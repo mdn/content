@@ -32,7 +32,7 @@ method returns {{jsxref('undefined')}}.
 
 ```js
 const gainNode = audioCtx.createGain();
-gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); //'gain' is the AudioParam
+gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); // 'gain' is the AudioParam
 gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
 ```
 

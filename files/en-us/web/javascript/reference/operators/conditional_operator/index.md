@@ -3,15 +3,29 @@ title: Conditional (ternary) operator
 slug: Web/JavaScript/Reference/Operators/Conditional_operator
 page-type: javascript-operator
 browser-compat: javascript.operators.conditional
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
 a condition followed by a question mark (`?`), then an expression to execute if the condition is {{Glossary("truthy")}} followed by a colon (`:`), and finally the expression to execute if the condition is {{Glossary("falsy")}}.
 This operator is frequently used as an alternative to an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement.
 
-{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
+{{InteractiveExample("JavaScript Demo: Conditional operator")}}
+
+```js interactive-example
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
+```
 
 ## Syntax
 

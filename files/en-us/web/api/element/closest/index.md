@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.closest
 ---
 
-{{APIRef('DOM')}}
+{{APIRef("DOM")}}
 
 The **`closest()`** method of the {{domxref("Element")}} interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified [CSS selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
@@ -81,5 +81,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## See also
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("Element.matches()")}}.

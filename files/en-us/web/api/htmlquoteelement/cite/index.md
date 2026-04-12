@@ -8,7 +8,7 @@ browser-compat: api.HTMLQuoteElement.cite
 
 {{ApiRef("HTML DOM")}}
 
-The **`cite`** property of the {{domxref("HTMLQuoteElement")}} interface indicates the URL for the source of the quotation.. It reflects the {{HTMLElement("q")}} element's [`cite`](/en-US/docs/Web/HTML/Element/q#cite) attribute.
+The **`cite`** property of the {{domxref("HTMLQuoteElement")}} interface indicates the URL for the source of the quotation. It reflects the {{HTMLElement("q")}} element's [`cite`](/en-US/docs/Web/HTML/Reference/Elements/q#cite) attribute.
 
 ## Value
 

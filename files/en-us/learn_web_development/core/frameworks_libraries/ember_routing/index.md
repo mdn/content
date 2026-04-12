@@ -2,9 +2,9 @@
 title: Routing in Ember
 slug: Learn_web_development/Core/Frameworks_libraries/Ember_routing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer","Learn_web_development/Core/Frameworks_libraries/Ember_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In this article we learn about **routing**, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
@@ -119,8 +119,12 @@ But now we need a way to differentiate between each of these routes, so that the
 First of all, return once more to our `todo-data.js` file. It already contains a getter that returns all todos, and a getter that returns incomplete todos. The getter we are missing is one to return just the completed todos. Add the following below the existing getters:
 
 ```js
-get completed() {
-  return this.todos.filter((todo) => todo.isCompleted);
+export default class TodoDataService extends Service {
+  // …
+  get completed() {
+    return this.todos.filter((todo) => todo.isCompleted);
+  }
+  // …
 }
 ```
 

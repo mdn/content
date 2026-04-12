@@ -1,13 +1,15 @@
 ---
 title: String.prototype.fontsize()
+short-title: fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.fontsize
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`fontsize()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes this string to be displayed in the specified font size.
 
@@ -71,5 +73,6 @@ document.getElementById("yourElemId").style.fontSize = "7pt";
 ## See also
 
 - [Polyfill of `String.prototype.fontsize` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.fontsize`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("font")}}

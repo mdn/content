@@ -1,11 +1,11 @@
 ---
 title: Object.prototype.constructor
+short-title: constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Object.constructor
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`constructor`** data property of an {{jsxref("Object")}} instance returns a reference to the constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
 
@@ -186,7 +186,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // it's pretty fine
 ```
 
-Note that when manually adding the `constructor` property, it's crucial to make the property [non-enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties), so `constructor` won't be visited in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops — as it normally isn't.
+Note that when manually adding the `constructor` property, it's crucial to make the property [non-enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), so `constructor` won't be visited in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops — as it normally isn't.
 
 If the code above looks like too much boilerplate, you may also consider using [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) to manipulate the prototype chain.
 

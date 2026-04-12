@@ -37,54 +37,42 @@ When the button is clicked, the oscillator starts, and the `MediaRecorder` is st
 From here, you can play and save the opus file.
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>createMediaStreamDestination() demo</title>
-  </head>
-  <body>
-    <h1>createMediaStreamDestination() demo</h1>
+<button>Make sine wave</button> <audio controls></audio>
+```
 
-    <p>Encoding a pure sine wave to an Opus file</p>
-    <button>Make sine wave</button>
-    <audio controls></audio>
-    <script>
-      const b = document.querySelector("button");
-      let clicked = false;
-      const chunks = [];
-      const ac = new AudioContext();
-      const osc = ac.createOscillator();
-      const dest = ac.createMediaStreamDestination();
-      const mediaRecorder = new MediaRecorder(dest.stream);
-      osc.connect(dest);
+```js
+const b = document.querySelector("button");
+let clicked = false;
+const chunks = [];
+const ac = new AudioContext();
+const osc = ac.createOscillator();
+const dest = ac.createMediaStreamDestination();
+const mediaRecorder = new MediaRecorder(dest.stream);
+osc.connect(dest);
 
-      b.addEventListener("click", (e) => {
-        if (!clicked) {
-          mediaRecorder.start();
-          osc.start(0);
-          e.target.textContent = "Stop recording";
-          clicked = true;
-        } else {
-          mediaRecorder.stop();
-          osc.stop(0);
-          e.target.disabled = true;
-        }
-      });
+b.addEventListener("click", (e) => {
+  if (!clicked) {
+    mediaRecorder.start();
+    osc.start(0);
+    e.target.textContent = "Stop recording";
+    clicked = true;
+  } else {
+    mediaRecorder.stop();
+    osc.stop(0);
+    e.target.disabled = true;
+  }
+});
 
-      mediaRecorder.ondataavailable = (evt) => {
-        // Push each chunk (blobs) in an array
-        chunks.push(evt.data);
-      };
+mediaRecorder.ondataavailable = (evt) => {
+  // Push each chunk (blobs) in an array
+  chunks.push(evt.data);
+};
 
-      mediaRecorder.onstop = (evt) => {
-        // Make blob out of our blobs, and open it.
-        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
-        document.querySelector("audio").src = URL.createObjectURL(blob);
-      };
-    </script>
-  </body>
-</html>
+mediaRecorder.onstop = (evt) => {
+  // Make blob out of our blobs, and open it.
+  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+  document.querySelector("audio").src = URL.createObjectURL(blob);
+};
 ```
 
 > [!NOTE]

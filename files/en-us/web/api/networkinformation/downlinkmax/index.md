@@ -14,7 +14,7 @@ The **`downlinkMax`** read-only property of the {{domxref("NetworkInformation")}
 
 ## Value
 
-An number representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
+A number representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
 
 ## Examples
 

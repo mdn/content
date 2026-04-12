@@ -2,9 +2,8 @@
 title: IMAP
 slug: Glossary/IMAP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 IMAP (Internet Message Access Protocol) is a {{Glossary("protocol")}} used to retrieve and store emails. More recent than {{Glossary("POP")}}, IMAP allows folders and rules on the server.
 

@@ -2,12 +2,10 @@
 title: GPUInternalError
 slug: Web/API/GPUInternalError
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUInternalError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUInternalError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes an application error indicating that an operation failed for a system or implementation-specific reason, even when all validation requirements were satisfied.
 
@@ -19,7 +17,7 @@ Internal errors occur when something happens in the WebGPU implementation that w
 
 ## Constructor
 
-- {{domxref("GPUInternalError.GPUInternalError", "GPUInternalError()")}} {{Experimental_Inline}}
+- {{domxref("GPUInternalError.GPUInternalError", "GPUInternalError()")}}
   - : Creates a new `GPUInternalError` object instance.
 
 ## Instance properties
@@ -36,7 +34,7 @@ The following example uses an error scope to capture a suspected validation erro
 ```js
 device.pushErrorScope("internal");
 
-const module = device.createShaderModule({
+let module = device.createShaderModule({
   code: shader, // REALLY complex shader
 });
 

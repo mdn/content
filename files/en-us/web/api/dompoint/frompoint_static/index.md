@@ -25,10 +25,8 @@ DOMPoint.fromPoint(sourcePoint)
 ### Parameters
 
 - `sourcePoint`
-
   - : A {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing the following properties, from which to take the
     values of the new point's properties:
-
     - `x`
       - : An unrestricted floating-point value indicating the `x`-coordinate of the point in space. This is generally the horizontal coordinate, with positive values being to the right and negative values to the left. The default value is `0`.
     - `y`
@@ -62,7 +60,7 @@ use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y
 The _z_ and _w_ properties are allowed to keep their default values (0 and 1 respectively).
 
 ```js
-const center = DOMPoint.fromPoint({ x: 75, y: -50, z: -55, w: 0.25 });
+const center = DOMPoint.fromPoint({ x: 75, y: -50 });
 ```
 
 ## Specifications

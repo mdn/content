@@ -3,9 +3,8 @@ title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the user clicks a notification, but not on any of the notification's buttons (for that, see {{WebExtAPIRef("notifications.onButtonClicked")}}).
 
@@ -31,15 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `notificationId`
       - : `string`. ID of the notification that the user clicked.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -52,6 +45,10 @@ browser.notifications.onClicked.addListener((notificationId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

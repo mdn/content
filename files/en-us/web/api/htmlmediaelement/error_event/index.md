@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLMediaElement.error_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`error`** event is fired when the resource could not be loaded due to an error (for example, a network connectivity problem).
 
@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## Event type

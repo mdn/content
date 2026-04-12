@@ -3,12 +3,10 @@ title: "Navigation: back() method"
 short-title: back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.back
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`back()`** method of the
 {{domxref("Navigation")}} interface navigates backwards by one entry in the navigation history.
@@ -40,7 +38,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e. either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible, or if the current {{domxref("Document")}} is unloading.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e., either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible, or if the current {{domxref("Document")}} is unloading.
 
 ## Examples
 
@@ -78,4 +76,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

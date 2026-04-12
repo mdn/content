@@ -3,13 +3,26 @@ title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
 page-type: javascript-operator
 browser-compat: javascript.operators.typeof
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`typeof`** operator returns a string indicating the type of the operand's value.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: typeof operator")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## Syntax
 
@@ -24,7 +37,7 @@ typeof operand
 
 ## Description
 
-The following table summarizes the possible return values of `typeof`. For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Data_structures) page.
+The following table summarizes the possible return values of `typeof`. For more information about types and primitives, see also the [JavaScript data structure](/en-US/docs/Web/JavaScript/Guide/Data_structures) page.
 
 | Type                                                                                                                                                                                                     | Result                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -137,19 +150,19 @@ The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Referen
 // Parentheses can be used for determining the data type of expressions.
 const someData = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+typeof someData + " foo"; // "number foo"
+typeof (someData + " foo"); // "string"
 ```
 
 ### Interaction with undeclared and uninitialized variables
 
-`typeof` is generally always guaranteed to return a string for any operand it is supplied with. Even with undeclared identifiers, `typeof` will return `"undefined"` instead of throwing an error.
+`typeof` works with undeclared identifiers, returning `"undefined"` instead of throwing an error.
 
 ```js
 typeof undeclaredVariable; // "undefined"
 ```
 
-However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/using", "using")}} {{jsxref("Statements/await_using", "await using")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -160,6 +173,8 @@ let newLetVariable;
 const newConstVariable = "hello";
 class newClass {}
 ```
+
+See [`typeof` operator and `undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined#typeof_operator_and_undefined) for more details.
 
 ### Exceptional behavior of document.all
 
@@ -175,7 +190,7 @@ Although `document.all` is also [falsy](/en-US/docs/Glossary/Falsy) and [loosely
 
 `typeof` is very useful, but it's not as versatile as might be required. For example, `typeof []` is `"object"`, as well as `typeof new Date()`, `typeof /abc/`, etc.
 
-For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e. objects and functions), it returns a more granular type name where possible.
+For greater specificity in checking types, here we present a custom `type(value)` function, which mostly mimics the behavior of `typeof`, but for non-primitives (i.e., objects and functions), it returns a more granular type name where possible.
 
 ```js
 function type(value) {

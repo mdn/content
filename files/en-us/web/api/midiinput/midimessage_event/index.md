@@ -14,15 +14,15 @@ The `midimessage` event of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("midimessage", (event) => {});
+```js-nolint
+addEventListener("midimessage", (event) => { })
 
-onmidimessage = (event) => {};
+onmidimessage = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIMessageEvent")}}
 

@@ -1,6 +1,6 @@
 ---
-title: "DOMMatrixReadOnly: transformPoint method"
-short-title: transformPoint
+title: "DOMMatrixReadOnly: transformPoint() method"
+short-title: transformPoint()
 slug: Web/API/DOMMatrixReadOnly/transformPoint
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.transformPoint
@@ -15,17 +15,15 @@ You can also create a new `DOMPoint` by applying a matrix to a point with the {{
 
 ## Syntax
 
-```js
-DOMMatrixReadOnly.transformPoint();
-DOMMatrixReadOnly.transformPoint(point);
+```js-nolint
+transformPoint()
+transformPoint(point)
 ```
 
 ### Parameters
 
 - `point`
-
   - : A {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing up to four of the following properties:
-
     - `x`
       - : The `x`-coordinate of the point in space as a number. The default value is `0`.
     - `y`

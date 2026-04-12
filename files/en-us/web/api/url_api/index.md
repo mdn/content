@@ -69,31 +69,33 @@ The URL API is a simple one, with only a couple of interfaces to its name:
 
 ## Examples
 
-If you want to process the parameters included in a URL, you could do it manually, but it's much easier to create a `URL` object to do it for you. The `fillTableWithParameters()` function below takes as input a {{domxref("HTMLTableElement")}} object representing a {{HTMLElement("table")}}. Rows are added to the table, one for each key found in the parameters, with the first column containing the key's name, and the second column having the value.
+### Parsing URL parameters using the URL API
 
-Note the call to {{domxref("URLSearchParams.sort()")}} to sort the parameter list before generating the table.
+You could process URL parameters by parsing a URL as a string, splitting it on certain characters or using regular expressions, but it's much easier to create a new `URL` object for this. The example below gets the document URL from [`document.location.href`](/en-US/docs/Web/API/Document/location), sorts the parameters using {{domxref("URLSearchParams.sort()")}}, then extracts the keys using `URLSearchParams.keys`.
+
+For each key in the document URL, we add rows to a {{HTMLElement("table")}} element, one for each key found in the parameters, with the first column containing the key's name, and the second column containing the value:
 
 ```js
-function fillTableWithParameters(tbl) {
-  const url = new URL(document.location.href);
-  url.searchParams.sort();
-  const keys = url.searchParams.keys();
+const table = document.querySelector(".param-table");
 
-  for (const key of keys) {
-    const val = url.searchParams.get(key);
-    const row = document.createElement("tr");
-    const cell1 = document.createElement("td");
-    cell1.innerText = key;
-    row.appendChild(cell1);
-    const cell2 = document.createElement("td");
-    cell2.innerText = val;
-    row.appendChild(cell2);
-    tbl.appendChild(row);
-  }
+const url = new URL(document.location.href);
+url.searchParams.sort();
+const keys = url.searchParams.keys();
+
+for (let key of keys) {
+  let val = url.searchParams.get(key);
+  let row = document.createElement("tr");
+  let cell = document.createElement("td");
+  cell.innerText = key;
+  row.appendChild(cell);
+  cell = document.createElement("td");
+  cell.innerText = val;
+  row.appendChild(cell);
+  table.appendChild(row);
 }
 ```
 
-A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
+You can try a [live version of this example](https://mdn.github.io/dom-examples/url-params/) and [view the full source code on GitHub](https://github.com/mdn/dom-examples/tree/main/url-params).
 
 ## Specifications
 

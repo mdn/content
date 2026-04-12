@@ -3,7 +3,7 @@ title: "RTCIceCandidateStats: relayProtocol property"
 short-title: relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidateStats.relayProtocol
+browser-compat: api.RTCStatsReport.type_local-candidate.relayProtocol
 ---
 
 {{APIRef("WebRTC")}}

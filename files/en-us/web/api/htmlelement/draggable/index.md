@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.draggable
 
 The **`draggable`** property of the {{domxref("HTMLElement")}} interface gets and sets a {{jsxref("Boolean")}} primitive indicating if the element is draggable.
 
-It reflects the value of the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) HTML global attribute.
+It reflects the value of the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) HTML global attribute.
 
 ## Value
 
@@ -25,14 +25,10 @@ const draggableElement = document.querySelector(".draggable-element");
 const notDraggableElement = document.querySelector(".not-draggable-element");
 
 // enable the target element's ability to drag
-if (!draggableElement.draggable) {
-  draggableElement.draggable = true;
-}
+draggableElement.draggable = true;
 
 // disable the target element's ability to drag
-if (notDraggableElement.draggable) {
-  notDraggableElement.draggable = false;
-}
+notDraggableElement.draggable = false;
 ```
 
 ## Specifications
@@ -45,5 +41,5 @@ if (notDraggableElement.draggable) {
 
 ## See also
 
-- [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) HTML global attribute
+- [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) HTML global attribute
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) overview

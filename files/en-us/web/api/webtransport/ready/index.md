@@ -10,6 +10,8 @@ browser-compat: api.WebTransport.ready
 
 The **`ready`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is ready to use.
 
+This promise is created when the `WebTransport` object is created and is resolved when a connection is established. Accessing or awaiting this promise does not trigger any action; it only allows actions to be taken when the transport is ready, similar to listening to an event.
+
 ## Value
 
 A {{jsxref("Promise")}} that resolves to `undefined`.
@@ -26,10 +28,10 @@ async function initTransport(url) {
   // The connection can be used once ready fulfills
   await transport.ready;
 
-  // ...
+  // …
 }
 
-// ...
+// …
 
 async function closeTransport(transport) {
   // Respond to connection closing

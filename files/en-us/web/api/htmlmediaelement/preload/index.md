@@ -19,7 +19,7 @@ A string. Possible values are as follows:
 - `none`
   - : Indicates that the media should not be preloaded.
 - `metadata`
-  - : Indicates that only media metadata (e.g. length) is fetched.
+  - : Indicates that only media metadata (e.g., length) is fetched.
 - `auto`
   - : Indicates that the whole media file can be downloaded, even if the user is not expected to use it.
 - _empty string_

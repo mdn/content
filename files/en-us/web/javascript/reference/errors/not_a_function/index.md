@@ -2,9 +2,8 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a function" occurs when there was an attempt to call a
 value from a function, but the value is not actually a function.
@@ -32,14 +31,12 @@ There are many built-in functions in need of a (callback) function. You will hav
 provide a function in order to have these methods working properly:
 
 - When working with {{jsxref("Array")}} or {{jsxref("TypedArray")}} objects:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}},
     {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}},
     {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}},
     {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - When working with {{jsxref("Map")}} and {{jsxref("Set")}} objects:
-
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
 ## Examples
@@ -68,9 +65,7 @@ which will work with {{jsxref("Array")}} objects only.
 ```js example-bad
 const obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function (num) {
-  return num * 2;
-});
+obj.map((num) => num * 2);
 
 // TypeError: obj.map is not a function
 ```
@@ -80,9 +75,7 @@ Use an array instead:
 ```js example-good
 const numbers = [1, 4, 9];
 
-numbers.map(function (num) {
-  return num * 2;
-}); // [2, 8, 18]
+numbers.map((num) => num * 2); // [2, 8, 18]
 ```
 
 ### Function shares a name with a pre-existing property
@@ -104,7 +97,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
+myNewDog.name("Cassidy"); // TypeError: myNewDog.name is not a function
 ```
 
 Use a different property name instead:
@@ -113,7 +106,7 @@ Use a different property name instead:
 function Dog() {
   this.age = 11;
   this.color = "black";
-  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  this.dogName = "Ralph"; // Using this.dogName instead of .name
   return this;
 }
 
@@ -123,7 +116,7 @@ Dog.prototype.name = function (name) {
 };
 
 const myNewDog = new Dog();
-myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
+myNewDog.name("Cassidy"); // Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
 ### Using parentheses for multiplication
@@ -153,7 +146,7 @@ Ensure you are importing the module correctly.
 An example helpers library (`helpers.js`)
 
 ```js
-const helpers = function () {};
+function helpers() {}
 
 helpers.groupBy = function (objectArray, property) {
   return objectArray.reduce((acc, obj) => {

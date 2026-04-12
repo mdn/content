@@ -1,0 +1,76 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Mozilla/Firefox
+    title: Firefox
+  - type: listSubPages
+    path: /Mozilla/Firefox/Releases
+    tags: firefox-release-notes-active
+    link: /Mozilla/Firefox/Releases
+  - /Mozilla/Firefox/Experimental_features
+  - type: listSubPages
+    path: /Mozilla/Firefox/Releases
+    tags: firefox-release-notes
+    title: Release notes archive
+    details: closed
+  - link: https://firefox-source-docs.mozilla.org/
+    title: Firefox_documentation
+  - type: section
+    link: /Mozilla/Add-ons
+    title: Add-ons
+  - link: /Mozilla/Add-ons/WebExtensions
+    title: Browser_extensions
+  - link: https://extensionworkshop.com/documentation/themes
+    title: Themes
+l10n:
+  de:
+    Add-ons: Add-ons
+    Browser_extensions: Browser-Erweiterungen
+    Themes: Themen
+    Firefox_documentation: Firefox-Dokumentation
+  en-US:
+    Add-ons: Add-ons
+    Browser_extensions: Browser extensions
+    Themes: Themes
+    Firefox_documentation: Firefox documentation
+  es:
+    Add-ons: Complementos
+    Browser_extensions: Extensiones del navegador
+    Themes: Temas
+    Firefox_documentation: Documentación de Firefox
+  fr:
+    Add-ons: Modules complémentaires
+    Browser_extensions: WebExtensions
+    Themes: Thèmes
+    Firefox_documentation: Documentation de Firefox
+  ja:
+    Add-ons: アドオン
+    Browser_extensions: ブラウザー拡張機能
+    Themes: テーマ
+    Firefox_documentation: Firefox ドキュメント
+  ko:
+    Add-ons: Add-ons
+    Browser_extensions: 브라우저 확장 프로그램
+    Themes: 테마
+    Firefox_documentation: Firefox 문서
+  pt-BR:
+    Add-ons: Complementos
+    Browser_extensions: Extensões do navegador
+    Themes: Temas
+    Firefox_documentation: Documentação do Firefox
+  ru:
+    Add-ons: Дополнения
+    Browser_extensions: Расширения браузера
+    Themes: Темы
+    Firefox_documentation: Документация Firefox
+  zh-CN:
+    Add-ons: 附加组件
+    Browser_extensions: 浏览器扩展
+    Themes: 主题
+    Firefox_documentation: Firefox 文档
+  zh-TW:
+    Add-ons: 附加元件
+    Browser_extensions: 擴充套件
+    Themes: 佈景主題
+    Firefox_documentation: Firefox 文件

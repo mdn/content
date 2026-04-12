@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/web-animations/
 
 {{DefaultAPISidebar("Web Animations")}}
 
-The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
+The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e., animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
 
 ## Concepts and usage
 
@@ -22,7 +22,7 @@ The Web Animations API provides a common language for browsers and developers to
 - {{domxref("AnimationTimeline")}}
   - : Represents the timeline of animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline objects) and is not itself accessed by developers.
 - {{domxref("AnimationEvent")}}
-  - : Part of the [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) module, capturing the animation name and elapsed time.
+  - : Part of the [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations) module, capturing the animation name and elapsed time.
 - {{domxref("DocumentTimeline")}}
   - : Represents animation timelines, including the default document timeline (accessed using the {{domxref("Document.timeline")}} property).
 
@@ -53,6 +53,6 @@ The Web Animations API adds features to {{domxref("document")}} and {{domxref("e
 - CSS {{cssxref("animation")}} shorthand property
 - CSS {{cssxref("animation-timeline")}} property
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

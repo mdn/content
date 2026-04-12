@@ -3,9 +3,8 @@ title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
 
@@ -29,17 +28,13 @@ let removing = browser.cookies.remove(
 ### Parameters
 
 - `details`
-
   - : An `object` containing information to identify the cookie to remove. It contains these properties:
-
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `name`
       - : A `string` representing the name of the cookie to remove.
     - `partitionKey` {{optional_inline}}
-
       - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
-
         - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 

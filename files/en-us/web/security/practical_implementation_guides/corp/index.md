@@ -1,10 +1,10 @@
 ---
 title: Cross-Origin Resource Policy (CORP) implementation
+short-title: Cross-Origin Resource Policy (CORP)
 slug: Web/Security/Practical_implementation_guides/CORP
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 Cross-Origin Resource Policy (CORP) is set by the {{httpheader("Cross-Origin-Resource-Policy")}} response header, which lets websites and applications opt-in to protection against vulnerabilities related to certain cross-origin requests (such as those made by the {{htmlelement("script")}} and {{htmlelement("img")}} elements).
 
@@ -50,7 +50,7 @@ This also permits such resources to be embedded.
 
 - [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - [XS-Leaks Wiki](https://xsleaks.dev/)
-- [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
-- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
+- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy)
+- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)

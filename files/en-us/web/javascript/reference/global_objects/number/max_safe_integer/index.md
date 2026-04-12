@@ -1,17 +1,31 @@
 ---
 title: Number.MAX_SAFE_INTEGER
+short-title: MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.MAX_SAFE_INTEGER`** static data property represents the maximum safe integer in JavaScript (2<sup>53</sup> – 1).
 
 For larger integers, consider using {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## Value
 
@@ -22,6 +36,8 @@ For larger integers, consider using {{jsxref("BigInt")}}.
 ## Description
 
 [Double precision floating point format](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) only has 52 bits to represent the [mantissa](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding), so it can only safely represent integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1. "Safe" in this context refers to the ability to represent integers exactly and to compare them correctly. For example, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` will evaluate to true, which is mathematically incorrect. See {{jsxref("Number.isSafeInteger()")}} for more information.
+
+As mentioned in {{jsxref("Number.EPSILON")}}, the precision of numbers depends on their magnitude. `Number.MAX_SAFE_INTEGER` represents the largest value at which integer-level operations can be performed precisely, but you can still perform meaningful arithmetic on numbers larger than that, just without integer-level precision. The largest representable number in JavaScript is actually {{jsxref("Number.MAX_VALUE")}}, which is approximately 1.7976931348623157 × 10<sup>308</sup>.
 
 Because `MAX_SAFE_INTEGER` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_SAFE_INTEGER`, rather than as a property of a number value.
 
@@ -52,6 +68,8 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 ## See also
 
 - [Polyfill of `Number.MAX_SAFE_INTEGER` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.MAX_SAFE_INTEGER`](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
+- {{jsxref("Number.MAX_VALUE")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}

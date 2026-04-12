@@ -12,9 +12,9 @@ browser-compat: api.Navigator.deprecatedReplaceInURN
 
 The **`deprecatedReplaceInURN()`** method of the {{domxref("Navigator")}} interface substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property.
 
-A `FencedFrameConfig` or opaque URN is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) `runAdAuction()` method, and then set as the value of {{domxref("HTMLFencedFrameElement.config")}}. The content URL associated with the `FencedFrameConfig` or opaque URN is mapped to it internally by the browser, and can't be accessed via JavaScript.
+A `FencedFrameConfig` or opaque URN is returned from a source such as the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience) `runAdAuction()` method, and then set as the value of {{domxref("HTMLFencedFrameElement.config")}}. The content URL associated with the `FencedFrameConfig` or opaque URN is mapped to it internally by the browser, and can't be accessed via JavaScript.
 
-However, you may wish to substitute parts of that internal URL. This is a common approach for passing runtime data into ad creatives to use in rendering. `deprecatedReplaceInURN()` has been made available as a temporary measure to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developers.google.com/privacy-sandbox) APIs.
+However, you may wish to substitute parts of that internal URL. This is a common approach for passing runtime data into ad creatives to use in rendering. `deprecatedReplaceInURN()` has been made available as a temporary measure to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://privacysandbox.google.com/) APIs.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ deprecatedReplaceInURN(UrnOrConfig, replacements)
 ### Parameters
 
 - `UrnOrConfig`
-  - : A `FencedFrameConfig` object or a opaque URN for which you want to substitute parts of the corresponding internal URL.
+  - : A `FencedFrameConfig` object or an opaque URN for which you want to substitute parts of the corresponding internal URL.
 - `replacements`
   - : An object containing one or more properties representing the substitutions you wish to make in the internal URL. Each property key is a URL subsection you wish to replace, and each property value is the string to replace it with. Note that:
     - The URL subsections to replace must be in one of the following formats:

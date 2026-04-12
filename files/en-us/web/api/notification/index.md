@@ -23,14 +23,12 @@ These notifications' appearance and specific functionality vary across platforms
 _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
-
   - : A string representing the current permission to display notifications. Possible values are:
-
     - `denied` — The user refuses to have notifications displayed.
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ## Instance properties
@@ -53,6 +51,8 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
 - {{domxref("Notification.lang")}} {{ReadOnlyInline}}
   - : The language code of the notification as specified in the constructor's `options` parameter.
+- {{domxref("Notification.navigate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The navigation URL of the notification. When set, activating the notification navigates to this URL instead of firing the {{domxref("Notification.click_event", "click")}} or {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
@@ -100,12 +100,14 @@ _Also inherits events from its parent interface, {{domxref("EventTarget")}}_.
 Assume this basic HTML:
 
 ```html
-<button onclick="notifyMe()">Notify me!</button>
+<button>Notify me!</button>
 ```
 
 It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.
 
 ```js
+document.querySelector("button").addEventListener("click", notifyMe);
+
 function notifyMe() {
   if (!("Notification" in window)) {
     // Check if the browser supports notifications

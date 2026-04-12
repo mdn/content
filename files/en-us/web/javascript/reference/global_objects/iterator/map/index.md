@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.map()
+short-title: map()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/map
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.map
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`map()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields elements of the iterator, each transformed by a mapping function.
 
@@ -98,3 +98,7 @@ for (const n of fibonacci()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.map` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.map`](https://www.npmjs.com/package/es-iterator-helpers)
+- {{jsxref("Iterator")}}
+- {{jsxref("Iterator.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.reduce()")}}

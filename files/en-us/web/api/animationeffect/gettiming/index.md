@@ -30,13 +30,11 @@ None.
 An object containing the following properties:
 
 - `delay`
-
   - : The `number` of milliseconds of delay before the start of the effect.
 
     (See also {{cssxref("animation-delay")}}.)
 
 - `direction`
-
   - : `"normal"`, `"reverse"`, `"alternate"`, or `"alternate-reverse"`.
 
     Indicates whether the effect runs forwards (`"normal"`), backwards (`"reverse"`), switches direction
@@ -46,7 +44,6 @@ An object containing the following properties:
     (See also {{cssxref("animation-direction")}}.)
 
 - `duration`
-
   - : A `number` of milliseconds or the `string` `"auto"`.
 
     Indicates the time one iteration of the animation takes to complete.
@@ -56,19 +53,16 @@ An object containing the following properties:
     (See also {{cssxref("animation-duration")}}.)
 
 - `easing`
-
   - : A `string` representing an {{cssxref("easing-function")}} describing the rate of change of the effect over time.
 
     (See also {{cssxref("animation-timing-function")}}.)
 
 - `endDelay`
-
   - : The `number` of milliseconds of delay after the end of the effect.
 
     This is primarily of use when sequencing animations based on the end time of another animation.
 
 - `fill`
-
   - : `"none"`, `"forwards"`, `"backwards"`, `"both"`, or `"auto"`.
 
     Indicates whether the effect is reflected by its target(s) prior to playing
@@ -81,7 +75,6 @@ An object containing the following properties:
     (See also {{cssxref("animation-fill-mode")}}.)
 
 - `iterations`
-
   - : The `number` of times the effect will repeat. A value of {{jsxref("Infinity")}} indicates that
     the effect repeats indefinitely.
 

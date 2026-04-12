@@ -9,7 +9,7 @@ browser-compat: api.PerformanceElementTiming
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`PerformanceElementTiming`** interface contains render timing information for image and text node elements the developer annotated with an [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute for observation.
+The **`PerformanceElementTiming`** interface contains render timing information for image and text node elements the developer annotated with an [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute for observation.
 
 ## Description
 
@@ -19,11 +19,11 @@ The API supports timing information on the following elements:
 
 - {{htmlelement("img")}} elements,
 - {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
-- [poster](/en-US/docs/Web/HTML/Element/video#poster) images of {{htmlelement("video")}} elements,
+- [poster](/en-US/docs/Web/HTML/Reference/Elements/video#poster) images of {{htmlelement("video")}} elements,
 - elements which have a contentful {{cssxref("background-image")}} property with a URL value for a resource that is actually available, and
 - groups of text nodes, such as a {{htmlelement("p")}}.
 
-The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
+The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute on the element.
 
 `PerformanceElementTiming` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -31,7 +31,32 @@ The author flags an element for observation by adding the [`elementtiming`](/en-
 
 ## Instance properties
 
-This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
+This interface directly defines the following properties:
+
+- {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : An {{domxref("Element")}} representing the element we are returning information about.
+- {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A string which is the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the element.
+- {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute on the element.
+- {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
+- {{domxref("PerformanceElementTiming.loadTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} with the loadTime of the element.
+- {{domxref("PerformanceElementTiming.naturalHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
+- {{domxref("PerformanceElementTiming.naturalWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
+- {{domxref("PerformanceElementTiming.paintTime")}} {{experimental_inline}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
+- {{domxref("PerformanceElementTiming.presentationTime")}} {{experimental_inline}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the element was actually drawn on the screen.
+- {{domxref("PerformanceElementTiming.renderTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} with the renderTime of the element.
+- {{domxref("PerformanceElementTiming.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A string which is the initial URL of the resources request for images, 0 for text.
+
+It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns `0` as `duration` does not apply to this interface.
@@ -42,27 +67,6 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 
-This interface also supports the following properties:
-
-- {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An {{domxref("Element")}} representing the element we are returning information about.
-- {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the element.
-- {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
-- {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
-- {{domxref("PerformanceElementTiming.loadTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} with the loadTime of the element.
-- {{domxref("PerformanceElementTiming.naturalHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An unsigned 32-bit integer (unsigned long) which is the intrinsic height of the image if this is applied to an image, 0 for text.
-- {{domxref("PerformanceElementTiming.naturalWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
-- {{domxref("PerformanceElementTiming.renderTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} with the renderTime of the element.
-- {{domxref("PerformanceElementTiming.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A string which is the initial URL of the resources request for images, 0 for text.
-
 ## Instance methods
 
 - {{domxref("PerformanceElementTiming.toJSON()")}} {{Experimental_Inline}}
@@ -72,7 +76,7 @@ This interface also supports the following properties:
 
 ### Observing render time of specific elements
 
-In this example two elements are being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation.
+In this example two elements are being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation.
 
 ```html
 <img src="image.jpg" elementtiming="big-image" />
@@ -90,6 +94,35 @@ observer.observe({ type: "element", buffered: true });
 
 Two entries will be output to the console. The first containing details of the image, the second with details of the text node.
 
+### Observing separate paint and presentation timings
+
+The `paintTime` and `presentationTime` properties enable you to retrieve specific timings for the paint phase starting and the element being drawn on the screen. The `paintTime` is broadly interoperable, whereas the `presentationTime` is implementation-dependent.
+
+This example uses a `PerformanceObserver` to observe all performance entries of type `"element"` (remember that, to be observed, elements need to have `elementtiming` attributes set on them). We check for `paintTime` and `presentationTime` support and retrieve those values if they are available. In non-supporting browsers, the code retrieves the `renderTime` or `loadTime`, depending on what is supported.
+
+```js
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  entries.forEach((entry) => {
+    if (entry.presentationTime) {
+      console.log(
+        "Element paintTime:",
+        entry.paintTime,
+        "Element presentationTime:",
+        entry.presentationTime,
+      );
+    } else if (entry.paintTime) {
+      console.log("Element paintTime:", entry.paintTime);
+    } else if (entry.renderTime) {
+      console.log("Element renderTime:", entry.renderTime);
+    } else {
+      console.log("Element loadTime", entry.loadTime);
+    }
+  });
+});
+observer.observe({ type: "element", buffered: true });
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -100,4 +133,4 @@ Two entries will be output to the console. The first containing details of the i
 
 ## See also
 
-- [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) HTML attribute
+- [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) HTML attribute

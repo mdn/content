@@ -1,11 +1,11 @@
 ---
 title: Math.atanh()
+short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atanh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.atanh()`** static method returns the inverse hyperbolic tangent of a number. That is,
 
@@ -15,7 +15,21 @@ The **`Math.atanh()`** static method returns the inverse hyperbolic tangent of a
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-atanh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+
+```js interactive-example
+console.log(Math.atanh(-1));
+// Expected output: -Infinity
+
+console.log(Math.atanh(0));
+// Expected output: 0
+
+console.log(Math.atanh(0.5));
+// Expected output: 0.549306144334055 (approximately)
+
+console.log(Math.atanh(1));
+// Expected output: Infinity
+```
 
 ## Syntax
 
@@ -61,6 +75,7 @@ Math.atanh(2); // NaN
 ## See also
 
 - [Polyfill of `Math.atanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.atanh`](https://www.npmjs.com/package/math.atanh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}

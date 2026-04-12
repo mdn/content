@@ -19,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("negotiationneeded", (event) => {});
+```js-nolint
+addEventListener("negotiationneeded", (event) => { })
 
-onnegotiationneeded = (event) => {};
+onnegotiationneeded = (event) => { }
 ```
 
 ## Event type
@@ -34,23 +34,19 @@ A generic {{domxref("Event")}}.
 In this example, we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to create an event handler for `negotiationneeded`. Its role is to create an {{Glossary("SDP")}} offer and send it through the signaling channel to the remote peer.
 
 ```js
-pc.addEventListener(
-  "negotiationneeded",
-  (ev) => {
-    pc.createOffer()
-      .then((offer) => pc.setLocalDescription(offer))
-      .then(() =>
-        sendSignalingMessage({
-          type: "video-offer",
-          sdp: pc.localDescription,
-        }),
-      )
-      .catch((err) => {
-        // handle error
-      });
-  },
-  false,
-);
+pc.addEventListener("negotiationneeded", (ev) => {
+  pc.createOffer()
+    .then((offer) => pc.setLocalDescription(offer))
+    .then(() =>
+      sendSignalingMessage({
+        type: "video-offer",
+        sdp: pc.localDescription,
+      }),
+    )
+    .catch((err) => {
+      // handle error
+    });
+});
 ```
 
 After creating the offer, the local end is configured by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}; then a signaling message is created and sent to the remote peer through the signaling server, to share that offer with the other peer. The other peer should recognize this message and follow up by creating its own {{domxref("RTCPeerConnection")}}, setting the remote description with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}, and then creating an answer to send back to the offering peer.

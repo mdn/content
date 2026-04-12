@@ -3,30 +3,31 @@ title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
 page-type: webextension-api-type
 browser-compat: webextensions.api.commands.Command
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-Information about a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Information about the settings for the commands specified in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 An array of these objects is returned from {{WebExtAPIRef('commands.getAll()')}}.
 
 ## Type
 
-Values of this type are objects. They contain the following properties:
+A value of this type is an object containing these properties for the commands:
 
-- `name` {{optional_inline}}
-  - : `string`. Name of this command. This will be passed into the {{WebExtAPIRef('commands.onCommand')}} event listener.
+- `name`
+  - : `string`. Name of the command. This is passed into the {{WebExtAPIRef('commands.onCommand')}} event listener.
 - `description` {{optional_inline}}
-  - : `string`. Description of this command. This is primarily used to explain to the user what this command does.
+  - : `string`. Description of the command. This is used to explain to the user what this command does.
 - `shortcut` {{optional_inline}}
-  - : `string`. Key(s) used to execute this command, specified as a string like "Ctrl+Shift+Y".
+  - : `string`. Keys used to execute the command, specified as a string. See the [shortcut values](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#shortcut_values) section of the `commands` manifest key documentation for more details.
+
+`description` and `shortcut` reflect the values given in the `commands` manifest.json key unless they have been updated with {{WebExtAPIRef('commands.update()')}} or, in the case of the shortcut, customized by the user.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

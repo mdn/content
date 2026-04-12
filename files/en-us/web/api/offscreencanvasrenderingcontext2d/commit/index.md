@@ -22,6 +22,14 @@ The copy operation is synchronous. Calling this method is not needed for the tra
 commit()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js

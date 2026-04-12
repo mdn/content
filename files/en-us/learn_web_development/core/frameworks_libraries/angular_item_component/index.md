@@ -2,9 +2,10 @@
 title: Creating an item component
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
@@ -62,14 +63,17 @@ Just as with the `AppComponent`, the `ItemComponent` is made up of the following
 
 You can see a reference to the HTML and CSS files in the `@Component()` decorator metadata in `item.component.ts`.
 
-```js
+```ts
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   standalone: true,
   imports: [],
-  templateUrl: './item.component.html',
-  styleUrl: './item.component.css'
+  templateUrl: "./item.component.html",
+  styleUrl: "./item.component.css",
 })
+export class ItemComponent {
+  // …
+}
 ```
 
 ## Add HTML for the ItemComponent
@@ -186,9 +190,13 @@ import { ItemComponent } from "./item/item.component";
 
 Then, configure the AppComponent by adding the following to the same file's class:
 
-```js
-remove(item: Item) {
-  this.allItems.splice(this.allItems.indexOf(item), 1);
+```ts
+export class AppComponent {
+  // …
+  remove(item: Item) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
+  }
+  // …
 }
 ```
 
@@ -201,7 +209,7 @@ For more information on the `splice()` method, see the [`Array.prototype.splice(
 To use the `ItemComponent` UI, you must add logic to the component such as functions, and ways for data to go in and out.
 In `item.component.ts`, edit the JavaScript imports as follows:
 
-```js
+```ts
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Item } from "../item";
@@ -211,21 +219,23 @@ The addition of `Input`, `Output`, and `EventEmitter` allows `ItemComponent` to 
 By importing `Item`, the `ItemComponent` can understand what an `item` is.
 You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `@if` blocks:
 
-```js
+```ts
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './item.component.html',
-  styleUrl: './item.component.css',
+  templateUrl: "./item.component.html",
+  styleUrl: "./item.component.css",
 })
+export class ItemComponent {
+  // …
+}
 ```
 
 Further down `item.component.ts`, replace the generated `ItemComponent` class with the following:
 
-```js
+```ts
 export class ItemComponent {
-
   editable = false;
 
   @Input() item!: Item;
@@ -275,10 +285,14 @@ To use the `ItemComponent` in `AppComponent`, put the `ItemComponent` selector i
 Angular specifies the selector of a component in the metadata of the `@Component()` decorator.
 In this example, we've defined the selector as `app-item`:
 
-```js
+```ts
 @Component({
-  selector: 'app-item',
-  // ...
+  selector: "app-item",
+  // …
+})
+export class ItemComponent {
+  // …
+}
 ```
 
 To use the `ItemComponent` selector within the `AppComponent`, you add the element, `<app-item>`, which corresponds to the selector you defined for the component class to `app.component.html`.
@@ -301,14 +315,17 @@ Replace the current unordered list `<ul>` in `app.component.html` with the follo
 
 Change the `imports` in `app.component.ts` to include `ItemComponent` as well as `CommonModule`:
 
-```js
+```ts
 @Component({
   standalone: true,
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
   imports: [CommonModule, ItemComponent],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 The double curly brace syntax, `\{{}}`, in the `<h2>` interpolates the length of the `items` array and displays the number.
@@ -357,9 +374,9 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .btn-save:hover {
@@ -367,8 +384,8 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save:focus {
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: black;
 }
 
 .checkbox-wrapper {
@@ -377,7 +394,7 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn {
   background-color: #b90000;
-  color: #fff;
+  color: white;
   border-color: #9a0000;
 }
 
@@ -387,13 +404,13 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn:active {
   background-color: #e30000;
-  border-color: #000;
+  border-color: black;
 }
 
 .sm-text-input {
   width: 100%;
   padding: 0.5rem;
-  border: 2px solid #555;
+  border: 2px solid #555555;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;
@@ -417,21 +434,21 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 }
 
 /* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 2px solid #ccc;
-  background: #fff;
+  border: 2px solid #cccccc;
+  background: white;
 }
 
 /* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
   content: "\2713\0020";
   position: absolute;
   top: 0.15em;
@@ -440,21 +457,21 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   line-height: 0.8;
   color: #0d8dee;
   transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", "Arial";
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label::after {
   opacity: 0;
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
 
 /* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
+[type="checkbox"]:checked:focus + label::before,
+[type="checkbox"]:not(:checked):focus + label::before {
   border: 2px dotted blue;
 }
 ```

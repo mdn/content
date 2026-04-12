@@ -1,10 +1,10 @@
 ---
-title: Accessibility
+title: Accessibility on the web
+short-title: Accessibility
 slug: Learn_web_development/Core/Accessibility
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 
@@ -15,7 +15,7 @@ Access to web content such as public services, education, e-commerce sites, and 
 You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) before starting this module.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
@@ -36,10 +36,12 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
 - [Accessibility troubleshooting](/en-US/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>Challenge</sup>
   - : In this challenge, we present to you a simple site with several accessibility issues that you need to diagnose and fix.
 
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills).
+
 ## See also
 
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN Curriculum partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : An excellent series of video tutorials by Marcy Sutton.
 - [Deque University resources](https://dequeuniversity.com/resources/)
@@ -48,5 +50,7 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
   - : Includes guides, checklists, tools, and more.
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : Includes a list of web accessibility evaluation tools.
+- [Learn Accessible Web Design](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

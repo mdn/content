@@ -3,9 +3,8 @@ title: runtime.onSuspendCanceled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspendCanceled
 page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onSuspendCanceled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't be unloaded after all.
 
@@ -33,10 +32,6 @@ Events have three functions:
 - `listener`
   - : The function called when this event occurs.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Listen for `SuspendCanceled` events:
@@ -50,6 +45,10 @@ browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onSuspendCanceled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

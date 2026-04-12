@@ -2,11 +2,10 @@
 title: Positioning
 slug: Learn_web_development/Core/CSS_layout/Positioning
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}
 
 Positioning allows you to take elements out of normal document flow and make them behave differently, for example, sitting on top of one another or always remaining in the same place inside the browser viewport. This article explains the different {{cssxref("position")}} values and how to use them.
 
@@ -118,7 +117,9 @@ If you now save and refresh, you'll get a result something like this:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -194,7 +195,9 @@ If you now save and refresh, you should see something like so:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -277,7 +280,9 @@ This should give the following result:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -368,7 +373,9 @@ You should now see the lime paragraph on top:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -476,7 +483,9 @@ You should now see the finished example:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -650,22 +659,20 @@ body {
 
 {{ EmbedLiveSample('Scrolling_index', '100%', 200) }}
 
-Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' [overflow](/en-US/docs/Web/CSS/overflow) property.
+Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' [overflow](/en-US/docs/Web/CSS/Reference/Properties/overflow) property.
 
 > [!NOTE]
 > You can see this example live at [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)).
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills).
-
 ## Summary
 
-I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for. Next up, we'll look at Flexbox.
+I'm sure you had fun playing with basic positioning. While it's not an ideal method to use for entire layouts, there are many specific objectives it's suited for.
+
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
 ## See also
 
 - The {{cssxref("position")}} property reference.
 - [Practical positioning examples](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples), for some more useful ideas.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}

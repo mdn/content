@@ -1,11 +1,11 @@
 ---
 title: Set[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Set.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set[Symbol.species]`** static accessor property is an unused accessor property specifying how to copy `Set` objects.
 

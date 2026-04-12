@@ -3,9 +3,8 @@ title: declarativeNetRequest.onRuleMatchedDebug
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/onRuleMatchedDebug
 page-type: webextension-api-event
 browser-compat: webextensions.api.declarativeNetRequest.onRuleMatchedDebug
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a rule is matched with a request. Only available extensions with the `"declarativeNetRequestFeedback"` permission, as this is intended for debugging purposes only. See [Testing](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#testing) for details on how testing is enabled in each browser.
 
@@ -31,11 +30,8 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `request`
-
       - : An object containing information about the request the rule matched.
         - `documentId` {{optional_inline}}
           - : A `string`. The unique identifier for the frame's document, if this request is for a frame.

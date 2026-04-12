@@ -18,7 +18,7 @@ A string.
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("The error message: " + ev.message);
+  console.log(`The error message: ${ev.message}`);
 });
 ```
 

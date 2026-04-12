@@ -2,9 +2,8 @@
 title: Binding
 slug: Glossary/Binding
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In programming, a **binding** is an association of an {{glossary("identifier")}} with a value. Not all bindings are {{glossary("variable", "variables")}} — for example, function {{glossary("parameter", "parameters")}} and the binding created by the {{jsxref("Statements/try...catch", "catch (e)")}} block are not "variables" in the strict sense. In addition, some bindings are implicitly created by the language — for example, {{jsxref("Operators/this", "this")}} and [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) in JavaScript.
 

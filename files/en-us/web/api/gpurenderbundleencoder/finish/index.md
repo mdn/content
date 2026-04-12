@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: finish() method"
 short-title: finish()
 slug: Web/API/GPURenderBundleEncoder/finish
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.finish
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`finish()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface completes recording of the current render bundle command sequence, returning a {{domxref("GPURenderBundle")}} object that can be passed into a {{domxref("GPURenderPassEncoder.executeBundles()")}} call to execute those commands in a specific render pass.
@@ -34,8 +32,8 @@ A {{domxref("GPURenderBundle")}} object instance.
 
 The following criteria must be met when calling **`finish()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
-- The {{domxref("GPURenderBundleEncoder")}} is open (i.e. not already ended via a `finish()` call).
-- The debug stack for the current render pass is empty (i.e. no render pass debug group is currently open, as opened by {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The {{domxref("GPURenderBundleEncoder")}} is open (i.e., not already ended via a `finish()` call).
+- The debug stack for the current render pass is empty (i.e., no render pass debug group is currently open, as opened by {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 

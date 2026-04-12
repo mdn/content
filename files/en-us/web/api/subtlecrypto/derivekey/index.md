@@ -19,7 +19,7 @@ See [Supported algorithms](#supported_algorithms) for some more detail on this.
 ## Syntax
 
 ```js-nolint
-deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
+deriveKey(algorithm, baseKey, derivedKeyType, extractable, keyUsages)
 ```
 
 ### Parameters
@@ -34,12 +34,10 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
     If `algorithm` is ECDH or X25519, then this will be the ECDH or X25519 private key.
     Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
-- `derivedKeyAlgorithm`
+- `derivedKeyType`
   - : An object defining the algorithm the derived key will be used for:
-    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
-    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
-    - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
-    - For [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
+    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
+    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesDerivedKeyParams`](/en-US/docs/Web/API/AesDerivedKeyParams) object.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
@@ -99,7 +97,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 #### ECDH
 
-ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_.
+ECDH (Elliptic Curve Diffie–Hellman) is a _key-agreement algorithm_.
 It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
 They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
 
@@ -247,7 +245,7 @@ This is followed by another two elements for displaying the ciphertext after Ali
 ```css hidden
 input {
   display: block;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px;
 }
 #results {
   margin-top: 20px;
@@ -519,7 +517,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: "HKDF",
-      salt: salt,
+      salt,
       info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },

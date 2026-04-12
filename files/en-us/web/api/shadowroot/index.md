@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.ShadowRoot
 ---
 
-{{APIRef('Shadow DOM')}}
+{{APIRef("Shadow DOM")}}
 
-The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
+The **`ShadowRoot`** interface of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
 
 You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the `mode` option set to `open`.
 
@@ -22,6 +22,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is clonable.
+- {{domxref("ShadowRoot.customElementRegistry")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CustomElementRegistry")}} object associated with this shadow root, or `null` if one has not been set.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root delegates focus if a non-focusable node is selected.
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
@@ -38,6 +40,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- `ShadowRoot.referenceTarget` {{Experimental_Inline}} {{non-standard_inline}}
+  - : A nullable string value that indicates the effective target of any element reference made against the shadow host from outside the host element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 - {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is serializable.
     A serializable shadow root inside an element will be serialized by {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} when its [`options.serializableShadowRoots`](/en-US/docs/Web/API/Element/getHTML#serializableshadowroots) parameter is set `true`.
@@ -57,8 +61,10 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
+- {{DOMxRef("ShadowRoot.setHTML()")}} {{experimental_inline}}
+  - : Provides an XSS-safe method to parse and sanitize a string of HTML into a {{domxref("DocumentFragment")}}, which then replaces the existing tree in the shadow DOM.
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
-  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](#shadowroot.innerhtml).
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 
 ## Events
 
@@ -74,14 +80,18 @@ The following snippets are taken from our [life-cycle-callbacks](https://github.
 Inside the `<custom-square>` element's class definition we include some life cycle callbacks that make a call to an external function, `updateStyle()`, which actually applies the size and color to the element. You'll see that we are passing it `this` (the custom element itself) as a parameter.
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("Custom square element added to page.");
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("Custom square element attributes changed.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
@@ -113,3 +123,8 @@ div {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using the shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+- [Web components](/en-US/docs/Web/API/Web_components)

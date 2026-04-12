@@ -24,9 +24,7 @@ getBufferSubData(target, srcByteOffset, dstData, dstOffset, length)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.ARRAY_BUFFER`
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.

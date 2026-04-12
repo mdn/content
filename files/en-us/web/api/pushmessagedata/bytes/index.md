@@ -8,7 +8,7 @@ browser-compat: api.PushMessageData.bytes
 
 {{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`bytes()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("Uint8Array")}} object.
+The **`bytes()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{jsxref("Uint8Array")}} object.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-An {{jsxref("Uint8Array")}}.
+A {{jsxref("Uint8Array")}}.
 
 ### Exceptions
 
@@ -35,7 +35,7 @@ See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArra
 
 ```js
 self.addEventListener("push", (event) => {
-  const buffer = event.data.Uint8Array();
+  const buffer = event.data.bytes();
 
   // do something with your typed array
 });

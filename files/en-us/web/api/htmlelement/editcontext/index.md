@@ -14,19 +14,23 @@ The **`editContext`** property of the {{domxref("HTMLElement")}} interface gets 
 
 The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
+## Value
+
+An {{domxref("EditContext")}} object or `null`.
+
 ### Possible elements
 
 Setting the `editContext` property only works on certain types of elements:
 
-- One of these HTML elements: [`<article>`](/en-US/docs/Web/HTML/Element/article), [`<aside>`](/en-US/docs/Web/HTML/Element/aside), [`<blockquote>`](/en-US/docs/Web/HTML/Element/blockquote), [`<body>`](/en-US/docs/Web/HTML/Element/body), [`<div>`](/en-US/docs/Web/HTML/Element/div), [`<footer>`](/en-US/docs/Web/HTML/Element/footer), [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), [`<header>`](/en-US/docs/Web/HTML/Element/header), [`<main>`](/en-US/docs/Web/HTML/Element/main), [`<nav>`](/en-US/docs/Web/HTML/Element/nav), [`<p>`](/en-US/docs/Web/HTML/Element/p), [`<section>`](/en-US/docs/Web/HTML/Element/section), or [`<span>`](/en-US/docs/Web/HTML/Element/span).
+- One of these HTML elements: [`<article>`](/en-US/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/en-US/docs/Web/HTML/Reference/Elements/aside), [`<blockquote>`](/en-US/docs/Web/HTML/Reference/Elements/blockquote), [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body), [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div), [`<footer>`](/en-US/docs/Web/HTML/Reference/Elements/footer), [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header), [`<main>`](/en-US/docs/Web/HTML/Reference/Elements/main), [`<nav>`](/en-US/docs/Web/HTML/Reference/Elements/nav), [`<p>`](/en-US/docs/Web/HTML/Reference/Elements/p), [`<section>`](/en-US/docs/Web/HTML/Reference/Elements/section), or [`<span>`](/en-US/docs/Web/HTML/Reference/Elements/span).
 - A valid [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements).
-- A [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element.
+- A [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) element.
 
 If you try to set the `editContext` property on an element that is not one of the above, a `NotSupportedError` {{domxref("DOMException")}} is thrown.
 
 ### Element association
 
-Setting the `editContext` property of an element to a {{domxref("EditContext")}} instance associates that element with the `EditContext` instance.
+Setting the `editContext` property of an element to an {{domxref("EditContext")}} instance associates that element with the `EditContext` instance.
 
 The association is one-to-one:
 
@@ -44,10 +48,6 @@ To check whether an element is associated with an `EditContext` instance already
 An `EditContext` instance will keep its associated element alive if it has other live references, even if the associated element is removed from the DOM.
 
 If you want to make sure the element is garbage collected, clear the `editContext` property of the element.
-
-## Value
-
-An {{domxref("EditContext")}} object or `null`.
 
 ## Examples
 

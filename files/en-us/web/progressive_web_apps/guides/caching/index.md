@@ -2,9 +2,8 @@
 title: Caching
 slug: Web/Progressive_web_apps/Guides/Caching
 page-type: guide
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 When a user opens and interacts with a website, all the resources that the website needs, including the HTML, JavaScript, CSS, images, fonts, as well as any data explicitly requested by the app, are retrieved by making HTTP(S) requests. One of the most fundamental features of a PWA is the ability to explicitly cache some of the app's resources on the device, meaning that they can be retrieved without needing to send a request to the network.
 
@@ -13,7 +12,7 @@ There are two main benefits to caching resources locally: **offline operation** 
 - **Offline operation**: Caching enables a PWA to function to a greater or lesser extent while the device does not have network connectivity.
 - **Responsiveness**: Even if the device is online, a PWA will usually be much more responsive if its user interface is fetched from the cache, rather than the network.
 
-The main drawback, of course, is **freshness**: caching is less appropriate for resources which need to be up to date. Also, for some types of requests, such as [POST](/en-US/docs/Web/HTTP/Methods/POST) requests, caching is never appropriate.
+The main drawback, of course, is **freshness**: caching is less appropriate for resources which need to be up to date. Also, for some types of requests, such as [POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests, caching is never appropriate.
 
 This means that whether and when you should cache a resource is very dependent on the resource in question, and a PWA will typically adopt different strategies for different resources. In this guide we'll look at some common caching strategies for PWAs, and see which strategies make sense for which resources.
 
@@ -116,6 +115,7 @@ async function cacheFirst(request) {
 }
 
 self.addEventListener("fetch", (event) => {
+  const url = new URL(event.request.url);
   if (precachedResources.includes(url.pathname)) {
     event.respondWith(cacheFirst(event.request));
   }

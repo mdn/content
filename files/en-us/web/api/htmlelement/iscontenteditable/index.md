@@ -37,8 +37,8 @@ const secondParagraph = document.getElementById("secondParagraph");
 const infoText1 = document.getElementById("infoText1");
 const infoText2 = document.getElementById("infoText2");
 
-infoText1.textContent += " " + firstParagraph.isContentEditable;
-infoText2.textContent += " " + secondParagraph.isContentEditable;
+infoText1.textContent += ` ${firstParagraph.isContentEditable}`;
+infoText2.textContent += ` ${secondParagraph.isContentEditable}`;
 ```
 
 ### Result
@@ -56,4 +56,4 @@ infoText2.textContent += " " + secondParagraph.isContentEditable;
 ## See also
 
 - {{domxref("HTMLElement/contentEditable")}}
-- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute.

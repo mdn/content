@@ -13,7 +13,7 @@ The `getNumberOfChars()` method of the {{domxref("SVGTextContentElement")}} inte
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getNumberOfChars()
+getNumberOfChars()
 ```
 
 ### Parameters

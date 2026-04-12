@@ -19,9 +19,13 @@ The **`keys()`** method of the {{domxref("Highlight")}} interface is an alias fo
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object containing each `Range` object in the given `Highlight`, in insertion order.
+A new iterator object containing each `AbstractRange` object in the given `Highlight`, in insertion order.
 
 ## Specifications
 

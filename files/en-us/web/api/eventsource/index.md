@@ -34,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("EventTarget
 - {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : A string representing the URL of the source.
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
-  - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
+  - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/Guides/CORS)) credentials set (`true`), or not (`false`, the default).
 
 ## Instance methods
 

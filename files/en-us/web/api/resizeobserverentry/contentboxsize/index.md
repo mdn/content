@@ -42,31 +42,28 @@ size.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  for (let entry of entries) {
+  for (const entry of entries) {
     if (entry.contentBoxSize) {
       // The standard makes contentBoxSize an array...
       if (entry.contentBoxSize[0]) {
-        entry.target.style.borderRadius =
-          Math.min(
-            100,
-            entry.contentBoxSize[0].inlineSize / 10 +
-              entry.contentBoxSize[0].blockSize / 10,
-          ) + "px";
+        entry.target.style.borderRadius = `${Math.min(
+          100,
+          entry.contentBoxSize[0].inlineSize / 10 +
+            entry.contentBoxSize[0].blockSize / 10,
+        )}px`;
       } else {
-        // ...but old versions of Firefox treat it as a single item
-        entry.target.style.borderRadius =
-          Math.min(
-            100,
-            entry.contentBoxSize.inlineSize / 10 +
-              entry.contentBoxSize.blockSize / 10,
-          ) + "px";
+        // … but old versions of Firefox treat it as a single item
+        entry.target.style.borderRadius = `${Math.min(
+          100,
+          entry.contentBoxSize.inlineSize / 10 +
+            entry.contentBoxSize.blockSize / 10,
+        )}px`;
       }
     } else {
-      entry.target.style.borderRadius =
-        Math.min(
-          100,
-          entry.contentRect.width / 10 + entry.contentRect.height / 10,
-        ) + "px";
+      entry.target.style.borderRadius = `${Math.min(
+        100,
+        entry.contentRect.width / 10 + entry.contentRect.height / 10,
+      )}px`;
     }
   }
 });

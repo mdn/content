@@ -24,14 +24,10 @@ The following examples show how the mode and name properties are passed in the c
 {{domxref('LockManager')}} is the object returned by {{domxref('navigator.locks')}}.
 
 ```js
-navigator.locks.request("net_db_sync", show_lock_properties);
-navigator.locks.request(
-  "another_lock",
-  { mode: "shared" },
-  show_lock_properties,
-);
+navigator.locks.request("net_db_sync", showLockProperties);
+navigator.locks.request("another_lock", { mode: "shared" }, showLockProperties);
 
-function show_lock_properties(lock) {
+function showLockProperties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }

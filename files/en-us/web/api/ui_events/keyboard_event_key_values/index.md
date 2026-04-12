@@ -730,7 +730,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         on the right side of the keyboard.
       </td>
       <td><code>VK_APPS</code> (0x5D)</td>
-      <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
+      <td><code>kVK_ContextualMenu</code> (0x6E)</td>
       <td>
         <code>GDK_KEY_Menu</code> (0xFF67)<br /><code>Qt::Key_Menu</code>
         (0x01000055)
@@ -1089,7 +1089,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 ## IME and composition keys
 
-Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
+Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple key presses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
@@ -1225,7 +1225,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
           >ISO/IEC 9995 keyboard</a
         >. Each key may have multiple groups of characters, each in its own
-        column. Pressing this key instructs the device to interpret keypresses
+        column. Pressing this key instructs the device to interpret key presses
         as coming from the first column on subsequent keystrokes.
       </td>
       <td></td>
@@ -2271,7 +2271,7 @@ These keys represent buttons which commonly exist on modern smartphones.
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_APP_SWITCH</code> (181)</td>
+      <td><code>KEYCODE_APP_SWITCH</code> (187)</td>
     </tr>
     <tr>
       <td><code>"Call"</code></td>
@@ -2417,10 +2417,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       </td>
       <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
       <td></td>
-      <td>
-        <code>GDK_KEY_AudioForward (0x1008FF97)<br />Qt:Key_AudioForward</code>
-        (0x01000102)
-      </td>
+      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)<br/><code>Qt:Key_AudioForward</code> (0x01000102)</td>
       <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
     </tr>
     <tr>
@@ -3057,7 +3054,7 @@ The values below are derived in part from a number of consumer electronics techn
 
 - [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)
-- [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
+- [ANSI/CEA-2014-B](https://shop.cta.tech/products/cta-2014): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
 > [!NOTE]
@@ -3845,6 +3842,8 @@ These keys control documents. In the specification, they're included in other se
       <th scope="col">Linux</th>
       <th scope="col">Android</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>"Close"</code> [1]</td>
       <td>
@@ -3948,7 +3947,7 @@ These keys control documents. In the specification, they're included in other se
       </td>
       <td></td>
     </tr>
-  </thead>
+  </tbody>
 </table>
 
 \[1] Prior to Firefox 37, this key generated the key value `"Unidentified"`.

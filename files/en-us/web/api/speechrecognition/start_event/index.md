@@ -14,10 +14,10 @@ The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("start", (event) => {});
+```js-nolint
+addEventListener("start", (event) => { })
 
-onstart = (event) => {};
+onstart = (event) => { }
 ```
 
 ## Event type
@@ -29,7 +29,7 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
 recognition.addEventListener("start", () => {
   console.log("Speech recognition service has started");

@@ -1,15 +1,29 @@
 ---
 title: Object.getOwnPropertySymbols()
+short-title: getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertySymbols()`** static method returns an array of all symbol properties found directly upon a given object.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+
+```js interactive-example
+const object = {};
+const a = Symbol("a");
+const b = Symbol.for("b");
+
+object[a] = "localSymbol";
+object[b] = "globalSymbol";
+
+const objectSymbols = Object.getOwnPropertySymbols(object);
+
+console.log(objectSymbols.length);
+// Expected output: 2
+```
 
 ## Syntax
 

@@ -22,10 +22,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("icecandidate", (event) => {});
+```js-nolint
+addEventListener("icecandidate", (event) => { })
 
-onicecandidate = (event) => {};
+onicecandidate = (event) => { }
 ```
 
 ## Event type
@@ -105,18 +105,14 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener(
-  "icecandidate",
-  (ev) => {
-    if (ev.candidate !== null) {
-      sendMessage({
-        type: "new-ice-candidate",
-        candidate: ev.candidate,
-      });
-    }
-  },
-  false,
-);
+pc.addEventListener("icecandidate", (ev) => {
+  if (ev.candidate !== null) {
+    sendMessage({
+      type: "new-ice-candidate",
+      candidate: ev.candidate,
+    });
+  }
+});
 ```
 
 You can also set the `onicecandidate` event handler property directly:

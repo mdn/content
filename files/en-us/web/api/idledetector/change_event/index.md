@@ -16,10 +16,10 @@ The **`change`** event of the {{domxref("IdleDetector")}} interface fires when t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("change", (event) => {});
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => {};
+onchange = (event) => { }
 ```
 
 ## Event type

@@ -9,7 +9,7 @@ browser-compat: api.ChapterInformation
 
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 
-The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
+The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e., a video or audio file).
 
 The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. The property takes an array of `ChapterInformation` objects as its value.
 
@@ -31,49 +31,52 @@ The sample code below from [Video / Media Session Sample](https://googlechrome.g
 ```js
 const BASE_URL = "https://storage.googleapis.com/media-session/";
 
-chapterInfo: [
-  {
-    title: "Chapter 1",
-    startTime: 0,
-    artwork: [
-      {
-        src: BASE_URL + "sintel/chapter1-128.png",
-        sizes: "128x128",
-        type: "image/png",
-      },
-      {
-        src: BASE_URL + "sintel/chapter1-512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  },
-  {
-    title: "Chapter 2",
-    startTime: 37,
-    artwork: [
-      {
-        src: BASE_URL + "sintel/chapter2-128.png",
-        sizes: "128x128",
-        type: "image/png",
-      },
-      {
-        src: BASE_URL + "sintel/chapter2-512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  },
-];
+const metadata = {
+  // …
+  chapterInfo: [
+    {
+      title: "Chapter 1",
+      startTime: 0,
+      artwork: [
+        {
+          src: `${BASE_URL}sintel/chapter1-128.png`,
+          sizes: "128x128",
+          type: "image/png",
+        },
+        {
+          src: `${BASE_URL}sintel/chapter1-512.png`,
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    {
+      title: "Chapter 2",
+      startTime: 37,
+      artwork: [
+        {
+          src: `${BASE_URL}sintel/chapter2-128.png`,
+          sizes: "128x128",
+          type: "image/png",
+        },
+        {
+          src: `${BASE_URL}sintel/chapter2-512.png`,
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+  ],
+};
 ```
 
 The following snippet shows how it can be used inside Media Session code (the above object property is part of the `playlist` object referenced below):
 
 ```js
 function updateMetadata() {
-  let track = playlist[index];
+  const track = playlist[index];
 
-  log("Playing " + track.title + " track...");
+  log(`Playing ${track.title} track...`);
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track.title,
     artist: track.artist,
@@ -81,7 +84,7 @@ function updateMetadata() {
     chapterInfo: track.chapterInfo,
   });
 
-  // ...
+  // …
 }
 ```
 

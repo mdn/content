@@ -2,13 +2,12 @@
 title: Federated identity
 slug: Glossary/Federated_identity
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **federated identity** system is one in which an {{glossary("identity provider", "identity provider (IdP)")}} acts as an intermediary between users and {{glossary("relying party", "relying parties")}}, enabling a user to use a single set of {{glossary("credential", "credentials")}} to authenticate with a number of different relying parties.
 
-Traditionally, on the web, a user will sign into a website with a username and a password, and the password is verified by the website against a (properly {{glossary("hash", "hashed")}} and {{glossary("salt", "salted")}}) copy stored on the website's backend.
+Traditionally, on the web, a user will sign into a website with a username and a password, and the password is verified by the website against a (properly {{glossary("hash function", "hashed")}} and {{glossary("salt", "salted")}}) copy stored on the website's backend.
 
 In this model, if users have multiple accounts with different websites, they have to remember many passwords, and this encourages bad password practices such as using the same password for multiple accounts.
 

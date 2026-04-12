@@ -2,12 +2,10 @@
 title: WGSLLanguageFeatures
 slug: Web/API/WGSLLanguageFeatures
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WGSLLanguageFeatures
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`WGSLLanguageFeatures`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is a [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
 
@@ -23,22 +21,37 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 The following WGSL language extensions are defined at [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification. Bear in mind that the exact set of features available will vary across implementations and physical devices, and may change over time.
 
 - `packed_4x8_integer_dot_product`
-
   - : Allows **DP4a** (Dot Product of 4 Elements and Accumulate) GPU instructions to be used via your WGSL code. These efficiently perform 8-bit integer dot products to accelerate computation, saving memory and network bandwidth and improving performance compared with the equivalent `f32` versions. They are commonly used in machine learning models in inferencing, within AI frameworks.
 
     Specifically, when `packed_4x8_integer_dot_product` is available, WGSL code can use:
-
     - 32-bit integer scalars packing 4-component vectors of 8-bit integers to be used as inputs to dot product instructions (via the `dot4U8Packed()` and `dot4I8Packed()` built-in functions).
     - Packing and unpacking instructions with packed 4-component vectors of 8-bit integers (via built-in functions such as `pack4xI8()` and `pack4xI8Clamp()`).
 
-- `readonly_and_readwrite_storage_textures`
+- `pointer_composite_access`
+  - : Enables WGSL shader code to access components of complex data types using the same dot (`.`) syntax whether you're working directly with the data or with a pointer to it.
 
+    When `pointer_composite_access` is available:
+    - If `foo` is a pointer: `foo.bar` is available as a more convenient way to write `(*foo).bar`. The asterisk (`*`) would normally be needed to turn the pointer into a "reference" that can be dereferenced, but now both pointers and references are almost interchangeable.
+    - If `foo` is not a pointer: The dot (`.`) operator works exactly as you're used to for directly accessing members.
+    - if `pa` is a pointer that stores the starting address of an array, then `pa[i]` gives you direct access to the memory location where the `i`th element of that array is stored.
+
+    See [Syntax sugar for dereferencing composites in WGSL](https://developer.chrome.com/blog/new-in-webgpu-123#syntax_sugar_for_dereferencing_composites_in_wgsl) for further details and an example.
+
+- `readonly_and_readwrite_storage_textures`
   - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WGSL code to read storage textures, and read/write storage textures, respectively.
 
+- `subgroup_id`
+  - : When available, the [`subgroup_id`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-subgroup_id) and [`num_subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-num_subgroups) WGSL built-in values are usable in compute shaders. These improve the process of scheduling work across subgroups, by indexing memory to avoid overlapping memory accesses. See [WGSL subgroup_id extension](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_subgroup_id_extension) for more details.
+    > [!NOTE]
+    > For the `subgroup_id` WGSL feature to be usable, the [`subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
+
+- `uniform_buffer_standard_layout`
+  - : When available, uniform buffers use the same [memory layout constraints](https://gpuweb.github.io/gpuweb/wgsl/#address-space-layout-constraints) as storage buffers, which makes it easier to share data structures across both kinds of buffers. This means uniform buffers are no longer required to have 16-byte alignment on array elements, or to pad nested structure offsets to a multiple of 16 bytes.
+
+    See [WGSL uniform_buffer_standard_layout extension](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_uniform_buffer_standard_layout_extension) for more details.
+
 - `unrestricted_pointer_parameters`
-
   - : Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:
-
     - Parameter pointers to storage, uniform, and workgroup address spaces being passed to user-declared functions.
     - Pointers to structure members and array elements being passed to user-declared functions.
 
@@ -48,22 +61,22 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 
 The following property is available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
-- {{jsxref("Set.prototype.size", "size")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.size", "size")}}
   - : Returns the number of values in the set.
 
 ## Instance methods
 
 The following methods are available to all read-only [setlike](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects:
 
-- {{jsxref("Set.prototype.has()", "has()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.has()", "has()")}}
   - : Returns a boolean asserting whether or not an element with the given value is present in the set.
-- {{jsxref("Set.prototype.values()", "values()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.values()", "values()")}}
   - : Returns a new iterator object that yields **values** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.keys()", "keys()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.keys()", "keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()", "values()")}}.
-- {{jsxref("Set.prototype.entries()", "entries()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.entries()", "entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the set in insertion order.
-- {{jsxref("Set.prototype.forEach()", "forEach()")}} {{Experimental_Inline}}
+- {{jsxref("Set.prototype.forEach()", "forEach()")}}
   - : Calls the provided callback function once for each value present in the set in insertion order.
 
 ## Examples
@@ -94,7 +107,7 @@ for (const value of valueIterator) {
   console.log(value);
 }
 
-// ...
+// …
 ```
 
 ## Specifications

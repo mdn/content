@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.rejectionhandled_event
 ---
 
-{{APIRef}}{{AvailableInWorkers("worker")}}
+{{APIRef("DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`rejectionhandled`** event is sent to the script's global scope (typically {{domxref("WorkerGlobalScope")}}) whenever a rejected {{jsxref("Promise")}} is handled late, i.e., when a handler is attached to the promise after its rejection had caused an {{domxref("WorkerGlobalScope.unhandledrejection_event", "unhandledrejection")}} event.
 
@@ -16,9 +16,10 @@ This can be used in debugging and for general application resiliency, in tandem 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-self.addEventListener("rejectionhandled", (event) => {});
-self.onrejectionhandled = (event) => {};
+```js-nolint
+addEventListener("rejectionhandled", (event) => { })
+
+onrejectionhandled = (event) => { }
 ```
 
 ## Event type

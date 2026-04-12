@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("devicemotion", (event) => {});
+```js-nolint
+addEventListener("devicemotion", (event) => { })
 
-ondevicemotion = (event) => {};
+ondevicemotion = (event) => { }
 ```
 
 ## Event type
@@ -50,7 +50,7 @@ function handleMotionEvent(event) {
   // Do something awesome.
 }
 
-window.addEventListener("devicemotion", handleMotionEvent, true);
+window.addEventListener("devicemotion", handleMotionEvent);
 ```
 
 ## Specifications
@@ -64,4 +64,3 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 ## See also
 
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-- [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

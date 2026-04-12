@@ -21,9 +21,7 @@ getInternalformatParameter(target, internalformat, pname)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-
     - `gl.RENDERBUFFER`
       - : Buffer data storage for single images in a
         renderable internal format.
@@ -33,12 +31,10 @@ getInternalformatParameter(target, internalformat, pname)
     information (must be a color-renderable, depth-renderable or stencil-renderable
     format).
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of information to query. Possible
     values:
-
     - `gl.SAMPLES`
-      - : Returns a {{jsxref("Int32Array")}} containing sample
+      - : Returns an {{jsxref("Int32Array")}} containing sample
         counts supported for `internalformat` in descending order.
 
 ### Return value

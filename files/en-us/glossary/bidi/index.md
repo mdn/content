@@ -2,9 +2,8 @@
 title: BiDi
 slug: Glossary/BiDi
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **BiDi** (BiDirectional) describes a document that contains both right-to-left (RTL) and left-to-right (LTR) text.
 

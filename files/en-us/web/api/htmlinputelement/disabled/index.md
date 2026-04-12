@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.disabled
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLInputElement.disabled`** property is a boolean value that reflects the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
+The **`HTMLInputElement.disabled`** property is a boolean value that reflects the [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/input#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
 
 ## Value
 
@@ -39,13 +39,9 @@ A boolean value.
 const checkBox = document.getElementById("check-box");
 const toggleBox = document.getElementById("toggle-box");
 
-toggleBox.addEventListener(
-  "change",
-  (event) => {
-    checkBox.disabled = !event.target.checked;
-  },
-  false,
-);
+toggleBox.addEventListener("change", (event) => {
+  checkBox.disabled = !event.target.checked;
+});
 ```
 
 ### Result

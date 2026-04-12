@@ -3,9 +3,8 @@ title: Regular expressions
 slug: Web/JavaScript/Reference/Regular_expressions
 page-type: landing-page
 browser-compat: javascript.regular_expressions
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **regular expression** (_regex_ for short) allow developers to match strings against a pattern, extract submatch information, or simply test if the string conforms to that pattern. Regular expressions are used in many programming languages, and JavaScript's syntax is inspired by [Perl](https://www.perl.org/).
 
@@ -13,7 +12,7 @@ You are encouraged to read the [regular expressions guide](/en-US/docs/Web/JavaS
 
 ## Description
 
-[_Regular expressions_](https://en.wikipedia.org/wiki/Regular_expression) are a important concept in formal language theory. They are a way to describe a possibly infinite set of character strings (called a _language_). A regular expression, at its core, needs the following features:
+[_Regular expressions_](https://en.wikipedia.org/wiki/Regular_expression) are an important concept in formal language theory. They are a way to describe a possibly infinite set of character strings (called a _language_). A regular expression, at its core, needs the following features:
 
 - A set of _characters_ that can be used in the language, called the _alphabet_.
 - _Concatenation_: `ab` means "the character `a` followed by the character `b`".
@@ -50,7 +49,7 @@ Flags are special parameters that can change the way a regular expression is int
 | `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
 | `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
 | `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`  | Allows `^` and `$` to match next to newline characters.                                       | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `m`  | Makes `^` and `$` match the start and end of each line instead of those of the entire string. | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
 | `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |

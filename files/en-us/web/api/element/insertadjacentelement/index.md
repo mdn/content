@@ -21,11 +21,9 @@ insertAdjacentElement(position, element)
 ### Parameters
 
 - `position`
-
   - : A string representing the position relative to the
     `targetElement`; must match (case-insensitively) one of the following
     strings:
-
     - `'beforebegin'`: Before the
       `targetElement` itself.
     - `'afterbegin'`: Just inside the
@@ -68,31 +66,103 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ## Examples
 
-```js
-beforeBtn.addEventListener("click", () => {
-  const tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  if (activeElem) {
-    activeElem.insertAdjacentElement("beforebegin", tempDiv);
-  }
-  setListener(tempDiv);
-});
+### Inserting before and after
 
-afterBtn.addEventListener("click", () => {
-  const tempDiv = document.createElement("div");
-  tempDiv.style.backgroundColor = randomColor();
-  if (activeElem) {
-    activeElem.insertAdjacentElement("afterend", tempDiv);
-  }
-  setListener(tempDiv);
-});
+In this example we have a row of square boxes. The user can select a box by clicking on it: this gives the box a different border, to show that it is selected.
+
+If a box is selected, and the user presses the "Insert before" or "Insert after" buttons, then the code creates a new box, gives it a random color, and inserts it before or after the selected box.
+
+#### HTML
+
+```html
+<p>
+  Click colored box to select it, then use the first two buttons below to insert
+  elements before and after your selection.
+</p>
+
+<section>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+<button class="before">Insert before</button>
+<button class="after">Insert after</button>
+<button class="reset">Reset demo</button>
 ```
 
-Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
-demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
-container. When one is clicked, it becomes selected and you can then press the
-_Insert before_ and _Insert after_ buttons to insert new divs before or
-after the selected element using `insertAdjacentElement()`.
+#### CSS
+
+```css
+div {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+  border: 3px solid black;
+  display: inline-block;
+  background-color: red;
+}
+
+.selected {
+  border-color: aqua;
+}
+```
+
+#### JavaScript
+
+```js
+let selectedElem;
+
+// Function to select a new element
+function selectElement(newSelection) {
+  if (selectedElem !== newSelection) {
+    if (selectedElem) {
+      selectedElem.classList.remove("selected");
+    }
+    selectedElem = newSelection;
+    newSelection.classList.add("selected");
+  }
+}
+
+// Add click handlers that select the clicked element
+const initElems = Array.from(document.querySelectorAll("section div"));
+for (const initElem of initElems) {
+  initElem.addEventListener("click", (e) => selectElement(e.target));
+}
+
+// Add click handlers to "beforeBtn" and "afterBtn"
+// to insert a new element before/after the selected element
+const beforeBtn = document.querySelector(".before");
+const afterBtn = document.querySelector(".after");
+beforeBtn.addEventListener("click", () => insertNewElement("beforebegin"));
+afterBtn.addEventListener("click", () => insertNewElement("afterend"));
+
+function insertNewElement(position) {
+  function random() {
+    return Math.floor(Math.random() * 255);
+  }
+
+  if (!selectedElem) {
+    return;
+  }
+
+  const newElement = document.createElement("div");
+  const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  newElement.style.backgroundColor = randomColor;
+  newElement.addEventListener("click", (e) => selectElement(e.target));
+
+  selectedElem.insertAdjacentElement(position, newElement);
+}
+
+// Reset the example
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => window.location.reload(true));
+```
+
+#### Result
+
+{{embedlivesample("Inserting before and after", "", "200")}}
 
 ## Specifications
 

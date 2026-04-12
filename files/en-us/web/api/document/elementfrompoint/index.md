@@ -55,29 +55,35 @@ The topmost {{domxref("Element")}} object located at the specified coordinates.
 This example creates two buttons which let you set the current color of the paragraph
 element located under the coordinates `(2, 2)`.
 
+### HTML
+
+```html
+<p id="para1">Some text here</p>
+<button>Blue</button>
+<button>Red</button>
+```
+
+The HTML provides the paragraph whose color will be affected, as well as two buttons:
+one to change the color to blue, and another to change the color to red.
+
 ### JavaScript
 
 ```js
 function changeColor(newColor) {
-  elem = document.elementFromPoint(2, 2);
+  const elem = document.elementFromPoint(2, 2);
   elem.style.color = newColor;
 }
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    changeColor(event.target.textContent.toLowerCase());
+  });
+});
 ```
 
 The `changeColor()` method obtains the element located at the specified
 point, then sets that element's current foreground {{cssxref("color")}} property to the
 color specified by the `newColor` parameter.
-
-### HTML
-
-```html
-<p id="para1">Some text here</p>
-<button onclick="changeColor('blue');">Blue</button>
-<button onclick="changeColor('red');">Red</button>
-```
-
-The HTML provides the paragraph whose color will be affected, as well as two buttons:
-one to change the color to blue, and another to change the color to red.
 
 ### Result
 

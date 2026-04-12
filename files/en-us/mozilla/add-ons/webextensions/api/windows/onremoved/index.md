@@ -3,9 +3,8 @@ title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.windows.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a window is closed.
 
@@ -31,15 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `windowId`
       - : `integer`. ID of the window that was closed.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -52,6 +45,10 @@ browser.windows.onRemoved.addListener((windowId) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#event-onRemoved) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.

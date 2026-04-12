@@ -10,7 +10,7 @@ spec-urls: https://w3c.github.io/webrtc-stats/#dom-rtcvideosourcestats
 
 The **`RTCVideoSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics information about a video track ({{domxref("MediaStreamTrack")}}) that is attached to one or more senders ({{domxref("RTCRtpSender")}}).
 
-These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `media-source` and a [`kind`](#kind) of `video`.
+These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCVideoSourceStats/type) of `media-source` and a [`kind`](/en-US/docs/Web/API/RTCVideoSourceStats/kind) of `video`.
 
 > [!NOTE]
 > For video information about remotely sourced tracks (that are being received), see {{domxref("RTCInboundRtpStreamStats")}}.
@@ -52,7 +52,7 @@ The following properties are common to all statistics objects. <!-- RTCStats -->
 ## Description
 
 The interface provides statistics about a video media source attached to one or more senders.
-The information includes a identifier for the associated `MediaStreamTrack`, along with the height and width of the last frame sent from the source, the number of frames sent from the source, and the frame rate.
+The information includes an identifier for the associated `MediaStreamTrack`, along with the height and width of the last frame sent from the source, the number of frames sent from the source, and the frame rate.
 
 ## Examples
 

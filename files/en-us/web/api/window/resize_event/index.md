@@ -12,7 +12,7 @@ The **`resize`** event fires when the document view (window) has been resized.
 
 This event is not cancelable and does not bubble.
 
-In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
+In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e., returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
 
 While the `resize` event fires only for the window nowadays, you can get resize notifications for other elements using the [ResizeObserver](/en-US/docs/Web/API/ResizeObserver) API.
 
@@ -22,10 +22,10 @@ If the resize event is triggered too many times for your application, see [Optim
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("resize", (event) => {});
+```js-nolint
+addEventListener("resize", (event) => { })
 
-onresize = (event) => {};
+onresize = (event) => { }
 ```
 
 ## Event type

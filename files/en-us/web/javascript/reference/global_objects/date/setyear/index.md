@@ -1,13 +1,15 @@
 ---
 title: Date.prototype.setYear()
+short-title: setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Date.setYear
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 

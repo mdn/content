@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.find()
+short-title: find()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/find
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.find
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`find()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.find()")}}: it returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
@@ -75,6 +75,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.find` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.find`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.every()")}}
 - {{jsxref("Iterator.prototype.some()")}}

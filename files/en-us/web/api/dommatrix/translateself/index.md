@@ -15,8 +15,8 @@ To translate a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.tran
 ## Syntax
 
 ```js-nolint
-DOMMatrix.translateSelf(translateX, translateY)
-DOMMatrix.translateSelf(translateX, translateY, translateZ)
+translateSelf(translateX, translateY)
+translateSelf(translateX, translateY, translateZ)
 ```
 
 ### Parameters
@@ -63,8 +63,8 @@ console.log(matrix); // output: "matrix(1, 0, 0, 1, 25, 25)"
   - {{cssxref("transform-function/translateX", "translateX()")}}
   - {{cssxref("transform-function/translateY", "translateY()")}}
   - {{cssxref("transform-function/translateZ", "translateZ()")}}
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface methods
   - {{domxref("CanvasRenderingContext2D.translate()")}}
   - {{domxref("CanvasRenderingContext2D.transform()")}}

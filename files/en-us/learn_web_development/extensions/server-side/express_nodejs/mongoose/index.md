@@ -1,10 +1,12 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
+short-title: "3: Using databases with Mongoose"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use [Mongoose](https://mongoosejs.com/) to provide database access for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.
 
@@ -42,11 +44,11 @@ For more information on the options see [Database integration](https://expressjs
 There are two common approaches for interacting with a database:
 
 - Using the databases' native query language, such as SQL.
-- Using an Object Relational Mapper ("ORM"). An ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
+- Using an Object Relational Mapper ("ORM") or Object Document Mapper ("ODM"). These represent the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs and ODMs are tied to a specific database, while others provide a database-agnostic backend.
 
-The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
+The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. Object mappers are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the mapper supports different database backends, and must make greater compromises in terms of what database features are supported).
 
-The benefit of using an ORM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.
+The benefit of using an ORM/ODM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.
 
 > [!NOTE]
 > Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
@@ -86,7 +88,7 @@ We know that we need to store information about books (title, summary, author, g
 
 When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case some obvious candidates for these models are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g. like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g. fantasy, science fiction, etc.).
+You might also want to use models to represent selection-list options (e.g., like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g., fantasy, science fiction, etc.).
 
 Once we've decided on our models and fields, we need to think about the relationships between them.
 
@@ -125,24 +127,24 @@ The code in the asynchronous function then executes until either another `await`
 
 You can see how this works in the example below.
 `myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
-When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
-async function myFunction {
-  // ...
+async function myFunction() {
+  // …
   await someObject.methodThatReturnsPromise();
-  // ...
-  await aFunctionThatReturnsPromise();
-  // ...
+  // …
+  await functionThatReturnsPromise();
+  // …
 }
 
 try {
-  // ...
+  // …
   myFunction();
-  // ...
+  // …
 } catch (e) {
- // error handling code
+  // error handling code
 }
 ```
 
@@ -160,13 +162,13 @@ the function then continues to the next `await`, and waits until the promise ret
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
-async function myFunction {
-  // ...
+async function myFunction() {
+  // …
   const [resultFunction1, resultFunction2] = await Promise.all([
-     functionThatReturnsPromise1(),
-     functionThatReturnsPromise2()
+    functionThatReturnsPromise1(),
+    functionThatReturnsPromise2(),
   ]);
-  // ...
+  // …
   await anotherFunctionThatReturnsPromise(resultFunction1);
 }
 ```
@@ -202,11 +204,6 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 ```js
 // Import the mongoose module
 const mongoose = require("mongoose");
-
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
 
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
@@ -305,13 +302,12 @@ Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the des
 
 The code also shows both ways of declaring a field:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
+- Field _name_ and _type_ as a key-value pair (i.e., as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
-
   - default values.
-  - built-in validators (e.g. max/min values) and custom validation functions.
+  - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
-  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
+  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g., `{ type: String, lowercase: true, trim: true }`)
 
 For more information about options see [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
 
@@ -324,7 +320,6 @@ The built-in validators include:
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
 - [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
-
   - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
   - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
   - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
@@ -369,7 +364,7 @@ We provide a brief overview below. For more information see: [Models](https://mo
 
 > [!NOTE]
 > Creation, update, deletion and querying of records are asynchronous operations that return a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-> The examples below show just the use of the relevant methods and `await` (i.e. the essential code for using the methods).
+> The examples below show just the use of the relevant methods and `await` (i.e., the essential code for using the methods).
 > The surrounding `async function` and `try...catch` block to catch errors are omitted for clarity.
 > For more information on using `await/async` see [Database APIs are asynchronous](#database_apis_are_asynchronous) above.
 
@@ -399,7 +394,7 @@ You can access the fields in this new record using the dot syntax, and change th
 
 ```js
 // Access model field values using dot notation
-console.log(awesome_instance.name); //should log 'also_awesome'
+console.log(awesome_instance.name); // should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
 awesome_instance.name = "New cool name";
@@ -578,11 +573,11 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
-> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.com/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
@@ -599,7 +594,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 3. Scroll down the page to see the different options you can choose.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
-
    - You can change the name of your Cluster under _Cluster Name_.
      We are keeping it as `Cluster0` for this tutorial.
    - Deselect the _Preload sample dataset_ checkbox, as we'll import our own sample data later on
@@ -609,7 +603,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 4. This will open the _Security Quickstart_ section.
    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
-
    - Enter a username and password for your application to use to access the database (above we have created a new login "cooluser").
      Remember to copy and store the credentials safely as we will need them later on.
      Click the **Create User** button.
@@ -638,14 +631,12 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 8. This will open the _Create Database_ screen.
 
    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
-
    - Enter the name for the new database as `local_library`.
    - Enter the name of the collection as `Collection0`.
    - Click the **Create** button to create the database.
 
 9. You will return to the _Collections_ screen with your database created.
    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
-
    - Click the _Overview_ tab to return to the cluster overview.
 
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
@@ -655,7 +646,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 11. This will open the _Connect to Cluster0_ screen.
 
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
-
     - Select your database user.
     - Select the _Drivers_ category, then the _Driver_ **Node.js** and _Version_ as shown.
     - **DO NOT** install the driver as suggested.
@@ -679,22 +669,41 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
+Open **bin/www** (from the root of your project) and copy the following text below where you set the port (after the line `app.set("port", port);`).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
+
 const mongoDB = "insert_your_database_url_here";
 
-main().catch((err) => console.log(err));
-async function main() {
+async function connectMongoose() {
   await mongoose.connect(mongoDB);
+
+  // Add connection error handlers
+  mongoose.connection.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+  mongoose.connection.on("disconnected", () => {
+    console.warn("MongoDB disconnected");
+  });
+}
+
+try {
+  connectMongoose();
+} catch (err) {
+  console.error("Failed to connect to MongoDB:", err);
+  process.exit(1);
 }
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+> [!NOTE]
+> We could have put the database connection code in our **app.js** code.
+> Putting it in the application entry point decouples the application and database, which makes it easier to use a different database for running test code.
 
 Note that hard-coding database credentials in source code as shown above is not recommended.
 We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
@@ -706,7 +715,7 @@ We will define a separate module for each model, as [discussed above](#one_schem
 Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
 
 ```plain
-/express-locallibrary-tutorial  // the project root
+/express-locallibrary-tutorial  # the project root
   /models
     author.js
     book.js
@@ -836,7 +845,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g., whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

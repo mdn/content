@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.unhandledrejection_event
 ---
 
-{{APIRef}}{{AvailableInWorkers("worker")}}
+{{APIRef("DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`unhandledrejection`** event is sent to the global scope (typically {{domxref("WorkerGlobalScope")}}) of a script when a {{jsxref("Promise")}} that has no rejection handler is rejected.
 
@@ -16,9 +16,10 @@ This is useful for debugging and for providing fallback error handling for unexp
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-self.addEventListener("unhandledrejection", (event) => {});
-self.onunhandledrejection = (event) => {};
+```js-nolint
+addEventListener("unhandledrejection", (event) => { })
+
+onunhandledrejection = (event) => { }
 ```
 
 ## Event type

@@ -22,10 +22,43 @@ drag item list is considered to be disabled if the item list's
 
 This example shows the use of the `length` property.
 
+### HTML
+
+```html
+<div>
+  <p id="source" draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
+</div>
+<div id="target">Drop Zone</div>
+```
+
+### CSS
+
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+
+#target {
+  border: 1px solid black;
+}
+```
+
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -34,9 +67,16 @@ function dragstart_handler(ev) {
   // Add some other items to the drag payload
   dataList.add("<p>Paragraph…</p>", "text/html");
   dataList.add("http://www.example.org", "text/uri-list");
-}
+});
 
-function drop_handler(ev) {
+source.addEventListener("dragend", (ev) => {
+  console.log("dragEnd");
+  const dataList = ev.dataTransfer.items;
+  // Clear any remaining drag data
+  dataList.clear();
+});
+
+target.addEventListener("drop", (ev) => {
   console.log("Drop");
   ev.preventDefault();
   const data = ev.dataTransfer.items;
@@ -62,60 +102,14 @@ function drop_handler(ev) {
       });
     }
   }
-}
+});
 
-function dragover_handler(ev) {
+target.addEventListener("dragover", (ev) => {
   console.log("dragOver");
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
-}
-
-function dragend_handler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
-  // Clear any remaining drag data
-  dataList.clear();
-}
-```
-
-### HTML
-
-```html
-<div>
-  <p
-    id="source"
-    ondragstart="dragstart_handler(event);"
-    ondragend="dragend_handler(event);"
-    draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
-  </p>
-</div>
-<div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  Drop Zone
-</div>
-```
-
-### CSS
-
-```css
-div {
-  margin: 0em;
-  padding: 2em;
-}
-
-#source {
-  color: blue;
-  border: 1px solid black;
-}
-
-#target {
-  border: 1px solid black;
-}
+});
 ```
 
 ### Result

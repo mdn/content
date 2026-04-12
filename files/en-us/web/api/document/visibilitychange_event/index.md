@@ -8,7 +8,7 @@ browser-compat: api.Document.visibilitychange_event
 
 {{APIRef}}
 
-The `visibilitychange` event is fired at the document when the contents of its tab have become visible or have been hidden.
+The `visibilitychange` event is fired at the document when its visibility status changes — for example, when the user switches browser tabs, navigates to a new page, minimizes or closes the browser, or on mobile, switches to a different app.
 
 The event is not cancelable.
 
@@ -16,10 +16,10 @@ The event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("visibilitychange", (event) => {});
+```js-nolint
+addEventListener("visibilitychange", (event) => { })
 
-onvisibilitychange = (event) => {};
+onvisibilitychange = (event) => { }
 ```
 
 ## Event type
@@ -46,11 +46,9 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     playingOnHide = !audio.paused;
     audio.pause();
-  } else {
+  } else if (playingOnHide) {
     // Resume playing if audio was "playing on hide"
-    if (playingOnHide) {
-      audio.play();
-    }
+    audio.play();
   }
 });
 ```

@@ -3,14 +3,13 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 page-type: javascript-class
 browser-compat: javascript.builtins.Date
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 
 > [!NOTE]
-> TC39 is working on [Temporal](https://tc39.es/proposal-temporal/docs/index.html), a new Date/Time API. Read more about it on the [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). It is not yet ready for production use!
+> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. Consider using `Temporal` for new code and migrate existing code over to it if possible (check the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility). We will be writing a usage guide soon!
 
 ## Description
 
@@ -19,7 +18,7 @@ JavaScript **`Date`** objects represent a single moment in time in a platform-in
 A JavaScript date is fundamentally specified as the time in milliseconds that has elapsed since the [epoch](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range), which is defined as the midnight at the beginning of January 1, 1970, UTC (equivalent to the [UNIX epoch](/en-US/docs/Glossary/Unix_time)). This timestamp is _timezone-agnostic_ and uniquely defines an instant in history.
 
 > [!NOTE]
-> While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
+> While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e., host system) time zone and offset.
 
 The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
@@ -130,7 +129,22 @@ The {{jsxref("Date/Date", "Date()")}} constructor can be called with two or more
 > [!NOTE]
 > Some methods, including the `Date()` constructor, `Date.UTC()`, and the deprecated {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} methods, interpret a two-digit year as a year in the 1900s. For example, `new Date(99, 5, 24)` is interpreted as June 24, 1999, not June 24, 99. See [Interpretation of two-digit years](#interpretation_of_two-digit_years) for more information.
 
-When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it become the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
+When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it becomes the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
+
+When attempting to set the local time to a time falling within an offset transition (usually daylight saving time), the exact time is derived using the same behavior as `Temporal`'s [`disambiguation: "compatible"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time) option. That is, if the local time corresponds to two instants, the earlier one is chosen; if the local time does not exist (there is a gap), we go forward by the gap duration.
+
+```js
+// Assume America/New_York local time zone
+// 2024-03-10 02:30 is within the spring-forward transition and does not exist
+// 01:59 (UTC-5) jumps to 03:00 (UTC-4), so 02:30 moves forward by one hour
+console.log(new Date(2024, 2, 10, 2, 30).toString());
+// Sun Mar 10 2024 03:30:00 GMT-0400 (Eastern Daylight Time)
+
+// 2024-11-03 01:30 is within the fall-back transition and exists twice
+// 01:59 (UTC-4) jumps to 01:00 (UTC-5), so the earlier 01:30 (UTC-4) is chosen
+console.log(new Date(2024, 10, 3, 1, 30).toString());
+// Sun Nov 03 2024 01:30:00 GMT-0400 (Eastern Daylight Time)
+```
 
 ### Date time string format
 
@@ -189,7 +203,7 @@ See the [Formats of `toString` method return values](#formats_of_tostring_method
 - {{jsxref("Date.parse()")}}
   - : Parses a string representation of a date and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 - {{jsxref("Date.UTC()")}}
-  - : Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
+  - : Accepts the same parameters as the longest form of the constructor (i.e., 2 to 7) and returns the number of milliseconds since January 1, 1970 00:00:00 UTC, with leap seconds ignored.
 
 ## Instance properties
 
@@ -241,7 +255,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setDate()")}}
   - : Sets the day of the month for a specified date according to local time.
 - {{jsxref("Date.prototype.setFullYear()")}}
-  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.
+  - : Sets the full year (e.g., 4 digits for 4-digit years) for a specified date according to local time.
 - {{jsxref("Date.prototype.setHours()")}}
   - : Sets the hours for a specified date according to local time.
 - {{jsxref("Date.prototype.setMilliseconds()")}}
@@ -257,7 +271,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setUTCDate()")}}
   - : Sets the day of the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCFullYear()")}}
-  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.
+  - : Sets the full year (e.g., 4 digits for 4-digit years) for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCHours()")}}
   - : Sets the hour for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCMilliseconds()")}}
@@ -275,7 +289,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.toISOString()")}}
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : Returns a string representing the `Date` using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+  - : Returns a string representing the `Date` using {{jsxref("Date/toISOString", "toISOString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -284,6 +298,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.
 - {{jsxref("Date.prototype.toString()")}}
   - : Returns a string representing the specified `Date` object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Date.prototype.toTemporalInstant()")}}
+  - : Returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](#the_epoch_timestamps_and_invalid_date).
 - {{jsxref("Date.prototype.toTimeString()")}}
   - : Returns the "time" portion of the `Date` as a human-readable string.
 - {{jsxref("Date.prototype.toUTCString()")}}

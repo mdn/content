@@ -13,13 +13,13 @@ The CSS Painting API — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_A
 
 ## Concepts and usage
 
-Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('image/paint', 'paint()')}}, a CSS [`<image>`](/en-US/docs/Web/CSS/image) function. You can then apply these values to properties like {{cssxref("background-image")}} to set complex custom backgrounds on an element.
+Essentially, the CSS Painting API contains functionality allowing developers to create custom values for {{cssxref('image/paint', 'paint()')}}, a CSS {{cssxref('&lt;image&gt;')}} function. You can then apply these values to properties like {{cssxref('background-image')}} to set complex custom backgrounds on an element.
 
 For example:
 
 ```css
 aside {
-  background-image: paint(myPaintedImage);
+  background-image: paint(my-painted-image);
 }
 ```
 
@@ -30,18 +30,18 @@ The API defines a {{domxref('worklet')}} that can be used to programmatically ge
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the paint worklet.
 - {{domxref('PaintRenderingContext2D')}}
-  - : Implements a subset of the [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) API. It has an output bitmap that is the size of the object it is rendering to.
+  - : The rendering context for the CSS Painting API's rendering context for drawing to the bitmap.
 - {{domxref('PaintSize')}}
-  - : Returns the read-only values of the output bitmap's width and height.
+  - : Represents the size of the output bitmap that the author should draw.
 
 ## Examples
 
 The following example creates a list of items with a background image that rotates between three different colors and three widths.
 In [a supporting browser](#browser_compatibility) you will see something like the image below.
 
-![The width and color of the background image changes based on the custom properties](guide/boxbg.png)
+![The width and color of the background image changes based on the custom properties](Guide/boxbg.png)
 
-To achieve this we'll define two custom CSS properties, `--boxColor` and `--widthSubtractor`.
+To achieve this we'll define two custom CSS properties, `--box-color` and `--width-subtractor`.
 
 ### The paint worklet
 
@@ -61,7 +61,7 @@ registerPaint(
       them as an array.
     */
     static get inputProperties() {
-      return ["--boxColor", "--widthSubtractor"];
+      return ["--box-color", "--width-subtractor"];
     }
 
     paint(ctx, size, props) {
@@ -70,11 +70,11 @@ registerPaint(
         size -> paintSize: width and height
         props -> properties: get() method
       */
-      ctx.fillStyle = props.get("--boxColor");
+      ctx.fillStyle = props.get("--box-color");
       ctx.fillRect(
         0,
         size.height / 3,
-        size.width * 0.4 - props.get("--widthSubtractor"),
+        size.width * 0.4 - props.get("--width-subtractor"),
         size.height * 0.6,
       );
     }
@@ -106,7 +106,7 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 #### CSS
 
-In our CSS, we define the `--boxColor` and `--widthSubtractor` custom properties.
+In our CSS, we define the `--box-color` and `--width-subtractor` custom properties.
 
 ```css live-sample___example-boxbg
 body {
@@ -114,24 +114,24 @@ body {
 }
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60%);
+  --box-color: hsl(55 90% 60%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60%);
-  --widthSubtractor: 20;
+  --box-color: hsl(155 90% 60%);
+  --width-subtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60%);
-  --widthSubtractor: 40;
+  --box-color: hsl(255 90% 60%);
+  --width-subtractor: 40;
 }
 ```
 
 #### JavaScript
 
 The setup and logic of the paint worklet is in the external script.
-To register the worklet, we need to call [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) from our main script:
+To register the worklet, we need to call {{domxref('Worklet.addModule', 'addModule()')}} from our main script:
 
 ```js live-sample___example-boxbg
 CSS.paintWorklet.addModule(

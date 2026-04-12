@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.size
 
 {{APIRef("HTML DOM")}}
 
-The **`size`** property of the {{DOMxRef("HTMLInputElement")}} interface defines the number of visible characters displayed. It reflects the {{htmlelement("input")}} element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute.
+The **`size`** property of the {{DOMxRef("HTMLInputElement")}} interface defines the number of visible characters displayed. It reflects the {{htmlelement("input")}} element's [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute.
 
-The `size` property is relevant to the [`text`](/en-US/docs/Web/HTML/Element/input/text), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`email`](/en-US/docs/Web/HTML/Element/input/email), [`url`](/en-US/docs/Web/HTML/Element/input/url), and [`password`](/en-US/docs/Web/HTML/Element/input/password) input type only. The value is a non-negative integer greater than zero. If omitted or invalid, the value is `20`.
+The `size` property is relevant to the [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email), [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url), and [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password) input type only. The value is a non-negative integer greater than zero. If omitted or invalid, the value is `20`.
 
 ## Value
 

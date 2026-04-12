@@ -19,7 +19,7 @@ Before we look at the transformation methods, let's look at two other methods wh
 
 Canvas states are stored on a stack. Every time the `save()` method is called, the current drawing state is pushed onto the stack. A drawing state consists of
 
-- The transformations that have been applied (i.e. `translate`, `rotate` and `scale` – see below).
+- The transformations that have been applied (i.e., `translate`, `rotate` and `scale` – see below).
 - The current values of the following attributes:
   - {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
   - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}
@@ -52,11 +52,11 @@ function draw() {
   ctx.fillRect(0, 0, 150, 150); // Draw a Black rectangle with default settings
   ctx.save(); // Save the original default state
 
-  ctx.fillStyle = "#09F"; // Make changes to saved settings
+  ctx.fillStyle = "#0099ff"; // Make changes to saved settings
   ctx.fillRect(15, 15, 120, 120); // Draw a Blue rectangle with new settings
   ctx.save(); // Save the current state
 
-  ctx.fillStyle = "#FFF"; // Make changes to saved settings
+  ctx.fillStyle = "white"; // Make changes to saved settings
   ctx.globalAlpha = 0.5;
   ctx.fillRect(30, 30, 90, 90); // Draw a 50%-White rectangle with newest settings
 
@@ -235,7 +235,6 @@ draw();
 Finally, the following transformation methods allow modifications directly to the transformation matrix.
 
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
-
   - : Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by:
 
     <!-- prettier-ignore-start -->

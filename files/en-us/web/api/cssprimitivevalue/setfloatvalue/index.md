@@ -33,7 +33,6 @@ setFloatValue(unitType, floatValue)
 ### Parameters
 
 - `unitType`
-
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
 
@@ -80,7 +79,7 @@ None ({{jsxref("undefined")}}).
       <td>
         An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't
         contain a float value or if the string value can't be converted into the
-        specified unit.<br />An NO_MODIFICATION_ALLOWED_ERR is raised if this
+        specified unit.<br />A NO_MODIFICATION_ALLOWED_ERR is raised if this
         property is read-only.
       </td>
     </tr>

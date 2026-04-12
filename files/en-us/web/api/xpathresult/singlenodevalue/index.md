@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.singleNodeValue
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The read-only **`singleNodeValue`** property of the
 {{domxref("XPathResult")}} interface returns a {{domxref("Node")}} value or
@@ -24,8 +24,8 @@ returned by {{domxref("Document.evaluate()")}}.
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 

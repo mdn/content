@@ -16,7 +16,7 @@ The provided data is spliced into the existing data.
 ## Syntax
 
 ```js-nolint
-characterData.insertData(offset, data)
+insertData(offset, data)
 ```
 
 ### Parameters

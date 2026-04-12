@@ -14,7 +14,7 @@ This property can also be set directly, for example to set a default value based
 
 ## Value
 
-A string containing the value of the {{htmlelement("input")}} element, or the empty string if the input element has no value set.
+A string specifying the default value of the {{htmlelement("input")}} element.
 
 ## Examples
 

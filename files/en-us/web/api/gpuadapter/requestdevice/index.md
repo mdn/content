@@ -3,12 +3,10 @@ title: "GPUAdapter: requestDevice() method"
 short-title: requestDevice()
 slug: Web/API/GPUAdapter/requestDevice
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUAdapter.requestDevice
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the
 {{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object, which is the primary interface for communicating with the GPU.
@@ -31,21 +29,24 @@ requestDevice(descriptor)
     - `requiredFeatures` {{optional_inline}}
       - : An array of strings representing additional functionality that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these features. See {{domxref("GPUSupportedFeatures")}} for a full list of possible features. This defaults to an empty array if no value is provided.
     - `requiredLimits` {{optional_inline}}
-      - : An object containing properties representing the limits that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these limits. Each key must be the name of a member of {{domxref("GPUSupportedLimits")}}. This defaults to an empty object if no value is provided.
+      - : An object containing properties representing the limits that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these limits. Each key with a non-`undefined` value must be the name of a member of {{domxref("GPUSupportedLimits")}}.
+        > [!NOTE]
+        > You can request unknown limits when requesting a GPU device without causing an error. Such limits will be `undefined`. This is useful because it makes WebGPU code less brittle — a codebase won't stop working because a limit no longer exists in the adapter.
 
-> [!NOTE]
-> Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
+Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
 
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object instance.
 
-If you make a duplicate call, i.e. call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via {{domxref("GPUDevice.lost")}}.
+If you make a duplicate call, i.e., call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise rejects with an `OperationError` because the associated `GPUAdapter` is consumed when a `GPUDevice` is created.
 
 ### Exceptions
 
 - `OperationError` {{domxref("DOMException")}}
-  - : The promise rejects with an `OperationError` if the limits included in the `requiredLimits` property are not supported by the {{domxref("GPUAdapter")}}, either because they are not valid limits, or because their values are higher than the adapter's values for those limits.
+  - : The promise rejects with an `OperationError` if either:
+    - The limits included in the `requiredLimits` property are not supported by the {{domxref("GPUAdapter")}}, either because they are not valid limits, or because their values are higher than the adapter's values for those limits.
+    - The `GPUAdapter` has been consumed by having `requestDevice()` called on it previously.
 - `TypeError` {{domxref("DOMException")}}
   - : The promise rejects with a `TypeError` if the features included in the `requiredFeatures` property are not supported by the {{domxref("GPUAdapter")}}.
 
@@ -66,7 +67,7 @@ async function init() {
 
   const device = await adapter.requestDevice();
 
-  // ...
+  // …
 }
 ```
 
@@ -110,7 +111,7 @@ async function init() {
     requiredLimits,
   });
 
-  // ...
+  // …
 }
 ```
 

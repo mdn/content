@@ -7,17 +7,60 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test", "PR Test - new CI"]
+    workflows:
+      - "PR Test"
     types:
       - completed
 
+  workflow_call:
+    secrets:
+      GCP_PROJECT_NAME:
+        required: true
+      WIP_PROJECT_ID:
+        required: true
+
+permissions:
+  # Download artifact.
+  actions: read
+  # Post comment in pull request.
+  pull-requests: write
+  # Authenticate with GCP.
+  id-token: write
+  # Report commit status.
+  statuses: write
+
 jobs:
-  review:
+  identify-pr:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      pr-number: ${{ steps.identify-pr.outputs.number }}
     steps:
-      - name: "Download artifact"
-        uses: actions/download-artifact@v4
+      - name: Identify PR
+        id: identify-pr
+        run: |
+          PR_NUMBER=$(gh api "repos/$HEAD_REPO/commits/$HEAD_SHA/pulls" --jq ".[] | select(.base.repo.full_name == \"$BASE_REPO\") | .number")
+          echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
+        env:
+          BASE_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+          HEAD_REPO: ${{ github.event.workflow_run.head_repository.full_name }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+
+  review:
+    needs: identify-pr
+    environment: review
+    runs-on: ubuntu-latest
+    if: needs.identify-pr.outputs.pr-number
+    env:
+      PR_NUMBER: ${{ needs.identify-pr.outputs.pr-number }}
+      PREFIX: pr${{ needs.identify-pr.outputs.pr-number }}
+      STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
+      STATUS_CONTEXT: pr-review-companion
+      STATUS_TARGET: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           pattern: build
           path: build
@@ -26,91 +69,104 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Check for artifacts
-        if: ${{ hashFiles('build/') != '' }}
+        id: check
+        if: hashFiles('build/') != ''
+        run: echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mark status as pending
+        if: steps.check.outputs.HAS_ARTIFACT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
+          gh api "$STATUS_PATH" \
+            -f state=pending \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment pending' \
+            -f target_url="$STATUS_TARGET"
 
-      - uses: actions/checkout@v4
-        if: ${{ env.HAS_ARTIFACT }}
+      - name: Authenticate with GCP
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         with:
-          repository: mdn/yari
-          path: yari
+          token_format: access_token
+          service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
+          workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
 
-      - name: Install Python
-        if: ${{ env.HAS_ARTIFACT }}
-        id: setup-python
-        uses: actions/setup-python@v5
+      - name: Setup gcloud
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3.0.1
+
+      - name: Upload to GCS
+        if: steps.check.outputs.HAS_ARTIFACT
+        uses: google-github-actions/upload-cloud-storage@6397bd7208e18d13ba2619ee21b9873edc94427a # v3.0.0
         with:
-          python-version: "3.10"
+          path: "build"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          resumable: false
+          headers: |-
+            cache-control: no-store
+          parent: false
+          concurrency: 500
+          process_gcloudignore: false
 
-      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
-      - name: Load cached ~/.local
-        if: ${{ env.HAS_ARTIFACT }}
-        uses: actions/cache@v4
+      - name: Checkout (mdn/content)
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
-          path: ~/.local
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+          path: content
+          persist-credentials: false
 
-      - name: Install Python poetry
-        if: ${{ env.HAS_ARTIFACT }}
-        uses: snok/install-poetry@v1.4
+      - name: Setup (mdn/content)
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
+          node-version-file: "content/.nvmrc"
+          package-manager-cache: false
 
-      - name: Load cached venv
-        if: ${{ env.HAS_ARTIFACT }}
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: yari/deployer/.venv
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
+      - name: Install (mdn/content)
+        if: steps.check.outputs.HAS_ARTIFACT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: content
+        run: npm ci
 
-      - name: Install poetry dependencies
-        if: ${{ env.HAS_ARTIFACT && steps.cached-poetry-dependencies.outputs.cache-hit != 'true' }}
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction --no-root
-
-      - name: Install Deployer
-        if: ${{ env.HAS_ARTIFACT }}
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction
-
-      - name: Deploy and analyze built content
-        if: ${{ env.HAS_ARTIFACT }}
+      - name: Analyze PR build
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
-
-          DEPLOYER_BUCKET_NAME: mdn-content-dev
-          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
-          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
-
+        working-directory: content
         run: |
-          PR_NUMBER=`cat build/NR`
-
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
-          cd yari/deployer
-
-          poetry run deployer upload \
-            --prefix="pr$PR_NUMBER" \
-            --default-cache-control 0 \
-            "$BUILD_OUT_ROOT"
-
-          poetry run deployer analyze-pr-build \
-            --prefix="pr$PR_NUMBER" \
+          node scripts/analyze-pr-build.js \
+            --prefix="$PREFIX" \
             --analyze-flaws \
             --analyze-dangerous-content \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --github-token="${{ secrets.GITHUB_TOKEN }}" \
             --repo=$GITHUB_REPOSITORY \
-            --pr-number=$PR_NUMBER \
+            --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
+
+      - name: Mark status as success
+        if: steps.check.outputs.HAS_ARTIFACT && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=success \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment succeeded' \
+            -f target_url="$STATUS_TARGET"
+
+      - name: Mark status as failure
+        if: steps.check.outputs.HAS_ARTIFACT && failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "$STATUS_PATH" \
+            -f state=failure \
+            -f context="$STATUS_CONTEXT" \
+            -f description='Review deployment failed' \
+            -f target_url="$STATUS_TARGET"

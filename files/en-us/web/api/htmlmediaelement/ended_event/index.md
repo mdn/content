@@ -21,10 +21,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("ended", (event) => {});
+```js-nolint
+addEventListener("ended", (event) => { })
 
-onended = (event) => {};
+onended = (event) => { }
 ```
 
 ## Event type
@@ -94,9 +94,7 @@ video.onended = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 - [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-
   - [`MediaStreamTrack`: `ended` event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-
   - [Web audio API: ended event](/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event)

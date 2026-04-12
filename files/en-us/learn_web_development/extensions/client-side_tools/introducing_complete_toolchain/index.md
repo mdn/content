@@ -1,10 +1,12 @@
 ---
 title: Introducing a complete toolchain
+short-title: Sample toolchain
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
@@ -70,7 +72,7 @@ You should have most of the pieces of software already if you've been following 
 
 Besides the tools we're going to install that contribute to our toolchain, you will need to create an account with GitHub if you wish to complete the tutorial. However, you can still follow the local development part without it. As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases, and much more. In the next chapter, we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
 
-Signed up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
+Sign up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
 
 ### Installing git
 
@@ -86,7 +88,7 @@ Revision control can also allow you to _branch_ out your project code, creating 
 
 Finally, it can help you undo changes or revert your code back to a time "when it was working" if a mistake has been introduced somewhere and you are having trouble fixing it — something all developers need to do once in a while!
 
-Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
+Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads/) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
 
 You can interact with git in a number of different ways, from using the command line to issue commands, to using a [git GUI app](https://git-scm.com/downloads/guis) to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:
 
@@ -107,7 +109,7 @@ As we talked about in [Chapter 1](/en-US/docs/Learn_web_development/Extensions/C
 
 - **Development environment**: The tools that are most fundamental to running your code. This part is already set up in the previous chapter.
 - **Safety net**: Making the software development experience stable and more efficient. We might also refer to this as our development environment.
-- **Transformation**: Tooling that allows us to use the latest features of a language (e.g. JavaScript) or another language entirely (e.g. JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
+- **Transformation**: Tooling that allows us to use the latest features of a language (e.g., JavaScript) or another language entirely (e.g., JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
 - **Post development**: Tooling that comes into play after you are done with the body of development to ensure that your software makes it to the web and continues to run. In this case study we'll look at adding tests to your code, and deploying your app using GitHub Pages so it is available for all the web to see.
 
 Let's start working on these, beginning with our development environment. We will follow the same steps as how a real project would be set up, so in the future, if you are setting up a new project, you can refer back to this chapter and follow the steps again.
@@ -162,7 +164,7 @@ npm install --save-dev prettier
 
 Note again that we are using `--save-dev` to add it as a dev dependency, because we only use it during development.
 
-Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/en/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
+Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
 
 ```json
 {
@@ -170,7 +172,7 @@ Like many tools made more recently Prettier comes with "sensible defaults". That
 }
 ```
 
-With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/configuration.html) in its documentation.
 
 By default, Prettier formats all files that you specify. However, again, we don't need to format generated files, or there may be certain legacy code that we don't want to touch. We can tell Prettier to always ignore these files by creating a `.prettierignore` file in the root of the project directory. Add the following contents to the file:
 
@@ -188,15 +190,17 @@ npx prettier --write ./index.html
 ```
 
 > [!NOTE]
-> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e., "don't release any code that's not been properly formatted."
 
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 
 ```json
-"scripts": {
-  // ...
-  "format": "prettier --write ."
-},
+{
+  "scripts": {
+    // …
+    "format": "prettier --write ."
+  }
+}
 ```
 
 Now you can run the following to format the directory:
@@ -226,19 +230,20 @@ The go-to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an 
 ESLint is installed via npm, so as per discussions in Chapter 2, you have the choice to install this tool locally or globally, but a local installation is highly recommended, because you need to have a configuration file for each project anyway. Remember the command to run:
 
 ```bash
-npm install --save-dev eslint@8 @eslint/js globals
+npm install --save-dev eslint@9 @eslint/js@9 globals
 ```
 
-> **Note:** `eslint@8` installs the version 8 of ESLint, while the latest is v9. This is because `eslint-plugin-react`, which we will use later, [does not support v9 yet](https://github.com/jsx-eslint/eslint-plugin-react/issues/3699).
+> [!NOTE]
+> The `@9` specifier installs the latest release of the v9 major version. Keep the major versions of `eslint` and `@eslint/js` aligned so that the predefined configurations remain compatible. At the time of writing, the latest ESLint is v10. However, it usually takes a while for the plugins to be catch up, so we remain on v9 at this point. Once issues such as [`eslint-plugin-react`'s ESLint v10 compatibility](https://github.com/jsx-eslint/eslint-plugin-react/issues/3977) become resolved, contributions are welcome to update our article to use the latest versions.
 
 The `@eslint/js` package provides predefined ESLint configuration, while the `globals` package provides a list of known global names in each environment. We will use them later in the configuration. Out of the box, ESLint is going to complain that it can't find the configuration file if you run it with `npx eslint`:
 
 ```plain
 Oops! Something went wrong! :(
 
-ESLint: 8.57.0
+ESLint: 9.39.4
 
-ESLint couldn't find a configuration file. To set up a configuration file for this project, please run:
+ESLint couldn't find an eslint.config.(js|mjs|cjs) file.
 
 ...
 ```
@@ -283,9 +288,8 @@ Then, update the ESLint configuration file to include the recommended config of 
 ```js
 import js from "@eslint/js";
 import globals from "globals";
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
-import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
-import reactHooksPlugin from "eslint-plugin-react-hooks";
+import reactPlugin from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
   js.configs.recommended,
@@ -305,19 +309,11 @@ export default [
       },
     },
   },
-  reactRecommended,
-  reactJSXRuntime,
-  {
-    plugins: {
-      "react-hooks": reactHooksPlugin,
-    },
-    rules: reactHooksPlugin.configs.recommended.rules,
-  },
+  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat["jsx-runtime"],
+  reactHooks.configs.flat.recommended,
 ];
 ```
-
-> [!NOTE]
-> Our configuration for `eslint-plugin-react-hooks` is a bit awkward, compared to the one-line additions for `eslint-plugin-react` configurations. This is because `eslint-plugin-react-hooks` doesn't support the new ESLint config format yet. See [facebook/react#28313](https://github.com/facebook/react/issues/28313) for more information.
 
 There's a complete [list of ESLint rules](https://eslint.org/docs/latest/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
 

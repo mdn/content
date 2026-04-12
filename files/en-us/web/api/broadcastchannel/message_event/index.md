@@ -16,6 +16,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("message", (event) => { })
+
 onmessage = (event) => { }
 ```
 
@@ -38,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 

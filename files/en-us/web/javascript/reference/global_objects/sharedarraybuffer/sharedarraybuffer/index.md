@@ -1,18 +1,16 @@
 ---
 title: SharedArrayBuffer() constructor
+short-title: SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 page-type: javascript-constructor
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 > [!NOTE]
 > The `SharedArrayBuffer` constructor may not always be globally available unless certain [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
-
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
 
 ## Syntax
 
@@ -21,7 +19,8 @@ new SharedArrayBuffer(length)
 new SharedArrayBuffer(length, options)
 ```
 
-> **Note:** `SharedArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `SharedArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -34,16 +33,26 @@ new SharedArrayBuffer(length, options)
 
 ### Return value
 
-A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are
-initialized to 0.
+A new `SharedArrayBuffer` object of the specified size, with its {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} property set to the specified `maxByteLength` if one was specified. Its contents are initialized to 0.
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+
+### Basic usage
+
+Create a buffer specifying its size in bytes.
+
+```js
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength); // 8
+```
+
 ### Always use the new operator to create a SharedArrayBuffer
 
-`SharedArrayBuffer` constructors are required to be constructed with a
-{{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
+`SharedArrayBuffer` constructors are required to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `SharedArrayBuffer` constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
 
 ```js example-bad
 const sab = SharedArrayBuffer(1024);

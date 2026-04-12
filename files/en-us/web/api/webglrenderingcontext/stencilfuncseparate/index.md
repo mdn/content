@@ -24,19 +24,15 @@ stencilFuncSeparate(face, func, ref, mask)
 ### Parameters
 
 - `face`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
-
     - `gl.FRONT`
     - `gl.BACK`
     - `gl.FRONT_AND_BACK`
 
 - `func`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
     `gl.ALWAYS`. The possible values are:
-
     - `gl.NEVER`: Never pass.
     - `gl.LESS`: Pass if `(ref & mask) < (stencil & mask)`.
     - `gl.EQUAL`: Pass if `(ref & mask) = (stencil & mask)`.

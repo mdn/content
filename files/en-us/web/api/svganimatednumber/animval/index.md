@@ -18,7 +18,7 @@ A `number`; the current value of the animated attribute as a float.
 
 ## Examples
 
-This example includes a {{SVGElement("path")}} element with a nested {{SVGElement("animate")}} element that animates the value of the path's {{SVGElement("pathLength")}} attribute:
+This example includes a {{SVGElement("path")}} element with a nested {{SVGElement("animate")}} element that animates the value of the path's {{SVGAttr("pathLength")}} attribute:
 
 ```html
 <path d="M 0,40 h100" pathLength="90" id="path">

@@ -31,9 +31,14 @@ updateText(rangeStart, rangeEnd, text)
 - `text`
   - : A string representing the new text content.
 
+### Return value
+
+None (`undefined`).
+
 ### Exceptions
 
-- If less than three arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if the method is called with less than three arguments.
 
 ## Examples
 
@@ -64,7 +69,7 @@ editContext.addEventListener("textupdate", (e) => {
 });
 
 canvas.addEventListener("keydown", async (e) => {
-  if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
+  if (e.key === "v" && (e.ctrlKey || e.metaKey)) {
     const pastedText = await navigator.clipboard.readText();
     console.log(
       `The user pasted the text: ${pastedText}. Updating the EditContext text.`,

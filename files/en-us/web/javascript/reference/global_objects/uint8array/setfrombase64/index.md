@@ -1,11 +1,11 @@
 ---
 title: Uint8Array.prototype.setFromBase64()
+short-title: setFromBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromBase64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromBase64
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFromBase64()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a [base64](/en-US/docs/Glossary/Base64)-encoded string, returning an object indicating how many bytes were read and written.
 
@@ -133,7 +133,8 @@ console.log(decoder.decode(""));
 
 ## See also
 
-- [Polyfill of `Uint8Array.setFromBase64` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.prototype.setFromBase64` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.prototype.setFromBase64`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromBase64()")}}
 - {{jsxref("Uint8Array.prototype.toBase64()")}}

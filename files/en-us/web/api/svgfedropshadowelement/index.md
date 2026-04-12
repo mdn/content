@@ -26,9 +26,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDropShadowElement.result")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.stdDeviationX")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviationX")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviation")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.stdDeviationY")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviationY")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviation")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.width")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.x")}} {{ReadOnlyInline}}

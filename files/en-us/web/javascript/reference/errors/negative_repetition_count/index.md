@@ -2,9 +2,8 @@
 title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "repeat count must be non-negative" occurs when the
 {{jsxref("String.prototype.repeat()")}} method is used with a `count`

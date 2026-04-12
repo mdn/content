@@ -1,10 +1,10 @@
 ---
 title: Introducing asynchronous JavaScript
+short-title: Introduction
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
@@ -220,7 +220,7 @@ The description we just saw of asynchronous functions might remind you of event 
 
 Some early asynchronous APIs used events in just this way. The {{domxref("XMLHttpRequest")}} API enables you to make HTTP requests to a remote server using JavaScript. Since this can take a long time, it's an asynchronous API, and you get notified about the progress and eventual completion of a request by attaching event listeners to the `XMLHttpRequest` object.
 
-The following example shows this in action. Press "Click to start request" to send a request. We create a new {{domxref("XMLHttpRequest")}} and listen for its {{domxref("XMLHttpRequest/loadend_event", "loadend")}} event. The handler logs a "Finished!" message along with the status code.
+The following example shows this in action. Press "Click to start request" to send a request. We create a new {{domxref("XMLHttpRequest")}} and listen for its {{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}} event. The handler logs a "Finished!" message along with the status code.
 
 After adding the event listener we send the request. Note that after this, we can log "Started XHR request": that is, our program can continue to run while the request is going on, and our event handler will be called when the request is complete.
 
@@ -228,7 +228,7 @@ After adding the event listener we send the request. Note that after this, we ca
 <button id="xhr">Click to start request</button>
 <button id="reload">Reload</button>
 
-<pre readonly class="event-log"></pre>
+<pre class="event-log"></pre>
 ```
 
 ```css hidden

@@ -22,30 +22,23 @@ pipeThrough(transformStream, options)
 ### Parameters
 
 - `transformStream`
-
   - : A {{domxref("TransformStream")}} (or an object with the structure `{writable, readable}`) consisting of a readable stream and a writable stream working together to transform some data from one form to another.
     Data written to the `writable` stream can be read in some transformed state by the `readable` stream.
     For example, a {{domxref("TextDecoder")}}, has bytes written to it and strings read from it, while a video decoder has encoded bytes written to it and uncompressed video frames read from it.
 
 - `options` {{optional_inline}}
-
   - : The options that should be used when piping to the `writable` stream.
     Available options are:
-
     - `preventClose`
-
       - : If this is set to `true`, closing the source `ReadableStream` will no longer cause the destination `WritableStream` to be closed.
 
     - `preventAbort`
-
       - : If this is set to `true`, errors in the source `ReadableStream` will no longer abort the destination `WritableStream`.
 
     - `preventCancel`
-
       - : If this is set to `true`, errors in the destination `WritableStream` will no longer cancel the source `ReadableStream`.
 
     - `signal`
-
       - : If set to an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object, ongoing pipe operations can then be aborted via the corresponding [`AbortController`](/en-US/docs/Web/API/AbortController).
 
 ### Return value

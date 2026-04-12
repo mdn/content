@@ -2,9 +2,8 @@
 title: Localization
 slug: Glossary/Localization
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Localization** (l10n) is the process of adapting a software user interface to a specific culture.
 
@@ -26,7 +25,7 @@ The following are common factors to consider:
 - local holidays
 - personal names
 
-The complementary practice, of designing a system so it is easy to localize, is called {{glossary("Internationalization")}}.
+The complementary practice of making a system easier to localize is called {{glossary("Internationalization")}}.
 
 ## See also
 

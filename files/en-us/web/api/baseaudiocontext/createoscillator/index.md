@@ -14,7 +14,7 @@ waveform. It basically generates a constant tone.
 
 > [!NOTE]
 > The {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-> constructor is the recommended way to create a {{domxref("OscillatorNode")}}; see
+> constructor is the recommended way to create an {{domxref("OscillatorNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax

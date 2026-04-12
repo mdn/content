@@ -14,7 +14,7 @@ translating vector.
 
 ## Value
 
-A double integer or a {{domxref("CSSNumericValue")}}
+A {{domxref("CSSNumericValue")}}. Can be set to a number, which is wrapped in a {{domxref("CSSUnitValue")}} of `unit: "number"`.
 
 ## Examples
 

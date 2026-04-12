@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.cols
 
 {{ APIRef("HTML DOM") }}
 
-The **`cols`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface is a positive integer representing the visible width of the multi-line text control, in average character widths. It reflects the `<textarea>` element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute.
+The **`cols`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface is a positive integer representing the visible width of the multi-line text control, in average character widths. It reflects the `<textarea>` element's [`cols`](/en-US/docs/Web/HTML/Reference/Elements/textarea#cols) attribute.
 
 ## Value
 

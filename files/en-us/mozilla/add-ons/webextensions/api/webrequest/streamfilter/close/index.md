@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.close()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.close
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Closes the request. After this is called, no further response data will be passed to the browser's rendering engine and no more filter events will be given to the extension.
 
@@ -28,10 +27,6 @@ None.
 ### Return value
 
 None.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,3 +52,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

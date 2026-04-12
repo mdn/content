@@ -2,26 +2,25 @@
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
 Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
 
-It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
+It's also more straightforward to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
 > [!NOTE]
-> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
+> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for faster development, but it's totally up to you which approach you chose.
 
 ## Pure JavaScript approach
 
 Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 ```
 
 Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:
@@ -80,7 +79,7 @@ You can see this example in action online at [end3r.github.io/JavaScript-Game-Co
 
 ## Phaser approach
 
-As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These will make your life easier and development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
+As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These should make development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
 
 ### Mouse
 

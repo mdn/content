@@ -10,7 +10,7 @@ browser-compat: api.Element.scrollsnapchanging_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`scrollsnapchanging`** event of the {{domxref("Element")}} interface is fired on the [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+The **`scrollsnapchanging`** event of the {{domxref("Element")}} interface is fired on the [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 Specifically, this event fires during a scrolling gesture, each time the user moves over potential new snap targets. For example, the user could scroll slowly by dragging their finger on a touch screen device, or hold down the mouse button on a scroll bar and move the mouse. `scrollsnapchanging` can therefore fire multiple times for each scrolling gesture.
 
@@ -20,10 +20,10 @@ However, it does not fire on all potential snap targets for a scrolling gesture 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollsnapchanging", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchanging", (event) => { })
 
-onscrollsnapchanging = (event) => {};
+onscrollsnapchanging = (event) => { }
 ```
 
 ## Event type
@@ -84,6 +84,6 @@ At the start of the function, we select all elements that previously had the `pe
 - {{DOMxRef("Document/scrollend_event", "scrollend")}} event
 - {{domxref("SnapEvent")}}
 - CSS {{cssxref("scroll-snap-type")}} property
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap module](/en-US/docs/Web/CSS/Guides/Scroll_snap)
+- [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

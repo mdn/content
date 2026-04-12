@@ -47,67 +47,69 @@ Clicking the buttons uses `getElementsByTagName()` to count the descendant
 paragraph elements of a particular parent (either the document itself or one of two
 nested {{HTMLElement("div")}} elements).
 
-```html-nolint
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>getElementsByTagName example</title>
-    <script>
-      function getAllParaElems() {
-        const allParas = document.getElementsByTagName("p");
-        const num = allParas.length;
-        alert(`There are ${num} paragraph in this document`);
-      }
+```html
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-      function div1ParaElems() {
-        const div1 = document.getElementById("div1");
-        const div1Paras = div1.getElementsByTagName("p");
-        const num = div1Paras.length;
-        alert(`There are ${num} paragraph in #div1`);
-      }
+<div id="div1">
+  <p>Some div1 text</p>
+  <p>Some div1 text</p>
+  <p>Some div1 text</p>
 
-      function div2ParaElems() {
-        const div2 = document.getElementById("div2");
-        const div2Paras = div2.getElementsByTagName("p");
-        const num = div2Paras.length;
-        alert(`There are ${num} paragraph in #div2`);
-      }
-    </script>
-  </head>
-  <body style="border: solid green 3px">
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+  <div id="div2">
+    <p>Some div2 text</p>
+    <p>Some div2 text</p>
+  </div>
+</div>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Some div2 text</p>
-        <p>Some div2 text</p>
-      </div>
-    </div>
+<button id="btn1">Show all p elements in document</button>
+<br />
+<button id="btn2">Show all p elements in div1 element</button>
+<br />
+<button id="btn3">Show all p elements in div2 element</button>
+```
 
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+```css
+body {
+  border: solid green 3px;
+}
 
-    <button onclick="getAllParaElems();">
-      Show all p elements in document
-    </button>
-    <br />
+#div1 {
+  border: solid blue 3px;
+}
 
-    <button onclick="div1ParaElems();">
-      Show all p elements in div1 element
-    </button>
-    <br />
+#div2 {
+  border: solid red 3px;
+}
+```
 
-    <button onclick="div2ParaElems();">
-      Show all p elements in div2 element
-    </button>
-  </body>
-</html>
+```js
+function getAllParaElems() {
+  const allParas = document.getElementsByTagName("p");
+  const num = allParas.length;
+  alert(`There are ${num} paragraph in this document`);
+}
+
+function div1ParaElems() {
+  const div1 = document.getElementById("div1");
+  const div1Paras = div1.getElementsByTagName("p");
+  const num = div1Paras.length;
+  alert(`There are ${num} paragraph in #div1`);
+}
+
+function div2ParaElems() {
+  const div2 = document.getElementById("div2");
+  const div2Paras = div2.getElementsByTagName("p");
+  const num = div2Paras.length;
+  alert(`There are ${num} paragraph in #div2`);
+}
+
+document.getElementById("btn1").addEventListener("click", getAllParaElems);
+document.getElementById("btn2").addEventListener("click", div1ParaElems);
+document.getElementById("btn3").addEventListener("click", div2ParaElems);
 ```
 
 ## Notes

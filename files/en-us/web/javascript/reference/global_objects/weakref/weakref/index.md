@@ -1,11 +1,11 @@
 ---
 title: WeakRef() constructor
+short-title: WeakRef()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakRef.WeakRef
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`WeakRef()`** constructor creates {{jsxref("WeakRef")}} objects.
 
@@ -15,7 +15,8 @@ The **`WeakRef()`** constructor creates {{jsxref("WeakRef")}} objects.
 new WeakRef(target)
 ```
 
-> **Note:** `WeakRef()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `WeakRef()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

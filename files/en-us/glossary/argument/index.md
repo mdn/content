@@ -2,9 +2,8 @@
 title: Argument
 slug: Glossary/Argument
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Arguments** are {{glossary("value", "values")}} ({{Glossary("primitive")}} or {{Glossary("object")}}) passed as input to a {{Glossary("function")}}. Do not confuse arguments with {{Glossary("parameter","parameters")}}, which are the names used in the function definition to refer to the arguments.
 

@@ -19,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("iceconnectionstatechange", (event) => {});
+```js-nolint
+addEventListener("iceconnectionstatechange", (event) => { })
 
-oniceconnectionstatechange = (event) => {};
+oniceconnectionstatechange = (event) => { }
 ```
 
 ## Event type
@@ -48,14 +48,10 @@ An event handler for this event can be added using the `oniceconnectionstatechan
 In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
 ```js
-pc.addEventListener(
-  "iceconnectionstatechange",
-  (ev) => {
-    let stateElem = document.querySelector("#call-state");
-    stateElem.className = `${pc.iceConnectionState}-state`;
-  },
-  false,
-);
+pc.addEventListener("iceconnectionstatechange", (ev) => {
+  let stateElem = document.querySelector("#call-state");
+  stateElem.className = `${pc.iceConnectionState}-state`;
+});
 ```
 
 This can also be written as:

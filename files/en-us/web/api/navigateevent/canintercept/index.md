@@ -3,12 +3,10 @@ title: "NavigateEvent: canIntercept property"
 short-title: canIntercept
 slug: Web/API/NavigateEvent/canIntercept
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.canIntercept
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`canIntercept`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns `true` if the navigation can be intercepted and have its URL rewritten, or `false` otherwise
@@ -65,4 +63,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

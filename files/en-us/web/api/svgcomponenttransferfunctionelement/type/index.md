@@ -8,7 +8,7 @@ browser-compat: api.SVGComponentTransferFunctionElement.type
 
 {{APIRef("SVG")}}
 
-The **`type`** read-only property of the {{domxref("SVGComponentTransferFunctionElement")}} interface reflects the {{SVGAttr("type")}} attribute of the given element. It takes one of the [`SVG_FECOMPONENTTRANSFER_TYPE_*`](/en-US/docs/Web/API/SVGComponentTransferFunctionElement#constants) constants defined on this interface.
+The **`type`** read-only property of the {{domxref("SVGComponentTransferFunctionElement")}} interface reflects the {{SVGAttr("type")}} attribute of the given element. It takes one of the [`SVG_FECOMPONENTTRANSFER_TYPE_*`](/en-US/docs/Web/API/SVGComponentTransferFunctionElement#static_properties) constants defined on this interface.
 
 ## Value
 

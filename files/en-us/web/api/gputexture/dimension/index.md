@@ -3,12 +3,10 @@ title: "GPUTexture: dimension property"
 short-title: dimension
 slug: Web/API/GPUTexture/dimension
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUTexture.dimension
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`dimension`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the dimension of the set of texels for each `GPUTexture` subresource.
@@ -26,7 +24,7 @@ An enumerated value. Possible values are:
 ## Examples
 
 ```js
-// ...
+// …
 
 const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],

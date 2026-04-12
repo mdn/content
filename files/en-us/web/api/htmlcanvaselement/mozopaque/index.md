@@ -12,7 +12,7 @@ browser-compat: api.HTMLCanvasElement.mozOpaque
 {{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
 The non-standard **`HTMLCanvasElement.mozOpaque`** property is
-a boolean value reflecting the [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque) HTML
+a boolean value reflecting the [`moz-opaque`](/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) HTML
 attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or
 not translucency will be a factor. If the canvas knows there's no translucency, painting
 performance can be optimized.
@@ -57,5 +57,5 @@ Not part of any standard.
 ## See also
 
 - {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.mozOpaque` property
-- [`moz-opaque`](/en-US/docs/Web/HTML/Element/canvas#moz-opaque): HTML attribute of the {{HTMLElement("canvas")}} element
+- [`moz-opaque`](/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque): HTML attribute of the {{HTMLElement("canvas")}} element
 - [Optimizing your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

@@ -3,9 +3,8 @@ title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.erase
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`erase()`** function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
 
@@ -32,10 +31,6 @@ let erasing = browser.downloads.erase(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the promise will be fulfilled with an array of integers representing the ids of the erased {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}. If no items matching the query parameter could be found, the array will be empty. If the call failed, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -74,6 +69,10 @@ erasing.then(onErased, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-erase) API.

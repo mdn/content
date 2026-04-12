@@ -2,9 +2,8 @@
 title: Prerender
 slug: Glossary/Prerender
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Prerendering refers to the practice of speculatively {{Glossary("prefetch", "prefetching")}} and _rendering_ pages that the user is likely to navigate to in the near future (the browser renders the page in the background in what is effectively an invisible separate tab). Prerendering includes downloading a document's subresources and running associated JavaScript.
 
@@ -29,7 +28,7 @@ Prerendering results in faster display time than prefetching and hence a better 
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
 - Related glossary terms:
   - {{Glossary("Prefetch")}}
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages#prerendering-from-the-address-bar) on developer.chrome.com

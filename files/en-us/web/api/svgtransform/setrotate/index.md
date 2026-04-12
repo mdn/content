@@ -13,7 +13,7 @@ The `setRotate()` method of the {{domxref("SVGTransform")}} interface sets the t
 ## Syntax
 
 ```js-nolint
-SVGTransform.setRotate(angle, cx, cy)
+setRotate(angle, cx, cy)
 ```
 
 ### Parameters

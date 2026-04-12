@@ -44,7 +44,8 @@ A hardware-agnostic representation of input devices that can target a specific c
 
 Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location. See [capturing the pointer](#capturing_the_pointer) for an example.
 
-> **Note:** _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
+> [!NOTE]
+> _Pointer capture_ is different from [_pointer lock_](/en-US/docs/Web/API/Pointer_Lock_API), which physically prevents the pointer from leaving a region.
 
 ### pointer event
 
@@ -66,7 +67,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 - {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{ domxref('PointerEvent.pointerId','pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
@@ -79,11 +80,11 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 - {{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range `-1` to `1`, where `0` is the neutral position of the control.
 - {{ domxref('PointerEvent.tiltX','tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
 - {{ domxref('PointerEvent.tiltY','tiltY')}} {{ReadOnlyInline}}
-  - : the plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+  - : the plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
 - {{ domxref('PointerEvent.twist','twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType','pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary','isPrimary')}} {{ReadOnlyInline}}
@@ -137,35 +138,31 @@ This example registers a handler for every event type for the given element.
 ```
 
 ```js
-function over_handler(event) {}
-function enter_handler(event) {}
-function down_handler(event) {}
-function move_handler(event) {}
-function up_handler(event) {}
-function cancel_handler(event) {}
-function out_handler(event) {}
-function leave_handler(event) {}
-function rawUpdate_handler(event) {}
-function gotCapture_handler(event) {}
-function lostCapture_handler(event) {}
+function overHandler(event) {}
+function enterHandler(event) {}
+function downHandler(event) {}
+function moveHandler(event) {}
+function upHandler(event) {}
+function cancelHandler(event) {}
+function outHandler(event) {}
+function leaveHandler(event) {}
+function rawUpdateHandler(event) {}
+function gotCaptureHandler(event) {}
+function lostCaptureHandler(event) {}
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointer event handlers
-  el.onpointerover = over_handler;
-  el.onpointerenter = enter_handler;
-  el.onpointerdown = down_handler;
-  el.onpointermove = move_handler;
-  el.onpointerup = up_handler;
-  el.onpointercancel = cancel_handler;
-  el.onpointerout = out_handler;
-  el.onpointerleave = leave_handler;
-  el.onpointerrawupdate = rawUpdate_handler;
-  el.ongotpointercapture = gotCapture_handler;
-  el.onlostpointercapture = lostCapture_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointer event handlers
+el.onpointerover = overHandler;
+el.onpointerenter = enterHandler;
+el.onpointerdown = downHandler;
+el.onpointermove = moveHandler;
+el.onpointerup = upHandler;
+el.onpointercancel = cancelHandler;
+el.onpointerout = outHandler;
+el.onpointerleave = leaveHandler;
+el.onpointerrawupdate = rawUpdateHandler;
+el.ongotpointercapture = gotCaptureHandler;
+el.onlostpointercapture = lostCaptureHandler;
 ```
 
 ### Event properties
@@ -179,67 +176,63 @@ This example illustrates accessing all of a pointer event's properties.
 ```js
 const id = -1;
 
-function process_id(event) {
+function processId(event) {
   // Process this event based on the event's identifier
 }
-function process_mouse(event) {
+function processMouse(event) {
   // Process the mouse pointer event
 }
-function process_pen(event) {
+function processPen(event) {
   // Process the pen pointer event
 }
-function process_touch(event) {
+function processTouch(event) {
   // Process the touch pointer event
 }
-function process_tilt(tiltX, tiltY) {
+function processTilt(tiltX, tiltY) {
   // Tilt data handler
 }
-function process_pressure(pressure) {
+function processPressure(pressure) {
   // Pressure handler
 }
-function process_non_primary(event) {
+function processNonPrimary(event) {
   // Non primary handler
 }
 
-function down_handler(ev) {
+function downHandler(ev) {
   // Calculate the touch point's contact area
   const area = ev.width * ev.height;
 
   // Compare cached id with this event's id and process accordingly
-  if (id === ev.identifier) process_id(ev);
+  if (id === ev.identifier) processId(ev);
 
   // Call the appropriate pointer type handler
   switch (ev.pointerType) {
     case "mouse":
-      process_mouse(ev);
+      processMouse(ev);
       break;
     case "pen":
-      process_pen(ev);
+      processPen(ev);
       break;
     case "touch":
-      process_touch(ev);
+      processTouch(ev);
       break;
     default:
       console.log(`pointerType ${ev.pointerType} is not supported`);
   }
 
   // Call the tilt handler
-  if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
+  if (ev.tiltX !== 0 && ev.tiltY !== 0) processTilt(ev.tiltX, ev.tiltY);
 
   // Call the pressure handler
-  process_pressure(ev.pressure);
+  processPressure(ev.pressure);
 
   // If this event is not primary, call the non primary handler
-  if (!ev.isPrimary) process_non_primary(ev);
+  if (!ev.isPrimary) processNonPrimary(ev);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown handler
-  el.onpointerdown = down_handler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown handler
+el.onpointerdown = downHandler;
 ```
 
 ## Determining the Primary Pointer
@@ -250,7 +243,7 @@ A mouse has only one pointer, so it will always be the primary pointer. For touc
 
 ## Determining button states
 
-Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e. pressing an additional button while another button on the pointer device is already pressed).
+Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e., pressing an additional button while another button on the pointer device is already pressed).
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
@@ -293,12 +286,8 @@ function downHandler(ev) {
   el.setPointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  el.onpointerdown = downHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+el.onpointerdown = downHandler;
 ```
 
 The following example shows a pointer capture being released (when a {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("Element/pointerup_event", "pointerup")}} or {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs.
@@ -320,14 +309,10 @@ function cancelHandler(ev) {
   el.releasePointerCapture(ev.pointerId);
 }
 
-function init() {
-  const el = document.getElementById("target");
-  // Register pointerdown and pointercancel handlers
-  el.onpointerdown = downHandler;
-  el.onpointercancel = cancelHandler;
-}
-
-document.addEventListener("DOMContentLoaded", init);
+const el = document.getElementById("target");
+// Register pointerdown and pointercancel handlers
+el.onpointerdown = downHandler;
+el.onpointercancel = cancelHandler;
 ```
 
 ## touch-action CSS property
@@ -335,16 +320,6 @@ document.addEventListener("DOMContentLoaded", init);
 The {{cssxref("touch-action")}} CSS property is used to specify whether or not the browser should apply its default (_native_) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
 
 A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
-
-In the following example, the browser's default touch behavior is disabled for the `div` element.
-
-```html
-<html lang="en">
-  <body>
-    <div style="touch-action:none;">Can't touch this…</div>
-  </body>
-</html>
-```
 
 In the following example, default touch behavior is disabled for some `button` elements.
 
@@ -369,7 +344,7 @@ Although the pointer event interfaces enable applications to create enhanced use
 The browser _may map generic pointer input to mouse events for compatibility with mouse-based content_. This mapping of events is called _compatibility mouse events_. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:
 
 - Mouse events can only be prevented when the pointer is down.
-- Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.
+- Hovering pointers (e.g., a mouse with no buttons pressed) cannot have their mouse events prevented.
 - The `mouseover`, `mouseout`, `mouseenter`, and `mouseleave` events are never prevented (even if the pointer is down).
 
 ## Best practices
@@ -392,16 +367,8 @@ Some additional values have been defined for the CSS {{cssxref("touch-action")}}
 
 ## See also
 
-### Demos and examples
-
-- [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
-
-### Community
-
+- [Touch Events](/en-US/docs/Web/API/Touch_events)
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
 - [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
-
-### Related topics and resources
-
-- [Touch Events Standard](https://www.w3.org/TR/touch-events/)
+- [Touch/pointer tests and demos](https://patrickhlauke.github.io/touch/) by Patrick H. Lauke

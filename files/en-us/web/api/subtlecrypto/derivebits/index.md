@@ -149,7 +149,7 @@ We then use Alice's private key and Bob's public key to derive a secret, and com
 
 #### HTML
 
-The HTML is defines two buttons.
+The HTML defines two buttons.
 The "Change keys" button is pressed to generate new key pairs for Alice and Bob.
 The "Derive bits" button is pressed to derive a shared secret with the current set of key pairs.
 

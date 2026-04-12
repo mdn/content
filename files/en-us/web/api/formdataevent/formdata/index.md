@@ -61,7 +61,7 @@ formElem.addEventListener("formdata", (e) => {
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
+- {{domxref("XMLHttpRequest")}}
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

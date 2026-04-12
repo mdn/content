@@ -49,40 +49,40 @@ A {{jsxref("Promise")}} that resolves to an object containing the following prop
 
 An example return value looks like this:
 
-```js
+```json
 {
-  bytes: 1500000,
-  breakdown: [
+  "bytes": 1500000,
+  "breakdown": [
     {
-      bytes: 1000000,
-      attribution: [
+      "bytes": 1000000,
+      "attribution": [
         {
-          url: "https://example.com",
-          scope: "Window",
-        },
-      ],
-      types: ["DOM", "JS"],
-    },
-    {
-      bytes: 0,
-      attribution: [],
-      types: [],
-    },
-    {
-      bytes: 500000,
-      attribution: [
-        {
-          url: "https://example.com/iframe.html"
-          container: {
-            id: "example-id",
-            src: "redirect.html?target=iframe.html",
-          },
-          scope: "Window",
+          "url": "https://example.com",
+          "scope": "Window"
         }
       ],
-      types: ["JS", "DOM"],
+      "types": ["DOM", "JS"]
     },
-  ],
+    {
+      "bytes": 0,
+      "attribution": [],
+      "types": []
+    },
+    {
+      "bytes": 500000,
+      "attribution": [
+        {
+          "url": "https://example.com/iframe.html",
+          "container": {
+            "id": "example-id",
+            "src": "redirect.html?target=iframe.html"
+          },
+          "scope": "Window"
+        }
+      ],
+      "types": ["JS", "DOM"]
+    }
+  ]
 }
 ```
 
@@ -93,7 +93,7 @@ An example return value looks like this:
 
 ## Description
 
-The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
+The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Guide/Memory_management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
 
 The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Rather than make single calls to this method, it's better to make periodic calls to track how memory usage changes over the duration of a session.
 
@@ -101,7 +101,7 @@ The `byte` values this API returns aren't comparable across browsers or between 
 
 ## Security requirements
 
-To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
 You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 

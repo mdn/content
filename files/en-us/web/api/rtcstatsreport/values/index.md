@@ -20,6 +20,10 @@ The method is otherwise the same as {{jsxref("Map.prototype.values()")}}.
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
@@ -36,7 +40,7 @@ The properties of statistics objects with the `type` of `outbound-rtp` are logge
 const stats = await myPeerConnection.getStats();
 
 for (const stat of stats.values()) {
-  if (stat.type != "outbound-rtp") continue;
+  if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
     console.log(`${statName}: ${report[statName]}`);
   });

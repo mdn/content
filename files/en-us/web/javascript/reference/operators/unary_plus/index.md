@@ -3,14 +3,36 @@ title: Unary plus (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 page-type: javascript-operator
 browser-compat: javascript.operators.unary_plus
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **unary plus (`+`)** operator precedes its operand and evaluates to its
 operand but attempts to [convert it into a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), if it isn't already.
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Unary plus (+) operator", "taller")}}
+
+```js interactive-example
+const x = 1;
+const y = -1;
+
+console.log(+x);
+// Expected output: 1
+
+console.log(+y);
+// Expected output: -1
+
+console.log(+"");
+// Expected output: 0
+
+console.log(+true);
+// Expected output: 1
+
+console.log(+false);
+// Expected output: 0
+
+console.log(+"hello");
+// Expected output: NaN
+```
 
 ## Syntax
 

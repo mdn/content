@@ -7,7 +7,7 @@ browser-compat: api.IIRFilterNode
 
 {{APIRef("Web Audio API")}}
 
-The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response)** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
+The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is an {{domxref("AudioNode")}} processor which implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response)** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
 
 {{InheritanceDiagram}}
 
@@ -67,7 +67,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the fol
 
 ## Examples
 
-You can find a simple IIR filter demo live [on CodePen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can find a [simple IIR filter demo live](https://mdn.github.io/webaudio-examples/iirfilter-node/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 Also see our [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters) guide for a full explanation.
 

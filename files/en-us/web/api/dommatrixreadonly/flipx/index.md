@@ -13,8 +13,12 @@ The **`flipX()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creat
 ## Syntax
 
 ```js-nolint
-  DOMMatrixReadOnly.flipX()
+flipX()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

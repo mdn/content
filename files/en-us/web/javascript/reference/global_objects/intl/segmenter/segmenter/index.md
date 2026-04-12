@@ -1,15 +1,28 @@
 ---
 title: Intl.Segmenter() constructor
+short-title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Segmenter.Segmenter
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Segmenter()`** constructor creates {{jsxref("Intl.Segmenter")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter() constructor")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string = "Que ma joie demeure";
+
+const iterator = segmenterFr.segment(string)[Symbol.iterator]();
+
+console.log(iterator.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator.next().value.segment);
+// Expected output: ' '
+```
 
 ## Syntax
 
@@ -19,12 +32,13 @@ new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
 ```
 
-> **Note:** `Intl.Segmenter()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.Segmenter()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`

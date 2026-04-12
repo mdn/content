@@ -16,6 +16,10 @@ The **`getEntries()`** method of the {{domxref("PerformanceObserverEntryList")}}
 getEntries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A list of explicitly observed {{domxref("PerformanceEntry")}} objects. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects are found, an empty list is returned.

@@ -30,7 +30,7 @@ The only sequence which is not allowed within a CDATA section is the closing seq
 of a CDATA section itself, `]]>`.
 
 > [!NOTE]
-> CDATA sections should not be used within HTML they are considered as comments and not displayed.
+> CDATA sections should not be used within HTML. They are considered comments and are not displayed.
 
 {{InheritanceDiagram}}
 

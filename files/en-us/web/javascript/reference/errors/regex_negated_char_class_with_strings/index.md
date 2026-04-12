@@ -2,9 +2,8 @@
 title: "SyntaxError: negated character class with strings in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_negated_char_class_with_strings
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "negated character class with strings in regular expression" occurs when a [`v`-mode character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) is negated and may be able to match a string (more than one character).
 

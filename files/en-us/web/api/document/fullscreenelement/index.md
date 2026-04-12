@@ -21,7 +21,7 @@ strict mode); the setter is a no-operation and it will be ignored.
 
 The {{domxref("Element")}} object that's currently in fullscreen mode; if fullscreen
 mode isn't currently in use by the `document`, the returned
-value is `null`.
+value is `null`. If there are multiple elements in fullscreen mode, the topmost (most recently requested) element is returned.
 
 ## Examples
 
@@ -56,5 +56,5 @@ function isVideoInFullscreen() {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- The {{HTMLElement("iframe")}} [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   attribute

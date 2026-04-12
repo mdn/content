@@ -23,7 +23,8 @@ The user agent may implement the process of actually sending data in any way it
 chooses; this may be done periodically during the event loop or truly asynchronously. As
 messages are actually sent, this value is reduced accordingly.
 
-> **Note:** `bufferedamountlow` events are not fired after the data channel is closed.
+> [!NOTE]
+> `bufferedamountlow` events are not fired after the data channel is closed.
 
 ## Value
 

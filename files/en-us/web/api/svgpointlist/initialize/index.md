@@ -8,7 +8,7 @@ browser-compat: api.SVGPointList.initialize
 
 {{APIRef("SVG")}}
 
-The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clears the list then adds a single new {{domxref("SVGPoint")}} object to the list.
+The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clears the list then adds a single new {{domxref("DOMPoint")}} object to the list.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ initialize(obj)
 ### Parameters
 
 - `obj`
-  - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be added when the list is initialized.
+  - : A {{domxref("DOMPoint")}} object containing the coordinates of the point to be added when the list is initialized.
 
 ### Return value
 
-The added {{domxref("SVGPoint")}} object.
+The added {{domxref("DOMPoint")}} object.
 
 ### Exceptions
 
@@ -45,11 +45,11 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-console.log(example.points.length); //5;
-let svgPoint = document.getElementById("svg").createSVGPoint();
-example.points.initialize(svgPoint);
-console.log(example.points.length); //1
+const example = document.getElementById("example");
+console.log(example.points.length); // 5;
+const point = document.getElementById("svg").createSVGPoint();
+example.points.initialize(point);
+console.log(example.points.length); // 1
 ```
 
 ## Specifications

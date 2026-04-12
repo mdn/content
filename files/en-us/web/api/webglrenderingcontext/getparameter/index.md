@@ -126,7 +126,7 @@ You can query the following `pname` parameters when using a
     <tr>
       <td><code>gl.COLOR_WRITEMASK</code></td>
       <td>
-        sequence&#x3C;{{domxref("WebGL_API/Types", "GLboolean")}}>
+        <code>sequence&#x3C;{{domxref("WebGL_API/Types", "GLboolean", "", "nocode")}}></code>
         (with 4 values)
       </td>
       <td></td>

@@ -39,17 +39,13 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : Thrown under the following conditions:
-
     - The _name_ is an empty string.
     - A constructor under the given _name_ is already registered. Registering
       the same name twice is not allowed.
 
 - {{jsxref("TypeError")}}
-
   - : Thrown under the following conditions:
-
     - The _processorCtor_ is not a callable constructor.
     - The {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property of the constructor exists and doesn't return an array of {{domxref("AudioParamDescriptor")}}-based objects.
 

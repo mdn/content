@@ -1,15 +1,24 @@
 ---
 title: Math.LOG2E
+short-title: LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.LOG2E
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.LOG2E`** static data property represents the base 2 logarithm of [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E), approximately 1.443.
 
-{{EmbedInteractiveExample("pages/js/math-log2e.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.LOG2E", "shorter")}}
+
+```js interactive-example
+function getLog2e() {
+  return Math.LOG2E;
+}
+
+console.log(getLog2e());
+// Expected output: 1.4426950408889634
+```
 
 ## Value
 

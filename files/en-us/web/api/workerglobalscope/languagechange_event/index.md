@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.languagechange_event
 ---
 
-{{APIRef}}{{AvailableInWorkers("worker")}}
+{{APIRef("DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
 
@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("languagechange", (event) => {});
+```js-nolint
+addEventListener("languagechange", (event) => { })
 
-onlanguagechange = (event) => {};
+onlanguagechange = (event) => { }
 ```
 
 ## Event type

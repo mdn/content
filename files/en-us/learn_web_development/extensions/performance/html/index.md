@@ -1,10 +1,12 @@
 ---
 title: HTML performance optimization
+short-title: Performant HTML
 slug: Learn_web_development/Extensions/Performance/HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML is by default fast and accessible. It is our job, as developers, to ensure that we preserve these two properties when creating or editing HTML code. Complications can occur when, for example, the file size of a {{htmlelement("video")}} embed is too large or when JavaScript parsing blocks the rendering of critical page elements. This article walks you through the key HTML performance features that can drastically improve the quality of your web page.
 
@@ -53,26 +55,26 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 
 [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) has revolutionized the way that web content layout is handled across different devices. One key advantage that it enables is dynamic switching of layouts optimized for different screen sizes, for example a wide screen layout versus a narrow (mobile) screen layout. It can also handle dynamic switching of content based on other device attributes, such as resolution or preference for light or dark color scheme.
 
-The so-called "mobile first" technique can ensure that the default layout is for small-screen devices, so mobiles can just download images suitable for their screens, and don't need to take the performance hit of downloading larger desktop images. However, since this is controlled using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) in your CSS, it can only positively affect performance of images loaded in CSS.
+The so-called "mobile first" technique can ensure that the default layout is for small-screen devices, so mobiles can just download images suitable for their screens, and don't need to take the performance hit of downloading larger desktop images. However, since this is controlled using [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) in your CSS, it can only positively affect performance of images loaded in CSS.
 
-In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Responsive_images) guides.
+In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) guides.
 
 ### Providing different image resolutions via srcset
 
-To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
+To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 
 This example provides different size images for different screen widths:
 
 ```html
 <img
   srcset="480w.jpg 480w, 800w.jpg 800w"
-  sizes="(max-width: 600px) 480px,
+  sizes="(width <= 600px) 480px,
          800px"
   src="800w.jpg"
   alt="Family portrait" />
 ```
 
-`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the screen width is `600px` or less, then `max-width: 600px` is true, and therefore, the slot to fill is said to be `480px`. In this case, the browser will likely choose to load the 480w.jpg file (480px-wide image). This helps with performance because browsers don't load larger images than they need.
+`srcset` provides the intrinsic size of the source images along with their filenames, and `sizes` provides media queries alongside image slot widths that need to be filled in each case. The browser then decides which images makes sense to load for each slot. As an example, if the screen width is `600px` or less, then `width <= 600px` is true, and therefore, the slot to fill is said to be `480px`. In this case, the browser will likely choose to load the 480w.jpg file (480px-wide image). This helps with performance because browsers don't load larger images than they need.
 
 This example provides different resolution images for different screen resolutions:
 
@@ -83,7 +85,7 @@ This example provides different resolution images for different screen resolutio
   alt="Family portrait" />
 ```
 
-`1.5x`, `2x`, etc. are relative resolution indicators. If the image is styled to be 320px-wide (for example with `width: 320px` in CSS), the browser will load `320w.jpg` if the device is low resolution (one device pixel per CSS pixel), or `640x.jpg` if the device is high resolution (two device pixels per CSS pixel or more).
+`1.5x`, `2x`, etc. are relative resolution indicators. If the image is styled to be 320px-wide (for example with `width: 320px` in CSS), the browser will load `320w.jpg` if the device is low resolution (one {{glossary("device pixel")}} per CSS pixel), or `640x.jpg` if the device is high resolution (two device pixels per CSS pixel or more).
 
 In both cases, the `src` attribute provides a default image to load if the browser does not support `src`/`srcset`.
 
@@ -97,13 +99,13 @@ An example is as follows:
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="narrow-banner-480w.jpg" />
-  <source media="(min-width: 800px)" srcset="wide-banner-800w.jpg" />
+  <source media="(width < 800px)" srcset="narrow-banner-480w.jpg" />
+  <source media="(width >= 800px)" srcset="wide-banner-800w.jpg" />
   <img src="large-banner-800w.jpg" alt="Dense forest scene" />
 </picture>
 ```
 
-The {{htmlelement("source")}} elements contain media queries inside `media` attributes. If a media query returns true, the image referenced in its `<source>` element's `srcset` attribute is loaded. In the above example, if the viewport width is `799px` or less, the `narrow-banner-480w.jpg` image is loaded. Also note how the `<picture>` element includes an `<img>` element, which provides a default image to load in the case of browsers that don't support `<picture>`.
+The {{htmlelement("source")}} elements contain media queries inside `media` attributes. If a media query returns true, the image referenced in its `<source>` element's `srcset` attribute is loaded. In the above example, if the viewport width is less than `800px`, the `narrow-banner-480w.jpg` image is loaded. Also note how the `<picture>` element includes an `<img>` element, which provides a default image to load in the case of browsers that don't support `<picture>`.
 
 Note the use of the `srcset` attribute in this example. As shown in the previous section, you can provide different resolutions for each image source.
 
@@ -113,11 +115,8 @@ Note the use of the `srcset` attribute in this example. As shown in the previous
 <video controls>
   <source src="video/smaller.mp4" type="video/mp4" />
   <source src="video/smaller.webm" type="video/webm" />
-  <source src="video/larger.mp4" type="video/mp4" media="(min-width: 800px)" />
-  <source
-    src="video/larger.webm"
-    type="video/webm"
-    media="(min-width: 800px)" />
+  <source src="video/larger.mp4" type="video/mp4" media="(width >= 800px)" />
+  <source src="video/larger.webm" type="video/webm" media="(width >= 800px)" />
 
   <!-- fallback for browsers that don't support video element -->
   <a href="video/larger.mp4">download video</a>
@@ -142,7 +141,9 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 
 See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
-You can also lazy load video content by using the `preload` attribute. For example:
+### Lazy loading video and audio
+
+You can also lazy load video content until the video is played, by using the `preload` attribute. For example:
 
 ```html
 <video controls preload="none" poster="poster.jpg">
@@ -152,6 +153,26 @@ You can also lazy load video content by using the `preload` attribute. For examp
 ```
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
+
+Giving `preload` a value of `metadata` asks the browser to download the minimal data needed to display the video before playing (for example the length, dimensions, and maybe initial frame).
+
+The `loading` attribute can further enhance lazy loading for videos by deferring loading of any video data, regardless of the `preload` value, as well as deferring loading of the `poster` image, until the video is near the viewport (at which point the `preload` value is used as per usual).
+
+```html
+<video controls preload="none" poster="poster.jpg" loading="lazy">
+  <source src="video.webm" type="video/webm" />
+  <source src="video.mp4" type="video/mp4" />
+</video>
+```
+
+This also can be used with audio content:
+
+```html
+<audio
+  controls
+  src="/shared-assets/audio/t-rex-roar.mp3"
+  loading="lazy"></audio>
+```
 
 See [Fast playback with audio and video preload](https://web.dev/articles/fast-playback-with-preload) on web.dev for detailed information.
 
@@ -260,18 +281,18 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 
 See the following articles for detailed information on using `rel="preload"`:
 
-- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > [!NOTE]
 > You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
 > [!NOTE]
-> There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> There are other [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, and `prefetch`. Go to the linked page and find out what they do.
 
 ## See also
 
 - [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}

@@ -2,9 +2,8 @@
 title: Algorithm
 slug: Glossary/Algorithm
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **algorithm** is a self-contained series of instructions to perform a function.
 

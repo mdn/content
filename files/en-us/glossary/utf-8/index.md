@@ -2,9 +2,8 @@
 title: UTF-8
 slug: Glossary/UTF-8
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 UTF-8 (UCS Transformation Format 8) is the World Wide Web's most common {{Glossary("Character encoding", "character encoding")}}. Each character is represented by one to four bytes. UTF-8 is backward-compatible with {{Glossary("ASCII")}} and can represent any standard Unicode character.
 

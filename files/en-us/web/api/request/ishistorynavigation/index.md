@@ -22,29 +22,28 @@ This example executes in a service worker. It listens for the {{domxref("Service
 
 ```js
 self.addEventListener("request", (event) => {
-  // ...
+  // …
 
   if (event.request.isHistoryNavigation) {
     event.respondWith(
       caches.match(event.request).then((response) => {
         if (response !== undefined) {
           return response;
-        } else {
-          return fetch(event.request).then((response) => {
-            let responseClone = response.clone();
-
-            caches.open("v1").then((cache) => {
-              cache.put(event.request, responseClone);
-            });
-
-            return response;
-          });
         }
+        return fetch(event.request).then((response) => {
+          const responseClone = response.clone();
+
+          caches
+            .open("v1")
+            .then((cache) => cache.put(event.request, responseClone));
+
+          return response;
+        });
       }),
     );
   }
 
-  // ...
+  // …
 });
 ```
 

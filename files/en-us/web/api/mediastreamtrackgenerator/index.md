@@ -10,6 +10,9 @@ browser-compat: api.MediaStreamTrackGenerator
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
+> [!NOTE]
+> Consider using {{domxref("VideoTrackGenerator")}} instead.
+
 The **`MediaStreamTrackGenerator`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
 The object consumes a stream of media frames as input, which can be audio or video frames.
 
@@ -53,6 +56,10 @@ trackProcessor.readable
   .pipeThrough(transformer)
   .pipeTo(trackGenerator.writable);
 ```
+
+## See also
+
+- {{domxref("VideoTrackGenerator")}}
 
 ## Specifications
 

@@ -2,9 +2,8 @@
 title: Certificate authority
 slug: Glossary/Certificate_authority
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **certificate authority** (CA) is an organization that {{Glossary("Signature/Security", "signs")}} {{Glossary("Digital certificate", "digital certificates")}} and their associated {{Glossary("Key", "public keys")}}, thereby asserting that the contained information and keys are correct.
 
@@ -13,7 +12,7 @@ For a website digital certificate, this information minimally includes the name 
 Certificate authorities are the part of the Internet [public key infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) that allows browsers to verify website identity and securely connect over TLS (thus HTTPS).
 
 > [!NOTE]
-> Web browsers come preloaded with a list of "root certificates". The browser can use these to reliably check that the website certificate was signed by a certificate authority that "chains back" to the root certificate (i.e. was trusted by the owner of the root certificate or an intermediate CA). Ultimately this process relies on every CA performing adequate identity checks before signing a certificate!
+> Web browsers come preloaded with a list of "root certificates". The browser can use these to reliably check that the website certificate was signed by a certificate authority that "chains back" to the root certificate (i.e., was trusted by the owner of the root certificate or an intermediate CA). Ultimately this process relies on every CA performing adequate identity checks before signing a certificate!
 
 ## See also
 

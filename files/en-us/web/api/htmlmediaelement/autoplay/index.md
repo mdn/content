@@ -9,7 +9,7 @@ browser-compat: api.HTMLMediaElement.autoplay
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.autoplay`**
-property reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating
+property reflects the [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/video#autoplay) HTML attribute, indicating
 whether playback should automatically begin as soon as enough media is available to do
 so without interruption.
 
@@ -25,7 +25,7 @@ active (that is, when {{domxref("MediaStream.active")}} becomes `true`).
 > creating media elements whose source will be set at a later time, under user control.
 
 For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
-autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 ## Value
 

@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("payerdetailchange", async (event) => {});
+```js-nolint
+addEventListener("payerdetailchange", (event) => { })
 
-onpayerdetailchange = async (event) => {};
+onpayerdetailchange = (event) => { }
 ```
 
 ## Event type
@@ -87,7 +87,7 @@ response.onpayerdetailchange = async (ev) => {
   // validation to the errors list
 
   const errors = await Promise.all(promisesToValidate).then((results) =>
-    results.reduce((errors, result), Object.assign(errors, result)),
+    results.reduce((errors, result) => Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected

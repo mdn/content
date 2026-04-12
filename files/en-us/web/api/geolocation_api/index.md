@@ -11,6 +11,9 @@ The **Geolocation API** allows the user to provide their location to web applica
 
 WebExtensions that wish to use the `Geolocation` object must add the `"geolocation"` permission to their manifest. The user's operating system will prompt the user to allow location access the first time it is requested.
 
+> [!NOTE]
+> The {{htmlelement("geolocation")}} element provides an alternative mechanism for accessing and handling geolocation data that solves some of the shortcomings of the Geolocation API: It provides a consistent UI, and a more intuitive permission management process.
+
 ## Concepts and usage
 
 You will often want to retrieve a user's location information in your web app, for example to plot their location on a map, or display personalized information relevant to their location.
@@ -48,9 +51,9 @@ For further information on Geolocation usage, read [Using the Geolocation API](/
 
 ## Security considerations
 
-The Geolocation API allows users to programmatically access location information in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
+The Geolocation API allows users to programmatically access location information in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
-Access may further be controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/geolocation","geolocation")}}.
+Access may further be controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/geolocation","geolocation")}}.
 The default allowlist for `geolocation` is `self`, which allows access to location information in same-origin nested frames only.
 Third party usage is enabled by setting a `Permissions-Policy` response header to grant permission to a particular third party origin:
 
@@ -61,7 +64,7 @@ Permissions-Policy: geolocation=(self b.example.com)
 The `allow="geolocation"` attribute must then be added to the iframe element with sources from that origin:
 
 ```html
-<iframe src="https://b.example.com" allow="geolocation"/></iframe>
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
 ```
 
 Geolocation data may reveal information that the device owner does not want to share.
@@ -83,10 +86,10 @@ See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Ge
 
 ### Availability
 
-As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
+As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/service/webService/webServiceGuide/position/webServiceIp). These services use the user's IP address and/or a local app to provide enhanced positioning.
 
 ## See also
 
+- {{htmlelement("geolocation")}} element
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

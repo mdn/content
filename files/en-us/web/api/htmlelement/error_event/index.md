@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.error_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `error` event is fired on an element when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 
@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -37,7 +37,7 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 ```html
 <div class="controls">
   <button id="img-error" type="button">Generate image error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
@@ -120,6 +120,5 @@ imgError.addEventListener("click", () => {
 ## See also
 
 - Related events
-
   - Window: {{domxref("Window/error_event", "error")}} event
   - HTMLElement: {{domxref("HTMLElement/load_event", "load")}} event

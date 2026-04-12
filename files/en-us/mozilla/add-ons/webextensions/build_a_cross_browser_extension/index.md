@@ -2,9 +2,8 @@
 title: Build a cross-browser extension
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari).
 
@@ -129,7 +128,7 @@ For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebE
 
 ### Manifest keys
 
-The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) file keys supported by the main browsers fall broadly into three categories:
+The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file keys supported by the main browsers fall broadly into three categories:
 
 1. **Extension information attributes.**
    For example, at the time of writing, Firefox and Opera include the [`developer`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) key for details about the developer of the extension.

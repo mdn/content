@@ -22,7 +22,7 @@ new URLSearchParams(options)
 
 - `options` {{optional_inline}}
   - : One of:
-    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored.
+    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored. This is the only form that decodes [percent-encoding](/en-US/docs/Glossary/Percent-encoding), and decodes `+` to U+0020 SPACE.
     - A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form-urlencoded` form).
     - A record of string keys and string values. Note that nesting is not supported.
 
@@ -68,22 +68,22 @@ console.log(url.href);
 console.log(url.origin);
 // https://example.com
 
-const add_params = {
+const addParams = {
   c: "a",
-  d: new String(2),
-  e: false.toString(),
+  d: 2,
+  e: false,
 };
 
-const new_params = new URLSearchParams([
+const newParams = new URLSearchParams([
   ...Array.from(url.searchParams.entries()), // [["a","hello"],["b","world"]]
-  ...Object.entries(add_params), // [["c","a"],["d","2"],["e","false"]]
+  ...Object.entries(addParams), // [["c","a"],["d",2],["e",false]]
 ]).toString();
-console.log(new_params);
+console.log(newParams);
 // a=hello&b=world&c=a&d=2&e=false
 
-const new_url = new URL(`${url.origin}${url.pathname}?${new_params}`);
+const newURL = new URL(`${url.origin}${url.pathname}?${newParams}`);
 
-console.log(new_url.href);
+console.log(newURL.href);
 // https://example.com/?a=hello&b=world&c=a&d=2&e=false
 
 // Here it is as a function that accepts (URL, Record<string, string>)

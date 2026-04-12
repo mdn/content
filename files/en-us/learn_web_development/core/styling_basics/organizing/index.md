@@ -2,9 +2,8 @@
 title: Organizing your CSS
 slug: Learn_web_development/Core/Styling_basics/Organizing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
@@ -46,7 +45,7 @@ Here are some general suggestions for ways to keep your stylesheets organized an
 
 If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.
 
-For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS).
+For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/CSS).
 
 ### Keep it consistent
 
@@ -110,7 +109,7 @@ You may have used a CSS property in a specific way to get around older browser i
 ```css
 .box {
   background-color: red; /* fallback for older browsers that don't support gradients */
-  background-image: linear-gradient(to right, #ff0000, #aa0000);
+  background-image: linear-gradient(to right, red, #aa0000);
 }
 ```
 
@@ -202,7 +201,7 @@ If you create very specific selectors, you will often find that you need to dupl
 
 ```css
 article.main p.box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 
@@ -210,7 +209,7 @@ If you then wanted to apply the same rules to something outside of `main`, or to
 
 ```css
 .box {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 ```
 
@@ -236,7 +235,7 @@ However, you do gain a lot of structure by adopting one. Since many of these sys
 
 #### OOCSS
 
-Most of the approaches you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by [the work of Nicole Sullivan](https://github.com/stubbornella/oocss/wiki). The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as [The Media Object](/en-US/docs/Web/CSS/Layout_cookbook/Media_objects). This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.
+Most of the approaches you will encounter owe something to the concept of Object Oriented CSS (OOCSS), an approach made popular by [the work of Nicole Sullivan](https://github.com/stubbornella/oocss/wiki). The basic idea of OOCSS is to separate your CSS into reusable objects, which can be used anywhere you need on your site. The standard example of OOCSS is the pattern described as [The Media Object](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Media_objects). This is a pattern with a fixed size image, video or other element on one side, and flexible content on the other. It's a pattern we see all over websites for comments, listings, and so on.
 
 If you are not taking an OOCSS approach you might create a custom CSS for the different places this pattern is used, for example, by creating two classes, one called `comment` with a bunch of rules for the component parts, and another called `list-item` with almost the same rules as the `comment` class except for some tiny differences. The differences between these two components are the list-item has a bottom border, and images in comments have a border whereas list-item images do not.
 
@@ -346,7 +345,7 @@ The most popular pre-processor is [Sass](https://sass-lang.com/). This is not a 
 
 #### Defining variables
 
-CSS now has native [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), making this feature increasingly less important. However, one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then to use that variable around the project. This means that if you realize you have used the wrong shade of blue, you only need change it in one place.
+CSS now has native [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), making this feature increasingly less important. However, one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then to use that variable around the project. This means that if you realize you have used the wrong shade of blue, you only need change it in one place.
 
 If we created a variable called `$base-color`, as in the first line below, we could then use it through the stylesheet anywhere that required that color.
 

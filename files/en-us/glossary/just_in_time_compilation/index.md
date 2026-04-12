@@ -2,9 +2,8 @@
 title: Just-In-Time Compilation (JIT)
 slug: Glossary/Just_In_Time_Compilation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **JIT** (_Just-In-Time Compilation_) is a {{glossary("compile", "compilation")}} process in which code is translated from an intermediate representation or a higher-level language (e.g., {{glossary("JavaScript")}} or Java bytecode) into machine code _at runtime_, rather than prior to execution. This approach combines the benefits of both interpretation and ahead-of-time (AOT) compilation.
 

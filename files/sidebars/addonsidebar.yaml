@@ -23,12 +23,14 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Internationalization
       - /Mozilla/Add-ons/WebExtensions/Content_Security_Policy
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
+      - /Mozilla/Add-ons/WebExtensions/Native_manifests
+      - /Mozilla/Add-ons/WebExtensions/User_actions
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-  - title: WebExtensions#User_Interface
+  - link: /Mozilla/Add-ons/WebExtensions/user_interface
+    title: WebExtensions#User_Interface
     details: closed
     children:
-      - /Mozilla/Add-ons/WebExtensions/user_interface
       - /Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
       - /Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
       - /Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
@@ -38,6 +40,8 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
       - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
       - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Popups
   - title: WebExtensions#How_to
     details: closed
     children:
@@ -59,8 +63,10 @@ sidebar:
     title: WebExtensions#API
   - type: listSubPages
     path: /Mozilla/Add-ons/WebExtensions/manifest.json
+    link: /Mozilla/Add-ons/WebExtensions/manifest.json
     title: WebExtensions#manifest.json
     details: closed
+    code: true
   - title: extension_workshop
     details: closed
     children:
@@ -171,11 +177,11 @@ l10n:
     WebExtensions#How_to: 怎么做
     WebExtensions#API: JavaScript API
     WebExtensions#manifest.json: 清单键
-    extension_workshop: Extension Workshop
-    extension_workshop_develop: Develop
-    extension_workshop_publish: Publish
-    extension_workshop_manage: Manage
-    extension_workshop_enterprise: Enterprise
+    extension_workshop: 扩展工作坊
+    extension_workshop_develop: 开发
+    extension_workshop_publish: 发布
+    extension_workshop_manage: 管理
+    extension_workshop_enterprise: 企业版
     Channels: 渠道
     Blog: 附加组件博客
     Forums: 附加组件论坛

@@ -3,9 +3,8 @@ title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Reloads the extension.
 
@@ -21,10 +20,6 @@ browser.runtime.reload()
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Reload the extension when the user clicks a browser action's icon:
@@ -36,6 +31,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-reload) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

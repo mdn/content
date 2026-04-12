@@ -22,7 +22,7 @@ MediaSource.isTypeSupported(type)
 ### Parameters
 
 - `type`
-  - : A string specifying the MIME type of the media and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) containing a comma-separated list of the supported codecs.
+  - : A string specifying the MIME type of the media and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) containing a comma-separated list of the supported codecs.
 
 ### Return value
 
@@ -79,7 +79,7 @@ function sourceOpen() {
 ## See also
 
 - [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
+- [Codecs in common media types](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

@@ -2,9 +2,8 @@
 title: How can we design for all types of users?
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article provides basic tips to help you design websites for any kind of user.
 
@@ -34,10 +33,6 @@ This article provides basic tips to help you design websites for any kind of use
 
 When you're building a website, one top issue to consider is [Universal Design](https://en.wikipedia.org/wiki/Universal_design): accommodating all users regardless of disability, technical constraints, culture, location, and so on.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
-
 ## Dig deeper
 
 ### Color contrast
@@ -46,7 +41,7 @@ To keep your text readable, use a text color that contrasts well with the backgr
 
 The {{Glossary("W3C")}} defines a good color mix with an algorithm that calculates luminosity ratio between foreground and background. The calculation may seem pretty complicated, but we can rely on tools to do the job for us.
 
-Let's download and install the Paciello Group's [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/).
+Let's download and install Vispero's [Color Contrast Analyser](https://vispero.com/lp/color-contrast-checker/).
 
 > [!NOTE]
 > Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.
@@ -247,7 +242,4 @@ You must also provide alternatives to multimedia content.
 
 ### Image compression
 
-Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:
-
-- **Installed software.** [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](https://optipng.sourceforge.net/) (all platforms), [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux)
-- **Online tools.** Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)
+Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local. Generally, local tools are preferred because they can be more integrated with your development workflow; these tools include [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](https://optipng.sourceforge.net/) (all platforms), and [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux).

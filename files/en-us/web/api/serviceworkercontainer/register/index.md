@@ -8,21 +8,14 @@ browser-compat: api.ServiceWorkerContainer.register
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
+> [!WARNING]
+> The `scriptURL` parameter passed to this method represents the URL of an external script loaded into a service worker.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by having a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that restricts the locations from which scripts can be loaded, and by always assigning {{domxref("TrustedScriptURL")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+> See [Security considerations](#security_considerations) for more information.
+
 The **`register()`** method of the {{domxref("ServiceWorkerContainer")}} interface creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given scope.
-If successful, the registration associates the provided script URL to a _scope_, which is subsequently used for matching documents to a specific service worker.
-
-A single registration is created for each unique scope.
-If `register()` is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.
-If there are no changes, then the existing registration is returned.
-Note that calling `register()` with the same scope and `scriptURL` does not restart the installation process.
-You can therefore call this method unconditionally from a controlled page: you don't need to first check whether there's an active registration or service worker.
-
-A document can potentially be within the scope of several registrations with different service workers and options.
-The browser will associate the document with the matching registration that has the most specific scope.
-This ensures that only one service worker runs for each document.
-
-> [!NOTE]
-> It is generally safer not to define registrations that have overlapping scopes.
 
 ## Syntax
 
@@ -34,17 +27,14 @@ register(scriptURL, options)
 ### Parameters
 
 - `scriptURL`
-  - : The URL of the service worker script.
-    The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+  - : A {{domxref("TrustedScriptURL")}} instance or a string defining the URL of the service worker script.
+    The registered service worker file needs to be served with a valid [JavaScript media type](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
 - `options` {{optional_inline}}
-
   - : An object containing registration options. Currently available options are:
-
     - `scope`
-
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
-        This is usually specified as a URL that is relative to the base URL of the site (e.g. `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
+        This is usually specified as a URL that is relative to the base URL of the site (e.g., `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
         The default `scope` for a service worker registration is the directory where the service worker script is located (resolving `./` against `scriptURL`).
 
         The scope should be used to specify documents that are in the same directory or more deeply nested than the service worker.
@@ -52,10 +42,8 @@ register(scriptURL, options)
         See the [Examples](#examples) section for information on broadening the default scope of a service worker.
 
     - `type`
-
       - : A string specifying the type of worker to create.
         Valid values are:
-
         - `'classic'`
           - : The loaded service worker is in a standard script.
             This is the default.
@@ -64,10 +52,8 @@ register(scriptURL, options)
             For ES module compatibility info, see the [browser compatibility data table for the `ServiceWorker` interface](/en-US/docs/Web/API/ServiceWorker#browser_compatibility).
 
     - `updateViaCache`
-
       - : A string indicating how the HTTP cache is used for service worker scripts resources during updates.
         Note: This only refers to the service worker script and its imports, not other resources fetched by these scripts.
-
         - `'all'`
           - : The HTTP cache will be queried for the main script, and all imported scripts. If no fresh entry is found in the HTTP cache, then the scripts are fetched from the network.
         - `'imports'`
@@ -82,7 +68,6 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
 ### Exceptions
 
 - `TypeError`
-
   - : The `scriptURL` or `scope URL` is a failure.
     This can happen if the URL can't be resolved to a valid URL or uses a scheme that is not `http:` or `https`.
     It may also happen if `scriptURL` is not a {{domxref("TrustedScriptURL")}}, and this is a requirement of the site's [Trusted Types Policy](/en-US/docs/Web/API/Trusted_Types_API).
@@ -93,9 +78,92 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
   - : The `scriptURL` is not a potentially trustworthy origin, such as `localhost` or an `https` URL.
     The `scriptURL` and scope are not same-origin with the registering page.
 
+## Description
+
+The **`register()`** method creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given scope.
+If successful, the registration associates the provided script URL to a _scope_, which is subsequently used for matching documents to a specific service worker.
+
+A single registration is created for each unique scope.
+If `register()` is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.
+If there are no changes, then the existing registration is returned.
+Calling `register()` with the same scope and `scriptURL` does not restart the installation process, so it is generally safe to call this method unconditionally from a controlled page.
+However, it does send a network request for the service worker script, which may put more load on the server.
+If this is a concern, you can first check for an existing registration using {{domxref("ServiceWorkerContainer.getRegistration()")}}.
+
+A document can potentially be within the scope of several registrations with different service workers and options.
+The browser will associate the document with the matching registration that has the most specific scope.
+This ensures that only one service worker runs for each document.
+
+> [!NOTE]
+> It is generally safer not to define registrations that have overlapping scopes.
+
+### Security considerations
+
+The `scriptURL` parameter specifies the script for the service worker, which can intercept network requests for pages within its scope and return responses that are fresh, cached, new, or modified.
+If the input is provided by a user, this is a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+
+It is extremely risky to accept and execute arbitrary URLs from untrusted origins.
+A website should control what scripts that are allowed to run using a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) with the [`worker-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) directive (or a fallback defined in [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src)).
+This can restrict scripts to those from the current origin, or a specific set of origins, or even particular files.
+
+If you're using this property and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) (using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive), you will need to always assign {{domxref("TrustedScriptURL")}} objects instead of strings.
+This ensures that the input is passed through a transformation function, which has the chance to reject or modify the URL before it is injected.
+
 ## Examples
 
 The examples below should be read together to understand how service worker scope applies to a page.
+
+Note that the first example shows how to use the method with trusted types.
+The other examples omit this step for brevity.
+
+### Using TrustedScriptURL
+
+To mitigate the risk of XSS, we should always assign `TrustedScriptURL` instances to the `scriptURL` parameter.
+We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: worker-src`).
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
+This acts as a transparent replacement for the trusted types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScriptURL", "createScriptURL()")}} method for transforming input strings into {{domxref("TrustedScriptURL")}} instances.
+
+For the purpose of this example we'll assume that we want to allow a predefined set of URLs in the `scriptAllowList` array and log any other scripts.
+
+```js
+const scriptAllowList = [
+  // Some list of allowed URLs
+];
+const policy = trustedTypes.createPolicy("script-url-policy", {
+  createScriptURL(input) {
+    if (scriptAllowList.includes(input)) {
+      return input; // allow the script
+    }
+    console.log(`Script not in scriptAllowList: ${input}`);
+    return ""; // Block the script
+  },
+});
+```
+
+Then we use the `policy` object to create a `TrustedScriptURL` object from a potentially unsafe input string:
+
+```js
+// The potentially malicious string
+// We won't be including untrustedScript in our scriptAllowList array
+const untrustedScript = "https://evil.example.com/service_worker.js";
+
+// Create a TrustedScriptURL instance using the policy
+const trustedScriptURL = policy.createScriptURL(untrustedScript);
+```
+
+We can now pass the `TrustedScriptURL` object into `register()`:
+
+```js
+navigator.serviceWorker.register(trustedScriptURL);
+```
 
 ### Register a service worker with default scope
 

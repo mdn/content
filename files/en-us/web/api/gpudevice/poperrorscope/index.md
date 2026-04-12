@@ -3,12 +3,10 @@ title: "GPUDevice: popErrorScope() method"
 short-title: popErrorScope()
 slug: Web/API/GPUDevice/popErrorScope
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUDevice.popErrorScope
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popErrorScope()`** method of the
 {{domxref("GPUDevice")}} interface pops an existing GPU error scope from the error scope stack (originally pushed using {{domxref("GPUDevice.pushErrorScope()")}}) and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or `null` if no error occurred.
@@ -25,7 +23,7 @@ None.
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope. This can be of type:
+A {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope. This can be of type:
 
 - {{domxref("GPUInternalError")}}
 - {{domxref("GPUOutOfMemoryError")}}

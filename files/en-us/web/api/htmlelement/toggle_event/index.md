@@ -18,10 +18,10 @@ This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("toggle", (event) => {});
+```js-nolint
+addEventListener("toggle", (event) => { })
 
-ontoggle = (event) => {};
+ontoggle = (event) => { }
 ```
 
 ## Event type
@@ -78,9 +78,9 @@ const popover = document.getElementById("mypopover");
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
-    console.log("Popover has been shown");
+    log("Popover has been shown");
   } else {
-    console.log("Popover has been hidden");
+    log("Popover has been hidden");
   }
 });
 ```
@@ -98,7 +98,7 @@ For example:
 
 ```js
 popover.addEventListener("toggle", () => {
-  //...
+  // …
 });
 
 popover.showPopover();
@@ -108,7 +108,7 @@ popover.hidePopover();
 
 ### Other examples
 
-- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#opening_a_modal_dialog) example in `HTMLDialogElement`
+- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#open_close_a_modal_dialog) example in `HTMLDialogElement`
 
 ## Specifications
 
@@ -120,6 +120,6 @@ popover.hidePopover();
 
 ## See also
 
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - Related event: [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event)

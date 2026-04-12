@@ -12,11 +12,11 @@ The **`authenticatorData`** property of the {{domxref("AuthenticatorAssertionRes
 
 ## Value
 
-An {{jsxref("ArrayBuffer")}} with a {{jsxref("ArrayBuffer.byteLength")}} of at least 37 bytes, which contains the data structure explained in [Authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data).
+An {{jsxref("ArrayBuffer")}} with a {{jsxref("ArrayBuffer.byteLength", "byteLength")}} of at least 37 bytes, which contains the data structure explained in [Authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data).
 
 ## Examples
 
-See [User login using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/get#user_login_using_the_webauthn_api) for a detailed example.
+See [Retrieving a public key credential](/en-US/docs/Web/API/CredentialsContainer/get#retrieving_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

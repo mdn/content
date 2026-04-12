@@ -2,9 +2,10 @@
 title: Styling web forms
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 In the previous few articles, we showed how to create web forms in HTML. Now, we'll show how to style them in [CSS](/en-US/docs/Web/CSS).
 
@@ -42,7 +43,7 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+3. Single-line text {{HTMLElement("input")}}s (e.g., type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search).
 4. Multi-line {{HTMLElement("textarea")}}
 5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}
@@ -51,17 +52,19 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 #### Harder-to-style
 
 - Checkboxes and radio buttons
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)
 
 The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) shows how to style these.
 
 #### Having internals can't be styled in CSS alone
 
-- [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
-- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)
+- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+  > [!NOTE]
+  > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
 For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
@@ -131,7 +134,92 @@ The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tric
 
 Take the following example:
 
-{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
+```html hidden live-sample___positioned-legend
+<form>
+  <fieldset>
+    <legend>Choose all the vegetables you like to eat</legend>
+    <ul>
+      <li>
+        <label for="carrots">Carrots</label>
+        <input
+          type="checkbox"
+          checked
+          id="carrots"
+          name="carrots"
+          value="carrots" />
+      </li>
+      <li>
+        <label for="peas">Peas</label>
+        <input type="checkbox" id="peas" name="peas" value="peas" />
+      </li>
+      <li>
+        <label for="cabbage">Cabbage</label>
+        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
+      </li>
+      <li>
+        <label for="cauliflower">Cauliflower</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
+      </li>
+      <li>
+        <label for="broccoli">Broccoli</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>What is your favorite meal?</legend>
+    <ul>
+      <li>
+        <label for="soup">Soup</label>
+        <input type="radio" checked id="soup" name="meal" value="soup" />
+      </li>
+      <li>
+        <label for="curry">Curry</label>
+        <input type="radio" id="curry" name="meal" value="curry" />
+      </li>
+      <li>
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="pizza" name="meal" value="pizza" />
+      </li>
+      <li>
+        <label for="tacos">Tacos</label>
+        <input type="radio" id="tacos" name="meal" value="tacos" />
+      </li>
+      <li>
+        <label for="bolognese">Bolognese</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
+      </li>
+    </ul>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___positioned-legend
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+```
+
+{{EmbedLiveSample("positioned-legend", '100%', 400)}}
 
 To position the legend in this manner, we used the following CSS (other declarations removed for brevity):
 
@@ -195,7 +283,7 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
+1. [The postcard background](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — download this image and save it in the same directory as your working HTML file.
 2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
 3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 
@@ -237,7 +325,7 @@ body {
   font: 1.3rem sans-serif;
   padding: 0.5em;
   margin: 0;
-  background: #222;
+  background: #222222;
 }
 
 form {
@@ -247,7 +335,7 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: white url("background.jpg");
 
   /* we create our grid */
   display: grid;
@@ -257,7 +345,7 @@ form {
 }
 ```
 
-Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
@@ -340,27 +428,27 @@ textarea {
 
 #### Styling the submit button
 
-The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 5px;
   background: none;
   cursor: pointer;
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
@@ -373,17 +461,8 @@ And voilà! Your form should now look like this:
 > [!NOTE]
 > If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
-## Test your skills
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics).
-
 ## Summary
 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. [In the next article](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), we will see how to handle form widgets which fall into the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

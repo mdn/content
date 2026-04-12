@@ -1,8 +1,14 @@
-<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
+<!-- 🙌 Thanks for contributing to MDN Web Docs. 🙌 -->
+
+<!--
+Add details below to help us review your pull request (PR).
+Explain your changes and link to a related issue or pull request.
+Your PR may be delayed or closed if you don't provide enough information.
+-->
 
 ### Description
 
-<!-- ✍️ Summarize your changes in one or two sentences -->
+<!-- ✍️ Summarize your changes in one or two sentences. -->
 
 ### Motivation
 
@@ -10,13 +16,12 @@
 
 ### Additional details
 
-<!-- 🔗 Link to release notes, vendor docs, bug trackers, source control, or other places providing more context -->
+<!-- 🔗 Link to release notes, browser docs, bug trackers, source control, or other resources. -->
 
 ### Related issues and pull requests
 
 <!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
 <!-- 👉 Highlight related pull requests using "Relates to #123" -->
-<!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+<!-- ❗ If another pull request must be merged first, use "**Depends on:** #123" -->
 
-
-<!-- 👷‍♀️ After submitting, go to the "Checks" tab of your PR for the build status -->
+<!-- 🔎 After submitting, the 'Checks' tab of your PR shows the build status. -->

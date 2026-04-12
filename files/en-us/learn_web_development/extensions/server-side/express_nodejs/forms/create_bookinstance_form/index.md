@@ -2,9 +2,8 @@
 title: Create BookInstance form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This subarticle shows how to define a page/form to create `BookInstance` objects.
 This is very much like the form we used to [create `Book` objects](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form).
@@ -29,14 +28,14 @@ Find the exported `bookinstance_create_get()` controller method and replace it w
 
 ```js
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = asyncHandler(async (req, res, next) => {
+exports.bookinstance_create_get = async (req, res, next) => {
   const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
   res.render("bookinstance_form", {
     title: "Create BookInstance",
     book_list: allBooks,
   });
-});
+};
 ```
 
 The controller gets a sorted list of all books (`allBooks`) and passes it via `book_list` to the view **`bookinstance_form.pug`** (along with a `title`).
@@ -63,7 +62,7 @@ exports.bookinstance_create_post = [
     .toDate(),
 
   // Process request after validation and sanitization.
-  asyncHandler(async (req, res, next) => {
+  async (req, res, next) => {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -88,12 +87,12 @@ exports.bookinstance_create_post = [
         bookinstance: bookInstance,
       });
       return;
-    } else {
-      // Data from form is valid
-      await bookInstance.save();
-      res.redirect(bookInstance.url);
     }
-  }),
+
+    // Data from form is valid
+    await bookInstance.save();
+    res.redirect(bookInstance.url);
+  },
 ];
 ```
 
@@ -158,7 +157,7 @@ The one thing to note is the line where we set the "due back" date to `bookinsta
 input#due_back.form-control(type='date', name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 ```
 
-The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Element/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
+The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Reference/Elements/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
 The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the next section.
 
 ## Model—virtual `due_back_yyyy_mm_dd()` method

@@ -1,0 +1,38 @@
+<svg version="1.1" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="14" fill="none">
+	<g>
+		<rect fill="white" x="0" y="0" w="480" h="360" />
+
+		<!-- Thick black border -->
+		<path stroke="black" stroke-width="3" d="M 250 42, h -200, v 290, h 368, v -127" />
+
+		<!-- Thinner lines showing corner-shapes -->
+		<g stroke="black" stroke-width="1">
+			<path stroke="hsl(0deg, 80%, 40%)" d="M 250 41 a 169 164 0 0 1 169 164" />
+			<path stroke="hsl(240deg, 80%, 50%)" d="M 250 41 l 169 164" />
+			<path stroke="hsl(120deg, 80%, 30%)" d="M 250 41 a 169 164 0 0 0 169 164" />
+			<path d="M 250 41 h 169 v 164" />
+			<path d="M 250 41 v 164 h 169" />
+		</g>
+
+		<!-- Most of the text -->
+		<g fill="black">
+			<text transform="translate(59, 36)">Top border</text>
+			<text transform="translate(422, 250)">Right<tspan x="0" dy="16">border</tspan></text>
+			<text transform="translate(320, 79)" font-size="12" fill="hsl(0deg,80%,40%)">K=1</text>
+			<text transform="translate(320, 105)" font-size="12" fill="hsl(240deg,80%,50%)">K=0</text>
+			<text transform="translate(320, 169)" font-size="12" fill="hsl(120deg, 80%, 30%)">K=-1</text>
+			<text text-anchor="end" transform="translate(419, 36)" font-size="12">K=infinity</text>
+			<text transform="translate(252, 217)" font-size="12">K=-infinity</text>
+		</g>
+
+		<!-- The two arrows + text -->
+		<g transform="translate(365 75) rotate(-45)">
+			<path stroke="black" stroke-width="1" fill="#ccc" d="M0 0 h 30 v -5 l 10 10 l -10 10 v -5 h -30 z" />
+			<text text-anchor="middle" fill="black" x="20" y="27" font-size="12">K &gt; 1</text>
+		</g>
+		<g transform="translate(260 180) rotate(-45)">
+			<path stroke="black" stroke-width="1" fill="#ccc" d="M40 0 h -30 v -5 l -10 10 l 10 10 v -5 h 30 z" />
+			<text text-anchor="middle" fill="black" x="20" y="27" font-size="12">K &lt; -1</text>
+		</g>
+	</g>
+</svg>

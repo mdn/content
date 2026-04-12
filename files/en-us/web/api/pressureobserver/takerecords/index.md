@@ -35,7 +35,7 @@ An {{jsxref("Array")}} of {{domxref("PressureRecord")}} objects.
 The following example stores the current list of pressure records into `records` and empties the pressure observer.
 
 ```js
-const observer = new PressureObserver(callback):
+const observer = new PressureObserver(callback);
 observer.observe("cpu");
 
 const records = observer.takeRecords();

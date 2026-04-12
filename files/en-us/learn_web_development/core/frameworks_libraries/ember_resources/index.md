@@ -2,9 +2,8 @@
 title: Ember resources and troubleshooting
 slug: Learn_web_development/Core/Frameworks_libraries/Ember_resources
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Ember_routing", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -45,7 +44,6 @@ Our final Ember article provides you with a list of resources that you can use t
 ## Further resources
 
 - [Ember.JS Guides](https://guides.emberjs.com/release/)
-
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release/)

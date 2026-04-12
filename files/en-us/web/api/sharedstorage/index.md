@@ -3,11 +3,11 @@ title: SharedStorage
 slug: Web/API/SharedStorage
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin, defining methods to write data to the shared storage.
 
@@ -20,13 +20,13 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 
 ## Instance methods
 
-- {{domxref("SharedStorage.append", "append()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorage.append", "append()")}} {{deprecated_inline}}
   - : Appends a string to the value of an existing key-value pair in the current origin's shared storage.
-- {{domxref("SharedStorage.clear", "clear()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorage.clear", "clear()")}} {{deprecated_inline}}
   - : Clears the current origin's shared storage, removing all data from it.
-- {{domxref("SharedStorage.delete", "delete()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorage.delete", "delete()")}} {{deprecated_inline}}
   - : Deletes an existing key-value pair from the current origin's shared storage.
-- {{domxref("SharedStorage.set", "set()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorage.set", "set()")}} {{deprecated_inline}}
   - : Stores a new key-value pair in the current origin's shared storage or updates an existing one.
 
 ## Examples
@@ -34,7 +34,7 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 ```js
 window.sharedStorage
   .set("ab-testing-group", "0")
-  .then(console.log("Value saved to shared storage"));
+  .then(() => console.log("Value saved to shared storage"));
 ```
 
 ## Specifications

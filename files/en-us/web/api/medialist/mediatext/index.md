@@ -16,10 +16,10 @@ interface is a {{Glossary("stringifier")}} that returns a string representing th
 
 A string representing the media queries of a stylesheet. Each one is
 separated by a comma, for example
-`screen and (min-width: 480px), print`.
+`screen and (width >= 480px), print`.
 
 If you wish to set new media queries on the document, the string value must have the
-different queries separated by commas, e.g. `screen, print`. Note that the
+different queries separated by commas, e.g., `screen, print`. Note that the
 `MediaList` is a live list; updating the list via
 `mediaText` will immediately update the behavior of the
 document.

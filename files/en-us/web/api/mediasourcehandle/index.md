@@ -52,7 +52,8 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **Note:** `MediaSourceHandle`s cannot be successfully transferred into or via a shared worker or service worker.
+> [!NOTE]
+> `MediaSourceHandle`s cannot be successfully transferred into or via a shared worker or service worker.
 
 ## Specifications
 

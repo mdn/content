@@ -14,10 +14,10 @@ The **`controllerchange`** event of the {{domxref("ServiceWorkerContainer")}} in
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("controllerchange", (event) => {});
+```js-nolint
+addEventListener("controllerchange", (event) => { })
 
-oncontrollerchange = (event) => {};
+oncontrollerchange = (event) => { }
 ```
 
 ## Event type

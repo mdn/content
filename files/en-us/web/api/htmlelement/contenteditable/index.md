@@ -39,4 +39,4 @@ A string.
 ## See also
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute.

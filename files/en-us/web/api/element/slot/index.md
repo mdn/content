@@ -25,7 +25,7 @@ using the contents of a template that contains a slot named `my-text`.
 
 When `<my-paragraph>` is used in the document, the slot is populated
 by a slottable element by including it inside the element with a
-[`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+[`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
 with the value `my-text`. Here is one such example:
 
 ```html

@@ -3,9 +3,8 @@ title: "Lookbehind assertion: (?<=...), (?<!...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.lookbehind_assertion
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **lookbehind assertion** "looks behind": it attempts to match the previous input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input stays the same. It matches each atom in its pattern in the reverse order.
 

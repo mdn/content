@@ -1,20 +1,39 @@
 ---
-title: Floor
-slug: WebAssembly/Reference/Numeric/Floor
+title: "floor: Wasm text instruction"
+short-title: floor
+slug: WebAssembly/Reference/Numeric/floor
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
-
-The **`floor`** instructions, are used for getting the value of a number rounded down to the next integer.
+The **`floor`** instructions are used for getting the value of a number rounded down to the next integer.
 
 **`floor`** differs from **`trunc`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 
-{{EmbedInteractiveExample("pages/wat/floor.html", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: floor", "tabbed-standard")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    f32.const -2.7 ;; load a number onto the stack
+    f32.floor ;; round down
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; load a number onto the stack
 f32.const -2.7
 

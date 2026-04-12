@@ -1,13 +1,13 @@
 ---
 title: Iterator.prototype.every()
+short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/every
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.every
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`every()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.every()")}}: it tests whether all elements produced by the iterator pass the test implemented by the provided function. It returns a boolean value.
+The **`every()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.every()")}}: it returns `false` if it finds an element that does not satisfy the provided testing function. Otherwise, if the iterator is exhausted without finding such an element, it returns `true`.
 
 ## Syntax
 
@@ -75,6 +75,7 @@ console.log(seq.next()); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.every` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.every`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}
 - {{jsxref("Iterator.prototype.some()")}}

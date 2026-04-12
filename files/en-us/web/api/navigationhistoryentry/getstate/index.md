@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: getState() method"
 short-title: getState()
 slug: Web/API/NavigationHistoryEntry/getState
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.getState
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`getState()`** method of the {{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
 
@@ -59,5 +57,4 @@ async function handleReload() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)
 - Methods that allow state to be updated — {{domxref("Navigation.navigate()")}}, {{domxref("Navigation.reload()")}}, and {{domxref("Navigation.updateCurrentEntry()")}}

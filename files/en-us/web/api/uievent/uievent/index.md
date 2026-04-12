@@ -27,7 +27,6 @@ new UIEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers set it to `load`, `unload`, `abort`, `error`, or `select`.
 - `options` {{optional_inline}}
-
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `detail` {{optional_inline}}
       - : A number that is an event-dependent value associated with the event.

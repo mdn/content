@@ -2,13 +2,12 @@
 title: Styling links
 slug: Learn_web_development/Core/Text_styling/Styling_links
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
-When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links), it is important to understand why default link styles are important, how to use pseudo-classes to style link states effectively, and how to style links for use in common varied interface features such as navigation menus and tabs. We'll look at all these topics in this article.
+When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links), it is important to understand why default link styles are important, how to use pseudo-classes to style link states effectively, and how to style links for use in common, varied interface features such as navigation menus and tabs. We'll look at all these topics in this article.
 
 <table>
   <tbody>
@@ -38,25 +37,24 @@ When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/
 
 ## Link states
 
-The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes_and_pseudo-elements):
+The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements):
 
 - **Link**: A link that has a destination (i.e., not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.
 - **Visited**: A link that has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.
 - **Hover**: A link that is hovered over by a user's mouse pointer, styled using the {{cssxref(":hover")}} pseudo class.
 - **Focus**: A link that is focused (e.g., moved to by a keyboard user using the <kbd>Tab</kbd> key or something similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.
-- **Active**: A link that is activated (e.g., clicked on), styled using the {{cssxref(":active")}} pseudo class.
+- **Active**: A link that is activated (for example, clicked on), styled using the {{cssxref(":active")}} pseudo class.
 
 ## Default styles
 
-The example below illustrates what a link will look and behave like by default; though the CSS is enlarging and centering the text to make it stand out more. You can compare the look and behavior of the default stylings in the example with the look and behavior of other links on this page which have more CSS styles applied. Default links have the following properties:
+The example below illustrates what a link will look and behave like by default, though the CSS is enlarging and centering the text to make it stand out more. You can compare the look and behavior of the default styling in the example with that of other links on this page, which have more CSS styles applied. Default links have the following properties:
 
 - Links are underlined.
 - Unvisited links are blue.
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
 - Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key.
-
-- Active links are red. Try holding down the mouse button on the link as you click it.
+- Active links are red. Try holding down the mouse button as you click the link.
 
 ```html
 <p><a href="#">A simple link</a></p>
@@ -72,9 +70,9 @@ p {
 {{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
 > [!NOTE]
-> All the link examples on this page link to the top of their window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
+> All the link examples on this page link to the top of their embedded window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
 
-Interestingly enough, these default styles are nearly the same as they were back in the early days of browsers in the mid-1990s. This is because users know and have come to expect this behavior — if links were styled differently, it would confuse a lot of people. This doesn't mean that you shouldn't style links at all. It just means that you shouldn't stray too far from the expected behavior. You should at least:
+Interestingly, the default styles are nearly the same as they were back in the early days of browsers in the mid-1990s. This is because users know and have come to expect this behavior — if links were styled differently, it would confuse people. This doesn't mean that you shouldn't style links at all. It just means that you shouldn't stray too far from the expected behavior. You should at least:
 
 - Use underlining for links, but not for other things. If you don't want to underline links, at least highlight them in some other way.
 - Make them react in some way when hovered/focused, and in a slightly different way when activated.
@@ -83,16 +81,16 @@ The default styles can be turned off/changed using the following CSS properties:
 
 - {{cssxref("color")}} for the text color.
 - {{cssxref("cursor")}} for the mouse pointer style — you shouldn't turn this off unless you've got a very good reason.
-- {{cssxref("outline")}} for the text outline. An outline is similar to a border. The only difference is that a border takes up space in the box and an outline doesn't; it just sits over the top of the background. The outline is a useful accessibility aid, so should not be removed without adding another method of indicating the focused link.
+- {{cssxref("outline")}} for the text outline. An outline is similar to a border. The only difference is that a border takes up space in the box, and an outline doesn't: outlines sit on top of the background. The outline is a useful accessibility aid, so it should not be removed without adding another method of indicating the focused link.
 
 > [!NOTE]
 > You are not just limited to the above properties to style your links — you are free to use any properties you like.
 
 ## Styling links
 
-Now that we've looked at the default states in some detail, let's look at a typical set of link styles.
+Now that we've explored the default states in some detail, let's look at a typical set of link styles.
 
-To start off with, we'll write out our empty rulesets:
+To start with, we'll write out our empty rulesets:
 
 ```css
 a {
@@ -179,150 +177,88 @@ So what did we do here? This certainly looks different to the default styling, b
 - The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have no underline and different background colors.
 - Finally, `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
 
-## Active learning: Style your own links
+## Style your own links
 
-In this active learning session, we'd like you to take our empty set of rules and add your own declarations to make the links look really cool. Use your imagination, go wild. We are sure you can come up with something cooler and just as functional as our example above.
+For this task, we'd like you to take our empty set of rules and add your own declarations to make the links look really cool. Use your imagination, go wild. We are sure you can come up with something cooler and just as functional as our example above.
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to insert the example we showed above.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Give the links some default styling that will be applied to them all the time. You don't just have to stick to text color, but make sure the links are still recognizable as links.
+3. Give _visited_ links a slightly different color from the default link styles you set.
+4. Give the link _focus_ and _hover_ states a distinct style that highlights them over other links. Also, remove the default underline when links are being focused/hovered.
+5. Give the _active_ state a different style again.
 
-```html hidden
-<div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>There are several browsers available, such as <a href="#">Mozilla
- Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p>
-  </textarea>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view an example solution below the example output.
 
-  <h2>CSS Input</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-a {
-
-}
-
-a:link {
-
-}
-
-a:visited {
-
-}
-
-a:focus {
-
-}
-
-a:hover {
-
-}
-
-a:active {
-
-}
-  </textarea>
-
-  <h2>Output</h2>
-  <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
-    <input
-      id="reset"
-      type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
-    <input
-      id="solution"
-      type="button"
-      value="Show solution"
-      style="margin: 10px 0 0 10px;" />
-  </div>
-</div>
+```html-nolint live-sample___link_styling
+<p>
+  There are several browsers available, such as
+  <a href="https://www.mozilla.org/firefox/new/" target="_blank">Mozilla Firefox</a>,
+  <a href="https://www.google.co.uk/chrome/" target="_blank">Google Chrome</a>, and
+  <a href="https://www.microsoft.com/edge" target="_blank">Microsoft Edge</a>.
+</p>
 ```
 
-```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-const htmlCode = htmlInput.value;
-const cssCode = cssInput.value;
-const output = document.querySelector(".output");
-const solution = document.getElementById("solution");
-
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
-
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
-}
-
-reset.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
-});
-
-solution.addEventListener("click", () => {
-  htmlInput.value = htmlCode;
-  cssInput.value = `p {
+```css-nolint hidden live-sample___link_styling
+p {
   font-size: 1.2rem;
   font-family: sans-serif;
   line-height: 1.4;
 }
 
+```
+
+```css live-sample___link_styling
 a {
-  outline-color: transparent;
-  text-decoration: none;
-  padding: 2px 1px 0;
 }
 
-a:link {
+a:visited {
+}
+
+a:focus,
+a:hover {
+}
+
+a:active {
+}
+```
+
+{{ EmbedLiveSample('link_styling', "100%", 100) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished CSS could look like this:
+
+```css
+a {
+  outline-color: transparent;
+  padding: 2px 1px 0;
   color: #265301;
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
+a:hover,
 a:focus {
-  border-bottom: 1px solid;
-  background: #BAE498;
-}
-
-a:hover {
-  border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #bae498;
+  text-decoration: none;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
-}`;
-  drawOutput();
-});
-
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+  color: #cdfeaa;
+}
 ```
 
-{{ EmbedLiveSample('Active_learning_Style_your_own_links', 700, 800) }}
+</details>
 
 ## Including icons on links
 
-A common practice is to include icons on links to provide more of an indicator as to what kind of content the link points to. Let's look at a really simple example that adds an icon to external links (links that lead to other sites). Such an icon usually looks like a little arrow pointing out of a box. For this example, we'll use [external link icon from icons8.com](https://icons8.com/icon/741/external-link).
+A common practice is to include icons on links to indicate what kind of content the link points to. Let's look at a basic example that adds an icon to external links (links that lead to other sites). External link icons are usually arrows pointing out of boxes. For this example, we'll use [external link icon from icons8.com](https://icons8.com/icon/741/external-link).
 
-Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
+First, some simple HTML to style:
 
 ```html-nolint
 <p>
@@ -334,7 +270,7 @@ Let's look at some HTML and CSS that will give us the effect we want. First, som
 </p>
 ```
 
-Next, the CSS:
+Next, here's some CSS that will give us the effect we want:
 
 ```css
 body {
@@ -357,13 +293,13 @@ a[href^="http"]::after {
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're using {{cssxref("::after")}} pseudo-element. The `0.8rem x 0.8rem` pseudo-element gets put after the anchor text as an inline block. And the icon is being rendered as {{cssxref("background")}} of the pseudo-element.
+So what's going on here? We'll skip over most of the CSS, as it is the same as in previous examples. The last rule, however, is interesting: we're using {{cssxref("::after")}} pseudo-element selector. The `0.8em x 0.8em` pseudo-element is rendered after the anchor text as an inline block, and the icon referenced in its {{cssxref("background-image")}} property is placed in the pseudo-element's background. We've also included some {{cssxref("margin-left")}} to create some space between the icon and the word that precedes it.
 
-We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes the icon size also adjusts accordingly.
+We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units): `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes, the icon size also adjusts accordingly.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute with a value that begins with "http".
 
-So that's it. Try revisiting the active learning section above and trying this new technique out!
+So that's it. Try revisiting the task section above and trying this new technique out!
 
 > [!NOTE]
 > Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) and [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) yet; these are explained in other places.
@@ -372,7 +308,7 @@ So that's it. Try revisiting the active learning section above and trying this n
 
 The tools you've explored so far in this article can also be used in other ways. For example, states like hover can be used to style many different elements, not just links — you might want to style the hover state of paragraphs, list items, or other things.
 
-In addition, links are quite commonly styled to look and behave like buttons in certain circumstances. A website navigation menu can be marked up as a set of links, and this can be styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site. Let's explore how.
+In addition, links are commonly styled to behave like buttons. A website navigation menu can be marked up as a set of links, and this can be styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site. Let's explore how.
 
 First, some HTML:
 
@@ -444,6 +380,6 @@ The CSS includes the styling for the container and the links it contains.
 
 ## Summary
 
-We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom fonts on your websites (or web fonts, as they are better known).
+We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom web fonts on your websites.
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

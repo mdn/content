@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: drawIndexedIndirect() method"
 short-title: drawIndexedIndirect()
 slug: Web/API/GPURenderPassEncoder/drawIndexedIndirect
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -22,7 +20,6 @@ drawIndexedIndirect(indirectBuffer, indirectOffset)
 ### Parameters
 
 - `indirectBuffer`
-
   - : A {{domxref("GPUBuffer")}} containing the `indexCount`, `instanceCount`, `firstIndex`, `baseVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of five 32-bit unsigned integer values representing the values (20 bytes total), given in the same order as the arguments for {{domxref("GPURenderPassEncoder.drawIndexed()")}}. So for example:
 
     ```js
@@ -58,7 +55,7 @@ The following criteria must be met when calling **`drawIndirect()`**, otherwise 
 ## Examples
 
 ```js
-// ...
+// …
 
 // Create GPURenderPassEncoder
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
@@ -92,7 +89,7 @@ passEncoder.end();
 // End frame by passing array of GPUCommandBuffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

@@ -3,11 +3,10 @@ title: "CycleTracker: Base HTML and CSS"
 short-title: Base HTML and CSS
 slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 page-type: tutorial-chapter
+sidebar: pwasidebar
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
-
-{{PWASidebar}}
 
 To build a PWA, a progressive web application, we need to create a fully-functioning web application. In this section, we will markup the HTML for a static web page and enhance the appearance with CSS.
 
@@ -69,7 +68,7 @@ The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the c
 <!doctype html>
 ```
 
-The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
+The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute defining the primary language of the page.
 
 ```html
 <!doctype html>
@@ -82,7 +81,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
-The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -107,7 +106,7 @@ For right now, the last component we include in the `<head>` is a {{HTMLelement(
 <link rel="stylesheet" href="style.css" />
 ```
 
-The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
+The HTML `<link>` element is used to specify a relationship between the current document and an external resource. There are more than 25 defined values for the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute—and many more values that are not in any specification. The most common value, `rel="stylesheet"`, imports an external resource as a stylesheet.
 
 We will revisit the `<link>` element and its `rel` attribute in a future section when we include the [link to the manifest](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) file.
 
@@ -115,7 +114,7 @@ We will revisit the `<link>` element and its `rel` attribute in a future section
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -136,9 +135,9 @@ Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLeleme
 </form>
 ```
 
-The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
+The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
 
 ```html
 <label for="start-date">Start date</label>
@@ -194,7 +193,7 @@ This content, other than the container `<section id="past-periods"></section>`, 
 
 ### JavaScript link
 
-Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
+Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>
@@ -211,13 +210,13 @@ We can now style the static HTML using CSS. Our final CSS is:
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 ul {
   padding: 0;
@@ -227,7 +226,7 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -240,23 +239,23 @@ If every line is familiar to you, you can copy the above CSS, or write your own 
 
 ### CSS explained
 
-We use the {{CSSXref("background-color")}} property to set a light green (`#efe`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white (`#fff`) background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#cfc`).
+We use the {{CSSXref("background-color")}} property to set a light green (`#eeffee`) background color on the `body`. Then on the unordered list, fieldset, and legend, we use a white background color, along with a thin solid border added with the {{CSSXref("border")}} property. We override the `background-color` for the legend, making the legend and the list items a darker green (`#ccffcc`).
 
-We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/CSS_selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `#fff` background color from the unordered list.
+We use the [`:nth-of-type(even)`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type) pseudo-class [selector](/en-US/docs/Web/CSS/Guides/Selectors) to set every even-numbered list item to {{CSSXref("inherit")}} the background color from its parent; in this case, inheriting the `white` background color from the unordered list.
 
 ```css
 body {
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 li,
 legend {
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
@@ -274,7 +273,7 @@ li {
 }
 ```
 
-We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
+We add a little white space by setting the `body`'s {{CSSXref("margin")}} using the `vw` and `vh` [viewport units](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport), making white space on the outside of our app be proportional to the viewport's size. We also add a little padding to the `li` and `legend`. Finally, to improve, but not fix, the alignment of the past-periods data, we set the {{CSSXref("font-family")}} of the `ul` results section to be `monospace`, making each glyph have the same fixed width.
 
 ```css
 body {
@@ -294,13 +293,13 @@ We can combine the above, putting multiple properties in each selector declarati
 ```css
 body {
   margin: 1vh 1vw;
-  background-color: #efe;
+  background-color: #eeffee;
 }
 ul,
 fieldset,
 legend {
   border: 1px solid;
-  background-color: #fff;
+  background-color: white;
 }
 ul {
   padding: 0;
@@ -310,14 +309,14 @@ li,
 legend {
   list-style-type: none;
   padding: 0.2em 0.5em;
-  background-color: #cfc;
+  background-color: #ccffcc;
 }
 li:nth-of-type(even) {
   background-color: inherit;
 }
 ```
 
-If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/Guides/Selectors), or work through the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
@@ -343,4 +342,4 @@ Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_app
 
 Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css) from GitHub.
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

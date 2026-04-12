@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.toSorted()
+short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSorted
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toSorted()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order.
 
@@ -87,6 +87,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims polyfill of `Array.prototype.toSorted`](https://www.npmjs.com/package/array.prototype.tosorted)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}

@@ -2,9 +2,8 @@
 title: Testing
 slug: Learn_web_development/Extensions/Testing
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Testing/Introduction", "Learn_web_development/Extensions")}}
 
@@ -22,7 +21,7 @@ Before starting this module, You should really have learnt the fundamentals of [
 - [Introduction to cross browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction)
   - : This article starts the module off by providing an overview of the topic of cross browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
 - [Strategies for carrying out testing](/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies)
-  - : Next, we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+  - : Next, we drill down into carrying out testing, looking at identifying a target audience (e.g., what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
 - [Handling common HTML and CSS problems](/en-US/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)
   - : With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.
 - [Implementing feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)

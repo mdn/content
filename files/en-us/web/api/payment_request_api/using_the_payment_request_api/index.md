@@ -4,7 +4,7 @@ slug: Web/API/Payment_Request_API/Using_the_Payment_Request_API
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
 
@@ -108,7 +108,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
 
 ## Detecting availability of the Payment Request API
 
-You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e. `if (window.PaymentRequest)`.
+You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e., `if (window.PaymentRequest)`.
 
 In the following snippet, a merchant page performs this check, and if it returns `true` updates the checkout button to use `PaymentRequest` instead of legacy web forms.
 
@@ -248,7 +248,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 ## Recommending a payment app when user has no apps
 
-If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobPay.
+If you select to pay with the BobBucks demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobBucks.
 
 The code looks something like this:
 
@@ -270,7 +270,7 @@ checkoutButton.addEventListener("click", () => {
     })
     .catch((error) => {
       if (error.name === "NotSupportedError") {
-        window.location.href = "https://bobpay.xyz/#download";
+        window.location.href = "https://bobbucks.dev/#download";
       } else {
         // Other kinds of errors; cancelled or failed payment. For demo purposes:
         introPanel.style.display = "none";
@@ -290,14 +290,16 @@ If the merchant desires to collect additional information not part of the API (e
 ```js
 request
   .show()
-  .then((paymentResponse) => {
+  .then((paymentResponse) => paymentResponse.complete("success"))
+  .then(() => {
     // Process payment here.
     // Close the UI:
-    paymentResponse.complete('success').then(() => {
-      // Request additional shipping address details.
-      const additionalDetailsContainer = document.getElementById('additional-details-container');
-      additionalDetailsContainer.style.display = 'block';
-      window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
+    // Request additional shipping address details.
+    const additionalDetailsContainer = document.getElementById(
+      "additional-details-container",
+    );
+    additionalDetailsContainer.style.display = "block";
+    window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
   })
   .catch((error) => {
     // Handle error.
@@ -309,7 +311,7 @@ request
 
 ## Pre-authorizing transactions
 
-Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Payment Handler (see the {{domxref("Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Payment Handler could make use of to return authorization status.
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Web-based Payment Handler (see the {{domxref("Web-based Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Web-based Payment Handler could make use of to return authorization status.
 
 The merchant code would look like this:
 
@@ -335,7 +337,7 @@ paymentRequest
   });
 ```
 
-The payment handler would include the following code:
+The web-based payment handler would include the following code:
 
 ```js
 self.addEventListener("canmakepayment", (evt) => {

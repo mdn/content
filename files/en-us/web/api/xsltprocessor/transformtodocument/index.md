@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XSLTProcessor.transformToDocument
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `transformToDocument()` method of the {{domxref("XSLTProcessor")}} interface transforms the provided {{DOMxRef("Node")}} source to a {{domxref("Document")}} using the XSLT stylesheet associated with `XSLTProcessor`.
 
@@ -23,7 +23,7 @@ transformToDocument(source)
 
 ### Return value
 
-A {{domxref("Document")}}. The actual interface depends on the [output method](https://www.w3.org/TR/1999/REC-xslt-19991116#output) of the stylesheet:
+A {{domxref("Document")}}. The actual interface depends on the output method of the stylesheet, as specified by [`<xsl:output>`](/en-US/docs/Web/XML/XSLT/Reference/Element/output) element's `method`.
 
 | Output method | Result interface                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------ |

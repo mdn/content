@@ -29,15 +29,12 @@ lockOrientation(orientation)
 ### Parameters
 
 - `orientation`
-
   - : The orientation into which to lock the screen. This is either a string or an array
     of strings. Passing several strings lets the screen rotate only in the selected
     orientations.
 
     The following strings represent the possible orientation requirements you may specify:
-
     - `portrait-primary`
-
       - : It represents the orientation of the screen when it is in its primary portrait mode.
         A screen is considered in its primary portrait mode if the device is held in its
         normal position and that position is in portrait, or if the normal position of the

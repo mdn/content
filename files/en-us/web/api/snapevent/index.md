@@ -9,7 +9,7 @@ browser-compat: api.SnapEvent
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
 
-The **`SnapEvent`** interface defines the event object for the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events. Respectively, these fire on on a [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
+The **`SnapEvent`** interface defines the event object for the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events. Respectively, these fire on a [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
 
 These events can be used to run code in response to new elements being snapped to; `SnapEvent` exposes references to the element snapped to in the inline and/or block direction. The property values available on `SnapEvent` correspond directly to the value of the {{cssxref("scroll-snap-type")}} CSS property set on the scroll container:
 
@@ -76,6 +76,6 @@ scrollingElem.addEventListener("scrollsnapchange", (event) => {
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap module](/en-US/docs/Web/CSS/Guides/Scroll_snap)
+- [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

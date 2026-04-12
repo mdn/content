@@ -2,9 +2,8 @@
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **CSS selector** is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.
 
@@ -27,14 +26,14 @@ div.warning {
 
 #customized {
   font:
-    16px Lucida Grande,
-    Arial,
-    Helvetica,
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
 
-The selectors here are `"p"` (which applies the color green to the text inside any {{HTMLElement("p")}} element), `"div.warning"` (which makes any {{HTMLElement("div")}} element with the [class](/en-US/docs/Web/HTML/Global_attributes/class) `"warning"` look like a warning box), and `"#customized"`, which sets the base font of the element with the ID `"customized"` to 16-pixel tall Lucida Grande or one of a few fallback fonts.
+The selectors here are `"p"` (which applies the color green to the text inside any {{HTMLElement("p")}} element), `"div.warning"` (which makes any {{HTMLElement("div")}} element with the [class](/en-US/docs/Web/HTML/Reference/Global_attributes/class) `"warning"` look like a warning box), and `"#customized"`, which sets the base font of the element with the ID `"customized"` to 16-pixel tall Lucida Grande or one of a few fallback fonts.
 
 We can then apply this CSS to some HTML, such as:
 
@@ -62,26 +61,22 @@ The resulting page content is styled like this:
 
 - [Learn more about CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) in our introduction to CSS.
 - Basic selectors
-
-  - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`
-  - [Class selectors](/en-US/docs/Web/CSS/Class_selectors) `.classname`
-  - [ID selectors](/en-US/docs/Web/CSS/ID_selectors) `#idname`
-  - [Universal selectors](/en-US/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-  - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-  - [State selectors](/en-US/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+  - [Type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+  - [Class selectors](/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+  - [ID selectors](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+  - [Universal selectors](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
+  - [State selectors](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `a:active, a:visited`
 
 - Grouping selectors
-
-  - [Selector list](/en-US/docs/Web/CSS/Selector_list) `A, B`
+  - [Selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) `A, B`
 
 - Combinators
-
-  - [Next-sibling selectors](/en-US/docs/Web/CSS/Next-sibling_combinator) `A + B`
-  - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-  - [Child selectors](/en-US/docs/Web/CSS/Child_combinator) `A > B`
-  - [Descendant selectors](/en-US/docs/Web/CSS/Descendant_combinator) `A B`
+  - [Next-sibling selectors](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+  - [Subsequent-sibling selectors](/en-US/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+  - [Child selectors](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+  - [Descendant selectors](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
 - Pseudo
-
-  - [Pseudo classes](/en-US/docs/Web/CSS/Pseudo-classes) `:`
-  - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
+  - [Pseudo classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:`
+  - [Pseudo elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) `::`

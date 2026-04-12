@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.toSpliced()
+short-title: toSpliced()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSpliced
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toSpliced
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toSpliced()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("Array/splice", "splice()")}} method. It returns a new array with some elements removed and/or replaced at a given index.
 
@@ -13,43 +13,40 @@ The **`toSpliced()`** method of {{jsxref("Array")}} instances is the [copying](/
 
 ```js-nolint
 toSpliced(start)
-toSpliced(start, deleteCount)
-toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2)
-toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
+toSpliced(start, skipCount)
+toSpliced(start, skipCount, item1)
+toSpliced(start, skipCount, item1, item2)
+toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parameters
 
 - `start`
-
   - : Zero-based index at which to start changing the array, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length` or `start` is omitted, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
 
-- `deleteCount` {{optional_inline}}
+- `skipCount` {{optional_inline}}
+  - : An integer indicating the number of elements in the array to remove (or, to skip) from `start`.
 
-  - : An integer indicating the number of elements in the array to remove from `start`.
+    If `skipCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `skipCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
 
-    If `deleteCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `deleteCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
-
-    If `deleteCount` is `0` or negative, no elements are removed.
+    If `skipCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `toSpliced()` will only remove elements from the array.
 
 ### Return value
 
-A new array that consists of all elements before `start`, `item1`, `item2`, …, `itemN`, and all elements after `start + deleteCount`.
+A new array that consists of all elements before `start`, `item1`, `item2`, …, `itemN`, and all elements after `start + skipCount`.
 
 ## Description
 
-The `toSpliced()` method, like `splice()`, does multiple things at once: it removes the given number of elements from the array, starting at a given index, and then inserts the given elements at the same index. However, it returns a new array instead of modifying the original array. The deleted elements therefore are not returned from this method.
+The `toSpliced()` method, like `splice()`, does multiple things at once: it removes the given number of elements from the array, starting at a given index, and then inserts the given elements at the same index. However, it returns a new array instead of modifying the original array. The deleted elements therefore are not returned from this method, but they remain accessible in the original array.
 
 The `toSpliced()` method never produces a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). If the source array is sparse, the empty slots will be replaced with `undefined` in the new array.
 
@@ -115,6 +112,7 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 ## See also
 
 - [Polyfill of `Array.prototype.toSpliced` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims polyfill of `Array.prototype.toSpliced`](https://www.npmjs.com/package/array.prototype.tospliced)
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

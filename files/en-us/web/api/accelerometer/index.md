@@ -13,7 +13,7 @@ The **`Accelerometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Senso
 
 To use this sensor, the user must grant permission to the `'accelerometer'`, device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -35,11 +35,11 @@ _In addition to the properties listed below, `Accelerometer` inherits properties
 
 ## Instance methods
 
-_`Accelerometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+_`Accelerometer` doesn't have its own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
 ## Events
 
-_`Accelerometer` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
+_`Accelerometer` doesn't have its own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
 ## Example
 

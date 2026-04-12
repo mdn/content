@@ -2,15 +2,14 @@
 title: Alignment container
 slug: Glossary/Alignment_Container
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **alignment container** is the rectangle that the {{glossary("alignment subject")}} is aligned within. This is defined by the layout mode; it is usually the alignment subject's containing block, and assumes the writing mode of the box establishing the containing block.
 
 ## See also
 
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - Properties reference
   - CSS {{CSSXref("align-content")}} property
   - CSS {{CSSXref("align-items")}} property

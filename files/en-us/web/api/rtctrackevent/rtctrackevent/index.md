@@ -12,7 +12,7 @@ The **`RTCTrackEvent()`** constructor creates and returns a new {{domxref("RTCTr
 configured to describe the track which has been added to the {{domxref("RTCPeerConnection")}}.
 
 In general, you won't need to use this constructor, as `RTCTrackEvent`
-objects are created by WebRTC and delivered to your `RTCPeerConnector`'s
+objects are created by WebRTC and delivered to your `RTCPeerConnection`'s
 {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler as appropriate.
 
 ## Syntax

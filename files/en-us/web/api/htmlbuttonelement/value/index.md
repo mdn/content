@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.value
 
 {{ APIRef("HTML DOM") }}
 
-The **`value`** property of the {{DOMxRef("HTMLButtonElement")}} interface represents the value of the {{htmlelement("button")}} element as a string, or the empty string if no value is set. It reflects the element's [`value`](/en-US/docs/Web/HTML/Element/button#value) attribute.
+The **`value`** property of the {{DOMxRef("HTMLButtonElement")}} interface represents the value of the {{htmlelement("button")}} element as a string, or the empty string if no value is set. It reflects the element's [`value`](/en-US/docs/Web/HTML/Reference/Elements/button#value) attribute.
 
 ## Value
 

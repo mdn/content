@@ -1,15 +1,23 @@
 ---
 title: Date.prototype.toTimeString()
+short-title: toTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toTimeString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntax
 
@@ -29,20 +37,20 @@ A string representing the time portion of the given date (see description for th
 
 {{jsxref("Date")}} instances refer to a specific point in time. `toTimeString()` interprets the date in the local timezone and formats the _time_ part in English. It always uses the format of `HH:mm:ss GMT±xxxx (TZ)`, where:
 
-| Format String | Description                                                                                           |
-| ------------- | ----------------------------------------------------------------------------------------------------- |
-| `HH`          | Hour, as two digits with leading zero if required                                                     |
-| `mm`          | Minute, as two digits with leading zero if required                                                   |
-| `ss`          | Seconds, as two digits with leading zero if required                                                  |
-| `±xxxx`       | The local timezone's offset — two digits for hours and two digits for minutes (e.g. `-0500`, `+0800`) |
-| `TZ`          | The timezone's name (e.g. `PDT`, `PST`)                                                               |
+| Format String | Description                                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------------ |
+| `HH`          | Hour, as two digits with leading zero if required                                                      |
+| `mm`          | Minute, as two digits with leading zero if required                                                    |
+| `ss`          | Seconds, as two digits with leading zero if required                                                   |
+| `±xxxx`       | The local timezone's offset — two digits for hours and two digits for minutes (e.g., `-0500`, `+0800`) |
+| `TZ`          | The timezone's name (e.g., `PDT`, `PST`)                                                               |
 
 For example: "04:42:04 GMT+0000 (Coordinated Universal Time)".
 
 - If you only want to get the _date_ part, use {{jsxref("Date/toDateString", "toDateString()")}}.
 - If you want to get both the date and time, use {{jsxref("Date/toString", "toString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}.
+- If you want to format the date in a more user-friendly format (e.g., localization), use {{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}.
 
 ## Examples
 

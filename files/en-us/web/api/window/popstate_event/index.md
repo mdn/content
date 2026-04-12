@@ -14,9 +14,10 @@ The **`popstate`** event of the {{domxref("Window")}} interface is fired when th
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("popstate", (event) => {});
-onpopstate = (event) => {};
+```js-nolint
+addEventListener("popstate", (event) => { })
+
+onpopstate = (event) => { }
 ```
 
 ## Event type
@@ -46,8 +47,6 @@ These methods and their corresponding events can be used to add data to the hist
 
 Note that just calling `history.pushState()` or `history.replaceState()` won't trigger a `popstate` event. The `popstate` event will be triggered by doing a browser action such as a click on the back or forward button (or calling `history.back()` or `history.forward()` in JavaScript).
 
-Browsers tend to handle the `popstate` event differently on page load. Chrome (prior to v34) and Safari always emit a `popstate` event on page load, but Firefox doesn't.
-
 > [!NOTE]
 > When writing functions that process `popstate` event it is important to take into account that properties like `window.location` will already reflect the state change (if it affected the current URL), but `document` might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("Window.setTimeout", "setTimeout()")}} method call should be used to effectively put its inner _callback_ function that does the processing at the end of the browser event loop: `window.onpopstate = () => setTimeout(doSomeThing, 0);`
 
@@ -65,7 +64,7 @@ To better understand when the `popstate` event is fired, consider this simplifie
 2. If **current-entry**'s title wasn't set using one of the History API methods ({{domxref("History.pushState", "pushState()")}} or {{domxref("History.replaceState", "replaceState()")}}), set the entry's title to the string returned by its {{domxref("document.title")}} attribute.
 3. If the browser has state information it wishes to store with the **current-entry** before navigating away from it, it then does so. The entry is now said to have "persisted user state." This information the browser might add to the history session entry may include, for instance, the document's scroll position, the values of form inputs, and other such data.
 4. If **new-entry** has a different `Document` object than **current-entry**, the browsing context is updated so that its {{domxref("Window.document", "document")}} property refers to the document referred to by **new-entry**, and the context's name is updated to match the context name of the now-current document.
-5. Each form control within **new-entry**'s {{domxref("Document")}} that has [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) configured with its autofill field name set to `off` is reset. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for more about the autocomplete field names and how autocomplete works.
+5. Each form control within **new-entry**'s {{domxref("Document")}} that has [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) configured with its autofill field name set to `off` is reset. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) for more about the autocomplete field names and how autocomplete works.
 6. If **new-entry**'s document is already fully loaded and ready—that is, its {{domxref("Document.readyState", "readyState")}} is `complete`—and the document is not already visible, it's made visible and the {{domxref("Window/pageshow_event", "pageshow")}} event is fired at the document with the {{domxref("PageTransitionEvent")}}'s {{domxref("PageTransitionEvent.persisted", "persisted")}} attribute set to `true`.
 7. The document's {{domxref("Document.URL", "URL")}} is set to that of **new-entry**.
 8. If the history traversal is being performed with replacement enabled, the entry immediately prior to the destination entry (taking into account the `delta` parameter on methods such as {{domxref("History.go", "go()")}}) is removed from the history stack.

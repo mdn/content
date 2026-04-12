@@ -3,13 +3,20 @@ title: Bitwise AND assignment (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_and_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **bitwise AND assignment (`&=`)** operator performs [bitwise AND](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Bitwise AND assignment (&=) operator", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a &= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## Syntax
 

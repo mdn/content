@@ -30,12 +30,10 @@ with the `<button>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("test");
-  for (const label of button.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const button = document.getElementById("test");
+for (const label of button.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

@@ -6,11 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.axes
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
 interface returns an array representing the controls with axes present on the device
-(e.g. analog thumb sticks).
+(e.g., analog thumb sticks).
 
 Each entry in the array is a floating point value in the range -1.0 – 1.0, representing
 the axis position from the lowest value (-1.0) to the highest value (1.0).

@@ -8,7 +8,7 @@ browser-compat: api.SpeechSynthesisUtterance
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a speech request.
-It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
+It contains the content the speech service should read and information about how to read it (e.g., language, pitch and volume.)
 
 {{InheritanceDiagram}}
 
@@ -78,9 +78,9 @@ let voices;
 
 function loadVoices() {
   voices = synth.getVoices();
-  for (let i = 0; i < voices.length; i++) {
+  for (const [i, voice] of voices.entries()) {
     const option = document.createElement("option");
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+    option.textContent = `${voice.name} (${voice.lang})`;
     option.value = i;
     voiceSelect.appendChild(option);
   }

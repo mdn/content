@@ -3,15 +3,22 @@ title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Moves one or more tabs to a new position in the same window or to a different window.
 
 You can only move tabs to and from windows whose {{WebExtAPIRef('windows.WindowType', 'WindowType')}} is `"normal"`.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+When tabs associated with a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views) are moved:
+
+- When both tabs in a split are specified and they remain adjacent but their order is changed, the tabs are swapped in the split view.
+- When both tabs in a split view are specified but are separated by one or more tabs, the tabs are moved and the split view removed.
+- When only one of the tabs in a split view is moved:
+  - In Firefox, the other tab is moved to preserve the split view. The tabs are re-ordered if necessary.
+    > [!NOTE]
+    > In Firefox 149 only, when a call moves a tab or tabs in a split view, the tabs in the split view are moved together, but the order of the tabs is unchanged.
+  - In Chrome, moving a tab away from the other tab in the split view removes the split view. (This behavior may change in a future release.) Otherwise, the tabs are re-ordered as necessary.
 
 ## Syntax
 
@@ -27,13 +34,10 @@ let moving = browser.tabs.move(
 - `tabIds`
   - : `integer` or `array` of `integer`. ID of the {{WebExtAPIRef('tabs.Tab', 'tab')}} to move, or an array of tab IDs.
 - `moveProperties`
-
   - : `object`. An object that specifies where to move the tab(s).
-
     - `windowId` {{optional_inline}}
       - : `integer`. The ID of the window to which you want to move the tab(s). If you omit this, then each tab in `tabIds` will be moved to `index` in its current window. If you include this, and `tabIds` contains more than one tab, then the first tab in `tabIds` will be moved to `index`, and the other tabs will follow it in the order given in `tabIds`.
     - `index`
-
       - : `integer`. The index position to move the tab to, starting at 0. A value of -1 will place the tab at the end of the window.
 
         If you pass a value less than -1, the function will throw an error.
@@ -42,7 +46,7 @@ let moving = browser.tabs.move(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `{{WebExtAPIRef('tabs.Tab')}}` object or an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this will be an empty array. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object or an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this is an empty array. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 

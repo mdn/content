@@ -3,9 +3,8 @@ title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the sidebar's title.
 
@@ -24,9 +23,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Get the title for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
@@ -40,10 +37,6 @@ let gettingTitle = browser.sidebarAction.getTitle(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the sidebar's title.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -65,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

@@ -1,11 +1,11 @@
 ---
 title: Intl.DurationFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.DurationFormat.formatToParts
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatToParts()`** method of {{jsxref("Intl.DurationFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DurationFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
@@ -18,7 +18,7 @@ formatToParts(duration)
 ### Parameters
 
 - `duration` {{optional_inline}}
-  - : The duration object to be formatted. It should include some or all of the following properties: `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Each property's value should be an integer, and their signs should be consistent. This can be a {{jsxref("Temporal.Duration")}} object; see the {{jsxref("Temporal.Duration")}} documentation for more information about these properties.
 
 ### Return value
 
@@ -80,3 +80,4 @@ new Intl.DurationFormat("en", { style: "long" }).formatToParts(duration);
 
 - {{jsxref("Intl.DurationFormat")}}
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
+- {{jsxref("Temporal.Duration")}}

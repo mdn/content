@@ -2,11 +2,10 @@
 title: Floats
 slug: Learn_web_development/Core/CSS_layout/Floats
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 Originally for floating images inside blocks of text, the {{cssxref("float")}} property became one of the most commonly used tools for creating multiple column layouts on webpages. With the advent of flexbox and grid it's now returned to its original purpose, as this article explains.
 
@@ -94,8 +93,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -220,8 +219,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -238,7 +237,7 @@ body {
 
 {{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
 
-The [line boxes](/en-US/docs/Web/CSS/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
+The [line boxes](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
 
 ## Clearing floats
 
@@ -290,8 +289,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -326,7 +325,7 @@ You should see that the second paragraph now clears the floated element and no l
 
 ## Clearing boxes wrapped around a float
 
-You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around _both_ elements.
+You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box containing _both_ elements.
 
 ### The problem
 
@@ -392,8 +391,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -464,8 +463,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
+    0.9em/1.2 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -483,12 +482,8 @@ body {
 
 {{EmbedLiveSample('display_flow-root', '100%', 600)}}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats_skills).
-
 ## Summary
 
-That's all you need to know about floats. Next up, we'll explore positioning in detail.
+That's all you need to know about floats. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout")}}

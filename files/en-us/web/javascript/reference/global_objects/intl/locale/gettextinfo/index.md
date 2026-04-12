@@ -1,11 +1,11 @@
 ---
 title: Intl.Locale.prototype.getTextInfo()
+short-title: getTextInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.getTextInfo
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getTextInfo()`** method of {{jsxref("Intl.Locale")}} instances returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for this locale.
 

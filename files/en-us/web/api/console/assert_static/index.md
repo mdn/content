@@ -2,7 +2,7 @@
 title: "console: assert() static method"
 short-title: assert()
 slug: Web/API/console/assert_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.assert_static
 ---
 
@@ -70,6 +70,6 @@ for (let number = 2; number <= 5; number++) {
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.assert()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#assert)
+- [Microsoft Edge's documentation for `console.assert()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#assert)
 - [Node.js documentation for `console.assert()`](https://nodejs.org/docs/latest/api/console.html#consoleassertvalue-message)
 - [Google Chrome's documentation for `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)

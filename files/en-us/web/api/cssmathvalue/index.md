@@ -15,6 +15,7 @@ The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs
 
 Below is a list of interfaces based on the CSSMathValue interface.
 
+- {{DOMxRef('CSSMathClamp')}}
 - {{domxref('CSSMathInvert')}}
 - {{domxref('CSSMathMax')}}
 - {{domxref('CSSMathMin')}}
@@ -37,7 +38,7 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 ## Examples
 
-We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator`.
+We create an element with a {{cssxref("width")}} determined using a {{cssxref("calc()")}} function, then {{domxref("console/log_static", "console.log()")}} the `operator`.
 
 ```html
 <div>has width</div>

@@ -41,7 +41,7 @@ _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 ```js
 const videoPlayer = document.getElementById("player");
 
-// ...
+// …
 
 // Open a Picture-in-Picture window.
 const pipWindow = await window.documentPictureInPicture.requestWindow({
@@ -49,7 +49,7 @@ const pipWindow = await window.documentPictureInPicture.requestWindow({
   height: videoPlayer.clientHeight,
 });
 
-// ...
+// …
 ```
 
 See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) for a full working demo (see the full [source code](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) also).

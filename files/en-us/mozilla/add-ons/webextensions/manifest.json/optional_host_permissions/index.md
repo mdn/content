@@ -3,9 +3,8 @@ title: optional_host_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_host_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -24,7 +23,7 @@ browser-compat: webextensions.manifest.optional_host_permissions
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "optional_host_permissions": [
   "*://developer.mozilla.org/*",
   "*://*.example.org/*"
@@ -40,6 +39,9 @@ Use the `optional_host_permissions` key to enable runtime requests for access (a
 See [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for more information on defining hosts.
 
 Use the {{webextapiref("permissions")}} API to request an optional host permission at runtime. Requesting a host permission may present the user with a dialog asking whether they want to grant the permission to your extension.
+
+> [!NOTE]
+> [Users may opt in or out of optional host permissions](https://support.mozilla.org/en-US/kb/manage-optional-permissions-extensions) from the extension's **Permissions** tab in the Firefox Add-ons Manager. Extensions that use optional host permissions can check for the permissions granted by the user with {{webextapiref("permissions.getAll()")}} and listen for {{webextapiref("permissions.onAdded")}} and {{webextapiref("permissions.onRemoved")}} to know when a user grants or revokes permissions.
 
 ## Example
 

@@ -3,9 +3,8 @@ title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Displays a JSON object in the extension's sidebar pane.
 
@@ -33,10 +32,6 @@ let setting = browser.devtools.panels.setObject(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, once the object has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's [devtools page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page).
@@ -57,6 +52,10 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

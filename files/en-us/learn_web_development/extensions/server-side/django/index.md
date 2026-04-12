@@ -2,11 +2,10 @@
 title: Django Web Framework (Python)
 slug: Learn_web_development/Extensions/Server-side/Django
 page-type: learn-module
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side")}}
 
 Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications.
 
@@ -57,4 +56,4 @@ The following assessment will test your understanding of how to create a website
 - [DIY Django mini blog](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog)
   - : In this assessment you'll use some of the knowledge you've learned from this module to create your own blog.
 
-{{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side")}}

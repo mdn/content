@@ -3,9 +3,8 @@ title: "Input boundary assertion: ^, $"
 slug: Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.input_boundary_assertion
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 An **input boundary assertion** checks if the current position in the string is an input boundary. An input boundary is the start or end of the string; or, if the `m` flag is set, the start or end of a line.
 

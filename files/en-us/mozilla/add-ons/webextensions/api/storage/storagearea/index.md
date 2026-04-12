@@ -3,9 +3,8 @@ title: storage.StorageArea
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
 page-type: webextension-api-type
 browser-compat: webextensions.api.storage.StorageArea
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 StorageArea is an object representing a storage area.
 
@@ -19,6 +18,8 @@ Values of this type are objects.
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
   - : Stores one or more items in the storage area. If an item already exists, its value will be updated.
 - {{WebExtAPIRef("storage.StorageArea.setAccessLevel()")}}
@@ -33,11 +34,11 @@ Values of this type are objects.
 - {{WebExtAPIRef("storage.StorageArea.onChanged")}}
   - : Fires when one or more items in the storage area change.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#type-StorageArea) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

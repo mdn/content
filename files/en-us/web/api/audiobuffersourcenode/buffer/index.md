@@ -18,6 +18,11 @@ generates a single channel containing silence (that is, every sample is 0).
 An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
 node will play.
 
+## Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `buffer` property has already been set to a non-`null` value, and is then set to a non-`null` value again.
+
 ## Examples
 
 > [!NOTE]
@@ -28,7 +33,7 @@ const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = () => {
   // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
+  // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
     // This gives us the actual ArrayBuffer that contains the data
     const nowBuffering = myArrayBuffer.getChannelData(channel);

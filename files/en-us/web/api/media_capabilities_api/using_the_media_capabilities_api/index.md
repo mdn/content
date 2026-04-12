@@ -7,16 +7,9 @@ browser-compat: api.MediaCapabilities
 
 {{DefaultAPISidebar("Media Capabilities API")}}
 
-The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
+The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) enables you to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details.
 
-These features include:
-
-- The ability to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details. With the Media Capabilities API, you can determine not just if the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource/isTypeSupported_static", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.
-- More and more finely-detailed information about the display's properties, so that informed decisions can be made when choosing the best format to play on the user's device. For example, you can use the API to ensure that you don't try to play High Dynamic Range (HDR) content on a Standard Dynamic Range (SDR) screen.
-- Support for getting real-time feedback about the playback of media, so your code can make informed decisions about adapting the stream's quality or other settings to manage the user's perceived media performance and quality. One feature of this is the ability to detect when the device switches GPUs, so you can make appropriate adjustments based on the new GPU's capabilities.
-
-> [!NOTE]
-> The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.
+With the Media Capabilities API, you can determine not just whether the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource/isTypeSupported_static", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.
 
 ## The MediaCapabilities interface
 
@@ -38,9 +31,9 @@ Taking video as an example, to obtain information about video decoding abilities
 
 The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter a media decoding configuration.
 
-In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
+In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g., a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
-- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
+- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
 - The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the {{glossary("aspect ratio")}}.
 - The `bitrate` is the number of bits used to encode one second of video.
 - The `framerate` is the number of frames which are played per second of time when playing the video.
@@ -73,7 +66,7 @@ const audioConfiguration = {
 ```
 
 Had we been testing encoding capabilities, we would have created a slightly different configuration.
-In this case the type of media being tested is either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
+In this case the type of media being tested is either `record` (for recording media, i.e., a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
 
 ### Querying the browser about decoding abilities
 
@@ -112,7 +105,7 @@ The error can be due to the `type` not being one of the two possible values, the
 ```js
 navigator.mediaCapabilities
   .decodingInfo(videoConfiguration)
-  .then(console.log("It worked"))
+  .then(() => console.log("It worked"))
   .catch((error) => console.error(`It failed: ${error}`));
 ```
 
@@ -190,7 +183,7 @@ li {
 
 ```js
 let mc = {
-  videoConfiguration: new Object(),
+  videoConfiguration: {},
 
   tryIt() {
     mc.createConfiguration();

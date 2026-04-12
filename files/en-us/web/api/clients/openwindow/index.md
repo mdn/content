@@ -41,11 +41,11 @@ URL is from the same origin as the service worker or a {{Glossary("null", "null 
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : The promise is rejected with this exception if none of the windows in the app's origin have [transient activation](/en-US/docs/Web/Security/User_activation).
+  - : The promise is rejected with this exception if none of the windows in the app's origin have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Security requirements
 
-- At least one window in the app's origin must have [transient activation](/en-US/docs/Web/Security/User_activation).
+- At least one window in the app's origin must have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Examples
 
@@ -70,17 +70,18 @@ self.addEventListener("notificationclick", (e) => {
   // Get all the Window clients
   e.waitUntil(
     clients.matchAll({ type: "window" }).then((clientsArr) => {
-      // If a Window tab matching the targeted URL already exists, focus that;
-      const hadWindowToFocus = clientsArr.some((windowClient) =>
-        windowClient.url === e.notification.data.url
-          ? (windowClient.focus(), true)
-          : false,
+      const windowToFocus = clientsArr.find(
+        (windowClient) => windowClient.url === e.notification.data.url,
       );
-      // Otherwise, open a new tab to the applicable URL and focus it.
-      if (!hadWindowToFocus)
+      if (windowToFocus) {
+        // If a Window tab matching the targeted URL already exists, focus that;
+        windowToFocus.focus();
+      } else {
+        // Otherwise, open a new tab to the applicable URL and focus it.
         clients
           .openWindow(e.notification.data.url)
           .then((windowClient) => (windowClient ? windowClient.focus() : null));
+      }
     }),
   );
 });

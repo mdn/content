@@ -6,18 +6,20 @@ page-type: web-api-event
 browser-compat: api.Element.mousemove_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The `mousemove` event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
+
+These events happen whether or not any mouse buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the mouse, how fast the machine is, what other tasks and processes are happening, etc.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mousemove", (event) => {});
+```js-nolint
+addEventListener("mousemove", (event) => { })
 
-onmousemove = (event) => {};
+onmousemove = (event) => { }
 ```
 
 ## Event type
@@ -37,9 +39,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -63,9 +65,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -181,3 +183,4 @@ function drawLine(context, x1, y1, x2, y2) {
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointermove_event", "pointermove")}}

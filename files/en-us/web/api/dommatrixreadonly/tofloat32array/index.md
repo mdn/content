@@ -15,7 +15,7 @@ For double-precision floating-point numbers, see {{domxref("DOMMatrixReadOnly.to
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.toFloat32Array()
+toFloat32Array()
 ```
 
 ### Parameters

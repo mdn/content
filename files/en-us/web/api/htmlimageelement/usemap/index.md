@@ -8,25 +8,15 @@ browser-compat: api.HTMLImageElement.useMap
 
 {{APIRef("HTML DOM")}}
 
-The **`useMap`** property on the
-{{domxref("HTMLImageElement")}} interface reflects the value of the
-{{Glossary("HTML")}} [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute, which is a string
-providing the name of the client-side image map to apply to the image.
+The **`useMap`** property of the {{domxref("HTMLImageElement")}} interface providing the name of the client-side image map to apply to the image. It reflects the `<img>` element's [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) content attribute.
 
 ## Value
 
-A string providing the page-local URL (that is, a URL that begins
-with the hash or pound symbol, `#`) of the {{HTMLElement("map")}} element
-which defines the image map to apply to the image.
+A string containing the hash `#` symbol followed by the [`name`](/en-US/docs/Web/HTML/Reference/Elements/map#name) of the {{HTMLElement("map")}} element which defines the image map to apply to the image.
 
-You can learn more about client-side image maps in our learning article [Add a hitmap on top of an image](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image).
+## Examples
 
-## Usage notes
-
-The string value of `useMap` must be a valid anchor for a
-{{HTMLElement("map")}} element. In other words, this string should be the value of the
-appropriate `<map>`'s [`name`](/en-US/docs/Web/HTML/Element/map#name) attribute with a
-pound or hash symbol prepended to it.
+### Using useMap
 
 Consider a `<map>` that looks like this:
 
@@ -41,19 +31,16 @@ Consider a `<map>` that looks like this:
 </map>
 ```
 
-Given the image map named `mainmenu-map`, the image which uses it should
-look something like the following:
+Given the image map named `mainmenu-map`, you can dynamically construct images that reference the image map as follows:
 
-```html
-<img src="menubox.png" usemap="#mainmenu-map" />
+```js
+const image = new Image();
+image.src = "menu-box.png";
+image.alt = "";
+image.useMap = "#mainmenu-map";
 ```
 
-For additional examples (including interactive ones), see the articles about the
-{{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using image maps](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image).
-
-## Examples
-
-{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+For additional examples (including interactive ones), see the articles about the {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using image maps](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image).
 
 ## Specifications
 
@@ -62,3 +49,9 @@ For additional examples (including interactive ones), see the articles about the
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Add a hitmap on top of an image](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
+- {{HTMLElement("map")}}
+- {{HTMLElement("area")}}

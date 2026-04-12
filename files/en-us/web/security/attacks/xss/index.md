@@ -2,13 +2,14 @@
 title: Cross-site scripting (XSS)
 slug: Web/Security/Attacks/XSS
 page-type: guide
+sidebar: security
 ---
 
 A cross-site scripting (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website.
 
 ## Overview
 
-A web browser downloads code from many different websites and runs it on the user's computer. Some of these websites will be highly trustworthy, and the user may use them for sensitive operations, such as financial transactions or medical advice. With others, such as a casual gaming site, the user may have no such trust relationship. The foundation of the browser's security model is that these sites should be kept separate from each other, so code from one site should not be able to access objects or {{glossary("credential", "credentials")}} in another site. This is called the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+A web browser downloads code from many different websites and runs it on the user's computer. Some of these websites will be highly trustworthy, and the user may use them for sensitive operations, such as financial transactions or medical advice. With others, such as a casual gaming site, the user may have no such trust relationship. The foundation of the browser's security model is that these sites should be kept separate from each other, so code from one site should not be able to access objects or {{glossary("credential", "credentials")}} in another site. This is called the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ![Diagram of 2 sites in the browsers, in separate worlds](same-origin.svg)
 
@@ -131,7 +132,7 @@ If the comments are not sanitized, then they are potential vectors for XSS. This
 
 One big difference between the two examples is that the malicious code is injected in different parts of the website's codebase, and this is a reflection of each website's architecture.
 
-A website that uses client-side rendering, such as an {{glossary("SPA", "single-page app")}}, modifies pages in the browser, using web APIs such as {{domxref("document.createElement()")}} to do so, either directly, or indirectly through a framework like React. It's in the course of this process that XSS injection will happen. That's what we see in the first example: the malicious code is injected in the browser, by a script running in the page assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property, which interprets its value as HTML code.
+A website that uses client-side rendering, such as a {{glossary("SPA", "single-page app")}}, modifies pages in the browser, using web APIs such as {{domxref("document.createElement()")}} to do so, either directly, or indirectly through a framework like React. It's in the course of this process that XSS injection will happen. That's what we see in the first example: the malicious code is injected in the browser, by a script running in the page assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property, which interprets its value as HTML code.
 
 A website that uses server-side rendering builds pages on the server, using a framework like Django or Express, most commonly by inserting values into page templates. XSS injection, if it happens, will happen in the server during the templating process. That's what we see in the second example: the code is injected in the server, by the Express code inserting the URL parameter value into the document it's returning. The XSS attack code then runs when the browser evaluates the page.
 
@@ -142,7 +143,7 @@ In both cases, the general approach to defense is the same, and we'll go into th
 If you need to include external input in your site's pages, there are two main defenses against XSS:
 
 1. Use _output encoding_ and _sanitization_ to prevent input from becoming executable. If you're rendering content in the browser, you can use the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to ensure that input is being passed through a sanitization function before being included in the page.
-2. Use a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails and executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
+2. Use a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails and executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
 
 ### Output encoding
 
@@ -202,14 +203,15 @@ However, suppose the template is like this:
 <div \{{ my_input }}></div>
 ```
 
-In this context the browser will treat the `my_input` variable as an HTML attribute. If `my_input` is `onmouseover="alert('XSS')"`, the output encoding provided by Django won't prevent the attack.
+In this context the browser will treat the `my_input` variable as an HTML attribute. Because Django encodes quotes (`"` → `&quot;`, `'` → `&#x27;`), the payload `onmouseover="alert('XSS')"` will not execute.
+However, an unquoted payload like `onmouseover=alert(1)` (or using backticks, ``onmouseover=alert(`XSS`)``) will still execute, because attribute values need not be quoted and backticks are not escaped by default.
 
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
 What's safe in one context may be unsafe in another, and it's necessary to understand the context in which you are including untrusted content, and to implement any special handling that this demands.
 
 - **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is interpreted as HTML. The encoding applied by template engines is mostly concerned with this context.
-- **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of the {{htmlelement("iframe")}} element.
+- **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src) attribute of the {{htmlelement("iframe")}} element.
 
   It's also important to quote placeholders for inserted attribute values, or an attacker may be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
 
@@ -217,7 +219,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
   <div class=\{{ my_class }}>...</div>
   ```
 
-  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover="alert('XSS!')"`. To prevent the attack, quote the placeholder:
+  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover=alert(1)`. To prevent the attack, quote the placeholder:
 
   ```django example-good
     <div class="\{{ my_class }}">...</div>
@@ -272,7 +274,7 @@ Other APIs directly execute their arguments as JavaScript. For example:
 
 The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that input is always sanitized before being passed to one of these APIs.
 
-The key to enforcing the use of trusted types is the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. If this directive is set, then passing string arguments to unsafe APIs will throw an exception:
+The key to enforcing the use of trusted types is the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. If this directive is set, then passing string arguments to unsafe APIs will throw an exception:
 
 ```js example-bad
 const userInput = "I might be XSS";
@@ -306,11 +308,9 @@ The Trusted Types API does not yet have good cross-browser support, but when it 
 
 Output encoding and sanitization are all about preventing malicious scripts from getting into a site's pages. One of the main functions of a content security policy is to prevent malicious scripts from being executed even if they are in a site's pages. That is, it is a backup in case the other defenses fail.
 
-The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct nonce or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
+The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/Guides/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct {{Glossary("Nonce", "nonce")}} or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
 
-### Defense summary checklist
-
-We can summarize the defenses above as follows:
+## Defense summary checklist
 
 - When interpolating input into a page, either in the browser or in the server, use a templating engine that performs output encoding.
 - Be aware of the context in which you are interpolating input, and ensure that the appropriate output encoding will be performed in that context.
@@ -320,7 +320,3 @@ We can summarize the defenses above as follows:
 ## See also
 
 - [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
-</section>

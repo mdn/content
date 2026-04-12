@@ -3,11 +3,11 @@ title: SharedStorageOperation
 slug: Web/API/SharedStorageOperation
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the base class for all output gate operation types.
 
@@ -31,7 +31,7 @@ The output gate types are detailed below:
     </tr>
     <tr>
       <td>Run</td>
-      <td>A generic way to process some shared storage data. Used, for example, by the <a href="https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation">Private Aggregation API</a> to process shared storage data and generate aggregated reports. </td>
+      <td>A generic way to process some shared storage data. Used, for example, by the <a href="https://privacysandbox.google.com/private-advertising/private-aggregation">Private Aggregation API</a> to process shared storage data and generate aggregated reports. </td>
       <td>{{domxref("SharedStorageRunOperation")}}</td>
       <td>{{domxref("WindowSharedStorage.run()", "run()")}}</td>
     </tr>

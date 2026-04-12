@@ -2,9 +2,8 @@
 title: What software do I need to build a website?
 slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we lay out which software components you need when you're editing, uploading, or viewing a website.
 
@@ -43,10 +42,6 @@ You'll need tools to:
 
 Nearly all operating systems by default include a text editor and a browser, which you can use to view websites. As a result, you usually only need to acquire software for transferring files to your web server.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
-
 ## Dig deeper
 
 ### Creating and editing webpages
@@ -81,7 +76,7 @@ All desktop operating systems come with a basic text editor. These editors are a
         <ul>
           <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
           <li><a href="https://brackets.io/">Brackets</a></li>
@@ -109,7 +104,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             >
           </li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -122,7 +117,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>
         <ul>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Vi" rel="external">Vi</a>
+            <a href="https://en.wikipedia.org/wiki/Vi_(text_editor)" rel="external">Vi</a>
             (All UNIX)
           </li>
           <li>
@@ -152,7 +147,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
           <li><a href="https://www.vim.org/" rel="external">VIM</a></li>
           <li>
-            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
+            <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -162,7 +157,11 @@ All desktop operating systems come with a basic text editor. These editors are a
     </tr>
     <tr>
       <td>ChromeOS</td>
-      <td></td>
+      <td>
+        <ul>
+          <li><a href="https://github.com/GoogleChromeLabs/text-app">Text</a></li>
+        </ul>
+      </td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -185,7 +184,7 @@ Here is a screenshot of an online text editor:
 When your website is ready for public viewing, you'll have to upload your webpages to your web server. You can buy space on a server from various providers (see [How much does it cost to do something on the web?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)). Once you settle on which provider to use, the provider will email you the access information, usually in the form of an SFTP URL, username, password, and other information needed to connect to their server. Bear in mind that (S)FTP is now somewhat old-fashioned, and other uploading systems are starting to become popular, such as [RSync](https://en.wikipedia.org/wiki/Rsync) and [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 > [!NOTE]
-> FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g. SFTP or RSync over SSH.
+> FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g., SFTP or RSync over SSH.
 
 Uploading files to a web server is a very important step while creating a website, so we cover it in detail in [a separate article](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server). For now, here's a short list of free basic (S)FTP clients:
 
@@ -219,7 +218,7 @@ Uploading files to a web server is a very important step while creating a websit
         <ul>
           <li>
             <a
-              href="https://wiki.gnome.org/action/show/Apps/Files?action=show&#x26;redirect=Apps%2FNautilus"
+              href="https://apps.gnome.org/en/Nautilus/"
               rel="external"
               >Nautilus/Files</a
             >
@@ -255,13 +254,13 @@ Uploading files to a web server is a very important step while creating a websit
 
 There are [many web browsers available](https://en.wikipedia.org/wiki/List_of_web_browsers). When you're developing a website you should test it at least with the following major browsers on both desktop and mobile platforms, to make sure your site works for most people:
 
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Mozilla Firefox](https://www.firefox.com/en-US/)
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 
-If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/browsers/opera-mini).
+If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/mini).
 
-Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
+Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://www.browsershots.at/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
 
 See [Strategies for carrying out testing: Putting together a testing lab](/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies#putting_together_a_testing_lab) for more information.
 

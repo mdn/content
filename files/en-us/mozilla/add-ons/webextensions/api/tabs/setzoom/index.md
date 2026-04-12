@@ -3,9 +3,8 @@ title: tabs.setZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.setZoom
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Zooms the specified tab.
 

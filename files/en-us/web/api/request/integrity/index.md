@@ -8,7 +8,7 @@ browser-compat: api.Request.integrity
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request.
+The **`integrity`** read-only property of the {{domxref("Request")}} interface contains the [subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) value of the request.
 
 ## Value
 
@@ -45,5 +45,5 @@ console.log(myRequest.integrity); // "sha256-abc123"
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

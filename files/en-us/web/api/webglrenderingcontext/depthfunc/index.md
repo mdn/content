@@ -20,11 +20,9 @@ depthFunc(func)
 ### Parameters
 
 - `func`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the depth comparison function, which sets the
     conditions under which the pixel will be drawn. The default value is
     `gl.LESS`. Possible values are:
-
     - `gl.NEVER` (never pass)
     - `gl.LESS` (pass if the incoming value is less than the depth buffer
       value)

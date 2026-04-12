@@ -3,9 +3,8 @@ title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.captureVisibleTab
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Creates a data URL encoding the image of an area of the active tab in the specified window. You must have the `<all_urls>` or `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 

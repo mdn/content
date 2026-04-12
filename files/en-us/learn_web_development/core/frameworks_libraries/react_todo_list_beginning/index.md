@@ -1,10 +1,10 @@
 ---
-title: Beginning our React todo list
+title: Beginning our React ToDo app
+short-title: React ToDo app
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -174,7 +174,7 @@ function App(props) {
 export default App;
 ```
 
-Now open `index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Element/title) element's text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) at the top of our app.
+Now open `index.html` and change the [`<title>`](/en-US/docs/Web/HTML/Reference/Elements/title) element's text to `TodoMatic`. This way, it will match the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) at the top of our app.
 
 ```html
 <title>TodoMatic</title>
@@ -186,10 +186,10 @@ When your browser refreshes, you should see something like this:
 
 It's ugly, and doesn't function yet, but that's okay — we'll style it in a moment. First, consider the JSX we have, and how it corresponds to our user stories:
 
-- We have a [`<form>`](/en-US/docs/Web/HTML/Element/form) element, with an [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) for writing out a new task, and a button to submit the form.
+- We have a [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) element, with an [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text) for writing out a new task, and a button to submit the form.
 - We have an array of buttons that will be used to filter our tasks.
 - We have a heading that tells us how many tasks remain.
-- We have our 3 tasks, arranged in an unordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
+- We have our 3 tasks, arranged in an unordered list. Each task is a list item ([`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li)), and has buttons to edit and delete it and a checkbox to check it off as done.
 
 The form will allow us to _make_ tasks; the buttons will let us _filter_ them; the heading and list are our way to _read_ them. The UI for _editing_ a task is conspicuously absent for now. That's okay – we'll write that later.
 
@@ -209,9 +209,9 @@ Here, `aria-pressed` tells assistive technology (like screen readers) that the b
 
 The class `visually-hidden` has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to assistive technology users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for assistive technology users that do not have the extra visual context to help them.
 
-Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element:
+Further down, you can find our [`<ul>`](/en-US/docs/Web/HTML/Reference/Elements/ul) element:
 
-```html
+```jsx
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -227,10 +227,12 @@ The `aria-labelledby` attribute tells assistive technologies that we're treating
 Finally, the labels and inputs in our list items have some attributes unique to JSX:
 
 ```jsx
-<input id="todo-0" type="checkbox" defaultChecked />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<div className="c-cb">
+  <input id="todo-0" type="checkbox" defaultChecked />
+  <label className="todo-label" htmlFor="todo-0">
+    Eat
+  </label>
+</div>
 ```
 
 The `defaultChecked` attribute in the `<input />` tag tells React to check this checkbox initially. If we were to use `checked`, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.
@@ -243,7 +245,7 @@ The `defaultChecked` attribute in the previous section is a boolean attribute �
 
 Because JSX is JavaScript, there's a gotcha to be aware of with boolean attributes: writing `defaultChecked="false"` will set a _string_ value of `"false"` rather than a _boolean_ value. Non-empty strings are [truthy](/en-US/docs/Glossary/Truthy), so React will consider `defaultChecked` to be `true` and check the checkbox by default. This is not what we want, so we should avoid it.
 
-If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden), which prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `{false}`. Note, again, that writing `hidden="false"` results in a truthy value so the `<h1>` _will_ hide. Don't forget to remove this code when you're done.
+If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden), which prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `{false}`. Note, again, that writing `hidden="false"` results in a truthy value so the `<h1>` _will_ hide. Don't forget to remove this code when you're done.
 
 > [!NOTE]
 > The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
@@ -309,16 +311,16 @@ input[type="text"] {
   border-radius: 0;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
   margin: 0 auto;
   max-width: 68rem;
   width: 100%;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
@@ -337,7 +339,7 @@ body {
   text-transform: capitalize;
 }
 .btn.toggle-btn {
-  border-color: #d3d3d3;
+  border-color: lightgray;
   border-width: 1px;
 }
 .btn.toggle-btn[aria-pressed="true"] {
@@ -347,14 +349,14 @@ body {
 .btn__danger {
   background-color: #ca3c3c;
   border-color: #bd2130;
-  color: #fff;
+  color: white;
 }
 .btn__filter {
   border-color: lightgrey;
 }
 .btn__primary {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
 }
 .btn-group {
   display: flex;
@@ -372,7 +374,6 @@ body {
   text-align: center;
 }
 .visually-hidden {
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -390,7 +391,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -404,7 +405,7 @@ body {
 /* End global styles */
 /* General app styles */
 .todoapp {
-  background: #fff;
+  background: white;
   box-shadow:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
@@ -412,7 +413,7 @@ body {
   padding: 1rem;
   position: relative;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -440,7 +441,7 @@ body {
   text-align: center;
 }
 .input__lg {
-  border: 2px solid #000;
+  border: 2px solid black;
   padding: 2rem;
 }
 .input__lg:focus-visible {
@@ -455,7 +456,7 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -486,9 +487,9 @@ body {
   box-sizing: border-box;
   clear: left;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.25;
   min-height: 44px;
   padding-left: 40px;
@@ -522,7 +523,7 @@ body {
 }
 .c-cb > label::before {
   background: transparent;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   content: "";
   position: absolute;
 }

@@ -2,7 +2,7 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-spec-urls: https://svgwg.org/svg2-draft/
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/
 ---
 
 {{DefaultAPISidebar("SVG")}}
@@ -29,9 +29,9 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGCircleElement")}}
 - {{DOMxRef("SVGClipPathElement")}}
 - {{DOMxRef("SVGComponentTransferFunctionElement")}}
-- {{DOMxRef("SVGCursorElement")}}
 - {{DOMxRef("SVGDefsElement")}}
 - {{DOMxRef("SVGDescElement")}}
+- {{DOMxRef("SVGDiscardElement")}}
 - {{DOMxRef("SVGElement")}}
 - {{DOMxRef("SVGEllipseElement")}}
 - {{DOMxRef("SVGFEBlendElement")}}
@@ -127,7 +127,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ### SMIL-related interfaces
 
-- {{DOMxRef("ElementTimeControl")}}
 - {{DOMxRef("TimeEvent")}}
 
 ### Other SVG interfaces

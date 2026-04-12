@@ -1,10 +1,12 @@
 ---
 title: Setting up a Node development environment
+short-title: Dev environment setup
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Now that you know what [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
 
@@ -42,7 +44,7 @@ There are other peripheral tools that are part of a typical development environm
 
 ### What operating systems are supported?
 
-_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/package-manager) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
+_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
 
 In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.
 
@@ -52,7 +54,7 @@ There are many [releases of Node](https://nodejs.org/en/blog/release/) — newer
 
 Generally you should use the most recent _LTS (long-term supported)_ release as this will be more stable than the "current" release while still having relatively recent features (and is still being actively maintained). You should use the _Current_ release if you need a feature that is not present in the LTS version.
 
-For _Express_ you should always use the latest version.
+For _Express_ you should use the most recent LTS release of Node.
 
 ### What about databases and other dependencies?
 
@@ -64,7 +66,7 @@ In order to use _Express_ you will have to install _Nodejs_ and the [Node Packag
 To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
 > [!NOTE]
-> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager) (nodejs.org).
+> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download) (nodejs.org).
 > We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
 ### Windows
@@ -79,11 +81,11 @@ After `nvm-windows` has installed, open a command prompt (or PowerShell) and ent
 nvm install lts
 ```
 
-At time of writing the LTS version of nodejs is 20.11.0.
+At time of writing the LTS version of nodejs is 22.17.0.
 You can set this as the _current version_ to use with the command below:
 
 ```bash
-nvm use 20.11.0
+nvm use 22.17.0
 ```
 
 > [!NOTE]
@@ -103,12 +105,12 @@ After `nvm` has installed, open a terminal enter the following command to downlo
 nvm install --lts
 ```
 
-At the time of writing, the LTS version of nodejs is 20.11.0.
+At the time of writing, the LTS version of nodejs is 22.17.0.
 The command `nvm list` shows the downloaded set of version and the current version.
 You can set a particular version as the _current version_ with the command below (the same as for `nvm-windows`)
 
 ```bash
-nvm use 20.11.0
+nvm use 22.17.0
 ```
 
 Use the command `nvm --help` to find out other command line options.
@@ -121,14 +123,14 @@ A good way to do this is to use the "version" command in your terminal/command p
 
 ```bash
 > node -v
-v20.11.0
+v22.17.0
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-10.2.4
+10.9.2
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
@@ -136,20 +138,21 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 1. Copy the following text into a file named **hellonode.js**. This uses pure Node features (nothing from Express):
 
    ```js
-   //Load HTTP module
+   // Load HTTP module
    const http = require("http");
+
    const hostname = "127.0.0.1";
    const port = 3000;
 
-   //Create HTTP server and listen on port 3000 for requests
+   // Create HTTP server and listen on port 3000 for requests
    const server = http.createServer((req, res) => {
-     //Set the response HTTP header with HTTP status and Content type
+     // Set the response HTTP header with HTTP status and Content type
      res.statusCode = 200;
      res.setHeader("Content-Type", "text/plain");
      res.end("Hello World\n");
    });
 
-   //listen for request on port 3000, and as a callback function have the port listened on logged
+   // Listen for request on port 3000, and as a callback function have the port listened on logged
    server.listen(port, hostname, () => {
      console.log(`Server running at http://${hostname}:${port}/`);
    });
@@ -210,20 +213,20 @@ The following steps show how you can use npm to download a package, save it into
    {
      "name": "myapp",
      "version": "1.0.0",
-     "description": "",
      "main": "index.js",
      "scripts": {
        "test": "echo \"Error: no test specified\" && exit 1"
      },
      "author": "",
-     "license": "ISC"
+     "license": "ISC",
+     "description": ""
    }
    ```
 
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
-    npm install express
+   npm install express
    ```
 
    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
@@ -240,7 +243,7 @@ The following steps show how you can use npm to download a package, save it into
      "author": "",
      "license": "ISC",
      "dependencies": {
-       "express": "^4.17.1"
+       "express": "^5.1.0"
      }
    }
    ```
@@ -250,6 +253,7 @@ The following steps show how you can use npm to download a package, save it into
 
    ```js
    const express = require("express");
+
    const app = express();
    const port = 3000;
 
@@ -295,9 +299,11 @@ npm install eslint --save-dev
 The following entry would then be added to your application's **package.json**:
 
 ```json
+{
   "devDependencies": {
-    "eslint": "^7.10.0"
+    "eslint": "^9.30.1"
   }
+}
 ```
 
 > [!NOTE]
@@ -305,18 +311,20 @@ The following entry would then be added to your application's **package.json**:
 
 ### Running tasks
 
-In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call npm to execute them with the [run-script](https://docs.npmjs.com/cli/run-script/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc.).
+In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call npm to execute them with the [run-script](https://docs.npmjs.com/cli/commands/npm-run/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc.).
 
 > [!NOTE]
 > Task runners like [Gulp](https://gulpjs.com/) and [Grunt](https://gruntjs.com/) can also be used to run tests and other external tools.
 
-For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder /src/js):
+For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder `/src/js`):
 
 ```json
-"scripts": {
-  // …
-  "lint": "eslint src/js"
-  // …
+{
+  "scripts": {
+    // …
+    "lint": "eslint src/js"
+    // …
+  }
 }
 ```
 
@@ -434,7 +442,7 @@ In the next article we start working through a tutorial to build a complete web 
 
 ## See also
 
-- [Downloads](https://nodejs.org/en/download/package-manager) page (nodejs.org)
+- [Downloads](https://nodejs.org/en/download) page (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 - [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)

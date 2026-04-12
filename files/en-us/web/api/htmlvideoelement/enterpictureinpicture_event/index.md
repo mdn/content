@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("enterpictureinpicture", (event) => {});
+```js-nolint
+addEventListener("enterpictureinpicture", (event) => { })
 
-onenterpictureinpicture = (event) => {};
+onenterpictureinpicture = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +46,7 @@ function onEnterPip() {
   console.log("Picture-in-Picture mode activated!");
 }
 
-video.addEventListener("enterpictureinpicture", onEnterPip, false);
+video.addEventListener("enterpictureinpicture", onEnterPip);
 
 button.onclick = () => {
   video.requestPictureInPicture();

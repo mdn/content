@@ -2,9 +2,8 @@
 title: HTML
 slug: Glossary/HTML
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **HTML** (HyperText Markup Language) is a descriptive language that specifies webpage structure.
 

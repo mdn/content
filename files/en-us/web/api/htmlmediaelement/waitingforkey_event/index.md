@@ -17,10 +17,10 @@ Otherwise, including if the data was previously available but isn't anymore, the
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("waitingforkey", (event) => {});
+```js-nolint
+addEventListener("waitingforkey", (event) => { })
 
-onwaitingforkey = (event) => {};
+onwaitingforkey = (event) => { }
 ```
 
 ## Event type

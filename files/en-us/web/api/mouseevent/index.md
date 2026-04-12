@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MouseEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent`** interface represents events that occur due to the user interacting with a pointing device (such as a mouse).
 Common events using this interface include {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}}.
@@ -36,13 +36,13 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : The button number that was pressed (if applicable) when the mouse event was fired.
+  - : The button number that was pressed or released (if applicable) when the mouse event was fired.
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -52,9 +52,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
+  - : The Y coordinate of the mouse pointer relative to the position of the last move event of the same type (a {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}}, or {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}).
 - {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
 - {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
@@ -66,9 +66,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}

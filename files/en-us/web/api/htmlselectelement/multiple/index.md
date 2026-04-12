@@ -8,7 +8,7 @@ browser-compat: api.HTMLSelectElement.multiple
 
 {{ APIRef("HTML DOM") }}
 
-The **`multiple`** property of the {{DOMxRef("HTMLSelectElement")}} interface specifies that the user may select more than one option from the list of options. It reflects the {{htmlelement("select")}} element's [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute.
+The **`multiple`** property of the {{DOMxRef("HTMLSelectElement")}} interface specifies that the user may select more than one option from the list of options. It reflects the {{htmlelement("select")}} element's [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute.
 
 ## Value
 

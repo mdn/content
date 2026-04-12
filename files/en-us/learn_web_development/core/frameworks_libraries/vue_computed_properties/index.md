@@ -2,9 +2,10 @@
 title: Using Vue computed properties
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_styling","Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_styling","Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
 
@@ -61,12 +62,18 @@ To create a computed property, we need to add a `computed` property to our compo
 Add the following code to your `App` component object, below the `methods` property. The list summary method will get the number of finished `ToDoItems`, and return a string reporting this.
 
 ```js
-computed: {
-  listSummary() {
-    const numberFinishedItems = this.ToDoItems.filter((item) =>item.done).length
-    return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
-  }
-}
+export default {
+  // …
+  computed: {
+    listSummary() {
+      const numberFinishedItems = this.ToDoItems.filter(
+        (item) => item.done,
+      ).length;
+      return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`;
+    },
+  },
+  // …
+};
 ```
 
 Now we can add `\{{listSummary}}` directly to our template; we'll add this inside an `<h2>` element, just above our `<ul>`. We'll also add an `id` and an `aria-labelledby` attribute to assign the `<h2>` contents to be a label for the `<ul>` element.
@@ -109,10 +116,18 @@ Since all we need to do is emit that the checkbox was checked, we can include th
 In `App.vue`, add a new method called `updateDoneStatus()`, below your `addToDo()` method. This method should take one parameter: the todo item _id_. We want to find the item with the matching `id` and update its `done` status to be the opposite of its current status:
 
 ```js
-updateDoneStatus(toDoId) {
-  const toDoToUpdate = this.ToDoItems.find((item) => item.id === toDoId)
-  toDoToUpdate.done = !toDoToUpdate.done
-}
+export default {
+  // …
+  methods: {
+    // …
+    updateDoneStatus(toDoId) {
+      const toDoToUpdate = this.ToDoItems.find((item) => item.id === toDoId);
+      toDoToUpdate.done = !toDoToUpdate.done;
+    },
+    // …
+  },
+  // …
+};
 ```
 
 We want to run this method whenever a `ToDoItem` emits a `checkbox-changed` event, and pass in its `item.id` as the parameter. Update your `<to-do-item></to-do-item>` call as follows:

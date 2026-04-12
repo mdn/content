@@ -8,28 +8,15 @@ browser-compat: api.Element.scrollHeight
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollHeight`** read-only property is a
-measurement of the height of an element's content, including content not visible on the
-screen due to overflow.
+The **`scrollHeight`** read-only property of the {{domxref("Element")}} interface is a measurement of the height of an element's content, including content not visible on the screen due to overflow.
 
 ![The user's viewport is an element with four regions labeled padding-top, border-top, border-bottom, padding-bottom. The scroll height goes from the container's padding top to the end of the padding bottom, well beyond the top and bottom of the viewport.](scrollheight.png)
 
-The `scrollHeight` value is equal to the minimum height the element would
-require in order to fit all the content in the viewport without using a vertical
-scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight", "clientHeight")}}:
-it includes the element's padding, but not its border, margin or
-horizontal scrollbar (if present). It can also include the height of pseudo-elements
-such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
-fit without a need for vertical scrollbar, its `scrollHeight` is equal to
-{{domxref("Element.clientHeight", "clientHeight")}}
-
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value, use
-> {{domxref("Element.getBoundingClientRect()")}}.
+The `scrollHeight` value is equal to the minimum height the element would require in order to fit all the content in the viewport without using a vertical scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight", "clientHeight")}}: it includes the element's padding, but not its border, margin or horizontal scrollbar (if present). It can also include the height of pseudo-elements such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit without a need for vertical scrollbar, its `scrollHeight` is equal to {{domxref("Element.clientHeight", "clientHeight")}}.
 
 ## Value
 
-An integer corresponding to the scrollHeight pixel value of the element.
+An integer.
 
 ## Problems and solutions
 
@@ -72,13 +59,9 @@ function isScrollable(element) {
 
 ### Checking that the user has read a text
 
-Associated with the {{domxref("Element.scroll_event", "scroll")}} event, this
-equivalence can be useful to determine whether a user has read a text or not (see also
-the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
-properties).
+Associated with the {{domxref("Element.scroll_event", "scroll")}} event, this equivalence can be useful to determine whether a user has read a text or not (see also the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} properties).
 
-The checkbox in the demo below is disabled, and so cannot be checked to show agreement
-until the content of the paragraph has been scrolled through. Once checked, the "Next" button can be clicked to continue.
+The checkbox in the demo below is disabled, and so cannot be checked to show agreement until the content of the paragraph has been scrolled through. Once checked, the "Next" button can be clicked to continue.
 
 #### HTML
 
@@ -216,6 +199,11 @@ toNextStep.addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("Element.clientHeight")}}
-- {{domxref("HTMLElement.offsetHeight")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollWidth")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}
+- {{domxref("Element.scrollTo()")}}

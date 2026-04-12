@@ -7,7 +7,7 @@ browser-compat: api.SVGLengthList
 
 {{APIRef("SVG")}}
 
-The `SVGLengthList` interface defines a list of {{ domxref("SVGLength") }} objects. It is used for the {{domxref("SVGAnimatedLengthList.baseVal", "baseVal")}} and {{domxref("SVGAnimatedLengthList.animVal", "animVal")}} properties of {{domxref("SVGAnimatedLengthList")}}.
+The **`SVGLengthList`** interface defines a list of {{ domxref("SVGLength") }} objects. It is used for the {{domxref("SVGAnimatedLengthList.baseVal", "baseVal")}} and {{domxref("SVGAnimatedLengthList.animVal", "animVal")}} properties of {{domxref("SVGAnimatedLengthList")}}.
 
 An `SVGLengthList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -85,7 +85,7 @@ function resetSpacing() {
 function printList() {
   output.textContent = "";
   for (let i = 0; i < list.length; i++) {
-    output.innerText += list.getItem(i).value + "\n";
+    output.innerText += `${list.getItem(i).value}\n`;
   }
 }
 printList();

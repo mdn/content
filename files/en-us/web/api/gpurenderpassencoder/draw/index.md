@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: draw() method"
 short-title: draw()
 slug: Web/API/GPURenderPassEncoder/draw
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.draw
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`draw()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws primitives based on the vertex buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}.
@@ -42,7 +40,7 @@ None ({{jsxref("Undefined")}}).
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}. Most of these commands originate from the `GPURenderPassEncoder` created via {{domxref("GPUCommandEncoder.beginRenderPass()")}}. `draw()` is used to specify that three vertices should be drawn to create our triangle.
 
 ```js
-// ...
+// …
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
@@ -75,7 +73,7 @@ passEncoder.end();
 // End frame by passing array of command buffers to command queue for execution
 device.queue.submit([commandEncoder.finish()]);
 
-// ...
+// …
 ```
 
 ## Specifications

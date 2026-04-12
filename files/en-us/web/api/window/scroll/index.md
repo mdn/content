@@ -44,10 +44,9 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```html
-<!-- put the 100th vertical pixel at the top of the window -->
-
-<button onclick="scroll(0, 100);">click to scroll to the 100th pixel</button>
+```js
+// Put the 100th vertical pixel at the top of the window
+window.scroll(0, 100);
 ```
 
 Using `options`:

@@ -10,7 +10,7 @@ browser-compat: api.HTMLOptionElement.selected
 
 The **`selected`** property of the {{DOMxRef("HTMLOptionElement")}} interface specifies the current selectedness of the element; that is, whether the {{HTMLElement("option")}} is selected or not.
 
-The presence of the HTML [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute indicates the option is selected by default. It does not indicate whether this option is currently selected: if the option's state changes, the `selected` content attribute does not reflect the change; only the `HTMLOptionElement`'s `selected` IDL property is updated. The `selected` attribute is reflected by the {{domxref("HTMLOptionElement.defaultSelected", "defaultSelected")}} property.
+The presence of the HTML [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute indicates the option is selected by default. It does not indicate whether this option is currently selected: if the option's state changes, the `selected` content attribute does not reflect the change; only the `HTMLOptionElement`'s `selected` IDL property is updated. The `selected` attribute is reflected by the {{domxref("HTMLOptionElement.defaultSelected", "defaultSelected")}} property.
 
 ## Value
 

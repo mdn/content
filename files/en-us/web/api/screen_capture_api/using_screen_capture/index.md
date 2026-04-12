@@ -193,21 +193,13 @@ const displayMediaOptions = {
 };
 
 // Set event listeners for the start and stop buttons
-startElem.addEventListener(
-  "click",
-  (evt) => {
-    startCapture();
-  },
-  false,
-);
+startElem.addEventListener("click", (evt) => {
+  startCapture();
+});
 
-stopElem.addEventListener(
-  "click",
-  (evt) => {
-    stopCapture();
-  },
-  false,
-);
+stopElem.addEventListener("click", (evt) => {
+  stopCapture();
+});
 ```
 
 ##### Logging content
@@ -315,7 +307,7 @@ The CSS is entirely cosmetic in this example. The video is given a border, and i
 
 ```css
 #video {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   width: 98%;
   max-width: 860px;
 }
@@ -337,7 +329,7 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute.
+In order to function when [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 

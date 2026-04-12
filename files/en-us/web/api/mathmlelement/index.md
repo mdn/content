@@ -17,12 +17,23 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}_.
 
 - {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
+- {{DOMxRef("MathMLElement.autofocus")}}
+  - : Whether the control should be focused when the page loads, or when a {{htmlelement("dialog")}} or [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) become shown.
+- {{DOMxRef("MathMLElement.dataset")}} {{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes) attached to the element. These correspond to MathML's [`data-*`](/en-US/docs/Web/MathML/Reference/Global_attributes/data-*) global attributes.
 - {{DOMxRef("MathMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
+- {{DOMxRef("MathMLElement.tabIndex")}}
+  - : The position of the element in the tabbing order.
 
 ## Instance methods
 
-_This interface has no methods, but inherits methods from its parent, {{DOMxRef("Element")}}_.
+_This interface also inherits methods from its parent, {{DOMxRef("Element")}}_.
+
+- {{DOMxRef("MathMLElement.blur()")}}
+  - : Removes keyboard focus from the currently focused element.
+- {{DOMxRef("MathMLElement.focus()")}}
+  - : Makes the element the current keyboard focus.
 
 ## Examples
 

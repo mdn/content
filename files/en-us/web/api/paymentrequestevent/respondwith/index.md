@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.respondWith
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`respondWith()`** method of the {{domxref("PaymentRequestEvent")}} interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a payment handler response object yourself.
 
@@ -25,7 +25,7 @@ respondWith(promise)
     - `methodName`
       - : The payment method identifier for the payment method that the user selected to fulfill the transaction.
     - `details`
-      - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [7.1.2 details attribute](https://w3c.github.io/payment-handler/#details-attribute) for more details.
+      - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [8.1.2 `details` attribute](https://w3c.github.io/web-based-payment-handler/#details-attribute) for more details.
 
 ### Return value
 
@@ -48,7 +48,7 @@ self.addEventListener("paymentrequest", async (e) => {
     client = await e.openWindow(checkoutURL);
     if (!client) {
       // Reject if the window fails to open
-      throw "Failed to open window";
+      throw new Error("Failed to open window");
     }
   } catch (err) {
     // Reject the promise on failure

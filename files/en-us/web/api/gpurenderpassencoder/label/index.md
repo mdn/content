@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: label property"
 short-title: label
 slug: Web/API/GPURenderPassEncoder/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPURenderPassEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

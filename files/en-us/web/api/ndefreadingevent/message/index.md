@@ -8,7 +8,7 @@ status:
 browser-compat: api.NDEFReadingEvent.message
 ---
 
-{{securecontext_header}}{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Web NFC API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 

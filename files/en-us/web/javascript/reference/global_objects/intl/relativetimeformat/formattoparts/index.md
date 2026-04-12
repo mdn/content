@@ -1,15 +1,29 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`formatToParts()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/RelativeTimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+
+```js interactive-example
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf.formatToParts(10, "seconds");
+
+console.log(parts[0].value);
+// Expected output: "in "
+
+console.log(parts[1].value);
+// Expected output: "10"
+
+console.log(parts[2].value);
+// Expected output: " seconds"
+```
 
 ## Syntax
 

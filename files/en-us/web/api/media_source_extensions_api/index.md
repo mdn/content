@@ -2,8 +2,6 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-status:
-  - experimental
 spec-urls:
   - https://w3c.github.io/media-source/
   - https://w3c.github.io/media-playback-quality/
@@ -35,7 +33,7 @@ The two most common use cases for DASH involve watching content "on demand" or "
 
 Live profile content can introduce latency due to its transcoding and broadcasting, so DASH is not suitable for real time communication like [WebRTC](/en-US/docs/Web/API/WebRTC_API) is. It can however support significantly more client connections than WebRTC.
 
-There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript.
+There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript. The [DASH Adaptive Streaming for HTML video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming) article provides an example of how to use DASH with MSE.
 
 ### Availability in workers
 
@@ -53,6 +51,12 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
   - : Represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} via a `MediaSource` object.
 - {{domxref("SourceBufferList")}}
   - : A simple container list for multiple `SourceBuffer` objects.
+- {{domxref("ManagedMediaSource")}}
+  - : A {{domxref("MediaSource")}} that actively manages its memory content. Unlike a regular `MediaSource`, a `ManagedMediaSource` can evict content from its source buffers at any time for reasons such as memory or hardware limitations.
+- {{domxref("ManagedSourceBuffer")}}
+  - : A {{domxref("SourceBuffer")}} created by a `ManagedMediaSource`. Fires {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events to notify the application when buffered ranges are modified, including when the user agent evicts content.
+- {{domxref("BufferedChangeEvent")}}
+  - : The event object for the {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} event, which contains {{domxref("TimeRanges")}} representing the added and removed buffered ranges.
 - {{domxref("VideoPlaybackQuality")}}
   - : Contains information about the quality of video being played by a {{htmlelement("video")}} element, such as number of dropped or corrupted frames. Returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method.
 

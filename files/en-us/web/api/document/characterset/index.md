@@ -22,11 +22,9 @@ A string.
 
 ## Examples
 
-```html
-<button onclick="console.log(document.characterSet);">
-  Log character encoding
-</button>
-<!-- displays document's character encoding in the dev console, such as "ISO-8859-1" or "UTF-8" -->
+```js
+console.log(document.characterSet);
+// document's character encoding, such as "ISO-8859-1" or "UTF-8"
 ```
 
 ## Specifications

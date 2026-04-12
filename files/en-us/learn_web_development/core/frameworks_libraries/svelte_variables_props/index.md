@@ -2,9 +2,9 @@
 title: "Dynamic behavior in Svelte: working with variables and props"
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Now that we have our markup and styles ready, we can start developing the required features for our Svelte to-do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete to-dos, mark them as complete, and filter them by status.
@@ -342,7 +342,8 @@ Now on to the next major task for this article — let's add some functionality 
 
    Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
 
-   > **Note:** `Array` has several mutable operations: [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [`sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of `push()` we avoid mutating the array, which is considered a good practice.
+   > [!NOTE]
+   > `Array` has several mutable operations: [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [`sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of `push()` we avoid mutating the array, which is considered a good practice.
 
    Update your `addTodo()` function like so:
 

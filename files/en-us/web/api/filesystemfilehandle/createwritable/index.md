@@ -24,9 +24,7 @@ createWritable(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `keepExistingData` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`.
         When set to `true` if the file exists, the existing file is first copied to the temporary file.
@@ -75,7 +73,7 @@ async function writeFile(fileHandle, contents) {
 
 ### Expanded usage with options
 
-Our [`createWritable()` mode test](https://createwritable-mode-test.glitch.me/) example provides a {{htmlelement("button")}} to select a file to write to, a text {{htmlelement("input")}} field into which you can enter some text to write to the file, and a second `<button>` to write the text to the file.
+Our [`createWritable()` mode test](https://mdn.github.io/dom-examples/file-system-api/createwritable-mode/) example (see the [source code](https://github.com/mdn/dom-examples/tree/main/file-system-api/createwritable-mode)) provides a {{htmlelement("button")}} to select a file to write to, a text {{htmlelement("input")}} field into which you can enter some text to write to the file, and a second `<button>` to write the text to the file.
 
 In the demo above, try selecting a text file on your file system (or entering a new file name), entering some text into the input field, and writing the text to the file. Open the file on your file system to check whether the write was successful.
 
@@ -103,7 +101,7 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 </ol>
 ```
 
-The text input field and the write text button are set to be disabled initially via the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute — they shouldn't be used until the user has selected a file to write to.
+The text input field and the write text button are set to be disabled initially via the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute — they shouldn't be used until the user has selected a file to write to.
 
 ```css hidden
 li {

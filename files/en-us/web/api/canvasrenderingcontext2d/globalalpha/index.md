@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.globalAlpha
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.globalAlpha`**
@@ -73,15 +73,15 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 // Draw background
-ctx.fillStyle = "#FD0";
+ctx.fillStyle = "#ffdd00";
 ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = "#6C0";
+ctx.fillStyle = "#66cc00";
 ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = "#09F";
+ctx.fillStyle = "#0099ff";
 ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = "#F30";
+ctx.fillStyle = "#ff3300";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = "#FFF";
+ctx.fillStyle = "white";
 
 // Set transparency value
 ctx.globalAlpha = 0.2;

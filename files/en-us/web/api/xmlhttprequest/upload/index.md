@@ -13,7 +13,7 @@ The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHtt
 It is an opaque object, but because it's also an {{domxref("XMLHttpRequestEventTarget")}}, event listeners can be attached to track its process.
 
 > [!NOTE]
-> Attaching event listeners to this object prevents the request from being a "simple request" and will cause a preflight request to be issued if cross-origin; see [CORS](/en-US/docs/Web/HTTP/CORS). Because of this, event listeners need to be registered before calling {{domxref("XMLHttpRequest.send", "send()")}} or upload events won't be dispatched.
+> Attaching event listeners to this object prevents the request from being a "simple request" and will cause a preflight request to be issued if cross-origin; see [CORS](/en-US/docs/Web/HTTP/Guides/CORS). Because of this, event listeners need to be registered before calling {{domxref("XMLHttpRequest.send", "send()")}} or upload events won't be dispatched.
 
 > [!NOTE]
 > The spec also seems to indicate that event listeners should be attached after {{domxref("XMLHttpRequest.open", "open()")}}. However, browsers are buggy on this matter, and often need the listeners to be registered _before_ {{domxref("XMLHttpRequest.open", "open()")}} to work.
@@ -29,29 +29,29 @@ The following events can be triggered on an upload object and used to monitor th
   </thead>
   <tbody>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/loadstart_event", "loadstart")}}</td>
       <td>The upload has begun.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/progress_event", "progress")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/progress_event", "progress")}}</td>
       <td>
         Periodically delivered to indicate the amount of progress made so far.
       </td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/abort_event", "abort")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/abort_event", "abort")}}</td>
       <td>The upload operation was aborted.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/error_event", "error")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/error_event", "error")}}</td>
       <td>The upload failed due to an error.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/load_event", "load")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/load_event", "load")}}</td>
       <td>The upload completed successfully.</td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/timeout_event", "timeout")}}</td>
       <td>
         The upload timed out because a reply did not arrive within the time
         interval specified by the
@@ -59,7 +59,7 @@ The following events can be triggered on an upload object and used to monitor th
       </td>
     </tr>
     <tr>
-      <td>{{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}</td>
+      <td>{{domxref("XMLHttpRequestEventTarget/loadend_event", "loadend")}}</td>
       <td>
         The upload finished. This event does not differentiate between success
         or failure, and is sent at the end of the upload regardless of the

@@ -1,14 +1,16 @@
 ---
 title: Function.prototype.arguments
+short-title: arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 page-type: javascript-instance-accessor-property
 status:
   - deprecated
   - non-standard
 browser-compat: javascript.builtins.Function.arguments
+sidebar: jsref
 ---
 
-{{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 > [!NOTE]
 > The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.
@@ -19,7 +21,7 @@ The **`arguments`** accessor property of {{jsxref("Function")}} instances return
 
 The value of `arguments` is an array-like object corresponding to the arguments passed to a function.
 
-In the case of recursion, i.e. if function `f` appears several times on the call stack, the value of `f.arguments` represents the arguments corresponding to the most recent invocation of the function.
+In the case of recursion, i.e., if function `f` appears several times on the call stack, the value of `f.arguments` represents the arguments corresponding to the most recent invocation of the function.
 
 The value of the `arguments` property is normally {{jsxref("Operators/null", "null")}} if there is no outstanding invocation of the function in progress (that is, the function has been called but has not yet returned).
 

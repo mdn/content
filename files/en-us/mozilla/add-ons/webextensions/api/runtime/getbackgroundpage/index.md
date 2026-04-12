@@ -3,9 +3,8 @@ title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBackgroundPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension. If the background page is non-persistent (an event page) and it is not running, the background page is started.
 
@@ -22,7 +21,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 > [!NOTE]
 > In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
 >
-> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) for details.
+> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See [Migrate to a service worker](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) for details.
 >
 > Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}, which work correctly in both scenarios above.
 
@@ -39,10 +38,6 @@ None.
 ### Return value
 
 A {{JSxRef("Promise")}} that will be fulfilled with the {{DOMxRef("Window")}} object for the background page, if there is one. If the extension does not include a background page, the promise is rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -74,6 +69,10 @@ getting.then(onGot, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

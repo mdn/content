@@ -20,19 +20,21 @@ bindTexture(target, texture)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
+    - `gl.TEXTURE_2D`
+      - : A two-dimensional texture.
+    - `gl.TEXTURE_CUBE_MAP`
+      - : A cube-mapped texture.
 
-    - `gl.TEXTURE_2D`: A two-dimensional texture.
-    - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-      When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
-
-      - `gl.TEXTURE_3D`: A three-dimensional texture.
-      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+    - `gl.TEXTURE_3D`
+      - : A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`
+      - : A two-dimensional array texture.
 
 - `texture`
   - : A {{domxref("WebGLTexture")}} object to bind.
+    If `null` is passed, the currently bound texture for the specified target is unbound.
 
 ### Return value
 
@@ -54,6 +56,13 @@ const gl = canvas.getContext("webgl");
 const texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
+```
+
+### Unbinding a texture
+
+```js
+// Unbind any texture currently bound to TEXTURE_2D
+gl.bindTexture(gl.TEXTURE_2D, null);
 ```
 
 ### Getting current bindings

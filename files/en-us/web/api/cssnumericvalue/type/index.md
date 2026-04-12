@@ -26,7 +26,20 @@ None.
 
 ### Return value
 
-A {{domxref('CSSNumericType')}} object.
+A `CSSNumericType` dictionary, which contains the following properties:
+
+- `length`
+- `angle`
+- `time`
+- `frequency`
+- `resolution`
+- `flex`
+- `percent`
+- `percentHint`
+
+For each property except `percentHint`, the value is an integer representing the power of that unit. For example, a numeric value of `calc(1px * 1em)` will return `{ length: 2 }`.
+
+The `percentHint` property is a string that indicates the type of value that the percent is applied to. The string value is the same as the type properties: `"length"`, `"angle"`, `"time"`, `"frequency"`, `"resolution"`, `"flex"`, or `"percent"`. It indicates that the type actually holds a percentage, but that percentage will eventually resolve to the hinted base type, and so has been replaced with it in the type.
 
 ### Exceptions
 

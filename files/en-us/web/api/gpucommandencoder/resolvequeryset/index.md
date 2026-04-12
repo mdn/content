@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: resolveQuerySet() method"
 short-title: resolveQuerySet()
 slug: Web/API/GPUCommandEncoder/resolveQuerySet
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.resolveQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`resolveQuerySet()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
@@ -49,7 +47,7 @@ The following criteria must be met when calling **`resolveQuerySet()`**, otherwi
 ## Examples
 
 ```js
-// ...
+// …
 
 const queryBuffer = device.createBuffer({
   size: 1024,
@@ -61,17 +59,17 @@ const querySet = device.createQuerySet({
   count: 32,
 });
 
-// ...
+// …
 
 const commandEncoder = device.createCommandEncoder();
 
 // Write timestamps to querySet
 commandEncoder.writeTimestamp(querySet, 0);
-// ...
+// …
 commandEncoder.writeTimestamp(querySet, 1);
 // etc.
 
-// ...
+// …
 
 commandEncoder.resolveQuerySet(
   querySet,
@@ -81,7 +79,7 @@ commandEncoder.resolveQuerySet(
   0, // Buffer offset
 );
 
-// ...
+// …
 ```
 
 ## Specifications

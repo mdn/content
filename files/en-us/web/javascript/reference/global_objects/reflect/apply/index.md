@@ -1,15 +1,33 @@
 ---
 title: Reflect.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.apply()`** static method calls a target function with arguments as specified.
 
-{{EmbedInteractiveExample("pages/js/reflect-apply.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.apply()", "taller")}}
+
+```js interactive-example
+console.log(Reflect.apply(Math.floor, undefined, [1.75]));
+// Expected output: 1
+
+console.log(
+  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+);
+// Expected output: "hello"
+
+console.log(
+  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+);
+// Expected output: 4
+
+console.log(Reflect.apply("".charAt, "ponies", [3]));
+// Expected output: "i"
+```
 
 ## Syntax
 
@@ -80,6 +98,7 @@ Reflect.apply("".charAt, "ponies", [3]);
 ## See also
 
 - [Polyfill of `Reflect.apply` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [es-shims polyfill of `Reflect.apply`](https://www.npmjs.com/package/reflect-apply)
 - {{jsxref("Reflect")}}
 - {{jsxref("Function.prototype.apply()")}}
 - [`handler.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply)

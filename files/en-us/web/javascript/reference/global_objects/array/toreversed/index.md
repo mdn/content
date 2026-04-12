@@ -1,11 +1,11 @@
 ---
 title: Array.prototype.toReversed()
+short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toReversed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toReversed()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the {{jsxref("Array/reverse", "reverse()")}} method. It returns a new array with the elements in reversed order.
 
@@ -81,6 +81,7 @@ console.log(Array.prototype.toReversed.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.toReversed` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims polyfill of `Array.prototype.toReversed`](https://www.npmjs.com/package/array.prototype.toreversed)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

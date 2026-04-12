@@ -10,7 +10,7 @@ browser-compat: api.Element.previousElementSibling
 
 The **`Element.previousElementSibling`**
 read-only property returns the {{domxref("Element")}} immediately prior to the specified
-one in its parent's children list, or `null` if the specified element is the first one in the list.
+one in its parent's {{domxref("Element.children", "children")}} list, or `null` if the specified element is the first one in the list.
 
 ## Value
 
@@ -24,27 +24,25 @@ An {{domxref("Element")}} object, or `null`.
 <li>This is a list item</li>
 <li>This is another list item</li>
 <div id="div-03">Here is div-03</div>
+```
 
-<script>
-  let el = document.getElementById("div-03").previousElementSibling;
-  document.write("<p>Siblings of div-03</p><ol>");
-  while (el) {
-    document.write("<li>" + el.nodeName + "</li>");
-    el = el.previousElementSibling;
-  }
-  document.write("</ol>");
-</script>
+```js
+let el = document.getElementById("div-03").previousElementSibling;
+console.log("Siblings of div-03:");
+while (el) {
+  console.log(el.nodeName);
+  el = el.previousElementSibling;
+}
 ```
 
 This example outputs the following into the page when it loads:
 
 ```plain
-Siblings of div-03
-
-   1. LI
-   2. LI
-   3. DIV
-   4. DIV
+Siblings of div-03:
+LI
+LI
+DIV
+DIV
 ```
 
 ## Specifications

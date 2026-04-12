@@ -27,9 +27,7 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
 - {{domxref("NetworkInformation.saveData")}} {{ReadOnlyInline}}
   - : Returns `true` if the user has set a reduced data usage option on the user agent.
 - {{domxref("NetworkInformation.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : Returns the type of connection a device is using to communicate with the network. It will be one of the following values:
-
     - `bluetooth`
     - `cellular`
     - `ethernet`

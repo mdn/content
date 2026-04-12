@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableRowElement.bgColor
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`HTMLTableRowElement.bgColor`** property is used to set the background color of a row or retrieve the value of the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/tr#bgcolor) attribute, if present.
+The **`HTMLTableRowElement.bgColor`** property is used to set the background color of a row or retrieve the value of the obsolete [`bgColor`](/en-US/docs/Web/HTML/Reference/Elements/tr#bgcolor) attribute, if present.
 
 > [!NOTE]
 > This property is deprecated and CSS should be used to set the background color. Use the {{cssxref("background-color")}} property instead.
@@ -27,7 +27,7 @@ One of the following value types can be used:
 
 ## Examples
 
-Use CSS `background-color` instead. An [example](/en-US/docs/Web/CSS/background-color#colorize_tables) is available on the {{cssxref("background-color")}} page.
+Use CSS `background-color` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/background-color#colorize_tables) is available on the {{cssxref("background-color")}} page.
 
 ## Specifications
 

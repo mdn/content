@@ -3,31 +3,48 @@ title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Locale
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Locale`** object is a standard built-in property of the Intl object that represents a Unicode locale identifier.
 
-{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+
+```js interactive-example
+const korean = new Intl.Locale("ko", {
+  script: "Kore",
+  region: "KR",
+  hourCycle: "h23",
+  calendar: "gregory",
+});
+
+const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+
+console.log(korean.baseName, japanese.baseName);
+// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+
+console.log(korean.hourCycle, japanese.hourCycle);
+// Expected output: "h23" "h12"
+```
 
 ## Description
 
-The **`Intl.Locale`** object was created to allow for easier manipulation of Unicode locales. Unicode represents locales with a string, called a _locale identifier_. The locale identifier consists of a _language identifier_ and _extension tags_. Language identifiers are the core of the locale, consisting of _language_, _script_, and _region subtags_. Additional information about the locale is stored in the optional _extension tags_. Extension tags hold information about locale aspects such as calendar type, clock type, and numbering system type.
+The **`Intl.Locale`** object was created to allow for easier manipulation of Unicode locales. Unicode represents locales with a string, called a _locale identifier_. The locale identifier consists of a _language identifier_ and _extension tags_. Language identifiers are the core of the locale, consisting of _language_, _script_, _region_, and _variants_ subtags. Additional information about the locale is stored in the optional _extension tags_. Extension tags hold information about locale aspects such as calendar type, clock type, and numbering system type.
 
 Traditionally, the Intl API used strings to represent locales, just as Unicode does. This is a simple and lightweight solution that works well. Adding a Locale class, however, adds ease of parsing and manipulating the language, script, and region, as well as extension tags. The following properties of `Intl.Locale` correspond to Unicode locale identifier subtags:
 
-| Property                                                     | Corresponding subtag         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{jsxref("Intl/Locale/language", "language")}}               | `language` (first part)      |
-| {{jsxref("Intl/Locale/script", "script")}}                   | `script` (second part)       |
-| {{jsxref("Intl/Locale/region", "region")}}                   | `region` (second/third part) |
-| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (extension)             |
-| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (extension)             |
-| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (extension)             |
-| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (extension)             |
-| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (extension)             |
-| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (extension)             |
+| Property                                                     | Corresponding subtag               |
+| ------------------------------------------------------------ | ---------------------------------- |
+| {{jsxref("Intl/Locale/language", "language")}}               | Language ID, first part            |
+| {{jsxref("Intl/Locale/script", "script")}}                   | Language ID, part after `language` |
+| {{jsxref("Intl/Locale/region", "region")}}                   | Language ID, part after `script`   |
+| {{jsxref("Intl/Locale/variants", "variants")}}               | Language ID, part after `region`   |
+| {{jsxref("Intl/Locale/calendar", "calendar")}}               | `ca` (extension)                   |
+| {{jsxref("Intl/Locale/caseFirst", "caseFirst")}}             | `kf` (extension)                   |
+| {{jsxref("Intl/Locale/collation", "collation")}}             | `co` (extension)                   |
+| {{jsxref("Intl/Locale/hourCycle", "hourCycle")}}             | `hc` (extension)                   |
+| {{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}} | `nu` (extension)                   |
+| {{jsxref("Intl/Locale/numeric", "numeric")}}                 | `kn` (extension)                   |
 
 The information above is exactly provided as-is when the `Locale` object is constructed, without consulting any external database. The `Intl.Locale` object additionally provides some methods that return information about the locale's real-world information, such as available calendars, collations, and numbering systems.
 
@@ -62,6 +79,8 @@ These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.
   - : Returns the region of the world (usually a country) associated with the locale.
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : Returns the script used for writing the particular language used in the locale.
+- {{jsxref("Intl/Locale/variants", "Intl.Locale.prototype.variants")}}
+  - : Returns the variants subtags (such as different orthographies) associated with the locale.
 - `Intl.Locale.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Locale"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

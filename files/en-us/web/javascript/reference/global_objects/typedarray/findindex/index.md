@@ -1,15 +1,26 @@
 ---
 title: TypedArray.prototype.findIndex()
+short-title: findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.findIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`findIndex()`** method of {{jsxref("TypedArray")}} instances returns the index of the first element in a typed array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findIndex()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.findIndex()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findIndex(isNegative));
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -41,20 +52,24 @@ See {{jsxref("Array.prototype.findIndex()")}} for more details. This method is n
 
 ## Examples
 
-### Find the index of a prime number in a typed array
+### Find the index of the first prime number in a typed array
 
-The following example finds the index of an element in the typed array that is a prime
-number (or returns `-1` if there is no prime number).
+The following example returns the index of the first element in the typed array that is a prime number, or `-1` if there is no prime number.
 
 ```js
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 const uint8 = new Uint8Array([4, 6, 8, 12]);
@@ -63,6 +78,9 @@ const uint16 = new Uint16Array([4, 6, 7, 12]);
 console.log(uint8.findIndex(isPrime)); // -1, not found
 console.log(uint16.findIndex(isPrime)); // 2
 ```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ## Specifications
 

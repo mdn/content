@@ -22,9 +22,7 @@ new AudioBufferSourceNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `buffer`
       - : An instance of {{domxref("AudioBuffer")}} to be played.
     - `detune`

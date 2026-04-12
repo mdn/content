@@ -1,10 +1,12 @@
 ---
 title: Strategies for carrying out testing
+short-title: Testing strategies
 slug: Learn_web_development/Extensions/Testing/Testing_strategies
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 This article explains how to do cross-browser testing: how to choose which browsers and devices to test, how to actually test those browsers and devices, and how to test with user groups.
 
@@ -105,7 +107,7 @@ There is a huge amount of data you could look at using Google Analytics — cust
 You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 
 > [!NOTE]
-> When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> When using Google analytics, you need to beware of misleading bias, e.g., "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
@@ -148,7 +150,7 @@ You might notice that the button isn't usable with only the keyboard. We could r
 These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g., "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
 - They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab
@@ -166,7 +168,7 @@ It is generally better to have a real device running the browser you want to tes
 
 The following are also good options, if you can get them:
 
-- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
+- A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions.
 - A couple of lower-spec mobile devices, so you can test the performance of features like animations on less powerful processors.
 
 Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
@@ -190,7 +192,7 @@ An emulator might be as simple as testing a device condition. For example, if yo
 More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:
 
 - The official [Android Studio IDE](https://developer.android.com/studio/) for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust [emulator](https://developer.android.com/studio/run/emulator.html). If you want something a bit more lightweight, [Andy](https://www.andyroid.net/) is a reasonable option that runs on both Windows and Mac.
-- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [XCode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
+- Apple provides an app called [Simulator](https://help.apple.com/simulator/mac/current/) that runs on top of the [Xcode](https://developer.apple.com/xcode/) development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.
 
 You can often find simulators for other mobile device environments too, for example:
 
@@ -208,12 +210,11 @@ Virtual machines are applications that run on your desktop computer and allow yo
 
 To use a Virtual Box, you need to:
 
-1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
+1. Get hold of an installer disk or image (e.g., ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
 2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
 3. Open the app; you'll be presented with a view like the following: ![Application window left panel lists Windows operating system and Opera TV emulators. Right panel include several subpanels including general, system, display, settings, audio, network and a preview.](virtualbox.png)
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
 5. Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
-
    1. Provide a name for the new virtual machine
    2. Choose which operating system and version you are installing on it
    3. Set how much RAM should be allocated (we'd recommend something like 2048MB, or 2GB)
@@ -245,7 +246,7 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](https://www.selenium.dev/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
 
-There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
+There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
 Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
 
@@ -267,15 +268,15 @@ Generally, you'll get your users to look at the page or view containing the new 
 When running tests, it can also be a good idea to:
 
 - Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
-- Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
+- Use browser's private mode functionality when running tests, where available (e.g., [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
 
-These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
+These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e., there is nothing installed that could affect the results of the tests.
 
 > [!NOTE]
 > Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
 > [!NOTE]
-> Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jazzband/django-waffle).
+> Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/django-waffle/django-waffle).
 
 ## Summary
 

@@ -1,26 +1,28 @@
 ---
-title: Live examples
+title: Live samples (EmbedLiveSample)
+short-title: Live samples
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-MDN supports displaying code blocks within the articles as _live samples_, enabling readers to see both the code and its output as it would look on a web page. This feature allows readers to understand exactly what the executed code would produce, making the documentation dynamic and instructive.
+MDN supports displaying code blocks within the articles as _live samples_, so readers can see both the source code and its output as it looks on a web page.
+This feature allows readers to understand exactly what the executed code would produce, making the documentation dynamic and instructive.
 It also allows authors to be absolutely sure that the code blocks in documentation have the expected output, and work appropriately when used with different browsers.
 
-The live sample system can process code blocks written in HTML, CSS, and JavaScript, regardless of the order in which they are written in the page. This ensures that the output corresponds to the combined source code because the system runs the code directly within the page.
+The live sample system can process code blocks written in HTML, CSS, and JavaScript, regardless of the order in which they are written in the page.
+This ensures that the output corresponds to the combined source code because the system runs the code directly within the page.
 
-Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_available), live samples don't provide inbuilt support for capturing console logging or resetting examples that are changed by user input.
+Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_on_mdn), live samples don't provide inbuilt support for capturing console logging or resetting examples that are changed by user input.
 The [Examples](#examples) section shows how you can implement these, and other, useful features.
 
-## How does the live sample system work?
+## How do live samples work?
 
-The live sample system groups code blocks, merges them into HTML and renders the HTML in an {{HTMLElement("iframe")}}.
+Live samples group code blocks, merges them into HTML and renders the HTML in an {{HTMLElement("iframe")}}.
 A live sample consists of two parts:
 
 - One or more code blocks grouped together
-- A macro call that shows the result of the combined code blocks in an {{HTMLElement("iframe")}}
+- A macro call that shows the result of the code blocks in an {{HTMLElement("iframe")}}
 
 Each [code block](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) containing code for the output has a language identifier — `html`, `css`, or `js` — that specifies whether it's HTML, CSS, or JavaScript code. The language identifiers must be on the corresponding blocks of code, and a macro call (`EmbedLiveSample`) must be present in the page to display the output:
 
@@ -119,32 +121,36 @@ The live sample system has lots of options available, and we'll try to break thi
 
 There are two macros that you can use to display live samples:
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) embeds a live sample into a page
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link that opens the live sample in a new page
+- [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) embeds a live sample into a page
+- [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) creates a link that opens the live sample in a new page
 
 In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, adding the macro should do the job.
 
 #### EmbedLiveSample macro
 
 ```plain
-\{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug, class_name, allow)}}
+\{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug, class_name, allow, sandbox)}}
 ```
 
-- sample_id
+- `sample_id`
   - : Required: This can be the string identifier of the sample or the ID of the heading or enclosing block to draw the code from.
     To verify if you have the correct heading ID, look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page.
-- width {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : The `width` attribute for the {{HTMLElement("iframe")}}, specified in `px`. Deprecated since it no longer has any effect: live examples always span the full width of the content area.
-- height
+- `height`
   - : The `height` attribute of the {{HTMLElement("iframe")}}, specified in `px`. Must be at least `60`. This is optional; a reasonable default height will be used if you omit this.
-- screenshot_URL {{deprecated_inline}}
+- `screenshot_URL` {{deprecated_inline}}
   - : The URL of a screenshot that shows what the live sample should look like. Deprecated; only add live samples if there is reasonable browser support.
-- page_slug {{deprecated_inline}}
+- `page_slug` {{deprecated_inline}}
   - : The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used. Deprecated; only include live samples if the code is on the same page.
-- class_name {{deprecated_inline}}
+- `class_name` {{deprecated_inline}}
   - : The class name to apply to the {{HTMLElement("iframe")}}. Deprecated; there's no reason to use another class name.
-- allow
+- `allow`
   - : The `allow` attribute for the {{HTMLElement("iframe")}}. This is optional; by default no allowed features are present.
+- `sandbox`
+  - : A string containing the `sandbox` attributes that the example should include.
+    Allowed values are `allow-modals`, `allow-forms`, and `allow-popups`.
+    Multiple values can be provided, such as `"allow-modals allow-popups"`.
 
 #### LiveSampleLink macro
 
@@ -152,9 +158,9 @@ In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` 
 \{{LiveSampleLink(block_ID, link_text)}}
 ```
 
-- block_ID
+- `block_ID`
   - : The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page.
-- link_text
+- `link_text`
   - : A string to use as the link text.
 
 ## Using the live sample system
@@ -217,7 +223,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`.
 One common use case is to take existing code snippets already shown on MDN and turning them into live samples.
 The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their markup. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.
 
-Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
+Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g., `html`, `css`, or `js`.
 
 > [!NOTE]
 > You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
@@ -352,7 +358,7 @@ Result of `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
 
 ### Allowing features
 
-The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#embedded_frame_syntax).
 
 ```html
 <div id="fullscreen-content">
@@ -457,8 +463,7 @@ Generally when implementing your own samples you should place logging elements b
 
 > [!NOTE]
 > Displaying log output as part of the sample is a much better user experience than using `console.log()`.
-
-> [!NOTE]
+>
 > See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
 
 #### HTML
@@ -589,6 +594,6 @@ Reset the example by pressing the "Reset" button.
 - Orders of code blocks
   - : When adding a live sample, the code blocks should be sorted so that the first one corresponds to the main language for this sample (if there is one). For example, when adding a live sample for the HTML Reference, the first block should be HTML, when adding a live sample for the CSS Reference, it should be CSS and so on.
 - Naming of headings
-  - : When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
+  - : When there is no ambiguity (e.g., the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
 - Using a "Result" block
-  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).
+  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g., screen reader, web crawler).

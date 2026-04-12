@@ -38,9 +38,7 @@ if (scrollRestoration === "manual") {
 ### Prevent automatic page location restoration
 
 ```js
-if (history.scrollRestoration) {
-  history.scrollRestoration = "manual";
-}
+history.scrollRestoration = "manual";
 ```
 
 ## Specifications

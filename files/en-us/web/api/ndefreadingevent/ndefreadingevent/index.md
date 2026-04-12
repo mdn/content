@@ -8,7 +8,7 @@ status:
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
 
-{{securecontext_header}}{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Web NFC API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
@@ -24,15 +24,11 @@ new NDEFReadingEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `reading`.
 - `options`
-
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
-
     - `serialNumber` {{optional_inline}}
       - : The serial number of the device a message was read from. It default to `""`, and can be set to `null`.
     - `message`
-
       - : An object with the following members:
-
         - `data` {{optional_inline}}
           - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}
@@ -40,23 +36,17 @@ new NDEFReadingEvent(type, options)
         - `id` {{optional_inline}}
           - : A developer-defined identifier for the record.
         - `lang` {{optional_inline}}
-          - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+          - : A valid {{glossary("BCP 47 language tag")}}.
         - `mediaType` {{optional_inline}}
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
         - `recordType`
-
           - : A string indicating the type of data stored in `data`. It must be one of the following values:
-
             - `"absolute-url"`
-
-              An absolute URL to the data.
-
-              `"empty"`
-
+              - : An absolute URL to the data.
+            - `"empty"`
               - : An empty {{domxref("NDEFRecord")}}.
-
             - `"mime"`
-              - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+              - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
             - `"smart-poster"`
               - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
             - `"text"`

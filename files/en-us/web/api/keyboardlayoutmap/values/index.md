@@ -15,7 +15,17 @@ The **`values()`** method of the {{domxref("KeyboardLayoutMap")}} interface retu
 
 The method is otherwise the same as {{jsxref("Map.prototype.values()")}}.
 
-## Value
+## Syntax
+
+```js-nolint
+values()
+```
+
+### Parameters
+
+None.
+
+### Return value
 
 A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 

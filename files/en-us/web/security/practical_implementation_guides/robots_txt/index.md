@@ -2,9 +2,8 @@
 title: robots.txt configuration
 slug: Web/Security/Practical_implementation_guides/Robots_txt
 page-type: guide
+sidebar: security
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 [`robots.txt`](/en-US/docs/Glossary/Robots.txt) is a text file that tells robots (such as search engine indexers) how to behave, by instructing them not to crawl certain paths on the website. It is placed within the root directory of a website.
 
@@ -38,4 +37,7 @@ Disallow: /secret/admin-interface
 
 ## See also
 
+- {{HTTPHeader("X-Robots-Tag")}} HTTP header
+- [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML element ("robots tag")
+- {{RFC("9309", "Robots Exclusion Protocol")}}
 - [About /robots.txt](https://www.robotstxt.org/robotstxt.html) on `robotstxt.org`

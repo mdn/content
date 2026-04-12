@@ -15,7 +15,7 @@ used to play audio data contained within an {{ domxref("AudioBuffer") }} object.
 
 > [!NOTE]
 > The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
-> constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
+> constructor is the recommended way to create an {{domxref("AudioBufferSourceNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax
@@ -64,7 +64,7 @@ const myArrayBuffer = audioCtx.createBuffer(
 
 button.onclick = () => {
   // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
+  // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
     // This gives us the actual ArrayBuffer that contains the data
     const nowBuffering = myArrayBuffer.getChannelData(channel);

@@ -2,9 +2,8 @@
 title: Attribute selectors
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
@@ -18,7 +17,7 @@ As you know from your study of HTML, elements can have attributes that give furt
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>
@@ -38,12 +37,12 @@ As you know from your study of HTML, elements can have attributes that give furt
 
 These selectors enable the selection of an element based on the presence of an attribute alone (for example `href`), or on various different matches against the value of the attribute.
 
-| Selector             | Example                         | Description                                                                                                                            |
-| -------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `[*attr*]`           | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
-| `[*attr*=*value*]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
-| `[*attr*~=*value*]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
-| `[*attr*\|=*value*]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
+| Selector         | Example                         | Description                                                                                                                            |
+| ---------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`         | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
+| `[attr=value]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
+| `[attr~=value]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
+| `[attr\|=value]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
 
 In the example below you can see these selectors being used.
 
@@ -80,6 +79,8 @@ li[class~="a"] {
 
 {{EmbedLiveSample("attribute", "", "200px")}}
 
+Try editing the above CSS to add a rule that selects only list items with a `class` attribute value of `ab`, and gives them a `white` text `color` and a `purple` `background-color`.
+
 ## Substring matching selectors
 
 These selectors allow for more advanced matching of substrings inside the value of your attribute. For example, if you had classes of `box-warning` and `box-error` and wanted to match everything that started with the string "box-", you could use `[class^="box-"]` to select them both (or `[class|="box"]` as described in section above).
@@ -89,8 +90,6 @@ These selectors allow for more advanced matching of substrings inside the value 
 | `[attr^=value]` | `li[class^="box-"]` | Matches elements with an _attr_ attribute, whose value begins with _value_.                        |
 | `[attr$=value]` | `li[class$="-box"]` | Matches elements with an _attr_ attribute whose value ends with _value_.                           |
 | `[attr*=value]` | `li[class*="box"]`  | Matches elements with an _attr_ attribute whose value contains _value_ anywhere within the string. |
-
-(Aside: It may help to note that `^` and `$` have long been used as _anchors_ in so-called _regular expressions_ to mean _begins with_ and _ends with_ respectively.)
 
 The next example shows usage of these selectors:
 
@@ -126,6 +125,8 @@ li[class*="a"] {
 ```
 
 {{EmbedLiveSample("attribute-substring", "", "200px")}}
+
+Try editing the above CSS to add a rule that selects only list items with a `class` attribute value that has `b` or `c` at the end of it, and gives them a `2px`-wide, `solid`, `black` `border`. You may have to use a [selector list](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#selector_lists) to solve this one.
 
 ## Summary
 

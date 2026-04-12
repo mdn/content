@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.indeterminate
 
 {{APIRef("HTML DOM")}}
 
-The **`indeterminate`** property of the {{domxref("HTMLInputElement")}} interface returns a boolean value that indicates whether the checkbox is in the _indeterminate_ state. For example, a "select all/deselect all" checkbox may be in the indeterminate state when some but not all of its sub-controls are checked. The `indeterminate` state can only be set via JavaScript and is only relevant to [`checkbox`](/en-US/docs/Web/HTML/Element/input/checkbox) controls.
+The **`indeterminate`** property of the {{domxref("HTMLInputElement")}} interface returns a boolean value that indicates whether the checkbox is in the _indeterminate_ state. For example, a "select all/deselect all" checkbox may be in the indeterminate state when some but not all of its sub-controls are checked. The `indeterminate` state can only be set via JavaScript and is only relevant to [`checkbox`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) controls.
 
 It is unrelated to the {{domxref("HTMLInputElement.checked")}} property, and an indeterminate checkbox can be either checked or unchecked. Being indeterminate only affects the checkbox's appearance (see example below), not its presence when submitted (which is controlled by the checkedness).
 
@@ -43,5 +43,5 @@ checkbox.indeterminate = true;
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.checked")}}
 - {{HTMLElement("input")}}
-- [Indeterminate state checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)
+- [Indeterminate state checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes)
 - CSS {{cssxref(":indeterminate")}} property

@@ -4,11 +4,11 @@ short-title: keys()
 slug: Web/API/WorkletSharedStorage/keys
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WorkletSharedStorage.keys
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`keys()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator), which contains the keys for each item in a `WorkletSharedStorage` instance.
@@ -30,7 +30,7 @@ An array of the `WorkletSharedStorage`'s enumerable property keys.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+  - : Thrown if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 

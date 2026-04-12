@@ -41,9 +41,9 @@ A {{domxref("Rect")}} object representing the rect value.
 
 ### Exceptions
 
-| **Type**       | **Description**                                                                                                 |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a Rect value. (i.e. this is not `CSS_RECT`). |
+| **Type**       | **Description**                                                                                                  |
+| -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a Rect value. (i.e., this is not `CSS_RECT`). |
 
 ## Examples
 

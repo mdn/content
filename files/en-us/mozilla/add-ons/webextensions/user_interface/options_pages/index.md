@@ -2,9 +2,8 @@
 title: Options page
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 An Options page enables you to define preferences for your extension that your users can change. Users can access the options page for an extension from the browser's add-ons manager:
 
@@ -40,7 +39,7 @@ To create an options page, write an HTML file defining the page. This page can i
 </html>
 ```
 
-Note the use of `<meta name="color-scheme" content="dark light">`. This enables automatic switching between light and dark themes in the embedded UI based on the user's browser preferences.
+Note the use of `<meta name="color-scheme" content="dark light">`. This enables automatic switching between light and dark themes in the embedded UI based on the user's browser preferences. For more information, see [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme).
 
 JavaScript running in the page can use all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the add-on has [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. In particular, you can use the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API to persist preferences.
 

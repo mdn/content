@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("contentdelete", (event) => {});
+```js-nolint
+addEventListener("contentdelete", (event) => { })
 
-oncontentdelete = (event) => {};
+oncontentdelete = (event) => { }
 ```
 
 ## Event type
@@ -59,7 +59,7 @@ You can also set up the event handler using the `oncontentdelete` property:
 
 ```js
 self.oncontentdelete = (event) => {
-  // ...
+  // …
 };
 ```
 

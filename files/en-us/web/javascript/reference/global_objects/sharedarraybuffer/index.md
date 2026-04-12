@@ -3,9 +3,8 @@ title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.SharedArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`SharedArrayBuffer`** object is used to represent a generic raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a [Transferable Object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects), unlike an `ArrayBuffer` which is transferable.
 
@@ -33,7 +32,7 @@ Shared memory can be created and updated simultaneously in workers or the main t
 Shared memory and high-resolution timers were effectively [disabled at the start of 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) in light of [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>).
 In 2020, a new, secure approach has been standardized to re-enable shared memory.
 
-To use shared memory your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+To use shared memory your document must be in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 
 ```js
@@ -55,20 +54,20 @@ When cross-origin isolated, `postMessage()` no longer throws for `SharedArrayBuf
 Depending on whether the above security measures are taken, the various memory-sharing APIs have different availabilities:
 
 - The `Atomics` object is always available.
-- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) can still be used to get an instance.
+- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) can still be used to get an instance.
 - Unless the two headers mentioned above are set, the various `postMessage()` APIs will throw for `SharedArrayBuffer` objects. If they are set, `postMessage()` on `Window` objects and dedicated workers will function and allow for memory sharing.
 
 ### WebAssembly shared memory
 
-[`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects can be created with the [`shared`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
+[`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects can be created with the [`shared`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
 
-The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
+The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
 
 ### Growing SharedArrayBuffers
 
 `SharedArrayBuffer` objects can be made growable by including the `maxByteLength` option when calling the {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} constructor. You can query whether a `SharedArrayBuffer` is growable and what its maximum size is by accessing its {{jsxref("SharedArrayBuffer/growable", "growable")}} and {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} properties, respectively. You can assign a new size to a growable `SharedArrayBuffer` with a {{jsxref("SharedArrayBuffer/grow", "grow()")}} call. New bytes are initialized to 0.
 
-These features make growing `SharedArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow)).
+These features make growing `SharedArrayBuffer`s more efficient — otherwise, you have to make a copy of the buffer with a new size. It also gives JavaScript parity with WebAssembly in this regard (Wasm linear memory can be resized with [`WebAssembly.Memory.prototype.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)).
 
 For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown.
 
@@ -105,6 +104,8 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 ## Examples
+
+Note that these examples cannot be run directly from the console or and arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](#security_requirements) are met.
 
 ### Creating a new SharedArrayBuffer
 

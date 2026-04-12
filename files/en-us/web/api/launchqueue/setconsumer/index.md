@@ -10,7 +10,7 @@ browser-compat: api.LaunchQueue.setConsumer
 
 {{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
-The **`setConsumer()`** method of the {{domxref("LaunchQueue")}} interface is used to declare the callback that will handle custom launch navigation handling in a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA). Such custom navigation is initiated via {{domxref("Window.launchQueue")}} when a PWA has been launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`.
+The **`setConsumer()`** method of the {{domxref("LaunchQueue")}} interface is used to declare the callback that will handle custom launch navigation handling in a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA). Such custom navigation is initiated via {{domxref("Window.launchQueue")}} when a PWA has been launched with a [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ if ("launchQueue" in window) {
       const track = params.get("track");
       if (track) {
         audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
+        title.textContent = new URL(track).pathname.slice(1);
         audio.play();
       }
     }
@@ -59,4 +59,3 @@ if ("launchQueue" in window) {
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app

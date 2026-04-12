@@ -1,13 +1,15 @@
 ---
 title: String.prototype.bold()
+short-title: bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.bold
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`bold()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("b")}} element (`<b>str</b>`), which causes this string to be displayed as bold.
 
@@ -66,5 +68,6 @@ document.body.appendChild(elem);
 ## See also
 
 - [Polyfill of `String.prototype.bold` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.bold`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("b")}}

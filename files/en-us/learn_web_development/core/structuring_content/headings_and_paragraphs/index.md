@@ -1,10 +1,9 @@
 ---
-title: Headings and paragraphs in HTML
+title: Headings and paragraphs
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
@@ -24,11 +23,13 @@ One of HTML's main jobs is to give text structure so that a browser can display 
     <tr>
       <th scope="row">Learning outcomes:</th>
       <td>
-        <li>How to create a good document structure with headings and content beneath those headings.</li>
-        <li>Using semantic HTML rather than presentational HTML, and why this is important.</li>
-        <li>The need for heading levels to be used logically, i.e. no skipping levels or using them arbitrarily because you want to achieve a certain font size (that's a job for CSS).</li>
-        <li>SEO benefits: for example, keywords are boosted in headings.</li>
-        <li>Accessibility benefits: Assistive technology (AT) such as screen readers use headings (and other landmarks) as signposts to navigate content. HTML documents are very difficult for AT users to use without headings.</li>
+        <ul>
+          <li>How to create a good document structure with headings and content beneath those headings.</li>
+          <li>Using semantic HTML rather than presentational HTML, and why this is important.</li>
+          <li>The need for heading levels to be used logically, i.e., no skipping levels or using them arbitrarily because you want to achieve a certain font size (that's a job for CSS).</li>
+          <li>SEO benefits: for example, keywords are boosted in headings.</li>
+          <li>Accessibility benefits: Assistive technology (AT) such as screen readers use headings (and other landmarks) as signposts to navigate content. HTML documents are very difficult for AT users to use without headings.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -91,7 +92,7 @@ It's really up to you what the elements involved represent, as long as the hiera
 
 ## Why do we need structure?
 
-To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for exercises in subsequent lessons. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).
+To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—a nice hummus recipe. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).
 
 However, when you open the document in your browser, you'll see that the text appears as a big chunk!
 
@@ -106,151 +107,48 @@ This is because there are no elements to give the content structure, so the brow
 
 Therefore, we need to give our content structural markup.
 
-## Active learning: Giving our content structure
+## Giving content structure
 
-Let's jump straight in with a live example. In the example below, add elements to the raw text in the _Input_ field so that it appears as a heading and two paragraphs in the _Output_ field.
+Let's jump straight in and get you to solve a small code challenge to gain practice with HTML headings and paragraphs:
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get stuck, press the _Show solution_ button to see the answer.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Wrap the appropriate text at the start of the content inside an `<h1>` element to turn it into a main heading.
+3. There are two pairs of words that should be wrapped inside `<h2>` elements to turn them into second level headings.
+4. Wrap the remaining sentences in `<p>` elements to turn them into paragraphs. One `<p>` element should sit below each `<h2>` element.
 
-```html hidden
-<h2>Live output</h2>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-My short story I am a statistician and my name is Trish.
-
-My legs are made of cardboard and I am married to a fish.
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+```html live-sample___headings_paragraphs
+Favorite body parts The brain Lovely shape and color. Also does thinkin' stuff.
+The feet Knobbly and ugly, but useful for getting about.
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('headings_paragraphs', "100%", 60) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished HTML element should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<h1>Favorite body parts</h1>
+
+<h2>The brain</h2>
+
+<p>Lovely shape and color. Also does thinkin' stuff.</p>
+
+<h2>The feet</h2>
+
+<p>Knobbly and ugly, but useful for getting about.</p>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution = `<h1>My short story</h1>
-<p>
-  I am a statistician and my name is Trish.
-</p>
-<p>
-  My legs are made of cardboard and I am married to a fish.
-</p>`;
-
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Giving_our_content_structure', 700, 400, "", "") }}
+</details>
 
 ## Why do we need semantics?
 
 Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)
 
-In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("Heading_Elements", "h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the `{{htmlelement("Heading_Elements", "&lt;h1>")}}` element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
 ```html
 <h1>This is a top level heading</h1>

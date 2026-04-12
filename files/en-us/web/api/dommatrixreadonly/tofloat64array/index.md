@@ -13,7 +13,7 @@ The **`toFloat64Array()`** method of the {{domxref("DOMMatrixReadOnly")}} interf
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.toFloat64Array()
+toFloat64Array()
 ```
 
 ### Parameters

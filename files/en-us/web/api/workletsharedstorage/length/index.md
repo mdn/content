@@ -4,11 +4,11 @@ short-title: length()
 slug: Web/API/WorkletSharedStorage/length
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WorkletSharedStorage.length
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`length()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the number of entries currently stored in shared storage for the current origin.
@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that fulfills with a number, which represents the total 
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}}.
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
     - The browser fails to retrieve the number of entries for some other reason.
 
 ## Examples

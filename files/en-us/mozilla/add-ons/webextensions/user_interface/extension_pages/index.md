@@ -2,9 +2,8 @@
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
 
@@ -66,7 +65,7 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-To use the history API, you must request the "`history`" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use the history API, you must request the `"history"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 ## Web page design
 

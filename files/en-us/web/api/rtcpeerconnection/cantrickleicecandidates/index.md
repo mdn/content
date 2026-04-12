@@ -49,7 +49,7 @@ async function newPeer(remoteOffer) {
   await pc.setLocalDescription(offer);
   if (pc.canTrickleIceCandidates) return pc.localDescription;
   const answer = await waitToCompleteIceGathering(pc);
-  sendAnswerToPeer(answer); //To peer via signaling channel
+  sendAnswerToPeer(answer); // To peer via signaling channel
 }
 // Handle error with try/catch
 

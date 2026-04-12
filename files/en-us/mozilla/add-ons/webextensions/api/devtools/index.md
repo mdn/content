@@ -3,9 +3,8 @@ title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
 page-type: webextension-api
 browser-compat: webextensions.api.devtools
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to interact with the browser's {{Glossary("Developer Tools")}}. You use this API to create Developer Tools pages, interact with the window that is being inspected, inspect the page network usage.
 

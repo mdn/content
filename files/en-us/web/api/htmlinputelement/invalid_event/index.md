@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLInputElement.invalid_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.
 
@@ -18,10 +18,10 @@ It is not checked on {{domxref("Element/blur_event", "blur")}}.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("invalid", (event) => {});
+```js-nolint
+addEventListener("invalid", (event) => { })
 
-oninvalid = (event) => {};
+oninvalid = (event) => { }
 ```
 
 ## Event type

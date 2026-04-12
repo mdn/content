@@ -60,25 +60,6 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 - `start` {{Deprecated_Inline}}
   - : Fires when the marquee starts scrolling.
 
-## Examples
-
-```html
-<marquee>This text will scroll from right to left</marquee>
-
-<marquee direction="up">This text will scroll from bottom to top</marquee>
-
-<marquee
-  direction="down"
-  width="250"
-  height="200"
-  behavior="alternate"
-  style="border:solid">
-  <marquee behavior="alternate">This text will bounce</marquee>
-</marquee>
-```
-
-{{EmbedLiveSample("Examples", 600, 450)}}
-
 ## Specifications
 
 {{Specifications}}

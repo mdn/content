@@ -2,9 +2,8 @@
 title: How do you make sure your website works properly?
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
@@ -36,10 +35,6 @@ A distant web server often behaves quite differently from a local one, so it's a
 
 Let's see how to diagnose and solve those problems.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
-
 ## Dig deeper
 
 ### Test in your browser
@@ -69,7 +64,7 @@ Servers respond with a status message whenever they receive a request. Here are 
 - **304: Not modified**
   - : The file has not changed since the last time you asked for it, so your browser can display the version from its cache, resulting in faster response times and more efficient use of bandwidth.
 - **403: Forbidden**
-  - : You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g. your hosting provider forgot to give you access rights to a directory).
+  - : You aren't allowed to display the resource. Usually it has to do with a configuration mistake (e.g., your hosting provider forgot to give you access rights to a directory).
 - **404: Not found**
   - : Self-explanatory. We'll discuss how to solve this below.
 - **500: Internal server error**

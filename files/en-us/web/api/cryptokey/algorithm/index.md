@@ -21,6 +21,8 @@ An object matching:
 - [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams) if the algorithm is any of the EC variants.
 - [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) if the algorithm is HMAC.
 
+For `RsaHashedKeyGenParams` and `HmacKeyGenParams`, the `hash` property is always in the object form (with a property called `name`), not the string form.
+
 ## Examples
 
 ```js
@@ -36,8 +38,11 @@ function importSecretKey(rawKey) {
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(`This key is to be used with the ${key.algorithm} algorithm.`);
+importSecretKey(rawKey).then((key) =>
+  console.log(
+    `This key is to be used with the ${key.algorithm.name} algorithm.`,
+  ),
+);
 ```
 
 ## Specifications

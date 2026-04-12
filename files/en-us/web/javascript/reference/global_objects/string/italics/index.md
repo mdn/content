@@ -1,13 +1,15 @@
 ---
 title: String.prototype.italics()
+short-title: italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.String.italics
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`italics()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes this string to be displayed as italic.
 
@@ -66,5 +68,6 @@ document.body.appendChild(elem);
 ## See also
 
 - [Polyfill of `String.prototype.italics` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.italics`](https://www.npmjs.com/package/es-string-html-methods)
 - [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
 - {{HTMLElement("i")}}

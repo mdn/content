@@ -13,7 +13,7 @@ The `setSkewX()` method of the {{domxref("SVGTransform")}} interface sets the tr
 ## Syntax
 
 ```js-nolint
-SVGTransform.setSkewX(angle)
+setSkewX(angle)
 ```
 
 ### Parameters

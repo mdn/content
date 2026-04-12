@@ -2,11 +2,10 @@
 title: Debugging CSS
 slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. Perhaps you believe that a certain selector should match an element, but nothing happens, or a box is a different size than you expected. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
 
@@ -148,7 +147,7 @@ Browsers ignore CSS they don't understand. If the property or value you are usin
 
 ![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](no-support.png)
 
-You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility).
+You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns#browser_compatibility).
 
 ### Is something else overriding your CSS?
 
@@ -171,7 +170,7 @@ In the process of doing this, you may discover what is causing the problem, or a
 
 If you are still struggling to fix the problem then having a reduced test case gives you something to ask for help with, by posting to a forum, or showing to a co-worker. You are much more likely to get help if you can show that you have done the work of reducing the problem and identifying exactly where it happens, before asking for help. A more experienced developer might be able to quickly spot the problem and point you in the right direction, and even if not, your reduced test case will enable them to have a quick look and hopefully be able to offer at least some help.
 
-In the instance that your problem is actually a bug in a browser, then a reduced test case can also be used to file a bug report with the relevant browser vendor (e.g. on Mozilla's [bugzilla site](https://bugzilla.mozilla.org/)).
+In the instance that your problem is actually a bug in a browser, then a reduced test case can also be used to file a bug report with the relevant browser vendor (e.g., on Mozilla's [bugzilla site](https://bugzilla.mozilla.org/)).
 
 As you become more experienced with CSS, you will find that you get faster at figuring out issues. However, even the most experienced of us sometimes find ourselves wondering what on earth is going on. Taking a methodical approach, making a reduced test case, and explaining the issue to someone else will usually result in a fix being found.
 
@@ -186,4 +185,4 @@ That's it for all the lessons in this module. To finish it off, we'll test your 
 - [Firefox > Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
 - [Chrome > View and change CSS](https://developer.chrome.com/docs/devtools/css/), developer.chrome.com
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

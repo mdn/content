@@ -2,9 +2,8 @@
 title: Object prototypes
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 

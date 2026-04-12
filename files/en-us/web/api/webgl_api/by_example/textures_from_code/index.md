@@ -72,53 +72,51 @@ button {
 </script>
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
-window.addEventListener("load", setupWebGL, false);
+const canvas = document.querySelector("canvas");
 
-let gl;
-let program;
+const gl = getRenderingContext();
+let source = document.querySelector("#vertex-shader").innerHTML;
+const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vertexShader, source);
+gl.compileShader(vertexShader);
 
-function setupWebGL(evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+source = document.querySelector("#fragment-shader").innerHTML;
+const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fragmentShader, source);
+gl.compileShader(fragmentShader);
 
-  let source = document.querySelector("#vertex-shader").innerHTML;
-  const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, source);
-  gl.compileShader(vertexShader);
-
-  source = document.querySelector("#fragment-shader").innerHTML;
-  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, source);
-  gl.compileShader(fragmentShader);
-
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    const linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").textContent =
-      `Shader program did not link successfully. Error log: ${linkErrLog}`;
-    return;
-  }
-  initializeAttributes();
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
+const program = gl.createProgram();
+gl.attachShader(program, vertexShader);
+gl.attachShader(program, fragmentShader);
+gl.linkProgram(program);
+gl.detachShader(program, vertexShader);
+gl.detachShader(program, fragmentShader);
+gl.deleteShader(vertexShader);
+gl.deleteShader(fragmentShader);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const linkErrLog = gl.getProgramInfoLog(program);
   cleanup();
+  document.querySelector("p").textContent =
+    `Shader program did not link successfully. Error log: ${linkErrLog}`;
+  throw new Error("Program failed to link");
+}
+let buffer;
+initializeAttributes();
+gl.useProgram(program);
+gl.drawArrays(gl.POINTS, 0, 1);
+cleanup();
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
 }
 
-let buffer;
 function initializeAttributes() {
   gl.enableVertexAttribArray(0);
   buffer = gl.createBuffer();
@@ -136,30 +134,6 @@ function cleanup() {
     gl.deleteProgram(program);
   }
 }
-```
-
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent =
-      "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
-}
-```
-
-```js hidden
-})();
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code).

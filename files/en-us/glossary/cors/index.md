@@ -2,13 +2,12 @@
 title: CORS
 slug: Glossary/CORS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **CORS** (Cross-Origin Resource Sharing) is a system, consisting of transmitting {{Glossary("HTTP_header", "HTTP headers")}}, that determines whether browsers block frontend JavaScript code from accessing responses for cross-origin requests.
 
-The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
+The [same-origin security policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) forbids cross-origin access to resources. But CORS gives web servers the ability to say they want to opt into allowing cross-origin access to their resources.
 
 ## CORS headers
 
@@ -27,7 +26,7 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Used when issuing a preflight request to let the server know which HTTP headers will be used when the actual request is made.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
+  - : Used when issuing a preflight request to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) will be used when the actual request is made.
 - {{HTTPHeader("Origin")}}
   - : Indicates where a fetch originates from.
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -35,6 +34,6 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 
 ## See also
 
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
 - [Fetch specification](https://fetch.spec.whatwg.org/)

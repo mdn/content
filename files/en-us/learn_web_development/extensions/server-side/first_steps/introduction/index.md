@@ -1,10 +1,10 @@
 ---
 title: Introduction to the server side
+short-title: Introduction
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
@@ -28,7 +28,7 @@ Welcome to the MDN beginner's server-side programming course! In this first arti
   </tbody>
 </table>
 
-Most large-scale websites use server-side code to dynamically display different data when needed, generally pulled out of a database stored on a server and sent to the client to be displayed via some code (e.g. HTML and JavaScript).
+Most large-scale websites use server-side code to dynamically display different data when needed, generally pulled out of a database stored on a server and sent to the client to be displayed via some code (e.g., HTML and JavaScript).
 
 Perhaps the most significant benefit of server-side code is that it allows you to tailor website content for individual users. Dynamic sites can highlight content that is more relevant based on user preferences and habits. It can also make sites easier to use by storing personal preferences and information — for example reusing stored credit card details to streamline subsequent payments.
 
@@ -40,17 +40,17 @@ In the modern world of web development, learning about server-side development i
 
 Web browsers communicate with [web servers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
 
-The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
+The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Reference/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
 
-Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
+Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g., "HTTP/1.1 200 OK" for success).
 
-The body of a successful response to a request would contain the requested resource (e.g. a new HTML page, or an image), which could then be displayed by the web browser.
+The body of a successful response to a request would contain the requested resource (e.g., a new HTML page, or an image), which could then be displayed by the web browser.
 
 ### Static sites
 
 The diagram below shows a basic web server architecture for a _static site_ (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
 
-The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Status#server_error_responses)).
+The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
@@ -58,7 +58,7 @@ The server retrieves the requested document from its file system and returns an 
 
 A dynamic website is one where some of the response content is generated _dynamically_, only when needed. On a dynamic website, HTML pages are normally created by inserting data from a database into placeholders in HTML templates (this is a much more efficient way of storing large amounts of content than using static websites).
 
-A dynamic site can return different data for a URL based on information provided by the user or stored preferences and can perform other operations as part of returning a response (e.g. sending notifications).
+A dynamic site can return different data for a URL based on information provided by the user or stored preferences and can perform other operations as part of returning a response (e.g., sending notifications).
 
 Most of the code to support a dynamic website must run on the server. Creating this code is known as "**server-side programming**" (or sometimes "**back-end scripting**").
 
@@ -88,7 +88,7 @@ Server-side code can be written in any number of programming languages — examp
 
 Developers typically write their code using **web frameworks**. Web frameworks are collections of functions, objects, rules and other code constructs designed to solve common problems, speed up development, and simplify the different types of tasks faced in a particular domain.
 
-Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself (e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
+Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself (e.g., support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
 
 > [!NOTE]
 > Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple website UI.
@@ -109,7 +109,7 @@ Some of the common uses and benefits of server-side programming are listed below
 
 Imagine how many products are available on Amazon, and imagine how many posts have been written on Facebook? Creating a separate static page for each product or post would be completely impractical.
 
-Server-side programming allows us to instead store the information in a database and dynamically construct and return HTML and other types of files (e.g. PDFs, images, etc.). It is also possible to return data ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) for rendering by appropriate client-side web frameworks (this reduces the processing burden on the server and the amount of data that needs to be sent).
+Server-side programming allows us to instead store the information in a database and dynamically construct and return HTML and other types of files (e.g., PDFs, images, etc.). It is also possible to return data ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) for rendering by appropriate client-side web frameworks (this reduces the processing burden on the server and the amount of data that needs to be sent).
 
 The server is not limited to sending information from databases, and might alternatively return the result of software tools, or data from communications services. The content can even be targeted for the type of client device that is receiving it.
 
@@ -130,7 +130,8 @@ Servers can store and use information about clients to provide a convenient and 
 
 A deeper analysis of user habits can be used to anticipate their interests and further customize responses and notifications, for example providing a list of previously visited or popular locations you may want to look at on a map.
 
-> **Note:** [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
+> [!NOTE]
+> [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
 >
 > Google search results are optimized based on previous searches.
 >
@@ -156,7 +157,7 @@ Server-side programming allows developers to make use of **sessions** — basica
 This allows, for example, a site to know that a user has previously logged in and display links to their emails or order history, or perhaps save the state of a simple game so that the user can go to a site again and carry on where they left it.
 
 > [!NOTE]
-> Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. [The Age](https://www.theage.com.au/)). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.
+> Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g., [The Age](https://www.theage.com.au/)). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.
 
 ### Notifications and communication
 

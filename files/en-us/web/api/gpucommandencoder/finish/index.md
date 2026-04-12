@@ -3,12 +3,10 @@ title: "GPUCommandEncoder: finish() method"
 short-title: finish()
 slug: Web/API/GPUCommandEncoder/finish
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCommandEncoder.finish
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`finish()`** method of the
 {{domxref("GPUCommandEncoder")}} interface completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
@@ -35,7 +33,7 @@ A {{domxref("GPUCommandBuffer")}} object instance.
 
 The following criteria must be met when calling **`finish()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUCommandEncoder")}} becomes invalid:
 
-- There are no active debug groups (i.e. started via {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- There are no active debug groups (i.e., started via {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 - The {{domxref("GPUCommandEncoder")}} is in an open state — this means that:
   - There are no child {{domxref("GPUComputePassEncoder")}} or {{domxref("GPURenderPassEncoder")}}s active that have not been ended (by calling `end()`).
   - The {{domxref("GPUCommandEncoder")}} has not already had `finish()` called on it (in which case it cannot be used to encode any more commands).
@@ -43,12 +41,12 @@ The following criteria must be met when calling **`finish()`**, otherwise a {{do
 ## Examples
 
 ```js
-// ...
+// …
 
 const commandBuffer = commandEncoder.finish();
 device.queue.submit([commandBuffer]);
 
-// ...
+// …
 ```
 
 ## Specifications

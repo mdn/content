@@ -8,7 +8,7 @@ browser-compat: api.Clipboard.readText
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`readText()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} which fulfils with a copy of the textual contents of the system clipboard.
+The **`readText()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} which fulfills with a copy of the textual contents of the system clipboard.
 
 > [!NOTE]
 > To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
@@ -39,7 +39,7 @@ Returns an empty string if the clipboard is empty, does not contain text, or doe
 
 ## Security considerations
 
-Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 

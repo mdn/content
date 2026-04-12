@@ -27,7 +27,7 @@ has(cacheName)
 
 ### Return value
 
-a {{jsxref("Promise")}} that resolves to `true` if the cache exists or
+A {{jsxref("Promise")}} that resolves to `true` if the cache exists or
 `false` if not.
 
 ## Examples

@@ -1,18 +1,38 @@
 ---
-title: Max
-slug: WebAssembly/Reference/Numeric/Max
+title: "max: Wasm text instruction"
+short-title: max
+slug: WebAssembly/Reference/Numeric/max
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}}
+The **`max`** instructions are used for getting the higher of two numbers.
 
-The **`max`** instructions, are used for getting the higher of two numbers.
+{{InteractiveExample("Wat Demo: max", "tabbed-taller")}}
 
-{{EmbedInteractiveExample("pages/wat/max.html", "tabbed-taller")}}
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    f32.const 10
+    f32.const 2
+
+    f32.max ;; calculate the higher number
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
-```wasm
+```wat
 ;; load two numbers onto the stack
 f32.const 10
 f32.const 3

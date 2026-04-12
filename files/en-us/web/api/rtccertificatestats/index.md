@@ -9,14 +9,14 @@ browser-compat: api.RTCStatsReport.type_certificate
 
 The **`RTCCertificateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report information about a certificate used by an {{domxref("RTCDtlsTransport")}} and its underlying {{domxref("RTCIceTransport")}}.
 
-The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `certificate`.
+The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](/en-US/docs/Web/API/RTCCertificateStats/type) of `certificate`.
 
 ## Instance properties
 
 - {{domxref("RTCCertificateStats.fingerprint", "fingerprint")}}
-  - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](#fingerprintalgorithm).
+  - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](/en-US/docs/Web/API/RTCCertificateStats/fingerprintAlgorithm).
 - {{domxref("RTCCertificateStats.fingerprintAlgorithm", "fingerprintAlgorithm")}}
-  - : A string containing the hash function used to compute the certificate [`fingerprint`](#fingerprint), such as "sha-256".
+  - : A string containing the hash function used to compute the certificate [`fingerprint`](/en-US/docs/Web/API/RTCCertificateStats/fingerprint), such as "sha-256".
 - {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
   - : A string containing the base-64 representation of the DER-encoded certificate.
 

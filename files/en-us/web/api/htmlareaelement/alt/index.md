@@ -8,7 +8,7 @@ browser-compat: api.HTMLAreaElement.alt
 
 {{APIRef("HTML DOM")}}
 
-The **`alt`** property of the {{DOMxRef("HTMLAreaElement")}} interface specifies the text of the hyperlink, defining the textual label for an image map's link. It reflects the {{htmlelement("area")}} element's [`alt`](/en-US/docs/Web/HTML/Element/area#alt) attribute.
+The **`alt`** property of the {{DOMxRef("HTMLAreaElement")}} interface specifies the text of the hyperlink, defining the textual label for an image map's link. It reflects the {{htmlelement("area")}} element's [`alt`](/en-US/docs/Web/HTML/Reference/Elements/area#alt) attribute.
 
 The `alt` value must be text that, when presented with the `alt` text of the other `<area>` hyperlinks within the same {{htmlelement("map")}}, along with the `alt` text of the {{htmlelement("img")}} itself, provides the user with the same kind of choice as the hyperlink would when used without its text but with its shape applied to the image.
 

@@ -11,12 +11,6 @@ browser-compat: api.Navigator.wakeLock
 The **`wakeLock`** read-only property of the {{domxref("Navigator")}} interface returns a {{DOMxRef("WakeLock")}} interface that allows a document to acquire a screen wake lock.
 While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
 
-## Syntax
-
-```js-nolint
-navigator.wakeLock
-```
-
 ## Specifications
 
 {{Specifications}}

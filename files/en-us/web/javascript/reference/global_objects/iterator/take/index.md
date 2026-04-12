@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.take()
+short-title: take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.take
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`take()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields the given number of elements in this iterator and then terminates.
 
@@ -130,5 +130,6 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.take` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.take`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.drop()")}}

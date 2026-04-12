@@ -13,7 +13,7 @@ The `getExtentOfChar()` method of the {{domxref("SVGTextContentElement")}} inter
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getExtentOfChar(index)
+getExtentOfChar(index)
 ```
 
 ### Parameters

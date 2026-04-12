@@ -3,9 +3,8 @@ title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 page-type: javascript-class
 browser-compat: javascript.builtins.TypedArray
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
 underlying [binary data buffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
@@ -15,13 +14,11 @@ different global properties, whose values are typed array constructors for speci
 element types, listed below. On the following pages you will find common properties and
 methods that can be used with any typed array containing elements of any type.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
-
 ## Description
 
 The `TypedArray` constructor (often referred to as `%TypedArray%` to indicate its "intrinsicness", since it does not correspond to any global exposed to a JavaScript program) serves as the common superclass of all `TypedArray` subclasses. Think about `%TypedArray%` as an "abstract class" providing a common interface of utility methods for all typed array subclasses. This constructor is not directly exposed: there is no global `TypedArray` property. It is only accessible through `Object.getPrototypeOf(Int8Array)` and similar.
 
-When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an array buffer is created internally in memory or, if an `ArrayBuffer` object is given as constructor argument, that `ArrayBuffer` is used instead. The buffer address is saved as an internal property of the instance and all the methods of `%TypedArray%.prototype` will set and get values based on that array buffer address.
+When creating an instance of a `TypedArray` subclass (e.g., `Int8Array`), an array buffer is created internally in memory or, if an `ArrayBuffer` object is given as constructor argument, that `ArrayBuffer` is used instead. The buffer address is saved as an internal property of the instance and all the methods of `%TypedArray%.prototype` will set and get values based on that array buffer address.
 
 ### TypedArray objects
 
@@ -235,7 +232,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.entries()")}}
   - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.prototype.every()")}}
-  - : Tests whether all elements in the array pass the test provided by a function. See also {{jsxref("Array.prototype.every()")}}.
+  - : Returns `false` if it finds an element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`. See also {{jsxref("Array.prototype.every()")}}.
 - {{jsxref("TypedArray.prototype.fill()")}}
   - : Fills all the elements of an array from a start index to an end index with a static value. See also {{jsxref("Array.prototype.fill()")}}.
 - {{jsxref("TypedArray.prototype.filter()")}}
@@ -273,7 +270,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.slice()")}}
   - : Extracts a section of an array and returns a new array. See also {{jsxref("Array.prototype.slice()")}}.
 - {{jsxref("TypedArray.prototype.some()")}}
-  - : Returns `true` if at least one element in this array satisfies the provided testing function. See also {{jsxref("Array.prototype.some()")}}.
+  - : Returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`. See also {{jsxref("Array.prototype.some()")}}.
 - {{jsxref("TypedArray.prototype.sort()")}}
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}

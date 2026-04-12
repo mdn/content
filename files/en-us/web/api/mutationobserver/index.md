@@ -23,10 +23,6 @@ The **`MutationObserver`** interface provides the ability to watch for changes b
 - {{domxref("MutationObserver.takeRecords()", "takeRecords()")}}
   - : Removes all pending notifications from the `MutationObserver`'s notification queue and returns them in a new {{jsxref("Array")}} of {{domxref("MutationRecord")}} objects.
 
-## Mutation Observer & customize resize event listener & demo
-
-<https://codepen.io/milofultz/pen/LYjPXPw>
-
 ## Example
 
 The following example was adapted from [this blog post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).

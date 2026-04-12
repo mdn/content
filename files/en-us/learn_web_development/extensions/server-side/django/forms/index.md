@@ -1,10 +1,12 @@
 ---
 title: "Django Tutorial Part 9: Working with forms"
+short-title: "9: Forms"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this tutorial, we'll show you how to work with HTML Forms in Django, and, in particular, the easiest way to write forms to create, update, and delete model instances. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
 
@@ -67,7 +69,6 @@ The form attributes define the HTTP `method` used to send the data and the desti
 
 - `action`: The resource/URL where data is to be sent for processing when the form is submitted. If this is not set (or set to an empty string), then the form will be submitted back to the current page URL.
 - `method`: The HTTP method used to send the data: _post_ or _get_.
-
   - The `POST` method should always be used if the data is going to result in a change to the server's database, because it can be made more resistant to cross-site forgery request attacks.
   - The `GET` method should only be used for forms that don't change user data (for example, a search form). It is recommended for when you want to be able to bookmark or share the URL.
 
@@ -86,16 +87,13 @@ A process flowchart of how Django handles form requests is shown below, starting
 Based on the diagram above, the main things that Django's form handling does are:
 
 1. Display the default form the first time it is requested by the user.
-
    - The form may contain blank fields if you're creating a new record, or it may be pre-populated with initial values (for example, if you are changing a record, or have useful default initial values).
    - The form is referred to as _unbound_ at this point, because it isn't associated with any user-entered data (though it may have initial values).
 
 2. Receive data from a submit request and bind it to the form.
-
    - Binding data to the form means that the user-entered data and any errors are available when we need to redisplay the form.
 
 3. Clean and validate the data.
-
    - Cleaning the data performs sanitization of the input fields, such as removing invalid characters that might be used to send malicious content to the server, and converts them into consistent Python types.
    - Validation checks that the values are appropriate for the field (for example, that they are in the right date range, aren't too short or too long, etc.)
 
@@ -169,8 +167,8 @@ There are many other types of form fields, which you will largely recognize from
 The arguments that are common to most fields are listed below (these have sensible default values):
 
 - [`required`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#required): If `True`, the field may not be left blank or given a `None` value. Fields are required by default, so you would set `required=False` to allow blank values in the form.
-- [`label`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g. _Renewal date_).
-- [`label_suffix`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g. Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
+- [`label`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g., _Renewal date_).
+- [`label_suffix`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g., Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
 - [`initial`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#initial): The initial value for the field when the form is displayed.
 - [`widget`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#widget): The display widget to use.
 - [`help_text`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#help-text) (as seen in the example above): Additional text that can be displayed in forms to explain how to use the field.
@@ -241,7 +239,7 @@ The URL configuration will redirect URLs with the format **/catalog/book/_\<book
 
 As discussed in the [Django form handling process](#django_form_handling_process) above, the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect to a new page if the data is valid. In order to perform these different actions, the view has to be able to know whether it is being called for the first time to render the default form, or a subsequent time to validate data.
 
-For forms that use a `POST` request to submit information to the server, the most common pattern is for the view to test against the `POST` request type (`if request.method == 'POST':`) to identify form validation requests and `GET` (using an `else` condition) to identify the initial form creation request. If you want to submit your data using a `GET` request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).
+For forms that use a `POST` request to submit information to the server, the most common pattern is for the view to test against the `POST` request type (`if request.method == 'POST':`) to identify form validation requests and `GET` (using an `else` condition) to identify the initial form creation request. If you want to submit your data using a `GET` request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g., to read a hidden value in the form).
 
 The book renewal process will be writing to our database, so, by convention, we use the `POST` request approach.
 The code fragment below shows the (very standard) pattern for this sort of function view.
@@ -346,7 +344,7 @@ return render(request, 'catalog/book_renew_librarian.html', context)
 
 If the form is not valid we call `render()` again, but this time the form value passed in the context will include error messages.
 
-If the form is valid, then we can start to use the data, accessing it through the `form.cleaned_data` attribute (e.g. `data = form.cleaned_data['renewal_date']`). Here, we just save the data into the `due_back` value of the associated `BookInstance` object.
+If the form is valid, then we can start to use the data, accessing it through the `form.cleaned_data` attribute (e.g., `data = form.cleaned_data['renewal_date']`). Here, we just save the data into the `due_back` value of the associated `BookInstance` object.
 
 > [!WARNING]
 > While you can also access the form data directly through the request (for example, `request.POST['renewal_date']` or `request.GET['renewal_date']` if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.
@@ -456,13 +454,13 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
 > [!NOTE]
 > It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <ul class="errorlist">
+    <ul class="error-list">
       <li>Invalid date - renewal in past</li>
     </ul>
     <input
@@ -572,7 +570,7 @@ class RenewBookModelForm(ModelForm):
 > [!NOTE]
 > This might not look all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can considerably reduce the amount of code required!
 
-The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due Back_), and we also want our help text to be specific to this use case.
+The rest of the information comes from the model field definitions (e.g., labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due Back_), and we also want our help text to be specific to this use case.
 The `Meta` below shows you how to override these fields, and you can similarly set `widgets` and `error_messages` if the defaults aren't sufficient.
 
 ```python

@@ -2,9 +2,10 @@
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
 
@@ -28,7 +29,7 @@ The JavaScript documentation on MDN includes the following:
 
 JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
 
-JavaScript contains a standard library of objects, such as `Array`, `Date`, and `Math`, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+JavaScript contains a standard library of objects, such as `Array`, `Map`, and `Math`, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
 
 - _Client-side JavaScript_ extends the core language by supplying objects to control a browser and its _Document Object Model_ (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
 - _Server-side JavaScript_ extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
@@ -57,7 +58,7 @@ In contrast, JavaScript descends in spirit from a line of smaller, dynamically t
 
 JavaScript is standardized at [Ecma International](https://ecma-international.org/) — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard. Companies can use the open standard language to develop their implementation of JavaScript. The ECMAScript standard is documented in the ECMA-262 specification.
 
-The ECMA-262 standard is also approved by the [ISO](https://www.iso.org/home.html) (International Organization for Standardization) as ISO-16262. You can also find the specification on [the Ecma International website](https://ecma-international.org/publications-and-standards/standards/ecma-262/). The ECMAScript specification does not describe the Document Object Model (DOM), which is standardized by the [World Wide Web Consortium (W3C)](https://www.w3.org/) and/or [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/). The DOM defines the way in which HTML document objects are exposed to your script. To get a better idea about the different technologies that are used when programming with JavaScript, consult the article [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+The ECMA-262 standard is also approved by the [ISO](https://www.iso.org/home.html) (International Organization for Standardization) as ISO-16262. You can also find the specification on [the Ecma International website](https://ecma-international.org/publications-and-standards/standards/ecma-262/). The ECMAScript specification does not describe the Document Object Model (DOM), which is standardized by the [World Wide Web Consortium (W3C)](https://www.w3.org/) and/or [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org/). The DOM defines the way in which HTML document objects are exposed to your script. To get a better idea about the different technologies that are used when programming with JavaScript, consult the article [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ### JavaScript documentation versus the ECMAScript specification
 
@@ -71,7 +72,7 @@ The JavaScript documentation describes aspects of the language that are appropri
 
 ## Getting started with JavaScript
 
-To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.mozilla.org/en-CA/firefox/new/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
+To get started with JavaScript, all you need is a modern web browser. Recent versions of [Firefox](https://www.firefox.com/en-US/), [Chrome](https://www.google.com/chrome/index.html), [Microsoft Edge](https://www.microsoft.com/en-us/edge), and [Safari](https://www.apple.com/safari/) all support the features discussed in this guide.
 
 A very useful tool for exploring JavaScript is the JavaScript Console (sometimes called the Web Console, or just the console): this is a tool which enables you to enter JavaScript and run it in the current page.
 
@@ -83,7 +84,7 @@ The exact instructions for opening the console vary from one browser to another:
 
 - [Opening the console in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/web_console/#opening-the-web-console)
 - [Opening the console in Chrome](https://developer.chrome.com/docs/devtools/open)
-- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/)
+- [Opening the console in Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/)
 
 ### Entering and running JavaScript
 

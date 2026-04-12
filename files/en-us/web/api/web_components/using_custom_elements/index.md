@@ -14,16 +14,22 @@ This article introduces custom elements, and walks through some examples.
 
 There are two types of custom element:
 
+- **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
+
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Global_attributes/is) for more information.
+  > Safari does not plan to support customized built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
-- **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
+For both kinds of custom element, the basic steps to create and use them are the same:
+
+- You first [implement its behavior](#implementing_a_custom_element) by defining a JavaScript class.
+- You then [register the custom element](#registering_a_custom_element) to the current page. You can also create [scoped registries](#scoped_custom_element_registries) to limit definitions to a particular DOM subtree.
+- Finally, you can [use the custom element](#using_a_custom_element) in your HTML or JavaScript code.
 
 ## Implementing a custom element
 
-A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements).
+A custom element is implemented as a [class](/en-US/docs/Web/JavaScript/Reference/Classes) which extends {{domxref("HTMLElement")}} (in the case of autonomous elements) or the interface you want to customize (in the case of customized built-in elements). This class will not be called by you, but will be called by the browser. Immediately after defining the class, you should [register](#registering_a_custom_element) the custom element, so you can create instances of it using standard DOM practices, such as writing the element in HTML markup, calling {{domxref("document.createElement()")}}, etc.
 
 Here's the implementation of a minimal custom element that customizes the {{HTMLElement("p")}} element:
 
@@ -55,10 +61,11 @@ Once your custom element is registered, the browser will call certain methods of
 
 Custom element lifecycle callbacks include:
 
-- `connectedCallback()`: called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
-- `disconnectedCallback()`: called each time the element is removed from the document.
-- `adoptedCallback()`: called each time the element is moved to a new document.
-- `attributeChangedCallback()`: called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
+- `connectedCallback()`: Called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
+- `disconnectedCallback()`: Called each time the element is removed from the document.
+- `connectedMoveCallback()`: When defined, this is called _instead of_ `connectedCallback()` and `disconnectedCallback()` each time the element is moved to a different place in the DOM via {{domxref("Element.moveBefore()")}}. Use this to avoid running initialization/cleanup code in the `connectedCallback()` and `disconnectedCallback()` callbacks when the element is not actually being added to or removed from the DOM. See [Lifecycle callbacks and state-preserving moves](#lifecycle_callbacks_and_state-preserving_moves) for more details.
+- `adoptedCallback()`: Called each time the element is moved to a new document.
+- `attributeChangedCallback()`: Called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
 
 Here's a minimal custom element that logs these lifecycle events:
 
@@ -80,6 +87,10 @@ class MyCustomElement extends HTMLElement {
     console.log("Custom element removed from page.");
   }
 
+  connectedMoveCallback() {
+    console.log("Custom element moved with moveBefore()");
+  }
+
   adoptedCallback() {
     console.log("Custom element moved to new page.");
   }
@@ -90,6 +101,28 @@ class MyCustomElement extends HTMLElement {
 }
 
 customElements.define("my-custom-element", MyCustomElement);
+```
+
+#### Lifecycle callbacks and state-preserving moves
+
+The position of a custom element in the DOM can be manipulated just like any regular HTML element, but there are lifecycle side-effects to consider.
+
+Each time a custom element is moved (via methods such as {{domxref("Element.moveBefore()")}} or {{domxref("Node.insertBefore()")}}), the `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired, because the element is disconnected from and reconnected to the DOM.
+
+This might be your intended behavior. However, since these callbacks are typically used to implement any required initialization or cleanup code to run at the start or end of the element's lifecycle, running them when the element is moved (rather than removed or inserted) may cause problems with its state. You might for example remove some stored data that the element still needs.
+
+If you want to preserve the element's state, you can do so by defining a `connectedMoveCallback()` lifecycle callback inside the element class, and then using the {{domxref("Element.moveBefore()")}} method to move the element (instead of similar methods such as {{domxref("Node.insertBefore()")}}). This causes the `connectedMoveCallback()` to run instead of `connectedCallback()` and `disconnectedCallback()`.
+
+You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
+
+```js
+class MyComponent {
+  // ...
+  connectedMoveCallback() {
+    console.log("Custom move-handling logic here.");
+  }
+  // ...
+}
 ```
 
 ## Registering a custom element
@@ -121,7 +154,7 @@ customElements.define("popup-info", PopupInfo);
 
 Once you've defined and registered a custom element, you can use it in your code.
 
-To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute:
+To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute:
 
 ```html
 <p is="word-count"></p>
@@ -133,6 +166,74 @@ To use an autonomous custom element, use the custom name just like a built-in HT
 <popup-info>
   <!-- content of the element -->
 </popup-info>
+```
+
+## Scoped custom element registries
+
+The examples above register custom elements on the global {{domxref("CustomElementRegistry")}} accessed via {{domxref("Window.customElements")}}. This means every custom element name you register must be globally unique across the entire page. As applications grow and begin combining components from multiple libraries, global name collisions can become a problem — if two libraries both try to define `<my-button>`, one of them will fail.
+
+**Scoped custom element registries** solve this by letting you create an independent registry whose definitions only apply to a specific DOM subtree, such as a {{domxref("ShadowRoot")}}. Different shadow trees can each use their own registry with their own definitions, even if the element names overlap.
+
+### Creating a scoped registry
+
+Create a scoped registry using the {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor and register elements on it with {{domxref("CustomElementRegistry.define()", "define()")}}, just like the global registry:
+
+```js
+const myRegistry = new CustomElementRegistry();
+
+myRegistry.define(
+  "my-element",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.textContent = "Hello from scoped registry!";
+    }
+  },
+);
+```
+
+> [!NOTE]
+> Scoped registries do not support the `extends` option in `define()` (for creating [customized built-in elements](#types_of_custom_element)). Attempting to use `extends` with a scoped registry throws a `NotSupportedError` {{domxref("DOMException")}}.
+
+### Associating a scoped registry with a shadow root
+
+One way to use a scoped registry is to pass it to {{domxref("Element.attachShadow()")}} via the `customElementRegistry` option. Elements parsed or created inside that shadow tree will then use the scoped registry's definitions instead of the global one:
+
+```js
+const host = document.createElement("div");
+document.body.appendChild(host);
+
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: myRegistry,
+});
+
+// <my-element> is upgraded using myRegistry's definition
+shadow.innerHTML = "<my-element></my-element>";
+```
+
+You can also associate a scoped registry after the shadow root has been created by calling {{domxref("CustomElementRegistry.initialize()", "initialize()")}}. This is useful when you need to set up the DOM structure first and attach the registry later:
+
+```js
+const shadow = host.attachShadow({
+  mode: "open",
+  customElementRegistry: null, // no registry yet
+});
+shadow.innerHTML = "<my-element></my-element>";
+
+// Later, associate the scoped registry and upgrade elements
+myRegistry.initialize(shadow);
+```
+
+### Declarative shadow DOM with scoped registry
+
+For [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), you can use the `shadowrootcustomelementregistry` attribute on a {{HTMLElement("template")}} element. This tells the HTML parser to leave the shadow root's {{domxref("ShadowRoot.customElementRegistry", "customElementRegistry")}} as `null`, so a scoped registry can be attached later with `initialize()`:
+
+```html
+<my-host>
+  <template shadowrootmode="open" shadowrootcustomelementregistry>
+    <my-element></my-element>
+  </template>
+</my-host>
 ```
 
 ## Responding to attribute changes
@@ -183,9 +284,9 @@ For a complete example showing the use of `attributeChangedCallback()`, see [Lif
 
 Built in HTML elements can have different _states_, such as "hover", "disabled", and "read only".
 Some of these states can be set as attributes using HTML or JavaScript, while others are internal, and cannot.
-Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
+Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
-Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class function.
+Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the {{cssxref(":state()")}} pseudo-class function.
 The code below shows how this works using the example of an autonomous custom element that has an internal state `"collapsed"`.
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
@@ -220,7 +321,7 @@ customElements.define("my-custom-element", MyCustomElement);
 ```
 
 We can use the identifier added to the custom element's `CustomStateSet` (`this._internals.states`) for matching the element's custom state.
-This is matched by passing the identifier to the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class.
+This is matched by passing the identifier to the {{cssxref(":state()")}} pseudo-class.
 For example, below we select on the `hidden` state being true (and hence the element's `collapsed` state) using the `:hidden` selector, and remove the border.
 
 ```css
@@ -232,7 +333,7 @@ my-custom-element:state(hidden) {
 }
 ```
 
-The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that is in a particular state.
+The `:state()` pseudo-class can also be used within the {{cssxref(":host()")}} pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/Reference/Selectors/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the {{cssxref("::part()")}} pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/Guides/Shadow_parts) of a custom element that is in a particular state.
 
 There are several live examples in {{domxref("CustomStateSet")}} showing how this works.
 
@@ -428,7 +529,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of customized built-in elements.
 
 First of all, we define our element's class:
 
@@ -475,7 +576,7 @@ class ExpandingList extends HTMLUListElement {
           const nextUl = e.target.nextElementSibling;
 
           // Toggle visible state and update class attribute on ul
-          if (nextUl.style.display == "block") {
+          if (nextUl.style.display === "block") {
             nextUl.style.display = "none";
             nextUl.parentNode.setAttribute("class", "closed");
           } else {
@@ -512,7 +613,7 @@ Using the built-in element in a web document also looks somewhat different:
 
 You use a `<ul>` element as normal, but specify the name of the custom element inside the `is` attribute.
 
-Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Element/script#defer) attribute to the line that includes the script:
+Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to the line that includes the script:
 
 ```html
 <script src="main.js" defer></script>
@@ -528,16 +629,20 @@ So far we've seen only one lifecycle callback in action: `connectedCallback()`. 
 In the class constructor, we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:
 
 ```js
-constructor() {
-  // Always call super first in constructor
-  super();
+class Square extends HTMLElement {
+  // …
+  constructor() {
+    // Always call super first in constructor
+    super();
 
-  const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "open" });
 
-  const div = document.createElement("div");
-  const style = document.createElement("style");
-  shadow.appendChild(style);
-  shadow.appendChild(div);
+    const div = document.createElement("div");
+    const style = document.createElement("style");
+    shadow.appendChild(style);
+    shadow.appendChild(div);
+  }
+  // …
 }
 ```
 
@@ -559,37 +664,53 @@ function updateStyle(elem) {
 The actual updates are all handled by the lifecycle callbacks. The `connectedCallback()` runs each time the element is added to the DOM — here we run the `updateStyle()` function to make sure the square is styled as defined in its attributes:
 
 ```js
-connectedCallback() {
-  console.log("Custom square element added to page.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("Custom square element added to page.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 The `disconnectedCallback()` and `adoptedCallback()` callbacks log messages to the console to inform us when the element is either removed from the DOM, or moved to a different page:
 
 ```js
-disconnectedCallback() {
-  console.log("Custom square element removed from page.");
-}
+class Square extends HTMLElement {
+  // …
+  disconnectedCallback() {
+    console.log("Custom square element removed from page.");
+  }
 
-adoptedCallback() {
-  console.log("Custom square element moved to new page.");
+  adoptedCallback() {
+    console.log("Custom square element moved to new page.");
+  }
+  // …
 }
 ```
 
 The `attributeChangedCallback()` callback is run whenever one of the element's attributes is changed in some way. As you can see from its parameters, it is possible to act on attributes individually, looking at their name, and old and new attribute values. In this case however, we are just running the `updateStyle()` function again to make sure that the square's style is updated as per the new values:
 
 ```js
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log("Custom square element attributes changed.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("Custom square element attributes changed.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside the custom element class - this should return an array containing the names of the attributes you want to observe:
 
 ```js
-static get observedAttributes() {
-  return ["color", "size"];
+class Square extends HTMLElement {
+  // …
+  static get observedAttributes() {
+    return ["color", "size"];
+  }
+  // …
 }
 ```

@@ -14,13 +14,7 @@ object that is associated with the context. It might be [`null`](/en-US/docs/Web
 associated with a {{HTMLElement("canvas")}} element or an {{domxref("OffscreenCanvas")}}
 object.
 
-## Syntax
-
-```js-nolint
-gl.canvas
-```
-
-### Return value
+## Value
 
 Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).

@@ -19,15 +19,11 @@ requestVideoFrameCallback(callback)
 ### Parameters
 
 - `callback`
-
   - : The callback function that runs when a new video frame is sent to the compositor. This contains two parameters:
-
     - `now`
       - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the callback was called.
     - `metadata`
-
       - : An object containing the following properties:
-
         - `expectedDisplayTime`
           - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the browser expects the frame to be visible.
         - `height`
@@ -45,7 +41,6 @@ requestVideoFrameCallback(callback)
           - : A number, in media pixels, representing the width of the video frame (the visible decoded pixels, without aspect ratio adjustments).
 
         Additional metadata properties may be available within `requestVideoFrameCallback()` callbacks used in {{domxref("WebRTC_API", "WebRTC", "", "nocode")}} applications:
-
         - `captureTime`
           - : A {{domxref("DOMHighResTimeStamp")}} representing the time when the frame was captured. This applies to video frames coming from a local or remote source. For a remote source, the capture time is estimated using clock synchronization and RTCP sender reports to convert RTP timestamps to capture time.
         - `receiveTime`
@@ -53,7 +48,8 @@ requestVideoFrameCallback(callback)
         - `rtpTimestamp`
           - : A number representing the RTP timestamp associated with this video frame.
 
-> **Note:** `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
+> [!NOTE]
+> `width` and `height` may differ from {{domxref("HTMLVideoElement.videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight")}} in certain cases (for example, an anamorphic video may have rectangular pixels).
 
 ### Return value
 
@@ -81,37 +77,73 @@ You can compare the `now` callback parameter and the `expectedDisplayTime` metad
 
 ### Drawing video frames on a canvas
 
-This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the DOM for debugging purposes.
+This example shows how to use `requestVideoFrameCallback()` to draw the frames of a video onto a {{htmlelement("canvas")}} element at exactly the same frame rate as the video. It also logs the frame metadata to the screen for debugging purposes.
 
 ```js
-if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
-  let paintCount = 0;
-  let startTime = 0.0;
+const button = document.querySelector("button");
+const video = document.querySelector("video");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const fpsInfo = document.querySelector("#fps-info");
+const metadataInfo = document.querySelector("#metadata-info");
 
-  const updateCanvas = (now, metadata) => {
-    if (startTime === 0.0) {
-      startTime = now;
-    }
+button.addEventListener("click", () =>
+  video.paused ? video.play() : video.pause(),
+);
 
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+video.addEventListener("play", () => {
+  if (!("requestVideoFrameCallback" in HTMLVideoElement.prototype)) {
+    console.error(
+      "Your browser does not support the `Video.requestVideoFrameCallback()` API.",
+    );
+  }
+});
 
-    const elapsed = (now - startTime) / 1000.0;
-    const fps = (++paintCount / elapsed).toFixed(3);
-    fpsInfo.innerText = `video fps: ${fps}`;
-    metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+let width = canvas.width;
+let height = canvas.height;
 
-    // Re-register the callback to run on the next frame
-    video.requestVideoFrameCallback(updateCanvas);
-  };
+let paintCount = 0;
+let startTime = 0.0;
 
-  // Initial registration of the callback to run on the first frame
+const updateCanvas = (now, metadata) => {
+  if (startTime === 0.0) {
+    startTime = now;
+  }
+
+  ctx.drawImage(video, 0, 0, width, height);
+
+  const elapsed = (now - startTime) / 1000.0;
+  const fps = (++paintCount / elapsed).toFixed(3);
+  fpsInfo.innerText = !isFinite(fps) ? 0 : fps;
+  metadataInfo.innerText = JSON.stringify(metadata, null, 2);
+
   video.requestVideoFrameCallback(updateCanvas);
-} else {
-  alert("Your browser does not support requestVideoFrameCallback().");
+};
+
+video.src = "https://mdn.github.io/shared-assets/videos/flower.mp4";
+video.requestVideoFrameCallback(updateCanvas);
+```
+
+```css
+video,
+canvas {
+  max-width: 49%;
 }
 ```
 
-See [requestVideoFrameCallback Demo](https://requestvideoframecallback.glitch.me/) for a working implementation of the above code.
+```html
+<p>
+  Start <button type="button">⏯</button> playing the video. Pause the video to
+  read the metadata. Drawing video frames on the canvas is synced with the
+  actual video framerate.
+</p>
+<video controls playsinline></video>
+<canvas width="960" height="540"></canvas>
+<p><span id="fps-info">0</span>fps</p>
+<pre id="metadata-info"></pre>
+```
+
+{{embedlivesample("drawing_video_frames_on_a_canvas", , "540")}}
 
 ## Specifications
 

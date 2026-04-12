@@ -2,15 +2,14 @@
 title: Function
 slug: Glossary/Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **function** is a code snippet that can be called by other code or by itself, or a {{Glossary("variable")}} that refers to the function. When a function is called, {{Glossary("Argument", "arguments")}} are passed to the function as input, and the function can optionally return a value. A function in {{glossary("JavaScript")}} is also an {{glossary("object")}}.
 
 A function name is an {{Glossary("identifier")}} included as part of a function declaration or function expression. The function name's {{Glossary("scope")}} depends on whether the function name is a declaration or expression.
 
-### Different types of functions
+## Different types of functions
 
 An **anonymous function** is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:
 
@@ -87,9 +86,9 @@ Function expressions, named or anonymous, can be called immediately.
 
 Declared functions can't be called immediately this way, because IIFEs must be function _expressions_.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
-  console.log('Hello Foo');
+  console.log("Hello Foo");
 }();
 ```
 

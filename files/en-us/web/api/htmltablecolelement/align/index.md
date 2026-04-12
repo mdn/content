@@ -30,9 +30,9 @@ The possible values are:
 
 ## Examples
 
-Use CSS `text-align` on the {{htmlelement("td")}} and {{htmlelement("th")}} elements. As {{htmlelement("td")}} elements of a column are not children of {{htmlelement("col")}}, setting the `align` attribute in HTML or `text-align` property in CSS on a {{HTMLElement("col")}} element will have no effect. Instead, select the cells of a column using a [`:is(td, tr):nth-child(n)`](/en-US/docs/Web/CSS/:nth-child), where `n` is the column number, or similar.
+Use CSS `text-align` on the {{htmlelement("td")}} and {{htmlelement("th")}} elements. As {{htmlelement("td")}} elements of a column are not children of {{htmlelement("col")}}, setting the `align` attribute in HTML or `text-align` property in CSS on a {{HTMLElement("col")}} element will have no effect. Instead, select the cells of a column using a [`:is(td, tr):nth-child(n)`](/en-US/docs/Web/CSS/Reference/Selectors/:nth-child), where `n` is the column number, or similar.
 
-An [example](/en-US/docs/Web/CSS/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
+An [example](/en-US/docs/Web/CSS/Reference/Selectors/:nth-child#styling_a_table_column) is available on the {{cssxref(":nth-child()")}} page.
 
 ## Specifications
 

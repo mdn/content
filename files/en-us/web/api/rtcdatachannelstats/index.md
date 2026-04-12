@@ -9,9 +9,9 @@ browser-compat: api.RTCStatsReport.type_data-channel
 
 The **`RTCDataChannelStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics related to one {{domxref("RTCDataChannel")}} object on the connection.
 
-The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `data-channel`.
+The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](/en-US/docs/Web/API/RTCDataChannelStats/type) of `data-channel`.
 
-The data channels statistics may be correlated to a particular channel by comparing the [`dataChannelIdentifier`](#datachannelidentifier) property to a matching {{domxref("RTCDataChannel.id")}}.
+The data channels statistics may be correlated to a particular channel by comparing the [`dataChannelIdentifier`](/en-US/docs/Web/API/RTCDataChannelStats/dataChannelIdentifier) property to a matching {{domxref("RTCDataChannel.id")}}.
 
 ## Instance properties
 

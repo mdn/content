@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Fenced Frame API")}}
 
-This article provides information on how communication differs between an embedder and content embedded inside different types of frame (i.e. an {{htmlelement("iframe")}} and a {{htmlelement("fencedframe")}}), and how passed data can be stored.
+This article provides information on how communication differs between an embedder and content embedded inside different types of frame (i.e., an {{htmlelement("iframe")}} and a {{htmlelement("fencedframe")}}), and how passed data can be stored.
 
 ## How to communicate between the embedder and an `<iframe>`
 
@@ -18,7 +18,7 @@ From the `<iframe>`, you can listen to a [`message`](/en-US/docs/Web/API/Window/
 
 ## How to communicate between the embedder and a `<fencedframe>`
 
-Fenced frames are intended to be used for cases such as displaying targeted ads selected via the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) and {{domxref("WindowSharedStorage.selectURL()")}}. Communicating between `<fencedframe>`s and other pages outside the `<fencedframe>` on the page is intentionally limited, but one method of communication between the embedder and shared storage worklets does exist — {{domxref("FencedFrameConfig.setSharedStorageContext()")}}.
+Fenced frames are intended to be used for cases such as displaying targeted ads selected via the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience) and {{domxref("WindowSharedStorage.selectURL()")}}. Communicating between `<fencedframe>`s and other pages outside the `<fencedframe>` on the page is intentionally limited, but one method of communication between the embedder and shared storage worklets does exist — {{domxref("FencedFrameConfig.setSharedStorageContext()")}}.
 
 > [!NOTE]
 > Within the same `<fencedframe>` tree, communication between frames is allowed. For example, a root `<fencedframe>` can send a message to a child `<iframe>` in its own tree, and a child `<iframe>` can send a message to the parent `<fencedframe>`.

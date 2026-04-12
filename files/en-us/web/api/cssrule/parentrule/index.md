@@ -19,7 +19,7 @@ A {{domxref("CSSRule")}} which is the type of the containing rules. If the curre
 ## Examples
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .box {
     width: 100px;
     height: 200px;

@@ -8,7 +8,7 @@ browser-compat: api.MutationRecord.target
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} read-only property **`target`** is the target (i.e. the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`target`** is the target (i.e., the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
 
 ## Value
 

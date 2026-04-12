@@ -8,7 +8,7 @@ browser-compat: api.Element.scrollLeft
 
 {{APIRef("DOM")}}
 
-The **`Element.scrollLeft`** property gets or sets the number of pixels by which an element's content is scrolled from its left edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
+The **`scrollLeft`** property of the {{domxref("Element")}} interface gets or sets the number of pixels by which an element's content is scrolled from its left edge. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number.
 
 ## Value
 
@@ -38,13 +38,13 @@ The `scrollLeft` property can be set, which causes the element to scroll to the 
 #container {
   width: 100px;
   height: 100px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   overflow-x: scroll;
 }
 
 #content {
   width: 250px;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 ```
 
@@ -72,5 +72,11 @@ button.onclick = () => {
 
 ## See also
 
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.clientLeft")}}
+- {{domxref("Element.scrollHeight")}}
+- {{domxref("Element.scrollWidth")}}
 - {{domxref("Element.scrollTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - {{domxref("Element.scrollTo()")}}

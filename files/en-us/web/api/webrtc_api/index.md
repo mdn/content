@@ -173,6 +173,8 @@ These interfaces and events are used to process incoming and outgoing encoded vi
 
 ## Guides
 
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+  - : The Real-time Transport Protocol (RTP), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 - [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
   - : This article introduces the protocols on top of which the WebRTC API is built.
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
@@ -183,7 +185,7 @@ These interfaces and events are used to process incoming and outgoing encoded vi
   - : **Perfect negotiation** is a design pattern which is recommended for your signaling process to follow, which provides transparency in negotiation while allowing both sides to be either the offerer or the answerer, without significant coding needed to differentiate the two.
 - [Signaling and two-way video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : A tutorial and example which turns a WebSocket-based chat system created for a previous example and adds support for opening video calls among participants. The chat server's WebSocket connection is used for WebRTC signaling.
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
   - : A guide to the codecs which WebRTC requires browsers to support as well as the optional ones supported by various popular browsers. Included is a guide to help you choose the best codecs for your needs.
 - [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
   - : This guide covers how you can use a peer connection and an associated {{DOMxRef("RTCDataChannel")}} to exchange arbitrary data between two peers.

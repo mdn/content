@@ -28,7 +28,7 @@ A Promise that resolves with a {{jsxref("String")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
@@ -59,9 +59,17 @@ function getData(pageId) {
   console.log(pageId);
   const myRequest = new Request(`${pageId}.txt`);
   fetch(myRequest)
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error, status = ${response.status}`);
+      }
+      return response.text();
+    })
     .then((text) => {
       myArticle.innerText = text;
+    })
+    .catch((error) => {
+      myArticle.innerText = `Error: ${error.message}`;
     });
 }
 ```
@@ -77,5 +85,5 @@ function getData(pageId) {
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

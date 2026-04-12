@@ -16,7 +16,7 @@ If the preceding {{domxref("Ink.requestPresenter", "Ink.requestPresenter()")}} m
 
 This area is always the client coordinates for the element's border box, so moving the element or scrolling the element requires no recalculation on the developer's part.
 
-### Value
+## Value
 
 An {{domxref("Element")}}.
 
@@ -25,10 +25,10 @@ An {{domxref("Element")}}.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({ presentationArea: canvas });
+  const presenter = await ink.requestPresenter({ presentationArea: canvas });
   console.log(presenter.presentationArea);
 
-  //...
+  // …
 }
 ```
 
@@ -39,7 +39,3 @@ async function inkInit() {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

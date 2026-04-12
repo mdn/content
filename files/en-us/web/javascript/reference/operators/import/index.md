@@ -3,9 +3,8 @@ title: import()
 slug: Web/JavaScript/Reference/Operators/import
 page-type: javascript-operator
 browser-compat: javascript.operators.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
@@ -37,10 +36,13 @@ Returns a promise which:
 
 - If the referenced module is loaded and evaluated successfully, fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
 - If the [coercion to string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) of `moduleName` throws, rejects with the thrown error.
-- If `moduleName` refers to a module that doesn't exist, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`).
+- If module fetching and loading fails for any reason, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`). Common causes may include:
+  - In a file-system-based module system (Node.js, for example), if accessing the file system fails (permission denied, file not found, etc.).
+  - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE]
+> `import()` never synchronously throws an error.
 
 ## Description
 
@@ -69,11 +71,11 @@ For example, `import()` can be used in the main thread, a shared worker, or a de
 
 A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
 
-The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
+The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) in lexicographic order (i.e., the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
 
 The string properties are non-configurable and writable when you use {{jsxref("Object.getOwnPropertyDescriptors()")}} to get their descriptors. However, they are effectively read-only, because you cannot re-assign a property to a new value. This behavior mirrors the fact that static imports create "[live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)" — the values can be re-assigned by the module exporting them, but not by the module importing them. The writability of the properties reflects the possibility of the values changing, because non-configurable and non-writable properties must be constant. For example, you can re-assign the exported value of a variable, and the new value can be observed in the module namespace object.
 
-Each module specifier corresponds to a unique module namespace object, so the following is generally true:
+Each (normalized) module specifier corresponds to a unique module namespace object, so the following is generally true:
 
 ```js
 import * as mod from "/my-module.js";
@@ -105,6 +107,24 @@ import("/my-module.js").then((mod2) => {
 
 > [!WARNING]
 > Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
+
+This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
+
+```js
+import(`/my-module.js?t=${Date.now()}`);
+```
+
+Note that this can lead to memory leaks in a long-running application, because the engine cannot safely garbage-collect any module namespace objects. Currently, there is no way to manually clear the cache of module namespace objects.
+
+You can also use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to fetch module source code as text, and then evaluate the module manually depending on the module type:
+
+- For JavaScript modules, you can dynamically import the source code as a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static) in browsers, or use [`vm.Module`](https://nodejs.org/docs/latest/api/vm.html#class-vmmodule) to evaluate it in Node.js.
+- For JSON modules, you can parse the source code using {{jsxref("JSON.parse()")}}.
+- For CSS modules, you can create a new {{domxref("CSSStyleSheet")}} object and use its [`replace()`](/en-US/docs/Web/API/CSSStyleSheet/replace) method to populate it with the source code.
+
+However, this is semantically not the same as dynamic import, because user-agent settings like [fetch destination](/en-US/docs/Web/API/Request/destination), [CSP](/en-US/docs/Web/HTTP/Guides/CSP), or [module resolution](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) may not be applied correctly.
+
+Module namespace object caching only applies to modules that are loaded and linked _successfully_. A module is imported in three steps: loading (fetching the module), linking (mostly, parsing the module), and evaluating (executing the parsed code). Only evaluation failures are cached; if a module fails to load or link, the next import may try to load and link the module again. The browser may or may not cache the result of the fetch operation, but it should follow typical HTTP semantics, so handling such network failures should not be different from handling {{domxref("Window/fetch", "fetch()")}} failures.
 
 ## Examples
 
@@ -186,6 +206,16 @@ Promise.all(
     (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
+```
+
+### Using import attributes with dynamic import
+
+[Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) are accepted as the second parameter of the `import()` syntax.
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
 ```
 
 ## Specifications

@@ -10,16 +10,16 @@ browser-compat: api.EditContext.compositionstart_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window starts.
+The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window starts.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("compositionstart", (event) => {});
+```js-nolint
+addEventListener("compositionstart", (event) => { })
 
-oncompositionstart = (event) => {};
+oncompositionstart = (event) => { }
 ```
 
 ## Examples

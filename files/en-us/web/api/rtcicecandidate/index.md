@@ -16,7 +16,6 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 ## Constructor
 
 - {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}
-
   - : Creates an `RTCIceCandidate` object to represent a single ICE candidate, optionally configured based on a configuration object.
 
     > [!NOTE]

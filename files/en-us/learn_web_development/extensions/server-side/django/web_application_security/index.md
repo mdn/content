@@ -1,10 +1,12 @@
 ---
 title: Django web application security
+short-title: Django security
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Protecting user data is an essential part of any website design. We previously explained some of the more common security threats in the article [Web security](/en-US/docs/Web/Security) — this article provides a practical demonstration of how Django's in-built protections handle such threats.
 
@@ -89,48 +91,30 @@ They would then send the file to all the Librarians and suggest that they open t
       action="http://127.0.0.1:8000/catalog/author/create/"
       method="post"
       name="EvilForm">
-      <table>
-        <tr>
-          <th><label for="id_first_name">First name:</label></th>
-          <td>
-            <input
-              id="id_first_name"
-              maxlength="100"
-              name="first_name"
-              type="text"
-              value="Mad"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_last_name">Last name:</label></th>
-          <td>
-            <input
-              id="id_last_name"
-              maxlength="100"
-              name="last_name"
-              type="text"
-              value="Man"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_birth">Date of birth:</label></th>
-          <td>
-            <input id="id_date_of_birth" name="date_of_birth" type="text" />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_death">Died:</label></th>
-          <td>
-            <input
-              id="id_date_of_death"
-              name="date_of_death"
-              type="text"
-              value="12/10/2016" />
-          </td>
-        </tr>
-      </table>
+      <label for="id_first_name">First name:</label>
+      <input
+        id="id_first_name"
+        maxlength="100"
+        name="first_name"
+        type="text"
+        value="Mad"
+        required />
+      <label for="id_last_name">Last name:</label>
+      <input
+        id="id_last_name"
+        maxlength="100"
+        name="last_name"
+        type="text"
+        value="Man"
+        required />
+      <label for="id_date_of_birth">Date of birth:</label>
+      <input id="id_date_of_birth" name="date_of_birth" type="text" />
+      <label for="id_date_of_death">Died:</label>
+      <input
+        id="id_date_of_death"
+        name="date_of_death"
+        type="text"
+        value="12/10/2016" />
       <input type="submit" value="Submit" />
     </form>
   </body>
@@ -161,7 +145,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - SQL injection protection
   - : SQL injection vulnerabilities enable malicious users to execute arbitrary SQL code on a database, allowing data to be accessed, modified, or deleted irrespective of the user's permissions. In almost every case you'll be accessing the database using Django's querysets/models, so the resulting SQL will be properly escaped by the underlying database driver. If you do need to write raw queries or custom SQL then you'll need to explicitly think about preventing SQL injection.
 - Clickjacking protection
-  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) protection in the form of the [`X-Frame-Options` middleware](https://docs.djangoproject.com/en/4.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
+  - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) controlled by the attacker. Django contains [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) protection in the form of the [`X-Frame-Options` middleware](https://docs.djangoproject.com/en/4.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing TLS/HTTPS
   - : TLS/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
     - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.

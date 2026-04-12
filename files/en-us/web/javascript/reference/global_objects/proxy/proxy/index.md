@@ -1,11 +1,11 @@
 ---
 title: Proxy() constructor
+short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Proxy.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 
@@ -15,7 +15,8 @@ The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 new Proxy(target, handler)
 ```
 
-> **Note:** `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

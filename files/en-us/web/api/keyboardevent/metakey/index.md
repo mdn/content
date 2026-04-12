@@ -28,16 +28,16 @@ A boolean value.
 ## Examples
 
 ```html
-<button onclick="ismetaKey(event)">Click me with the meta key</button>
+<button>Click me with the meta key</button>
 
 <p id="output"></p>
 ```
 
 ```js
-function ismetaKey(e) {
+document.querySelector("button").addEventListener("click", (e) => {
   document.querySelector("#output").textContent =
     `metaKey pressed? ${e.metaKey}`;
-}
+});
 ```
 
 ### Result

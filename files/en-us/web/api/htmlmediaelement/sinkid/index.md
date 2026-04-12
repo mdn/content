@@ -21,7 +21,7 @@ A string indicating the current audio output device, or the empty string if the 
 
 Access to the property is subject to the following constraints:
 
-- The property must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The property must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Specifications
 

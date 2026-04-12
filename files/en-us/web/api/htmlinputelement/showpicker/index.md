@@ -13,7 +13,7 @@ The **`HTMLInputElement.showPicker()`** method displays the browser picker for a
 This is the same picker that would normally be displayed when the element is selected, but can be triggered from a button press or other user interaction.
 
 Commonly browsers implement it for inputs of these types: `"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or `"file"`.
-It can also be prepopulated with items from a {{htmlelement("datalist")}} element or [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute.
+It can also be prepopulated with items from a {{htmlelement("datalist")}} element or [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute.
 
 More generally, this method should ideally display the picker for any input element on the platform that has a picker.
 
@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 
@@ -103,7 +103,7 @@ Click the button next to each input type to show its picker.
 
 ### showPicker() for a datalist input
 
-`showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist).
+`showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Reference/Elements/datalist).
 
 First we define a `<datalist>` in HTML consisting of a number of internet browsers, an input of type `text` that uses it, and a button.
 
@@ -135,9 +135,11 @@ button.addEventListener("click", () => {
 });
 ```
 
+As for the other pickers, we can't show this code running as a live example because it runs in a cross-origin frame, and would cause a [`SecurityError`](#securityerror).
+
 ### showPicker() for autocomplete
 
-`showPicker()` can launch a picker for an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) input.
+`showPicker()` can launch a picker for an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) input.
 
 Here we define an input that takes an autocomplete option of "name".
 
@@ -174,4 +176,4 @@ button.addEventListener("click", () => {
 - {{ domxref("HTMLInputElement") }}
 - {{ domxref("HTMLSelectElement.showPicker()") }}
 - {{htmlelement("datalist")}}
-- [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)

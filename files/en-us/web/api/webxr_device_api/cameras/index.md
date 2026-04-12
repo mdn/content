@@ -194,7 +194,7 @@ const translateVec = vec3.fromValues(
 mat4.translate(transform, transform, translateVec);
 ```
 
-This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes [track](#track), [crane](#crane), and [push](#push) movements.
+This starts with the perspective matrix representing a 130° vertical field of view, then applies a translation that moves the camera in a manner that includes [track](#trucking_moving_left_or_right), [crane](#pedestaling_moving_up_or_down), and [push](#dollying_moving_in_or_out) movements.
 
 #### Scaling transforms
 

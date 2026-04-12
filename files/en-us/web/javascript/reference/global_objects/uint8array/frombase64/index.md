@@ -1,11 +1,11 @@
 ---
 title: Uint8Array.fromBase64()
+short-title: fromBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Uint8Array.fromBase64
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Uint8Array.fromBase64()`** static method creates a new {{jsxref("Uint8Array")}} object from a [base64](/en-US/docs/Glossary/Base64)-encoded string.
 
@@ -147,6 +147,7 @@ const array5 = Uint8Array.fromBase64("PGI+ TURO PC9i P=", {
 ## See also
 
 - [Polyfill of `Uint8Array.fromBase64` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.fromBase64`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.prototype.setFromBase64()")}}
 - {{jsxref("Uint8Array.prototype.toBase64()")}}

@@ -28,19 +28,15 @@ blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
 - `dstX0`, `dstY0`, `dstX1`, `dstY1`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the bounds of the destination rectangle.
 - `mask`
-
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise OR mask indicating which buffers
     are to be copied. Possible values:
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`
 
 - `filter`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the interpolation to be applied if the image is
     stretched. Possible values:
-
     - `gl.NEAREST`
     - `gl.LINEAR`
 

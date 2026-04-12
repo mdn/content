@@ -2,9 +2,8 @@
 title: Home page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The first page we'll create will be the website home page, which is accessible from either the site (`/`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
@@ -21,15 +20,15 @@ As a reminder, all the route functions are defined in **/routes/catalog.js**:
 
 ```js
 // GET catalog home page.
-router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); // This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 The book controller index function passed as a parameter (`book_controller.index`) has a "placeholder" implementation defined in **/controllers/bookController.js**:
 
 ```js
-exports.index = asyncHandler(async (req, res, next) => {
+exports.index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
-});
+};
 ```
 
 It is this controller function that we extend to get information from our models and then render it using a template (view).
@@ -42,17 +41,15 @@ Open **/controllers/bookController.js**. Near the top of the file you should see
 
 ```js
 const Book = require("../models/book");
-const asyncHandler = require("express-async-handler");
 
-exports.index = asyncHandler(async (req, res, next) => {
+exports.index = async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Site Home Page");
-});
+};
 ```
 
 Replace all the code above with the following code fragment.
 The first thing this does is import (`require()`) all the models.
 We need to do this because we'll be using them to get our counts of documents.
-The code also requires "express-async-handler", which provides a wrapper to [catch exceptions thrown in route handler functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_exceptions_in_route_functions).
 
 ```js
 const Book = require("../models/book");
@@ -60,9 +57,7 @@ const Author = require("../models/author");
 const Genre = require("../models/genre");
 const BookInstance = require("../models/bookinstance");
 
-const asyncHandler = require("express-async-handler");
-
-exports.index = asyncHandler(async (req, res, next) => {
+exports.index = async (req, res, next) => {
   // Get details of books, book instances, authors and genre counts (in parallel)
   const [
     numBooks,
@@ -86,7 +81,7 @@ exports.index = asyncHandler(async (req, res, next) => {
     author_count: numAuthors,
     genre_count: numGenres,
   });
-});
+};
 ```
 
 We use the [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method to get the number of instances of each model.
@@ -97,7 +92,7 @@ Because the queries for document counts are independent of each other we use [`P
 The method returns a new promise that we [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) for completion (execution pauses within _this function_ at `await`).
 When all the queries complete, the promise returned by `all()` fulfills, continuing execution of the route handler function, and populating the array with the results of the database queries.
 
-We then call [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
+We then call [`res.render()`](https://expressjs.com/en/5x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
 The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
 > [!NOTE]
@@ -105,7 +100,7 @@ The data is supplied as key-value pairs, and can be accessed in the template usi
 > Other template languages may require that you pass in values for all objects that you use.
 
 Note that the code is very simple because we can assume that the database queries succeed.
-If any of the database operations fail, the exception that is thrown will be caught by `asyncHandler()` and passed to the `next` middleware handler in the chain.
+If any of the database operations fail, the exception that is thrown will cause the Promise to reject, and Express will pass the error to the `next` middleware handler in the chain.
 
 ## View
 
@@ -136,7 +131,7 @@ Under the _Dynamic content_ heading we list the number of copies of each model.
 Note that the template values for the data are the keys that were specified when `render()` was called in the route handler function.
 
 > [!NOTE]
-> We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
+> We didn't escape the count values (i.e., we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
 ## What does it look like?
 

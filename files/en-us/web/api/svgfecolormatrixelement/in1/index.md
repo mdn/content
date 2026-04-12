@@ -35,13 +35,13 @@ In this example, two {{SVGElement("feColorMatrix")}} elements are defined in a f
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#color-matrix-filter)" />
   <circle
     cx="100"
     cy="100"
     r="50"
-    style="fill:blue;"
+    fill="blue"
     filter="url(#color-matrix-filter)" />
 </svg>
 ```

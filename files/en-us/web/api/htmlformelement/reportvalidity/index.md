@@ -27,13 +27,9 @@ Returns `true` if the associated controls' values have no validity problems; oth
 ## Example
 
 ```js
-document.forms["my-form"].addEventListener(
-  "submit",
-  () => {
-    document.forms["my-form"].reportValidity();
-  },
-  false,
-);
+document.forms["my-form"].addEventListener("submit", () => {
+  document.forms["my-form"].reportValidity();
+});
 ```
 
 ## Specifications
@@ -49,4 +45,4 @@ document.forms["my-form"].addEventListener(
 - {{domxref("HTMLFormElement.checkValidity()")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

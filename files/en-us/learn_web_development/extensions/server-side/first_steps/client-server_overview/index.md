@@ -1,10 +1,11 @@
 ---
-title: Client-Server Overview
+title: Client-server overview
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Now that you know the purpose and potential benefits of server-side programming, we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
 
@@ -34,25 +35,23 @@ Web browsers communicate with [web servers](/en-US/docs/Learn_web_development/Ho
 
 This request includes:
 
-- A URL identifying the target server and resource (e.g. an HTML file, a particular data point on the server, or a tool to run).
+- A URL identifying the target server and resource (e.g., an HTML file, a particular data point on the server, or a tool to run).
 - A method that defines the required action (for example, to get a file or to save or update some data). The different methods/verbs and their associated actions are listed below:
-
-  - `GET`: Get a specific resource (e.g. an HTML file containing information about a product, or a list of products).
-  - `POST`: Create a new resource (e.g. add a new article to a wiki, add a new contact to a database).
+  - `GET`: Get a specific resource (e.g., an HTML file containing information about a product, or a list of products).
+  - `POST`: Create a new resource (e.g., add a new article to a wiki, add a new contact to a database).
   - `HEAD`: Get the metadata information about a specific resource without getting the body like `GET` would. You might for example use a `HEAD` request to find out the last time a resource was updated, and then only use the (more "expensive") `GET` request to download the resource if it has changed.
   - `PUT`: Update an existing resource (or create a new one if it doesn't exist).
   - `DELETE`: Delete the specified resource.
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: These verbs are for less common/advanced tasks, so we won't cover them here.
 
 - Additional information can be encoded with the request (for example, HTML form data). Information can be encoded as:
-
   - URL parameters: `GET` requests encode data in the URL sent to the server by adding name/value pairs onto the end of it — for example `http://example.com?name=Fred&age=11`. You always have a question mark (`?`) separating the rest of the URL from the URL parameters, an equals sign (`=`) separating each name from its associated value, and an ampersand (`&`) separating each pair. URL parameters are inherently "insecure" as they can be changed by users and then resubmitted. As a result URL parameters/`GET` requests are not used for requests that update data on the server.
   - `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
   - Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their login status and permissions/accesses to resources.
 
-Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g., {{HTTPStatus("200", "200 OK")}} for success, {{HTTPStatus("404", "404 Not Found")}} if the resource cannot be found, {{HTTPStatus("403", "403 Forbidden")}} if the user isn't authorized to see the resource, etc.). The body of the response to a successful `GET` request contains the requested resource.
+Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Reference/Status) indicating whether or not the request succeeded (e.g., {{HTTPStatus("200", "200 OK")}} for success, {{HTTPStatus("404", "404 Not Found")}} if the resource cannot be found, {{HTTPStatus("403", "403 Forbidden")}} if the user isn't authorized to see the resource, etc.). The body of the response to a successful `GET` request contains the requested resource.
 
-When an HTML page is returned, it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
+When an HTML page is returned, it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g., an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
 
 Both static and dynamic websites (discussed in the following sections) use exactly the same communication protocol/patterns.
 
@@ -98,7 +97,7 @@ For example, you can see here that:
 - My browser (`User-Agent`) is Mozilla Firefox (`Mozilla/5.0`).
 - It can accept gzip compressed information (`Accept-Encoding: gzip`).
 - It can accept the specified languages (`Accept-Language: en-US,en;q=0.8,es;q=0.6`).
-- The `Referer` line indicates the address of the web page that contained the link to this resource (i.e. the origin of the request, `https://developer.mozilla.org/en-US/`).
+- The `Referer` line indicates the address of the web page that contained the link to this resource (i.e., the origin of the request, `https://developer.mozilla.org/en-US/`).
 
 HTTP requests can also have a body, but it is empty in this case.
 
@@ -136,7 +135,7 @@ Content-Length: 41823
   …
 ```
 
-The remainder of the response header includes information about the response (e.g. when it was generated), the server, and how it expects the browser to handle the page (e.g. the `X-Frame-Options: DENY` line tells the browser not to allow this page to be embedded in an {{htmlelement("iframe")}} in another site).
+The remainder of the response header includes information about the response (e.g., when it was generated), the server, and how it expects the browser to handle the page (e.g., the `X-Frame-Options: DENY` line tells the browser not to allow this page to be embedded in an {{htmlelement("iframe")}} in another site).
 
 ### POST request/response example
 
@@ -189,11 +188,11 @@ Content-Length: 0
 ```
 
 > [!NOTE]
-> The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g. [WebSniffer](https://websniffer.com/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool in Firefox).
+> The HTTP responses and requests shown in these examples were captured using the [Fiddler](https://www.telerik.com/download/fiddler) application, but you can get similar information using web sniffers (e.g., [WebSniffer](https://websniffer.com/)) or packet analyzers like [Wireshark](https://www.wireshark.org/). You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool in Firefox).
 
 ## Static sites
 
-A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g. `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
+A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g., `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
 
 > [!NOTE]
 > Static sites are excellent when you have a small number of pages and you want to send the same content to every user. However they can have a significant cost to maintain as the number of pages becomes larger.
@@ -202,9 +201,9 @@ Let's recap on how this works, by looking again at the static site architecture 
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
-When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) of `200 OK` (indicating success). The server might return a different status code, for example `404 Not Found` if the file is not present on the server, or `301 Moved Permanently` if the file exists but has been redirected to a different location.
+When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Reference/Status) of `200 OK` (indicating success). The server might return a different status code, for example `404 Not Found` if the file is not present on the server, or `301 Moved Permanently` if the file exists but has been redirected to a different location.
 
-The server for a static site will only ever need to process GET requests, because the server doesn't store any modifiable data. It also doesn't change its responses based on HTTP Request data (e.g. URL parameters or cookies).
+The server for a static site will only ever need to process GET requests, because the server doesn't store any modifiable data. It also doesn't change its responses based on HTTP Request data (e.g., URL parameters or cookies).
 
 Understanding how static sites work is nevertheless useful when learning server-side programming, because dynamic sites handle requests for static files (CSS, JavaScript, static images, etc.) in exactly the same way.
 
@@ -226,7 +225,7 @@ The diagram below shows the main elements of the "team coach" website, along wit
 
 After the coach submits the form with the team name and number of players, the sequence of operations is:
 
-1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11`) or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
+1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g., `/best?team=my_team_name&show=11`) or as part of the URL pattern (e.g., `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
 2. The _Web Server_ detects that the request is "dynamic" and forwards it to the _Web Application_ for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
 3. The _Web Application_ identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The _Web Application_ then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
 4. The _Web Application_ dynamically creates an HTML page by putting the data (from the _Database_) into placeholders inside an HTML template.
@@ -273,7 +272,7 @@ urlpatterns = [
 ```
 
 > [!NOTE]
-> The first parameters in the `url()` functions may look a bit odd (e.g. `r'^junior/$'`) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."
+> The first parameters in the `url()` functions may look a bit odd (e.g., `r'^junior/$'`) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."
 
 The web framework also makes it easy for a view function to fetch information from the database. The structure of our data is defined in models, which are Python classes that define the fields to be stored in the underlying database. If we have a model named _Team_ with a field of "_team_type_" then we can use a simple query syntax to get back all teams that have a particular type.
 

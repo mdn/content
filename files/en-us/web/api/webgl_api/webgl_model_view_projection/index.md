@@ -8,9 +8,6 @@ page-type: guide
 
 This article explores how to take data within a [WebGL](/en-US/docs/Web/API/WebGL_API) project, and project it into the proper spaces to display it on the screen. It assumes a knowledge of basic matrix math using translation, scale, and rotation matrices. It explains the three core matrices that are typically used when composing a 3D scene: the model, view and projection matrices.
 
-> [!NOTE]
-> This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
-
 ## The model, view, and projection matrices
 
 Individual transformations of points and polygons in space in WebGL are handled by the basic transformation matrices like translation, scale, and rotation. These matrices can be composed together and grouped in special ways to make them useful for rendering complicated 3D scenes. These composed matrices ultimately move the original model data around into a special coordinate space called **clip space**. This is a 2 unit wide cube, centered at (0,0,0), and with corners that range from (-1,-1,-1) to (1,1,1). This clip space is compressed down into a 2D space and rasterized into an image.
@@ -29,103 +26,356 @@ The above graphic is a visualization of the clip space that all of the points mu
 
 For this section we will put our data into the clip space coordinate system directly. Normally model data is used that is in some arbitrary coordinate system, and is then transformed using a matrix, converting the model coordinates into the clip space coordinate system. For this example, it's easiest to illustrate how clip space works by using model coordinate values ranging from (-1,-1,-1) to (1,1,1). The code below will create 2 triangles that will draw a square on the screen. The Z depth in the squares determines what gets drawn on top when the squares share the same space. The smaller Z values are rendered on top of the larger Z values.
 
-### WebGLBox example
+<!-- Shared setup -->
 
-This example will create a custom `WebGLBox` object that will draw a 2D box on the screen.
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+<canvas id="canvas" width="1000" height="1000"></canvas>
+```
 
-> [!NOTE]
-> The code for each WebGLBox example is available in this [GitHub repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
-
-#### WebGLBox constructor
-
-The constructor looks like this:
-
-```js
-function WebGLBox() {
-  // Setup the canvas and WebGL context
-  this.canvas = document.getElementById("canvas");
-  this.canvas.width = window.innerWidth;
-  this.canvas.height = window.innerHeight;
-  this.gl = MDN.createContext(canvas);
-
-  const gl = this.gl;
-
-  // Setup a WebGL program, anything part of the MDN object is defined outside of this article
-  this.webglProgram = MDN.createWebGLProgramFromIds(
-    gl,
-    "vertex-shader",
-    "fragment-shader",
-  );
-  gl.useProgram(this.webglProgram);
-
-  // Save the attribute and uniform locations
-  this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
-  this.colorLocation = gl.getUniformLocation(this.webglProgram, "color");
-
-  // Tell WebGL to test the depth when drawing, so if a square is behind
-  // another square it won't be drawn
-  gl.enable(gl.DEPTH_TEST);
+```css hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 ```
 
-#### WebGLBox draw
+```js hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+function createShader(gl, source, type) {
+  // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, source);
+  gl.compileShader(shader);
 
-Now we'll create a method to draw a box on the screen.
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    const info = gl.getShaderInfoLog(shader);
+    throw new Error(`Could not compile WebGL program.\n\n${info}`);
+  }
 
-```js
-WebGLBox.prototype.draw = function (settings) {
-  // Create some attribute data; these are the triangles that will end being
-  // drawn to the screen. There are two that form a square.
+  return shader;
+}
 
-  const data = new Float32Array([
-    //Triangle 1
-    settings.left,
-    settings.bottom,
-    settings.depth,
-    settings.right,
-    settings.bottom,
-    settings.depth,
-    settings.left,
-    settings.top,
-    settings.depth,
+function linkProgram(gl, vertexShader, fragmentShader) {
+  const program = gl.createProgram();
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+  gl.linkProgram(program);
 
-    //Triangle 2
-    settings.left,
-    settings.top,
-    settings.depth,
-    settings.right,
-    settings.bottom,
-    settings.depth,
-    settings.right,
-    settings.top,
-    settings.depth,
-  ]);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    const info = gl.getProgramInfoLog(program);
+    throw new Error(`Could not compile WebGL program.\n\n${info}`);
+  }
 
-  // Use WebGL to draw this onto the screen.
+  return program;
+}
 
-  // Performance Note: Creating a new array buffer for every draw call is slow.
-  // This function is for illustration purposes only.
+function createWebGLProgram(gl, vertexSource, fragmentSource) {
+  // Combines createShader() and linkProgram()
+  const vertexShader = createShader(gl, vertexSource, gl.VERTEX_SHADER);
+  const fragmentShader = createShader(gl, fragmentSource, gl.FRAGMENT_SHADER);
+  return linkProgram(gl, vertexShader, fragmentShader);
+}
 
-  const gl = this.gl;
+function createWebGLProgramFromIds(gl, vertexSourceId, fragmentSourceId) {
+  const vertexSourceEl = document.getElementById(vertexSourceId);
+  const fragmentSourceEl = document.getElementById(fragmentSourceId);
 
-  // Create a buffer and bind the data
-  const buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
-
-  // Setup the pointer to our attribute data (the triangles)
-  gl.enableVertexAttribArray(this.positionLocation);
-  gl.vertexAttribPointer(this.positionLocation, 3, gl.FLOAT, false, 0, 0);
-
-  // Setup the color uniform that will be shared across all triangles
-  gl.uniform4fv(this.colorLocation, settings.color);
-
-  // Draw the triangles to the screen
-  gl.drawArrays(gl.TRIANGLES, 0, 6);
-};
+  return createWebGLProgram(
+    gl,
+    vertexSourceEl.innerHTML,
+    fragmentSourceEl.innerHTML,
+  );
+}
 ```
 
-The shaders are the bits of code written in GLSL that take our data points and ultimately render them to the screen. For convenience, these shaders are stored in a {{htmlelement("script")}} element that is brought into the program through the custom function `MDN.createWebGLProgramFromIds()`. This function is part of a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) written for these tutorials and is not explained in depth here. This function handles the basics of taking some GLSL source code and compiling it into a WebGL program. The function takes three parameters — the context to render the program in, the ID of the {{htmlelement("script")}} element containing the vertex shader, and the ID of the {{htmlelement("script")}} element containing the fragment shader. The vertex shader positions the vertices, and the fragment shader colors each pixel.
+```js hidden live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+// Functions below are copied from Matrix_math_for_the_web
+// point • matrix
+function multiplyMatrixAndPoint(matrix, point) {
+  // Give a simple variable name to each part of the matrix, a column and row number
+  const c0r0 = matrix[0],
+    c1r0 = matrix[1],
+    c2r0 = matrix[2],
+    c3r0 = matrix[3];
+  const c0r1 = matrix[4],
+    c1r1 = matrix[5],
+    c2r1 = matrix[6],
+    c3r1 = matrix[7];
+  const c0r2 = matrix[8],
+    c1r2 = matrix[9],
+    c2r2 = matrix[10],
+    c3r2 = matrix[11];
+  const c0r3 = matrix[12],
+    c1r3 = matrix[13],
+    c2r3 = matrix[14],
+    c3r3 = matrix[15];
+
+  // Now set some simple names for the point
+  const x = point[0];
+  const y = point[1];
+  const z = point[2];
+  const w = point[3];
+
+  // Multiply the point against each part of the 1st column, then add together
+  const resultX = x * c0r0 + y * c0r1 + z * c0r2 + w * c0r3;
+
+  // Multiply the point against each part of the 2nd column, then add together
+  const resultY = x * c1r0 + y * c1r1 + z * c1r2 + w * c1r3;
+
+  // Multiply the point against each part of the 3rd column, then add together
+  const resultZ = x * c2r0 + y * c2r1 + z * c2r2 + w * c2r3;
+
+  // Multiply the point against each part of the 4th column, then add together
+  const resultW = x * c3r0 + y * c3r1 + z * c3r2 + w * c3r3;
+
+  return [resultX, resultY, resultZ, resultW];
+}
+
+// matrixB • matrixA
+function multiplyMatrices(matrixA, matrixB) {
+  // Slice the second matrix up into rows
+  const row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
+  const row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
+  const row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
+  const row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
+
+  // Multiply each row by matrixA
+  const result0 = multiplyMatrixAndPoint(matrixA, row0);
+  const result1 = multiplyMatrixAndPoint(matrixA, row1);
+  const result2 = multiplyMatrixAndPoint(matrixA, row2);
+  const result3 = multiplyMatrixAndPoint(matrixA, row3);
+
+  // Turn the result rows back into a single matrix
+  // prettier-ignore
+  return [
+    result0[0], result0[1], result0[2], result0[3],
+    result1[0], result1[1], result1[2], result1[3],
+    result2[0], result2[1], result2[2], result2[3],
+    result3[0], result3[1], result3[2], result3[3],
+  ];
+}
+
+function multiplyArrayOfMatrices(matrices) {
+  if (matrices.length === 1) {
+    return matrices[0];
+  }
+  return matrices.reduce((result, matrix) => multiplyMatrices(result, matrix));
+}
+
+function translate(x, y, z) {
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, 0,
+    x, y, z, 1,
+  ];
+}
+
+function scale(x, y, z) {
+  // prettier-ignore
+  return [
+    x, 0, 0, 0,
+    0, y, 0, 0,
+    0, 0, z, 0,
+    0, 0, 0, 1,
+  ];
+}
+
+const sin = Math.sin;
+const cos = Math.cos;
+
+function rotateX(a) {
+  // prettier-ignore
+  return [
+    1, 0, 0, 0,
+    0, cos(a), -sin(a), 0,
+    0, sin(a), cos(a), 0,
+    0, 0, 0, 1,
+  ];
+}
+
+function rotateY(a) {
+  // prettier-ignore
+  return [
+    cos(a), 0, sin(a), 0,
+    0, 1, 0, 0,
+    -sin(a), 0, cos(a), 0,
+    0, 0, 0, 1,
+  ];
+}
+
+function rotateZ(a) {
+  // prettier-ignore
+  return [
+    cos(a), -sin(a), 0, 0,
+    sin(a), cos(a), 0, 0,
+    0, 0, 1, 0,
+    0, 0, 0, 1,
+  ];
+}
+
+// Define the data that is needed to make a 3d cube
+function createCubeData() {
+  // prettier-ignore
+  const positions = [
+    // Front face
+    -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
+    // Back face
+    -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
+    // Top face
+    -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
+    // Bottom face
+    -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
+    // Right face
+    1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
+    // Left face
+    -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
+  ];
+
+  // prettier-ignore
+  const colorsOfFaces = [
+    [0.3, 1.0, 1.0, 1.0],    // Front face: cyan
+    [1.0, 0.3, 0.3, 1.0],    // Back face: red
+    [0.3, 1.0, 0.3, 1.0],    // Top face: green
+    [0.3, 0.3, 1.0, 1.0],    // Bottom face: blue
+    [1.0, 1.0, 0.3, 1.0],    // Right face: yellow
+    [1.0, 0.3, 1.0, 1.0]     // Left face: purple
+  ];
+
+  let colors = [];
+
+  for (const polygonColor of colorsOfFaces) {
+    for (let i = 0; i < 4; i++) {
+      colors = colors.concat(polygonColor);
+    }
+  }
+
+  // prettier-ignore
+  const elements = [
+    0,  1,  2,   0,  2,  3,    // front
+    4,  5,  6,   4,  6,  7,    // back
+    8,  9,  10,  8,  10, 11,   // top
+    12, 13, 14,  12, 14, 15,   // bottom
+    16, 17, 18,  16, 18, 19,   // right
+    20, 21, 22,  20, 22, 23,   // left
+  ];
+
+  return { positions, elements, colors };
+}
+
+// Take the data for a cube and bind the buffers for it.
+// Return an object collection of the buffers
+function createBuffersForCube(gl, cube) {
+  const positions = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, positions);
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(cube.positions),
+    gl.STATIC_DRAW,
+  );
+
+  const colors = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, colors);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cube.colors), gl.STATIC_DRAW);
+
+  const elements = gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, elements);
+  gl.bufferData(
+    gl.ELEMENT_ARRAY_BUFFER,
+    new Uint16Array(cube.elements),
+    gl.STATIC_DRAW,
+  );
+
+  return { positions, elements, colors };
+}
+```
+
+### WebGLBox example
+
+This example will create a custom `WebGLBox` object that will draw a 2D box on the screen. It is implemented as a class, which contains a constructor and a `draw()` method to draw a box on the screen:
+
+```js live-sample___clip_space_ex
+class WebGLBox {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  positionLocation;
+  colorLocation;
+  constructor() {
+    const gl = this.gl;
+
+    // Setup a WebGL program
+    gl.useProgram(this.webglProgram);
+
+    // Save the attribute and uniform locations
+    this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+    this.colorLocation = gl.getUniformLocation(this.webglProgram, "vColor");
+
+    // Tell WebGL to test the depth when drawing, so if a square is behind
+    // another square it won't be drawn
+    gl.enable(gl.DEPTH_TEST);
+  }
+  draw(settings) {
+    // Create some attribute data; these are the triangles that will end being
+    // drawn to the screen. There are two that form a square.
+
+    // prettier-ignore
+    const data = new Float32Array([
+      // Triangle 1
+      settings.left, settings.bottom, settings.depth,
+      settings.right, settings.bottom, settings.depth,
+      settings.left, settings.top, settings.depth,
+
+      // Triangle 2
+      settings.left, settings.top, settings.depth,
+      settings.right, settings.bottom, settings.depth,
+      settings.right, settings.top, settings.depth,
+    ]);
+
+    // Use WebGL to draw this onto the screen.
+
+    // Performance Note: Creating a new array buffer for every draw call is slow.
+    // This function is for illustration purposes only.
+
+    const gl = this.gl;
+
+    // Create a buffer and bind the data
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+
+    // Setup the pointer to our attribute data (the triangles)
+    gl.enableVertexAttribArray(this.positionLocation);
+    gl.vertexAttribPointer(this.positionLocation, 3, gl.FLOAT, false, 0, 0);
+
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniform4fv(this.colorLocation, settings.color);
+
+    // Draw the triangles to the screen
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+}
+```
+
+The shaders are the bits of code written in GLSL that take our data points and ultimately render them to the screen. For convenience, these shaders are stored in a {{htmlelement("script")}} element that is brought into the program through the custom function `createWebGLProgramFromIds()`. This function handles the basics of taking some GLSL source code and compiling it into a WebGL program. It takes three parameters — the context to render the program in, the ID of the {{htmlelement("script")}} element containing the vertex shader, and the ID of the {{htmlelement("script")}} element containing the fragment shader. This function is not explained in depth here; if you want to see its implementation, click "Play" on the code block. The vertex shader positions the vertices, and the fragment shader colors each pixel.
 
 First take a look at the vertex shader that will move the vertices on the screen:
 
@@ -139,26 +389,49 @@ void main() {
 }
 ```
 
+```html hidden live-sample___clip_space_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // The individual position vertex
+  attribute vec3 position;
+
+  void main() {
+    // the gl_Position is the final position in clip space after the vertex shader modifies it
+    gl_Position = vec4(position, 1.0);
+  }
+</script>
+```
+
 Next, to actually rasterize the data into pixels, the fragment shader evaluates everything on a per pixel basis, setting a single color. The GPU calls the shader function for each pixel it needs to render; the shader's job is to return the color to use for that pixel.
 
 ```glsl
 precision mediump float;
-uniform vec4 color;
+uniform vec4 vColor;
 
 void main() {
-  gl_FragColor = color;
+  gl_FragColor = vColor;
 }
+```
+
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  uniform vec4 vColor;
+
+  void main() {
+    gl_FragColor = vColor;
+  }
+</script>
 ```
 
 With those settings included, it's time to directly draw to the screen using clip space coordinates.
 
-```js
+```js live-sample___clip_space_ex
 const box = new WebGLBox();
 ```
 
 First draw a red box in the middle.
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 0.5, // x
   bottom: -0.5, // x
@@ -172,7 +445,7 @@ box.draw({
 
 Next, draw a green box up top and behind the red box.
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 0.9, // x
   bottom: 0, // x
@@ -186,7 +459,7 @@ box.draw({
 
 Finally, for demonstration that clipping is actually going on, this box doesn't get drawn because it's entirely outside of clip space. The depth is outside of the -1.0 to 1.0 range.
 
-```js
+```js live-sample___clip_space_ex
 box.draw({
   top: 1, // x
   bottom: -1, // x
@@ -200,9 +473,87 @@ box.draw({
 
 #### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/mff99yu5/)
+```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+<!-- The SVG overlay showing clip space -->
+<svg
+  id="clip-space-axis"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 500"
+  preserveAspectRatio="none"></svg>
 
-![The results of drawing to clip space using WebGL.](part1.png)
+<!-- Use a separate SVG for text to avoid scaling -->
+<svg id="clip-space-text" xmlns="http://www.w3.org/2000/svg"></svg>
+```
+
+```js hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex
+const axisOverlay = document.getElementById("clip-space-axis");
+const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "path");
+const yAxis = document.createElementNS("http://www.w3.org/2000/svg", "path");
+yAxis.setAttribute("fill", "none");
+yAxis.setAttribute("stroke", "black");
+xAxis.setAttribute("fill", "none");
+xAxis.setAttribute("stroke", "black");
+let yAxisPath = "M 249.5 0 L 249.5 500";
+let xAxisPath = "M 0 250.5 L 500 250.5";
+for (let i = -10; i <= 10; i++) {
+  if (i === 0) continue;
+  const length = i % 5 === 0 ? 24 : 12;
+  const loc = 250 + i * 25 - 0.5;
+  yAxisPath += ` M 249.5 ${loc} L ${249.5 + length} ${loc}`;
+  xAxisPath += ` M ${loc} 250.5 L ${loc} ${250.5 - length}`;
+}
+xAxis.setAttribute("d", xAxisPath);
+yAxis.setAttribute("d", yAxisPath);
+axisOverlay.appendChild(xAxis);
+axisOverlay.appendChild(yAxis);
+
+const textOverlay = document.getElementById("clip-space-text");
+for (const label of ["+X", "-X", "+Y", "-Y"]) {
+  const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  let x, y;
+  if (label === "+X") {
+    [x, y] = ["97.5%", "53%"];
+  } else if (label === "-X") {
+    [x, y] = ["2.5%", "53%"];
+  } else if (label === "+Y") {
+    [x, y] = ["47%", "2.5%"];
+  } else if (label === "-Y") {
+    [x, y] = ["47%", "97.5%"];
+  }
+  textEl.setAttribute("x", x);
+  textEl.setAttribute("y", y);
+  textEl.setAttribute("text-anchor", "middle");
+  textEl.setAttribute("font-family", "'Courier New'");
+  textEl.setAttribute("font-size", "16");
+  textEl.setAttribute("font-weight", "bold");
+  textEl.textContent = label;
+  textOverlay.appendChild(textEl);
+}
+for (let i = -1; i <= 1; i += 0.5) {
+  if (i === 0) continue;
+  const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  textEl.setAttribute("x", "58%");
+  textEl.setAttribute("y", `${50 - i * 48}%`);
+  textEl.setAttribute("text-anchor", "end");
+  textEl.setAttribute("font-family", "'Courier New'");
+  textEl.setAttribute("font-size", "11");
+  textEl.textContent = i.toFixed(1);
+  textOverlay.appendChild(textEl);
+  const textEl2 = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "text",
+  );
+  textEl2.setAttribute("x", `${50 + i * 50}%`);
+  textEl2.setAttribute("y", "45%");
+  textEl2.setAttribute("text-anchor", i > 0 ? "end" : "start");
+  textEl2.setAttribute("font-family", "'Courier New'");
+  textEl2.setAttribute("font-size", "11");
+  textEl2.textContent = i.toFixed(1);
+  textOverlay.appendChild(textEl2);
+}
+```
+
+{{EmbedLiveSample("clip_space_ex", "", 600)}}
 
 #### Exercise
 
@@ -212,7 +563,7 @@ A helpful exercise at this point is to move the boxes around the clip space by v
 
 The main line of the previous clip space vertex shader contained this code:
 
-```js
+```glsl
 gl_Position = vec4(position, 1.0);
 ```
 
@@ -257,39 +608,91 @@ The final benefit of using homogeneous coordinates is that they fit very nicely 
 
 The clipping of points and polygons from clip space happens before the homogeneous coordinates have been transformed back into Cartesian coordinates (by dividing by w). This final space is known as **normalized device coordinates** or NDC.
 
-To start playing with this idea the previous example can be modified to allow for the use of the `w` component.
+To start playing with this idea the previous example can be modified to allow for the use of the `w` component. Apart from modifying `data`, also remember to change `vertexAttribPointer()` to use 4 components (the second `size` parameter) instead of 3.
 
 ```js
-//Redefine the triangles to use the W component
+// Redefine the triangles to use the W component
+// prettier-ignore
 const data = new Float32Array([
-  //Triangle 1
-  settings.left,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.left,
-  settings.top,
-  settings.depth,
-  settings.w,
+  // Triangle 1
+  settings.left, settings.bottom, settings.depth, settings.w,
+  settings.right, settings.bottom, settings.depth, settings.w,
+  settings.left, settings.top, settings.depth, settings.w,
 
-  //Triangle 2
-  settings.left,
-  settings.top,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.bottom,
-  settings.depth,
-  settings.w,
-  settings.right,
-  settings.top,
-  settings.depth,
-  settings.w,
+  // Triangle 2
+  settings.left, settings.top, settings.depth, settings.w,
+  settings.right, settings.bottom, settings.depth, settings.w,
+  settings.right, settings.top, settings.depth, settings.w,
 ]);
+```
+
+```js hidden live-sample___homogenous_coordinates_ex
+class WebGLBox {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  positionLocation;
+  colorLocation;
+  constructor() {
+    const gl = this.gl;
+
+    // Setup a WebGL program
+    gl.useProgram(this.webglProgram);
+
+    // Save the attribute and uniform locations
+    this.positionLocation = gl.getAttribLocation(this.webglProgram, "position");
+    this.colorLocation = gl.getUniformLocation(this.webglProgram, "vColor");
+
+    // Tell WebGL to test the depth when drawing, so if a square is behind
+    // another square it won't be drawn
+    gl.enable(gl.DEPTH_TEST);
+  }
+  draw(settings) {
+    // Create some attribute data; these are the triangles that will end being
+    // drawn to the screen. There are two that form a square.
+
+    // prettier-ignore
+    const data = new Float32Array([
+      // Triangle 1
+      settings.left, settings.bottom, settings.depth, settings.w,
+      settings.right, settings.bottom, settings.depth, settings.w,
+      settings.left, settings.top, settings.depth, settings.w,
+
+      // Triangle 2
+      settings.left, settings.top, settings.depth, settings.w,
+      settings.right, settings.bottom, settings.depth, settings.w,
+      settings.right, settings.top, settings.depth, settings.w,
+    ]);
+
+    // Use WebGL to draw this onto the screen.
+
+    // Performance Note: Creating a new array buffer for every draw call is slow.
+    // This function is for illustration purposes only.
+
+    const gl = this.gl;
+
+    // Create a buffer and bind the data
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+
+    // Setup the pointer to our attribute data (the triangles)
+    gl.enableVertexAttribArray(this.positionLocation);
+    gl.vertexAttribPointer(this.positionLocation, 4, gl.FLOAT, false, 0, 0);
+
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniform4fv(this.colorLocation, settings.color);
+
+    // Draw the triangles to the screen
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+}
+
+const box = new WebGLBox();
 ```
 
 Then the vertex shader uses the 4 dimensional point passed in.
@@ -302,9 +705,19 @@ void main() {
 }
 ```
 
+```html hidden live-sample___homogenous_coordinates_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec4 position;
+
+  void main() {
+    gl_Position = position;
+  }
+</script>
+```
+
 First, we draw a red box in the middle, but set W to 0.7. As the coordinates get divided by 0.7 they will all be enlarged.
 
-```js
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 0.5, // y
   bottom: -0.5, // y
@@ -319,7 +732,7 @@ box.draw({
 
 Now, we draw a green box up top, but shrink it by setting the w component to 1.1
 
-```js
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 0.9, // y
   bottom: 0, // y
@@ -334,7 +747,7 @@ box.draw({
 
 This last box doesn't get drawn because it's outside of clip space. The depth is outside of the -1.0 to 1.0 range.
 
-```js
+```js live-sample___homogenous_coordinates_ex
 box.draw({
   top: 1, // y
   bottom: -1, // y
@@ -349,7 +762,7 @@ box.draw({
 
 ### The results
 
-![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
+{{EmbedLiveSample("homogenous_coordinates_ex", "", 600)}}
 
 ### Exercises
 
@@ -364,30 +777,26 @@ Finally a single model matrix is computed and set. This matrix represents the tr
 
 In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
 
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
+The following code sample defines a method on the `CubeDemo` object that will create the model matrix. The new function looks like this (the utility functions are introduced in the [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web) chapter):
 
 ```js
-CubeDemo.prototype.computeModelMatrix = function (now) {
-  //Scale down by 50%
-  const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
-
-  // Rotate around X according to time
-  const rotateX = MDN.rotateXMatrix(now * 0.0003);
-
-  // Rotate around Y according to time slightly faster
-  const rotateY = MDN.rotateYMatrix(now * 0.0005);
-
+function computeModelMatrix(now) {
+  // Scale down by 20%
+  const scaleMatrix = scale(0.2, 0.2, 0.2);
+  // Rotate a slight tilt
+  const rotateXMatrix = rotateX(now * 0.0003);
+  // Rotate according to time
+  const rotateYMatrix = rotateY(now * 0.0005);
   // Move slightly down
-  const position = MDN.translateMatrix(0, -0.1, 0);
-
+  const translateMatrix = translate(0, -0.1, 0);
   // Multiply together, make sure and read them in opposite order
-  this.transforms.model = MDN.multiplyArrayOfMatrices([
-    position, // step 4
-    rotateY, // step 3
-    rotateX, // step 2
-    scale, // step 1
+  this.transforms.model = multiplyArrayOfMatrices([
+    translateMatrix, // step 4
+    rotateYMatrix, // step 3
+    rotateXMatrix, // step 2
+    scaleMatrix, // step 1
   ]);
-};
+}
 ```
 
 In order to use this in the shader it must be set to a uniform location. The locations for the uniforms are saved in the `locations` object shown below:
@@ -406,6 +815,93 @@ gl.uniformMatrix4fv(
 );
 ```
 
+```js hidden live-sample___model_transform_ex live-sample___divide_by_w_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // All of the matrix transforms
+  locations = {}; // All of the shader locations
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // Save the attribute and uniform locations
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // Tell WebGL to test the depth when drawing
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // Scale down by 20%
+    const scaleMatrix = scale(0.2, 0.2, 0.2);
+    // Rotate a slight tilt
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // Rotate according to time
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // Move slightly down
+    const translateMatrix = translate(0, -0.1, 0);
+    // Multiply together, make sure and read them in opposite order
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // step 4
+      rotateYMatrix, // step 3
+      rotateXMatrix, // step 2
+      scaleMatrix, // step 1
+    ]);
+
+    // Performance caveat: in real production code it's best not to create
+    // new arrays and objects in a loop. This example chooses code clarity
+    // over performance.
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // Compute our matrices
+    this.computeModelMatrix(now);
+    // Update the data going to the GPU
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+
+    // Set the positions attribute
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // Set the colors attribute
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // Perform the actual draw
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // Run the draw as a loop
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
+```
+
 In the shader, each position vertex is first transformed into a homogeneous coordinate (a `vec4` object), and then multiplied against the model matrix.
 
 ```glsl
@@ -413,13 +909,46 @@ gl_Position = model * vec4(position, 1.0);
 ```
 
 > [!NOTE]
-> In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple \* operator.
+> In JavaScript, matrix multiplication requires a custom function, while in the shader it is built into the language with the simple `*` operator.
+
+The complete orchestration code is hidden. Again, if you are interested, click "Play" on a code block in this section to check it out.
+
+```html hidden live-sample___model_transform_ex
+<!-- The vertex shader operates on individual vertices in our model data by setting gl_Position -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // Each point has a position and color
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // The transformation matrix
+  uniform mat4 model;
+
+  // Pass the color attribute down to the fragment shader
+  varying vec4 vColor;
+
+  void main() {
+    // Pass the color down to the fragment shader
+    vColor = color;
+    gl_Position = model * vec4(position, 1.0);
+  }
+</script>
+```
+
+```html hidden live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
+<!-- The fragment shader determines the color of the final pixel by setting gl_FragColor -->
+<script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  varying vec4 vColor;
+
+  void main() {
+    gl_FragColor = vColor;
+  }
+</script>
+```
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/5jofzgsh/)
-
-![Using a model matrix](part3.png)
+{{EmbedLiveSample("model_transform_ex", "", 600)}}
 
 At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.
 
@@ -451,13 +980,47 @@ float w = (1.0 + transformedPosition.z) * scaleFactor;
 gl_Position = vec4(transformedPosition.xyz, w);
 ```
 
+```html hidden live-sample___divide_by_w_ex
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // Each point has a position and color
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // The projection matrix
+  uniform mat4 model;
+
+  // Pass the color attribute down to the fragment shader
+  varying vec4 vColor;
+
+  void main() {
+    // Pass the color down to the fragment shader
+    vColor = color;
+
+    // First transform the point
+    vec4 transformedPosition = model * vec4(position, 1.0);
+
+    // How much affect does the perspective have?
+    float scaleFactor = 0.5;
+
+    // Set w by taking the Z value which is typically ranged -1 to 1, then scale
+    // it to be from 0 to some number, in this case 0-1.
+    float w = (1.0 + transformedPosition.z) * scaleFactor;
+
+    // Save the new gl_Position with the custom w component
+    gl_Position = vec4(transformedPosition.xyz, w);
+  }
+</script>
+```
+
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/vk9r8h2c/)
+{{EmbedLiveSample("divide_by_w_ex", "", 600)}}
 
-![Filling the W component and creating some projection.](part4.png)
+See that little triangle on the corner facing the camera? Here's a screenshot of when it shows up:
 
-See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
+![A small triangle appears in the top right corner](part4.png)
+
+That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
 ### Exercise
 
@@ -470,19 +1033,31 @@ In the next section we'll take this step of copying Z into the w slot and turn i
 The last step of filling in the w component can actually be accomplished with a simple matrix. Start with the identity matrix:
 
 ```js
-const identity = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
+// prettier-ignore
+const identity = [
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 0,
+  0, 0, 0, 1,
+];
 
-MDN.multiplyPoint(identity, [2, 3, 4, 1]);
-//> [2, 3, 4, 1]
+multiplyPoint(identity, [2, 3, 4, 1]);
+// [2, 3, 4, 1]
 ```
 
 Then move the last column's 1 up one space.
 
 ```js
-const copyZ = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
+// prettier-ignore
+const copyZ = [
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, 1,
+  0, 0, 0, 0,
+];
 
-MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
-//> [2, 3, 4, 4]
+multiplyPoint(copyZ, [2, 3, 4, 1]);
+// [2, 3, 4, 4]
 ```
 
 However in the last example we performed `(z + 1) * scaleFactor`:
@@ -490,48 +1065,37 @@ However in the last example we performed `(z + 1) * scaleFactor`:
 ```js
 const scaleFactor = 0.5;
 
+// prettier-ignore
 const simpleProjection = [
-  1,
-  0,
-  0,
-  0,
-  0,
-  1,
-  0,
-  0,
-  0,
-  0,
-  1,
-  scaleFactor,
-  0,
-  0,
-  0,
-  scaleFactor,
+  1, 0, 0, 0,
+  0, 1, 0, 0,
+  0, 0, 1, scaleFactor,
+  0, 0, 0, scaleFactor,
 ];
 
-MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
-//> [2, 3, 4, 2.5]
+multiplyPoint(simpleProjection, [2, 3, 4, 1]);
+// [2, 3, 4, 2.5]
 ```
 
 Breaking it out a little further we can see how this works:
 
 ```js
-let x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
-let y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
-let z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
-let w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
+const x = 2 * 1 + 3 * 0 + 4 * 0 + 1 * 0;
+const y = 2 * 0 + 3 * 1 + 4 * 0 + 1 * 0;
+const z = 2 * 0 + 3 * 0 + 4 * 1 + 1 * 0;
+const w = 2 * 0 + 3 * 0 + 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 The last line could be simplified to:
 
 ```js
-w = 4 * scaleFactor + 1 * scaleFactor;
+const w = 4 * scaleFactor + 1 * scaleFactor;
 ```
 
 Then factoring out the scaleFactor, we get this:
 
 ```js
-w = (4 + 1) * scaleFactor;
+const w = (4 + 1) * scaleFactor;
 ```
 
 Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the previous example.
@@ -539,26 +1103,124 @@ Which is exactly the same as the `(z + 1) * scaleFactor` that we used in the pre
 In the box demo, an additional `computeSimpleProjectionMatrix()` method is added. This is called in the `draw()` method and has the scale factor passed to it. The result should be identical to the last example:
 
 ```js
-CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
+function computeSimpleProjectionMatrix(scaleFactor) {
+  // prettier-ignore
   this.transforms.projection = [
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    scaleFactor,
-    0,
-    0,
-    0,
-    scaleFactor,
+    1, 0, 0, 0,
+    0, 1, 0, 0,
+    0, 0, 1, scaleFactor,
+    0, 0, 0, scaleFactor,
   ];
-};
+}
+```
+
+```js hidden live-sample___simple_projection_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // All of the matrix transforms
+  locations = {}; // All of the shader locations
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // Save the attribute and uniform locations
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // Tell WebGL to test the depth when drawing
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // Scale down by 20%
+    const scaleMatrix = scale(0.2, 0.2, 0.2);
+    // Rotate a slight tilt
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // Rotate according to time
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // Move slightly down
+    const translateMatrix = translate(0, -0.1, 0);
+    // Multiply together, make sure and read them in opposite order
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // step 4
+      rotateYMatrix, // step 3
+      rotateXMatrix, // step 2
+      scaleMatrix, // step 1
+    ]);
+
+    // Performance caveat: in real production code it's best not to create
+    // new arrays and objects in a loop. This example chooses code clarity
+    // over performance.
+  }
+
+  computeSimpleProjectionMatrix(scaleFactor) {
+    // prettier-ignore
+    this.transforms.projection = [
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, scaleFactor, // Note the extra scale factor here
+      0, 0, 0, scaleFactor,
+    ];
+
+    // This matrix copies the point and sets the W component to 1 + (z * scaleFactor)
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // Compute our matrices
+    this.computeModelMatrix(now);
+    this.computeSimpleProjectionMatrix(0.5);
+    // Update the data going to the GPU
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+
+    // Set the positions attribute
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // Set the colors attribute
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // Perform the actual draw
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // Run the draw as a loop
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
 ```
 
 Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#the_model_view_and_projection_matrices)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
@@ -568,11 +1230,35 @@ Although the result is identical, the important step here is in the vertex shade
 gl_Position = projection * model * vec4(position, 1.0);
 ```
 
+```html hidden live-sample___simple_projection_ex live-sample___projection_matrix_ex
+<!-- The vertex shader operates on individual vertices in our model data by setting gl_Position -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // Each point has a position and color
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // The transformation matrices
+  uniform mat4 model;
+  uniform mat4 projection;
+
+  // Pass the color attribute down to the fragment shader
+  varying vec4 vColor;
+
+  void main() {
+    // Pass the color down to the fragment shader
+    vColor = color;
+
+    // Read the multiplication in reverse order, the original point is moved
+    // into clip space, and then projected into a perspective view by filling
+    // in the W component
+    gl_Position = projection * model * vec4(position, 1.0);
+  }
+</script>
+```
+
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/zwyLLcbw/)
-
-![A simple projection matrix](part5.png)
+{{EmbedLiveSample("simple_projection_ex", "", 600)}}
 
 ## The viewing frustum
 
@@ -610,37 +1296,21 @@ One important thing to note about the perspective projection matrix used below i
 
 The reason to flip the z axis is that the clip space coordinate system is a left-handed coordinate system (wherein the z-axis points away from the viewer and into the screen), while the convention in mathematics, physics and 3D modeling, as well as for the view/eye coordinate system in OpenGL, is to use a right-handed coordinate system (z-axis points out of the screen towards the viewer). More on that in the relevant Wikipedia articles: [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness), [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule).
 
-Let's take a look at a `perspectiveMatrix()` function, which computes the perspective projection matrix.
+Let's take a look at a `perspective()` function, which computes the perspective projection matrix.
 
-```js
-MDN.perspectiveMatrix = function (
-  fieldOfViewInRadians,
-  aspectRatio,
-  near,
-  far,
-) {
+```js live-sample___projection_matrix_ex live-sample___view_matrix_ex
+function perspective(fieldOfViewInRadians, aspectRatio, near, far) {
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
 
+  // prettier-ignore
   return [
-    f / aspectRatio,
-    0,
-    0,
-    0,
-    0,
-    f,
-    0,
-    0,
-    0,
-    0,
-    (near + far) * rangeInv,
-    -1,
-    0,
-    0,
-    near * far * rangeInv * 2,
-    0,
+    f / aspectRatio, 0, 0, 0,
+    0, f, 0, 0,
+    0, 0, (near + far) * rangeInv, -1,
+    0, 0, near * far * rangeInv * 2, 0,
   ];
-};
+}
 ```
 
 The four parameters into this function are:
@@ -657,24 +1327,135 @@ The four parameters into this function are:
 In the latest version of the box demo, the `computeSimpleProjectionMatrix()` method has been replaced with the `computePerspectiveMatrix()` method.
 
 ```js
-CubeDemo.prototype.computePerspectiveMatrix = function () {
+function computePerspectiveMatrix() {
   const fieldOfViewInRadians = Math.PI * 0.5;
   const aspectRatio = window.innerWidth / window.innerHeight;
   const nearClippingPlaneDistance = 1;
   const farClippingPlaneDistance = 50;
 
-  this.transforms.projection = MDN.perspectiveMatrix(
+  this.transforms.projection = perspective(
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
     farClippingPlaneDistance,
   );
-};
+}
+```
+
+```js hidden live-sample___projection_matrix_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // All of the matrix transforms
+  locations = {}; // All of the shader locations
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // Save the attribute and uniform locations
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // Tell WebGL to test the depth when drawing
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // Scale up
+    const scaleMatrix = scale(5, 5, 5);
+    // Rotate a slight tilt
+    const rotateXMatrix = rotateX(now * 0.0003);
+    // Rotate according to time
+    const rotateYMatrix = rotateY(now * 0.0005);
+    // Move slightly down
+    const translateMatrix = translate(0, 0, -20);
+    // Multiply together, make sure and read them in opposite order
+    this.transforms.model = multiplyArrayOfMatrices([
+      translateMatrix, // step 4
+      rotateYMatrix, // step 3
+      rotateXMatrix, // step 2
+      scaleMatrix, // step 1
+    ]);
+
+    // Performance caveat: in real production code it's best not to create
+    // new arrays and objects in a loop. This example chooses code clarity
+    // over performance.
+  }
+
+  computePerspectiveMatrix(scaleFactor) {
+    const fieldOfViewInRadians = Math.PI * 0.5;
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const nearClippingPlaneDistance = 1;
+    const farClippingPlaneDistance = 50;
+
+    this.transforms.projection = perspective(
+      fieldOfViewInRadians,
+      aspectRatio,
+      nearClippingPlaneDistance,
+      farClippingPlaneDistance,
+    );
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // Compute our matrices
+    this.computeModelMatrix(now);
+    this.computePerspectiveMatrix(0.5);
+    // Update the data going to the GPU
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+
+    // Set the positions attribute
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // Set the colors attribute
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // Perform the actual draw
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // Run the draw as a loop
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
 ```
 
 The shader code is identical to the previous example:
 
-```js
+```glsl
 gl_Position = projection * model * vec4(position, 1.0);
 ```
 
@@ -682,9 +1463,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/Lzxw7e1q/)
-
-![A true perspective matrix](part6.png)
+{{EmbedLiveSample("projection_matrix_ex", "", 600)}}
 
 ### Exercises
 
@@ -714,23 +1493,147 @@ Unlike the model matrix, which directly transforms the model vertices, the view 
 The following `computeViewMatrix()` method animates the view matrix by moving it in and out, and left and right.
 
 ```js
-CubeDemo.prototype.computeViewMatrix = function (now) {
+function computeViewMatrix(now) {
   const moveInAndOut = 20 * Math.sin(now * 0.002);
   const moveLeftAndRight = 15 * Math.sin(now * 0.0017);
 
   // Move the camera around
-  const position = MDN.translateMatrix(moveLeftAndRight, 0, 50 + moveInAndOut);
+  const position = translate(moveLeftAndRight, 0, 50 + moveInAndOut);
 
   // Multiply together, make sure and read them in opposite order
-  const matrix = MDN.multiplyArrayOfMatrices([
+  this.transforms.view = multiplyArrayOfMatrices([
     // Exercise: rotate the camera view
     position,
   ]);
+}
+```
 
-  // Inverse the operation for camera movements, because we are actually
-  // moving the geometry in the scene, not the camera itself.
-  this.transforms.view = MDN.invertMatrix(matrix);
-};
+```js hidden live-sample___view_matrix_ex
+class CubeDemo {
+  canvas = document.getElementById("canvas");
+  gl = this.canvas.getContext("webgl");
+  webglProgram = createWebGLProgramFromIds(
+    this.gl,
+    "vertex-shader",
+    "fragment-shader",
+  );
+  transforms = {}; // All of the matrix transforms
+  locations = {}; // All of the shader locations
+  buffers;
+
+  constructor() {
+    const gl = this.gl;
+    gl.useProgram(this.webglProgram);
+    this.buffers = createBuffersForCube(gl, createCubeData());
+
+    // Save the attribute and uniform locations
+    this.locations.model = gl.getUniformLocation(this.webglProgram, "model");
+    this.locations.view = gl.getUniformLocation(this.webglProgram, "view");
+    this.locations.projection = gl.getUniformLocation(
+      this.webglProgram,
+      "projection",
+    );
+    this.locations.position = gl.getAttribLocation(
+      this.webglProgram,
+      "position",
+    );
+    this.locations.color = gl.getAttribLocation(this.webglProgram, "color");
+
+    // Tell WebGL to test the depth when drawing
+    gl.enable(gl.DEPTH_TEST);
+  }
+
+  computeModelMatrix(now) {
+    // Scale up
+    const scaleMatrix = scale(5, 5, 5);
+    // Fixed rotation
+    const rotateXMatrix = rotateX(Math.PI * 0.2);
+    // Fixed rotation
+    const rotateYMatrix = rotateY(Math.PI * 0.2);
+    // Multiply together, make sure and read them in opposite order
+    this.transforms.model = multiplyArrayOfMatrices([
+      rotateYMatrix, // step 3
+      rotateXMatrix, // step 2
+      scaleMatrix, // step 1
+    ]);
+
+    // Performance caveat: in real production code it's best not to create
+    // new arrays and objects in a loop. This example chooses code clarity
+    // over performance.
+  }
+
+  computeViewMatrix(now) {
+    const zoomInAndOut = 5 * Math.sin(now * 0.002);
+
+    // Move slightly down
+    const position = translate(0, 0, -20 + zoomInAndOut);
+
+    // Multiply together, make sure and read them in opposite order
+    this.transforms.view = multiplyArrayOfMatrices([
+      // Exercise: rotate the camera view
+      position,
+    ]);
+  }
+
+  computePerspectiveMatrix(scaleFactor) {
+    const fieldOfViewInRadians = Math.PI * 0.5;
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const nearClippingPlaneDistance = 1;
+    const farClippingPlaneDistance = 50;
+
+    this.transforms.projection = perspective(
+      fieldOfViewInRadians,
+      aspectRatio,
+      nearClippingPlaneDistance,
+      farClippingPlaneDistance,
+    );
+  }
+
+  draw() {
+    const gl = this.gl;
+    const now = Date.now();
+    // Compute our matrices
+    this.computeModelMatrix(now);
+    this.computeViewMatrix(now);
+    this.computePerspectiveMatrix(0.5);
+    // Update the data going to the GPU
+    // Setup the color uniform that will be shared across all triangles
+    gl.uniformMatrix4fv(
+      this.locations.model,
+      false,
+      new Float32Array(this.transforms.model),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.projection,
+      false,
+      new Float32Array(this.transforms.projection),
+    );
+    gl.uniformMatrix4fv(
+      this.locations.view,
+      false,
+      new Float32Array(this.transforms.view),
+    );
+
+    // Set the positions attribute
+    gl.enableVertexAttribArray(this.locations.position);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.positions);
+    gl.vertexAttribPointer(this.locations.position, 3, gl.FLOAT, false, 0, 0);
+
+    // Set the colors attribute
+    gl.enableVertexAttribArray(this.locations.color);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.buffers.colors);
+    gl.vertexAttribPointer(this.locations.color, 4, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffers.elements);
+    // Perform the actual draw
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+    // Run the draw as a loop
+    requestAnimationFrame(() => this.draw());
+  }
+}
+
+const cube = new CubeDemo();
+cube.draw();
 ```
 
 The shader now uses three matrices.
@@ -739,13 +1642,39 @@ The shader now uses three matrices.
 gl_Position = projection * view * model * vec4(position, 1.0);
 ```
 
+```html hidden live-sample___view_matrix_ex
+<!-- The vertex shader operates on individual vertices in our model data by setting gl_Position -->
+<script id="vertex-shader" type="x-shader/x-vertex">
+  // Each point has a position and color
+  attribute vec3 position;
+  attribute vec4 color;
+
+  // The transformation matrices
+  uniform mat4 model;
+  uniform mat4 view;
+  uniform mat4 projection;
+
+  // Pass the color attribute down to the fragment shader
+  varying vec4 vColor;
+
+  void main() {
+    // Pass the color down to the fragment shader
+    vColor = color;
+
+    // Read the multiplication in reverse order, the point is taken from
+    // the original model space and moved into world space. It is then
+    // projected into clip space as a homogeneous point. Generally the
+    // W value will be something other than 1 at the end of it.
+    gl_Position = projection * view * model * vec4(position, 1.0);
+  }
+</script>
+```
+
 After this step, the GPU pipeline will clip the out of range vertices, and send the model down to the fragment shader for rasterization.
 
 ### The results
 
-[View on JSFiddle](https://jsfiddle.net/tatumcreative/86fd797g/)
-
-![The view matrix](part7.png)
+{{EmbedLiveSample("view_matrix_ex", "", 600)}}
 
 ### Relating the coordinate systems
 

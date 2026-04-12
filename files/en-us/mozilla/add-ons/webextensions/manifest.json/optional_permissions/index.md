@@ -3,9 +3,8 @@ title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_permissions
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -39,7 +38,8 @@ The [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/perm
 
 For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime).
 
-Starting with Firefox 84, users can manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions can check for the permissions granted by the user with {{webextapiref("permissions.getAll()")}} and listen for {{webextapiref("permissions.onAdded")}} and {{webextapiref("permissions.onRemoved")}} to know when a user grants or revokes permissions.
+> [!NOTE]
+> Users can [manage optional permissions from the Firefox Add-ons Manager](https://support.mozilla.org/en-US/kb/manage-optional-permissions-extensions). Extensions that use optional permissions can check for the permissions granted by the user with {{webextapiref("permissions.getAll()")}} and listen for {{webextapiref("permissions.onAdded")}} and {{webextapiref("permissions.onRemoved")}} to know when a user grants or revokes permissions.
 
 The key can contain host permissions and API permissions.
 
@@ -86,8 +86,10 @@ The optional API permissions are:
 - `search`
 - `sessions`
 - `tabHide`
+- `tabGroups`
 - `tabs`
 - `topSites`
+- `userScripts` ([optional-only](#optional-only_permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
@@ -101,6 +103,7 @@ These optional permissions are granted silently, without a user prompt:
 - `activeTab`
 - `cookies`
 - `idle`
+- `tabGroups`
 - `webRequest`
 - `webRequestBlocking`
 - `webRequestFilterResponse`
@@ -108,10 +111,11 @@ These optional permissions are granted silently, without a user prompt:
 
 ### Optional-only permissions
 
-Optional permissions are generally available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key so they can be requested at install time. However, some browsers support the concept of optional-only permissions, permissions that can only be requested at runtime using the {{webextapiref("permissions.request()")}} API. In addition, optional-only permissions must be requested individually and alone through the {{webextapiref("permissions.request()")}} API.
+Optional permissions are generally available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key, so they can be requested at install time. However, some browsers support the concept of optional-only permissions, permissions that can only be requested at runtime. For example, in Firefox, optional-only permissions can be granted by the user from the [extension's options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) or using {{webextapiref("permissions.request()")}}. Optional-only permissions must be requested individually and alone through the {{webextapiref("permissions.request()")}} API.
 
-> [!NOTE]
-> No optional-only permissions were generally available at the time of writing, December 2024.
+The optional-only API permissions are:
+
+- `userScripts` (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 
 ## Examples
 

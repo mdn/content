@@ -1,16 +1,28 @@
 ---
 title: Set.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
 for each value in this set, in insertion order.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## Syntax
 

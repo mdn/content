@@ -8,7 +8,7 @@ spec-urls:
   - https://w3c.github.io/webauthn/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 Secure Payment Confirmation (SPC), available through the Payment Request API, provides a mechanism for strong customer authentication during checkout, thereby protecting against online payment fraud.
 
@@ -94,7 +94,7 @@ navigator.credentials
 SPC allows a credential to be created in a cross-origin iframe (e.g., if `merchant.com` embeds an iframe from `bank.com`).
 
 In this flow, as part of a transaction, the Relying Party (e.g., a bank) authenticates the account holder through some mechanism other than SPC (e.g., by using a one-time passcode or some other mechanism). The Relying Party then offers the user the option of registering an SPC credential to streamline future transactions. The user registers an SPC credential with the Relying Party.
-In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the [`payment`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/payment) permission policy set.
+In order for these steps to happen in the merchant context (that is, without a redirect), the cross-origin iframe must have the [`payment`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/payment) permission policy set.
 
 For example:
 
@@ -157,6 +157,19 @@ try {
   // send response.details to the issuing bank for verification
 } catch (err) {
   // SPC cannot be used; merchant should fallback to traditional flows
+}
+```
+
+Before starting a payment flow, you can determine whether SPC is available by calling the {{domxref('PaymentRequest.securePaymentConfirmationAvailability_static', 'PaymentRequest.securePaymentConfirmationAvailability()')}} static method. For example:
+
+```js
+async function spcSupport() {
+  const support = await PaymentRequest.securePaymentConfirmationAvailability();
+  if (support === "available") {
+    // Commence SPC payment flow
+  } else {
+    // Fallback to traditional flows
+  }
 }
 ```
 

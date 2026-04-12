@@ -8,15 +8,13 @@ browser-compat: api.CSSImportRule.media
 
 {{APIRef("CSSOM")}}
 
-The read-only **`media`** property of the
-{{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
-containing the value of the `media` attribute of the associated stylesheet.
+The read-only **`media`** property of the {{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object representing the media query list of the {{cssxref("@import")}} rule.
 
 ## Value
 
-Returns a {{domxref("MediaList")}} object.
+A {{domxref("MediaList")}} object.
 
-The value of `media` can be set by passing a string containing the `media` attribute; for example `"print"`.
+Although the `media` property itself is read-only in the sense that you can't replace the `MediaList` object, you can still assign to the `media` property directly, which is equivalent to assigning to its {{domxref("MediaList/mediaText", "mediaText")}} property. You can also modify the `MediaList` object using the {{domxref("MediaList/appendMedium", "appendMedium()")}} and {{domxref("MediaList/deleteMedium", "deleteMedium()")}} methods.
 
 ## Examples
 
@@ -28,12 +26,12 @@ first item in the list of CSS rules will be a `CSSImportRule`. The
 the `mediaText` property with a value of `screen`.
 
 ```css
-@import url("style.css") screen;
+@import "style.css" screen;
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); //returns a MediaList
+const myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].media); // A MediaList
 ```
 
 ### Setting the media property
@@ -41,7 +39,7 @@ console.log(myRules[0].media); //returns a MediaList
 To change the `media` attribute of the associated stylesheet, set the value of `media` to a string containing the new value.
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
+const myRules = document.styleSheets[0].cssRules;
 myRules[0].media = "print";
 ```
 

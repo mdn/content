@@ -43,14 +43,10 @@ navigator.getUserMedia({ video: true }, (stream) => {
   videoStream = stream;
   pc.addStream(stream);
 });
-document.getElementById("closeButton").addEventListener(
-  "click",
-  (event) => {
-    pc.removeStream(videoStream);
-    pc.close();
-  },
-  false,
-);
+document.getElementById("closeButton").addEventListener("click", (event) => {
+  pc.removeStream(videoStream);
+  pc.close();
+});
 ```
 
 ## Browser compatibility

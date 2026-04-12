@@ -13,7 +13,7 @@ The `setStdDeviation()` method of the {{domxref("SVGFEGaussianBlurElement")}} in
 ## Syntax
 
 ```js-nolint
-SVGFEGaussianBlurElement.setStdDeviation(x, y)
+setStdDeviation(x, y)
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ None ({{jsxref('undefined')}}).
     y="50"
     width="100"
     height="100"
-    style="fill:hotpink;"
+    fill="hotpink"
     filter="url(#gaussian-blur-filter)" />
 </svg>
 

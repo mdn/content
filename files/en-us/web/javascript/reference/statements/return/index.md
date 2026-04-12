@@ -3,13 +3,27 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 page-type: javascript-statement
 browser-compat: javascript.statements.return
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and specifies a value to be returned to the function caller.
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: return statement")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -93,7 +107,7 @@ counter();
 
 ### Returning a function
 
-See also the article about [Closures](/en-US/docs/Web/JavaScript/Closures).
+See also the article about [Closures](/en-US/docs/Web/JavaScript/Guide/Closures).
 
 ```js
 function magic() {
@@ -117,4 +131,4 @@ answer(1337); // 56154
 ## See also
 
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)

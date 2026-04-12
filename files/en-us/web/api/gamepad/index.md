@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Gamepad
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`Gamepad`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
 
@@ -17,7 +17,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 ## Instance properties
 
 - {{domxref("Gamepad.axes")}} {{ReadOnlyInline}}
-  - : An array representing the controls with axes present on the device (e.g. analog thumb sticks).
+  - : An array representing the controls with axes present on the device (e.g., analog thumb sticks).
 - {{domxref("Gamepad.buttons")}} {{ReadOnlyInline}}
   - : An array of {{domxref("gamepadButton")}} objects representing the buttons present on the device.
 - {{domxref("Gamepad.connected")}} {{ReadOnlyInline}}
@@ -37,7 +37,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 - {{domxref("Gamepad.mapping")}} {{ReadOnlyInline}}
   - : A string indicating whether the browser has remapped the controls on the device to a known layout.
 - {{domxref("Gamepad.pose")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
+  - : A {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g., its position and orientation in 3D space).
 - {{domxref("Gamepad.timestamp")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.
 

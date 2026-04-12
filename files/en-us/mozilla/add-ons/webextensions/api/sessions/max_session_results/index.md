@@ -3,9 +3,8 @@ title: sessions.MAX_SESSION_RESULTS
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
 page-type: webextension-api-property
 browser-compat: webextensions.api.sessions.MAX_SESSION_RESULTS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This value represents the maximum number of sessions that will be returned by a call to {{WebExtAPIRef("sessions.getRecentlyClosed()")}}. It is read-only for WebExtension code, and is set to 25.
 

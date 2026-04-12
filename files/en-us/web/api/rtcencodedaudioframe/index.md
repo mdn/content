@@ -12,6 +12,11 @@ The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_AP
 The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.
 The `data` property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.
 
+## Constructor
+
+- {{domxref("RTCEncodedAudioFrame.RTCEncodedAudioFrame()","RTCEncodedAudioFrame()")}}
+  - : Copy constructor. Creates a new and independent `RTCEncodedAudioFrame` object from a frame, optionally overwriting some of the copied metadata.
+
 ## Instance properties
 
 - {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
@@ -26,6 +31,8 @@ The `data` property gives access to the encoded frame data as a buffer, which mi
 
 ## Examples
 
+### Transforming an encoded audio frame
+
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 
 If the transformer is inserted into an audio stream, the `transform()` method is called with a `RTCEncodedAudioFrame` whenever a new frame is enqueued on `event.transformer.readable`.
@@ -33,7 +40,7 @@ The `transform()` method shows how this might be read, modified using a fictiona
 
 ```js
 addEventListener("rtctransform", (event) => {
-  const async transform = new TransformStream({
+  const transform = new TransformStream({
     async transform(encodedFrame, controller) {
       // Reconstruct the original frame.
       const view = new DataView(encodedFrame.data);
@@ -42,7 +49,7 @@ addEventListener("rtctransform", (event) => {
       const newData = new ArrayBuffer(encodedFrame.data.byteLength);
       const newView = new DataView(newData);
 
-      //Encrypt frame bytes using the encryptFunction() method (not shown)
+      // Encrypt frame bytes using the encryptFunction() method (not shown)
       for (let i = 0; i < encodedFrame.data.byteLength; ++i) {
         const encryptedByte = encryptFunction(~view.getInt8(i));
         newView.setInt8(i, encryptedByte);

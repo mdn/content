@@ -32,16 +32,23 @@ The HTML content for this example is primarily a checkbox, shaped as an actual b
 
 ```html
 <div class="controls">
-    <input type="checkbox" id="playButton">
-    <label for="playButton">Activate: </label>
-    <label for="volumeControl">Volume: </label>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-           value="0.8" name="volume" id="volumeControl">
-  </div>
+  <input type="checkbox" id="playButton" />
+  <label for="playButton">Activate: </label>
+  <label for="volumeControl">Volume: </label>
+  <input
+    type="range"
+    min="0.0"
+    max="1.0"
+    step="0.01"
+    value="0.8"
+    name="volume"
+    id="volumeControl" />
 </div>
 
-<p>Toggle the checkbox above to start and stop the tones, and use the volume control to
-change the volume of the notes E and G in the chord.</p>
+<p>
+  Toggle the checkbox above to start and stop the tones, and use the volume
+  control to change the volume of the notes E and G in the chord.
+</p>
 ```
 
 ```css hidden
@@ -56,7 +63,7 @@ change the volume of the notes E and G in the chord.</p>
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after {
+#playButton:not(:checked) + label::after {
   content: "▶️";
 }
 
@@ -145,7 +152,7 @@ function setup() {
   gainNode3.connect(context.destination);
 
   // All is set up. We can hook the volume control.
-  volumeControl.addEventListener("input", changeVolume, false);
+  volumeControl.addEventListener("input", changeVolume);
 }
 ```
 
@@ -162,7 +169,7 @@ Then we assign a handler for the volume slider's {{domxref("Element/input_event"
 Right after declaring the `setup()` function, we add a handler to the play checkbox's {{domxref("HTMLElement/change_event", "change")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and the stage is set. Let's see how the action plays out.
 
 ```js
-playButton.addEventListener("change", togglePlay, false);
+playButton.addEventListener("change", togglePlay);
 ```
 
 #### Toggling the oscillators on and off
@@ -183,7 +190,7 @@ function togglePlay(event) {
 }
 ```
 
-If the `playButton` widget is checked, we're already playing the oscillators, and we call `stopOscillators()` to shut down the oscillators. See [Stopping the oscillators](#stopping_the_oscillators) below for that code.
+If the `playButton` widget is unchecked, we're already playing the oscillators, and we call `stopOscillators()` to shut down the oscillators. See [Stopping the oscillators](#stopping_the_oscillators) below for that code.
 
 If the `playButton` widget is checked, indicating that we're currently paused, we call `startOscillators()` to start the oscillators playing their tones. Below, we describe that code under [Starting the oscillators](#starting_the_oscillators).
 
@@ -209,19 +216,19 @@ When the user clicks the play/pause toggle button while the oscillators aren't p
 function startOscillators() {
   oscNode1 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 261.625565300598634, // middle C$
+    frequency: 261.6255653005986, // middle C
   });
   oscNode1.connect(gainNode1);
 
   oscNode2 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 329.627556912869929, // E
+    frequency: 329.6275569128699, // E
   });
   oscNode2.connect(gainNode2);
 
   oscNode3 = new OscillatorNode(context, {
     type: "sine",
-    frequency: 391.995435981749294, // G
+    frequency: 391.99543598174927, // G
   });
   oscNode3.connect(gainNode3);
 

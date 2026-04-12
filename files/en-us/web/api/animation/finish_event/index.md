@@ -25,6 +25,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("finish", (event) => { })
+
 onfinish = (event) => { }
 ```
 

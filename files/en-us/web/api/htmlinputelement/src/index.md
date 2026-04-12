@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.src
 
 {{APIRef("HTML DOM")}}
 
-The **`src`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the source of an image to display as the graphical submit button. It reflects the {{htmlelement("input")}} element's [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute.
+The **`src`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the source of an image to display as the graphical submit button. It reflects the {{htmlelement("input")}} element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/input#src) attribute.
 
-The `src` property is valid for the [`image`](/en-US/docs/Web/HTML/Element/input/image) type only.
+The `src` property is valid for the [`image`](/en-US/docs/Web/HTML/Reference/Elements/input/image) type only.
 
 ## Value
 

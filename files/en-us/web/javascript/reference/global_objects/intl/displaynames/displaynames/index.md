@@ -1,15 +1,28 @@
 ---
 title: Intl.DisplayNames() constructor
+short-title: Intl.DisplayNames()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames() constructor")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## Syntax
 
@@ -17,12 +30,13 @@ The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}
 new Intl.DisplayNames(locales, options)
 ```
 
-> **Note:** `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options`
   - : An object containing the following properties, in the order they are retrieved:
     - `localeMatcher` {{optional_inline}}

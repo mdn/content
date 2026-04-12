@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.formEnctype
 
 {{APIRef("HTML DOM")}}
 
-The **`formEnctype`** property of the {{domxref("HTMLButtonElement")}} interface is the {{Glossary("MIME_type", "MIME type")}} of the content sent to the server when the form is submitted. It reflects the value of the `<button>`'s [`formenctype`](/en-US/docs/Web/HTML/Element/button#formenctype) attribute.
+The **`formEnctype`** property of the {{domxref("HTMLButtonElement")}} interface is the {{Glossary("MIME_type", "MIME type")}} of the content sent to the server when the form is submitted. It reflects the value of the `<button>`'s [`formenctype`](/en-US/docs/Web/HTML/Reference/Elements/button#formenctype) attribute.
 
 The value overrides the {{domxref("HTMLFormElement.enctype", "enctype")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the submit button. This property can be retrieved or set. If not set, the value is the empty string (`""`).
 

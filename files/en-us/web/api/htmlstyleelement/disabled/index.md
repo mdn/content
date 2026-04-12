@@ -10,7 +10,7 @@ browser-compat: api.HTMLStyleElement.disabled
 
 The **`HTMLStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
 
-Note that there is no corresponding `disabled` attribute on the [HTML `<style>` element](/en-US/docs/Web/HTML/Element/style).
+Note that there is no corresponding `disabled` attribute on the [HTML `<style>` element](/en-US/docs/Web/HTML/Reference/Elements/style).
 
 ## Value
 
@@ -24,12 +24,12 @@ Setting the property to `true` when there is no associated stylesheet has no eff
 
 ### Disabling an inline style
 
-This example demonstrates programmatically setting the disabled property on a style that was defined in the HTML using the [HTML `<style>` element](/en-US/docs/Web/HTML/Element/style).
+This example demonstrates programmatically setting the disabled property on a style that was defined in the HTML using the [HTML `<style>` element](/en-US/docs/Web/HTML/Reference/Elements/style).
 Note that you can also access any/all stylesheets in the document using [`Document.styleSheets`](/en-US/docs/Web/API/Document/styleSheets).
 
 #### HTML
 
-The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Element/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
+The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style) element that makes paragraph elements blue, a paragraph element, and a button that will be used to enabled and disable the style.
 
 ```html
 <button>Enable</button>
@@ -103,7 +103,7 @@ Note that this is the earliest point at which setting the property to `true` wil
 Before this point the document did not have an associated style, and so the value defaults to `false`.
 
 ```js
-//Disable the style
+// Disable the style
 style.disabled = true;
 ```
 

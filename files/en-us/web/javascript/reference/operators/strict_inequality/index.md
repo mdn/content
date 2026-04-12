@@ -3,16 +3,29 @@ title: Strict inequality (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 page-type: javascript-operator
 browser-compat: javascript.operators.strict_inequality
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **strict inequality (`!==`)** operator checks whether its two operands are
 not equal, returning a Boolean result. Unlike the [inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
 operator, the strict inequality operator always considers operands of different types to
 be different.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Strict inequality (!==) operator")}}
+
+```js interactive-example
+console.log(1 !== 1);
+// Expected output: false
+
+console.log("hello" !== "hello");
+// Expected output: false
+
+console.log("1" !== 1);
+// Expected output: true
+
+console.log(0 !== false);
+// Expected output: true
+```
 
 ## Syntax
 

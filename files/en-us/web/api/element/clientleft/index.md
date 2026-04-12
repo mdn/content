@@ -8,24 +8,14 @@ browser-compat: api.Element.clientLeft
 
 {{ APIRef("DOM") }}
 
-The width of the left border of an element in pixels. It includes the width of the
-vertical scrollbar if the text direction of the element is right-to-left and if there
-is an overflow causing a left vertical scrollbar to be rendered.
-`clientLeft` does not include the left margin or the left padding.
-`clientLeft` is read-only.
+The **`clientLeft`** read-only property of the {{domxref("Element")}} interface returns the width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right-to-left and if there is an overflow causing a left vertical scrollbar to be rendered. `clientLeft` does not include the left margin or the left padding.
 
 > [!NOTE]
-> This property will round the value to an integer. If you
-> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
-
-> [!NOTE]
-> When an element has
-> `display: inline`, `clientLeft` returns `0`
-> regardless of the element's border.
+> When an element has `display: inline`, `clientLeft` returns `0` regardless of the element's border.
 
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -75,3 +65,13 @@ In the following example, the client area has a white background and a 24px blac
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

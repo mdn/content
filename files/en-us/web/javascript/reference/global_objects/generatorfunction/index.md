@@ -3,9 +3,8 @@ title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.GeneratorFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`GeneratorFunction`** object provides methods for [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*). In JavaScript, every generator function is actually a `GeneratorFunction` object.
 
@@ -17,7 +16,25 @@ const GeneratorFunction = function* () {}.constructor;
 
 `GeneratorFunction` is a subclass of {{jsxref("Function")}}.
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: GeneratorFunction", "taller")}}
+
+```js interactive-example
+const GeneratorFunction = function* () {}.constructor;
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str += val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Constructor
 

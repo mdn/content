@@ -3,12 +3,10 @@ title: "GPUBindGroup: label property"
 short-title: label
 slug: Web/API/GPUBindGroup/label
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUBindGroup.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUBindGroup")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -24,7 +22,7 @@ A string. If this has not been previously set as described above, it will be an 
 Setting and getting a label via `GPUBindGroup.label`:
 
 ```js
-// ...
+// …
 
 const bindGroup = device.createBindGroup({
   layout: bindGroupLayout,
@@ -46,7 +44,7 @@ console.log(bindGroup.label); // "my_bind_group"
 Setting a label via the originating {{domxref("GPUDevice.createBindGroup()")}} call, and then getting it via `GPUBindGroup.label`:
 
 ```js
-// ...
+// …
 
 const bindGroup = device.createBindGroup({
   layout: bindGroupLayout,

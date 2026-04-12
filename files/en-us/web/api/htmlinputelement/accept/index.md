@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.accept
 
 {{ApiRef("HTML DOM")}}
 
-The **`accept`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, generally a comma-separated list of unique file type specifiers providing a hint for the expected file type for an [`<input>` of type `file`](/en-US/docs/Web/HTML/Element/input/file). If the attribute is not explicitly set, the `accept` property is an empty string.
+The **`accept`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`accept`](/en-US/docs/Web/HTML/Reference/Elements/input#accept) attribute, generally a comma-separated list of unique file type specifiers providing a hint for the expected file type for an [`<input>` of type `file`](/en-US/docs/Web/HTML/Reference/Elements/input/file). If the attribute is not explicitly set, the `accept` property is an empty string.
 
 ## Value
 
@@ -35,6 +35,6 @@ inputElement.accept = ".doc,.docx,.xml,application/msword"; // sets the accept v
 - {{domxref("HTMLInputElement.type")}}
 - {{domxref("HTMLInputElement.multiple")}}
 - {{domxref("HTMLInputElement.capture")}}
-- [File type specifiers](/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers)
+- [File type specifiers](/en-US/docs/Web/HTML/Reference/Elements/input/file#unique_file_type_specifiers)
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File_API)

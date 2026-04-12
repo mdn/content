@@ -3,9 +3,8 @@ title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 page-type: javascript-class
 browser-compat: javascript.builtins.BigUint64Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`BigUint64Array`** typed array represents an array of 64-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 

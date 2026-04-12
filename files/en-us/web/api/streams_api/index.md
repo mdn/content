@@ -37,9 +37,9 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Readable streams
 
 - {{domxref("ReadableStream")}}
-  - : Represents a readable stream of data. It can be used to handle response streams of the [Fetch API](/en-US/docs/Web/API/Fetch_API), or developer-defined streams (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
+  - : Represents a readable stream of data. It can be used to handle response streams of the [Fetch API](/en-US/docs/Web/API/Fetch_API), or developer-defined streams (e.g., a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
 - {{domxref("ReadableStreamDefaultReader")}}
-  - : Represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request).
+  - : Represents a default reader that can be used to read stream data supplied from a network (e.g., a fetch request).
 - {{domxref("ReadableStreamDefaultController")}}
   - : Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
 
@@ -76,7 +76,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### ByteStream-related interfaces
 
 - {{domxref("ReadableStreamBYOBReader")}}
-  - : Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
+  - : Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g., a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).
 - {{domxref("ReadableByteStreamController")}}
   - : Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.
 - {{domxref("ReadableStreamBYOBRequest")}}
@@ -92,10 +92,6 @@ We have created a directory of examples to go along with the Streams API documen
 - [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): This example extends the Simple random stream example, showing how a stream can be teed and both resulting streams can be read independently.
 - [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to write to a writable stream, then decode the stream and write the contents to the UI.
 - [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
-
-Examples from other developers:
-
-- [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
 ## Specifications
 

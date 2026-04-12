@@ -3,9 +3,8 @@ title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.sidebar_action
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -89,7 +88,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
           chrome://browser/content/extension-mac.css on macOS. When setting
           dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
-          <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
+          <a href="/en-US/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
         </p>
       </td>
     </tr>
@@ -140,11 +139,11 @@ The `sidebar_action` key is an object that may have any of the properties listed
         <p>
           The HTML file may include CSS and JavaScript files using
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/link">&#x3C;link></a></code
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code
           >
           and
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >

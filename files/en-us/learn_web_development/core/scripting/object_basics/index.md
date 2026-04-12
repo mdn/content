@@ -1,12 +1,12 @@
 ---
 title: JavaScript object basics
+short-title: Objects
 slug: Learn_web_development/Core/Scripting/Object_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.
 
@@ -82,7 +82,7 @@ person.introduceSelf();
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g., `name` and `age` above), and a value (e.g., `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```js
 const objectName = {
@@ -278,9 +278,12 @@ Adding a property to an object using the method above isn't possible with dot no
 You may have noticed something slightly strange in our methods. Look at this one for example:
 
 ```js
-introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
-}
+const person = {
+  // …
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
 ```
 
 You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.
@@ -404,14 +407,10 @@ Note that built in objects and APIs don't always create object instances automat
 const myNotification = new Notification("Hello!");
 ```
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics).
-
 ## Summary
 
 You should now have a good idea of how to work with objects in JavaScript — including creating your own simple objects. You should also appreciate that objects are very useful as structures for storing related data and functionality — if you tried to keep track of all the properties and methods in our `person` object as separate variables and functions, it would be inefficient and frustrating, and we'd run the risk of clashing with other variables and functions that have the same names. Objects let us keep the information safely locked away in their own package, out of harm's way.
 
-In the next article we'll look at **DOM scripting**, which unlocks a large amount of fundamental browser API functionality.
+In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Events","Learn_web_development/Core/Scripting/Test_your_skills/Object_basics", "Learn_web_development/Core/Scripting")}}

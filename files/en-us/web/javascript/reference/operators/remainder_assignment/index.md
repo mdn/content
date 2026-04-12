@@ -3,13 +3,25 @@ title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.remainder_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **remainder assignment (`%=`)** operator performs [remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Remainder assignment (%=) operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a %= 2));
+// Expected output: 1
+
+console.log((a %= 0));
+// Expected output: NaN
+
+console.log((a %= "hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 

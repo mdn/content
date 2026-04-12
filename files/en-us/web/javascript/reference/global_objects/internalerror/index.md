@@ -5,9 +5,10 @@ page-type: javascript-class
 status:
   - non-standard
 browser-compat: javascript.builtins.InternalError
+sidebar: jsref
 ---
 
-{{JSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 The **`InternalError`** object indicates an error that occurred internally in the JavaScript engine.
 

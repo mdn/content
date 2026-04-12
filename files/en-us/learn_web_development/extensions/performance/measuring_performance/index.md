@@ -2,9 +2,10 @@
 title: Measuring performance
 slug: Learn_web_development/Extensions/Performance/Measuring_performance
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
@@ -90,7 +91,7 @@ The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of t
 
 The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and to notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
 
-While this article does not dive into using these APIs, it is helpful to know they exist. Refer to the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings) article for further examples of using performance Web APIs.
+While this article does not dive into using these APIs, it is helpful to know they exist. Refer to the [Navigation and timings](/en-US/docs/Web/Performance/Guides/Navigation_and_resource_timings) article for further examples of using performance Web APIs.
 
 ## Conclusion
 

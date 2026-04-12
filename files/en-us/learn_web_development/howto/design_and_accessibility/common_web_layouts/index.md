@@ -2,9 +2,8 @@
 title: What do common web layouts contain?
 slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 page-type: learn-faq
+sidebar: learn-how-to
 ---
-
-{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 When designing pages for your website, it's good to have an idea of the most common layouts.
 
@@ -66,17 +65,13 @@ These are just examples and you're quite free to lay things out as you want. You
 
 These are rules of thumb you can draw on. There are complex designs and exceptions, of course. In other articles we'll discuss how to design responsive sites (sites that change depending on the screen size) and sites whose layouts vary between pages. For now, it's best to keep your layout consistent throughout your site.
 
-## Active learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
-
 ## Deeper dive
 
 Let's study some more concrete examples taken from well-known websites.
 
 ### One-column layout
 
-**[Invision application](https://www.invisionapp.com/)**. A typical one-column layout providing all the information linearly on one page.
+A typical one-column layout providing all the information linearly on one page.
 
 ![Example of a 1 column layout in the wild](screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 

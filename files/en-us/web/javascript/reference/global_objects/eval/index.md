@@ -3,16 +3,34 @@ title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 page-type: javascript-function
 browser-compat: javascript.builtins.eval
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Objects")}}
-
 > [!WARNING]
-> Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
+> The argument passed to this function is dynamically parsed and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](#security_considerations) for more information.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -23,15 +41,20 @@ eval(script)
 ### Parameters
 
 - `script`
-  - : A string representing a JavaScript expression, statement, or sequence of statements. The expression can include variables and properties of existing objects. It will be parsed as a script, so [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (which can only exist in modules) are not allowed.
+  - : A {{domxref("TrustedScript")}} instance or string representing a JavaScript expression, statement, or sequence of statements. The expression can include variables and properties of existing objects. It will be parsed as a script, so [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (which can only exist in modules) are not allowed.
 
 ### Return value
 
-The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned. If `script` is not a string primitive, `eval()` returns the argument unchanged.
+The completion value of evaluating the given code. If the completion value is empty, {{jsxref("undefined")}} is returned. If `script` is not a {{domxref("TrustedScript")}} or string primitive, `eval()` returns the argument unchanged.
 
 ### Exceptions
 
-Throws any exception that occurs during evaluation of the code, including {{jsxref("SyntaxError")}} if `script` fails to be parsed as a script.
+- {{jsxref("SyntaxError")}}
+  - : The `script` parameter cannot be parsed as a script.
+- {{jsxref("TypeError")}}
+  - : `script` is a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
+
+The method also throws any exception that occurs during evaluation of the code.
 
 ## Description
 
@@ -47,7 +70,7 @@ In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
 ```
 
-If the argument of `eval()` is not a string, `eval()` returns the argument unchanged. In the following example, passing a `String` object instead of a primitive causes `eval()` to return the `String` object rather than evaluating the string.
+If the argument of `eval()` is not a {{domxref("TrustedScript")}} or string, `eval()` returns the argument unchanged. In the following example, passing a `String` object instead of a primitive causes `eval()` to return the `String` object rather than evaluating the string.
 
 ```js
 eval(new String("2 + 2")); // returns a String object containing "2 + 2"
@@ -177,7 +200,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 Using direct `eval()` suffers from multiple problems:
 
-- `eval()` executes the code it's passed with the privileges of the caller. If you run `eval()` with a string that could be affected by a malicious party, you may end up running malicious code on the user's machine with the permissions of your webpage / extension. More importantly, allowing third-party code to access the scope in which `eval()` was invoked (if it's a direct eval) can lead to possible attacks that reads or changes local variables.
+- `eval()` executes the code it's passed with the privileges of the caller. If you run `eval()` with a string that could be affected by a malicious party, you may end up running malicious code on the user's machine with the permissions of your webpage / extension. More importantly, allowing third-party code to access the scope in which `eval()` was invoked (if it's a direct eval) can lead to possible attacks that reads or changes local variables. See [Security considerations](#security_considerations) for approaches that mitigate these risks.
 - `eval()` is slower than the alternatives, since it has to invoke the JavaScript interpreter, while many other constructs are optimized by modern JS engines.
 - Modern JavaScript interpreters convert JavaScript to machine code. This means that any concept of variable naming gets obliterated. Thus, any use of `eval()` will force the browser to do long expensive variable name lookups to figure out where the variable exists in the machine code and set its value. Additionally, new things can be introduced to that variable through `eval()`, such as changing the type of that variable, forcing the browser to re-evaluate all of the generated machine code to compensate.
 - Minifiers give up on any minification if the scope is transitively depended on by `eval()`, because otherwise `eval()` cannot read the correct variable at runtime.
@@ -192,7 +215,7 @@ Consider this code:
 function looseJsonParse(obj) {
   return eval(`(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 Simply using indirect eval and forcing strict mode can make the code much better:
@@ -201,22 +224,22 @@ Simply using indirect eval and forcing strict mode can make the code much better
 function looseJsonParse(obj) {
   return eval?.(`"use strict";(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 The two code snippets above may seem to work the same way, but they do not; the first one using direct eval suffers from multiple problems.
 
-- It is a great deal slower, due to more scope inspections. Notice `c: new Date()` in the evaluated string. In the indirect eval version, the object is being evaluated in the global scope, so it is safe for the interpreter to assume that `Date` refers to the global `Date()` constructor instead of a local variable called `Date`. However, in the code using direct eval, the interpreter cannot assume this. For example, in the following code, `Date` in the evaluated string doesn't refer to `window.Date()`.
+- It is a great deal slower, due to more scope inspections. Notice `c: new Map()` in the evaluated string. In the indirect eval version, the object is being evaluated in the global scope, so it is safe for the interpreter to assume that `Map` refers to the global `Map()` constructor instead of a local variable called `Map`. However, in the code using direct eval, the interpreter cannot assume this. For example, in the following code, `Map` in the evaluated string doesn't refer to `window.Map()`.
 
   ```js
   function looseJsonParse(obj) {
-    function Date() {}
+    class Map {}
     return eval(`(${obj})`);
   }
-  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Date() }`));
+  console.log(looseJsonParse(`{ a: 4 - 1, b: function () {}, c: new Map() }`));
   ```
 
-  Thus, in the `eval()` version of the code, the browser is forced to make the expensive lookup call to check to see if there are any local variables called `Date()`.
+  Thus, in the `eval()` version of the code, the browser is forced to make the expensive lookup call to check to see if there are any local variables called `Map()`.
 
 - If not using strict mode, `var` declarations within the `eval()` source becomes variables in the surrounding scope. This leads to hard-to-debug issues if the string is acquired from external input, especially if there's an existing variable with the same name.
 - Direct eval can read and mutate bindings in the surrounding scope, which may lead to external input corrupting local data.
@@ -233,24 +256,16 @@ The difference between `eval()` and `Function()` is that the source string passe
 The `Function()` constructor is useful if you wish to create local bindings within your eval source, by passing the variables as parameter bindings.
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ][n % 7 || 0];
+function add(a, b) {
+  return a + b;
 }
-function runCodeWithDateFunction(obj) {
-  return Function("Date", `"use strict";return (${obj});`)(Date);
+function runCodeWithAddFunction(obj) {
+  return Function("add", `"use strict";return (${obj});`)(add);
 }
-console.log(runCodeWithDateFunction("Date(5)")); // Saturday
+console.log(runCodeWithAddFunction("add(5, 7)")); // 12
 ```
 
-Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
+Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
 
 #### Using bracket accessors
 
@@ -330,7 +345,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-[Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
+[Closures](/en-US/docs/Web/JavaScript/Guide/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
 
 #### Using JSON
 
@@ -338,9 +353,74 @@ If the string you're calling `eval()` on contains data (for example, an array: `
 
 Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.
 
-Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XPath) instead of JavaScript code.
+Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XML/XPath) instead of JavaScript code.
+
+### Security considerations
+
+The method can be used to execute arbitrary input with the privileges of the caller. If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+
+For example, the following code shows how `eval()` might execute `untrustedCode` provided by a user:
+
+```js example-bad
+const untrustedCode = "alert('Potentially evil code!');";
+const adder = eval(untrustedCode);
+```
+
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default. If you must allow the scripts to run via `eval()`, you can mitigate the risks by always assigning a {{domxref("TrustedScript")}} instance instead of a string, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. This ensures that the input is passed through a transformation function.
+
+To allow `eval()` to run, you additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive. The [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) keyword also allows `eval()`, but is much less safe then `trusted-types-eval` because it would allow execution even on browsers that do not support trusted types.
+
+For example, the required CSP for your site might look like this:
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
+
+The behavior of the transformation function implemented in your trusted types policy depends on the specific use case that requires a user provided script. If possible, you should lock the allowed scripts to exactly the code that you trust to run. If that is not possible, you might allow or block the use of certain functions within the provided input.
 
 ## Examples
+
+Note that the first example shows how to use the method with trusted types. The other examples omit this step for brevity.
+
+### Using TrustedScript
+
+To mitigate the risk of XSS, we should always assign `TrustedScript` instances to the `script` parameter. We also need to do this if we're enforcing trusted types for other reasons and we want to allow some script sources that have been permitted (by `CSP: script-src`).
+
+Trusted types are not yet supported on all browsers, so first we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill). This acts as a transparent replacement for the Trusted Types JavaScript API:
+
+```js
+if (typeof trustedTypes === "undefined")
+  trustedTypes = { createPolicy: (n, rules) => rules };
+```
+
+Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createScript", "createScript()")}} method for transforming input strings into {{domxref("TrustedScript")}} instances.
+
+For the purpose of this example, we'll assume that we have a function `transformedScript()` that defines our transformation/filtering logic.
+
+```js
+const policy = trustedTypes.createPolicy("script-policy", {
+  createScript(input) {
+    const transformed = transformedScript(input); // Our filter method
+    return transformed;
+  },
+});
+```
+
+Then we use the `policy` object to create a `TrustedScript` object from a potentially unsafe input string:
+
+```js
+// The potentially malicious string
+const untrustedScript = "alert('Potentially evil code!');";
+
+// Create a TrustedScriptURL instance using the policy
+const trustedScript = policy.createScript(untrustedScript);
+```
+
+The `TrustedScript` object can now be passed to `eval()`:
+
+```js
+eval(trustedScript);
+```
 
 ### Using eval()
 

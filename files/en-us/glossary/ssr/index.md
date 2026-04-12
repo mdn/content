@@ -2,9 +2,8 @@
 title: Server-side rendering (SSR)
 slug: Glossary/SSR
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Server-side rendering** (SSR) refers to the practice of generating HTML content on the server and sending it to the client. SSR is opposed to {{glossary("CSR", "client-side rendering")}}, where the client generates the HTML content using JavaScript. Both techniques are not mutually exclusive and can be used together in the same application.
 

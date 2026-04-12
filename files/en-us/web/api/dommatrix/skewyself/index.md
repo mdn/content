@@ -15,8 +15,8 @@ To skew a matrix along the Y-axis without mutating it, see {{domxref("DOMMatrixR
 ## Syntax
 
 ```js-nolint
-DOMMatrix.skewYSelf()
-DOMMatrix.skewYSelf(sY)
+skewYSelf()
+skewYSelf(sY)
 ```
 
 ### Parameters
@@ -54,9 +54,8 @@ console.log(matrix); // output: "matrix(1, -0.25, 0, 1, 0, 0)"
   - {{cssxref("transform-function/skew", "skew()")}}
   - {{cssxref("transform-function/skewX", "skewX()")}}
   - {{cssxref("transform-function/skewY", "skewY()")}}
-  - {{cssxref("transform-function/skewZ", "skewZ()")}}
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface methods
   - {{domxref("CanvasRenderingContext2D.transform()")}}
   - {{domxref("CanvasRenderingContext2D.setTransform()")}}

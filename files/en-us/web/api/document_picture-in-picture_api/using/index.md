@@ -4,7 +4,7 @@ slug: Web/API/Document_Picture-in-Picture_API/Using
 page-type: guide
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
@@ -57,7 +57,7 @@ if ("documentPictureInPicture" in window) {
 
   const togglePipButton = document.createElement("button");
   togglePipButton.textContent = "Toggle Picture-in-Picture";
-  togglePipButton.addEventListener("click", togglePictureInPicture, false);
+  togglePipButton.addEventListener("click", togglePictureInPicture);
 
   document.getElementById("control-bar").appendChild(togglePipButton);
 }
@@ -84,7 +84,7 @@ async function togglePictureInPicture() {
     height: videoPlayer.clientHeight,
   });
 
-  // ...
+  // …
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(videoPlayer);
@@ -99,7 +99,7 @@ async function togglePictureInPicture() {
 To copy all CSS style sheets from the originating window, loop through all style sheets explicitly linked into or embedded in the document (via {{domxref("Document.styleSheets")}}) and append them to the Picture-in-Picture window. Note that this is a one-time copy.
 
 ```js
-// ...
+// …
 
 // Copy style sheets over from the initial document
 // so that the player looks the same.
@@ -123,12 +123,12 @@ To copy all CSS style sheets from the originating window, loop through all style
   }
 });
 
-// ...
+// …
 ```
 
 ## Target styles when in Picture-in-Picture mode
 
-The `picture-in-picture` value of the {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features) allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
+The `picture-in-picture` value of the {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
 
 ```css
 @media (display-mode: picture-in-picture) {
@@ -151,7 +151,7 @@ In [our demo](https://mdn.github.io/dom-examples/document-picture-in-picture/), 
 
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
   body {
-    background: #333;
+    background: #333333;
   }
 
   a {

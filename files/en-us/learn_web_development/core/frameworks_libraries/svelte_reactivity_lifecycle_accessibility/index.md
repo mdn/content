@@ -2,9 +2,9 @@
 title: "Advanced Svelte: Reactivity, lifecycle, accessibility"
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_components","Learn_web_development/Core/Frameworks_libraries/Svelte_stores", "Learn_web_development/Core/Frameworks_libraries")}}
 
 In the last article we added more features to our to-do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. To avoid common pitfalls, we'll have to dig a little deeper into Svelte's reactivity system. We'll also look at solving some accessibility focus issues, and more besides.
@@ -94,6 +94,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    ```svelte
    <script>
      import { createEventDispatcher } from "svelte";
+
      const dispatch = createEventDispatcher();
 
      let completed = true;
@@ -214,7 +215,7 @@ const checkAllTodos = (completed) => {
 };
 ```
 
-Assignments to properties of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
+Assignments to properties of arrays and objects — e.g., `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
 
 Another solution is to assign a new array to `todos` containing a copy of all the to-dos with the `completed` property updated accordingly, like this:
 
@@ -333,7 +334,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
    </form>
    ```
 
-   Here we are binding the `<input>` to the `name` variable with `bind:value={name}` and disabling the _Add_ button when it is empty (i.e. no text content) using `disabled={!name}`. We are also taking care of the <kbd>Escape</kbd> key with `on:keydown={(e) => e.key === 'Escape' && onCancel()}`. Whenever the <kbd>Escape</kbd> key is pressed we run `onCancel()`, which just clears up the `name` variable.
+   Here we are binding the `<input>` to the `name` variable with `bind:value={name}` and disabling the _Add_ button when it is empty (i.e., no text content) using `disabled={!name}`. We are also taking care of the <kbd>Escape</kbd> key with `on:keydown={(e) => e.key === 'Escape' && onCancel()}`. Whenever the <kbd>Escape</kbd> key is pressed we run `onCancel()`, which just clears up the `name` variable.
 
 3. Now we have to `import` and use it from inside the `Todos` component, and update the `addTodo()` function to receive the name of the new todo.
 
@@ -726,7 +727,7 @@ That's not what we want — we want the _Edit_ button to receive focus only when
 6. Go back and try your app again. At this point, every time the _Edit_ button is added to the DOM, the `focusEditButton` action is executed, but it will only give focus to the button if the `editButtonPressed` flag is `true`.
 
 > [!NOTE]
-> We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. For a more detailed introduction to actions, consider checking out the [Svelte Interactive tutorial](https://learn.svelte.dev/tutorial/actions) or the [Svelte `use:action` documentation](https://svelte.dev/docs/element-directives#use-action).
+> We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. For a more detailed introduction to actions, consider checking out the [Svelte `use:action` documentation](https://svelte.dev/docs/element-directives#use-action).
 
 ## Component binding: exposing component methods and variables using the `bind:this={component}` directive
 

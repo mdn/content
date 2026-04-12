@@ -8,7 +8,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.message_event
 
 {{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
-The `message` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e. when the parent sends a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)).
+The `message` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e., when the parent sends a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)).
 
 This event is not cancellable and does not bubble.
 
@@ -16,10 +16,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("message", (event) => {});
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => {};
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -41,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("Window")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Example
 

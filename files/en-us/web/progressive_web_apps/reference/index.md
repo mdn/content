@@ -3,15 +3,14 @@ title: Progressive Web Apps reference
 short-title: Reference
 slug: Web/Progressive_web_apps/Reference
 page-type: landing-page
+sidebar: pwasidebar
 ---
-
-{{PWASidebar}}
 
 This reference describes the technologies, features, and APIs that [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) can use to offer a great user experience.
 
 ## Web app manifest
 
-- [Web app manifest members](/en-US/docs/Web/Manifest)
+- [Web app manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest)
   - : Developers can use web app manifest members to describe a PWA, customize its appearance, and more deeply integrate it into the operating system.
 
 ## Service Worker APIs

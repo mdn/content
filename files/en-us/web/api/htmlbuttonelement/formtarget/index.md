@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.formTarget
 
 {{APIRef("HTML DOM")}}
 
-The **`formTarget`** property of the {{domxref("HTMLButtonElement")}} interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("button")}} element's [`formtarget`](/en-US/docs/Web/HTML/Element/button#formtarget) attribute.
+The **`formTarget`** property of the {{domxref("HTMLButtonElement")}} interface is the tab, window, or iframe where the response of the submitted {{HtmlElement("form")}} is to be displayed. It reflects the value of the {{HTMLElement("button")}} element's [`formtarget`](/en-US/docs/Web/HTML/Reference/Elements/button#formtarget) attribute.
 
 The value overrides the {{domxref("HTMLFormElement.target", "target")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the button. This property can be retrieved or set. If not set, the value is the empty string (`""`).
 

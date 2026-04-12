@@ -6,6 +6,9 @@ on:
     - cron: "0 0 * * 6"
   workflow_dispatch:
 
+# No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
+permissions: {}
+
 jobs:
   update:
     if: github.repository == 'mdn/content'
@@ -13,29 +16,32 @@ jobs:
 
     steps:
       - name: Checkout content
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           path: mdn-content
           ref: main
+          persist-credentials: false
 
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: "mdn-content/.nvmrc"
+          package-manager-cache: false
 
       - name: Checkout webref
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           repository: w3c/webref
           path: webref
           ref: "@webref/idl@latest"
+          persist-credentials: false
 
       - name: Extract data from webref
         working-directory: mdn-content
         run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
         with:
           path: mdn-content
           token: ${{ secrets.AUTOMERGE_TOKEN }}

@@ -9,7 +9,7 @@ browser-compat: api.Node
 
 The {{Glossary("DOM")}} **`Node`** interface is an abstract base
 class upon which many other DOM API objects are based, thus letting those object types
-to be used similarly and often interchangeably. As an abstract class, there is
+be used similarly and often interchangeably. As an abstract class, there is
 no such thing as a plain `Node` object. All objects that implement
 `Node` functionality are based on one of its subclasses. Most notable are
 {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.
@@ -44,7 +44,7 @@ _In addition to the properties below, `Node` inherits properties from its parent
     or `null` if the node has no child.
 - {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
   - : A boolean indicating whether or not the Node is connected (directly or indirectly)
-    to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the
+    to the context object, e.g., the {{DOMxRef("Document")}} object in the case of the
     normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.
 - {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the last direct child node of the node,
@@ -60,7 +60,6 @@ _In addition to the properties below, `Node` inherits properties from its parent
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
@@ -83,7 +82,7 @@ _In addition to the properties below, `Node` inherits properties from its parent
     a document, returns `null`.
 - {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
   - : Returns a `Node` that is the parent of this node. If there is no such
-    node, like if this node is the top of the tree or if doesn't participate in a tree,
+    node — for example, if this node is the top of the tree, or if it doesn't participate in a tree —
     this property returns `null`.
 - {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has
@@ -144,6 +143,11 @@ _In addition to the methods below, `Node` inherits methods from its parent, {{DO
 - {{DOMxRef("Node.replaceChild()")}}
   - : Replaces one child `Node` of the current one with the second one given
     in parameter.
+
+## Events
+
+- {{domxref("Node/selectstart_event", "selectstart")}}
+  - : Fires when the user starts a new selection in this node.
 
 ## Examples
 

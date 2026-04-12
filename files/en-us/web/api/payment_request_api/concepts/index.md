@@ -7,7 +7,7 @@ spec-urls:
   - https://w3c.github.io/payment-method-id/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a website or app. In this article, we'll take a look at how the API operates and what each of its components does.
 
@@ -34,10 +34,9 @@ Payment handlers are identified by **payment method identifiers**, which are str
 
 ### Standardized payment method identifiers
 
-Standardized payment method identifiers are those listed in the [payment method registry](https://www.w3.org/TR/payment-method-id/#registry).
+Standardized payment method identifiers are those listed in the [payment method registry](https://w3c.github.io/payment-method-id/#registry).
 
 - `secure-payment-confirmation`
-
   - : Identifies the [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) method. The payment request data for this method is defined by the {{domxref("SecurePaymentConfirmationRequest")}} dictionary. For more information see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
 - `basic-card`
@@ -54,7 +53,7 @@ These may vary substantially depending on the specifics of the service, and a gi
 
 ## Functions of a payment handler
 
-A {{Glossary("user agent")}} may provide built-in support for certain types of payments. In addition, the [Payment Handler API](https://w3c.github.io/payment-handler/) can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for:
+A {{Glossary("user agent")}} may provide built-in support for certain types of payments. In addition, the [Payment Handler API](https://w3c.github.io/web-based-payment-handler/) can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for:
 
 1. **Making sure a payment can be made.** The conditions that make payment possible vary depending on the payment method and the user's payment request; for example, if the user chooses to pay using a credit card that isn't accepted by the payee, the payment can't be made.
 2. **If merchant validation is supported by the payment handler, respond to merchant validation requests from the user agent.** See [Merchant validation](#merchant_validation) for details.

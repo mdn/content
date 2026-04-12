@@ -1,15 +1,26 @@
 ---
 title: DataView.prototype.setUint32()
+short-title: setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint32
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUint32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit unsigned integer in the 4 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.setUint32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+
+console.log(view.getUint32(1));
+// Expected output: 4294967295
+```
 
 ## Syntax
 

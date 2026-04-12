@@ -3,9 +3,8 @@ title: tabs.highlight()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.highlight
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 
@@ -22,13 +21,10 @@ let highlighting = browser.tabs.highlight(
 ### Parameters
 
 - `highlightInfo`
-
   - : `object`.
-
     - `windowId` {{optional_inline}}
       - : `integer`. ID of the window that contains the tabs.
     - `populate` {{optional_inline}}
-
       - : `boolean`. Defaults to `true`. If set to `false`, the {{WebExtAPIRef('windows.Window')}} object won't have a `tabs` property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.
 
         > [!NOTE]
@@ -41,11 +37,11 @@ let highlighting = browser.tabs.highlight(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-highlight) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

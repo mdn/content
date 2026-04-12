@@ -1,10 +1,10 @@
 ---
 title: Introduction to CSS layout
+short-title: Introduction
 slug: Learn_web_development/Core/CSS_layout/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
@@ -26,7 +26,7 @@ This lesson recaps some of the CSS layout features we've already touched upon in
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Recognise the methods used to implement modern page layouts.</li>
+          <li>Recognize the methods used to implement modern page layouts.</li>
           <li>Understand that normal flow is the default way a browser lays out block and inline content.</li>
           <li>Know that properties such as <code>display</code>, <code>float</code>, and <code>position</code> are intended to change how the browser lays out content.</li>
         </ul>
@@ -53,11 +53,11 @@ By default, a [block-level element](/en-US/docs/Glossary/Block-level_content)'s 
 
 If you want to control the `display` property of an inline-level element in this manner, use CSS to set it to behave like a block-level element (e.g., with `display: block;` or `display: inline-block;`, which mixes characteristics from both).
 
-That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, which is based on the parent's [writing mode](/en-US/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.
+That explains how elements are structured individually, but how about the way they're structured when they interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, which is based on the parent's [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) (_initial_: horizontal-tb). Each element will appear on a new line below the last one, with each one separated by whatever margin that's been specified. In English, for example, (or any other horizontal, top to bottom writing mode) block-level elements are laid out vertically.
 
 Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.
 
-If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 Collapsing margins is only relevant in the **vertical direction**.
 
 ### Normal flow example
@@ -89,7 +89,9 @@ Let's look at a simple example that explains all of this:
   line. Overflowing inline elements will
   <span>wrap onto a new line if possible (like this one containing text)</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -129,7 +131,7 @@ The methods that can override normal flow and change how elements are laid out i
 - Positioning
   - : The {{cssxref("position")}} property allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, fixing them to the top of the browser viewport using `position: fixed`.
 - Specific layout systems accessed through `display`
-  - : We also have entire layout methods that are enabled via specific `display` values. This most important ones for you to know about are [CSS grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), which both alter how child elements are laid out inside their parents.
+  - : We also have entire layout methods that are enabled via specific `display` values. The most important ones for you to know about are [CSS grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), which both alter how child elements are laid out inside their parents.
 - Responsive design
   - : Responsive design refers to creating layouts that adapt to different devices the web page is rendered on (for example, desktops and mobile phones). Responsive design doesn't provide any specific layout tools of its own; its most significant component is the {{cssxref("@media")}} at-rule, which allows you to apply different layouts depending on device attributes such as screen width or resolution.
 
@@ -137,9 +139,9 @@ The methods that can override normal flow and change how elements are laid out i
 
 There are other layout techniques that are less commonly used, which we won't cover in this module:
 
-- [Table layout](/en-US/docs/Web/CSS/CSS_table)
+- [Table layout](/en-US/docs/Web/CSS/Guides/Table)
   - : Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
+- [Multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout)
   - : The multi-column layout properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## Summary

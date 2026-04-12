@@ -1,12 +1,12 @@
 ---
 title: Storing the information you need — Variables
+short-title: Variables
 slug: Learn_web_development/Core/Scripting/Variables
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting")}}
 
 After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
 
@@ -87,7 +87,7 @@ buttonB.onclick = () => {
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
 
-You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. Without a variable, we don't have a way of knowing how many times the button have been clicked. The message to the user will quickly be irrelevant when no information can be remembered.
+You may not fully understand the syntax we are using (yet!), but you should be able to get the idea. Without a variable, we don't have a way of knowing how many times the button has been clicked. The message to the user will quickly be irrelevant when no information can be remembered.
 
 Variables just make sense, and as you learn more about JavaScript they will start to become second nature.
 
@@ -371,7 +371,7 @@ Try entering the four lines above into your console one by one, and see what the
 
 As well as variables, you can declare constants. These are like variables, except that:
 
-- you must initialize them when you declare them
+- you must initialize them when you declare them.
 - you can't assign them a new value after you've initialized them.
 
 For example, using `let` you can declare a variable without initializing it:
@@ -424,12 +424,8 @@ _Use `const` when you can, and use `let` when you have to._
 
 This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
-
 ## Summary
 
-By now you should know a reasonable amount about JavaScript variables and how to create them. In the next article, we'll focus on numbers in more detail, looking at how to do basic math in JavaScript.
+By now you should know a reasonable amount about JavaScript variables and how to create them. In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Test_your_skills/Variables", "Learn_web_development/Core/Scripting")}}

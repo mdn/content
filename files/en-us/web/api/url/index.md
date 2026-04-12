@@ -81,7 +81,7 @@ if (URL.canParse("../cats", "http://www.example.com/dogs")) {
   console.log(url.hostname); // "www.example.com"
   console.log(url.pathname); // "/cats"
 } else {
-  console.log("Invalid URL"); //Invalid URL
+  console.log("Invalid URL");
 }
 ```
 

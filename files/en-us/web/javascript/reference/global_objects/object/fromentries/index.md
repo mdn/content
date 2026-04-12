@@ -1,15 +1,27 @@
 ---
 title: Object.fromEntries()
+short-title: fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.fromEntries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.fromEntries()`** static method transforms a list of key-value pairs into an object.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Syntax
 
@@ -20,9 +32,7 @@ Object.fromEntries(iterable)
 ### Parameters
 
 - `iterable`
-
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), such as an {{jsxref("Array")}} or {{jsxref("Map")}}, containing a list of objects. Each object should have two properties:
-
     - `0`
       - : A string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) representing the property key.
     - `1`
@@ -36,7 +46,7 @@ A new object whose properties are given by the entries of the iterable.
 
 ## Description
 
-The `Object.fromEntries()` method takes a list of key-value pairs and returns a new object whose properties are given by those entries. The `iterable` argument is expected to be an object that implements an `[Symbol.iterator]()` method. The method returns an iterator object that produces two-element array-like objects. The first element is a value that will be used as a property key, and the second element is the value to associate with that property key.
+The `Object.fromEntries()` method takes a list of key-value pairs and returns a new object whose properties are given by those entries. The `iterable` argument is expected to be an object that implements a `[Symbol.iterator]()` method. The method returns an iterator object that produces two-element array-like objects. The first element is a value that will be used as a property key, and the second element is the value to associate with that property key.
 
 `Object.fromEntries()` performs the reverse of {{jsxref("Object.entries()")}}, except that `Object.entries()` only returns string-keyed properties, while `Object.fromEntries()` can also create symbol-keyed properties.
 
@@ -98,6 +108,7 @@ console.log(object2);
 ## See also
 
 - [Polyfill of `Object.fromEntries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.fromEntries`](https://www.npmjs.com/package/object.fromentries)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}

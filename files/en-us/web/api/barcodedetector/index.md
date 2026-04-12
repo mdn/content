@@ -24,9 +24,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API', ''
 ## Instance methods
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
-
   - : Returns a {{jsxref('Promise')}} which fulfills with an array of `DetectedBarcode` objects with the following properties:
-
     - `boundingBox`: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.
     - `cornerPoints`: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.
     - `format`: The detected barcode format. (For a full list of formats, consult the [supported barcode format](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats)) list.

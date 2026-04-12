@@ -1,17 +1,27 @@
 ---
 title: String.prototype.trim()
+short-title: trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trim
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`trim()`** method of {{jsxref("String")}} values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 
 To return a new string with whitespace trimmed from just one end, use {{jsxref("String/trimStart", "trimStart()")}} or {{jsxref("String/trimEnd", "trimEnd()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## Syntax
 

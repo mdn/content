@@ -27,7 +27,8 @@ contains(otherNode)
 
 - `otherNode`
   - : The {{domxref("Node")}} to test with.
-    > **Note:** `otherNode` is not optional, but can be set to `null`.
+    > [!NOTE]
+    > `otherNode` is not optional, but can be set to `null`.
 
 ### Return value
 

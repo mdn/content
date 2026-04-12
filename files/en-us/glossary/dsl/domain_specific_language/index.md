@@ -2,9 +2,8 @@
 title: DSL (Domain-Specific Language)
 slug: Glossary/DSL/Domain_specific_language
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **Domain-Specific Language (DSL)** is a type of computer language of limited scope, designed to address a particular problem within an application domain.
 

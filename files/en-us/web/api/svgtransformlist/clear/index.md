@@ -13,7 +13,7 @@ The `clear()` method of the {{domxref("SVGTransformList")}} interface clears all
 ## Syntax
 
 ```js-nolint
-SVGTransformList.clear()
+clear()
 ```
 
 ### Parameters

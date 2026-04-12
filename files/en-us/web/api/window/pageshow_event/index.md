@@ -8,14 +8,23 @@ browser-compat: api.Window.pageshow_event
 
 {{APIRef("HTML DOM")}}
 
-The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
+The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser navigates to a new document.
 
 This includes:
 
-- Initially loading the page
-- Navigating to the page from another page in the same window or tab
-- Restoring a frozen page on mobile OSes
-- Returning to the page using the browser's forward or back buttons
+- Initially loading the page.
+- Navigating to the page from another page in the same window or tab.
+- Restoring a frozen page on mobile OSes.
+- Returning to the page using the browser's forward or back buttons (including when restored from the {{Glossary("bfcache")}}).
+- Opening a page in a background tab.
+- {{Glossary("Prerender", "Prerendering")}} a page, even before it is activated.
+
+> [!WARNING]
+> Despite the name, the `pageshow` event does not fire when the page is actually _shown_ to the user. For example, it may be opened in a background tab or prerendered. If you are interested in responding to the page being shown to the user, use the following events:
+>
+> - {{domxref("window/pagereveal_event", "pagereveal")}}: Sent when a page is first rendered.
+> - {{domxref("document/visibilitychange_event", "visibilitychange")}}: Sent each time a page's visibility changes.
+> - {{domxref("document/prerenderingchange_event", "prerenderingchange")}}: Sent when a prerendered page is activated.
 
 > [!NOTE]
 > During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
@@ -24,9 +33,10 @@ This includes:
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pageshow", (event) => {});
-onpageshow = (event) => {};
+```js-nolint
+addEventListener("pageshow", (event) => { })
+
+onpageshow = (event) => { }
 ```
 
 ## Event type

@@ -77,10 +77,10 @@ for (
 
   const myRules = document.styleSheets[sheetCount].cssRules;
   log(`rules: ${myRules.length}`);
-  for (let i = 0; i < myRules.length; i++) {
-    log(`rule: ${myRules[i]}`);
-    if (myRules[i] instanceof CSSPageRule) {
-      //... Do something with CSSPageRule
+  for (const rule of myRules) {
+    log(`rule: ${rule}`);
+    if (rule instanceof CSSPageRule) {
+      // Do something with CSSPageRule
     }
   }
 }

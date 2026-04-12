@@ -19,11 +19,13 @@ A string.
 ## Examples
 
 ```html
-<source
-  id="el"
-  src="large.webp"
-  type="video/webp"
-  media="screen and (min-width: 600px)" />
+<video>
+  <source
+    id="el"
+    src="large.webp"
+    type="video/webp"
+    media="screen and (width >= 600px)" />
+</video>
 ```
 
 ```js
@@ -49,6 +51,6 @@ console.log(el.type); // Output: "video/webp"
 - {{htmlelement("picture")}}
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}
-- [Media types found on the web](/en-US/docs/Web/Media/Formats)
-- [Important MIME types for web developers](/en-US/docs/Web/HTTP/MIME_types#important_mime_types_for_web_developers)
-- {{domxref("Media Capabilities API")}}
+- [Media types found on the web](/en-US/docs/Web/Media/Guides/Formats)
+- [Important MIME types for web developers](/en-US/docs/Web/HTTP/Guides/MIME_types#important_mime_types_for_web_developers)
+- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)

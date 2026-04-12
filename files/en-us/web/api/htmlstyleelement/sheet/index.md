@@ -11,7 +11,7 @@ browser-compat: api.HTMLStyleElement.sheet
 The read-only **`sheet`** property of the {{domxref("HTMLStyleElement")}} interface
 contains the stylesheet associated with that element.
 
-An {{DOMxref("StyleSheet")}} is always associated with a {{domxref("HTMLStyleElement")}}, unless its `type` attribute is not `text/css`.
+A {{DOMxref("StyleSheet")}} is always associated with a {{domxref("HTMLStyleElement")}}, unless its `type` attribute is not `text/css`.
 
 ## Value
 
@@ -19,16 +19,22 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 
 ## Examples
 
+Suppose the `<head>` contains the following:
+
 ```html
-<html>
-  <header>
-    <style media="print" />
-    …
-  </header>
-</html>
+<style id="inline-style">
+  p {
+    color: blue;
+  }
+</style>
 ```
 
 The `sheet` property of the associated `HTMLStyleElement` object will return the {{domxref("StyleSheet")}} object describing it.
+
+```js
+const style = document.getElementById("inline-style");
+console.log(style.sheet.cssRules[0].cssText); // 'p { color: blue; }'
+```
 
 ## Specifications
 

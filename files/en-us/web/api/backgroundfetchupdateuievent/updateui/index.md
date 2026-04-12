@@ -24,13 +24,9 @@ updateUI(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing any of the following:
-
     - `icons` {{optional_inline}}
-
       - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
-
         - `src`
           - : A string which is a URL of an image.
         - `sizes` {{optional_inline}}

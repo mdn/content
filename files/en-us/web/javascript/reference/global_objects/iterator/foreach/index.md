@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.forEach()")}}: it executes a provided function once for each element produced by the iterator.
 
@@ -64,6 +64,7 @@ for (const v of new Set([1, 2, 3]).values()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.forEach`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}
 - {{jsxref("Iterator.prototype.map()")}}

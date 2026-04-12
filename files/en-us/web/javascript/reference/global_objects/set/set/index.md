@@ -1,15 +1,28 @@
 ---
 title: Set() constructor
+short-title: Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Set.Set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set() constructor")}}
+
+```js interactive-example
+const set = new Set([1, 2, 3, 4, 5]);
+
+console.log(set.has(1));
+// Expected output: true
+
+console.log(set.has(5));
+// Expected output: true
+
+console.log(set.has(6));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -18,17 +31,13 @@ new Set()
 new Set(iterable)
 ```
 
-> **Note:** `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `iterable` {{optional_inline}}
-
-  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
-    `Set`.
-
-    If you don't specify this parameter, or its value is `null`, the new
-    `Set` is empty.
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (such as an array) is passed, all of its elements will be added to the new `Set`. If you don't specify this parameter, or its value is `null` or `undefined`, the new `Set` is empty.
 
 ### Return value
 
@@ -60,4 +69,5 @@ mySet.add(o);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Set")}}

@@ -2,13 +2,12 @@
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 page-type: guide
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
+Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load code such as [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) and disallows potentially unsafe practices such as using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). This article briefly explains what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
 
-Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load code such as [\<script>](/en-US/docs/Web/HTML/Element/script) and disallows potentially unsafe practices such as using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). This article briefly explains what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
-
-[Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) is a mechanism to help prevent websites from inadvertently executing malicious content. A website specifies a CSP using an HTTP header sent from the server. The CSP is mostly concerned with specifying legitimate sources of various types of content, such as scripts or embedded plugins. For example, a website can use it to specify that the browser should only execute JavaScript served from the website itself, and not from any other sources. A CSP can also instruct the browser to disallow potentially unsafe practices, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+[Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP) is a mechanism to help prevent websites from inadvertently executing malicious content. A website specifies a CSP using an HTTP header sent from the server. The CSP is mostly concerned with specifying legitimate sources of various types of content, such as scripts or embedded plugins. For example, a website can use it to specify that the browser should only execute JavaScript served from the website itself, and not from any other sources. A CSP can also instruct the browser to disallow potentially unsafe practices, such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 Like websites, extensions can load content from different sources. For example, a browser action's popup is specified as an HTML document, and it can include JavaScript and CSS from different sources, just like a normal web page:
 
@@ -64,7 +63,7 @@ These policies are applied to any extension that has not explicitly set its own 
 
 ### Location of script and object resources
 
-Under the default CSP, you can only load code that is local to the extension. The CSP limits {{CSP("script-src")}} to secure sources only, which covers [\<script>](/en-US/docs/Web/HTML/Element/script) resources, [ES6 modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). In browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin), the {{CSP("object-src")}} directive is also restricted. For more information on object-src in extensions, see the WECG issue [Remove object-src from the CSP (at least in MV3)](https://github.com/w3c/webextensions/issues/204)).
+Under the default CSP, you can only load code that is local to the extension. The CSP limits {{CSP("script-src")}} to secure sources only, which covers [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) resources, [ES6 modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). In browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin), the {{CSP("object-src")}} directive is also restricted. For more information on object-src in extensions, see the WECG issue [Remove object-src from the CSP (at least in MV3)](https://github.com/w3c/webextensions/issues/204)).
 
 For example, consider a line like this in an extension's document:
 
@@ -75,10 +74,25 @@ For example, consider a line like this in an extension's document:
 This doesn't load the requested resource: it fails silently, and any object that you expect to be present from the resource is not found. There are two main solutions to this:
 
 - download the resource, package it in your extension, and refer to this version of the resource.
-- allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or, in Manifest V3, the `content_scripts` property.
+- allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key.
 
 > [!NOTE]
 > If your modified CSP allows remote script injection, your extension will get rejected from addons.mozilla.org (AMO) during the review. For more information, see details about [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/).
+
+#### Scripts from localhost
+
+The default CSP blocks all remote scripts, including scripts from localhost. However, to support local extension development, the CSP accepts localhost sources as an exception. You can use this feature for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded extensions from Firefox 147, by specifying CSP sources based at `http://localhost` or `http://127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "example",
+  "version": "1.0.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://localhost:3000"
+  }
+}
+```
 
 ### eval() and friends
 

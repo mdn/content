@@ -8,7 +8,7 @@ browser-compat: api.HTMLSelectElement.required
 
 {{ APIRef("HTML DOM") }}
 
-The **`required`** property of the {{DOMxRef("HTMLSelectElement")}} interface specifies that the user must select an option with a non-empty string value before submitting a form. It reflects the {{htmlelement("select")}} element's [`required`](/en-US/docs/Web/HTML/Element/select#required) attribute.
+The **`required`** property of the {{DOMxRef("HTMLSelectElement")}} interface specifies that the user must select an option with a non-empty string value before submitting a form. It reflects the {{htmlelement("select")}} element's [`required`](/en-US/docs/Web/HTML/Reference/Elements/select#required) attribute.
 
 ## Value
 

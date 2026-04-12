@@ -3,9 +3,8 @@ title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.move
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`bookmarks.move()`** method moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.
 
@@ -28,9 +27,7 @@ let movingBookmark = browser.bookmarks.move(
 - `id`
   - : A {{jsxref("string")}} containing the ID of the bookmark or folder to move.
 - `destination`
-
   - : An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:
-
     - `parentId` {{optional_inline}}
       - : A {{jsxref("string")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.
     - `index` {{optional_inline}}

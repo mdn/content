@@ -59,9 +59,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using the {{domxref("TextTrack.addCue()")}} method, with a `VTTCue` object as the value.
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 ### CSS

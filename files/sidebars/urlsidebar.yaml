@@ -1,0 +1,24 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/URI
+    title: URIs
+  - type: listSubPages
+    path: /Web/URI/Guides
+    link: /Web/URI/Guides
+  - type: section
+    link: /Web/URI/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/URI/Reference/Schemes
+    link: /Web/URI/Reference/Schemes
+    details: open
+    code: true
+  - /Web/URI/Reference/Authority
+  - /Web/URI/Reference/Path
+  - /Web/URI/Reference/Query
+  - type: listSubPages
+    path: /Web/URI/Reference/Fragment
+    link: /Web/URI/Reference/Fragment
+    details: open

@@ -1,15 +1,29 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `NumberFormat` object.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions()")}}
+
+```js interactive-example
+const numberFormat = new Intl.NumberFormat("de-DE");
+const options = numberFormat.resolvedOptions();
+
+console.log(options.locale);
+// Expected output: "de-DE"
+
+console.log(options.numberingSystem);
+// Expected output: "latn"
+
+console.log(options.style);
+// Expected output: "decimal"
+```
 
 ## Syntax
 
@@ -26,13 +40,13 @@ None.
 A new object with properties reflecting the options computed during the initialization of this `NumberFormat` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
+  - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
 - `numberingSystem`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 - `style`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"decimal"`, `"percent"`, `"currency"`, or `"unit"`. The default is `"decimal"`.
 - `currency` {{optional_inline}}
-  - : The value provided for this property in the `options` argument. It is only present if `style` is `"currency"`. It is an [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes). It is required if `style` is `"currency"` so there is no default.
+  - : The value provided for this property in the `options` argument. It is only present if `style` is `"currency"`. It is an ISO 4217 currency code; see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_currency_identifiers). It is required if `style` is `"currency"` so there is no default.
 - `currencyDisplay` {{optional_inline}}
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"currency"`. It is either `"code"`, `"symbol"`, `"narrowSymbol"`, or `"name"`. The default is `"symbol"`.
 - `currencySign` {{optional_inline}}

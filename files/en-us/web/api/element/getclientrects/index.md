@@ -10,7 +10,7 @@ browser-compat: api.Element.getClientRects
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
 interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
-bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) in a client.
+bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) in a client.
 
 Most elements only have one border box each, but a multiline [inline-level element](/en-US/docs/Glossary/Inline-level_content) (such as a multiline
 {{HTMLElement("span")}} element, by default) has a border box around each line.
@@ -244,9 +244,9 @@ function addClientRectsOverlay(elt) {
 (() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  const elts = document.getElementsByClassName("withClientRectsOverlay");
-  for (const elt of elts) {
-    addClientRectsOverlay(elt);
+  const elems = document.getElementsByClassName("withClientRectsOverlay");
+  for (const elem of elems) {
+    addClientRectsOverlay(elem);
   }
 })();
 ```

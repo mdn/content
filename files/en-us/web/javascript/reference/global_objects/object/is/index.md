@@ -1,15 +1,30 @@
 ---
 title: Object.is()
+short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
 
-The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
+{{InteractiveExample("JavaScript Demo: Object.is()")}}
 
-{{EmbedInteractiveExample("pages/js/object-is.html")}}
+```js interactive-example
+console.log(Object.is("1", 1));
+// Expected output: false
+
+console.log(Object.is(NaN, NaN));
+// Expected output: true
+
+console.log(Object.is(-0, 0));
+// Expected output: false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -30,7 +45,7 @@ A boolean indicating whether or not the two arguments are the same value.
 
 ## Description
 
-`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is). Two values are the same if one of the following holds:
+`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
 - both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
@@ -40,7 +55,6 @@ A boolean indicating whether or not the two arguments are the same value.
 - both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) with the same numeric value
 - both [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that reference the same symbol value
 - both numbers and
-
   - both `+0`
   - both `-0`
   - both {{jsxref("NaN")}}
@@ -91,4 +105,5 @@ Object.is(NaN, Number.NaN); // true
 ## See also
 
 - [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [es-shims polyfill of `Object.is`](https://www.npmjs.com/package/object.is)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

@@ -1,10 +1,9 @@
 ---
-title: First-class Function
+title: First-class function
 slug: Glossary/First-class_Function
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A programming language is said to have **First-class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 
@@ -20,7 +19,7 @@ foo(); // Invoke it using the variable
 // foobar
 ```
 
-We assigned an _Anonymous Function_ in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
+We assigned an _Anonymous Function_ to a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
 
 > [!NOTE]
 > Even if your function was named, you can use the variable name to invoke it. Naming it will be helpful when debugging your code. _But it won't affect the way we invoke it._

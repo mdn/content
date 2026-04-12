@@ -10,16 +10,16 @@ browser-compat: api.EditContext.compositionend_event
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window ends.
+The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using an {{glossary("Input Method Editor")}} (IME) window ends.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("compositionend", (event) => {});
+```js-nolint
+addEventListener("compositionend", (event) => { })
 
-oncompositionend = (event) => {};
+oncompositionend = (event) => { }
 ```
 
 ## Examples

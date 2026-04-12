@@ -36,42 +36,34 @@ The following example runs through the attribute nodes for the element in the do
 with id "paragraph", and prints each attribute's value.
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>Attributes example</title>
-    <script>
-      function listAttributes() {
-        const paragraph = document.getElementById("paragraph");
-        const result = document.getElementById("result");
+<p id="paragraph" class="green" contenteditable>Sample Paragraph</p>
+<input type="button" value="Show paragraph attribute name and value" />
+<pre id="result"></pre>
+```
 
-        // First, let's verify that the paragraph has some attributes
-        if (paragraph.hasAttributes()) {
-          let output = "Attributes of first paragraph:\n";
-          for (const attr of paragraph.attributes) {
-            output += `${attr.name} -> ${attr.value}\n`;
-          }
-          result.textContent = output;
-        } else {
-          result.textContent = "No attributes to show";
-        }
-      }
-    </script>
-  </head>
+```css
+.green {
+  color: green;
+}
+```
 
-  <body>
-    <p id="paragraph" style="color: green;">Sample Paragraph</p>
-    <form action="">
-      <p>
-        <input
-          type="button"
-          value="Show first attribute name and value"
-          onclick="listAttributes();" />
-      </p>
-    </form>
-    <pre id="result"></pre>
-  </body>
-</html>
+```js
+const paragraph = document.getElementById("paragraph");
+const result = document.getElementById("result");
+const btn = document.querySelector("input[type='button']");
+
+btn.addEventListener("click", () => {
+  // First, let's verify that the paragraph has some attributes
+  if (paragraph.hasAttributes()) {
+    let output = "Attributes of first paragraph:\n";
+    for (const attr of paragraph.attributes) {
+      output += `${attr.name} -> ${attr.value}\n`;
+    }
+    result.textContent = output;
+  } else {
+    result.textContent = "No attributes to show";
+  }
+});
 ```
 
 {{EmbedLiveSample('enumerating_elements_attributes', 100, 300)}}

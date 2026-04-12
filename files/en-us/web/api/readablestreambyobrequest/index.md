@@ -17,7 +17,7 @@ An underlying source that supports "BYOB mode" should check for {{domxref("Reada
 If data arrives from the underlying source when {{domxref("ReadableByteStreamController.byobRequest")}} is `null`, it can be queued using {{domxref("ReadableByteStreamController.enqueue()")}}.
 This might happen when an underlying push source receives new data when the stream's internal buffers are not empty.
 
-An underlying source uses the request by writing data to the BYOB request's [`view`](#readablestreambyobrequest.view) and then calling [`respond()`](#readablestreambyobrequest.respond), or by calling [`respondWithNewView()`](#readablestreambyobrequest.respondwithnewview) and passing a new view as an argument.
+An underlying source uses the request by writing data to the BYOB request's [`view`](/en-US/docs/Web/API/ReadableStreamBYOBRequest/view) and then calling [`respond()`](/en-US/docs/Web/API/ReadableStreamBYOBRequest/respond), or by calling [`respondWithNewView()`](/en-US/docs/Web/API/ReadableStreamBYOBRequest/respondWithNewView) and passing a new view as an argument.
 Note that the "new view" must actually be a view over the _same_ buffer as the original `view`, starting at the same offset.
 This might be used to return a shorter buffer if the underlying source is unable to fill the entire original view.
 
@@ -37,11 +37,11 @@ None. `ReadableStreamBYOBRequest` instance is created automatically by `Readable
 ## Instance methods
 
 - {{domxref("ReadableStreamBYOBRequest.respond()")}}
-  - : Signals the associated readable byte stream that the specified number of bytes were written into the current [`view`](#readablestreambyobrequest.view), which then causes the pending request from the consumer to be resolved.
+  - : Signals the associated readable byte stream that the specified number of bytes were written into the current [`view`](/en-US/docs/Web/API/ReadableStreamBYOBRequest/view), which then causes the pending request from the consumer to be resolved.
     Note that after this method is called the `view` is transferred and no longer modifiable.
 - {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}
   - : Signals to the associated readable byte stream view passed as an argument should be transferred to the consumer of the readable byte stream.
-    This new view must use the same buffer as the original [`view`](#readablestreambyobrequest.view), start at the same offset, and be the same length or shorter.
+    This new view must use the same buffer as the original [`view`](/en-US/docs/Web/API/ReadableStreamBYOBRequest/view), start at the same offset, and be the same length or shorter.
     Note that after this method is called the `view` is transferred and no longer modifiable.
 
 ## Examples

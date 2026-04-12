@@ -1,15 +1,32 @@
 ---
 title: Object.create()
+short-title: create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.create
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.create()`** static method creates a new object, using an existing object as the prototype of the newly created object.
 
-{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction() {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## Syntax
 
@@ -23,7 +40,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : The object which should be the prototype of the newly-created object.
 - `propertiesObject` {{optional_inline}}
-  - : If specified and not {{jsxref("undefined")}}, an object whose [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
+  - : If specified and not {{jsxref("undefined")}}, an object whose [enumerable own properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
 
 ### Return value
 

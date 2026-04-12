@@ -3,30 +3,29 @@ title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 page-type: webextension-api-type
 browser-compat: webextensions.api.menus.ItemType
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-The type of menu item.
+The type of the menu item.
 
 ## Type
 
 Values of this type are strings. Possible values are:
 
-- normal
+- `normal`
   - : A menu item that just displays a label.
-- checkbox
+- `checkbox`
   - : A menu item that represents a binary state. It displays a checkmark next to the label. Clicking the item toggles the checkmark. The {{WebExtAPIRef("menus.onClicked")}} listener will be passed two extra properties: "checked", indicating whether the item is checked now, and "wasChecked", indicating whether the item was checked before the click event.
-- radio
+- `radio`
   - : A menu item that represents one of a group of choices. Just like a checkbox, this also displays a checkmark next to the label, and its {{WebExtAPIRef("menus.onClicked")}} listener is passed "checked" and "wasChecked". However, if you create more than one radio item, then the items function as a group of radio items: only one item in the group can be checked, and clicking an item makes it the checked item.
-- separator
+- `separator`
   - : A line separating a group of items.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-ItemType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.

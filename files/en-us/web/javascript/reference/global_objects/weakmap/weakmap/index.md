@@ -1,11 +1,11 @@
 ---
 title: WeakMap() constructor
+short-title: WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakMap.WeakMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`WeakMap()`** constructor creates {{jsxref("WeakMap")}} objects.
 
@@ -16,7 +16,8 @@ new WeakMap()
 new WeakMap(iterable)
 ```
 
-> **Note:** `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -32,7 +33,7 @@ const wm1 = new WeakMap();
 const wm2 = new WeakMap();
 const wm3 = new WeakMap();
 const o1 = {};
-const o2 = function () {};
+const o2 = () => {};
 const o3 = window;
 
 wm1.set(o1, 37);
@@ -69,7 +70,6 @@ wm1.has(o1); // false
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [`WeakMap` in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

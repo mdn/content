@@ -17,9 +17,10 @@ The `error` event is fired on `IDBTransaction` when a request returns an error a
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
-onerror = (event) => {};
+```js-nolint
+addEventListener("error", (event) => { })
+
+onerror = (event) => { }
 ```
 
 ## Event type
@@ -62,10 +63,6 @@ dBOpenRequest.onsuccess = (event) => {
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
-  transaction.addEventListener("error", () => {
-    console.log(`Error adding new item: ${newItem.taskTitle}`);
-  });
-
   const objectStore = transaction.objectStore("toDoList");
   const newItem = {
     taskTitle: "my task",
@@ -75,6 +72,10 @@ dBOpenRequest.onsuccess = (event) => {
     month: "January",
     year: 2020,
   };
+
+  transaction.addEventListener("error", () => {
+    console.log(`Error adding new item: ${newItem.taskTitle}`);
+  });
 
   const objectStoreRequest = objectStore.add(newItem);
 };
@@ -108,10 +109,6 @@ dBOpenRequest.onsuccess = (event) => {
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
-  transaction.onerror = () => {
-    console.log(`Error adding new item: ${newItem.taskTitle}`);
-  };
-
   const objectStore = transaction.objectStore("toDoList");
   const newItem = {
     taskTitle: "my task",
@@ -120,6 +117,10 @@ dBOpenRequest.onsuccess = (event) => {
     day: 10,
     month: "January",
     year: 2020,
+  };
+
+  transaction.onerror = () => {
+    console.log(`Error adding new item: ${newItem.taskTitle}`);
   };
 
   const objectStoreRequest = objectStore.add(newItem);

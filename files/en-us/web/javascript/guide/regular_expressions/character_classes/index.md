@@ -2,13 +2,24 @@
 title: Character classes
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 Character classes distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
-{{EmbedInteractiveExample("pages/js/regexp-character-classes.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+
+```js interactive-example
+const chessStory = "He played the King in a8 and she moved her Queen in c2.";
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// Expected output: Array [ 'a8', 'c2']
+
+const moods = "happy 🙂, confused 😕, sad 😢";
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// Expected output: Array ['🙂', '😕', '😢']
+```
 
 ## Types
 
@@ -205,7 +216,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to code points
+          >, where "X" is a letter from A–Z or a–z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>
@@ -216,29 +227,29 @@ Character classes distinguish kinds of characters such as, for example, distingu
         <code>\x<em>hh</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Hex escape:</strong></a>
         Matches the character with the code <code><em>hh</em></code> (two
         hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>hhhh</em></code>
+        <code>\u<em>HHHH</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode escape:</strong></a>
         Matches a UTF-16 code-unit with the value
-        <code><em>hhhh</em></code> (four hexadecimal digits).
+        <code><em>HHHH</em></code> (four hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code>
+        <code>\u{<em>H…H</em>}</code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode code point escape:</strong></a>
         (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>hhhh</em></code> or <code
-          >U+<em>hhhhh</em></code
-        >
-        (hexadecimal digits).
+        the Unicode value <code>U+<em>H…H</em></code> (1 to 6 hexadecimal digits).
       </td>
     </tr>
     <tr>
@@ -314,7 +325,7 @@ Character classes distinguish kinds of characters such as, for example, distingu
 
 ### Looking for a series of digits
 
-In this example, we match a sequence of 4 digits with `\d{4}`. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start or end matching in the middle of a number sequence).
+In this example, we match a sequence of 4 digits with `\d{4}`. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e., do not start or end matching in the middle of a number sequence).
 
 ```js
 const randomData = "015 354 8787 687351 3512 8735";
@@ -328,7 +339,7 @@ See more examples in the [character class escape](/en-US/docs/Web/JavaScript/Ref
 
 ### Looking for a word (from the latin alphabet) starting with A
 
-In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e. do not start matching in the middle of a word). `[aA]` indicates the letter "a" or "A". `\w+` indicates any character _from the Latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
+In this example, we match a word starting with the letter A. `\b` indicates a [word boundary](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) (i.e., do not start matching in the middle of a word). `[aA]` indicates the letter "a" or "A". `\w+` indicates any character _from the Latin alphabet_, multiple times (`+` is a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)). Note that because we already match until there are no more word characters, an end `\b` boundary is not necessary.
 
 ```js
 const aliceExcerpt =

@@ -3,9 +3,8 @@ title: Expressions and operators
 slug: Web/JavaScript/Reference/Operators
 page-type: landing-page
 browser-compat: javascript.operators
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 This chapter documents all the JavaScript language operators, expressions and keywords.
 
@@ -129,7 +128,8 @@ A comparison operator compares its operands and returns a boolean value based on
 - {{jsxref("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.
 
-> **Note:** `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Equality operators
 
@@ -218,8 +218,8 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Logical OR assignment.
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : Nullish coalescing assignment.
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-  - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
+  - : Destructuring allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
 ### Yield operators
 

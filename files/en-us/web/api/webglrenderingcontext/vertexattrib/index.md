@@ -60,16 +60,16 @@ change the values is by calling this function again.
 ## Examples
 
 ```js
-const a_foobar = gl.getAttribLocation(shaderProgram, "foobar");
-//either set each component individually:
-gl.vertexAttrib3f(a_foobar, 10.0, 5.0, 2.0);
-//or provide a Float32Array:
+const index = gl.getAttribLocation(shaderProgram, "foobar");
+// Either set each component individually:
+gl.vertexAttrib3f(index, 10.0, 5.0, 2.0);
+// Or provide a Float32Array:
 const floatArray = new Float32Array([10.0, 5.0, 2.0]);
-gl.vertexAttrib3fv(a_foobar, floatArray);
+gl.vertexAttrib3fv(index, floatArray);
 ```
 
 ```js
-// we want to load the following 3x3 matrix into attribute named "matrix3x3"
+// We want to load the following 3x3 matrix into attribute named "matrix3x3"
 // 0 1 2
 // 3 4 5
 // 6 7 8

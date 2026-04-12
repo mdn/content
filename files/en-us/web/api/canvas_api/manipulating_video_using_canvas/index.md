@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Canvas API")}}
 
-By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
+By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) element with a [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
 
 {{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
@@ -26,7 +26,7 @@ The HTML document used to render this content is shown below.
         color: #cccccc;
       }
       #c2 {
-        background-image: url(media/foo.png);
+        background-image: url("media/foo.png");
         background-repeat: no-repeat;
       }
       div {
@@ -45,7 +45,7 @@ The HTML document used to render this content is shown below.
         id="video"
         src="media/video.mp4"
         controls
-        crossorigin="anonymous" />
+        crossorigin="anonymous"></video>
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
@@ -58,7 +58,7 @@ The HTML document used to render this content is shown below.
 
 The key bits to take away from this are:
 
-1. This document establishes two [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements, with the IDs `c1` and `c2`. Canvas `c1` is used to display the current frame of the original video, while `c2` is used to display the video after performing the chroma-keying effect; `c2` is preloaded with the still image that will be used to replace the green background in the video.
+1. This document establishes two [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas) elements, with the IDs `c1` and `c2`. Canvas `c1` is used to display the current frame of the original video, while `c2` is used to display the video after performing the chroma-keying effect; `c2` is preloaded with the still image that will be used to replace the green background in the video.
 2. The JavaScript code is imported from a script named `processor.js`.
 
 ## The JavaScript code
@@ -82,15 +82,11 @@ processor.doLoad = function doLoad() {
   this.c2 = document.getElementById("c2");
   this.ctx2 = this.c2.getContext("2d");
 
-  video.addEventListener(
-    "play",
-    () => {
-      this.width = video.videoWidth / 2;
-      this.height = video.videoHeight / 2;
-      this.timerCallback();
-    },
-    false,
-  );
+  video.addEventListener("play", () => {
+    this.width = video.videoWidth / 2;
+    this.height = video.videoHeight / 2;
+    this.timerCallback();
+  });
 };
 ```
 
@@ -167,5 +163,5 @@ This is done repeatedly as the video plays, so that frame after frame is process
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
 - [Learning area: HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

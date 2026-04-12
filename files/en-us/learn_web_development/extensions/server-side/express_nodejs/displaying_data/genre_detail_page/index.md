@@ -2,9 +2,8 @@
 title: Genre detail page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier.
 The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**).
@@ -14,7 +13,7 @@ The page should display the genre name and a list of all books in the genre with
 
 ## Controller
 
-Open **/controllers/genreController.js** and require the `Book` module at the top of the file (the file should already `require()` the `Genre` module and "express-async-handler").
+Open **/controllers/genreController.js** and require the `Book` module at the top of the file (the file should already `require()` the `Genre` module).
 
 ```js
 const Book = require("../models/book");
@@ -24,7 +23,7 @@ Find the exported `genre_detail()` controller method and replace it with the fol
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = asyncHandler(async (req, res, next) => {
+exports.genre_detail = async (req, res, next) => {
   // Get details of genre and all associated books (in parallel)
   const [genre, booksInGenre] = await Promise.all([
     Genre.findById(req.params.id).exec(),
@@ -39,21 +38,21 @@ exports.genre_detail = asyncHandler(async (req, res, next) => {
 
   res.render("genre_detail", {
     title: "Genre Detail",
-    genre: genre,
+    genre,
     genre_books: booksInGenre,
   });
-});
+};
 ```
 
 We first use `Genre.findById()` to get Genre information for a specific ID, and `Book.find()` to get all books records that have that same associated genre ID.
 Because the two requests do not depend on each other, we use `Promise.all()` to run the database queries in parallel (this same approach for running queries in parallel was demonstrated in the [home page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page#controller)).
 
 We `await` on the returned promise, and once it settles we check the results.
-If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results.
+If the genre does not exist in the database (i.e., it may have been deleted) then `findById()` will return successfully with no results.
 In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 
 > [!NOTE]
-> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js) - for more information see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors)).
+> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js). For more information, see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors) and [Handling errors and exceptions in the route functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_errors_and_exceptions_in_the_route_functions)).
 
 If the `genre` is found, then we call `render()` to display the view.
 The view template is **genre_detail** (.pug).
@@ -87,7 +86,7 @@ The view is very similar to all our other templates. The main difference is that
 
 ## What does it look like?
 
-Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
+Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g., "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 

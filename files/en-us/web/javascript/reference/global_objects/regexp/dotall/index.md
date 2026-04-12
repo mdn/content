@@ -1,15 +1,27 @@
 ---
 title: RegExp.prototype.dotAll
+short-title: dotAll
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.dotAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `s` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+
+```js interactive-example
+const regex1 = /f.o/s;
+
+console.log(regex1.dotAll);
+// Expected output: true
+
+const regex2 = /bar/;
+
+console.log(regex2.dotAll);
+// Expected output: false
+```
 
 ## Description
 

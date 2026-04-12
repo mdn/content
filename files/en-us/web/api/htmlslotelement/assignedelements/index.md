@@ -24,9 +24,7 @@ assignedElements(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object that sets options for the nodes to be returned. The available options are:
-
     - `flatten`
       - : A boolean value indicating whether to return the
         assigned elements of any available child `<slot>` elements

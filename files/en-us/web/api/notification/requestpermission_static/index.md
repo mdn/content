@@ -46,7 +46,7 @@ The deprecated version of the method returns `undefined`.
 Assume this basic HTML:
 
 ```html
-<button onclick="notifyMe()">Notify me!</button>
+<button>Notify me!</button>
 ```
 
 It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.
@@ -54,6 +54,8 @@ It's possible to send a notification as follows — here we present a fairly ver
 Note that the request should be made in response to user interaction: below, the method is called in the click event handler.
 
 ```js
+document.querySelector("button").addEventListener("click", notifyMe);
+
 function notifyMe() {
   if (!("Notification" in window)) {
     // Check if the browser supports notifications

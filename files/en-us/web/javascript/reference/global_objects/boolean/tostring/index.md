@@ -1,15 +1,27 @@
 ---
 title: Boolean.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Boolean.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Boolean")}} values returns a string representing the specified boolean value.
 
-{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.prototype.toString()")}}
+
+```js interactive-example
+const flag1 = new Boolean(true);
+
+console.log(flag1.toString());
+// Expected output: "true"
+
+const flag2 = new Boolean(1);
+
+console.log(flag2.toString());
+// Expected output: "true"
+```
 
 ## Syntax
 

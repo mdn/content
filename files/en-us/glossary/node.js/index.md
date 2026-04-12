@@ -2,9 +2,8 @@
 title: Node.js
 slug: Glossary/Node.js
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that allows developers to build server-side and network applications with JavaScript.
 
@@ -19,5 +18,5 @@ Packages hosted on npm are downloaded from the registry at [https://registry.npm
 - [Node.js](https://en.wikipedia.org/wiki/Node.js) on Wikipedia
 - [Node.js website](https://nodejs.org/)
 - [API reference documentation](https://nodejs.org/api/)
-- [Guides](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+- [Guides](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
 - [npm Documentation](https://docs.npmjs.com/)

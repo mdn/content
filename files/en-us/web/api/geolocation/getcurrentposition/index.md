@@ -10,7 +10,7 @@ browser-compat: api.Geolocation.getCurrentPosition
 
 The **`getCurrentPosition()`** method of the {{domxref("Geolocation")}} interface is used to get the current position of the device.
 
-Note that in addition to requiring a secure context this feature may be blocked by the [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation) `Permissions-Policy`, and also requires that explicit permission be granted by the user.
+Note that in addition to requiring a secure context this feature may be blocked by the [`geolocation`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy`, and also requires that explicit permission be granted by the user.
 If required, the user will be prompted when this method is called.
 The permission state can be queried using the `geolocation` user permission in the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
@@ -56,7 +56,7 @@ function success(pos) {
   const crd = pos.coords;
 
   console.log("Your current position is:");
-  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Latitude: ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);
 }

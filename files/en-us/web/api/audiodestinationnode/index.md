@@ -53,7 +53,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-There is no complex set up for using an `AudioDestinationNode` — by default, this represents the output of the user's system (e.g. their speakers), so you can get it hooked up inside an audio graph using only a few lines of code:
+There is no complex set up for using an `AudioDestinationNode` — by default, this represents the output of the user's system (e.g., their speakers), so you can get it hooked up inside an audio graph using only a few lines of code:
 
 ```js
 const audioCtx = new AudioContext();

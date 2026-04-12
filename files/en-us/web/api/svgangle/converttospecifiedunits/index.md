@@ -18,7 +18,7 @@ This function will:
 ## Syntax
 
 ```js-nolint
-svgAngle.convertToSpecifiedUnits(unitType)
+convertToSpecifiedUnits(unitType)
 ```
 
 ### Parameters

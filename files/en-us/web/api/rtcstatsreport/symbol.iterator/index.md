@@ -21,6 +21,10 @@ The method is otherwise the same as [`Map.prototype[Symbol.iterator]()`](/en-US/
 RTCStatsReport[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The same return value as {{domxref("RTCStatsReport.entries()")}}.

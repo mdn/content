@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.mouseenter_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`mouseenter`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.
 
@@ -16,10 +16,10 @@ Note that "moving into an element" refers to the element's position in the DOM t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseenter", (event) => {});
+```js-nolint
+addEventListener("mouseenter", (event) => { })
 
-onmouseenter = (event) => {};
+onmouseenter = (event) => { }
 ```
 
 ## Event type
@@ -39,9 +39,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -65,9 +65,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -82,10 +82,11 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ## Usage notes
 
-Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.
+Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space. Other than that, enter and over events for the same situation are dispatched at the same time, if appropriate.
 
 ### Behavior of `mouseenter` events
 
+This describes the mouseenter events received by each of four concentric divs with no padding or margin, so the events all happen at the same time:
 ![Mouseenter behavior diagram](mouseenter.png)
 One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
@@ -124,7 +125,7 @@ Styling the `div` to make it more visible.
 #mouseTarget {
   box-sizing: border-box;
   width: 15rem;
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 ```
 
@@ -143,7 +144,7 @@ mouseTarget.addEventListener("mouseenter", (e) => {
 });
 
 mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
+  mouseTarget.style.border = "1px solid #333333";
   leaveEventCount++;
   addListItem(`This is mouseleave event ${leaveEventCount}.`);
 });
@@ -187,3 +188,4 @@ function addListItem(text) {
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerenter_event", "pointerenter")}}

@@ -25,7 +25,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     Values are the same as allowed on the {{DOMxRef("WebSocket.binaryType")}} property:
     `blob` if {{DOMxRef("Blob")}} objects are being used,
     or `arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used.
-    The default is `blob`.
+    The default is `arraybuffer`.
 - {{DOMxRef("RTCDataChannel.bufferedAmount", "bufferedAmount")}} {{ReadOnlyInline}}
   - : Returns the number of bytes of data
     currently queued to be sent over the data channel.
@@ -58,6 +58,10 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.ordered", "ordered")}} {{ReadOnlyInline}}
   - : Indicates whether or not the data channel guarantees in-order delivery of messages;
     the default is `true`, which indicates that the data channel is indeed ordered.
+- {{DOMxRef("RTCDataChannel.priority", "priority")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a string indicating the priority of the data channel,
+    as set when the data channel was created, or as assigned by the user agent.
+    Possible values are `"very-low"`, `"low"`, `"medium"`, or `"high"`.
 - {{DOMxRef("RTCDataChannel.protocol", "protocol")}} {{ReadOnlyInline}}
   - : Returns a string containing the name of the subprotocol in use.
     If no protocol was specified

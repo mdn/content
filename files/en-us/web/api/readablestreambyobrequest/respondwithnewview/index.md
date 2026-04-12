@@ -25,7 +25,6 @@ respondWithNewView(view)
 ### Parameters
 
 - `view`
-
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
 
     This must be a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}} and occupy the same or less memory.
@@ -38,7 +37,6 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : Thrown if the source object is not a `ReadableStreamBYOBRequest`, or there is no associated controller, or the associated internal array buffer is non-existent or detached.
     It may also be thrown if the `view` is zero-length when there is an active reader, or non-zero when called on a closed stream.
 

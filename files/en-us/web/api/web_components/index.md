@@ -27,7 +27,7 @@ Web Components aims to solve such problems — it consists of three main technol
 The basic approach for implementing a web component generally looks something like this:
 
 1. Create a class in which you specify your web component functionality, using the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax.
-2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
+2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from. You can register on the global registry via {{domxref("Window.customElements")}}, or create a [scoped registry](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) using the {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor to avoid name conflicts between components.
 3. If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
 4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
 5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
@@ -46,13 +46,15 @@ The basic approach for implementing a web component generally looks something li
 ### Custom elements
 
 - {{domxref("CustomElementRegistry")}}
-  - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.
+  - : Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document. The {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor can be used to create scoped registries, and the {{domxref("CustomElementRegistry.initialize()")}} method associates a scoped registry with a DOM subtree.
 - {{domxref("Window.customElements")}}
-  - : Returns a reference to the `CustomElementRegistry` object.
+  - : Returns a reference to the global `CustomElementRegistry` object.
+- {{domxref("Document.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the document.
+- {{domxref("Element.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the element.
 - [Life cycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks)
-
   - : Special callback functions defined inside the custom element's class definition, which affect its behavior:
-
     - `connectedCallback()`
       - : Invoked when the custom element is first connected to the document's DOM.
     - `disconnectedCallback()`
@@ -62,19 +64,15 @@ The basic approach for implementing a web component generally looks something li
     - `attributeChangedCallback()`
       - : Invoked when one of the custom element's attributes is added, removed, or changed.
 
-- Extensions for creating custom built-in elements
-
+- Extensions for creating customized built-in elements
   - : The following extensions are defined:
-
-    - The [`is`](/en-US/docs/Web/HTML/Global_attributes/is) global HTML attribute
-      - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
+    - The [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) global HTML attribute
+      - : Allows you to specify that a standard HTML element should behave like a registered customized built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method
-      - : Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
+      - : Allows you to create an instance of a standard HTML element that behaves like a given registered customized built-in element.
 
 - CSS pseudo-classes
-
   - : Pseudo-classes relating specifically to custom elements:
-
     - {{cssxref(":defined")}}
       - : Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`.
     - {{cssxref(":host")}}
@@ -88,34 +86,28 @@ The basic approach for implementing a web component generally looks something li
         More precisely, it matches anonymous custom elements where the specified state is present in the element's {{domxref("CustomStateSet")}}.
 
 - CSS pseudo-elements
-
   - : Pseudo-elements relating specifically to custom elements:
-
     - {{cssxref("::part")}}
-      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 
 ### Shadow DOM
 
 - {{domxref("ShadowRoot")}}
   - : Represents the root node of a shadow DOM subtree.
+- {{domxref("ShadowRoot.customElementRegistry")}}
+  - : The {{domxref("CustomElementRegistry")}} associated with the shadow root. Can be set via the `customElementRegistry` option of {{domxref("Element.attachShadow()")}}, or later using {{domxref("CustomElementRegistry.initialize()")}}.
 - {{domxref("Element")}} extensions
-
   - : Extensions to the `Element` interface related to shadow DOM:
-
     - The {{domxref("Element.attachShadow()")}} method attaches a shadow DOM tree to the specified element.
     - The {{domxref("Element.shadowRoot")}} property returns the shadow root attached to the specified element, or `null` if there is no shadow root attached.
 
 - Relevant {{domxref("Node")}} additions
-
   - : Additions to the `Node` interface relevant to shadow DOM:
-
     - The {{domxref("Node.getRootNode()")}} method returns the context object's root, which optionally includes the shadow root if it is available.
-    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g. the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
+    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g., the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
 
 - {{domxref("Event")}} extensions
-
   - : Extensions to the `Event` interface related to shadow DOM:
-
     - {{domxref("Event.composed")}}
       - : Returns `true` if the event will propagate across the shadow DOM boundary into the standard DOM, otherwise `false`.
     - {{domxref("Event.composedPath")}}
@@ -127,23 +119,19 @@ The basic approach for implementing a web component generally looks something li
   - : Contains an HTML fragment that is not rendered when a containing document is initially loaded, but can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. The associated DOM interface is {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.
-- The [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) global HTML attribute
+- The [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) global HTML attribute
   - : Assigns a slot in a shadow DOM shadow tree to an element.
 - {{domxref("Element.assignedSlot")}}
   - : A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this element is inserted.
 - {{domxref("Text.assignedSlot")}}
   - : A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this text node is inserted.
 - {{domxref("Element")}} extensions
-
   - : Extensions to the `Element` interface related to slots:
-
     - {{domxref("Element.slot")}}
       - : Returns the name of the shadow DOM slot attached to the element.
 
 - CSS pseudo-elements
-
   - : Pseudo-elements relating specifically to slots:
-
     - {{cssxref("::slotted")}}
       - : Matches any content that is inserted into a slot.
 

@@ -1,10 +1,10 @@
 ---
 title: What went wrong? Troubleshooting JavaScript
+short-title: Troubleshooting
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
@@ -34,7 +34,7 @@ When you built up the "Guess the number" game in the previous article, you may h
 
 Generally speaking, when you do something wrong in code, there are two main types of error that you'll come across:
 
-- **Syntax errors**: These are spelling errors in your code that actually cause the program not to run at all, or stop working part way through — you will usually be provided with some error messages too. These are usually okay to fix, as long as you are familiar with the right tools and know what the error messages mean!
+- **Syntax errors**: These are spelling errors in your code that actually cause the program not to run at all, or stop working part way through — you will usually be provided with some error messages too. These are usually not too hard to fix, as long as you are familiar with the right tools and know what the error messages mean!
 - **Logic errors**: These are errors where the syntax is actually correct but the code is not what you intended it to be, meaning that program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.
 
 Okay, so it's not quite _that_ simple — there are some other differentiators as you drill down deeper. But the above classifications will do at this early stage in your career. We'll look at both of these types going forward.
@@ -167,7 +167,7 @@ There's definitely a problem in the game logic somewhere — the game is not ret
 
 ### Working through the logic
 
-To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g. 0.5675493843.
+To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g., 0.5675493843.
 
 ```js
 Math.random();
@@ -197,21 +197,21 @@ Try updating both lines like this, then save and refresh — the game should now
 
 There are other common errors you'll come across in your code. This section highlights most of them.
 
-### The program always says you've won, regardless of the guess you enter
+### The game is over after the first wrong guess
 
 This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside `checkGuess()`:
 
 ```js
-if (userGuess === randomNumber) {
+} else if (guessCount === 10) {
 ```
 
 to
 
 ```js
-if (userGuess = randomNumber) {
+} else if (guessCount = 10) {
 ```
 
-the test would always return `true`, causing the program to report that the game has been won. Be careful!
+the test would always return `true`, causing the program to `setGameOver()` after the first wrong guess. Be careful!
 
 ### SyntaxError: missing ) after argument list
 

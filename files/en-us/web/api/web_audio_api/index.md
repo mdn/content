@@ -63,7 +63,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
 - {{domxref("AudioContext")}}
   - : The **`AudioContext`** interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}. An audio context controls the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an `AudioContext` before you do anything else, as everything happens inside a context.
 - {{domxref("AudioNode")}}
-  - : The **`AudioNode`** interface represents an audio-processing module like an _audio source_ (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), _audio destination_, _intermediate processing module_ (e.g. a filter like {{domxref("BiquadFilterNode")}}, or _volume control_ like {{domxref("GainNode")}}).
+  - : The **`AudioNode`** interface represents an audio-processing module like an _audio source_ (e.g., an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), _audio destination_, _intermediate processing module_ (e.g., a filter like {{domxref("BiquadFilterNode")}}, or _volume control_ like {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
   - : The **`AudioParam`** interface represents an audio-related parameter, like one of an {{domxref("AudioNode")}}. It can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.
 - {{domxref("AudioParamMap")}}
@@ -158,7 +158,7 @@ Using audio worklets, you can define custom audio nodes written in JavaScript or
 - {{domxref("AudioWorkletNode")}}
   - : The `AudioWorkletNode` interface represents an {{domxref("AudioNode")}} that is embedded into an audio graph and can pass messages to the corresponding `AudioWorkletProcessor`.
 - {{domxref("AudioWorkletProcessor")}}
-  - : The `AudioWorkletProcessor` interface represents audio processing code running in a `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
+  - : The `AudioWorkletProcessor` interface represents audio processing code running in an `AudioWorkletGlobalScope` that generates, processes, or analyzes audio directly, and can pass messages to the corresponding `AudioWorkletNode`.
 - {{domxref("AudioWorkletGlobalScope")}}
   - : The `AudioWorkletGlobalScope` interface is a `WorkletGlobalScope`-derived object representing a worker context in which an audio processing script is run; it is designed to enable the generation, processing, and analysis of audio data directly using JavaScript in a worklet thread rather than on the main thread.
 
@@ -207,7 +207,7 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 - [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Advanced techniques: creating sound, sequencing, timing, scheduling](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
 - [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
@@ -217,7 +217,6 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 
 ### Libraries
 
-- [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [Tone.js](https://tonejs.github.io/): a framework for creating interactive music in the browser.
 - [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://webaudio.github.io/web-audio-api/) and falls back to [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), as well as providing other useful features.
 - [Mooog](https://github.com/mattlima/mooog): jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.
@@ -228,4 +227,4 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 ### Related topics
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)

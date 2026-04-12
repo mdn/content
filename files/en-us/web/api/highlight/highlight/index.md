@@ -9,7 +9,7 @@ browser-compat: api.Highlight.Highlight
 {{APIRef("CSS Custom Highlight API")}}
 
 The **`Highlight()`** constructor returns a newly created
-{{domxref("Highlight")}} object which can hold a collection of {{domxref("Range")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+{{domxref("Highlight")}} object which can hold a collection of {{domxref("AbstractRange")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ new Highlight(range1, range2, /* …, */ rangeN)
 ### Parameters
 
 - `range1`, …, `rangeN` {{optional_inline}}
-  - : One ore more initial {{domxref("Range")}} objects to add in the new highlight.
+  - : One or more initial {{domxref("AbstractRange")}} objects to add in the new highlight.
 
 ### Return value
 
@@ -55,4 +55,5 @@ const highlight = new Highlight(range1, range2);
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)

@@ -2,9 +2,8 @@
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 

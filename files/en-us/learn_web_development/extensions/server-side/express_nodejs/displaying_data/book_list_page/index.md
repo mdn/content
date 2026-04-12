@@ -2,9 +2,8 @@
 title: Book list page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
 
@@ -16,14 +15,14 @@ Open **/controllers/bookController.js**. Find the exported `book_list()` control
 
 ```js
 // Display list of all books.
-exports.book_list = asyncHandler(async (req, res, next) => {
+exports.book_list = async (req, res, next) => {
   const allBooks = await Book.find({}, "title author")
     .sort({ title: 1 })
     .populate("author")
     .exec();
 
   res.render("book_list", { title: "Book List", book_list: allBooks });
-});
+};
 ```
 
 The route handler calls the `find()` function on the `Book` model, selecting to return only the `title` and `author` as we don't need the other fields (it will also return the `_id` and virtual fields), and sorting the results by the title alphabetically using the `sort()` method.
@@ -48,7 +47,7 @@ block content
     ul
       each book in book_list
         li
-          a(href=book.url) #{book.title}
+          a(href=book.url) !{book.title}
           |  (#{book.author.name})
 
   else

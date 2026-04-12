@@ -2,9 +2,8 @@
 title: Dealing with files
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
 
@@ -46,7 +45,7 @@ Whereas Windows has the File Explorer:
 ![The Windows File Explorer application, showing the contents of a typical Home folder](file-explorer.png)
 
 > [!NOTE]
-> This guide was written using Windows 11 and macOS 15. You may be using a different OS version, or a different OS altogether, in which case the experience may differ slightly. There are plenty of guides on the web on basic OS usage — we encourage you to search the web for information on your particular OS.
+> This guide was written using Windows 11 and macOS 15. You may be using a different OS version, or a different OS altogether, in which case the experience will differ. There are plenty of guides on the web on basic OS usage — we encourage you to search the web for information on your particular OS.
 
 ### Basic structure
 
@@ -57,7 +56,7 @@ The currently-logged-in user will by default only be able to access their own _H
 You should create project files relating to your work somewhere inside in your _Home_ folder, perhaps inside _Documents_. This makes sense, as web page files are often referred to as _documents_.
 
 > [!WARNING]
-> If you start creating and editing files in other places on your system (for example, areas that control the operating system or important applications), you might break something. For the moment, stick to creating and editing files inside your _Home_ folder.
+> If you start creating and editing files in other places on your system (for example, areas that control the operating system or important applications), you might break something. Stick to creating and editing files inside your _Home_ folder until you know what you are doing.
 
 ### Creating a folder
 
@@ -99,7 +98,7 @@ You should see your `web-projects` folder open in the VS Code _EXPLORER_ pane, a
 
 #### An aside on keyboard navigation in VS Code
 
-VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
+VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/configure/keybindings).
 
 In general, if you want to navigate VS Code via the keyboard, you can press the <kbd>Tab</kbd> key to move around different areas of the UI (<kbd>Shift</kbd> + <kbd>Tab</kbd> will move you to a previous tab focus position). If there are multiple buttons in a tab focus position, you can use the cursor keys to move between them.
 
@@ -153,18 +152,14 @@ Let's add some more features inside `test-site` to demonstrate a typical website
 3. **`styles` folder**: This folder will contain the CSS code used to style your content (for example, setting text and background colors).
 4. **`scripts` folder**: This folder will contain all the JavaScript code used to add interactive functionality to your site (for example, defining what happens when buttons are clicked).
 
-> [!CALLOUT]
->
-> **Try it out**
->
-> You should already have an `index.html` file inside `test-site`. Create the `images`, `styles`, and `scripts` folders inside it now.
+You should already have an `index.html` file inside `test-site`. Create the `images`, `styles`, and `scripts` folders inside it now.
 
 ## File names
 
 There are generally two parts to a file name — the **name** and the **extension**. Take the file we created above — `index.html`:
 
 - The name in this case is `index`. File names can generally contain whatever characters you like, although different computer systems will have various restrictions on the characters that can be used. It is better to stick to numbers and letters, at least to begin with. In addition, systems may give special meaning to certain names or parts of names — as we've already said, `index` files tend to be recognized as the main homepage file of a website.
-- The file extension identifies the type of file we are dealing with, and is used by computer systems to identify what kind of content it can expect in the file, which program it should use to open the file, etc. in this case, the extension is `.html`, which means the file should contain plain text, and more specifically, HTML code. Because of the extension, your computer knows that when you try to open the file it should open it using your default text editor, which should be VS Code if you followed all our instructions up to now.
+- The file extension identifies the type of file we are dealing with, and is used by computer systems to identify what kind of content it can expect in the file, which program it should use to open the file, etc. In this case, the extension is `.html`, which means the file should contain plain text, and more specifically, HTML code. Because of the extension, your computer knows that when you try to open the file it should open it using your default text editor, which should be VS Code if you followed all our instructions up to now.
 
 It is not true in all cases, but most files need an extension to be handled properly. Removing or changing the file extension is likely to cause errors, so you shouldn't alter it unless you really know what you are doing.
 
@@ -175,14 +170,14 @@ On Windows computers, you might have trouble seeing the extensions of some files
 
 ### Best practices for naming files
 
-As you follow this course, you'll notice that we always ask you to name folders and files completely in lowercase with no spaces. There are many ways in which using spaces in file and folder names creates issues — some of the more common ones are as follows:
+As you follow this course, you'll notice that we always ask you to name folders and files completely in lowercase with no spaces. There are many ways in which ignoring this advice creates issues — some of the more common ones are as follows:
 
 1. Many computer systems, including most web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/images/MyImage.jpg` and then in a different file you try to reference the image with `test-site/images/myimage.jpg`, it may not work.
 2. When you invoke commands on the command line, you have to put quotes around file names with spaces in them, otherwise they will be interpreted as two separate items.
 3. Some programming languages (for example, Python) do not work well with spaces in file names in certain circumstances (for example, if these files are modules to be imported).
-4. File names commonly map to web addresses/URLs. If you, for example, have a file called `my file.html` in your server's root folder, generally it will be accessible at a URL like `https://example.com/my%20file.html`. Web servers usually replace the spaces in filenames with `%20` (because URLs are {{Glossary("Percent-encoding", "percent-encoded")}}), which can create subtle bugs with some systems if they assume that file names and URLs match perfectly.
+4. File names commonly map to web addresses/URLs. If you, for example, have a file called <code>my&nbsp;file.html</code> in your server's root folder, generally it will be accessible at a URL like `https://example.com/my%20file.html`. Web servers usually replace the spaces in filenames with `%20` (because URLs are {{Glossary("Percent-encoding", "percent-encoded")}}), which can create subtle bugs with some systems if they assume that file names and URLs match perfectly.
 
-Instead of spaces, many developers use a separator character such as a hyphen (`-`) rather than a space — for example `my-file.html` rather than `my file.html`. This is a good practice.
+Instead of spaces, many developers use a separator character such as a hyphen (`-`) rather than a space — for example `my-file.html` rather than <code>my&nbsp;file.html</code>. This is a good practice.
 
 It is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way, you'll encounter fewer problems further down the road.
 
@@ -233,6 +228,6 @@ You should see a basic webpage displaying your image!
 - You can combine these as much as you like, for example `../subfolder/another-subfolder/my-image.jpg`.
 
 > [!NOTE]
-> The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
+> The Windows file system tends to use backslashes, not forward slashes, e.g., `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

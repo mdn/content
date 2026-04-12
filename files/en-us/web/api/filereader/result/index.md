@@ -68,7 +68,7 @@ The result types are described below.
 
 ## Examples
 
-This example presents a function `reader()` which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a {{domxref("FileReader")}} object and creating a listener for {{domxref("FileReader/load_event", "load")}} events, such that when then file is read, the `result` is obtained and passed to the callback function provided to `reader()`.
+This example presents a function `reader()` which reads a file from a [file input](/en-US/docs/Web/HTML/Reference/Elements/input/file). It works by creating a {{domxref("FileReader")}} object and creating a listener for {{domxref("FileReader/load_event", "load")}} events, such that when then file is read, the `result` is obtained and passed to the callback function provided to `reader()`.
 
 The content is handled as raw text data.
 
@@ -94,7 +94,7 @@ document.querySelector("#image").addEventListener("change", (evt) => {
 });
 ```
 
-Given the asynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a {{jsxref("Promise")}}.
+Given the asynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach. Here's an example for a [file input](/en-US/docs/Web/HTML/Reference/Elements/input/file) with attribute `multiple` that returns a {{jsxref("Promise")}}.
 
 ```js
 // Given this HTMLInputElement:

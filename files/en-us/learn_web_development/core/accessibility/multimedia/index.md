@@ -2,11 +2,10 @@
 title: Accessible multimedia
 slug: Learn_web_development/Core/Accessibility/Multimedia
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 Another category of content that can create accessibility problems is multimedia. Video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
 
@@ -86,7 +85,7 @@ The controls attribute provides play/pause buttons, seek bar, etc. — the basic
 
 However, there are problems with these controls:
 
-- They are not keyboard-accessible in most browsers, i.e. you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
+- They are not keyboard-accessible in most browsers, i.e., you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
 - Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.
 
 To remedy this, we can create our own custom controls. Let's look at how.
@@ -225,9 +224,9 @@ Each time the time updates (once per second), we fire this function. It works ou
 
 This gives you a basic idea of how to add custom player functionality to video/audio player instances. For more information on how to add more complex features to video/audio players, see:
 
-- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery)
-- [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
+- [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 
 We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)).
 
@@ -307,7 +306,7 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 - Save it as a .vtt file in a sensible place.
-- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in.
+- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Reference/Elements/track#srclang) to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 
@@ -319,11 +318,7 @@ Here's an example:
 </video>
 ```
 
-This will result in a video that has subtitles displayed, kind of like this:
-
-![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
-
-For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+This will result in a video that has subtitles displayed. For a full-fledged application and its source code, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > [!NOTE]
 > Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
@@ -336,4 +331,4 @@ It is not always easy to make multimedia accessible. If for example, you are dea
 
 You can however make sure that such an app has good enough color contrast and clear presentation so it is perceivable to those with low vision/color blindness, and also make it keyboard accessible. Remember that accessibility is about doing as much as you can, rather than striving for 100% accessibility all the time, which is often impossible.
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

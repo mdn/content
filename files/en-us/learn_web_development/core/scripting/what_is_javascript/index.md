@@ -2,9 +2,8 @@
 title: What is JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
@@ -44,17 +43,34 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Button showing Player 1: Chris with no styling](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
-  font-family: "helvetica neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid rgb(200 200 0 / 60%);
@@ -67,34 +83,37 @@ button {
 }
 ```
 
-![Button showing Player 1: Chris with styling](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+Try clicking on the text label, entering a name into the dialog box that opens, and pressing the OK button.
 
-Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
+
+> [!NOTE]
+> Before moving on, why not jump in and get your hands dirty with a challenge from Scrimba at this early stage? Check out [Render a welcome message](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. If you don't know how to write this code, don't worry at all; you could try doing some web searches to find some answers, or view the solution at the end of the scrim.
 
 ## So what can it really do?
 
 The core client-side JavaScript language consists of some common programming features that allow you to do things like:
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
-- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g. "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -114,11 +133,11 @@ They generally fall into two categories.
   This is how [Google Maps](https://www.google.com/maps) is able to find your location and plot it on a map.
 - The [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs allow you to create animated 2D and 3D graphics.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
-- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
+- [Audio and Video APIs](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://developer.x.com/en/docs) allows you to do things like displaying your latest tweets on your website.
+- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -151,23 +170,23 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here, we first define a code block called `updateName()` (these types of reusable code blocks are called **functions**), which asks the user for a new name and inserts that name into the text of a button. We then store a reference to a button using `document.querySelector` and attach an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` function is run.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+If you were to swap the order of the `const button = ...` and `button.addEventListener(...)` lines, the code would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > [!NOTE]
-> This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
+> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a common source of errors.
 
 ### Interpreted versus compiled code
 
@@ -200,7 +219,7 @@ JavaScript can also be used as a server-side language, for example in the popula
 ### Dynamic versus static code
 
 The word **dynamic** is used to describe both client-side JavaScript, and server-side languages — it refers to the ability to update the display of a web page/app to show different things in different circumstances, generating new content as required.
-Server-side code dynamically generates new content on the server, e.g. pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g. creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user.
+Server-side code dynamically generates new content on the server, e.g., pulling data from a database, whereas client-side JavaScript dynamically generates new content inside the browser on the client, e.g., creating a new HTML table, filling it with data requested from the server, then displaying the table in a web page shown to the user.
 The meaning is slightly different in the two contexts, but related, and both approaches (server-side and client-side) usually work together.
 
 A web page with no dynamically updating content is referred to as **static** — it just shows the same content all the time.
@@ -209,6 +228,9 @@ A web page with no dynamically updating content is referred to as **static** —
 
 JavaScript is applied to your HTML page in a similar manner to CSS.
 Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets and {{htmlelement("style")}} elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the {{htmlelement("script")}} element. Let's learn how this works.
+
+> [!NOTE]
+> Scrimba's [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> interactive tutorial walks through a couple of different ways to add JavaScript to your HTML.
 
 ### Internal JavaScript
 
@@ -278,7 +300,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
 5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
@@ -346,7 +368,6 @@ There are a few different strategies to make sure your JavaScript only runs afte
 - In the internal JavaScript example above, the script element is placed at the bottom of the body of the document, and therefore only run after the rest of the HTML body is parsed.
 - In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules. (You could also place external scripts at the bottom of the body. But if there is a lot of HTML and the network is slow, it may take a lot of time before the browser can even start fetching and loading the script, so placing external scripts in the head is usually better.)
 - If you still want to use non-module scripts in the document head, which could block the whole page from displaying, and could cause errors because it executes before the HTML is parsed:
-
   - For external scripts, you should add the `defer` (or if you don't need the HTML to be ready, the `async`) attribute on the {{htmlelement("script")}} element.
   - For internal scripts, you should wrap the code in a [`DOMContentLoaded` event listener](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
 

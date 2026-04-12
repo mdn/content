@@ -39,5 +39,4 @@ console.log(navigator.globalPrivacyControl);
 
 - {{HTTPHeader("Sec-GPC")}} header
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
-- [Global Privacy Control Spec](https://privacycg.github.io/gpc-spec/)
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)

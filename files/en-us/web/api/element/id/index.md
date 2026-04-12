@@ -10,13 +10,13 @@ browser-compat: api.Element.id
 
 The **`id`** property of the {{domxref("Element")}} interface
 represents the element's identifier, reflecting the
-[**`id`**](/en-US/docs/Web/HTML/Global_attributes/id)
+[**`id`**](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
 global attribute.
 
 If the `id` value is not the empty string, it must be unique in a document.
 
 The `id` is often used with {{domxref("Document.getElementById()", "getElementById()")}} to retrieve a particular element.
-Another common case is to use an element's [ID as a selector](/en-US/docs/Web/CSS/ID_selectors) when styling the document with [CSS](/en-US/docs/Web/CSS).
+Another common case is to use an element's [ID as a selector](/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors) when styling the document with [CSS](/en-US/docs/Web/CSS).
 
 > [!NOTE]
 > Identifiers are case-sensitive, but you should avoid creating
@@ -36,5 +36,5 @@ A string.
 
 ## See also
 
-- The DOM [**id**](/en-US/docs/Web/HTML/Global_attributes/id)
+- The DOM [**id**](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
   global attribute.

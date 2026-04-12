@@ -8,107 +8,95 @@ browser-compat: api.HTMLDialogElement.returnValue
 
 {{ APIRef("HTML DOM") }}
 
-The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the {{htmlelement("dialog")}}, usually to indicate which button the user pressed to close it.
+The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface is a string representing the return value for a {{htmlelement("dialog")}} element when it's closed.
+You can set the value directly (`dialog.returnValue = "result"`) or by providing the value as a string argument to {{domxref("HTMLDialogElement.close()", "close()")}} or {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}}.
 
 ## Value
 
 A string representing the `returnValue` of the dialog.
+Defaults to an empty string (`""`).
 
 ## Examples
 
-The following example displays a button to open a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
-The script assigns the `returnValue` an initial value of `initialValue`.
-The confirm button (`confirmBtn`) submits the form with validation and the "X" button submits the form without validation. Submitting a form with a `method="dialog"` closes the dialog and sets the return value to the `value`, if any, of the `button` or `input` elements of `type=submit`.
-The reset button has an event handler that closes the dialog; it has no impact on the `returnValue`. Neither does closing the dialog with the <kbd>Esc</kbd> key.
+### Checking the return value
+
+The following example displays a button to open a dialog. The dialog asks the user if they want to accept a Terms of Service prompt.
+
+The dialog contains "Accept" or "Decline" buttons: when the user clicks one of the buttons, the button's click handler closes the dialog, passing their choice into the {{domxref("HTMLDialogElement.close()", "close()")}} function. This assigns the choice to the dialog's `returnValue` property.
+
+In the dialog's {{domxref("HTMLDialogElement.close_event", "close")}} event handler, the example updates the main page's status text to record the `returnValue`.
+
+If the user dismisses the dialog without clicking a button (for example, by pressing the <kbd>Esc</kbd> key), then the return value is not set.
+
+#### HTML
 
 ```html
-<!-- Simple pop-up dialog box containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <input
-      type="submit"
-      aria-label="close"
-      value="X"
-      name="x-button"
-      formnovalidate />
-    <p>
-      <label
-        >Favorite animal:
-        <select name="favAnimal" required>
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </label>
-    </p>
-    <menu>
-      <button type="reset" value="resetBtn">Reset</button>
-      <button type="submit" value="confirmBtn">Confirm</button>
-    </menu>
-  </form>
+<dialog id="dialog">
+  <p>Do you agree to the Terms of Service (link)?</p>
+  <button id="decline" value="declined">Decline</button>
+  <button id="accept" value="accepted">Accept</button>
 </dialog>
-
-<p>
-  <button id="openDialog">Open Dialog</button>
-</p>
-<p id="text"></p>
-
-<script>
-  (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("favDialog");
-    const text = document.getElementById("text");
-    const reset = document.querySelector("[type='reset']");
-    dialog.returnValue = "initialValue";
-
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
-      }
-    }
-
-    function handleUserInput(returnValue) {
-      if (!returnValue) {
-        text.innerText += ". There was no return value";
-      } else {
-        text.innerText += ". Return value: " + returnValue;
-      }
-    }
-
-    // "Open Dialog" button opens the <dialog> modally
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
-    });
-
-    reset.addEventListener("click", () => {
-      dialog.close();
-    });
-
-    // when the dialog is closed, no matter how it is closed
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
-    });
-  })();
-</script>
-<style>
-  [aria-label="close"] {
-    appearance: none;
-    border-radius: 50%;
-    border: 1px solid;
-    float: right;
-  }
-</style>
+<button id="open">Open dialog</button>
 ```
 
-### Result
+```html hidden
+<pre id="log"></pre>
+```
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+```css hidden
+#log {
+  height: 170px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.getElementById("log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+```js
+const dialog = document.getElementById("dialog");
+const openButton = document.getElementById("open");
+const declineButton = document.getElementById("decline");
+const acceptButton = document.getElementById("accept");
+
+openButton.addEventListener("click", () => {
+  // Reset the return value on each open
+  dialog.returnValue = "";
+  updateReturnValue();
+  // Show the dialog
+  dialog.showModal();
+});
+
+function closeDialog(event) {
+  const button = event.target;
+  dialog.close(button.value);
+}
+
+function updateReturnValue() {
+  log(`Return value: "${dialog.returnValue}"`);
+}
+
+declineButton.addEventListener("click", closeDialog);
+acceptButton.addEventListener("click", closeDialog);
+
+dialog.addEventListener("close", updateReturnValue);
+```
+
+#### Result
+
+Click "Open Dialog", then choose the "Accept" or "Decline" buttons in the dialog, or dismiss the dialog by pressing the <kbd>Esc</kbd> key.
+Observe the different status updates.
+
+{{ EmbedLiveSample('Checking the return value', '100%', "250px")}}
 
 ## Specifications
 
@@ -120,4 +108,4 @@ The reset button has an event handler that closes the dialog; it has no impact o
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- HTML {{htmlelement("dialog")}} element

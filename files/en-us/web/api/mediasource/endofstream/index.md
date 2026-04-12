@@ -21,10 +21,8 @@ endOfStream(endOfStreamError)
 ### Parameters
 
 - `endOfStreamError` {{optional_inline}}
-
   - : A string representing an error to throw when the end of the stream
     is reached. The possible values are:
-
     - `network`
       - : Terminates playback and signals that a network error has
         occurred. This can be used create a custom error handler related to media streams.
@@ -47,7 +45,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
+  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e., their {{domxref("SourceBuffer.updating")}} property is
     `true`.)
 
 ## Examples

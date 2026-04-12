@@ -19,6 +19,10 @@ The **`values()`** method of the {{domxref("HighlightRegistry")}} interface retu
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new iterator object containing each `Highlight` object in the registry, in insertion order.

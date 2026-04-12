@@ -3,9 +3,8 @@ title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 page-type: javascript-class
 browser-compat: javascript.builtins.Symbol
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
 
@@ -84,8 +83,12 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 The static properties are all well-known Symbols. In these Symbols' descriptions, we will use language like "`Symbol.hasInstance` is a method determining…", but bear in mind that this is referring to the semantic of an object's method having this Symbol as the method name (because well-known Symbols act as "protocols"), not describing the value of the Symbol itself.
 
+- {{jsxref("Symbol.asyncDispose")}}
+  - : A method that disposes resources of the object asynchronously when the object goes out of scope. Used by the [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) declaration.
 - {{jsxref("Symbol.asyncIterator")}}
   - : A method that returns the default AsyncIterator for an object. Used by [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of).
+- {{jsxref("Symbol.dispose")}}
+  - : A method that disposes resources of the object when the object goes out of scope. Used by the [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declaration.
 - {{jsxref("Symbol.hasInstance")}}
   - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("Operators/instanceof", "instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
@@ -155,7 +158,7 @@ typeof Symbol.iterator === "symbol";
 Some things to note when working with type conversion of Symbols.
 
 - When trying to convert a Symbol to a number, a {{jsxref("TypeError")}} will be thrown
-  (e.g. `+sym` or `sym | 0`).
+  (e.g., `+sym` or `sym | 0`).
 - When using loose equality, `Object(sym) == sym` returns `true`.
 - `Symbol("foo") + "bar"` throws a {{jsxref("TypeError")}} (can't convert Symbol to string). This prevents you from silently creating a new string property name from a Symbol, for example.
 - The ["safer" `String(sym)` conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) works like a call to {{jsxref("Symbol.prototype.toString()")}} with Symbols, but note that `new String(sym)` will throw.
@@ -212,5 +215,5 @@ obj[Object(sym)]; // still 1
 
 - [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) on hacks.mozilla.org (2015)

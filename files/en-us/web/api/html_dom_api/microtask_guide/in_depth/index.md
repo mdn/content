@@ -62,19 +62,15 @@ greetUser("Veronica");
 This short program contains three execution contexts, some of which are created and destroyed several times over the course of the program's execution. As each context is created, it is placed on the **execution context stack**. When it exits, the context is removed from the context stack.
 
 - Upon starting the program, the global context is created.
-
   - When `greetUser("Mike")` is reached, a context is created for the `greetUser()` function; this execution context is pushed onto the execution context stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed. Program execution resumes with the next context found on the stack, which is `greetUser()`; this function resumes execution where it left off.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 
   - When `greetUser("Teresa")` is reached, a context is created for it and pushed onto the stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed. `greetUser()` continues to execute where it left off.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 
   - When `greetUser("Veronica")` is reached, a context is created for it and pushed onto the stack.
-
     - When `greetUser()` calls `localGreeting()`, another context is created to run that function. When this function returns, the context for `localGreeting()` is removed from the execution stack and destroyed.
     - The `greetUser()` function returns and its context is removed from the stack and destroyed.
 
@@ -92,7 +88,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 ### Event loops
 
-Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
+Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
 
 Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
@@ -146,7 +142,7 @@ The microtask queue has been around for a while, but it's historically been used
 
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("Window.queueMicrotask()")}}
-- [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
+- [The Event Loop](/en-US/docs/Web/JavaScript/Reference/Execution_model)
 - [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)

@@ -2,7 +2,7 @@
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
 page-type: web-api-interface
-browser-compat: api.AudioParamDescriptor
+spec-urls: https://webaudio.github.io/web-audio-api/#AudioParamDescriptor
 ---
 
 {{APIRef("Web Audio API")}}
@@ -50,10 +50,6 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

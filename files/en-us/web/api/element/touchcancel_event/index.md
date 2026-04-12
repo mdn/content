@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.touchcancel_event
 ---
 
-{{APIRef}}
+{{APIRef("Touch Events")}}
 
 The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner.
 
@@ -22,10 +22,10 @@ Some examples of situations that will trigger a `touchcancel` event:
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("touchcancel", (event) => {});
+```js-nolint
+addEventListener("touchcancel", (event) => { })
 
-ontouchcancel = (event) => {};
+ontouchcancel = (event) => { }
 ```
 
 ## Event type

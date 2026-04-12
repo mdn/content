@@ -21,7 +21,6 @@ replace(text)
 ### Parameters
 
 - `text`
-
   - : A string containing the style rules to replace the content of the stylesheet. If the string does not contain a parsable list of rules, then the value will be set to an empty string.
 
     > [!NOTE]

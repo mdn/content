@@ -3,9 +3,8 @@ title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.set
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Stores one or more items in the storage area or updates stored items.
 
@@ -28,7 +27,6 @@ Where `<storageType>` is one of the writable storage types — {{WebExtAPIRef("s
 ### Parameters
 
 - `keys`
-
   - : An object containing one or more key/value pairs to be stored. If an item is in storage, its value is updated.
 
     Values can be [primitive](/en-US/docs/Glossary/Primitive) (such as a number, boolean, or string), {{jsxref("Array")}}, or {{jsxref("Object")}} types.

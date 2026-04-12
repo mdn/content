@@ -20,11 +20,9 @@ cullFace(mode)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether front- or back-facing polygons are
     candidates for culling. The default value is `gl.BACK`. Possible values
     are:
-
     - `gl.FRONT`
     - `gl.BACK`
     - `gl.FRONT_AND_BACK`

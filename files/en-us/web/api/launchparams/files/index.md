@@ -10,7 +10,7 @@ browser-compat: api.LaunchParams.files
 
 {{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
-The **`files`** read-only property of the {{domxref("LaunchParams")}} interface returns an array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+The **`files`** read-only property of the {{domxref("LaunchParams")}} interface returns an array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method.
 
 ## Value
 
@@ -43,4 +43,3 @@ if ("launchQueue" in window) {
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app

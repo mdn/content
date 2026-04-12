@@ -9,7 +9,8 @@ browser-compat: api.DOMRectList
 
 The **`DOMRectList`** interface represents a collection of {{domxref("DOMRect")}} objects, typically used to hold the rectangles associated with a particular element, like bounding boxes returned by methods such as {{domxref("Element.getClientRects", "getClientRects()")}}. It provides access to each rectangle in the list via its index, along with a `length` property that indicates the total number of rectangles in the list.
 
-> **Note**: `DOMRectList` exists for compatibility with legacy Web content and is not recommended to be used when creating new APIs.
+> [!NOTE]
+> `DOMRectList` exists for compatibility with legacy Web content and is not recommended to be used when creating new APIs.
 
 ## Instance properties
 

@@ -23,19 +23,18 @@ None.
 
 ### Return value
 
-A promise that resolves with an {{jsxref("Uint8Array")}}.
+A promise that resolves with a {{jsxref("Uint8Array")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
 - {{jsxref("TypeError")}}
   - : Thrown for one of the following reasons:
     - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
     - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 - {{jsxref("RangeError")}}
-  - : There was a problem creating the associated `ArrayBuffer`.
-    For example, if the data size is more than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
+  - : Thrown if there is a problem creating the associated `ArrayBuffer` (for example, if the data size is too large).
 
 ## Examples
 
@@ -102,7 +101,7 @@ function log(text) {
 ```
 
 The code first checks if the `bytes()` method is supported.
-If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) event on the `<select>` element.
+If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) on the `<select>` element.
 When the value changes, it passes the value of the selection (a URL for an image file) to the `checkSignature()` method defined below.
 If the method is not supported it logs this information.
 
@@ -128,7 +127,7 @@ The file name and the file type are then logged.
 
 ```js
 async function checkSignature(url) {
-  if (url == "") return;
+  if (url === "") return;
   log(`File: ${url}`);
   const response = await fetch(url);
   const image = await response.bytes();
@@ -180,5 +179,5 @@ The log should then display the file name, along with the file type that was det
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

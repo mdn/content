@@ -1,12 +1,15 @@
 ---
 title: "Django Tutorial: The Local Library website"
+short-title: "1: Local library tutorial"
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
-The first article in our practical tutorial series explains what you'll learn, and provides an overview of the "local library" example website we'll be working through and evolving in subsequent articles.
+This article is an overview of the MDN Django tutorial and introduces the "local library" example website we'll be using throughout the next few pages.
+You'll find out what the tutorial covers, how to get started, how to ask for help, and everything else you need to build and deploy your first server-side Python app.
 
 <table>
   <tbody>

@@ -30,7 +30,7 @@ An {{jsxref("ArrayBuffer")}} representing the file's data.
 The following exceptions can be raised by this method:
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.
+  - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g., because it has been erased.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if one of the following problematic situation is detected:
     - the resource has been modified by a third party;

@@ -14,7 +14,7 @@ with a given name. If the requested header doesn't exist in the `Headers`
 object, it returns `null`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
@@ -27,8 +27,10 @@ get(name)
 
 - `name`
   - : The name of the HTTP header whose values you want to retrieve from the
-    `Headers` object. If the given name is not the name of an HTTP header, this
-    method throws a {{jsxref("TypeError")}}. The name is case-insensitive.
+    `Headers` object. If the given name doesn't match the
+    [field-name](https://httpwg.org/specs/rfc9110.html#fields.names)
+    production in the HTTP specification, this method throws a {{jsxref("TypeError")}}.
+    The name is case-insensitive.
 
 ### Return value
 
@@ -76,5 +78,5 @@ myHeaders
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

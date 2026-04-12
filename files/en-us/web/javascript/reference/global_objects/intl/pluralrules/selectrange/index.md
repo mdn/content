@@ -1,11 +1,11 @@
 ---
 title: Intl.PluralRules.prototype.selectRange()
+short-title: selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.PluralRules.selectRange
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`selectRange()`** method of {{jsxref("Intl.PluralRules")}} instances receives two values and returns a string indicating which plural rule to use for locale-aware formatting of the indicated range.
 

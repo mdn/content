@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.Navigator.deviceMemory
   - api.WorkerNavigator.deviceMemory
-  - http.headers.Device-Memory
+  - http.headers.Sec-CH-Device-Memory
 spec-urls: https://www.w3.org/TR/device-memory/
 ---
 
@@ -27,7 +27,7 @@ const RAM = navigator.deviceMemory;
 
 ### Client Hints
 
-You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
+You may also use the [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
 
 ## Interfaces
 
@@ -48,4 +48,4 @@ You may also use the [Client Hints](/en-US/docs/Web/HTTP/Client_hints) HTTP Head
 
 ## See also
 
-- {{HTTPHeader("Device-Memory")}} header
+- {{HTTPHeader("Sec-CH-Device-Memory")}} header

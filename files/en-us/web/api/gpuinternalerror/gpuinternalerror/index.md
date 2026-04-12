@@ -3,12 +3,10 @@ title: "GPUInternalError: GPUInternalError() constructor"
 short-title: GPUInternalError()
 slug: Web/API/GPUInternalError/GPUInternalError
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.GPUInternalError.GPUInternalError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUInternalError()`** constructor creates a new
 {{domxref("GPUInternalError")}} object instance.

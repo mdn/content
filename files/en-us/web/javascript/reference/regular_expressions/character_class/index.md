@@ -3,9 +3,8 @@ title: "Character class: [...], [^...]"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_class
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_class
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **character class** matches any character in or not in a custom set of characters. When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
@@ -96,25 +95,21 @@ Complement character classes `[^...]` cannot possibly be able to match strings l
 
 ### Complement classes and case-insensitive matching
 
-In non-`v`-mode, complement character classes `[^...]` are implemented by simply inverting the match result — that is, `[^...]` matches whenever `[...]` doesn't match, and vice versa. However, the other complement classes, such as `\P{...}` and `\W`, work by eagerly constructing the set consisting of all characters without the specified property. They seem to produce the same behavior, but are made more complex when combined with [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) matching.
+[Case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) matching works by case-folding both the expected character set and the matched string. When specifying complement classes, the order in which JavaScript performs case-folding and complementing is important. In brief, `[^...]` in `u` mode matches `allCharacters - caseFold(original)`, while in `v` mode matches `caseFold(allCharacters) - caseFold(original)`. This ensures that all complement class syntaxes, including `[^...]`, `\P`, `\W`, etc., cancel each other out.
 
-Consider the following two regexes:
+Consider the following two regexes (to simplify things, let's assume that Unicode characters are one of three kinds: lowercase, uppercase, and caseless, and each uppercase letter has a unique lowercase counterpart, and vice versa):
 
 ```js
 const r1 = /\p{Lowercase_Letter}/iu;
 const r2 = /[^\P{Lowercase_Letter}]/iu;
 ```
 
-The `r2` is a double negation and seems to be equivalent with `r1`. But in fact, `r1` matches all lower- and upper-case ASCII letters, while `r2` matches none. To illustrate how it works, pretend that we are only dealing with ASCII characters, not the entire Unicode character set, and `r1` and `r2` are specified as below:
+The `r2` is a double negation and seems to be equivalent with `r1`. But in fact, `r1` matches all lower- and uppercase ASCII letters, while `r2` matches none. Here's a step-by-step explanation:
 
-```js
-const r1 = /[a-z]/iu;
-const r2 = /[^A-Z]/iu;
-```
+- In `r1`, `\p{Lowercase_Letter}` constructs a set of all lowercase characters. Characters in this set are then case-folded to their lowercase form, so they stay the same. The input string is also case-folded to lowercase. Therefore, `"A"` and `"a"` are both folded to `"a"` and matched by `r1`.
+- In `r2`, `\P{Lowercase_Letter}` first constructs a set of all non-lowercase characters, i.e., uppercase letters and caseless characters. Characters in this set are then case-folded to their lowercase form, so the character set becomes all lowercase letters and caseless characters. `[^...]` negates the match, causing it to match anything that's _not_ in this set, i.e., an uppercase letter. However, the input is still case-folded to lowercase, so `"A"` is folded to `"a"` and not matched by `r2`.
 
-Recall that case-insensitive matching happens by folding both the pattern and the input to the same case (see {{jsxref("RegExp/ignoreCase", "ignoreCase")}} for more details). For `r1`, the character class `a-z` stays the same after case folding, while both upper- and lower-case ASCII string inputs are folded to lower-case, so `r1` is able to match both `"A"` and `"a"`. For `r2`, the character class `A-Z` is folded to `a-z`; however, `^` negates the match result, so that `[^A-Z]` in effect only matches upper-case strings. However, both upper- and lower-case ASCII string inputs are still folded to lower-case, causing `r2` to match nothing.
-
-In `v` mode, this behavior is fixed — `[^...]` also eagerly constructs the complement class instead of negating the match result. This makes `[^\P{Lowercase_Letter}]` and `\p{Lowercase_Letter}` are strictly equivalent.
+The main observation here is that after `[^...]` negates the match, the expected character set may not be a subset of the set of case-folded Unicode characters, causing the case-folded input to not be in the expected character set. In `v` mode, the set of all characters is also case-folded. The `\P` character class itself also works slightly differently in `v` mode (see [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)). All of these ensure that `[^\P{Lowercase_Letter}]` and `\p{Lowercase_Letter}` are strictly equivalent.
 
 ## Examples
 
@@ -151,7 +146,7 @@ The following function matches all non-ASCII numbers.
 
 ```js
 function nonASCIINumbers(str) {
-  return str.match(/[\p{Decimal_Number}--[0-9]]/gv);
+  return str.match(/[\p{Decimal_Number}--\d]/gv);
 }
 
 // 𑜹 is U+11739 AHOM DIGIT NINE

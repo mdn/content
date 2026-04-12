@@ -1,11 +1,11 @@
 ---
 title: Iterator.prototype.drop()
+short-title: drop()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/drop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.drop
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`drop()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that skips the given number of elements at the start of this iterator.
 
@@ -134,5 +134,6 @@ new Set([1, 2, 3]).values().drop(4).next(); // { value: undefined, done: true }
 ## See also
 
 - [Polyfill of `Iterator.prototype.drop` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.drop`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.take()")}}

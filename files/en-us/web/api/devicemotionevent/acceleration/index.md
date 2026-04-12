@@ -8,13 +8,13 @@ browser-compat: api.DeviceMotionEvent.acceleration
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`acceleration`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the amount of acceleration recorded by
+The **`acceleration`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the acceleration recorded by
 the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-The acceleration value does not include the effect of
-the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
+This value does not include the effect of
+the gravitational force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
 
 > [!NOTE]
-> If the hardware doesn't know how to remove gravity from the
+> If the hardware does not know how to remove gravity from the
 > acceleration data, this value may not be present in the
 > {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
 > {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.
@@ -22,14 +22,14 @@ the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationInclu
 ## Value
 
 The `acceleration` property is an object providing information about
-acceleration on three axis. Each axis is represented with its own property:
+acceleration on the three axes in the [Device coordinate frame](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained#device_coordinate_frame). Each axis is represented with its own property:
 
 - `x`
-  - : Represents the acceleration upon the x axis which is the west to east axis
+  - : Represents the acceleration along the x axis
 - `y`
-  - : Represents the acceleration upon the y axis which is the south to north axis
+  - : Represents the acceleration along the y axis
 - `z`
-  - : Represents the acceleration upon the z axis which is the down to up axis
+  - : Represents the acceleration along the z axis
 
 ## Specifications
 
