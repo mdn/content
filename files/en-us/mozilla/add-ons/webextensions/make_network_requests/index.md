@@ -32,7 +32,7 @@ When the extension **does not** have host permissions, the extension's origin is
 
 ### Other considerations for extension requests
 
-Because extension contexts have privileged access (potentially to all web origins when you set host permissions to `"https://*/*"`), there are important privacy and security implications. Extensions making requests from their contexts should be careful not to mix information from different isolated web pages. For example, using cookies or cached data associated with one site when your extension makes a request on behalf of another site can cause privacy leaks. See [bug 1670278](https://bugzil.la/1670278) for further context on cookie and network partitioning considerations.
+Because extension contexts have privileged access (potentially to all web origins when you set host permissions to `"https://*/*"`), there are important privacy and security implications. Extensions making requests from their contexts should be careful not to mix information from different isolated web pages. For example, using cookies or cached data associated with one site when your extension makes a request on behalf of another site can cause privacy leaks. See [Firefox bug 1670278](https://bugzil.la/1670278) for further context on cookie and network partitioning considerations.
 
 ## Requests from content scripts
 
