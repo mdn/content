@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`has()`** method of the {{domxref("Highlight")}} interface returns a boolean indicating whether a {{domxref("AbstractRange")}} object exists in a `Highlight` object or not.
+The **`has()`** method of the {{domxref("Highlight")}} interface returns a boolean indicating whether an {{domxref("AbstractRange")}} object exists in a `Highlight` object or not.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.has()")}}.
 
