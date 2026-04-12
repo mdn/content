@@ -12,10 +12,10 @@ The **`replace()`** method of {{jsxref("String")}} values returns a new string w
 {{InteractiveExample("JavaScript Demo: String.prototype.replace()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "I think Ruth's dog is cuter than Ruth's cat!";
 
 console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+// Expected output: "I think my dog is cuter than Ruth's cat!"
 
 const regex = /dog/i;
 console.log(paragraph.replace(regex, "ferret"));
