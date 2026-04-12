@@ -32,7 +32,7 @@ When the extension **does not** have host permissions, the extension's origin is
 
 ### Other considerations for extension requests
 
-Because extension contexts have privileged access (potentially to all web origins when you set host permissions to `"https://*/*"`), there are important privacy and security implications. Extensions making requests from their contexts should be careful not to mix information from different isolated web pages. For example, using cookies or cached data associated with one site when your extension makes a request on behalf of another site can cause privacy leaks. See [bug 1670278](https://bugzilla.mozilla.org/show_bug.cgi?id=1670278) for further context on cookie and network partitioning considerations.
+Because extension contexts have privileged access (potentially to all web origins when you set host permissions to `"https://*/*"`), there are important privacy and security implications. Extensions making requests from their contexts should be careful not to mix information from different isolated web pages. For example, using cookies or cached data associated with one site when your extension makes a request on behalf of another site can cause privacy leaks. See [bug 1670278](https://bugzil.la/1670278) for further context on cookie and network partitioning considerations.
 
 ## Requests from content scripts
 
@@ -46,7 +46,7 @@ Requests initiated by MAIN world content scripts behave exactly as if the web pa
 
 The behavior of `fetch()` in ISOLATED world content scripts varies between browsers and manifest versions:
 
-- **Firefox (Manifest V2):** `fetch()` operates independently of the web page's CSP. It can also perform cross-origin requests when the extension has host permissions. However, CORS doesn't work in MV2 content scripts when the extension doesn't have host permissions ([Firefox bug 1605197](https://bugzilla.mozilla.org/show_bug.cgi?id=1605197)).
+- **Firefox (Manifest V2):** `fetch()` operates independently of the web page's CSP. It can also perform cross-origin requests when the extension has host permissions. However, CORS doesn't work in MV2 content scripts when the extension doesn't have host permissions ([Firefox bug 1605197](https://bugzil.la/1605197)).
 - **Firefox (Manifest V3):** `fetch()` behaves identically to the web page's `fetch()` and follows the page's constraints, including CSP and CORS rules, independently of the extension's host permissions.
 - **Chrome (Manifest V3):** Requests must be allowed by the browser's content security policy for isolated world scripts. Many DOM APIs are covered by the extension's CSP rather than the web page's CSP ([crbug 896041](https://crbug.com/896041)).
 
@@ -61,8 +61,8 @@ To grant an extension context access to servers outside the extension's origin, 
 
 ```json
 {
- "name": "My extension",
- "host_permissions": ["https://www.mozilla.org/"]
+  "name": "My extension",
+  "host_permissions": ["https://www.mozilla.org/"]
 }
 ```
 
@@ -114,16 +114,16 @@ In the background script:
 
 ```js example-bad
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
- if (request.contentScriptQuery == "fetchUrl") {
- // WARNING: SECURITY PROBLEM - a malicious web page may abuse
- // the message handler to get access to arbitrary cross-origin
- // resources.
- fetch(request.url)
- .then((response) => response.text())
- .then((text) => sendResponse(text))
- .catch((error) => console.error(error));
- return true; // Responds asynchronously.
- }
+  if (request.contentScriptQuery == "fetchUrl") {
+    // WARNING: SECURITY PROBLEM - a malicious web page may abuse
+    // the message handler to get access to arbitrary cross-origin
+    // resources.
+    fetch(request.url)
+      .then((response) => response.text())
+      .then((text) => sendResponse(text))
+      .catch((error) => console.error(error));
+    return true; // Responds asynchronously.
+  }
 });
 ```
 
@@ -131,11 +131,11 @@ In the content script:
 
 ```js example-bad
 browser.runtime.sendMessage(
- {
- contentScriptQuery: "fetchUrl",
- url: `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`,
- },
- (response) => parsePrice(response.text()),
+  {
+    contentScriptQuery: "fetchUrl",
+    url: `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`,
+  },
+  (response) => parsePrice(response.text()),
 );
 ```
 
@@ -145,21 +145,21 @@ Instead, design message handlers that limit the resources fetched. In this more 
 
 ```js example-good
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
- if (request.contentScriptQuery == "queryPrice") {
- // Validate the itemId's type
- if (typeof request.itemId !== "number") {
- throw new TypeError(
- `queryPrice expected a value of type 'number' but received '${typeof request.itemId}'`,
- );
- }
- const url = `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`;
- fetch(url)
- .then((response) => response.text())
- .then((text) => parsePrice(text))
- .then((price) => sendResponse(price))
- .catch((error) => console.error(error));
- return true; // Responds asynchronously.
- }
+  if (request.contentScriptQuery == "queryPrice") {
+    // Validate the itemId's type
+    if (typeof request.itemId !== "number") {
+      throw new TypeError(
+        `queryPrice expected a value of type 'number' but received '${typeof request.itemId}'`,
+      );
+    }
+    const url = `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`;
+    fetch(url)
+      .then((response) => response.text())
+      .then((text) => parsePrice(text))
+      .then((price) => sendResponse(price))
+      .catch((error) => console.error(error));
+    return true; // Responds asynchronously.
+  }
 });
 ```
 
@@ -167,8 +167,8 @@ And in the content script:
 
 ```js example-good
 browser.runtime.sendMessage(
- { contentScriptQuery: "queryPrice", itemId: 12345 },
- (price) => console.log(price),
+  { contentScriptQuery: "queryPrice", itemId: 12345 },
+  (price) => console.log(price),
 );
 ```
 
