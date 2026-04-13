@@ -106,3 +106,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The {{domxref("CustomElementRegistry","customElementRegistry")}} property is supported on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
   This allows the definition of [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries).
   ([Firefox bug 2018900](https://bugzil.la/2018900)).
+
+- **Multiple import maps**: `dom.multiple_import_maps.enabled`
+
+  [Multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps) support means that developers no longer need to know all their module mappings up front and declare them in a single import map before loading any modules.
+  ([Firefox bug 1916277](https://bugzil.la/1916277)).
