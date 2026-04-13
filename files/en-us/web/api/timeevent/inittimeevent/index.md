@@ -13,7 +13,7 @@ The **`TimeEvent.initTimeEvent()`** method initializes the value of a {{domxref(
 This method may only be called before the event has been dispatched via {{domxref("EventTarget.dispatchEvent()")}}. If called multiple times, the final call takes precedence.
 
 > [!NOTE]
-> {{domxref("Document.createEvent()")}} is deprecated in favor of event constructors, but `TimeEvent` has no dedicated constructor. {{domxref("CustomEvent")}} is not an equivalent replacement, as it does not produce a `TimeEvent` instance with the interface's `view` and `detail` attributes.
+> {{domxref("Document.createEvent()")}} is deprecated in favor of event constructors, but `TimeEvent` has no dedicated constructor. {{domxref("CustomEvent")}} is not a valid replacement, as it does not produce a `TimeEvent` instance with the interface's `view` and `detail` attributes.
 
 ## Syntax
 
