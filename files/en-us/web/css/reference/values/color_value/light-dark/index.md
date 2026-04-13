@@ -227,7 +227,7 @@ section {
 }
 ```
 
-Firstly, we define the light and dark `linear-gradient()`s using custom properties.
+Firstly, we define light and dark `linear-gradient()` values as custom properties.
 
 ```css
 :root {
