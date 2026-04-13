@@ -86,13 +86,13 @@ animation:
 
 One or more single `<animation>` declarations, separated by commas, with each `<animation>` including:
 
-- `<single-animation-name>`
+- `<keyframes-name>` or `none`
   - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
-- `<single-animation-duration>`
+- `<animation-duration>`
   - : Determines the length of time that an animation takes to complete one cycle. The value must be one of those available in {{cssxref("animation-duration")}}. The initial value is `0s`.
-- `<single-easing-function>`
+- `<easing-function>`
   - : Determines the type of transition. The value must be one of those available in {{cssxref("animation-timing-function")}}. The initial value is `ease`.
-- `<single-animation-delay>`
+- `<animation-delay>`
   - : Determines the amount of time to wait from applying the animation to an element before beginning to perform the animation. The value must be one of those available in {{cssxref("animation-delay")}}. The initial value is `0s`.
 - `<single-animation-direction>`
   - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}. The initial value for {{cssxref("animation-direction")}} is `normal`.
