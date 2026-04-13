@@ -8,9 +8,9 @@ browser-compat: api.RTCPeerConnection.idpLoginUrl
 
 {{APIRef("WebRTC")}}
 
-The **`idpLoginUrl`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns a string containing the URL the application can open to allow the user to log in to the {{Glossary("Identity provider", "identity provider")}} (IdP). This value is `null` until the IdP indicates that login is needed.
+The **`idpLoginUrl`** read-only property of the {{domxref("RTCPeerConnection")}} interface returns a string containing the URL endpoint the application can open to log users in to the {{Glossary("Identity provider", "identity provider")}} (IdP). This value is `null` until the IdP indicates that login is needed.
 
-When a call to {{domxref("RTCPeerConnection.getIdentityAssertion()")}} fails because the IdP requires user authentication, the resulting promise is rejected with an {{domxref("RTCError")}} whose {{domxref("RTCError.errorDetail", "errorDetail")}} is `"idp-need-login"`. The browser then sets this property to the login URL provided by the IdP. The application can open this URL (for example, in a popup window or iframe) to allow the user to complete the login process before retrying the identity assertion.
+When a call to {{domxref("RTCPeerConnection.getIdentityAssertion()")}} fails because the IdP requires user authentication, the resulting promise is rejected with an {{domxref("RTCError")}} whose {{domxref("RTCError.errorDetail", "errorDetail")}} is `"idp-need-login"`. The browser then sets this property to the login URL provided by the IdP. The application can open this URL (for example, in a pop-up window or `<iframe>`) to allow the user to complete the login process before retrying the identity assertion.
 
 ## Value
 
