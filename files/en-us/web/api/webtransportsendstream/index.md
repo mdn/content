@@ -25,17 +25,17 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
-- {{domxref("WebTransportSendStream.getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
+- {{domxref("WebTransportSendStream.sendOrder")}}
+  - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("WritableStream")}}._
 
+- {{domxref("WebTransportSendStream.getStats()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 - {{domxref("WebTransportSendStream.getWriter()")}}
   - : Returns a new `WebTransportWriter` object and locks the stream to it. While the stream is locked, no other writer can be acquired until this one is released.
-- {{domxref("WebTransportSendStream.sendOrder")}}
-  - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Examples
 
