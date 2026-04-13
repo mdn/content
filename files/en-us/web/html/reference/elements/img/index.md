@@ -213,7 +213,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
         Source size values specify the intended display size of the image.
         {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors.
-        The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied).
+        The `w` value defined in sizes determines the image’s default layout width.
+        In the absence of {{glossary("CSS")}}, the browser will render the image at this size, regardless of the physical pixel dimensions of the downloaded file.
 
         A source size value can be any non-negative [length](/en-US/docs/Web/CSS/Reference/Values/length).
         It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/Reference/Values/Functions#math_functions).
