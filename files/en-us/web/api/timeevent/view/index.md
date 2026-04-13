@@ -12,7 +12,7 @@ The **`TimeEvent.view`** read-only property identifies the {{glossary("WindowPro
 
 ## Value
 
-A {{glossary("WindowProxy")}} object, or `null`.
+A {{glossary("WindowProxy")}} object identifying the window that generated the event, or `null` if no window is associated.
 
 ## Specifications
 
