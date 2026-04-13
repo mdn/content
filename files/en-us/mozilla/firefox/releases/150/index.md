@@ -53,7 +53,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{htmlelement("html")}} in the HTML [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
-  In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the HTML element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
+  In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the `<html>` element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
 
 #### DOM
 
