@@ -202,10 +202,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         1. A [media condition](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax), omitted for the last item in the list.
         2. A source size value.
 
-        For example, the following source size proposes using a `1000px`-wide image source if the _viewport_ height is 500px or less.
+        For example, the following source size proposes using a `1000px`-wide image source if the _viewport_ width is 500px or less.
 
         ```css
-        (height <= 500px) 1000px
+        (width<= 500px) 1000px
         ```
 
         Media conditions describe properties of the _{{glossary("viewport")}}_, not the _image_.
