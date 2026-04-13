@@ -156,7 +156,7 @@ section {
 
 {{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 500)}}
 
-### Setting images based on color scheme
+### Setting gradient background based on a color scheme
 
 This is using the same code as the previous example but includes a `<div>`, instead of a `<p>` of text, with a `background-image` property.
 
@@ -266,7 +266,7 @@ section div {
 
 #### Result
 
-{{EmbedLiveSample("setting_colors_based_on_color_scheme", "100%", 350)}}
+{{EmbedLiveSample("setting_gradient_background_based_on_a_color_scheme", "100%", 350)}}
 
 ## Specifications
 
