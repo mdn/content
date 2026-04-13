@@ -15,7 +15,7 @@ sidebar: security
 - Project: Blog website
 - Description: Public-facing blog serving static pages. Interactive components include user comments, a contact form, analytics scripts, and a map embed.
 - Version: 1.0
-- Last updated: 2026-02-23
+- Last updated: 2026-04-13
 
 ![Diagram showing components, assets, data flows, and trust boundaries for this example threat model.](diagram.svg)
 

@@ -5,16 +5,14 @@ page-type: guide
 sidebar: security
 ---
 
-Threat modeling is a process that can help developers identify and understand potential security risks in applications and websites. Threat modeling can help you understand the specific vulnerabilities of your application, the browser environment, and the user's interaction with your UI. This article describes what a threat model is and how to perform threat modeling, providing a lightweight overview and walking through the threat modeling process.
+Threat modeling is a process that can help identify and understand potential security risks in applications and websites. It can help you understand the specific vulnerabilities of your application, the browser environment, and the user's interaction with your UI. This article describes what a threat model is and how to perform threat modeling, providing a lightweight overview and walking through the threat modeling process.
 
-Depending on your goal, threat modeling can be more involved than described here. Whether you are exercising lightweight threat modeling for your own benefit, so that security isn't an afterthought or neglected at all, or performing a more heavyweight assessment for a software audit, a threat model enables identifying and resolving actual and perceived threats.
+Depending on your goal, threat modeling can be more involved than described here. Whether you are exercising lightweight threat modeling for your own benefit, or performing a more heavyweight assessment for a software audit, a threat model enables identifying and resolving actual and perceived threats.
 
-This page describes the overall threat modeling process.
+This page describes the overall threat modeling process. For threat model frameworks and resources, see:
 
-For threat model frameworks and resources, see:
-
-- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
-  - : Overview of the STRIDE and LUNDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling resources.
+- [Threat modeling frameworks and tools](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+  - : Overview of the STRIDE and LUNDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling tools.
 
 For an example threat model, see:
 
@@ -46,7 +44,7 @@ To illustrate the different terms, let's take a house as an example:
 
 ## What is threat modeling?
 
-Threat modeling is a the process of creating a threat model. It is form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
+Threat modeling is a the process of creating a representative model that describes your systems's threats. It is form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
 
 1. What are we working on?
 2. What can go wrong?
@@ -78,10 +76,10 @@ There is no single ideal threat modeling representation, therefore it is a good 
 
 One form of threat model includes asking and answering the four main questions from the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
 
-- [What are we working on?](#1-what-are-we-working-on)
-- [What can go wrong?](#2-what-can-go-wrong)
-- [What are we going to do about it?](#3-what-are-we-going-to-do-about-it)
-- [Did we do a good job?](#4-did-we-do-a-good-enough-job)
+- [What are we working on?](#1._what_are_we_working_on)
+- [What can go wrong?](#2._what_can_go_wrong)
+- [What are we going to do about it?](#3._what_are_we_going_to_do_about_it)
+- [Did we do a good job?](#4._did_we_do_a_good_enough_job)
 
 Let's walk through these questions in order.
 
