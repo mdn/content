@@ -12,29 +12,31 @@ The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS
 
 ```css-nolint
 /* Named color values */
-color: light-dark(black, white);
-background-color: light-dark(white, black);
+light-dark(
+  black,
+  white
+);
 
 /* RGB color values */
-color: light-dark(
+light-dark(
   rgb(0 0 0),
   rgb(255 255 255)
 );
 
 /* image url values */
-color: light-dark(
+light-dark(
   url("light-icon.png"),
   url("dark-icon.png")
 );
 
 /* linear-gradient values */
-color: light-dark(
+light-dark(
   linear-gradient(135deg, ghostwhite 20%, tomato),
   linear-gradient(45deg, darkslategray 20%, gold)
 );
 
 /* Custom properties */
-color: light-dark(
+light-dark(
   var(--light),
   var(--dark)
 );
