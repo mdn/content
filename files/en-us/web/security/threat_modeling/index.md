@@ -27,7 +27,7 @@ A threat is anything that could potentially harm your website's functionality, o
 
 A threat model is a structured representation of potential threats. It includes all the information that affects the security of your product, whether that product is a server, an application or a website. It is a living document, or mental map, that identifies your assets (What are you protecting?), potential adversaries (who would want to attack you, your product, or your users?), and potential vulnerabilities (where and what are your product's weak spots?)
 
-Threats are always present but they don't have to turn into attacks. An attack is a realization of a threat on an operational system (a system is a collection of assets) and ideally, if the security posture of a system is strong enough, potential threats won't turn into actual attacks.
+Threats are always present but they don't have to turn into attacks. An attack is when a threat is actually carried out against a live system (a system being a collection of assets). Ideally, if a system is well-protected, threats will stay as threats and never actually happen.
 
 When thinking about threats, we can identify system weaknesses (vulnerabilities), like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) or [JavaScript prototype pollution](/en-US/docs/Web/Security/Attacks/Prototype_pollution).
 
@@ -61,7 +61,7 @@ Modeling activities are not done by security auditors exclusively. Anyone who is
 
 Having a shared/common understanding of your system and its threats allows you to measure the robustness of your system. This should be captured in a threat model document.
 
-It can be quite some work to get to an initial threat modeling document. Often, the initial work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
+It can be quite some work to get to an initial threat modeling document. Often, this work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
 
 For any threat model, it helps to:
 
