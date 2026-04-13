@@ -18,7 +18,12 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
+
+- The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
+  This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
+  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  ([Firefox bug 1819581](https://bugzil.la/1819581)).
 
 <!-- No notable changes. -->
 
@@ -34,7 +39,12 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
+<<<<<<< 43560-color-mix-multi-color-enabled-ff-release
 - The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2024171](https://bugzil.la/2024171)).
+=======
+- The [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) CSS function now accepts [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) values. This allows using images, gradients, and so on for different color schemes.
+  ([Firefox bug 2023569](https://bugzil.la/2023569)).
+>>>>>>> main
 
 <!-- #### Removals -->
 
@@ -53,6 +63,9 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Removals -->
 
 ### APIs
+
+- The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{htmlelement("html")}} in the HTML [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
+  In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the `<html>` element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
 
 #### DOM
 
