@@ -166,7 +166,7 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 ### Merging multiple import maps
 
-Supporting browsers can declare one or more import maps anywhere in the document, provided they are defined before any module that depends on them is loaded (earlier specifications allowed only a single declaration that must be made before any module is loaded).
+Supporting browsers can declare one or more import maps anywhere in the document, provided they are defined before any module that depends on them is loaded (some [browser versions](#browser_compatibility) allow only a single import map declaration, which must appear before any module is loaded).
 
 Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
 
