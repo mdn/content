@@ -6,7 +6,7 @@ browser-compat: css.types.color.light-dark
 sidebar: cssref
 ---
 
-The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [`<color>` function](/en-US/docs/Web/CSS/Reference/Values/Functions#color_functions) enables setting two colors or images for a property - returning one of the two color or image options by detecting if the developer has set a light or dark color scheme or the user has requested light or dark color theme - without needing to encase the theme colors within a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features) query.
+The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) accepts two colors or two images and returns a color or an image based on the active color scheme, without needing a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features).
 
 Users are able to indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing two color values where any `<color>` value is accepted. The `light-dark()` CSS color function returns the first value if the user's preference is set to `light` or if no preference is set and the second value if the user's preference is set to `dark`.
 
