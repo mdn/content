@@ -171,7 +171,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `loading`
   - : Indicates how the browser should load the image:
     - `eager`
-      - : Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
+      - : Loads the image immediately, regardless of whether or not the image is currently within the {{glossary("visual viewport")}} (this is the default value).
     - `lazy`
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser.
 
