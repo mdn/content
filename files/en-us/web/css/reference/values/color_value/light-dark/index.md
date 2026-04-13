@@ -158,7 +158,7 @@ section {
 
 ### Setting gradient background based on a color scheme
 
-This is using the same code as the previous example but includes a `<div>`, instead of a `<p>` of text, with a `background-image` property.
+This example uses the same HTML code as the previous example but includes a `<div>` instead of a `<p>`.
 
 ```html hidden
 <h1><code>light-dark()</code> CSS function with images</h1>
@@ -227,7 +227,7 @@ section {
 }
 ```
 
-Firstly, we define the light and dark `linear-gradient()`s using custom properties.
+Firstly, we define light and dark `linear-gradient()` values as custom properties.
 
 ```css
 :root {
@@ -253,7 +253,7 @@ section div {
 }
 ```
 
-Then we use the custom properties to set the light and dark `background-image`.
+Then we use the custom properties with `light-dark()` to set the `background-image` property based on the active color scheme.
 
 ```css-nolint
 section div {
