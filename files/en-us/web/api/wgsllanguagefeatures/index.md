@@ -45,6 +45,9 @@ The following WGSL language extensions are defined at [WGSL language extensions]
     > [!NOTE]
     > For the `subgroup_id` WGSL feature to be usable, the [`subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
 
+- `texture_and_sampler_let`
+  - When available, allows WGSL shaders to store texture and sampler objects in `let` declarations.
+
 - `uniform_buffer_standard_layout`
   - : When available, uniform buffers use the same [memory layout constraints](https://gpuweb.github.io/gpuweb/wgsl/#address-space-layout-constraints) as storage buffers, which makes it easier to share data structures across both kinds of buffers. This means uniform buffers are no longer required to have 16-byte alignment on array elements, or to pad nested structure offsets to a multiple of 16 bytes.
 
