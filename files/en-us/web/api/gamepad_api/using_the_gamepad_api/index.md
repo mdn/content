@@ -110,7 +110,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 - `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
 
 > [!NOTE]
->  The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. You can also access gamepads through {{domxref("Navigator.getGamepads()")}}. In practice, you should poll {{domxref("Navigator.getGamepads()")}} and read the current object for a known `index` each frame, rather than relying on a long-lived reference from an earlier event.
+> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. You can also access gamepads through {{domxref("Navigator.getGamepads()")}}. In practice, you should poll {{domxref("Navigator.getGamepads()")}} and read the current object for a known `index` each frame, rather than relying on a long-lived reference from an earlier event.
 
 ### Using button information
 
