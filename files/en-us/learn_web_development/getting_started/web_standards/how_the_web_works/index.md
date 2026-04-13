@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 _How the web works_ provides a high-level description of what happens when you use a web browser to navigate to a web page, explaining the magic that goes on behind the scenes to deliver the relevant code to your computer for the browser to assemble into something you can look at.
 
