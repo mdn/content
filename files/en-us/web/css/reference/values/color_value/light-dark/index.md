@@ -8,7 +8,6 @@ sidebar: cssref
 
 The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) accepts two colors or two images and returns a color or an image based on the active color scheme, without needing a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features).
 
-
 ## Syntax
 
 ```css-nolint
