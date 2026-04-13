@@ -8,19 +8,6 @@ sidebar: cssref
 
 The **`light-dark()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) accepts two colors or two images and returns a color or an image based on the active color scheme, without needing a [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [media feature](/en-US/docs/Web/CSS/Guides/Media_queries/Using#targeting_media_features).
 
-Users are able to indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing two color values where any `<color>` value is accepted. The `light-dark()` CSS color function returns the first value if the user's preference is set to `light` or if no preference is set and the second value if the user's preference is set to `dark`.
-
-To enable support for the `light-dark()` color function, the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
-
-```css
-:root {
-  color-scheme: light dark;
-}
-body {
-  color: light-dark(#333b3c, #efefec);
-  background-color: light-dark(#efedea, #223a2c);
-}
-```
 
 ## Syntax
 
@@ -71,6 +58,22 @@ Functional notation: `light-dark(light-image, dark-image)`
 
 - `dark-image`
   - : {{CSSXref("&lt;image&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
+
+## Description
+
+Users can indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing, either, two color values where any `<color>` value is accepted or two image values where any `<image>` value is accepted. The `light-dark()` CSS color function returns the first value if the used color scheme is to `light` or if no preference is set and the second value if the used color scheme is to `dark`.
+
+To enable support for the `light-dark()` color function, the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
+
+```css
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark(#333b3c, #efefec);
+  background-color: light-dark(#efedea, #223a2c);
+}
+```
 
 ## Formal syntax
 
