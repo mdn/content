@@ -253,7 +253,7 @@ section div {
 }
 ```
 
-Then we use the custom properties to set the light and dark `background-image`.
+Then we use the custom properties with `light-dark()` to set the `background-image` property based on the active color scheme.
 
 ```css-nolint
 section div {
