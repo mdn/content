@@ -24,41 +24,40 @@ See the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute i
 
 ### Selecting an image to fit window width
 
-This example demonstrates how setting the `sizes` value to `auto` affects the selection of the image to load from the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) when {{htmlelement("img")}} elements are lazy-loaded.
-It also allows you to see the effect of changing the size of a container on the loaded image.
+This example demonstrates how the browser uses the `sizes` attribute to select an image from `srcset` based on the rendered width of the image at the current viewport width.
+It also allows you to see the effect of resizing the browser window on which image is loaded.
 
 #### HTML
 
 In order to demonstrate the effect of lazy loading the images need to be initially hidden from the {{glossary("visual viewport")}}, and then scrolled into view.
 This is achieved by having an outer `scroll-container` {{htmlelement("div")}} that nests `spacer` and `demo-wrap` containers.
-The images are contained inside the `demo-wrap` container, which is pushed out of the visual viewport by the height set on the `spacer` container.
+The image is contained inside the `demo-wrap` container, which is pushed out of the visual viewport by the height set on the `spacer` container.
 
-The three {{htmlelement("img")}} elements have different `alt` attribute values, but are otherwise identical:
+The {{htmlelement("img")}} element has the following attributes:
 
-- `srcset` defines three images and indicates that they are 600px, 400px, and 200px wide.
+- `srcset` defines four images and indicates that they are 600px, 900px, 1200px, and 1500px wide.
 - `src` specifies the image that will be used if `srcset` is not supported or it can't be parsed.
   We use the largest image in the `srcset` as this will almost always downscale better than the smallest image will upscale.
 - `loading` is `lazy`.
-- `sizes` is `auto`.
-  This tells the browser to select the image that is most appropriate based on the layout information it has at the time the image intersects with the visual viewport.
-
-The three images are constrained within containers that are sized to select different images.
+- `sizes` specifies the expected rendered width of the image at a set of viewport-width breakpoints, allowing the browser to select the most appropriate image from `srcset`.
 
 ```html
 <div id="scroll-container">
   Scroll down to display images
   <div id="spacer"></div>
   <div id="demo-wrap">
-    <div class="img-container img-container--sm" id="resizable">
+    <div class="img-container" id="resizable">
       <div class="img-square">
         <img
           loading="lazy"
-          sizes="(max-width: 600px) 200px, (max-width: 800px) 400px, 600px"
-          src="600.png"
-          srcset="600.png 600w, 400.png 400w, 200.png 200w"
-          alt="Image in small container" />
+          sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, (max-width: 1200px) 1200px, 1500px"
+          src="1500.png"
+          srcset="600.png 600w, 900.png 900w, 1200.png 1200w, 1500.png 1500w"
+          alt="Example image" />
       </div>
-      <div class="label"><strong>Container width: 100px</strong></div>
+      <div class="label">
+        <strong>Container width: <span id="width-label"></span></strong>
+      </div>
     </div>
   </div>
 </div>
@@ -84,10 +83,6 @@ function log(text) {
   border: 1px solid black;
 }
 ```
-
-#### CSS
-
-Here we show the CSS classes that set the size of the different image containers.
 
 ```css hidden
 #scroll-container {
@@ -125,11 +120,24 @@ Here we show the CSS classes that set the size of the different image containers
   padding: 6px 10px;
   background: #f5f5f5;
 }
+#resizable {
+  width: 100%;
+}
 ```
 
 ```js hidden
 // Logging
 const images = document.querySelectorAll(".img-square img");
+const widthLabel = document.getElementById("width-label");
+
+function updateWidthLabel() {
+  widthLabel.textContent = `${document.getElementById("resizable").offsetWidth}px`;
+}
+
+updateWidthLabel();
+new ResizeObserver(updateWidthLabel).observe(
+  document.getElementById("resizable"),
+);
 
 images.forEach((img) => {
   if (img.complete) {
@@ -160,22 +168,28 @@ const observer = new IntersectionObserver(
 images.forEach((img) => observer.observe(img));
 ```
 
-The remaining CSS and the JavaScript that powers the slider, logging, and so on, are not shown (if you are interested in examining these, select "Play" to view the whole example in the interactive playground).
+The CSS and JavaScript are not shown (if you want to examine these, select "Play" to view the whole example in the interactive playground).
 
 #### Result
 
-Scroll the frame to display the three images.
-The browser should have selected a different image for each based on the different width constraints.
-You can use the slider to modify the size of the container for the first image.
-Note that the browser may or may not select a new image to display as the size of the container changes as implementations are not required to react to dynamic changes.
+The example is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully, and the example is not constrained by its containing frame.
+
+1. Scroll the frame to display the image.
+   The label at the bottom of the image shows the current container width.
+2. Resize the window — you should see the image change at the `sizes` attribute's media query trigger points.
+
+   Note that the the selected image may be larger than the container width alone suggests.
+   Many displays, if not most, have a [device pixel ratio (DPR)](/en-US/docs/Web/API/Window/devicePixelRatio) greater than one.
+   In order to render a sharp image at the physical pixel density of the display, a browser will multiply the matched `sizes` hint by the DPR before selecting from `srcset`.
+   For example, on a 2× display with a viewport of ~500px, the matched hint is `600px`, but the browser looks for a ~1200px image and selects `1200.png` as the closest available size and then scales it to fit in the available space.
+
+   > [!NOTE]
+   > As a result, some of the images in the `srcset` may not be reachable on a particular display at some trigger points, and this may be browser dependent.
 
 {{EmbedLiveSample("Selecting an image to fit window width", "", 600)}}
 
-{{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}},
-
-The log provides information when a `load` event fires for each image, and when an image intersects the visible viewport.
-Note that the images are lazy-loaded, so the `load` event should be fired just before the image enters the viewport.
-Also note that the `load` event also fires as you modify the container size for the first image, indicating when the browser has recalculated the layout (not necessarily that a new image has been loaded).
+The log provides information when a `load` event fires for the image, and when it intersects the visible viewport.
+Note that the image is lazy-loaded, so the `load` event should be fired just before the image enters the viewport.
 
 ### Automatic image selection for lazy loaded images
 
