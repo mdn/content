@@ -1,0 +1,224 @@
+---
+title: Threat modeling
+slug: Web/Security/Threat_modeling
+page-type: guide
+sidebar: security
+---
+
+Threat modeling is a process that can help identify and understand potential security risks in applications and websites. It can help you understand the specific vulnerabilities of your application, the browser environment, and the user's interaction with your UI. This article describes what a threat model is and how to perform threat modeling, providing a lightweight overview and walking through the threat modeling process.
+
+Depending on your goal, threat modeling can be more involved than described here. Whether you are exercising lightweight threat modeling for your own benefit, or performing a more heavyweight assessment for a software audit, a threat model enables identifying and resolving actual and perceived threats.
+
+This page describes the overall threat modeling process. For threat model frameworks and resources, see:
+
+- [Threat modeling frameworks and tools](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+  - : Overview of the STRIDE and LUNDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling tools.
+
+For an example threat model, see:
+
+- [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
+  - : An example threat model for a public-facing blog serving static pages. Interactive components include user comments, a contact form, analytics scripts, and a map embed.
+
+## What is a threat?
+
+A threat is anything that could potentially harm your website's functionality, or the data it holds.
+
+A threat model is a structured representation of potential threats. It includes all the information that affects the security of your product, whether that product is a server, an application or a website. It is a living document, or mental map, that identifies your assets (What are you protecting?), potential adversaries (who would want to attack you, your product, or your users?), and potential vulnerabilities (where and what are your product's weak spots?)
+
+Threats are always present but they don't have to turn into attacks. An attack is when a threat is actually carried out against a live system (a system being a collection of assets). Ideally, if a system is well-protected, threats will stay as threats and never actually happen.
+
+When thinking about threats, we can identify system weaknesses (vulnerabilities), like [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) or [JavaScript prototype pollution](/en-US/docs/Web/Security/Attacks/Prototype_pollution).
+
+We then implement mitigations as a response to vulnerabilities: they defend the system to the extent they are able to. In certain specific cases, it is also possible to accept that the threat might materialize, prepare oneself to accept the adverse consequences, and monitor whether this actually happens. This must be a conscious choice: accepting a threat is not something to be taken lightly.
+
+How likely a threat is to occur and how severe its impact would be is typically described as risk.
+
+To illustrate the different terms, let's take a house as an example:
+
+- Threat: a burglar.
+- Vulnerability: an unlocked window or a weak door lock.
+- Attack: the burglar climbing through the window or picking the lock.
+- Mitigation: a strong deadbolt, an alarm system, policy to ensure all windows are locked.
+- Risk: we announced publicly that we are away on vacation, which increases the risk for burglars to try to get into our house.
+- Severity of impact: The impact will be greater if the burglar knows we're on vacation, as they will feel confident spending more time in our home. The severity will be less if I have a house sitter or I have placed all my valuables in an off-site safe.
+
+## What is threat modeling?
+
+Threat modeling is a the process of creating a representative model that describes your systems's threats. It is form of risk assessment with the goal to analyze the most probable attack vectors and to identify assets most desired by an attacker. It is a structured, repeatable process for analyzing a representation of a system so you can identify relevant security and privacy concerns, understand what can go wrong, and decide how to respond. Per the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org), creating a threat model typically involves answering four key questions:
+
+1. What are we working on?
+2. What can go wrong?
+3. What are we going to do about it?
+4. Did we do a good enough job?
+
+## How to do threat modeling?
+
+Threat modeling should happen early in your development process and frequently revisited. Much like you constantly iterate over your software, you should also continuously analyze the system's security using your threat model. Usually, this begins right after the features have been defined.
+
+Modeling activities are not done by security auditors exclusively. Anyone who is concerned about the privacy or security of a system should be empowered to help. Cross-functional collaboration from a diverse set of participants makes the threat model stronger. For example, whoever is designing the system surely has a clear understanding of what is being built and of the concerns that might keep them up at night.
+
+Having a shared/common understanding of your system and its threats allows you to measure the robustness of your system. This should be captured in a threat model document.
+
+It can be quite some work to get to an initial threat modeling document. Often, this work gets done as part of a workshop with your team, either self-guided or mediated by a professional. The produced threat model document needs to be extensible for future re-assessment and ideally lives version-controlled within your codebase.
+
+For any threat model, it helps to:
+
+- Describe your system elements (assets, components)
+- Describe data flows and interactions with third parties
+- Identify stakeholders
+- Discuss threats
+- Consider threat responses
+- Iterate
+
+## Questions to be answered
+
+There is no single ideal threat modeling representation, therefore it is a good idea to use multiple [threat modeling frameworks](/en-US/docs/Web/Security/Threat_modeling/Frameworks) to illuminate different problems.
+
+One form of threat model includes asking and answering the four main questions from the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
+
+- [What are we working on?](#1._what_are_we_working_on)
+- [What can go wrong?](#2._what_can_go_wrong)
+- [What are we going to do about it?](#3._what_are_we_going_to_do_about_it)
+- [Did we do a good job?](#4._did_we_do_a_good_enough_job)
+
+Let's walk through these questions in order.
+
+## 1. What are we working on?
+
+The first question is about describing the project. To do this, you create a model of the system, which consists of data flow diagrams, architecture diagrams, or use-case diagrams showing components, data flows, trust boundaries, dependencies, and key stakeholders.
+
+To define the scope of the threat model, we need to delineate which threats target our own project and which target the browser or other layers of the web platform stack — we define these as external dependencies to our threat model. The [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/) provides a useful starting point, and outlines the environment shared by most websites and web applications.
+
+It is helpful to make yourself aware about which parts you will be responsible for and which parts will be taken care of by others, such as protections the browser usually provides for you. If you maintain a list of relevant existing threat models for your software dependencies and your environment, you can reference them in your own threat model and don't need to redo the modeling again. Threat modeling is not about completeness; it's about improving understanding over time.
+
+For learning purposes, the following sections will use the example of a blog website. See [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model) page for how this guide translates to a threat model document.
+Note that the assumptions we will make about the blog are incomplete, and recognize that the assumptions you will make about your own system will likely also be incomplete. It is a good idea to brainstorm with your team to get a more complete overview of the system you want to protect.
+
+Let's describe what are we working on in terms of components, assets, data flows, trust boundaries, dependencies, and stakeholders.
+
+### Components
+
+Components are things that run code or store data. For example, we could say that our blog website will consist of several software components which will be interesting for our threat model:
+
+- Web server
+- Blog software (for example a static site generator, or a CMS)
+- Static pages
+- User authentication
+- User-submitted content (for example, a comment section)
+- Contact form
+- Fetch calls to (your own or external) APIs
+- Third-party scripts, for example displaying a map, or usage analytics
+
+Of course, your website's complexity can vary quite a lot. Maybe you are building a static website, primarily with HTML and CSS, maybe you host a site with a CMS, a server, and a database, or maybe you are building a complex web application like an online game, an email client, or a drawing webapp.
+
+Depending on what you are doing, your threat model can either be quite short and self-contained, or it can be very long and maybe you prefer to create several threat models for different parts of your system, focusing on one part at a time.
+
+To reference identified components, you index them with the letter C (C1, C2, C3, ...) in your threat model.
+
+### Assets
+
+Assets are things an attacker wants and are in need of protection. This could be:
+
+- User data: General user data and personally identifying information (PII).
+- User credentials: Login information, usernames, passwords, passkeys.
+- Cookies and session information.
+- Private content assets (for example, draft blog posts).
+
+To reference identified assets, you index them with the letter A (A1, A2, A3, ...) in your threat model.
+
+### Data flows and trust boundaries
+
+Anything that happens inside the browser or comes from a user's input is _untrusted_. Threat modeling helps you identify the **trust boundary** — the point where data crosses from untrusted areas outside of your control into your trusted application logic.
+
+We identify the mechanism by which assets move between components. They may be uni- or bi-directional.
+
+- Authentication flows
+- Contact form flow
+- Data flows to external services
+
+When data flows between a user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
+
+To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your threat model. Trust boundaries are usually visualized using a dashed line.
+
+### External dependencies
+
+You may not model external dependencies in full detail, but you should document your assumptions about them and model them at the level needed to reason about your own risks. We can look at them like black boxes whose internals are unknown to us but ideally they also have their own threat models which we reference in our own. For example:
+
+- Operating system (OS)
+- Browser and the web platform (see also [web platform threat model](https://w3c.github.io/threat-model-web/))
+- Browser extensions (WebExtensions)
+
+To reference identified external dependencies, you index them with the letter E (E1, E2, E3, ...) in your threat model.
+
+### Stakeholders
+
+Identify your audience and understand their interests, benefits, and potential harms. Who could be impacted by potential threats? Putting people and groups first helps you to avoid just thinking about the security of technical components. Instead, your focus is on how secure and trustworthy the relationship between real humans and your software is.
+
+- Anonymous user
+- Registered user
+- Disabled user
+- Blog administrator or developer
+
+For example, spam may primarily harm administrators, while credential leakage may harm both users and administrators.
+
+Note that you don't model potential attackers. Over-characterizing attackers can lead to analysis bias.
+
+To reference identified stakeholders, you index them with the letter S (S1, S2, S3, ...) in your threat model.
+
+## 2. What can go wrong?
+
+Now that we've modeled our environment, we can start thinking about what can go wrong with it. Threats can be identified in different ways and one common way is to look at threat lists. For example, we could start by taking a look at threat maps or rely on external threat lists such as OWASP top ten or others.
+
+- [OWASP top ten](https://owasp.org/Top10/2025/)
+- Security consideration sections in web platform specifications as well as on MDN Web Docs.
+
+For a web application, this might include cross-site scripting, cross-site request forgery, account takeover, or data leakage via third-party scripts.
+
+Another common way to identify threats is to use [threat analysis frameworks](/en-US/docs/Web/Security/Threat_modeling/Frameworks), in particular STRIDE and LINDDUN.
+
+You can decide whether you present identified threats in a table or prefer describing them more analytically, for example, by writing down the chain of events that lead up to an attack ("kill chain"). The [W3C Threat Modeling Guide](https://w3c.github.io/threat-modeling-guide/#curatorial-storytelling) recommends telling a story and giving threats priorities, so that the most important threats are discussed first and that readers are not overwhelmed with extraneous details.
+
+To reference the identified threats, you index them with the letter T (T1, T2, T3, ...) in your threat model.
+
+## 3. What are we going to do about it?
+
+In step three, we will need to answer how we are going to respond to the threats we've identified in the second step.
+
+There are various options for how we could respond to threats. In general, responses can be put in four categories using the **ERTA** mnemonics:
+
+- **E**liminate: Remove the asset or the threat.
+- **R**educe: Make it harder, e.g., adding a control, mitigation or countermeasure.
+- **T**ransfer: Shift responsibility for mitigating the threat to another system or organization (for example, a third-party service).
+- **A**ccept: that it is not possible to mitigate the threat for now; it is still open and needs to be monitored.
+
+Examples:
+
+- Eliminate: We remove the comment functionality from our blog as it is not widely used and we don't want to deal with securing it.
+- Reduce: We only allow registered users to use the comment function.
+- Transfer: We use an external plugin for comments.
+- Accept: We accept that our comment functionality faces threats, like spam, but we accept this threat and we implement spam monitoring.
+
+Document your responses and decisions. You will likely come back to them in step 4 when asking if these responses are good enough.
+
+To reference the identified responses, you index them with the letter R (R1, R2, R3, ...) in your threat model.
+
+## 4. Did we do a good enough job?
+
+Once you have done a round of threat modeling, file (private) issues with your project and describe your findings in a threat model document. Even if no action or bugfix is needed, the documentation of your threat model will be useful later.
+
+You can revisit the issues you filed and the documentation you've written in the next round of threat modeling and see if anything changed or needs reassessment. It is helpful to revalidate your documented issues. With every iteration of threat modeling, your system should become more secure and you will be more aware of further threats and risks. The experience you gather over time will help you to make your threat modeling more robust; it won't be perfect or complete from the start, and it doesn't need to be in order to be useful.
+
+We provide an [example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model) for inspiration. Threat model documents don't get published very often and aren't shared broadly unfortunately; they are often an internal resource. Although it is good practice to publish your threat model, both to demonstrate trustworthiness and to solicit additional feedback.
+
+In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). Frameworks exist, including STRIDE and LUNDDUN, that provide structure for threat modeling processes. See the [threat modeling frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks) guide for a list of privacy and security threats, along with example questions that may help guide you in your own threat model development.
+
+## See also
+
+- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+- [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
+- [Security](/en-US/docs/Web/Security)
+- [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
+- [W3C Threat Modeling Guide for specification authors](https://w3c.github.io/threat-modeling-guide/)
+- [Threat Model for the Web Platform](https://w3c.github.io/threat-model-web/)
+- [OWASP Threat Modeling Playbook](https://github.com/OWASP/threat-modeling-playbook)
+- [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
