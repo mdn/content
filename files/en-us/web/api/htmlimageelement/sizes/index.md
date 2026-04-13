@@ -133,7 +133,7 @@ The three {{htmlelement("img")}} elements have different `alt` attribute values,
 
 - `srcset` defines three images and indicates that they are 600px, 400px, and 200px wide.
 - `src` specifies the image that will be used if `srcset` is not supported or it can't be parsed.
-  We use the largest image in the `srcset` as this will almost always downscale better than the smallest image will upscale.
+  This is the largest image in the `srcset` as the visual result from downscaling it for smaller layout sizes will almost always be better than upscaling the smallest image for larger layout sizes.
 - `loading` is `lazy`.
 - `sizes` is `auto`.
   This tells the browser to select the image that is most appropriate based on the layout information it has at the time the image intersects with the visual viewport.
