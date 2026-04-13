@@ -221,7 +221,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     - `auto`
       - : The `auto` keyword indicates that the browser should use the expected layout width of the element to select the image to display.
-        That is, it should use the [concrete size](/en-US/docs/Web/CSS/Reference/Values/image) of the image, calculated after layout from HTML and CSS has been applied.
+        That is, it should use the [concrete size](/en-US/docs/Web/CSS/Reference/Values/image#concrete_size) of the image, calculated after layout from HTML and CSS has been applied.
         This is only valid when combined with `loading="lazy"`, as the page is expected to already have CSS and other layout information by the time the image loads.
 
         Using `auto` saves you having to specify your layout media conditions twice: once for layout, and once for selection of an appropriate image to fetch and display.
