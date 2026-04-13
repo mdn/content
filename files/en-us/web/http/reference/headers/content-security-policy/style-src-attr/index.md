@@ -84,7 +84,7 @@ document.querySelector("div").style.cssText = "display:inline;";
 Style properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector("div").style.display = "none";
+document.querySelector("div").style.display = "inline";
 ```
 
 Note that using JavaScript might independently be blocked using the {{CSP("script-src")}} CSP directive.
