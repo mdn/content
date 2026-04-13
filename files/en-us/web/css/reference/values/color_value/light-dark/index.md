@@ -158,7 +158,7 @@ section {
 
 ### Setting images based on color scheme
 
-This is using the same code as the previous example but includes a `<div>`, instead of a `<p>` of text, with a `background-image` property.
+This example uses the same HTML code as the previous example but includes a `<div>` instead of a `<p>`.
 
 ```html hidden
 <h1><code>light-dark()</code> CSS function with images</h1>
