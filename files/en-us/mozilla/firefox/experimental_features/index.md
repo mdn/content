@@ -398,7 +398,7 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 ### Multiple import maps
 
 Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
-These are easier to use and more robust, because developers no longer need to know all their module mappings up front, and declare them in a single import map before loading any modules.
+These give developers more flexibility when structuring and loading JavaScript modules, because they no longer need to know all their module mappings up front, and declare them in a single import map loading any modules.
 ([Firefox bug 1916277](https://bugzil.la/1916277)).
 
 | Release channel   | Version added | Enabled by default? |
