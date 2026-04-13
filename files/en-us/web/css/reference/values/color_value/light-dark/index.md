@@ -44,21 +44,20 @@ light-dark(
 
 ### Values
 
-Functional notation: `light-dark(light-color, dark-color)`
+The light-dark() function has two forms:
 
-- `light-color`
-  - : {{CSSXref("&lt;color&gt;")}} value to be set for light {{CSSXref("color-scheme")}}.
-
-- `dark-color`
-  - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
-
-Functional notation: `light-dark(light-image, dark-image)`
-
-- `light-image`
-  - : {{CSSXref("&lt;image&gt;")}} value to be set for light {{CSSXref("color-scheme")}}.
-
-- `dark-image`
-  - : {{CSSXref("&lt;image&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
+- Accepts two `<color>` values:
+  - `<color>` (light)
+    - : The {{CSSXref("<color>")}} value used when the {{CSSXref("color-scheme")}} is light or no preference is set.
+  - `<color>` (dark)
+    - : The {{CSSXref("<color>")}} value used when the {{CSSXref("color-scheme")}} is dark`.
+- Accepts two `<image>` values:
+  - `<image>` (light)
+    - : The {{CSSXref("<image>")}} value used when the {{CSSXref("color-scheme")}} is light or no preference is set.
+  - `<image>` (dark)
+    - : The {{CSSXref("<image>")}} value used when the {{CSSXref("color-scheme")}} is dark`.
+  - `none`
+    - : The `none` keyword produces a fully transparent image with no natural size.
 
 ## Description
 
