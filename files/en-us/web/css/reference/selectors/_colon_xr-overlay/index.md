@@ -32,7 +32,7 @@ The overlay element itself is a [stacking context](/en-US/docs/Web/CSS/Guides/Po
 
 ### Basic usage
 
-In this example, we define the overlay to be transparent black, enabling content behind the overlay to be partially visible. To ensure enough contrast between content and its background, we set the {{cssxref("color")}} to `white`.
+In this example, we define the overlay to be semi-transparent black, enabling content behind the overlay to be partially visible. To ensure enough contrast between content and its background, we set the {{cssxref("color")}} to `white`.
 
 ```css
 :xr-overlay {
