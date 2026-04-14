@@ -61,7 +61,7 @@ The light-dark() function has two forms:
 
 ## Description
 
-Users can indicate their color-scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing, either, two color values where any `<color>` value is accepted or two image values where any `<image>` value is accepted. The `light-dark()` CSS color function returns the first value if the used color scheme is to `light` or if no preference is set and the second value if the used color scheme is to `dark`.
+Users can indicate their color scheme preference through their operating system settings (e.g., light or dark mode) or their user agent settings. The `light-dark()` function enables providing either two color values where any `<color>` value is accepted or two image values where any `<image>` value is accepted. The `light-dark()` function returns the first value if the used color scheme is `light` or if no preference is set and the second value if the used color scheme is `dark`.
 
 To enable support for the `light-dark()` color function, the {{CSSXref("color-scheme")}} must have a value of `light dark`, usually set on the {{CSSXref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes).
 
