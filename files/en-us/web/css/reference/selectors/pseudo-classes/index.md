@@ -50,7 +50,7 @@ These pseudo-classes enable the selection of elements based on their display sta
 - {{CSSxRef(":picture-in-picture")}}
   - : Matches an element that is currently in picture-in-picture mode.
 - {{CSSXref(":xr-overlay")}}
-  - : Matches the root element of the DOM overlay when a web page is being viewed in an immersive AR or VR environment.
+  - : Matches the DOM overlay element during an immersive AR or VR session.
 
 ## Input pseudo-classes
 
