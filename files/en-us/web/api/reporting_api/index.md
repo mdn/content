@@ -6,6 +6,7 @@ browser-compat: api.ReportingObserver
 spec-urls:
   - https://w3c.github.io/reporting/#intro
   - https://w3c.github.io/webappsec-csp/#CSPViolationReport
+  - https://wicg.github.io/crash-reporting/
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
   - https://html.spec.whatwg.org/multipage/browsers.html#embedder-policy-checks
@@ -66,9 +67,9 @@ Methods are then available on the observer to start collecting reports ({{domxre
 
 ### Report types
 
-Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("COEPViolationReport")}}, {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, and {{domxref("CSPViolationReport")}}.
+Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("COEPViolationReport")}}, {{domxref("CrashReport")}}, {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, and {{domxref("CSPViolationReport")}}.
 These all have an origin `url`, a `type`, and a `body` that is specific to the report type.
-The type of report can be determined from its `type` property, which for the reports above would be `coep`, `deprecation`, `integrity-violation`, `intervention` and `csp-violation`.
+The type of report can be determined from its `type` property, which for the reports above would be `coep`, `crash`, `deprecation`, `integrity-violation`, `intervention` and `csp-violation`.
 
 Reports sent to reporting endpoints and reporting observers are essentially the same.
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
@@ -81,6 +82,8 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ## Interfaces
 
+- {{domxref("CrashReportContext")}}
+  - : Provides methods enabling arbitrary data to be recorded for the current top-level browsing context, which is then added to a {{domxref("CrashReport")}} and sent to a reporting endpoint when a browser crash occurs.
 - {{domxref("ReportingObserver")}}
   - : An object that can be used to collect and access reports as they are generated.
 
