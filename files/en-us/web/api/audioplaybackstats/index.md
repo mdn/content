@@ -11,9 +11,6 @@ The **`AudioPlaybackStats`** interface of the [Web Audio API](/en-US/docs/Web/AP
 
 An audio context's `AudioPlaybackStats` object can be accessed via its {{domxref("AudioContext.playbackStats")}} property. The returned `AudioPlaybackStats` object is live — the contained property values are updated once every second.
 
-> [!NOTE]
-> It is possible to retrieve the immediate playout latency of the context via the {{domxref("AudioContext.outputLatency")}} property; `AudioPlaybackStats` however provides access to more detailed information that updates over time.
-
 ## Description
 
 When audio is playing in an application, it is beneficial to measure {{glossary("latency")}} and **underrun** — both can contribute to a bad user experience:
@@ -21,11 +18,16 @@ When audio is playing in an application, it is beneficial to measure {{glossary(
 - Audio latency
   - : A measure of the delay between the user activating a control (such as a play button) and the audio playing as expected. Significant latency can make an application feel unresponsive.
 - Underrun
-  - : Happens when the audio application runs out of buffered audio data to play before new data arrives to replace it. This occurs when audio is not delivered to the playback device in time due to audio graph complexity, CPU overload, or malfunctions in other audio programs. The result is an audible "glitch" — a click, pop, or audio dropout occurring because the application has nothing to play and fills the gap with silence or noise.
+  - : Happens when the audio application runs out of buffered audio data to play before new data arrives to replace it — in other words, it can't provide audio frames fast enough. This occurs when audio is not delivered to the playback device in time due to audio graph complexity, CPU overload, or malfunctions in other audio programs. The result is an audible "glitch" — a click, pop, or audio dropout occurring because the application has nothing to play and fills the gap with silence or noise.
 
-If underruns are detected, action should be taken to avoid future underruns, for example providing a larger buffer, or freeing up system resources. Larger buffers should be used carefully as they can also increase latency, so it is important to achieve a balance.
+If underruns are detected, action should be taken to avoid future underruns, for example providing a larger buffer, or freeing up system resources. Larger buffers should be used carefully as they can also increase latency, so it is important to achieve a balance. Latency can be reduced by reducing buffer size, simplifying required processing, or reducing audio sample size.
 
-Latency can be reduced by reducing buffer size, simplifying required processing, or reducing audio sample size.
+Web audio performance varies greatly between high-end devices such as a modern desktop computer and low-end devices such as budget mobile phones. The `AudioPlaybackStats` object allows developers to collect telemetry data from their users to understand how their app performs in the "real world" with respect to latency and underrun and respond to problems as they arise.
+
+For example, you could create an "adaptive" audio system in your app that detects when underrun or latency exceeds a certain threshold (where the audio starts glitching), and:
+
+- Reduces computation load by cutting down the maximum number of voices in play at once or removing complex filters.
+- Prompts the user to try closing other tabs or apps or switching their audio output device for better performance.
 
 ### Provided underrun stats
 
@@ -36,11 +38,13 @@ Underruns are defined in terms of **underrun frames** and **underrun events**:
 - Underrun event
   - : The playback of a continuous sequence of underrun frames. The duration of the underrun event is the total duration of the sequence of underrun frames.
 
-The number of underrun events that have occurred since the audio context was first initialized is reported by the {{domxref("AudioPlaybackStats.underrunEvents")}} property, and the duration of those underrun events is reported by the {{domxref("AudioPlaybackStats.underrunDuration")}} property.
+The number of underrun events that have occurred since the audio context was first initialized is reported by the {{domxref("AudioPlaybackStats.underrunEvents")}} property, and the duration of those underrun events is reported by the {{domxref("AudioPlaybackStats.underrunDuration")}} property. This allows developers to find out exactly how often and for how long audio is cutting out due to underrun.
 
 ### Provided latency stats
 
 The audio context's latency can be measured using the {{domxref("AudioPlaybackStats.averageLatency")}}, {{domxref("AudioPlaybackStats.minimumLatency")}}, and {{domxref("AudioPlaybackStats.maximumLatency")}} properties.
+
+It is possible to retrieve the immediate playout latency of the context via the {{domxref("AudioContext.outputLatency")}} property, however this is an instantaneous value that fluctuates rapidly. `AudioPlaybackStats` provides average, minimum, and maximum latency over time, which is much more useful for identifying persistent performance issues.
 
 ## Instance properties
 
