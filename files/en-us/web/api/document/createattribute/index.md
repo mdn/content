@@ -35,7 +35,7 @@ An {{domxref("Attr")}} node.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if the [`localName`](#localName) value is not a valid attribute name.
+  - : Thrown if the [`localName`](#localname) value is not a valid attribute name.
     It must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
     > [!NOTE]

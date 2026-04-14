@@ -25,7 +25,7 @@ Currently each page is 64KiB.
 
     ;; grow memory by 1 page
     ;; grow returns in 1 for success and -1 for failure
-    ;; will fail if you change to more more than 1 page
+    ;; will fail if you change to more than 1 page
     (memory.grow (i32.const 1))
     call $log ;; log the result
 
@@ -49,7 +49,7 @@ i32.const 3  ;; Number of pages to grow the memory (3)
 memory.grow  ;; Grow the memory (by 3 pages)
 ;; the top item on the stack will now either be the previous number of pages (success) or `-1` (failure)
 
-;; grow default memory by two pages using an S-function
+;; grow default memory by two pages using an S-expression
 (memory.grow (i32.const 2))
 ```
 
@@ -64,7 +64,7 @@ memory.grow (memory 1) ;; Grow memory index 1
 i32.const 1  ;; Number of pages to grow specified memory (1)
 memory.grow (memory $memory1) ;; Grow $memory1 by 1 page
 
-;; Grow memory with name $memory1 by three pages using an S-function
+;; Grow memory with name $memory1 by three pages using an S-expression
 (memory.grow (memory $memory1) (i32.const 3))
 ;; Will return -1 as max value is 4!
 ```
@@ -95,7 +95,7 @@ The code below shows a WAT file that demonstrates this:
     memory.grow
     call $log ;; log the result (previous no. pages = 1)
 
-    ;; grow default memory, using an S-function
+    ;; grow default memory, using an S-expression
     (memory.grow (i32.const 1))
     call $log ;; log the result (-1: max is 2 pages for default memory declared above!)
   )

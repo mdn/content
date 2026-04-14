@@ -87,9 +87,9 @@ To retrieve the new table size after the `grow` instruction is applied to it, us
 
 ### Opcodes
 
-| Instruction  | Binary format            | Example text => binary                                                               |
-| ------------ | ------------------------ | ------------------------------------------------------------------------------------ |
-| `table.grow` | `0xfc 15:u32 𝑥:tableidx` | `(table.grow (i32.const 1) (ref.null func))` => `0xfc 0x0f 0x00 0x41 0x01 0xd0 0x70` |
+| Instruction  | Binary format             | Example text => binary                                                               |
+| ------------ | ------------------------- | ------------------------------------------------------------------------------------ |
+| `table.grow` | `0xfc 15:u32 𝑥:table_idx` | `(table.grow (i32.const 1) (ref.null func))` => `0xfc 0x0f 0x00 0x41 0x01 0xd0 0x70` |
 
 ## Description
 

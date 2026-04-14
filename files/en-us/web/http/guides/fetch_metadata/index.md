@@ -124,7 +124,7 @@ We can distinguish two sorts of cross-origin attack:
 
 - [Cross-site leaks](/en-US/docs/Web/Security/Attacks/XS-Leaks): in these attacks, the attacker uses the request to gain information about the user's relationship with the target site, often through side channels such as [error events](/en-US/docs/Web/Security/Attacks/XS-Leaks#leaking_page_existence_using_error_events).
 
-Most websites will want to deny some cross-origin requests while allowing others: for example, if you deny all cross-origin requests, noone will be able to navigate to your site from a different site!
+Most websites will want to deny some cross-origin requests while allowing others: for example, if you deny all cross-origin requests, no one will be able to navigate to your site from a different site!
 
 Using fetch metadata, a server can construct a policy for allowing or denying cross-origin requests based on the details of their context.
 

@@ -29,6 +29,8 @@ CSS can handle the following kinds of images:
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
+### Concrete size
+
 CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_; (2) its _specified size_, defined by CSS properties like {{CSSxRef("width")}}, {{CSSxRef("height")}}, or {{CSSxRef("background-size")}}; and (3) its _default size_, determined by the kind of property the image is used with:
 
 | Kind of Object (CSS Property)                                                                | Default object size                                                                                           |

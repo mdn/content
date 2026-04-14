@@ -10,7 +10,7 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 
 The **`columnNumber`** property of the {{domxref("CSPViolationReport")}} dictionary indicates the character position in the source file line that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
-This property is used with the {{domxref("CSPViolationReport.sourceFile")}} and {{domxref("CSPViolationReport.lineNumber")}} properties, which together provide the the exact location in the source that caused the violation.
+This property is used with the {{domxref("CSPViolationReport.sourceFile")}} and {{domxref("CSPViolationReport.lineNumber")}} properties, which together provide the exact location in the source that caused the violation.
 
 Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
 If the resource that triggers the CSP violation is not loaded, the value will be `null`.
