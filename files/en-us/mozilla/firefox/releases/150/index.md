@@ -16,7 +16,10 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- A specific message is now displayed in the [_Response tab_ of the Network pane](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) to indicate why there is no response data when a request has been redirected.
+  ([Firefox bug 2016679](https://bugzil.la/2016679)).
 
 ### HTML
 
