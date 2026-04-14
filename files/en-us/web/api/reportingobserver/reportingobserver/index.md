@@ -47,6 +47,9 @@ new ReportingObserver(callback, options)
         - `coep`
           - : Violations of the site's {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP).
             Reports are {{domxref("COEPViolationReport")}} instances.
+        - `coop`
+          - : Violations of the site's {{httpheader("Cross-Origin-Opener-Policy")}} (COOP).
+            Reports are {{domxref("COOPViolationReport")}} instances.
         - `crash`
           - : Browser crash reports.
             (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
@@ -62,6 +65,9 @@ new ReportingObserver(callback, options)
         - `intervention`
           - : Features blocked by the user agent, for example, if an ad significantly impacts page performance.
             Reports are {{domxref("InterventionReport")}} instances.
+        - `permissions-policy-violation`
+          - : Violations of the site's {{httpheader("Permissions-Policy")}}.
+            Reports are {{domxref("PermissionsPolicyViolationReport")}} instances.
 
         If this option is omitted, all supported types are collected.
 
