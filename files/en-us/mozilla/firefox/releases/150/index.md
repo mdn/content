@@ -44,6 +44,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) CSS function now accepts [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) values. This allows using images, gradients, and so on for different color schemes.
   ([Firefox bug 2023569](https://bugzil.la/2023569)).
 
+- The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} are now supported. They allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 2020775](https://bugzil.la/2020775)).
+
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
