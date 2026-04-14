@@ -39,6 +39,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
+- The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now accepts multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix any number of colors. ([Firefox bug 2024171](https://bugzil.la/2024171)).
+
 - The [`light-dark()`](/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) CSS function now accepts [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) values. This allows using images, gradients, and so on for different color schemes.
   ([Firefox bug 2023569](https://bugzil.la/2023569)).
 
