@@ -95,6 +95,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The behavior of {{WebExtAPIRef("tabs.move")}} is updated for split views so that:
   - The order of tabs in a split view can be swapped. ([Firefox bug 2016762](https://bugzil.la/2016762))
   - When the list of tabs includes both split view tabs and places one or more tabs between them, the tabs are moved apart and the split view closed. ([Firefox bug 2022549](https://bugzil.la/2022549))
+- Resolved an issue with some JavaScript [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) calls failing to import CSS. ([Firefox bug 2016369](https://bugzil.la/2016369))
 
 <!-- ### Removals -->
 
