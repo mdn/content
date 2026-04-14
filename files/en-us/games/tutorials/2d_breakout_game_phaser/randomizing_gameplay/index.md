@@ -299,7 +299,7 @@ You can do a lot more in the game—add whatever you feel would be best to make 
 - Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing).
 - Create levels with different brick layouts.
 
-Be sure to check the ever-growing list of [examples](https://labs.phaser.io/) and the [official documentation](https://phaser.io/docs/), and visit the [Phaser Discourse forum](https://phaser.discourse.group/) if you ever need any help.
+Be sure to check the ever-growing list of [examples](https://labs.phaser.io/) and the [official documentation](https://docs.phaser.io/), and visit the [Phaser Discourse forum](https://phaser.discourse.group/) if you ever need any help.
 
 You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser).
 
