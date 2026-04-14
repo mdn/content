@@ -82,6 +82,7 @@ The parameters are:
           fill: attr(svg|myattr type(*), green);
         }
         ```
+
         > [!NOTE]
         > If no namespace is specified (just an identifier is given, like `attr(foo)`), the null namespace is implied. This is usually what's desired, as namespaced attributes are rare. As with attribute selectors, the case-sensitivity of `<attr-name>` depends on the document language.
 
