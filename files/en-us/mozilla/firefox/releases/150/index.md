@@ -18,7 +18,12 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
+
+- The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
+  This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
+  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  ([Firefox bug 1819581](https://bugzil.la/1819581)).
 
 <!-- No notable changes. -->
 
@@ -55,6 +60,9 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{htmlelement("html")}} in the HTML [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
+  In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the `<html>` element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
+
 #### DOM
 
 - The [`options.shadowRoots`](/en-US/docs/Web/API/Document/caretPositionFromPoint#shadowroots) argument of the {{domxref('Document.caretPositionFromPoint()')}} method is now supported.
@@ -87,6 +95,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The behavior of {{WebExtAPIRef("tabs.move")}} is updated for split views so that:
   - The order of tabs in a split view can be swapped. ([Firefox bug 2016762](https://bugzil.la/2016762))
   - When the list of tabs includes both split view tabs and places one or more tabs between them, the tabs are moved apart and the split view closed. ([Firefox bug 2022549](https://bugzil.la/2022549))
+- Resolved an issue with some JavaScript [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) calls failing to import CSS. ([Firefox bug 2016369](https://bugzil.la/2016369))
 
 <!-- ### Removals -->
 

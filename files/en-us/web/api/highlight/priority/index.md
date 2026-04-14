@@ -10,7 +10,7 @@ browser-compat: api.Highlight.priority
 
 The `priority` property of the {{domxref("Highlight")}} interface is a number used to determine which highlight's styles should be used to resolve style conflicts in overlapping parts. Highlights with a higher `priority` number have preference over those with a lower `priority`.
 
-It is possible to create {{domxref("Range")}} objects that overlap in a document.
+It is possible to create {{domxref("AbstractRange")}} objects that overlap in a document.
 
 When overlapping ranges are used by multiple different {{domxref("Highlight")}} objects, and when those highlights are styled using {{cssxref("::highlight")}} pseudo-elements, this may lead to conflicting styles.
 
