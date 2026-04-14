@@ -198,20 +198,8 @@ It also allows you to see the effect of changing the size of a container on the 
 
 #### HTML
 
-In order to demonstrate the effect of lazy loading the images need to be initially hidden from the {{glossary("visual viewport")}}, and then scrolled into view.
-This is achieved by having an outer `scroll-container` {{htmlelement("div")}} that nests `spacer` and `demo-wrap` containers.
-The images are contained inside the `demo-wrap` container, which is pushed out of the visual viewport by the height set on the `spacer` container.
-
-The three {{htmlelement("img")}} elements have different `alt` attribute values, but are otherwise identical:
-
-- `srcset` defines three images and indicates that they are 600px, 400px, and 200px wide.
-- `src` specifies the image that will be used if `srcset` is not supported or it can't be parsed.
-  This is the largest image in the `srcset` as the visual result from downscaling it for smaller layout sizes will almost always be better than upscaling the smallest image for larger layout sizes.
-- `loading` is `lazy`.
-- `sizes` is `auto`.
-  This tells the browser to select the image that is most appropriate based on the layout information it has at the time the image intersects with the visual viewport.
-
-The three images are constrained within containers that are sized to select different images.
+The HTML is similar to that in the previous example, except that it defines three near-identical {{htmlelement("img")}} elements, each with a `scrset` indicating 3 images that are `600px`, `400px`, and `200px` wide, and with a `sizes` value of `auto`.
+These are constrained within containers that are sized to select the different images.
 
 ```html
 <div id="scroll-container">
