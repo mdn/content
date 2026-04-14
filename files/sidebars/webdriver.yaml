@@ -23,7 +23,10 @@ sidebar:
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
         code: true
-      - link: /Web/WebDriver/Reference/BiDi/Modules/log
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules/log
+        link: /Web/WebDriver/Reference/BiDi/Modules/log
+        details: closed
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
         code: true
