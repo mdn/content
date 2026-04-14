@@ -7,7 +7,7 @@ sidebar: security
 
 Threat modeling is a process that can help developers identify and understand potential security risks in applications and websites.
 
-The [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling/) describes how to perform threat modeling. It provides a lightweight overview of the threat modeling process, focusing on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
+The [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling) describes how to perform threat modeling. It provides a lightweight overview of the threat modeling process, focusing on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org).
 
 This article describes the [STRIDE](#stride) and [LINDDUN](#linddun) frameworks, which provide structure for threat modeling processes, along with additional resources.
 
@@ -104,7 +104,7 @@ It is important to note that you do not need expensive and powerful tools in ord
 
 ## See also
 
-- [Guide to threat modeling](/en-US/docs/Web/Security/Threat_modeling/)
+- [Guide to threat modeling](/en-US/docs/Web/Security/Threat_modeling)
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
 - [Security](/en-US/docs/Web/Security)
 - [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
