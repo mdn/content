@@ -56,6 +56,9 @@ attr(data-size type(<length> | <percentage>))
 attr(data-count type(<number>), 0)
 attr(data-width px, inherit)
 attr(data-something, "default")
+
+/* With namespace */
+attr(color|myAttr type(*), red)
 ```
 
 ### Parameters
@@ -70,6 +73,18 @@ The parameters are:
 
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
+    - Namespaces
+      - : The attribute name can contain a [`namespace`](/en-US/docs/Web/CSS/Guides/Namespaces) which allows the targeting elements of [XML](/en-US/docs/Web/XML)-based markup languages such as [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML)
+
+        ```css
+        @namespace svg url("http://www.w3.org/2000/svg");
+        a {
+          fill: attr(svg|myattr type(*), green)
+        }
+        ```
+        > [!NOTE]
+        > If no namespace is specified (just an identifier is given, like `attr(foo)`), the null namespace is implied. This is usually what's desired, as namespaced attributes are rare. As with attribute selectors, the case-sensitivity of `<attr-name>` depends on the document language.
+
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a {{cssxref("type()")}} function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
     - `raw-string`
