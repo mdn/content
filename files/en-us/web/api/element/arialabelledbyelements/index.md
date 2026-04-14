@@ -26,7 +26,7 @@ When written, the assigned array is copied: subsequent changes to the array do n
 The property is a flexible alternative to using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to set the accessible name.
 Unlike `aria-labelledby`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute.
 
-For example, this might be used to label a container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}} (provided it has been given an [appropriate ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby#associated_roles)), or a grouping of elements, such as an image with a slider that can be used to change its opacity.
+For example, this might be used to label a container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}} (provided it has been given an [appropriate ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby#associated_roles)).
 The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.
 
 The property reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
