@@ -90,8 +90,14 @@ The `gecko` sub-key supports these properties:
 
 - `strict_min_version`
   - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
+    > [!NOTE]
+    > The minimum supported version capable of receiving updates is 115.0 (ESR) or, if ESR versions are not included, 128.0. This is due to the expiration of the root certificate in Firefox in March 2025. As a result, older versions of Firefox don't recognize extension signatures. See [Update Firefox to prevent add-ons issues from root certificate expiration](https://support.mozilla.org/en-US/kb/root-certificate-expiration) for more information.
 - `strict_max_version`
   - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
+
+    > [!CALLOUT]
+    > See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
+
 - `update_url`
   - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e., not through AMO).
 
@@ -101,8 +107,6 @@ The `gecko_android` sub-key supports these properties:
   - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
 - `strict_max_version`
   - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
-
-See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
 To support Firefox for Android without specifying a version range, the `gecko_android` sub-key must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
