@@ -16,7 +16,7 @@ It can only be present when `srcset` uses width descriptors.
 
 ## Value
 
-A string containing that is can be the `auto` keyword (optionally followed by any number of _source sizes_), or one or more _source sizes_.
+A string that can be the `auto` keyword (optionally followed by any number of _source sizes_), or one or more _source sizes_.
 
 See the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute in the HTML `<img>` reference for more information.
 
@@ -35,7 +35,7 @@ The image is contained inside the `demo-wrap` container, which is pushed out of 
 
 The {{htmlelement("img")}} element has the following attributes:
 
-- `srcset` defines four images and indicates that they are 600px, 900px, 1200px, and 1500px wide.
+- `srcset` defines four images and indicates that they are `600px`, `900px`, `1200px`, and `1500px` wide.
 - `src` specifies the image that will be used if `srcset` is not supported or it can't be parsed.
   We use the largest image in the `srcset` as this will almost always downscale better than the smallest image will upscale.
 - `loading` is `lazy`.
@@ -176,7 +176,7 @@ The example is best {{LiveSampleLink('Selecting an image to fit window width', '
 
 1. Scroll the frame to display the image.
    The label at the bottom of the image shows the current container width.
-2. Resize the window — you should see the image change at the `sizes` attribute's media query trigger points.
+2. Resize the window — you should see the image change at the `sizes` attribute's media query break points.
 
    Note that the the selected image may be larger than the container width alone suggests.
    Many displays, if not most, have a [device pixel ratio (DPR)](/en-US/docs/Web/API/Window/devicePixelRatio) greater than one.
@@ -184,7 +184,7 @@ The example is best {{LiveSampleLink('Selecting an image to fit window width', '
    For example, on a 2× display with a viewport of ~500px, the matched hint is `600px`, but the browser looks for a ~1200px image and selects `1200.png` as the closest available size and then scales it to fit in the available space.
 
    > [!NOTE]
-   > As a result, some of the images in the `srcset` may not be reachable on a particular display at some trigger points, and this may be browser dependent.
+   > As a result, some of the images in the `srcset` may not be reachable on a particular display at some break points, and this may be browser dependent.
 
 {{EmbedLiveSample("Selecting an image to fit window width", "", 600)}}
 
@@ -512,7 +512,7 @@ break50.addEventListener(
 
 The page is best {{LiveSampleLink('Blog example', 'viewed in its own window')}}, so you can adjust the sizes fully, and the example is not constrained by its containing frame.
 
-1. Enable the developer tools and change the width of the page — you should see the image change (and jump in size) at the sizes media query trigger points: `640px` (`40em`), and `800px` (`50em`).
+1. Enable the developer tools and change the width of the page — you should see the image change (and jump in size) at the sizes media query break points: `640px` (`40em`), and `800px` (`50em`).
 2. Set the width between `50em` `(800px)` and `60em` (960px`) so that the last media query is selected.
    Then alternately press each of the buttons and note how the layout size of the image is changed.
 
