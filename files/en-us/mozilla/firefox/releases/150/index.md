@@ -114,6 +114,10 @@ These features are shipping in Firefox 150 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Namespaced attributes in `attr()` CSS function**: `layout.css.attr.enabled`
+
+  The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style the accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
+
 - **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
 
   The {{domxref("CustomElementRegistry","customElementRegistry")}} property is supported on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
