@@ -25,7 +25,7 @@ WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But i
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
-- For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
+- For WebCore, Apple also made available a [page](https://docs.webkit.org/Deep%20Dive/Architecture/JSWrappers.html) for its dialect.
 
 > [!NOTE]
 > We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
