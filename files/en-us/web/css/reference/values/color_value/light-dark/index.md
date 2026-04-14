@@ -81,7 +81,7 @@ body {
 
 ## Examples
 
-### Setting colors based on color scheme
+### Setting colors based on a color scheme
 
 By default, in supporting browsers, the color returned by the `light-dark()` color function depends on the user preference set through an operating system's settings (e.g., light or dark mode) or from a user agent setting. You can also change this setting in the browser's {{glossary("developer tools")}}.
 
