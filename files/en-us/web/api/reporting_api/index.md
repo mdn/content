@@ -75,6 +75,21 @@ The only difference is that server reports are JSON serializations of the object
 
 A list of documented report types and their corresponding report dictionary are given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
 
+##### XXXXX
+
+| Type                           | Report object                                   | Local | Server | Notes                                                                                            |
+| ------------------------------ | ----------------------------------------------- | ----- | ------ | ------------------------------------------------------------------------------------------------ |
+| `coep`                         | {{domxref("COEPViolationReport")}}              | Y     | Y      | {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) violations                                 |
+| `coop`                         | {{domxref("COOPViolationReport")}}              | Y     | Y      | {{httpheader("Cross-Origin-Opener-Policy")}} (COOP) violations                                   |
+| `crash`                        | {{domxref("CrashReport")}}                      | N     | Y      | Browser crash reports                                                                            |
+| `csp-violation`                | {{domxref("CSPViolationReport")}}               | Y     | Y      | [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations                      |
+| `deprecation`                  | {{domxref("DeprecationReport")}}                | Y     | Y      | Deprecated features used by the site.                                                            |
+| `document-policy-violation`    | {{domxref("DocumentPolicyViolationReport")}}    | ??    | Y      | {{httpheader("Document-Policy")}} violations                                                     |
+| `integrity-violation`          | {{domxref("IntegrityViolationReport")}}         | Y     | Y      | {{httpheader("Integrity-Policy")}} violations                                                    |
+| `intervention`                 | {{domxref("InterventionReport")}}               | Y     | Y      | Features blocked by the user agent, for example, if an ad significantly impacts page performance |
+| `network-error`                | {{domxref("NetworkErrorReport")}}               | Y     | N      | Network error report                                                                             |
+| `permissions-policy-violation` | {{domxref("PermissionsPolicyViolationReport")}} | Y     | Y      | {{httpheader("Permissions-Policy")}} violations                                                  |
+
 ### Generating reports via WebDriver
 
 The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/docs/Web/WebDriver) extension, which allows you to simulate report generation during automation. Reports generated via WebDriver are observed by any registered `ReportingObserver` objects present in the loaded website. This is not yet documented.
