@@ -47,16 +47,16 @@ The [Crash Reporting API](https://wicg.github.io/crash-reporting) extension to t
 
 The information is stored in a special key-value store, manipulated using the document's {{domxref("CrashReportContext")}} object, which is accessed via the {{domxref("Window.crashReport")}} property.
 
-When the browser crashes, the information stored in the key-value store is added to a {{domxref("CrashReport")}} and sent to the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
+When the browser crashes, the information stored in the key-value store is added to a {{domxref("CrashReport")}} and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
 > [!NOTE]
-> It is not possible to retrieve {{domxref("CrashReport")}}s using a {{domxref("ReportingObserver")}}.
+> It is not possible to retrieve {{domxref("CrashReport")}}s using a {{domxref("ReportingObserver")}} — the reports are only generated when the browser crashes, at which point the observer code isn't available to run.
 
 ## Examples
 
 ### Sending a report to a reporting endpoint
 
-Configuring a web page to send a crash report requires that you set a [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named "default" using the {{httpheader("Reporting-Endpoints")}} header, for example `https://example.com/default`.
+Configuring a web page to send a crash report requires that you set a [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) using the {{httpheader("Reporting-Endpoints")}} header, for example `https://example.com/default`.
 
 A typical report structure is as follows:
 

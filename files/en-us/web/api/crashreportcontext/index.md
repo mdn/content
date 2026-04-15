@@ -28,7 +28,7 @@ The information is stored in a special key-value store, which is similar to [Web
 
 To use this API, a document first needs to call {{domxref("CrashReportContext.initialize", "window.crashReport.initialize()")}}, which takes as an argument a number specifying the maximum number of bytes that can be recorded in the key-value store by each individual {{domxref("CrashReportContext.set", "window.crashReport.set()")}} call. Values are then recorded using `set()`, and deleted using {{domxref("CrashReportContext.delete", "window.crashReport.delete()")}}.
 
-When the browser crashes, the information stored in the key-value store is added to a {{domxref("CrashReport")}} and sent to the default [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+When the browser crashes, the information stored in the key-value store is added to a {{domxref("CrashReport")}} and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint).
 
 > [!NOTE]
 > It is not possible to retrieve {{domxref("CrashReport")}}s using a {{domxref("ReportingObserver")}}.
