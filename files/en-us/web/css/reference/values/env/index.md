@@ -261,6 +261,7 @@ The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segm
 - {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- [`<meta name="text-scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)

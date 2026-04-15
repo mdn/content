@@ -25,16 +25,13 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 The `<meta name="text-scale" content="scale">` element can be included in a page to make the {{htmlelement("html")}} root element's `font-size` scale in proportion to OS and browser-level text scale settings. In practice, this means that in supporting browsers, provided you don't set a root `font-size` in units unrelated to font size (like pixels or viewport units), relative `font-size` settings such as `2em` or `1rem` will be scaled in proportion to user OS or browser font size settings.
 
-This means that you can signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences. It also causes the browser to disable existing browser-based mechanisms (such as full-page zoom on Windows) and heuristics (for example, text autosizing on mobile).
+This means that you can signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences. It also causes the browser to disable existing browser-based mechanisms and heuristics.
 
-Effects of `<meta name="text-scale" content="scale">` on supported browsers:
+For example:
 
-- Chrome for Android
-  - : Including it will cause `rem` and `em` font sizes to scale in proportion to the global OS "Font size" setting. Text autosizing is disabled.
-- Chrome for desktop
-  - : The [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable will reflect the multiplier that corresponds to Chrome's Settings > Appearance > Font size, but other than that, it has no discernable effect.
-- Chrome for Windows
-  - : In addition to the above point, full-page zoom is disabled.
+- In Chrome for Android, `rem` and `em` font sizes will scale in proportion to the global OS "Font size" setting. Text autosizing is disabled.
+- In Chrome for desktop, the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable will reflect the multiplier that corresponds to Chrome's Settings > Appearance > Font size, but other than that, it has no discernable effect.
+- In Chrome for Windows, in addition to the above point, full-page zoom is disabled.
 
 > [!NOTE]
 > You can also set page sizes to be proportional to browser or OS-level font settings by using the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable to size dimensions. However, unless it is not supported in your target browser set or you are not able to edit the HTML, you are advised to use the `<meta>` tag rather than the `env()` variable. The `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
@@ -92,7 +89,7 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 {{embedlivesample("text-scale", "100%", "200")}}
 
-View this in a browser that supports `<meta name="text-scale" content="scale">`, such as Chrome for Android, and try adjusting the OS Font size settings. You'll see that the top and bottom lines of text scale in proportion to those settings, whereas the middle line of text doesn't change size.
+Test this in a supporting browser. For example, load it in Chrome for Android and try adjusting the OS Font size settings. You'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size.
 
 ## Specifications
 
@@ -104,6 +101,4 @@ View this in a browser that supports `<meta name="text-scale" content="scale">`,
 
 ## See also
 
-- {{glossary("viewport")}} glossary term
-- [Prepare for viewport resize behavior changes coming to Chrome on Android](https://developer.chrome.com/blog/viewport-resize-behavior/) on developer.chrome.com
-- [Mobile viewports for responsive experiences](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/mobile-viewports) on Adobe Experience League
+- [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale)
