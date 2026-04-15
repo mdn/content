@@ -66,7 +66,7 @@ Allowed values for the `timeline-trigger-activation-range-end` property are:
 - `normal`
 - A `<length-percentage>`
 - A `<timeline-range-name>`
-- A `<timeline-range-name>` and a `<length-percentage>` separated by a space.
+- A `<timeline-range-name>` and a `<length-percentage>`, separated by a space.
 
 If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
