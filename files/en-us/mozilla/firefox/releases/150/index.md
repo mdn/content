@@ -116,7 +116,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Namespaced attributes in `attr()` CSS function**: `layout.css.attr.enabled`
 
-  The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style the accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
+  The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
 
 - **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
 
