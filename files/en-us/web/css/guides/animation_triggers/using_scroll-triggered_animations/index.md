@@ -10,22 +10,20 @@ sidebar: cssref
 
 This article covers how to use CSS scroll-triggered animations.
 
-> [!NOTE]
-> Scroll-triggered animations sound similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different. Scroll-triggered animations are regular time-based animations that play when a trigger becomes active, for example when an element scrolls to a certain scroll position inside a scrolling container. With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content.
-
 ## Scroll-triggered animation concepts
 
 A very common UI pattern involves triggering animations on a web page when the user scrolls to a certain place in the content, for example to pull in additional UI elements or draw the user's attention to certain details.
 
-CSS scroll-triggered animations provide a declarative mechanism for creating such effects, providing an alternative to using JavaScript features such as the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API). Depending on which JavaScript mechanism you are currently using, CSS scroll-triggered animations may also be simpler to implement and/or more performant.
+**CSS scroll-triggered animations** enable defining stroll-based triggers that start and stop [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). For example, you can define trigger positions on an element within a {{glossary("scroll container")}} so that, when the element on which the trigger is applied reaches those positions within the scrollport, it toggles the play state of an animation applied to that element, or a completely different one.
+
+> [!NOTE]
+> Scroll-triggered animations also provide an alternative to using JavaScript features such as the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) or frameworks to create scroll triggers. CSS scroll-triggered animations are more performant, and arguably simpler to implement.
 
 ## Scroll-triggered animation basics
 
-Let's walk through a basic example to show you how a scroll-triggered animation works.
+Let's walk through a basic example to show you how a scroll-triggered animation works. As the content is scrolled up and down, a figure will fade into view when it starts to appear inside the viewport, and fade out again once it has left the viewport.
 
-This example features several paragraphs of content with a {{htmlelement("figure")}} element included in the middle of them — this includes an {{htmlelement("img")}} and a {{htmlelement("figcaption")}}. As the content is scrolled up and down, we will fade the figure into view when it starts to appear inside the viewport, and fade it out again once it has left the viewport.
-
-For the sake of brevity, we are not showing the full HTML source.
+This example features several paragraphs of content with a {{htmlelement("figure")}} element included in the middle of them — this includes an {{htmlelement("img")}} and a {{htmlelement("figcaption")}}. For the sake of brevity, we are not showing the full HTML source.
 
 ```html
 ...
@@ -194,16 +192,17 @@ figure {
 
 Walking through this:
 
-- We first apply an {{cssxref("animation")}} to the element we want to animate (the {{htmlelement("figure")}}). On its own, this would cause the `<figure>` to fade into view as soon as the page loads.
-- To stop this happening, we set an {{cssxref("animation-trigger")}} value on the animated element. This includes:
-  - A {{cssxref("dashed-ident")}}, `--t`, which is equal to the {{cssxref("timeline-trigger-name")}} of the element that will create the animation trigger.
-  - Two {{cssxref("&lt;animation-action>")}} values, which specify how the animation should behave when the trigger is **activated** (the `<figure>` element's animation plays forwards) and **deactivated** (the `<figure>` element's animation plays backwards).
-- Next, we set the `timeline-trigger-name` property with a value of `--t` to specify that, not only is the `<figure>` element the element that will be animated, it will also have an identifying name for triggers created on it.
-- Finally, we need to create the animation trigger; this is done using the {{cssxref("timeline-trigger-source")}} property. In this case, we a specify the [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) function, which creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) to control triggering the animation. The resulting {{domxref("ViewTimeline")}} tracks the position of the `<figure>` element (which is called the **subject** or the **tracked element** for this purpose) across the block-axis of the nearest parent scroller.
+1. We apply an {{cssxref("animation")}} to the element we want to animate (the {{htmlelement("figure")}}). By itself, without triggers, this would cause the `<figure>` to fade into view as soon as the page loads.
+2. To delay the start of the animation until the element is scrolled into view, we set an {{cssxref("animation-trigger")}} value on the animated element defining which element will provide the triggers, and what those triggers are. This includes:
+   - A {{cssxref("dashed-ident")}}, `--t`, which is the name of the trigger. This is equal to the value of the {{cssxref("timeline-trigger-name")}} property set on the element that will create the animation trigger.
+   - Two {{cssxref("&lt;animation-action>")}} values, which specify how the animation should behave when the trigger is **activated** and **deactivated**, respectively. When the trigger is activated, we set the `<figure>` element's animation to play forwards, maintaining the named animation's `to` keyframe state. When the trigger is deactivated, we set the `<figure>` element's animation to play backwards, maintaining the named animation's `from` keyframe state.
+3. We set the `timeline-trigger-name` property with a value of `--t` to specify that, not only is the `<figure>` element the element that will be animated, it will also have an identifying name for triggers created on it.
+4. We create the animation trigger using the {{cssxref("timeline-trigger-source")}} property, specifying the [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) function. This creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) to control the animation triggers. The resulting {{domxref("ViewTimeline")}} tracks the position of the `<figure>` element (which is called the **subject** or the **tracked element** for this purpose) across the block-axis of the nearest parent scroller.
 
-  The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the viewport, and deactivation occurs when the tracked element completely exits the viewport. The scroll offset range inside which the trigger is activated is called the **activation range**, and the scroll offset range inside which the trigger stays active (and deactivates when it leaves) is called the **active range**. You'll learn about adjusting these ranges later on, starting with [Adjusting the trigger activation range](#adjusting_the_trigger_activation_range).
+   The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the viewport, and deactivation occurs when the tracked element completely exits the viewport. The scroll offset range inside which the trigger is activated is called the **activation range**, and the scroll offset range inside which the trigger stays active (and deactivates when it leaves) is called the **active range**. You'll learn about adjusting these ranges later on, starting with [Adjusting the trigger activation range](#adjusting_the_trigger_activation_range).
 
-It is possible for the tracked element to be different to the animation element; see [Creating the trigger on a different element](#creating_the_trigger_on_a_different_element), later on.
+> [!NOTE]
+> It is possible for the tracked element to be different to the animation element; see [Creating the trigger on a different element](#creating_the_trigger_on_a_different_element), later on.
 
 The only thing left to do is define {{cssxref("@keyframes")}} for the `fade-in` animation referenced earlier in the `animation` property value.
 
@@ -224,6 +223,13 @@ The above example renders like so:
 {{embedlivesample("basic-scroll-triggered", "100%", 500)}}
 
 Note how the figure starts to fade in as soon as any part of it becomes visible in the viewport, whether you are moving it in from the bottom or the top. It doesn't fade out again until the entire image has moved out of the viewport, so by default, you won't see this.
+
+### Scroll-triggered versus scroll-driven animations
+
+Scroll-triggered animations are similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different:
+
+- As demonstrated above, scroll-triggered animations are regular time-based animations that play when a trigger becomes active; they always complete in the same amount of time, regardless of how fast the user scrolls.
+- With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content, with a faster scrolling speed resulting in a faster animation.
 
 ## Different types of trigger source
 
