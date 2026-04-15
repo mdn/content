@@ -143,6 +143,8 @@ Scroll the element in the inline direction to see its background color change. S
   - : Scroll-driven animation timelines and creating scroll-driven animations.
 - [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
   - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+  - : Creating scroll-triggered animations.
 
 ## Related concepts
 
@@ -178,5 +180,4 @@ Scroll the element in the inline direction to see its background color change. S
 
 ## See also
 
-- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [Animate elements on scroll with scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) via developer.chrome.com (2023)

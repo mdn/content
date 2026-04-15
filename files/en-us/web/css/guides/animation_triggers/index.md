@@ -35,6 +35,8 @@ The CSS animation triggers module also introduces the `event-trigger`, `event-tr
 
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
   - : A guide to implementing CSS scroll-triggered animations.
+- [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+  - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
 
 ## Related concepts
 
