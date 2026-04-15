@@ -106,7 +106,7 @@ These features are shipping in Firefox 150 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- **Absolutely positioned elements in multi-column containers and printing**: `layout.abspos.fragmentainer-aware-positioning.enabled`
+- **Absolutely positioned elements in multi-column containers and when printing**: `layout.abspos.fragmentainer-aware-positioning.enabled`
 
   Firefox now correctly positions and fragments absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing. This improves interoperability with other browsers and prevents layout issues such as overlapping text or content loss. ([Firefox bug 2018797](https://bugzil.la/2018797)).
 
