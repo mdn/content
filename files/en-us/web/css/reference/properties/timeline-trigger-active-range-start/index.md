@@ -78,9 +78,9 @@ The `timeline-trigger-active-range-start` and {{cssxref("timeline-trigger-active
 
 ### Specifying multiple range start values
 
-When multiple values are specified in a single `timeline-trigger-active-range-start` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as multiple {{cssxref("animation")}} values are distributed (see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)).
+When multiple values are specified in a single `timeline-trigger-active-range-start` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as other [multiple animation property values are set](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
-If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-active-range-start` value is set, the `timeline-trigger-active-range-start` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-active-range-start` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-active-range-start` value set. And so on.
+For example, if multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-active-range-start` value is set, the `timeline-trigger-active-range-start` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-active-range-start` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-active-range-start` value set. And so on.
 
 For example, consider these declarations:
 
