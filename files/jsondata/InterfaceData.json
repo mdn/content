@@ -1772,10 +1772,6 @@
       "inh": "HTMLElement",
       "impl": []
     },
-    "HTMLPermissionElement": {
-      "inh": "HTMLElement",
-      "impl": []
-    },
     "HTMLPictureElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -2616,6 +2612,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "PerformanceContainerTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceElementTiming": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -3056,6 +3056,14 @@
       "inh": "",
       "impl": []
     },
+    "RTCSFrameReceiverTransform": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "RTCSFrameSenderTransform": {
+      "inh": "",
+      "impl": []
+    },
     "RTCStatsReport": {
       "inh": "",
       "impl": []
@@ -3154,14 +3162,6 @@
     },
     "SFrameEncrypterStream": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "SFrameReceiverTransform": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "SFrameSenderTransform": {
-      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {

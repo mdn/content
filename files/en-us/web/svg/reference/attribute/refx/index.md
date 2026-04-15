@@ -3,8 +3,8 @@ title: refX
 slug: Web/SVG/Reference/Attribute/refX
 page-type: svg-attribute
 spec-urls:
-  - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefXAttribute
-  - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefXAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefXAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElementRefXAttribute
 sidebar: svgref
 ---
 

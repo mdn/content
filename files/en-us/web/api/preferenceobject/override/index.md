@@ -24,7 +24,7 @@ The override of the {{domxref("PreferenceObject")}} interface, if set, or `null`
 This example demonstrates how to disambiguate between the color scheme preference set by the user agent vs a programmatic override.
 
 ```js
-if (navigator.preferences.colorScheme.override == null) {
+if (navigator.preferences.colorScheme.override === null) {
   console.log(
     "The user agent set the following color scheme:",
     navigator.preferences.colorScheme.value,

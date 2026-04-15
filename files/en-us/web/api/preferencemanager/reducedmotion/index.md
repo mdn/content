@@ -11,13 +11,13 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-motion-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedMotion`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-motion", "reduced motion")}} of the site.
+The **`reducedMotion`** read-only property of the {{domxref("PreferenceManager")}} interface returns the {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) of the site.
 
 Valid `reducedMotion` {{domxref("PreferenceObject.value")}} settings are `reduce` and `no-preference`.
 
 ## Value
 
-A {{domxref("PreferenceObject")}} used to override the user's preference for the {{cssxref("@media/prefers-reduced-motion", "reduced motion")}} of the site.
+A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) of the site.
 
 ## Examples
 
