@@ -87,7 +87,7 @@ timeline-trigger-activation-range-end:
   entry 100%;
 ```
 
-In this case, the first name will use the `cover` range end, and the second name will use the `entry 100%` range end. The third name will cycle back to using the `cover` range end again.
+In this case, `--my-trigger` will use the `cover` range end and `--my-other-trigger` will use the `entry 100%` range end. As there are three names but only two range ends, the range ends are cycled, so the third trigger name, `--another-trigger`, will use the `cover` range end.
 
 ## Formal definition
 
@@ -183,12 +183,6 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
-
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A `timeline-trigger-activation-range-end` of `contain 60%`, which sets the trigger's activation range end point to 60% of the way through the `contain` range (when the tracked element has scrolled a little over half way through the viewport in either direction). The {{cssxref("timeline-trigger-activation-range-start")}} value defaults to 0% of the way through the `cover` range, meaning that the animation will start when the tracked element has started to enter the viewport.
-
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
   width: 80%;
@@ -230,10 +224,18 @@ div {
 
 ```css live-sample___basic-example
 div.animated {
-  animation: rotate 3s infinite linear both;
+  animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
+```
 
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
+
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A `timeline-trigger-activation-range-end` of `contain 60%`, which sets the trigger's activation range end point to `60%` of the way through the `contain` range (when the tracked element has scrolled a little over half way through the viewport in either direction). The {{cssxref("timeline-trigger-activation-range-start")}} value defaults to `0%` of the way through the `cover` range, meaning that the animation will start when the tracked element start edge enters into the viewport via the scrollport's end edge.
+
+```css live-sample___basic-example
 div.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
@@ -241,7 +243,7 @@ div.trigger {
 }
 ```
 
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
+Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css live-sample___basic-example live-sample___compare-multiple-values
 div.animated {
@@ -267,11 +269,9 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 
 #### Result
 
-The rendered result looks like this:
-
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. When the tracked `<div>` starts to enter the viewport, the animation will play; when the tracked `<div>` has scrolled a little over half-way up the viewport, the animation will pause.
+Try scrolling the content up. The tracked `<div>` plays as it enters the viewport, pausing when the tracked `<div>` has scrolled `60%` of the way up the viewport.
 
 ## Specifications
 

@@ -217,12 +217,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-The animated {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a `timeline-trigger-name` of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
-
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
-
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a `timeline-trigger-name` of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 body {
@@ -265,17 +260,24 @@ div {
 
 ```css live-sample___basic-view-progress-example
 div.animated {
-  animation: rotate 3s infinite linear both;
+  animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
+```
 
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
+
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+
+```css live-sample___basic-view-progress-example
 div.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
 }
 ```
 
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
+Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 div.animated {
@@ -301,8 +303,6 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 
 #### Result
 
-The rendered result looks like this:
-
 {{EmbedLiveSample("basic-view-progress-example", "100%", "240")}}
 
 Try scrolling the content up. When any part of the `.trigger` `<div>` appears in the viewport, the animation will play; when it has completely left the viewport at either edge, the animation will pause.
@@ -317,7 +317,7 @@ We have also set a {{cssxref("timeline-trigger-activation-range")}} of `600px`, 
 
 ```css hidden live-sample___basic-scroll-progress-example
 div.animated {
-  animation: rotate 3s infinite linear both;
+  animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
 ```
@@ -331,8 +331,6 @@ div.trigger {
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("basic-scroll-progress-example", "100%", "240")}}
 

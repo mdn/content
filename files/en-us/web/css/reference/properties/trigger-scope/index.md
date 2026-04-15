@@ -259,17 +259,17 @@ Each `.animated` `<div>` is then given a different `animation`, and a different 
 
 ```css live-sample___trigger-scope
 #one .animated {
-  animation: fade-in 1s infinite alternate ease-in both;
+  animation: fade-in 1s infinite alternate ease-in;
   left: 10px;
 }
 
 #two .animated {
-  animation: color-cycle 1s infinite alternate linear both;
+  animation: color-cycle 1s infinite alternate linear;
   left: 110px;
 }
 
 #three .animated {
-  animation: move-up-down 2s infinite linear both;
+  animation: move-up-down 2s infinite linear;
   left: 210px;
 }
 ```
@@ -339,7 +339,7 @@ checkbox.addEventListener("change", () => {
 });
 ```
 
-The example renders like this:
+#### Result
 
 {{embedlivesample("trigger-scope", "100%", 400)}}
 

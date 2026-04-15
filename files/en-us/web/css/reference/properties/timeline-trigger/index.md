@@ -90,7 +90,7 @@ An element with this declaration set will have:
 - An identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function), which selects the element's nearest ancestor scrolling element to define its timeline trigger.
 - An activation range of [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry), meaning that the trigger will activate when its tracked element starts to enter the viewport.
-- An active range of `entry exit 50%` meaning that once activated, the trigger will stay active until its tracked element leaves the range between the start of the `entry` range and 50% of the way through the [`exit`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#exit) range (when 50% of the tracked element has left the viewport).
+- An active range of `entry exit 50%` meaning that once activated, the trigger will stay active until its tracked element leaves the range between the start of the `entry` range and `50%` of the way through the [`exit`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#exit) range (when `50%` of the tracked element has left the viewport via the scrollport's start edge).
 
 An animated element can be triggered by the previously-described trigger by referencing its identifying name in its {{cssxref("animation-trigger")}} property.
 
@@ -204,13 +204,6 @@ We have hidden the text content for brevity.
 
 The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view() entry / cover`. This specifies the following, all in a single declaration:
-
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `entry`, which means that the trigger will activate in the [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (from the point where the tracked element's block start edge enters the viewport, to the point where its block end edge enters the viewport).
-- A {{cssxref("timeline-trigger-active-range")}} of `cover`, which means that, once activated, the trigger will stay active until the tracked element leaves the [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (in other words, until it completely leaves the viewport).
-
 ```css hidden live-sample___basic-example live-sample___multiple-values
 body {
   width: 80%;
@@ -252,16 +245,25 @@ div {
 
 ```css live-sample___basic-example
 div.animated {
-  animation: rotate 3s infinite linear both;
+  animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
+```
 
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view() entry / cover`. This specifies the following, all in a single declaration:
+
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-activation-range")}} of `entry`, which means that the trigger will activate in the [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (from the point where the tracked element's block start edge enters the viewport, to the point where its block end edge enters the viewport).
+- A {{cssxref("timeline-trigger-active-range")}} of `cover`, which means that, once activated, the trigger will stay active until the tracked element leaves the [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (in other words, until it completely leaves the viewport).
+
+```css live-sample___basic-example
 div.trigger {
   timeline-trigger: --t view() entry / cover;
 }
 ```
 
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
+Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css live-sample___basic-example
 div.animated {
@@ -286,8 +288,6 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
@@ -356,7 +356,7 @@ div.animated {
 }
 
 div.animated2 {
-  animation: up-down 1s infinite linear both;
+  animation: up-down 1s infinite linear;
   animation-trigger: --t2 play pause;
 }
 ```
@@ -426,8 +426,6 @@ Finally, we define the `@keyframes` for the two animations.
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("multiple-values", "100%", "240")}}
 

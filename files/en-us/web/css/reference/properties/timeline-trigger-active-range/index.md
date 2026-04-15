@@ -160,7 +160,7 @@ timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;
 timeline-trigger-active-range: cover, contain;
 ```
 
-In this case, the first name will use the `cover` range, and the second name will use the `contain` range. The third name will cycle back to using the `cover` range again.
+In this case, `--my-trigger` will use the `cover` range and `--my-other-trigger` will use the `contain` range. As there are three names but only two range ends, the range ends are cycled, so the third trigger name, `--another-trigger`, will use the `cover` range.
 
 ## Formal definition
 
@@ -268,12 +268,6 @@ We have hidden the text content for brevity.
 
 The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
-
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A `timeline-trigger-activation-range` of `entry` — on its own, this means that the trigger will activate when the tracked element starts to enter the viewport and deactivate when the tracked element has completely entered the viewport.
-
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
   width: 80%;
@@ -324,10 +318,18 @@ form {
 
 ```css live-sample___basic-example
 div.animated {
-  animation: rotate 3s infinite linear both;
+  animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
+```
 
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
+
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A `timeline-trigger-activation-range` of `entry` — on its own, this means that the trigger will activate when the tracked element starts to enter the viewport via the scrollport's end edge and deactivate when the tracked element has completely entered the viewport.
+
+```css live-sample___basic-example
 div.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
@@ -343,7 +345,7 @@ div.trigger:has(+ form input:checked) {
 }
 ```
 
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
+Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css live-sample___basic-example live-sample___compare-multiple-values
 div.animated {
@@ -368,8 +370,6 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 

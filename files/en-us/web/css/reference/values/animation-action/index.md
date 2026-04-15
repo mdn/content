@@ -136,11 +136,6 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it once. We set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play on activation, and play in reverse on deactivation.
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
-
-- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
-
 ```css hidden live-sample___basic-example
 body {
   width: 80%;
@@ -185,13 +180,20 @@ div.animated {
   animation: rotate 1.5s infinite linear both;
   animation-trigger: --t play-forwards play-backwards;
 }
+```
 
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
+
+- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
+
+```css live-sample___basic-example
 div.trigger {
   timeline-trigger: --t view() contain;
 }
 ```
 
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
+Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css live-sample___basic-example
 div.animated {
@@ -216,8 +218,6 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
@@ -391,8 +391,6 @@ Next, we set a different {{cssxref("animation-trigger")}} property value on each
 ```
 
 #### Result
-
-The rendered result looks like this:
 
 {{EmbedLiveSample("different-effects", "100%", "240")}}
 
