@@ -59,7 +59,7 @@ The `timeline-trigger-activation-range-start` property is specified as one or mo
 
 ## Description
 
-When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-start` property can be used to explicitly define the start of the trigger's **activation range**. Read the linked guide and the [`timeline-trigger-activation-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description) for more information.
+When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-start` property can be used to explicitly define the start of the trigger's [activation range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description).
 
 Allowed values for the `timeline-trigger-activation-range-start` property are:
 
@@ -70,7 +70,7 @@ Allowed values for the `timeline-trigger-activation-range-start` property are:
 
 If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `0%`.
 
-The `timeline-trigger-activation-range-start`, along with the {{cssxref("timeline-trigger-activation-range-end")}} property, can both be set in a single declaration using the {{cssxref("timeline-trigger-activation-range")}} shorthand.
+The `timeline-trigger-activation-range-start` and {{cssxref("timeline-trigger-activation-range-end")}} properties can both be set in a single declaration using the {{cssxref("timeline-trigger-activation-range")}} shorthand.
 
 ### Specifying multiple range start values
 

@@ -60,7 +60,7 @@ The `timeline-trigger-active-range-end` property is specified as one or more val
 
 ## Description
 
-When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-active-range-end` property can be set to explicitly define the end of the trigger's **active range**. Read the linked guide and the [`timeline-trigger-active-range` description](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) for more information.
+When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-active-range-end` property can be set to explicitly define the end of the trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description).
 
 Allowed values for the `timeline-trigger-active-range-end` property are:
 
@@ -72,7 +72,7 @@ Allowed values for the `timeline-trigger-active-range-end` property are:
 
 If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
-The `timeline-trigger-active-range-end`, along with the {{cssxref("timeline-trigger-active-range-start")}} property, can both be set in a single declaration using the {{cssxref("timeline-trigger-active-range")}} shorthand.
+The `timeline-trigger-active-range-end` and {{cssxref("timeline-trigger-active-range-start")}} properties can both be set in a single declaration using the {{cssxref("timeline-trigger-active-range")}} shorthand.
 
 ### Specifying multiple range end values
 
