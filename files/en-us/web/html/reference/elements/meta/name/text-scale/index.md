@@ -90,8 +90,6 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 #### Result
 
-The above code renders like this:
-
 {{embedlivesample("text-scale", "100%", "200")}}
 
 View this in a browser that supports `<meta name="text-scale" content="scale">`, such as Chrome for Android, and try adjusting the OS Font size settings. You'll see that the top and bottom lines of text scale in proportion to those settings, whereas the middle line of text doesn't change size.
