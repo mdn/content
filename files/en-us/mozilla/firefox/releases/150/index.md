@@ -118,6 +118,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
 
+- **Absolutely positioned elements in multi-column containers and when printing**: `layout.abspos.fragmentainer-aware-positioning.enabled`
+
+  Absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing are now correctly positioned and fragmented. This improves interoperability with other browsers and prevents layout issues such as overlapping text or content loss. ([Firefox bug 2018797](https://bugzil.la/2018797)).
+
 - **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
 
   The {{domxref("CustomElementRegistry","customElementRegistry")}} property is supported on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
