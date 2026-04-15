@@ -74,7 +74,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
     - Namespaces
-      - : The attribute name can contain a [`namespace`](/en-US/docs/Web/CSS/Guides/Namespaces) which allows the targeting elements of [XML](/en-US/docs/Web/XML)-based markup languages such as [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML)
+      - : The attribute name can contain a [`namespace`](/en-US/docs/Web/CSS/Guides/Namespaces) which allows the targeting elements of [XML](/en-US/docs/Web/XML)-based markup languages such as [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML).
 
         ```css
         @namespace svg url("http://www.w3.org/2000/svg");
