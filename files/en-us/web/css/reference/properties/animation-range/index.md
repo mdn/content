@@ -275,5 +275,6 @@ Check the checkbox to apply the `animation-fill-mode` property to the animated e
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-inset")}}
 - {{cssxref("animation-fill-mode")}}
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

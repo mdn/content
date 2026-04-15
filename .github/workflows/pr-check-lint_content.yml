@@ -1,45 +1,28 @@
-name: Lint and review content files
+name: Lint content
 
 on:
   pull_request:
     paths:
       - .github/workflows/pr-check-lint_content.yml
-  pull_request_target:
-    paths:
       - .nvmrc
       - "*.md"
       - "files/**/*.md"
 
 permissions:
-  # Compare commits and add reviewdog comments.
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
-  lint-and-review-docs:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if PR reviews can be posted
-        id: permissions
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
-          BASE_REPO: ${{ github.repository }}
-        run: |
-          if [[ "${EVENT_NAME}" == "pull_request_target" || "${HEAD_REPO}" == "${BASE_REPO}" ]]; then
-            echo "CAN_POST_REVIEWS=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Checkout BASE
+      - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          # explicitly specify base ref to ensure `pull_request` runs
-          # behave the same as `pull_request_target` runs
-          ref: ${{ github.event.pull_request.base.sha }}
           persist-credentials: false
 
       - name: Get changed files
@@ -70,45 +53,9 @@ jobs:
             echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Checkout HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: pr_head
-          persist-credentials: false
-
-      - name: Get changed content from HEAD
-        if: steps.check.outputs.HAS_FILES == 'true'
-        run: |
-          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
-          git config --global user.name "mdn-bot"
-
-          # Remove non-Markdown files from BASE.
-          find files -type f ! -name '*.md' -delete
-          git commit --quiet -m "Remove non-Markdown files from PR base" files
-
-          # Remove files from BASE.
-          rm -r files *.md
-
-          # Remove non-Markdown files from HEAD.
-          find pr_head -type f ! -name '*.md' -delete
-
-          # Move Markdown files from HEAD into BASE.
-          mv pr_head/files pr_head/*.md .
-
-          # Remove HEAD checkout.
-          rm -r pr_head
-
-          # To avoid contents of PR getting into the diff that we are going to generate
-          # after running the linters, here we make a dummy commit.
-          # Note, this commit is not getting pushed.
-          git add .
-          git commit -m "Use Markdown files from PR head" .
-
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -215,40 +162,30 @@ jobs:
             echo "FILES_MODIFIED=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Setup reviewdog
-        if: (steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true') && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
-        uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
-        with:
-          reviewdog_version: latest
-
-      - name: Suggest changes using diff
-        if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
+      - name: Collect artifact files
+        if: always() && steps.check.outputs.HAS_FILES == 'true'
         env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TMPFILE=$(mktemp)
-          git diff >"${TMPFILE}"
-          git stash -u && git stash drop
-          reviewdog \
-            -name="mdn-linter" \
-            -f=diff \
-            -f.diff.strip=1 \
-            -filter-mode=diff_context \
-            -reporter=github-pr-review < "${TMPFILE}"
-
-      - name: Add reviews for markdownlint errors
-        if: steps.markdownlint.outputs.MD_LINT_FAILED == 'true' && steps.permissions.outputs.CAN_POST_REVIEWS == 'true'
-        env:
+          FILES_MODIFIED: ${{ steps.lint-diff.outputs.FILES_MODIFIED }}
+          MD_LINT_FAILED: ${{ steps.markdownlint.outputs.MD_LINT_FAILED }}
           MD_LINT_LOG: ${{ steps.markdownlint.outputs.MD_LINT_LOG }}
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${MD_LINT_LOG}" | \
-            reviewdog \
-            -efm="%f:%l:%c %m" \
-            -efm="%f:%l %m" \
-            -name="markdownlint" \
-            -diff="git diff" \
-            -reporter="github-pr-review"
+          rm -rf lint-results
+          mkdir -p lint-results
+
+          if [[ "$FILES_MODIFIED" == 'true' ]]; then
+            git diff HEAD > lint-results/lint.diff
+          fi
+
+          if [[ "$MD_LINT_FAILED" == 'true' ]]; then
+            echo "$MD_LINT_LOG" > lint-results/markdownlint.log
+          fi
+
+      - name: Upload artifact
+        if: always() && steps.check.outputs.HAS_FILES == 'true' && hashFiles('lint-results/*') != ''
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: lint-results
+          path: lint-results
 
       - name: Fail if any issues pending
         if: steps.lint-diff.outputs.FILES_MODIFIED == 'true' || steps.crlf.outputs.CRLF_FAILED == 'true' || steps.markdownlint.outputs.MD_LINT_FAILED == 'true' || steps.frontmatter.outputs.FM_LINT_FAILED == 'true'

@@ -3,7 +3,7 @@ title: slope
 slug: Web/SVG/Reference/Attribute/slope
 page-type: svg-attribute
 browser-compat: svg.elements.feFuncR
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-slope
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-slope
 sidebar: svgref
 ---
 

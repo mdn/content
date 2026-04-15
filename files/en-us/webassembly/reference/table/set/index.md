@@ -89,9 +89,9 @@ table.set identifier
 
 ### Opcodes
 
-| Instruction | Binary opcode                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| `table.set` | `𝟶𝚡𝟸𝟼` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.set` | `0x26 𝑥:table_idx` | `table.set 0` => `0x26 0x01` |
 
 ## Description
 
