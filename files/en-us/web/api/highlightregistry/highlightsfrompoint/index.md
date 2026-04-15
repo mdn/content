@@ -45,11 +45,11 @@ If no custom highlights are applied at the specified point, or the specified poi
 
 ### Output custom highlights applied at the mouse pointer position
 
-In this example, you can apply custom highlights to a paragraph of text. These custom highlights can be overlapping. When the user double-clicks the paragraph, we use the `highlightsFromPoint()` method to return the content of any custom highlights located at the mouse pointer coordinates of the double-click.
+This example demonstrates using the `highlightsFromPoint()` method to return the content of all custom highlights located at the mouse pointer coordinates of a user's double-click. We'll enable applying multiple custom highlights to a paragraph of text, which can even be overlapping, when the user presses the <kbd>h</kbd> key. When the user double-clicks on the paragraph, if the click occurs within one or more highlights, the content of each double-clicked hilight gets written to the page.
 
 #### HTML
 
-The markup includes a {{htmlelement("p")}} element containing text to which you can apply custom highlights, and a {{htmlelement("section")}} element into which we will output the highlighted text fragments.
+The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section")}} element. The user will be able to apply up to three custom highlights to the paragraph's text content. The `<section>` is included as the container where the highlighted text fragments will be displayed.
 
 ```html live-sample___highlights-from-point-example
 <h1>highlightsFromPoint() demo</h1>
@@ -68,6 +68,21 @@ The markup includes a {{htmlelement("p")}} element containing text to which you 
 #### CSS
 
 In the CSS, we define styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`. We select each custom highlight by passing its name into the {{cssxref("::highlight()")}} pseudo-element, giving them yellow, red, and blue background colors respectively.
+
+```css live-sample___highlights-from-point-example
+:root::highlight(highlight1) {
+  background-color: rgb(255 255 0 / 0.5);
+}
+
+:root::highlight(highlight2) {
+  background-color: rgb(255 0 0 / 0.5);
+}
+
+:root::highlight(highlight3) {
+  background-color: rgb(0 0 255 / 0.75);
+  color: white;
+}
+```
 
 ```css hidden live-sample___highlights-from-point-example
 * {
@@ -105,24 +120,9 @@ article {
 }
 ```
 
-```css live-sample___highlights-from-point-example
-:root::highlight(highlight1) {
-  background-color: rgb(255 255 0 / 0.5);
-}
-
-:root::highlight(highlight2) {
-  background-color: rgb(255 0 0 / 0.5);
-}
-
-:root::highlight(highlight3) {
-  background-color: rgb(0 0 255 / 0.75);
-  color: white;
-}
-```
-
 #### JavaScript
 
-The script for this example has two distinct areas of functionality: We first need to create custom highlights and apply them to our content, then we can use the `highlightsFromPoint()` method to return custom highlights from a specific point.
+This example has two distinct areas of functionality. We first have to enable the creation of custom highlights when the clicks <kbd>h</kbd> after having selected some text. We then have to enable writing highlighted content to the page when the user double clicks on one or more custom highlights.
 
 ##### Creating and applying custom highlights
 
