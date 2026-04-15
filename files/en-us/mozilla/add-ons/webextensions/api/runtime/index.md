@@ -26,8 +26,8 @@ It also provides messaging APIs enabling you to:
   - : Identifies the browser's processor architecture.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
   - : Contains information about the platform the browser is running on.
-- {{WebExtAPIRef("runtime.PlatformNaclArch")}}
-  - : The native client architecture. This may be different from `PlatformArch` on some platforms.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}} {{deprecated_inline}}
+  - : The deprecated enumeration value representing Google Native Client architecture. Consider migrating to `PlatformArch`, which is supported by Safari and Mozilla, and represents the true CPU architecture and conveys correct bitness information on ARM.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
