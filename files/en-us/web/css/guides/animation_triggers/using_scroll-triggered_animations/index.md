@@ -205,9 +205,6 @@ Walking through this:
 
 It is possible for the tracked element to be different to the animation element; see [Creating the trigger on a different element](#creating_the_trigger_on_a_different_element), later on.
 
-> [!NOTE]
-> `animation-trigger` is a reset-only sub-property of the `animation` shorthand property. You can't provide an `animation-trigger` value inside `animation`; instead `animation` resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list.
-
 The only thing left to do is define {{cssxref("@keyframes")}} for the `fade-in` animation referenced earlier in the `animation` property value.
 
 ```css live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
