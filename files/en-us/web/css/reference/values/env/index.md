@@ -37,7 +37,7 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
     - `preferred-text-scale`
-      - : A number indicating the user's preferred font scaling factor, as set by browser or OS-level preferences. This can be used to size website text or other UI features proportionally to browser or OS-set font sizes.
+      - : A number indicating the user's preferred font scaling factor, as set by browser or OS-level preferences. This can be used to size content proportionally to browser or OS-set font sizes.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
