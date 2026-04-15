@@ -16,14 +16,18 @@ The **`timeline-trigger-activation-range-end`** [CSS](/en-US/docs/Web/CSS) prope
 ## Syntax
 
 ```css
-/* Keyword or <length-percentage> */
+/* Keyword */
 timeline-trigger-activation-range-end: normal;
+
+/* <length-percentage> */
 timeline-trigger-activation-range-end: 80%;
 timeline-trigger-activation-range-end: 400px;
 
-/* Named timeline range value */
+/* Named timeline range */
 timeline-trigger-activation-range-end: contain;
 timeline-trigger-activation-range-end: exit;
+
+/* Named timeline range plus offset */
 timeline-trigger-activation-range-end: entry 100%;
 timeline-trigger-activation-range-end: contain 600px;
 
@@ -45,11 +49,11 @@ The `timeline-trigger-activation-range-end` property is specified as one or more
 ### Values
 
 - `normal`
-  - : Represents the end of the timeline. This is the default value.
+  - : Represents the end of the `cover` timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - {{cssxref("timeline-range-name")}}
-  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
+  - : Specifies a named timeline range within the overall timeline.
 - `<timeline-range-name>` `<length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 

@@ -16,14 +16,18 @@ The **`timeline-trigger-activation-range-start`** [CSS](/en-US/docs/Web/CSS) pro
 ## Syntax
 
 ```css
-/* Keyword or <length-percentage> */
+/* Keyword */
 timeline-trigger-activation-range-start: normal;
+
+/* <length-percentage> */
 timeline-trigger-activation-range-start: 20%;
 timeline-trigger-activation-range-start: 350px;
 
-/* Named timeline range value */
+/* Named timeline range */
 timeline-trigger-activation-range-start: cover;
 timeline-trigger-activation-range-start: exit;
+
+/* Named timeline range plus offset */
 timeline-trigger-activation-range-start: entry 40%;
 timeline-trigger-activation-range-start: contain 200px;
 
@@ -45,11 +49,11 @@ The `timeline-trigger-activation-range-start` property is specified as one or mo
 ### Values
 
 - `normal`
-  - : Represents the start of the timeline. This is the default value.
+  - : Represents the start of the `cover` timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - {{cssxref("timeline-range-name")}}
-  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
+  - : Specifies a named timeline range within the overall timeline.
 - `<timeline-range-name>` `<length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 

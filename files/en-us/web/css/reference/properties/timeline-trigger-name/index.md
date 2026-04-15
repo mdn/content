@@ -16,7 +16,7 @@ The **`timeline-trigger-name`** [CSS](/en-US/docs/Web/CSS) property specifies a 
 ## Syntax
 
 ```css
-/* none keyword */
+/* Keyword */
 timeline-trigger-name: none;
 
 /* Single dashed ident */

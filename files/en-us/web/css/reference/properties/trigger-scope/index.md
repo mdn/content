@@ -16,9 +16,11 @@ The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit
 ## Syntax
 
 ```css
-/* Single value */
+/* Keyword */
 trigger-scope: none;
 trigger-scope: all;
+
+/* <dashed-ident> */
 trigger-scope: --my-trigger;
 
 /* Multiple <dashed-ident> values */
