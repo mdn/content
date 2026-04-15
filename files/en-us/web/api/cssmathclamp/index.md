@@ -13,7 +13,7 @@ The **`CSSMathClamp`** interface of the [CSS Typed Object Model API](/en-US/docs
 
 ## Constructor
 
-- {{domxref("CSSMathClamp.CSSMathClamp", "CSSMathClamp()")}} {{Experimental_Inline}}
+- {{domxref("CSSMathClamp.CSSMathClamp", "CSSMathClamp()")}}
   - : Creates a new `CSSMathClamp` object.
 
 ## Instance properties

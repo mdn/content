@@ -15,7 +15,10 @@ sidebar:
     children:
       - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
         code: true
-      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules/browser
+        link: /Web/WebDriver/Reference/BiDi/Modules/browser
+        details: closed
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true

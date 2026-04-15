@@ -174,7 +174,6 @@ Servers should use `text/javascript` for JavaScript resources as indicated in th
   # Manifest files
     AddType application/manifest+json     webmanifest
     AddType application/x-web-app-manifest+json         webapp
-    AddType text/cache-manifest           appcache
   # Media files
     AddType audio/mp4                     f4a f4b m4a
     AddType audio/ogg                     oga ogg opus
@@ -237,7 +236,7 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 
 ```apacheconf
 <IfModule mod_mime.c>
-  AddCharset utf-8 .appcache \
+  AddCharset utf-8 \
     .bbaw \
     .css \
     .htc \

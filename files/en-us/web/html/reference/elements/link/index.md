@@ -229,10 +229,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `imagesrcset`
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute has similar syntax and semantics as the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- `integrity`
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
-    The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
-    The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
+- [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the resource. It is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must only be specified when the `rel` attribute is set to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).

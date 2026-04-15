@@ -6,7 +6,7 @@ browser-compat: css.types.color.color-mix
 sidebar: cssref
 ---
 
-The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
+The **`color-mix()`** functional notation takes one or more {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
 ## Syntax
 
@@ -22,11 +22,15 @@ color-mix(in lab, plum 60%, #123456 50%)
 /* With hue interpolation method */
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
+
+/* with more than two colors */
+color-mix(in oklab, teal, olive, blue)
+color-mix(in oklab, teal 20%, olive 30%, blue 50%)
 ```
 
 ### Parameters
 
-The `color-mix( <color-interpolation-method>, <color> [<percentage>], <color> [<percentage>] )` accepts the following parameters:
+The `color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` accepts the following parameters:
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax)), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
@@ -43,7 +47,7 @@ A `<color>`; the result of mixing the colors, in the given `<color-space>`, in t
 
 ## Description
 
-The `color-mix()` function enables mixing two {{cssxref("&lt;color&gt;")}} values of any type, in a specific ratio, in a given colorspace, using either a shorter or longer hue interpolation method. Browsers support a plethora of color spaces; the `color-mix()` function enables a wide range of colors to be mixed, not limited to the sRGB color space.
+The `color-mix()` function enables mixing one or more {{cssxref("&lt;color&gt;")}} values of any type, in a specific ratio, in a given colorspace, using either a shorter or longer hue interpolation method. Browsers support a plethora of color spaces; the `color-mix()` function enables a wide range of colors to be mixed, not limited to the sRGB color space.
 
 {{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
@@ -53,7 +57,7 @@ This demo allows you to select two colors, `color-one` and `color-two`, and mix 
 
 Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
 
-- If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
+- If the result of physically mixing colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
 - If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab (and older Lab) color spaces are appropriate, because they are designed to be perceptually uniform.
 - If avoiding graying out in color mixing is desired, i.e., maximizing chroma throughout the transition, the Oklch (and older LCH) color spaces work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
@@ -69,9 +73,9 @@ The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Referenc
 
 ### Color percentages
 
-Each of the two colors can be declared with a `<percentage>` value between `0%` and `100%`, which specifies the amount of the corresponding color to mix. The percentages are normalized if the total value of the declared percentages does not equal `100%`.
+Each color can be declared with a `<percentage>` value between `0%` and `100%`, which specifies the amount of the corresponding color to mix. The percentages are normalized if the total value of the declared percentages does not equal `100%`.
 
-The two color percentages (we'll refer to them as `p1` and `p2`) are normalized as follows:
+When two colors are being mixed, the two color percentages (we'll refer to them as `p1` and `p2`) are normalized as follows:
 
 - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
 - If `p1` is omitted, then `p1 = 100% - p2`.
@@ -246,7 +250,7 @@ In this way, the `color-mix()` function can be used to add transparency to any c
 
 ### Using hue interpolation in color-mix()
 
-This example demonstrates the hue interpolation methods available to the `color-mix()` function. When using hue [interpolation](/en-US/docs/Web/CSS/Reference/Values/color_value#interpolation), the resulting hue is between the hue values of the two colors being mixed. The value will be different based on which route is taken around the color wheel.
+This example demonstrates the hue interpolation methods available to the `color-mix()` function. When using hue [interpolation](/en-US/docs/Web/CSS/Reference/Values/color_value#interpolation), the resulting hue is between the hue values of the colors being mixed. The value will be different based on which route is taken around the color wheel.
 
 For more information, see {{cssxref("&lt;hue-interpolation-method&gt;")}}.
 
