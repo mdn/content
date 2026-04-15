@@ -26,7 +26,7 @@ None. However, you must include the `params` field and set it to an empty object
 
 ### Return value
 
-The `result` object in the response with the following fields:
+The following fields in the `result` object of the response describe the current status of the browser:
 
 - `ready`
   - : A boolean that indicates whether the browser is ready to create new sessions.
