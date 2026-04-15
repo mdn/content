@@ -25,7 +25,7 @@ The **CSS animation triggers** module provides functionality for triggering stan
 - {{cssxref("timeline-trigger-source")}}
 - {{cssxref("trigger-scope")}}
 
-The CSS animation triggers module level 1 also introduces the `event-trigger`, `event-trigger-name`, and `event-trigger-source` properties. Currently, no browsers support these features.
+The CSS animation triggers module also introduces the `event-trigger`, `event-trigger-name`, and `event-trigger-source` properties. Currently, no browsers support these features.
 
 ### Data types and values
 
