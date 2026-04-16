@@ -1,5 +1,5 @@
 ---
-title: '`<input type="number">` HTML attribute value'
+title: '`<input type="number">` HTML attribute value` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number

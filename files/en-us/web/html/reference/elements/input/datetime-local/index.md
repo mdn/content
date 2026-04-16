@@ -1,5 +1,5 @@
 ---
-title: <input type="datetime-local">
+title: '`<input type="datetime-local">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/datetime-local
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_datetime-local

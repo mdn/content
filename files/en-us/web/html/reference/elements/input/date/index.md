@@ -1,5 +1,5 @@
 ---
-title: <input type="date">
+title: '`<input type="date">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/date
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_date

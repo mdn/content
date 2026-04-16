@@ -1,5 +1,5 @@
 ---
-title: <input type="url">
+title: '`<input type="url">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/url
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_url

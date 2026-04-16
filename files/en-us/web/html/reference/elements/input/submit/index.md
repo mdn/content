@@ -1,5 +1,5 @@
 ---
-title: <input type="submit">
+title: '`<input type="submit">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/submit
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_submit
