@@ -106,7 +106,7 @@ img:focus {
 ```
 
 ```css hidden
-@media not (dynamic-range: high)  {
+@media not (dynamic-range: high) {
   body::before {
     content: "Your device may not display the image at full brightness.";
     background-color: wheat;
@@ -114,7 +114,7 @@ img:focus {
     text-align: center;
   }
 }
-@supports not (dynamic-range-limit: standard){
+@supports not (dynamic-range-limit: standard) {
   body::before {
     content: "Your browser doesn't support the dynamic-range-limit property.";
     background-color: wheat;
