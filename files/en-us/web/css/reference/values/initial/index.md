@@ -8,7 +8,7 @@ sidebar: cssref
 
 The **`initial`** [CSS](/en-US/docs/Web/CSS) keyword applies the [initial (or default) value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) of a property to an element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}. With `all` set to `initial`, all CSS properties can be restored to their respective initial values in one go instead of restoring each one separately.
 
-On [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, or {{cssxref("revert-layer")}} keywords instead.
+On [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, or {{cssxref("revert-rule")}} keywords instead.
 
 ## Examples
 
@@ -61,6 +61,6 @@ With the `initial` keyword in this example, the `color` and `font-size` values o
 
 ## See also
 
-- {{cssxref("inherit")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}} keywords
+- {{cssxref("inherit")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, {{cssxref("revert-rule")}}, and {{cssxref("unset")}} keywords
 - {{cssxref("all")}}
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)

@@ -102,4 +102,5 @@ p {
 - Use the {{cssxref("inherit")}} keyword to make an element's property the same as its parent.
 - Use the {{cssxref("revert")}} keyword to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
 - Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.
+- Use the {{cssxref("revert-rule")}} keyword to reset a property as if the current style rule were not present.
 - The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.
