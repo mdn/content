@@ -1,5 +1,5 @@
 ---
-title: <input type="search">
+title: '`<input type="search">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/search
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_search

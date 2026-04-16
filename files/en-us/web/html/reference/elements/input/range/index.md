@@ -1,5 +1,5 @@
 ---
-title: <input type="range">
+title: '`<input type="range">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range

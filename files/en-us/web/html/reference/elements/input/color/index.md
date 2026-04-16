@@ -1,5 +1,5 @@
 ---
-title: <input type="color">
+title: '`<input type="color">` HTML attribute value'
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
 browser-compat:
