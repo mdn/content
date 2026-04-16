@@ -89,13 +89,24 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Fixed an issue where having pending downloads when closing the session could be blocked by a prompt. The prompt is now dismissed automatically. ([Firefox bug 2003840](https://bugzil.la/2003840))
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Added the `emulation.setNetworkConditions` command, which only supports the `type: offline` at the moment. Using this, you can emulate offline mode either on specific browsing contexts, on user contexts (a.k.a. containers) or globally. ([Firefox bug 1993079](https://bugzil.la/1993079))
+- Improved our support for non utf-8 header values across all the `network` module commands and events. They are now properly serialized to `BytesValue`. ([Firefox bug 1994996](https://bugzil.la/1994996))
+- Fixed a bug with download events, which would be missing the `navigation` property when triggered by a link with `target="_blank"`. ([Firefox bug 1999481](https://bugzil.la/1999481))
+- Updated the `log.entryAdded` event to only be emitted for console API calls that use the "printer". With this change, using `console.clear` or `console.time` no longer triggers an event. ([Firefox bug 1866749](https://bugzil.la/1866749))
+- Fixed a race condition with the `browsingContext.setViewport` command which could timeout if several contexts were created in parallel. ([Firefox bug 2019511](https://bugzil.la/2019511))
+- Improved the `browsingContext.locateNodes` command to allow retrieving the HTML element (documentElement). ([Firefox bug 2020578](https://bugzil.la/2020578))
+
+#### Marionette
+
+- Fixed the `WebDriver:getShadowRoot` command to stop returning user-agent shadow roots. ([Firefox bug 2016741](https://bugzil.la/2016741))
 
 ## Changes for add-on developers
 
