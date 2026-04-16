@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: crossorigin"
+title: "`crossorigin` HTML attribute"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
 page-type: html-attribute

@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: dirname"
+title: "`dirname` HTML attribute"
 short-title: dirname
 slug: Web/HTML/Reference/Attributes/dirname
 page-type: html-attribute

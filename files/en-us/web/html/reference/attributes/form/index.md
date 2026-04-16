@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: form"
+title: "`form` HTML attribute"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 page-type: html-attribute
