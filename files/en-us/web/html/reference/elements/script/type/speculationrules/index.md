@@ -1,5 +1,5 @@
 ---
-title: <script type="speculationrules">
+title: '`<script type="speculationrules">` HTML attribute value'
 short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 page-type: html-attribute-value

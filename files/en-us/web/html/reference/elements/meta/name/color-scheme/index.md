@@ -1,5 +1,5 @@
 ---
-title: <meta name="color-scheme">
+title: '`<meta name="color-scheme">` HTML attribute value'
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 page-type: html-attribute-value
