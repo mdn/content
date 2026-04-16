@@ -1,5 +1,5 @@
 ---
-title: HTML autofocus global attribute
+title: "`autofocus` HTML global attribute"
 short-title: autofocus
 slug: Web/HTML/Reference/Global_attributes/autofocus
 page-type: html-attribute
