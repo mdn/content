@@ -28,7 +28,7 @@ Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and
 
 ```json
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Borderify",
   "version": "1.0",
 
