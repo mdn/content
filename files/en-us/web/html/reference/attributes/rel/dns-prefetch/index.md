@@ -1,5 +1,5 @@
 ---
-title: rel="dns-prefetch"
+title: '`rel="dns-prefetch"` HTML attribute value'
 slug: Web/HTML/Reference/Attributes/rel/dns-prefetch
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.dns-prefetch
