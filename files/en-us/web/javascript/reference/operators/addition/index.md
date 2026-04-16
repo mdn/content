@@ -75,7 +75,12 @@ You cannot mix BigInt and number operands in addition.
 ```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
-"1" + 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+Strings are an exception: because the string branch is tested first, adding a string to a BigInt produces string concatenation rather than a `TypeError`.
+
+```js
+"1" + 2n; // "12"
 ```
 
 To do addition with a BigInt and a non-BigInt, convert either operand:
