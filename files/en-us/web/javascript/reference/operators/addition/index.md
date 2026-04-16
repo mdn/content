@@ -70,14 +70,14 @@ false + false; // 0
 1n + 2n; // 3n
 ```
 
-You cannot mix BigInt and number operands in addition.
+You cannot mix BigInt and number operands in addition. `null`, `undefined`, and boolean values are coerced to numbers and are forbidden as well.
 
 ```js example-bad
 1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
-Strings are an exception: because the string branch is tested first, adding a string to a BigInt produces string concatenation rather than a `TypeError`.
+Strings have priority over over types, so adding a string to a BigInt produces string concatenation rather than a `TypeError`.
 
 ```js
 "1" + 2n; // "12"
