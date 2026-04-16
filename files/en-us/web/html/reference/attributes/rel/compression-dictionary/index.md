@@ -1,5 +1,5 @@
 ---
-title: rel="compression-dictionary"
+title: '`rel="compression-dictionary"` HTML attribute value'
 slug: Web/HTML/Reference/Attributes/rel/compression-dictionary
 page-type: html-attribute-value
 status:
