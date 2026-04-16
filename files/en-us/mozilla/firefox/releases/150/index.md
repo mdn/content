@@ -49,6 +49,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} are now supported. They allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 2020775](https://bugzil.la/2020775)).
 
+- The {{cssxref("revert-rule")}} CSS keyword is now supported. It allows a property's value to be determined as if the current style rule were not present at all, so that the value from another matching rule can take effect instead. ([Firefox bug 2017307](https://bugzil.la/2017307)).
+
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
