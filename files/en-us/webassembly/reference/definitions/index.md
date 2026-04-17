@@ -10,6 +10,8 @@ This set of pages details the top-level definitions available in Wasm for defini
 
 ## Definitions
 
+- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
+  - : Creates a new global.
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table)
   - : Creates a new table.
 

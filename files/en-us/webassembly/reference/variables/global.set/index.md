@@ -32,14 +32,35 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wat
-;; load the number 2 onto the stack
-i32.const 2
-
-;; store the number 2 in the variable $val
-global.set $val
+```plain
+global.set identifier
 ```
 
-| Instruction  | Binary opcode |
-| ------------ | ------------- |
-| `global.set` | `0x24`        |
+- `global.set`
+  - : The `global.set` instruction type. Must always be included first.
+- `identifier`
+  - : An identifier for the global whose value you want to set. This can be one of the following:
+    - `name`
+      - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first intialized. This must begin with a `$` symbol, for example `$my_global`.
+    - `index`
+      - : The global's index number, for example `0` for the first global in the wasm script, `1` for the second, etc.
+
+### Type
+
+```plain
+[new_value] -> []
+```
+
+- `new_value`
+  - : The new value set for the global. For the `global.set` instruction to succeed, the global must be mutable (the [`mut`](/en-US/docs/WebAssembly/Reference/Definitions/global#mut) flag was set when it was first initialized), and the `new_value` must have the same [`data_type`](/en-US/docs/WebAssembly/Reference/Definitions/global#data_type) as the global.
+
+### Opcodes
+
+| Instruction  | Binary format | Example text => binary        |
+| ------------ | ------------- | ----------------------------- |
+| `global.set` | `0x24`        | `global.set 0` => `0x24 0x00` |
+
+## See also
+
+- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
+- [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get)

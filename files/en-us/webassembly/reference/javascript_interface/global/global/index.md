@@ -1,5 +1,6 @@
 ---
 title: WebAssembly.Global() constructor
+short-title: Global()
 slug: WebAssembly/Reference/JavaScript_interface/Global/Global
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Global.Global
@@ -19,21 +20,22 @@ new WebAssembly.Global(descriptor, value)
 
 - `descriptor`
   - : An object, which contains two properties:
-    - `value`: A string representing the
-      data type of the global. This can be any one of:
-      - `i32`: A 32-bit integer.
-      - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
-      - `f32`: A 32-bit floating point number.
-      - `f64`: A 64-bit floating point number.
-      - `v128`: A 128-bit vector.
-      - `externref`: A host reference.
-      - `anyfunc`: A function reference.
-    - `mutable`: A boolean value that determines whether the global is
-      mutable or not. By default, this is `false`.
+    - `value`
+      - : A string representing the
+        data type of the global. This can be any one of:
+        - `i32`: A 32-bit integer.
+        - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
+        - `f32`: A 32-bit floating point number.
+        - `f64`: A 64-bit floating point number.
+        - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
+        - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+    - `mutable`
+      - : A boolean value that determines whether the global is
+        mutable or not. By default, this is `false`.
 
 - `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
-    If no value is specified, a typed 0 value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc` (as specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue)).
+    If no value is specified, a typed `0` value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc`.
 
 ## Examples
 
