@@ -139,8 +139,8 @@ sidebar:
         details: closed
         children:
           - type: listSubPages
-            path: /WebAssembly/Reference/SIMD/Arithmetic
-            link: /WebAssembly/Reference/SIMD/Arithmetic
+            path: /WebAssembly/Reference/SIMD/arithmetic
+            link: /WebAssembly/Reference/SIMD/arithmetic
             title: Arithmetic
             details: closed
           - type: listSubPages
@@ -159,9 +159,9 @@ sidebar:
             title: Extract
             details: closed
           - type: listSubPages
-            path: /WebAssembly/Reference/SIMD/load
-            link: /WebAssembly/Reference/SIMD/load
-            title: Load
+            path: /WebAssembly/Reference/SIMD/load_store
+            link: /WebAssembly/Reference/SIMD/load_store
+            title: Load and store
             details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Table

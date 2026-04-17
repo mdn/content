@@ -83,7 +83,7 @@ Note that SIMD lanes are zero-indexed. In the previous output value:
 
 Some instructions operate on the `v128` type itself:
 
-- v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load) instructions.
+- v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load_store) instructions.
 - General numeric instructions such as [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const).
 
 Most of the SIMD instructions, however, operate on interpretations of the `v128` type. See the [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD) landing page for the full list.
