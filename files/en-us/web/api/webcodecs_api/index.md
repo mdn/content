@@ -6,43 +6,109 @@ page-type: web-api-overview
 
 {{DefaultAPISidebar("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **WebCodecs API** gives web developers low-level access to the individual frames of a video stream and chunks of audio.
-It is useful for web applications that require full control over the way media is processed.
-For example, video or audio editors, and video conferencing.
+The **WebCodecs API** enables web developers to encode and decode video and audio in the browser efficiently (using hardware acceleration) and with very low-level control (processing on a per-frame basis).
 
-## Concepts and Usage
+It is useful for web applications that do heavy media processing, or which require low-level control over the way media is encoded, such as browser-based video and audio editing, as well as live-streaming and video conferencing.
 
-Many Web APIs use media codecs internally.
-For example, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and the [WebRTC API](/en-US/docs/Web/API/WebRTC_API).
-However these APIs do not allow developers to work with individual frames of a video stream and unmixed chunks of encoded audio or video.
+## Why WebCodecs exists
 
-Web developers have typically used WebAssembly in order to get around this limitation,
-and to work with media codecs in the browser.
-However, this requires additional bandwidth to download codecs that already exist in the browser,
-reducing performance and power efficiency, and adding additional development overhead.
+There are other APIs which use media codecs internally, such as the [MediaRecorder API](/en-US/docs/Web/API/MediaRecorder) and the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), but these lack the low-level (per-frame) control required by some applications.
 
-The WebCodecs API provides access to codecs that are already in the browser.
-It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
+Previously, developers used WebAssembly ports of ffmpeg, but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large files efficiently.
+
+WebCodecs was designed to enable low-level, hardware-accelerated media processing, for applications such as high-performance streaming and video editing, which were not well served by the existing APIs.
+
+## Concepts
+
+The WebCodecs API provides browser-native interfaces to represent raw video frames, encoded video frames, as well as raw and encoded audio.
+
+|             | Video                            | Audio                            |
+| ----------- | -------------------------------- | -------------------------------- |
+| **Raw**     | {{domxref("VideoFrame")}}        | {{domxref("AudioData")}}         |
+| **Encoded** | {{domxref("EncodedVideoChunk")}} | {{domxref("EncodedAudioChunk")}} |
+
+The WebCodecs API also introduces the {{domxref("VideoDecoder")}} and {{domxref("VideoEncoder")}} interfaces, which transform `EncodedVideoChunk` objects into `VideoFrame` objects and vice-versa.
+
+![VideoEncoder and VideoDecoder](video-encoder-decoder.png)
+
+Likewise, the WebCodecs API also introduces the {{domxref("AudioDecoder")}} and {{domxref("AudioEncoder")}} interfaces, which transform `EncodedAudioChunk` objects into `AudioData` objects and vice-versa.
+
+![AudioEncoder and AudioDecoder](audio-encoder-decoder.png)
+
+Generally there is a 1:1 correspondence between the raw and encoded versions of each media type. Decoding n `EncodedVideoChunk` objects will yield n `VideoFrame` objects (same with audio).
+
+### Video
+
+A `VideoFrame` represents a video frame, and is tied both to actual pixel data on the device's graphics memory, as well as metadata such as the timestamp and duration (in microseconds), format and resolution. A `VideoFrame` can be constructed from any image source, and can also be rendered to a {{domxref("Canvas")}} using any of the canvas rendering methods.
+
+`EncodedVideoChunk` represents the encoded version of the same frame, tied to binary data in regular memory and the same metadata, with one key additional field: `type`, which can be "key" or "delta", representing whether it corresponds to a [key frame](https://webcodecsfundamentals.org/basics/encoded-video-chunk/#key-frames).
+
+![VideoFrame and EncodedVideoChunk](video-frame.png)
+
+### Audio
+
+An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), however the extracted `Float32Array` samples can be copied directly into a {{domxref("AudioBuffer")}} for playback.
+
+![AudioData and EncodedAudioChunk](audio-data.png)
 
 ### Processing Model
 
-The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance
-of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to
-keep this model in mind.
+The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to keep this model in mind.
 
-Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages
-to the end the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the
-processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages to the end of the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
 
-Methods named `flush()` can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it
-should generally only be called once all desired work is queued. It is not intended to force progress at regular intervals. Calling it
-unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
+The `flush()` method can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it should generally only be called once all desired work is queued — it is not intended to force progress at regular intervals. Calling it unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
 
-### Demuxing
+### Codecs
 
-There is currently no API for demuxing media containers. Developers working with containerized media will need to implement their own
-or use third party libraries. E.g., [MP4Box.js](https://github.com/gpac/mp4box.js/) or [jswebm](https://github.com/jscodec/jswebm) can be
-used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{domxref("EncodedVideoChunk")}} objects respectively.
+A codec is a specific algorithm for encoding (compressing) and decoding (decompressing) video and audio. There are several industry standard codecs for video, and a separate set of codecs for audio. Here are the major ones supported in WebCodecs:
+
+#### Video Codecs
+
+- H.264 (AVC)
+  - : The most widely supported video codec. Most MP4 files use H.264.
+- VP9
+  - : Open source, developed by Google. Better compression than H.264. Commonly used on YouTube and in WebM files.
+- AV1
+  - : The newest open source codec, with better compression than VP9. Broad decoder support; hardware encoder support is still limited.
+- H.265 (HEVC)
+  - : Better compression than H.264, but with significant gaps in browser support outside of Apple platforms.
+
+#### Audio Codecs
+
+- Opus
+  - : Open source, low-latency. The recommended choice for most WebCodecs audio encoding.
+- AAC
+  - : Widely supported. Common in MP4 files.
+- MP3
+  - : Broadly supported for decoding, but not available as an encoder in WebCodecs.
+- PCM
+  - : Uncompressed audio. No quality loss, but large file sizes.
+
+The WebCodecs specification only supports a specific set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals, or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
+
+### Muxing and Demuxing
+
+The WebCodecs API only deals with encoding and decoding, with encoded chunks just representing binary data. It does not provide a built-in way to read `EncodedVideoChunk` objects from a video file, or write them to a playable video file.
+
+Reading encoded chunks from a video file is a completely different process called demuxing, and to fetch `EncodedVideoChunk` objects from a video file, you will need to use a demuxing library such as [MediaBunny](https://mediabunny.dev/) or [web-demuxer](https://github.com/bilibili/web-demuxer).
+
+![Demuxer](decoder-demuxer.png)
+
+These libraries will follow the video container specifications (e.g., webm, mp4) to extract the track data and byte offsets for each encoded chunk, and provide methods for extracting the actual chunks from the raw file.
+
+Likewise, to write to a playable video file, you will need a muxing library, with [MediaBunny](https://mediabunny.dev/) being the primary option for muxing. Muxing libraries will handle formatting the binary encoded data, and placing it in the correct byte position in the output file stream according to the container specification, so that the output video is playable.
+
+You can find more information on muxing and demuxing in the [Muxing and Demuxing guide](https://webcodecsfundamentals.org/basics/muxing/) on WebCodecs Fundamentals.
+
+## Guides
+
+- [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
+  - : A brief primer on video processing, including codecs and containers, muxing and demuxing, that covers conceptual information to understand how the WebCodecs API implements these concepts.
+- [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
+  - : In depth guide to how to actually use the WebCodecs API, including how to instantiate and configure encoders and decoders, how to create and consume video frames, and how to extract samples from AudioData.
+- [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
+  - : The WebCodecs API requires codec strings — precise identifiers that specify not just the codec family but also the profile, level, and other parameters. This guide explains how codec strings work and how to choose the right codec for common use cases.
 
 ## Interfaces
 
@@ -73,34 +139,46 @@ used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{d
 
 ## Examples
 
-In the following example, frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded.
-See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
+The basic instantiation of a `VideoEncoder` looks like this, where you define the output callback where `EncodedVideoChunk` objects will be returned.
 
 ```js
-let frameCounter = 0;
-const track = stream.getVideoTracks()[0];
-const mediaProcessor = new MediaStreamTrackProcessor(track);
-const reader = mediaProcessor.readable.getReader();
-while (true) {
-  const result = await reader.read();
-  if (result.done) break;
-  let frame = result.value;
-  if (encoder.encodeQueueSize > 2) {
-    // Too many frames in flight, encoder is overwhelmed
-    // let's drop this frame.
-    frame.close();
-  } else {
-    frameCounter++;
-    const insertKeyframe = frameCounter % 150 === 0;
-    encoder.encode(frame, { keyFrame: insertKeyframe });
-    frame.close();
-  }
+const encoder = new VideoEncoder({
+  output(chunk, meta) {
+    // Do something with chunk, typically send to muxing library
+  },
+  error(e) {
+    console.warn(e);
+  },
+});
+```
+
+You then need to configure the encoder with the codec parameter and various other fields.
+
+```js
+encoder.configure({
+  codec: "vp09.00.40.08.00", // See codec selection guide
+  width: 1280,
+  height: 720,
+  bitrate: 1_000_000, // 1 Mbps
+  framerate: 25,
+});
+```
+
+You can then start encoding frames to the encoder. You can construct a `VideoFrame` from a `Canvas`
+
+```js
+for (let i = 0; i < 60; i++) {
+  const frame = new VideoFrame(canvas, { timestamp: (i * 1e6) / 30 }); //30 fps, in microseconds
+  encoder.encode(frame, { keyFrame: i % 60 === 0 });
 }
 ```
+
+See [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API) for more examples.
 
 ## See also
 
 - [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
+- [WebCodecsFundamentals](https://webcodecsfundamentals.org/)
 - [Real-Time Video Processing with WebCodecs and Streams: Processing Pipelines](https://webrtchacks.com/real-time-video-processing-with-webcodecs-and-streams-processing-pipelines-part-1/)
 - [Video Frame Processing on the Web – WebAssembly, WebGPU, WebGL, WebCodecs, WebNN, and WebTransport](https://webrtchacks.com/video-frame-processing-on-the-web-webassembly-webgpu-webgl-webcodecs-webnn-and-webtransport/)
