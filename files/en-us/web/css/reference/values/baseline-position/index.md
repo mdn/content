@@ -1,5 +1,6 @@
 ---
-title: <baseline-position>
+title: "`<baseline-position>` CSS type"
+short-title: <baseline-position>
 slug: Web/CSS/Reference/Values/baseline-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-baseline-position

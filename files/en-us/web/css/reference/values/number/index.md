@@ -1,5 +1,6 @@
 ---
-title: <number>
+title: "`<number>` CSS type"
+short-title: <number>
 slug: Web/CSS/Reference/Values/number
 page-type: css-type
 browser-compat: css.types.number

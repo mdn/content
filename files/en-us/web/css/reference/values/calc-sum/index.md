@@ -1,5 +1,6 @@
 ---
-title: <calc-sum>
+title: "`<calc-sum>` CSS type"
+short-title: <calc-sum>
 slug: Web/CSS/Reference/Values/calc-sum
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-calc-sum

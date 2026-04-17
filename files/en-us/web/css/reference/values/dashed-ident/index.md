@@ -1,5 +1,6 @@
 ---
-title: <dashed-ident>
+title: "`<dashed-ident>` CSS type"
+short-title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#dashed-idents

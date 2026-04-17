@@ -1,5 +1,6 @@
 ---
-title: <ident>
+title: "`<ident>` CSS type"
+short-title: <ident>
 slug: Web/CSS/Reference/Values/ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-ident

@@ -1,5 +1,6 @@
 ---
-title: <corner-shape-value>
+title: "`<corner-shape-value>` CSS type"
+short-title: <corner-shape-value>
 slug: Web/CSS/Reference/Values/corner-shape-value
 page-type: css-type
 status:

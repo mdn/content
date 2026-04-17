@@ -1,5 +1,6 @@
 ---
-title: <filter-function>
+title: "`<filter-function>` CSS type"
+short-title: <filter-function>
 slug: Web/CSS/Reference/Values/filter-function
 page-type: css-type
 browser-compat: css.types.filter-function

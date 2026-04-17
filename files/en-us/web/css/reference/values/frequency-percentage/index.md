@@ -1,5 +1,6 @@
 ---
-title: <frequency-percentage>
+title: "`<frequency-percentage>` CSS type"
+short-title: <frequency-percentage>
 slug: Web/CSS/Reference/Values/frequency-percentage
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#typedef-frequency-percentage
