@@ -85,7 +85,9 @@ vegetables.push(...moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method.
+Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method, which will make a new combined array instead of adding to the original.
+
+Note: using spread syntax will only work if the number of elements in the array is less than the maximum number of function parameters. Use {{jsxref("Array/concat", "concat()")}} if you're not sure that the array you're trying to merge will be short enough.
 
 ### Calling push() on non-array objects
 
