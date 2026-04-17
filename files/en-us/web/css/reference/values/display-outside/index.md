@@ -1,5 +1,6 @@
 ---
-title: <display-outside>
+title: "`<display-outside>` CSS type"
+short-title: <display-outside>
 slug: Web/CSS/Reference/Values/display-outside
 page-type: css-type
 browser-compat:

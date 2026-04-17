@@ -1,5 +1,6 @@
 ---
-title: <color>
+title: "`<color>` CSS type"
+short-title: <color>
 slug: Web/CSS/Reference/Values/color_value
 page-type: css-type
 browser-compat: css.types.color

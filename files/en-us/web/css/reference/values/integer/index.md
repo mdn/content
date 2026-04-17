@@ -1,5 +1,6 @@
 ---
-title: <integer>
+title: "`<integer>` CSS type"
+short-title: <integer>
 slug: Web/CSS/Reference/Values/integer
 page-type: css-type
 browser-compat: css.types.integer

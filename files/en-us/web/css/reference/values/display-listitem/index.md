@@ -1,5 +1,6 @@
 ---
-title: <display-listitem>
+title: "`<display-listitem>` CSS type"
+short-title: <display-listitem>
 slug: Web/CSS/Reference/Values/display-listitem
 page-type: css-type
 browser-compat: css.properties.display.list-item

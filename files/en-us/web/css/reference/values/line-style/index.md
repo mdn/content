@@ -1,5 +1,6 @@
 ---
-title: <line-style>
+title: "`<line-style>` CSS type"
+short-title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
 page-type: css-type
 browser-compat: css.types.line-style

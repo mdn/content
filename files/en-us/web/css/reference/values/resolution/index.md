@@ -1,5 +1,6 @@
 ---
-title: <resolution>
+title: "`<resolution>` CSS type"
+short-title: <resolution>
 slug: Web/CSS/Reference/Values/resolution
 page-type: css-type
 browser-compat: css.types.resolution

@@ -1,5 +1,6 @@
 ---
-title: <time>
+title: "`<time>` CSS type"
+short-title: <time>
 slug: Web/CSS/Reference/Values/time
 page-type: css-type
 browser-compat: css.types.time

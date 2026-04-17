@@ -1,5 +1,6 @@
 ---
-title: <percentage>
+title: "`<percentage>` CSS type"
+short-title: <percentage>
 slug: Web/CSS/Reference/Values/percentage
 page-type: css-type
 browser-compat: css.types.percentage
