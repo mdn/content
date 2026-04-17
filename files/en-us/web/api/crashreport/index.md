@@ -1,0 +1,99 @@
+---
+title: CrashReport
+slug: Web/API/CrashReport
+page-type: web-api-interface
+browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.crash
+---
+
+{{APIRef("Reporting API")}}
+
+The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a crash report.
+
+> [!NOTE]
+> It is not possible to retrieve crash reports using a {{domxref("ReportingObserver")}} — the reports are only generated when the browser crashes, at which point the observer code isn't available to run.
+
+## Instance properties
+
+- `age`
+  - : The age of the report in milliseconds.
+- `type`
+  - : The string `"crash"` indicating that this is a crash report.
+- `url`
+  - : A string representing the URL of the document that generated the report.
+- `user_agent`
+  - : The user agent string of the browser that generated the report.
+- `body`
+  - : The body of the report.
+    This is an object with the following properties:
+    - `crash_report_api` {{experimental_inline}} {{optional_inline}}
+      - : An object containing the key-value pairs set via the {{domxref("CrashReportContext.set()")}} method, if any.
+    - `is_top_level` {{experimental_inline}}
+      - : A boolean indicating whether the crashed document was a top-level document (`true`) or an embedded document (`false`).
+    - `reason` {{experimental_inline}} {{optional_inline}}
+      - : A string indicating the specfic reason why the crash occurred, if known. Possible values are:
+        - `oom`
+          - : The page ran out of memory.
+        - `unresponsive`
+          - : The page was killed due to being unresponsive.
+    - `stack` {{experimental_inline}} {{optional_inline}}
+      - : A string representing the JavaScript call stack at the time of the crash. This is included if the `reason` is `unresponsive`, if the `Document-Policy` value for `include-js-call-stacks-in-crash-reports` in the document that crashed is `true`, and if the call stack was able to be recovered from the crashed document.
+    - `visibility_state` {{experimental_inline}}
+      - : An enumerated value indicating whether the document is visible. This mirrors the value of the {{domxref("Document.visibilityState")}} property. Possible values are:
+        - `visible`
+          - : The document content is at least partially visible.
+        - `hidden`
+          - : The document content is completely hidden.
+
+## Description
+
+Crash reports containing arbitrary information can be sent to a server endpoint using the [Reporting API](/en-US/docs/Web/API/Reporting_API) .
+This is useful because we can store detailed diagnostic information throughout the lifetime of an application and use the reports to debug crashes more effectively.
+
+The diagnostic information is stored in a special key-value store that can be manipulated using the document's {{domxref("CrashReportContext")}} object.
+This is accessed via the {{domxref("Window.crashReport")}} property.
+
+When the browser crashes, the information stored in the key-value store is added to a `CrashReport` and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
+
+## Examples
+
+### Sending a report to a reporting endpoint
+
+Configuring a web page to send a crash report requires that you set a [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) using the {{httpheader("Reporting-Endpoints")}} header, for example `https://example.com/default`.
+
+A typical report structure is as follows:
+
+```json
+{
+  "age": 27,
+  "type": "crash",
+  "url": "https://example.com/",
+  "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0",
+  "body": {
+    "sourceFile": "https://example.com/",
+    "reason": "unresponsive",
+    "stack": "SomeError: ... at ...",
+    "is_top_level": true,
+    "visibility_state": "visible",
+    "crash_report_api": {
+      "crash_data_1": "0001",
+      "crash_data_2": "0002"
+    }
+  }
+}
+```
+
+The report will be sent as a JSON object in a {{httpmethod("POST")}} request to the endpoint whenever the browser crashes.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("CrashReportContext")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

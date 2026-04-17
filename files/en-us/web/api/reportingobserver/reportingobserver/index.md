@@ -49,7 +49,7 @@ new ReportingObserver(callback, options)
             Reports are {{domxref("COEPViolationReport")}} instances.
         - `crash`
           - : Browser crash reports.
-            (crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server).
+            Reports are {{domxref("CrashReport")}} instances. Note that crash reports aren't retrievable via a `ReportingObserver` but can be sent to a server.
         - `csp-violation`
           - : Violations of the site's CSP policy.
             Reports are {{domxref("CSPViolationReport")}} instances.
