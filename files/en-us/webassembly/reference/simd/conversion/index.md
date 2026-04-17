@@ -37,9 +37,9 @@ WebAssembly SIMD conversion instructions.
   - : Converts lanes 2–3 of a signed `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
 - [`extend_high_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i32x4_u)
   - : Converts lanes 2–3 of an unsigned `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
-- [`extend_low_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i8x16_s)
+- [`extend_low_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i8x16_s)
   - : Converts lanes 0–7 of a signed `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
-- [`extend_low_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i8x16_u)
+- [`extend_low_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i8x16_u)
   - : Converts lanes 0–7 of an unsigned `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
 - [`extend_low_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i16x8_s)
   - : Converts lanes 0–3 of a signed `v128` `i16x8` value interpretation into an `i32x4` value interpretation.
