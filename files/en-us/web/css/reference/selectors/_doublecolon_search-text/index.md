@@ -1,5 +1,6 @@
 ---
-title: ::search-text
+title: "`::search-text` CSS pseudo-element"
+short-title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 page-type: css-pseudo-element
 status:

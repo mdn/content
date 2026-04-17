@@ -1,5 +1,6 @@
 ---
-title: ::-moz-focus-inner
+title: "`::-moz-focus-inner` CSS pseudo-element"
+short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
 page-type: css-pseudo-element
 status:

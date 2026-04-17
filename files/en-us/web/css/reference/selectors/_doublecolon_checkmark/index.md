@@ -1,5 +1,6 @@
 ---
-title: ::checkmark
+title: "`::checkmark` CSS pseudo-element"
+short-title: ::checkmark
 slug: Web/CSS/Reference/Selectors/::checkmark
 page-type: css-pseudo-element
 status:
