@@ -1,5 +1,6 @@
 ---
-title: revert-layer
+title: "`revert-layer` CSS keyword"
+short-title: revert-layer
 slug: Web/CSS/Reference/Values/revert-layer
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert-layer
