@@ -1,5 +1,6 @@
 ---
-title: inherits
+title: "`inherits` CSS at-rule descriptor"
+short-title: inherits
 slug: Web/CSS/Reference/At-rules/@property/inherits
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.inherits

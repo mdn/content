@@ -1,5 +1,6 @@
 ---
-title: font-width
+title: "`font-width` CSS at-rule descriptor"
+short-title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
 page-type: css-at-rule-descriptor
 status:

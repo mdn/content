@@ -1,5 +1,6 @@
 ---
-title: size-adjust
+title: "`size-adjust` CSS at-rule descriptor"
+short-title: size-adjust
 slug: Web/CSS/Reference/At-rules/@font-face/size-adjust
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.size-adjust

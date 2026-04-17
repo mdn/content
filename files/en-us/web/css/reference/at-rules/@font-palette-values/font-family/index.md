@@ -1,5 +1,6 @@
 ---
-title: font-family
+title: "`font-family` CSS at-rule descriptor"
+short-title: font-family
 slug: Web/CSS/Reference/At-rules/@font-palette-values/font-family
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.font-family

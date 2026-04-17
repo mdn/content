@@ -1,5 +1,6 @@
 ---
-title: font-weight
+title: "`font-weight` CSS at-rule descriptor"
+short-title: font-weight
 slug: Web/CSS/Reference/At-rules/@font-face/font-weight
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-weight

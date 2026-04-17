@@ -1,5 +1,6 @@
 ---
-title: suffix
+title: "`suffix` CSS at-rule descriptor"
+short-title: suffix
 slug: Web/CSS/Reference/At-rules/@counter-style/suffix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.suffix
