@@ -41,12 +41,12 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 ## Description
 
 Permissions Policy violations are reported when a document attempts to use a browser feature that is blocked by its [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
-The policy is set using the {{httpheader("Permissions-Policy")}} HTTP header, or a `<meta http-equiv="Permissions-Policy">` element.
+The policy is set using the {{httpheader("Permissions-Policy")}} HTTP header, or a `<meta http-equiv="permissions-policy">` element.
 
 You can monitor for Permissions-Policy violation reports within the page that sets the policy using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) `options` property specifying the types of reports that you want to report on.
 The callback method is then called with reports of the requested types, passing a report object.
-For Permissions Policy violations, the object will be a `PermissionsPolicyViolationReport` instance (which has the [`type`](#type) property set to `"permissions-policy-violation"`).
+For `Permissions-Policy` violations, the object will be a `PermissionsPolicyViolationReport` instance with `PermissionsPolicyViolationReport.type == "permissions-policy-violation"`.
 
 The structure of a typical in-page report is shown below.
 Note that we can see the URL of the page that had its policy violated (`url`), and from `body.featureId` we can see which feature was blocked.
@@ -109,7 +109,7 @@ Permissions-Policy: geolocation=()
 Or equivalently via an HTML `<meta>` element:
 
 ```html
-<meta http-equiv="Permissions-Policy" content="geolocation=()" />
+<meta http-equiv="permissions-policy" content="geolocation=()" />
 ```
 
 Then we will attempt to use the Geolocation API:
