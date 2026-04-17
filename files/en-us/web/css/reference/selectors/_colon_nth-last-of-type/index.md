@@ -1,5 +1,6 @@
 ---
-title: :nth-last-of-type()
+title: "`:nth-last-of-type()` CSS pseudo-class"
+short-title: :nth-last-of-type()
 slug: Web/CSS/Reference/Selectors/:nth-last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-of-type

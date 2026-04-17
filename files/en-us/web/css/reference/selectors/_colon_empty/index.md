@@ -1,5 +1,6 @@
 ---
-title: :empty
+title: "`:empty` CSS pseudo-class"
+short-title: :empty
 slug: Web/CSS/Reference/Selectors/:empty
 page-type: css-pseudo-class
 browser-compat: css.selectors.empty

@@ -1,5 +1,6 @@
 ---
-title: :is()
+title: "`:is()` CSS pseudo-class"
+short-title: :is()
 slug: Web/CSS/Reference/Selectors/:is
 page-type: css-pseudo-class
 browser-compat: css.selectors.is

@@ -1,5 +1,6 @@
 ---
-title: :xr-overlay
+title: "`:xr-overlay` CSS pseudo-class"
+short-title: :xr-overlay
 slug: Web/CSS/Reference/Selectors/:xr-overlay
 page-type: css-pseudo-class
 status:

@@ -1,5 +1,6 @@
 ---
-title: :target
+title: "`:target` CSS pseudo-class"
+short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target

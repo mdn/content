@@ -1,5 +1,6 @@
 ---
-title: :fullscreen
+title: "`:fullscreen` CSS pseudo-class"
+short-title: :fullscreen
 slug: Web/CSS/Reference/Selectors/:fullscreen
 page-type: css-pseudo-class
 browser-compat: css.selectors.fullscreen

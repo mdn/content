@@ -1,5 +1,6 @@
 ---
-title: :local-link
+title: "`:local-link` CSS pseudo-class"
+short-title: :local-link
 slug: Web/CSS/Reference/Selectors/:local-link
 page-type: css-pseudo-class
 status:

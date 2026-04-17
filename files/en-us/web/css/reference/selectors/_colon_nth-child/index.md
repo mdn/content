@@ -1,5 +1,6 @@
 ---
-title: :nth-child()
+title: "`:nth-child()` CSS pseudo-class"
+short-title: :nth-child()
 slug: Web/CSS/Reference/Selectors/:nth-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-child

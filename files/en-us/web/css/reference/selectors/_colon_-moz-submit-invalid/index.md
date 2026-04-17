@@ -1,5 +1,6 @@
 ---
-title: :-moz-submit-invalid
+title: "`:-moz-submit-invalid` CSS pseudo-class"
+short-title: :-moz-submit-invalid
 slug: Web/CSS/Reference/Selectors/:-moz-submit-invalid
 page-type: css-pseudo-class
 status:
