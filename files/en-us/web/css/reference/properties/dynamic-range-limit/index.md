@@ -72,7 +72,7 @@ The `dynamic-range-limit` property allows you to control the brightness of HDR c
 
 ### Basic `dynamic-range-limit` usage
 
-In our [dynamic-range-limit property demo](https://github.com/mdn/dom-examples/tree/main/dynamic-range-limit), we include an HDR image that can be hovered and focused to transition the `dynamic-range-limit` value. [View the example live](https://mdn.github.io/dom-examples/dynamic-range-limit/) in a display capable of displaying HDR colors, and try it out. The code is explained below.
+This example demonstrates the basic use of the `dynamic-range-limit` property and the difference between HDR and SDR images.
 
 #### HTML
 
@@ -80,19 +80,17 @@ In the markup, we embed an HDR image using an {{htmlelement("img")}} element. We
 
 ```html
 <img
-  src="gioia-pixel-ultrahdr.jpg"
-  alt="A subway station, with white strip lights lighting the platform and ad posters in the background"
+  src="hdr.jpg"
+  alt="White strip lights lighting in a subway station"
   tabindex="0" />
 ```
 
 #### CSS
 
-We give our `<img>` element some rudimentary styles, then set its `dynamic-range-limit` property to `standard`, which means it won't be displayed any brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value will transition over `0.6` seconds when its state changes.
+We display the image as if it were and SDR image by setting the `dynamic-range-limit` property to `standard`, which means it won't be displayed any brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value will transition over `0.6` seconds when its state changes.
 
 ```css
 img {
-  width: 50%;
-  border: 1px solid black;
   dynamic-range-limit: standard;
   transition: dynamic-range-limit 0.6s;
 }
@@ -106,6 +104,31 @@ img:focus {
   dynamic-range-limit: no-limit;
 }
 ```
+
+```css hidden
+@media not (dynamic-range: high) {
+  body::before {
+    content: "Your device may not display the image at full brightness.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+  }
+}
+@supports not (dynamic-range-limit: standard) {
+  body::before {
+    content: "Your browser doesn't support the dynamic-range-limit property.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+  }
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Examples", 300, 400)}}
+
+The image is HDR, but is displayed as muted by default. Hover or focus the image. Note how it transitions to vivid HDR colors in displays capable of displaying them.
 
 ## Specifications
 
