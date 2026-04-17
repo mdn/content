@@ -1,5 +1,6 @@
 ---
-title: fit-content()
+title: "`fit-content()` CSS function"
+short-title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
 page-type: css-function
 browser-compat:

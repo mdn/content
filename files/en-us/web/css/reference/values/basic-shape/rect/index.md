@@ -1,5 +1,6 @@
 ---
-title: rect()
+title: "`rect()` CSS function"
+short-title: rect()
 slug: Web/CSS/Reference/Values/basic-shape/rect
 page-type: css-function
 browser-compat: css.types.basic-shape.rect

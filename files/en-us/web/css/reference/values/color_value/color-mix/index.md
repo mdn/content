@@ -1,5 +1,6 @@
 ---
-title: color-mix()
+title: "`color-mix()` CSS function"
+short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 page-type: css-function
 browser-compat: css.types.color.color-mix

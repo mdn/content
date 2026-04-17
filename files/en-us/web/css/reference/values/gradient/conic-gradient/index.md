@@ -1,5 +1,6 @@
 ---
-title: conic-gradient()
+title: "`conic-gradient()` CSS function"
+short-title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
 page-type: css-function
 browser-compat: css.types.gradient.conic-gradient

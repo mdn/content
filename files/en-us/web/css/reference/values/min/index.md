@@ -1,5 +1,6 @@
 ---
-title: min()
+title: "`min()` CSS function"
+short-title: min()
 slug: Web/CSS/Reference/Values/min
 page-type: css-function
 browser-compat: css.types.min

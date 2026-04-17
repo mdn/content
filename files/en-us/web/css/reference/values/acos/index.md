@@ -1,5 +1,6 @@
 ---
-title: acos()
+title: "`acos()` CSS function"
+short-title: acos()
 slug: Web/CSS/Reference/Values/acos
 page-type: css-function
 browser-compat: css.types.acos

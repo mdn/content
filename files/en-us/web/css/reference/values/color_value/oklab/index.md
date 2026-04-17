@@ -1,5 +1,6 @@
 ---
-title: oklab()
+title: "`oklab()` CSS function"
+short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 page-type: css-function
 browser-compat: css.types.color.oklab

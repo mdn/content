@@ -1,5 +1,6 @@
 ---
-title: var()
+title: "`var()` CSS function"
+short-title: var()
 slug: Web/CSS/Reference/Values/var
 page-type: css-function
 browser-compat: css.types.var

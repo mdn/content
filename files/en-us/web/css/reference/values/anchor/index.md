@@ -1,5 +1,6 @@
 ---
-title: anchor()
+title: "`anchor()` CSS function"
+short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 page-type: css-function
 browser-compat: css.types.anchor

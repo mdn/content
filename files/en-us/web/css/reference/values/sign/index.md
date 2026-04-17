@@ -1,5 +1,6 @@
 ---
-title: sign()
+title: "`sign()` CSS function"
+short-title: sign()
 slug: Web/CSS/Reference/Values/sign
 page-type: css-function
 browser-compat: css.types.sign

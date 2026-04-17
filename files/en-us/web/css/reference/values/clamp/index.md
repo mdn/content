@@ -1,5 +1,6 @@
 ---
-title: clamp()
+title: "`clamp()` CSS function"
+short-title: clamp()
 slug: Web/CSS/Reference/Values/clamp
 page-type: css-function
 browser-compat: css.types.clamp

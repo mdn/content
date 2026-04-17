@@ -1,5 +1,6 @@
 ---
-title: scroll()
+title: "`scroll()` CSS function"
+short-title: scroll()
 slug: Web/CSS/Reference/Properties/animation-timeline/scroll
 page-type: css-function
 browser-compat: css.properties.animation-timeline.scroll

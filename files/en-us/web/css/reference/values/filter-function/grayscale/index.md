@@ -1,5 +1,6 @@
 ---
-title: grayscale()
+title: "`grayscale()` CSS function"
+short-title: grayscale()
 slug: Web/CSS/Reference/Values/filter-function/grayscale
 page-type: css-function
 browser-compat: css.types.filter-function.grayscale

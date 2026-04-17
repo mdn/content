@@ -1,5 +1,6 @@
 ---
-title: max()
+title: "`max()` CSS function"
+short-title: max()
 slug: Web/CSS/Reference/Values/max
 page-type: css-function
 browser-compat: css.types.max

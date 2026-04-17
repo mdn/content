@@ -1,5 +1,6 @@
 ---
-title: contrast-color()
+title: "`contrast-color()` CSS function"
+short-title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 page-type: css-function
 browser-compat: css.types.color.contrast-color

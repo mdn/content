@@ -1,5 +1,6 @@
 ---
-title: view()
+title: "`view()` CSS function"
+short-title: view()
 slug: Web/CSS/Reference/Properties/animation-timeline/view
 page-type: css-function
 browser-compat: css.properties.animation-timeline.view

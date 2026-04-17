@@ -1,5 +1,6 @@
 ---
-title: env()
+title: "`env()` CSS function"
+short-title: env()
 slug: Web/CSS/Reference/Values/env
 page-type: css-function
 browser-compat: css.types.env
