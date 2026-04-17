@@ -1,84 +1,69 @@
 ---
-title: Web push architecture
+title: Web Push architecture
 slug: Web/API/Push_API/Web_Push_Architecture
 page-type: guide
 ---
 
 {{DefaultAPISidebar("Push API")}}
 
-This article explains how the different pieces of the Web Push infrastructure fit together, from subscribing to a push service through to delivering a push message to a service worker.
+Web Push enables a web application to receive messages from an application server even when the app is not open in the browser. The application server does not send messages directly to the browser. Instead, it sends messages to a push service, which delivers them to the browser, and the browser wakes the application's service worker to handle them.
 
-## Overview
+Because the push service sits between your server and the browser, the messages that your server sends to the push service need to be {{Glossary("Encryption", "encrypted")}} so the push service cannot read them, and {{Glossary("Signature/Security", "signed")}} so the push service can verify that they came from your application server. The application server communicates with the push service using the [HTTP Push](https://datatracker.ietf.org/doc/html/rfc8030) protocol.
 
-The Web Push system involves several parties working together:
+## Subscription
 
-1. Your **web application**, running in the user's browser
-2. A **service worker**, registered by your application to receive push events in the background
-3. A **push service**, operated by the browser vendor (such as Mozilla or Google), which routes messages from your server to the right browser
-4. Your **application server**, which sends messages to the push service when it needs to notify a user
+Before an application can receive push messages, the application server needs a {{Glossary("Public-key_cryptography", "public/private key pair")}} for signing push messages. The public key is given to the web application, and the corresponding private key stays on the application server.
 
-The key insight is that your server never talks directly to the user's browser. Instead, it posts messages to a push service, which holds them until the browser comes online to collect them.
+![Diagram showing Web Push subscription steps](push-messaging-1.svg)
 
-## The subscription flow
+The subscription flow then looks like this:
 
-Before your server can send push messages, the user's browser must subscribe to the push service:
-
-1. Your application requests notification permission from the user.
-2. On approval, it calls {{domxref("PushManager.subscribe()")}} with your server's VAPID public key in the `applicationServerKey` option.
+1. If notification permission has not already been granted, the web application typically requests it from the user.
+2. The web application calls {{domxref("PushManager.subscribe()")}}. In browsers that support application server authentication, the call includes the application server's public key in the `applicationServerKey` option.
 3. The browser contacts its push service and creates a new subscription.
-4. {{domxref("PushManager.subscribe()")}} resolves with a {{domxref("PushSubscription")}} object containing:
-   - An **endpoint** URL — a unique URL on the push service where your server will POST messages.
-   - A **p256dh** key — the browser's public key for encrypting message payloads.
-   - An **auth** secret — a shared secret for message authentication.
-5. Your application sends this subscription data to your server, which stores it.
+4. {{domxref("PushManager.subscribe()")}} resolves with a {{domxref("PushSubscription")}} object. This includes:
+   - [`endpoint`](/en-US/docs/Web/API/PushSubscription/endpoint): a unique URL on the push service where the application server sends push messages.
+   - [`p256dh`](/en-US/docs/Web/API/PushSubscription/getKey#p256dh): a public key that the application server uses when encrypting message payloads.
+   - [`auth`](/en-US/docs/Web/API/PushSubscription/getKey#auth): an authentication secret used as part of payload encryption.
+5. The web application sends the subscription details to the application server, which stores them for later use.
 
-The endpoint URL is a [capability URL](https://w3ctag.github.io/capability-urls/): anyone who knows it can send messages to that browser. Your server must keep it secret.
-
-## Push services
-
-Each browser vendor operates its own push service:
-
-- **Firefox** uses [Mozilla Autopush](https://mozilla-push-service.readthedocs.io/), a Python/Rust service that maintains WebSocket connections to Firefox clients and exposes REST endpoints for application servers.
-- **Chrome and Chromium-based browsers** use [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging), which handles routing through Google's infrastructure.
-- **Safari on macOS and iOS** uses Apple's push infrastructure. On iOS and iPadOS (16.4+), web push follows the standard W3C Push API but is only available for Progressive Web Apps installed to the home screen.
-
-Despite the different backend implementations, all push services speak the same protocol: the [Web Push Protocol (RFC 8030)](https://datatracker.ietf.org/doc/html/rfc8030). This means your application server uses the same code to send messages regardless of which browser the user has. The endpoint URL in each subscription already points to the correct push service.
+The `endpoint` is a [capability URL](https://w3ctag.github.io/capability-urls/) and identifies a specific subscription. Treat it as sensitive data and only send it to your application server over authenticated application requests.
 
 ## Sending a message
 
-When your server needs to notify a user, it sends an HTTP POST request to the subscription's endpoint URL. The request includes:
+When the application server needs to notify a user, it sends an HTTP {{httpmethod("POST")}} request to the subscription's endpoint URL. The request contains an encrypted payload, authentication information for the push service, and optional delivery headers. The push service validates the request and, if it is valid, queues it for delivery.
 
-### Encrypted payload
+![Diagram showing Web Push message sending, delivery, and handling](push-messaging-2.svg)
 
-Message content is encrypted end-to-end so the push service cannot read it. The encryption uses:
+### Encrypting the payload
 
-- **ECDH key agreement** (P-256) between your server and the browser's subscription keys
-- **HKDF-SHA-256** for deriving encryption keys
-- **AES-128-GCM** content encoding (defined in [RFC 8188](https://datatracker.ietf.org/doc/html/rfc8188))
+Push payloads are encrypted end-to-end so that the push service can route the message without being able to read it. The application server uses the subscription's `p256dh` public key and `auth` secret to derive the content encryption keys, encrypts the payload, and includes the encrypted body in the request.
 
-The full protocol is specified in [RFC 8291 (Message Encryption for Web Push)](https://datatracker.ietf.org/doc/html/rfc8291). In practice, libraries like [web-push](https://github.com/web-push-libs) handle this automatically.
+The message encryption protocol is defined in [Message Encryption for Web Push (RFC 8291)](https://datatracker.ietf.org/doc/html/rfc8291), and the HTTP content coding it relies on is defined in [RFC 8188](https://datatracker.ietf.org/doc/html/rfc8188). In practice, most applications rely on a library or framework to construct the encryption headers and body correctly.
 
 ### VAPID authentication
 
-Your server identifies itself using Voluntary Application Server Identification ([VAPID, RFC 8292](https://datatracker.ietf.org/doc/html/rfc8292)). This works by signing requests with a JSON Web Token (JWT) that includes:
+To let the push service verify who sent the message, the application server signs the request using Voluntary Application Server Identification ([VAPID, RFC 8292](https://datatracker.ietf.org/doc/html/rfc8292)). In browsers that require `applicationServerKey` during subscription, the push service verifies that the request was signed with the private key corresponding to that public key.
 
-- An **audience** claim binding the token to the push service's origin
-- An **expiry** no more than 24 hours in the future
-- An optional **subject** with a contact URI (typically a `mailto:` address)
+VAPID uses a JSON Web Token (JWT) that includes:
 
-The push service verifies that the signing key matches the `applicationServerKey` used at subscription time, preventing unauthorized servers from sending messages to your users' subscriptions.
+- An `aud` claim binding the token to the push service's origin
+- An `exp` claim no more than 24 hours in the future
+- An optional `sub` claim with a contact URI such as a `mailto:` address
+
+VAPID identifies the application server to the push service. It is separate from payload encryption, which uses the subscription's `p256dh` and `auth` values.
 
 ### Delivery headers
 
-The POST request also includes headers that control delivery behavior:
+The application server can also send headers that control how the push service handles the message:
 
-- **TTL** (required): How many seconds the push service should hold the message if the user is offline. `0` means deliver immediately or discard.
-- **Urgency** (optional): Battery-saving hint. Values are `very-low`, `low`, `normal` (default), and `high`.
-- **Topic** (optional): A string up to 32 characters. If two messages share the same topic, the push service replaces the older one. Useful for updates that supersede each other, such as unread counts.
+- `TTL` (required): How many seconds the push service should hold the message if the user is offline. `0` means deliver immediately or discard.
+- `Urgency` (optional): A delivery hint. Values are `very-low`, `low`, `normal` (default), and `high`.
+- `Topic` (optional): A string up to 32 characters. If two messages share the same topic, the push service replaces the older one. This is useful for updates that supersede each other, such as unread counts.
 
 ### Response codes
 
-The push service responds with:
+After receiving the request, the push service responds with status codes such as:
 
 | Status         | Meaning                                                             |
 | -------------- | ------------------------------------------------------------------- |
@@ -93,10 +78,11 @@ The push service responds with:
 
 When the push service delivers a message to the browser:
 
-1. The browser wakes the service worker registered for that subscription's scope.
-2. A {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event fires with a {{domxref("PushEvent")}} containing the decrypted {{domxref("PushMessageData")}}.
-3. The service worker typically calls {{domxref("ServiceWorkerRegistration.showNotification()")}} to display a notification.
-4. If the user clicks the notification, a {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} event fires, where the service worker can open or focus a window.
+1. The browser receives the encrypted message and decrypts it.
+2. If necessary, it starts the service worker registered for the subscription's scope.
+3. It fires a {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} event with a {{domxref("PushEvent")}} containing the decrypted {{domxref("PushMessageData")}}.
+4. The service worker typically calls {{domxref("ServiceWorkerRegistration.showNotification()")}} to display a notification.
+5. If the user clicks the notification, a {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} event fires, where the service worker can open or focus a window.
 
 Browsers may limit background activity for sites without visible notifications. Firefox enforces a quota on push messages that do not display a notification.
 
