@@ -90,6 +90,98 @@ backdrop-filter: unset;
 - `<filter-value-list>`
   - : A space-separated list of {{cssxref("filter-function")}}s or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
 
+## Description
+
+The `backdrop-filter` property applies filter effects to the pixels painted _behind_ an element, up to the nearest ancestor that is a **backdrop root**. Content above the backdrop root is not affected.
+
+### Backdrop root
+
+A backdrop root is an element that establishes a boundary for `backdrop-filter` effects. The following elements are backdrop roots:
+
+- The root element ({{HTMLElement("html")}})
+- An element with a {{cssxref("filter")}} value other than `none`
+- An element with an {{cssxref("opacity")}} value less than `1`
+- An element with a {{cssxref("mask")}}, {{cssxref("mask-image")}}, {{cssxref("mask-border")}}, or {{cssxref("clip-path")}} value other than `none`
+- An element with a `backdrop-filter` value other than `none`
+- An element with a {{cssxref("mix-blend-mode")}} value other than `normal`
+- An element with {{cssxref("will-change")}} set to any of the above properties
+
+This means that if a parent element has `opacity: 0.9`, it becomes a backdrop root and any child's `backdrop-filter` will only blur the content between that parent and the child - not the content behind the parent. This is a common source of confusion when `backdrop-filter` appears to have no visible effect despite being correctly applied.
+
+The following example demonstrates how backdrop roots affect `backdrop-filter`. The first container has `will-change: opacity`, making it a backdrop root - notice that the blur circle only affects the text and square inside the container, not the checkered background behind it. The second container is not a backdrop root, so its blur circle affects everything behind it, including the page background.
+
+```html
+<div class="parent backdrop-root">
+  <div class="text">Text</div>
+  <div class="square"></div>
+  <div class="overlay"></div>
+</div>
+<div class="parent">
+  <div class="text">Text</div>
+  <div class="square"></div>
+  <div class="overlay"></div>
+</div>
+```
+
+```css
+body {
+  display: flex;
+  column-gap: 16px;
+  padding: 16px;
+  background-image: conic-gradient(
+    gray 90deg,
+    silver 90deg 180deg,
+    gray 180deg 270deg,
+    silver 270deg
+  );
+  background-size: 32px 32px;
+}
+
+.parent {
+  position: relative;
+  width: 256px;
+  height: 256px;
+}
+
+.backdrop-root {
+  outline: 2px solid crimson;
+  will-change: opacity;
+}
+
+.square {
+  position: absolute;
+  top: 35px;
+  left: 40%;
+  width: 25%;
+  height: 25%;
+  border: 10px solid white;
+}
+
+.text {
+  position: absolute;
+  left: 40%;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 256px;
+  filter: blur(1px);
+}
+
+.overlay {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  outline: 3px solid gainsboro;
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+}
+```
+
+{{EmbedLiveSample("Backdrop root", "", 288)}}
+
 ## Formal definition
 
 {{cssinfo}}
