@@ -55,11 +55,11 @@ WebAssembly SIMD conversion instructions.
 - [`narrow_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i16x8_s)
   - : Converts two signed `v128` `i16x8` value interpretations into an `i8x16` value interpretation.
 - [`narrow_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i16x8_u)
-  - : Converts two unsigned `v128` `i16x8` value interpretations into an `i8x16` value interpretation.
+  - : Converts two signed `v128` `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation.
 - [`narrow_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i32x4_s)
   - : Converts two signed `v128` `i32x4` value interpretations into an `i16x8` value interpretation.
 - [`narrow_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i32x4_u)
-  - : Converts two unsigned `v128` `i32x4` value interpretations into an `i16x8` value interpretation.
+  - : Converts two signed `v128` `i32x4` value interpretations into an `i16x8` value interpretation using unsigned saturation.
 
 ## Value replacement
 

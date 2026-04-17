@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.narrow_i16x8_u
 sidebar: webassemblysidebar
 ---
 
-The **`narrow_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations into an `i8x16` value interpretation.
+The **`narrow_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation (clamping to the range `0` to `255`).
 
 {{InteractiveExample("Wat Demo: narrow_i16x8_u", "tabbed-taller")}}
 
