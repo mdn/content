@@ -124,51 +124,63 @@ The following example demonstrates how backdrop roots affect `backdrop-filter`. 
 ```
 
 ```css
+body {
+  display: flex;
+  column-gap: 16px;
+  padding: 16px;
+  background-image: conic-gradient(
+    gray 90deg,
+    silver 90deg 180deg,
+    gray 180deg 270deg,
+    silver 270deg
+  );
+  background-size: 32px 32px;
+}
+
 .parent {
+  position: relative;
   width: 256px;
   height: 256px;
-  position: relative;
-  display: inline-block;
 }
 
 .backdrop-root {
-  will-change: opacity;
   outline: 2px solid crimson;
+  will-change: opacity;
 }
 
 .square {
+  position: absolute;
+  top: 35px;
+  left: 40%;
   width: 25%;
   height: 25%;
-  position: absolute;
   border: 10px solid white;
-  left: 40%;
-  top: 35px;
 }
 
 .text {
+  position: absolute;
+  left: 40%;
+  color: white;
   font-size: 32px;
   font-weight: 500;
   text-align: center;
   line-height: 256px;
-  position: absolute;
-  left: 40%;
   filter: blur(1px);
-  color: white;
 }
 
 .overlay {
-  border-radius: 9999px;
-  outline: 1px solid #eaeaea;
-  width: 50%;
-  height: 50%;
   position: absolute;
   top: 25%;
   left: 50%;
+  width: 50%;
+  height: 50%;
+  outline: 3px solid gainsboro;
+  border-radius: 9999px;
   backdrop-filter: blur(10px);
 }
 ```
 
-{{EmbedLiveSample("Backdrop root", 600, 300)}}
+{{EmbedLiveSample("Backdrop root", "", 288)}}
 
 ## Formal definition
 
