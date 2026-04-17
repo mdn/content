@@ -49,13 +49,21 @@ URL is from the same origin as the service worker or a {{Glossary("null", "null 
 
 ## Examples
 
+### Opening a window on a notification click
+
+In this example a service worker creates and then shows a that contains an associated URL, which is under the service worker's scope. When the user clicks the notification:
+
+- If the page at the notification's URL is already open, the service worker focuses it.
+- Otherwise, the service worker opens the page in a new window.
+
+Note that the {{domxref("Client.url")}} property is not updated unless a new page is actually loaded. This means that it will not be updated if the user navigates within the same page using a URL fragment, or if a {{glossary("SPA", "single-page app (SPA)")}} intercepts a navigation event (for example, using the [Navigation API](/en-US/docs/Web/API/Navigation_API)) and updates the page content using client-side code. Consequently, this technique is not suitable for SPAs.
+
 ```js
-// Send notification to OS if applicable
+// Create and show notification
 if (self.Notification.permission === "granted") {
   const notificationObject = {
     body: "Click here to view your messages.",
     data: { url: `${self.location.origin}/some/path` },
-    // data: { url: 'http://example.com' },
   };
   self.registration.showNotification(
     "You've got messages!",
@@ -63,12 +71,12 @@ if (self.Notification.permission === "granted") {
   );
 }
 
-// Notification click event listener
+// Handle notification click
 self.addEventListener("notificationclick", (e) => {
   // Close the notification popout
   e.notification.close();
-  // Get all the Window clients
   e.waitUntil(
+    // Get all the Window clients
     clients.matchAll({ type: "window" }).then((clientsArr) => {
       const windowToFocus = clientsArr.find(
         (windowClient) => windowClient.url === e.notification.data.url,
