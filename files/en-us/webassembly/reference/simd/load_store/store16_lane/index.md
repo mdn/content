@@ -50,7 +50,7 @@ v128.store16_lane mem_idx offset=int align=int lane_idx
 - `offset=int` {{optional_inline}}
   - : An integer representing a constant number of bytes to add to the address before storing. The default is `0`.
 - `align=int` {{optional_inline}}
-  - : An integer representing a hint to the Wasm engine about what alignment to expect for the final address. The minimum value is `1` and the default and maximum value is `1`. An `align` value has to be a power of `2`.
+  - : An integer representing a hint to the Wasm engine about what alignment to expect for the final address. The minimum value is `1` and the default and maximum value is `2`. An `align` value has to be a power of `2`.
 - `lane_idx`
   - : The index of the lane whose value you want to store.
 
@@ -69,10 +69,10 @@ v128.store16_lane mem_idx offset=int align=int lane_idx
 
 | Instruction         | Binary format                                           | Example text => binary                                                 |
 | ------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `v128.store16_lane` | `0xfd 89:u32 mem_idx:u8 offset:u32 align:u32 l:laneidx` | `v128.store16_lane 0 offset=0 align=1 7` => `0xfd 0x59 0x01 0x00 0x07` |
+| `v128.store16_lane` | `0xfd 89:u32 mem_idx:u8 offset:u32 align:u32 l:laneidx` | `v128.store16_lane 0 offset=0 align=2 7` => `0xfd 0x59 0x01 0x00 0x07` |
 
 > [!NOTE]
-> While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=1` is equivalent to `0x00` (`2^0`).
+> While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=2` is equivalent to `0x01` (`2^1`).
 
 ## Specifications
 

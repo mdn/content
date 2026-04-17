@@ -27,7 +27,7 @@ WebAssembly SIMD-specific arithmetic instructions.
 ## Lane-wise rounding average
 
 - [`avgr_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/avgr_u)
-  - : Performs a rounding average of two unsigned `v128` value interpretations. Each lane of the output value is the mean average of the corresponding lanes of the input value, rounded to the nearest integer.
+  - : Performs a rounding average of two unsigned `v128` value interpretations. Each lane of the output value is `(a + b + 1) / 2`, rounded up (ceiling division).
 
 ## Lane-wise saturating rounding multiplication
 

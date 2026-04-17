@@ -69,7 +69,7 @@ v128.store8_lane mem_idx offset=int align=int lane_idx
 
 | Instruction        | Binary format                                           | Example text => binary                                                 |
 | ------------------ | ------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `v128.store8_lane` | `0xfd 88:u32 mem_idx:u8 offset:u32 align:u32 l:laneidx` | `v128.store8_lane 0 offset=0 align=1 15` => `0xfd 0x58 0x04 0x00 0x0f` |
+| `v128.store8_lane` | `0xfd 88:u32 mem_idx:u8 offset:u32 align:u32 l:laneidx` | `v128.store8_lane 0 offset=0 align=1 15` => `0xfd 0x58 0x00 0x00 0x0f` |
 
 > [!NOTE]
 > While Wasm text format specifies the literal `align` value, the binary equivalent represents the exponent of the formula `2^x` used to calculate the alignment. So for example, `align=1` is equivalent to `0x00` (`2^0`).

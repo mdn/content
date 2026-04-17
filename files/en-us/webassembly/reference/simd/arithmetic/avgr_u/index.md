@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.avgr_u
 sidebar: webassemblysidebar
 ---
 
-The **`avgr_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a rounding average of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is the mean average of the corresponding lanes of the input value, rounded to the nearest integer.
+The **`avgr_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a rounding average of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is `(a + b + 1) / 2`, i.e., the mean average of the corresponding lanes of the input values, rounded up (ceiling division).
 
 {{InteractiveExample("Wat Demo: avgr_u", "tabbed-taller")}}
 
