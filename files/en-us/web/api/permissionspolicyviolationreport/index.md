@@ -38,6 +38,11 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 - `url`
   - : A string representing the URL of the document that generated the report.
 
+> [!NOTE]
+> Chrome's server-side serialization uses `policyId` rather than `featureId` for the feature name in the body of a server report.
+> For cross-browser compatibility, developers will need to process both fields in reporting endpoints.
+> The report returned by a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver) follows the specification.
+
 ## Description
 
 Permissions Policy violations are reported when a document attempts to use a browser feature that is blocked by its [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
@@ -71,9 +76,6 @@ Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} 
 The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
 The structure of the server report is almost exactly the same as `PermissionsPolicyViolationReport`, except that it additionally includes `age` and `user_agent` fields.
-
-> [!NOTE]
-> Chrome's server-side serialization uses `policyId` rather than `featureId` for the feature name in the body of a server report.
 
 ```json
 [
@@ -181,9 +183,6 @@ navigator.geolocation.getCurrentPosition(
 The violation report will then be sent to the default endpoint as a JSON array.
 Note that the `type` is `"permissions-policy-violation"` and the `body` property is a serialization of the `PermissionsPolicyViolationReport` object.
 
-> [!NOTE]
-> Chrome's server-side serialization uses `policyId` rather than `featureId` for the feature name.
-
 ```json
 [
   {
@@ -193,7 +192,7 @@ Note that the `type` is `"permissions-policy-violation"` and the `body` property
       "disposition": "enforce",
       "lineNumber": 44,
       "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
-      "policyId": "geolocation",
+      "policyId": "geolocation" /* Note: Chrome server-report version of featureId*/,
       "sourceFile": "https://example.com/"
     },
     "type": "permissions-policy-violation",
