@@ -1,5 +1,6 @@
 ---
-title: direction
+title: "`direction` CSS property"
+short-title: direction
 slug: Web/CSS/Reference/Properties/direction
 page-type: css-property
 browser-compat: css.properties.direction

@@ -1,5 +1,6 @@
 ---
-title: filter
+title: "`filter` CSS property"
+short-title: filter
 slug: Web/CSS/Reference/Properties/filter
 page-type: css-property
 browser-compat: css.properties.filter

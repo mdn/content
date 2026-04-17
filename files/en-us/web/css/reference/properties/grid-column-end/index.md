@@ -1,5 +1,6 @@
 ---
-title: grid-column-end
+title: "`grid-column-end` CSS property"
+short-title: grid-column-end
 slug: Web/CSS/Reference/Properties/grid-column-end
 page-type: css-property
 browser-compat: css.properties.grid-column-end

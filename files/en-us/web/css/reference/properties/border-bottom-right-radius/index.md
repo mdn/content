@@ -1,5 +1,6 @@
 ---
-title: border-bottom-right-radius
+title: "`border-bottom-right-radius` CSS property"
+short-title: border-bottom-right-radius
 slug: Web/CSS/Reference/Properties/border-bottom-right-radius
 page-type: css-property
 browser-compat: css.properties.border-bottom-right-radius

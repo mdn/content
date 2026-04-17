@@ -1,5 +1,6 @@
 ---
-title: animation-direction
+title: "`animation-direction` CSS property"
+short-title: animation-direction
 slug: Web/CSS/Reference/Properties/animation-direction
 page-type: css-property
 browser-compat: css.properties.animation-direction

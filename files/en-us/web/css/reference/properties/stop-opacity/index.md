@@ -1,5 +1,6 @@
 ---
-title: stop-opacity
+title: "`stop-opacity` CSS property"
+short-title: stop-opacity
 slug: Web/CSS/Reference/Properties/stop-opacity
 page-type: css-property
 browser-compat: css.properties.stop-opacity

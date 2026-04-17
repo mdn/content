@@ -1,5 +1,6 @@
 ---
-title: print-color-adjust
+title: "`print-color-adjust` CSS property"
+short-title: print-color-adjust
 slug: Web/CSS/Reference/Properties/print-color-adjust
 page-type: css-property
 browser-compat: css.properties.print-color-adjust

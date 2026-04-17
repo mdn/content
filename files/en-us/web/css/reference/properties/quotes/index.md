@@ -1,5 +1,6 @@
 ---
-title: quotes
+title: "`quotes` CSS property"
+short-title: quotes
 slug: Web/CSS/Reference/Properties/quotes
 page-type: css-property
 browser-compat: css.properties.quotes

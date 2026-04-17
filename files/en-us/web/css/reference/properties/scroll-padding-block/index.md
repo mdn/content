@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-block
+title: "`scroll-padding-block` CSS property"
+short-title: scroll-padding-block
 slug: Web/CSS/Reference/Properties/scroll-padding-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-block

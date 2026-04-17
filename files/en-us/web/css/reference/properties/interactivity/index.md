@@ -1,5 +1,6 @@
 ---
-title: interactivity
+title: "`interactivity` CSS property"
+short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 page-type: css-property
 status:

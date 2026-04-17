@@ -1,5 +1,6 @@
 ---
-title: stroke-linecap
+title: "`stroke-linecap` CSS property"
+short-title: stroke-linecap
 slug: Web/CSS/Reference/Properties/stroke-linecap
 page-type: css-property
 browser-compat: css.properties.stroke-linecap

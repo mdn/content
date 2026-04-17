@@ -1,5 +1,6 @@
 ---
-title: animation-range-start
+title: "`animation-range-start` CSS property"
+short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 page-type: css-property
 browser-compat: css.properties.animation-range-start

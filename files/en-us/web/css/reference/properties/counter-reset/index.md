@@ -1,5 +1,6 @@
 ---
-title: counter-reset
+title: "`counter-reset` CSS property"
+short-title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
 page-type: css-property
 browser-compat: css.properties.counter-reset

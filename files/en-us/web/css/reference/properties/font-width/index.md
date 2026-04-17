@@ -1,5 +1,6 @@
 ---
-title: font-width
+title: "`font-width` CSS property"
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 page-type: css-property
 status:

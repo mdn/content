@@ -1,5 +1,6 @@
 ---
-title: font-stretch
+title: "`font-stretch` CSS property"
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 page-type: css-property
 browser-compat: css.properties.font-stretch

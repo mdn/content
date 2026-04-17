@@ -1,5 +1,6 @@
 ---
-title: font-variant-numeric
+title: "`font-variant-numeric` CSS property"
+short-title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
 page-type: css-property
 browser-compat: css.properties.font-variant-numeric

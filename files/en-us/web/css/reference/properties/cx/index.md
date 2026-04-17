@@ -1,5 +1,6 @@
 ---
-title: cx
+title: "`cx` CSS property"
+short-title: cx
 slug: Web/CSS/Reference/Properties/cx
 page-type: css-property
 browser-compat: css.properties.cx

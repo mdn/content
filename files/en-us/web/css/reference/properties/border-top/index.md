@@ -1,5 +1,6 @@
 ---
-title: border-top
+title: "`border-top` CSS property"
+short-title: border-top
 slug: Web/CSS/Reference/Properties/border-top
 page-type: css-shorthand-property
 browser-compat: css.properties.border-top

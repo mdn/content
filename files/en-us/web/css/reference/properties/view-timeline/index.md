@@ -1,5 +1,6 @@
 ---
-title: view-timeline
+title: "`view-timeline` CSS property"
+short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 page-type: css-shorthand-property
 browser-compat: css.properties.view-timeline

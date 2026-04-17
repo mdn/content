@@ -1,5 +1,6 @@
 ---
-title: border-bottom
+title: "`border-bottom` CSS property"
+short-title: border-bottom
 slug: Web/CSS/Reference/Properties/border-bottom
 page-type: css-shorthand-property
 browser-compat: css.properties.border-bottom

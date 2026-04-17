@@ -1,5 +1,6 @@
 ---
-title: font
+title: "`font` CSS property"
+short-title: font
 slug: Web/CSS/Reference/Properties/font
 page-type: css-shorthand-property
 browser-compat: css.properties.font

@@ -1,5 +1,6 @@
 ---
-title: forced-color-adjust
+title: "`forced-color-adjust` CSS property"
+short-title: forced-color-adjust
 slug: Web/CSS/Reference/Properties/forced-color-adjust
 page-type: css-property
 browser-compat: css.properties.forced-color-adjust

@@ -1,5 +1,6 @@
 ---
-title: rx
+title: "`rx` CSS property"
+short-title: rx
 slug: Web/CSS/Reference/Properties/rx
 page-type: css-property
 browser-compat: css.properties.rx

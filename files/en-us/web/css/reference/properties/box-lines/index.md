@@ -1,5 +1,6 @@
 ---
-title: box-lines
+title: "`box-lines` CSS property"
+short-title: box-lines
 slug: Web/CSS/Reference/Properties/box-lines
 page-type: css-property
 status:

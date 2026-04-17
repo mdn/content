@@ -1,5 +1,6 @@
 ---
-title: corner-block-start-shape
+title: "`corner-block-start-shape` CSS property"
+short-title: corner-block-start-shape
 slug: Web/CSS/Reference/Properties/corner-block-start-shape
 page-type: css-property
 status:

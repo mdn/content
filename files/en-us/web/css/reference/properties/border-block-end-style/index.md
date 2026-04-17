@@ -1,5 +1,6 @@
 ---
-title: border-block-end-style
+title: "`border-block-end-style` CSS property"
+short-title: border-block-end-style
 slug: Web/CSS/Reference/Properties/border-block-end-style
 page-type: css-property
 browser-compat: css.properties.border-block-end-style

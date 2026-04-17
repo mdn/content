@@ -1,5 +1,6 @@
 ---
-title: color-scheme
+title: "`color-scheme` CSS property"
+short-title: color-scheme
 slug: Web/CSS/Reference/Properties/color-scheme
 page-type: css-property
 browser-compat: css.properties.color-scheme

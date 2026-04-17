@@ -1,5 +1,6 @@
 ---
-title: padding-block-end
+title: "`padding-block-end` CSS property"
+short-title: padding-block-end
 slug: Web/CSS/Reference/Properties/padding-block-end
 page-type: css-property
 browser-compat: css.properties.padding-block-end

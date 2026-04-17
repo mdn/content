@@ -1,5 +1,6 @@
 ---
-title: -webkit-touch-callout
+title: "`-webkit-touch-callout` CSS property"
+short-title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
 page-type: css-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-style
+title: "`font-synthesis-style` CSS property"
+short-title: font-synthesis-style
 slug: Web/CSS/Reference/Properties/font-synthesis-style
 page-type: css-property
 browser-compat: css.properties.font-synthesis-style

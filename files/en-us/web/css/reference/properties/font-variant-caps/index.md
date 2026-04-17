@@ -1,5 +1,6 @@
 ---
-title: font-variant-caps
+title: "`font-variant-caps` CSS property"
+short-title: font-variant-caps
 slug: Web/CSS/Reference/Properties/font-variant-caps
 page-type: css-property
 browser-compat: css.properties.font-variant-caps

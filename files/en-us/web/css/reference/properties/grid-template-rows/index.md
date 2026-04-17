@@ -1,5 +1,6 @@
 ---
-title: grid-template-rows
+title: "`grid-template-rows` CSS property"
+short-title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows

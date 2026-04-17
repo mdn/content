@@ -1,5 +1,6 @@
 ---
-title: margin
+title: "`margin` CSS property"
+short-title: margin
 slug: Web/CSS/Reference/Properties/margin
 page-type: css-shorthand-property
 browser-compat: css.properties.margin

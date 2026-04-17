@@ -1,5 +1,6 @@
 ---
-title: background-attachment
+title: "`background-attachment` CSS property"
+short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment

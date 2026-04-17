@@ -1,5 +1,6 @@
 ---
-title: background-position-y
+title: "`background-position-y` CSS property"
+short-title: background-position-y
 slug: Web/CSS/Reference/Properties/background-position-y
 page-type: css-property
 browser-compat: css.properties.background-position-y

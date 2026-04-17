@@ -1,5 +1,6 @@
 ---
-title: columns
+title: "`columns` CSS property"
+short-title: columns
 slug: Web/CSS/Reference/Properties/columns
 page-type: css-shorthand-property
 browser-compat: css.properties.columns

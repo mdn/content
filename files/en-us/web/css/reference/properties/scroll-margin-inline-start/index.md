@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-inline-start
+title: "`scroll-margin-inline-start` CSS property"
+short-title: scroll-margin-inline-start
 slug: Web/CSS/Reference/Properties/scroll-margin-inline-start
 page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-start

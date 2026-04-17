@@ -1,5 +1,6 @@
 ---
-title: gap
+title: "`gap` CSS property"
+short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 page-type: css-shorthand-property
 browser-compat: css.properties.gap

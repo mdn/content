@@ -1,5 +1,6 @@
 ---
-title: column-wrap
+title: "`column-wrap` CSS property"
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 page-type: css-property
 status:

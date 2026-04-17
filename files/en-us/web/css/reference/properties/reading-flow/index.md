@@ -1,5 +1,6 @@
 ---
-title: reading-flow
+title: "`reading-flow` CSS property"
+short-title: reading-flow
 slug: Web/CSS/Reference/Properties/reading-flow
 page-type: css-property
 status:

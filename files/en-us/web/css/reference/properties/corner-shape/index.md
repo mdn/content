@@ -1,5 +1,6 @@
 ---
-title: corner-shape
+title: "`corner-shape` CSS property"
+short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 page-type: css-shorthand-property
 status:

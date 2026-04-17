@@ -1,5 +1,6 @@
 ---
-title: box-shadow
+title: "`box-shadow` CSS property"
+short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 page-type: css-property
 browser-compat: css.properties.box-shadow

@@ -1,5 +1,6 @@
 ---
-title: scroll-timeline-axis
+title: "`scroll-timeline-axis` CSS property"
+short-title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
 page-type: css-property
 browser-compat: css.properties.scroll-timeline-axis

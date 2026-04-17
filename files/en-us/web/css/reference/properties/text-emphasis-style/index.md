@@ -1,5 +1,6 @@
 ---
-title: text-emphasis-style
+title: "`text-emphasis-style` CSS property"
+short-title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
 page-type: css-property
 browser-compat: css.properties.text-emphasis-style

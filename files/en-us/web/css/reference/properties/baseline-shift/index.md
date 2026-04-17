@@ -1,5 +1,6 @@
 ---
-title: baseline-shift
+title: "`baseline-shift` CSS property"
+short-title: baseline-shift
 slug: Web/CSS/Reference/Properties/baseline-shift
 page-type: css-property
 browser-compat: css.properties.baseline-shift

@@ -1,5 +1,6 @@
 ---
-title: animation-composition
+title: "`animation-composition` CSS property"
+short-title: animation-composition
 slug: Web/CSS/Reference/Properties/animation-composition
 page-type: css-property
 browser-compat: css.properties.animation-composition

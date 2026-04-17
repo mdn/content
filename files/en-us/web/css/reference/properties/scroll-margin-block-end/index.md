@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-block-end
+title: "`scroll-margin-block-end` CSS property"
+short-title: scroll-margin-block-end
 slug: Web/CSS/Reference/Properties/scroll-margin-block-end
 page-type: css-property
 browser-compat: css.properties.scroll-margin-block-end

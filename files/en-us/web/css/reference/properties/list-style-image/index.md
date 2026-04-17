@@ -1,5 +1,6 @@
 ---
-title: list-style-image
+title: "`list-style-image` CSS property"
+short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image

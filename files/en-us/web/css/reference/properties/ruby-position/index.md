@@ -1,5 +1,6 @@
 ---
-title: ruby-position
+title: "`ruby-position` CSS property"
+short-title: ruby-position
 slug: Web/CSS/Reference/Properties/ruby-position
 page-type: css-property
 browser-compat: css.properties.ruby-position

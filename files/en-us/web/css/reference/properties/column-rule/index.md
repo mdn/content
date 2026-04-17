@@ -1,5 +1,6 @@
 ---
-title: column-rule
+title: "`column-rule` CSS property"
+short-title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
 page-type: css-shorthand-property
 browser-compat: css.properties.column-rule

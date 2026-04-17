@@ -1,5 +1,6 @@
 ---
-title: box-ordinal-group
+title: "`box-ordinal-group` CSS property"
+short-title: box-ordinal-group
 slug: Web/CSS/Reference/Properties/box-ordinal-group
 page-type: css-property
 status:

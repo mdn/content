@@ -1,5 +1,6 @@
 ---
-title: line-height-step
+title: "`line-height-step` CSS property"
+short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 page-type: css-property
 status:

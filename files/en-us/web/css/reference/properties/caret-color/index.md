@@ -1,5 +1,6 @@
 ---
-title: caret-color
+title: "`caret-color` CSS property"
+short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 page-type: css-property
 browser-compat: css.properties.caret-color

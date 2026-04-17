@@ -1,5 +1,6 @@
 ---
-title: animation-delay
+title: "`animation-delay` CSS property"
+short-title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
 page-type: css-property
 browser-compat: css.properties.animation-delay

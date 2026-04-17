@@ -1,5 +1,6 @@
 ---
-title: height
+title: "`height` CSS property"
+short-title: height
 slug: Web/CSS/Reference/Properties/height
 page-type: css-property
 browser-compat: css.properties.height

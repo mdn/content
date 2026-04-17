@@ -1,5 +1,6 @@
 ---
-title: position-area
+title: "`position-area` CSS property"
+short-title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 page-type: css-property
 browser-compat: css.properties.position-area

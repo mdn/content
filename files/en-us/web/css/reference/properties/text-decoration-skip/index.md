@@ -1,5 +1,6 @@
 ---
-title: text-decoration-skip
+title: "`text-decoration-skip` CSS property"
+short-title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
 page-type: css-property
 status:

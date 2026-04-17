@@ -1,5 +1,6 @@
 ---
-title: font-variant-east-asian
+title: "`font-variant-east-asian` CSS property"
+short-title: font-variant-east-asian
 slug: Web/CSS/Reference/Properties/font-variant-east-asian
 page-type: css-property
 browser-compat: css.properties.font-variant-east-asian

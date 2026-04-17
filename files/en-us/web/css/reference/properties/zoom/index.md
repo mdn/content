@@ -1,5 +1,6 @@
 ---
-title: zoom
+title: "`zoom` CSS property"
+short-title: zoom
 slug: Web/CSS/Reference/Properties/zoom
 page-type: css-property
 browser-compat: css.properties.zoom

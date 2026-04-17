@@ -1,5 +1,6 @@
 ---
-title: text-autospace
+title: "`text-autospace` CSS property"
+short-title: text-autospace
 slug: Web/CSS/Reference/Properties/text-autospace
 page-type: css-property
 browser-compat: css.properties.text-autospace

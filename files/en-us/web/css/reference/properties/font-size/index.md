@@ -1,5 +1,6 @@
 ---
-title: font-size
+title: "`font-size` CSS property"
+short-title: font-size
 slug: Web/CSS/Reference/Properties/font-size
 page-type: css-property
 browser-compat: css.properties.font-size

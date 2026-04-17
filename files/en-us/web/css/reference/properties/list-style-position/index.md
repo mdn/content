@@ -1,5 +1,6 @@
 ---
-title: list-style-position
+title: "`list-style-position` CSS property"
+short-title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
 page-type: css-property
 browser-compat: css.properties.list-style-position

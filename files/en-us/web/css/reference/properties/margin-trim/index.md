@@ -1,5 +1,6 @@
 ---
-title: margin-trim
+title: "`margin-trim` CSS property"
+short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 page-type: css-property
 status:

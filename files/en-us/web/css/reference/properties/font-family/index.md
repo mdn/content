@@ -1,5 +1,6 @@
 ---
-title: font-family
+title: "`font-family` CSS property"
+short-title: font-family
 slug: Web/CSS/Reference/Properties/font-family
 page-type: css-property
 browser-compat: css.properties.font-family

@@ -1,5 +1,6 @@
 ---
-title: scroll-behavior
+title: "`scroll-behavior` CSS property"
+short-title: scroll-behavior
 slug: Web/CSS/Reference/Properties/scroll-behavior
 page-type: css-property
 browser-compat: css.properties.scroll-behavior

@@ -1,5 +1,6 @@
 ---
-title: anchor-scope
+title: "`anchor-scope` CSS property"
+short-title: anchor-scope
 slug: Web/CSS/Reference/Properties/anchor-scope
 page-type: css-property
 browser-compat: css.properties.anchor-scope

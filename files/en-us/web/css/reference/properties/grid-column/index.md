@@ -1,5 +1,6 @@
 ---
-title: grid-column
+title: "`grid-column` CSS property"
+short-title: grid-column
 slug: Web/CSS/Reference/Properties/grid-column
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-column

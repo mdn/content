@@ -1,5 +1,6 @@
 ---
-title: math-shift
+title: "`math-shift` CSS property"
+short-title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
 page-type: css-property
 browser-compat: css.properties.math-shift

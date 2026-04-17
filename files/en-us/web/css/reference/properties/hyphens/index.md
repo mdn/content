@@ -1,5 +1,6 @@
 ---
-title: hyphens
+title: "`hyphens` CSS property"
+short-title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
 page-type: css-property
 browser-compat: css.properties.hyphens

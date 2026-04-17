@@ -1,5 +1,6 @@
 ---
-title: -moz-force-broken-image-icon
+title: "`-moz-force-broken-image-icon` CSS property"
+short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
 page-type: css-property
 status:

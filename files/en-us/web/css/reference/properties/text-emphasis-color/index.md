@@ -1,5 +1,6 @@
 ---
-title: text-emphasis-color
+title: "`text-emphasis-color` CSS property"
+short-title: text-emphasis-color
 slug: Web/CSS/Reference/Properties/text-emphasis-color
 page-type: css-property
 browser-compat: css.properties.text-emphasis-color

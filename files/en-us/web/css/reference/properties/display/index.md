@@ -1,5 +1,6 @@
 ---
-title: display
+title: "`display` CSS property"
+short-title: display
 slug: Web/CSS/Reference/Properties/display
 page-type: css-property
 browser-compat: css.properties.display

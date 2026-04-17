@@ -1,5 +1,6 @@
 ---
-title: text-decoration-skip-ink
+title: "`text-decoration-skip-ink` CSS property"
+short-title: text-decoration-skip-ink
 slug: Web/CSS/Reference/Properties/text-decoration-skip-ink
 page-type: css-property
 browser-compat: css.properties.text-decoration-skip-ink

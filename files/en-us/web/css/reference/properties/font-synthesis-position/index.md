@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-position
+title: "`font-synthesis-position` CSS property"
+short-title: font-synthesis-position
 slug: Web/CSS/Reference/Properties/font-synthesis-position
 page-type: css-property
 status:

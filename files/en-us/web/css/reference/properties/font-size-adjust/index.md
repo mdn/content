@@ -1,5 +1,6 @@
 ---
-title: font-size-adjust
+title: "`font-size-adjust` CSS property"
+short-title: font-size-adjust
 slug: Web/CSS/Reference/Properties/font-size-adjust
 page-type: css-property
 browser-compat: css.properties.font-size-adjust

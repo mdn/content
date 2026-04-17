@@ -1,5 +1,6 @@
 ---
-title: outline-width
+title: "`outline-width` CSS property"
+short-title: outline-width
 slug: Web/CSS/Reference/Properties/outline-width
 page-type: css-property
 browser-compat: css.properties.outline-width

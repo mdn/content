@@ -1,5 +1,6 @@
 ---
-title: font-variation-settings
+title: "`font-variation-settings` CSS property"
+short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 page-type: css-property
 browser-compat: css.properties.font-variation-settings

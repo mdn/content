@@ -1,5 +1,6 @@
 ---
-title: image-orientation
+title: "`image-orientation` CSS property"
+short-title: image-orientation
 slug: Web/CSS/Reference/Properties/image-orientation
 page-type: css-property
 browser-compat: css.properties.image-orientation

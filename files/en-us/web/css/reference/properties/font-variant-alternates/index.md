@@ -1,5 +1,6 @@
 ---
-title: font-variant-alternates
+title: "`font-variant-alternates` CSS property"
+short-title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
 page-type: css-property
 browser-compat: css.properties.font-variant-alternates

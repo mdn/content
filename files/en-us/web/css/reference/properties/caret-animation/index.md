@@ -1,5 +1,6 @@
 ---
-title: caret-animation
+title: "`caret-animation` CSS property"
+short-title: caret-animation
 slug: Web/CSS/Reference/Properties/caret-animation
 page-type: css-property
 status:

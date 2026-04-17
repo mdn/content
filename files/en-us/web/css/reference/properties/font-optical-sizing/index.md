@@ -1,5 +1,6 @@
 ---
-title: font-optical-sizing
+title: "`font-optical-sizing` CSS property"
+short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 page-type: css-property
 browser-compat: css.properties.font-optical-sizing

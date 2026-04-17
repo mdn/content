@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-small-caps
+title: "`font-synthesis-small-caps` CSS property"
+short-title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 page-type: css-property
 browser-compat: css.properties.font-synthesis-small-caps

@@ -1,5 +1,6 @@
 ---
-title: corner-block-end-shape
+title: "`corner-block-end-shape` CSS property"
+short-title: corner-block-end-shape
 slug: Web/CSS/Reference/Properties/corner-block-end-shape
 page-type: css-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: float
+title: "`float` CSS property"
+short-title: float
 slug: Web/CSS/Reference/Properties/float
 page-type: css-property
 browser-compat: css.properties.float

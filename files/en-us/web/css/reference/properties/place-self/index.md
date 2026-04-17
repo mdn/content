@@ -1,5 +1,6 @@
 ---
-title: place-self
+title: "`place-self` CSS property"
+short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 page-type: css-shorthand-property
 browser-compat: css.properties.place-self

@@ -1,5 +1,6 @@
 ---
-title: view-transition-class
+title: "`view-transition-class` CSS property"
+short-title: view-transition-class
 slug: Web/CSS/Reference/Properties/view-transition-class
 page-type: css-property
 browser-compat: css.properties.view-transition-class

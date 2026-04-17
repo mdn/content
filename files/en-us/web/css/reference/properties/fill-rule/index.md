@@ -1,5 +1,6 @@
 ---
-title: fill-rule
+title: "`fill-rule` CSS property"
+short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
 page-type: css-property
 browser-compat: css.properties.fill-rule

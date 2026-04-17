@@ -1,5 +1,6 @@
 ---
-title: text-combine-upright
+title: "`text-combine-upright` CSS property"
+short-title: text-combine-upright
 slug: Web/CSS/Reference/Properties/text-combine-upright
 page-type: css-property
 browser-compat: css.properties.text-combine-upright

@@ -1,5 +1,6 @@
 ---
-title: box-decoration-break
+title: "`box-decoration-break` CSS property"
+short-title: box-decoration-break
 slug: Web/CSS/Reference/Properties/box-decoration-break
 page-type: css-property
 browser-compat: css.properties.box-decoration-break

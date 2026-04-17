@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-stop
+title: "`scroll-snap-stop` CSS property"
+short-title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
 page-type: css-property
 browser-compat: css.properties.scroll-snap-stop

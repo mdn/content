@@ -1,5 +1,6 @@
 ---
-title: object-fit
+title: "`object-fit` CSS property"
+short-title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
 page-type: css-property
 browser-compat: css.properties.object-fit
