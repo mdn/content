@@ -72,6 +72,9 @@ Firefox 151 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} now correctly add and remove a split view when a call includes one of the split view's tabs. Previously, a call would fail or close the split view. ([Firefox bug 2029099](https://bugzil.la/2029099))
+- {{WebExtAPIRef("tabs.move()")}} now correctly moves a split view to the right when a call includes one of the split view's tabs. Previously, a call moved a split view only to the left or to the end of the tab list. ([Firefox bug 2027855](https://bugzil.la/2027855))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->

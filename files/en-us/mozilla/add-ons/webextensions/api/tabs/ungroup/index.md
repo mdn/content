@@ -6,7 +6,7 @@ browser-compat: webextensions.api.tabs.ungroup
 sidebar: addonsidebar
 ---
 
-Removes one or more tabs from their respective tab groups. If any groups become empty, they are deleted.
+Removes one or more tabs from their respective tab groups. A split view is removed from the group if either of its tabs is specified. If any groups become empty, they are deleted.
 
 All tabs in a tab group must be adjacent. If necessary, an ungrouped tab is moved before or after the tab group to maintain this requirement.
 
