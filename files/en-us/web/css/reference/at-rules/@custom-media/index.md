@@ -1,5 +1,6 @@
 ---
-title: "@custom-media"
+title: "`@custom-media` CSS at-rule"
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 page-type: css-at-rule
 status:

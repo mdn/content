@@ -1,5 +1,6 @@
 ---
-title: "@property"
+title: "`@property` CSS at-rule"
+short-title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 page-type: css-at-rule
 browser-compat: css.at-rules.property
