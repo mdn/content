@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 ### Basic usage
 
 ```js
-window.crashReport.set(1024).then(() => {
+window.crashReport.initialize(1024).then(() => {
   // Set a possible crash-causing value, and try
   // running an operation that may cause a crash
   window.crashReport.set("crash-arg", "00031");
