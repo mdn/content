@@ -17,7 +17,7 @@ The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reportin
 - `age`
   - : The age of the report in milliseconds.
 - `type`
-  - : The string `"crash"` indicating that this is a deprecation report.
+  - : The string `"crash"` indicating that this is a crash report.
 - `url`
   - : A string representing the URL of the document that generated the report.
 - `user_agent`
