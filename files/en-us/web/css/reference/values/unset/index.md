@@ -1,5 +1,6 @@
 ---
-title: unset
+title: "`unset` CSS keyword"
+short-title: unset
 slug: Web/CSS/Reference/Values/unset
 page-type: css-keyword
 browser-compat: css.types.global_keywords.unset

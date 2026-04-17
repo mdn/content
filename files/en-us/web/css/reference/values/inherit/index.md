@@ -1,5 +1,6 @@
 ---
-title: inherit
+title: "`inherit` CSS keyword"
+short-title: inherit
 slug: Web/CSS/Reference/Values/inherit
 page-type: css-keyword
 browser-compat: css.types.global_keywords.inherit

@@ -1,5 +1,6 @@
 ---
-title: "!important"
+title: "`!important` CSS keyword"
+short-title: "!important"
 slug: Web/CSS/Reference/Values/important
 page-type: css-keyword
 sidebar: cssref
