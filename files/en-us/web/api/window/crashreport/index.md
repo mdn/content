@@ -8,7 +8,8 @@ browser-compat: api.Window.crashReport
 
 {{securecontext_header}}{{APIRef("Reporting API")}}
 
-The **`crashReport`** read-only property of the {{domxref("Window")}} interface returns a {{domxref("CrashReportContext")}} object that enables arbitrary data to be recorded for the current top-level browsing context, which is then added to a {{domxref("CrashReport")}} and sent to a reporting endpoint when a browser crash occurs.
+The **`crashReport`** read-only property of the {{domxref("Window")}} interface returns a {{domxref("CrashReportContext")}} object that enables arbitrary data to be recorded for the current top-level browsing context.
+The data is then included in {{domxref("CrashReport")}} objects that are sent to a reporting endpoint when a browser crash occurs.
 
 ## Value
 
