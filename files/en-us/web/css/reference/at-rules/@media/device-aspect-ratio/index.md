@@ -1,5 +1,6 @@
 ---
-title: device-aspect-ratio
+title: "`device-aspect-ratio` CSS media feature"
+short-title: device-aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/device-aspect-ratio
 page-type: css-media-feature
 status:

@@ -1,5 +1,6 @@
 ---
-title: dynamic-range
+title: "`dynamic-range` CSS media feature"
+short-title: dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/dynamic-range
 page-type: css-media-feature
 browser-compat: css.at-rules.media.dynamic-range
