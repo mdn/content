@@ -1,5 +1,6 @@
 ---
 title: '`rel="preconnect"` HTML attribute value'
+short-title: preconnect
 slug: Web/HTML/Reference/Attributes/rel/preconnect
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.preconnect

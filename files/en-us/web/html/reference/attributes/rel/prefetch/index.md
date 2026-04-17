@@ -1,5 +1,6 @@
 ---
 title: '`rel="prefetch"` HTML attribute value'
+short-title: prefetch
 slug: Web/HTML/Reference/Attributes/rel/prefetch
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.prefetch

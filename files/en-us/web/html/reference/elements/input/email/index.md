@@ -1,5 +1,6 @@
 ---
 title: '`<input type="email">` HTML attribute value'
+short-title: email
 slug: Web/HTML/Reference/Elements/input/email
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_email

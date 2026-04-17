@@ -1,5 +1,6 @@
 ---
 title: '`rel="manifest"` HTML attribute value'
+short-title: manifest
 slug: Web/HTML/Reference/Attributes/rel/manifest
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.manifest
