@@ -1,6 +1,6 @@
 ---
 title: "`<meta name>` HTML attribute"
-short-title: <meta> name
+short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name

@@ -1,5 +1,6 @@
 ---
 title: "`<script type>` HTML attribute"
+short-title: <script type>
 slug: Web/HTML/Reference/Elements/script/type
 page-type: html-attribute
 browser-compat: html.elements.script.type
