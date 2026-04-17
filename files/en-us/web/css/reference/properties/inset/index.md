@@ -1,5 +1,6 @@
 ---
-title: inset
+title: "`inset` CSS property"
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 page-type: css-shorthand-property
 browser-compat: css.properties.inset

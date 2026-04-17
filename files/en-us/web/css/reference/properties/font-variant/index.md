@@ -1,5 +1,6 @@
 ---
-title: font-variant
+title: "`font-variant` CSS property"
+short-title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
 page-type: css-shorthand-property
 browser-compat: css.properties.font-variant

@@ -1,5 +1,6 @@
 ---
-title: border-image
+title: "`border-image` CSS property"
+short-title: border-image
 slug: Web/CSS/Reference/Properties/border-image
 page-type: css-shorthand-property
 browser-compat: css.properties.border-image

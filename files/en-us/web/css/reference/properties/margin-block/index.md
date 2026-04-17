@@ -1,5 +1,6 @@
 ---
-title: margin-block
+title: "`margin-block` CSS property"
+short-title: margin-block
 slug: Web/CSS/Reference/Properties/margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.margin-block

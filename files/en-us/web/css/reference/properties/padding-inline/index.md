@@ -1,5 +1,6 @@
 ---
-title: padding-inline
+title: "`padding-inline` CSS property"
+short-title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.padding-inline

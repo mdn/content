@@ -1,5 +1,6 @@
 ---
-title: grid
+title: "`grid` CSS property"
+short-title: grid
 slug: Web/CSS/Reference/Properties/grid
 page-type: css-shorthand-property
 browser-compat: css.properties.grid

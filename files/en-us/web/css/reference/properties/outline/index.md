@@ -1,5 +1,6 @@
 ---
-title: outline
+title: "`outline` CSS property"
+short-title: outline
 slug: Web/CSS/Reference/Properties/outline
 page-type: css-shorthand-property
 browser-compat: css.properties.outline

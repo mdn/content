@@ -1,5 +1,6 @@
 ---
-title: border-width
+title: "`border-width` CSS property"
+short-title: border-width
 slug: Web/CSS/Reference/Properties/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width

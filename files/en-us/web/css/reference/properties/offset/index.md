@@ -1,5 +1,6 @@
 ---
-title: offset
+title: "`offset` CSS property"
+short-title: offset
 slug: Web/CSS/Reference/Properties/offset
 page-type: css-shorthand-property
 browser-compat: css.properties.offset

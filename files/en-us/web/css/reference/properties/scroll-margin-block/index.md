@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-block
+title: "`scroll-margin-block` CSS property"
+short-title: scroll-margin-block
 slug: Web/CSS/Reference/Properties/scroll-margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-block

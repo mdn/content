@@ -1,5 +1,6 @@
 ---
-title: place-content
+title: "`place-content` CSS property"
+short-title: place-content
 slug: Web/CSS/Reference/Properties/place-content
 page-type: css-shorthand-property
 browser-compat: css.properties.place-content
