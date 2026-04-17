@@ -1,5 +1,6 @@
 ---
-title: "@keyframes"
+title: "`@keyframes` CSS at-rule"
+short-title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
 page-type: css-at-rule
 browser-compat: css.at-rules.keyframes

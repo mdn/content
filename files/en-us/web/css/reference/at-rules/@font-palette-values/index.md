@@ -1,5 +1,6 @@
 ---
-title: "@font-palette-values"
+title: "`@font-palette-values` CSS at-rule"
+short-title: "@font-palette-values"
 slug: Web/CSS/Reference/At-rules/@font-palette-values
 page-type: css-at-rule
 browser-compat: css.at-rules.font-palette-values

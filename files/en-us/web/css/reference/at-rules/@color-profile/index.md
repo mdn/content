@@ -1,5 +1,6 @@
 ---
-title: "@color-profile"
+title: "`@color-profile` CSS at-rule"
+short-title: "@color-profile"
 slug: Web/CSS/Reference/At-rules/@color-profile
 page-type: css-at-rule
 spec-urls: https://www.w3.org/TR/css-color-5/#at-profile

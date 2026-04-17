@@ -1,5 +1,6 @@
 ---
-title: "@container"
+title: "`@container` CSS at-rule"
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
