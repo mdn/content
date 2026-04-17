@@ -1,5 +1,6 @@
 ---
-title: overlay
+title: "`overlay` CSS property"
+short-title: overlay
 slug: Web/CSS/Reference/Properties/overlay
 page-type: css-property
 status:

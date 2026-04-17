@@ -1,5 +1,6 @@
 ---
-title: font-variant-ligatures
+title: "`font-variant-ligatures` CSS property"
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures

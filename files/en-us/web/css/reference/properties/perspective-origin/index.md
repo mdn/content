@@ -1,5 +1,6 @@
 ---
-title: perspective-origin
+title: "`perspective-origin` CSS property"
+short-title: perspective-origin
 slug: Web/CSS/Reference/Properties/perspective-origin
 page-type: css-property
 browser-compat: css.properties.perspective-origin

@@ -1,5 +1,6 @@
 ---
-title: counter-increment
+title: "`counter-increment` CSS property"
+short-title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
 page-type: css-property
 browser-compat: css.properties.counter-increment

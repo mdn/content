@@ -1,5 +1,6 @@
 ---
-title: border-inline-end-width
+title: "`border-inline-end-width` CSS property"
+short-title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
 page-type: css-property
 browser-compat: css.properties.border-inline-end-width

@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-right
+title: "`scroll-padding-right` CSS property"
+short-title: scroll-padding-right
 slug: Web/CSS/Reference/Properties/scroll-padding-right
 page-type: css-property
 browser-compat: css.properties.scroll-padding-right

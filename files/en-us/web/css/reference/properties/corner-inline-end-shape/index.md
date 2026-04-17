@@ -1,5 +1,6 @@
 ---
-title: corner-inline-end-shape
+title: "`corner-inline-end-shape` CSS property"
+short-title: corner-inline-end-shape
 slug: Web/CSS/Reference/Properties/corner-inline-end-shape
 page-type: css-property
 status:

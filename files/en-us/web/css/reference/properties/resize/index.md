@@ -1,5 +1,6 @@
 ---
-title: resize
+title: "`resize` CSS property"
+short-title: resize
 slug: Web/CSS/Reference/Properties/resize
 page-type: css-property
 browser-compat: css.properties.resize

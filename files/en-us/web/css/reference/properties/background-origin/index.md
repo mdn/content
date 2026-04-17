@@ -1,5 +1,6 @@
 ---
-title: background-origin
+title: "`background-origin` CSS property"
+short-title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
 page-type: css-property
 browser-compat: css.properties.background-origin

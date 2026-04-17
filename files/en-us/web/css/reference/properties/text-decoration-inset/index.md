@@ -1,5 +1,6 @@
 ---
-title: text-decoration-inset
+title: "`text-decoration-inset` CSS property"
+short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 page-type: css-property
 status:

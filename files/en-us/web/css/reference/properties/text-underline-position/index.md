@@ -1,5 +1,6 @@
 ---
-title: text-underline-position
+title: "`text-underline-position` CSS property"
+short-title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position

@@ -1,5 +1,6 @@
 ---
-title: mix-blend-mode
+title: "`mix-blend-mode` CSS property"
+short-title: mix-blend-mode
 slug: Web/CSS/Reference/Properties/mix-blend-mode
 page-type: css-property
 browser-compat: css.properties.mix-blend-mode

@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-weight
+title: "`font-synthesis-weight` CSS property"
+short-title: font-synthesis-weight
 slug: Web/CSS/Reference/Properties/font-synthesis-weight
 page-type: css-property
 browser-compat: css.properties.font-synthesis-weight

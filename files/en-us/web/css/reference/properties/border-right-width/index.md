@@ -1,5 +1,6 @@
 ---
-title: border-right-width
+title: "`border-right-width` CSS property"
+short-title: border-right-width
 slug: Web/CSS/Reference/Properties/border-right-width
 page-type: css-property
 browser-compat: css.properties.border-right-width

@@ -1,5 +1,6 @@
 ---
-title: table-layout
+title: "`table-layout` CSS property"
+short-title: table-layout
 slug: Web/CSS/Reference/Properties/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout

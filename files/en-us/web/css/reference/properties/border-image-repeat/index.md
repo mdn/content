@@ -1,5 +1,6 @@
 ---
-title: border-image-repeat
+title: "`border-image-repeat` CSS property"
+short-title: border-image-repeat
 slug: Web/CSS/Reference/Properties/border-image-repeat
 page-type: css-property
 browser-compat: css.properties.border-image-repeat

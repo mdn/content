@@ -1,5 +1,6 @@
 ---
-title: field-sizing
+title: "`field-sizing` CSS property"
+short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 page-type: css-property
 browser-compat: css.properties.field-sizing

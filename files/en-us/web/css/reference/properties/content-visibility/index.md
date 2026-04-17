@@ -1,5 +1,6 @@
 ---
-title: content-visibility
+title: "`content-visibility` CSS property"
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility

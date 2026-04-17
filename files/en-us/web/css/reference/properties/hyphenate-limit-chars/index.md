@@ -1,5 +1,6 @@
 ---
-title: hyphenate-limit-chars
+title: "`hyphenate-limit-chars` CSS property"
+short-title: hyphenate-limit-chars
 slug: Web/CSS/Reference/Properties/hyphenate-limit-chars
 page-type: css-property
 browser-compat: css.properties.hyphenate-limit-chars

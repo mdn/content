@@ -1,5 +1,6 @@
 ---
-title: border-block-width
+title: "`border-block-width` CSS property"
+short-title: border-block-width
 slug: Web/CSS/Reference/Properties/border-block-width
 page-type: css-property
 browser-compat: css.properties.border-block-width

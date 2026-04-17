@@ -1,5 +1,6 @@
 ---
-title: backface-visibility
+title: "`backface-visibility` CSS property"
+short-title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility

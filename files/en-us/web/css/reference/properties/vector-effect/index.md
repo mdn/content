@@ -1,5 +1,6 @@
 ---
-title: vector-effect
+title: "`vector-effect` CSS property"
+short-title: vector-effect
 slug: Web/CSS/Reference/Properties/vector-effect
 page-type: css-property
 browser-compat: css.properties.vector-effect

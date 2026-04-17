@@ -1,5 +1,6 @@
 ---
-title: backdrop-filter
+title: "`backdrop-filter` CSS property"
+short-title: backdrop-filter
 slug: Web/CSS/Reference/Properties/backdrop-filter
 page-type: css-property
 browser-compat: css.properties.backdrop-filter

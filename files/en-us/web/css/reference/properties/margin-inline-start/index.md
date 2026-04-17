@@ -1,5 +1,6 @@
 ---
-title: margin-inline-start
+title: "`margin-inline-start` CSS property"
+short-title: margin-inline-start
 slug: Web/CSS/Reference/Properties/margin-inline-start
 page-type: css-property
 browser-compat: css.properties.margin-inline-start

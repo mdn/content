@@ -1,5 +1,6 @@
 ---
-title: font-weight
+title: "`font-weight` CSS property"
+short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 page-type: css-property
 browser-compat: css.properties.font-weight

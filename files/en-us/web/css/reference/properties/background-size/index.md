@@ -1,5 +1,6 @@
 ---
-title: background-size
+title: "`background-size` CSS property"
+short-title: background-size
 slug: Web/CSS/Reference/Properties/background-size
 page-type: css-property
 browser-compat: css.properties.background-size

@@ -1,5 +1,6 @@
 ---
-title: margin-top
+title: "`margin-top` CSS property"
+short-title: margin-top
 slug: Web/CSS/Reference/Properties/margin-top
 page-type: css-property
 browser-compat: css.properties.margin-top

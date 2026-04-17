@@ -1,5 +1,6 @@
 ---
-title: border-spacing
+title: "`border-spacing` CSS property"
+short-title: border-spacing
 slug: Web/CSS/Reference/Properties/border-spacing
 page-type: css-property
 browser-compat: css.properties.border-spacing

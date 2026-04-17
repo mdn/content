@@ -1,5 +1,6 @@
 ---
-title: container-type
+title: "`container-type` CSS property"
+short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 page-type: css-property
 browser-compat: css.properties.container-type

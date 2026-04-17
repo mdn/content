@@ -1,5 +1,6 @@
 ---
-title: column-span
+title: "`column-span` CSS property"
+short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 page-type: css-property
 browser-compat: css.properties.column-span

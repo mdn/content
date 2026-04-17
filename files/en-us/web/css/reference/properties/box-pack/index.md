@@ -1,5 +1,6 @@
 ---
-title: box-pack
+title: "`box-pack` CSS property"
+short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 page-type: css-property
 status:

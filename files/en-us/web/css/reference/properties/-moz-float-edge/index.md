@@ -1,5 +1,6 @@
 ---
-title: -moz-float-edge
+title: "`-moz-float-edge` CSS property"
+short-title: -moz-float-edge
 slug: Web/CSS/Reference/Properties/-moz-float-edge
 page-type: css-property
 status:

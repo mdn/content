@@ -1,5 +1,6 @@
 ---
-title: isolation
+title: "`isolation` CSS property"
+short-title: isolation
 slug: Web/CSS/Reference/Properties/isolation
 page-type: css-property
 browser-compat: css.properties.isolation

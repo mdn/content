@@ -1,5 +1,6 @@
 ---
-title: object-position
+title: "`object-position` CSS property"
+short-title: object-position
 slug: Web/CSS/Reference/Properties/object-position
 page-type: css-property
 browser-compat: css.properties.object-position

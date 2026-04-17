@@ -1,5 +1,6 @@
 ---
-title: border-block-start-width
+title: "`border-block-start-width` CSS property"
+short-title: border-block-start-width
 slug: Web/CSS/Reference/Properties/border-block-start-width
 page-type: css-property
 browser-compat: css.properties.border-block-start-width

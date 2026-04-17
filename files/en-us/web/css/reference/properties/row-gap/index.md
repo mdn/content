@@ -1,5 +1,6 @@
 ---
-title: row-gap
+title: "`row-gap` CSS property"
+short-title: row-gap
 slug: Web/CSS/Reference/Properties/row-gap
 page-type: css-property
 browser-compat: css.properties.row-gap

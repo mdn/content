@@ -1,5 +1,6 @@
 ---
-title: box-direction
+title: "`box-direction` CSS property"
+short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 page-type: css-property
 status:

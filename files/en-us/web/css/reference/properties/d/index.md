@@ -1,5 +1,6 @@
 ---
-title: d
+title: "`d` CSS property"
+short-title: d
 slug: Web/CSS/Reference/Properties/d
 page-type: css-property
 browser-compat: css.properties.d

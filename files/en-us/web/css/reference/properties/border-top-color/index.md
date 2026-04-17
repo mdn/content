@@ -1,5 +1,6 @@
 ---
-title: border-top-color
+title: "`border-top-color` CSS property"
+short-title: border-top-color
 slug: Web/CSS/Reference/Properties/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color

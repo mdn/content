@@ -1,5 +1,6 @@
 ---
-title: padding-right
+title: "`padding-right` CSS property"
+short-title: padding-right
 slug: Web/CSS/Reference/Properties/padding-right
 page-type: css-property
 browser-compat: css.properties.padding-right

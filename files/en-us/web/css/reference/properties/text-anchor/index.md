@@ -1,5 +1,6 @@
 ---
-title: text-anchor
+title: "`text-anchor` CSS property"
+short-title: text-anchor
 slug: Web/CSS/Reference/Properties/text-anchor
 page-type: css-property
 browser-compat: css.properties.text-anchor

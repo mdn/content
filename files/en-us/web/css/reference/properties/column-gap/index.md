@@ -1,5 +1,6 @@
 ---
-title: column-gap
+title: "`column-gap` CSS property"
+short-title: column-gap
 slug: Web/CSS/Reference/Properties/column-gap
 page-type: css-property
 browser-compat: css.properties.column-gap

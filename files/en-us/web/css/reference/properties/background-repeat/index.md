@@ -1,5 +1,6 @@
 ---
-title: background-repeat
+title: "`background-repeat` CSS property"
+short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 page-type: css-property
 browser-compat: css.properties.background-repeat

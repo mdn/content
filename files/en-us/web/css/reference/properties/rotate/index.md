@@ -1,5 +1,6 @@
 ---
-title: rotate
+title: "`rotate` CSS property"
+short-title: rotate
 slug: Web/CSS/Reference/Properties/rotate
 page-type: css-property
 browser-compat: css.properties.rotate

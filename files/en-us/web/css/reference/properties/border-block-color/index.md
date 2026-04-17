@@ -1,5 +1,6 @@
 ---
-title: border-block-color
+title: "`border-block-color` CSS property"
+short-title: border-block-color
 slug: Web/CSS/Reference/Properties/border-block-color
 page-type: css-property
 browser-compat: css.properties.border-block-color

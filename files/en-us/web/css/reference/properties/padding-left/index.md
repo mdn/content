@@ -1,5 +1,6 @@
 ---
-title: padding-left
+title: "`padding-left` CSS property"
+short-title: padding-left
 slug: Web/CSS/Reference/Properties/padding-left
 page-type: css-property
 browser-compat: css.properties.padding-left

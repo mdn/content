@@ -1,5 +1,6 @@
 ---
-title: word-spacing
+title: "`word-spacing` CSS property"
+short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 page-type: css-property
 browser-compat: css.properties.word-spacing

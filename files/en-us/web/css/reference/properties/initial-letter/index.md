@@ -1,5 +1,6 @@
 ---
-title: initial-letter
+title: "`initial-letter` CSS property"
+short-title: initial-letter
 slug: Web/CSS/Reference/Properties/initial-letter
 page-type: css-property
 browser-compat: css.properties.initial-letter

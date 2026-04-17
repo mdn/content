@@ -1,5 +1,6 @@
 ---
-title: anchor-name
+title: "`anchor-name` CSS property"
+short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 page-type: css-property
 browser-compat: css.properties.anchor-name

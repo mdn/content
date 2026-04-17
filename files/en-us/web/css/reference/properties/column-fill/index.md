@@ -1,5 +1,6 @@
 ---
-title: column-fill
+title: "`column-fill` CSS property"
+short-title: column-fill
 slug: Web/CSS/Reference/Properties/column-fill
 page-type: css-property
 browser-compat: css.properties.column-fill

@@ -1,5 +1,6 @@
 ---
-title: line-height
+title: "`line-height` CSS property"
+short-title: line-height
 slug: Web/CSS/Reference/Properties/line-height
 page-type: css-property
 browser-compat: css.properties.line-height

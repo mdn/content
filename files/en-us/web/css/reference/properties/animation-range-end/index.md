@@ -1,5 +1,6 @@
 ---
-title: animation-range-end
+title: "`animation-range-end` CSS property"
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 page-type: css-property
 browser-compat: css.properties.animation-range-end

@@ -1,5 +1,6 @@
 ---
-title: background-blend-mode
+title: "`background-blend-mode` CSS property"
+short-title: background-blend-mode
 slug: Web/CSS/Reference/Properties/background-blend-mode
 page-type: css-property
 browser-compat: css.properties.background-blend-mode

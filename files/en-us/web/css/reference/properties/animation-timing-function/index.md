@@ -1,5 +1,6 @@
 ---
-title: animation-timing-function
+title: "`animation-timing-function` CSS property"
+short-title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
 page-type: css-property
 browser-compat: css.properties.animation-timing-function

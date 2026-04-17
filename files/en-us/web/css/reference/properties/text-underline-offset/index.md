@@ -1,5 +1,6 @@
 ---
-title: text-underline-offset
+title: "`text-underline-offset` CSS property"
+short-title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
 page-type: css-property
 browser-compat: css.properties.text-underline-offset

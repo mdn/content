@@ -1,5 +1,6 @@
 ---
-title: animation-iteration-count
+title: "`animation-iteration-count` CSS property"
+short-title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
 page-type: css-property
 browser-compat: css.properties.animation-iteration-count

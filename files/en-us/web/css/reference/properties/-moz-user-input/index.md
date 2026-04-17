@@ -1,5 +1,6 @@
 ---
-title: -moz-user-input
+title: "`-moz-user-input` CSS property"
+short-title: -moz-user-input
 slug: Web/CSS/Reference/Properties/-moz-user-input
 page-type: css-property
 status:

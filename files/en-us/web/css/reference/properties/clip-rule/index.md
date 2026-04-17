@@ -1,5 +1,6 @@
 ---
-title: clip-rule
+title: "`clip-rule` CSS property"
+short-title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
 page-type: css-property
 browser-compat: css.properties.clip-rule

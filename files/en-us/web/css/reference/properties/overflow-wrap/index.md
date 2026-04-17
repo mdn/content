@@ -1,5 +1,6 @@
 ---
-title: overflow-wrap
+title: "`overflow-wrap` CSS property"
+short-title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
 page-type: css-property
 browser-compat: css.properties.overflow-wrap

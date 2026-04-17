@@ -1,5 +1,6 @@
 ---
-title: padding-block-start
+title: "`padding-block-start` CSS property"
+short-title: padding-block-start
 slug: Web/CSS/Reference/Properties/padding-block-start
 page-type: css-property
 browser-compat: css.properties.padding-block-start

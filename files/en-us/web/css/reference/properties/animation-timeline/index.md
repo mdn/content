@@ -1,5 +1,6 @@
 ---
-title: animation-timeline
+title: "`animation-timeline` CSS property"
+short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 page-type: css-property
 browser-compat: css.properties.animation-timeline

@@ -1,5 +1,6 @@
 ---
-title: caption-side
+title: "`caption-side` CSS property"
+short-title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
 page-type: css-property
 browser-compat: css.properties.caption-side
