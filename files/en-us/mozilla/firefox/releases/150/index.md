@@ -53,6 +53,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("revert-rule")}} CSS keyword is now supported. It allows a property's value to be determined as if the current style rule had not been present, so that the value from another matching rule can take effect instead. ([Firefox bug 2017307](https://bugzil.la/2017307)).
 
+- The {{cssxref("overscroll-behavior")}} CSS property (and its longhand properties {{cssxref("overscroll-behavior-x")}}, {{cssxref("overscroll-behavior-y")}}, {{cssxref("overscroll-behavior-block")}}, and {{cssxref("overscroll-behavior-inline")}}) now correctly apply to scroll containers that have no scrollable overflow, such as elements with `overflow: hidden`. Previously, the property was ignored on such elements. ([Firefox bug 1837436](https://bugzil.la/1837436)).
+
 <!-- #### Removals -->
 
 <!-- ### JavaScript -->
