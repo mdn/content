@@ -138,6 +138,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
 
+- **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
+
+  The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This has been updated to support the nesting of `style()` queries. ([Firefox bug 2014098](https://bugzil.la/2014098)).
+
 - **Absolutely positioned elements in multi-column containers and when printing**: `layout.abspos.fragmentainer-aware-positioning.enabled`
 
   Absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing are now correctly positioned and fragmented. This improves interoperability with other browsers and prevents layout issues such as overlapping text or content loss. ([Firefox bug 2018797](https://bugzil.la/2018797)).
