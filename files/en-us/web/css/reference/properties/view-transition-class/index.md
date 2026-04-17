@@ -28,7 +28,7 @@ view-transition-class: unset;
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : An identifying name that causes the selected element to participate in a separate [view transition](/en-US/docs/Web/API/View_Transition_API) from the root view transition.
+  - : An identifying name that allows the element to be selected by view transition pseudo-elements in order to apply styles during the transition.
 - `none`
   - : No class would apply to the named view transition pseudo-elements generated for this element.
 
