@@ -1,5 +1,6 @@
 ---
-title: :focus
+title: "`:focus` CSS pseudo-class"
+short-title: :focus
 slug: Web/CSS/Reference/Selectors/:focus
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus

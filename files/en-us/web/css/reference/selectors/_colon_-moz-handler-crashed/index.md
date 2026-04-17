@@ -1,5 +1,6 @@
 ---
-title: :-moz-handler-crashed
+title: "`:-moz-handler-crashed` CSS pseudo-class"
+short-title: :-moz-handler-crashed
 slug: Web/CSS/Reference/Selectors/:-moz-handler-crashed
 page-type: css-pseudo-class
 status:

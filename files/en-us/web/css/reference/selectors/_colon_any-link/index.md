@@ -1,5 +1,6 @@
 ---
-title: :any-link
+title: "`:any-link` CSS pseudo-class"
+short-title: :any-link
 slug: Web/CSS/Reference/Selectors/:any-link
 page-type: css-pseudo-class
 browser-compat: css.selectors.any-link
