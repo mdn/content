@@ -1,5 +1,6 @@
 ---
-title: color-gamut
+title: "`color-gamut` CSS media feature"
+short-title: color-gamut
 slug: Web/CSS/Reference/At-rules/@media/color-gamut
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-gamut

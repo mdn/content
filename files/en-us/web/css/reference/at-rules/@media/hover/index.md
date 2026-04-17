@@ -1,5 +1,6 @@
 ---
-title: hover
+title: "`hover` CSS media feature"
+short-title: hover
 slug: Web/CSS/Reference/At-rules/@media/hover
 page-type: css-media-feature
 browser-compat: css.at-rules.media.hover

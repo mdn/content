@@ -1,5 +1,6 @@
 ---
-title: prefers-color-scheme
+title: "`prefers-color-scheme` CSS media feature"
+short-title: prefers-color-scheme
 slug: Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-color-scheme

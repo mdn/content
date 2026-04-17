@@ -1,5 +1,6 @@
 ---
-title: vertical-viewport-segments
+title: "`vertical-viewport-segments` CSS media feature"
+short-title: vertical-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/vertical-viewport-segments
 page-type: css-media-feature
 status:

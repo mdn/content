@@ -1,5 +1,6 @@
 ---
-title: color-index
+title: "`color-index` CSS media feature"
+short-title: color-index
 slug: Web/CSS/Reference/At-rules/@media/color-index
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color-index

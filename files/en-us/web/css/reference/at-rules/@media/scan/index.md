@@ -1,5 +1,6 @@
 ---
-title: scan
+title: "`scan` CSS media feature"
+short-title: scan
 slug: Web/CSS/Reference/At-rules/@media/scan
 page-type: css-media-feature
 browser-compat: css.at-rules.media.scan

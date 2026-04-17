@@ -1,5 +1,6 @@
 ---
-title: -webkit-animation
+title: "`-webkit-animation` CSS media feature"
+short-title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
 page-type: css-media-feature
 status:

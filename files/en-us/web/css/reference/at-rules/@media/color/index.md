@@ -1,5 +1,6 @@
 ---
-title: color
+title: "`color` CSS media feature"
+short-title: color
 slug: Web/CSS/Reference/At-rules/@media/color
 page-type: css-media-feature
 browser-compat: css.at-rules.media.color
