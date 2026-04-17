@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`pmin`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the smaller of the corresponding input lanes.
+The **`pmin`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the smaller of the corresponding input lanes. It is defined as `b < a ? b : a`, meaning that NaN in the first operand propagates to the output but NaN in the second operand does not — unlike [`min`](/en-US/docs/WebAssembly/Reference/Numeric/min), which propagates NaN from either operand.
 
 {{InteractiveExample("Wat Demo: pmin", "tabbed-taller")}}
 
