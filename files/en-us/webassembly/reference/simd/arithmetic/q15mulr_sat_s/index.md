@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.q15mulr_sat_s
 sidebar: webassemblysidebar
 ---
 
-The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a lane-wise saturating rounding multiplication in Q15 format on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations, outputting a single `i16x8` value interpretation.
+The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations, outputting a single `i16x8` value interpretation.
 
 {{InteractiveExample("Wat Demo: q15mulr_sat_s", "tabbed-taller")}}
 

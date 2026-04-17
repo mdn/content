@@ -19,17 +19,6 @@ WebAssembly SIMD-specific arithmetic instructions.
 - [`extadd_pairwise_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extadd_pairwise_i16x8_u)
   - : Adds each adjacent pair of lanes of an unsigned `v128` `i16x8` value interpretation, outputting the results into an `i32x4` value interpretation.
 
-## Addition and subtraction with saturation
-
-- [`add_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_s)
-  - : Performs a saturated addition of two signed `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
-- [`add_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_u)
-  - : Performs a saturated addition of two unsigned `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
-- [`sub_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_s)
-  - : Performs a saturated subtraction of two signed `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
-- [`sub_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_u)
-  - : Performs a saturated subtraction of two unsigned `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
-
 ## Integer dot product
 
 - [`dot_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/dot_i16x8_s)
@@ -43,7 +32,7 @@ WebAssembly SIMD-specific arithmetic instructions.
 ## Lane-wise saturating rounding multiplication
 
 - [`q15mulr_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/q15mulr_sat_s)
-  - : Performs a lane-wise saturating rounding multiplication in Q15 format on two signed `v128` `i16x8` value interpretations, outputting a single `i16x8` value interpretation.
+  - : Performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed `v128` `i16x8` value interpretations, outputting a single `i16x8` value interpretation.
 
 ## Min and max
 
@@ -86,6 +75,17 @@ WebAssembly SIMD-specific arithmetic instructions.
   - : Takes lanes 0–1 of two unsigned `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
 - [`extmul_high_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i32x4_u)
   - : Takes lanes 2–3 of two unsigned `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
+
+## Saturated addition and subtraction
+
+- [`add_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_s)
+  - : Performs a saturating addition of two signed `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+- [`add_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_u)
+  - : Performs a saturating addition of two unsigned `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+- [`sub_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_s)
+  - : Performs a saturating subtraction of two signed `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
+- [`sub_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_u)
+  - : Performs a saturating subtraction of two unsigned `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
 
 ## See also
 

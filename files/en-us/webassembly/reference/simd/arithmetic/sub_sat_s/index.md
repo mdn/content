@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.sub_sat_s
 sidebar: webassemblysidebar
 ---
 
-The **`sub_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a saturated subtraction of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
+The **`sub_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) subtraction of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
 
 {{InteractiveExample("Wat Demo: sub_sat_s", "tabbed-taller")}}
 
@@ -29,6 +29,11 @@ The **`sub_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Refere
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
+
+Saturation means that output values are clamped to within a certain range:
+
+- `i8x16.sub_sat_s`: `−128` to `127` (the full range of a signed 8-bit integer)
+- `i16x8.sub_sat_s`: `−32,768` to `32,767` (the full range of a signed 16-bit integer)
 
 ## Syntax
 

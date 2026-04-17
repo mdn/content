@@ -75,7 +75,7 @@ WebAssembly SIMD conversion instructions.
 ## SIMD-specific trunc instructions
 
 - [`trunc_sat_f32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_s)
-  - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
+  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
 - [`trunc_sat_f32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_u)
   - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
 - [`trunc_sat_f64x2_s_zero`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_s_zero)

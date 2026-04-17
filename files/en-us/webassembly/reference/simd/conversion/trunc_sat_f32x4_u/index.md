@@ -7,9 +7,7 @@ browser-compat: webassembly.simd.trunc_sat_f32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_sat_f32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a saturating conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
-
-If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0`. If the rounded integer value of a lane is outside the range of the destination type, the result is saturated to the nearest representable integer value.
+The **`trunc_sat_f32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: trunc_sat_f32x4_u", "tabbed-taller")}}
 
@@ -30,6 +28,8 @@ If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
+
+Saturation means that output values are clamped to within a certain range: `0` to `4,294,967,295` (the full range of an unsigned 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
 
 ## Syntax
 
