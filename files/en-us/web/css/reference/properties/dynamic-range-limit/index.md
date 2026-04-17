@@ -29,22 +29,18 @@ dynamic-range-limit: unset;
 
 ### Values
 
-The `dynamic-range-limit` property is specified as one of the following keyword values or a {{cssxref("dynamic-range-limit-mix()")}} function call.
-
-The following keyword values can be specified:
-
 - `standard`
-  - : Specifies the maximum luminance as **HDR reference white**, which is the CSS color `white`.
+  - : Specifies the maximum luminance as High Dynamic Range (HDR) reference white, which is the CSS color `white`.
 - `no-limit`
-  - : Specifies the maximum luminance as much greater than that of HDR reference white. The precise level is not specified.
+  - : Specifies the maximum luminance as much greater than that of HDR reference white. The precise level is not specified. This is the initial value.
 - `constrained`
   - : Specifies the maximum luminance as somewhat greater than that of HDR reference white, such that a mix of Standard Dynamic Range (SDR) and HDR content can be comfortably viewed together. The precise level is not specified.
-
-The {{cssxref("dynamic-range-limit-mix()")}} function specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword (or a nested `dynamic-range-limit-mix()` function) and a percentage.
+- {{cssxref("dynamic-range-limit-mix()")}}
+  - : Specifies the maximum luminance as a custom value that is a combination of the different keyword values proportionate to the provided percentages. It takes two or more pairs, each consisting of a `dynamic-range-limit` keyword or a nested `dynamic-range-limit-mix()` function and a percentage.
 
 ## Description
 
-Dynamic range is the difference in luminance (brightness) between the lightest and darkest parts of content. Dynamic range is measured in photographic stops, where an increase of one stop represents a doubling of the luminance.
+The `dynamic-range-limit` property specifies the maximum luminance allowed in displays capable of displaying high dynamic range colors. A **dynamic range** is the difference in luminance (brightness) between the lightest and darkest parts of content. Dynamic range is measured in photographic stops, where an increase of one stop represents a doubling of the luminance.
 
 ### SDR, HDR, and headroom
 
@@ -98,7 +94,7 @@ img {
 }
 ```
 
-On hover or focus, we change the value of the `<img>` element's `dynamic-range-limit` to `no-limit` so that it will display as brightly as the browser and display setup allow.
+On hover or focus, we change the value of the `<img>` element's `dynamic-range-limit` to `no-limit` so that it displays as brightly as the browser and display setup allow.
 
 ```css
 img:hover,
@@ -117,4 +113,4 @@ img:focus {
 
 ## See also
 
-[`dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) media features
+- [`dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) media features
