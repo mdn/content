@@ -6,13 +6,14 @@ browser-compat: css.properties.view-transition-class
 sidebar: cssref
 ---
 
-The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with an identifying class (a {{cssxref("custom-ident")}}), providing an additional method of styling the view transitions for those elements.
+The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with one or more identifying classes ({{cssxref("custom-ident")}}s), providing an additional method of styling the view transitions for those elements.
 
 ## Syntax
 
 ```css
 /* <custom-ident> value examples */
 view-transition-class: card;
+view-transition-class: card fast-slide;
 
 /* Keyword value */
 view-transition-class: none;
