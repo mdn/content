@@ -9,6 +9,8 @@ browser-compat: css.selectors.xr-overlay
 sidebar: cssref
 ---
 
+{{SeeCompatTable}}
+
 The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
 
 ## Syntax
