@@ -1,5 +1,6 @@
 ---
-title: :optional
+title: "`:optional` CSS pseudo-class"
+short-title: :optional
 slug: Web/CSS/Reference/Selectors/:optional
 page-type: css-pseudo-class
 browser-compat: css.selectors.optional

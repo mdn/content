@@ -1,5 +1,6 @@
 ---
-title: :-moz-last-node
+title: "`:-moz-last-node` CSS pseudo-class"
+short-title: :-moz-last-node
 slug: Web/CSS/Reference/Selectors/:-moz-last-node
 page-type: css-pseudo-class
 status:

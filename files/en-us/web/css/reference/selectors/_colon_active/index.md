@@ -1,5 +1,6 @@
 ---
-title: :active
+title: "`:active` CSS pseudo-class"
+short-title: :active
 slug: Web/CSS/Reference/Selectors/:active
 page-type: css-pseudo-class
 browser-compat: css.selectors.active

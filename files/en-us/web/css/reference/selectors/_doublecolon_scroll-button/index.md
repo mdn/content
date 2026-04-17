@@ -1,5 +1,6 @@
 ---
-title: ::scroll-button()
+title: "`::scroll-button()` CSS pseudo-element"
+short-title: ::scroll-button()
 slug: Web/CSS/Reference/Selectors/::scroll-button
 page-type: css-pseudo-element
 status:

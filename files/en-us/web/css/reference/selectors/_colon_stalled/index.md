@@ -1,5 +1,6 @@
 ---
-title: :stalled
+title: "`:stalled` CSS pseudo-class"
+short-title: :stalled
 slug: Web/CSS/Reference/Selectors/:stalled
 page-type: css-pseudo-class
 browser-compat: css.selectors.stalled

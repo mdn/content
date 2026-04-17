@@ -1,5 +1,6 @@
 ---
-title: :where()
+title: "`:where()` CSS pseudo-class"
+short-title: :where()
 slug: Web/CSS/Reference/Selectors/:where
 page-type: css-pseudo-class
 browser-compat: css.selectors.where

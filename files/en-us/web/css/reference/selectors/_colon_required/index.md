@@ -1,5 +1,6 @@
 ---
-title: :required
+title: "`:required` CSS pseudo-class"
+short-title: :required
 slug: Web/CSS/Reference/Selectors/:required
 page-type: css-pseudo-class
 browser-compat: css.selectors.required
