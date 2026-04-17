@@ -6,13 +6,14 @@ browser-compat: css.properties.view-transition-class
 sidebar: cssref
 ---
 
-The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with an identifying class (a {{cssxref("custom-ident")}}), providing an additional method of styling the view transitions for those elements.
+The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with one or more identifying classes ({{cssxref("custom-ident")}}s), providing an additional method of styling the view transitions for those elements.
 
 ## Syntax
 
 ```css
 /* <custom-ident> value examples */
 view-transition-class: card;
+view-transition-class: card fast-slide;
 
 /* Keyword value */
 view-transition-class: none;
@@ -28,7 +29,7 @@ view-transition-class: unset;
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : An identifying name that causes the selected element to participate in a separate [view transition](/en-US/docs/Web/API/View_Transition_API) from the root view transition. The identifier must be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
+  - : An identifying name that allows the element to be selected by view transition pseudo-elements in order to apply styles during the transition.
 - `none`
   - : No class would apply to the named view transition pseudo-elements generated for this element.
 
