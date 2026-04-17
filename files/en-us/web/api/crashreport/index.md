@@ -9,6 +9,9 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 
 The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a crash report.
 
+> [!NOTE]
+> It is not possible to retrieve crash reports using a {{domxref("ReportingObserver")}} — the reports are only generated when the browser crashes, at which point the observer code isn't available to run.
+
 ## Instance properties
 
 - `age`
@@ -22,6 +25,10 @@ The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reportin
 - `body`
   - : The body of the report.
     This is an object with the following properties:
+    - `crash_report_api` {{experimental_inline}} {{optional_inline}}
+      - : An object containing the key-value pairs set via the {{domxref("CrashReportContext.set()")}} method, if any.
+    - `is_top_level` {{experimental_inline}}
+      - : A boolean indicating whether the crashed document was a top-level document (`true`) or an embedded document (`false`).
     - `reason` {{experimental_inline}} {{optional_inline}}
       - : A string indicating the specfic reason why the crash occurred, if known. Possible values are:
         - `oom`
@@ -30,16 +37,12 @@ The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reportin
           - : The page was killed due to being unresponsive.
     - `stack` {{experimental_inline}} {{optional_inline}}
       - : A string representing the JavaScript call stack at the time of the crash. This is included if the `reason` is `unresponsive`, if the `Document-Policy` value for `include-js-call-stacks-in-crash-reports` in the document that crashed is `true`, and if the call stack was able to be recovered from the crashed document.
-    - `is_top_level` {{experimental_inline}}
-      - : A boolean indicating whether the crashed document was a top-level document (`true`) or an embedded document (`false`).
     - `visibility_state` {{experimental_inline}}
       - : An enumerated value indicating whether the document is visible. This mirrors the value of the {{domxref("Document.visibilityState")}} property. Possible values are:
         - `visible`
           - : The document content is at least partially visible.
         - `hidden`
           - : The document content is completely hidden.
-    - `crash_report_api` {{experimental_inline}} {{optional_inline}}
-      - : An object containing the key-value pairs set via the {{domxref("CrashReportContext.set()")}} method, if any.
 
 ## Description
 
@@ -47,10 +50,7 @@ The [Crash Reporting API](https://wicg.github.io/crash-reporting) extension to t
 
 The information is stored in a special key-value store, manipulated using the document's {{domxref("CrashReportContext")}} object, which is accessed via the {{domxref("Window.crashReport")}} property.
 
-When the browser crashes, the information stored in the key-value store is added to a {{domxref("CrashReport")}} and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
-
-> [!NOTE]
-> It is not possible to retrieve {{domxref("CrashReport")}}s using a {{domxref("ReportingObserver")}} — the reports are only generated when the browser crashes, at which point the observer code isn't available to run.
+When the browser crashes, the information stored in the key-value store is added to a `CrashReport` and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
 
 ## Examples
 
