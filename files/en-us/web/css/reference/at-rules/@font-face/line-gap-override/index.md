@@ -1,5 +1,6 @@
 ---
-title: line-gap-override
+title: "`line-gap-override` CSS at-rule descriptor"
+short-title: line-gap-override
 slug: Web/CSS/Reference/At-rules/@font-face/line-gap-override
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.line-gap-override

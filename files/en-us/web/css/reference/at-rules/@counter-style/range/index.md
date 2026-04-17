@@ -1,5 +1,6 @@
 ---
-title: range
+title: "`range` CSS at-rule descriptor"
+short-title: range
 slug: Web/CSS/Reference/At-rules/@counter-style/range
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.range
