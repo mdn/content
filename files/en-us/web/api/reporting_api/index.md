@@ -97,6 +97,8 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 - {{domxref("COEPViolationReport")}}
   - : Contains details of a {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) violation.
+- {{domxref("CrashReport")}}
+  - : Contains details of a browser crash.
 - {{domxref("CSPViolationReport")}}
   - : Contains details of a CSP violation.
     This is defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications.

@@ -19,7 +19,7 @@ initialize(length)
 ### Parameters
 
 - `length`
-  - : A number indicating the maximum number of bytes that can be stored in the key-value store by each individual `set()` call. The maximum allowable value is `5 * 1024 * 1024` (5MB), which is also the maximum amount of crash report memory allowed for one origin.
+  - : A number indicating the maximum number of bytes that can be stored in the key-value store by each individual `set()` call. The maximum allowable value is `65536` (64KB), which is also the maximum amount of crash report memory allowed for one origin.
 
 ### Return value
 
@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
     - The calling document is not fully active.
     - A crash report key-value store was already initialized by a previous `initialize()` call.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : `length` is more than `5 * 1024 * 1024`.
+  - : `length` is more than `65536`.
 
 ## Examples
 

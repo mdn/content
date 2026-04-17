@@ -22,7 +22,8 @@ The `CrashReportContext` object for a particular browsing context is accessed vi
 
 ## Description
 
-The [Crash Reporting API](https://wicg.github.io/crash-reporting) extension to the [Reporting API](/en-US/docs/Web/API/Reporting_API) specifies a mechanism allowing arbitrary information to be recorded and made available in crash reports. This is useful because we can store detailed diagnostic information throughout the lifetime of an application and use the crash reports to debug crashes more effectively.
+Crash reports containing arbitrary information can be sent to a server endpoint using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+This is useful because we can store detailed diagnostic information throughout the lifetime of an application and use the reports to debug crashes more effectively.
 
 The information is stored in a special key-value store, which is similar to [Web Storage](/en-US/docs/Web/API/Web_Storage_API) except that its scope is restricted to the current top-level origin, and it doesn't have a getter method available. It allows document-specific state information to be recorded and deleted. The top-level document will record diagnostic information relating to it and any embedded documents, and send any related crash reports.
 
