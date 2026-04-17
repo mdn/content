@@ -6,9 +6,9 @@ browser-compat: css.types.global_keywords.revert-rule
 sidebar: cssref
 ---
 
-The **`revert-rule`** [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) rolls back the value of a property as if the current [style rule](/en-US/docs/Web/CSS/Syntax#css_rulesets) had not been present at all. The cascade then determines the value from the remaining declarations — this could be another rule in the same [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a rule in a different layer, a different [style origin](/en-US/docs/Glossary/Style_origin), or a [defaulted value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#defaulting) (inherited or initial).
+The **`revert-rule`** [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) rolls back the cascaded value of a property to the value it would have had if the current [style rule](/en-US/docs/Web/CSS/Syntax#css_rulesets) had not been present. The cascade then determines the value from the remaining declarations — this could be another rule in the same [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a rule in a different layer, a different [style origin](/en-US/docs/Glossary/Style_origin), or a [default value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#defaulting) (`inherited` or `initial`).
 
-The `revert-rule` keyword behaves like {{cssxref("revert-layer")}} in the animation origin.
+When used inside a [CSS animation](/en-US/docs/Web/CSS/CSS_animations) (the animation origin), the `revert-rule` keyword behaves like {{cssxref("revert-layer")}}.
 
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
@@ -66,13 +66,13 @@ p.special {
 
 #### Result
 
-{{EmbedLiveSample('Rolling_back_to_the_previous_rule', '100%', 120)}}
+{{EmbedLiveSample('Rolling back to the previous rule', '100%', 120)}}
 
-The paragraph text is blue (from the `p` rule), because the `color: revert-rule` declaration in the `p.special` rule causes it to be ignored for the `color` property. The `font-weight: bold` and `border` declarations are unaffected.
+The paragraph text is blue from the `p` rule because `color: revert-rule` causes the `color` declaration in `p.special` to be ignored. The `font-weight` and `border` declarations are unaffected.
 
 ### Reverting from a style attribute
 
-When `revert-rule` is used in a [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style), it causes the cascade to act as if the style attribute were not present, since the style attribute is treated as its own style rule.
+When `revert-rule` is used in a [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style), it causes the cascade to act as if the style attribute were not present. This works because the style attribute is treated as its own style rule.
 
 #### HTML
 
@@ -106,13 +106,13 @@ p {
 
 #### Result
 
-{{EmbedLiveSample('Reverting_from_a_style_attribute', '100%', 120)}}
+{{EmbedLiveSample('Reverting from a style attribute', '100%', 120)}}
 
-The paragraph displays in green because `revert-rule` removes the style attribute's declaration from the cascade, and the `p { color: green; }` rule takes effect.
+The paragraph text is green because `revert-rule` causes the cascade to ignore the style attribute's declaration, and the `p` rule takes effect.
 
-### A chain of revert-rule
+### Chaining multiple `revert-rule` values
 
-The `revert-rule` keyword removes the current rule from the cascade entirely. If the resulting winning rule also uses `revert-rule`, that rule is likewise removed, continuing back through earlier rules.
+If multiple rules use `revert-rule` for the same property, the cascade ignores each of them in turn, continuing back through earlier rules until it finds a concrete value.
 
 #### HTML
 
@@ -143,7 +143,7 @@ p {
   color: red;
 }
 p.a {
-  color: green;
+  color: revert-rule;
 }
 p.b {
   color: revert-rule;
@@ -152,9 +152,9 @@ p.b {
 
 #### Result
 
-{{EmbedLiveSample('A_chain_of_revert-rule', '100%', 120)}}
+{{EmbedLiveSample('Chaining multiple revert-rule values', '100%', 120)}}
 
-The `p.b` rule is removed from the cascade by `revert-rule`. Among the remaining rules, `p.a` wins over `p` due to higher [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity), so the text is green.
+Both the `p.b` and `p.a` rules are ignored by `revert-rule`. The cascade falls through to the `p` rule, so the text is red.
 
 ## Specifications
 
