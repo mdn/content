@@ -1,5 +1,6 @@
 ---
-title: :root
+title: "`:root` CSS pseudo-class"
+short-title: :root
 slug: Web/CSS/Reference/Selectors/:root
 page-type: css-pseudo-class
 browser-compat: css.selectors.root

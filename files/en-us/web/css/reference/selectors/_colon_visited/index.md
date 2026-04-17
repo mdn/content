@@ -1,5 +1,6 @@
 ---
-title: :visited
+title: "`:visited` CSS pseudo-class"
+short-title: :visited
 slug: Web/CSS/Reference/Selectors/:visited
 page-type: css-pseudo-class
 browser-compat: css.selectors.visited

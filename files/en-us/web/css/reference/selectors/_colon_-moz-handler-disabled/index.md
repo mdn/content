@@ -1,5 +1,6 @@
 ---
-title: :-moz-handler-disabled
+title: "`:-moz-handler-disabled` CSS pseudo-class"
+short-title: :-moz-handler-disabled
 slug: Web/CSS/Reference/Selectors/:-moz-handler-disabled
 page-type: css-pseudo-class
 status:

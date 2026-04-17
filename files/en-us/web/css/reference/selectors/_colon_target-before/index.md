@@ -1,5 +1,6 @@
 ---
-title: :target-before
+title: "`:target-before` CSS pseudo-class"
+short-title: :target-before
 slug: Web/CSS/Reference/Selectors/:target-before
 page-type: css-pseudo-class
 status:

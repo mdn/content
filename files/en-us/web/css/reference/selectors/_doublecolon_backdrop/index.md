@@ -1,5 +1,6 @@
 ---
-title: ::backdrop
+title: "`::backdrop` CSS pseudo-element"
+short-title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
 page-type: css-pseudo-element
 browser-compat: css.selectors.backdrop

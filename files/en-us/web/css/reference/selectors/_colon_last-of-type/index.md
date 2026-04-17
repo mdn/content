@@ -1,5 +1,6 @@
 ---
-title: :last-of-type
+title: "`:last-of-type` CSS pseudo-class"
+short-title: :last-of-type
 slug: Web/CSS/Reference/Selectors/:last-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.last-of-type
