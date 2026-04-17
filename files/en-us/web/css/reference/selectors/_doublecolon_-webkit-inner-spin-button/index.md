@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-inner-spin-button
+title: "`::-webkit-inner-spin-button` CSS pseudo-element"
+short-title: ::-webkit-inner-spin-button
 slug: Web/CSS/Reference/Selectors/::-webkit-inner-spin-button
 page-type: css-pseudo-element
 status:

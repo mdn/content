@@ -1,5 +1,6 @@
 ---
-title: ::details-content
+title: "`::details-content` CSS pseudo-element"
+short-title: ::details-content
 slug: Web/CSS/Reference/Selectors/::details-content
 page-type: css-pseudo-element
 browser-compat: css.selectors.details-content
