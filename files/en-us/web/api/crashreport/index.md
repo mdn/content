@@ -49,7 +49,7 @@ The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reportin
 Crash reports containing arbitrary information can be sent to a server endpoint using the [Reporting API](/en-US/docs/Web/API/Reporting_API) .
 This is useful because we can store detailed diagnostic information throughout the lifetime of an application and use the reports to debug crashes more effectively.
 
-The diagnostic information is stored in a special key-value store that can be manipulated using the document's {{domxref("CrashReportContext")}} object. 
+The diagnostic information is stored in a special key-value store that can be manipulated using the document's {{domxref("CrashReportContext")}} object.
 This is accessed via the {{domxref("Window.crashReport")}} property.
 
 When the browser crashes, the information stored in the key-value store is added to a `CrashReport` and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
