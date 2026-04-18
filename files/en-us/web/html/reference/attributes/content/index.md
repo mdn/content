@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: content"
+title: "`content` HTML attribute"
 short-title: content
 slug: Web/HTML/Reference/Attributes/content
 page-type: html-attribute

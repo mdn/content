@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: disabled"
+title: "`disabled` HTML attribute"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
 page-type: html-attribute

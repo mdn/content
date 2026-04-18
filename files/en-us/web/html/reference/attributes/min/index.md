@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: min"
+title: "`min` HTML attribute"
 short-title: min
 slug: Web/HTML/Reference/Attributes/min
 page-type: html-attribute
