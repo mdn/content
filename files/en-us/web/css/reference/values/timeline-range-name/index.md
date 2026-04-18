@@ -14,6 +14,12 @@ The `<timeline-range-name>` keyword values are used in [keyframe selectors](/en-
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
 - {{cssxref("animation-range")}} shorthand
+- {{cssxref("timeline-trigger-activation-range-end")}}
+- {{cssxref("timeline-trigger-activation-range-start")}}
+- {{cssxref("timeline-trigger-activation-range")}} shorthand
+- {{cssxref("timeline-trigger-active-range-end")}}
+- {{cssxref("timeline-trigger-active-range-start")}}
+- {{cssxref("timeline-trigger-active-range")}} shorthand
 
 ## Syntax
 
@@ -67,4 +73,5 @@ See the [View timeline range visualizer](https://scroll-driven-animations.style/
 - [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

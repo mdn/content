@@ -109,7 +109,8 @@ One or more single `<animation>` declarations, separated by commas, with each `<
 
 The `animation` property is specified as one or more single animations, separated by commas. Each `animation` within the comma-separated list of animations sets the {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}. If any of the components are not included in an `animation` declaration, the component value is set to the component's initial value.
 
-### animation-name
+> [!NOTE]
+> {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} and {{cssxref("animation-trigger")}} are not currently included in this list, as current implementations are reset-only. This means that including `animation` resets previously-declared `animation-range-start` and `animation-range-end` values to `normal` and a previously-declared `animation-trigger` to `none`, but these properties cannot be set via `animation`. When creating CSS [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) or [triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers), you need to declare these properties after declaring any `animation` shorthand for them to take effect.
 
 The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, no animation is applied to any of the properties.
 

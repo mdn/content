@@ -143,6 +143,8 @@ Scroll the element in the inline direction to see its background color change. S
   - : Scroll-driven animation timelines and creating scroll-driven animations.
 - [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
   - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+  - : Creating scroll-triggered animations.
 
 ## Related concepts
 
@@ -150,6 +152,18 @@ Scroll the element in the inline direction to see its background color change. S
   - {{cssxref("animation-timeline")}}
   - {{cssxref("@keyframes")}} at-rule
   - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} shorthand
+  - {{cssxref("timeline-trigger-activation-range")}} shorthand
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} shorthand
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{glossary("Scroll container")}}
   - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
