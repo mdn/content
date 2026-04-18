@@ -122,6 +122,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The behavior of {{WebExtAPIRef("tabs.move")}} is updated for split views so that:
   - The order of tabs in a split view can be swapped. ([Firefox bug 2016762](https://bugzil.la/2016762))
   - When the list of tabs includes both split view tabs and places one or more tabs between them, the tabs are moved apart and the split view closed. ([Firefox bug 2022549](https://bugzil.la/2022549))
+- Extension documents can now use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) and assert a [Relying Party ID (RP ID)](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#rp) for any domain covered by the extension's [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions). This change means that {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} and {{domxref("CredentialsContainer.create()", "navigator.credentials.get()")}} can specify an RP ID matching a host-permitted domain, enabling extensions to create and retrieve WebAuthn credentials on behalf of web services. See [Use Web Authn API in web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api) for details. ([Firefox bug 1956484](https://bugzil.la/1956484)).
 - Resolved an issue with some JavaScript [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) calls failing to import CSS. ([Firefox bug 2016369](https://bugzil.la/2016369))
 
 <!-- ### Removals -->
