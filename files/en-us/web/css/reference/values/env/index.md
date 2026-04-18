@@ -37,6 +37,8 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
       - : The dimensions of a visible `titlebar-area-*` area. These variables are available when using the `window-controls-overlay` [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field. The variables' values can be used to ensure content doesn't overlap window control buttons (that is, minimize, maximize, and close) with progressive web apps (PWA) installed on desktop devices.
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
+    - `preferred-text-scale`
+      - : A number indicating the user's preferred font scaling factor, as set by browser or OS-level preferences. This can be used to size content proportionally to browser or OS-set font sizes.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
@@ -64,6 +66,21 @@ Originally provided by the iOS browser to allow developers to place their conten
 Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the [Window Controls Overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API) feature to take advantage of the full application window surface area. Using the [`titlebar-area-*` values](#titlebar-area-x) values, developers can position elements where the title bar would have been and [ensure content is not obscured by window control buttons](#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
 
 The `viewport-segment-*` variable names can be used to set your containers to fit neatly into the available segments of a multi-viewport-segment device such as a hinged or foldable device. The integers following the `viewport-segment-*` name indicate which segment of the multiple segments the environment variable is referencing.
+
+The `preferred-text-scale` variable can be used to size website text or other UI features proportionally to browser or OS-set font sizes. For example, you could set your body font size to be in proportion to a user-defined text scale like so:
+
+```css
+body {
+  font-size: calc(100% * env(preferred-text-scale));
+}
+```
+
+For example, on Chrome for Android, the body font size will be set in proportion to the global OS "Font size" setting.
+
+> [!NOTE]
+> Page sizes can also be set to be proportional to browser or OS-level font size by including [`<meta name="text-scale" content="scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) inside the document `<head>`. The `<meta>` tag should be used in favor of the `env(preferred-text-scale)` when possible, as the `<meta>` tag is simpler to use and is supported across a wider range of platforms.
+>
+> You are also advised not to use both — this results in the text scaling unexpectedly, with small font sizes being smaller and large font sizes being larger.
 
 ### Names followed by integers
 
@@ -245,6 +262,7 @@ The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segm
 - {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- [`<meta name="text-scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
