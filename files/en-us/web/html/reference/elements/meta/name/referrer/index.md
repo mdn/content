@@ -1,5 +1,5 @@
 ---
-title: <meta name="referrer">
+title: '`<meta name="referrer">` HTML attribute value'
 short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 page-type: html-attribute-value

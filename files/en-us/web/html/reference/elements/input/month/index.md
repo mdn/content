@@ -1,5 +1,6 @@
 ---
-title: <input type="month">
+title: '`<input type="month">` HTML attribute value'
+short-title: month
 slug: Web/HTML/Reference/Elements/input/month
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_month

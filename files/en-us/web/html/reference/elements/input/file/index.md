@@ -1,5 +1,6 @@
 ---
-title: <input type="file">
+title: '`<input type="file">` HTML attribute value'
+short-title: file
 slug: Web/HTML/Reference/Elements/input/file
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_file

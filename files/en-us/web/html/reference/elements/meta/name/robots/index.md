@@ -1,5 +1,5 @@
 ---
-title: <meta name="robots">
+title: '`<meta name="robots">` HTML attribute value'
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 page-type: html-attribute-value

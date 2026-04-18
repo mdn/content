@@ -1,5 +1,6 @@
 ---
-title: rel="alternate stylesheet"
+title: '`rel="alternate stylesheet"` HTML attribute value'
+short-title: alternate stylesheet
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.alternate_stylesheet

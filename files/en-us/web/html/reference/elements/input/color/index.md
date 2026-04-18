@@ -1,5 +1,6 @@
 ---
-title: <input type="color">
+title: '`<input type="color">` HTML attribute value'
+short-title: color
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
 browser-compat:

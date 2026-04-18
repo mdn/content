@@ -1,5 +1,6 @@
 ---
-title: <input type="checkbox">
+title: '`<input type="checkbox">` HTML attribute value'
+short-title: checkbox
 slug: Web/HTML/Reference/Elements/input/checkbox
 page-type: html-attribute-value
 browser-compat:
