@@ -154,6 +154,7 @@ The style for all `<li>` elements rolls back to the defaults in the user-agent o
 - {{cssxref("initial")}}
 - {{cssxref("inherit")}}
 - {{cssxref("revert")}}
+- {{cssxref("revert-rule")}}
 - {{cssxref("unset")}}
 - {{cssxref("all")}}
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module

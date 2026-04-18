@@ -157,5 +157,6 @@ Also, if neither the user agent nor the user override the `<h3>` or `<section>` 
 - Use the {{cssxref("initial")}} keyword to set a property to its initial value.
 - Use the {{cssxref("inherit")}} keyword to make an element's property the same as its parent.
 - Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.
+- Use the {{cssxref("revert-rule")}} keyword to reset a property to the value of an earlier matching style rule.
 - Use the {{cssxref("unset")}} keyword to set a property to its inherited value if it inherits or to its initial value if not.
 - The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.

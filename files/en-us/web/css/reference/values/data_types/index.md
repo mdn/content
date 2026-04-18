@@ -33,6 +33,8 @@ These types include keywords and identifiers as well as strings, and URLs.
       - : Rolls back the cascade to the value of the earlier origin.
     - {{CSSXref("revert-layer")}}
       - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
+    - {{CSSXref("revert-rule")}}
+      - : Rolls back the cascade to the value of an earlier matching style rule.
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
