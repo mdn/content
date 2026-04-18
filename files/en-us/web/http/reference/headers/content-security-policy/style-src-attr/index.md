@@ -71,20 +71,20 @@ Content-Security-Policy: style-src-attr 'none'
 …the inline style applied to the element below will not be applied:
 
 ```html
-<div style="display:none">Foo</div>
+<div style="display:inline">Foo</div>
 ```
 
 The policy would also block any styles applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
 ```js
-document.querySelector("div").setAttribute("style", "display:none;");
-document.querySelector("div").style.cssText = "display:none;";
+document.querySelector("div").setAttribute("style", "display:inline;");
+document.querySelector("div").style.cssText = "display:inline;";
 ```
 
 Style properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector("div").style.display = "none";
+document.querySelector("div").style.display = "inline";
 ```
 
 Note that using JavaScript might independently be blocked using the {{CSP("script-src")}} CSP directive.
