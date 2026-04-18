@@ -124,10 +124,12 @@ Once you are done processing your audio, these interfaces define where to output
 
 ### Data analysis and visualization
 
-If you want to extract time, frequency, and other data from your audio, the `AnalyserNode` is what you need.
+Interfaces for extracting audio graph statistics, for the purposes of data analysis and visualization.
 
 - {{domxref("AnalyserNode")}}
-  - : The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information, for the purposes of data analysis and visualization.
+  - : Represents a node able to provide real-time frequency and time-domain analysis information.
+- {{domxref("AudioPlaybackStats")}}
+  - : Provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow developers to measure audio delay and glitchiness.
 
 ### Splitting and merging audio channels
 
