@@ -30,6 +30,8 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
   - : A boolean that reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootCustomElementRegistry", "shadowRootCustomElementRegistry")}}
   - : A string that reflects the value of the [`shadowrootcustomelementregistry`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) attribute of the associated `<template>` element, indicating that the declarative shadow root will use a scoped {{domxref("CustomElementRegistry")}}.
+- {{domxref("HTMLTemplateElement.shadowRootReferenceTarget", "shadowRootReferenceTarget")}}
+  - : A nullable string that reflects the value of the [`shadowrootreferencetarget`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootreferencetarget) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
   - : A boolean that reflects the value of the [`shadowrootserializable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) attribute of the associated `<template>` element.
 
