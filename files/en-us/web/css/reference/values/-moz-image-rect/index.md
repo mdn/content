@@ -1,6 +1,6 @@
 ---
-title: "`-moz-image-rect` CSS function"
-short-title: -moz-image-rect
+title: "`-moz-image-rect()` CSS function"
+short-title: -moz-image-rect()
 slug: Web/CSS/Reference/Values/-moz-image-rect
 page-type: css-function
 status:
