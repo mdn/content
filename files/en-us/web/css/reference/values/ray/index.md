@@ -1,5 +1,6 @@
 ---
-title: ray()
+title: "`ray()` CSS function"
+short-title: ray()
 slug: Web/CSS/Reference/Values/ray
 page-type: css-function
 browser-compat: css.types.ray

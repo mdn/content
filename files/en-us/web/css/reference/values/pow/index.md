@@ -1,5 +1,6 @@
 ---
-title: pow()
+title: "`pow()` CSS function"
+short-title: pow()
 slug: Web/CSS/Reference/Values/pow
 page-type: css-function
 browser-compat: css.types.pow

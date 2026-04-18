@@ -1,5 +1,6 @@
 ---
-title: repeating-conic-gradient()
+title: "`repeating-conic-gradient()` CSS function"
+short-title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-conic-gradient

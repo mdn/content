@@ -1,5 +1,6 @@
 ---
-title: lch()
+title: "`lch()` CSS function"
+short-title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
 page-type: css-function
 browser-compat: css.types.color.lch

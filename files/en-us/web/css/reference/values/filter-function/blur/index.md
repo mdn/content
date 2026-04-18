@@ -1,5 +1,6 @@
 ---
-title: blur()
+title: "`blur()` CSS function"
+short-title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
 page-type: css-function
 browser-compat: css.types.filter-function.blur

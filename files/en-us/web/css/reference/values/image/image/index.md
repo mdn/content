@@ -1,5 +1,6 @@
 ---
-title: image()
+title: "`image()` CSS function"
+short-title: image()
 slug: Web/CSS/Reference/Values/image/image
 page-type: css-function
 spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image

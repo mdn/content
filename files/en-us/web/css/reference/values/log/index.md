@@ -1,5 +1,6 @@
 ---
-title: log()
+title: "`log()` CSS function"
+short-title: log()
 slug: Web/CSS/Reference/Values/log
 page-type: css-function
 browser-compat: css.types.log

@@ -1,5 +1,6 @@
 ---
-title: progress()
+title: "`progress()` CSS function"
+short-title: progress()
 slug: Web/CSS/Reference/Values/progress
 page-type: css-function
 browser-compat: css.types.progress

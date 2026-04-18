@@ -1,5 +1,6 @@
 ---
-title: attr()
+title: "`attr()` CSS function"
+short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 page-type: css-function
 browser-compat: css.types.attr

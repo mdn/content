@@ -1,5 +1,6 @@
 ---
-title: ellipse()
+title: "`ellipse()` CSS function"
+short-title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
 page-type: css-function
 browser-compat: css.types.basic-shape.ellipse

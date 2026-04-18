@@ -1,5 +1,6 @@
 ---
-title: sepia()
+title: "`sepia()` CSS function"
+short-title: sepia()
 slug: Web/CSS/Reference/Values/filter-function/sepia
 page-type: css-function
 browser-compat: css.types.filter-function.sepia

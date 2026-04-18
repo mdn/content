@@ -1,5 +1,6 @@
 ---
-title: circle()
+title: "`circle()` CSS function"
+short-title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 page-type: css-function
 browser-compat: css.types.basic-shape.circle
