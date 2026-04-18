@@ -50,6 +50,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
 
+- `shadowrootslotassignment`
+  - : Sets the [`slotAssignment`](/en-US/docs/Web/API/ShadowRoot/slotAssignment) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element.
+    This is the declarative equivalent of the `slotAssignment` option of the {{domxref("Element.attachShadow()")}} method.
+    - `named`
+      - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root. This is the default value.
+    - `manual`
+      - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
+
 ## Usage notes
 
 This element has no permitted content, because everything nested inside it in the HTML source does not actually become the children of the `<template>` element. The {{domxref("Node.childNodes")}} property of the `<template>` element is always empty, and you can only access said nested content via the special {{domxref("HTMLTemplateElement.content", "content")}} property. However, if you call {{domxref("Node.appendChild()")}} or similar methods on the `<template>` element, then you would be inserting children into the `<template>` element itself, which is a violation of its content model and does not actually update the {{domxref("DocumentFragment")}} returned by the `content` property.
