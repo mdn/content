@@ -23,6 +23,44 @@ WebAssembly SIMD conversion instructions.
 - [`promote_low_f32x4`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/promote_low_f32x4)
   - : Converts the first two lanes of a `v128` `f32x4` value interpretation into an `f64x2` value interpretation.
 
+## Convert from narrower to wider type
+
+- [`extend_high_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i8x16_s)
+  - : Converts lanes 8–15 of a signed `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
+- [`extend_high_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i8x16_u)
+  - : Converts lanes 8–15 of an unsigned `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
+- [`extend_high_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i16x8_s)
+  - : Converts lanes 4–7 of a signed `v128` `i16x8` value interpretation into an `i32x4` value interpretation.
+- [`extend_high_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i16x8_u)
+  - : Converts lanes 4–7 of an unsigned `v128` `i16x8` value interpretation into an `i32x4` value interpretation.
+- [`extend_high_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i32x4_s)
+  - : Converts lanes 2–3 of a signed `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
+- [`extend_high_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_high_i32x4_u)
+  - : Converts lanes 2–3 of an unsigned `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
+- [`extend_low_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i8x16_s)
+  - : Converts lanes 0–7 of a signed `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
+- [`extend_low_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i8x16_u)
+  - : Converts lanes 0–7 of an unsigned `v128` `i8x16` value interpretation into an `i16x8` value interpretation.
+- [`extend_low_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i16x8_s)
+  - : Converts lanes 0–3 of a signed `v128` `i16x8` value interpretation into an `i32x4` value interpretation.
+- [`extend_low_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i16x8_u)
+  - : Converts lanes 0–3 of an unsigned `v128` `i16x8` value interpretation into an `i32x4` value interpretation.
+- [`extend_low_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i32x4_s)
+  - : Converts lanes 0–1 of a signed `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
+- [`extend_low_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/extend_low_i32x4_u)
+  - : Converts lanes 0–1 of an unsigned `v128` `i32x4` value interpretation into an `i64x2` value interpretation.
+
+## Convert from wider to narrower type
+
+- [`narrow_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i16x8_s)
+  - : Converts two signed `v128` `i16x8` value interpretations into an `i8x16` value interpretation.
+- [`narrow_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i16x8_u)
+  - : Converts two signed `v128` `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation.
+- [`narrow_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i32x4_s)
+  - : Converts two signed `v128` `i32x4` value interpretations into an `i16x8` value interpretation.
+- [`narrow_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/narrow_i32x4_u)
+  - : Converts two signed `v128` `i32x4` value interpretations into an `i16x8` value interpretation using unsigned saturation.
+
 ## Value replacement
 
 - [`replace_lane`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/replace_lane)
@@ -37,7 +75,7 @@ WebAssembly SIMD conversion instructions.
 ## SIMD-specific trunc instructions
 
 - [`trunc_sat_f32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_s)
-  - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
+  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
 - [`trunc_sat_f32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_u)
   - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
 - [`trunc_sat_f64x2_s_zero`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_s_zero)

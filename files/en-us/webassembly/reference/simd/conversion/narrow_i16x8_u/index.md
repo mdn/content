@@ -1,0 +1,71 @@
+---
+title: "narrow_i16x8_u: Wasm SIMD conversion instruction"
+short-title: narrow_i16x8_u
+slug: WebAssembly/Reference/SIMD/conversion/narrow_i16x8_u
+page-type: webassembly-instruction
+browser-compat: webassembly.simd.narrow_i16x8_u
+sidebar: webassemblysidebar
+---
+
+The **`narrow_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation (clamping to the range `0` to `255`).
+
+{{InteractiveExample("Wat Demo: narrow_i16x8_u", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    v128.const i16x8 2 4 6 8 10 12 14 16
+    v128.const i16x8 18 20 22 24 26 28 30 32
+
+    i8x16.narrow_i16x8_u
+    i8x16.extract_lane_s 15
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
+```
+
+## Syntax
+
+```plain
+i8x16.narrow_i16x8_u
+```
+
+- `i8x16.narrow_i16x8_u`
+  - : The `i8x16.narrow_i16x8_u` instruction.
+
+### Type
+
+```plain
+[input1, input2] -> [output]
+```
+
+- `input1`
+  - : The first input `v128` `i16x8` value interpretation.
+- `input2`
+  - : The second input `v128` `i16x8` value interpretation.
+- `output`
+  - : The output `v128` `i8x16` value interpretation.
+
+### Binary encoding
+
+| Instruction            | Binary format  | Example text => binary                |
+| ---------------------- | -------------- | ------------------------------------- |
+| `i8x16.narrow_i16x8_u` | `0xfd 102:u32` | `i8x16.narrow_i16x8_u` => `0xfd 0x66` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)
