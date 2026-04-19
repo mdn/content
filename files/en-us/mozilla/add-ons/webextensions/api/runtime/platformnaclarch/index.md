@@ -11,7 +11,7 @@ sidebar: addonsidebar
 
 The enumerated value representing the CPU instruction set architecture of Google Native Client used by the browser. This enum is deprecated, following the removal of Google Native Client from Google Chrome. As of 2026, Chromium intends to remove this enum.
 
-## Possible values
+## Type
 
 - `ARM`
   - : The string literal `"arm"`. Represents all versions of the ARM ISA, including all 32-bit and 64-bit variants. Equivalent to [`PlatformArch.arm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#arm) (32-bit variant) and `PlatformArch.arm64` combined into one value.
