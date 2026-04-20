@@ -104,19 +104,6 @@ We define an SVG with two SVG {{SVGElement("text")}} elements, each containing a
     une pipe sub!
   </text>
 </svg>
-<p><code>baseline-shift: top;</code></p>
-<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="50">
-    Ceci
-    <tspan baseline-shift="super">n'est pas</tspan>
-    une pipe super!
-  </text>
-  <text x="10" y="90">
-    Ceci
-    <tspan baseline-shift="sub">n'est pas</tspan>
-    une pipe sub!
-  </text>
-</svg>
 ```
 
 The SVG is repeated three times; we've only shown one copy for the sake of brevity.
@@ -145,9 +132,6 @@ svg:nth-of-type(2) tspan {
 svg:nth-of-type(3) tspan {
   baseline-shift: super;
 }
-svg:nth-of-type(4) tspan {
-  baseline-shift: top;
-}
 ```
 
 ```css hidden
@@ -156,9 +140,9 @@ svg {
   width: 15em;
   margin-bottom: 10px;
 }
-@supports not (baseline-shift: top) {
+@supports not (baseline-shift: sub) {
   body::before {
-    content: "Your browser doesn't support all the `baseline-shift` property values.";
+    content: "Your browser doesn't support the `baseline-shift` property.";
     background-color: wheat;
     display: block;
     text-align: center;
@@ -169,7 +153,7 @@ svg {
 
 #### Results
 
-{{EmbedLiveSample("Using keyword values", "300", "500")}}
+{{EmbedLiveSample("Using keyword values", "300", "370")}}
 
 The SVG `baseline-shift` attribute values are used in the first SVG. In the second and third SVGs, the CSS `baseline-shift` values override the attribute values.
 
