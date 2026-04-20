@@ -178,7 +178,7 @@ The example is best {{LiveSampleLink('Selecting an image to fit window width', '
    The label at the bottom of the image shows the current container width.
 2. Resize the window — you should see the image change at the `sizes` attribute's media query break points.
 
-   Note that the the selected image may be larger than the container width alone suggests.
+   Note that the selected image may be larger than the container width alone suggests.
    Many displays, if not most, have a [device pixel ratio (DPR)](/en-US/docs/Web/API/Window/devicePixelRatio) greater than one.
    In order to render a sharp image at the physical pixel density of the display, a browser will multiply the matched `sizes` hint by the DPR before selecting from `srcset`.
    For example, on a 2× display with a viewport of ~500px, the matched hint is `600px`, but the browser looks for a ~1200px image and selects `1200.png` as the closest available size and then scales it to fit in the available space.
