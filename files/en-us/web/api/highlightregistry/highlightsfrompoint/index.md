@@ -186,7 +186,7 @@ pElem.addEventListener("dblclick", (event) => {
 
 {{EmbedLiveSample("highlights-from-point-example", "100%", "600")}}
 
-To create multiple highlights, select press <kbd>h</kbd> after selecting some text a few times. Double click on the highlights you created, preferably where they overlap, to write the content of the clicked highlights to the page.
+To create a highlight, press <kbd>h</kbd> after selecting some text. You can create up to three highlights. Double click on the highlights you created, preferably where they overlap, to write the content of the clicked highlights to the page.
 
 ## Specifications
 
