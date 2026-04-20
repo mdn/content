@@ -1,5 +1,6 @@
 ---
-title: ::-moz-meter-bar
+title: "`::-moz-meter-bar` CSS pseudo-element"
+short-title: ::-moz-meter-bar
 slug: Web/CSS/Reference/Selectors/::-moz-meter-bar
 page-type: css-pseudo-element
 status:

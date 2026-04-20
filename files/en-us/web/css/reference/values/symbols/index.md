@@ -1,5 +1,6 @@
 ---
-title: symbols()
+title: "`symbols()` CSS function"
+short-title: symbols()
 slug: Web/CSS/Reference/Values/symbols
 page-type: css-function
 browser-compat: css.properties.list-style-type.symbols

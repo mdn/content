@@ -1,5 +1,6 @@
 ---
-title: :focus-within
+title: "`:focus-within` CSS pseudo-class"
+short-title: :focus-within
 slug: Web/CSS/Reference/Selectors/:focus-within
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-within

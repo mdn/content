@@ -1,5 +1,6 @@
 ---
-title: random()
+title: "`random()` CSS function"
+short-title: random()
 slug: Web/CSS/Reference/Values/random
 page-type: css-function
 status:

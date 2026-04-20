@@ -1,5 +1,6 @@
 ---
-title: polygon()
+title: "`polygon()` CSS function"
+short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 page-type: css-function
 browser-compat: css.types.basic-shape.polygon

@@ -1449,8 +1449,9 @@
         "CrashReportContext",
         "CSPViolationReport",
         "DeprecationReport",
-        "InterventionReport",
         "IntegrityViolationReport",
+        "InterventionReport",
+        "PermissionsPolicyViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
