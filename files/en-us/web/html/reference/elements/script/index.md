@@ -86,8 +86,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-- `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
+- [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the script. It is used to ensure that the content of the script is what the developer expects it to be, and has not been replaced with a malicious script in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must not be specified when the `src` attribute is absent. See also [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`

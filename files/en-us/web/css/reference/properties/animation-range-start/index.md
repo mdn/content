@@ -61,7 +61,7 @@ The `animation-range-start`, along with the {{cssxref("animation-range-end")}} p
 
 ## Examples
 
-### Creating a scroll view progress timeline with range start
+### Creating a scroll progress timeline with range start
 
 In this example, the `animation-range-start` is applied to an element animated via a scroll progress timeline. This makes the animation start well before the element enters the scrollport.
 
@@ -184,7 +184,7 @@ p {
 
 Scroll to see the element animate. Notice how the element is already scaled and semi-opaque as it enters the viewport. This is because the element started animating well before it entered the viewport.
 
-{{EmbedLiveSample("Creating a named view progress timeline with range start", "100%", "480px")}}
+{{EmbedLiveSample("Creating a scroll progress timeline with range start", "100%", "480px")}}
 
 ## Specifications
 

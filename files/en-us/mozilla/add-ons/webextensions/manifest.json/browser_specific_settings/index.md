@@ -37,6 +37,11 @@ sidebar: addonsidebar
 "browser_specific_settings": {
   "gecko": {
     "id": "@addon-example",
+    "data_collection_permissions": {
+      "required": [
+        "none"
+      ]
+    },
     "strict_min_version": "58.0"
   }
 }

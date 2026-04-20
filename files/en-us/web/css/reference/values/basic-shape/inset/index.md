@@ -1,5 +1,6 @@
 ---
-title: inset()
+title: "`inset()` CSS function"
+short-title: inset()
 slug: Web/CSS/Reference/Values/basic-shape/inset
 page-type: css-function
 browser-compat: css.types.basic-shape.inset

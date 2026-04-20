@@ -1,5 +1,6 @@
 ---
-title: :has()
+title: "`:has()` CSS pseudo-class"
+short-title: :has()
 slug: Web/CSS/Reference/Selectors/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
