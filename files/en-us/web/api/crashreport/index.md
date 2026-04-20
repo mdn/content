@@ -52,13 +52,23 @@ This is useful because we can store detailed diagnostic information throughout t
 The diagnostic information is stored in a special key-value store that can be manipulated using the document's {{domxref("CrashReportContext")}} object.
 This is accessed via the {{domxref("Window.crashReport")}} property.
 
-When the browser crashes, the information stored in the key-value store is added to a `CrashReport` and sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint), if it is defined. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
+When the browser crashes, the information stored in the key-value store is added to a `CrashReport` and sent to a reporting server. The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
+
+- If a `crash-reporting` server endpoint is defined, crash reports are delivered there. For example:
+  ```http
+  Reporting-Endpoints: crash-reporting="https://example.com/reports"
+  ```
+- If a `crash-reporting` endpoint is not defined, but a [`default` reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) is defined, crash reports are delivered there. For example:
+  ```http
+  Reporting-Endpoints: default="https://example.com/reports"
+  ```
+- If neither endpoint is defined, crash reports are not delivered.
 
 ## Examples
 
 ### Sending a report to a reporting endpoint
 
-Configuring a web page to send a crash report requires that you set a [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) using the {{httpheader("Reporting-Endpoints")}} header, for example `https://example.com/default`.
+Configuring a web page to send a crash report requires that you define a reporting server endpoint using the {{httpheader("Reporting-Endpoints")}} header, for example `https://example.com/reports`, as described earlier.
 
 A typical report structure is as follows:
 
