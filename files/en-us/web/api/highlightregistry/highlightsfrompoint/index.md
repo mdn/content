@@ -45,14 +45,15 @@ If no custom highlights are applied at the specified point, or the specified poi
 
 ### Output custom highlights applied at the mouse pointer position
 
-This example demonstrates using the `highlightsFromPoint()` method to return the content of all custom highlights located at the mouse pointer coordinates of a user's double-click. We'll enable applying multiple custom highlights to a paragraph of text, which can even be overlapping, when the user presses the <kbd>h</kbd> key. When the user double-clicks on the paragraph, if the click occurs within one or more highlights, the content of each double-clicked hilight gets written to the page.
+This example demonstrates using the `highlightsFromPoint()` method to return the content of all custom highlights located at the mouse pointer coordinates of a user's double-click. In this example, multiple custom highlights can be created on a paragraph of text, including overlapping ones. When the user presses the <kbd>h</kbd> key after selecting some text, a new {{domxref("Highlight")}} is named and registered, supporting up to three custom highlights at a time. When the user double-clicks on the paragraph, the content of all the double-clicked highlights, if any, are written to the page.
 
 #### HTML
 
-The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section")}} element. The user will be able to apply up to three custom highlights to the paragraph's text content. The `<section>` is included as the container where the highlighted text fragments will be displayed.
+The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section")}} element. The `<section>` is included as the container where the highlighted text fragments will be displayed.
 
 ```html live-sample___highlights-from-point-example
 <h1>highlightsFromPoint() demo</h1>
+<h2>Highlightable content</h2>
 <p class="highlightable-text">
   When you select a section of text then press "h" on the keyboard, the text you
   selected will be given a custom highlight. Multiple highlights will be colored
@@ -61,26 +62,25 @@ The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section"
   multiple highlights overlap the section, you'll see multiple text sections
   outputted.
 </p>
-<h2>Highlighted text at point</h2>
+<h2>Text of clicked highlights</h2>
 <section></section>
 ```
 
 #### CSS
 
-In the CSS, we define styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`. We select each custom highlight by passing its name into the {{cssxref("::highlight()")}} pseudo-element, giving them yellow, red, and blue background colors respectively.
+In the CSS, we define styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`. We select each custom highlight by passing its name into the {{cssxref("::highlight()")}} pseudo-element, making their backgrounds semi-transparent yellow, red, or blue, respectively, with areas of combined colors where the semi-transparent backgrounds of the highlights overlap.
 
 ```css live-sample___highlights-from-point-example
-:root::highlight(highlight1) {
-  background-color: rgb(255 255 0 / 0.5);
+::highlight(highlight1) {
+  background-color: rgb(255 255 0 / 0.75);
 }
 
-:root::highlight(highlight2) {
-  background-color: rgb(255 0 0 / 0.5);
+::highlight(highlight2) {
+  background-color: rgb(255 0 0 / 0.3);
 }
 
-:root::highlight(highlight3) {
-  background-color: rgb(0 0 255 / 0.75);
-  color: white;
+::highlight(highlight3) {
+  background-color: rgb(0 0 255 / 0.3);
 }
 ```
 
@@ -114,19 +114,15 @@ article {
   border: 2px solid #dddddd;
   border-radius: 5px;
 }
-
-.instructions {
-  font-size: 0.8rem;
-}
 ```
 
 #### JavaScript
 
-This example has two distinct areas of functionality. We first have to enable the creation of custom highlights when the clicks <kbd>h</kbd> after having selected some text. We then have to enable writing highlighted content to the page when the user double clicks on one or more custom highlights.
+This example has two distinct areas of functionality. We first have to enable the creation of custom highlights when the user clicks <kbd>h</kbd> after having selected some text. We then have to enable writing highlighted content to the page when the user double clicks on one or more custom highlights.
 
 ##### Creating and applying custom highlights
 
-To create custom highlights, we start by grabbing references to the `<p>` element and its contained text node. We then create a variable called `highlightCount`, initially set to `1`, which will be used to specify which custom highlight to apply later on.
+To create custom highlights, we start by grabbing references to the `<p>` element and its contained text node. We also create a variable called `highlightCount`, initially set to `1`, which will be used to specify which custom highlight to apply later on.
 
 ```js live-sample___highlights-from-point-example
 const pElem = document.querySelector(".highlightable-text");
@@ -134,7 +130,7 @@ const textNode = pElem.firstChild;
 let highlightCount = 1;
 ```
 
-Next, we define a [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handler that applies a custom highlight to any selected text if <kbd>h</kbd> is pressed on the keyboard. Inside, we start by grabbing the selected text using {{domxref("Window.getSelection()")}} and converting it to a {{domxref("Range")}} using {{domxref("Selection.getRangeAt()")}}.
+When the user presses the <kbd>h</kbd> key after selecting some text, we need to register and name a new {{domxref("Highlight")}} object, supporting up to three custom highlights at a time. To do this, we define a [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handler that applies a custom highlight to any selected text if <kbd>h</kbd> is pressed on the keyboard. Inside, we start by grabbing the selected text using {{domxref("Window.getSelection()")}} and converting it to a {{domxref("Range")}} using {{domxref("Selection.getRangeAt()")}}.
 
 We check that the `selectedRange` object's [`startContainer`](/en-US/docs/Web/API/AbstractRange/startContainer) and [`endContainer`](/en-US/docs/Web/API/AbstractRange/endContainer) are both equal to the paragraph `textNode`, to make sure we don't allow any cross-container highlights. If so, we set the custom `highlightName` we want to apply to the `selectedRange` using `highlight${highlightCount++}`. Since we are incrementing `highlightCount`, we add in a check — when it reaches `4`, we set it back to `1`. This has the effect of cycling through the available highlights in order as they are set.
 
@@ -189,6 +185,8 @@ pElem.addEventListener("dblclick", (event) => {
 #### Result
 
 {{EmbedLiveSample("highlights-from-point-example", "100%", "600")}}
+
+To create multiple highlights, select press <kbd>h</kbd> after selecting some text a few times. Double click on the highlights you created, preferably where they overlap, to write the content of the clicked highlights to the page.
 
 ## Specifications
 
