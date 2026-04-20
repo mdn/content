@@ -179,7 +179,7 @@ p {
 }
 
 @supports not (scroll-initial-target: nearest) {
-  body::before {
+  :root::before {
     content: "Your browser doesn't support the scroll-initial-target property.";
     background-color: wheat;
     display: block;
