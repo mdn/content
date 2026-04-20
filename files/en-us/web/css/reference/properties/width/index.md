@@ -329,7 +329,7 @@ We use the {{cssxref("display")}} property to make the parent a flex container, 
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```

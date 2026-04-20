@@ -183,9 +183,8 @@ p {
     content: "Your browser doesn't support the scroll-initial-target property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```

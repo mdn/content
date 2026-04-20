@@ -55,10 +55,7 @@ details:open > summary {
     display: block;
     width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

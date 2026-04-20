@@ -167,6 +167,7 @@ body::before {
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }

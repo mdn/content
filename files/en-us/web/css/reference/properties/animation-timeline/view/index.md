@@ -195,7 +195,7 @@ An important point to remember is that the animation lasts only as long as the `
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

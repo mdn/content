@@ -188,10 +188,6 @@ div {
     text-align: center;
     padding: 1rem 0;
   }
-
-  body > * {
-    display: none;
-  }
 }
 ```
 
@@ -272,10 +268,6 @@ div {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -398,22 +390,12 @@ section {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
   body::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -536,10 +518,6 @@ section {
     text-align: center;
     padding: 1rem 0;
   }
-
-  body > * {
-    display: none;
-  }
 }
 ```
 
@@ -613,22 +591,13 @@ div {
 }
 
 @supports not (corner-shape: square) {
-  body {
-    all: unset !important;
-  }
-
   body::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
