@@ -52,7 +52,7 @@ To solve this challenge, we are expecting you to create a basic website project,
        Describe the chairs (select all you agree with)
        Comfy
        Luxurious
-       Hi tec
+       Hi-tech
        Pretty
        Majestic
 
