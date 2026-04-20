@@ -29,41 +29,10 @@ There are several different features and problems on the web platform that gener
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
 
-The purpose of the Reporting API is to provide a consistent reporting mechanism that can be used to make such information available to developers in the form of reports represented by JavaScript objects. There are a few ways to use it, which are detailed in the sections below.
+The purpose of the Reporting API is to provide a consistent reporting mechanism that can be used to make such information available to developers in the form of reports represented by JavaScript objects.
 
-### Reporting server endpoints
-
-Each unique origin you want to get reports for can be given a series of "endpoints", which are named URLs (or groups of URLs) that can be sent reports from a user agent.
-A reporting server at these endpoints can collect the reports, and process and present them as needed by your application.
-
-The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify details about the different endpoints that a user-agent has available to it for delivering reports.
-The endpoints can then be used on particular HTTP response headers to indicate the specific endpoint (or in some cases endpoints) that will be used for the associated report.
-The directive or parameter used to specify an endpoint depends on the header.
-For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to, while the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field is used on {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}} to specify where to send integrity-policy violation reports.
-
-Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the "default reporting endpoint".
-This is just an endpoint named "default" specified using the `Reporting-Endpoints` header.
-
-> [!NOTE]
-> There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
-
-The reports themselves are sent to the target endpoint by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
-They are serializations of the corresponding dictionary for each [report type](#report_types).
-For example, CSP violation reports are a serialization of a {{domxref("CSPViolationReport")}} object.
-
-Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
-
-### Reporting observers
-
-Reports can also be obtained via {{domxref("ReportingObserver")}} objects created via JavaScript inside the website you are aiming to get reports on.
-This method is not as failsafe as sending reports to the server because any page crash could stop you retrieving the reports — but it is easier to set up, and more flexible.
-
-A `ReportingObserver` object is created using the {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} constructor, which is passed two parameters:
-
-- A callback function with two parameters — an array of the reports available in the observer's report queue and a copy of the same `ReportingObserver` object, which allows observation to be controlled directly from inside the callback. The callback runs when observation starts.
-- An options dictionary that allows you to specify the [types](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) of reports to collect, and whether reports generated before the observer was created should be observable (`buffered: true`).
-
-Methods are then available on the observer to start collecting reports ({{domxref("ReportingObserver.observe()")}}), retrieve the reports currently in the report queue ({{domxref("ReportingObserver.takeRecords()")}}), and disconnect the observer so it can no longer collect records ({{domxref("ReportingObserver.disconnect()")}}).
+Reports can be obtained within a page using JavaScript via reporting observers, or can be sent to a remote server endpoint.
+The types of reports and the two reporting approaches are detailed in the sections below.
 
 ### Report types
 
@@ -75,6 +44,52 @@ Reports sent to reporting endpoints and reporting observers are essentially the 
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
 
 A list of documented report types and their corresponding report dictionary are given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
+
+### Reporting observers
+
+Reports can be obtained via {{domxref("ReportingObserver")}} objects created via JavaScript inside the website you are aiming to get reports on.
+This method is not as failsafe as sending reports to the server because any page crash could stop you retrieving the reports — but it is easier to set up, and more flexible.
+
+A `ReportingObserver` object is created using the {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} constructor, which is passed two parameters:
+
+- A callback function with two parameters — an array of the reports available in the observer's report queue and a copy of the same `ReportingObserver` object, which allows observation to be controlled directly from inside the callback. The callback runs when observation starts.
+- An options dictionary that allows you to specify the [types](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) of reports to collect, and whether reports generated before the observer was created should be observable (`buffered: true`).
+
+Methods are then available on the observer to start collecting reports ({{domxref("ReportingObserver.observe()")}}), retrieve the reports currently in the report queue ({{domxref("ReportingObserver.takeRecords()")}}), and disconnect the observer so it can no longer collect records ({{domxref("ReportingObserver.disconnect()")}}).
+
+### Reporting server endpoints
+
+Reports can also be sent to remote _server endpoints_ by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+They are serializations of the corresponding dictionary for each [report type](#report_types).
+For example, CSP violation reports are a serialization of a {{domxref("CSPViolationReport")}} object.
+
+Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
+
+> [!NOTE]
+> There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
+
+The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify the name and URL for different endpoints that a user-agent has available to it for delivering reports.
+The endpoints can then be used on particular HTTP response headers to indicate the specific endpoint (or in some cases endpoints) that will be used for the associated report.
+Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) (this is just an endpoint named "default" specified using the `Reporting-Endpoints` header).
+
+The mechanism to specify server endpoint for each report is listed below.
+
+- `coep`
+  - `report-to` parameter on {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
+- `csp-violation`
+  - {{CSP("report-to")}} directive on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+- `integrity-violation`
+  - [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}
+- `permissions-policy-violation`
+  - `report-to` parameter on {{HTTPHeader("Permissions-Policy")}} or {{HTTPHeader("Permissions-Policy-Report-Only")}}
+  - [`"default"` endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint)
+- `crash`
+  - `crash-reporting` endpoint
+  - `default` endpoint.
+- `deprecation`
+  - `default` endpoint.
+- `intervention`
+  - `default` endpoint.
 
 ### Generating reports via WebDriver
 
@@ -121,18 +136,6 @@ These HTTP response headers define the endpoints where reports are sent.
     These endpoints can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
   - : No longer part of the Reporting API but still supported by some browsers. This sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers especially for [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) that has not yet been updated to support `Reporting-Endpoints`. Other Reporting API reports should use `Reporting-Endpoints` instead for better future support.
-
-Report endpoints can be set for the following reports using the {{CSP("report-to")}} directive or parameter on the corresponding headers:
-
-- COEP violations
-  - : {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}.
-- CSP violations
-  - : {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
-
-Report endpoints can be set for the following reports using the [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in a structured dictionary on the corresponding headers:
-
-- Integrity-Policy violations
-  - : {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 
 ## Examples
 
