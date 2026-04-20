@@ -12,12 +12,12 @@ sidebar: http
 {{SeeCompatTable}}
 
 The HTTP **`Permissions-Policy-Report-Only`** {{Glossary("response header")}} provides a mechanism for website administrators to report on violations of a {{HTTPHeader("Permissions-Policy")}} without enforcing them.
-This allows testing and fixing of a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) issues before a policy is deployed.
+This allows testing and fixing of [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) issues before a policy is deployed.
 
 The syntax and behavior is exactly the same as for `Permissions-Policy` except:
 
 - The policy is not enforced.
-- Policy violation report objects ({{domxref("PermissionsPolicyViolationReport")}}) have the value `body.disposition="report"` (instead of `"enforce"`).
+- Policy violation report objects ({{domxref("PermissionsPolicyViolationReport")}}) have a `body.disposition` value of `"report"` instead of `"enforce"`.
 
 See {{HTTPHeader("Permissions-Policy")}} for more information (most of its content has not been duplicated below).
 
@@ -55,7 +55,7 @@ Reporting-Endpoints: geo_endpoint="https://example.com/reports"
 Permissions-Policy-Report-Only: geolocation=();report-to=geo_endpoint
 ```
 
-By specifying `geolocation=()` for the origin list, it is violation to access geolocation for all browsing contexts (this includes all `<iframe>`s), regardless of their origin.
+By specifying `geolocation=()` for the origin list, it is a violation for any browsing context to access geolocation (this includes `<iframe>`s), regardless of origin.
 The `report-to` parameter indicates that reports will be sent to the endpoint named `geo_endpoint`.
 The mapping between `geo_endpoint` and the URL where reports are to be sent is provided in `Reporting-Endpoints`.
 
@@ -68,7 +68,7 @@ navigator.geolocation.getCurrentPosition(
 );
 ```
 
-The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) sent to the endpoint might look like the JSON below.
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) sent to the endpoint will have the same structure as the JSON sample shown below.
 This is the same as a report for `Permissions-Policy` except for the value of `body.disposition`.
 
 ```json
@@ -77,7 +77,7 @@ This is the same as a report for `Permissions-Policy` except for the value of `b
     "age": 48512,
     "body": {
       "columnNumber": 29,
-      "disposition": "report", // A violation that is reported and not enforced
+      "disposition": "report", // A violation that is reported but not enforced
       "lineNumber": 44,
       "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
       "featureId": "geolocation",

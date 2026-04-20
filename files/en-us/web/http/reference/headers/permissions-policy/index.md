@@ -42,7 +42,7 @@ Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
 Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
 ```
 
-The header can be used to set the allowlists for one or more directives, and optionally a per-directive `report-to` parameter indicating the server endpoint for reporting violations of the policy.
+The header can be used to set the allowlists for one or more directives, and optionally a per-directive `report-to` parameter indicating the server endpoint to send policy violation reports to.
 The entries for each directive are comma separated.
 
 - `<directive>`

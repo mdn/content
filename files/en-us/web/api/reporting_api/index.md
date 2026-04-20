@@ -31,7 +31,7 @@ There are several different features and problems on the web platform that gener
 
 The purpose of the Reporting API is to provide a consistent reporting mechanism that can be used to make such information available to developers in the form of reports represented by JavaScript objects.
 
-Reports can be obtained within a page using JavaScript via reporting observers, or can be sent to a remote server endpoint.
+Reports can be retrieved via JavaScript reporting observers or sent to a remote server endpoint.
 The types of reports and the two reporting approaches are detailed in the sections below.
 
 ### Report types
@@ -43,12 +43,12 @@ The type of report can be determined from its `type` property, which for the rep
 Reports sent to reporting endpoints and reporting observers are essentially the same.
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
 
-A list of documented report types and their corresponding report dictionary are given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
+A list of documented report types and their corresponding report dictionaries is given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
 
 ### Reporting observers
 
 Reports can be obtained via {{domxref("ReportingObserver")}} objects created via JavaScript inside the website you are aiming to get reports on.
-This method is not as failsafe as sending reports to the server because any page crash could stop you retrieving the reports — but it is easier to set up, and more flexible.
+This method is not as failsafe as sending reports to the server because any page crash could stop you from retrieving the reports; it is, however, easier to set up, and more flexible.
 
 A `ReportingObserver` object is created using the {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} constructor, which is passed two parameters:
 
@@ -69,10 +69,10 @@ Reports sent to endpoints can be retrieved independently of the running of the w
 > There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
 The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify the name and URL for different endpoints that a user-agent has available to it for delivering reports.
-The endpoints can then be used on particular HTTP response headers to indicate the specific endpoint (or in some cases endpoints) that will be used for the associated report.
+The endpoints can then be specified within particular HTTP response headers to indicate the endpoint (or in some cases, endpoints) that associated reports will be delivered to.
 Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) (this is just an endpoint named "default" specified using the `Reporting-Endpoints` header).
 
-The mechanism to specify server endpoint for each report is listed below.
+The mechanism to specify server endpoints for each report is listed below.
 
 - `coep`
   - `report-to` parameter on {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
