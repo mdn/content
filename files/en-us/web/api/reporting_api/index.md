@@ -36,14 +36,27 @@ The types of reports and the two reporting approaches are detailed in the sectio
 
 ### Report types
 
-Reports sent to reporting observers are instances of dictionary objects, such as {{domxref("COEPViolationReport")}}, {{domxref("CrashReport")}}, {{domxref("DeprecationReport")}}, {{domxref("IntegrityViolationReport")}}, {{domxref("InterventionReport")}}, {{domxref("CSPViolationReport")}}, and {{domxref("PermissionsPolicyViolationReport")}}.
-These all have an origin `url`, a `type`, and a `body` that is specific to the report type.
-The type of report can be determined from its `type` property, which for the reports above would be `coep`, `crash`, `deprecation`, `integrity-violation`, `intervention`, `csp-violation`, and `permissions-policy-violation`.
+Reports sent to reporting observers are instances of dictionary objects.
+These all have `type`, `url`, and `body` properties, where the `type` indicates the type of report, and the `body` is specific to the report type.
 
-Reports sent to reporting endpoints and reporting observers are essentially the same.
+Reports sent to reporting endpoints are essentially the same.
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
 
-A list of documented report types and their corresponding report dictionaries is given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
+The following table lists the documented report types, their corresponding report dictionaries, and notes on the violation.
+Note that except for `crash` reports, which can't be observed in JavaScript (because the observing page has crashed), all the listed reports are visible in both observers and can be sent to server endpoints.
+
+| Type                           | Report object                                   | Notes                                                                                      |
+| ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `coep`                         | {{domxref("COEPViolationReport")}}              | {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) violations                           |
+| `coop`                         | `COOPViolationReport`                           | {{httpheader("Cross-Origin-Opener-Policy")}} (COOP) violations                             |
+| `crash`                        | {{domxref("CrashReport")}}                      | Browser crash reports                                                                      |
+| `csp-violation`                | {{domxref("CSPViolationReport")}}               | [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations                |
+| `deprecation`                  | {{domxref("DeprecationReport")}}                | Deprecated features used by the site.                                                      |
+| `integrity-violation`          | {{domxref("IntegrityViolationReport")}}         | {{httpheader("Integrity-Policy")}} violations                                              |
+| `intervention`                 | {{domxref("InterventionReport")}}               | Features blocked by the user agent, such as ads that significantly impact page performance |
+| `permissions-policy-violation` | {{domxref("PermissionsPolicyViolationReport")}} | {{httpheader("Permissions-Policy")}} violations                                            |
+
+A list of the types is also is given in the [`options.types`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#types) parameter passed to the `ReportingObserver()` constructor.
 
 ### Reporting observers
 
