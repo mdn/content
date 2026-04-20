@@ -63,7 +63,6 @@ In your extension's `manifest.json` file, declare `host_permissions` for the dom
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["storage"],
   "host_permissions": ["https://*/*"]
 }
 ```
@@ -94,43 +93,18 @@ Add a mechanism to enter the registration JSON. In this case, a pop-up; you coul
 
 ### Register the credentials
 
-In your extension script, parse the options JSON and call `navigator.credentials.create()`. The key detail is that you set `rp.id` to a domain covered by your extension's host permissions, even though your extension is not running on that domain.
+In your extension script, parse the options JSON and call `navigator.credentials.create()` with `publicKey` in the {{domxref("PublicKeyCredential")}} format. The key detail is that you set `rp.id` to a domain covered by your extension's host permissions, even though your extension is not running on that domain.
 
-Binary fields, such as `challenge` and `user.id`, must be converted to `ArrayBuffer` instances. If your JSON input uses Base64 strings, add code to convert them:
-
-```js
-function base64ToArrayBuffer(base64) {
-  const binaryString = window.atob(base64);
-  const bytes = new Uint8Array(binaryString.length);
-  for (let i = 0; i < binaryString.length; i++) {
-    bytes[i] = binaryString.charCodeAt(i);
-  }
-  return bytes.buffer;
-}
-
-function convertOptions(options) {
-  if (typeof options.challenge === "string") {
-    options.challenge = base64ToArrayBuffer(options.challenge);
-  }
-  if (options.user && typeof options.user.id === "string") {
-    options.user.id = base64ToArrayBuffer(options.user.id);
-  }
-  if (options.allowCredentials) {
-    options.allowCredentials = options.allowCredentials.map((cred) => ({
-      ...cred,
-      id: base64ToArrayBuffer(cred.id),
-    }));
-  }
-  return options;
-}
-```
+Binary fields, such as `challenge` and `user.id`, must be passed as typed arrays or `ArrayBuffer` instances. If your JSON input uses base64-encoded strings, the {{jsxref("Uint8Array.fromBase64")}} method can be used to convert them.
 
 You can then add code to register the credentials:
 
 ```js
 // Registration
 async function register(optionsJSON) {
-  const options = convertOptions(JSON.parse(optionsJSON));
+  const options = JSON.parse(optionsJSON);
+  options.challenge = Uint8Array.fromBase64(options.challenge);
+  options.user.id = Uint8Array.fromBase64(options.user.id);
   const credential = await navigator.credentials.create({ publicKey: options });
   console.log("Credential created:", credential);
   return credential;
@@ -157,11 +131,17 @@ The JSON you use to perform the registration, with `rp.id` set to an external do
 
 ### Authenticate the credential
 
-To authenticate the credentials, call `navigator.credentials.get()` with the `rpId` in the JSON set to the target domain. Again, you need to convert binary fields, such as `challenge` and `user.id`, to `ArrayBuffer` instances before asserting:
+To authenticate the credentials, call `navigator.credentials.get()` with the `rpId` in the JSON set to the target domain. Again, you need to convert binary fields, such as `challenge`, from the base64-encoded string as used in the example, to `Uint8Array` instances before asserting:
 
 ```js
 async function authenticate(optionsJSON) {
-  const options = convertOptions(JSON.parse(optionsJSON));
+  const options = JSON.parse(optionsJSON);
+  options.id = Uint8Array.fromBase64(options.challenge);
+  if (Array.isArray(options.allowCredentials)) {
+    for (const ac of options.allowCredential) {
+      ac.id = Uint8Array.fromBase64(ac.id);
+    }
+  }
   const assertion = await navigator.credentials.get({ publicKey: options });
 
   const clientDataJSON = new TextDecoder().decode(
