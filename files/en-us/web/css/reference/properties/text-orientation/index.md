@@ -1,5 +1,6 @@
 ---
-title: text-orientation
+title: "`text-orientation` CSS property"
+short-title: text-orientation
 slug: Web/CSS/Reference/Properties/text-orientation
 page-type: css-property
 browser-compat: css.properties.text-orientation

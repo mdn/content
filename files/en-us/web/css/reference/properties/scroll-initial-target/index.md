@@ -1,5 +1,6 @@
 ---
-title: scroll-initial-target
+title: "`scroll-initial-target` CSS property"
+short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 page-type: css-property
 status:

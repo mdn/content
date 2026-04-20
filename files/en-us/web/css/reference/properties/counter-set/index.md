@@ -1,5 +1,6 @@
 ---
-title: counter-set
+title: "`counter-set` CSS property"
+short-title: counter-set
 slug: Web/CSS/Reference/Properties/counter-set
 page-type: css-property
 browser-compat: css.properties.counter-set

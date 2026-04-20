@@ -41,8 +41,8 @@ The `params` field contains:
 
 The `alwaysMatch` and `firstMatch` objects can include the following features:
 
-- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
-  - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
+- `acceptInsecureCerts` {{optional_inline}}
+  - : A boolean that controls whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
 - `browserName` {{optional_inline}}
   - : A string that specifies the name of the browser to use (for example, `"firefox"` or `"chrome"`).
 - `browserVersion` {{optional_inline}}

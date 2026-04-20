@@ -7,9 +7,10 @@ browser-compat: api.NavigationTransition
 
 {{APIRef("Navigation API")}}
 
-The **`NavigationTransition`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents an ongoing navigation, that is, a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation/navigateerror_event", "navigateerror")}} stage.
+The **`NavigationTransition`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} represents an ongoing navigation — a navigation that hasn't yet reached the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} or {{domxref("Navigation/navigateerror_event", "navigateerror")}} stage.
 
 It is accessed via the {{domxref("Navigation.transition")}} property.
+Note that this property is only populated while the [`intercept()`](/en-US/docs/Web/API/NavigateEvent/intercept) handler is unresolved (i.e., during a [navigation interception](/en-US/docs/Web/API/Navigation/navigate_event#handling_a_navigation_using_intercept)), and is otherwise `null`.
 
 {{InheritanceDiagram}}
 
@@ -21,6 +22,8 @@ It is accessed via the {{domxref("Navigation.transition")}} property.
   - : Returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.
 - {{domxref("NavigationTransition.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Returns the type of the ongoing navigation.
+- {{domxref("NavigationTransition.to", "to")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("NavigationDestination")}} that the transition is navigating to.
 
 ## Examples
 

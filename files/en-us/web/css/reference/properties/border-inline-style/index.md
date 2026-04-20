@@ -1,5 +1,6 @@
 ---
-title: border-inline-style
+title: "`border-inline-style` CSS property"
+short-title: border-inline-style
 slug: Web/CSS/Reference/Properties/border-inline-style
 page-type: css-property
 browser-compat: css.properties.border-inline-style

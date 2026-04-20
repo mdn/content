@@ -1,5 +1,6 @@
 ---
-title: :out-of-range
+title: "`:out-of-range` CSS pseudo-class"
+short-title: :out-of-range
 slug: Web/CSS/Reference/Selectors/:out-of-range
 page-type: css-pseudo-class
 browser-compat: css.selectors.out-of-range

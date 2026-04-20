@@ -1,5 +1,6 @@
 ---
-title: box-flex-group
+title: "`box-flex-group` CSS property"
+short-title: box-flex-group
 slug: Web/CSS/Reference/Properties/box-flex-group
 page-type: css-property
 status:
