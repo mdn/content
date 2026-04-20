@@ -192,7 +192,7 @@ Note that the `type` is `"permissions-policy-violation"` and the `body` property
       "disposition": "enforce",
       "lineNumber": 44,
       "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
-      "policyId": "geolocation" /* Note: Chrome server-report version of featureId*/,
+      "policyId": "geolocation", // Note: Chrome server-report version of featureId
       "sourceFile": "https://example.com/"
     },
     "type": "permissions-policy-violation",
