@@ -205,7 +205,7 @@ In the following example, we've declared a reversed counter named 'priority'. Th
 ```css hidden
 @supports not (counter-reset: reversed(priority)) {
   body::before {
-    content: "Your browser doesn't support the reversed counters yet.";
+    content: "Your browser doesn't support the reversed() function.";
     background-color: wheat;
     display: block;
     text-align: center;
