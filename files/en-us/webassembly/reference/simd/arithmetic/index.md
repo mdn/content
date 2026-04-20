@@ -32,7 +32,7 @@ WebAssembly SIMD-specific arithmetic instructions.
 ## Lane-wise saturating rounding multiplication
 
 - [`q15mulr_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/q15mulr_sat_s)
-  - : Performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed `v128` `i16x8` value interpretations, outputting a single `i16x8` value interpretation.
+  - : performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed `v128` `i16x8` value interpretations — clamping the output to the range allowed by the value type (a single `i16x8` value interpretation).
 
 ## Min and max
 
@@ -52,40 +52,40 @@ WebAssembly SIMD-specific arithmetic instructions.
 ## Multiply and extend
 
 - [`extmul_low_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i8x16_s)
-  - : Takes lanes 0–7 of two signed `v128` `i8x16` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i16x8` value interpretation.
+  - : Takes lanes 0–7 of two signed `v128` `i8x16` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i16x8` value interpretation.
 - [`extmul_high_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i8x16_s)
-  - : Takes lanes 8–15 of two signed `v128` `i8x16` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i16x8` value interpretation.
+  - : Takes lanes 8–15 of two signed `v128` `i8x16` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i16x8` value interpretation.
 - [`extmul_low_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i8x16_u)
-  - : Takes lanes 0–7 of two unsigned `v128` `i8x16` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i16x8` value interpretation.
+  - : Takes lanes 0–7 of two unsigned `v128` `i8x16` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i16x8` value interpretation.
 - [`extmul_high_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i8x16_u)
-  - : Takes lanes 8–15 of two unsigned `v128` `i8x16` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i16x8` value interpretation.
+  - : Takes lanes 8–15 of two unsigned `v128` `i8x16` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i16x8` value interpretation.
 - [`extmul_low_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i16x8_s)
-  - : Takes lanes 0–3 of two signed `v128` `i16x8` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i32x4` value interpretation.
+  - : Takes lanes 0–3 of two signed `v128` `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 - [`extmul_high_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i16x8_s)
-  - : Takes lanes 4–7 of two signed `v128` `i16x8` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i32x4` value interpretation.
+  - : Takes lanes 4–7 of two signed `v128` `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 - [`extmul_low_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i16x8_u)
-  - : Takes lanes 0–3 of two unsigned `v128` `i16x8` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i32x4` value interpretation.
+  - : Takes lanes 0–3 of two unsigned `v128` `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 - [`extmul_high_i16x8_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i16x8_u)
-  - : Takes lanes 4–7 of two unsigned `v128` `i16x8` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i32x4` value interpretation.
+  - : Takes lanes 4–7 of two unsigned `v128` `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 - [`extmul_low_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i32x4_s)
-  - : Takes lanes 0–1 of two signed `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
+  - : Takes lanes 0–1 of two signed `v128` `i32x4` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i64x2` value interpretation.
 - [`extmul_high_i32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i32x4_s)
-  - : Takes lanes 2–3 of two signed `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
+  - : Takes lanes 2–3 of two signed `v128` `i32x4` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i64x2` value interpretation.
 - [`extmul_low_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_low_i32x4_u)
-  - : Takes lanes 0–1 of two unsigned `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
+  - : Takes lanes 0–1 of two unsigned `v128` `i32x4` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i64x2` value interpretation.
 - [`extmul_high_i32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extmul_high_i32x4_u)
-  - : Takes lanes 2–3 of two unsigned `v128` `i32x4` value interpretations, multiplies the equivalent lanes of each value together, and outputs the products of those operations into an `i64x2` value interpretation.
+  - : Takes lanes 2–3 of two unsigned `v128` `i32x4` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i64x2` value interpretation.
 
 ## Saturated addition and subtraction
 
 - [`add_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_s)
-  - : Performs a saturating addition of two signed `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two signed `v128` value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
 - [`add_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/add_sat_u)
-  - : Performs a saturating addition of two unsigned `v128` value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+  - : Performs a saturating addition of two unsigned `v128` value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
 - [`sub_sat_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_s)
-  - : Performs a saturating subtraction of two signed `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
+  - : Performs a saturating subtraction of two signed `v128` value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
 - [`sub_sat_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/sub_sat_u)
-  - : Performs a saturating subtraction of two unsigned `v128` value interpretations. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
+  - : performs a saturating subtraction of two unsigned `v128` value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
 
 ## See also
 

@@ -75,13 +75,13 @@ WebAssembly SIMD conversion instructions.
 ## SIMD-specific trunc instructions
 
 - [`trunc_sat_f32x4_s`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_s)
-  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation.
+  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a `v128` `f32x4` value interpretation into a signed `i32x4` value interpretation, clamping the output to the range allowed by the value type.
 - [`trunc_sat_f32x4_u`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_u)
-  - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into an unsigned `i32x4` value interpretation.
+  - : Performs a saturating conversion of the lanes of a `v128` `f32x4` value interpretation into an unsigned `i32x4` value interpretation, clamping the output to the range allowed by the value type.
 - [`trunc_sat_f64x2_s_zero`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_s_zero)
-  - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into a signed `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+  - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into a signed `i32x4` value interpretation, clamping the output to the range allowed by the value type. The two higher lanes of the result are initialized to zero.
 - [`trunc_sat_f64x2_u_zero`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_u_zero)
-  - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+  - : Performs a saturating conversion of the lanes of a `v128` `f64x2` value interpretation into an unsigned `i32x4` value interpretation, clamping the output to the range allowed by the value type. The two higher lanes of the result are initialized to zero.
 
 > [!NOTE]
 > See also the non-SIMD-specific [`trunc`](/en-US/docs/WebAssembly/Reference/Numeric/trunc) instruction.

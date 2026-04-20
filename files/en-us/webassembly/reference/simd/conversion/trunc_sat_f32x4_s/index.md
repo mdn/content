@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.trunc_sat_f32x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_sat_f32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into a signed `i32x4` value interpretation.
+The **`trunc_sat_f32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into a signed `i32x4` value interpretation, clamping the output to the range allowed by the value type.
 
 {{InteractiveExample("Wat Demo: trunc_sat_f32x4_s", "tabbed-taller")}}
 
@@ -29,7 +29,7 @@ The **`trunc_sat_f32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembl
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-Saturation means that output values are clamped to within a certain range: `−2,147,483,648` to `2,147,483,647` (the full range of a signed 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
+Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation instead of wrapping. Allowed output values are `−2,147,483,648` to `2,147,483,647` (the full range of a signed 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
 
 ## Syntax
 

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.add_sat_u
 sidebar: webassemblysidebar
 ---
 
-The **`add_sat_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+The **`add_sat_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
 
 {{InteractiveExample("Wat Demo: add_sat_u", "tabbed-taller")}}
 
@@ -30,7 +30,7 @@ The **`add_sat_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Refere
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-Saturation means that output values are clamped to within a certain range:
+Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation instead of wrapping. Allowed output values are:
 
 - `i8x16.add_sat_u`: `0` to `255` (the full range of an unsigned 8-bit integer)
 - `i16x8.add_sat_u`: `0` to `65,535` (the full range of an unsigned 16-bit integer)
