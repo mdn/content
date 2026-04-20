@@ -106,6 +106,9 @@ img:focus {
 ```
 
 ```css hidden
+img {
+  max-height: 100vh;
+}
 @media not (dynamic-range: high) {
   body::before {
     content: "Your device may not display the image at full brightness.";
