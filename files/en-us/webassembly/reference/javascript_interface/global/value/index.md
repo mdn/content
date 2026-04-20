@@ -14,7 +14,7 @@ The **`value`** property of the
 
 A string indicating the value of the global.
 
-For the setter to work, the global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was first initialized), and the new value must have the same [`data_type`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#value) as the global.
+For the setter to work, the global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was declared), and the global's value must have the same data type as the one specified in the constructor's [`value`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#value) property when the global was first created.
 
 ## Examples
 
@@ -53,5 +53,5 @@ console.log(myGlobal.value);
 
 ## See also
 
-- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) text instruction
+- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) definition
 - [WebAssembly](/en-US/docs/WebAssembly)

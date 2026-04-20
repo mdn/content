@@ -45,5 +45,5 @@ console.log(myGlobal.valueOf());
 
 ## See also
 
-- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) text instruction
+- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) definition
 - [WebAssembly](/en-US/docs/WebAssembly)

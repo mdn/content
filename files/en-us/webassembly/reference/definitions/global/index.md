@@ -15,7 +15,7 @@ The **`global`** definition declares a new global variable.
   (import "console" "log" (func $log (param i32)))
 
   ;; Import a global variable from js
-  (global $from_js (import "env" "from_js") i32)
+  (import "env" "from_js" (global $from_js i32))
 
   ;; Create a global variable
   (global $from_wasm (mut i32) (i32.const 10))
@@ -52,11 +52,11 @@ global identifier type initial_value
 ```
 
 - `global`
-  - : The `global` instruction type. Must always be included first.
+  - : The `global` definition type. Must always be included first.
 - `identifier` {{optional_inline}}
   - : An identifying name for the global. This must begin with a `$` symbol, for example `$my_global`.
 - `type`
-  - : The type of global to create. This can consist of one or two separate values:
+  - : The type of global to create. This can consist of one or two items:
     - `mut` {{optional_inline}}
       - : The `mut` flag. If included, the global is mutable — it can be set to a different value after initialization via the [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set) instruction.
     - `data_type`
@@ -69,26 +69,32 @@ global identifier type initial_value
         - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
         - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
 - `initial_value`
-  - : The initializer for the new global. Its value must be a literal or a [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get) of another global, and its type must be the same as the declared [`type`](#type).
+  - : The initializer for the new global. Its value can be:
+    - A literal value.
+    - A [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get) of another global.
+    - An expression such as an addition, division, or multiplication, an array declaration, or a struct declaration.
+
+    The `initial_value` type must be the same as the declared [`type`](#type).
 
 ## Description
 
 The WebAssembly `global` definition enables globally-scoped variables to be defined inside a Wasm module. Global variables can be:
 
 - Retrieved via [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get) and used from anywhere inside the module.
-- Mutated via [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set), provided the [`mut`](#mut) flag was included when the global was first initialized. Attempting to mutate a non-mutable variable results in a validation error.
-- Exported to pass them into JavaScript, provided the global in question does not contain a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) (SIMD) type.
-
-  For example:
+- Mutated via [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set), provided the [`mut`](#mut) flag was included when the global was declared. Attempting to mutate a non-mutable variable results in a validation error.
+- Exported to pass them into JavaScript. For example:
 
   ```wat
   (global $my_global (mut i32) (i32.const 0))
   (export "my_global" (global $my_global))
   ```
 
+> [!NOTE]
+> If a global contains a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) (SIMD) type, you can export it, but attempting to read the global's value via JavaScript will result in a `TypeError`.
+
 ### Creating globals from JavaScript
 
-It is also possible to create a Wasm global from within the JavaScript host using the {{jsxref("WebAssembly.Global.Global", "WebAssembly.Global()")}} constructor then import it into the module.
+It is also possible to create a Wasm global from within the JavaScript host using the {{jsxref("WebAssembly.Global.Global", "WebAssembly.Global()")}} constructor then importing it into the module.
 
 For example:
 
@@ -105,11 +111,9 @@ const { instance } = await WebAssembly.instantiateStreaming(
 
 ### Sharing globals between modules
 
-It isn't possible to share a reference to a global initialized inside a Wasm module. If you were to export it and then import it into another module, the second module would get its own separate copy, and the scope wouldn't be shared.
+It is possible to share globals declared inside Wasm modules, or inside the JavaScript host, between multiple modules.
 
-To share global state between multiple modules, you need to create the global inside the JavaScript host, and then import it into the modules.
-
-For example:
+For example, the state of the global created below is shared between two different modules:
 
 ```js
 const shared = new WebAssembly.Global({ value: "i32", mutable: true }, 0);

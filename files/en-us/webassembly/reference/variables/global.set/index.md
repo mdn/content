@@ -43,7 +43,7 @@ global.set identifier
     - `name`
       - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first intialized. This must begin with a `$` symbol, for example `$my_global`.
     - `index`
-      - : The global's index number, for example `0` for the first global in the wasm script, `1` for the second, etc.
+      - : The global's index number, for example `0` for the first global in the Wasm script, `1` for the second, etc.
 
 ### Type
 
@@ -52,7 +52,7 @@ global.set identifier
 ```
 
 - `new_value`
-  - : The new value set for the global. For the `global.set` instruction to succeed, the global must be mutable (the [`mut`](/en-US/docs/WebAssembly/Reference/Definitions/global#mut) flag was set when it was first initialized), and the `new_value` must have the same [`data_type`](/en-US/docs/WebAssembly/Reference/Definitions/global#data_type) as the global.
+  - : The new value set for the global. For the `global.set` instruction to succeed, the global must be mutable (the [`mut`](/en-US/docs/WebAssembly/Reference/Definitions/global#mut) flag was set when it was declared), and the `new_value` must have the same [`data_type`](/en-US/docs/WebAssembly/Reference/Definitions/global#data_type) as the global.
 
 ### Opcodes
 
