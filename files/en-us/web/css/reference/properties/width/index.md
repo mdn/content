@@ -270,7 +270,7 @@ p.min-pink {
 
 ```css hidden
 @supports not (width: calc-size(min-content, size * 2)) {
-  body::after {
+  body::before {
     content: "Your browser doesn't support the calc-size() function yet.";
     background-color: wheat;
     display: block;
