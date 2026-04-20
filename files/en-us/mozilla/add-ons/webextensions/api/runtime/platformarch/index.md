@@ -29,6 +29,9 @@ Values of this type are strings. Possible values are:
 - `"x86-64"`
   - : The platform is based on the x86 64-bit architecture.
 
+> [!NOTE]
+> This list may be incomplete. In particular, it may not reflect unofficial builds for other platforms.
+
 {{WebExtExamples}}
 
 ## Browser compatibility
