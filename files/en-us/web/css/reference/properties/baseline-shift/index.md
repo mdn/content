@@ -140,9 +140,9 @@ svg {
   width: 15em;
   margin-bottom: 10px;
 }
-@supports not (baseline-shift: sub) {
+@supports not (baseline-shift: top) {
   body::before {
-    content: "Your browser doesn't support the `baseline-shift` property.";
+    content: "Your browser doesn't support all the `baseline-shift` property values.";
     background-color: wheat;
     display: block;
     text-align: center;

@@ -256,16 +256,11 @@ div {
 }
 
 @supports not (corner-shape: scoop notch) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
@@ -390,7 +385,7 @@ section {
 }
 
 @supports not (corner-shape: scoop) {
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
     background-color: wheat;
     display: block;
@@ -505,16 +500,10 @@ section {
 }
 
 @supports not (corner-shape: superellipse(0)) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
@@ -591,11 +580,10 @@ div {
 }
 
 @supports not (corner-shape: square) {
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
