@@ -17,7 +17,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
   - : Specifies the {{cssxref("font-size")}} scale opt-in behavior.
     Its value is a keyword, which can be one of the following:
     - `scale`
-      - : Opts the page in to having the {{htmlelement("html")}} root element's {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. It also causes the browser to disable existing browser-based mechanisms (such as full-page zoom on Windows) and heuristics (for example, text autosizing on mobile).
+      - : Opts the page in to having the {{htmlelement("html")}} root element's {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. It also causes the browser to disable existing browser-based mechanisms and heuristics (for example, text autosizing on mobile).
     - `legacy`
       - : The default value. The page is not opted in to the root element's `font-size` scaling in proportion to OS and browser-level text scale settings.
 
@@ -25,18 +25,21 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 The `<meta name="text-scale" content="scale">` element can be included in a page to make the {{htmlelement("html")}} root element's `font-size` scale in proportion to OS and browser-level text scale settings. In practice, this means that in supporting browsers, provided you don't set a root `font-size` in units unrelated to font size (like pixels or viewport units), relative `font-size` settings such as `2em` or `1rem` will be scaled in proportion to user OS or browser font size settings.
 
+Recommended usage is to:
+
+1. Include `<meta name="text-scale" content="scale" />` in your page.
+2. Not override the default {{cssxref(":root")}} `font-size`.
+3. Use only `em`/`rem` units or keywords such as `small`, `x-large`, etc. to size content.
+4. Not use the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable to size dimensions. This has similar effects, but the `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
+
+   Avoid including both these features as this may result in text scaling being applied twice, with small font sizes being smaller and large font sizes being larger.
+
 This means that you can signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences. It also causes the browser to disable existing browser-based mechanisms and heuristics.
 
 For example:
 
 - In Chrome for Android, `rem` and `em` font sizes will scale in proportion to the global OS "Font size" setting. Text autosizing is disabled.
 - In Chrome for desktop, the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable will reflect the multiplier that corresponds to Chrome's Settings > Appearance > Font size, but other than that, it has no discernable effect.
-- In Chrome for Windows, in addition to the above point, full-page zoom is disabled.
-
-> [!NOTE]
-> You can also set page sizes to be proportional to browser or OS-level font settings by using the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable to size dimensions. However, unless it is not supported in your target browser set or you are not able to edit the HTML, you are advised to use the `<meta>` tag rather than the `env()` variable. The `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
->
-> You are also advised not to use both — this results in the text scaling unexpectedly, with small font sizes being smaller and large font sizes being larger.
 
 > [!NOTE]
 > The `<meta name="text-scale" content="scale">` element also has other effects in Android Webview: see https://chromium.googlesource.com/chromium/src/+/b29d63222d10f4c7e620d057578d737969eb7ae3.
