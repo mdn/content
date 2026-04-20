@@ -73,7 +73,7 @@ The `body.disposition` field shows that the violation was enforced or only repor
 }
 ```
 
-Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) indicated by name in a per-directive `report-to` parameter, or otherwise to the [`default` reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint).
+Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) indicated by name in a per-directive `report-to` parameter, with fallback to the [`default` reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) (if defined).
 The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} response header.
 
 The structure of the server report is almost exactly the same as `PermissionsPolicyViolationReport`, except that it additionally includes `age` and `user_agent` fields.
