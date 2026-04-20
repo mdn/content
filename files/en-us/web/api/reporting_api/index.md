@@ -72,24 +72,37 @@ The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify the nam
 The endpoints can then be specified within particular HTTP response headers to indicate the endpoint (or in some cases, endpoints) that associated reports will be delivered to.
 Report types that don't have an associated HTTP header, such as `crash`, `deprecation`, and `intervention` reports, will usually send reports to the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) (this is just an endpoint named "default" specified using the `Reporting-Endpoints` header).
 
-The mechanism to specify server endpoints for each report is listed below.
+The mechanisms to specify server endpoints for each report type are listed below:
 
-- `coep`
-  - `report-to` parameter on {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
-- `csp-violation`
-  - {{CSP("report-to")}} directive on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
-- `integrity-violation`
-  - [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}
-- `permissions-policy-violation`
-  - `report-to` parameter on {{HTTPHeader("Permissions-Policy")}} or {{HTTPHeader("Permissions-Policy-Report-Only")}}
-  - [`"default"` endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint)
-- `crash`
-  - `crash-reporting` endpoint
-  - `default` endpoint.
-- `deprecation`
-  - `default` endpoint.
-- `intervention`
-  - `default` endpoint.
+`coep`
+
+- `report-to` parameter on {{HTTPHeader("Cross-Origin-Embedder-Policy")}} or {{HTTPHeader("Cross-Origin-Embedder-Policy-Report-Only")}}
+
+`csp-violation`
+
+- {{CSP("report-to")}} directive on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+
+`integrity-violation`
+
+- [`endpoints`](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) field in {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}
+
+`permissions-policy-violation`
+
+- `report-to` parameter on {{HTTPHeader("Permissions-Policy")}} or {{HTTPHeader("Permissions-Policy-Report-Only")}}
+- [`"default"` endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint)
+
+`crash`
+
+- `crash-reporting` endpoint
+- `default` endpoint.
+
+`deprecation`
+
+- `default` endpoint.
+
+`intervention`
+
+- `default` endpoint.
 
 ### Generating reports via WebDriver
 
