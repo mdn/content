@@ -395,6 +395,7 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 ## See also
 
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{HTTPHeader("Permissions-Policy-Report-Only")}}
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Referrer-Policy")}}
