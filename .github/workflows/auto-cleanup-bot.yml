@@ -31,9 +31,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LEFTHOOK: 0
 
-      - name: Lint markdown files
+      - name: Apply fixes
         run: |
           npm run content fix-flaws
+          npm run content fmt-sidebars
           npm run fix:md
           npm run fix:fm
           node scripts/sort_and_unique_file_lines.js .vscode/dictionaries
