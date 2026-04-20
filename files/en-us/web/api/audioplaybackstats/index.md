@@ -20,7 +20,7 @@ When audio is playing in an application, it is beneficial to measure {{glossary(
 - Underrun
   - : Happens when the audio application runs out of buffered audio data to play before new data arrives to replace it — in other words, it can't provide audio frames fast enough. This occurs when audio is not delivered to the playback device in time due to audio graph complexity, CPU overload, or malfunctions in other audio programs. The result is an audible "glitch" — a click, pop, or audio dropout occurring because the application has nothing to play and fills the gap with silence or noise.
 
-If underruns are detected, action should be taken to avoid future underruns, for example providing a larger buffer, or freeing up system resources. Larger buffers should be used carefully as they can also increase latency, so it is important to achieve a balance. Latency can be reduced by reducing buffer size, simplifying required processing, or reducing audio sample size.
+If underruns are detected, action should be taken to avoid future underruns, for example providing a larger buffer, or freeing up system resources. Larger buffers should be used carefully as they can also increase latency, so it is important to achieve a balance. Latency can be reduced by simplifying the required processing, or reducing the playback buffer size.
 
 Web audio performance varies greatly between high-end devices such as a modern desktop computer and low-end devices such as budget mobile phones. The `AudioPlaybackStats` object allows developers to collect telemetry data from their users to understand how their app performs in the "real world" with respect to latency and underrun and respond to problems as they arise.
 
