@@ -275,7 +275,7 @@ p.min-pink {
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```

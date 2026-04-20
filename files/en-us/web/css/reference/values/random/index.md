@@ -237,7 +237,6 @@ We render the five badges as circles. We use the `random()` function within an {
     content: "Your browser doesn't support the random() function.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
@@ -291,7 +290,6 @@ body {
     content: "Your browser doesn't support the random() function.";
     color: white;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }

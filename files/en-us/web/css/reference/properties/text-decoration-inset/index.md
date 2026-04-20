@@ -140,7 +140,6 @@ li {
     content: "Your browser doesn't support the text-decoration-inset property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
@@ -199,7 +198,6 @@ u {
     content: "Your browser doesn't support the text-decoration-inset property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
   }
