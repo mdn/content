@@ -50,7 +50,7 @@ details:open > summary {
 ```css hidden
 @supports not selector(:open) {
   body::before {
-    content: "Your browser doesn't support :open selector.";
+    content: "Your browser doesn't support the :open selector.";
     background-color: wheat;
     display: block;
     text-align: center;
