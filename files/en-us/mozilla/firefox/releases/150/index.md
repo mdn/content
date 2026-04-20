@@ -20,6 +20,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - A specific message is now displayed in the [_Response tab_ of the Network pane](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) to indicate why there is no response data when a request has been redirected.
   ([Firefox bug 2016679](https://bugzil.la/2016679)).
+- A new "Element-specific pseudo-classes" section has been added to the [pseudo-class toggle pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes), including a toggle for the {{cssxref(":open")}} pseudo-class, which is only available for elements that have an open state like `<dialog>` elements. The existing toggle for the {{cssxref(":visited")}} pseudo-class was also moved there, as it only applies to `<a>` and `<area>` elements. ([Firefox bug 2014442](https://bugzil.la/2014442)).
 
 ### HTML
 
