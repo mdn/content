@@ -1,5 +1,6 @@
 ---
-title: shape()
+title: "`shape()` CSS function"
+short-title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 page-type: css-function
 browser-compat: css.types.basic-shape.shape

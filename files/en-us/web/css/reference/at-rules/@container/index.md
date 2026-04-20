@@ -81,6 +81,23 @@ If no `<container-query>` is specified, named containers are selected.
     font-size: 1.5em;
   }
 }
+
+/* Boolean style() queries */
+@container style(--theme: one) or style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* matched container styles */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* matched container styles */
+}
+@container not style(--theme: one) {
+  /* matched container styles */
+}
 ```
 
 ### Parameters

@@ -1,5 +1,6 @@
 ---
-title: text-decoration
+title: "`text-decoration` CSS property"
+short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
 page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration

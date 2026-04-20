@@ -139,6 +139,11 @@ sidebar:
         details: closed
         children:
           - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/Arithmetic
+            link: /WebAssembly/Reference/SIMD/Arithmetic
+            title: Arithmetic
+            details: closed
+          - type: listSubPages
             path: /WebAssembly/Reference/SIMD/bitwise
             link: /WebAssembly/Reference/SIMD/bitwise
             title: Bitwise

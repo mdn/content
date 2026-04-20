@@ -13,11 +13,11 @@ The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Naviga
 
 _The `WorkerNavigator` interface doesn't inherit any property._
 
-- {{DOMxRef("WorkerNavigator.appCodeName")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.appCodeName")}} {{ReadOnlyInline}}
   - : Always returns `'Mozilla'`, in any browser. This property is kept only for compatibility purposes.
-- {{DOMxRef("WorkerNavigator.appName")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.appName")}} {{ReadOnlyInline}}
   - : Returns the official name of the browser. Do not rely on this property to return the correct value.
-- {{DOMxRef("WorkerNavigator.appVersion")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.appVersion")}} {{ReadOnlyInline}}
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
@@ -43,9 +43,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a boolean value indicating whether the browser is online.
 - {{DOMxRef("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
-- {{DOMxRef("WorkerNavigator.platform")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.platform")}} {{ReadOnlyInline}}
   - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.
-- {{DOMxRef("WorkerNavigator.product")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.product")}} {{ReadOnlyInline}}
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API), to enable the control of serial ports.

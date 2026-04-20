@@ -66,7 +66,7 @@ For example, the following uses the [`const`](/en-US/docs/WebAssembly/Reference/
 v128.const f32x4 65.4 780.9 1011.1 3.0
 ```
 
-We could then round all four values down to the nearest integer simultaneously using the [`floor`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/floor) instruction:
+We could then round all four values down to the nearest integer simultaneously using the [`floor`](/en-US/docs/WebAssembly/Reference/Numeric/floor) instruction:
 
 ```wat
 f32x4.floor

@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`add()`** method of the {{domxref("Highlight")}} interface adds a new {{domxref("Range")}} object to a highlight, to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
+The **`add()`** method of the {{domxref("Highlight")}} interface adds a new {{domxref("AbstractRange")}} object to a highlight, to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.add()")}}.
 
@@ -22,7 +22,7 @@ add(range)
 ### Parameters
 
 - `range`
-  - : A {{domxref("Range")}} object to add to the `Highlight`.
+  - : An {{domxref("AbstractRange")}} object to add to the `Highlight`.
 
 ### Return value
 

@@ -1,5 +1,6 @@
 ---
-title: :open
+title: "`:open` CSS pseudo-class"
+short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
 page-type: css-pseudo-class
 browser-compat: css.selectors.open

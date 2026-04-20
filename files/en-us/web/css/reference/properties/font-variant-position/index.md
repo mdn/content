@@ -1,5 +1,6 @@
 ---
-title: font-variant-position
+title: "`font-variant-position` CSS property"
+short-title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
 page-type: css-property
 browser-compat: css.properties.font-variant-position

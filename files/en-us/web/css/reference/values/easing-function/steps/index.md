@@ -1,5 +1,6 @@
 ---
-title: steps()
+title: "`steps()` CSS function"
+short-title: steps()
 slug: Web/CSS/Reference/Values/easing-function/steps
 page-type: css-function
 browser-compat: css.types.easing-function.steps

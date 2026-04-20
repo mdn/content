@@ -1447,8 +1447,9 @@
         "COEPViolationReport",
         "CSPViolationReport",
         "DeprecationReport",
-        "InterventionReport",
         "IntegrityViolationReport",
+        "InterventionReport",
+        "PermissionsPolicyViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],

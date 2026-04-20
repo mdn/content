@@ -1,5 +1,6 @@
 ---
-title: contain
+title: "`contain` CSS property"
+short-title: contain
 slug: Web/CSS/Reference/Properties/contain
 page-type: css-property
 browser-compat: css.properties.contain

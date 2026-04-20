@@ -1,5 +1,6 @@
 ---
-title: <text-edge>
+title: "`<text-edge>` CSS type"
+short-title: <text-edge>
 slug: Web/CSS/Reference/Values/text-edge
 page-type: css-type
 browser-compat: css.types.text-edge

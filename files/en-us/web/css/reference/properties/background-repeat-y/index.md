@@ -1,5 +1,6 @@
 ---
-title: background-repeat-y
+title: "`background-repeat-y` CSS property"
+short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 page-type: css-property
 status:
