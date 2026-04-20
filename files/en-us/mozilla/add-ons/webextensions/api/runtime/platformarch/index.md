@@ -23,7 +23,7 @@ Values of this type are strings. Possible values are:
 - `"mips64"`
   - : The platform is based on the 64-bit MIPS instruction set architecture (ISA).
 - `"riscv64"`
-  - : The platform is based on the 64-bit implementation of the RISC-V open-standard instruction set architecture (ISA). 
+  - : The platform is based on the 64-bit implementation of the RISC-V open-standard instruction set architecture (ISA).
 - `"x86-32"`
   - : The platform is based on the x86 32-bit architecture.
 - `"x86-64"`
