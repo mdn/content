@@ -1,5 +1,6 @@
 ---
-title: image-resolution
+title: "`image-resolution` CSS property"
+short-title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
 page-type: css-property
 status:

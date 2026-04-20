@@ -1,5 +1,6 @@
 ---
-title: if()
+title: "`if()` CSS function"
+short-title: if()
 slug: Web/CSS/Reference/Values/if
 page-type: css-function
 status:

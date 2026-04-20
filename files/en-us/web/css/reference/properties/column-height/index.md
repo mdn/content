@@ -1,5 +1,6 @@
 ---
-title: column-height
+title: "`column-height` CSS property"
+short-title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 page-type: css-property
 status:

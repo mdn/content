@@ -1,5 +1,6 @@
 ---
-title: dynamic-range-limit
+title: "`dynamic-range-limit` CSS property"
+short-title: dynamic-range-limit
 slug: Web/CSS/Reference/Properties/dynamic-range-limit
 page-type: css-property
 browser-compat: css.properties.dynamic-range-limit

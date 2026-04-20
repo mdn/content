@@ -1,5 +1,6 @@
 ---
-title: color
+title: "`color` CSS property"
+short-title: color
 slug: Web/CSS/Reference/Properties/color
 page-type: css-property
 browser-compat: css.properties.color

@@ -1,5 +1,6 @@
 ---
-title: calc()
+title: "`calc()` CSS function"
+short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 page-type: css-function
 browser-compat: css.types.calc

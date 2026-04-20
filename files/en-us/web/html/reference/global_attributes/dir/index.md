@@ -1,5 +1,5 @@
 ---
-title: HTML dir global attribute
+title: "`dir` HTML global attribute"
 short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
 page-type: html-attribute

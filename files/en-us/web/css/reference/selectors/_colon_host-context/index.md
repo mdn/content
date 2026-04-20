@@ -1,5 +1,6 @@
 ---
-title: :host-context()
+title: "`:host-context()` CSS pseudo-class"
+short-title: :host-context()
 slug: Web/CSS/Reference/Selectors/:host-context
 page-type: css-pseudo-class
 status:

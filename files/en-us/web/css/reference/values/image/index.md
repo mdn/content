@@ -1,5 +1,6 @@
 ---
-title: <image>
+title: "`<image>` CSS type"
+short-title: <image>
 slug: Web/CSS/Reference/Values/image
 page-type: css-type
 browser-compat: css.types.image

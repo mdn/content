@@ -1,5 +1,6 @@
 ---
-title: :not()
+title: "`:not()` CSS pseudo-class"
+short-title: :not()
 slug: Web/CSS/Reference/Selectors/:not
 page-type: css-pseudo-class
 browser-compat: css.selectors.not

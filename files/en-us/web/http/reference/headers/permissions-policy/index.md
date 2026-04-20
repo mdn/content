@@ -13,6 +13,11 @@ sidebar: http
 
 The HTTP **`Permissions-Policy`** {{Glossary("response header")}} provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
+Violations of a policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports are automatically sent to the server endpoint named `"default"`, if one is defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+Reports can also be observed in the page for which the policy is being enforced using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
+The format of the report and additional detail is provided in {{domxref("PermissionsPolicyViolationReport")}}.
+
 For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) article.
 
 <table class="properties">
@@ -53,13 +58,13 @@ Permissions-Policy: <directive>=<allowlist>
 
 Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
-So instead of
+So instead of:
 
 ```http
 ("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
-You can specify
+You can specify:
 
 ```http
 ("https://example.com" "https://*.example.com")
@@ -307,6 +312,52 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 <iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
 ```
 
+### Reporting violations
+
+This example shows how to configure reporting of Permissions Policy violations to a server endpoint.
+
+The response headers below block geolocation and define a [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+Permissions Policy violation reports are automatically sent to this endpoint.
+
+```http
+Reporting-Endpoints: default="https://example.com/reports"
+Permissions-Policy: geolocation=()
+```
+
+A violation occurs when a page attempts to use the blocked feature, for example:
+
+```js
+navigator.geolocation.getCurrentPosition(
+  () => {},
+  () => {},
+);
+```
+
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) sent to the endpoint might look like this:
+
+```json
+[
+  {
+    "age": 48512,
+    "body": {
+      "columnNumber": 29,
+      "disposition": "enforce",
+      "lineNumber": 44,
+      "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
+      "featureId": "geolocation",
+      "sourceFile": "https://example.com/"
+    },
+    "type": "permissions-policy-violation",
+    "url": "https://example.com/",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+  }
+]
+```
+
+> [!NOTE]
+> Chrome's server-side serialization of violation reports uses `policyId` rather than [`featureId`](/en-US/docs/Web/API/PermissionsPolicyViolationReport#featureid) for the feature name in the `body` of a server report.
+> The {{domxref("PermissionsPolicyViolationReport")}} returned by a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver) follows the specification.
+
 ## Specifications
 
 {{Specifications}}
@@ -321,3 +372,7 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Referrer-Policy")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- {{domxref("PermissionsPolicyViolationReport")}}
+- {{domxref("ReportingObserver")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

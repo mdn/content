@@ -1,5 +1,6 @@
 ---
-title: width
+title: "`width` CSS property"
+short-title: width
 slug: Web/CSS/Reference/Properties/width
 page-type: css-property
 browser-compat: css.properties.width

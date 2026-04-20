@@ -1,5 +1,6 @@
 ---
-title: animation-fill-mode
+title: "`animation-fill-mode` CSS property"
+short-title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
 page-type: css-property
 browser-compat: css.properties.animation-fill-mode
