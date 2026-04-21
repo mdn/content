@@ -30,7 +30,7 @@ The `CrashReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reportin
     - `is_top_level` {{experimental_inline}}
       - : A boolean indicating whether the crashed document was a top-level document (`true`) or an embedded document (`false`).
     - `reason` {{experimental_inline}} {{optional_inline}}
-      - : A string indicating the specfic reason why the crash occurred, if known. Possible values are:
+      - : A string indicating the specific reason why the crash occurred, if known. Possible values are:
         - `oom`
           - : The page ran out of memory.
         - `unresponsive`

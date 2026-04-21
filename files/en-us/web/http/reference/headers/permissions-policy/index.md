@@ -335,7 +335,7 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 This example shows how to configure reporting of `Permissions-Policy` violations to a server endpoint.
 
 The response headers below block geolocation and define the reporting endpoint name for the feature as "geo_endpoint".
-The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define URL of this endpoint name.
+The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define the URL of this endpoint name.
 
 ```http
 Reporting-Endpoints: geo_endpoint="https://example.com/reports"
