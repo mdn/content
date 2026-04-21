@@ -3,6 +3,7 @@ title: "global.set: Wasm text instruction"
 short-title: global.set
 slug: WebAssembly/Reference/Variables/global.set
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.global_get
 sidebar: webassemblysidebar
 ---
 
@@ -59,6 +60,14 @@ global.set identifier
 | Instruction  | Binary format | Example text => binary        |
 | ------------ | ------------- | ----------------------------- |
 | `global.set` | `0x24`        | `global.set 0` => `0x24 0x00` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

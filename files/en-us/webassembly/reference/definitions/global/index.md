@@ -3,6 +3,7 @@ title: "global: Wasm definition"
 short-title: global
 slug: WebAssembly/Reference/Definitions/global
 page-type: webassembly-instruction
+browser-compat: webassembly.definitions.global
 sidebar: webassemblysidebar
 ---
 
@@ -122,6 +123,14 @@ const shared = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 const modA = await instantiate(bytesA, { env: { shared } });
 const modB = await instantiate(bytesB, { env: { shared } });
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

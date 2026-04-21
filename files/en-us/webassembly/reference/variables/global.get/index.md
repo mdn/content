@@ -3,6 +3,7 @@ title: "global.get: Wasm text instruction"
 short-title: global.get
 slug: WebAssembly/Reference/Variables/global.get
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.global_get
 sidebar: webassemblysidebar
 ---
 
@@ -58,6 +59,14 @@ global.get identifier
 | Instruction  | Binary format | Example text => binary        |
 | ------------ | ------------- | ----------------------------- |
 | `global.get` | `0x23`        | `global.get 0` => `0x23 0x00` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
