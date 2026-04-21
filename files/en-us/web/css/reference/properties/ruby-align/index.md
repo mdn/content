@@ -1,5 +1,6 @@
 ---
-title: ruby-align
+title: "`ruby-align` CSS property"
+short-title: ruby-align
 slug: Web/CSS/Reference/Properties/ruby-align
 page-type: css-property
 browser-compat: css.properties.ruby-align

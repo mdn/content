@@ -1,5 +1,6 @@
 ---
-title: box-align
+title: "`box-align` CSS property"
+short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 page-type: css-property
 status:

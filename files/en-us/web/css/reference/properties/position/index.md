@@ -1,5 +1,6 @@
 ---
-title: position
+title: "`position` CSS property"
+short-title: position
 slug: Web/CSS/Reference/Properties/position
 page-type: css-property
 browser-compat: css.properties.position

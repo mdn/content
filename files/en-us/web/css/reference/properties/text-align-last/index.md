@@ -1,5 +1,6 @@
 ---
-title: text-align-last
+title: "`text-align-last` CSS property"
+short-title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
 page-type: css-property
 browser-compat: css.properties.text-align-last

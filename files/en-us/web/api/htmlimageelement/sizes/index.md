@@ -198,7 +198,7 @@ It also allows you to see the effect of changing the size of a container on the 
 
 #### HTML
 
-The HTML is similar to that in the previous example, except that it defines three near-identical {{htmlelement("img")}} elements, each with a `scrset` indicating 3 images that are `600px`, `400px`, and `200px` wide, and with a `sizes` value of `auto`.
+The HTML is similar to that in the previous example, except that it defines three near-identical {{htmlelement("img")}} elements, each with a `srcset` indicating 3 images that are `600px`, `400px`, and `200px` wide, and with a `sizes` value of `auto`.
 These are constrained within containers that are sized to select the different images.
 
 ```html

@@ -1,13 +1,13 @@
 ---
-title: Firefox 151 release notes for developers (Nightly)
-short-title: Firefox 151 (Nightly)
+title: Firefox 151 release notes for developers (Beta)
+short-title: Firefox 151 (Beta)
 slug: Mozilla/Firefox/Releases/151
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 151 that affect developers.
-Firefox 151 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
+Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -73,6 +73,8 @@ Firefox 151 is the current [Nightly version of Firefox](https://www.firefox.com/
 ## Changes for add-on developers
 
 - The {{WebExtAPIRef("webRequest.onErrorOccurred")}} event now falls back to `NS_ERROR_NET_ON_RECEIVING_FROM` instead of a string starting with `NS_ERROR_NET_ON_` or `NS_ERROR_NET_UNKNOWN_`. This change is part of performance and reliability improvements to the `onErrorOccurred` event. ([Firefox bug 1(https://bugzil.la/1881986))
+- {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} now correctly add and remove a split view when a call includes one of the split view's tabs. Previously, a call would fail or separate the split view. ([Firefox bug 2029099](https://bugzil.la/2029099))
+- {{WebExtAPIRef("tabs.move()")}} now correctly moves a split view to the right when a call includes one of the split view's tabs. Previously, a call moved a split view only to the left or to the end of the tab list. ([Firefox bug 2027855](https://bugzil.la/2027855))
 
 <!-- ### Removals -->
 

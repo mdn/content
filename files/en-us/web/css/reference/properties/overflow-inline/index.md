@@ -1,5 +1,6 @@
 ---
-title: overflow-inline
+title: "`overflow-inline` CSS property"
+short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 page-type: css-property
 browser-compat: css.properties.overflow-inline

@@ -1,18 +1,13 @@
 ---
-title: Firefox 150 release notes for developers (Beta)
-short-title: Firefox 150 (Beta)
+title: Firefox 150 release notes for developers (Stable)
+short-title: Firefox 150 (Stable)
 slug: Mozilla/Firefox/Releases/150
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 150 that affect developers.
-Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
 
 ## Changes for web developers
 
@@ -20,6 +15,7 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - A specific message is now displayed in the [_Response tab_ of the Network pane](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) to indicate why there is no response data when a request has been redirected.
   ([Firefox bug 2016679](https://bugzil.la/2016679)).
+- A new "Element-specific pseudo-classes" section has been added to the [pseudo-class toggle pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes), including a toggle for the {{cssxref(":open")}} pseudo-class, which is only available for elements that have an open state like `<dialog>` elements. The existing toggle for the {{cssxref(":visited")}} pseudo-class was also moved there, as it only applies to `<a>` and `<area>` elements. ([Firefox bug 2014442](https://bugzil.la/2014442)).
 
 ### HTML
 
@@ -27,18 +23,6 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
   This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
   ([Firefox bug 1819581](https://bugzil.la/1819581)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -55,21 +39,9 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{cssxref("overscroll-behavior")}} CSS property (and its longhand properties {{cssxref("overscroll-behavior-x")}}, {{cssxref("overscroll-behavior-y")}}, {{cssxref("overscroll-behavior-block")}}, and {{cssxref("overscroll-behavior-inline")}}) now correctly apply to scroll containers that have no scrollable overflow, such as elements with `overflow: hidden`. Previously, the property was ignored on such elements. ([Firefox bug 1837436](https://bugzil.la/1837436)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -89,14 +61,6 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `ariaNotify()` method is now supported on {{domxref("Document/ariaNotify","Document")}} and {{domxref("Element/ariaNotify","Element")}}.
   This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -122,11 +86,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The behavior of {{WebExtAPIRef("tabs.move")}} is updated for split views so that:
   - The order of tabs in a split view can be swapped. ([Firefox bug 2016762](https://bugzil.la/2016762))
   - When the list of tabs includes both split view tabs and places one or more tabs between them, the tabs are moved apart and the split view closed. ([Firefox bug 2022549](https://bugzil.la/2022549))
+- Extension documents can now use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) and assert a [Relying Party ID (RP ID)](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#rp) for any domain covered by the extension's [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions). This change means that {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} and {{domxref("CredentialsContainer.create()", "navigator.credentials.get()")}} can specify an RP ID matching a host-permitted domain, enabling extensions to create and retrieve WebAuthn credentials on behalf of web services. See [Use Web Authn API in web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api) for details. ([Firefox bug 1956484](https://bugzil.la/1956484)).
 - Resolved an issue with some JavaScript [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) calls failing to import CSS. ([Firefox bug 2016369](https://bugzil.la/2016369))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 

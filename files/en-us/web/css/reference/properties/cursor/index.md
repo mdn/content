@@ -1,5 +1,6 @@
 ---
-title: cursor
+title: "`cursor` CSS property"
+short-title: cursor
 slug: Web/CSS/Reference/Properties/cursor
 page-type: css-property
 browser-compat: css.properties.cursor

@@ -1,5 +1,6 @@
 ---
-title: -webkit-border-before
+title: "`-webkit-border-before` CSS property"
+short-title: -webkit-border-before
 slug: Web/CSS/Reference/Properties/-webkit-border-before
 page-type: css-shorthand-property
 status:

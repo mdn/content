@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: accept"
+title: "`accept` HTML attribute"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 page-type: html-attribute
