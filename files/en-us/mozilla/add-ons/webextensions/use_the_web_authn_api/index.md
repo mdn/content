@@ -69,6 +69,7 @@ In your extension's `manifest.json` file, declare `host_permissions` for the dom
 
 > [!NOTE]
 > The broad `"https://*/*"` pattern grants access to all HTTPS domains. For your extension, set this to the domains it needs (e.g., `"https://example.com/*"`).
+> This example uses an extension popup. However, due to a known issue, the flow does not work as the popup closes when the prompt for credentials appears. A workaround is to open the page in a new tab. See [Firefox bug 2026687](https://bugzil.la/2026687).
 
 ### Collect WebAuthn options
 
@@ -136,9 +137,9 @@ To authenticate the credentials, call `navigator.credentials.get()` with the `rp
 ```js
 async function authenticate(optionsJSON) {
   const options = JSON.parse(optionsJSON);
-  options.id = Uint8Array.fromBase64(options.challenge);
-  if (Array.isArray(options.allowCredentials)) {
-    for (const ac of options.allowCredential) {
+  options.challenge = Uint8Array.fromBase64(options.challenge);
+  if (Array.isArray(options?.allowCredentials)) {
+    for (const ac of options.allowCredentials) {
       ac.id = Uint8Array.fromBase64(ac.id);
     }
   }
