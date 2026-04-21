@@ -72,6 +72,8 @@ Firefox 151 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("webRequest.onErrorOccurred")}} event now falls back to `NS_ERROR_NET_ON_RECEIVING_FROM` instead of a string starting with `NS_ERROR_NET_ON_` or `NS_ERROR_NET_UNKNOWN_`. This change is part of performance and reliability improvements to the `onErrorOccurred` event. ([Firefox bug 1(https://bugzil.la/1881986))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->
