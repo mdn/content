@@ -43,7 +43,7 @@ Reports sent to reporting endpoints are essentially the same.
 The only difference is that server reports are JSON serializations of the objects that have additional `user_agent` and `age` fields.
 
 The following table lists the documented report types, their corresponding report dictionaries, and notes on the violation.
-Note that except for `crash` reports, which can't be observed in JavaScript (because the observing page has crashed), all the listed reports are visible in both observers and can be sent to server endpoints.
+Note that, except for `crash` reports, which can't be observed in JavaScript (because the observing page has crashed), all the listed reports are visible in observers and can be sent to server endpoints.
 
 | Type                           | Report object                                   | Notes                                                                                      |
 | ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
