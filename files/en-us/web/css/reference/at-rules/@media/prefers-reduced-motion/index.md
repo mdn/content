@@ -1,5 +1,6 @@
 ---
-title: prefers-reduced-motion
+title: "`prefers-reduced-motion` CSS media feature"
+short-title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-reduced-motion

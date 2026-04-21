@@ -1,13 +1,13 @@
 ---
-title: Firefox 151 release notes for developers (Nightly)
-short-title: Firefox 151 (Nightly)
+title: Firefox 151 release notes for developers (Beta)
+short-title: Firefox 151 (Beta)
 slug: Mozilla/Firefox/Releases/151
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 151 that affect developers.
-Firefox 151 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
+Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
