@@ -10,6 +10,9 @@ browser-compat: api.CookieStoreManager.subscribe
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
+> [!NOTE]
+> Duplicate subscriptions (same `name` and `url`) are ignored; only unique subscriptions are added.
+
 ## Syntax
 
 ```js-nolint
@@ -27,8 +30,6 @@ subscribe(subscriptions)
 
 ### Return value
 
-> [!NOTE]
-> Duplicate subscriptions (same `name` and `url`) are ignored; only unique subscriptions are added.
 
 A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subscription completes.
 
