@@ -30,7 +30,6 @@ subscribe(subscriptions)
 
 ### Return value
 
-
 A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subscription completes.
 
 ### Exceptions
