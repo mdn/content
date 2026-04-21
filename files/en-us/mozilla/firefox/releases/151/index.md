@@ -50,7 +50,12 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) is now supported on desktop platforms.
+  This makes it possible to open an always-on-top popup window that can be populated with arbitrary HTML content.
+  It can be used to display any content that a user might want to view separate from the launching page (or even the browser), such as a set of streams showing the participants of a video conference call, a stock ticker, or a countdown timer.
+  ([Firefox bug 2006594](https://bugzil.la/2006594)).
 
 <!-- #### DOM -->
 
