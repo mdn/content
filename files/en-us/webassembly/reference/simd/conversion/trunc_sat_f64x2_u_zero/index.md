@@ -29,7 +29,7 @@ The **`trunc_sat_f64x2_u_zero`** [SIMD conversion instruction](/en-US/docs/WebAs
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation instead of wrapping. Allowed output values are `0` to `4,294,967,295` (the full range of an unsigned 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
+Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation. Allowed output values are `0` to `4,294,967,295` (the full range of an unsigned 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
 
 ## Syntax
 
