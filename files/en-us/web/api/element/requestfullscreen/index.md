@@ -199,6 +199,84 @@ kbd {
 
 {{embedlivesample("requesting_fullscreen_mode", , "400", "", "", "", "fullscreen")}}
 
+### Using keyboard lock
+
+This example is _exactly_ the same as the last one except that it specifies the `keyboardLock` option when requesting requests fullscreen.
+On supporting browsers, this disables the default <kbd>Esc</kbd> key action to leave fullscreen mode, and enables long-press for the same action.
+
+#### JavaScript
+
+```js hidden
+const video = document.querySelector("video");
+
+document.addEventListener("keydown", (event) => {
+  // Note that "F" is case-sensitive (uppercase):
+  if (event.key === "Enter" || event.key === "F") {
+    // Check if we're in fullscreen mode
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      return;
+    }
+```
+
+The code that sets the keyboard lock mode to `"browser"` is:
+
+```js
+    // Otherwise enter fullscreen mode
+    video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
+      console.error(`Error enabling fullscreen: ${err.message}`);
+    });
+  }
+```
+
+```js hidden
+});
+```
+
+```html hidden
+<p>
+  The video element below shows a time-lapse of a flower blooming. You can
+  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift</kbd> +
+  <kbd>F</kbd> (uppercase "F"). The embedded document needs to have
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
+    focus
+  </a>
+  for the example to work.
+</p>
+
+<video controls loop src="/shared-assets/videos/flower.mp4" width="420"></video>
+```
+
+```css hidden
+body {
+  font-family:
+    "Benton Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 2em;
+}
+
+video::backdrop {
+  background-color: #444488;
+}
+button {
+  display: block;
+}
+kbd {
+  border: 2px solid #cdcdcd;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 0 #cdcdcd;
+  font-size: 0.825rem;
+  padding: 0.25rem;
+}
+```
+
+#### Results
+
+Select the frame and press <kbd>Shift + F</kbd>.
+When the page displays full frame, note that the temporary notification at the top of the page: "Exit full screen (Press and hold Esc)".
+
+{{embedlivesample("Using keyboard lock", , "400", "", "", "", "fullscreen")}}
+
 ### Using navigationUI
 
 In this example, the entire document is placed into fullscreen mode by calling
