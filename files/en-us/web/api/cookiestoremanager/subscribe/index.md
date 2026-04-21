@@ -10,8 +10,7 @@ browser-compat: api.CookieStoreManager.subscribe
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
-> [!NOTE]
-> Duplicate subscriptions (same `name` and `url`) are ignored; only unique subscriptions are added.
+Duplicate subscriptions are ignored: that is, if a service worker subscribes more than once to the same cookie, it will only receive each change notification once.
 
 ## Syntax
 
@@ -39,9 +38,9 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 
 ## Examples
 
-In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
+### Setting name and URL
 
-- Setting `name` and `url`:
+In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
 // Subscribe to a specific cookie and URL
@@ -52,44 +51,33 @@ await registration.cookies.subscribe(subscriptions);
 await registration.cookies.subscribe([{}]);
 ```
 
-- Omitting `url`:
+### Setting name only
+
+In this example we set only `name`, and omit `url`: the subscription applies to all cookies names `cookie1` that are under the service worker's scope.
 
 ```js
 // Subscribe to all cookies named "cookie1" in the registration scope
 await registration.cookies.subscribe([{ name: "cookie1" }]);
 ```
 
-If `url` is omitted, the subscription applies to the entire service worker registration scope.
+### Setting URL only
 
-- Omitting `name`:
+In this example we set only `url`, and omit `name`: the subscription applies to all cookies within the specified URL scope.
 
 ```js
 // Subscribe to all cookie changes within a specific path
 await registration.cookies.subscribe([{ url: "/path/one/" }]);
 ```
 
-If `name` is omitted, the subscription applies to all cookies within the specified URL scope.
+### Setting a URL outside the service worker's scope
 
-- Scope behavior:
+If the URL is outside the service worker's scope, `subscribe()` will throw a `TypeError`.
 
-```js
-await registration.cookies.subscribe([{ name: "cookie1", url: "/path/one/" }]); // subscription
-cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/one/" }); // receives a change event
-cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/two/" }); // does not receive a change event
-```
-
-The `url` can be narrower than the service worker registration scope. Change events are only received for cookies within the subscribed path.
-
-- Exception:
-
-```js
-// This will throw a TypeError because "/out-of-scope/" is outside the service worker scope
+```js example-bad
 await registration.cookies.subscribe([
   { name: "cookie1", url: "/out-of-scope/" },
 ]);
 ```
-
-If the URL is outside the service worker's scope, `subscribe()` will fail and throw a `TypeError`. This means you can only subscribe to cookies within the service worker's own scope.
 
 ## Specifications
 
