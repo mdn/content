@@ -1445,6 +1445,8 @@
       "guides": [],
       "interfaces": [
         "COEPViolationReport",
+        "CrashReport",
+        "CrashReportContext",
         "CSPViolationReport",
         "DeprecationReport",
         "IntegrityViolationReport",
@@ -1454,7 +1456,7 @@
         "SecurityPolicyViolationEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.crashReport"],
       "events": []
     },
     "Resize Observer API": {

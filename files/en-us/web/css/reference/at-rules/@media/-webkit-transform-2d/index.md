@@ -1,5 +1,6 @@
 ---
-title: -webkit-transform-2d
+title: "`-webkit-transform-2d` CSS media feature"
+short-title: -webkit-transform-2d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-2d
 page-type: css-media-feature
 status:

@@ -11,7 +11,7 @@ browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_
 
 The `PermissionsPolicyViolationReport` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a report that is generated when a document violates its [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
-Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, and a serialized version can be sent to the [default reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint).
+Reports of this type can be observed from within a page using a {{domxref("ReportingObserver")}}, and a serialized version can be sent to a reporting server endpoint.
 
 ## Instance properties
 
@@ -47,15 +47,16 @@ Reports of this type can be observed from within a page using a {{domxref("Repor
 
 Permissions Policy violations are reported when a document attempts to use a browser feature that is blocked by its [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 The policy is set using the {{httpheader("Permissions-Policy")}} HTTP header, or a `<meta http-equiv="permissions-policy">` element.
+Violations of the policy may also be reported but not enforced using the {{httpheader("Permissions-Policy-Report-Only")}} HTTP header, or a `<meta http-equiv="permissions-policy-report-only">` element.
 
 You can monitor for Permissions-Policy violation reports within the page that sets the policy using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 To do this you create a {{domxref("ReportingObserver")}} object to listen for reports, passing a callback method and an (optional) `options` property specifying the types of reports that you want to report on.
 The callback method is then called with reports of the requested types, passing a report object.
-For `Permissions-Policy` violations, the object will be a `PermissionsPolicyViolationReport` instance with `PermissionsPolicyViolationReport.type == "permissions-policy-violation"`.
+For `Permissions-Policy` or `Permissions-Policy-Report-Only` violations, the object will be a `PermissionsPolicyViolationReport` instance with `PermissionsPolicyViolationReport.type === "permissions-policy-violation"`.
 
 The structure of a typical in-page report is shown below.
 Note that we can see the URL of the page that had its policy violated (`url`), and from `body.featureId` we can see which feature was blocked.
-The `body.disposition` field shows that the violation was enforced.
+The `body.disposition` field shows that the violation was enforced or only reported.
 
 ```json
 {
@@ -66,14 +67,14 @@ The `body.disposition` field shows that the violation was enforced.
     "lineNumber": 44,
     "columnNumber": 29,
     "featureId": "geolocation",
-    "disposition": "enforce",
+    "disposition": "enforce", // Policy was enforced!
     "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document."
   }
 }
 ```
 
-Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) named `"default"`, if one is defined.
-The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} header.
+Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to the [reporting server endpoint](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) indicated by name in a per-directive `report-to` parameter, with fallback to the [`default` reporting server endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) (if defined).
+The reporting server endpoint and its mapping to a particular URL are set using the {{httpheader("Reporting-Endpoints")}} response header.
 
 The structure of the server report is almost exactly the same as `PermissionsPolicyViolationReport`, except that it additionally includes `age` and `user_agent` fields.
 
@@ -163,12 +164,23 @@ Note that the `type` is `"permissions-policy-violation"` and `body.featureId` id
 
 ### Sending a Permissions Policy violation report to a reporting endpoint
 
-Here we define the define reporting endpoint named `"default"` using the {{httpheader("Reporting-Endpoints")}} response header, and set the `Permissions-Policy` header to block use of the `geolocation` feature.
+This example shows how to configure reporting of `Permissions-Policy` violations to a server endpoint.
+
+The response headers below block geolocation and define the reporting endpoint name for the feature as "geo_endpoint".
+The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define the URL of this endpoint name.
 
 ```http
-Reporting-Endpoints: default="https://example.com/reports"
-Permissions-Policy: geolocation=()
+Reporting-Endpoints: geo_endpoint="https://example.com/reports"
+Permissions-Policy: geolocation=();report-to=geo_endpoint
 ```
+
+> [!NOTE]
+> To send all violation reports to the same endpoint we might instead define the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint):
+>
+> ```http
+> Reporting-Endpoints: default="https://example.com/reports"
+> Permissions-Policy: geolocation=()
+> ```
 
 As before, a violation is triggered by attempting to use a blocked feature:
 
@@ -214,6 +226,7 @@ Note that the `type` is `"permissions-policy-violation"` and the `body` property
 
 - {{domxref("ReportingObserver")}}
 - {{httpheader("Permissions-Policy")}}
+- {{httpheader("Permissions-Policy-Report-Only")}}
 - {{httpheader("Reporting-Endpoints")}}
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
