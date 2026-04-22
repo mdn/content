@@ -68,7 +68,7 @@ await registration.cookies.subscribe([{ url: "/path/one/" }]);
 
 ### Subscribing to all cookies
 
-In this example, both `name` and `url` are omitted. The subscription applies to all cookies within the specified URL scope.
+In this example, both `name` and `url` are omitted. The subscription applies to all cookies within the service worker's scope.
 
 ```js
 // Subscribe to all cookie changes within the entire registration scope
