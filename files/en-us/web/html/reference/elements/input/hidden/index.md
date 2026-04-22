@@ -1,6 +1,6 @@
 ---
 title: '`<input type="hidden">` HTML attribute value'
-short-title: hidden
+short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_hidden

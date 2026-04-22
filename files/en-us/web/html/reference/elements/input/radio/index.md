@@ -1,6 +1,6 @@
 ---
 title: '`<input type="radio">` HTML attribute value'
-short-title: radio
+short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_radio
