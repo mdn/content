@@ -33,8 +33,8 @@ The **`@keyframes`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
   - : Equivalent to the value `100%`.
 - {{cssxref("&lt;percentage&gt;")}}
   - : A percentage through the animation sequence at which the specified keyframe should occur.
-- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
-  - : A percentage through the specified {{cssxref("animation-range")}} at which the specified keyframe should occur. See [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more information on the kinds of animations that use named timeline ranges.
+- {{cssxref("timeline-range-name")}} {{cssxref("&lt;percentage&gt;")}}
+  - : A percentage through the specified {{cssxref("animation-range")}} at which the specified keyframe should occur.
 
 ## Description
 
