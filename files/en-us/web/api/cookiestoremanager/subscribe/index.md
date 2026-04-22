@@ -23,9 +23,9 @@ subscribe(subscriptions)
 - `subscriptions`
   - : An array of objects, each of which has the following properties:
     - `name` {{optional_inline}}
-      - : A string with the name of a cookie. If `name` is omitted, the service worker is subscribed to change events for all cookies that are in scope.
+      - : A string equal to the name of a cookie. If `name` is omitted, the service worker is subscribed to change events for all cookies that are in scope.
     - `url` {{optional_inline}}
-      - : A string with the url of a cookie scope. This may be narrower than the scope of the service worker registration. If `url` is omitted, it defaults to the scope of the service worker registration.
+      - : A string equal to the URL of a cookie scope. This may be narrower than the scope of the service worker registration. If `url` is omitted, it defaults to the scope of the service worker registration.
 
 ### Return value
 
@@ -34,7 +34,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the URL passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
+  - : Thrown if the `url` is not a valid URL, or doesn't start with the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
 
 ## Examples
 
@@ -46,14 +46,11 @@ In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `re
 // Subscribe to a specific cookie and URL
 const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
-
-// Subscribe to all cookie changes within the entire registration scope
-await registration.cookies.subscribe([{}]);
 ```
 
 ### Setting name only
 
-In this example we set only `name`, and omit `url`: the subscription applies to all cookies names `cookie1` that are under the service worker's scope.
+In this example, we set only `name` and omit `url`: the subscription applies to all cookies named `cookie1` within the service worker's scope.
 
 ```js
 // Subscribe to all cookies named "cookie1" in the registration scope
@@ -67,6 +64,15 @@ In this example we set only `url`, and omit `name`: the subscription applies to 
 ```js
 // Subscribe to all cookie changes within a specific path
 await registration.cookies.subscribe([{ url: "/path/one/" }]);
+```
+
+### Subscribing to all cookies
+
+In this example, both `name` and `url` are omitted. The subscription applies to all cookies within the specified URL scope.
+
+```js
+// Subscribe to all cookie changes within the entire registration scope
+await registration.cookies.subscribe([{}]);
 ```
 
 ### Setting a URL outside the service worker's scope
