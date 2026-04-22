@@ -1,5 +1,5 @@
 ---
-title: "<object>: The External Object element"
+title: "`<object>` HTML External Object element"
 slug: Web/HTML/Reference/Elements/object
 page-type: html-element
 browser-compat: html.elements.object

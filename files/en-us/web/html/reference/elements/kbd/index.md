@@ -1,5 +1,5 @@
 ---
-title: "<kbd>: The Keyboard Input element"
+title: "`<kbd>` HTML Keyboard Input element"
 slug: Web/HTML/Reference/Elements/kbd
 page-type: html-element
 browser-compat: html.elements.kbd

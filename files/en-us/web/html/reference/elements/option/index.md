@@ -1,5 +1,5 @@
 ---
-title: "<option>: The HTML Option element"
+title: "`<option>` HTML HTML Option element"
 slug: Web/HTML/Reference/Elements/option
 page-type: html-element
 browser-compat: html.elements.option

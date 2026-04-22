@@ -1,5 +1,5 @@
 ---
-title: "<output>: The Output element"
+title: "`<output>` HTML Output element"
 slug: Web/HTML/Reference/Elements/output
 page-type: html-element
 browser-compat: html.elements.output

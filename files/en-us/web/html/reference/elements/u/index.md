@@ -1,5 +1,5 @@
 ---
-title: "<u>: The Unarticulated Annotation (Underline) element"
+title: "`<u>` HTML Unarticulated Annotation (Underline) element"
 slug: Web/HTML/Reference/Elements/u
 page-type: html-element
 browser-compat: html.elements.u

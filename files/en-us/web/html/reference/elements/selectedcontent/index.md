@@ -1,5 +1,5 @@
 ---
-title: "<selectedcontent>: The selected option display element"
+title: "`<selectedcontent>` HTML selected option display element"
 slug: Web/HTML/Reference/Elements/selectedcontent
 page-type: html-element
 status:

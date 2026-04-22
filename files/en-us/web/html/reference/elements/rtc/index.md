@@ -1,5 +1,5 @@
 ---
-title: "<rtc>: The Ruby Text Container element"
+title: "`<rtc>` HTML Ruby Text Container element"
 slug: Web/HTML/Reference/Elements/rtc
 page-type: html-element
 status:

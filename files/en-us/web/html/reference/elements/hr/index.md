@@ -1,5 +1,5 @@
 ---
-title: "<hr>: The Thematic Break (Horizontal Rule) element"
+title: "`<hr>` HTML Thematic Break (Horizontal Rule) element"
 slug: Web/HTML/Reference/Elements/hr
 page-type: html-element
 browser-compat: html.elements.hr

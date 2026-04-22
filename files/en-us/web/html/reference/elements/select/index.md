@@ -1,5 +1,5 @@
 ---
-title: "<select>: The HTML Select element"
+title: "`<select>` HTML HTML Select element"
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select

@@ -1,5 +1,5 @@
 ---
-title: "<table>: The Table element"
+title: "`<table>` HTML Table element"
 slug: Web/HTML/Reference/Elements/table
 page-type: html-element
 browser-compat: html.elements.table

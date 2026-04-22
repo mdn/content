@@ -1,5 +1,5 @@
 ---
-title: "<i>: The Idiomatic Text element"
+title: "`<i>` HTML Idiomatic Text element"
 slug: Web/HTML/Reference/Elements/i
 page-type: html-element
 browser-compat: html.elements.i

@@ -1,5 +1,5 @@
 ---
-title: "<html>: The HTML Document / Root element"
+title: "`<html>` HTML HTML Document / Root element"
 slug: Web/HTML/Reference/Elements/html
 page-type: html-element
 browser-compat: html.elements.html

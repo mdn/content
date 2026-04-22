@@ -1,5 +1,5 @@
 ---
-title: "<summary>: The Disclosure Summary element"
+title: "`<summary>` HTML Disclosure Summary element"
 slug: Web/HTML/Reference/Elements/summary
 page-type: html-element
 browser-compat: html.elements.summary

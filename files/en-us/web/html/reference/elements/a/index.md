@@ -1,5 +1,5 @@
 ---
-title: "<a>: The Anchor element"
+title: "`<a>` HTML Anchor element"
 slug: Web/HTML/Reference/Elements/a
 page-type: html-element
 browser-compat: html.elements.a

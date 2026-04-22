@@ -1,5 +1,5 @@
 ---
-title: "<title>: The Document Title element"
+title: "`<title>` HTML Document Title element"
 slug: Web/HTML/Reference/Elements/title
 page-type: html-element
 browser-compat: html.elements.title

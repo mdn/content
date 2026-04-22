@@ -1,5 +1,5 @@
 ---
-title: "<meta>: The metadata element"
+title: "`<meta>` HTML metadata element"
 slug: Web/HTML/Reference/Elements/meta
 page-type: html-element
 browser-compat: html.elements.meta

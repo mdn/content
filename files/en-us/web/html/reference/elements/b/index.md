@@ -1,5 +1,5 @@
 ---
-title: "<b>: The Bring Attention To element"
+title: "`<b>` HTML Bring Attention To element"
 slug: Web/HTML/Reference/Elements/b
 page-type: html-element
 browser-compat: html.elements.b

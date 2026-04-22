@@ -1,5 +1,5 @@
 ---
-title: "<rp>: The Ruby Fallback Parenthesis element"
+title: "`<rp>` HTML Ruby Fallback Parenthesis element"
 slug: Web/HTML/Reference/Elements/rp
 page-type: html-element
 browser-compat: html.elements.rp

@@ -1,5 +1,5 @@
 ---
-title: "<th>: The Table Header element"
+title: "`<th>` HTML Table Header element"
 slug: Web/HTML/Reference/Elements/th
 page-type: html-element
 browser-compat: html.elements.th

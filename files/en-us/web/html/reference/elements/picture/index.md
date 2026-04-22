@@ -1,5 +1,5 @@
 ---
-title: "<picture>: The Picture element"
+title: "`<picture>` HTML Picture element"
 slug: Web/HTML/Reference/Elements/picture
 page-type: html-element
 browser-compat: html.elements.picture

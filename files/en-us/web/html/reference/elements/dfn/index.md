@@ -1,5 +1,5 @@
 ---
-title: "<dfn>: The Definition element"
+title: "`<dfn>` HTML Definition element"
 slug: Web/HTML/Reference/Elements/dfn
 page-type: html-element
 browser-compat: html.elements.dfn

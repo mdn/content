@@ -1,5 +1,5 @@
 ---
-title: "<ol>: The Ordered List element"
+title: "`<ol>` HTML Ordered List element"
 slug: Web/HTML/Reference/Elements/ol
 page-type: html-element
 browser-compat: html.elements.ol

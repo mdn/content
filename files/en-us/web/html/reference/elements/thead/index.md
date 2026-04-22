@@ -1,5 +1,5 @@
 ---
-title: "<thead>: The Table Head element"
+title: "`<thead>` HTML Table Head element"
 slug: Web/HTML/Reference/Elements/thead
 page-type: html-element
 browser-compat: html.elements.thead

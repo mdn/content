@@ -1,5 +1,5 @@
 ---
-title: "<search>: The generic search element"
+title: "`<search>` HTML generic search element"
 slug: Web/HTML/Reference/Elements/search
 page-type: html-element
 browser-compat: html.elements.search

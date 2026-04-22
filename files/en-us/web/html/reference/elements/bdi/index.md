@@ -1,5 +1,5 @@
 ---
-title: "<bdi>: The Bidirectional Isolate element"
+title: "`<bdi>` HTML Bidirectional Isolate element"
 slug: Web/HTML/Reference/Elements/bdi
 page-type: html-element
 browser-compat: html.elements.bdi

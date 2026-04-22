@@ -1,5 +1,5 @@
 ---
-title: "<input>: The HTML Input element"
+title: "`<input>` HTML HTML Input element"
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input

@@ -1,5 +1,5 @@
 ---
-title: "<div>: The Content Division element"
+title: "`<div>` HTML Content Division element"
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element
 browser-compat: html.elements.div
