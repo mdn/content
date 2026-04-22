@@ -120,7 +120,7 @@ We also include two overlays to enable visualizing the animation range:
 
 #### CSS
 
-Most of the `subject` and `subject-container` are hidden for brevity. The relevant styles are:
+Most of the CSS is hidden for brevity. The styles for the `subject` and `subject-container` include:
 
 ```css
 .subject {
