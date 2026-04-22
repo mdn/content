@@ -90,8 +90,6 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 
 Text containers with a `class` of `text-scale` are given a {{cssxref("font-size")}} of `1rem`, which means that in browsers that support `<meta name="text-scale" content="scale">`, that text will scale as the OS/browser font settings are changed. Text containers with a `class` of `fixed` are given a `font-size` of `20px`, which means that this text will remain at a fixed size as the OS/browser font settings are changed.
 
-We also include a {{cssxref("@media")}} query to set a larger `font-size` for narrow screens.
-
 ```css live-sample___text-scale
 .text-scale {
   font-size: 1rem;
@@ -99,16 +97,6 @@ We also include a {{cssxref("@media")}} query to set a larger `font-size` for na
 
 .fixed {
   font-size: 20px;
-}
-
-@media (width < 600px) {
-  .text-scale {
-    font-size: 1.5rem;
-  }
-
-  .fixed {
-    font-size: 30px;
-  }
 }
 ```
 
@@ -120,7 +108,66 @@ Test this in a supporting browser. For example, load it in Chrome for Android an
 
 {{ LiveSampleLink("text-scale", "Open the example in a separate tab") }}
 
-You'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size. This is also true when the `@media` query rules are applied to the page on narrow screens.
+You'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size.
+
+### A text-scale-responsive layout
+
+The following example demonstrates that with `<meta name="text-scale">` applied to a page, font-relative sizes can be used inside {{cssxref("@media")}} queries to cause supporting browsers to automatically adjust breakpoints as the OS text size is changed.
+
+#### HTML
+
+Like the previous example, our markup again includes the `<meta name="text-scale">` and `<meta name="viewport">` elements in the `<head>`. In this demo, the body content contains two elements — {{htmlelement("main")}} and {{htmlelement("aside")}} — to represent a main content column and a sidebar.
+
+```html live-sample___text-scale-layout
+<!doctype html>
+<html>
+  <head>
+    <meta name="text-scale" content="scale" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <main>Main content</main>
+    <aside>Aside content</aside>
+  </body>
+</html>
+```
+
+#### CSS
+
+We set our body element to have a {{cssxref("display")}} of `grid` and give the grid a {{cssxref("gap")}} of `24px`. By default, the main content and sidebar are laid out one below the other.
+
+We then include a {{cssxref("@media")}} query that lays the elements out side-by-side via {{cssxref("grid-template-columns")}} when the viewport becomes wider than `40rem`.
+
+```css live-sample___text-scale-layout
+body {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+}
+
+main,
+aside {
+  background-color: silver;
+  padding: 24px;
+  font-size: 1.5rem;
+}
+
+@media (width > 40rem) {
+  body {
+    grid-template-columns: 1fr 18.75rem;
+  }
+}
+```
+
+#### Result
+
+{{embedlivesample("text-scale-layout", "100%", "200")}}
+
+Test this in a supporting browser like Chrome for Android. You can open the demo in a separate tab using the link below to make testing easier:
+
+{{ LiveSampleLink("text-scale-layout", "Open the example in a separate tab") }}
+
+You'll see that, as the OS Font size is increased, the breakpoint size increases in proportion to it. At larger OS font sizes, the main and aside will start to appear on top of each other whereas previously they appeared side-by-side.
 
 ## Specifications
 
