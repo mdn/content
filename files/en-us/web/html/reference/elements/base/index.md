@@ -1,5 +1,6 @@
 ---
 title: "`<base>` HTML Document Base URL element"
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 page-type: html-element
 browser-compat: html.elements.base

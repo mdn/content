@@ -1,5 +1,6 @@
 ---
 title: "`<embed>` HTML Embed External Content element"
+short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 page-type: html-element
 browser-compat: html.elements.embed

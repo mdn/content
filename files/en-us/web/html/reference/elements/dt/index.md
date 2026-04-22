@@ -1,5 +1,6 @@
 ---
 title: "`<dt>` HTML Description Term element"
+short-title: <dt>
 slug: Web/HTML/Reference/Elements/dt
 page-type: html-element
 browser-compat: html.elements.dt

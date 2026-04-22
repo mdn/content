@@ -1,5 +1,6 @@
 ---
 title: "`<q>` HTML Inline Quotation element"
+short-title: <q>
 slug: Web/HTML/Reference/Elements/q
 page-type: html-element
 browser-compat: html.elements.q

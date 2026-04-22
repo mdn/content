@@ -1,5 +1,6 @@
 ---
 title: "`<figure>` HTML Figure with Optional Caption element"
+short-title: <figure>
 slug: Web/HTML/Reference/Elements/figure
 page-type: html-element
 browser-compat: html.elements.figure

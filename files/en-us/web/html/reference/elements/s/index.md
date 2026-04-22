@@ -1,5 +1,6 @@
 ---
 title: "`<s>` HTML Strikethrough element"
+short-title: <s>
 slug: Web/HTML/Reference/Elements/s
 page-type: html-element
 browser-compat: html.elements.s

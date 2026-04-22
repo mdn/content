@@ -1,5 +1,6 @@
 ---
 title: "`<dl>` HTML Description List element"
+short-title: <dl>
 slug: Web/HTML/Reference/Elements/dl
 page-type: html-element
 browser-compat: html.elements.dl

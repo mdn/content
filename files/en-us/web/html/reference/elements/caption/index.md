@@ -1,5 +1,6 @@
 ---
 title: "`<caption>` HTML Table Caption element"
+short-title: <caption>
 slug: Web/HTML/Reference/Elements/caption
 page-type: html-element
 browser-compat: html.elements.caption

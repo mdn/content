@@ -1,5 +1,6 @@
 ---
 title: "`<template>` HTML Content Template element"
+short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template

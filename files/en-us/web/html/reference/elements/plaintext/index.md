@@ -1,5 +1,6 @@
 ---
 title: "`<plaintext>` HTML Plain Text element (Deprecated)"
+short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
 page-type: html-element
 status:

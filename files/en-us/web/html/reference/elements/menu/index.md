@@ -1,5 +1,6 @@
 ---
 title: "`<menu>` HTML Menu element"
+short-title: <menu>
 slug: Web/HTML/Reference/Elements/menu
 page-type: html-element
 browser-compat: html.elements.menu

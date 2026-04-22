@@ -1,5 +1,6 @@
 ---
 title: "`<progress>` HTML Progress Indicator element"
+short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 page-type: html-element
 browser-compat: html.elements.progress

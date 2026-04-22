@@ -1,5 +1,6 @@
 ---
 title: "`<hgroup>` HTML Heading Group element"
+short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 page-type: html-element
 browser-compat: html.elements.hgroup

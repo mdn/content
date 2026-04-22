@@ -1,5 +1,6 @@
 ---
 title: "`<param>` HTML Object Parameter element"
+short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 page-type: html-element
 status:

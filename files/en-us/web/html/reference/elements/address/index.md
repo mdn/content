@@ -1,5 +1,6 @@
 ---
 title: "`<address>` HTML Contact Address element"
+short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 page-type: html-element
 browser-compat: html.elements.address

@@ -1,5 +1,6 @@
 ---
 title: "`<li>` HTML List Item element"
+short-title: <li>
 slug: Web/HTML/Reference/Elements/li
 page-type: html-element
 browser-compat: html.elements.li

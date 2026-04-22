@@ -1,5 +1,6 @@
 ---
 title: "`<wbr>` HTML Line Break Opportunity element"
+short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 page-type: html-element
 browser-compat: html.elements.wbr

@@ -1,5 +1,6 @@
 ---
 title: "`<aside>` HTML Aside element"
+short-title: <aside>
 slug: Web/HTML/Reference/Elements/aside
 page-type: html-element
 browser-compat: html.elements.aside

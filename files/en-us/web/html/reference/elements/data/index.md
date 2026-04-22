@@ -1,5 +1,6 @@
 ---
 title: "`<data>` HTML Data element"
+short-title: <data>
 slug: Web/HTML/Reference/Elements/data
 page-type: html-element
 browser-compat: html.elements.data

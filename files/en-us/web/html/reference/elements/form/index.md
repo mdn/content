@@ -1,5 +1,6 @@
 ---
 title: "`<form>` HTML Form element"
+short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 page-type: html-element
 browser-compat: html.elements.form

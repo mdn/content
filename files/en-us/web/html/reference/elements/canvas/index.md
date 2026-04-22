@@ -1,5 +1,6 @@
 ---
 title: "`<canvas>` HTML Graphics Canvas element"
+short-title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
 page-type: html-element
 browser-compat: html.elements.canvas

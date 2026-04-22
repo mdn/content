@@ -1,5 +1,6 @@
 ---
 title: "`<img>` HTML Image Embed element"
+short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 page-type: html-element
 browser-compat: html.elements.img

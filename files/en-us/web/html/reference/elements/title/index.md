@@ -1,5 +1,6 @@
 ---
 title: "`<title>` HTML Document Title element"
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 page-type: html-element
 browser-compat: html.elements.title

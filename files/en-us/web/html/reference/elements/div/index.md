@@ -1,5 +1,6 @@
 ---
 title: "`<div>` HTML Content Division element"
+short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element
 browser-compat: html.elements.div

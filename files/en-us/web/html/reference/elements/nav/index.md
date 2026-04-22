@@ -1,5 +1,6 @@
 ---
 title: "`<nav>` HTML Navigation Section element"
+short-title: <nav>
 slug: Web/HTML/Reference/Elements/nav
 page-type: html-element
 browser-compat: html.elements.nav

@@ -1,5 +1,6 @@
 ---
 title: "`<marquee>` HTML Marquee element"
+short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 page-type: html-element
 status:

@@ -1,5 +1,6 @@
 ---
 title: "`<ul>` HTML Unordered List element"
+short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 page-type: html-element
 browser-compat: html.elements.ul

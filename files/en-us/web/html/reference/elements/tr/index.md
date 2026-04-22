@@ -1,5 +1,6 @@
 ---
 title: "`<tr>` HTML Table Row element"
+short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
 page-type: html-element
 browser-compat: html.elements.tr

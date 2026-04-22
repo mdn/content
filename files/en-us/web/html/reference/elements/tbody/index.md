@@ -1,5 +1,6 @@
 ---
 title: "`<tbody>` HTML Table Body element"
+short-title: <tbody>
 slug: Web/HTML/Reference/Elements/tbody
 page-type: html-element
 browser-compat: html.elements.tbody

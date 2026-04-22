@@ -1,5 +1,6 @@
 ---
 title: "`<noembed>` HTML Embed Fallback element"
+short-title: <noembed>
 slug: Web/HTML/Reference/Elements/noembed
 page-type: html-element
 status:

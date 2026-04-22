@@ -1,5 +1,6 @@
 ---
 title: "`<area>` HTML Image Map Area element"
+short-title: <area>
 slug: Web/HTML/Reference/Elements/area
 page-type: html-element
 browser-compat: html.elements.area

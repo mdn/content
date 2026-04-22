@@ -1,5 +1,6 @@
 ---
 title: "`<del>` HTML Deleted Text element"
+short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 page-type: html-element
 browser-compat: html.elements.del

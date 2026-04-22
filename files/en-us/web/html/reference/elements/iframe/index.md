@@ -1,5 +1,6 @@
 ---
 title: "`<iframe>` HTML Inline Frame element"
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element
 browser-compat: html.elements.iframe

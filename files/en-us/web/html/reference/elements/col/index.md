@@ -1,5 +1,6 @@
 ---
 title: "`<col>` HTML Table Column element"
+short-title: <col>
 slug: Web/HTML/Reference/Elements/col
 page-type: html-element
 browser-compat: html.elements.col

@@ -1,5 +1,6 @@
 ---
 title: "`<td>` HTML Table Data Cell element"
+short-title: <td>
 slug: Web/HTML/Reference/Elements/td
 page-type: html-element
 browser-compat: html.elements.td

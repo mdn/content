@@ -1,5 +1,6 @@
 ---
 title: "`<abbr>` HTML Abbreviation element"
+short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 page-type: html-element
 browser-compat: html.elements.abbr

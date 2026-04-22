@@ -1,5 +1,6 @@
 ---
 title: "`<ins>` HTML Inserted Text element"
+short-title: <ins>
 slug: Web/HTML/Reference/Elements/ins
 page-type: html-element
 browser-compat: html.elements.ins

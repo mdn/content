@@ -1,5 +1,6 @@
 ---
-title: <frameset>
+title: "`<frameset>` HTML frame element's set"
+short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 page-type: html-element
 status:

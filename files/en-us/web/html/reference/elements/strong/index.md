@@ -1,5 +1,6 @@
 ---
 title: "`<strong>` HTML Strong Importance element"
+short-title: <strong>
 slug: Web/HTML/Reference/Elements/strong
 page-type: html-element
 browser-compat: html.elements.strong

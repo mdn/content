@@ -1,5 +1,6 @@
 ---
 title: "`<cite>` HTML Citation element"
+short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 page-type: html-element
 browser-compat: html.elements.cite

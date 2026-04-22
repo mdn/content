@@ -1,5 +1,6 @@
 ---
 title: "`<time>` HTML (Date) Time element"
+short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 page-type: html-element
 browser-compat: html.elements.time

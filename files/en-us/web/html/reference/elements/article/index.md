@@ -1,5 +1,6 @@
 ---
 title: "`<article>` HTML Article Contents element"
+short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 page-type: html-element
 browser-compat: html.elements.article

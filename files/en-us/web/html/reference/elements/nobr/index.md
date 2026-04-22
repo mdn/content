@@ -1,5 +1,6 @@
 ---
 title: "`<nobr>` HTML Non-Breaking Text element"
+short-title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
 page-type: html-element
 status:

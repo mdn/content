@@ -1,5 +1,6 @@
 ---
 title: "`<label>` HTML Label element"
+short-title: <label>
 slug: Web/HTML/Reference/Elements/label
 page-type: html-element
 browser-compat: html.elements.label

@@ -1,5 +1,6 @@
 ---
 title: "`<audio>` HTML Embed Audio element"
+short-title: <audio>
 slug: Web/HTML/Reference/Elements/audio
 page-type: html-element
 browser-compat: html.elements.audio

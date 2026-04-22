@@ -1,5 +1,6 @@
 ---
 title: "`<span>` HTML Content Span element"
+short-title: <span>
 slug: Web/HTML/Reference/Elements/span
 page-type: html-element
 browser-compat: html.elements.span
