@@ -70,9 +70,9 @@ In this example, we create an anonymous view progress timeline for the element w
 The HTML includes a lot of content, including two overlays, which we've hidden for brevity. In the middle of the text, we include the following:
 
 ```html live-sample__not_included_in_result
-  <div class="subject-container">
-    <div class="subject animation"></div>
-  </div>
+<div class="subject-container">
+  <div class="subject animation"></div>
+</div>
 ```
 
 ```html hidden
