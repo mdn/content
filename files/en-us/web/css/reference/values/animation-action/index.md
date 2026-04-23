@@ -14,7 +14,7 @@ The `<animation-action>` keyword values are used in the following properties:
 
 ## Syntax
 
-Valid `<animation-action>` values:
+The `<animation-action>` enumerated type is specified using one of the values listed below:
 
 - `none`
   - : The animation will not play.
