@@ -51,7 +51,7 @@ It is not recommended as a general-purpose encoding target.
 
 Like H.264, HEVC is a patented codec. The codec is subject to royalties in certain circumstances. Developers should review usage with legal counsel.
 
-## Codec-container compatibility
+### Codec-container compatibility
 
 Not all codecs are supported by all containers.
 The following table covers the two most common web video containers:
@@ -66,11 +66,11 @@ The following table covers the two most common web video containers:
 H.264 is the standard codec for MP4. VP9 and AV1 are the standard codecs for WebM.
 While VP9 and AV1 have partial MP4 support in some environments, pairing them with WebM is more reliable.
 
-## Choosing a codec string
+### Choosing a codec string
 
 For each codec family, there are hundreds of possible codec strings. The following tables provide a practical starting point for codec strings that maximize encoding compatibility.
 
-### H.264
+#### H.264
 
 | Codec string  | Profile  | Max resolution | Support                                                            |
 | ------------- | -------- | -------------- | ------------------------------------------------------------------ |
@@ -79,7 +79,7 @@ For each codec family, there are hundreds of possible codec strings. The followi
 | `avc1.42003e` | Baseline | 8K             | [86.8%](https://webcodecsfundamentals.org/codecs/avc1.42003e.html) |
 | `avc1.64003e` | High     | 8K             | [85.9%](https://webcodecsfundamentals.org/codecs/avc1.64003e.html) |
 
-### VP9
+#### VP9
 
 | Codec string       | Level | Max resolution | Support                                                                  |
 | ------------------ | ----- | -------------- | ------------------------------------------------------------------------ |
@@ -88,7 +88,7 @@ For each codec family, there are hundreds of possible codec strings. The followi
 | `vp09.00.50.08.00` | 5     | 4K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.50.08.00.html) |
 | `vp09.00.61.08.00` | 6.1   | 8K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.61.08.00.html) |
 
-### AV1
+#### AV1
 
 | Codec string    | Level | Max resolution | Support                                                              |
 | --------------- | ----- | -------------- | -------------------------------------------------------------------- |
@@ -96,7 +96,7 @@ For each codec family, there are hundreds of possible codec strings. The followi
 | `av01.0.08M.08` | 4.0   | 1080p          | [87.8%](https://webcodecsfundamentals.org/codecs/av01.0.08M.08.html) |
 | `av01.0.12M.08` | 5.0   | 4K             | [87.8%](https://webcodecsfundamentals.org/codecs/av01.0.12M.08.html) |
 
-### HEVC
+#### HEVC
 
 | Codec string       | Level | Max resolution | Support                                                                 |
 | ------------------ | ----- | -------------- | ----------------------------------------------------------------------- |
@@ -106,13 +106,13 @@ For each codec family, there are hundreds of possible codec strings. The followi
 
 See the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) for an exhaustive list of potential codec strings, and support across browsers & devices.
 
-## Codec string format
+### Codec string format
 
 The WebCodecs API requires a fully qualified codec string rather than a general codec name. The string encodes the codec family, profile, level, and other parameters that affect which hardware can encode or decode the stream and at what resolution and quality.
 
 The format for these codec strings is specified in the [W3C codec registry](https://www.w3.org/TR/webcodecs-codec-registry/), and the format is different for each codec family.
 
-### H.264
+#### H.264
 
 `avc1.4d0034`
 
@@ -121,7 +121,7 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `00` — Constraint flags
 - `34` — Level IDC in hexadecimal (`34` = level 5.2, supports up to 4K)
 
-### VP9
+#### VP9
 
 `vp09.00.40.08.00`
 
@@ -131,7 +131,7 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `08` — Bit depth (8-bit)
 - `00` — Chroma subsampling
 
-### AV1
+#### AV1
 
 `av01.0.05M.08`
 
@@ -140,7 +140,7 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `05M` — Level and tier (`05` = level 3.1, `M` = Main tier)
 - `08` — Bit depth (8-bit)
 
-### HEVC
+#### HEVC
 
 `hvc1.1.6.L150.B0`
 
