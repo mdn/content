@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-trigger
 sidebar: cssref
 ---
 
-The **`<animation-action>`** {{glossary("enumerated")}} data type is a CSS identifier that specifies how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
+The **`<animation-action>`** {{glossary("enumerated")}} data type represents keyword values that specifies how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
 
 The `<animation-action>` keyword values are used in the following properties:
 
