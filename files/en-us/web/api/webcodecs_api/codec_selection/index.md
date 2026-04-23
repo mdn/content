@@ -66,7 +66,7 @@ The following table covers the two most common web video containers:
 H.264 is the standard codec for MP4. VP9 and AV1 are the standard codecs for WebM.
 While VP9 and AV1 have partial MP4 support in some environments, pairing them with WebM is more reliable.
 
-### Choosing a codec string
+### Codec string selection
 
 For each codec family, there are hundreds of possible codec strings.
 
