@@ -18,7 +18,7 @@ When **decoding** a video file, the codec is determined by how the file was orig
 
 When **encoding**, you choose the codec. The rest of this guide covers how to choose a codec.
 
-## Choosing a codec family
+## Choosing a video codec family
 
 Before choosing a codec string, like `vp09.00.40.08.00` or `avc1.4d0034`, it is worth reviewing the codec families.
 
