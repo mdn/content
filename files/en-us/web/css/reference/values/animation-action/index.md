@@ -223,7 +223,7 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 
 Try scrolling the content up. When the tracked `<div>` fully appears in the viewport, the animation will play; when it starts to leave the viewport at either edge, the animation will play in reverse.
 
-### Demonstrating different `<animation-action>` effects
+### Comparing the `<animation-action>` values
 
 In this example we show a series of {{htmlelement("div")}} elements with the same scroll-triggered `rotate` animation applied as in the previous example, but different `<animation-action>` values. This allows you to compare and contrast the effect of the different actions.
 
