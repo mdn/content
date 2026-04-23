@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
 
-The **Prompt API** gives web pages the ability to directly prompt a browser-provided language model. It provides a uniform JavaScript interface that abstracts away implementation-specific details of the underlying model, such as prompt templating and tokenization. By relying on a model built into the browser, the Prompt API offers benefits including local processing of sensitive data, offline capability, model sharing across origins, and lower cost compared to cloud-based or bring-your-own-model approaches.
+The **Prompt API** allows web pages to directly prompt a browser-provided language model through a uniform JavaScript interface, without needing to manage implementation-specific details such as prompt templating and tokenization.
 
 ## Concepts and usage
 
@@ -17,7 +17,7 @@ All interaction with the language model happens through a {{domxref("LanguageMod
 
 Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple turns.
 
-Use {{domxref("LanguageModel.append()")}} to pre-load content into the context window without generating a response — useful for injecting documents, background information, or conversation history before asking a question.
+Use {{domxref("LanguageModel.append()")}} to preload content into the context window without generating a response — useful for providing documents, background information, or conversation history before asking a question.
 
 ### Checking availability
 
@@ -27,7 +27,7 @@ Before creating a session, call the static {{domxref("LanguageModel.availability
 
 Every `LanguageModel` session has a finite context window, measured in tokens, which is the total amount of input and output it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
 
-When a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window, it throws a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
+When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, it throws a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
 
 To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()")}}.
 
@@ -43,7 +43,7 @@ Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} 
 
 ### Permissions policy
 
-Access to the Prompt API is controlled by the `"language-model"` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin `<iframe>` elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
+Access to the Prompt API is controlled by the `language-model` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin {{HTMLElement("iframe")}} elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
 
 ### Security and privacy
 
