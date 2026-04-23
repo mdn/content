@@ -1,5 +1,6 @@
 ---
-title: update
+title: "`update` CSS media feature"
+short-title: update
 slug: Web/CSS/Reference/At-rules/@media/update
 page-type: css-media-feature
 browser-compat: css.at-rules.media.update

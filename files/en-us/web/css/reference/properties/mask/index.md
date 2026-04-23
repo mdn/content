@@ -1,5 +1,6 @@
 ---
-title: mask
+title: "`mask` CSS property"
+short-title: mask
 slug: Web/CSS/Reference/Properties/mask
 page-type: css-shorthand-property
 browser-compat: css.properties.mask

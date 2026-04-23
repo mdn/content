@@ -1,5 +1,6 @@
 ---
-title: <dimension>
+title: "`<dimension>` CSS type"
+short-title: <dimension>
 slug: Web/CSS/Reference/Values/dimension
 page-type: css-type
 browser-compat: css.types.dimension

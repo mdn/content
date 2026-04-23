@@ -1,5 +1,6 @@
 ---
-title: border-image-outset
+title: "`border-image-outset` CSS property"
+short-title: border-image-outset
 slug: Web/CSS/Reference/Properties/border-image-outset
 page-type: css-property
 browser-compat: css.properties.border-image-outset

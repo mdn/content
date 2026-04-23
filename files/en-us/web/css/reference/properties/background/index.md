@@ -1,5 +1,6 @@
 ---
-title: background
+title: "`background` CSS property"
+short-title: background
 slug: Web/CSS/Reference/Properties/background
 page-type: css-shorthand-property
 browser-compat: css.properties.background

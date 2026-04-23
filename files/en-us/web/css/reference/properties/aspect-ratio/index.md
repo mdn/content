@@ -1,5 +1,6 @@
 ---
-title: aspect-ratio
+title: "`aspect-ratio` CSS property"
+short-title: aspect-ratio
 slug: Web/CSS/Reference/Properties/aspect-ratio
 page-type: css-property
 browser-compat: css.properties.aspect-ratio

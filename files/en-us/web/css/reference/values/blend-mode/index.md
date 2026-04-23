@@ -1,5 +1,6 @@
 ---
-title: <blend-mode>
+title: "`<blend-mode>` CSS type"
+short-title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
 page-type: css-type
 browser-compat: css.types.blend-mode

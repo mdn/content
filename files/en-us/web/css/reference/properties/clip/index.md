@@ -1,5 +1,6 @@
 ---
-title: clip
+title: "`clip` CSS property"
+short-title: clip
 slug: Web/CSS/Reference/Properties/clip
 page-type: css-property
 status:

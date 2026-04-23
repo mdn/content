@@ -1,5 +1,6 @@
 ---
-title: vertical-align
+title: "`vertical-align` CSS property"
+short-title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
 page-type: css-shorthand-property
 browser-compat: css.properties.vertical-align

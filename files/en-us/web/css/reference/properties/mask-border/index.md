@@ -1,5 +1,6 @@
 ---
-title: mask-border
+title: "`mask-border` CSS property"
+short-title: mask-border
 slug: Web/CSS/Reference/Properties/mask-border
 page-type: css-shorthand-property
 browser-compat: css.properties.mask-border
