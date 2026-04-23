@@ -21,8 +21,8 @@ promptStreaming(input, options)
 
 - `input`
   - : The prompt to send to the model. This is a `LanguageModelPrompt`, which is either:
-    - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal input.
+    - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
+    - A sequence of {{domxref("LanguageModelMessage")}} objects for multi-turn or multimodal input.
 - `options` {{optional_inline}}
   - : A {{domxref("LanguageModelPromptOptions")}} object. Options include:
     - `responseConstraint` — An object constraining the format of the model's output.
@@ -35,7 +35,7 @@ A {{domxref("ReadableStream")}} of {{jsxref("String")}} chunks. Each chunk is a 
 
 ### Exceptions
 
-Errors are surfaced as stream errors rather than as rejected promises. Consumers should handle errors using the stream's standard error-handling mechanisms.
+Errors are surfaced as stream errors rather than as rejected promises. Consumers should handle errors using a stream's standard error-handling mechanisms.
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Surfaced if `input` contains a message with `role: "system"`.
@@ -48,7 +48,7 @@ Errors are surfaced as stream errors rather than as rejected promises. Consumers
 
 ## Description
 
-`promptStreaming()` works like {{domxref("LanguageModel.prompt()")}}, but instead of buffering the entire response, it returns a `ReadableStream` that emits text chunks as they are produced. This is useful for displaying responses to users in real time, for long outputs, or for any scenario where low perceived latency matters.
+The `promptStreaming()` method works like {{domxref("LanguageModel.prompt()")}}, but instead of buffering the entire response, it returns a `ReadableStream` that emits text chunks as they are produced. This is useful for displaying responses to users in real time, for long outputs, or for any scenario where low perceived latency matters.
 
 Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
 

@@ -8,7 +8,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns the availability status of the browser's language model for the given options, without creating a session or triggering a download.
+The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns the availability status of the browser's language model for the given options without creating a session or triggering a download.
 
 ## Syntax
 
@@ -32,13 +32,11 @@ A {{jsxref("Promise")}} that resolves with one of the following `Availability` s
 - `"available"` — The model is ready to use with the given options.
 - `"downloadable"` — The model can support the given options but requires a download that has not yet started.
 - `"downloading"` — The model can support the given options and a download is currently in progress.
-- `"unavailable"` — The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error).
+- `"unavailable"` — The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In which case, the caller should retry or fall back to an alternative implementation.
 
 ## Description
 
 Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
-
-When the method returns `"unavailable"`, `null` may also be returned internally to signal a transient error; in either case, callers should treat it as an unavailable state and consider retrying later or falling back to an alternative implementation.
 
 ## Examples
 

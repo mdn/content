@@ -20,7 +20,7 @@ clone(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelCloneOptions")}} object. Options include:
+  - : A {{domxref("LanguageModelCloneOptions")}} object. If this argument is absent, the `options` from the original session are used (not copied). Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value
@@ -36,9 +36,9 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 
 ## Description
 
-`clone()` is useful for branching a session at a specific point in a conversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+The `clone()` method branches a session at a specific point in a coversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
 
-For example, you might build up shared context using {{domxref("LanguageModel.append()")}} or early `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
+For example, you might build up shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
 
 ## Examples
 

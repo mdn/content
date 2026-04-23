@@ -12,13 +12,13 @@ The **`contextWindow`** read-only property of the {{domxref("LanguageModel")}} i
 
 ## Value
 
-An unrestricted double representing the session's context window capacity in tokens. May be `Infinity` if the user agent does not impose a specific limit beyond available memory or JavaScript string constraints.
+An unrestricted double representing the session's context window capacity in tokens. This value may be `Infinity` if the user agent does not impose a specific limit beyond available memory or JavaScript string constraints.
 
 ## Description
 
-`contextWindow` is the maximum number of tokens this session can hold across all inputs and outputs combined. It is set when the session is created and does not change during the session's lifetime.
+The `contextWindow` property is the maximum number of tokens this session can hold across all inputs and outputs combined. It is set when the session is created and does not change during the session's lifetime.
 
-Compare `contextWindow` against {{domxref("LanguageModel.contextUsage")}} to determine how much space remains. Use {{domxref("LanguageModel.measureContextUsage()")}} to estimate how many tokens a new prompt would consume before sending it.
+Compare `contextWindow` against {{domxref("LanguageModel.contextUsage", "contextUsage")}} to determine how much space remains. Use {{domxref("LanguageModel.measureContextUsage()", "measureContextUsage()")}} to estimate how many tokens a new prompt would consume before sending it.
 
 The value is implementation-defined and may vary depending on the model, device capabilities, and the session's configuration. A value of `Infinity` indicates that the user agent does not impose a hard limit.
 

@@ -22,7 +22,7 @@ LanguageModel.create(options)
 - `options` {{optional_inline}}
   - : A {{domxref("LanguageModelCreateOptions")}} object that configures the session. Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
-    - `monitor` — A `CreateMonitorCallback` to receive download progress events.
+    - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
     - `initialPrompts` — A sequence of {{domxref("LanguageModelMessage")}} objects to pre-load into the context window.
     - `expectedInputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the input modalities.
     - `expectedOutputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the output modalities.
@@ -45,7 +45,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 
 ## Description
 
-`LanguageModel.create()` is the primary entry point for the Prompt API. It initializes a language model session backed by a browser-provided model. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress using the `monitor` option.
+The `create()` method initializes a language model session backed by a browser-provided model. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress using the `monitor` option.
 
 Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
 
