@@ -190,12 +190,16 @@ An important point to remember is that the animation lasts only as long as the `
 ```css hidden
 @layer no-support {
   @supports not (animation-timeline: view()) {
-    body::before {
+    body::after {
       content: "Your browser doesn't support the CSS `view()` function.";
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
+
+      position: absolute;
+      inset: 0;
+      bottom: auto;
     }
   }
 }

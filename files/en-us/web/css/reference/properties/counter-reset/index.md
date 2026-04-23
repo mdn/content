@@ -204,11 +204,12 @@ In the following example, we've declared a reversed counter named 'priority'. Th
 
 ```css hidden
 @supports not (counter-reset: reversed(priority)) {
-  .stack {
-    display: none;
-  }
-  body::after {
-    content: "Your browser doesn't support the reversed counters yet.";
+  body::before {
+    content: "Your browser doesn't support the reversed() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
