@@ -22,3 +22,8 @@ sidebar:
     link: /Web/Security/Practical_implementation_guides
     title: Practical implementation guides
     details: closed
+  - type: listSubPages
+    path: /Web/Security/Threat_modeling
+    link: /Web/Security/Threat_modeling
+    title: Threat modeling
+    details: closed

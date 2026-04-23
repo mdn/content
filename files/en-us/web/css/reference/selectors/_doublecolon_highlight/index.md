@@ -1,5 +1,6 @@
 ---
-title: ::highlight()
+title: "`::highlight()` CSS pseudo-element"
+short-title: ::highlight()
 slug: Web/CSS/Reference/Selectors/::highlight
 page-type: css-pseudo-element
 browser-compat: css.selectors.highlight

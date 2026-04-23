@@ -1,5 +1,6 @@
 ---
-title: :read-only
+title: "`:read-only` CSS pseudo-class"
+short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-only

@@ -1,5 +1,6 @@
 ---
-title: "@container"
+title: "`@container` CSS at-rule"
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
@@ -80,6 +81,23 @@ If no `<container-query>` is specified, named containers are selected.
   h2 {
     font-size: 1.5em;
   }
+}
+
+/* Boolean style() queries */
+@container style(--theme: one) or style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* matched container styles */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* matched container styles */
+}
+@container not style(--theme: one) {
+  /* matched container styles */
 }
 ```
 

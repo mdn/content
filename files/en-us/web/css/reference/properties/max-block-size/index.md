@@ -1,5 +1,6 @@
 ---
-title: max-block-size
+title: "`max-block-size` CSS property"
+short-title: max-block-size
 slug: Web/CSS/Reference/Properties/max-block-size
 page-type: css-property
 browser-compat: css.properties.max-block-size

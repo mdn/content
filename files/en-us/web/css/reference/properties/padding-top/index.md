@@ -1,5 +1,6 @@
 ---
-title: padding-top
+title: "`padding-top` CSS property"
+short-title: padding-top
 slug: Web/CSS/Reference/Properties/padding-top
 page-type: css-property
 browser-compat: css.properties.padding-top

@@ -1,5 +1,6 @@
 ---
-title: flex-shrink
+title: "`flex-shrink` CSS property"
+short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 page-type: css-property
 browser-compat: css.properties.flex-shrink

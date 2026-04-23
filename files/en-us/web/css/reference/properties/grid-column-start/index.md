@@ -1,5 +1,6 @@
 ---
-title: grid-column-start
+title: "`grid-column-start` CSS property"
+short-title: grid-column-start
 slug: Web/CSS/Reference/Properties/grid-column-start
 page-type: css-property
 browser-compat: css.properties.grid-column-start
