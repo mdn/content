@@ -91,7 +91,7 @@ If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, a
 
 The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
 
-Remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+When `window.open()` returns, the new window always contains `about:blank`. If a different URL was provided, it is loaded asynchronously. The global object is reused for this initial load, so properties set on it may persist.
 
 Modern browsers have strict popup blocker policies. Popup windows must be opened in direct response to user input, and a separate user gesture event is required for each `Window.open()` call. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
 
