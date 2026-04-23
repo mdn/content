@@ -1,5 +1,5 @@
 ---
-title: "`<base>` HTML Document Base URL element"
+title: "`<base>` HTML document base URL element"
 short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<time>` HTML (Date) Time element"
+title: "`<time>` HTML time (date) element"
 short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 page-type: html-element

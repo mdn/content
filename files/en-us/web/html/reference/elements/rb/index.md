@@ -1,5 +1,5 @@
 ---
-title: "`<rb>` HTML Ruby Base element"
+title: "`<rb>` HTML ruby base element"
 short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 page-type: html-element

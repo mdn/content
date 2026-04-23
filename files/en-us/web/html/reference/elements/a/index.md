@@ -1,5 +1,5 @@
 ---
-title: "`<a>` HTML Anchor element"
+title: "`<a>` HTML anchor element"
 short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 page-type: html-element
