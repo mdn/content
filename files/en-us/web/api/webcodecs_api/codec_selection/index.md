@@ -68,7 +68,11 @@ While VP9 and AV1 have partial MP4 support in some environments, pairing them wi
 
 ### Choosing a codec string
 
-For each codec family, there are hundreds of possible codec strings. The following tables provide a practical starting point for codec strings that maximize encoding compatibility.
+For each codec family, there are hundreds of possible codec strings.
+
+Each codec string encodes a **profile** and **level** that determine the capabilities and compatibility of the encoded stream. The profile controls which encoding features are enabled — lower profiles such as Baseline are simpler and more broadly compatible, while higher profiles such as High enable better compression at the cost of requiring more capable hardware. The level sets the maximum resolution and bitrate the stream can use. In general, prefer lower profiles and levels unless you specifically need the higher resolution or compression efficiency.
+
+The following tables provide a practical starting point for codec strings, with levels and profiles that maximize encoding compatibility.
 
 #### H.264
 
