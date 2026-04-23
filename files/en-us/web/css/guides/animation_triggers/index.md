@@ -63,4 +63,6 @@ The CSS animation triggers module also introduces the `event-trigger`, `event-tr
 
 ## See also
 
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [CSS scroll-triggered animations are coming!](https://developer.chrome.com/blog/scroll-triggered-animations) on developer.chrome.com (2025)
