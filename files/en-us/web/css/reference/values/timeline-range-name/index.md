@@ -1,5 +1,6 @@
 ---
-title: <timeline-range-name>
+title: "`<timeline-range-name>` CSS type"
+short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 page-type: css-type
 browser-compat: css.types.timeline-range-name

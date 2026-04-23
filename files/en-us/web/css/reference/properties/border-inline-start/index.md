@@ -1,5 +1,6 @@
 ---
-title: border-inline-start
+title: "`border-inline-start` CSS property"
+short-title: border-inline-start
 slug: Web/CSS/Reference/Properties/border-inline-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-start

@@ -1,5 +1,6 @@
 ---
-title: scrollbar-color
+title: "`scrollbar-color` CSS property"
+short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color

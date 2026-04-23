@@ -1,5 +1,6 @@
 ---
-title: rem()
+title: "`rem()` CSS function"
+short-title: rem()
 slug: Web/CSS/Reference/Values/rem
 page-type: css-function
 browser-compat: css.types.rem

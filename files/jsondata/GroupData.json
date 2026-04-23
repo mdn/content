@@ -1445,15 +1445,18 @@
       "guides": [],
       "interfaces": [
         "COEPViolationReport",
+        "CrashReport",
+        "CrashReportContext",
         "CSPViolationReport",
         "DeprecationReport",
-        "InterventionReport",
         "IntegrityViolationReport",
+        "InterventionReport",
+        "PermissionsPolicyViolationReport",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.crashReport"],
       "events": []
     },
     "Resize Observer API": {

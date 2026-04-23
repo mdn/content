@@ -1,5 +1,6 @@
 ---
-title: text-align
+title: "`text-align` CSS property"
+short-title: text-align
 slug: Web/CSS/Reference/Properties/text-align
 page-type: css-property
 browser-compat: css.properties.text-align

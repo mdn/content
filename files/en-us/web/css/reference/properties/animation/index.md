@@ -1,5 +1,6 @@
 ---
-title: animation
+title: "`animation` CSS property"
+short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 page-type: css-shorthand-property
 browser-compat: css.properties.animation

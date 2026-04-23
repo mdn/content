@@ -1,5 +1,6 @@
 ---
-title: view-timeline-axis
+title: "`view-timeline-axis` CSS property"
+short-title: view-timeline-axis
 slug: Web/CSS/Reference/Properties/view-timeline-axis
 page-type: css-property
 browser-compat: css.properties.view-timeline-axis
@@ -163,7 +164,7 @@ p {
   body::before {
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
   @supports not (view-timeline-axis: inherit) {
     body::before {

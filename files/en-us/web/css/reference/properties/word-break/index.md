@@ -1,5 +1,6 @@
 ---
-title: word-break
+title: "`word-break` CSS property"
+short-title: word-break
 slug: Web/CSS/Reference/Properties/word-break
 page-type: css-property
 browser-compat: css.properties.word-break

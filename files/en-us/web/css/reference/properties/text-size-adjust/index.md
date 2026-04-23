@@ -1,5 +1,6 @@
 ---
-title: text-size-adjust
+title: "`text-size-adjust` CSS property"
+short-title: text-size-adjust
 slug: Web/CSS/Reference/Properties/text-size-adjust
 page-type: css-property
 status:
