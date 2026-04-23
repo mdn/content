@@ -20,7 +20,7 @@ append(input, options)
 ### Parameters
 
 - `input`
-  - : The content to append to the context window. This is a `LanguageModelPrompt`, which is either:
+  - : The content to append to the context window. This is a {{domxref("LanguageModelPrompt")}}, which is either:
     - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal content.
 - `options` {{optional_inline}}
@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 
 ## Description
 
-`append()` is useful for pre-loading context — such as a document, conversation history, or background information — before asking the model a question. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context.
+The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context.
 
 Unlike `initialPrompts` in {{domxref("LanguageModelCreateOptions")}}, `append()` can be called at any point during the session's lifetime.
 

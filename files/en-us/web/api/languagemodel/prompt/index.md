@@ -21,8 +21,8 @@ prompt(input, options)
 
 - `input`
   - : The prompt to send to the model. This is a `LanguageModelPrompt`, which is either:
-    - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal input.
+    - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
+    - A sequence of {{domxref("LanguageModelMessage")}} objects for multi-turn or multimodal input.
 - `options` {{optional_inline}}
   - : A {{domxref("LanguageModelPromptOptions")}} object. Options include:
     - `responseConstraint` — An object constraining the format of the model's output.
@@ -46,7 +46,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} containing the
 
 ## Description
 
-`prompt()` is the primary method for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
+The `prompt()` method is the primary method for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
 
 For long responses or streaming use cases, use {{domxref("LanguageModel.promptStreaming()")}} instead to receive the response incrementally. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
 

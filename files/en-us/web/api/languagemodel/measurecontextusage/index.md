@@ -8,7 +8,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume, without sending it to the model or modifying the session's state.
+The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state.
 
 ## Syntax
 
@@ -21,8 +21,8 @@ measureContextUsage(input, options)
 
 - `input`
   - : The input to measure. This is a `LanguageModelPrompt`, which is either:
-    - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal input.
+    - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
+    - A sequence of {{domxref("LanguageModelMessage")}} objects for multi-turn or multimodal input.
 - `options` {{optional_inline}}
   - : A {{domxref("LanguageModelPromptOptions")}} object. Options include:
     - `responseConstraint` — An object constraining the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
@@ -42,7 +42,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 
 ## Description
 
-`measureContextUsage()` is a dry-run measurement that lets you check how much of the context window a given input requires, before deciding whether to send it. Compare the result to {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input fits.
+The `measureContextUsage()` function is a dry-run measurement that lets you check how much of the context window a given input require, before deciding whether to send it. Compare the result to {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input fits.
 
 This is particularly useful for long-context applications such as document summarization, where you need to split or truncate content to stay within the context window limit.
 
