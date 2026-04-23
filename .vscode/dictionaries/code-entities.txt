@@ -36,6 +36,7 @@ allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
@@ -83,6 +84,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -377,6 +379,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -437,6 +440,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -470,6 +474,7 @@ msword
 mtei
 mths
 multistatus
+myattr
 mymr
 mymrepka
 mymrpao
