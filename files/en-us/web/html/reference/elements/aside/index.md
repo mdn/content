@@ -1,5 +1,5 @@
 ---
-title: "`<aside>` HTML Aside element"
+title: "`<aside>` HTML aside element"
 short-title: <aside>
 slug: Web/HTML/Reference/Elements/aside
 page-type: html-element

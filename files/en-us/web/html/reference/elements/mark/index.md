@@ -1,5 +1,5 @@
 ---
-title: "`<mark>` HTML Mark Text element"
+title: "`<mark>` HTML mark text element"
 short-title: <mark>
 slug: Web/HTML/Reference/Elements/mark
 page-type: html-element

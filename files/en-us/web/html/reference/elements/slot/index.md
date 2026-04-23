@@ -1,5 +1,5 @@
 ---
-title: "`<slot>` HTML Web Component Slot element"
+title: "`<slot>` HTML web component slot element"
 short-title: <slot>
 slug: Web/HTML/Reference/Elements/slot
 page-type: html-element

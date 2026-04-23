@@ -1,5 +1,5 @@
 ---
-title: "`<dir>` HTML Directory element"
+title: "`<dir>` HTML directory element"
 short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 page-type: html-element

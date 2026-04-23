@@ -1,5 +1,5 @@
 ---
-title: "`<details>` HTML Details disclosure element"
+title: "`<details>` HTML details disclosure element"
 short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<wbr>` HTML Line Break Opportunity element"
+title: "`<wbr>` HTML line break opportunity element"
 short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 page-type: html-element

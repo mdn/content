@@ -1,5 +1,5 @@
 ---
-title: "`<tt>` HTML Teletype Text element"
+title: "`<tt>` HTML teletype text element"
 short-title: <tt>
 slug: Web/HTML/Reference/Elements/tt
 page-type: html-element

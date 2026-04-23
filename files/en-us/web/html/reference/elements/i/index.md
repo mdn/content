@@ -1,5 +1,5 @@
 ---
-title: "`<i>` HTML Idiomatic Text element"
+title: "`<i>` HTML idiomatic text element"
 short-title: <i>
 slug: Web/HTML/Reference/Elements/i
 page-type: html-element

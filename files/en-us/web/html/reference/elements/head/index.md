@@ -1,5 +1,5 @@
 ---
-title: "`<head>` HTML Document Metadata (Header) element"
+title: "`<head>` HTML document metadata (header) element"
 short-title: <head>
 slug: Web/HTML/Reference/Elements/head
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<dialog>` HTML Dialog element"
+title: "`<dialog>` HTML dialog element"
 short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 page-type: html-element

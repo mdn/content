@@ -1,5 +1,5 @@
 ---
-title: "`<s>` HTML Strikethrough element"
+title: "`<s>` HTML strikethrough element"
 short-title: <s>
 slug: Web/HTML/Reference/Elements/s
 page-type: html-element

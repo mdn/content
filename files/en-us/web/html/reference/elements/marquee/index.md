@@ -1,5 +1,5 @@
 ---
-title: "`<marquee>` HTML Marquee element"
+title: "`<marquee>` HTML marquee element"
 short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 page-type: html-element

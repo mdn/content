@@ -1,5 +1,5 @@
 ---
-title: "`<picture>` HTML Picture element"
+title: "`<picture>` HTML picture element"
 short-title: <picture>
 slug: Web/HTML/Reference/Elements/picture
 page-type: html-element

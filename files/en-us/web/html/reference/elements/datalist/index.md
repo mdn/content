@@ -1,5 +1,5 @@
 ---
-title: "`<datalist>` HTML Data List element"
+title: "`<datalist>` HTML data list element"
 short-title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
 page-type: html-element

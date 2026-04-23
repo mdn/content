@@ -1,5 +1,5 @@
 ---
-title: "`<nav>` HTML Navigation Section element"
+title: "`<nav>` HTML navigation section element"
 short-title: <nav>
 slug: Web/HTML/Reference/Elements/nav
 page-type: html-element

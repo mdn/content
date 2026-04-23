@@ -1,5 +1,5 @@
 ---
-title: "`<hgroup>` HTML Heading Group element"
+title: "`<hgroup>` HTML heading group element"
 short-title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 page-type: html-element

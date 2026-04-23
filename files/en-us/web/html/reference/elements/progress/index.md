@@ -1,5 +1,5 @@
 ---
-title: "`<progress>` HTML Progress Indicator element"
+title: "`<progress>` HTML progress indicator element"
 short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 page-type: html-element

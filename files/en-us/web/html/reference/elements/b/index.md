@@ -1,5 +1,5 @@
 ---
-title: "`<b>` HTML Bring Attention To element"
+title: "`<b>` HTML bring attention to element"
 short-title: <b>
 slug: Web/HTML/Reference/Elements/b
 page-type: html-element

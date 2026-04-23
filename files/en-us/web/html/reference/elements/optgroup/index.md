@@ -1,5 +1,5 @@
 ---
-title: "`<optgroup>` HTML Option Group element"
+title: "`<optgroup>` HTML option group element"
 short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 page-type: html-element

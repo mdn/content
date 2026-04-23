@@ -1,5 +1,5 @@
 ---
-title: "`<span>` HTML Content Span element"
+title: "`<span>` HTML content span element"
 short-title: <span>
 slug: Web/HTML/Reference/Elements/span
 page-type: html-element

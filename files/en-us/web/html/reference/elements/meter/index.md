@@ -1,5 +1,5 @@
 ---
-title: "`<meter>` HTML Meter element"
+title: "`<meter>` HTML meter element"
 short-title: <meter>
 slug: Web/HTML/Reference/Elements/meter
 page-type: html-element

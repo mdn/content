@@ -1,5 +1,5 @@
 ---
-title: "`<p>` HTML Paragraph element"
+title: "`<p>` HTML paragraph element"
 short-title: <p>
 slug: Web/HTML/Reference/Elements/p
 page-type: html-element

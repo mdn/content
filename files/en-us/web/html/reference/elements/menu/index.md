@@ -1,5 +1,5 @@
 ---
-title: "`<menu>` HTML Menu element"
+title: "`<menu>` HTML menu element"
 short-title: <menu>
 slug: Web/HTML/Reference/Elements/menu
 page-type: html-element

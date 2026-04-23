@@ -1,5 +1,5 @@
 ---
-title: "`<embed>` HTML Embed External Content element"
+title: "`<embed>` HTML embed external content element"
 short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 page-type: html-element

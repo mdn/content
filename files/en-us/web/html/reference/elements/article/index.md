@@ -1,5 +1,5 @@
 ---
-title: "`<article>` HTML Article Contents element"
+title: "`<article>` HTML article contents element"
 short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<iframe>` HTML Inline Frame element"
+title: "`<iframe>` HTML inline frame element"
 short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element

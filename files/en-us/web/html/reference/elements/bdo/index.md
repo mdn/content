@@ -1,5 +1,5 @@
 ---
-title: "`<bdo>` HTML Bidirectional Text Override element"
+title: "`<bdo>` HTML bidirectional text override element"
 short-title: <bdo>
 slug: Web/HTML/Reference/Elements/bdo
 page-type: html-element

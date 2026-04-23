@@ -1,5 +1,5 @@
 ---
-title: "`<script>` HTML Script element"
+title: "`<script>` HTML script element"
 short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 page-type: html-element

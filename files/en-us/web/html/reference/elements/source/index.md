@@ -1,5 +1,5 @@
 ---
-title: "`<source>` HTML Media or Image Source element"
+title: "`<source>` HTML media or image source element"
 short-title: <source>
 slug: Web/HTML/Reference/Elements/source
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<select>` HTML Select element"
+title: "`<select>` HTML select element"
 short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element

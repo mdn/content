@@ -1,5 +1,5 @@
 ---
-title: "`<cite>` HTML Citation element"
+title: "`<cite>` HTML citation element"
 short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 page-type: html-element

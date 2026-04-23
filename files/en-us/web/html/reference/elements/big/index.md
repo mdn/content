@@ -1,5 +1,5 @@
 ---
-title: "`<big>` HTML Bigger Text element"
+title: "`<big>` HTML bigger text element"
 short-title: <big>
 slug: Web/HTML/Reference/Elements/big
 page-type: html-element

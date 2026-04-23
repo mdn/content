@@ -1,5 +1,5 @@
 ---
-title: "`<style>` HTML Style Information element"
+title: "`<style>` HTML style information element"
 short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 page-type: html-element

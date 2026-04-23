@@ -1,5 +1,5 @@
 ---
-title: "`<data>` HTML Data element"
+title: "`<data>` HTML data element"
 short-title: <data>
 slug: Web/HTML/Reference/Elements/data
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<fencedframe>` HTML Fenced Frame element"
+title: "`<fencedframe>` HTML fenced frame element"
 short-title: <fencedframe>
 slug: Web/HTML/Reference/Elements/fencedframe
 page-type: html-element

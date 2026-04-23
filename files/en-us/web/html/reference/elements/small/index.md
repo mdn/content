@@ -1,5 +1,5 @@
 ---
-title: "`<small>` HTML Side Comment element"
+title: "`<small>` HTML side comment element"
 short-title: <small>
 slug: Web/HTML/Reference/Elements/small
 page-type: html-element

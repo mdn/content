@@ -1,5 +1,5 @@
 ---
-title: "`<template>` HTML Content Template element"
+title: "`<template>` HTML content template element"
 short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element

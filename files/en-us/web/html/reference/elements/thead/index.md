@@ -1,5 +1,5 @@
 ---
-title: "`<thead>` HTML Table Head element"
+title: "`<thead>` HTML table head element"
 short-title: <thead>
 slug: Web/HTML/Reference/Elements/thead
 page-type: html-element

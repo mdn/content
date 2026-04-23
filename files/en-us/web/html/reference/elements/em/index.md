@@ -1,5 +1,5 @@
 ---
-title: "`<em>` HTML Emphasis element"
+title: "`<em>` HTML emphasis element"
 short-title: <em>
 slug: Web/HTML/Reference/Elements/em
 page-type: html-element

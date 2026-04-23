@@ -1,5 +1,5 @@
 ---
-title: "`<td>` HTML Table Data Cell element"
+title: "`<td>` HTML table data cell element"
 short-title: <td>
 slug: Web/HTML/Reference/Elements/td
 page-type: html-element

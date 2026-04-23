@@ -1,5 +1,5 @@
 ---
-title: "`<li>` HTML List Item element"
+title: "`<li>` HTML list item element"
 short-title: <li>
 slug: Web/HTML/Reference/Elements/li
 page-type: html-element

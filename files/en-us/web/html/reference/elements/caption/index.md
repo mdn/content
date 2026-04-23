@@ -1,5 +1,5 @@
 ---
-title: "`<caption>` HTML Table Caption element"
+title: "`<caption>` HTML table caption element"
 short-title: <caption>
 slug: Web/HTML/Reference/Elements/caption
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<table>` HTML Table element"
+title: "`<table>` HTML table element"
 short-title: <table>
 slug: Web/HTML/Reference/Elements/table
 page-type: html-element

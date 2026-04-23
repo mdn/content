@@ -1,5 +1,5 @@
 ---
-title: "`<div>` HTML Content Division element"
+title: "`<div>` HTML content division element"
 short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 page-type: html-element

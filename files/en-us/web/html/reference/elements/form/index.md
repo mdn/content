@@ -1,5 +1,5 @@
 ---
-title: "`<form>` HTML Form element"
+title: "`<form>` HTML form element"
 short-title: <form>
 slug: Web/HTML/Reference/Elements/form
 page-type: html-element

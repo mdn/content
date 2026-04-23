@@ -1,5 +1,5 @@
 ---
-title: "`<fieldset>` HTML Field Set element"
+title: "`<fieldset>` HTML field set element"
 short-title: <fieldset>
 slug: Web/HTML/Reference/Elements/fieldset
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<main>` HTML Main element"
+title: "`<main>` HTML main element"
 short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 page-type: html-element

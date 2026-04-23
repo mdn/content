@@ -1,5 +1,5 @@
 ---
-title: "`<title>` HTML Document Title element"
+title: "`<title>` HTML document title element"
 short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 page-type: html-element

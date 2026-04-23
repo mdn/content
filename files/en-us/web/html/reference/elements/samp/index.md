@@ -1,5 +1,5 @@
 ---
-title: "`<samp>` HTML Sample Output element"
+title: "`<samp>` HTML sample output element"
 short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 page-type: html-element

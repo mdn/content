@@ -1,5 +1,5 @@
 ---
-title: "`<map>` HTML Image Map element"
+title: "`<map>` HTML image map element"
 short-title: <map>
 slug: Web/HTML/Reference/Elements/map
 page-type: html-element

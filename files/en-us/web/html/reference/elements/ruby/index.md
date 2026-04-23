@@ -1,5 +1,5 @@
 ---
-title: "`<ruby>` HTML Ruby Annotation element"
+title: "`<ruby>` HTML ruby annotation element"
 short-title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 page-type: html-element

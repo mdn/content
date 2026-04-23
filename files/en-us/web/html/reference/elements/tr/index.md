@@ -1,5 +1,5 @@
 ---
-title: "`<tr>` HTML Table Row element"
+title: "`<tr>` HTML table row element"
 short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
 page-type: html-element

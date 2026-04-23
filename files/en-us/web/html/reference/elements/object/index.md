@@ -1,5 +1,5 @@
 ---
-title: "`<object>` HTML External Object element"
+title: "`<object>` HTML external object element"
 short-title: <object>
 slug: Web/HTML/Reference/Elements/object
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<ul>` HTML Unordered List element"
+title: "`<ul>` HTML unordered list element"
 short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 page-type: html-element

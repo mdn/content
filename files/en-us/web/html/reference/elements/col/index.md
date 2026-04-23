@@ -1,5 +1,5 @@
 ---
-title: "`<col>` HTML Table Column element"
+title: "`<col>` HTML table column element"
 short-title: <col>
 slug: Web/HTML/Reference/Elements/col
 page-type: html-element

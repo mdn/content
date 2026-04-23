@@ -1,5 +1,5 @@
 ---
-title: "`<track>` HTML Embed Text Track element"
+title: "`<track>` HTML embed text track element"
 short-title: <track>
 slug: Web/HTML/Reference/Elements/track
 page-type: html-element

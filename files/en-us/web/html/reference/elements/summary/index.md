@@ -1,5 +1,5 @@
 ---
-title: "`<summary>` HTML Disclosure Summary element"
+title: "`<summary>` HTML disclosure summary element"
 short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<noframes>` HTML Frame Fallback element"
+title: "`<noframes>` HTML frame fallback element"
 short-title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
 page-type: html-element

@@ -1,5 +1,5 @@
 ---
-title: "`<pre>` HTML Preformatted Text element"
+title: "`<pre>` HTML preformatted text element"
 short-title: <pre>
 slug: Web/HTML/Reference/Elements/pre
 page-type: html-element
