@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebCodecs API")}}
 
-The WebCodecs API requires working with fully specified codec strings, such as `vp09.00.40.08.00`, instead of ambiguous strings like `vp9` or `h264`. Fully specified codec strings detail not just the codec family but also the profile, level, and other parameters.
+The [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) requires working with fully specified codec strings, such as `vp09.00.40.08.00`, instead of ambiguous strings like `vp9` or `h264`. Fully specified codec strings detail not just the codec family but also the profile, level, and other parameters.
 This guide explains how codec strings work and how to choose the right codec for common use cases.
 
 ## Decoding vs encoding
