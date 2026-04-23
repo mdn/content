@@ -14,14 +14,14 @@ The **`LanguageModelMessage`** dictionary of the [Prompt API](/en-US/docs/Web/AP
 ## Instance properties
 
 - `role`
-  - : A string from the `LanguageModelMessageRole` enumeration indicating who sent the message. Must be one of:
-    - `"system"` — A system-level instruction that guides the model's overall behavior. Note that `prompt()`, `promptStreaming()`, and `append()` throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+  - : A string indicating who sent the message. Must be one of:
+    - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
     - `"user"` — A message from the user.
     - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
 - `content`
   - : The content of the message. This is either:
-    - A string — Shorthand for a single text content part: `[{ type: "text", value: providedValue }]`.
-    - A sequence of {{domxref("LanguageModelMessageContent")}} objects — For multimodal messages or messages with multiple content parts.
+    - A string — Shorthand for a single text content part. For example: `[{ type: "text", value: providedValue }]`.
+    - A sequence of {{domxref("LanguageModelMessageContent")}} objects for multimodal messages or messages with multiple content parts.
 - `prefix` {{optional_inline}}
   - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
 

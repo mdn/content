@@ -18,7 +18,7 @@ Pass one or more `LanguageModelTool` objects in the `tools` array when calling {
 - `description`
   - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
 - `inputSchema`
-  - : An object containing a [JSON Schema](https://json-schema.org/) definition that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
+  - : An object containing a [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
 - `execute`
   - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 

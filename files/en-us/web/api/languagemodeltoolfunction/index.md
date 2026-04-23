@@ -26,15 +26,15 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing t
 
 ## Description
 
-`LanguageModelToolFunction` callbacks are defined by the developer and registered as part of a {{domxref("LanguageModelTool")}} dictionary passed to {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}. When the language model's generated output indicates a tool call, the user agent invokes the `execute` function with the arguments the model specified. The returned string is fed back to the model as the tool's output.
+`LanguageModelToolFunction` callbacks are defined by the developer and registered as part of a {{domxref("LanguageModelTool")}} dictionary passed to {{domxref("LanguageModel.create_static", "create()")}}. When the language model's generated output indicates a tool call, the user agent invokes the `execute` function with the arguments the model specified. The returned string is fed back to the model as the tool's output.
 
-The function must return a `Promise` resolving to a `DOMString`. This allows the implementation to perform asynchronous operations such as network requests or database lookups before returning a result.
+The function must return a `Promise` resolving with a `DOMString`. This allows the implementation to perform asynchronous operations such as network requests or database lookups before returning a result.
 
 ## Examples
 
 ### Defining a tool with a callback
 
-This example creates a session with a `getWeather` tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
+This example creates a session with a hypothetical "get wheather" tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
 
 ```js
 async function getWeatherData(location) {
