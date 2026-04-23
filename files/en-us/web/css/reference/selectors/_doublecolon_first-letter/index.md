@@ -1,5 +1,6 @@
 ---
-title: ::first-letter
+title: "`::first-letter` CSS pseudo-element"
+short-title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
 page-type: css-pseudo-element
 browser-compat: css.selectors.first-letter

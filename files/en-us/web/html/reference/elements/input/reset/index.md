@@ -1,5 +1,6 @@
 ---
-title: <input type="reset">
+title: '`<input type="reset">` HTML attribute value'
+short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_reset

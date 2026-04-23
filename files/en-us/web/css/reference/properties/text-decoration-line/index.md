@@ -1,5 +1,6 @@
 ---
-title: text-decoration-line
+title: "`text-decoration-line` CSS property"
+short-title: text-decoration-line
 slug: Web/CSS/Reference/Properties/text-decoration-line
 page-type: css-property
 browser-compat: css.properties.text-decoration-line

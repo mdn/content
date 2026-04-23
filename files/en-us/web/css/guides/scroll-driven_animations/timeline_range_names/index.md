@@ -162,11 +162,16 @@ body::before {
 
 @layer no-support {
   @supports not (animation-timeline: view()) {
-    body::before {
+    body::after {
       content: "Your browser doesn't support view progress scrolling.";
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
+
+      position: absolute;
+      inset: 0;
+      bottom: auto;
     }
   }
 }
@@ -523,7 +528,13 @@ The animation attachment range is the size of the subject, and not clamped to th
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-    <rect class="orange" width="100" height="250" x="230" y="750" fill="url(#g)" />
+    <rect
+      class="orange"
+      width="100"
+      height="250"
+      x="230"
+      y="750"
+      fill="url(#g)" />
     <text y="460" x="10">entry</text>
     <text y="520" x="360">100%</text>
     <text y="690" x="-50">100%</text>
@@ -546,7 +557,7 @@ The animation attachment range is the size of the subject, and not clamped to th
     <text y="490" x="80">100%</text>
     <text y="690" x="-50">100%</text>
     <line x1="225" x2="345" y1="250" y2="250" />
-    <line x1n h0" x2="230" y1="500" y2="500" />
+    <line x1="0" x2="230" y1="500" y2="500" />
     <line x1="-10" x2="120" y1="700" y2="700" />
     <line x1="0" x2="350" y1="750" y2="750" />
     <text y="760" x="360">0%</text>

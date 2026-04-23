@@ -1,5 +1,6 @@
 ---
-title: repeat()
+title: "`repeat()` CSS function"
+short-title: repeat()
 slug: Web/CSS/Reference/Values/repeat
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.repeat

@@ -1,5 +1,6 @@
 ---
-title: pad
+title: "`pad` CSS at-rule descriptor"
+short-title: pad
 slug: Web/CSS/Reference/At-rules/@counter-style/pad
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.pad

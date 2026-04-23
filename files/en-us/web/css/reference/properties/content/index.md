@@ -1,5 +1,6 @@
 ---
-title: content
+title: "`content` CSS property"
+short-title: content
 slug: Web/CSS/Reference/Properties/content
 page-type: css-property
 browser-compat: css.properties.content

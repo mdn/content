@@ -1,5 +1,6 @@
 ---
-title: <box-edge>
+title: "`<box-edge>` CSS type"
+short-title: <box-edge>
 slug: Web/CSS/Reference/Values/box-edge
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-box-4/#keywords
