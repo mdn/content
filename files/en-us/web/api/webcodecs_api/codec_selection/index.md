@@ -170,7 +170,7 @@ AAC encoding is universally supported on Safari versions that support {{domxref(
 
 MP3 and PCM are not not widely supported as encoding targets, with MP3 encoding not currently supported by any major browser. PCM (uncompressed audio) is available as a {{domxref("AudioData")}} format for raw audio processing, but support for encoding with `AudioEncoder` is limited.
 
-## Audio codec string reference
+### Audio codec string reference
 
 Audio codec strings are simpler than video codec strings. Opus requires no additional parameters; AAC uses a short parameter string.
 
@@ -189,6 +189,16 @@ PCM is available in several variants: `pcm-f32` (32-bit float), `pcm-s16` (16-bi
 
 Use {{domxref("AudioEncoder/isConfigSupported_static", "AudioEncoder.isConfigSupported()")}} to check support at runtime before configuring an `AudioEncoder`. Note that `AudioEncoder` itself is not available in all browsers — check for its existence with `typeof AudioEncoder !== "undefined"` before calling `isConfigSupported()`.
 
+## Common use cases
+
+You need to choose a video codec and an audio codec, along with the container format, together as a package. For practical quickstart guidance, here are some common configurations:
+
+**Targeting maximum compatibility** (video intended for playback in third-party software or on a wide range of devices): H.264 (e.g., `avc1.4d0034`) + AAC (`mp4a.40.2`) in an MP4 container is the most common choice in practice.
+
+**Open-source projects or applications controlling both encoding and playback** (e.g., internal tooling, in-app streaming): VP9 (e.g., `vp09.00.40.08.00`) + Opus (`opus`) in a WebM container is a natural fit — both are open-source, and WebM is the standard container for this combination.
+
+**Maximum compression** (e.g., large-scale streaming): AV1 + Opus in a WebM container, provided your target audience has sufficient hardware support. Use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify before committing to this combination.
+
 ## Checking support at runtime
 
 Before encoding, use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify that a given configuration is supported on the current device:
@@ -205,6 +215,32 @@ Since hardware support varies by device, a common pattern is to test codec strin
 
 ```js
 const candidates = ["avc1.64003e", "avc1.4d0034", "avc1.42003e", "avc1.42001f"];
+let codecString;
+
+for (const codec of candidates) {
+  const { supported } = await VideoEncoder.isConfigSupported({
+    codec,
+    width: 1920,
+    height: 1080,
+    bitrate: 5_000_000,
+    framerate: 30,
+  });
+  if (supported) {
+    codecString = codec;
+    break;
+  }
+}
+```
+
+The same pattern applies to VP9:
+
+```js
+const candidates = [
+  "vp09.00.61.08.00",
+  "vp09.00.50.08.00",
+  "vp09.00.40.08.00",
+  "vp09.00.10.08.00",
+];
 let codecString;
 
 for (const codec of candidates) {
