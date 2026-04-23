@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`LanguageModelAppendOptions`** dictionary of the [Prompt API](/en-US/docs/Web/API/Prompt_API) represents the options that can be passed to {{domxref("LanguageModel.append()")}}. Currently, the only option is an abort signal.
+The **`LanguageModelAppendOptions`** dictionary of the [Prompt API](/en-US/docs/Web/API/Prompt_API) represents the options that can be passed to {{domxref("LanguageModel.append()")}}.
 
 ## Instance properties
 
