@@ -164,7 +164,7 @@ Opus is an open source codec with broad encoding support across browsers and pla
 
 AAC is the standard audio codec for MP4 files and is required when targeting MP4 output. However, AAC encoding support in WebCodecs has notable gaps: it is not supported in Firefox on any platform, or in any browser on desktop Linux.
 
-AAC encoding is universally supported on Safari versions which support {{domxref("AudioEncoder")}} (Safari 26+), but previous versions of Safari do not support audio encoding in general.
+AAC encoding is universally supported on Safari versions that support {{domxref("AudioEncoder")}} (Safari 26+), but previous versions of Safari do not support audio encoding in general.
 
 ### MP3 and PCM
 
