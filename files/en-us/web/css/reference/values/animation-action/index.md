@@ -225,7 +225,7 @@ Try scrolling the content up. When the tracked `<div>` fully appears in the view
 
 ### Comparing the `<animation-action>` values
 
-In this example we show a series of {{htmlelement("div")}} elements with the same scroll-triggered `rotate` animation applied as in the previous example, but different `<animation-action>` values. This allows you to compare and contrast the effect of the different actions.
+This example provides a comparison of the various`<animation-action>` values. By applying the same rotation animation to identical side-by-side elements, only varying the `animation-trigger` values, you can compare and contrast the effects of the different actions.
 
 #### HTML
 
