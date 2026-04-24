@@ -161,7 +161,7 @@ p {
 
 ## Accessibility
 
-When `clamp()` is used for controlling text size, be sure that the maximum allowed value is a [relative length unit](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) that is no less than twice the minimum allowed value, for example:
+When `clamp()` is used for controlling text size, make sure that the maximum allowed value is a [relative length unit](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) that is no less than twice the minimum allowed value, for example:
 
 ```css
 font-size: clamp(1rem, 2.5vw, 2rem);
