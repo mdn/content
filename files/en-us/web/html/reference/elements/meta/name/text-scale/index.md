@@ -23,7 +23,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 ## Description
 
-The `<meta name="text-scale" content="scale">` element can be included in a document's  {{htmlelement("head")}}, to make the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings. Specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
+The `<meta name="text-scale" content="scale">` element can be included in a document's {{htmlelement("head")}}, to make the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings. Specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
 
 The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the {{cssxref("rem")}} unit's value. Provided you set or allow the root `font-size` to default to a [local or root relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any keyword (like `medium`) or local or root relative length, such a `em` and `rem`, will be scaled in proportion to user OS or browser font size settings.
 
