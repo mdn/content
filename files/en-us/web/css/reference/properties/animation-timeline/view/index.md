@@ -120,7 +120,7 @@ We also include two overlays to enable visualizing the animation range:
 
 #### CSS
 
-Most of the CSS is hidden for brevity. The styles for the `subject` and `subject-container` include:
+The styles for the `subject` and `subject-container` include:
 
 ```css
 .subject {
@@ -218,6 +218,8 @@ p {
   }
 }
 ```
+
+The rest of the CSS is hidden for brevity.
 
 #### Result
 
