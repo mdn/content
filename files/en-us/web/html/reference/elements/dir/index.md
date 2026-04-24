@@ -1,5 +1,6 @@
 ---
-title: "<dir>: The Directory element"
+title: "`<dir>` HTML directory element"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 page-type: html-element
 status:
