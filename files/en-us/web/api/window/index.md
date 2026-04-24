@@ -33,7 +33,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
-- {{domxref("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+- {{domxref("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{experimental_inline}}
   - : Returns a {{domxref("CrashReportContext")}} object that enables arbitrary data to be recorded for the current top-level browsing context, which is then added to a {{domxref("CrashReport")}} and sent to a reporting endpoint when a browser crash occurs.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for more details.
@@ -47,7 +47,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
-- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
 - {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.

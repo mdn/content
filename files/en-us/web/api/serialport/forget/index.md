@@ -3,12 +3,10 @@ title: "SerialPort: forget() method"
 short-title: forget()
 slug: Web/API/SerialPort/forget
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SerialPort.forget
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when access to the serial port is revoked.
 
