@@ -31,7 +31,7 @@ replaceElementWithChildren(element)
 
 A boolean value: `true` if the operation updated the `Sanitizer` configuration to replace the element with its children, and `false` otherwise.
 
-The method returns `false` if the sanitizer is already configured to replace the given element, or if the resolved element is [not allowed]().
+The method returns `false` if the sanitizer is already configured to replace the given element, or if the resolved element is [not allowed](#disallowed_replacement_elements).
 
 The method will return also return `false` if the following objects are passed:
 
