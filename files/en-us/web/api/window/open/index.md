@@ -89,7 +89,8 @@ If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, a
 
 ## Description
 
-The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
+The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window.
+The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control the features of the new window, such as whether it is a tab or a popup with minimal UI features, its size and position, and so on.
 
 When `window.open()` returns, the new window always contains `about:blank`. If a different URL was provided, it is loaded asynchronously. The global object is reused for this initial load, so properties set on it may persist.
 
