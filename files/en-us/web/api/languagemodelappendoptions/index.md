@@ -23,9 +23,12 @@ const controller = new AbortController();
 setTimeout(() => controller.abort(), 3000);
 
 try {
-  await session.append("Here is some background context for future questions.", {
-    signal: controller.signal,
-  });
+  await session.append(
+    "Here is some background context for future questions.",
+    {
+      signal: controller.signal,
+    },
+  );
   console.log("Context appended successfully.");
 } catch (err) {
   if (err.name === "AbortError") {

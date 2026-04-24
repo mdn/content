@@ -26,13 +26,8 @@ You can pass a `LanguageModelCreateCoreOptions` object to {{domxref("LanguageMod
 
 ```js
 const availability = await LanguageModel.availability({
-  expectedInputs: [
-    { type: "text" },
-    { type: "image" },
-  ],
-  expectedOutputs: [
-    { type: "text", languages: ["en"] },
-  ],
+  expectedInputs: [{ type: "text" }, { type: "image" }],
+  expectedOutputs: [{ type: "text", languages: ["en"] }],
 });
 
 if (availability === "unavailable") {
