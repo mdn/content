@@ -30,8 +30,13 @@ requestFullscreen(options)
         - `"browser"`
           - : Browser keyboard lock mode is applied.
             In this mode, the browser forwards keyboard events to the application that would normally be handled by browser or system code.
-            The browser disables the default action for some keys, such as exiting fullscreen mode when the <kbd>Esc</kbd> key is pressed.
-            Applications can call [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on events to cancel other default actions.
+            Applications should intercept evens for the keys and key combinations they want to use, and call [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) to cancel any default actions.
+
+            Note that some browsers may disable the default action for some keys, such as the key that is normally used to exit fullscreen mode; this is not guaranteed, so you should always call `preventDefault()`.
+            Browsers are also encouraged to provide a mechanism to exit fullscreen mode with keyboard lock.
+
+            For more information see the [Keyboard locking](#keyboard_locking) section below.
+
     - `navigationUI` {{optional_inline}}
       - : Controls whether or not to show navigation UI while the element is in fullscreen mode.
         The default value is `"auto"`, which indicates that the browser should decide what to do.
@@ -84,7 +89,7 @@ An element that you wish to place into fullscreen mode has to meet a small numbe
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute applied to it.
 
-Additionally, any set Permissions-Policies must allow the use of the `fullscreen` feature.
+Additionally, any set {{httpheader("Permissions-Policy")}} must allow the use of the `fullscreen` feature.
 
 ### Detecting fullscreen activation
 
@@ -95,18 +100,21 @@ It's also important to listen for `fullscreenchange` to be aware when, for examp
 
 ### Keyboard locking
 
-Keyboard locking allows a fullscreen application to intercept some keys and key combinations that would otherwise be handled by the browser or the underlying OS.
-This can improve the user experience for applications such as games, allowing you to use key combinations that would otherwise cause the browser to exit fullscreen mode, or otherwise affect the application and operating system.
+Keyboard locking allows a fullscreen application to intercept some keys and key combinations that would otherwise be exclusively handled by the browser or the underlying OS.
+This can improve the user experience for applications such as games, allowing you to intercept key combinations that would otherwise not reach your code or have have unintended side effects outside the control of your application.
 For example, this mechanism allows the <kbd>Esc</kbd> key to be used as a menu key in games, instead of exiting fullscreen mode.
 
 The keyboard lock is activated by passing a keyboard lock mode value, other than `none`, to the [`options.keyboardLock`](#keyboardlock) parameter when activating fullscreen mode.
-When keyboard lock is active in fullscreen mode the browser will redirect keyboard events that would otherwise trigger system or browser behavior to the application.
-The browser may remove the action associated with the events, or the web application can prevent the default action by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event.
-Note that the key combinations that are used for system control or that have privacy risks cannot be disabled using this mechanism.
+When keyboard lock is active in fullscreen mode the browser will redirect almost all keyboard events to the application, including those that would otherwise trigger system or browser behavior.
+The web application should then prevent the default action by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event.
+Some key combinations are used for system control or have privacy risks, and hence cannot be disabled using this mechanism (for example, <kbd>Ctrl+Alt+Delete</kbd> on Windows).
 
-Browsers are expected to provide an alternative for exiting fullscreen mode when keyboard lock is enabled, since the <kbd>Esc</kbd> default action is disabled.
-On Firefox this is a long-press of the <kbd>Esc</kbd> key.
+Note that the default actions for some keyboard events may be disabled by default in fullscreen mode in some Browsers.
+However this is not guaranteed, so generally you will need to call `preventDefault()` to disable the default action for all events that interest you.
+In particular, this includes the event for the <kbd>Esc</kbd> key, which may otherwise exit you out of fullscreen mode even if you have keyboard lock!
 
+Browsers are expected to provide an alternative mechanism for exiting fullscreen mode when keyboard lock is enabled, since the normal default action is disabled.
+Most browsers use the <kbd>Esc</kbd> to exit normal fullscreen mode, and a long-press <kbd>Esc</kbd> key to exit keyboard lock.
 The keyboard lock is disabled when the browser exits fullscreen mode.
 
 ### Security considerations
@@ -201,35 +209,41 @@ kbd {
 
 ### Using keyboard lock
 
-This example is _exactly_ the same as the last one except that it specifies the `keyboardLock` option when requesting requests fullscreen.
-On supporting browsers, this disables the default <kbd>Esc</kbd> key action to leave fullscreen mode, and enables long-press for the same action.
+This example is almost the same as the previous example except that we request that fullscreen is opened with keyboard lock.
 
 #### JavaScript
 
 ```js hidden
 const video = document.querySelector("video");
-
-document.addEventListener("keydown", (event) => {
-  // Note that "F" is case-sensitive (uppercase):
-  if (event.key === "Enter" || event.key === "F") {
-    // Check if we're in fullscreen mode
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-      return;
-    }
 ```
 
-The code that sets the keyboard lock mode to `"browser"` is:
+The modified key event listener code is shown below.
+
+The first difference is that we call `event.preventDefault()` to disable the default action in fullscreen mode, which exits the mode when the <kbd>Esc</kbd> key is pressed.
+While we might not need to do this on some browsers, which disable the default action for the normal fullscreen exit key by default, this can't be guaranteed on all browsers.
+
+As before we call `requestFullscreen()` if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
+The difference here is that we specify the `keyboardLock` option.
 
 ```js
-    // Otherwise enter fullscreen mode
-    video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
-      console.error(`Error enabling fullscreen: ${err.message}`);
-    });
+document.addEventListener("keydown", (event) => {
+  // Check if we're in fullscreen mode
+  if (document.fullscreenElement) {
+    // Cancel exiting via the Escape key
+    if (event.key === "Escape") {
+      event.preventDefault();
+      // Do whatever else you might want to do when escape is pressed
+    }
+  } else {
+    // Open full screen if Enter or F is pressed.
+    // Note that "F" is case-sensitive (uppercase):
+    if (event.key === "Enter" || event.key === "F") {
+      // Otherwise enter fullscreen mode
+      video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
+        console.error(`Error enabling fullscreen: ${err.message}`);
+      });
+    }
   }
-```
-
-```js hidden
 });
 ```
 
@@ -273,16 +287,14 @@ kbd {
 #### Results
 
 Select the frame and press <kbd>Shift + F</kbd>.
-When the page displays full frame, note that the temporary notification at the top of the page: "Exit full screen (Press and hold Esc)".
+When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
+On Firefox this says "Exit full screen (Press and hold Esc)".
 
 {{embedlivesample("Using keyboard lock", , "400", "", "", "", "fullscreen")}}
 
 ### Using navigationUI
 
-In this example, the entire document is placed into fullscreen mode by calling
-`requestFullscreen()` on the document's
-{{DOMxRef("Document.documentElement")}}, which is the document's root
-{{HTMLElement("html")}} element.
+In this example, the entire document is placed into fullscreen mode by calling `requestFullscreen()` on the document's {{DOMxRef("Document.documentElement")}}, which is the document's root {{HTMLElement("html")}} element.
 
 ```js
 let elem = document.documentElement;
