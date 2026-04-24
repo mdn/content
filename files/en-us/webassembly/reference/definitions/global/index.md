@@ -57,7 +57,7 @@ global identifier type initial_value
 - `identifier` {{optional_inline}}
   - : An identifying name for the global. This must begin with a `$` symbol, for example `$my_global`.
 - `type`
-  - : The type of global to create. This can consist of one or two items:
+  - : The type of global to create. This consists of a `data_type`, optionally preceded by the `mut` keyword:
     - `mut` {{optional_inline}}
       - : The `mut` flag. If included, the global is mutable — it can be set to a different value after initialization via the [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set) instruction.
     - `data_type`
