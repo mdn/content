@@ -5,7 +5,7 @@ page-type: landing-page
 sidebar: webassemblysidebar
 ---
 
-WebAssembly variable instructions.
+WebAssembly variable getter and setter instructions.
 
 ## Global
 
