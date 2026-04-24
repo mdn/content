@@ -80,7 +80,7 @@ In the markup, we embed an HDR image using an {{htmlelement("img")}} element. We
 
 ```html
 <img
-  src="hdr.jpg"
+  src="https://mdn.github.io/shared-assets/images/examples/hi-res/lights.jpg"
   alt="White strip lights lighting in a subway station"
   tabindex="0" />
 ```
