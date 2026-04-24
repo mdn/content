@@ -8,9 +8,9 @@ sidebar: addonsidebar
 
 Sets the access level for the storage area.
 
-This method is only supported for the `storage.session` StorageArea.
+Unlike other storage areas, `storage.session` is only available to privileged (trusted) extension contexts. This `setAccessLevel` method is used to expose the session storage area to content scripts too.
 
-Unlike other storage areas, `storage.session` is only available to privileged (trusted) extension contexts. This `setAccessLevel` method is used to expose the session storage area to content scripts too. By default, all other storage areas are exposed to all extension contexts, including content scripts.
+By default, all other storage areas are exposed to all extension contexts, including content scripts. This `setAccessLevel` method can be used to restrict access of these storage areas in content scripts.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -22,7 +22,7 @@ await browser.storage.<storageType>.setAccessLevel(
 )
 ```
 
-Where `<storageType>` is the {{WebExtAPIRef("storage.session")}} storage type.
+Where `<storageType>` is any of the storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.managed")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 
