@@ -75,12 +75,10 @@ body {
 }
 ```
 
-For example, on Chrome for Android, the body font size will be set in proportion to the global OS "Font size" setting.
-
 Page sizes can also be set to be proportional to browser or OS-level font size by including [`<meta name="text-scale" content="scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) inside the document `<head>`. The `<meta>` tag should be used in favor of the `env(preferred-text-scale)` when possible, as the `<meta>` tag is simpler to use and is supported across a wider range of platforms.
 
 > [!WARNING]
-> Using both these features together should be done with caution as it may result in text scaling being applied twice. For example, when combining `em` or `rem` with `env(preferred-text-scale)` — `font-size: calc(2rem * env(preferred-text-scale))` — you will end up with small font sizes being smaller and large font sizes being larger. This won't be a problem when multiplying by an absolute length (for example, `px`), which isn't relative to the document's initial font size — for example `font-size: calc(32px * env(preferred-text-scale))`.
+> Be careful using `env(preferred-text-scale)` when `<meta name="text-scale" content="scale">`  is set as this will result in text scaling being applied twice when combined with relative sizes, such as  `em` and `rem`. For example, when the `<meta>` is set, a declaration such as `font-size: calc(2rem * env(preferred-text-scale))` will cause small font sizes to be made even smaller and large font sizes larger.
 
 ### Names followed by integers
 
