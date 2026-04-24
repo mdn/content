@@ -59,7 +59,7 @@ For example:
 
 ### Using meta viewport text-scale
 
-The following example demonstrates the basics of using `<meta name="text-scale" content="scale">`.
+This example demonstrates the basics of using `<meta name="text-scale" content="scale">`.
 
 #### HTML
 
