@@ -20,7 +20,7 @@ clone(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelCloneOptions")}} object. If this argument is absent, the `options` from the original session are used (not copied). Options include:
+  - : A `LanguageModelCloneOptions` dictionary, which represents the options that can be passed. If this argument is absent, the `options` from the original session are used (not copied). Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value
@@ -84,6 +84,23 @@ try {
 }
 ```
 
+### Cloning a session with an abort signal
+
+```js
+const controller = new AbortController();
+setTimeout(() => controller.abort(), 3000);
+
+try {
+  const clonedSession = await session.clone({
+    signal: controller.signal,
+  });
+  console.log("Session cloned successfully.");
+} catch (err) {
+  if (err.name === "AbortError") {
+    console.log("Clone operation was aborted.");
+  }
+}
+
 ## Specifications
 
 {{Specifications}}
@@ -95,5 +112,4 @@ try {
 ## See also
 
 - {{domxref("LanguageModel.append()")}}
-- {{domxref("LanguageModelCloneOptions")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)

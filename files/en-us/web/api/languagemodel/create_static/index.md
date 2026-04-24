@@ -20,12 +20,12 @@ LanguageModel.create(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelCreateOptions")}} object that configures the session. Options include:
-    - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
-    - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
-    - `initialPrompts` — A sequence of {{domxref("LanguageModelMessage")}} objects to pre-load into the context window.
+  - : A `LanguageModelCreateOptions` dictionary containing the options for creating a {{domxref("LanguageModel")}} session. Options include:
     - `expectedInputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the input modalities.
     - `expectedOutputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the output modalities.
+    - `initialPrompts` — A sequence of {{domxref("LanguageModelMessage")}} objects that are pre-loaded into the session's context window before other prompts are sent. This is typically used to provide a system prompt and any few-shot examples that should persist across all turns.
+    - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
+    - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
     - `tools` — A sequence of {{domxref("LanguageModelTool")}} objects the model may invoke during generation.
 
 ### Return value
@@ -77,6 +77,22 @@ const response = await session.prompt("Hello, how are you?");
 console.log(response); // "Ahoy! I be doin' fine, matey!"
 ```
 
+### Creating a session with a system prompt
+
+```js
+const session = await LanguageModel.create({
+  initialPrompts: [
+    {
+      role: "system",
+      content: "You are a concise assistant. Respond in one sentence.",
+    },
+  ],
+});
+
+const response = await session.prompt("What is photosynthesis?");
+console.log(response);
+```
+
 ### Monitoring download progress
 
 ```js
@@ -87,6 +103,25 @@ const session = await LanguageModel.create({
     });
   },
 });
+```
+
+### Providing few-shot examples
+
+A few-shot example is a a set of input-output pairs passed to an AI before asking it to complete a similar task.
+
+```js
+const session = await LanguageModel.create({
+  initialPrompts: [
+    { role: "system", content: "Translate the user's input to French." },
+    { role: "user", content: "Hello" },
+    { role: "assistant", content: "Bonjour" },
+    { role: "user", content: "Goodbye" },
+    { role: "assistant", content: "Au revoir" },
+  ],
+});
+
+const result = await session.prompt("Good morning");
+console.log(result); // "Bonjour matin" or "Bonjour"
 ```
 
 ### Cancelling session creation
@@ -115,5 +150,4 @@ try {
 ## See also
 
 - {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}
-- {{domxref("LanguageModelCreateOptions")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)

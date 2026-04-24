@@ -20,7 +20,7 @@ LanguageModel.availability(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelCreateCoreOptions")}} object specifying the configuration to check. Options include:
+  - : A `LanguageModelCreateCoreOptions` dictionary that represents the base set of options used when checking language model availability or creating a session. Options include:
     - `expectedInputs` — A sequence of {{domxref("LanguageModelExpected")}} objects describing the required input modalities and languages.
     - `expectedOutputs` — A sequence of {{domxref("LanguageModelExpected")}} objects describing the required output modalities and languages.
     - `tools` — A sequence of {{domxref("LanguageModelTool")}} objects to verify tool support.
@@ -79,6 +79,24 @@ if (status === "available") {
 }
 ```
 
+### Checking availability for a multimodal configuration
+
+```js
+const availability = await LanguageModel.availability({
+  expectedInputs: [{ type: "text" }, { type: "image" }],
+  expectedOutputs: [{ type: "text", languages: ["en"] }],
+});
+
+if (availability === "unavailable") {
+  console.warn("This configuration is not supported.");
+} else {
+  const session = await LanguageModel.create({
+    expectedInputs: [{ type: "text" }, { type: "image" }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+  });
+}
+```
+
 ### Gating UI on availability
 
 ```js
@@ -103,5 +121,4 @@ if (status === "downloadable" || status === "downloading") {
 ## See also
 
 - {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
-- {{domxref("LanguageModelCreateCoreOptions")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
