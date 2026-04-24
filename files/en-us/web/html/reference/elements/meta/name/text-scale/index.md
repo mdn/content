@@ -19,7 +19,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
     - `scale`
       - : Opts the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. It also causes the browser to disable existing browser-based mechanisms and heuristics (for example, text autosizing on mobile).
     - `legacy`
-      - : The default value. The page is not opted in to the root element's `font-size` scaling in proportion to OS and browser-level text scale settings.
+      - : The default value. The page is not opted in to the root element's `font-size` scaling in proportion to OS and browser-level text scale settings. This has the same effect as not including the `<meta>` element at all (OS-level font preferences are ignored.)
 
 ## Description
 
