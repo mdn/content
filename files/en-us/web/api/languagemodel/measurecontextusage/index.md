@@ -24,7 +24,7 @@ measureContextUsage(input, options)
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence of {{domxref("LanguageModelMessage")}} objects for multi-turn or multimodal input.
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelPromptOptions")}} object. Options include:
+  - : A `LanguageModelPromptOptions` dictionary. Options include:
     - `responseConstraint` — An object constraining the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.

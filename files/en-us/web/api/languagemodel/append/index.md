@@ -24,7 +24,7 @@ append(input, options)
     - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal content.
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelAppendOptions")}} object. Options include:
+  - : A `LanguageModelAppendOptions` object representing the options that can be passed. Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value
@@ -46,7 +46,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 
 The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context.
 
-Unlike `initialPrompts` in {{domxref("LanguageModelCreateOptions")}}, `append()` can be called at any point during the session's lifetime.
+Unlike `initialPrompts` in `LanguageModelCreateOptions`, `append()` can be called at any point during the session's lifetime.
 
 ## Examples
 
@@ -77,6 +77,27 @@ const advice = await session.prompt("What database would you recommend?");
 console.log(advice);
 ```
 
+### Appending context with an abort signal
+
+```js
+const controller = new AbortController();
+setTimeout(() => controller.abort(), 3000);
+
+try {
+  await session.append(
+    "Here is some background context for future questions.",
+    {
+      signal: controller.signal,
+    },
+  );
+  console.log("Context appended successfully.");
+} catch (err) {
+  if (err.name === "AbortError") {
+    console.log("Append was aborted.");
+  }
+}
+```
+
 ### Checking context usage after appending
 
 ```js
@@ -98,5 +119,4 @@ console.log(`Context used: ${session.contextUsage} / ${session.contextWindow} to
 
 - {{domxref("LanguageModel.prompt()")}}
 - {{domxref("LanguageModel.measureContextUsage()")}}
-- {{domxref("LanguageModelAppendOptions")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
