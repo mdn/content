@@ -23,37 +23,47 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 ## Description
 
-The `<meta name="text-scale" content="scale">` element can be included in a document's {{htmlelement("head")}}, to make the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings. Specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
+The `<meta name="text-scale">` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences, and causes it to disable existing browser-based mechanisms and heuristics.
 
-The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the {{cssxref("rem")}} unit's value. Provided you set or allow the root `font-size` to default to a [local or root relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any keyword (like `medium`) or local or root relative length, such a `em` and `rem`, will be scaled in proportion to user OS or browser font size settings.
+The `<meta name="text-scale">` element makes the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings; specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
 
-For example, the following rule:
+The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the {{cssxref("rem")}} unit's value. Provided you set or allow the root `font-size` to default to a [local or root-relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any keyword (like `medium`) or local or root-relative length, such a `em` and `rem`, will be scaled in proportion to user OS or browser font size settings.
+
+For example, with `<meta name="text-scale" content="scale">` included on the page, the following rule:
 
 ```css
 p {
-  font-size: medium /* or "initial" */;
+  font-size: medium;
 }
 ```
 
-would result in all {{htmlelement("p")}} elements receiving a scaled font size.
+would result in all {{htmlelement("p")}} elements receiving a scaled font size. You could also set `font-size` to `initial` to get the same effect.
 
-Recommended usage is to:
-
-1. Include `<meta name="text-scale" content="scale" />` in your page.
-2. Not override the initial {{cssxref(":root")}} `font-size` with an absolute length value like `16px`.
-3. Use only font-relative units such as `em`/`rem` or keywords such as `small`, `x-large`, etc. to size content.
-4. Not use the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable to size dimensions. This has similar effects, but the `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
-
-   > [!WARNING]
-   > Using both these features together should be done with caution as it may result in text scaling being applied twice. For example, when setting `<meta name="text-scale">` on the page and then combining `em` or `rem` with `env(preferred-text-scale)` — `font-size: calc(2rem * env(preferred-text-scale))` — you will end up with small font sizes being smaller and large font sizes being larger. This won't be a problem when multiplying by an absolute length (for example, `px`), which isn't relative to the document's initial font size — for example `font-size: calc(32px * env(preferred-text-scale))`.
-
-This recommended usage allows you to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences. It also causes the browser to disable existing browser-based mechanisms and heuristics.
-
-For example:
+Known effects include:
 
 - In Chrome for Android, `rem` and `em` font sizes will scale in proportion to the global OS "Font size" setting. Text autosizing is disabled.
 - In Chrome for desktop, the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable will reflect the multiplier that corresponds to Chrome's Settings > Appearance > Font size, but other than that, it has no discernable effect.
-- The `<meta name="text-scale" content="scale">` element also has other effects in Android Webview: see https://chromium.googlesource.com/chromium/src/+/b29d63222d10f4c7e620d057578d737969eb7ae3.
+- The `<meta name="text-scale" content="scale">` element also has other effects in Android WebView: see https://chromium.googlesource.com/chromium/src/+/b29d63222d10f4c7e620d057578d737969eb7ae3.
+
+### Usage summary
+
+To summarize, recommended usage is to:
+
+1. Include `<meta name="text-scale" content="scale" />` in the `<head>` of your page.
+2. Not override the initial {{cssxref(":root")}} `font-size` with an absolute length value like `16px`.
+3. Use only font-relative units such as `em`/`rem` or keywords such as `small`, `x-large`, etc. to size content.
+
+### `<meta name="text-scale">` versus `env(preferred-text-scale)`
+
+You should prefer to use `<meta name="text-scale" />` to size dimensions relative to OS text scale settings rather than the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable. While they have similar effects, the `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
+
+Avoid using both these features together as it may result in text scaling being applied twice. For example, when setting `<meta name="text-scale">` on the page and then combining `em` or `rem` with `env(preferred-text-scale)`, for example:
+
+```css
+font-size: calc(2rem * env(preferred-text-scale));
+```
+
+you will end up with small font sizes being smaller and large font sizes being larger.
 
 ## Examples
 
