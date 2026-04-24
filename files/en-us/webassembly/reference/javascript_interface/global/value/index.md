@@ -7,8 +7,7 @@ browser-compat: webassembly.api.Global.value
 sidebar: webassemblysidebar
 ---
 
-The **`value`** property of the
-[`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype returns the value contained inside the global variable. This can be used to directly set and get the global's value.
+The **`value`** property of the [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype returns the value contained inside the global variable. This can be used to directly set and get the global's value.
 
 ## Value
 

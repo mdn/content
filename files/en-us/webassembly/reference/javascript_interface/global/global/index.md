@@ -21,8 +21,7 @@ new WebAssembly.Global(descriptor, value)
 - `descriptor`
   - : An object, which contains two properties:
     - `value`
-      - : A string representing the
-        data type of the global. This can be any one of:
+      - : A string representing the data type of the global. This can be any one of:
         - `i32`: A 32-bit integer.
         - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
         - `f32`: A 32-bit floating point number.
@@ -30,8 +29,7 @@ new WebAssembly.Global(descriptor, value)
         - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
         - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
     - `mutable`
-      - : A boolean value that determines whether the global is
-        mutable or not. By default, this is `false`.
+      - : A boolean value that determines whether the global is mutable or not. By default, this is `false`.
 
 - `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.

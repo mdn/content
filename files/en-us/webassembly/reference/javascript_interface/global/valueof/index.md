@@ -7,8 +7,7 @@ browser-compat: webassembly.api.Global.valueOf
 sidebar: webassemblysidebar
 ---
 
-The **`valueOf`** method of the
-[`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype is an old-style method that returns the value contained inside the global variable.
+The **`valueOf`** method of the [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype is an old-style method that returns the value contained inside the global variable.
 
 ## Syntax
 
