@@ -30,7 +30,7 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 | C1  | PWA frontend                      | HTML/CSS/JS                  |
 | C2  | Local storage                     | Cycle data stored in browser |
 | C3  | Service worker                    | Caching static assets        |
-| C6  | PWA manifest + icons              |                              |
+| C4  | PWA manifest + icons              |                              |
 
 ### Assets
 
@@ -51,11 +51,11 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 
 ### External dependencies
 
-| ID  | Dependency             | Notes                                       |
-| --- | ---------------------- | ------------------------------------------- |
+| ID  | Dependency   | Notes                                       |
+| --- | ------------ | ------------------------------------------- |
 | E1  | Web Browser  | Assuming default security settings like sandboxing, storage isolation, etc. |
-| E2  | Device        | Assuming updated OS, lock screen, malware protection |
-| E3  | Hosting          | Assuming safe guards, provide safeguards, such as DDoS protection  |
+| E2  | Device       | Assuming updated OS, lock screen, malware protection |
+| E3  | Hosting      | Assuming safe guards, provide safeguards, such as DDoS protection  |
 
 ### Stakeholders
 
@@ -63,7 +63,7 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 | --- | ---------------- | ----------------------------------------- |
 | S1  | Cycle tracking user       | Account safety, data protection           |
 | S2  | Developer        | Maintainer of code base                   |
-| S5  | Anonymous users     | Anyone with physical access to the device |
+| S3  | Anonymous users  | Anyone with physical access to the device |
 
 ## 2. What can go wrong?
 
@@ -71,19 +71,19 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 
 | ID  | Threat                          | Affected elements    | Description                                                                        |
 | --- | ------------------------------- | -------------------- | ---------------------------------------------------------------------------------- |
-| T1  | Local device access             | C2, A1–A3, F6, S5    | Someone with physical access to the device opens the PWA and views cycle data.     |
+| T1  | Local device access             | C2, A1–A3, F4, S3    | Someone with physical access to the device opens the PWA and views cycle data.     |
 | T2  | Shared browser profile exposure | C2, A1–A3, E4, S1    | Another person using the same browser profile sees stored cycle data.              |
 | T3  | Browser/OS sync leakage         | C2, A1–A3, E4        | Browser or operating system sync or backup uploads localStorage to cloud accounts. |
 | T4  | Malicious browser extensions    | C2, A1–A3, E4        | Extensions with broad permissions read or modify localStorage.                     |
-| T5  | XSS                             | C1, C2, A1–A4, F2–F3 | Injection vulnerability leading to data theft / attacker can read localStorage.    |
-| T6  | Compromised service worker      | C3, A5, A7, F5       | A malicious or tampered service worker exfiltrates data or alters app behavior.    |
-| T7  | Hosting compromise              | C1, C3, A7, E3       | Attacker modifies hosted JS to steal localStorage data.                            |
+| T5  | XSS                             | C1, C2, A1–A3, F2–F3 | Injection vulnerability leading to data theft / attacker can read localStorage.    |
+| T6  | Compromised service worker      | C3, F4       | A malicious or tampered service worker exfiltrates data or alters app behavior.    |
+| T7  | Hosting compromise              | C1, C3, A1-A3, E3       | Attacker modifies hosted JS to steal localStorage data.                            |
 | T8  | Device malware                  | C2, A1–A3, E2        | Malware on the device reads storage.                                               |
-| T9  | Data corruption                 | C2, A4, F2–F3        | localStorage becomes corrupted, losing cycle data.                                 |
-| T10 | Inference attacks               | A1–A3, A6            | Even minimal data reveals missed periods or pregnancy likelihood.                  |
-| T11 | Service worker DoS              | C3, F5               | Broken or malicious SW prevents app from loading offline.                          |
-| T12 | Legal or forensic seizure       | A1–A3, A6, S5        | Authorities accessing the device can read cycle data.                              |
-| T13 | Lookalike malicious forks       | C1, C3, A7, S1       | A forked version mimics the PWA but steals data.                                   |
+| T9  | Data corruption                 | C2, A1-A-3, F2–F3        | localStorage becomes corrupted, losing cycle data.                                 |
+| T10 | Inference attacks               | A1–A3            | Even minimal data reveals missed periods or pregnancy likelihood.                  |
+| T11 | Service worker DoS              | C3, F4               | Broken or malicious SW prevents app from loading offline.                          |
+| T12 | Legal or forensic seizure       | A1–A3, S3        | Authorities accessing the device can read cycle data.                              |
+| T13 | Lookalike malicious forks       | C1, C3, S1       | A forked version mimics the PWA but steals data.                                   |
 
 ## 3. What are we going to do about it?
 
