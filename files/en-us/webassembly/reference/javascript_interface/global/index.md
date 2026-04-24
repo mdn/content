@@ -29,7 +29,7 @@ All `Global` instances inherit from the `Global()` constructor's prototype objec
 ### Instance methods
 
 - [`Global.prototype.valueOf()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/valueOf)
-  - : Old-style method that returns the value contained inside the global variable.
+  - : Returns the value contained inside the global variable.
 
 ## Examples
 

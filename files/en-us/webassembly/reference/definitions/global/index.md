@@ -7,7 +7,7 @@ browser-compat: webassembly.definitions.global
 sidebar: webassemblysidebar
 ---
 
-The **`global`** definition declares a new global variable.
+The **`global`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) declares a new global variable.
 
 {{InteractiveExample("Wat Demo: global", "tabbed-taller")}}
 
@@ -72,7 +72,7 @@ global identifier type initial_value
         - Other reference types such as structs (for example, `structref`), exceptions (for example, `exnref`), `i31` (`i31ref`), etc.
 - `initial_value`
   - : The initializer for the new global. Its value can be:
-    - A literal value.
+    - A literal value, for example `i32.const 0`.
     - A [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get) of another global.
     - Any other [constant expression](https://webassembly.github.io/spec/core/valid/instructions.html#valid-constant).
 
@@ -136,3 +136,4 @@ const modB = await instantiate(bytesB, { env: { shared } });
 
 - [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get)
 - [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set)
+- [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) JavaScript interface
