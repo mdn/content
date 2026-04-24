@@ -14,7 +14,7 @@ This article covers how to use CSS scroll-triggered animations.
 
 A very common UI pattern involves triggering animations on a web page when the user scrolls to a certain place in the content, for example to pull in additional UI elements or draw the user's attention to certain details.
 
-**CSS scroll-triggered animations** enable defining stroll-based triggers that start and stop [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). For example, you can define trigger positions on an element within a {{glossary("scroll container")}} so that, when the element on which the trigger is applied reaches those positions within the scrollport, it toggles the play state of an animation applied to that element, or a completely different one.
+**CSS scroll-triggered animations** enable defining scroll-based triggers that start and stop [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). For example, you can define trigger positions on an element within a {{glossary("scroll container")}} so that, when the element on which the trigger is applied reaches those positions within the scrollport, it toggles the play state of an animation applied to that element, or a completely different one.
 
 > [!NOTE]
 > Scroll-triggered animations also provide an alternative to using JavaScript features such as the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) or frameworks to create scroll triggers. CSS scroll-triggered animations are more performant, and arguably simpler to implement.
@@ -121,7 +121,21 @@ This example features several paragraphs of content with a {{htmlelement("figure
 </p>
 ```
 
-The following ruleset provides everything you need to set up a scroll-triggered animation:
+We'll start by defining {{cssxref("@keyframes")}} for the `fade-in` animation we'll apply to our `<figure>`.
+
+```css live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+```
+
+Next, the following ruleset provides everything you need to set up a scroll-triggered animation:
 
 ```css hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
 body {
@@ -162,24 +176,6 @@ figcaption {
 }
 ```
 
-```css hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once live-sample___trigger-scope live-sample___multiple-triggers
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
-```
-
 ```css live-sample___basic-scroll-triggered
 figure {
   animation: fade-in 1s ease-in both;
@@ -203,20 +199,6 @@ Walking through this:
 
 > [!NOTE]
 > It is possible for the tracked element to be different to the animation element; see [Creating the trigger on a different element](#creating_the_trigger_on_a_different_element), later on.
-
-The only thing left to do is define {{cssxref("@keyframes")}} for the `fade-in` animation referenced earlier in the `animation` property value.
-
-```css live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-```
 
 The above example renders like so:
 
@@ -283,7 +265,7 @@ In this case, the `<figcaption>` fades into view when the `<img>` starts to appe
 
 ## Adjusting the trigger activation range
 
-In the previous couple of examples, the trigger is activated (fade-in starts) when the tracked element starts to enter the viewport from either edge, and the trigger is deactivated (fade-out starts) when the tracked element has completely left the viewport at either edge — hence the fade out never being visible.
+In the previous couple of examples, the trigger is activated (fade-in starts) when the tracked element starts to enter the viewport from either edge, and the trigger is deactivated (fade-out starts) when the tracked element has completely left the viewport at either edge — hence the fade out never being visible. It's also quite difficult to see the `<figcaption>` fade in on the previous example — you have to move the `<figure>` on-screen quite quickly to see it.
 
 This is because the default activation range and active range is the {{cssxref("timeline-range-name")}} `cover` value — the trigger activates as soon as the start edge of the tracked element enters the end edge of the viewport, and deactivates when the end edge of the tracked element has exited the start edge of the viewport.
 
@@ -712,6 +694,7 @@ body {
   width: 60%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
 }
 
 p {
@@ -999,6 +982,7 @@ We want the finished state of each animation to apply throughout, after it is re
 body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
   width: 80%;
   margin: 0 auto;
 }
@@ -1107,6 +1091,22 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
     background: blue;
     width: 600px;
     height: 200px;
+  }
+}
+```
+
+```css hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once live-sample___trigger-scope live-sample___multiple-triggers
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
   }
 }
 ```

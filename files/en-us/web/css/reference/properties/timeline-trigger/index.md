@@ -202,9 +202,9 @@ We have hidden the text content for brevity.
 
 #### CSS
 
-The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
-```css hidden live-sample___basic-example live-sample___multiple-values
+```css hidden live-sample___basic-example
 body {
   width: 80%;
   margin: 0 auto;
@@ -225,23 +225,31 @@ div {
 .trigger {
   background: wheat;
 }
+```
 
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
+```css live-sample___basic-example
+div.animated {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+```
+
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply below:
+
+```css live-sample___basic-example
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
 ```
+
+The `.animated` `<div>` has the `rotate` `animation` applied. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 div.animated {
@@ -260,30 +268,6 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `t
 ```css live-sample___basic-example
 div.trigger {
   timeline-trigger: --t view() entry / cover;
-}
-```
-
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
-
-```css live-sample___basic-example
-div.animated {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-}
-```
-
-Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
-
-```css live-sample___basic-example
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-
-  to {
-    rotate: 360deg;
-  }
 }
 ```
 
@@ -307,7 +291,9 @@ The markup for this example is exactly the same as the previous example markup e
 
 #### CSS
 
-```css hidden live-sample___basic-example live-sample___multiple-values
+We give the animated elements `fixed` positioning like in the previous example, but we give them different `left` values so that they don't sit on top of one another.
+
+```css hidden live-sample___multiple-values
 body {
   width: 80%;
   margin: 0 auto;
@@ -329,39 +315,7 @@ div {
 .trigger {
   background: wheat;
 }
-
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
 ```
-
-The CSS is very similar to the previous example, except that in this case we have separate `animation` and `animation-trigger` properties applied to the two animated `<div>` elements. Each one has a different animation that is triggered by a separate timeline trigger, and different `<animation-action>` values applied. The first animation plays on activation and plays in reverse on deactivation, whereas the second one plays on activation and pauses on deactivation.
-
-```css live-sample___multiple-values
-div.animated {
-  animation: rotate 3s infinite linear both;
-  animation-trigger: --t play-forwards play-backwards;
-}
-
-div.animated2 {
-  animation: up-down 1s infinite linear;
-  animation-trigger: --t2 play pause;
-}
-```
-
-Next, we give the animated elements `fixed` positioning like in the previous example, but we give them different `left` values so that they don't sit on top of one another.
 
 ```css live-sample___multiple-values
 div.animated,
@@ -379,17 +333,7 @@ div.animated2 {
 }
 ```
 
-We then set a `timeline-trigger` value on the `.trigger` `<div>` that contains two separate values. Each one has a separate `timeline-trigger-name` and different `timeline-trigger-activation-range` and `timeline-trigger-active-range` values so that the two animated elements start and stop their animations at different offsets.
-
-```css live-sample___multiple-values
-div.trigger {
-  timeline-trigger:
-    --t view() entry / cover,
-    --t2 view() contain;
-}
-```
-
-Finally, we define the `@keyframes` for the two animations.
+Next, we define the `@keyframes` for the two animations we'll apply to the `<div>`s:
 
 ```css live-sample___multiple-values
 @keyframes rotate {
@@ -421,6 +365,46 @@ Finally, we define the `@keyframes` for the two animations.
 
   100% {
     translate: 0 0;
+  }
+}
+```
+
+The scroll trigger CSS is very similar to the previous example, except that in this case we have separate `animation` and `animation-trigger` properties applied to the two animated `<div>` elements. Each one has a different animation that is triggered by a separate timeline trigger, and different `<animation-action>` values applied. The first animation plays on activation and plays in reverse on deactivation, whereas the second one plays on activation and pauses on deactivation.
+
+```css live-sample___multiple-values
+div.animated {
+  animation: rotate 3s infinite linear both;
+  animation-trigger: --t play-forwards play-backwards;
+}
+
+div.animated2 {
+  animation: up-down 1s infinite linear;
+  animation-trigger: --t2 play pause;
+}
+```
+
+We then set a `timeline-trigger` value on the `.trigger` `<div>` that contains two separate values. Each one has a separate `timeline-trigger-name` and different `timeline-trigger-activation-range` and `timeline-trigger-active-range` values so that the two animated elements start and stop their animations at different offsets.
+
+```css live-sample___multiple-values
+div.trigger {
+  timeline-trigger:
+    --t view() entry / cover,
+    --t2 view() contain;
+}
+```
+
+```css hidden live-sample___basic-example live-sample___multiple-values
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
   }
 }
 ```

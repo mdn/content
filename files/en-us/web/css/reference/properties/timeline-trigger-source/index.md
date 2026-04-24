@@ -217,7 +217,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an {{cssxref("animation-trigger")}} value on it that references a `timeline-trigger-name` of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
+We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 body {
@@ -240,23 +240,31 @@ div {
 .trigger {
   background: wheat;
 }
+```
 
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
+```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
+div.animated {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+```
+
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply below:
+
+```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
 ```
+
+The `.animated` `<div>` has the `rotate` `animation` applied. We then set an {{cssxref("animation-trigger")}} value on it that references a `timeline-trigger-name` of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
 
 ```css live-sample___basic-view-progress-example
 div.animated {
@@ -274,30 +282,6 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the fo
 div.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
-}
-```
-
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
-
-```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
-div.animated {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-}
-```
-
-Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
-
-```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-
-  to {
-    rotate: 360deg;
-  }
 }
 ```
 
@@ -327,6 +311,22 @@ div.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: scroll();
   timeline-trigger-activation-range: 600px;
+}
+```
+
+```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
 }
 ```
 

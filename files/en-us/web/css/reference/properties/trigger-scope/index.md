@@ -210,15 +210,49 @@ In the markup for this example, we have three {{htmlelement("section")}} element
 
 #### CSS
 
+To start, we define the {{cssxref("@keyframes")}} for multiple animations that will be applied to our `.animated` `<div>` elements later on.
+
+```css live-sample___trigger-scope
+@keyframes fade-in {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes color-cycle {
+  from {
+    background: red;
+  }
+
+  to {
+    background: blue;
+  }
+}
+
+@keyframes move-up-down {
+  25% {
+    translate: 0 -10px;
+  }
+
+  75% {
+    translate: 0 10px;
+  }
+}
+```
+
 ```css hidden live-sample___trigger-scope
 body {
   width: 60%;
   margin: 0 auto;
+  font-size: 1.3rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
-  font-size: 1.3rem;
   line-height: 1.5;
 }
 
@@ -286,45 +320,11 @@ Next, we set our `.trigger` `<div>` elements as triggers for the `.animated` `<d
 }
 ```
 
-We then define a `.scoped` class style, which sets a `trigger-scope` value of `all`. This `class` will be set on the three `<section>` elements when the checkbox is checked, and removed again when the checkbox is unchecked.
+Finally, we define a `.scoped` class style, which sets a `trigger-scope` value of `all`. This `class` will be set on the three `<section>` elements when the checkbox is checked, and removed again when the checkbox is unchecked.
 
 ```css live-sample___trigger-scope
 .scoped {
   trigger-scope: all;
-}
-```
-
-Finally, we define the {{cssxref("@keyframes")}} referenced in the `animation` properties set earlier.
-
-```css live-sample___trigger-scope
-@keyframes fade-in {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes color-cycle {
-  from {
-    background: red;
-  }
-
-  to {
-    background: blue;
-  }
-}
-
-@keyframes move-up-down {
-  25% {
-    translate: 0 -10px;
-  }
-
-  75% {
-    translate: 0 10px;
-  }
 }
 ```
 
@@ -337,6 +337,22 @@ checkbox.addEventListener("change", () => {
     section.classList.toggle("scoped");
   });
 });
+```
+
+```css hidden live-sample___trigger-scope
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
 ```
 
 #### Result

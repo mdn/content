@@ -6,7 +6,7 @@ browser-compat: css.properties.animation-trigger
 sidebar: cssref
 ---
 
-The **`<animation-action>`** {{glossary("enumerated")}} data type represents keyword values that specifies how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
+The **`<animation-action>`** {{glossary("enumerated")}} data type represents keyword values that specify how a [triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers) should behave when its trigger is activated and deactivated.
 
 The `<animation-action>` keyword values are used in the following properties:
 
@@ -21,11 +21,11 @@ The `<animation-action>` enumerated type is specified using one of the values li
 - `play`
   - : The animation will play.
 - `play-forwards`
-  - : The animation will play. `play-forwards` differs from the `play` value in that it extends the effect of an {{cssxref("animation-fill-mode")}} set on the corresponding animation to before/after the trigger is activated/deactivated. The animation will play and adopt the animation's finished state once finished, if its `animation-fill-mode` is set to `forwards` or `both`.
+  - : The animation will play forwards.
 - `play-backwards`
-  - : The animation will play in reverse. Like `play-forwards`, it extends the effect of an {{cssxref("animation-fill-mode")}} set on the corresponding animation to before/after the trigger is activated/deactivated. The animation will play in reverse and adopt the animation's starting state once finished. It is important to note that, even if the {{cssxref("animation-iteration-count")}} is set to `infinite`, the animation will not play backwards a greater number of times than it has already played forwards. For example, if the animation has previously played forwards five times before the `play-backwards` behavior starts, it will then play backwards five times and stop.
+  - : The animation will play in reverse.
 - `play-once`
-  - : The animation will play once and then stop.
+  - : The animation will play through all its iterations and then won't be triggered again.
 - `pause`
   - : The animation will pause.
 - `replay`
@@ -39,12 +39,149 @@ When setting an {{cssxref("animation-trigger")}} value on an animated element to
 
 If only a single value is specified, the animation doesn't change its behavior when its trigger deactivates; it will continue with the activation behavior. It has the same effect as setting `none` as the second value.
 
-Some `<animation-action>` values are designed to be used together. For example:
+There are some common patterns to observe:
 
 - `play-forwards play-backwards` is very common when you want a UI element to "animate in" when it appears on-screen, and then "animate out" again when it goes off-screen.
 - `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
+- `play-once` is often used on its own, when you want an animation to play only once when it appears on-screen.
 
-Other values are designed to be used on their own, for example `play-once`.
+The behavior of the different `<animation-action>` values is described in more detail in the following sections.
+
+### Specifying no action
+
+If you want to specify that no action is to occur on activation or deactivation, you can use the `none` value.
+
+### Playing the animation
+
+To play the animation, you can use the values `play`, `play-forwards`, `play-backwards`, or `play-once`.
+
+#### `play`
+
+`play` will play the animation through all its iterations. If combined with `pause`, `replay` or `reset`, for example:
+
+```css
+animation-trigger: --t play reset;
+```
+
+The animation will play on activation, and then `pause`, `replay` or `reset` on deactivation. On subsequent activation, the animation will play again.
+
+If combined with `play-backwards`, for example:
+
+```css
+animation-trigger: --t play play-backwards;
+```
+
+The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activation, however, the animation will not play again.
+
+It doesn't make sense to combine `play` with `play-forwards` or `play-once`.
+
+#### `play-forwards` and `play-backwards`
+
+`play-forwards` will play the animation through all its iterations. If combined with `play-backwards`, for example:
+
+```css
+animation-trigger: --t play-forwards play-backwards;
+```
+
+The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activation, the animation will start to play forwards again.
+
+If combined with `pause`, `replay` or `reset`, for example:
+
+```css
+animation-trigger: --t play-forwards pause;
+```
+
+The affect is the same as with `play`: the animation will play on activation, and then `pause`, `replay` or `reset` on deactivation. On subsequent activation, the animation will play again.
+
+It doesn't make sense to combine `play-forwards` with `play` or `play-once`.
+
+Note that using `play-backwards` as an activation action has no effect. For example:
+
+```css
+animation-trigger: --t play-backwards;
+```
+
+In this case, the animation does not play.
+
+> [!NOTE]
+> `play-forwards` and `play-backwards` don't have an effect on the animation's intrinsic direction. They only modify the animation after the fact. For example, if an animation's {{cssxref("animation-direction")}} is set to `reverse`, `play-forwards` won't make it change direction to play forwards. It will still play in reverse, which is its intrinsic animation setting. `play-backwards` would reverse its direction, causing it to play forwards.
+
+#### `play-once`
+
+`play-once` will play the animation through all its iterations, but only once. If the {{cssxref("animation-iteration-count")}} is set to `infinite`, there is not much difference in effect between `play-once` and `play`/`play-forwards`. However, with `animation-iteration-count` set to a finite number, you will observe the following behavior.
+
+If combined with `pause`:
+
+```css
+animation-trigger: --t play-once pause;
+```
+
+The animation will play on activation, and then `pause` on deactivation. On subsequent activation, however, the animation will not play again.
+
+If combined with `replay`:
+
+```css
+animation-trigger: --t play-once replay;
+```
+
+The animation will play on activation, and then start to play again from the beginning on deactivation. It won't go above its iteration count on any playthrough, but it will play again on subsequent deactivations. On subsequent activation, however, the animation will not play again.
+
+If combined with `reset`:
+
+```css
+animation-trigger: --t play-once reset;
+```
+
+The animation will play on activation, and then reset to the beginning of the animation on deactivation. On subsequent activation, the animation will play again.
+
+If combined with `play-backwards`, for example:
+
+```css
+animation-trigger: --t play-once play-backwards;
+```
+
+The animation will play on activation, then play backwards through all the iterations on deactivation. On subsequent activation, the animation will not play again, but you will notice that the animation will play backwards again on subsequent deactivations.
+
+It doesn't make sense to combine `play-once` with `play` or `play-forwards`.
+
+### Pausing the animation
+
+The `pause` value is used to pause the animation at whatever point it reached in its playback upon activation/deactivation. Using this in combination with other values has largely been discussed above. One case that was not mentioned above is using `pause` as the activation action, for example:
+
+```css
+animation-trigger: --t pause play;
+```
+
+This has an interesting effect of no playback on activation, but playback on subsequent deactivation: useful if you want an animation to play only when the subject leaves the viewport.
+
+It doesn't make sense to combine `pause` with `reset`.
+
+### Resetting the animation
+
+The `replay` and `reset` values are similar to `pause`, except that:
+
+- `reset` pauses the animation but also sets its progress back to `0`.
+- `replay` sets the animation progress back to `0` and then starts playing it again from that point.
+
+Using these values in combination with other values has largely been discussed above. One case that was not mentioned above is using these values as the activation action.
+
+For example:
+
+```css
+animation-trigger: --t replay pause;
+```
+
+This has an interesting effect of playing on activation (the same as an action like `play`) and pausing on deactivation. However, on subsequent activation, it will play from the start again, regardless of the play state before that. This is useful if you want an animation to play when the subject enters the viewport, pause when it leaves the viewport, but then play from the start on each subsequent entry.
+
+Another interesting example is as follows:
+
+```css
+animation-trigger: --t reset play;
+```
+
+This has an interesting effect of not playing on activation and then playing on deactivation. On subsequent activation, it will reset to progress `0`, regardless of the play state before that. This is useful if you want an animation to play when the subject leaves the viewport, and then reset to the beginning on each subsequent entry.
+
+It doesn't make sense to combine `replay` with `reset` or `pause`.
 
 ## Formal syntax
 
@@ -134,7 +271,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it once. We set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play on activation, and play in reverse on deactivation.
+We give the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -157,23 +294,31 @@ div {
 .trigger {
   background: wheat;
 }
+```
 
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
+```css live-sample___basic-example
+div.animated {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+```
+
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
+
+```css live-sample___basic-example live-sample___different-effects
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
 ```
+
+The `.animated` `<div>` has the `rotate` `animation` applied. We then set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t` with two `<animation-action>` values, `play-forwards` and `play-backwards`. These specify that the animation will play on activation, and play in reverse on deactivation.
 
 ```css live-sample___basic-example
 div.animated {
@@ -190,30 +335,6 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `t
 ```css live-sample___basic-example
 div.trigger {
   timeline-trigger: --t view() contain;
-}
-```
-
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
-
-```css live-sample___basic-example
-div.animated {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-}
-```
-
-Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
-
-```css live-sample___basic-example live-sample___different-effects
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-
-  to {
-    rotate: 360deg;
-  }
 }
 ```
 
@@ -328,22 +449,6 @@ section {
   display: flex;
   justify-content: space-between;
 }
-
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
 ```
 
 ```css live-sample___different-effects
@@ -387,6 +492,22 @@ Next, we set a different {{cssxref("animation-trigger")}} property value on each
 .five {
   animation: rotate 2s 1 linear both;
   animation-trigger: --t play-once reset;
+}
+```
+
+```css hidden live-sample___basic-example live-sample___different-effects
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
 }
 ```
 

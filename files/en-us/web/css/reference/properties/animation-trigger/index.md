@@ -193,9 +193,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-The `.animated` {{htmlelement("div")}} element has an `animation` applied that rotates it. We set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
-
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes a `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+We start by giving the animated `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -218,36 +216,7 @@ div {
 .trigger {
   background: wheat;
 }
-
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
 ```
-
-```css live-sample___basic-example
-div.animated {
-  animation: rotate 3s infinite linear both;
-  animation-trigger: --t play pause;
-}
-
-div.trigger {
-  timeline-trigger: --t view();
-}
-```
-
-Next, we give the animated `<div>` a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so that we can easily see when its animation starts and stops.
 
 ```css live-sample___basic-example
 div.animated {
@@ -257,7 +226,7 @@ div.animated {
 }
 ```
 
-Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
+Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use below:
 
 ```css live-sample___basic-example
 @keyframes rotate {
@@ -268,6 +237,23 @@ Finally, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
   to {
     rotate: 360deg;
   }
+}
+```
+
+The `.animated` `<div>` has the `rotate` `animation` applied. We then set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+
+```css live-sample___basic-example
+div.animated {
+  animation: rotate 3s infinite linear both;
+  animation-trigger: --t play pause;
+}
+```
+
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes a `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+
+```css live-sample___basic-example
+div.trigger {
+  timeline-trigger: --t view();
 }
 ```
 
@@ -349,15 +335,7 @@ This time, our markup contains only a single {{htmlelement("div")}} element, plu
 
 #### CSS
 
-The {{htmlelement("div")}} element has an `animation` applied that smoothly inverts its colors. We set an `animation-trigger` value on it that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation, and play in reverse on deactivation.
-
-We then specify a `timeline-trigger` value of `--t view() contain` on the same `<div>`, meaning that it creates the trigger for its own animation. This value includes the identifier referenced in the `animation-trigger` property, plus:
-
-- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger to the view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
-
-  > [!NOTE]
-  > This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the `<div>` enters the viewport and deactivate only when it has fully left the viewport.
+The {{htmlelement("div")}} element has an `animation` applied that smoothly inverts its colors, defined as follows:
 
 ```css hidden live-sample___same-element
 body {
@@ -372,33 +350,7 @@ div {
   background: orange;
   border: 5px solid black;
 }
-
-@supports not (timeline-trigger-name: --t) {
-  body::before {
-    font-family: sans-serif;
-    font-size: 1.3rem;
-    content: "Your browser does not support scroll-triggered animations.";
-    background-color: wheat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 40%;
-    text-align: center;
-    padding: 1rem 0;
-    z-index: 1;
-  }
-}
 ```
-
-```css live-sample___same-element
-div {
-  animation: invert-colors 0.6s ease-in both;
-  animation-trigger: --t play-forwards play-backwards;
-  timeline-trigger: --t view() contain;
-}
-```
-
-Finally, we define the {{cssxref("@keyframes")}} for the `invert-colors` animation:
 
 ```css live-sample___same-element
 @keyframes invert-colors {
@@ -410,6 +362,40 @@ Finally, we define the {{cssxref("@keyframes")}} for the `invert-colors` animati
   to {
     background: black;
     color: orange;
+  }
+}
+```
+
+We set an `animation-trigger` value on the `<div>` that references a `timeline-trigger-name` of `--t`; we also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation, and play in reverse on deactivation.
+
+We then specify a `timeline-trigger` value of `--t view() contain` on the same `<div>`, meaning that it creates the trigger for its own animation. This value includes the identifier referenced in the `animation-trigger` property, plus:
+
+- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger to the view progress timeline tracking the element inside its nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
+
+  > [!NOTE]
+  > This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the `<div>` enters the viewport and deactivate only when it has fully left the viewport.
+
+```css live-sample___same-element
+div {
+  animation: invert-colors 0.6s ease-in both;
+  animation-trigger: --t play-forwards play-backwards;
+  timeline-trigger: --t view() contain;
+}
+```
+
+```css hidden live-sample___basic-example live-sample___same-element
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
   }
 }
 ```
