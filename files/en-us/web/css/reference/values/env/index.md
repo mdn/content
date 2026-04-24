@@ -75,8 +75,6 @@ body {
 }
 ```
 
-For example, on Chrome for Android, the body font size will be set in proportion to the global OS "Font size" setting.
-
 Page sizes can also be set to be proportional to browser or OS-level font size by including [`<meta name="text-scale" content="scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) inside the document `<head>`. The `<meta>` tag should be used in favor of the `env(preferred-text-scale)` when possible, as the `<meta>` tag is simpler to use and is supported across a wider range of platforms.
 
 > [!WARNING]
