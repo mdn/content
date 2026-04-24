@@ -1,28 +1,27 @@
 ---
-title: Example threat model
+title: PWA example threat model
 slug: Web/Security/Threat_modeling/PWA_threat_model
 page-type: guide
 sidebar: security
 ---
 
 > [!NOTE]
-> This page shows an example threat model for a web application. CycleTracker, a menstrual cycle tracking PWA that stores only start and end dates in localStorage without third party or external scripts, is far safer than cloud‑based alternatives. As even minimal cycle data can reveal sensitive reproductive information, this bare bones tracker still faces some security risks because the application is vulnerable device access, local storage is vulnerable to XSS, and the application relies on browser security and device settings.
+> This page shows an example threat model for a Progressive Web Application (PWA). [CycleTracker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker) is a menstrual cycle tracking PWA that stores only start and end dates in [`localStorage`](/en-US/docs/Web/API/Window/localStorage) without third party or external scripts. It can be considered safer than many cloud‑based alternatives. However, even minimal cycle data can reveal sensitive reproductive information, so it makes sense to assess its security in a threat model.
 >
 > For more information and guidance on how to create a threat model, see the [threat modeling guide](/en-US/docs/Web/Security/Threat_modeling).
 
 ## Overview
 
-- Threat Model: Local‑Only Menstrual Cycle Tracking PWA
-- Project: CycleTracker PWA
-- Description: Data stored in local storage; only start/end dates collected.
+- Project: Local‑only Menstrual Cycle Tracking PWA
+- Description: A Progressive Web App for tracking menstrual cycles locally. Only stores start and end dates.
 - Version: 1.0
-- Last updated: 2024-02-23
+- Last updated: 2026-04-23
 
 ## 1. What are we working on?
 
 ### Assumptions and scope
 
-This threat model covers CycleTracker, a menstrual cycle tracking PWA that stores only start and end dates in localStorage without third party or external scripts, is far safer than cloud‑based alternatives. As even minimal cycle data can reveal sensitive reproductive information, this bare bones tracker still faces some security risks because the application is vulnerable device access, local storage is vulnerable to XSS, and the application relies on browser security and device settings.
+This threat model covers CycleTracker, a menstrual cycle tracking PWA that stores only start and end dates in `localStorage` without third party or external scripts.
 
 ### Components
 
@@ -31,10 +30,7 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 | C1  | PWA frontend                      | HTML/CSS/JS                  |
 | C2  | Local storage                     | Cycle data stored in browser |
 | C3  | Service worker                    | Caching static assets        |
-| C4  | Browser                           |                              |
-| C5  | Device                            | Operating system             |
 | C6  | PWA manifest + icons              |                              |
-| C7  | Network delivery of static assets | HTTPS                        |
 
 ### Assets
 
@@ -43,10 +39,6 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 | A1  | Cycle start dates                |                                |
 | A2  | Cycle end dates                  |                                |
 | A3  | Derived cycle patterns           | Inferred from A1/A2            |
-| A4  | Local storage                    |                                |
-| A5  | Service worker                   |                                |
-| A6  | User privacy and confidentiality |                                |
-| A7  | PWA code                         | Integrity of HTML, JS, and CSS |
 
 ### Data flows
 
@@ -55,29 +47,23 @@ This threat model covers CycleTracker, a menstrual cycle tracking PWA that store
 | F1  | Data submission | User enters cycle dates via UI                                |
 | F2  | LocalStorage    | PWA UI writes data to localStorage                            |
 | F3  | LocalStorage    | PWA UI reads data from localStorage                           |
-| F4  | App load        | Browser loads PWA assets over HTTPS                           |
-| F5  | Service worker  | SW intercepts network requests                                |
-| F6  | Physical device | Device-level trust boundary, device unlock enables app access |
+| F4  | App load        | Browser loads PWA assets over HTTPS or from a Service Worker                 |
 
 ### External dependencies
 
 | ID  | Dependency             | Notes                                       |
 | --- | ---------------------- | ------------------------------------------- |
-| E1  | Browser security model | sandboxing, storage isolation               |
-| E2  | Device security        | OS updates, lock screen, malware protection |
-| E3  | HTTPS hosting          | GitHub Pages                                |
-| E4  | Browser                | User profile configuration, extensions      |
-| E5  | OS                     | Operating system syncs (iCloud)             |
+| E1  | Web Browser  | Assuming default security settings like sandboxing, storage isolation, etc. |
+| E2  | Device        | Assuming updated OS, lock screen, malware protection |
+| E3  | Hosting          | Assuming safe guards, provide safeguards, such as DDoS protection  |
 
 ### Stakeholders
 
 | ID  | Stakeholder      | Interests / potential harm                |
 | --- | ---------------- | ----------------------------------------- |
-| S1  | End user         | Account safety, data protection           |
+| S1  | Cycle tracking user       | Account safety, data protection           |
 | S2  | Developer        | Maintainer of code base                   |
-| S3  | Browser          |                                           |
-| S4  | Hosting provider | Tracking app access and downloads         |
-| S5  | Device users     | Anyone with physical access to the device |
+| S5  | Anonymous users     | Anyone with physical access to the device |
 
 ## 2. What can go wrong?
 
