@@ -87,7 +87,7 @@ The following tables provide a practical starting point for codec strings, with 
 
 | Codec string       | Level | Max resolution | Support                                                                  |
 | ------------------ | ----- | -------------- | ------------------------------------------------------------------------ |
-| `vp09.00.10.08.00` | 1     | 720p           | [99.98%](https://webcodecsfundamentals.org/codecs/vp09.00.10.08.00.html) |
+| `vp09.00.30.08.00` | 3     | 720p           | [99.98%](https://webcodecsfundamentals.org/codecs/vp09.00.30.08.00.html) |
 | `vp09.00.40.08.00` | 4     | 2K             | [99.96%](https://webcodecsfundamentals.org/codecs/vp09.00.40.08.00.html) |
 | `vp09.00.50.08.00` | 5     | 4K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.50.08.00.html) |
 | `vp09.00.61.08.00` | 6.1   | 8K             | [99.97%](https://webcodecsfundamentals.org/codecs/vp09.00.61.08.00.html) |
@@ -104,7 +104,7 @@ The following tables provide a practical starting point for codec strings, with 
 
 | Codec string       | Level | Max resolution | Support                                                                 |
 | ------------------ | ----- | -------------- | ----------------------------------------------------------------------- |
-| `hvc1.1.6.L90.B0`  | 3.0   | 1080p          | [73.6%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L90.B0.html)  |
+| `hvc1.1.6.L120.B0` | 4.0   | 1080p          | [73.6%](https://webcodecsfundamentals.org/codecs/hev1.1.6.L120.B0.html) |
 | `hvc1.1.6.L150.B0` | 5.0   | 4K             | [73.6%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L150.B0.html) |
 | `hvc1.1.6.L180.B0` | 6.0   | 8K             | [73.1%](https://webcodecsfundamentals.org/codecs/hvc1.1.6.L180.B0.html) |
 
