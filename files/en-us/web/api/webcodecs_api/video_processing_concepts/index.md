@@ -15,7 +15,7 @@ A video is a sequence of images displayed in rapid succession. Each image in the
 
 ![Video Frames](video-frames.png)
 
-Each pixel in a video frame is represented by a set of numeric color channel values. Uncompressed, a single 4K frame (~8 million pixels) is approximately 25 MB. At 30 frames per second, one hour of uncompressed 4K video would be around 750 GB, which is impractically large for storage or streaming.
+Each pixel in a video frame is represented by a set of numeric color channel values. Uncompressed, a single 4K frame (~8 million pixels) is approximately 25 MB. At 30 frames per second, one hour of uncompressed 4K video would be over 3 TB, which is impractically large for storage or streaming.
 
 Codecs were developed in order to compress video, typically by 1-2 orders of magnitude, to be able to practically store and stream video content given typical device network and storage constraints.
 
