@@ -14,7 +14,7 @@ Selecting the correct string depends on your use case, but is primarily influenc
 
 ## Decoding vs encoding
 
-When **decoding** a video file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [MediaBunny](https://mediabunny.dev/) and [web-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} during configuration.
+When **decoding** a video file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [Mediabunny](https://mediabunny.dev/) and [web-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} during configuration.
 
 When **encoding**, you choose the codec. The rest of this guide covers how to choose a codec.
 

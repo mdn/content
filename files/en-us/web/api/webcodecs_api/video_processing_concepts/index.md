@@ -103,7 +103,7 @@ To play a video with WebCodecs, it is necessary to both demux the file (typicall
 
 ![Demuxing](decoder-demuxer.png)
 
-Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a 3rd party library like [MediaBunny](https://mediabunny.dev/)
+Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a 3rd party library like [Mediabunny](https://mediabunny.dev/)
 
 See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options for demuxing and muxing.
 
