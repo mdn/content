@@ -31,7 +31,7 @@ encoder.configure({
   width: 1280,
   height: 720,
   bitrate: 1_000_000, // 1 Mbps
-  framerate: 25,
+  framerate: 30,
 });
 ```
 
