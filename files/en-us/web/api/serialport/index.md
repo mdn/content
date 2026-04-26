@@ -2,12 +2,10 @@
 title: SerialPort
 slug: Web/API/SerialPort
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.SerialPort
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The `SerialPort` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) provides access to a serial port on the host device.
 
@@ -19,33 +17,33 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 
 ## Instance properties
 
-- {{domxref("SerialPort.connected")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SerialPort.connected")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the port is logically connected to the device.
-- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SerialPort.readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
-- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("SerialPort.writable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
 
 ## Instance methods
 
-- {{domxref("SerialPort.forget()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.forget()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when access to the serial port is revoked. Calling this "forgets" the device, resetting any previously-set permissions so the calling site can no longer communicate with the port.
-- {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.getInfo()")}}
   - : Returns an object containing identifying information for the device available via the port.
-- {{domxref("SerialPort.open()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.open()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.
-- {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.setSignals()")}}
   - : Sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
-- {{domxref("SerialPort.getSignals()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.getSignals()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
-- {{domxref("SerialPort.close()")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.close()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port closes.
 
 ## Events
 
-- {{domxref("SerialPort.connect_event", "connect")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.connect_event", "connect")}}
   - : Fired when the port connects to the device.
-- {{domxref("SerialPort.disconnect_event", "disconnect")}} {{Experimental_Inline}}
+- {{domxref("SerialPort.disconnect_event", "disconnect")}}
   - : Fired when the port disconnects from the device.
 
 ## Examples

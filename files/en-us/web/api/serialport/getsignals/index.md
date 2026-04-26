@@ -3,12 +3,10 @@ title: "SerialPort: getSignals() method"
 short-title: getSignals()
 slug: Web/API/SerialPort/getSignals
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SerialPort.getSignals
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
 

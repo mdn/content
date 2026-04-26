@@ -25,16 +25,16 @@ The **`@keyframes`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
 
 ### Values
 
-- {{cssxref("custom-ident")}}
-  - : A name identifying the keyframe list. This must match the identifier production in CSS syntax.
+- `<keyframes-name>`
+  - : A case-sensitive {{cssxref("custom-ident")}} or string naming the keyframe list.
 - `from`
-  - : A starting offset of `0%`.
+  - : Equivalent to the value `0%`.
 - `to`
-  - : An ending offset of `100%`.
+  - : Equivalent to the value `100%`.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : A percentage of the time through the animation sequence at which the specified keyframe should occur.
-- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
-  - : A percentage of the time through the specified {{cssxref("animation-range")}} at which the specified keyframe should occur. See [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more information on the kinds of animations that use named timeline ranges.
+  - : A percentage through the animation sequence at which the specified keyframe should occur.
+- {{cssxref("timeline-range-name")}} {{cssxref("&lt;percentage&gt;")}}
+  - : A percentage through the specified {{cssxref("animation-range")}} at which the specified keyframe should occur.
 
 ## Description
 
@@ -106,11 +106,9 @@ If a keyframe is defined multiple times but not all affected properties are in e
 
 In this example, at the `50%` keyframe, the values used are `top: 10px` and `left: 20px`.
 
-Cascading keyframes are supported starting in Firefox 14.
-
 ### `!important` in a keyframe
 
-Declarations in a keyframe qualified with `!important` are ignored.
+Declarations in a keyframe qualified with the {{cssxref("important")}} flag set are ignored.
 
 ```css
 @keyframes important1 {
@@ -159,9 +157,9 @@ See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using) and [scr
 
 - {{cssxref("animation-name")}}
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
-- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
-- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)

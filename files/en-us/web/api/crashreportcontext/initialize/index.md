@@ -3,10 +3,12 @@ title: "CrashReportContext: initialize() method"
 short-title: initialize()
 slug: Web/API/CrashReportContext/initialize
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CrashReportContext.initialize
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`initialize()`** method of the {{domxref("CrashReportContext")}} interface initializes a portion of memory to be used for storing crash report data specified by {{domxref("CrashReportContext.set", "set()")}}. This must be called before any other method is invoked on the object.
 

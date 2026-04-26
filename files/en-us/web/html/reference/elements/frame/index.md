@@ -1,5 +1,6 @@
 ---
-title: <frame>
+title: "`<frame>` HTML frame element"
+short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 page-type: html-element
 status:
