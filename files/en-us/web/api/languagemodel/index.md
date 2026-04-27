@@ -114,4 +114,3 @@ console.log(`Prompt uses ${usage} of ${session.contextWindow} tokens.`);
 ## See also
 
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
-- {{domxref("LanguageModelTool")}}

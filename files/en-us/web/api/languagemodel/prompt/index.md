@@ -125,5 +125,4 @@ try {
 
 - {{domxref("LanguageModel.promptStreaming()")}}
 - {{domxref("LanguageModel.append()")}}
-- {{domxref("LanguageModelPromptOptions")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)

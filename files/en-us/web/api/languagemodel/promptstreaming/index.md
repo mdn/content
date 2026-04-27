@@ -116,6 +116,5 @@ console.log(fullResponse);
 ## See also
 
 - {{domxref("LanguageModel.prompt()")}}
-- {{domxref("LanguageModelPromptOptions")}}
 - {{domxref("ReadableStream")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
