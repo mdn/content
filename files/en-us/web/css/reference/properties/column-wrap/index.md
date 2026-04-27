@@ -1,5 +1,6 @@
 ---
-title: column-wrap
+title: "`column-wrap` CSS property"
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 page-type: css-property
 status:
@@ -442,7 +443,7 @@ p:first-of-type {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {

@@ -18,7 +18,7 @@ The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines a mask for compositi
   - : This attribute defines the height of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `120%`; _Animatable_: **yes**
 - {{SVGAttr("mask-type")}}
-  - : This attribute defines the mask mode for the contents for the contents of the `<mask>`.
+  - : This attribute defines the mask mode for the contents of the `<mask>`.
     _Value type_: `alpha` | `luminance`; _Default value_: `luminance`; _Animatable_: **yes**
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.

@@ -70,7 +70,7 @@ If a cross-origin worker is required, users must load it from an intermediate sa
 
 ### Module and classic workers
 
-A classic worker is one that that is constructed from a classic script, while a module worker is constructed from an [ECMASCript module](/en-US/docs/Web/JavaScript/Guide/Modules).
+A classic worker is one that is constructed from a classic script, while a module worker is constructed from an [ECMASCript module](/en-US/docs/Web/JavaScript/Guide/Modules).
 The type of worker affects the worker constructor options, how the worker script is fetched, and how it is executed.
 
 The code below shows two ways you can construct a classic worker, and also how you specify the `type` of `"module"` to create a module worker.

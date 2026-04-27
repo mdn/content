@@ -1,5 +1,6 @@
 ---
-title: letter-spacing
+title: "`letter-spacing` CSS property"
+short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 page-type: css-property
 browser-compat: css.properties.letter-spacing
@@ -194,7 +195,7 @@ Our CSS starts by applying increasing {{cssxref("font-size")}} values to each su
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: <length>
+title: "`<length>` CSS type"
+short-title: <length>
 slug: Web/CSS/Reference/Values/length
 page-type: css-type
 browser-compat: css.types.length

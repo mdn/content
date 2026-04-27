@@ -32,7 +32,7 @@ jobs:
     name: Label by size
     runs-on: ubuntu-latest
     steps:
-      - uses: codelytv/pr-size-labeler@1c3422395d899286d5ee2c809fd5aed264d5eb9b # v1.10.2
+      - uses: codelytv/pr-size-labeler@095a41fca88b8764fd9e008ad269bcdb82bb38b9 # v1.10.4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           github_api_url: "https://api.github.com"

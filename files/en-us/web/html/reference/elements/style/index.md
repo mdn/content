@@ -1,5 +1,6 @@
 ---
-title: "<style>: The Style Information element"
+title: "`<style>` HTML style information element"
+short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 page-type: html-element
 browser-compat: html.elements.style

@@ -1,5 +1,6 @@
 ---
-title: clear
+title: "`clear` CSS property"
+short-title: clear
 slug: Web/CSS/Reference/Properties/clear
 page-type: css-property
 browser-compat: css.properties.clear

@@ -1,5 +1,6 @@
 ---
-title: :read-write
+title: "`:read-write` CSS pseudo-class"
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-write

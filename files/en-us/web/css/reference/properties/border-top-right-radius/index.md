@@ -1,5 +1,6 @@
 ---
-title: border-top-right-radius
+title: "`border-top-right-radius` CSS property"
+short-title: border-top-right-radius
 slug: Web/CSS/Reference/Properties/border-top-right-radius
 page-type: css-property
 browser-compat: css.properties.border-top-right-radius

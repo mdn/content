@@ -98,7 +98,7 @@ We begin our styling by opting the `<select>` into custom styling with an {{cssx
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 
@@ -114,22 +114,22 @@ Our basic styles look like this:
 
 ```css live-sample___basic-listbox live-sample___expanding-listbox live-sample___horizontal-listbox
 select {
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd;
   border-radius: 8px;
-  background: #eee;
+  background: #eeeeee;
   width: 200px;
   height: 130px;
 }
 
 option {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px;
   height: 40px;
   outline: none;
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 ```
 
@@ -306,7 +306,7 @@ We start our CSS by opting the `<select>` element into custom styling, as before
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 
@@ -320,9 +320,9 @@ Most of the styling is fairly rudimentary, but we'll run through it, pointing ou
 
 ```css live-sample___complex-listbox
 .wrapper {
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd;
   border-radius: 8px;
-  background: #ddd;
+  background: #dddddd;
   width: 250px;
 }
 ```
@@ -334,21 +334,21 @@ Next, we style the filter `<input>`, the `.options` `<div>` and the contained `<
   display: block;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   width: 95%;
   margin: 8px auto;
 }
 
 .options {
   padding: 0 5px;
-  background: #ddd;
+  background: #dddddd;
 }
 
 select {
   height: 200px;
   overflow-y: scroll;
   width: 100%;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
 }
 
 .edit {
@@ -363,12 +363,12 @@ We style our `<option>` elements in a similar manner to earlier examples, giving
 
 ```css live-sample___complex-listbox
 option {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px;
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:checked {
@@ -392,17 +392,17 @@ a {
 
 input:hover,
 input:focus {
-  border: 1px solid #999;
-  background: #eef;
+  border: 1px solid #999999;
+  background: #eeeeff;
 }
 
 .edit a {
-  color: #333;
+  color: #333333;
 }
 
 a:hover,
 a:focus {
-  outline: 2px dotted #666;
+  outline: 2px dotted #666666;
 }
 ```
 

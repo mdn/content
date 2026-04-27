@@ -97,7 +97,7 @@ app.post("/transfer", (req, res) => {
 });
 ```
 
-See {{glossary("Fetch metadata request header")}} for the complete list of Fetch metadata headers, and [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) for a guide to using this feature.
+See {{glossary("Fetch metadata request header")}} for the complete list of Fetch metadata headers, and [Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) for a guide to using this feature.
 
 ### Avoiding simple requests
 

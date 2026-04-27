@@ -1,5 +1,6 @@
 ---
-title: "<tfoot>: The Table Foot element"
+title: "`<tfoot>` HTML table foot element"
+short-title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
 page-type: html-element
 browser-compat: html.elements.tfoot

@@ -1,5 +1,6 @@
 ---
-title: scroll-marker-group
+title: "`scroll-marker-group` CSS property"
+short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 page-type: css-property
 status:

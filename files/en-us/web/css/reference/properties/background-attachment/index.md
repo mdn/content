@@ -1,5 +1,6 @@
 ---
-title: background-attachment
+title: "`background-attachment` CSS property"
+short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment
@@ -222,7 +223,7 @@ ul {
 
 {{EmbedLiveSample("Multiple_background_images")}}
 
-Note how the first background image is fixed to the viewport while the the second background image is fixed relative to the list.
+Note how the first background image is fixed to the viewport while the second background image is fixed relative to the list.
 
 ## Specifications
 

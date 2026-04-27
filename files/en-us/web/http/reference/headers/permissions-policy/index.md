@@ -13,6 +13,11 @@ sidebar: http
 
 The HTTP **`Permissions-Policy`** {{Glossary("response header")}} provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
+Violations of a policy can be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports may be sent to a server indicated by name in a per-directive `report-to` parameter, or otherwise to the server endpoint named `"default"` (the mapping between server endpoint names and URLs is set using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header).
+Reports can also be observed in the page for which the policy is being enforced using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
+The format of the report and additional detail is provided in {{domxref("PermissionsPolicyViolationReport")}}.
+
 For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) article.
 
 <table class="properties">
@@ -27,8 +32,18 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
 ## Syntax
 
 ```http
+# Single directive
 Permissions-Policy: <directive>=<allowlist>
+
+# Single directive with reporting endpoint
+Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
+
+# Multiple directives, with and without server reporting endpoints
+Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
 ```
+
+The header can be used to set the allowlists for one or more directives, and optionally a per-directive `report-to` parameter indicating the server endpoint to send policy violation reports to.
+The entries for each directive are comma separated.
 
 - `<directive>`
   - : The Permissions Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
@@ -51,15 +66,23 @@ Permissions-Policy: <directive>=<allowlist>
     > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy.
     > These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
 
-Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+- `report-to=<endpoint>` {{optional_inline}}
+  - : The `report-to` parameter can be used to indicate the name of a reporting endpoint where reports will be sent if there is a policy violation for the associated directive.
+    The endpoint name and its associated URL must be specified in a separate {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
-So instead of
+    If omitted, reports will be send to the [`default` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) if one has been defined.
+    See [Reporting API](/en-US/docs/Web/API/Reporting_API) for more information.
+
+Where supported, you can include wildcards in Permissions Policy origins.
+This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+
+So instead of:
 
 ```http
 ("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
-You can specify
+You can specify:
 
 ```http
 ("https://example.com" "https://*.example.com")
@@ -316,6 +339,60 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 <iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
 ```
 
+### Reporting violations
+
+This example shows how to configure reporting of `Permissions-Policy` violations to a server endpoint.
+
+The response headers below block geolocation and define the reporting endpoint name for the feature as "geo_endpoint".
+The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define the URL of this endpoint name.
+
+```http
+Reporting-Endpoints: geo_endpoint="https://example.com/reports"
+Permissions-Policy: geolocation=();report-to=geo_endpoint
+```
+
+> [!NOTE]
+> To send all violation reports to the same endpoint we might instead define the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint):
+>
+> ```http
+> Reporting-Endpoints: default="https://example.com/reports"
+> Permissions-Policy: geolocation=()
+> ```
+
+A violation occurs when a page attempts to use the blocked feature, for example:
+
+```js
+navigator.geolocation.getCurrentPosition(
+  () => {},
+  () => {},
+);
+```
+
+The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints) sent to the endpoint might look like this:
+
+```json
+[
+  {
+    "age": 48512,
+    "body": {
+      "columnNumber": 29,
+      "disposition": "enforce",
+      "lineNumber": 44,
+      "message": "Permissions policy violation: geolocation access has been blocked because of a permissions policy applied to the current document.",
+      "featureId": "geolocation",
+      "sourceFile": "https://example.com/"
+    },
+    "type": "permissions-policy-violation",
+    "url": "https://example.com/",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+  }
+]
+```
+
+> [!NOTE]
+> Chrome's server-side serialization of violation reports uses `policyId` rather than [`featureId`](/en-US/docs/Web/API/PermissionsPolicyViolationReport#featureid) for the feature name in the `body` of a server report.
+> The {{domxref("PermissionsPolicyViolationReport")}} returned by a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver) follows the specification.
+
 ## Specifications
 
 {{Specifications}}
@@ -327,6 +404,11 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 ## See also
 
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{HTTPHeader("Permissions-Policy-Report-Only")}}
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Referrer-Policy")}}
+- {{HTTPHeader("Reporting-Endpoints")}}
+- {{domxref("PermissionsPolicyViolationReport")}}
+- {{domxref("ReportingObserver")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

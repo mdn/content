@@ -1,5 +1,6 @@
 ---
-title: animation-play-state
+title: "`animation-play-state` CSS property"
+short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 page-type: css-property
 browser-compat: css.properties.animation-play-state

@@ -1,5 +1,6 @@
 ---
-title: flex
+title: "`flex` CSS property"
+short-title: flex
 slug: Web/CSS/Reference/Properties/flex
 page-type: css-shorthand-property
 browser-compat: css.properties.flex

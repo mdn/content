@@ -1,5 +1,6 @@
 ---
-title: transform
+title: "`transform` CSS property"
+short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 page-type: css-property
 browser-compat: css.properties.transform
