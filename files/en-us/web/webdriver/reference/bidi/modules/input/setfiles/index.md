@@ -54,7 +54,7 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Setting a file on a file input
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an active session, first obtain a shared reference to a `<input type="file">` element, then send the following message to set its selected file:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an active session, first obtain the `sharedId` of a `<input type="file">` element using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction), or an [`input.fileDialogOpened`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input/fileDialogOpened) event, then send the following message to set its selected file:
 
 ```json
 {
