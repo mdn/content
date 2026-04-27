@@ -1,5 +1,6 @@
 ---
-title: <overflow-position>
+title: "`<overflow-position>` CSS type"
+short-title: <overflow-position>
 slug: Web/CSS/Reference/Values/overflow-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-overflow-position

@@ -1,5 +1,6 @@
 ---
-title: :-moz-suppressed
+title: "`:-moz-suppressed` CSS pseudo-class"
+short-title: :-moz-suppressed
 slug: Web/CSS/Reference/Selectors/:-moz-suppressed
 page-type: css-pseudo-class
 status:

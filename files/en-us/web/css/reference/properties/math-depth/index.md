@@ -1,5 +1,6 @@
 ---
-title: math-depth
+title: "`math-depth` CSS property"
+short-title: math-depth
 slug: Web/CSS/Reference/Properties/math-depth
 page-type: css-property
 browser-compat: css.properties.math-depth

@@ -1,5 +1,6 @@
 ---
-title: align-items
+title: "`align-items` CSS property"
+short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 page-type: css-property
 browser-compat: css.properties.align-items

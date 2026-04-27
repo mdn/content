@@ -1,5 +1,6 @@
 ---
-title: padding-inline-end
+title: "`padding-inline-end` CSS property"
+short-title: padding-inline-end
 slug: Web/CSS/Reference/Properties/padding-inline-end
 page-type: css-property
 browser-compat: css.properties.padding-inline-end

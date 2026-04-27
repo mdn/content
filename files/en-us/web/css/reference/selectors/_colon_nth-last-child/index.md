@@ -1,5 +1,6 @@
 ---
-title: :nth-last-child()
+title: "`:nth-last-child()` CSS pseudo-class"
+short-title: :nth-last-child()
 slug: Web/CSS/Reference/Selectors/:nth-last-child
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-child

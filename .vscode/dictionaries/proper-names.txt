@@ -6,16 +6,19 @@ Addy
 Adham
 Adhemar
 Adilah
+Aisyah
 Akhgari
 alastairc
 Aldous
 Alexa
 Alman
+Amara
 Amit
 Amorim
 Amstelvar
 Amélie
 Anand
+Ananya
 ANDI
 Andreas
 Andreessen
@@ -27,6 +30,7 @@ Ansyari
 Apapou
 Aptana
 Araneae
+Arjun
 Arkanoid
 Artur
 Arun
@@ -93,6 +97,7 @@ Cassini
 Caterina
 caugner
 cdxgen
+Chaiyaporn
 Chakra
 Chamakh
 Chimero
@@ -140,6 +145,7 @@ Dedreux
 Deepti
 Deke
 Delaville
+Demir
 Denicola
 DeSandro
 Desaulniers
@@ -234,12 +240,15 @@ Grigsby
 Grissom
 Groff
 Grosso
+Gruber
 GSAP
 Guildford
+Haddad
 Haile
 Hamish
 hamishwillee
 Haml
+Hassan
 Haverbeke
 Headsight
 Hemiptera
@@ -249,6 +258,7 @@ Hickson
 Hidde
 Highrise
 Hildy
+Hiroshi
 hmatrjp
 Hobday
 hochan
@@ -275,7 +285,9 @@ Ionos
 Irena
 ITCSS
 ITEC
+Ivanova
 Jada
+Jakub
 Jalkhov
 jamiedoe
 Janc
@@ -304,6 +316,7 @@ Kadlec
 Kahlo
 Kaku
 Kang
+Kanya
 Kaply
 Karmadrome
 KASI
@@ -332,6 +345,7 @@ Koen
 Kokoro
 Konva
 Kravets
+Kwame
 Kyouko
 Kütük
 Laravel
@@ -369,8 +383,10 @@ Mapquest
 mapsort
 marcelozarate
 Marcotte
+Mariam
 Marijn
 Masayuki
+Mateo
 Mathoid
 Matomo
 Matroska
@@ -384,6 +400,7 @@ McNally
 McVerry
 Megalosaurus
 Menard
+Mensah
 Mercure
 Merkle
 mfuji
@@ -431,6 +448,7 @@ Neocities
 Nixpacks
 Noida
 Norah
+Novak
 Nurek
 Nuxt
 Nyman
@@ -443,6 +461,7 @@ Odelola
 Odenwald
 Oeschger
 Oikarinen
+Okafor
 Oleksii
 Oliveira
 olliej
@@ -471,9 +490,11 @@ Platane
 Pogany
 Poki
 Polycom
+Popescu
 potappo
 Powerbook
 Powermapper
+Prasetyo
 Prateek
 Presskit
 Prisca
@@ -485,6 +506,7 @@ Quora
 rachelandrew
 Radev
 Radimir
+Rahman
 Ramesh
 Rapp
 Rauschmayer
@@ -511,6 +533,7 @@ Ryuno
 Sagat
 Saionaro
 Sakura
+Salah
 Salame
 Salva
 Sandrina
@@ -573,6 +596,7 @@ Symfony
 Szewinska
 Tabliss
 Tamaran
+Tanaka
 Tanx
 Techopedia
 Tegra
@@ -600,6 +624,7 @@ Trustwave
 twgl
 Usain
 usrsctp
+Valentina
 Vallejoanderson
 Vanderheiden
 Vandermonde
@@ -657,6 +682,7 @@ Yslow
 YubiKey
 Yuki
 Yura
+Yusuf
 Zakas
 Zakirt
 Zangief

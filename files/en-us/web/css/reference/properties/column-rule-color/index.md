@@ -1,5 +1,6 @@
 ---
-title: column-rule-color
+title: "`column-rule-color` CSS property"
+short-title: column-rule-color
 slug: Web/CSS/Reference/Properties/column-rule-color
 page-type: css-property
 browser-compat: css.properties.column-rule-color

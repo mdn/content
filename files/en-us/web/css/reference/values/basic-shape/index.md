@@ -1,5 +1,6 @@
 ---
-title: <basic-shape>
+title: "`<basic-shape>` CSS type"
+short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 page-type: css-type
 browser-compat: css.types.basic-shape

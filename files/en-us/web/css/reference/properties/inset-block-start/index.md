@@ -1,5 +1,6 @@
 ---
-title: inset-block-start
+title: "`inset-block-start` CSS property"
+short-title: inset-block-start
 slug: Web/CSS/Reference/Properties/inset-block-start
 page-type: css-property
 browser-compat: css.properties.inset-block-start

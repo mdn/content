@@ -1,5 +1,6 @@
 ---
-title: marker-start
+title: "`marker-start` CSS property"
+short-title: marker-start
 slug: Web/CSS/Reference/Properties/marker-start
 page-type: css-property
 browser-compat: css.properties.marker-start

@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: elementtiming"
+title: "`elementtiming` HTML attribute"
 short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
 page-type: html-attribute

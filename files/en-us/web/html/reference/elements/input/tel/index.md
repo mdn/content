@@ -1,5 +1,6 @@
 ---
-title: <input type="tel">
+title: '`<input type="tel">` HTML attribute value'
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_tel

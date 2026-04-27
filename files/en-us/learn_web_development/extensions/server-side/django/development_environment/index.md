@@ -420,7 +420,7 @@ When you want to backup some changes to a branch you can create a "commit", whic
 
 The repo is created with a default branch named "main". You can spawn other branches off this using git, which initially have all the commits of the original branch.
 You can evolve branches separately by adding commits, and then later on use a "Pull Request" (PR) on GitHub to merge changes from one branch to another.
-You can also use git to switch between branches on your local compute, for example to try out different things.
+You can also use git to switch between branches on your local computer, for example to try out different things.
 
 In addition to branches, it is possible to create `tags` on any branch and later recover that branch at that point.
 

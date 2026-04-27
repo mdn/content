@@ -49,7 +49,7 @@ let querying = browser.tabs.query(queryInfo)
     - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tabs are pinned.
     - `splitViewId` {{optional_inline}}
-      - : `integer`. The ID of the split view the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} to query the tabs that don't belong to a split view.
+      - : `integer`. The ID of the [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views) the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} to query the tabs that don't belong to a split view.
     - `status` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.
     - `title` {{optional_inline}}

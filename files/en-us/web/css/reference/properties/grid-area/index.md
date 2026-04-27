@@ -1,5 +1,6 @@
 ---
-title: grid-area
+title: "`grid-area` CSS property"
+short-title: grid-area
 slug: Web/CSS/Reference/Properties/grid-area
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-area

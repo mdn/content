@@ -376,6 +376,7 @@
                 "webdriver-command",
                 "webdriver-capability",
                 "webdriver-error",
+                "webdriver-event",
                 "reference"
               ]
             }

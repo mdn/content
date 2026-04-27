@@ -44,15 +44,15 @@ Having modern web browsers available to you is essential for web development so 
 The most common browsers you'll come across are as follows:
 
 - Desktop browsers:
-  - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
-  - Gecko: [Mozilla Firefox](https://www.firefox.com/en-US/).
-  - WebKit: [Apple Safari](https://www.apple.com/safari/).
+  - [Chromium](<https://en.wikipedia.org/wiki/Chromium_(web_browser)>)-based: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
+  - [Gecko](<https://en.wikipedia.org/wiki/Gecko_(software)>)-based: [Mozilla Firefox](https://www.firefox.com/en-US/).
+  - [WebKit](https://en.wikipedia.org/wiki/WebKit)-based: [Apple Safari](https://www.apple.com/safari/).
 - Mobile/alternative device browsers:
-  - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
-  - Gecko (Android): [Mozilla Firefox](https://www.firefox.com/en-US/download/android/).
-  - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
+  - Chromium-based (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
+  - Gecko-based (Android): [Mozilla Firefox](https://www.firefox.com/en-US/download/android/).
+  - WebKit-based (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]
-    > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
+    > Most of the Android browsers listed above also have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
 
 Most modern browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page. This is available in slightly different places on different browsers and OSes, for example:
 
@@ -61,7 +61,11 @@ Most modern browsers tend to install updates automatically, applying the changes
 
 ### Which browsers to install
 
-For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. If possible, install at least one browser from each of the sub-bullets shown previously, so you don't just test in multiple browsers based on the same rendering engine.
+For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. Install browsers based on at least two different rendering engines (for example Chromium and Gecko), so you don't just test in multiple browsers based on the same rendering engine. This is important because your code may contain bugs that only affect one rendering engine.
+
+WebKit-based browsers are not available for Windows, Linux, and Android operating systems. If you want to test your code in all three major rendering engines and your computer is Windows-based, you will need to get access to a macOS- or iOS-based test device or use a software-based solution such as a virtual machine or test platform. You don't need to worry about comprehensive testing at this stage, however — recognizing that you should be testing your code across different rendering engines and getting some practice is good enough for now.
+
+You'll look at testing strategies in more detail in our [Testing](/en-US/docs/Learn_web_development/Extensions/Testing) module.
 
 ## Local web servers
 

@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior-inline
+title: "`overscroll-behavior-inline` CSS property"
+short-title: overscroll-behavior-inline
 slug: Web/CSS/Reference/Properties/overscroll-behavior-inline
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline

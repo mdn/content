@@ -3,10 +3,12 @@ title: "ManagedMediaSource: ManagedMediaSource() constructor"
 short-title: ManagedMediaSource()
 slug: Web/API/ManagedMediaSource/ManagedMediaSource
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.ManagedMediaSource.ManagedMediaSource
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`ManagedMediaSource()`** constructor of the {{domxref("ManagedMediaSource")}} interface constructs and returns a new `ManagedMediaSource` object instance with no associated source buffers.
 

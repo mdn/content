@@ -1,5 +1,6 @@
 ---
-title: <calc-keyword>
+title: "`<calc-keyword>` CSS type"
+short-title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
 page-type: css-type
 browser-compat: css.types.calc-keyword

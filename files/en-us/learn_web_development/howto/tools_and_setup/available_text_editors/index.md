@@ -143,7 +143,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://discourse.gnome.org/tag/gedit"
+        <a href="https://discourse.gnome.org/tag/gedit/27"
           rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>

@@ -1,5 +1,5 @@
 ---
-title: The WebSocket API (WebSockets)
+title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 page-type: web-api-overview
 browser-compat:

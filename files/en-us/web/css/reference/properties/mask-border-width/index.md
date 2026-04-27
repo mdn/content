@@ -1,5 +1,6 @@
 ---
-title: mask-border-width
+title: "`mask-border-width` CSS property"
+short-title: mask-border-width
 slug: Web/CSS/Reference/Properties/mask-border-width
 page-type: css-property
 browser-compat: css.properties.mask-border-width

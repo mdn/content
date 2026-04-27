@@ -63,7 +63,7 @@ i32.const 0 ;; stack variable with offset in memory to store the number
 i32.const 20 ;; stack variable with the number to store
 i32.store ;; store in default memory
 
-;; Store using S-function (same values and offset)
+;; Store using S-expression (same values and offset)
 (i32.store (i32.const 0) (i32.const 20))
 ```
 
@@ -80,7 +80,7 @@ i32.const 0 ;; offset to store the number
 i32.const 20 ;; the number to store
 i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 
-;; Store in same memory using an S function
+;; Store in same memory using an S-expression
 (i32.store (memory $memoryName) (i32.const 0) (i32.const 20))
 ```
 
