@@ -100,20 +100,20 @@ It's also important to listen for `fullscreenchange` to be aware when, for examp
 
 ### Keyboard locking
 
-Keyboard locking allows a fullscreen application to intercept some keys and key combinations that would otherwise be exclusively handled by the browser or the underlying OS.
-This can improve the user experience for applications such as games, allowing you to intercept key combinations that would otherwise not reach your code or have have unintended side effects outside the control of your application.
-For example, this mechanism allows the <kbd>Esc</kbd> key to be used as a menu key in games, instead of exiting fullscreen mode.
+Keyboard locking allows a fullscreen application to intercept and handle some keys and key combinations that would otherwise be exclusively handled by the browser or the underlying OS.
+This can improve the user experience for games, for example, by allowing the <kbd>Esc</kbd> key to be used as a menu key instead of exiting fullscreen mode.
+It can also be useful for applications such as remote desktop control, where you want almost all key events to be forwarded to the remote computer.
 
-The keyboard lock is activated by passing a keyboard lock mode value, other than `none`, to the [`options.keyboardLock`](#keyboardlock) parameter when activating fullscreen mode.
-When keyboard lock is active in fullscreen mode the browser will redirect almost all keyboard events to the application, including those that would otherwise trigger system or browser behavior.
+The keyboard lock is activated by passing a keyboard lock mode value of `"browser"` to the [`options.keyboardLock`](#keyboardlock) parameter when activating fullscreen mode.
+When keyboard lock is active in fullscreen mode the browser will redirect "many more" keyboard events to the application — the precise set of keys is browser dependent.
 The web application should then prevent the default action by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event.
 Some key combinations are used for system control or have privacy risks, and hence cannot be disabled using this mechanism (for example, <kbd>Ctrl+Alt+Delete</kbd> on Windows).
 
-Note that the default actions for some keyboard events may be disabled by default in fullscreen mode in some Browsers.
-However this is not guaranteed, so generally you will need to call `preventDefault()` to disable the default action for all events that interest you.
-In particular, this includes the event for the <kbd>Esc</kbd> key, which may otherwise exit you out of fullscreen mode even if you have keyboard lock!
+Note that some browsers disable the default action for the <kbd>Esc</kbd> key, which would otherwise exit the element from fullscreen mode even if you have keyboard lock!
+However this is not guaranteed, so generally you will need to call `preventDefault()` to disable the action if you don't want the key to exit the mode.
+More generally, you can't assume that the default action is disabled by default.
 
-Browsers are expected to provide an alternative mechanism for exiting fullscreen mode when keyboard lock is enabled, since the normal default action is disabled.
+Browsers are expected to provide an alternative mechanism for exiting fullscreen mode when keyboard lock is enabled.
 Most browsers use the <kbd>Esc</kbd> to exit normal fullscreen mode, and a long-press <kbd>Esc</kbd> key to exit keyboard lock.
 The keyboard lock is disabled when the browser exits fullscreen mode.
 
@@ -209,7 +209,7 @@ kbd {
 
 ### Using keyboard lock
 
-This example is almost the same as the previous example except that we request that fullscreen is opened with keyboard lock.
+This example is almost the same as the previous example, except that we request that fullscreen is opened with keyboard lock.
 
 #### JavaScript
 
