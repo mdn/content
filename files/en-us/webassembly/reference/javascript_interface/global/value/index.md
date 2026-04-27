@@ -24,11 +24,6 @@ For the setter to work:
 
 If this is not the case, a `TypeError` exception is thrown.
 
-If global is mutable and you attempt to set its `value` to an incompatible value type, the actual value set will be an appropriate value chosen by the browser. For example:
-
-- If you attempt to set it to a string, the value set will be `0`.
-- If you attempt to set an integer to a floating point number (for example, `3.5`), the value set will be the nearest integer rounded down (for example, `3`).
-
 ## Examples
 
 ### Creating a non-mutable global
