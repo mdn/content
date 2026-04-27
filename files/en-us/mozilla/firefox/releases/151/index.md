@@ -52,7 +52,7 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{svgelement("svg")}} in the SVG namespace or {{mathmlelement("math")}} in the MathML namespace (the method already returned `false` for {{htmlelement("html")}} elements).
+- The {{domxref("Sanitizer.replaceElementWithChildren()")}} method now returns `false` if the element to be replaced is {{svgelement("svg")}} in the SVG [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace) or {{mathmlelement("math")}} in the MathML namespace (joining {{htmlelement("html")}}, which was disallowed in [Firefox 150](/en-US/docs/Mozilla/Firefox/Releases/150#apis)).
   ([Firefox bug 2032359](https://bugzil.la/2032359)).
 
 <!-- #### DOM -->
