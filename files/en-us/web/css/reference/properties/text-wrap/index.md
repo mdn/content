@@ -1,5 +1,6 @@
 ---
-title: text-wrap
+title: "`text-wrap` CSS property"
+short-title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap

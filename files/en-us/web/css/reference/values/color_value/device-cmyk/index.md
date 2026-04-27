@@ -1,5 +1,6 @@
 ---
-title: device-cmyk()
+title: "`device-cmyk()` CSS function"
+short-title: device-cmyk()
 slug: Web/CSS/Reference/Values/color_value/device-cmyk
 page-type: css-function
 spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk

@@ -1,5 +1,6 @@
 ---
-title: pointer-events
+title: "`pointer-events` CSS property"
+short-title: pointer-events
 slug: Web/CSS/Reference/Properties/pointer-events
 page-type: css-property
 browser-compat: css.properties.pointer-events

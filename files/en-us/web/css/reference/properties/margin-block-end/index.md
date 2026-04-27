@@ -1,5 +1,6 @@
 ---
-title: margin-block-end
+title: "`margin-block-end` CSS property"
+short-title: margin-block-end
 slug: Web/CSS/Reference/Properties/margin-block-end
 page-type: css-property
 browser-compat: css.properties.margin-block-end

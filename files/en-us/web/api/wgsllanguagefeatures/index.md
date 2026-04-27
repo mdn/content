@@ -45,6 +45,9 @@ The following WGSL language extensions are defined at [WGSL language extensions]
     > [!NOTE]
     > For the `subgroup_id` WGSL feature to be usable, the [`subgroups`](https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups) extension needs to be enabled in the {{domxref("GPUDevice")}} (see {{domxref("GPUSupportedFeatures")}}).
 
+- `subgroup_uniformity`
+  - : When available, changes the scope of the uniformity analysis for the subgroup and quad built-in functions to the subgroup level (instead of the workgroup level). This feature allows subgroup functionality to be considered uniform in more cases, improving usability for developers and reducing the need to disable uniformity checks altogether. A practical implication is that more values are considered subgroup-uniform, such as the [`subgroup_id`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-subgroup_id) built-in value. See [WGSL subgroup_uniformity extension](https://developer.chrome.com/blog/new-in-webgpu-145#wgsl_subgroup_uniformity_extension) for more details.
+
 - `texture_and_sampler_let`
   - When available, allows WGSL shaders to store texture and sampler objects in `let` declarations.
 

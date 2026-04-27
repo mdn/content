@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-position-y
+title: "`-webkit-mask-position-y` CSS property"
+short-title: -webkit-mask-position-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-y
 page-type: css-property
 status:

@@ -1,5 +1,6 @@
 ---
-title: :-moz-drag-over
+title: "`:-moz-drag-over` CSS pseudo-class"
+short-title: :-moz-drag-over
 slug: Web/CSS/Reference/Selectors/:-moz-drag-over
 page-type: css-pseudo-class
 status:

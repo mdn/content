@@ -1,5 +1,6 @@
 ---
-title: grid-template-areas
+title: "`grid-template-areas` CSS property"
+short-title: grid-template-areas
 slug: Web/CSS/Reference/Properties/grid-template-areas
 page-type: css-property
 browser-compat: css.properties.grid-template-areas
