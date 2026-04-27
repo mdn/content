@@ -7,7 +7,7 @@ browser-compat: webassembly.api.Global.value
 sidebar: webassemblysidebar
 ---
 
-The **`value`** property of the [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype returns the value contained inside the global variable. This can be used to directly set and get the global's value.
+The **`value`** property of the [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) object prototype returns the value contained inside the global variable.
 
 ## Value
 
@@ -15,14 +15,9 @@ A string indicating the value of the global.
 
 ## Description
 
-The `value` property of a `Global` object instance allows you to get or set the global's value.
+The `value` property of a `Global` object instance allows you to directly get or set the global's value.
 
-For the setter to work:
-
-- The global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was declared).
-- The global's value must have the same data type as the one specified in the constructor's [`value`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#value) property when the global was first created.
-
-If this is not the case, a `TypeError` exception is thrown.
+For the setter to work, the global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was declared). If this is not the case, a `TypeError` exception is thrown.
 
 ## Examples
 
