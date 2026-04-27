@@ -13,10 +13,21 @@ The **`value`** property of the [`WebAssembly.Global`](/en-US/docs/WebAssembly/R
 
 A string indicating the value of the global.
 
+## Description
+
+The `value` property of a `Global` object instance allows you to get or set the global's value.
+
 For the setter to work:
 
-- The global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was declared). If this is not the case, a `TypeError` exception is thrown.
-- The global's value must have the same data type as the one specified in the constructor's [`value`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#value) property when the global was first created. If this is not the case (for example, if you set the global `value` to a string), the `value` is set to `0`, and the global becomes mutable.
+- The global must be mutable (the [`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) option was set to `true` when it was declared).
+- The global's value must have the same data type as the one specified in the constructor's [`value`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#value) property when the global was first created.
+
+If this is not the case, a `TypeError` exception is thrown.
+
+If global is mutable and you attempt to set its `value` to an incompatible value type, the actual value set will be an appropriate value chosen by the browser. For example:
+
+- If you attempt to set it to a string, the value set will be `0`.
+- If you attempt to set an integer to a floating point number (for example, `3.5`), the value set will be the nearest integer rounded down (for example, `3`).
 
 ## Examples
 
