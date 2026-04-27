@@ -3,10 +3,12 @@ title: "CrashReportContext: set() method"
 short-title: set()
 slug: Web/API/CrashReportContext/set
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CrashReportContext.set
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CrashReportContext")}} interface stores a key-value pair in the memory initialized by {{domxref("CrashReportContext.initialize", "initialize()")}}.
 

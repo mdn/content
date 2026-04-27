@@ -562,21 +562,6 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 - `image.jxl.enabled`
   - : Set to `true` to enable.
 
-#### Document Picture-in-Picture API
-
-The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
-See [Firefox bug 1858562](https://bugzil.la/1858562) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 148           | Yes                 |
-| Developer Edition | 148           | No                  |
-| Beta              | 148           | No                  |
-| Release           | 148           | No                  |
-
-- `dom.documentpip.enabled`
-  - : Set to `true` to enable.
-
 ### WebVR API (Disabled)
 
 The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.

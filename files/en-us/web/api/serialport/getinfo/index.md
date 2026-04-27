@@ -3,12 +3,10 @@ title: "SerialPort: getInfo() method"
 short-title: getInfo()
 slug: Web/API/SerialPort/getInfo
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SerialPort.getInfo
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an object containing identifying information for the device available via the port.
 
