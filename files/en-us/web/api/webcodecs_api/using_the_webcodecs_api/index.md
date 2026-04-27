@@ -317,7 +317,7 @@ for (const audioData of rawAudio) {
 await encoder.flush();
 ```
 
-See the [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection#choosing_an_audio_codec) guide for guidance on choosing between Opus and AAC.
+See the [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection#audio-codecs) guide for guidance on choosing between Opus and AAC.
 
 ### Decoding
 

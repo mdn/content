@@ -14,21 +14,23 @@ Selecting the correct string depends on your use case, but is primarily influenc
 
 ## Decoding vs encoding
 
-When **decoding** a video file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [Mediabunny](https://mediabunny.dev/) and [web-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} during configuration.
+When **decoding** a video or audio file, the codec is determined by how the file was originally encoded — you do not choose it. Demuxing libraries such as [Mediabunny](https://mediabunny.dev/) and [web-demuxer](https://github.com/bilibili/web-demuxer) will extract the correct codec string for a given file, which you can supply directly to {{domxref("VideoDecoder")}} or {{domxref("AudioDecoder")}} during configuration.
 
 When **encoding**, you choose the codec. The rest of this guide covers how to choose a codec.
 
-## Choosing a video codec family
+## Video Codecs
+
+### Video Codec Families
 
 Before choosing a codec string, like `vp09.00.40.08.00` or `avc1.4d0034`, it is worth reviewing the codec families.
 
-### H.264 (AVC)
+#### H.264 (AVC)
 
 H.264 is one of the most widely supported codecs across browsers, operating systems, and consumer devices. It is the most common codec used in MP4 files, and applications which encode videos intended for playback in 3rd party software typically choose H.264 as a pragmatic choice for maximum compatibility.
 
 While popular, it is worth noting that H.264 is a patented codec. While browser vendors hold licenses covering the H.264 encoder implementations used by WebCodecs, the codec is subject to royalties in certain circumstances. Developers should review usage with legal counsel.
 
-### VP9
+#### VP9
 
 VP9 is an open source codec developed by Google, and offers better compression than H.264 at equivalent quality. VP9 within WebM containers is widely supported across modern browsers, with coverage comparable to or exceeding H.264.
 
@@ -38,13 +40,13 @@ VP9 is sometimes, but not always supported as a codec within MP4 files, as suppo
 
 VP9 is often chosen for internal use cases for its better compression, or when open source licensing matters.
 
-### AV1
+#### AV1
 
 AV1 is a newer open source codec developed by the [Alliance for Open Media](https://aomedia.org/). AV1 has better compression than both H.264 and VP9 for the same quality, and decode support is now over 90% coverage globally across browsers.
 
 AV1 encoding support is strong across desktop browsers but limited on Safari and on Android. AV1 offers better quality-per-bit than VP9, but is more computationally intensive to encode. Consumer devices increasingly have support for AV1 hardware acceleration, which can make AV1 encoding more practical. The decision to use AV1 over VP9 typically comes down to whether the better quality-per-bit justifies the additional encoding overhead for a given use case.
 
-### HEVC (H.265)
+#### HEVC (H.265)
 
 HEVC offers better compression than H.264 but has significant gaps in browser encoding support outside of Apple platforms.
 It is not recommended as a general-purpose encoding target.
@@ -154,7 +156,7 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `L150` — Level × 30 (`L150` = level 5.0, supports up to 4K)
 - `B0` — Tier and constraint flags (`B0` = Main tier)
 
-## Choosing an audio codec
+## Audio Codecs
 
 ### Opus
 
