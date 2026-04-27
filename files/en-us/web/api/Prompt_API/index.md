@@ -54,27 +54,6 @@ The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secur
 - {{domxref("LanguageModel")}}
   - : Represents a session with a browser-provided language model. Provides static methods for creating sessions and checking availability, and instance methods for prompting the model, managing context, and cloning sessions.
 
-## Dictionaries
-
-- {{domxref("LanguageModelCreateOptions")}}
-  - : The full set of options for {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}, including an abort signal, a download-progress monitor, initial prompts, and all options inherited from {{domxref("LanguageModelCreateCoreOptions")}}.
-- {{domxref("LanguageModelCreateCoreOptions")}}
-  - : The base options shared by {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} and {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}, covering expected input and output modalities and registered tools.
-- {{domxref("LanguageModelPromptOptions")}}
-  - : Options for {{domxref("LanguageModel.prompt()")}} and {{domxref("LanguageModel.promptStreaming()")}}, including an optional output constraint and an abort signal.
-- {{domxref("LanguageModelAppendOptions")}}
-  - : Options for {{domxref("LanguageModel.append()")}}, consisting of an abort signal.
-- {{domxref("LanguageModelCloneOptions")}}
-  - : Options for {{domxref("LanguageModel.clone()")}}, consisting of an abort signal.
-- {{domxref("LanguageModelTool")}}
-  - : Describes a tool that a language model session can invoke during generation, including its name, description, input schema, and the callback the user agent invokes on the model's behalf.
-- {{domxref("LanguageModelExpected")}}
-  - : Describes an expected input or output capability for a session, specifying a content type (such as `"text"`, `"image"`, or `"audio"`) and an optional list of supported languages.
-- {{domxref("LanguageModelMessage")}}
-  - : Represents a single message in a conversation, with a role (`"system"`, `"user"`, or `"assistant"`), content (a string or a sequence of {{domxref("LanguageModelMessageContent")}} objects), and an optional prefix flag.
-- {{domxref("LanguageModelMessageContent")}}
-  - : Represents a single content part within a {{domxref("LanguageModelMessage")}}, pairing a content type with a corresponding value such as a string, `ImageBitmapSource`, or `AudioBuffer`.
-
 ## Callback functions
 
 - {{domxref("LanguageModelToolFunction")}}
