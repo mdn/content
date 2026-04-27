@@ -33,11 +33,9 @@ A boolean value: `true` if the operation updated the `Sanitizer` configuration t
 
 The method returns `false` if the sanitizer is already configured to replace the given element, or if the resolved element is [not allowed](#disallowed_replacement_elements).
 
-The method will return also return `false` if the following objects are passed:
-
 ## Description
 
-The **`replaceElementWithChildren()`** method specifies an element that will be replaced by its child HTML elements when the sanitizer is used.
+The **`replaceElementWithChildren()`** method specifies an element that will be replaced by its child elements and/or text nodes when the sanitizer is used.
 This is primarily used for stripping styles from text.
 
 ### Disallowed replacement elements
@@ -46,9 +44,9 @@ The following elements are not allowed as replacement elements:
 
 - {{htmlelement("html")}} in the HTML namespace (`http://www.w3.org/1999/xhtml`).
 - {{svgelement("svg")}} in the SVG namespace (`http://www.w3.org/2000/svg`).
-- {{mathmlelement("math")}} in the MATHML namespace (`http://www.w3.org/1998/Math/MathML`).
+- {{mathmlelement("math")}} in the MathML namespace (`http://www.w3.org/1998/Math/MathML`).
 
-The following method calls will all return `false` as the `Sanitizer` can't be updated.
+All the following method calls return `false` because the `Sanitizer` can't be updated for these elements:
 
 ```js
 const sanitizer = new Sanitizer();
