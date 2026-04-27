@@ -22,11 +22,15 @@ prompt(input, options)
 - `input`
   - : The prompt to send to the model. This is a `LanguageModelPrompt`, which is either:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of {{domxref("LanguageModelMessage")}} objects for multi-turn or multimodal input.
+    - A sequence representing a single message in a conversation with a language model. Options include:
+      - `role` — A string indicating who sent the message. Must be one of:
+          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+          - `"user"` — A message from the user.
+          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
-  - : A {{domxref("LanguageModelPromptOptions")}} object. Options include:
-    - `responseConstraint` — An object constraining the format of the model's output.
-    - `omitResponseConstraintInput` — A boolean; when `true`, suppresses the automatic constraint-description message.
+  - : Options for creating a prompt. Options include:
+    - `responseConstraint` — Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+    - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value

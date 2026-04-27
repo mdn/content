@@ -22,7 +22,7 @@ measureContextUsage(input, options)
 - `input`
   - : The input to measure. This is a `LanguageModelPrompt`, which is either:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of `LanguageModelMessage` dictionaries for multi-turn or multimodal input. This dictionary represents a single message in a conversation with a language model. Options include:
+    - A sequence for for multi-turn or multimodal input. Represents a single message in a conversation with a language model. Options include:
       - `role` — A string indicating who sent the message. Must be one of:
           - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
           - `"user"` — A message from the user.
@@ -30,7 +30,7 @@ measureContextUsage(input, options)
   - `content`
     - : The content of the message. This is either:
       - A string — Shorthand for a single text content part. For example: `[{ type: "text", value: providedValue }]`.
-      - A sequence of `LanguageModelMessageContent` objects for multimodal messages or messages with multiple content parts. Options include:
+      - A sequence of multimodal messages or messages with multiple content parts. Options include:
         - `type` - A string from the `LanguageModelMessageType` enumeration indicating the kind of content. Must be one of:
             - `"text"` — Plain text content.
             - `"image"` — Image content.
@@ -45,8 +45,8 @@ measureContextUsage(input, options)
   - `prefix` {{optional_inline}}
     - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
 - `options` {{optional_inline}}
-  - : A `LanguageModelPromptOptions` dictionary. Options include:
-    - `responseConstraint` — An object constraining the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+  - : Options for measuring contrext usage. Options include:
+    - `responseConstraint` — Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
 

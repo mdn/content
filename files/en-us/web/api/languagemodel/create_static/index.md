@@ -20,13 +20,51 @@ LanguageModel.create(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A `LanguageModelCreateOptions` dictionary containing the options for creating a {{domxref("LanguageModel")}} session. Options include:
-    - `expectedInputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the input modalities.
-    - `expectedOutputs` — A sequence of {{domxref("LanguageModelExpected")}} objects declaring the output modalities.
-    - `initialPrompts` — A sequence of {{domxref("LanguageModelMessage")}} objects that are pre-loaded into the session's context window before other prompts are sent. This is typically used to provide a system prompt and any few-shot examples that should persist across all turns.
+  - : Represents the options for creating a {{domxref("LanguageModel")}} session. Options include:
+    - `expectedInputs`
+      - : A sequence representing the required input modalities and languages. Options include:
+        - `type`
+          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - `"text"` — Plain text content.
+          - `"image"` — Image content.
+          - `"audio"` — Audio content.
+          - `"tool-call"` — A tool invocation issued by the model.
+          - `"tool-response"` — The result of a tool invocation.
+        - `languages` {{optional_inline}}
+          - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+    - `expectedOutputs` 
+      - : A sequence representing the required input modalities and languages. Options include:
+        - `type`
+          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - `"text"` — Plain text content.
+          - `"image"` — Image content.
+          - `"audio"` — Audio content.
+          - `"tool-call"` — A tool invocation issued by the model.
+          - `"tool-response"` — The result of a tool invocation.
+        - `languages` {{optional_inline}}
+          - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+    
+
+
+
+    - `initialPrompts` — 
+    - A sequence representing a single message in a conversation with a language model. Options include:
+      - `role` — A string indicating who sent the message. Must be one of:
+          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+          - `"user"` — A message from the user.
+          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
     - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
     - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
-    - `tools` — A sequence of {{domxref("LanguageModelTool")}} objects the model may invoke during generation.
+    - `tools` 
+    — A sequence of tools to verify support for. Options include:
+      - `name`
+        - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
+      - `description`
+        - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
+      - `inputSchema`
+        - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
+      - `execute`
+          - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
@@ -150,4 +188,5 @@ try {
 ## See also
 
 - {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}
+- {{domxref("LanguageModelToolFunction")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)

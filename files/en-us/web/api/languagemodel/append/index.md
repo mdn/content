@@ -20,11 +20,15 @@ append(input, options)
 ### Parameters
 
 - `input`
-  - : The content to append to the context window. This is a {{domxref("LanguageModelPrompt")}}, which is either:
+  - : The content to append to the context window. This is either:
     - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence of {{domxref("LanguageModelMessage")}} objects — For multi-turn or multimodal content.
+    - A sequence representing a single message in a conversation with a language model. Options include:
+      - `role` — A string indicating who sent the message. Must be one of:
+          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+          - `"user"` — A message from the user.
+          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
-  - : A `LanguageModelAppendOptions` object representing the options that can be passed. Options include:
+  - : Represents the options that can be passed. Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value
@@ -44,10 +48,8 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 
 ## Description
 
-The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context.
-
-Unlike `initialPrompts` in `LanguageModelCreateOptions`, `append()` can be called at any point during the session's lifetime.
-
+The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context. The `append()` method can be called at any point during the session's lifetime.
+ 
 ## Examples
 
 ### Loading a document before querying
