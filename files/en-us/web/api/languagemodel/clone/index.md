@@ -20,7 +20,7 @@ clone(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : A `LanguageModelCloneOptions` dictionary, which represents the options that can be passed. If this argument is absent, the `options` from the original session are used (not copied). Options include:
+  - : Represents the options that can be passed. If this argument is absent, the `options` from the original session are used (not copied). Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value

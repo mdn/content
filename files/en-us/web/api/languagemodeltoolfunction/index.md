@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`LanguageModelToolFunction`** callback of the [Prompt API](/en-US/docs/Web/API/Prompt_API) is a function assigned to the `execute` property of a `LanguageModelTool` dictionary when calling {{domxref("LanguageModel.availability_static", "availability()")}}. When the language model invokes a tool, the user agent calls this function on its behalf, passing the arguments the model specified, and uses the returned string as the tool's result.
+The **`LanguageModelToolFunction`** callback of the [Prompt API](/en-US/docs/Web/API/Prompt_API) is a function assigned to the `execute` property when calling {{domxref("LanguageModel.availability_static", "availability()")}}. When the language model invokes a tool, the user agent calls this function on its behalf, passing the arguments the model specified, and uses the returned string as the tool's result.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing t
 
 ## Description
 
-`LanguageModelToolFunction` callbacks are defined by the developer and registered as part of a {{domxref("LanguageModelTool")}} dictionary passed to {{domxref("LanguageModel.create_static", "create()")}}. When the language model's generated output indicates a tool call, the user agent invokes the `execute` function with the arguments the model specified. The returned string is fed back to the model as the tool's output.
+`LanguageModelToolFunction` callbacks are defined by the developer and registered as part of the object passed to {{domxref("LanguageModel.create_static", "create()")}}. When the language model's generated output indicates a tool call, the user agent invokes the `execute` function with the arguments the model specified. The returned string is fed back to the model as the tool's output.
 
 The function must return a `Promise` resolving with a `DOMString`. This allows the implementation to perform asynchronous operations such as network requests or database lookups before returning a result.
 
@@ -77,6 +77,5 @@ console.log(response);
 
 ## See also
 
-- {{domxref("LanguageModelTool")}}
 - {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
