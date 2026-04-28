@@ -10,7 +10,7 @@ While developers commonly refer to codecs by their code identifier string, such 
 
 The [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) requires working with fully specified codec strings, such as `vp09.00.40.08.00`, instead of ambiguous strings like `vp9` or `h264`. Fully specified codec strings detail not just the codec family but also the profile, level, and other parameters.
 
-Selecting the correct string depends on your use case, but is primarily influenced by compatibility concerns, and the hardware and software on which you want to run. This guide explains how codec strings work, how to choose the right codecs for common use cases, and common approaches for gracefully falling back to alternative codec strings when your preferences are unavailable.
+Selecting the correct string depends on your use case, but is primarily influenced by compatibility concerns, and the hardware and software on which you want to run. This guide explains how codec strings work, how to choose the right codecs for [common use cases](#common_use_cases), and common approaches for gracefully falling back to alternative codec strings when your preferences are unavailable.
 
 ## Decoding vs encoding
 
