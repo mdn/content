@@ -36,7 +36,7 @@ Likewise, the WebCodecs API also introduces the {{domxref("AudioDecoder")}} and 
 
 ![AudioEncoder and AudioDecoder](audio-encoder-decoder.png)
 
-Generally there is a 1:1 correspondence between the raw and encoded versions of each media type. Decoding n `EncodedVideoChunk` objects will yield n `VideoFrame` objects (same with audio).
+Generally there is a 1:1 correspondence between the raw and encoded versions of each media type. Decoding a number of `EncodedVideoChunk` objects will yield the same number of `VideoFrame` objects (and this is also true for audio).
 
 ### Video
 
