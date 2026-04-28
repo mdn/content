@@ -50,6 +50,10 @@ new SharedWorker(url, options)
     - `name`
       - : A string specifying an
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
+    - `extendedLifetime`
+      - : A boolean indicating whether the Shared Worker is allowed to live for a short period (typically 10-seconds to 5 minutes) after all pages using the shared worker have been navigated away from.
+        This allows developers to perform some work as the user navigates away from the page. For example, writing to storage, or sending data back to servers, to save state or record analytics.
+        The exact time may differ per browser. Chrome uses 30 seconds for example.
     - `sameSiteCookies`
       - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) should be available to the worker.
         Can have one of the following two values:
@@ -59,6 +63,9 @@ new SharedWorker(url, options)
         - 'none'
           - : Only `SameSite=None` cookies will be available to the worker.
             This option is supported in first-party and third-party contexts, and is the default in third-party contexts.
+
+> [!WARNING]
+> Pages can only open one type of shared worker. Attempting to open the same Shared Worker with different `type`, `credentials`, `name` or `extendedLifetime` values will fail to start the second instance and result in an error when the shared worker is attempted to be used.
 
 ### Exceptions
 
@@ -111,6 +118,16 @@ myWorker.port.onmessage = (e) => {
 ```
 
 For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+
+### Extended lifetime worker
+
+The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the `SharedWorker()` constructor with the `extendedLifetime` option:
+
+```js
+const myWorker = new SharedWorker("worker.js", { extendedLifetime: true });
+```
+
+This shared worker will continue to live on for a short period after the user has navigated away from the page.
 
 ## Specifications
 
