@@ -43,6 +43,8 @@ The only difference is that it has one additional field: `type`, which can be "k
 
 An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), however the extracted `Float32Array` samples can be copied directly into a {{domxref("AudioBuffer")}} for playback.
 
+Likewise, the `EncodedAudioChunk` represents the encoded (compressed) version of an `AudioData` objects, containing compressed audio sample data.
+
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
 ### Processing model
