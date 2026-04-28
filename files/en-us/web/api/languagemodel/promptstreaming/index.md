@@ -24,12 +24,12 @@ promptStreaming(input, options)
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence representing a single message in a conversation with a language model. Options include:
       - `role` — A string indicating who sent the message. Must be one of:
-          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-          - `"user"` — A message from the user.
-          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+        - `"user"` — A message from the user.
+        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
   - : Options for streaming a prompt. Options include:
-    - `responseConstraint` — Contraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+    - `responseConstraint` — Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
 
@@ -77,7 +77,9 @@ for await (const chunk of stream) {
 
 ```js
 const controller = new AbortController();
-document.querySelector("#stop").addEventListener("click", () => controller.abort());
+document
+  .querySelector("#stop")
+  .addEventListener("click", () => controller.abort());
 
 const stream = session.promptStreaming("Tell me a long story.", {
   signal: controller.signal,

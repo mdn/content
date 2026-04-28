@@ -24,9 +24,9 @@ append(input, options)
     - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence representing a single message in a conversation with a language model. Options include:
       - `role` — A string indicating who sent the message. Must be one of:
-          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-          - `"user"` — A message from the user.
-          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+        - `"user"` — A message from the user.
+        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
   - : Represents the options that can be passed. Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 ## Description
 
 The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context. The `append()` method can be called at any point during the session's lifetime.
- 
+
 ## Examples
 
 ### Loading a document before querying
@@ -61,7 +61,9 @@ const session = await LanguageModel.create();
 await session.append(documentText);
 
 // Now ask questions about the document
-const summary = await session.prompt("Summarize the key points of this document.");
+const summary = await session.prompt(
+  "Summarize the key points of this document.",
+);
 console.log(summary);
 ```
 
@@ -106,7 +108,9 @@ try {
 const session = await LanguageModel.create();
 await session.append(largeDocument);
 
-console.log(`Context used: ${session.contextUsage} / ${session.contextWindow} tokens`);
+console.log(
+  `Context used: ${session.contextUsage} / ${session.contextWindow} tokens`,
+);
 ```
 
 ## Specifications

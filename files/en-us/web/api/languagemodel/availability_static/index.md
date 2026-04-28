@@ -21,7 +21,7 @@ LanguageModel.availability(options)
 
 - `options` {{optional_inline}}
   - : Represents the base set of options used when checking language model availability or creating a session. Options include:
-    - `expectedInputs` 
+    - `expectedInputs`
       - : A sequence representing the required input modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
@@ -32,8 +32,8 @@ LanguageModel.availability(options)
           - `"tool-response"` — The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-    - `expectedOutputs` 
-      - : A sequence representing the required input modalities and languages. Options include:
+    - `expectedOutputs`
+      - : A sequence representing the required output modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
           - `"text"` — Plain text content.
@@ -44,8 +44,8 @@ LanguageModel.availability(options)
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
 
-    - `tools` 
-    — A sequence verifying tool support. Options include:
+    - `tools`
+      — A sequence verifying tool support. Options include:
       - `name`
         - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
       - `description`
@@ -53,7 +53,7 @@ LanguageModel.availability(options)
       - `inputSchema`
         - : An object containing a [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
       - `execute`
-          - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+        - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
@@ -94,11 +94,8 @@ switch (status) {
 ### Requesting image input support
 
 ```js
-const session = await LanguageModel.create({
-  expectedInputs: [
-    { type: "text" },
-    { type: "image" },
-  ],
+const status = await LanguageModel.availability({
+  expectedInputs: [{ type: "text" }, { type: "image" }],
 });
 ```
 

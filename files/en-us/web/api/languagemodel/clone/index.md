@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 
 ## Description
 
-The `clone()` method branches a session at a specific point in a coversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+The `clone()` method branches a session at a specific point in a conversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
 
 For example, you might build up shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
 
@@ -51,13 +51,12 @@ const session = await LanguageModel.create({
   ],
 });
 
-await session.append("The story begins in a small coastal town during a storm.");
+await session.append(
+  "The story begins in a small coastal town during a storm.",
+);
 
 // Branch into two different continuations
-const [clone1, clone2] = await Promise.all([
-  session.clone(),
-  session.clone(),
-]);
+const [clone1, clone2] = await Promise.all([session.clone(), session.clone()]);
 
 const [ending1, ending2] = await Promise.all([
   clone1.prompt("Write a happy ending."),
@@ -100,6 +99,7 @@ try {
     console.log("Clone operation was aborted.");
   }
 }
+```
 
 ## Specifications
 

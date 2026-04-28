@@ -32,8 +32,8 @@ LanguageModel.create(options)
           - `"tool-response"` — The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-    - `expectedOutputs` 
-      - : A sequence representing the required input modalities and languages. Options include:
+    - `expectedOutputs`
+      - : A sequence representing the required output modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
           - `"text"` — Plain text content.
@@ -43,20 +43,16 @@ LanguageModel.create(options)
           - `"tool-response"` — The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-    
-
-
-
-    - `initialPrompts` — 
+    - `initialPrompts` —
     - A sequence representing a single message in a conversation with a language model. Options include:
       - `role` — A string indicating who sent the message. Must be one of:
-          - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreamiing()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-          - `"user"` — A message from the user.
-          - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+        - `"user"` — A message from the user.
+        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
     - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
     - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
-    - `tools` 
-    — A sequence of tools to verify support for. Options include:
+    - `tools`
+      — A sequence of tools to verify support for. Options include:
       - `name`
         - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
       - `description`
@@ -64,7 +60,7 @@ LanguageModel.create(options)
       - `inputSchema`
         - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
       - `execute`
-          - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+        - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
@@ -145,7 +141,7 @@ const session = await LanguageModel.create({
 
 ### Providing few-shot examples
 
-A few-shot example is a a set of input-output pairs passed to an AI before asking it to complete a similar task.
+A few-shot example is a set of input-output pairs passed to an AI before asking it to complete a similar task.
 
 ```js
 const session = await LanguageModel.create({

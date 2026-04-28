@@ -10,7 +10,6 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`oncontextoverflow`** property of the {{domxref("LanguageModel")}} interface is an event handler that is called when the `contextoverflow` event fires. This event fires when {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}} would cause the session's {{domxref("LanguageModel.contextUsage", "contextUsage")}} to exceed the {{domxref("LanguageModel.contextWindow", "contextWindow")}}.
 
-
 ## Value
 
 A function to be called when the `contextoverflow` event fires, or `null` if no handler is set.
@@ -25,7 +24,7 @@ const session = await LanguageModel.create();
 session.oncontextoverflow = () => {
   console.warn(
     "The session's context window is full. " +
-    "Consider cloning the session or starting a new one.",
+      "Consider cloning the session or starting a new one.",
   );
 };
 
@@ -39,9 +38,7 @@ session.addEventListener("contextoverflow", () => {
 
 ```js
 let session = await LanguageModel.create({
-  initialPrompts: [
-    { role: "system", content: "You are a helpful assistant." },
-  ],
+  initialPrompts: [{ role: "system", content: "You are a helpful assistant." }],
 });
 
 session.oncontextoverflow = async () => {

@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`LanguageModelToolFunction`** callback of the [Prompt API](/en-US/docs/Web/API/Prompt_API) is a function assigned to the `execute` property when calling {{domxref("LanguageModel.availability_static", "availability()")}}. When the language model invokes a tool, the user agent calls this function on its behalf, passing the arguments the model specified, and uses the returned string as the tool's result.
+The **`LanguageModelToolFunction`** callback of the [Prompt API](/en-US/docs/Web/API/Prompt_API) is a function assigned to the `execute` property when calling {{domxref("LanguageModel.create_static", "create()")}}. When the language model invokes a tool, the user agent calls this function on its behalf, passing the arguments the model specified, and uses the returned string as the tool's result.
 
 ## Syntax
 
@@ -34,11 +34,13 @@ The function must return a `Promise` resolving with a `DOMString`. This allows t
 
 ### Defining a tool with a callback
 
-This example creates a session with a hypothetical "get wheather" tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
+This example creates a session with a hypothetical "get weather" tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
 
 ```js
 async function getWeatherData(location) {
-  const response = await fetch(`https://api.example.com/weather?city=${location}`);
+  const response = await fetch(
+    `https://api.example.com/weather?city=${location}`,
+  );
   const data = await response.json();
   return `${data.temp}°C, ${data.description}`;
 }
