@@ -164,7 +164,7 @@ p {
   body::before {
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
   @supports not (view-timeline-axis: inherit) {
     body::before {

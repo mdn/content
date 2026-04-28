@@ -1,5 +1,6 @@
 ---
-title: "@import"
+title: "`@import` CSS at-rule"
+short-title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import

@@ -159,6 +159,19 @@ p {
 }
 ```
 
+## Accessibility
+
+When `clamp()` is used for controlling text size, make sure that the maximum allowed value is a [relative length unit](/en-US/docs/Web/CSS/Reference/Values/length#relative_length_units) that is no less than twice the minimum allowed value, for example:
+
+```css
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+This helps to ensure that text size can scale to at least 200% if the page is zoomed.
+
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4: Resize Text | WAI | W3C](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
+
 ## Specifications
 
 {{Specifications}}

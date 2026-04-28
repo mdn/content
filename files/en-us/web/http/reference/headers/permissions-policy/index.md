@@ -13,8 +13,8 @@ sidebar: http
 
 The HTTP **`Permissions-Policy`** {{Glossary("response header")}} provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
-Violations of a policy may be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
-Reports are automatically sent to the server endpoint named `"default"`, if one is defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+Violations of a policy can be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+Reports may be sent to a server indicated by name in a per-directive `report-to` parameter, or otherwise to the server endpoint named `"default"` (the mapping between server endpoint names and URLs is set using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header).
 Reports can also be observed in the page for which the policy is being enforced using a [`ReportingObserver`](/en-US/docs/Web/API/ReportingObserver).
 The format of the report and additional detail is provided in {{domxref("PermissionsPolicyViolationReport")}}.
 
@@ -32,8 +32,18 @@ For more information, see the main [Permissions Policy](/en-US/docs/Web/HTTP/Gui
 ## Syntax
 
 ```http
+# Single directive
 Permissions-Policy: <directive>=<allowlist>
+
+# Single directive with reporting endpoint
+Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
+
+# Multiple directives, with and without server reporting endpoints
+Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
 ```
+
+The header can be used to set the allowlists for one or more directives, and optionally a per-directive `report-to` parameter indicating the server endpoint to send policy violation reports to.
+The entries for each directive are comma separated.
 
 - `<directive>`
   - : The Permissions Policy directive to apply the `allowlist` to. See [Directives](#directives) below for a list of the permitted directive names.
@@ -56,7 +66,15 @@ Permissions-Policy: <directive>=<allowlist>
     > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy.
     > These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
 
-Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
+- `report-to=<endpoint>` {{optional_inline}}
+  - : The `report-to` parameter can be used to indicate the name of a reporting endpoint where reports will be sent if there is a policy violation for the associated directive.
+    The endpoint name and its associated URL must be specified in a separate {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+
+    If omitted, reports will be send to the [`default` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) if one has been defined.
+    See [Reporting API](/en-US/docs/Web/API/Reporting_API) for more information.
+
+Where supported, you can include wildcards in Permissions Policy origins.
+This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
 So instead of:
 
@@ -314,15 +332,23 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 
 ### Reporting violations
 
-This example shows how to configure reporting of Permissions Policy violations to a server endpoint.
+This example shows how to configure reporting of `Permissions-Policy` violations to a server endpoint.
 
-The response headers below block geolocation and define a [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint) using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
-Permissions Policy violation reports are automatically sent to this endpoint.
+The response headers below block geolocation and define the reporting endpoint name for the feature as "geo_endpoint".
+The {{HTTPHeader("Reporting-Endpoints")}} HTTP response header is used to define the URL of this endpoint name.
 
 ```http
-Reporting-Endpoints: default="https://example.com/reports"
-Permissions-Policy: geolocation=()
+Reporting-Endpoints: geo_endpoint="https://example.com/reports"
+Permissions-Policy: geolocation=();report-to=geo_endpoint
 ```
+
+> [!NOTE]
+> To send all violation reports to the same endpoint we might instead define the [`"default"` reporting endpoint](/en-US/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint):
+>
+> ```http
+> Reporting-Endpoints: default="https://example.com/reports"
+> Permissions-Policy: geolocation=()
+> ```
 
 A violation occurs when a page attempts to use the blocked feature, for example:
 
@@ -369,6 +395,7 @@ The [report payload](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoint
 ## See also
 
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
+- {{HTTPHeader("Permissions-Policy-Report-Only")}}
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Referrer-Policy")}}
