@@ -50,7 +50,7 @@ Known effects include:
 To summarize, recommended usage is to:
 
 1. Include `<meta name="text-scale" content="scale" />` in the `<head>` of your page.
-2. Not override the initial {{cssxref(":root")}} `font-size` with an absolute length value like `16px`.
+2. Don't override the initial {{cssxref(":root")}} `font-size` with an absolute length value like `16px`.
 3. Use only font-relative units such as `em`/`rem` or keywords such as `small`, `x-large`, etc. to size content.
 
 ### `<meta name="text-scale">` versus `env(preferred-text-scale)`
