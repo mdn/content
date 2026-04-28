@@ -18,15 +18,15 @@ When **decoding** a video or audio file, the codec is determined by how the file
 
 When **encoding**, you choose the codec. The rest of this guide covers how to choose a codec.
 
-## Video Codecs
+## Video codecs
 
-### Video Codec Families
+### Video codec families
 
 Before choosing a codec string, like `vp09.00.40.08.00` or `avc1.4d0034`, it is worth reviewing the codec families.
 
 #### H.264 (AVC)
 
-H.264 is one of the most widely supported codecs across browsers, operating systems, and consumer devices. It is the most common codec used in MP4 files, and applications which encode videos intended for playback in 3rd party software typically choose H.264 as a pragmatic choice for maximum compatibility.
+H.264 is one of the most widely supported codecs across browsers, operating systems, and consumer devices. It is the most common codec used in MP4 files, and applications which encode videos intended for playback in third-party software typically choose H.264 as a pragmatic choice for maximum compatibility.
 
 While popular, it is worth noting that H.264 is a patented codec. While browser vendors hold licenses covering the H.264 encoder implementations used by WebCodecs, the codec is subject to royalties in certain circumstances. Developers should review usage with legal counsel.
 
@@ -156,7 +156,7 @@ The format for these codec strings is specified in the [W3C codec registry](http
 - `L150` — Level × 30 (`L150` = level 5.0, supports up to 4K)
 - `B0` — Tier and constraint flags (`B0` = Main tier)
 
-## Audio Codecs
+## Audio codecs
 
 ### Opus
 
@@ -170,7 +170,7 @@ AAC encoding is universally supported on Safari versions that support {{domxref(
 
 ### MP3 and PCM
 
-MP3 and PCM are not not widely supported as encoding targets, with MP3 encoding not currently supported by any major browser. PCM (uncompressed audio) is available as a {{domxref("AudioData")}} format for raw audio processing, but support for encoding with `AudioEncoder` is limited.
+MP3 and PCM are not widely supported as encoding targets, with MP3 encoding not currently supported by any major browser. PCM (uncompressed audio) is available as a {{domxref("AudioData")}} format for raw audio processing, but support for encoding with `AudioEncoder` is limited.
 
 ### Audio codec string reference
 
@@ -195,11 +195,9 @@ Use {{domxref("AudioEncoder/isConfigSupported_static", "AudioEncoder.isConfigSup
 
 You need to choose a video codec and an audio codec, along with the container format, together as a package. For practical quickstart guidance, here are some common configurations:
 
-**Targeting maximum compatibility** (video intended for playback in third-party software or on a wide range of devices): H.264 (e.g., `avc1.4d0034`) + AAC (`mp4a.40.2`) in an MP4 container is the most common choice in practice.
-
-**Open-source projects or applications controlling both encoding and playback** (e.g., internal tooling, in-app streaming): VP9 (e.g., `vp09.00.40.08.00`) + Opus (`opus`) in a WebM container is a natural fit — both are open-source, and WebM is the standard container for this combination.
-
-**Maximum compression** (e.g., large-scale streaming): AV1 + Opus in a WebM container, provided your target audience has sufficient hardware support. Use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify before committing to this combination.
+- **Targeting maximum compatibility** (video intended for playback in third-party software or on a wide range of devices): H.264 (e.g., `avc1.4d0034`) + AAC (`mp4a.40.2`) in an MP4 container is the most common choice in practice.
+- **Open-source projects or applications controlling both encoding and playback** (e.g., internal tooling, in-app streaming) VP9 (e.g., `vp09.00.40.08.00`) + Opus (`opus`) in a WebM container is a natural fit — both are open-source, and WebM is the standard container for this combination.
+- **Maximum compression** (e.g., large-scale streaming): AV1 + Opus in a WebM container, provided your target audience has sufficient hardware support. Use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify before committing to this combination.
 
 ## Checking support at runtime
 

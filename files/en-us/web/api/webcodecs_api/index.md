@@ -51,7 +51,7 @@ An `AudioData` object represents a number of individual audio samples (1024 is a
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
-### Processing Model
+### Processing model
 
 The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to keep this model in mind.
 
@@ -63,7 +63,7 @@ The `flush()` method can be used to wait for the completion of all work that was
 
 A codec is a specific algorithm for encoding (compressing) and decoding (decompressing) video and audio. There are several industry standard codecs for video, and a separate set of codecs for audio. Here are the major ones supported in WebCodecs:
 
-#### Video Codecs
+#### Video codecs
 
 - H.264 (AVC)
   - : The most widely supported video codec. Most MP4 files use H.264.
@@ -74,7 +74,7 @@ A codec is a specific algorithm for encoding (compressing) and decoding (decompr
 - H.265 (HEVC)
   - : Better compression than H.264, but with significant gaps in browser support outside of Apple platforms.
 
-#### Audio Codecs
+#### Audio codecs
 
 - Opus
   - : Open source, low-latency. The recommended choice for most WebCodecs audio encoding.
@@ -87,7 +87,7 @@ A codec is a specific algorithm for encoding (compressing) and decoding (decompr
 
 The WebCodecs specification only supports a specific set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) on WebCodecs Fundamentals, or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
 
-### Muxing and Demuxing
+### Muxing and demuxing
 
 The WebCodecs API only deals with encoding and decoding, with encoded chunks just representing binary data. It does not provide a built-in way to read `EncodedVideoChunk` objects from a video file, or write them to a playable video file.
 

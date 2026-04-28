@@ -23,7 +23,7 @@ Codecs were developed in order to compress video, typically by 1-2 orders of mag
 
 A **codec** (short for encode/decode) is an algorithm for compressing and decompressing video data. Codecs reduce file size dramatically — typically by a factor of 100 or more through a variety of different techniques. While there are a number of video codecs used within the browser, such as `vp9`, `av1` and `h264`, they all apply some form of the following techniques:
 
-### Spatial Compression
+### Spatial compression
 
 Codecs selectively remove high-frequency detail from each frame — fine textures and sharp edges that are less perceptible to the human eye.
 
@@ -33,7 +33,7 @@ The amount of detail removed is controlled by two things: the **bitrate**, which
 
 ![Bitrate ladder](bitrate-ladder.png)
 
-### Temporal Compression
+### Temporal compression
 
 Successive frames in a video are typically visually similar to one another. Instead of encoding each video frame as an independent image, video codecs calculate the difference between frames, and encode just the frame differences in a compact binary representation. Codecs typically use a number of techniques such as motion compensation to reduce the amount of data required to encode frame differences.
 
@@ -47,15 +47,15 @@ In WebCodecs, the `EncodedVideoChunk` interface has a `type` property which can 
 
 Because delta frames depend on all previous frames since the last key frame, a decoder cannot start decoding from an arbitrary point in a video — it must always start from a key frame. This has two practical implications: **seeking** to a specific timestamp requires finding the nearest preceding key frame and decoding every frame in order up to the target, and **error recovery** requires skipping forward to the next key frame before resuming decoding.
 
-When encoding with a `VideoEncoder`, it is possible to determine when to set a video as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method
+When encoding with a `VideoEncoder`, it is possible to determine when to set a video as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method.
 
 ```js
- encoder.encode(frame, {keyFrame: /* */})
+ encoder.encode(frame, { keyFrame: /* */ })
 ```
 
 ## Encoding and decoding
 
-### Codec Compatibility
+### Codec compatibility
 
 For codecs to be useful, it is necessary to be able to both encode video (turn raw video into compressed binary data) with a codec, and to be able to decode the same video (turn the compressed binary data back into raw video frames) with the same codec. The video industry has therefore coalesced around a handful of standard codecs such as `vp9`, `h264`, `hevc` and `av1`.
 
@@ -65,11 +65,11 @@ Applications which primarily consume video content (e.g., video player software)
 
 Applications which control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
 
-### Encoding is Expensive
+### Encoding is expensive
 
 Encoding is significantly more computationally expensive than decoding, typically by 1-2 orders of magnitude. Video conferencing applications will often use older codecs such as `vp8` because, although it results in lower quality video for the same bitrate, it is also less computationally expensive than newer codecs like `vp9`.
 
-### Hardware Acceleration
+### Hardware acceleration
 
 Most consumer devices include specialized hardware specifically designed to encode and decode video. Leveraging these specialized chips for encoding and decoding is called hardware acceleration, and can speed up encoding tasks by 2 orders of magnitude compared to standard CPU based encoding.
 
@@ -79,7 +79,7 @@ One of the key advantages of the WebCodecs API is the ability to use hardware ac
 
 ## Containers
 
-Codecs only deal with encoding raw media data into a binary compressed form and vice-versa. A video file, such as a WebM, MP4 or MKV file, contains both metadata such as track information, duration etc.., as well as encoded media data.
+Codecs only deal with encoding raw media data into a binary compressed form and vice-versa. A video file, such as a WebM, MP4 or MKV file, contains both metadata such as track information, duration etc., as well as encoded media data.
 
 ![Containers](containers.png)
 
