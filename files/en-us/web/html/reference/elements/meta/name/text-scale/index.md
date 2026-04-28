@@ -25,9 +25,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 The `<meta name="text-scale">` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences; it also disables existing browser-based mechanisms and heuristics.
 
-The `<meta name="text-scale">` element makes the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings; specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
-
-The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the {{cssxref("rem")}} unit's value. Provided you set or allow the root `font-size` to default to a [local or root-relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any keyword (like `medium`) or local or root-relative length, such a `em` and `rem`, will be scaled in proportion to user OS or browser font size settings.
+Specifically, it defines the value of the {{htmlelement("html")}} root element's initial `font-size` to scale in proportion to user-defined OS and browser-level font size settings. The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the [`rem`](/en-US/docs/Web/CSS/Reference/Values/length#rem) unit's value. Provided you set or allow the root `font-size` to default to a [local or root-relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any keyword (like `medium`) or local or root-relative length (such as `em` and `rem`) will be scaled in proportion to OS or browser font size settings.
 
 For example, with `<meta name="text-scale" content="scale">` included on the page, the following rule:
 
@@ -39,11 +37,7 @@ p {
 
 would result in all {{htmlelement("p")}} elements receiving a scaled font size. You could also set `font-size` to `initial` to get the same effect.
 
-Known effects include:
-
-- In Chrome for Android, `rem` and `em` font sizes will scale in proportion to the global OS "Font size" setting. Text autosizing is disabled.
-- In Chrome for desktop, the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable will reflect the multiplier that corresponds to Chrome's Settings > Appearance > Font size, but other than that, it has no discernable effect.
-- The `<meta name="text-scale" content="scale">` element also has other effects in Android WebView: see https://chromium.googlesource.com/chromium/src/+/b29d63222d10f4c7e620d057578d737969eb7ae3.
+On mobile platforms, this is not the case by default. `<meta name="text-scale">` enables this scaling. On desktop platforms, the effect is that the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable is made to reflect the multiplier that corresponds to browser font size settings, but other than that, it has no discernable advantage.
 
 ### Usage summary
 
@@ -61,9 +55,9 @@ Avoid using both features together, as text scaling may be applied twice, making
 
 ## Examples
 
-### Using meta viewport text-scale
+### Meta viewport text-scale demonstration
 
-This example demonstrates the basics of using `<meta name="text-scale" content="scale">`.
+This example demonstrates the effect of `<meta name="text-scale" content="scale">`.
 
 #### HTML
 
@@ -184,3 +178,4 @@ You'll see that, as the OS Font size is increased, the breakpoint size increases
 ## See also
 
 - [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale)
+- [[meta text-scale] Support for WebView](https://chromium.googlesource.com/chromium/src/+/b29d63222d10f4c7e620d057578d737969eb7ae3) on chromium.googlesource.com (2026)
