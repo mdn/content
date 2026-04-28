@@ -101,7 +101,7 @@ These libraries will follow the video container specifications (e.g., webm, mp4)
 
 Likewise, to write to a playable video file, you will need a muxing library, with [Mediabunny](https://mediabunny.dev/) being the primary option for muxing. Muxing libraries will handle formatting the binary encoded data, and placing it in the correct byte position in the output file stream according to the container specification, so that the output video is playable.
 
-You can find more information on muxing and demuxing in the [Muxing and Demuxing guide](https://webcodecsfundamentals.org/basics/muxing/) on WebCodecs Fundamentals.
+You can find more information on muxing and demuxing in the [Muxing and Demuxing guide](https://webcodecsfundamentals.org/basics/muxing/) (webcodecsfundamentals.org).
 
 ## Guides
 
