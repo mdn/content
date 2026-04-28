@@ -42,8 +42,8 @@ Generally there is a 1:1 correspondence between the raw and encoded versions of 
 
 A `VideoFrame` represents a video frame, and is tied both to actual pixel data on the device's graphics memory, as well as metadata such as the timestamp and duration (in microseconds), format and resolution. A `VideoFrame` can be constructed from any image source, and can also be rendered to a {{domxref("Canvas")}} using any of the canvas rendering methods.
 
-`EncodedVideoChunk` represents the encoded version of the same frame, tied to binary data in regular memory and the same metadata.
-The only difference is that it has one additional field: `type`, which can be "key" or "delta", representing whether or not it corresponds to a [key frame](https://webcodecsfundamentals.org/basics/encoded-video-chunk/#key-frames).
+`EncodedVideoChunk` represents the encoded (compressed) version of the same frame, tied to binary data in regular memory and the same metadata.
+The only difference is that it has one additional field: `type`, which can be "key" or "delta", representing whether or not it corresponds to a [key frame](https://webcodecsfundamentals.org/basics/encoded-video-chunk/#key-frames). An `EncodedVideoChunk` typically stores 10 to 100 types less data than it's corresponding raw `VideoFrame`.
 
 ![VideoFrame and EncodedVideoChunk](video-frame.png)
 
