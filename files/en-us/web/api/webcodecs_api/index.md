@@ -51,7 +51,7 @@ Likewise, the `EncodedAudioChunk` represents the encoded (compressed) version of
 
 The WebCodecs API uses an asynchronous [processing model](https://w3c.github.io/webcodecs/#codec-processing-model-section). Each instance of an encoder or decoder maintains an internal, independent processing queue. When queueing a substantial amount of work, it's important to keep this model in mind.
 
-Methods named `configure()`, `encode()`, `decode()`, and `flush()` operate asynchronously by appending control messages to the end of the queue, while methods named `reset()` and `close()` synchronously abort all pending work and purge the processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
+Methods named {{domxref("VideoEncoder/configure", "configure()")}}, {{domxref("VideoEncoder/encode", "encode()")}}, {{domxref("VideoDecoder/decode", "decode()")}}, and {{domxref("VideoEncoder/flush", "flush()")}} operate asynchronously by appending control messages to the end of the queue, while methods named {{domxref("VideoEncoder/reset", "reset()")}} and {{domxref("VideoEncoder/close", "close()")}} synchronously abort all pending work and purge the processing queue. After `reset()`, more work may be queued following a call to `configure()`, but `close()` is a permanent operation.
 
 The `flush()` method can be used to wait for the completion of all work that was pending at the time `flush()` was called. However, it should generally only be called once all desired work is queued — it is not intended to force progress at regular intervals. Calling it unnecessarily will affect encoder quality and cause decoders to require the next input to be a key frame.
 
