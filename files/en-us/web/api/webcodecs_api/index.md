@@ -141,7 +141,10 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 
 ## Examples
 
-The basic instantiation of a `VideoEncoder` looks like this, where you define the output callback where `EncodedVideoChunk` objects will be returned.
+### Basic usage
+
+To  instantiate a `VideoEncoder` we pass an object that specifies a callback function that will be called when `EncodedVideoChunk` instances are available for processing, and an error function that will be called if there are errors.
+This is shown in the following code:
 
 ```js
 const encoder = new VideoEncoder({
