@@ -63,7 +63,7 @@ The `flush()` method can be used to wait for the completion of all work that was
 
 ### Codecs
 
-A codec is a specific algorithm for encoding (compressing) and decoding (decompressing) video and audio. There are several industry standard codecs for video, and a separate set of codecs for audio. Here are the major ones supported in WebCodecs:
+A codec is a specific algorithm for encoding (compressing) and decoding (decompressing) video and audio. There are several industry standard codecs for video, and a separate set of codecs for audio. Here are the major ones supported by the WebCodecs API:
 
 #### Video codecs
 
