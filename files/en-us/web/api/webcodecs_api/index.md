@@ -8,7 +8,8 @@ page-type: web-api-overview
 
 The **WebCodecs API** enables web developers to encode and decode video and audio in the browser efficiently (using hardware acceleration) and with very low-level control (processing on a per-frame basis).
 
-It is useful for web applications that do heavy media processing, or which require low-level control over the way media is encoded, such as browser-based video and audio editing, as well as live-streaming and video conferencing.
+It is useful for web applications that do heavy media processing, or which require low-level control over the way media is encoded.
+This includes browser-based video and audio editing, as well as live-streaming and video conferencing.
 
 ## Why WebCodecs exists
 
