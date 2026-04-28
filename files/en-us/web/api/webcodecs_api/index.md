@@ -11,14 +11,6 @@ The **WebCodecs API** enables web developers to encode and decode video and audi
 It is useful for web applications that do heavy media processing, or which require low-level control over the way media is encoded.
 This includes browser-based video and audio editing, as well as live-streaming and video conferencing.
 
-## Why WebCodecs exists
-
-There are other APIs which use media codecs internally, such as the [MediaRecorder API](/en-US/docs/Web/API/MediaRecorder) and the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), but these lack the low-level (per-frame) control required by some applications.
-
-Previously, developers used WebAssembly ports of ffmpeg, but these lack true hardware acceleration capabilities, and are difficult to integrate with other key APIs like the File API for working with large files efficiently.
-
-WebCodecs was designed to enable low-level, hardware-accelerated media processing, for applications such as high-performance streaming and video editing, which were not well served by the existing APIs.
-
 ## Concepts
 
 The WebCodecs API provides browser-native interfaces to represent raw video frames, encoded video frames, as well as raw and encoded audio.
