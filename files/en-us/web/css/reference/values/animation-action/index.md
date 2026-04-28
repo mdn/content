@@ -19,19 +19,19 @@ The `<animation-action>` enumerated type is specified using one of the values li
 - `none`
   - : The animation will not play.
 - `play`
-  - : The animation will play.
+  - : The animation will play, resume (if paused), or restart (if currently finished) in the same direction as its current {{domxref("Animation.playbackRate", "playbackRate")}}, as if {{domxref("Animation.play", "play()")}} were called on the animation.
 - `play-forwards`
-  - : The animation will play forwards.
+  - : As `play`, except that the `playbackRate` is first set to a positive value, meaning that the animation will play forwards.
 - `play-backwards`
-  - : The animation will play in reverse.
+  - : As `play`, except that the `playbackRate` is first set to a negative value, meaning that the animation will play in reverse.
 - `play-once`
-  - : The animation will play through all its iterations and then won't be triggered again.
+  - : As `play`, except that once the animation has played through all its iterations, it won't be triggered again.
 - `pause`
-  - : The animation will pause.
+  - : The animation will pause, as if {{domxref("Animation.pause", "pause()")}} were called on the animation.
 - `replay`
-  - : The animation will play from the start (progress `0`), regardless of where it had played to previously.
+  - : As `play`, except that the animation's {{domxref("Animation.overallProgress", "overallProgress")}} is first set back to `0`.
 - `reset`
-  - : The animation will pause, and its progress will be set back to `0`.
+  - : As `pause`, except that the animation's {{domxref("Animation.overallProgress", "overallProgress")}} is first set back to `0`.
 
 ## Description
 
@@ -77,34 +77,33 @@ It doesn't make sense to combine `play` with `play-forwards` or `play-once`.
 
 #### `play-forwards` and `play-backwards`
 
-`play-forwards` will play the animation through all its iterations. If combined with `play-backwards`, for example:
+`play-forwards` and `play-backwards` will play the animation through all its iterations, except that the {{domxref("Animation.playbackRate", "playbackRate")}} will be changed to a positive or negative value, ensuring that the animation plays forwards or backwards, respectively.
+
+Combining `play-forwards` with `play-backwards`, for example:
 
 ```css
 animation-trigger: --t play-forwards play-backwards;
 ```
 
-The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activation, the animation will start to play forwards again.
+causes the animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activations, the animation will start to play forwards again.
 
-If combined with `pause`, `replay` or `reset`, for example:
+Combining `play-forwards` with `pause`, `replay` or `reset`, for example:
 
 ```css
 animation-trigger: --t play-forwards pause;
 ```
 
-The affect is the same as with `play`: the animation will play on activation, and then `pause`, `replay` or `reset` on deactivation. On subsequent activation, the animation will play again.
+Results in the same effect as with `play`: the animation will play on activation, and then `pause`, `replay` or `reset` on deactivation. On subsequent activations, the animation will play again.
 
 It doesn't make sense to combine `play-forwards` with `play` or `play-once`.
 
-Note that using `play-backwards` as an activation action has no effect. For example:
+Note that using `play-backwards` as an activation action has no effect, if the animation is already at the start of its iterations. For example:
 
 ```css
 animation-trigger: --t play-backwards;
 ```
 
-In this case, the animation does not play.
-
-> [!NOTE]
-> `play-forwards` and `play-backwards` don't have an effect on the animation's intrinsic direction. They only modify the animation after the fact. For example, if an animation's {{cssxref("animation-direction")}} is set to `reverse`, `play-forwards` won't make it change direction to play forwards. It will still play in reverse, which is its intrinsic animation setting. `play-backwards` would reverse its direction, causing it to play forwards.
+The animation does not play because it is already at the start.
 
 #### `play-once`
 
@@ -116,7 +115,7 @@ If combined with `pause`:
 animation-trigger: --t play-once pause;
 ```
 
-The animation will play on activation, and then `pause` on deactivation. On subsequent activation, however, the animation will not play again.
+The animation will play on activation, and then `pause` on deactivation. However, once the animation has played through all its iterations, the animation will not play again on subsequent activations.
 
 If combined with `replay`:
 
@@ -124,7 +123,7 @@ If combined with `replay`:
 animation-trigger: --t play-once replay;
 ```
 
-The animation will play on activation, and then start to play again from the beginning on deactivation. It won't go above its iteration count on any playthrough, but it will play again on subsequent deactivations. On subsequent activation, however, the animation will not play again.
+The animation will play on activation, and then start to play again from the beginning on deactivation. It won't go above its iteration count on any playthrough, but it will play again on subsequent deactivations because we are putting the animation back to the start each time. On subsequent activation, however, the animation will not play again.
 
 If combined with `reset`:
 
