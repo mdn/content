@@ -23,7 +23,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 ## Description
 
-The `<meta name="text-scale">` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences, and causes it to disable existing browser-based mechanisms and heuristics.
+The `<meta name="text-scale">` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences; it also disables existing browser-based mechanisms and heuristics.
 
 The `<meta name="text-scale">` element makes the {{htmlelement("html")}} root element's initial `font-size` scale in proportion to OS and browser-level text scale settings; specifically, it defines the value of `font-size: medium` to be proportional to these text scale settings.
 
