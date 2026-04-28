@@ -55,16 +55,9 @@ To summarize, recommended usage is to:
 
 ### `<meta name="text-scale">` versus `env(preferred-text-scale)`
 
-You should prefer to use `<meta name="text-scale" />` to size dimensions relative to OS text scale settings rather than the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable. While they have similar effects, the `<meta>` tag is easier to use, and also has some helpful effects on desktop browsers (`env(preferred-text-scale)` only really has any useful effect on mobile browsers).
+Using `<meta name="text-scale" />` to size dimensions relative to OS text scale settings is recommended over the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable. They have similar effects on mobile, but `<meta>` also provides improvements for desktop browsers (and is easier to use).
 
-Avoid using both these features together as it may result in text scaling being applied twice. For example, when setting `<meta name="text-scale">` on the page and then combining `em` or `rem` with `env(preferred-text-scale)`, for example:
-
-```css
-font-size: calc(2rem * env(preferred-text-scale));
-```
-
-you will end up with small font sizes being smaller and large font sizes being larger.
-
+Avoid using both features together, as text scaling may be applied twice, making small font-relative dimensions smaller and large font-relative dimensions larger.
 ## Examples
 
 ### Using meta viewport text-scale
