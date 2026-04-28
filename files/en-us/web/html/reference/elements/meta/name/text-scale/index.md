@@ -58,6 +58,7 @@ To summarize, recommended usage is to:
 Using `<meta name="text-scale" />` to size dimensions relative to OS text scale settings is recommended over the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable. They have similar effects on mobile, but `<meta>` also provides improvements for desktop browsers (and is easier to use).
 
 Avoid using both features together, as text scaling may be applied twice, making small font-relative dimensions smaller and large font-relative dimensions larger.
+
 ## Examples
 
 ### Using meta viewport text-scale
