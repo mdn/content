@@ -106,7 +106,7 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 ## Guides
 
 - [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
-  - : A brief primer on video processing, including codecs and containers, muxing and demuxing, that covers conceptual information to understand how the WebCodecs API implements these concepts.
+  - : A brief primer on video processing, covering codecs and containers, muxing and demuxing, and provides conceptual information to understand how the WebCodecs API implements these concepts.
 - [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
   - : In depth guide to how to actually use the WebCodecs API, including how to instantiate and configure encoders and decoders, how to create and consume video frames, and how to extract samples from `AudioData`.
 - [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
