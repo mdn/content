@@ -97,10 +97,13 @@ attachShadow(options)
     - `slotAssignment` {{Optional_inline}}
       - : A string specifying the _slot assignment mode_ for the shadow DOM tree. This can be one of:
         - `named`
-          - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root. Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot. Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+          - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
+            Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
+            Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+            This is the default value.
         - `manual`
-          - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
-            Its default value is `named`.
+          - : Elements are manually assigned to particular slot elements using {{domxref("HTMLSlotElement.assign()")}}.
+            No automatic assignment takes place.
 
 ### Return value
 
@@ -190,6 +193,119 @@ class MyCustomElement extends HTMLElement {
 // Define the new element
 customElements.define("my-custom-element", MyCustomElement);
 ```
+
+### Shadow DOM with named slot assignment
+
+This example demonstrates named slot assignment.
+
+#### Feature checking
+
+This part of the example defines a warning that will indicate if the type of slot assignment can be changed.
+
+First we create HTML that displays the warning if the mechanism is not supported.
+
+```html
+<p id="support-warning" hidden>
+  ⛔ Your browser doesn't support setting slot assignment (named assignment is
+  used).
+</p>
+```
+
+This code tests if the {{domxref("ShadowRoot.slotAssignment")}} property is defined, and uses the result to display the warning if it is not.
+
+```js
+const isSlotAssignmentSupported = Object.hasOwn(
+  ShadowRoot.prototype,
+  "slotAssignment",
+);
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isSlotAssignmentSupported);
+```
+
+#### Creating the web component
+
+This code creates a web component that has three named slots for an article's title, metadata, and body section.
+The ShadowRoot is created with `slotAssignment: "named"`.
+
+```js
+class MyArticle extends HTMLElement {
+  constructor() {
+    super();
+    // Attach the shadow root specifying that slotAssignment is "named" (not manual)
+    this.attachShadow({ mode: "open", slotAssignment: "named" });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    // Define the internal structure and styles
+    this.shadowRoot.innerHTML = `
+      <style>
+        .header {
+          background-color: plum;
+        }
+        .meta {
+          background-color: green;
+        }
+        .body {
+          background-color: lightblue;
+        }
+      </style>
+
+      <h2 class="header">
+        <slot name="title"></slot>
+      </h2>
+
+      <div class="meta">
+        <slot name="meta"></slot>
+      </div>
+
+      <div class="body">
+        <slot></slot>
+      </div>
+    `;
+  }
+}
+
+// Register the component
+customElements.define("my-article", MyArticle);
+```
+
+#### Using the web component
+
+The HTML below uses the `<my-article>` web component we just created.
+The nested elements are rendered in the component's slots based on name matching.
+The unnamed elements are rendered in the component's unnamed slot (the body).
+
+```html
+<my-article>
+  <span slot="title">Text for the title slot</span>
+  <span slot="meta">Text for the meta slot</span>
+
+  <p>
+    Text 1 with no slot attribute. Goes into default (unnamed) slot inside the
+    "body" div.
+  </p>
+  <p>
+    Text 2 with no slot attribute. Also goes into default (unnamed) slot inside
+    the "body" div.
+  </p>
+</my-article>
+```
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Shadow DOM with named slot assignment','100', '220px')}}
+
+> [!NOTE]
+> The example will still work even if the warning is displayed that shadow root slot assignment is not supported.
+> This is because `named` assignment predates the introduction of the `slotAssignment` property.
 
 ## Specifications
 
