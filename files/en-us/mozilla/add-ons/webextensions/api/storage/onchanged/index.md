@@ -6,11 +6,10 @@ browser-compat: webextensions.api.storage.onChanged
 sidebar: addonsidebar
 ---
 
-Fires when one or more items in any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}} changes, with details for the keys that changed.
+Fires when one or more items in any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}} changes.
 If you only need to listen for changes in one storage area, use {{WebExtAPIRef('storage.StorageArea.onChanged')}} instead.
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}}.
-The listener is called with details of the changed keys.
 
 > [!NOTE]
 > In Firefox, the listener receives all the keys from a storage area where {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes. The listener may be invoked when there is no change to the data. To find details of the changed items, examine each key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).

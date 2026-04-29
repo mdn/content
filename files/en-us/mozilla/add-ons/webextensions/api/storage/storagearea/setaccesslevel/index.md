@@ -9,6 +9,7 @@ sidebar: addonsidebar
 Sets the access level for the storage area.
 
 Use this method to:
+
 - Expose the `session` storage area to content scripts. Unlike other storage areas, by default, `storage.session` is only available to privileged (trusted) extension contexts by default.
 - Restrict content scripts' access to `local`, `managed`, and `sync` storage areas. By default, these storage areas are exposed to all extension contexts, including content scripts.
 
