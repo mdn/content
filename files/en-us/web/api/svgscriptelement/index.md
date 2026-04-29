@@ -18,7 +18,7 @@ The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script
 - {{domxref("SVGScriptElement.type")}} {{ReadOnlyInline}}
   - : A string corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read only attribute.
 - {{domxref("SVGScriptElement.async")}} {{ReadOnlyInline}}
-  - : A boolean, corresponding to the {{SVGAttr("async")}} attribute of the given {{SVGElement("script")}} element, controlling how the script should be executed.
+  - : A boolean corresponding to the {{SVGAttr("async")}} attribute of the given {{SVGElement("script")}} element.
 - {{domxref("SVGScriptElement.crossOrigin")}} {{ReadOnlyInline}}
   - : A string corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("script")}} element.
 
