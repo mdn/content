@@ -33,8 +33,6 @@ Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/releas
 
 - The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} are now supported. They allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 2020775](https://bugzil.la/2020775)).
 
-- The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties (and the {{cssxref("animation-range")}} shorthand property) are now supported. These properties set the start and end of an animation's attachment range along its timeline, allowing you to control where along a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) timeline an animation will start and end. ([Firefox bug 1825427](https://bugzil.la/1825427)).
-
 - The {{cssxref("revert-rule")}} CSS keyword is now supported. It allows a property's value to be determined as if the current style rule had not been present, so that the value from another matching rule can take effect instead. ([Firefox bug 2017307](https://bugzil.la/2017307)).
 
 - The {{cssxref("overscroll-behavior")}} CSS property (and its longhand properties {{cssxref("overscroll-behavior-x")}}, {{cssxref("overscroll-behavior-y")}}, {{cssxref("overscroll-behavior-block")}}, and {{cssxref("overscroll-behavior-inline")}}) now correctly apply to scroll containers that have no scrollable overflow, such as elements with `overflow: hidden`. Previously, the property was ignored on such elements. ([Firefox bug 1837436](https://bugzil.la/1837436)).
