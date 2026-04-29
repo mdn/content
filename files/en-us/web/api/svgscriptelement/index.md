@@ -36,4 +36,4 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## See also
 
-- {{domxref("HTMLScriptElement")}} 
+- {{domxref("HTMLScriptElement")}}
