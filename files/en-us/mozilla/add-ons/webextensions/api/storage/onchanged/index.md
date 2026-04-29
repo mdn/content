@@ -7,7 +7,7 @@ sidebar: addonsidebar
 ---
 
 Fires when one or more items in any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}} changes, with details for the keys that changed.
-To listen for changes in a specific storage area instead of all, use {{WebExtAPIRef('storage.StorageArea.onChanged')}} instead.
+If you only need to listen for changes in one storage area, use {{WebExtAPIRef('storage.StorageArea.onChanged')}} instead.
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}}.
 The listener is called with details of the changed keys.
