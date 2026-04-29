@@ -8,7 +8,7 @@ browser-compat: api.SVGScriptElement.async
 
 {{APIRef("SVG")}}
 
-The **`async`** property of the {{domxref("SVGScriptElement")}} interface is a boolean value that controls how the script should be executed. It reflects the {{SVGAttr("async")}} attribute of the given {{SVGElement("script")}} element. When set to `true`, the external script is fetched in parallel to parsing the SVG document, and the script is evaluated as soon as it becomes available. 
+The **`async`** property of the {{domxref("SVGScriptElement")}} interface is a boolean value that controls how the script should be executed. It reflects the {{SVGAttr("async")}} attribute of the given {{SVGElement("script")}} element. When set to `true`, the external script is fetched in parallel to parsing the SVG document, and the script is evaluated as soon as it becomes available.
 
 ## Value
 
