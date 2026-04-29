@@ -21,7 +21,7 @@ await browser.storage.<storageType>.setAccessLevel(
 )
 ```
 
-Where `<storageType>` is any of the storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.managed")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
+Where `<storageType>` is any of the storage types: {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.managed")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 
