@@ -300,7 +300,7 @@ self.addEventListener("fetch", (event) => {
 ```
 
 > [!NOTE]
-> If your PWA's main page is at the root of your site, you can use `/` instead of `./` in the `APP_STATIC_RESOURCES` path and the fetch response (`match("/"`).
+> If your PWA's main page is at the root of your site, you can use `/` instead of `./` for the array of resources (`APP_STATIC_RESOURCES`) and the fetch response (`match("/"`).
 
 When updating a service worker, the VERSION constant doesn't need to be updated, as any change in the content of the service worker script itself will trigger the browser to install the new service worker. However, it is a good practice to update the version number as it makes it easier for devs, including yourself, to see which version of the service worker is currently running in the browser, by [checking the name of the Cache in the Application tool](#with_developer_tools) (or Sources tool).
 
