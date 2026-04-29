@@ -17,15 +17,15 @@ The `<animation-action>` keyword values are used in the following properties:
 The `<animation-action>` enumerated type is specified using one of the values listed below:
 
 - `none`
-  - : The animation will not play.
+  - : No action is specified for the animation.
 - `play`
   - : The animation will play, resume (if paused), or restart (if currently finished) in the same direction as its current {{domxref("Animation.playbackRate", "playbackRate")}}, as if {{domxref("Animation.play", "play()")}} were called on the animation.
 - `play-forwards`
-  - : As `play`, except that the `playbackRate` is first set to a positive value, meaning that the animation will play forwards.
+  - : As `play`, except that the `playbackRate` is adjusted if required (flipping it to positive if it is currently negative) so that the animation will play forwards.
 - `play-backwards`
-  - : As `play`, except that the `playbackRate` is first set to a negative value, meaning that the animation will play in reverse.
+  - : As `play`, except that the `playbackRate` is adjusted if required (flipping it to negative if it is currently positive) so that the animation will play in reverse.
 - `play-once`
-  - : As `play`, except that once the animation has played through all its iterations, it won't be triggered again.
+  - : As `play`, except that once the animation has played through all its iterations, it won't be triggered again. Like `play`, if an animation is paused, `play-once` will resume playing it; unlike `play`, it won't replay a finished animation.
 - `pause`
   - : The animation will pause, as if {{domxref("Animation.pause", "pause()")}} were called on the animation.
 - `replay`
@@ -71,7 +71,7 @@ If combined with `play-backwards`, for example:
 animation-trigger: --t play play-backwards;
 ```
 
-The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activation, however, the animation will not play again.
+The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation.
 
 It doesn't make sense to combine `play` with `play-forwards` or `play-once`.
 
@@ -85,7 +85,7 @@ Combining `play-forwards` with `play-backwards`, for example:
 animation-trigger: --t play-forwards play-backwards;
 ```
 
-causes the animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activations, the animation will start to play forwards again.
+causes the animation to play forwards on activation, then play backwards through all the iterations it previously played forwards through on deactivation. On subsequent activations, the animation will start to play forwards again.
 
 Combining `play-forwards` with `pause`, `replay` or `reset`, for example:
 
