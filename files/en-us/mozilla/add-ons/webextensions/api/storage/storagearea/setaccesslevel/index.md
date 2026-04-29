@@ -8,11 +8,9 @@ sidebar: addonsidebar
 
 Sets the access level for the storage area.
 
-Unlike other storage areas, `storage.session` is only available to privileged (trusted) extension contexts. This `setAccessLevel` method is used to expose the session storage area to content scripts too.
-
-By default, all other storage areas are exposed to all extension contexts, including content scripts. This `setAccessLevel` method can be used to restrict access of these storage areas in content scripts.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Use this method to:
+- Expose the `session` storage area to content scripts. Unlike other storage areas, by default, `storage.session` is only available to privileged (trusted) extension contexts by default.
+- Restrict content scripts' access to `local`, `managed`, and `sync` storage areas. By default, these storage areas are exposed to all extension contexts, including content scripts.
 
 ## Syntax
 
