@@ -1,6 +1,6 @@
 ---
-title: browser.getUserContexts command
-short-title: browser.getUserContexts
+title: "`browser.getUserContexts` command"
+short-title: getUserContexts
 slug: Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts
 page-type: webdriver-command
 browser-compat: webdriver.bidi.browser.getUserContexts

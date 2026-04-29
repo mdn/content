@@ -1,6 +1,6 @@
 ---
-title: browser.removeUserContext command
-short-title: browser.removeUserContext
+title: "`browser.removeUserContext` command"
+short-title: removeUserContext
 slug: Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
 page-type: webdriver-command
 browser-compat: webdriver.bidi.browser.removeUserContext
