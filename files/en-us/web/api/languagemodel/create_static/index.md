@@ -60,7 +60,7 @@ LanguageModel.create(options)
       - `inputSchema`
         - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
       - `execute`
-        - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+        - : A `LanguageModelToolFunction` callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
@@ -93,22 +93,6 @@ Before calling `create()`, consider using {{domxref("LanguageModel.availability_
 const session = await LanguageModel.create();
 const answer = await session.prompt("What is 2 + 2?");
 console.log(answer); // "4"
-```
-
-### Creating a session with a system prompt
-
-```js
-const session = await LanguageModel.create({
-  initialPrompts: [
-    {
-      role: "system",
-      content: "You are a pirate. Respond in pirate speak.",
-    },
-  ],
-});
-
-const response = await session.prompt("Hello, how are you?");
-console.log(response); // "Ahoy! I be doin' fine, matey!"
 ```
 
 ### Creating a session with a system prompt
@@ -184,5 +168,4 @@ try {
 ## See also
 
 - {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}
-- {{domxref("LanguageModelToolFunction")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
