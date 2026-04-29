@@ -195,7 +195,6 @@ browser.browserAction.onClicked.addListener(() => {
 > [!CALLOUT]
 > To learn about debugging background scripts and viewing console output, see [Debugging background scripts](https://extensionworkshop.com/documentation/develop/debugging/#debugging-background-scripts) on Extension Workshop.
 
-
 #### Connectionless messaging
 
 With this pattern you call {{WebExtAPIRef("runtime.sendNativeMessage()")}}, passing it:
