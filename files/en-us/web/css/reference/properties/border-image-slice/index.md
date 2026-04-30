@@ -1,5 +1,6 @@
 ---
-title: border-image-slice
+title: "`border-image-slice` CSS property"
+short-title: border-image-slice
 slug: Web/CSS/Reference/Properties/border-image-slice
 page-type: css-property
 browser-compat: css.properties.border-image-slice

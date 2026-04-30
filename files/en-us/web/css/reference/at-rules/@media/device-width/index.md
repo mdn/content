@@ -1,5 +1,6 @@
 ---
-title: device-width
+title: "`device-width` CSS media feature"
+short-title: device-width
 slug: Web/CSS/Reference/At-rules/@media/device-width
 page-type: css-media-feature
 status:

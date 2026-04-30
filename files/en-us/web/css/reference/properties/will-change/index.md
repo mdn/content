@@ -1,5 +1,6 @@
 ---
-title: will-change
+title: "`will-change` CSS property"
+short-title: will-change
 slug: Web/CSS/Reference/Properties/will-change
 page-type: css-property
 browser-compat: css.properties.will-change

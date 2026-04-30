@@ -1,5 +1,6 @@
 ---
-title: widows
+title: "`widows` CSS property"
+short-title: widows
 slug: Web/CSS/Reference/Properties/widows
 page-type: css-property
 browser-compat: css.properties.widows

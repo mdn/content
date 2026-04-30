@@ -1,5 +1,6 @@
 ---
-title: white-space
+title: "`white-space` CSS property"
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 page-type: css-property
 browser-compat: css.properties.white-space
