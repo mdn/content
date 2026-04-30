@@ -29,4 +29,4 @@ Date: Fri, 30 Mar 2018 15:30:51 GMT
 ## See also
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
-- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

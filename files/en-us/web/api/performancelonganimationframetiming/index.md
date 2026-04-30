@@ -26,7 +26,24 @@ The `PerformanceLongAnimationFrameTiming` interface provides the following granu
 
 ## Instance properties
 
-This interface extends the following {{domxref("PerformanceEntry")}} properties for long animation frame performance entries:
+This interface directly defines the following properties:
+
+- {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds that the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
+- {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
+- {{domxref("PerformanceLongAnimationFrameTiming.paintTime")}} {{experimental_inline}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the animation frame started.
+- {{domxref("PerformanceLongAnimationFrameTiming.presentationTime")}} {{experimental_inline}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the UI update was actually drawn on the screen.
+- {{domxref("PerformanceLongAnimationFrameTiming.renderStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
+- {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an array of {{domxref("PerformanceScriptTiming")}} instances.
+- {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
+
+It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time taken in milliseconds to process the LoAF in its entirety.
@@ -36,19 +53,6 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
   - : Returns the entry name, which is always `"long-animation-frame"`.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time when the animation frame started.
-
-This interface also supports the following properties:
-
-- {{domxref("PerformanceLongAnimationFrameTiming.blockingDuration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the total time in milliseconds that the main thread was blocked from responding to high priority tasks, such as user input. This is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results.
-- {{domxref("PerformanceLongAnimationFrameTiming.firstUIEventTimestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the time of the first UI event — such as a mouse or keyboard event — to be queued during the current animation frame.
-- {{domxref("PerformanceLongAnimationFrameTiming.renderStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the start time of the rendering cycle, which includes {{domxref("Window.requestAnimationFrame()")}} callbacks, style and layout calculation, {{domxref("ResizeObserver")}} callbacks, and {{domxref("IntersectionObserver")}} callbacks.
-- {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an array of {{domxref("PerformanceScriptTiming")}} instances.
-- {{domxref("PerformanceLongAnimationFrameTiming.styleAndLayoutStart")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} indicating the beginning of the time period spent in style and layout calculations for the current animation frame.
 
 ## Instance methods
 

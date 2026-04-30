@@ -70,7 +70,7 @@ Later in the code, the `dispatchWorkgroups()` `workgroupCountX` parameter is set
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

@@ -205,11 +205,6 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 // Import the mongoose module
 const mongoose = require("mongoose");
 
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
-
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
 
@@ -578,7 +573,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
@@ -681,11 +676,19 @@ Replace the database URL string ('_insert_your_database_url_here_') with the loc
 // Set up mongoose connection
 const mongoose = require("mongoose");
 
-mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
 async function connectMongoose() {
   await mongoose.connect(mongoDB);
+
+  // Add connection error handlers
+  mongoose.connection.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+  mongoose.connection.on("disconnected", () => {
+    console.warn("MongoDB disconnected");
+  });
 }
 
 try {

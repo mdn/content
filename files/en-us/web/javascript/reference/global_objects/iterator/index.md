@@ -141,6 +141,10 @@ const myIterator = Iterator.from({
   - : Creates a new `Iterator` object from a list of iterable objects. The new iterator yields the values from each of the input iterables in sequence.
 - {{jsxref("Iterator.from()")}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
+- {{jsxref("Iterator.zip()")}} {{experimental_inline}}
+  - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding arrays containing elements at the same position.
+- {{jsxref("Iterator.zipKeyed()")}} {{experimental_inline}}
+  - : Creates a new `Iterator` object that aggregates elements from multiple iterable objects by yielding objects containing elements at the same position, with keys specified by the input.
 
 ## Instance properties
 
@@ -159,7 +163,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Iterator.prototype.drop()")}}
   - : Returns a new iterator helper object that skips the given number of elements at the start of this iterator.
 - {{jsxref("Iterator.prototype.every()")}}
-  - : Tests whether all elements produced by the iterator pass the test implemented by the provided function.
+  - : Returns `false` if it finds an element that does not satisfy the provided testing function. Otherwise, if the iterator is exhausted without finding such an element, it returns `true`.
 - {{jsxref("Iterator.prototype.filter()")}}
   - : Returns a new iterator helper object that yields only those elements of the iterator for which the provided callback function returns `true`.
 - {{jsxref("Iterator.prototype.find()")}}
@@ -173,7 +177,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 - {{jsxref("Iterator.prototype.reduce()")}}
   - : Executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
 - {{jsxref("Iterator.prototype.some()")}}
-  - : Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.
+  - : Returns `true` if it finds an element that satisfies the provided testing function. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 - {{jsxref("Iterator.prototype.take()")}}
   - : Returns a new iterator helper object that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}}

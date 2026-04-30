@@ -1,0 +1,20 @@
+---
+title: WebAssembly definitions
+slug: WebAssembly/Reference/Definitions
+page-type: landing-page
+spec-urls: https://webassembly.github.io/spec/core/syntax/modules.html
+sidebar: webassemblysidebar
+---
+
+This set of pages details the top-level module definition features available in Wasm for defining items such as tables, types, memories, functions, etc.
+
+## Definitions
+
+- [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
+  - : Creates a new global.
+- [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table)
+  - : Creates a new table.
+
+## Specifications
+
+{{Specifications}}

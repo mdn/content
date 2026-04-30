@@ -1,5 +1,6 @@
 ---
-title: "<input>: The HTML Input element"
+title: "`<input>` HTML input element"
+short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -616,7 +617,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     See [Client-side validation](#client-side_validation) for more information.
 
-- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch)
+- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}} {{non-standard_inline}}
   - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
 
     > [!NOTE]

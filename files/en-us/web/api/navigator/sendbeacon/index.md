@@ -31,15 +31,11 @@ sendBeacon(url, data)
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
-    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
-    object containing the data to send.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}} object containing the data to send. The total size of queued data is limited to 64 KiB (65,536 bytes).
 
 ### Return value
 
-Returns `true` if the
-{{glossary("user agent")}} successfully queued the `data` for transfer.
-Otherwise, it returns `false`.
+Returns `true` if the {{glossary("user agent")}} successfully queued the `data` for transfer. Otherwise, it returns `false`.
 
 ## Description
 
@@ -71,6 +67,8 @@ This means:
 - It doesn't impact the loading of the next page
 
 The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) request.
+
+The limitation, however, is that the payload size is limited to about 64 KiB. For larger data transfers, consider using `fetch()` instead.
 
 ### Sending analytics at the end of a session
 

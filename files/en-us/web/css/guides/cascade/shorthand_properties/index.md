@@ -5,9 +5,9 @@ page-type: guide
 sidebar: cssref
 ---
 
-**_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
+**_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties in one declaration. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
 
-The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.
+The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For example, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}.
 
 ## Tricky edge cases
 
@@ -38,32 +38,36 @@ Shorthand properties try not to force a specific order for the values of the pro
 
 Two important cases here are:
 
-- properties related to the edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
-- properties related to the corners of a box, like {{cssxref("border-radius")}}
+- Properties related to the sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}
+- Properties related to the corners of the box, like {{cssxref("border-radius")}}
 
-#### Edges of a box
+#### Sides of the box
 
-Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+Shorthands handling properties related to the sides of the box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those sides:
 
-- **1-value syntax:** `border-width: 1em` — The single value represents all edges: ![Box edges with one-value syntax](border1.png)
+- **1-value syntax:** `border-width: 1em` — A single value represents all sides: ![Box edges with one-value syntax](border1.png)
 
-- **2-value syntax:** `border-width: 1em 2em` — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones: ![Box edges with two-value syntax](border2.png)
+- **2-value syntax:** `border-width: 1em 2em` — The first value represents the top and bottom edges, and the second value represents the left and right edges: ![Box edges with two-value syntax](border2.png)
 
-- **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge: ![Box edges with three-value syntax](border3.png)
+- **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top edge, the second value represents the left and right edges, and the third value represents the bottom edge: ![Box edges with three-value syntax](border3.png)
 
-- **4-value syntax:** `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
+- **2-value syntax:** `border-width: 1em 2em` — The first value represents the top and bottom sides, and the second value represents the left and right sides: ![Box edges with two-value syntax](border2.png)
 
-#### Corners of a box
+- **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top side, the second value represents the left and right sides, and the third value represents the bottom side: ![Box edges with three-value syntax](border3.png)
 
-Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+- **4-value syntax:** `border-width: 1em 2em 3em 4em` — The four values represent the top, the right, the bottom, and the left sides, respectively, always in that order; that is, clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
 
-- **1-value syntax:** `border-radius: 1em` — The single value represents all corners: ![Box corners with one-value syntax](corner1.png)
+#### Corners of the box
 
-- **2-value syntax:** `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones: ![Box corners with two-value syntax](corner2.png)
+Similarly, shorthands handling properties related to the corners of the box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
 
-- **3-value syntax:** `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner: ![Box corners with three-value syntax](corner3.png)
+- **1-value syntax:** `border-radius: 1em` — A single value represents all corners: ![Box corners with one-value syntax](corner1.png)
 
-- **4-value syntax:** `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left: ![Box corners with four-value syntax](corner4.png)
+- **2-value syntax:** `border-radius: 1em 2em` — The first value represents the top-left and bottom-right corners, and the second value represents the top-right and bottom-left corners: ![Box corners with two-value syntax](corner2.png)
+
+- **3-value syntax:** `border-radius: 1em 2em 3em` — The first value represents the top-left corner, the second value represents the top-right and bottom-left corners, and the third value represents the bottom-right corner: ![Box corners with three-value syntax](corner3.png)
+
+- **4-value syntax:** `border-radius: 1em 2em 3em 4em` — The four values represent the top-left, top-right, bottom-right, and bottom-left corners respectively, always in that order; that is, clock-wise starting at the top-left: ![Box corners with four-value syntax](corner4.png)
 
 ## Background properties
 

@@ -8,7 +8,7 @@ browser-compat: api.CSSFontFeatureValuesRule.fontFamily
 
 {{ APIRef("CSSOM") }}
 
-The **`fontFamily`** property of the {{domxref("CSSConditionRule")}} interface represents the name of the font family it applies to.
+The **`fontFamily`** property of the {{domxref("CSSFontFeatureValuesRule")}} interface represents the name of the font family it applies to.
 
 ## Value
 

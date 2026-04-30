@@ -1,5 +1,6 @@
 ---
-title: border-left-width
+title: "`border-left-width` CSS property"
+short-title: border-left-width
 slug: Web/CSS/Reference/Properties/border-left-width
 page-type: css-property
 browser-compat: css.properties.border-left-width
@@ -75,11 +76,11 @@ border-left-width: unset;
 - `<line-width>`
   - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
     - `thin`
+      - Same as `1px`.
     - `medium`
+      - Same as `3px`.
     - `thick`
-
-> [!NOTE]
-> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+      - Same as `5px`.
 
 ## Formal definition
 

@@ -17,6 +17,7 @@ sidebar:
     children:
       - /Web/CSS/Guides/Anchor_positioning/Using
       - /Web/CSS/Guides/Anchor_positioning/Try_options_hiding
+      - /Web/CSS/Guides/Anchor_positioning/Anchored_container_queries
   - title: Animations
     details: closed
     children:
@@ -207,6 +208,7 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Properties_and_values_API/Houdini
+      - /Web/CSS/Guides/Properties_and_values_API/Registering_properties
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring

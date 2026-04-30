@@ -16,7 +16,7 @@ From the article, "**[Understanding Success Criterion 2.3.1: Three Flashes or Be
 
 ### Hardware and operating systems on many computers offer control that is not afforded to developers
 
-The user can do much to protect himself by learning his operating system, its personalization and accessibility settings. Those in the public sector who must accommodate those with special sensitivities, should consider setting aside at least one work station and becoming familiar with its personalization and accessibility settings. Understanding personalization and accessibility settings can actually be a money-saving endeavor. One work station can be set up to accommodate both a low-vision individual (needs high-contrast) and to accommodate an individual with photosensitive susceptibilities, by, adjusting personalization and accessibility settings.
+The user can do much to protect themselves by learning their operating system, its personalization and accessibility settings. Those in the public sector who must accommodate those with special sensitivities, should consider setting aside at least one work station and becoming familiar with its personalization and accessibility settings. Understanding personalization and accessibility settings can actually be a money-saving endeavor. One work station can be set up to accommodate both a low-vision individual (needs high-contrast) and to accommodate an individual with photosensitive susceptibilities, by adjusting personalization and accessibility settings.
 
 ### Use modern browsers. Learn personalization and accessibility settings
 
@@ -48,7 +48,7 @@ Select the "Reduce motion option" in OS Accessibility settings for Apple (image 
 
 #### Turn off animated GIFs in the browser
 
-Browsers offer much power to their users; it's just a matter of knowing where to go. Using Firefox as an example, it explains that by changing the value the **image.animation_mode** from "normal" to "none", all animated images will be blocked. To reverse it, you will have to change the value back to "normal"
+Browsers offer much power to their users; it's just a matter of knowing where to go. Using Firefox as an example, it explains that by changing the value of the **image.animation_mode** from "normal" to "none", all animated images will be blocked. To reverse it, you will have to change the value back to "normal"
 
 ![Screenshot of image.animation.mode selected in Firefox](image_animation_mode.png)
 
@@ -60,7 +60,7 @@ Browsers offer much power to their users; it's just a matter of knowing where to
 
 ![Screenshot showing modes of Beeline Reader a user can adjust in browser](beelinereader.png)
 
-### Take advantage Operating System accessibility features
+### Take advantage of Operating System accessibility features
 
 Most operating systems such as Windows 10, have accessibility options that are surprisingly powerful. Usually they are quite easy to find by typing (or saying) in the word, "Accessibility" in the search finder of the operating system.
 
@@ -74,7 +74,7 @@ In the Windows 10 operating system, the user has an ability to turn off animatio
 
 Those who have suffered traumatic brain injury (TBI) may be highly sensitive to color; it can require such a great "investment of cognitive energy" on their part, there's no energy for other daily tasks. Enabling grayscale presentation of the content reduces the cognitive workload. It may assist users with other disabilities, as well. An interesting discussion by users on the benefits of using grayscale may be found in the discussion thread, "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)". Of particular interest is a user who has Photosensitive Epilepsy, and uses it when feeling "seizure-y".
 
-Most Operating Systems have a way to let the user make an adjustment on the workstation. In the screenshot below, you can see an example of Windows 10 Accessibility Settings allowing for color filters to be selected. Grayscale is enabled when the color filters button is toggled "on"
+Most Operating Systems have a way to let the user make an adjustment on the workstation. In the screenshot below, you can see an example of Windows 10 Accessibility Settings allowing for color filters to be selected. Grayscale is enabled when the color filters button is toggled "on".
 
 ![Shows Windows 10 Accessibility Settings for GrayScale](colorfiltersgrayscaleinwindows.png)
 
@@ -88,4 +88,4 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 
 ### Contributors
 
-Many, many thanks to Eric Eggert from [Knowbility;](https://knowbility.org/) for his discussions and huge help on this topic.
+Many, many thanks to Eric Eggert from [Knowbility](https://knowbility.org/) for his discussions and huge help on this topic.

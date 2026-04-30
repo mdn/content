@@ -20,7 +20,7 @@ new IntersectionObserver(callback, options)
 ### Parameters
 
 - `callback`
-  - : A function which is called when the percentage of the target element is visible crosses a threshold.
+  - : A function which is called when the percentage of the target element that is visible crosses a threshold.
     The callback receives as input two parameters:
     - `entries`
       - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold.

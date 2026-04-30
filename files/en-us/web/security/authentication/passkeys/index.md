@@ -60,7 +60,7 @@ The RP's front-end code sends this to the server, which:
 
 - Verifies the attestation, if attestation is taking place
 - Verifies that the challenge is the expected value
-- Creates a new user account and stores the public key in it along with with the user's account information.
+- Creates a new user account and stores the public key in it along with the user's account information.
 
 ## Sign in
 

@@ -1,5 +1,6 @@
 ---
-title: :invalid
+title: "`:invalid` CSS pseudo-class"
+short-title: :invalid
 slug: Web/CSS/Reference/Selectors/:invalid
 page-type: css-pseudo-class
 browser-compat: css.selectors.invalid

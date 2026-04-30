@@ -17,6 +17,8 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.audioSession")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("AudioSession")}} object that can be used to control how audio from the web application interacts with other audio playing on the device.
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
@@ -67,11 +69,13 @@ _Doesn't inherit any properties._
   - : Returns `true` if the browser can display PDF files inline when navigating to them, and `false` otherwise.
 - {{domxref("Navigator.permissions")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+- {{domxref("Navigator.preferences")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : Returns the document's current {{domxref("PreferenceManager")}} object, which provides access to [user preference](/en-US/docs/Web/API/User_Preferences_API) information.
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("Presentation")}} API.
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Scheduling")}} object for the current document.
-- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).

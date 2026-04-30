@@ -1,5 +1,6 @@
 ---
-title: shape-rendering
+title: "`shape-rendering` CSS property"
+short-title: shape-rendering
 slug: Web/CSS/Reference/Properties/shape-rendering
 page-type: css-property
 browser-compat: css.properties.shape-rendering

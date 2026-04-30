@@ -51,10 +51,9 @@ Events have three functions:
 - `frameId`
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `frameType`
-  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`
+  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"` and `"sub_frame"`.
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
-    , `"fenced_frame"`, and `"sub_frame"`.
 - `documentId`
   - : `string`. A UUID of the document loaded.
 - `parentDocumentId`

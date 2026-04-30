@@ -22,7 +22,7 @@ const ym = Temporal.PlainYearMonth.from("2021-07"); // ISO 8601 calendar
 console.log(ym.era); // undefined
 
 const ym2 = Temporal.PlainYearMonth.from("2021-07-01[u-ca=gregory]");
-console.log(ym2.era); // gregory
+console.log(ym2.era); // ce
 ```
 
 ## Specifications

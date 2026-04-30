@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-block-end
+title: "`scroll-padding-block-end` CSS property"
+short-title: scroll-padding-block-end
 slug: Web/CSS/Reference/Properties/scroll-padding-block-end
 page-type: css-property
 browser-compat: css.properties.scroll-padding-block-end
@@ -114,5 +115,5 @@ scroll-padding-block-end: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

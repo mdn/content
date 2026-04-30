@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: rel"
+title: "`rel` HTML attribute"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 page-type: html-attribute

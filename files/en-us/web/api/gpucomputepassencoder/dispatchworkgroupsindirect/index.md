@@ -72,7 +72,7 @@ var<storage, read_write> output: array<f32>;
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

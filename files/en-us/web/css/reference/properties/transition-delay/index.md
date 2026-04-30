@@ -1,5 +1,6 @@
 ---
-title: transition-delay
+title: "`transition-delay` CSS property"
+short-title: transition-delay
 slug: Web/CSS/Reference/Properties/transition-delay
 page-type: css-property
 browser-compat: css.properties.transition-delay

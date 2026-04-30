@@ -23,8 +23,8 @@ const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
 const d3 = Temporal.Duration.from({ hours: 1 });
 const d4 = Temporal.Duration.from({ minutes: 60 });
 
-console.log(d1.minutes); // 1
-console.log(d2.minutes); // -1
+console.log(d1.minutes); // 30
+console.log(d2.minutes); // -30
 console.log(d3.minutes); // 0
 console.log(d4.minutes); // 60
 

@@ -311,7 +311,7 @@ request
 
 ## Pre-authorizing transactions
 
-Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Payment Handler (see the {{domxref("Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Payment Handler could make use of to return authorization status.
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Web-based Payment Handler (see the {{domxref("Web-based Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Web-based Payment Handler could make use of to return authorization status.
 
 The merchant code would look like this:
 
@@ -337,7 +337,7 @@ paymentRequest
   });
 ```
 
-The payment handler would include the following code:
+The web-based payment handler would include the following code:
 
 ```js
 self.addEventListener("canmakepayment", (evt) => {

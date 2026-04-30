@@ -1,5 +1,6 @@
 ---
-title: "<rb>: The Ruby Base element"
+title: "`<rb>` HTML ruby base element"
+short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 page-type: html-element
 status:
@@ -111,3 +112,4 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rtc")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

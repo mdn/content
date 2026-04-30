@@ -146,6 +146,6 @@ In the future, service workers will be able to do several other useful things fo
   - {{domxref("Content Index API", "", "", "nocode")}}
   - {{domxref("Cookie Store API", "", "", "nocode")}}
   - {{domxref("Notifications API", "", "", "nocode")}}
-  - {{domxref("Payment Handler API", "", "", "nocode")}}
+  - {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
   - {{domxref("Push API", "", "", "nocode")}}
   - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}

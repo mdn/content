@@ -2,10 +2,12 @@
 title: ClipboardChangeEvent
 slug: Web/API/ClipboardChangeEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.ClipboardChangeEvent
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}}{{SeeCompatTable}}
 
 The **`ClipboardChangeEvent`** interface of the {{domxref("Clipboard API", "", "", "nocode")}} represents events fired whenever the contents of the system clipboard are changed.
 
@@ -13,16 +15,16 @@ The **`ClipboardChangeEvent`** interface of the {{domxref("Clipboard API", "", "
 
 ## Constructor
 
-- {{domxref("ClipboardChangeEvent.ClipboardChangeEvent", "ClipboardChangeEvent()")}}
+- {{domxref("ClipboardChangeEvent.ClipboardChangeEvent", "ClipboardChangeEvent()")}} {{experimental_inline}}
   - : Creates a new `ClipboardChangeEvent` event with the given parameters.
 
 ## Instance properties
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardChangeEvent.types")}} {{ReadOnlyInline}}
+- {{domxref("ClipboardChangeEvent.types")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An array of strings representing the mandatory data types available on the system clipboard when the event was fired.
-- {{domxref("ClipboardChangeEvent.changeId")}} {{ReadOnlyInline}}
+- {{domxref("ClipboardChangeEvent.changeId")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A 128-bit integer representing a unique identifier for this specific clipboard change operation.
 
 ## Instance methods

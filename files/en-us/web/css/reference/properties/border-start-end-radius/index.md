@@ -1,5 +1,6 @@
 ---
-title: border-start-end-radius
+title: "`border-start-end-radius` CSS property"
+short-title: border-start-end-radius
 slug: Web/CSS/Reference/Properties/border-start-end-radius
 page-type: css-property
 browser-compat: css.properties.border-start-end-radius

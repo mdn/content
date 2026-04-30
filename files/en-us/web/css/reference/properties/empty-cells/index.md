@@ -1,5 +1,6 @@
 ---
-title: empty-cells
+title: "`empty-cells` CSS property"
+short-title: empty-cells
 slug: Web/CSS/Reference/Properties/empty-cells
 page-type: css-property
 browser-compat: css.properties.empty-cells

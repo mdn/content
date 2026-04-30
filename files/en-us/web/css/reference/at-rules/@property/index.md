@@ -1,5 +1,6 @@
 ---
-title: "@property"
+title: "`@property` CSS at-rule"
+short-title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 page-type: css-at-rule
 browser-compat: css.at-rules.property
@@ -27,7 +28,7 @@ The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gui
 
 @property --defaultSize {
   syntax: "<length> | <percentage>";
-  inherits: "true";
+  inherits: true;
   initial-value: 200px;
 }
 ```
@@ -163,7 +164,7 @@ In this example, we define a custom property called `--progress` using `@propert
 - {{cssxref("var")}}
 - [Custom properties (`--*`)](/en-US/docs/Web/CSS/Reference/Properties/--*)
 - [Registering CSS custom properties](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
-- [CSS Properties and Values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_api) module
+- [CSS Properties and Values API](/en-US/docs/Web/CSS/Guides/Properties_and_values_API) module
 - [CSS Properties and Values](/en-US/docs/Web/API/CSS_Properties_and_Values_API) API documentation
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) guide
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module

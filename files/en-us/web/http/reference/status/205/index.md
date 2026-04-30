@@ -15,7 +15,8 @@ The instruction to "reset content" can mean clearing the contents of a form, res
 > In web applications that use the `205` status, it's assumed that the client handles resetting content after a `205` response.
 > This is typically done via JavaScript, as resetting content such as forms after a `205` response is not handled natively by browsers.
 
-Note that the response must not include any content or the {{HTTPHeader("Content-Length")}} header (browsers may reject responses that include content).
+Note that the response must not include any content, and browsers may reject responses that do so.
+The response should not include the {{HTTPHeader("Content-Length")}} header either, but if it does the value must be `0`.
 The empty response may also be indicated using the {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} header with an empty chunk.
 
 ## Status
@@ -34,9 +35,9 @@ The client in this example sends a `POST` request to submit a form with the comm
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 16
 
-comment=Hello!
+comment=Hello%21
 ```
 
 After successfully processing the form submission, the server responds with the following `205` response, indicating that the client should reset the form.
@@ -44,7 +45,6 @@ After successfully processing the form submission, the server responds with the 
 ```http
 HTTP/1.1 205 Reset Content
 Content-Type: text/html; charset=utf-8
-Content-Length: 0
 Date: Wed, 26 Jun 2024 12:00:00 GMT
 ```
 

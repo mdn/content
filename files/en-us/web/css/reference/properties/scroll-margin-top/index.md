@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-top
+title: "`scroll-margin-top` CSS property"
+short-title: scroll-margin-top
 slug: Web/CSS/Reference/Properties/scroll-margin-top
 page-type: css-property
 browser-compat: css.properties.scroll-margin-top
@@ -108,5 +109,5 @@ scroll-margin-top: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)
