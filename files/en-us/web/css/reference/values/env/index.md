@@ -67,7 +67,7 @@ Another use case for `env()` variables is for desktop [Progressive web apps](/en
 
 The `viewport-segment-*` variable names can be used to set your containers to fit neatly into the available segments of a multi-viewport-segment device such as a hinged or foldable device. The integers following the `viewport-segment-*` name indicate which segment of the multiple segments the environment variable is referencing.
 
-The `preferred-text-scale` variable can be used to size website text or other UI features proportionally to browser or OS-set font sizes, such as Chrome for Android's global OS "Font size" setting. For example, you could set the body font size to be a percentage based on the user-defined text scale:
+The `preferred-text-scale` variable can be used to size website text or other UI features proportionally to browser or OS-set font sizes. For example, you could set the body font size to be a percentage based on the user-defined text scale:
 
 ```css
 body {

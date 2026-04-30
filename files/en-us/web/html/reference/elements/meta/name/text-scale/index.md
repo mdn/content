@@ -102,7 +102,7 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 {{embedlivesample("text-scale", "100%", "200")}}
 
-Test this in a supporting browser. For example, load it in Chrome for Android and try adjusting the OS Font size settings. You can open the demo in a separate tab using the link below to make testing easier:
+Test this in a supporting mobile browser and try adjusting the OS font size settings. You can open the demo in a separate tab using the link below to make testing easier:
 
 {{ LiveSampleLink("text-scale", "Open the example in a separate tab") }}
 
@@ -161,11 +161,11 @@ aside {
 
 {{embedlivesample("text-scale-layout", "100%", "200")}}
 
-Test this in a supporting browser like Chrome for Android. You can open the demo in a separate tab using the link below to make testing easier:
+Test this in a supporting mobile browser. You can open the demo in a separate tab using the link below to make testing easier:
 
 {{ LiveSampleLink("text-scale-layout", "Open the example in a separate tab") }}
 
-You'll see that, as the OS Font size is increased, the breakpoint size increases in proportion to it. At larger OS font sizes, the main and aside will start to appear on top of each other whereas previously they appeared side-by-side.
+You'll see that, as the OS font size is increased, the breakpoint size increases in proportion to it. At larger OS font sizes, the main and aside will start to appear on top of each other whereas previously they appeared side-by-side.
 
 ## Specifications
 
