@@ -83,6 +83,8 @@ _The following events are delivered to `XRSession` objects._
   - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the `XRSession` when the user initially squeezes a squeezable controller. This may be, for example, a trigger which is used to represent grabbing objects, or might represent actual squeezing when wearing a haptic glove. Also available through the `onsqueezestart` event handler property.
 - {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{Experimental_Inline}}
   - : An {{domxref("XRSessionEvent")}} which is sent to the session when its visibility state as indicated by the {{domxref("XRSession.visibilityState", "visibilityState")}} changes. Also available through the `onvisibilitychange` event handler property.
+- {{domxref("XRSession.visibilitymaskchange_event", "visibilitymaskchange")}} {{Experimental_Inline}}
+  - : An {{domxref("XRVisibilityMaskChangeEvent")}} which is sent to the session when the portion of the {{domxref("XRView")}} visible to the user changes, enabling performance improvements by allowing the browser to draw only the visible part of the updated view. Also available through the `onvisibilitymaskchange` event handler property.
 
 ## Example
 
