@@ -67,9 +67,15 @@ In this example, we create an anonymous view progress timeline for the element w
 
 #### HTML
 
-The HTML for the example is shown below.
+In the middle of the text, we include the following (note that the HTML includes a lot of content that we've hidden for brevity):
 
-```html
+```html live-sample__not_included_in_result
+<div class="subject-container">
+  <div class="subject animation"></div>
+</div>
+```
+
+```html hidden
 <div class="content">
   <h1>Content</h1>
   <p>
@@ -103,13 +109,18 @@ The HTML for the example is shown below.
     scelerisque. Netus et malesuada fames ac.
   </p>
 </div>
+```
+
+We also include two overlays to enable visualizing the animation range:
+
+```html
 <div class="overlay top">inset start 50%</div>
 <div class="overlay bottom">inset end 10%</div>
 ```
 
 #### CSS
 
-The `subject` and `content` classes are minimally styled, and the text content has some basic font settings:
+The styles for the `subject` and `subject-container` include:
 
 ```css
 .subject {
@@ -117,43 +128,23 @@ The `subject` and `content` classes are minimally styled, and the text content h
   height: 200px;
   background-color: deeppink;
 }
-
-.content {
-  width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-```
-
-To help show the result, we've defined a few extra classes. The `subject-container` class shows the bounds of the animation. And the semi-transparent `top` and `bottom` overlays mark inset-adjusted scrollport.
-
-```css
 .subject-container {
   border: 2px dashed black;
   width: 300px;
   margin: 0 auto;
 }
+```
 
+The `subject-container` class shows the bounds of the animation. We define `top` and `bottom` overlays to mark the inset-adjusted scrollport.
+
+```css
 .overlay {
   position: fixed;
-  width: 100%;
-  background-color: #f5deb3aa;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: red;
-  justify-content: flex-end;
 }
 
 .top {
   top: 0;
   height: 50%;
-  align-items: end;
 }
 
 .bottom {
@@ -162,9 +153,9 @@ To help show the result, we've defined a few extra classes. The `subject-contain
 }
 ```
 
-The `<div>` element with the `subject` class is also given a class of `animation`. The `grow` animation causes the `subject` element to grow or shrink. The `animation-timeline: view(block 55% 10%)` rule sets the element to be animated as it progresses through the view progress timeline created by its nearest scroll container (in this case, the document's root element).
+The `<div>` element with the `subject` class is also given a class of `animation`. The `grow` animation causes the `subject` element to grow or shrink. The `animation-timeline: view(block 50% 10%)` rule sets the element to be animated as it progresses through the view progress timeline created by its nearest scroll container (in this case, the document's root element).
 
-While scrolling down, note how the inset values `50% 10%` cause the animation to start when the element is 10% from the bottom of the scrollport and to finish when it is 50% from the top. As the animation progresses along the timeline, the `subject` grows. Conversely, when scrolling up, the animation proceeds in reverse, starting at 50% from the top, moving backward through the keyframes, and ending at 10% from the bottom. So, as the animation runs backward, the `subject` shrinks.
+While scrolling down, note how the inset values `50% 10%` cause the animation to start when the element is 10% from the bottom of the scrollport and to finish when it is 50% from the top. As the animation progresses along the timeline, the `subject` grows. When scrolling up the animation proceeds in the reverse direction, starting at 50% from the top, moving backward through the keyframes, and ending at 10% from the bottom. So, as the animation runs backward, the `subject` shrinks.
 
 An important point to remember is that the animation lasts only as long as the `subject` element is within view, which is defined here by `50% 10%` inset values.
 
@@ -172,7 +163,6 @@ An important point to remember is that the animation lasts only as long as the `
 .animation {
   animation-timeline: view(block 50% 10%);
   animation-name: grow;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
   animation-timing-function: linear;
 }
 
@@ -188,6 +178,30 @@ An important point to remember is that the animation lasts only as long as the `
 ```
 
 ```css hidden
+.content {
+  width: 75%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.overlay {
+  width: 100%;
+  background-color: #f5deb3aa;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  justify-content: flex-end;
+}
+.top {
+  align-items: end;
+}
+
 @layer no-support {
   @supports not (animation-timeline: view()) {
     body::after {
@@ -205,11 +219,13 @@ An important point to remember is that the animation lasts only as long as the `
 }
 ```
 
+The rest of the CSS is hidden for brevity.
+
 #### Result
 
-Scroll to see the element with the `subject` class animate as it enters and leaves the adjusted inset view.
-
 {{EmbedLiveSample("Examples", "100%", "480px")}}
+
+Scroll to see the element with the `subject` class animate as it enters and leaves the adjusted inset view.
 
 ## Specifications
 

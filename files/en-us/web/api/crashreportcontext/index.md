@@ -2,10 +2,12 @@
 title: CrashReportContext
 slug: Web/API/CrashReportContext
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CrashReportContext
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `CrashReportContext` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) provides methods enabling arbitrary data to be recorded for the current top-level browsing context, which is then added to a {{domxref("CrashReport")}} and sent to a reporting endpoint when a browser crash occurs.
 
@@ -13,11 +15,11 @@ The `CrashReportContext` object for a particular browsing context is accessed vi
 
 ## Instance methods
 
-- {{domxref("CrashReportContext.delete()")}}
+- {{domxref("CrashReportContext.delete()")}} {{experimental_inline}}
   - : Deletes a previously-stored key-value pair.
-- {{domxref("CrashReportContext.initialize()")}}
+- {{domxref("CrashReportContext.initialize()")}} {{experimental_inline}}
   - : Initializes a portion of memory to be used for storing crash report data specified by {{domxref("CrashReportContext.set", "set()")}}. This must be called before any other method is invoked on the object.
-- {{domxref("CrashReportContext.set()")}}
+- {{domxref("CrashReportContext.set()")}} {{experimental_inline}}
   - : Stores a key-value pair in the memory initialized by {{domxref("CrashReportContext.initialize", "initialize()")}}.
 
 ## Description
