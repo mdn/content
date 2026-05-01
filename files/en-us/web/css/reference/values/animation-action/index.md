@@ -19,19 +19,19 @@ The `<animation-action>` enumerated type is specified using one of the values li
 - `none`
   - : No action is specified for the animation.
 - `play`
-  - : The animation will play, resume (if paused), or restart (if currently finished) in the same direction as its current {{domxref("Animation.playbackRate", "playbackRate")}}, as if {{domxref("Animation.play", "play()")}} were called on the animation.
+  - : The animation will play, resume (if paused), or restart (if currently finished) in the same direction as its current direction of play. For those familiar with the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) (WAA), the behavior is equivalent to calling {{domxref("Animation.play", "play()")}} on the animation.
 - `play-forwards`
-  - : As `play`, except that the `playbackRate` is adjusted if required (flipping it to positive if it is currently negative) so that the animation will play forwards.
+  - : As `play`, except that the direction of play is adjusted if required (flipping it to forwards if the animation is currently playing backwards) so that the animation will play forwards. In WAA terms, this is equivalent to changing the {{domxref("Animation.playbackRate", "playbackRate")}} from a negative to a positive value.
 - `play-backwards`
-  - : As `play`, except that the `playbackRate` is adjusted if required (flipping it to negative if it is currently positive) so that the animation will play in reverse.
+  - : As `play`, except that the direction of play is adjusted if required (flipping it to backwards if the animation is currently playing forwards) so that the animation will play in reverse.
 - `play-once`
   - : As `play`, except that once the animation has played through all its iterations, it won't be triggered again. Like `play`, if an animation is paused, `play-once` will resume playing it; unlike `play`, it won't replay a finished animation.
 - `pause`
-  - : The animation will pause, as if {{domxref("Animation.pause", "pause()")}} were called on the animation.
+  - : The animation will pause. In WAA terms, this is equivalent to calling {{domxref("Animation.pause", "pause()")}} on the animation.
 - `replay`
-  - : As `play`, except that the animation's {{domxref("Animation.overallProgress", "overallProgress")}} is first set back to `0`.
+  - : As `play`, except that the animation is put back to the start. In WAA terms, this is equivalent to setting {{domxref("Animation.overallProgress", "overallProgress")}} to `0`.
 - `reset`
-  - : As `pause`, except that the animation's {{domxref("Animation.overallProgress", "overallProgress")}} is first set back to `0`.
+  - : As `pause`, except that the animation is put back to the start.
 
 ## Description
 
@@ -77,7 +77,7 @@ It doesn't make sense to combine `play` with `play-forwards` or `play-once`.
 
 #### `play-forwards` and `play-backwards`
 
-`play-forwards` and `play-backwards` will play the animation through all its iterations, except that the {{domxref("Animation.playbackRate", "playbackRate")}} will be changed to a positive or negative value, ensuring that the animation plays forwards or backwards, respectively.
+`play-forwards` and `play-backwards` will play the animation through all its iterations, except that the direction of play will be changed to forwards or backwards, ensuring that the animation plays forwards or backwards, respectively.
 
 Combining `play-forwards` with `play-backwards`, for example:
 

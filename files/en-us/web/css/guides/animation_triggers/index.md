@@ -9,6 +9,163 @@ sidebar: cssref
 
 The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling an element to a certain scroll offset inside the viewport, or a JavaScript event firing on an element.
 
+## Animation triggers in action
+
+In the below example, start scrolling down. When the first "bouncer" text appears in the viewport, the ball will bounce off to the right. When the "bouncer" text scrolls off the top of the viewport, the ball animation will play in reverse, moving it back up to the top-left. Keep scrolling: when the "another bouncer" text appears in the viewport and scrolls off to the top, the same process will repeat.
+
+```html hidden live-sample___in-action
+<section>
+  <div>
+    <p>scroll down</p>
+    <p id="trigger">bouncer</p>
+    <p>keep scrolling</p>
+    <p>keep scrolling</p>
+    <p>keep scrolling</p>
+    <p id="trigger2">another bouncer</p>
+    <p>scroll up</p>
+  </div>
+</section>
+
+<span id="ball"><span></span></span>
+```
+
+```css hidden live-sample___in-action
+#ball,
+#ball span {
+  animation:
+    moveright 2s 1 ease-out both,
+    moveright 2s 1 ease-out forwards;
+  animation-trigger:
+    --t play-forwards play-backwards,
+    --t2 play-forwards play-backwards;
+}
+#ball span {
+  animation-name: bounce, bounce;
+}
+
+#trigger {
+  timeline-trigger-name: --t;
+  timeline-trigger-source: view();
+}
+#trigger2 {
+  timeline-trigger-name: --t2;
+  timeline-trigger-source: view();
+}
+
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer scroller {
+  section {
+    border: solid;
+    width: 200px;
+    height: 400px;
+    overflow: scroll;
+  }
+  p {
+    text-align: center;
+    font-size: 2rem;
+    margin: 100% 0;
+  }
+  #trigger,
+  #trigger2 {
+    padding: 0;
+    color: red;
+  }
+}
+
+@layer animation-setup {
+  #ball {
+    position: fixed;
+    top: 96vh;
+  }
+  #ball span {
+    background: red;
+    border-radius: 50%;
+    height: 5vw;
+    display: block;
+    aspect-ratio: 1/1;
+  }
+
+  @keyframes moveright {
+    from {
+      transform: translatex(0);
+    }
+    to {
+      transform: translatex(90vw);
+    }
+  }
+
+  @keyframes bounce {
+    9%,
+    24%,
+    35%,
+    44%,
+    51%,
+    58%,
+    63%,
+    68%,
+    72%,
+    76%,
+    to {
+      transform: translatey(0);
+      animation-timing-function: ease-out;
+    }
+    from,
+    17%,
+    30%,
+    40%,
+    48%,
+    55%,
+    61%,
+    66%,
+    70%,
+    74% {
+      animation-timing-function: ease-in;
+    }
+    0% {
+      transform: translatey(-96vh);
+    }
+    17% {
+      transform: translatey(-57.6vh);
+    }
+    30% {
+      transform: translatey(-34.56vh);
+    }
+    40% {
+      transform: translatey(-20.74vh);
+    }
+    48% {
+      transform: translatey(-12.44vh);
+    }
+    55% {
+      transform: translatey(-7.46vh);
+    }
+    61% {
+      transform: translatey(-4.48vh);
+    }
+    66% {
+      transform: translatey(-2.69vh);
+    }
+    70% {
+      transform: translatey(-1.61vh);
+    }
+    74% {
+      transform: translatey(-0.97vh);
+    }
+  }
+}
+```
+
+{{embedlivesample("in-action", "100%", 400)}}
+
+This example uses the {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}} properties to create animaton triggers on the "bouncer" and "another bouncer" paragraphs. The bouncing ball has multiple {{cssxref("animation")}}s set on it, plus an {{cssxref("animation-trigger")}} property that references the trigger names set on the "bouncer" and "another bouncer" paragraphs and specifies animation actions to perform when the animations are triggered. This causes the ball's animations to play when the paragraphs appear in the viewport, and play in reverse when they scroll off the top of the viewport.
+
 ## Reference
 
 ### Properties
