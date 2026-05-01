@@ -57,6 +57,7 @@ new SharedWorker(url, options)
 
         This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
         The exact time that the worker is kept alive depends on the browser, and could be anywhere between 10 seconds and 5 minutes (Chrome uses 30 seconds).
+
     - `sameSiteCookies`
       - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) should be available to the worker.
         Can have one of the following two values:
