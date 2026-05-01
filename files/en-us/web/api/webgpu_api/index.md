@@ -39,7 +39,7 @@ There are several layers of abstraction between a device GPU and a web browser r
   > [!NOTE]
   > The above diagram assumes a device with only one GPU.
 
-- A native GPU API, which is part of the OS (for example Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
+- A native GPU API, which is part of the OS (for example, Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
 - A browser's WebGPU implementation handles communicating with the GPU via a native GPU API driver. A WebGPU adapter effectively represents a physical GPU and driver available on the underlying system, in your code.
 - A logical device is an abstraction via which a single web app can access GPU capabilities in a compartmentalized way. Logical devices are required to provide multiplexing capabilities. A physical device's GPU is used by many applications and processes concurrently, including potentially many web apps. Each web app needs to be able to access WebGPU in isolation for security and logic reasons.
 
@@ -87,7 +87,8 @@ const adapter = await navigator.gpu.requestAdapter({
 });
 ```
 
-The exact restrictions of compatibility mode are detailed at [WebGPU Compatibility Mode](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html). Resulting applications are still valid WebGPU core applications, due to supporting a subset of core WebGPU, and will therefore run even in browsers that do not support compatibility mode.
+The exact restrictions of compatibility mode are detailed at [WebGPU Compatibility Mode](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html).
+Restricted applications are still valid WebGPU core applications, due to supporting a subset of core WebGPU, and will therefore run on all browsers that support core WebGPU (even if they don't explicitly support compatibility mode).
 
 A `GPUAdapter` or `GPUDevice` that supports core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}). To test whether a WebGPU app is in core or compatibility mode, check whether the `core-features-and-limits` feature is supported, for example:
 

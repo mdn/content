@@ -8,8 +8,7 @@ browser-compat: api.GPU.requestAdapter
 
 {{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`requestAdapter()`** method of the
-{{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
+The **`requestAdapter()`** method of the {{domxref("GPU")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
 
 Note that the user agent chooses whether to return an adapter. If so, it chooses according to the provided options. If no options are provided, the device will provide access to the default adapter, which is usually good enough for most purposes.
 
@@ -29,7 +28,7 @@ requestAdapter(options)
         - `core`
           - : The default value. Specifies that the `GPUAdapter` will support all core WebGPU features and limits, which allows applications to support devices with modern platform graphics APIs. This is referred to as "core" WebGPU. Adapters that support core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}).
         - `compatibility`
-          - : Specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D11. This setting opts WebGPU into [compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode).
+          - : Specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This setting opts WebGPU into [compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode).
     - `powerPreference` {{optional_inline}}
       - : An enumerated value that can be used to provide a hint to the user agent indicating what class of adapter should be chosen from the system's available adapters. Available values are:
         - `undefined` (or not specified)
@@ -86,7 +85,7 @@ async function init() {
 
 ### Using compatibility mode only if necessary
 
-You can create an application that will use compatibility mode only if necessary, and upgrade to core if the core WebGPU feature set is available.
+You can create an application that will use compatibility mode only if necessary, and upgrade to core WebGPU if the core feature set is available.
 
 To do so, first request a compatibility mode adapter:
 
@@ -96,7 +95,7 @@ const adapter = await navigator.gpu.requestAdapter({
 });
 ```
 
-Next, check whether the `core-features-and-limits` feature is available using the {{jsxref("Set.has", "has()")}} method available on the {{domxref("GPUSupportedFeatures")}} object. If it is, request a {{domxref("GPUDevice")}} with `core-features-and-limits` as a required feature. If not, don't specify that required feature.
+Next, check whether the `core-features-and-limits` feature is available when using the {{jsxref("Set.has", "has()")}} method available on the {{domxref("GPUSupportedFeatures")}} object. If it is, request a {{domxref("GPUDevice")}} with `core-features-and-limits` as a required feature. If not, don't specify that required feature.
 
 ```js
 const hasCore = adapter.features.has("core-features-and-limits");
