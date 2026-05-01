@@ -1,5 +1,6 @@
 ---
-title: "<samp>: The Sample Output element"
+title: "`<samp>` HTML sample output element"
+short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 page-type: html-element
 browser-compat: html.elements.samp

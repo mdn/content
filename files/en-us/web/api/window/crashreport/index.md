@@ -3,10 +3,12 @@ title: "Window: crashReport property"
 short-title: crashReport
 slug: Web/API/Window/crashReport
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Window.crashReport
 ---
 
-{{securecontext_header}}{{APIRef("Reporting API")}}
+{{securecontext_header}}{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`crashReport`** read-only property of the {{domxref("Window")}} interface returns a {{domxref("CrashReportContext")}} object that enables arbitrary data to be recorded for the current top-level browsing context.
 The data is then included in {{domxref("CrashReport")}} objects that are sent to a reporting endpoint when a browser crash occurs.

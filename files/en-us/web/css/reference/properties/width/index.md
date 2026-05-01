@@ -270,12 +270,12 @@ p.min-pink {
 
 ```css hidden
 @supports not (width: calc-size(min-content, size * 2)) {
-  body::after {
+  body::before {
     content: "Your browser doesn't support the calc-size() function yet.";
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```
@@ -324,12 +324,12 @@ We use the {{cssxref("display")}} property to make the parent a flex container, 
 
 ```css hidden
 @supports not (width: stretch) {
-  body::after {
+  body::before {
     content: "Your browser doesn't support the stretch value yet.";
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```
@@ -391,6 +391,16 @@ We declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("
 ```css hidden
 body {
   padding: 5em;
+}
+
+@supports not (width: anchor-size(width)) {
+  body::before {
+    content: "Your browser doesn't support the anchor-size() function value.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 ```
 

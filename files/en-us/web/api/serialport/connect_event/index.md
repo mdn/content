@@ -3,12 +3,10 @@ title: "SerialPort: connect event"
 short-title: connect
 slug: Web/API/SerialPort/connect_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.SerialPort.connect_event
 ---
 
-{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when the port connects to the device.
 
