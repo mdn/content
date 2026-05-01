@@ -52,8 +52,11 @@ new SharedWorker(url, options)
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
     - `extendedLifetime`
       - : A boolean indicating whether the Shared Worker is allowed to remain alive for a short period after all pages using it have been navigated away from or closed.
+
+        Browsers _may_ also keep workers alive between same-origin navigations to avoid the cost of restarting a shared worker used by a site when the user is navigating from page to page within that site. The `extendedLifetime` option extends beyond just that use case to when the shared worker is not immediately reused. For example, when navigating to pages that do not use the shared work or when navigating away from the site completely.
+
         This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
-        The exact time that the worker is kept alive depends on tthe browser, and could be anywhere between 10 seconds and 5 minutes (Chrome uses 30 seconds).
+        The exact time that the worker is kept alive depends on the browser, and could be anywhere between 10 seconds and 5 minutes (Chrome uses 30 seconds).
     - `sameSiteCookies`
       - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) should be available to the worker.
         Can have one of the following two values:
@@ -126,10 +129,10 @@ For a full example, see our [Basic shared worker example](https://github.com/mdn
 If you construct a new shared worker with the same options as an already running shared worker, it will reuse the existing shared worker.
 
 ```js
-const worker1 = new SharedWorker('./worker.js');
+const worker1 = new SharedWorker("./worker.js");
 
 // This will not start a new worker and instead reuse worker1 for worker2
-const worker2 = new SharedWorker('./worker.js');
+const worker2 = new SharedWorker("./worker.js");
 ```
 
 ### Extended lifetime shared worker
@@ -147,17 +150,17 @@ If supported, this shared worker will continue to live on for a short period aft
 A shared worker is identified by it's URL and `name` and cannot have different `type`, `credential` or `extendedLifetime` options.
 
 ```js
-const worker1 = new SharedWorker('./worker.js');
+const worker1 = new SharedWorker("./worker.js");
 // Handle constructor errors
-worker1.addEventListener('error', (event) => {
-  console.log('Worker 1 got an instantiation error', event);
+worker1.addEventListener("error", (event) => {
+  console.log("Worker 1 got an instantiation error", event);
 });
 
 // This will cause an error:
-const worker2 = new SharedWorker('./worker.js', { credentials: 'omit' });
+const worker2 = new SharedWorker("./worker.js", { credentials: "omit" });
 // Handle constructor errors
-worker2.addEventListener('error', (event) => {
-  console.log('Worker 2 got an instantiation error', event);
+worker2.addEventListener("error", (event) => {
+  console.log("Worker 2 got an instantiation error", event);
 });
 ```
 
@@ -168,17 +171,17 @@ This will log `Worker 2 got an instantiation error` to the console as it attempt
 The following code shows how to correctly start multiple workers with different options but giving each a unique name:
 
 ```js
-const worker1 = new SharedWorker('./worker.js', {name: 'worker1'});
-worker1.addEventListener('error', (event) => {
-  console.log('Worker 1 got an instantiation error', event);
+const worker1 = new SharedWorker("./worker.js", { name: "worker1" });
+worker1.addEventListener("error", (event) => {
+  console.log("Worker 1 got an instantiation error", event);
 });
 worker1.port.start();
 
 // This will start a second instance of that worker
-const worker2 = new SharedWorker('./worker.js', { credentials: 'omit' });
+const worker2 = new SharedWorker("./worker.js", { credentials: "omit" });
 // Handle constructor errors
-worker2.addEventListener('error', (event) => {
-  console.log('Worker 2 got an instantiation error', event);
+worker2.addEventListener("error", (event) => {
+  console.log("Worker 2 got an instantiation error", event);
 });
 worker2.port.start();
 ```
