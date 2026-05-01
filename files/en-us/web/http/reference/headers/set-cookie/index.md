@@ -72,7 +72,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Domain=<domain-value>` {{optional_inline}}
   - : Defines the host to which the cookie will be sent.
 
-    Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
+    Only the domain of the server that set the cookie (the origin of the HTTP response) can be used as the value, or a higher-level domain (for example, `example.com` instead of `sub.example.com`), unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
 
     If omitted, the cookie is returned only to the host that sent them (i.e., it becomes a "host-only cookie").
     This is more restrictive than setting the host name, as the cookie is not made available to subdomains of the host.
