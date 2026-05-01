@@ -79,7 +79,7 @@ async function init() {
 
 By default, a `GPUAdapter` supports all core WebGPU features and limits, which allows applications to support devices with modern platform graphics APIs. This is referred to as "core" WebGPU.
 
-It is possible to opt WebGPU into "compatibility mode", which specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D11. This is done by specifying a [`featureLevel`](/en-US/docs/Web/API/GPU/requestAdapter#featurelevel) value of `compatibility` in your {{domxref("GPU.requestAdapter()")}} call:
+It is possible to opt WebGPU into "compatibility mode", which specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This is done by specifying a [`featureLevel`](/en-US/docs/Web/API/GPU/requestAdapter#featurelevel) value of `compatibility` in your {{domxref("GPU.requestAdapter()")}} call:
 
 ```js
 const adapter = await navigator.gpu.requestAdapter({
@@ -88,7 +88,7 @@ const adapter = await navigator.gpu.requestAdapter({
 ```
 
 The exact restrictions of compatibility mode are detailed at [WebGPU Compatibility Mode](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html).
-Restricted applications are still valid WebGPU core applications, due to supporting a subset of core WebGPU, and will therefore run on all browsers that support core WebGPU (even if they don't explicitly support compatibility mode).
+Restricted applications are still valid WebGPU core applications due to supporting a subset of core WebGPU, and will therefore run on all browsers that support core WebGPU, even if they don't explicitly support compatibility mode.
 
 A `GPUAdapter` or `GPUDevice` that supports core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}). To test whether a WebGPU app is in core or compatibility mode, check whether the `core-features-and-limits` feature is supported, for example:
 
