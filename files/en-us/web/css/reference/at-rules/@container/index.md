@@ -99,6 +99,11 @@ If no `<container-query>` is specified, named containers are selected.
 @container not style(--theme: one) {
   /* matched container styles */
 }
+
+/* range style() queries */
+@container style(--number > 4) {
+  /* matched container styles */
+}
 ```
 
 ### Parameters
@@ -559,6 +564,18 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 ```
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+
+### Container style queries range syntax
+
+The range syntax of _container style query_ is a `@container` query that compares a `<style-feature>` to a value.
+
+The following container query checks if the custom-property (`--price`) has a value larger than or equal to `25.00`:
+
+```css
+@container style(--price >= 25.00) {
+  /* <stylesheet> */
+}
+```
 
 ### Scroll-state queries
 
