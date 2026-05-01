@@ -163,7 +163,7 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 ## Examples
 
 > [!NOTE]
-> Animating [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged as it leads to layout reflow and repaints. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
+> Animating [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged as it leads to layout reflow and repaints. Animating any box model property is inherently CPU-intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
 
 ### Basic usage: a sun rise
 
@@ -180,7 +180,7 @@ We include one element: our sun.
 
 #### CSS
 
-We start by creating the sun and the sky. The sky is the root of the HTML document. We hide any content that is outside the viewport, which in our case will be any part of the sun below the horizon, by setting the {{cssxref("overflow")}} to hidden, and use the {{cssxref("justify-conten")}} property to center the sun in the background. We make the sun yellow, declaring the {{cssxref("height")}} to be the height of the viewport at `100vh`, and setting the width to be same as the height by setting the {{cssxref("aspect-ratio")}} to `1`. We turn the square into a circle with the {{cssxref("border-radius")}} property.
+We start by creating the sun and the sky. The sky is the root of the HTML document. We hide any content that is outside the viewport, which in our case will be any part of the sun below the horizon, by setting the {{cssxref("overflow")}} to hidden, and use the {{cssxref("justify-content")}} property to center the sun in the background. We make the sun yellow, declaring the {{cssxref("height")}} to be the height of the viewport at `100vh`, and setting the width to be the same as the height by setting the {{cssxref("aspect-ratio")}} to `1`. We turn the square into a circle with the {{cssxref("border-radius")}} property.
 
 ```css
 :root {
@@ -226,7 +226,7 @@ The last step is to apply the animation! We use the `animation` shorthand proper
 
 ### Applying multiple animations
 
-This example demonstrates applying multiple, comma-separted animation to a single element. Expanding on the previous example, with a sun that rises and falls on a lightblue background, here we will gradually rotate the sun through a rainbow of colors. The timing of the sun's position and color are independent.
+This example demonstrates applying multiple, comma-separated animations to a single element. Expanding on the previous example, with a sun that rises and falls on a lightblue background, here we will gradually rotate the sun through a rainbow of colors. The timing of the sun's position and color are independent.
 
 ```html hidden
 <div class="sun"></div>
@@ -270,7 +270,7 @@ We include the same HTML and CSS as in the previous example, and add a second `@
 }
 ```
 
-We then apply the two animation to our sun. Multiple animations are separated by commas, each animation's parameters are set independently
+We then apply the two animations to our sun. Multiple animations are separated by commas, each animation's parameters are set independently
 
 ```css
 .sun {
@@ -310,7 +310,7 @@ This example demonstrates what happens when multiple animations define values fo
 
 We use the same HTML and CSS as in the first example, including the original `rise` animation, and a second, `bounce` animation. The two animations declare values for the same property:
 
-```
+```css
 @keyframes rise {
   from {
     transform: translateY(110vh);
