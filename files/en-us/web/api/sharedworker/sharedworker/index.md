@@ -51,9 +51,9 @@ new SharedWorker(url, options)
       - : A string specifying an
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
     - `extendedLifetime`
-      - : A boolean indicating whether the Shared Worker is allowed to live for a short period (typically 10-seconds to 5 minutes) after all pages using the shared worker have been navigated away from.
-        This allows developers to perform some work as the user navigates away from the page. For example, writing to storage, or sending data back to servers, to save state or record analytics.
-        The exact time may differ per browser. Chrome uses 30 seconds for example.
+      - : A boolean indicating whether the Shared Worker is allowed to remain alive for a short period after all pages using it have been navigated away from or closed.
+        This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
+        The exact time that the worker is kept alive depends on tthe browser, and could be anywhere between 10 seconds and 5 minutes (Chrome uses 30 seconds).
     - `sameSiteCookies`
       - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) should be available to the worker.
         Can have one of the following two values:
