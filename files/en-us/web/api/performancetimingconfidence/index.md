@@ -34,7 +34,7 @@ This confidence measure is useful for developers when trying to determine whethe
 
 ### Interpreting confidence data
 
-Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates. The procedures below illustrate how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics.
+Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates, to improve consistency of data, cut down on compound errors, and generally produce more realistic and reliable results. The procedures below illustrate how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics based on the confidence data.
 
 #### Computing debiased means
 
