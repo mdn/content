@@ -22,7 +22,7 @@ When audio is playing in an application, it is beneficial to measure {{glossary(
 
 If underruns are detected, action should be taken to avoid future underruns, for example providing a larger buffer, or freeing up system resources. Larger buffers should be used carefully as they can also increase latency, so it is important to achieve a balance. Latency can be reduced by simplifying the required processing, or reducing the playback buffer size.
 
-Web audio performance varies greatly between high-end devices such as a modern desktop computer and low-end devices such as budget mobile phones. The `AudioPlaybackStats` object allows developers to collect telemetry data from their users to understand how their app performs in the "real world" with respect to latency and underrun and respond to problems as they arise.
+Web audio performance varies greatly across devices, from high-end modern desktop computers to low-end budget mobile phones. The `AudioPlaybackStats` object allows you to collect telemetry data from your users to understand how your app performs in the "real world". Use this data to identify and respond to latency and underrun problems.
 
 For example, you could create an "adaptive" audio system in your app that detects when underrun or latency exceeds a certain threshold (where the audio starts glitching), and:
 
