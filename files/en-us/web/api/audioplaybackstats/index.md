@@ -40,7 +40,7 @@ Underruns are defined in terms of **underrun frames** and **underrun events**:
 
 The number of underrun events since the audio context initialization is reported by the {{domxref("AudioPlaybackStats.underrunEvents")}} property, and the duration of those underrun events is reported by the {{domxref("AudioPlaybackStats.underrunDuration")}} property. This allows you to find out how often and for how long the audio cuts out due to underrun.
 
-### Provided latency stats
+### Latency statistics provided by the interface
 
 The audio context's latency can be measured using the {{domxref("AudioPlaybackStats.averageLatency")}}, {{domxref("AudioPlaybackStats.minimumLatency")}}, and {{domxref("AudioPlaybackStats.maximumLatency")}} properties.
 
