@@ -124,9 +124,9 @@ When no `animation-duration` value is specified in the `animation` shorthand pro
 
 ### animation-timeline
 
-If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`, which sets the timeline to the default {{domxref("documentTimeline")}}. 
+If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`, which sets the timeline to the default {{domxref("documentTimeline")}}.
 
-If an `<animation-timeline> value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the entire `animation` declaration is invalid and ignored. For this reason, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
+If an `<animation-timeline> value is included, but the user-agent doesn't support`<animation-timeline>`values within the shorthand, the entire`animation`declaration is invalid and ignored. For this reason, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the`animation-timeline`property after declaring any`animation` shorthand for it to take effect.
 
 Alternatively, the `<animation-timeline>` can be set within the `animation` shorthand within a CSS {{cssxref("@supports")}} block, such as:
 
@@ -198,7 +198,6 @@ We start by creating the sun and the sky. The sky is the root of the HTML docume
   animation: 4s linear 0s infinite alternate sun-rise;
 }
 ```
-
 
 Next, we create a CSS {{cssxref("@keyframes")}} animation that will push the element on which it is applied down past the viewport and then return the element to its default position using [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms):
 
@@ -287,7 +286,7 @@ We then apply the two animation to our sun. Multiple animations are separated by
 
 ### Cascading multiple animations
 
-This example demonstrates what happens when multiple animations define values for the same property. This example expands upon the [basic usage](#basic_ usage_a_sun_rise) example, with two animations applied that both set a {{cssxref("transform")}} value.
+This example demonstrates what happens when multiple animations define values for the same property. This example expands upon the [basic usage](#basic_usage_a_sun_rise) example, with two animations applied that both set a {{cssxref("transform")}} value.
 
 ```html hidden
 <div class="sun"></div>
@@ -331,7 +330,7 @@ We use the same HTML and CSS as in the first example, including the original `ri
 }
 ```
 
-We apply both animations to the sun.  When two animations apply different values to the same property, animations declared later in the cascade will override the properties of previously declared animations. In this case, the `transform` value on the `bounce` animation 'wins' the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade), and 'overwrites' the transform set by `rise`, so the sun will only move horizontally.
+We apply both animations to the sun. When two animations apply different values to the same property, animations declared later in the cascade will override the properties of previously declared animations. In this case, the `transform` value on the `bounce` animation 'wins' the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade), and 'overwrites' the transform set by `rise`, so the sun will only move horizontally.
 
 ```css
 .sun {
