@@ -121,7 +121,18 @@ myWorker.port.onmessage = (e) => {
 
 For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
-### Extended lifetime worker
+### Constructing an already running worker will reuse the existing worker
+
+If you construct a new shared worker with the same options as an already running shared worker, it will reuse the existing shared worker.
+
+```js
+const worker1 = new SharedWorker('./worker.js');
+
+// This will not start a new worker and instead reuse worker1 for worker2
+const worker2 = new SharedWorker('./worker.js');
+```
+
+### Extended lifetime shared worker
 
 The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the `SharedWorker()` constructor with the `extendedLifetime` option:
 
@@ -129,7 +140,50 @@ The following code snippet shows creation of a {{domxref("SharedWorker")}} objec
 const myWorker = new SharedWorker("worker.js", { extendedLifetime: true });
 ```
 
-This shared worker will continue to live on for a short period after the user has navigated away from the page.
+If supported, this shared worker will continue to live on for a short period after the user has navigated away from the page.
+
+### Catch shared worker construction errors
+
+A shared worker is identified by it's URL and `name` and cannot have different `type`, `credential` or `extendedLifetime` options.
+
+```js
+const worker1 = new SharedWorker('./worker.js');
+// Handle constructor errors
+worker1.addEventListener('error', (event) => {
+  console.log('Worker 1 got an instantiation error', event);
+});
+
+// This will cause an error:
+const worker2 = new SharedWorker('./worker.js', { credentials: 'omit' });
+// Handle constructor errors
+worker2.addEventListener('error', (event) => {
+  console.log('Worker 2 got an instantiation error', event);
+});
+```
+
+This will log `Worker 2 got an instantiation error` to the console as it attempts to start a shared worker with different options to an already running shared worker.
+
+### Multiple shared workers with different options
+
+The following code shows how to correctly start multiple workers with different options but giving each a unique name:
+
+```js
+const worker1 = new SharedWorker('./worker.js', {name: 'worker1'});
+worker1.addEventListener('error', (event) => {
+  console.log('Worker 1 got an instantiation error', event);
+});
+worker1.port.start();
+
+// This will start a second instance of that worker
+const worker2 = new SharedWorker('./worker.js', { credentials: 'omit' });
+// Handle constructor errors
+worker2.addEventListener('error', (event) => {
+  console.log('Worker 2 got an instantiation error', event);
+});
+worker2.port.start();
+```
+
+Unlike the previous example, no error will be logged to the console as both shared workers can work together.
 
 ## Specifications
 
