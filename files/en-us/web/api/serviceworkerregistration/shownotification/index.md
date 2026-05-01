@@ -59,6 +59,13 @@ showNotification(title, options)
       - : A string containing the URL of an icon to be displayed in the notification.
     - `image` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of an image to be displayed in the notification.
+        
+> [!NOTE]
+> The `icon`, `badge`, and `image` options serve different purposes in a notification:
+> - `icon`: The primary icon representing the notification, typically displayed alongside the title and body text.
+> - `badge`: A smaller, monochrome icon used in constrained display contexts such as status bars or notification trays, especially on mobile devices.
+> - `image`: A larger image shown within the notification body (if supported), used to provide additional visual context.
+> Support and appearance for these options may vary depending on the device and operating system.        
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
         The default is the empty string.
