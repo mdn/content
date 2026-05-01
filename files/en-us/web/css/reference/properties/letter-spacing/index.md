@@ -1,5 +1,6 @@
 ---
-title: letter-spacing
+title: "`letter-spacing` CSS property"
+short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 page-type: css-property
 browser-compat: css.properties.letter-spacing

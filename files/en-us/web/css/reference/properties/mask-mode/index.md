@@ -1,5 +1,6 @@
 ---
-title: mask-mode
+title: "`mask-mode` CSS property"
+short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode

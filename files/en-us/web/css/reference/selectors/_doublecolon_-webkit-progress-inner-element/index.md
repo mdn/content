@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-progress-inner-element
+title: "`::-webkit-progress-inner-element` CSS pseudo-element"
+short-title: ::-webkit-progress-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-inner-element
 page-type: css-pseudo-element
 status:

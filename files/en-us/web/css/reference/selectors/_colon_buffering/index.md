@@ -1,5 +1,6 @@
 ---
-title: :buffering
+title: "`:buffering` CSS pseudo-class"
+short-title: :buffering
 slug: Web/CSS/Reference/Selectors/:buffering
 page-type: css-pseudo-class
 browser-compat: css.selectors.buffering

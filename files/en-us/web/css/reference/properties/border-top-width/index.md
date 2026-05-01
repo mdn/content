@@ -1,5 +1,6 @@
 ---
-title: border-top-width
+title: "`border-top-width` CSS property"
+short-title: border-top-width
 slug: Web/CSS/Reference/Properties/border-top-width
 page-type: css-property
 browser-compat: css.properties.border-top-width

@@ -1,5 +1,6 @@
 ---
-title: <font>
+title: "`<font>` HTML font element"
+short-title: <font>
 slug: Web/HTML/Reference/Elements/font
 page-type: html-element
 status:
