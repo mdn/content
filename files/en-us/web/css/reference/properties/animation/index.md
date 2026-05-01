@@ -124,13 +124,11 @@ When no `animation-duration` value is specified in the `animation` shorthand pro
 
 ### animation-timeline
 
-The current implementations of `animation` are reset-only: if no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`.
+If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`, which sets the timeline to the default {{domxref("documentTimeline")}}. 
 
-By default, the `animation-timeline` is the {{domxref("documentTimeline")}}. If a value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the declaration is invalid and ignored.
+If an `<animation-timeline> value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the entire `animation` declaration is invalid and ignored. For this reason, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
 
-This means that, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
-
-Alternatively, the `animation-timeline` can be used within the `animation` shorthand within a CSS {{cssxref("@supports")}} block, such as:
+Alternatively, the `<animation-timeline>` can be set within the `animation` shorthand within a CSS {{cssxref("@supports")}} block, such as:
 
 ```css
 @supports (animation: view()) {
@@ -144,15 +142,15 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Referenc
 
 ## Accessibility
 
-Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for vestibular disorders, epilepsy, and migraine and scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for reduced animated experiences.
+Consider providing a mechanism for pausing or disabling animation as well as using the [reduced motion `@media` query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for reduced animated experiences.
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) via A List Apart (2015)
+- [An Introduction to the Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/) via CSS-Tricks (2017)
+- [Responsive Design for Motion](https://webkit.org/blog/7551/responsive-design-for-motion/) via WebKit (2017)
+- [Understanding WCAG, Guideline 2.2 — Enough Time: Provide users enough time to read and use content](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [Understanding WCAG Success Criterion 2.2.2: Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide) via W3C (2026)
 
 ## Formal definition
 
@@ -165,56 +163,77 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 ## Examples
 
 > [!NOTE]
-> Animating [CSS Box Model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
+> Animating [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged as it leads to layout reflow and repaints. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
 
-### Sun Rise
+### Basic usage: a sun rise
 
-Here we animate a yellow sun across a light blue sky. The sun rises
+In this example, we demonstrate the basic usage of the `animate` shorthand by animating a yellow sun across a light blue sky. The sun rises
 to the center of the viewport and then falls out of sight.
 
+#### HTML
+
+We include one element: our sun.
+
 ```html
 <div class="sun"></div>
 ```
 
+#### CSS
+
+We start by creating the sun and the sky. The sky is the root of the HTML document. We hide any content that is outside the viewport, which in our case will be any part of the sun below the horizon, by setting the {{cssxref("overflow")}} to hidden, and use the {{cssxref("justify-conten")}} property to center the sun in the background. We make the sun yellow, declaring the {{cssxref("height")}} to be the height of the viewport at `100vh`, and setting the width to be same as the height by setting the {{cssxref("aspect-ratio")}} to `1`. We turn the square into a circle with the {{cssxref("border-radius")}} property.
+
 ```css
 :root {
-  overflow: hidden; /* hides any part of the sun below the horizon */
+  overflow: hidden;
   background-color: lightblue;
   display: flex;
-  justify-content: center; /* centers the sun in the background */
+  justify-content: center;
 }
 
 .sun {
   background-color: yellow;
-  border-radius: 50%; /* creates a circular background */
-  height: 100vh; /* makes the sun the size of the viewport */
-  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1;
   animation: 4s linear 0s infinite alternate sun-rise;
 }
+```
 
+
+Next, we create a CSS {{cssxref("@keyframes")}} animation that will push the element on which it is applied down past the viewport and then return the element to its default position using [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms):
+
+```css
 @keyframes sun-rise {
   from {
-    /* pushes the sun down past the viewport */
     transform: translateY(110vh);
   }
   to {
-    /* returns the sun to its default position */
     transform: translateY(0);
   }
 }
 ```
 
-{{EmbedLiveSample('Sun_Rise')}}
+The last step is to apply the animation! We use the `animation` shorthand property to apply the `sun-rise` keyframe animation to the `.sun`; setting each iteration of the infinite iterations to take 4 seconds, with the direction of the animation alternating between each iteration:
 
-### Animating Multiple Properties
+```css
+.sun {
+  animation: 4s linear 0s infinite alternate sun-rise;
+}
+```
 
-Adding onto the sun animation in the previous example, we add a second animation changing the color of the sun as it rises and sets. The sun starts off dark red when it is below the horizon and changes to a bright orange as it reaches the top.
+#### Results
 
-```html
+{{EmbedLiveSample('Basic usage: a sun rise')}}
+
+### Applying multiple animations
+
+This example demonstrates applying multiple, comma-separted animation to a single element. Expanding on the previous example, with a sun that rises and falls on a lightblue background, here we will gradually rotate the sun through a rainbow of colors. The timing of the sun's position and color are independent.
+
+```html hidden
 <div class="sun"></div>
 ```
 
-```css
+```css hidden
 :root {
   overflow: hidden;
   background-color: lightblue;
@@ -227,53 +246,6 @@ Adding onto the sun animation in the previous example, we add a second animation
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate animating-multiple-properties;
-}
-
-/* it is possible to animate multiple properties in a single animation */
-@keyframes animating-multiple-properties {
-  from {
-    transform: translateY(110vh);
-    background-color: red;
-    filter: brightness(75%);
-  }
-  to {
-    transform: translateY(0);
-    background-color: orange;
-    /* unset properties i.e. 'filter' will revert to default values */
-  }
-}
-```
-
-{{EmbedLiveSample('Animating Multiple Properties')}}
-
-### Applying Multiple Animations
-
-Here is a sun that rises and falls on a lightblue background. The sun
-gradually rotates through a rainbow of colors. The timing of the sun's
-position and color are independent.
-
-```html
-<div class="sun"></div>
-```
-
-```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-}
-
-.sun {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
-  /* multiple animations are separated by commas, each animation's parameters are set independently */
-  animation:
-    4s linear 0s infinite alternate rise,
-    24s linear 0s infinite psychedelic;
 }
 
 @keyframes rise {
@@ -284,7 +256,11 @@ position and color are independent.
     transform: translateY(0);
   }
 }
+```
 
+We include the same HTML and CSS as in the previous example, and add a second `@keyframe` animation that adds a {{cssxref("filter")}} that rotates the hue through all the values using the {{cssxref("hue-rotate()")}} filter function:
+
+```css
 @keyframes psychedelic {
   from {
     filter: hue-rotate(0deg);
@@ -295,20 +271,29 @@ position and color are independent.
 }
 ```
 
-{{EmbedLiveSample('Applying Multiple Animations')}}
+We then apply the two animation to our sun. Multiple animations are separated by commas, each animation's parameters are set independently
 
-### Cascading Multiple Animations
+```css
+.sun {
+  animation:
+    4s linear 0s infinite alternate rise,
+    24s linear 0s infinite psychedelic;
+}
+```
 
-Here is a yellow sun on a lightblue background. The sun bounces between the
-left and right sides of the viewport. The sun remains in the viewport even
-though a rise animation is defined. The rise animation's transform property
-is 'overwritten' by the bounce animation.
+#### Results
 
-```html
+{{EmbedLiveSample('Applying multiple animations')}}
+
+### Cascading multiple animations
+
+This example demonstrates what happens when multiple animations define values for the same property. This example expands upon the [basic usage](#basic_ usage_a_sun_rise) example, with two animations applied that both set a {{cssxref("transform")}} value.
+
+```html hidden
 <div class="sun"></div>
 ```
 
-```css
+```css hidden
 :root {
   overflow: hidden;
   background-color: lightblue;
@@ -321,16 +306,12 @@ is 'overwritten' by the bounce animation.
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  /*
-    animations declared later in the cascade will override the
-    properties of previously declared animations
-  */
-  /* bounce 'overwrites' the transform set by rise, hence the sun only moves horizontally */
-  animation:
-    4s linear 0s infinite alternate rise,
-    4s linear 0s infinite alternate bounce;
 }
+```
 
+We use the same HTML and CSS as in the first example, including the original `rise` animation, and a second, `bounce` animation. The two animations declare values for the same property:
+
+```
 @keyframes rise {
   from {
     transform: translateY(110vh);
@@ -350,9 +331,24 @@ is 'overwritten' by the bounce animation.
 }
 ```
 
+We apply both animations to the sun.  When two animations apply different values to the same property, animations declared later in the cascade will override the properties of previously declared animations. In this case, the `transform` value on the `bounce` animation 'wins' the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade), and 'overwrites' the transform set by `rise`, so the sun will only move horizontally.
+
+```css
+.sun {
+  animation:
+    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate bounce;
+}
+```
+
+#### Results
+
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-See [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using#examples) for additional examples.
+The sun bounces between the
+left and right sides of the viewport. The sun remains in the viewport even
+though a rise animation is defined. The rise animation's transform property
+is 'overwritten' by the bounce animation.
 
 ## Specifications
 
