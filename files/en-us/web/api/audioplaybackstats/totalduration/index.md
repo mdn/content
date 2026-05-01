@@ -8,7 +8,7 @@ browser-compat: api.AudioPlaybackStats.totalDuration
 
 {{APIRef("Web Audio API")}}
 
-The **`totalDuration`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the total duration of all audio frames since the audio context was first initialized.
+The **`totalDuration`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the total duration of all audio frames since the audio context was initialized.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.AudioPlaybackStats.averageLatency
 
 {{APIRef("Web Audio API")}}
 
-The **`averageLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the average latency since the audio context was first initialized, or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
+The **`averageLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the average latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
 
 ## Value
 

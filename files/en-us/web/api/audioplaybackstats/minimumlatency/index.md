@@ -8,7 +8,7 @@ browser-compat: api.AudioPlaybackStats.minimumLatency
 
 {{APIRef("Web Audio API")}}
 
-The **`minimumLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the minimum latency since the audio context was first initialized, or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
+The **`minimumLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the minimum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
 
 ## Value
 
