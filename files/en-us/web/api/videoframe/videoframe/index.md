@@ -48,7 +48,11 @@ The first type of constructor creates a new {{domxref("VideoFrame")}} from an im
     - `metadata` {{optional_inline}}
       - : An object containing metadata describing the video frame, specified by the [WebCodecs VideoFrame Metadata Registry](https://w3c.github.io/webcodecs/video_frame_metadata_registry.html), which can contain the following properties:
         - `rtpTimestamp` {{optional_inline}}
-          - : The RTP timestamp of the corresponding encoded frame.
+          - : The RTP timestamp of the corresponding encoded frame. Only video frames originating from [WebRTC](/en-US/docs/Web/API/WebRTC_API) sources should have `rtpTimestamp` metadata set.
+
+        > [!NOTE]
+        > A video frame's `metadata` can be returned using the {{domxref("VideoFrame.metadata()")}} method.
+
     - `rotation` {{optional_inline}}
       - : An integer representing the rotation (0, 90, 180, or 270) in degrees clockwise. Defaults to `0`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
     - `timestamp`
