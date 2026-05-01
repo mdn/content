@@ -47,7 +47,7 @@ const myWorker = new SharedWorker("worker.js");
 
 > [!NOTE]
 > Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it.
-> 
+>
 > The shared worker will be alive as long as its global scope's owner set (a set of `Document` and `WorkerGlobalScope` objects) is not empty (for example, if there is any live page holding a reference to it, maybe through `new SharedWorker()`).
 >
 > The[`extendedLifetime`](/en-US/docs/Web/API/SharedWorker/SharedWorker#extendedlifetime) constructor option lets the shared worker stay alive for a short period longer to perform any clean up tasks, such as writing state information to storage, or sending analytics data back to servers.

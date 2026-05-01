@@ -165,8 +165,6 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 > [!NOTE]
 > In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
-### 
-
 ### Spawning a shared worker
 
 Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
