@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.length
 sidebar: jsref
 ---
 
-The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
+The **`length`** data property of an {{jsxref("Array")}} instance represents the number of slots in that array (this may be different to the number of elements as it may be a sparse array - with 'holes'). The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
 {{InteractiveExample("JavaScript Demo: Array: length", "shorter")}}
 
