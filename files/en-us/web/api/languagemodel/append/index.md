@@ -21,7 +21,8 @@ append(input, options)
 
 - `input`
   - : The content to append to the context window. This is either:
-    - A string — Shorthand for a single user message: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
+    - A string — Shorthand for a single message sent for the ["user" role](#user).
+      This is eqivalent to the passed text being inserted in `<input>` field in the message `[{ role: "user", content: [{ type: "text", value: <input> }] }]`.
     - A sequence representing a single message in a conversation with a language model. Options include:
       - `role` — A string indicating who sent the message. Must be one of:
         - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
@@ -33,7 +34,7 @@ append(input, options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined` when the content has been prefilled into the context window.
+A {{jsxref("Promise")}} that resolves with `undefined` when the content has been prefilled into the context window, or rejects with one of the exception values on failure.
 
 ### Exceptions
 
