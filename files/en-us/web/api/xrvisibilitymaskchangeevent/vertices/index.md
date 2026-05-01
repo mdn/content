@@ -10,6 +10,8 @@ browser-compat: api.XRVisibilityMaskChangeEvent.vertices
 
 The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array of coordinates representing the vertices required to draw the entire scene displayed in the {{domxref("XRView")}}. If this array is empty, the whole region of the `XRView` will be drawn.
 
+The {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} array specifies the indices of the `vertices` array that should be drawn to display the currently visible part of the scene displayed in the `XRView`.
+
 ## Value
 
 A {{domxref("Float32Array")}}.
