@@ -44,7 +44,7 @@ The number of underrun events since the audio context initialization is reported
 
 The audio context's latency can be measured using the {{domxref("AudioPlaybackStats.averageLatency")}}, {{domxref("AudioPlaybackStats.minimumLatency")}}, and {{domxref("AudioPlaybackStats.maximumLatency")}} properties.
 
-It is possible to retrieve the immediate playout latency of the context via the {{domxref("AudioContext.outputLatency")}} property, however this is an instantaneous value that fluctuates rapidly. `AudioPlaybackStats` provides average, minimum, and maximum latency over time, which is much more useful for identifying persistent performance issues.
+It is possible to retrieve the immediate playout latency of the audio context via the {{domxref("AudioContext.outputLatency")}} property; however, this is an instantaneous value that fluctuates rapidly. `AudioPlaybackStats` provides the average, minimum, and maximum latency over time, which is more useful for identifying persistent performance issues.
 
 ## Instance properties
 
