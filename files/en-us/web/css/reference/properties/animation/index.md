@@ -126,7 +126,7 @@ When no `animation-duration` value is specified in the `animation` shorthand pro
 
 If no `<animation-timeline>` is included in the `animation` shorthand, the shorthand declaration will reset any previously-declared `animation-timeline` values to `auto`, which sets the timeline to the default {{domxref("documentTimeline")}}.
 
-If an `<animation-timeline>` value is included, but the user-agent doesn't support`<animation-timeline>`values within the shorthand, the entire`animation`declaration is invalid and ignored. For this reason, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the`animation-timeline`property after declaring any`animation` shorthand for it to take effect.
+If an `<animation-timeline>` value is included, but the user-agent doesn't support `<animation-timeline>` values within the shorthand, the entire `animation` declaration is invalid and ignored. For this reason, when creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you need to declare the `animation-timeline` property after declaring any `animation` shorthand for it to take effect.
 
 Alternatively, the `<animation-timeline>` can be set within the `animation` shorthand within a CSS {{cssxref("@supports")}} block, such as:
 
