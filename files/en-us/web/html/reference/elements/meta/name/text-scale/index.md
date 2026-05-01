@@ -84,11 +84,31 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 </html>
 ```
 
+```html hidden live-sample___no-text-scale
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <p class="text-scale">
+      This font size obeys the user's font preferences, whether those
+      preferences are specified at the operating system level or the user agent
+      level.
+    </p>
+    <p class="fixed">
+      This font size does NOT respect the user's font preferences.
+      <div class="text-scale">But this font size does!</div>
+    </p>
+  </body>
+</html>
+```
+
 #### CSS
 
 Text containers with a `class` of `text-scale` are given a {{cssxref("font-size")}} of `1rem`, which means that in browsers that support `<meta name="text-scale" content="scale">`, that text will scale as the OS/browser font settings are changed. Text containers with a `class` of `fixed` are given a `font-size` of `20px`, which means that this text will remain at a fixed size as the OS/browser font settings are changed.
 
-```css live-sample___text-scale
+```css live-sample___text-scale live-sample___no-text-scale
 .text-scale {
   font-size: 1rem;
 }
@@ -100,13 +120,18 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 #### Result
 
+The following shows the live rendered example, followed by another version without the `<meta name="text-scale">` element:
+
 {{embedlivesample("text-scale", "100%", "200")}}
 
-Test this in a supporting mobile browser and try adjusting the OS font size settings. You can open the demo in a separate tab using the link below to make testing easier:
+{{embedlivesample("no-text-scale", "100%", "200")}}
 
-{{ LiveSampleLink("text-scale", "Open the example in a separate tab") }}
+Test these examples in a supporting mobile browser and try adjusting the OS font size settings. To make testing easier, you can open both versions full screen in a separate tab using the links below:
 
-You'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size.
+- {{ LiveSampleLink("text-scale", "The first example") }}
+- {{ LiveSampleLink("no-text-scale", "The second example (without <code>&lt;meta name=&quot;text-scale&quot;&gt;</code>)") }}
+
+In the first version of the example, you'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size. In the second version of the example without the `<meta name="text-scale">` element, none of the lines of text scale in proportion to the OS settings.
 
 ### A text-scale-responsive layout
 
