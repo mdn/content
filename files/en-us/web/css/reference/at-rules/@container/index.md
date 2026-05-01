@@ -571,11 +571,42 @@ The range syntax of _container style query_ is a `@container` query that compare
 
 The following container query checks if the custom-property (`--price`) has a value larger than or equal to `25.00`:
 
+```html
+<ul>
+  <li data-price="15.00">Red Curry</li>
+  <li data-price="20.00">Green Curry</li>
+  <li data-price="25.00">Massaman Curry</li>
+  <li data-price="30.00">Khoa Soi</li>
+</ul>
+```
+
+Firstly each `<li>` item is assigned the value in the `data-price` to the `--price` custom-property, the important part here is the attribute `type()` so that a value can be compared otherwise it will just behave as a string.
+
 ```css
-@container style(--price >= 25.00) {
-  /* <stylesheet> */
+li {
+  --price: attr(data-price type(<number>));
 }
 ```
+
+Next the data attribute is applied as content using the {{cssxRef("::after")}} pseudo-element.
+
+```css
+li::after {
+  content: " - £"attr(data-price);
+}
+```
+
+Finally the range syntax is used to see if the `--price` custom-property has a value greater than or equal to `25.00`, if so then the `::after` pseudo-element is styled `red`.
+
+```css
+@container style(--price >= 25.00) {
+  ::after {
+    color: red;
+  }
+}
+```
+
+{{EmbedLiveSample('container_style_queries_range_syntax', 100, 100)}}
 
 ### Scroll-state queries
 
