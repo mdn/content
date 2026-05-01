@@ -34,7 +34,7 @@ For example, you could create an "adaptive" audio system in your app that detect
 Underruns are defined in terms of **underrun frames** and **underrun events**:
 
 - Underrun frame
-  - : An audio frame, typically silence in the case of a web application, played by the output device in the absence of any "real" audio data from the audio context.
+  - : An audio frame, typically silence in the case of a web application, played by the output device when there is no actual audio data from the audio context.
 - Underrun event
   - : The playback of a continuous sequence of underrun frames. The duration of the underrun event is the total duration of the sequence of underrun frames.
 
