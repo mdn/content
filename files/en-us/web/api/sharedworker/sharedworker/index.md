@@ -65,7 +65,9 @@ new SharedWorker(url, options)
             This option is supported in first-party and third-party contexts, and is the default in third-party contexts.
 
 > [!WARNING]
-> Pages can only open one type of shared worker. Attempting to open the same Shared Worker with different `type`, `credentials`, `name` or `extendedLifetime` values will fail to start the second instance and result in an error when the shared worker is attempted to be used.
+> A shared worker is identified by it's URL and `name` and once running the `type`, `credentials`, and `extendedLifetime` options are fixed.
+> Attempting to constructing a new shared worker for the same script with the same name, but with different `type`, `credentials`, and `extendedLifetime` options values will error. If different values are required.
+> If different values are required, then start two workers with different `name` values.
 
 ### Exceptions
 
