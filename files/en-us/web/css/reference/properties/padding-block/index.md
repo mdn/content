@@ -1,5 +1,6 @@
 ---
-title: padding-block
+title: "`padding-block` CSS property"
+short-title: padding-block
 slug: Web/CSS/Reference/Properties/padding-block
 page-type: css-shorthand-property
 browser-compat: css.properties.padding-block

@@ -1,5 +1,6 @@
 ---
-title: caret-shape
+title: "`caret-shape` CSS property"
+short-title: caret-shape
 slug: Web/CSS/Reference/Properties/caret-shape
 page-type: css-property
 status:

@@ -66,7 +66,7 @@ For example, the following uses the [`const`](/en-US/docs/WebAssembly/Reference/
 v128.const f32x4 65.4 780.9 1011.1 3.0
 ```
 
-We could then round all four values down to the nearest integer simultaneously using the [`floor`](/en-US/docs/WebAssembly/Reference/SIMD/conversion/floor) instruction:
+We could then round all four values down to the nearest integer simultaneously using the [`floor`](/en-US/docs/WebAssembly/Reference/Numeric/floor) instruction:
 
 ```wat
 f32x4.floor
@@ -83,7 +83,7 @@ Note that SIMD lanes are zero-indexed. In the previous output value:
 
 Some instructions operate on the `v128` type itself:
 
-- v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load) instructions.
+- v128-specific instructions such as [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load_store) instructions.
 - General numeric instructions such as [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const).
 
 Most of the SIMD instructions, however, operate on interpretations of the `v128` type. See the [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD) landing page for the full list.

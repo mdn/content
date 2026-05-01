@@ -1,5 +1,6 @@
 ---
-title: stop-color
+title: "`stop-color` CSS property"
+short-title: stop-color
 slug: Web/CSS/Reference/Properties/stop-color
 page-type: css-property
 browser-compat: css.properties.stop-color

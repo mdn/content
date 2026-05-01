@@ -65,9 +65,9 @@ table.size identifier
 
 ### Opcodes
 
-| Instruction  | Binary format            | Example text => binary             |
-| ------------ | ------------------------ | ---------------------------------- |
-| `table.size` | `0xFC 16:u32 𝑥:tableidx` | `table.size 0` => `0xfc 0x10 0x00` |
+| Instruction  | Binary format             | Example text => binary             |
+| ------------ | ------------------------- | ---------------------------------- |
+| `table.size` | `0xFC 16:u32 𝑥:table_idx` | `table.size 0` => `0xfc 0x10 0x00` |
 
 ## Description
 

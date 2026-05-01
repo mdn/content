@@ -1,5 +1,6 @@
 ---
-title: grid
+title: "`grid` CSS media feature"
+short-title: grid
 slug: Web/CSS/Reference/At-rules/@media/grid
 page-type: css-media-feature
 browser-compat: css.at-rules.media.grid

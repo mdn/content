@@ -1,5 +1,6 @@
 ---
-title: ::picker-icon
+title: "`::picker-icon` CSS pseudo-element"
+short-title: ::picker-icon
 slug: Web/CSS/Reference/Selectors/::picker-icon
 page-type: css-pseudo-element
 browser-compat: css.selectors.picker-icon

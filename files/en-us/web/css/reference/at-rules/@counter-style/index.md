@@ -1,5 +1,6 @@
 ---
-title: "@counter-style"
+title: "`@counter-style` CSS at-rule"
+short-title: "@counter-style"
 slug: Web/CSS/Reference/At-rules/@counter-style
 page-type: css-at-rule
 browser-compat: css.at-rules.counter-style

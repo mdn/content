@@ -3,10 +3,12 @@ title: "PerformanceElementTiming: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceElementTiming/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.presentationTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the element was actually drawn on the screen.
 

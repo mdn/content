@@ -1,5 +1,6 @@
 ---
-title: padding-inline-start
+title: "`padding-inline-start` CSS property"
+short-title: padding-inline-start
 slug: Web/CSS/Reference/Properties/padding-inline-start
 page-type: css-property
 browser-compat: css.properties.padding-inline-start

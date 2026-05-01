@@ -64,8 +64,6 @@ You define the page action's properties using the [`page_action`](/en-US/docs/Mo
 }
 ```
 
-The only mandatory key is `default_icon`.
-
 There are two ways to specify a page action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
 - **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):

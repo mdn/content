@@ -91,9 +91,10 @@ This module adds properties and methods to interfaces defined in other specifica
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
-- {{domxref("Range")}} Interface and {{domxref("Range.range", "Range()")}} constructor
+- {{domxref("AbstractRange")}} interface
+- {{domxref("Range")}} interface and {{domxref("Range.range", "Range()")}} constructor
 - [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
-- {{domxref("FragmentDirective")}} Interface
+- {{domxref("FragmentDirective")}} interface
 
 ## Specifications
 

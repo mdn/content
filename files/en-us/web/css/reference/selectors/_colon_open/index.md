@@ -1,5 +1,6 @@
 ---
-title: :open
+title: "`:open` CSS pseudo-class"
+short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
 page-type: css-pseudo-class
 browser-compat: css.selectors.open
@@ -49,15 +50,11 @@ details:open > summary {
 ```css hidden
 @supports not selector(:open) {
   body::before {
-    content: "Your browser doesn't support :open selector.";
+    content: "Your browser doesn't support the :open selector.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

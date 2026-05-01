@@ -1,5 +1,6 @@
 ---
-title: outline-style
+title: "`outline-style` CSS property"
+short-title: outline-style
 slug: Web/CSS/Reference/Properties/outline-style
 page-type: css-property
 browser-compat: css.properties.outline-style

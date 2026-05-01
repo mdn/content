@@ -2,12 +2,10 @@
 title: Serial
 slug: Web/API/Serial
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.Serial
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) provides attributes and methods for finding and connecting to serial ports from a web page.
 
@@ -15,10 +13,10 @@ The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_AP
 
 ## Instance methods
 
-- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
+- {{domxref("Serial.requestPort()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user. This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
 
-- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
+- {{domxref("Serial.getPorts()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
 

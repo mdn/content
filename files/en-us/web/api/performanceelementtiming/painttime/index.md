@@ -3,10 +3,12 @@ title: "PerformanceElementTiming: paintTime property"
 short-title: paintTime
 slug: Web/API/PerformanceElementTiming/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.paintTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`paintTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
 

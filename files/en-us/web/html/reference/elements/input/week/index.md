@@ -1,5 +1,6 @@
 ---
-title: <input type="week">
+title: '`<input type="week">` HTML attribute value'
+short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_week
