@@ -71,7 +71,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.close()")}}
   - : Clears all states and releases the reference to the media resource.
 - {{domxref("VideoFrame.metadata()")}}
-  - : Returns the metadata asssociated with the `VideoFrame`.
+  - : Returns the metadata associated with the `VideoFrame`.
 
 ## Examples
 
