@@ -134,7 +134,7 @@ rotate: unset;
 
 - angle value
   - : An {{cssxref("angle")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
-- x, y, or z axis name plus angle value
+- x, y, or z axis name, plus angle value
   - : The name of the axis you want to rotate the affected element around (`x`, `y`, or `z`), plus an {{cssxref("angle")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
 - vector plus angle value
   - : Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{cssxref("angle")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
@@ -161,7 +161,7 @@ The first box rotates 90 degrees on the Z axis hover, the second rotates 180 deg
 ```html
 <div class="box" id="box1">rotate Z</div>
 <div class="box" id="box2">rotate Y</div>
-<div class="box" id="box3">vector & angle</div>
+<div class="box" id="box3">vector &amp; angle</div>
 ```
 
 #### CSS
