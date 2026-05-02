@@ -1633,7 +1633,7 @@ Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessib
 
 The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors.
 
-In our example, the outer `<div>` container uses [`role="combobox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), which indicates that the element controls a popup list of options. We also add [`aria-haspopup="listbox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) to declare the type of popup, and [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) to point to the option list's `id`.
+In our example, the outer `<div>` container uses [`role="combobox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), which indicates that the element presents a list of options that can be expanded or collapsed. We also add [`aria-haspopup="listbox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) to declare the type of popup, and [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) to point to the option list's `id`.
 
 The `<ul>` element uses [`role="listbox"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), which tells assistive technologies that the element presents a list of selectable items. Each `<li>` element uses [`role="option"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role).
 
@@ -1701,7 +1701,7 @@ function updateValue(select, index) {
 }
 ```
 
-It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but you should not rely on an off-screen native select as the only accessible control. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, keeping the ARIA attributes in sync with the visual state is essential.
+It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but you should not rely on an off-screen native select as the only accessible control. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, keeping the ARIA attributes in sync with the visual state is important.
 
 ### Updating the expanded state
 
@@ -1730,7 +1730,7 @@ function deactivateSelect(select) {
 
 ### Keyboard interaction
 
-To be fully accessible, the control must be operable via keyboard. We listen for `keydown` events and use a `switch` statement to handle the following keys:
+To support keyboard accessibility, the control must be operable via keyboard. We listen for `keydown` events and use a `switch` statement to handle the following keys:
 
 - <kbd>ArrowDown</kbd> — move to the next option
 - <kbd>ArrowUp</kbd> — move to the previous option
