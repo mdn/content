@@ -3,12 +3,10 @@ title: "SerialPort: disconnect event"
 short-title: disconnect
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port disconnects from the device.
 

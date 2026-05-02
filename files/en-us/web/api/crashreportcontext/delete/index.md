@@ -3,10 +3,12 @@ title: "CrashReportContext: delete() method"
 short-title: delete()
 slug: Web/API/CrashReportContext/delete
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CrashReportContext.delete
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("CrashReportContext")}} interface deletes a previously-stored key-value pair.
 

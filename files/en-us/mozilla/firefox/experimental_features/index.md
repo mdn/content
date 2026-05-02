@@ -133,7 +133,7 @@ You can alternatively use the {{cssxref("animation-timeline/scroll")}} functiona
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-The {{cssxref('timeline-scope')}} property is not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
+The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -560,21 +560,6 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 | Release           | —             | —                   |
 
 - `image.jxl.enabled`
-  - : Set to `true` to enable.
-
-#### Document Picture-in-Picture API
-
-The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
-See [Firefox bug 1858562](https://bugzil.la/1858562) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 148           | Yes                 |
-| Developer Edition | 148           | No                  |
-| Beta              | 148           | No                  |
-| Release           | 148           | No                  |
-
-- `dom.documentpip.enabled`
   - : Set to `true` to enable.
 
 ### WebVR API (Disabled)
