@@ -13,7 +13,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 
 ```html
 <form class="no-widget">
-  <select name="myFruit" id="myFruit" aria-label="Fruit">
+  <select name="myFruit">
     <option>Cherry</option>
     <option>Lemon</option>
     <option>Banana</option>
@@ -21,46 +21,14 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
     <option>Apple</option>
   </select>
 
-  <div
-    class="select"
-    role="combobox"
-    aria-label="Fruit"
-    aria-haspopup="listbox"
-    aria-expanded="false"
-    aria-controls="fruit-options">
+  <div class="select">
     <span class="value">Cherry</span>
-    <ul class="optList hidden" id="fruit-options" role="listbox">
-      <li class="option" id="fruit-option-0" role="option" aria-selected="true">
-        Cherry
-      </li>
-      <li
-        class="option"
-        id="fruit-option-1"
-        role="option"
-        aria-selected="false">
-        Lemon
-      </li>
-      <li
-        class="option"
-        id="fruit-option-2"
-        role="option"
-        aria-selected="false">
-        Banana
-      </li>
-      <li
-        class="option"
-        id="fruit-option-3"
-        role="option"
-        aria-selected="false">
-        Strawberry
-      </li>
-      <li
-        class="option"
-        id="fruit-option-4"
-        role="option"
-        aria-selected="false">
-        Apple
-      </li>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
     </ul>
   </div>
 </form>
@@ -202,24 +170,19 @@ function deactivateSelect(select) {
 
   optList.classList.add("hidden");
   select.classList.remove("active");
-  select.setAttribute("aria-expanded", "false");
 }
 
 function activeSelect(select, selectList) {
-  selectList.forEach((other) => {
-    if (other !== select) {
-      deactivateSelect(other);
-    }
-  });
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
 }
 
-function toggleOptList(select) {
+function toggleOptList(select, show) {
   const optList = select.querySelector(".optList");
-  const willOpen = optList.classList.contains("hidden");
 
   optList.classList.toggle("hidden");
-  select.classList.toggle("active", willOpen);
-  select.setAttribute("aria-expanded", String(willOpen));
 }
 
 function highlightOption(select, option) {
@@ -239,20 +202,12 @@ function updateValue(select, index) {
 
   nativeWidget.selectedIndex = index;
   value.textContent = optionList[index].textContent;
-
-  optionList.forEach((option, optionIndex) => {
-    const isSelected = optionIndex === index;
-    option.classList.toggle("highlight", isSelected);
-    option.setAttribute("aria-selected", String(isSelected));
-
-    if (isSelected) {
-      select.setAttribute("aria-activedescendant", option.id);
-    }
-  });
+  highlightOption(select, optionList[index]);
 }
 
 function getIndex(select) {
   const nativeWidget = select.previousElementSibling;
+
   return nativeWidget.selectedIndex;
 }
 
@@ -269,86 +224,63 @@ const selectList = document.querySelectorAll(".select");
 
 selectList.forEach((select) => {
   const optionList = select.querySelectorAll(".option");
-  const selectedIndex = getIndex(select);
-  const nativeWidget = select.previousElementSibling;
 
-  select.tabIndex = 0;
-  nativeWidget.tabIndex = -1;
-  nativeWidget.setAttribute("aria-hidden", "true");
-
-  updateValue(select, selectedIndex);
-
-  optionList.forEach((option, index) => {
-    option.addEventListener("mousedown", (event) => {
-      event.preventDefault();
-    });
-
+  optionList.forEach((option) => {
     option.addEventListener("mouseover", () => {
       highlightOption(select, option);
-    });
-
-    option.addEventListener("click", (event) => {
-      event.stopPropagation();
-      updateValue(select, index);
-      deactivateSelect(select);
-      select.focus();
     });
   });
 
   select.addEventListener("click", (event) => {
-    if (event.target.closest(".option")) return;
     toggleOptList(select);
   });
 
-  select.addEventListener("focus", () => {
+  select.addEventListener("focus", (event) => {
     activeSelect(select, selectList);
   });
 
-  select.addEventListener("blur", () => {
+  select.addEventListener("blur", (event) => {
     deactivateSelect(select);
   });
+});
 
-  select.addEventListener("keydown", (event) => {
+const selectList = document.querySelectorAll(".select");
+
+selectList.forEach((select) => {
+  const optionList = select.querySelectorAll(".option");
+  const selectedIndex = getIndex(select);
+
+  select.tabIndex = 0;
+  select.previousElementSibling.tabIndex = -1;
+
+  updateValue(select, selectedIndex);
+
+  optionList.forEach((option, index) => {
+    option.addEventListener("click", (event) => {
+      updateValue(select, index);
+    });
+  });
+
+  select.addEventListener("keyup", (event) => {
     let index = getIndex(select);
 
-    switch (event.key) {
-      case "ArrowDown":
-        event.preventDefault();
-        if (index < optionList.length - 1) {
-          index++;
-          updateValue(select, index);
-        }
-        break;
-
-      case "ArrowUp":
-        event.preventDefault();
-        if (index > 0) {
-          index--;
-          updateValue(select, index);
-        }
-        break;
-
-      case "Home":
-        event.preventDefault();
-        updateValue(select, 0);
-        break;
-
-      case "End":
-        event.preventDefault();
-        updateValue(select, optionList.length - 1);
-        break;
-
-      case "Enter":
-      case " ":
-        event.preventDefault();
-        toggleOptList(select);
-        break;
-
-      case "Escape":
-        event.preventDefault();
-        deactivateSelect(select);
-        break;
+    if (event.key === "Escape") {
+      deactivateSelect(select);
     }
+    if (event.key === "ArrowDown" && index < optionList.length - 1) {
+      index++;
+      event.preventDefault();
+    }
+    if (event.key === "ArrowUp" && index > 0) {
+      index--;
+      event.preventDefault();
+    }
+
+    if (event.key === "Enter" || event.key === " ") {
+      toggleOptList(select);
+    }
+
+    updateValue(select, index);
   });
 });
 ```
