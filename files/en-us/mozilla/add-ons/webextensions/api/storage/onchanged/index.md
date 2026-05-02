@@ -6,10 +6,16 @@ browser-compat: webextensions.api.storage.onChanged
 sidebar: addonsidebar
 ---
 
-Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area, returning details of only changed keys. A callback is called only when there are changes to the underlying data.
+Fires when one or more items in any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}} changes.
+If you only need to listen for changes in one storage area, use {{WebExtAPIRef('storage.StorageArea.onChanged')}} instead.
+
+Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against any of the {{WebExtAPIRef('storage.StorageArea', 'storage areas'}}.
 
 > [!NOTE]
-> In Firefox, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against whether they changed or not. Also, a callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+> In Firefox, the listener receives all the keys from a storage area where {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes. The listener may be invoked when there is no change to the data. To find details of the changed items, examine each key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+
+> [!NOTE]
+> Firefox does not fire this event for changes to `storage.managed` because managed storage is only read on browser startup (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)).
 
 ## Syntax
 
@@ -37,7 +43,7 @@ Events have three functions:
     - `changes`
       - : `object`. Object describing the change. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
-      - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
+      - : `string`. The name of the storage area (`"local"`, `"managed"`, `"session"`, or `"sync"`) to which the changes were made.
 
 ## Examples
 
