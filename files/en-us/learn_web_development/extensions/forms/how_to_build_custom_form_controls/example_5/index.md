@@ -30,11 +30,7 @@ This is the last example that explains [how to build custom form widgets](/en-US
     aria-controls="fruit-options">
     <span class="value">Cherry</span>
     <ul class="optList hidden" id="fruit-options" role="listbox">
-      <li
-        class="option"
-        id="fruit-option-0"
-        role="option"
-        aria-selected="true">
+      <li class="option" id="fruit-option-0" role="option" aria-selected="true">
         Cherry
       </li>
       <li
@@ -242,7 +238,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.textContent = optionList[index].textContent;
+  value.textContent = optionList[index].textContent.trim();
 
   optionList.forEach((option, optionIndex) => {
     const isSelected = optionIndex === index;

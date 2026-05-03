@@ -1660,7 +1660,11 @@ To support these roles, we update our HTML like this:
       <li class="option" id="fruit-option-0" role="option" aria-selected="true">
         Cherry
       </li>
-      <li class="option" id="fruit-option-1" role="option" aria-selected="false">
+      <li
+        class="option"
+        id="fruit-option-1"
+        role="option"
+        aria-selected="false">
         Lemon
       </li>
       <!-- ... -->
@@ -1670,7 +1674,7 @@ To support these roles, we update our HTML like this:
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in your CSS.
+> In this tutorial, we keep both the `role` attribute and the `class` attribute: the role provides semantics for assistive technologies, while the class names are used by the CSS and JavaScript. In a more generic implementation, you could instead use selectors such as `[role="option"]`, provided that you update the CSS and JavaScript consistently.
 
 ### The `aria-selected` attribute
 
@@ -1687,7 +1691,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.textContent = optionList[index].textContent;
+  value.textContent = optionList[index].textContent.trim();
 
   optionList.forEach((option, optionIndex) => {
     const isSelected = optionIndex === index;
@@ -1839,11 +1843,7 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
     aria-controls="fruit-options">
     <span class="value">Cherry</span>
     <ul class="optList hidden" id="fruit-options" role="listbox">
-      <li
-        class="option"
-        id="fruit-option-0"
-        role="option"
-        aria-selected="true">
+      <li class="option" id="fruit-option-0" role="option" aria-selected="true">
         Cherry
       </li>
       <li
@@ -2039,7 +2039,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.textContent = optionList[index].textContent;
+  value.textContent = optionList[index].textContent.trim();
 
   optionList.forEach((option, optionIndex) => {
     const isSelected = optionIndex === index;
