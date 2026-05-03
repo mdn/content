@@ -66,6 +66,25 @@ It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
+## Re-parsing and mutated XSS (mXSS)
+
+Sanitizing HTML with the Sanitizer API or using `Element.prototype.setHTML()` helps remove unsafe nodes and attributes, but it does not eliminate the risk of mutated XSS (mXSS) when the sanitized HTML is serialized and later re-parsed. If sanitized HTML is serialized (for example via `innerHTML`) and later re-parsed by the browser, parsing-time transformations can re-introduce executable content or attributes that the sanitizer did not anticipate.
+
+Example — unsafe flow
+
+```js
+// `code` comes from an untrusted source
+div.setHTML(code);             // Sanitizer runs here
+other_div.innerHTML = div.innerHTML; // Re-parsing `innerHTML` — can trigger mXSS
+```
+
+Recommendations
+
+- Avoid round-tripping sanitized `innerHTML` as a string. If you must persist markup, re-sanitize on every parse before insertion.
+- Prefer structured, safe representations (for example, store content as sanitized fragments or a safe data model) instead of raw HTML strings.
+- Use defensive headers and policies: Content Security Policy (CSP), Trusted Types, and server-side validation.
+- See also the WICG discussion on mutated XSS: https://wicg.github.io/sanitizer-api/#mutated-xss
+
 ## Examples
 
 ### Basic usage
