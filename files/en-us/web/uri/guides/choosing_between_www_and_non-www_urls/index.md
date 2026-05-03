@@ -29,11 +29,11 @@ There are different ways to choose which website is _canonical_.
 
 In this case, you need to configure the server receiving the HTTP requests (which is most likely the same for 'www' and 'non-www' URLs) to respond with an adequate HTTP {{HTTPStatus(301)}} response to any request to the non-canonical domain. This will redirect the browser trying to access the non-canonical URLs to their canonical equivalent. For example, if you've chosen to use 'non-www' URLs as the canonical type, you should redirect all 'www' URLs to their equivalent URL without the 'www'.
 
-Example:
+### Example: Redirecting www to non-www
 
-1. A server receives a request for `http://www.example.org/whaddup` (when the canonical domain is example.org).
-2. The server answers with a code {{HTTPStatus(301)}} with the {{HTTPHeader("Location")}} header `Location: http://example.org/whaddup`.
-3. The client issues a request to the location under the canonical domain: `http://example.org/whaddup`.
+1. A user visits: http://www.example.org/whaddup  
+2. The server responds with a `301` redirect  
+3. The browser is redirected to: http://example.org/whaddup
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
