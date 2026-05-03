@@ -2006,7 +2006,7 @@ function deactivateSelect(select) {
   select.setAttribute("aria-expanded", "false");
 }
 
-function activeSelect(select, selectList) {
+function deactivateOtherSelects(select, selectList) {
   selectList.forEach((other) => {
     if (other !== select) {
       deactivateSelect(other);
@@ -2101,7 +2101,7 @@ selectList.forEach((select) => {
   });
 
   select.addEventListener("focus", () => {
-    activeSelect(select, selectList);
+    deactivateOtherSelects(select, selectList);
   });
 
   select.addEventListener("blur", () => {
