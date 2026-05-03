@@ -74,7 +74,7 @@ Example — unsafe flow
 
 ```js
 // `code` comes from an untrusted source
-div.setHTML(code);             // Sanitizer runs here
+div.setHTML(code); // Sanitizer runs here
 other_div.innerHTML = div.innerHTML; // Re-parsing `innerHTML` — can trigger mXSS
 ```
 
