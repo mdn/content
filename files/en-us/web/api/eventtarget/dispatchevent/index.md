@@ -19,7 +19,7 @@ should have already been created and initialized using an {{domxref("Event/Event
 > [!NOTE]
 > When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
 
-Unlike calling `dispatchEvent()` manually, "native" events are fired by the browser and dispatched asynchronously via the [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model). The dispatch process itself is similar in both cases and invokes event handlers _synchronously_. All applicable event handlers are called and return before `dispatchEvent()` returns.
+Unlike calling `dispatchEvent()` manually, which triggers event handlers to run synchronously in the same stack frame, "native" events (dispatched by the browser) triggers each event handler to run on a separate stack execution frame; any queued microtasks run after each event handler. However, other asynchronous browser operations, such as rendering, run only after all event handlers have finished running.
 
 ## Syntax
 
