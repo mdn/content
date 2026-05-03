@@ -9,9 +9,9 @@ browser-compat: api.AudioSession
 
 {{APIRef("Audio Session API")}}{{SeeCompatTable}}
 
-The **`AudioSession`** interface of the [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) allows developers to specify how audio from a web application interacts with other audio playing on a device.
+The **`AudioSession`** interface of the [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) lets a web page declare the purpose of the audio it is producing — for example music playback, a video call, or a short notification. The platform uses that declaration to decide what should happen to audio from other apps and browser tabs — whether to pause it, duck it (lower its volume), or let it play alongside.
 
-An audio session represents the aggregated audio output from a web page. It allows web pages to express the general nature of their audio output, such as playback, recording, or transient sounds like notifications. The platform can then use this information to determine how web-based audio should interact with other applications on the device, for example, whether web audio should pause other audio or play alongside it.
+An audio session is the spec's term for the per-page object that holds this declaration; see the [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) overview for the underlying model.
 
 {{InheritanceDiagram}}
 
