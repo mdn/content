@@ -50,7 +50,7 @@ For example:
 
 ```css
 .element {
-  background-image: url(a.png), url(b.png), url(c.png);
+  background-image: url("a.png"), url("b.png"), url("c.png");
   background-position: left top;
 }
 ```
