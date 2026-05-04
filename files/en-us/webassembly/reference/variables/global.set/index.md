@@ -42,7 +42,7 @@ global.set identifier
 - `identifier`
   - : An identifier for the global whose value you want to set. This can be one of the following:
     - `name`
-      - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first intialized. This must begin with a `$` symbol, for example `$my_global`.
+      - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first initialized. This must begin with a `$` symbol, for example `$my_global`.
     - `index`
       - : The global's index number, for example `0` for the first global in the Wasm script, `1` for the second, etc.
 

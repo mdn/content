@@ -124,7 +124,7 @@ Here are some popular editors:
           >FAQ</a
         >,
         <a
-          href="https://mail.gnu.org/mailman/listinfo/help-gnu-emacs"
+          href="https://lists.gnu.org/mailman/listinfo/help-gnu-emacs"
           rel="external"
           >Mailing list</a
         >, <a href="news://gnu.emacs.help" rel="external">News Group</a>
