@@ -102,7 +102,7 @@ The card has a default font size, which is overridden for the `@container` named
 
 The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2"), in the `cssRules`.
+Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2") in the `cssRules`.
 
 ```js
 const exampleStylesheet = document.getElementById("example-styles").sheet;
@@ -133,7 +133,7 @@ It shows the name and query using the `conditions` property if supported on this
 
 {{EmbedLiveSample("Basic usage","100%","250px")}}
 
-Note that the title in the card section should double in size as the width of the page goes over 700px.
+Note that the text in the card `<div>` should double in size as the container `width` reaches `700px`, and will halve again as the `width` goes back down below `700px`.
 
 ### Multiple container conditions
 
@@ -200,7 +200,7 @@ Note that this condition is contrived to demonstrate the effect of multiple cond
 
 The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2"), in the `cssRules`.
+Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2") in the `cssRules`.
 
 ```js
 const exampleStylesheet = document.getElementById("example-styles").sheet;

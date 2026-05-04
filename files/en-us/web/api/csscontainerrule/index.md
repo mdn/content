@@ -152,7 +152,7 @@ These are represented by two nested {{htmlelement("div")}} elements.
 
 The CSS for the example is shown below.
 As described in the corresponding {{cssxref("@container")}} example, the CSS for the container element specifies the type of the container.
-The {{cssxref("@container")}} then applies a new width, font-size, and background color to the card if the width is less than 650px.
+The {{cssxref("@container")}} then applies a new `width`, `background-color`, and `font-size` to the card if the width is less than `650px`.
 
 ```html
 <style id="example-styles">
@@ -173,14 +173,14 @@ The {{cssxref("@container")}} then applies a new width, font-size, and backgroun
 ```
 
 > [!NOTE]
-> The styles in these examples are defined in an inline HTML `style` element with an `id` in order to make it easy for the code to find the correct sheet.
-> You might also locate the correct sheets for each example from the document by indexing against the length (e.g., `document.styleSheets[document.styleSheets.length-1]` but that makes working out the correct sheet for each example more complicated).
+> The styles in these examples are defined in an inline HTML {{htmlelement("style")}} element with an `id`, to make it easy for the code to find the correct style sheet.
+> You might also locate the correct style sheet for each example by indexing against the number of style sheets contained in the document, that is, the `length` of the `styleSheets` property (for example, `document.styleSheets[document.styleSheets.length-1]`), but that makes working out the correct sheet for each example more complicated.
 
 #### JavaScript
 
 The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added the `@container` as the second rule above, we can access the associated `CSSContainerRule` using the second entry, with index "1", in the `cssRules`.
+Since we added the `@container` as the second rule above, we can access the associated `CSSContainerRule` using the second entry, with index "1" in the `cssRules`.
 
 ```js
 const exampleStylesheet = document.getElementById("example-styles").sheet;
@@ -188,7 +188,7 @@ const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 ```
 
-Next, we use our feature testing code from the previous example.
+Next, we use our feature testing code from the previous example to find and log the information we want to display.
 
 ```js
 if (typeof CSSContainerRule === "undefined") {
@@ -223,14 +223,14 @@ This lists the condition using either the `conditions` property if it is support
 
 {{EmbedLiveSample("Unnamed container rule","100%","300px")}}
 
-Note that the text in the card should change background color as the width of the page transitions through 650px (but in this example we are most interested in the log).
+Note that the card's `background-color` should change when the container width becomes smaller or larger than `650px`.
 
 ### Named container condition
 
 The example below defines a {{cssxref("@container")}} rule that includes a name and a query, and displays the properties of the associated `CSSContainerRule`.
 
 The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/Reference/At-rules/@container#creating_named_container_contexts).
-Note that we've hidden the HTML, and the logging and feature checking code, as it is the same as in the previous example.
+Note that we've hidden the HTML, logging code, and feature checking code, as they are the same as in the previous example.
 
 ```html hidden
 <pre id="log"></pre>
@@ -325,13 +325,13 @@ The `conditionText` is also logged, and shows the combination of these two strin
 
 {{EmbedLiveSample("Named container condition","100%","300px")}}
 
-The title in the card section should double in size as the width of the page goes over 700px.
+The text in the card `<div>` should double in size as the page width reaches `700px`, and halve as it goes below `700px` again.
 
 ### Multiple container conditions
 
 The example below defines a {{cssxref("@container")}} rule that includes multiple container conditions, and displays the properties of the associated `CSSContainerRule`.
 
-Note that we've hidden the HTML, and the logging and feature checking code, as it is the same as in the previous example.
+Note that we've hidden the HTML, logging code, and feature checking code, as they are the same as in the previous example.
 
 ```html hidden
 <pre id="log"></pre>
