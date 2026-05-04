@@ -592,7 +592,7 @@ Next the data attribute is applied as content using the {{cssxRef("::after")}} p
 
 ```css
 li::after {
-  content: " - £"attr(data-price);
+  content: " - £" attr(data-price);
 }
 ```
 
