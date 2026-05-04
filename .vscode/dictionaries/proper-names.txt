@@ -681,6 +681,7 @@ Yoshi
 Yousafzai
 Yslow
 YubiKey
+YubiKeys
 Yuki
 Yura
 Yusuf

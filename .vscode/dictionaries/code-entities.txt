@@ -67,6 +67,7 @@ audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -234,7 +235,9 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
 fgets
@@ -474,7 +477,6 @@ msword
 mtei
 mths
 multistatus
-myattr
 mymr
 mymrepka
 mymrpao
@@ -618,6 +620,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -655,6 +659,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -759,6 +764,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu
