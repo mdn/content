@@ -43,8 +43,12 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Errors
 
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+  - : A required parameter is missing or has an invalid type.
 - `no such element`
   - : The element reference cannot be resolved to a valid DOM element in the given context.
+- `no such frame`
+  - : No context with the given context ID is found.
 - `unable to set file input`
   - : The element is not an `<input>` element with `type="file"`, the element is disabled, or more than one file path is provided without the `multiple` attribute.
 - `unsupported operation`

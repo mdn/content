@@ -145,6 +145,8 @@ The `result` field in the response is an empty object (`{}`).
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : The action sequence is malformed; for example, if a required field is missing or a field value is of the wrong type.
+- `no such frame`
+  - : No context with the given context ID is found.
 
 ## Examples
 

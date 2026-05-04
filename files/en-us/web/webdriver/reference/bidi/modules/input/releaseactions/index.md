@@ -31,6 +31,13 @@ The `params` field contains:
 
 The `result` field in the response is an empty object (`{}`).
 
+### Errors
+
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+  - : A required parameter is missing or has an invalid type.
+- `no such frame`
+  - : No context with the given context ID is found.
+
 ## Examples
 
 ### Releasing all active inputs
