@@ -69,7 +69,7 @@ The `params` field contains:
         | `"pointer"`                | `"pause"`, `"pointerDown"`, `"pointerUp"`, `"pointerMove"` |
         | `"wheel"`                  | `"pause"`, `"scroll"`                                      |
 
-        The following table shows the additional fields in the `actions` object for each operation type:
+        The following table shows the additional fields in the nested `actions` object for each operation type:
 
         | Operation `type` values | Fields available with this `type` value                                                                              |
         | ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -80,10 +80,11 @@ The `params` field contains:
         | `"pointerMove"`         | [`x`](#x), [`y`](#y), [`duration`](#duration), [`origin`](#origin), [pointer properties](#common_pointer_properties) |
         | `"scroll"`              | [`x`](#x), [`y`](#y), [`deltaX`](#deltax), [`deltaY`](#deltay), [`duration`](#duration), [`origin`](#origin)         |
 
+    The outer `actions` object also supports the following optional field:
     - `parameters` {{optional_inline}}
       - : An object with a `pointerType` field that specifies the pointer device type. Accepted values are `"mouse"` (default), `"pen"`, or `"touch"`. This field is valid only when the input source [`type`](#type) is `"pointer"`.
 
-The following fields are supported depending on the value of the operation `type`:
+The following fields are available in each nested `actions` object, depending on the operation `type`:
 
 - `button`
   - : A non-negative integer that identifies the pointer button (`0` = primary, `1` = middle, `2` = secondary).
@@ -98,13 +99,17 @@ The following fields are supported depending on the value of the operation `type
   - : A non-negative integer that specifies the time in milliseconds.
     Specify this when the `type` field value is `"pause"`, `"pointerMove"`, or `"scroll"`.
 - `origin` {{optional_inline}}
-  - : A string or an object that specifies the origin for the move or scroll. Accepted string values are `"viewport"` and `"pointer"`. For an object, include the following fields:
+  - : A string or an object that specifies the origin for the move or scroll. Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
+
+    If a string, accepted values are:
+    - `"viewport"`: Indicates that the x and y coordinates are relative to the viewport's top-left corner. Use this for absolute positioning within the page. This is the default value for `"scroll"` if `origin` is omitted.
+    - `"pointer"`: Indicates that the x and y coordinates are relative to the current pointer position. Use this for relative moves from where the pointer currently is.
+
+    If an object, include the following fields:
     - `type`
       - : A string set to `"element"`.
     - `element`
-      - : An object containing the ID that uniquely identifies the DOM element to use as the origin. The ID is returned by the browser when you locate the element using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
-
-    Specify this when the `type` field value is `"pointerMove"` or `"scroll"`. For `"scroll"`, `"viewport"` is the default if this field is omitted.
+      - : An object containing the ID that uniquely identifies the DOM element to use as the origin. The ID is returned by the browser when you locate the element using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes), [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
 
 - `value`
   - : A string that contains the key value, such as <kbd>a</kbd>, <kbd>Enter</kbd>, or <kbd>Shift</kbd>.
@@ -122,9 +127,9 @@ The following fields are supported depending on the value of the operation `type
     - `twist` {{optional_inline}}
       - : An integer that specifies the clockwise rotation, in degrees, of the pointer in the range `0`–`359`. See {{domxref("PointerEvent.twist")}}.
     - `altitudeAngle` {{optional_inline}}
-      - : A float that specifies the altitude angle, in radians, of the pointer in the range `0.0`–`1.5707963267948966`. See {{domxref("PointerEvent.altitudeAngle")}}.
+      - : A float that specifies the altitude angle, in radians, of the pointer in the range `0.0`–`π/2`. See {{domxref("PointerEvent.altitudeAngle")}}.
     - `azimuthAngle` {{optional_inline}}
-      - : A float that specifies the azimuth angle, in radians, of the pointer in the range `0.0`–`6.283185307179586`. See {{domxref("PointerEvent.azimuthAngle")}}.
+      - : A float that specifies the azimuth angle, in radians, of the pointer in the range `0.0`–`2π`. See {{domxref("PointerEvent.azimuthAngle")}}.
 - `x`
   - : A number (for `"pointerMove"`) or an integer (for `"scroll"`) that specifies the x-coordinate.
     Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
@@ -146,7 +151,7 @@ The `result` field in the response is an empty object (`{}`).
 ### Clicking an element
 
 Consider a scenario where you want to simulate a mouse click on an element.
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an active session, get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) and the element identifier using [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) and the element identifier using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes).
 Send the following message that uses three sequential steps: moving (`pointerMove`) the pointer to the center of the element (`x: 0, y: 0` relative to the element), pressing (`pointerDown`) the primary mouse button (`0`), and then releasing (`pointerUp`) it.
 
 ```json
@@ -202,7 +207,7 @@ The browser responds as follows:
 ### Scrolling the page
 
 Consider a scenario where you want to simulate scrolling a page down.
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an active session, get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 Send the following message that scrolls from the top-left of the viewport (`x: 0, y: 0`) by `300` CSS pixels downward (`deltaY: 300`) with no horizontal scrolling (`deltaX: 0`).
 
 ```json

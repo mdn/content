@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.input.releaseActions
 sidebar: webdriver
 ---
 
-The `input.releaseActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`input`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input) module releases any held keys or pressed pointer buttons for a given context and resets the session's input state. Call it after [`input.performActions`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input/performActions) to clean up any inputs left in an intermediate state.
+The `input.releaseActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`input`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input) module releases any held keys or pressed pointer buttons for a given context and resets the input state for that context. Call it after [`input.performActions`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input/performActions) to clean up any inputs left in an intermediate state.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ The `input.releaseActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID of the context for which to release inputs.
+  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context for which to release inputs. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
 ### Return value
 
@@ -35,7 +35,7 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Releasing all active inputs
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an active session, send the following message after [`input.performActions`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input/performActions) to release all held keys and pointer buttons and reset the input state:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), send the following message after [`input.performActions`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/input/performActions) to release all held keys and pointer buttons and reset the input state:
 
 ```json
 {
