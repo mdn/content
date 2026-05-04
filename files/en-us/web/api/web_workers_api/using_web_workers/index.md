@@ -182,11 +182,18 @@ The port connection needs to be started either implicitly by use of the `onmessa
 
 ### Shared worker lifetime
 
-Shared workers are shutdown when no windows, iframes or workers are referencing the shared worker.
+Shared workers are shut down when they are no longer referenced by any windows, iframes, or workers.
 
 Browsers _may_ keep workers alive between same-origin navigations to avoid the cost of restarting a shared worker used by a site when the user is navigating from page to page within that site.
 
-The [`extendedLifetime`](/en-US/docs/Web/API/SharedWorker/SharedWorker#extendedlifetime) constructor option extends beyond just that use case to when the shared worker is not immediately reused. For example, when navigating to pages that do not use the shared work or when navigating away from the site completely. This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
+The [`extendedLifetime`](/en-US/docs/Web/API/SharedWorker/SharedWorker#extendedlifetime) constructor option may also be specified to keep a shared worker alive for a short period after all references to it have closed:
+
+```js
+const worker = new SharedWorker("worker.js", { extendedLifetime: true });
+```
+
+This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
+This is more ergonomic than using a service worker for the same purpose.
 
 ### Sending messages to and from a shared worker
 
@@ -336,7 +343,7 @@ this.sendQuery = (queryMethod, ...queryMethodArguments) => {
 };
 ```
 
-We finish QueryableWorker with the `onmessage` method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in `listeners`.:
+We finish QueryableWorker with the `onmessage` method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in `listeners`:
 
 ```js
 worker.onmessage = (event) => {
@@ -405,7 +412,7 @@ onmessage = (event) => {
 };
 ```
 
-Here are the full implementation:
+Here is the full implementation:
 
 **example.html** (the main page):
 
@@ -768,7 +775,7 @@ To open devtools for web workers, you can use the following URLs:
 - Chrome: `chrome://inspect/`
 - Firefox: `about:debugging#/runtime/this-firefox`
 
-These pages show an overview over all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
+These pages show an overview of all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
 
 ## Functions and interfaces available in workers
 
