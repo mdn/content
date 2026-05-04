@@ -10,6 +10,10 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`clone()`** method of the {{domxref("LanguageModel")}} interface creates a copy of the current session, including its full context window state. The cloned session can be used independently without affecting the original.
 
+Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+
+For example, you might build a shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
+
 ## Syntax
 
 ```js-nolint
@@ -33,12 +37,6 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
   - : Thrown if the clone operation fails.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
-
-## Description
-
-The `clone()` method branches a session at a specific point in a conversation. Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
-
-For example, you might build up shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
 
 ## Examples
 

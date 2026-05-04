@@ -8,7 +8,11 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, optionally downloading the model if it is not already available.
+The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, optionally downloading the model if it is not already available. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress using the `monitor` option.
+
+Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
+
+Before calling `create()`, use {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
 
 ## Syntax
 
@@ -25,42 +29,58 @@ LanguageModel.create(options)
       - : A sequence representing the required input modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"` — Plain text content.
-          - `"image"` — Image content.
-          - `"audio"` — Audio content.
-          - `"tool-call"` — A tool invocation issued by the model.
-          - `"tool-response"` — The result of a tool invocation.
+          - `"text"`
+            - : Plain text content.
+          - `"image"`
+            - : Image content.
+          - `"audio"`
+            - : Audio content.
+          - `"tool-call"`
+            - : A tool invocation issued by the model.
+          - `"tool-response"`
+            - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
       - : A sequence representing the required output modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"` — Plain text content.
-          - `"image"` — Image content.
-          - `"audio"` — Audio content.
-          - `"tool-call"` — A tool invocation issued by the model.
-          - `"tool-response"` — The result of a tool invocation.
+          - `"text"`
+            - : Plain text content.
+          - `"image"`
+            - : Image content.
+          - `"audio"`
+            - : Audio content.
+          - `"tool-call"`
+            - : A tool invocation issued by the model.
+          - `"tool-response"`
+            - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-    - `initialPrompts` —
-    - A sequence representing a single message in a conversation with a language model. Options include:
-      - `role` — A string indicating who sent the message. Must be one of:
-        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-        - `"user"` — A message from the user.
-        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
-    - `monitor` — A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
-    - `signal` — An {{domxref("AbortSignal")}} to cancel session creation.
-    - `tools`
-      — A sequence of tools to verify support for. Options include:
-      - `name`
-        - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
-      - `description`
-        - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
-      - `inputSchema`
-        - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
-      - `execute`
-        - : A `LanguageModelToolFunction` callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+    - `initialPrompts`
+      - : A sequence representing a single message in a conversation with a language model. Options include:
+        - `role`
+          - : A string indicating who sent the message. Must be one of:
+            - `"system"`
+              - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+            - `"user"`
+              - : A message from the user.
+            - `"assistant"`
+              - : A message from the model (used for few-shot examples or continued dialogue).
+      - `monitor`
+        - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
+      - `signal`
+        - : An {{domxref("AbortSignal")}} to cancel session creation.
+      - `tools`
+        — A sequence of tools to verify support for. Options include:
+        - `name`
+          - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
+        - `description`
+          - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
+        - `inputSchema`
+          - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
+        - `execute`
+          - : A `LanguageModelToolFunction` callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
@@ -68,22 +88,17 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 
 ### Exceptions
 
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the operation was aborted via the `signal` option.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the language model is unavailable, or if the specified options (such as expected content types or languages) are not supported by the user agent.
+  - : Thrown in the following situations:
+    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+    - The input or output text is in a language the user agent doesn't support for prompting.
+    - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if session initialization fails for any other reason.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the content provided in `initialPrompts` exceeds the model's context window size.
-- `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was aborted via the `signal` option.
-
-## Description
-
-The `create()` method initializes a language model session backed by a browser-provided model. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress using the `monitor` option.
-
-Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
-
-Before calling `create()`, consider using {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
 
 ## Examples
 

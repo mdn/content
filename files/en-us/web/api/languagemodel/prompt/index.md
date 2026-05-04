@@ -10,6 +10,12 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`prompt()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{jsxref("Promise")}} that resolves with the model's complete response as a string.
 
+The `prompt()` method is the primary method for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
+
+For long responses or streaming use cases, use {{domxref("LanguageModel.promptStreaming()")}} instead to receive the response incrementally. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
+
+Each call to `prompt()` adds to the session's context. To branch from a given state without affecting the original session, call {{domxref("LanguageModel.clone()")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -23,15 +29,22 @@ prompt(input, options)
   - : The prompt to send to the model. This is a `LanguageModelPrompt`, which is either:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence representing a single message in a conversation with a language model. Options include:
-      - `role` — A string indicating who sent the message. Must be one of:
-        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-        - `"user"` — A message from the user.
-        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+      - `role`
+        - : A string indicating who sent the message. Must be one of:
+          - `"system"`
+            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+          - `"user"`
+            - : A message from the user.
+          - `"assistant"`
+            - : A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
   - : Options for creating a prompt. Options include:
-    - `responseConstraint` — Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
-    - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
-    - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
+    - `responseConstraint`
+      - : Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+    - `omitResponseConstraintInput`
+      - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
+    - `signal`
+      - : An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value
 
@@ -39,22 +52,17 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} containing the
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if `input` contains a message with `role: "system"`.
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
-- `OperationError` {{domxref("DOMException")}}
-  - : Thrown if the model fails to generate a response for any other reason.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
-
-## Description
-
-The `prompt()` method is the primary method for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
-
-For long responses or streaming use cases, use {{domxref("LanguageModel.promptStreaming()")}} instead to receive the response incrementally. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
-
-Each call to `prompt()` adds to the session's running context. To branch from a given state without affecting the original session, use {{domxref("LanguageModel.clone()")}} first.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown in the following situations:
+    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+    - The input or output text is in a language the user agent doesn't support for prompting.
+    - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the model fails to generate a response for any other reason.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
 
 ## Examples
 

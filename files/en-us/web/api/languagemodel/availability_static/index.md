@@ -10,6 +10,8 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns the availability status of the browser's language model for the given options without creating a session or triggering a download.
 
+Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
+
 ## Syntax
 
 ```js-nolint
@@ -25,25 +27,34 @@ LanguageModel.availability(options)
       - : A sequence representing the required input modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"` — Plain text content.
-          - `"image"` — Image content.
-          - `"audio"` — Audio content.
-          - `"tool-call"` — A tool invocation issued by the model.
-          - `"tool-response"` — The result of a tool invocation.
+          - `"text"`
+            - : Plain text content.
+          - `"image"`
+            - : Image content.
+          - `"audio"`
+            - : Audio content.
+          - `"tool-call"`
+            - : A tool invocation issued by the model.
+          - `"tool-response"`
+            - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
       - : A sequence representing the required output modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"` — Plain text content.
-          - `"image"` — Image content.
-          - `"audio"` — Audio content.
-          - `"tool-call"` — A tool invocation issued by the model.
-          - `"tool-response"` — The result of a tool invocation.
+          - `"text"`
+            - : Plain text content.
+          - `"image"`
+            - : Image content.
+          - `"audio"`
+            - : Audio content.
+          - `"tool-call"`
+            - : A tool invocation issued by the model.
+          - `"tool-response"`
+            - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-
     - `tools`
       — A sequence verifying tool support. Options include:
       - `name`
@@ -59,14 +70,14 @@ LanguageModel.availability(options)
 
 A {{jsxref("Promise")}} that resolves with one of the following `Availability` string values:
 
-- `"available"` — The model is ready to use with the given options.
-- `"downloadable"` — The model can support the given options but requires a download that has not yet started.
-- `"downloading"` — The model can support the given options and a download is currently in progress.
-- `"unavailable"` — The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In which case, the caller should retry or fall back to an alternative implementation.
-
-## Description
-
-Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
+- `"available"`
+  - : The model is ready to use with the given options.
+- `"downloadable"`
+  - : The model can support the given options but requires a download that has not yet started.
+- `"downloading"`
+  - : The model can support the given options and a download is currently in progress.
+- `"unavailable"`
+  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In which case, the caller should retry or fall back to an alternative implementation.
 
 ## Examples
 
@@ -91,7 +102,9 @@ switch (status) {
 }
 ```
 
-### Requesting image input support
+### Requesting input support
+
+This example shows how to determine whether a particular type of input is supported by the model.
 
 ```js
 const status = await LanguageModel.availability({
@@ -100,6 +113,8 @@ const status = await LanguageModel.availability({
 ```
 
 ### Checking availability for a specific language
+
+The following example tests whether the model suports English before asking it to translate Japanes text to English.
 
 ```js
 const status = await LanguageModel.availability({
@@ -137,11 +152,13 @@ if (availability === "unavailable") {
 
 ### Gating UI on availability
 
+The following example enables or disables a translation button based on the availability of a mode. It gives the user the option to download the model if it is not available.
+
 ```js
 const translateButton = document.querySelector("#translate");
 
 const status = await LanguageModel.availability();
-translateButton.disabled = status === "unavailable";
+translateButton.disabled = (status === "unavailable");
 
 if (status === "downloadable" || status === "downloading") {
   translateButton.textContent = "Download model to enable translation";

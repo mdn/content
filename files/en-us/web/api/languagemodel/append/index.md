@@ -8,7 +8,9 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`append()`** method of the {{domxref("LanguageModel")}} interface adds content to the session's context window without generating a model response. It returns a {{jsxref("Promise")}} that resolves when the content has been successfully loaded into context.
+The **`append()`** method of the {{domxref("LanguageModel")}} interface adds content to the session's context window without generating a model response. It returns a {{jsxref("Promise")}} that resolves when the content has been successfully loaded into context. Use this method to preload a context before asking the model a question.
+
+A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` to set the context. You can call the `append()` method at any point during the session's lifetime.
 
 ## Syntax
 
@@ -21,16 +23,27 @@ append(input, options)
 
 - `input`
   - : The content to append to the context window. This is either:
-    - A string — Shorthand for a single message sent for the ["user" role](#user).
-      This is eqivalent to the passed text being inserted in `<input>` field in the message `[{ role: "user", content: [{ type: "text", value: <input> }] }]`.
-    - A sequence representing a single message in a conversation with a language model. Options include:
-      - `role` — A string indicating who sent the message. Must be one of:
-        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-        - `"user"` — A message from the user.
-        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+    - A string — Shorthand for a single message. Sending only a string is equivalent to sending the following with a `"user"` role in the next option: `[{ type: "text", value: "Some string" }]`.
+    - An array of ojbects each of which represents a single message in a conversation with a language model. Options include:
+      - `role`
+        - : A string indicating who sent the message. Must be one of:
+        - `"user"`
+          - : A message from the user.
+        - `"assistant"`
+          - : A message from the model. Use this for few-shot examples or continued dialogue.
+      - `content` — An object containing the text to add to the context.
+        - `type`
+          - : One of `"text"`, `"image"`, `"audio"`, `"tool-call"`, or `"tool-response"`.
+        - `value`
+          - : The actual text of the content to append.
 - `options` {{optional_inline}}
   - : Represents the options that can be passed. Options include:
-    - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
+    - `signal`
+      - : An {{domxref("AbortSignal")}} to cancel the operation. Reasons to cancel an append operation include:
+        - The user cancelled the request or navigated away.
+        - A newer request superseded the old one.
+        - A timeout.
+        - A dependent resource was destroyed.
 
 ### Return value
 
@@ -38,22 +51,22 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if `input` contains a message with `role: "system"`.
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if appending `input` would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
-- `OperationError` {{domxref("DOMException")}}
-  - : Thrown if prefilling fails for any other reason.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
-
-## Description
-
-The `append()` method preloads a context before asking the model a question. A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` with a prompt that is intended only to set context. The `append()` method can be called at any point during the session's lifetime.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown in the following situations:
+    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+    - The input or output text is in a language the user agent doesn't support for prompting.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if prefilling fails for any other reason.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if appending `input` would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
 
 ## Examples
 
-### Loading a document before querying
+### Append context before prompting
+
+This example shows how to append to a context for the user role before calling `prompt()`.
 
 ```js
 const session = await LanguageModel.create();
@@ -68,21 +81,28 @@ const summary = await session.prompt(
 console.log(summary);
 ```
 
-### Appending multiple turns
+### Providing few-shot examples
+
+A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
 
 ```js
-const session = await LanguageModel.create();
+const session = await LanguageModel.create({
+  initialPrompts: [
+    { role: "system", content: "Translate the user's input to French." },
+    { role: "user", content: "Hello" },
+    { role: "assistant", content: "Bonjour" },
+    { role: "user", content: "Goodbye" },
+    { role: "assistant", content: "Au revoir" },
+  ],
+});
 
-await session.append([
-  { role: "user", content: "My project is a task management app." },
-  { role: "assistant", content: "Understood. I'll keep that in mind." },
-]);
-
-const advice = await session.prompt("What database would you recommend?");
-console.log(advice);
+const result = await session.prompt("Good morning");
+console.log(result); // "Bonjour matin" or "Bonjour"
 ```
 
 ### Appending context with an abort signal
+
+An abort signal lets you cancel an append message. The example below passes an {{domxref("AbortSignal")}} to the `signal` member and calls its `abort()` method after 3 seconds.
 
 ```js
 const controller = new AbortController();
@@ -104,6 +124,8 @@ try {
 ```
 
 ### Checking context usage after appending
+
+The code below shows how to log the percentage of tokens used after appending a large amount of context.
 
 ```js
 const session = await LanguageModel.create();

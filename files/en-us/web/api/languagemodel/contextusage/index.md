@@ -8,19 +8,15 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`contextUsage`** read-only property of the {{domxref("LanguageModel")}} interface returns the number of context window tokens currently consumed by this session, including initial prompts and all subsequent turns.
-
-## Value
-
-A number representing the current context window usage in tokens.
-
-## Description
-
-The `contextUsage` provides the total number of tokens the session has consumed in its context window so far. This value increases every time you call {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}}.
+The **`contextUsage`** read-only property of the {{domxref("LanguageModel")}} interface returns the number of context window tokens currently consumed by this session, including initial prompts and all subsequent turns. This value increases every time you call {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}}.
 
 Compare `contextUsage` with {{domxref("LanguageModel.contextWindow")}} to determine how much space remains. When `contextUsage` would exceed `contextWindow`, subsequent method calls throw a `QuotaExceededError` and the `contextoverflow` event fires.
 
 To estimate how many tokens a new prompt would use before sending it, call {{domxref("LanguageModel.measureContextUsage()")}}.
+
+## Value
+
+A number representing the current context window usage in tokens.
 
 ## Examples
 
@@ -36,7 +32,7 @@ console.log(
 );
 ```
 
-### Warning when context is nearly full
+### Warning when the context is nearly full
 
 ```js
 const session = await LanguageModel.create();

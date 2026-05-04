@@ -8,7 +8,9 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state.
+The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state. Think of it as a dry-run that lets you check how much of the context window a given input requires before deciding whether to send it. Compare the result to {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input fits.
+
+This is particularly useful for long-context applications such as document summarization, where you need to split or truncate content to stay within the context window limit.
 
 ## Syntax
 
@@ -23,20 +25,29 @@ measureContextUsage(input, options)
   - : The input to measure. This is a `LanguageModelPrompt`, which is either:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
     - A sequence for multi-turn or multimodal input. Represents a single message in a conversation with a language model. Options include:
-      - `role` — A string indicating who sent the message. Must be one of:
-        - `"system"` — A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
-        - `"user"` — A message from the user.
-        - `"assistant"` — A message from the model (used for few-shot examples or continued dialogue).
+      - `role`
+        - : A string indicating who sent the message. Must be one of:
+          - `"system"`
+            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+          - `"user"`
+            - : A message from the user.
+          - `"assistant"`
+            - : A message from the model (used for few-shot examples or continued dialogue).
   - `content`
     - : The content of the message. This is either:
       - A string — Shorthand for a single text content part. For example: `[{ type: "text", value: providedValue }]`.
       - A sequence of multimodal messages or messages with multiple content parts. Options include:
         - `type` - A string from the `LanguageModelMessageType` enumeration indicating the kind of content. Must be one of:
-          - `"text"` — Plain text content.
-          - `"image"` — Image content.
-          - `"audio"` — Audio content.
-          - `"tool-call"` — A tool invocation issued by the model.
-          - `"tool-response"` — The result of a tool invocation.
+          - `"text"`
+            - : Plain text content.
+          - `"image"`
+            - : Image content.
+          - `"audio"`
+            - : Audio content.
+          - `"tool-call"`
+            - : A tool invocation issued by the model.
+          - `"tool-response"`
+            - : The result of a tool invocation.
         - `value` - The content value. Its type depends on the `type` property:
           - For `"text"`: a {{jsxref("String")}}.
           - For `"image"`: an `ImageBitmapSource` (for example, a {{domxref("Blob")}}, {{domxref("ImageBitmap")}}, {{domxref("HTMLImageElement")}}, {{domxref("HTMLVideoElement")}}, or {{domxref("HTMLCanvasElement")}}).
@@ -46,9 +57,12 @@ measureContextUsage(input, options)
     - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
 - `options` {{optional_inline}}
   - : Options for measuring context usage. Options include:
-    - `responseConstraint` — Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
-    - `omitResponseConstraintInput` — A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
-    - `signal` — An {{domxref("AbortSignal")}} to cancel the operation.
+    - `responseConstraint`
+      - : Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+    - `omitResponseConstraintInput`
+      - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
+    - `signal`
+      - : An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value
 
@@ -56,16 +70,10 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 
 ### Exceptions
 
-- `TypeError`
-  - : Thrown if `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
-
-## Description
-
-The `measureContextUsage()` function is a dry-run measurement that lets you check how much of the context window a given input requires, before deciding whether to send it. Compare the result to {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input fits.
-
-This is particularly useful for long-context applications such as document summarization, where you need to split or truncate content to stay within the context window limit.
+- `TypeError`
+  - : Thrown if `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
 
 ## Examples
 
@@ -145,6 +153,8 @@ console.log(response);
 ```
 
 ### Using multimodal content parts
+
+This example shows how to create a prompt with multiple content types.
 
 ```js
 const imageBitmap = await createImageBitmap(imageElement);
