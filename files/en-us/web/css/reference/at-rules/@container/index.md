@@ -634,5 +634,6 @@ See [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positio
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
+- [`CSSContainerRule`](/en-US/docs/Web/API/CSSContainerRule) API
 - [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)
