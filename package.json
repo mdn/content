@@ -50,9 +50,9 @@
   },
   "devDependencies": {
     "@apideck/better-ajv-errors": "^0.3.7",
-    "@mdn/fred": "2.4.3",
+    "@mdn/fred": "2.6.0",
     "@octokit/rest": "^22.0.1",
-    "ajv": "^8.18.0",
+    "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
     "cheerio": "1.2.0",
