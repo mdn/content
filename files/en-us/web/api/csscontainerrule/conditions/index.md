@@ -73,7 +73,8 @@ function log(text) {
 
 #### HTML
 
-First we define the HTML for a `card` (`<div>`) contained within a `post`.
+First, we define the HTML for a `card` contained within a `post`.
+These are represented by two nested {{htmlelement("div")}} elements.
 
 ```html
 <div class="post">
@@ -87,7 +88,7 @@ First we define the HTML for a `card` (`<div>`) contained within a `post`.
 #### CSS
 
 The CSS for the container element specifies the type of the container, and may also specify a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than 700px, or if the container has the name `other-name`.
+The card has a default font size, which is overridden when it is contained inside a `sidebar` `@container` when its width is greater than or equal to `700px`, or when it is inside a container named `other-name`.
 Note that this condition is contrived to demonstrate how multiple conditions are represented (`other-name` doesn't actually do anything).
 
 ```html

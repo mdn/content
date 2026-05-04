@@ -35,7 +35,7 @@ If no name is defined, or if the rule defines multiple container conditions, thi
 
 ### Basic usage
 
-The example below defines a {{cssxref("@container")}} rule that has just one container condition, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
+The example below defines a {{cssxref("@container")}} rule with a single container condition, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
 The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/Reference/At-rules/@container#creating_named_container_contexts).
 
 ```html hidden
@@ -61,7 +61,8 @@ function log(text) {
 
 #### HTML
 
-First we define the HTML for a `card` (`<div>`) contained within a `post`.
+First, we define the HTML for a `card` contained within a `post`.
+These are represented by two nested {{htmlelement("div")}} elements.
 
 ```html
 <div class="post">
@@ -74,8 +75,8 @@ First we define the HTML for a `card` (`<div>`) contained within a `post`.
 
 #### CSS
 
-The CSS for the container element specifies the type of the container, and may also specify a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than 700px.
+The CSS for the container element specifies the type of the container along with a name.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if the `width` is greater than `700px`.
 
 ```html
 <style id="example-styles">
@@ -172,8 +173,7 @@ function log(text) {
 
 #### CSS
 
-The CSS for the container element specifies the type of the container, and may also specify a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than 700px or if the container has the name `other-name`.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if the `width` is greater than `700px` or if the container has the name `other-name`.
 Note that this condition is contrived to demonstrate the effect of multiple conditions (it does not affect the behavior of the example).
 
 ```html

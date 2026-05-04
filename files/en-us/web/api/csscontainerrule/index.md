@@ -136,7 +136,8 @@ function log(text) {
 
 #### HTML
 
-First we define the HTML for a `card` (`<div>`) contained within a `post`.
+First, we define the HTML for a `card` contained within a `post`.
+These are represented by two nested {{htmlelement("div")}} elements.
 
 ```html
 <div class="post">
@@ -263,8 +264,8 @@ function log(text) {
 
 #### CSS
 
-As described in {{cssxref("@container")}}, the CSS for the container element specifies the type of the container, and may also specify a name for the container.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the minimum width is greater than 700px.
+In this example, the {{cssxref("@container")}} specifies a name for the container — `sidebar`, as well as the container type.
+The card has a default font size, which is overridden when it is contained inside a `sidebar` `@container` when its width is greater than or equal to `700px`.
 
 ```html
 <style id="example-styles">
