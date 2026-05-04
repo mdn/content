@@ -35,6 +35,7 @@ The `params` field contains:
         This field is required when `type` is `"allowed"`.
 - `userContexts` {{optional_inline}}
   - : An array of strings where each string is the ID ([UUID](/en-US/docs/Glossary/UUID)) of a [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) to apply the download behavior to.
+    User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
     - If included, the specified download behavior is applied to each listed user context. If `downloadBehavior` is `null`, the per-context override is reset for each listed user context.
     - If not included, the specified download behavior is applied as a global default to all user contexts.
 
