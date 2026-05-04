@@ -158,7 +158,7 @@ The following example enables or disables a translation button based on the avai
 const translateButton = document.querySelector("#translate");
 
 const status = await LanguageModel.availability();
-translateButton.disabled = (status === "unavailable");
+translateButton.disabled = status === "unavailable";
 
 if (status === "downloadable" || status === "downloading") {
   translateButton.textContent = "Download model to enable translation";
