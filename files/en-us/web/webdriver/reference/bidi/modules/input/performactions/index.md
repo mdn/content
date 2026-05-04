@@ -41,6 +41,7 @@ The `params` field contains:
 - `actions`
   - : An array of objects, each representing an input source (`"key"`, `"pointer"`, or `"wheel"`) and the actions to perform for that source.
     All input sources are processed in parallel.
+    In each tick (step), every input source performs one action simultaneously or does nothing if assigned a `"pause"` action.
     This allows combining input sources, for example, holding <kbd>Shift</kbd> while clicking.
 
     Each `actions` object has the following fields:
@@ -97,7 +98,8 @@ The following fields are available in each nested `actions` object, depending on
     Specify this when the `type` field value is `"scroll"`.
 - `duration` {{optional_inline}}
   - : A non-negative integer that specifies the time in milliseconds.
-    Specify this when the `type` field value is `"pause"`, `"pointerMove"`, or `"scroll"`.
+    This value determines the number of ticks into which the action is divided; for example, a `"pointerMove"` with a 100 ms duration gets split across multiple ticks, each tick moving the pointer a fraction of the distance.
+    Specify `duration` when the `type` field value is `"pause"`, `"pointerMove"`, or `"scroll"`.
 - `origin` {{optional_inline}}
   - : A string or an object that specifies the origin for the move or scroll. Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
 
@@ -144,7 +146,7 @@ The `result` field in the response is an empty object (`{}`).
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : The action sequence is malformed; for example, if a required field is missing or a field value is of the wrong type.
+  - : The action sequence is malformed; for example, if a required field is missing, a field value is of the wrong type, or an input source `type` value is not `"none"`, `"key"`, `"pointer"`, or `"wheel"`.
 - `no such frame`
   - : No context with the given context ID is found.
 
