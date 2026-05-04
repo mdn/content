@@ -45,6 +45,8 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Errors
 
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+  - : A required parameter is missing or has an invalid type.
 - `unsupported operation`
   - : The browser does not support the specified download behavior.
 - `no such user context`

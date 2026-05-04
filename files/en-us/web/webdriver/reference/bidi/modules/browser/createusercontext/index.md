@@ -41,6 +41,8 @@ The following field in the `result` object of the response describes the created
 
 ### Errors
 
+- [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
+  - : A required parameter is missing or has an invalid type.
 - `unsupported operation`
   - : `acceptInsecureCerts` is `true` but the browser does not support accepting insecure TLS connections, or `proxy` is specified but the browser cannot configure proxy settings for this user context or cannot apply the given proxy configuration.
 
