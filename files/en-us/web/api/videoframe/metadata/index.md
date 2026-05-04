@@ -3,10 +3,12 @@ title: "VideoFrame: metadata() method"
 short-title: metadata()
 slug: Web/API/VideoFrame/metadata
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.VideoFrame.metadata
 ---
 
-{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`metadata()`** method of the {{domxref("VideoFrame")}} interface returns the metadata associated with the frame.
 
