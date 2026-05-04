@@ -68,7 +68,7 @@ Note that since this method always sanitizes input strings of XSS-unsafe entitie
 
 ## Re-parsing and mutated XSS (mXSS)
 
-Sanitizing HTML with the Sanitizer API or using `Element.prototype.setHTML()` helps remove unsafe nodes and attributes, but it does not eliminate the risk of mutated XSS (mXSS) when the sanitized HTML is serialized and later re-parsed. If sanitized HTML is serialized (for example via `innerHTML`) and later re-parsed by the browser, parsing-time transformations can re-introduce executable content or attributes that the sanitizer did not anticipate.
+Sanitizing HTML with the Sanitizer API or using `setHTML()` helps remove unsafe nodes and attributes, but it does not eliminate the risk of mutated XSS (mXSS) when the sanitized HTML is serialized and later re-parsed. If sanitized HTML is serialized (for example via `innerHTML`) and later re-parsed by the browser, parsing-time transformations can re-introduce executable content or attributes that the sanitizer did not anticipate.
 
 Example — unsafe flow
 
