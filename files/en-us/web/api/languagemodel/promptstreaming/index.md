@@ -28,7 +28,7 @@ promptStreaming(input, options)
           - `"system"`
             - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
           - `"user"`
-            - :  message from the user.
+            - : message from the user.
           - `"assistant"`
             - : A message from the model (used for few-shot examples or continued dialogue).
 - `options` {{optional_inline}}
