@@ -15,22 +15,33 @@ sidebar:
     children:
       - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/browser
-        link: /Web/WebDriver/Reference/BiDi/Modules/browser
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
         details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browser#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/log
-        link: /Web/WebDriver/Reference/BiDi/Modules/log
+      - link: /Web/WebDriver/Reference/BiDi/Modules/log
         details: closed
         code: true
+        children:
+          - type: section
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
