@@ -53,8 +53,10 @@ new SharedWorker(url, options)
     - `extendedLifetime`
       - : A boolean indicating whether the shared worker is allowed to remain alive for a short period after all pages using it have been navigated away from or closed.
 
-        This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
+        This is provided to allow work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
         The exact time that the worker is kept alive depends on the browser, and could be anywhere between 10 seconds and 5 minutes (Chrome uses 30 seconds).
+        
+        For more information see [Shared worker lifetime](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#shared_worker_lifetime) in _Using web workers_.    
 
     - `sameSiteCookies`
       - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) should be available to the worker.
