@@ -7,15 +7,17 @@ browser-compat: css.properties.position-anchor
 sidebar: cssref
 ---
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the default **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property), which is used by {{cssxref("position-area")}}, {{cssxref("position-try")}}, and (by default) all anchor functions ({{cssxref("anchor()")}} and {{cssxref("anchor-size()")}}) applied to this element.
 
 ## Syntax
 
 ```css
 /* Single values */
+position-anchor: normal;
 position-anchor: auto;
 position-anchor: none;
 position-anchor: --anchor-name;
+position-anchor: match-parent;
 
 /* Global values */
 position-anchor: inherit;
@@ -27,14 +29,20 @@ position-anchor: unset;
 
 ### Values
 
+- `normal`
+  - : If {{cssXRef("position-area")}} is `none`, behaves as `none`. Otherwise, behaves as `auto`.
+
 - `auto`
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
 
 - `none`
-  - : The initial (default) value. The positioned element is not associated with an anchor element.
+  - : The positioned element is not associated with an anchor element.
 
 - {{cssxref("dashed-ident")}}
   - : The name of the anchor element to associate the positioned element with, as listed in the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
+
+- `match-parent`
+  - : Uses the same default anchor element as the parent ​or originating element, if this is a [pseudo-element](/en-US/docs/Glossary/Pseudo-element) ​if any, and if that would be an acceptable anchor element. Otherwise it has no default anchor element.
 
 ## Description
 
