@@ -11,6 +11,14 @@ browser-compat: api.CSSContainerRule.containerName
 The read-only **`containerName`** property of the {{domxref("CSSContainerRule")}} interface represents the name of the container condition for a container rule that only defines one container condition.
 If there are multiple container conditions, the value is set to the empty string.
 
+## Value
+
+A string that contains the name of the container condition defined in a container rule, but only if it has just one container condition defined.
+
+If no name is defined, or if the rule defines multiple container conditions, this is the empty string (`""`).
+
+## Description
+
 This property reflects the value of the name part of the container condition in a corresponding {{cssxref("@container")}} at-rule that has just one container condition.
 
 For example, the value of `containerName` for the {{cssxref("@container")}} below is `sidebar`:
@@ -23,13 +31,7 @@ For example, the value of `containerName` for the {{cssxref("@container")}} belo
 
 > [!NOTE]
 > This value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used on supporting browsers.
-> Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions, and no corresponding `CSSContainerRule` can be created.
-
-## Value
-
-A string that contains the name of the container condition defined in a container rule, but only if it has just one container condition defined.
-
-If no name is defined, or if the rule defines multiple container conditions, this is the empty string (`""`).
+> Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions.
 
 ## Examples
 

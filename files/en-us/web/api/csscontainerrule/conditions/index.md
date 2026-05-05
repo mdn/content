@@ -8,7 +8,21 @@ browser-compat: api.CSSContainerRule.conditions
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`conditions`** property of the {{domxref("CSSContainerRule")}} interface represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects.
+The read-only **`conditions`** property of the {{domxref("CSSContainerRule")}} interface represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects, where each object represents a single container condition.
+
+## Value
+
+An array of objects where each object has the form:
+
+```js
+{ name: "<container-name>", query: "<container-query>" };
+```
+
+Either the `name` or `query` may be the empty string, but not both.
+
+## Description
+
+The **`conditions`** property represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects.
 
 Each object represents a container condition as a `name` string property and a `query` string property, either of which may be the empty string if not defined.
 The `name` represents the name of a container, and the `query` string represents the set of feature tests that must all be true for the particular container condition to match.
@@ -29,16 +43,6 @@ The `conditions` would be an array like this:
   { name: "", query: "(height >= 400px)" },
 ];
 ```
-
-## Value
-
-An array of objects where each object has the form:
-
-```js
-{ name: "<container-name>", query: "<container-query>" };
-```
-
-Either the `name` or `query` may be the empty string, but not both.
 
 ## Examples
 

@@ -11,6 +11,15 @@ browser-compat: api.CSSContainerRule.containerQuery
 The read-only **`containerQuery`** property of the {{domxref("CSSContainerRule")}} interface represents the query part of the container condition for a container rule that only defines one container condition.
 If there are multiple container conditions, the value is set to the empty string.
 
+## Value
+
+A string that contains the query part of the container condition defined in a container rule, but only if it has just one container condition defined.
+Note that the value may not be identical to the original string, as normalizations such as removing whitespace may happen.
+
+If no query is defined, or if the rule defines multiple container conditions, this is the empty string (`""`).
+
+## Description
+
 This property reflects the value of the query part of the container condition in a corresponding {{cssxref("@container")}} at-rule that has just one container condition.
 
 For example, the value of `containerQuery` for the {{cssxref("@container")}} below is `(width >= 700px)`:
@@ -23,14 +32,7 @@ For example, the value of `containerQuery` for the {{cssxref("@container")}} bel
 
 > [!NOTE]
 > This value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used on supporting browsers.
-> Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions, and no corresponding `CSSContainerRule` can be created.
-
-## Value
-
-A string that contains the query part of the container condition defined in a container rule, but only if it has just one container condition defined.
-Note that the value may not be identical to the original string, as normalizations such as removing whitespace may happen.
-
-If no query is defined, or if the rule defines multiple container conditions, this is the empty string (`""`).
+> Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions.
 
 ## Examples
 

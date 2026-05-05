@@ -64,7 +64,7 @@ The `conditions` property for the `@container` example above would look like thi
 ];
 ```
 
-The `containerName` and `containerQuery` properties predate support for container rules with multiple container conditions. 
+The `containerName` and `containerQuery` properties predate support for container rules with multiple container conditions.
 For a container rule with a _single container condition_ they contain the name and query of that condition (mirroring the `name` and `query` properties of the object in the `conditions` array).
 For a container rule with multiple conditions they are both set to the empty string.
 
@@ -79,8 +79,7 @@ You can also get the text for the whole condition using {{domxref("CSSConditionR
 
 Feature testing can be complicated because you may need to handle the cases where `CSSContainerRule` or `CSSContainerRule.conditions` are not supported, and also the particular case where `conditions` is not supported but multiple container conditions have been specified in the CSS.
 
-This code shows how you can do it.
-The code assumes that you have already obtained `containerRule`, a `CSSContainerRule` instance that corresponds to an `@container` rule defined in the page CSS (the next example shows how you might do this).
+This code shows how you can do it, assuming that you have already obtained `containerRule`, a `CSSContainerRule` instance that corresponds to an `@container` rule defined in the page CSS (the next example shows how you might get `containerRule`).
 
 ```js
 if (typeof CSSContainerRule === "undefined") {
