@@ -1,6 +1,6 @@
 ---
-title: session.new command
-short-title: session.new
+title: "`session.new` command"
+short-title: new
 slug: Web/WebDriver/Reference/BiDi/Modules/session/new
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.new

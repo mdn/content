@@ -28,6 +28,10 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
@@ -39,6 +43,7 @@ sidebar:
         code: true
         children:
           - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/log#events
             title: Events
           - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
             code: true
@@ -48,11 +53,23 @@ sidebar:
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/session
-        link: /Web/WebDriver/Reference/BiDi/Modules/session
+      - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/session#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/subscribe
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/storage
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
