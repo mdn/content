@@ -11,7 +11,7 @@ browser-compat: api.NavigationTransition.committed
 The **`committed`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns a {{jsxref("Promise")}} that fulfills at the same time the {{domxref("Navigation.currentEntry")}} and URL displayed in the browser change to reflect that the navigation is committed. This happens after all of the navigation's [precommit handlers](/en-US/docs/Web/API/NavigateEvent/intercept#handling_precommit_actions_with_precommithandler) are fulfilled.
 
-The `committed` promise rejects if any of the precommit handlers reject.
+The `committed` promise rejects if any precommit handler rejects.
 
 ## Value
 
