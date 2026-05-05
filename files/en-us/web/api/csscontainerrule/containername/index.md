@@ -210,7 +210,7 @@ const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 ```
 
-The code is slightly different than in the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
+The code is slightly different from the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
 Instead we only log the value of `containerName` if the browser supports multiple container conditions.
 
 ```js

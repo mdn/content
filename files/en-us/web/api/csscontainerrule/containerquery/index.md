@@ -65,7 +65,7 @@ function log(text) {
 #### HTML
 
 First, we define the HTML for a `card` contained within a `post`.
-They are represented by two nested {{htmlelement("div")}} elements.
+These are represented by two nested {{htmlelement("div")}} elements.
 
 ```html
 <div class="post">
@@ -211,7 +211,7 @@ const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 ```
 
-The code is slightly different than in the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
+The code is slightly different from the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
 Instead we only log the value of `containerQuery` if the browser supports multiple container conditions.
 
 ```js
@@ -253,6 +253,7 @@ If it does, then the value of `containerQuery` is the empty string.
 
 ## See also
 
+- CSS {{cssxref("container")}} shorthand property
 - [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
 - [Container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)

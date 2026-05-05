@@ -36,7 +36,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 A `CSSContainerRule` object represents a {{cssxref("@container")}} rule.
 
 A `@container` rule defines one or more comma-separated _container conditions_.
-Each container condition consists of at least one of a "name" and "query", where the "name" indicates the `id` of the container to which the condition applies and the "query" specifies one or more logically combined feature checks on the properties of a container.
+Each container condition consists of at least one of a "name" and "query", where the "name" indicates the name of the container to which the condition applies and the "query" specifies one or more logically combined feature checks on the properties of a container.
 If any of the container conditions match a container, the indicated styles are applied.
 
 > [!NOTE]
@@ -224,7 +224,7 @@ if (typeof CSSContainerRule === "undefined") {
 The example output is shown below.
 This lists the condition using either the `conditions` property if it is supported or `containerName`/`containerQuery` if it is not.
 
-{{EmbedLiveSample("Unnamed container rule","100%","300px")}}
+{{EmbedLiveSample("Unnamed container condition","100%","300px")}}
 
 Note that the card's `background-color` should change when the container width becomes smaller or larger than `650px`.
 

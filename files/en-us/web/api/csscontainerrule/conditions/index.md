@@ -119,7 +119,7 @@ Note that this condition is contrived to demonstrate how multiple conditions are
 
 The code below gets the {{domxref("HTMLStyleElement")}} associated with the example using its `id`, and then uses its `sheet` property to get the {{domxref("StyleSheet")}}.
 From the `StyleSheet` we get the set of `cssRules` added to the sheet.
-Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2"), in the `cssRules`.
+Since we added the `@container` as the third rule above, we can access the associated `CSSContainerRule` using the third entry (index "2") in the `cssRules`.
 
 ```js
 const exampleStylesheet = document.getElementById("example-styles").sheet;
@@ -143,7 +143,7 @@ if ("conditions" in CSSContainerRule.prototype) {
 
 > [!NOTE]
 > On browsers that don't support `conditions`, you may be able to use {{domxref("CSSContainerRule.containerName")}} and {{domxref("CSSContainerRule.containerQuery")}}, provided that the `@container` only specifies one container condition.
-> For more information see the [Feature testing](/en-US/docs/Web/API/CSSContainerRule#feature_testing) example in `CSSContainerRule`.
+> For more information, see the [Feature testing](/en-US/docs/Web/API/CSSContainerRule#feature_testing) example in `CSSContainerRule`.
 
 #### Results
 
