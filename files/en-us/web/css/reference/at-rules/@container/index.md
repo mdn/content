@@ -565,7 +565,7 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-### Container style queries range syntax
+### Container style range queries
 
 The range syntax of _container style query_ is a `@container` query that compares a `<style-feature>` to a value.
 
