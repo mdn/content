@@ -369,7 +369,7 @@ function log(text) {
 
 #### CSS
 
-The `@container` declaration here defines two container conditions, and will match if either is true.
+The `@container` declaration here defines two container conditions; it will match a container if either condition is true.
 
 ```html
 <style id="example-styles">
@@ -426,7 +426,7 @@ if (typeof CSSContainerRule === "undefined") {
 
 The example output is shown below.
 Browsers that support the `conditions` property will show both conditions.
-Those that do not will note that the multiple conditions cannot be parsed.
+Those that do not will log a note that the multiple conditions cannot be parsed.
 
 {{EmbedLiveSample("Multiple container conditions","100%","300px")}}
 
