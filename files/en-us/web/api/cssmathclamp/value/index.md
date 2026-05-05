@@ -30,5 +30,4 @@ To do
 ## See also
 
 - {{domxref("CSSMathClamp.lower")}}
-- {{domxref("CSSMathClamp.value")}}
 - {{domxref("CSSMathClamp.upper")}}

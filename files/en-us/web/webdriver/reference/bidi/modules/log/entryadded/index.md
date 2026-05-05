@@ -40,12 +40,12 @@ All log entry objects include the following fields:
   - : A non-negative integer that represents the time when the log entry was created, in UTC, as milliseconds elapsed since the epoch ({{jsxref("Date.now()")}}).
 - `type`
   - : A string that identifies the source of the log entry. It has one of the following values:
-    - `"console"`: Indicates that the log entry was generated from a call to a console API method (for example, {{domxref("console/log_static", "console.log()")}}, {{domxref("console/warn_static", "console.warn()")}}). Log entry objects of this type include [additional fields](#console-entry-fields).
+    - `"console"`: Indicates that the log entry was generated from a call to a console API method (for example, {{domxref("console/log_static", "console.log()")}}, {{domxref("console/warn_static", "console.warn()")}}). Log entry objects of this type include [additional fields](#console_log_entry_fields).
     - `"javascript"`: Indicates that the log entry was generated from an unhandled JavaScript error.
 
 ### `"console"` log entry fields
 
-In addition to the [common fields](#common-fields), log entry objects with `"type": "console"` also include:
+In addition to the [common fields](#common_fields), log entry objects with `"type": "console"` also include:
 
 - `args`
   - : An array of objects that represent the arguments passed to the console method. Each object has a `type` field (such as `"string"`, `"number"`, `"boolean"`, or `"array"`) and optional `value`, `handle`, and `internalId` fields.
