@@ -30,11 +30,13 @@ If a website has loaded after a browser "cold start" or session restore, its pag
 > [!NOTE]
 > Device factors such as CPU do not contribute to the performance assessment. Other factors than browser "cold start" and session restore may be taken into account in future updates.
 
-This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors.
+This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors. There is often a significant difference between real-world dashboard metrics and performance observations in page profiling tools.
 
 ### Interpreting confidence data
 
 Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates, to improve consistency of data, cut down on compound errors, and generally produce more realistic and reliable results. The procedures below illustrate how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics based on the confidence data.
+
+Once you have debiased the data and computed realistic summary statistics, you can focus on measuring and improving performance for issues under your control.
 
 #### Computing debiased means
 
