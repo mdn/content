@@ -27,7 +27,7 @@ None ({{jsxref("undefined")}}).
 
 ## Description
 
-When an SPA view transition is started via {{domxref("Document.startViewTransition()")}}, the browser automatically constructs a [pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree) to display and animate outgoing and inbound changes to the DOM. This tree is constructed when the view transition starts animating and destroyed when the animations associated with all view transition pseudo-elements are in the finished state ({{domxref("ViewTransition.finished", "finished")}} is resolved).
+When a same-document view transition is started (typically via {{domxref("Document.startViewTransition()")}}), the browser automatically constructs a [pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree) to display and animate outgoing and inbound changes to the DOM. This tree is constructed when the view transition starts animating and is destroyed when the animations associated with all view transition pseudo-elements reach the finished state ({{domxref("ViewTransition.finished", "finished")}} is resolved).
 
 This works fine in most cases, however, some advanced use cases benefit from the pseudo-tree persisting beyond the animation finish state. This can be achieved using the `waitUntil()` method, which is passed a {{jsxref("Promise")}} as an argument. Calling `waitUntil()` causes the pseudo-tree to persist until the promise is resolved. At this point the `finished` promise also resolves.
 
