@@ -129,9 +129,9 @@ if ("conditions" in CSSContainerRule.prototype) {
 
 The example output is shown below.
 The log section lists the name of the only container condition using `containerName`.
-It shows the name and query using the `conditions` property if supported on this browser.
+It also shows the name and query using the `conditions` property, if supported.
 
-{{EmbedLiveSample("Basic usage","100%","250px")}}
+{{EmbedLiveSample("Basic usage","100%","300px")}}
 
 Note that the text in the card `<div>` should double in size as the container `width` reaches `700px`, and will halve again as the `width` goes back down below `700px`.
 

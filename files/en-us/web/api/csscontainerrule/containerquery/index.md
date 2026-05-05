@@ -130,7 +130,7 @@ if ("conditions" in CSSContainerRule.prototype) {
 
 The example output is shown below.
 The log section lists the query of the only container condition using `containerQuery`.
-It shows the name and query using the `conditions` property if supported on this browser.
+It also shows the name and query using the `conditions` property, if supported.
 
 {{EmbedLiveSample("Basic usage","100%","250px")}}
 

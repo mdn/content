@@ -18,7 +18,7 @@ _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxr
 - {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}}
   - : Returns an array of objects, each of which specifies a container condition in a {{cssxref("@container")}} rule.
     The objects have a `name` string property and a `query` string property, either of which may be the empty string if not defined.
-    The `name` represents the name of a container, and the `query` string represents the set of feature tests that must all be true for the particular condition to apply.
+    The `name` represents the name of a container, and the `query` represents the set of feature tests that must all be true for the particular condition to apply.
 - {{domxref("CSSContainerRule.containerName")}} {{ReadOnlyInline}}
   - : Returns a string representing the name of the first container condition of a {{cssxref("@container")}}, when there is just one condition.
     If there are multiple container conditions, or if there is just one condition that does not specify a name, this is the empty string.
@@ -33,7 +33,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 
 ## Description
 
-`CSSContainerRule` represents a {{cssxref("@container")}} rule.
+A `CSSContainerRule` object represents a {{cssxref("@container")}} rule.
 
 A `@container` rule defines one or more comma-separated _container conditions_.
 Each container condition consists of at least one of a "name" and "query", where the "name" indicates the `id` of the container to which the condition applies and the "query" specifies one or more logically combined feature checks on the properties of a container.
@@ -44,7 +44,7 @@ If any of the container conditions match a container, the indicated styles are a
 > This affects how `CSSContainerRule` and `@container` are used.
 
 A contrived example consisting of three conditions is shown below.
-This will match: a container named `main-content` if its width is between 600px and 800px, any container that has a height greater than 800px, or any container named `other-content`.
+This will match a container named `main-content` if its width is between `600px` and `800px`, any container that has a height greater than `800px`, or any container named `other-content`.
 
 ```css
 @container main-content (width > 600px) and (width < 800px), (height > 800px), other-content {
@@ -64,8 +64,9 @@ The `conditions` property for the `@container` example above would look like thi
 ];
 ```
 
-The `containerName` and `containerQuery` properties contain the name and query, respectively, for a container rule with a _single_ container condition.
-On browsers that support the `conditions` property, these are set to the empty string if there are multiple conditions, or the value of the only entry in `conditions` if there is a single entry.
+The `containerName` and `containerQuery` properties predate support for container rules with multiple container conditions. 
+For a container rule with a _single container condition_ they contain the name and query of that condition (mirroring the `name` and `query` properties of the object in the `conditions` array).
+For a container rule with multiple conditions they are both set to the empty string.
 
 Note that on browsers that don't support multiple conditions, an `@container` with multiple conditions cannot be parsed, and so no corresponding `CSSContainerRule` will be created.
 
