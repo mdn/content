@@ -20,7 +20,7 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### HTML
 
-- The [`shadowrootslotassignment` attribute](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) is now supported on {{htmleelement("template")}} elements, allowing declarative definition of slot assignment behavior for shadow roots.
+- The [`shadowrootslotassignment` attribute](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) is now supported on {{htmlelement("template")}} elements, allowing declarative definition of slot assignment behavior for shadow roots.
   The attribute is reflected in JavaScript by {{domxref("ShadowRoot.slotAssignment")}} or {{domxref("HTMLTemplateElement.shadowRootSlotAssignment")}}
   ([Firefox bug 2031295](https://bugzil.la/2031295), [Firefox bug 2023824](https://bugzil.la/2023824)).
 
