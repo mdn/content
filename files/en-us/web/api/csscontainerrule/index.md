@@ -68,7 +68,8 @@ The `containerName` and `containerQuery` properties predate support for containe
 For a container rule with a _single container condition_ they contain the name and query of that condition (mirroring the `name` and `query` properties of the object in the `conditions` array).
 For a container rule with multiple conditions they are both set to the empty string.
 
-Note that on browsers that don't support multiple conditions, an `@container` with multiple conditions cannot be parsed, and so no corresponding `CSSContainerRule` will be created.
+Note that browsers that don't support the `conditions` property only allow container rules with a single container condition.
+An `@container` with multiple container conditions will not be parsed, and no corresponding `CSSContainerRule` will be created.
 
 You can also get the text for the whole condition using {{domxref("CSSConditionRule.conditionText")}}.
 
@@ -76,10 +77,10 @@ You can also get the text for the whole condition using {{domxref("CSSConditionR
 
 ### Feature testing
 
-Feature testing can be complicated because you may need to handle the cases where `CSSContainerRule` and/or `CSSContainerRule.conditions` are not defined, and also the case where `CSSContainerRule.conditions` is not defined but multiple container conditions have been specified in the CSS.
+Feature testing can be complicated because you may need to handle the cases where `CSSContainerRule` or `CSSContainerRule.conditions` are not supported, and also the particular case where `conditions` is not supported but multiple container conditions have been specified in the CSS.
 
 This code shows how you can do it.
-Note that `containerRule` is a `CSSContainerRule` representing the container rule, and that we prefer to use the information in `CSSContainerRule.conditions` if it is defined, rather than that in `containerName` and `containerQuery`.
+The code assumes that you have already obtained `containerRule`, a `CSSContainerRule` instance that corresponds to an `@container` rule defined in the page CSS (the next example shows how you might do this).
 
 ```js
 if (typeof CSSContainerRule === "undefined") {
@@ -106,6 +107,8 @@ if (typeof CSSContainerRule === "undefined") {
   log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 }
 ```
+
+Note that if it is defined, we prefer to use the information in `CSSContainerRule.conditions` rather than `containerName` and `containerQuery`.
 
 ### Unnamed container condition
 
