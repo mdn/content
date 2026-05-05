@@ -48,6 +48,9 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 - `subgroup_uniformity`
   - : When available, changes the scope of the uniformity analysis for the subgroup and quad built-in functions to the subgroup level (instead of the workgroup level). This feature allows subgroup functionality to be considered uniform in more cases, improving usability for developers and reducing the need to disable uniformity checks altogether. A practical implication is that more values are considered subgroup-uniform, such as the [`subgroup_id`](https://gpuweb.github.io/gpuweb/wgsl/#built-in-values-subgroup_id) built-in value. See [WGSL subgroup_uniformity extension](https://developer.chrome.com/blog/new-in-webgpu-145#wgsl_subgroup_uniformity_extension) for more details.
 
+- `texture_and_sampler_let`
+  - When available, allows WGSL shaders to store texture and sampler objects in `let` declarations.
+
 - `uniform_buffer_standard_layout`
   - : When available, uniform buffers use the same [memory layout constraints](https://gpuweb.github.io/gpuweb/wgsl/#address-space-layout-constraints) as storage buffers, which makes it easier to share data structures across both kinds of buffers. This means uniform buffers are no longer required to have 16-byte alignment on array elements, or to pad nested structure offsets to a multiple of 16 bytes.
 

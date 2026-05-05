@@ -47,7 +47,7 @@ window.crashReport.initialize(1024).then(() => {
   // Set a possible crash-causing value, and try
   // running an operation that may cause a crash
   window.crashReport.set("crash-arg", "00031");
-  operationThatMightCrash(00031);
+  operationThatMightCrash("00031");
   // Delete the key-value pair if it doesn't cause a crash
   window.crashReport.delete("crash-arg");
 });
