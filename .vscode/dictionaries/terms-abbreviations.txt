@@ -204,6 +204,7 @@ equirect
 equirectangular
 ESSL
 ETSI
+exfiltrates
 exfiltrating
 EXIF
 expando

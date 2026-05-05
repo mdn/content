@@ -352,17 +352,17 @@ Your finished HTML should look like this:
             <option value="papa">Papa bear</option>
             <option value="mama">Mama bear</option>
             <option value="junior">Junior</option>
-            <option value="randy">Cousin Randy</option>
+            <option value="dozer">Dozer</option>
           </select>
         </div>
 
         <div class="separator">
           <label for="greeting">Which greeting did you prefer?</label>
           <select name="greeting" id="greeting">
-            <option value="papa">Wave</option>
-            <option value="mama">Friendly greeting</option>
-            <option value="junior">Growl</option>
-            <option value="randy">Claw marks in the door</option>
+            <option value="wave">Wave</option>
+            <option value="friendly">Friendly greeting</option>
+            <option value="growl">Growl</option>
+            <option value="claw">Claw marks in the door</option>
           </select>
         </div>
       </div>
