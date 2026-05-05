@@ -28,7 +28,7 @@ requestAdapter(options)
         - `core`
           - : The default value. Specifies that the `GPUAdapter` will support all core WebGPU features and limits, which allows applications to support devices with modern platform graphics APIs. This is referred to as "core" WebGPU. Adapters that support core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}).
         - `compatibility`
-          - : Specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This setting opts WebGPU into [compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode).
+          - : Specifies that the `GPUAdapter` supports a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This setting opts WebGPU into [compatibility mode](/en-US/docs/Web/API/WebGPU_API#webgpu_compatibility_mode).
     - `powerPreference` {{optional_inline}}
       - : An enumerated value that can be used to provide a hint to the user agent indicating what class of adapter should be chosen from the system's available adapters. Available values are:
         - `undefined` (or not specified)
