@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: maxlength"
+title: "`maxlength` HTML attribute"
 short-title: maxlength
 slug: Web/HTML/Reference/Attributes/maxlength
 page-type: html-attribute

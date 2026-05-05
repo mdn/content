@@ -1,5 +1,6 @@
 ---
-title: view-transition-name
+title: "`view-transition-name` CSS property"
+short-title: view-transition-name
 slug: Web/CSS/Reference/Properties/view-transition-name
 page-type: css-property
 browser-compat: css.properties.view-transition-name

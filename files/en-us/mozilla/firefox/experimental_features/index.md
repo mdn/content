@@ -325,10 +325,10 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | No                  |
-| Developer Edition | 146           | No                  |
-| Beta              | 146           | No                  |
-| Release           | 146           | No                  |
+| Nightly           | 148           | No                  |
+| Developer Edition | 148           | No                  |
+| Beta              | 148           | No                  |
+| Release           | 148           | No                  |
 
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
@@ -347,37 +347,23 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### `color-mix()` accepts multiple color arguments
+### Namespaced attributes in `attr()` CSS function
 
-The [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix) CSS function now supports multiple [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) values, rather than just two. This allows you to mix many colors and set the percentages of each. ([Firefox bug 2007772](https://bugzil.la/2007772)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.color-mix-multi-color.enabled`
-  - : Set to `true` to enable.
-
-### Media-based pseudo-classes
-
-The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 1707584](https://bugzil.la/1707584), [Firefox bug 2014512](https://bugzil.la/2014512)).
+The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
+| Nightly           | 150           | No                  |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
 
-- `dom.media.pseudo-classes.enabled`
+- `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
 ### `@container style()` queries
 
-The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)), [Firefox bug 2014098](https://bugzil.la/2014098)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -389,13 +375,43 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 - `layout.css.style-queries.enabled`
   - : Set to `true` to enable.
 
+### Absolutely positioned elements in multi-column containers and printing
+
+Absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing are now correctly positioned and fragmented.
+This improves interoperability with other browsers and prevents layout issues such as overlapping text or content loss.
+([Firefox bug 2018797](https://bugzil.la/2018797)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
+
+- `layout.abspos.fragmentainer-aware-positioning.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
 
 ## JavaScript
 
-**No experimental features in this release cycle.**
+### Multiple import maps
+
+Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
+These give developers more flexibility when structuring and loading JavaScript modules, because they no longer need to know all their module mappings up front, and declare them in a single import map loading any modules.
+([Firefox bug 1916277](https://bugzil.la/1916277)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | No                  |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
+
+- `dom.multiple_import_maps.enabled`
+  - : Set to `true` to enable.
 
 ## APIs
 
@@ -544,21 +560,6 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 | Release           | —             | —                   |
 
 - `image.jxl.enabled`
-  - : Set to `true` to enable.
-
-#### Document Picture-in-Picture API
-
-The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
-See [Firefox bug 1858562](https://bugzil.la/1858562) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 148           | Yes                 |
-| Developer Edition | 148           | No                  |
-| Beta              | 148           | No                  |
-| Release           | 148           | No                  |
-
-- `dom.documentpip.enabled`
   - : Set to `true` to enable.
 
 ### WebVR API (Disabled)

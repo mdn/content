@@ -2,7 +2,7 @@
 title: viewBox
 slug: Web/SVG/Reference/Attribute/viewBox
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/coords.html#ViewBoxAttribute
 sidebar: svgref
 ---
 

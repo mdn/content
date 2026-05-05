@@ -1,5 +1,6 @@
 ---
-title: border-bottom-color
+title: "`border-bottom-color` CSS property"
+short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
 page-type: css-property
 browser-compat: css.properties.border-bottom-color

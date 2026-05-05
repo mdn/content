@@ -1,5 +1,6 @@
 ---
-title: superellipse()
+title: "`superellipse()` CSS function"
+short-title: superellipse()
 slug: Web/CSS/Reference/Values/superellipse
 page-type: css-function
 status:

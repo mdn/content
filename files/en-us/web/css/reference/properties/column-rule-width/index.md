@@ -1,5 +1,6 @@
 ---
-title: column-rule-width
+title: "`column-rule-width` CSS property"
+short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
 page-type: css-property
 browser-compat: css.properties.column-rule-width

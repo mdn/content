@@ -1,5 +1,6 @@
 ---
-title: negative
+title: "`negative` CSS at-rule descriptor"
+short-title: negative
 slug: Web/CSS/Reference/At-rules/@counter-style/negative
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.negative

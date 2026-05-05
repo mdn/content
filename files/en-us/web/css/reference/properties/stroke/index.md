@@ -1,5 +1,6 @@
 ---
-title: stroke
+title: "`stroke` CSS property"
+short-title: stroke
 slug: Web/CSS/Reference/Properties/stroke
 page-type: css-property
 browser-compat: css.properties.stroke
@@ -36,10 +37,10 @@ stroke: unset;
   - : Sets the painting of the stroke with any valid CSS color value.
 
 - `<image>`
-  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://svgwg.org/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
+  - : Sets the painting of the stroke with what SVG calls a [_paint server_](https://w3c.github.io/svgwg/svg2-draft/pservers.html), which in this context is an SVG gradient or pattern. CSS gradients cannot be used with the `stroke` property.
 
 - `context-stroke`
-  - : Causes an element to "inherit" its stroke definition from its [_context element_](https://svgwg.org/svg2-draft/painting.html#TermContextElement). If there is no valid context element, then this value will result in no paint being used for the stroke.
+  - : Causes an element to "inherit" its stroke definition from its [_context element_](https://w3c.github.io/svgwg/svg2-draft/painting.html#TermContextElement). If there is no valid context element, then this value will result in no paint being used for the stroke.
 
 ## Formal definition
 

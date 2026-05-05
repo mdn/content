@@ -556,7 +556,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ### Displaying event object properties
 
-This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
+This example uses DOM methods to display all the properties of the {{domxref("Element.click_event", "click")}} event object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
 
 The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org/) lists the standard properties, however many browsers have extended these greatly.
 
@@ -569,6 +569,7 @@ Put the following code into a blank text file and load it into a variety of brow
 ```css
 table {
   border-collapse: collapse;
+  margin-top: 2em;
 }
 thead {
   font-weight: bold;
@@ -586,13 +587,12 @@ td {
 ```
 
 ```js
-function showEventProperties(e) {
+function showEventProperties(event) {
   function addCell(row, text) {
     const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  const event = e || window.event;
   document.getElementById("eventType").textContent = event.type;
 
   const table = document.createElement("table");
@@ -619,7 +619,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-showEventProperties(event);
+window.addEventListener("click", showEventProperties);
 ```
 
 {{EmbedLiveSample("Displaying event object properties", "", "300")}}
