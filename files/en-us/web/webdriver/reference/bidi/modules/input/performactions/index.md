@@ -18,11 +18,11 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
     "context": "<contextId>",
     "actions": [
       {
-        "type": "<inputSourceType>",
+        "type": "<outerType>",
         "id": "<sourceId>",
         "actions": [
           {
-            "type": "<actionType>",
+            "type": "<innerType>",
             ...
           }
         ]
