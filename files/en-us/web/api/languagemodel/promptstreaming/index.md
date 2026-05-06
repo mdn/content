@@ -8,7 +8,9 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`promptStreaming()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{domxref("ReadableStream")}} that delivers the model's response incrementally as it is generated. This is useful for displaying responses to users in real time, for long outputs, or for any scenario where low perceived latency matters. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
+The **`promptStreaming()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{domxref("ReadableStream")}} that delivers the model's response incrementally as it is generated.
+
+This is useful for displaying responses to users in real time, for long outputs, or for any scenario where low perceived latency matters. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
 
 ## Syntax
 

@@ -9,7 +9,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt_API) represents a session with a browser-provided language model. It exposes static methods for creating sessions and checking availability, as well as instance methods for prompting the model, appending context, and managing the context window.
 
-`LanguageModel` cannot be constructed directly. Instead, use the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method.
+`LanguageModel` instances cannot be constructed directly. Instead, use the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method.
 
 {{InheritanceDiagram}}
 

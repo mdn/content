@@ -24,7 +24,8 @@ clone(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : Represents the options that can be passed. If this argument is absent, the `options` from the original session are used (not copied). Options include:
+  - : Represents the options that can be passed. If this argument is absent, the `options` from the original session, such as its abort signal, are used.
+    Options include:
     - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value
@@ -43,6 +44,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 ### Exploring multiple response paths
 
 ```js
+// Set up system and user context
 const session = await LanguageModel.create({
   initialPrompts: [
     { role: "system", content: "You are a creative writing assistant." },

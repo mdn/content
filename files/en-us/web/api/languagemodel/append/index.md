@@ -59,7 +59,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
     - The `role` is `"assistant"` and `type` is anything other than `"text"`.
     - The input or output text is in a language the user agent doesn't support for prompting.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if prefilling fails for any other reason.
+  - : Thrown if prefilling fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if appending `input` would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
 
@@ -68,6 +68,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 ### Append context before prompting
 
 This example shows how to append to a context for the user role before calling `prompt()`.
+Note that we can just specify text input (`documentText`) in this case, because `user` is the default role.
 
 ```js
 const session = await LanguageModel.create();
@@ -84,7 +85,7 @@ console.log(summary);
 
 ### Providing few-shot examples
 
-A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+A few-shot example is a set of user role (input) and assistant role (output) pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
 
 ```js
 const session = await LanguageModel.create({

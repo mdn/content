@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`prompt()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{jsxref("Promise")}} that resolves with the model's complete response as a string.
 
-The `prompt()` method is the primary method for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
+The `prompt()` method is the primary mechanism for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
 
 For long responses or streaming use cases, use {{domxref("LanguageModel.promptStreaming()")}} instead to receive the response incrementally. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
 
@@ -44,7 +44,7 @@ prompt(input, options)
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`
-      - : An {{domxref("AbortSignal")}} to cancel the operation.
+      - : An {{domxref("AbortSignal")}} that can be used cancel the operation.
 
 ### Return value
 

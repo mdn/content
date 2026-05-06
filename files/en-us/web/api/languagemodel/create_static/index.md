@@ -8,11 +8,13 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, optionally downloading the model if it is not already available. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress using the `monitor` option.
+The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, automatically downloading the model if it is not already available.
 
-Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
+You can you can monitor progress of a model download using the `monitor` option.
 
 Before calling `create()`, use {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
+
+Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
 
 ## Syntax
 
@@ -76,7 +78,7 @@ LanguageModel.create(options)
         - `name`
           - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
         - `description`
-          - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
+          - : A string describing what the tool does. The model uses this description to decide if and when to invoke the tool.
         - `inputSchema`
           - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
         - `execute`
