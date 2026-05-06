@@ -1,5 +1,6 @@
 ---
-title: user-modify
+title: "`user-modify` CSS property"
+short-title: user-modify
 slug: Web/CSS/Reference/Properties/user-modify
 page-type: css-property
 status:

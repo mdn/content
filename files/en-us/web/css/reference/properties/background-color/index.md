@@ -1,5 +1,6 @@
 ---
-title: background-color
+title: "`background-color` CSS property"
+short-title: background-color
 slug: Web/CSS/Reference/Properties/background-color
 page-type: css-property
 browser-compat: css.properties.background-color

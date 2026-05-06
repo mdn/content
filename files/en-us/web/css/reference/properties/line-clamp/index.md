@@ -1,5 +1,6 @@
 ---
-title: line-clamp
+title: "`line-clamp` CSS property"
+short-title: line-clamp
 slug: Web/CSS/Reference/Properties/line-clamp
 page-type: css-property
 browser-compat: css.properties.line-clamp

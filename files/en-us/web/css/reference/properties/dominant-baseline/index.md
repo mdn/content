@@ -1,5 +1,6 @@
 ---
-title: dominant-baseline
+title: "`dominant-baseline` CSS property"
+short-title: dominant-baseline
 slug: Web/CSS/Reference/Properties/dominant-baseline
 page-type: css-property
 browser-compat: css.properties.dominant-baseline

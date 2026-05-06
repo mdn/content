@@ -1,5 +1,6 @@
 ---
-title: <angle>
+title: "`<angle>` CSS type"
+short-title: <angle>
 slug: Web/CSS/Reference/Values/angle
 page-type: css-type
 browser-compat: css.types.angle

@@ -1,5 +1,6 @@
 ---
-title: invert()
+title: "`invert()` CSS function"
+short-title: invert()
 slug: Web/CSS/Reference/Values/filter-function/invert
 page-type: css-function
 browser-compat: css.types.filter-function.invert

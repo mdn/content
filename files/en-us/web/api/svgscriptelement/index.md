@@ -22,7 +22,7 @@ The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script
 - {{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("script")}} element.
 - {{domxref("SVGScriptElement.type")}} {{ReadOnlyInline}}
-  - : A string corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read only attribute.
+  - : A string corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute.
 
 ## Instance methods
 
@@ -35,3 +35,7 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLScriptElement")}}
