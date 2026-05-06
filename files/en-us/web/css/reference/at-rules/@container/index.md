@@ -560,14 +560,14 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-#### Equality (`:`) versus range (`=`) syntax
+#### Plain (`:`) versus range (`=`) syntax
 
 When a `<style-feature>` includes a value, you can write the comparison in two forms that look similar but behave differently:
 
-- `style(--n: 3)` (equality) matches the property's _computed value_ against the right-hand side. For an unregistered custom property, the computed value is the value as authored, so `style(--n: 3)` is false when `--n` is `calc(6/2)`. Use this form for keyword-like values, such as `style(--stock: low)`.
+- `style(--n: 3)` (plain) matches the property's _computed value_ against the right-hand side. For an unregistered custom property, the computed value is the value as authored, so `style(--n: 3)` is false when `--n` is `calc(6/2)`. Use this form for keyword-like values, such as `style(--stock: low)`.
 - `style(--n = 3)` (range) parses both sides as a number, length, percentage, etc., and compares numerically. With the same `--n: calc(6/2)`, `style(--n = 3)` is true. The range syntax also supports `<`, `<=`, `>`, `>=`, three-value intervals such as `style(0 < --n < 10)`, and flexible operand ordering.
 
-For the full rules and more examples, see [Equality versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#equality_versus_range_syntax_in_style_queries) in the container style queries guide.
+For the full rules and more examples, see [Plain versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries) in the container style queries guide.
 
 ### Scroll-state queries
 

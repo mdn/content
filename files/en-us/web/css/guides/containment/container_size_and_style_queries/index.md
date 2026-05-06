@@ -353,11 +353,11 @@ If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {
 > [!NOTE]
 > When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
-### Equality versus range syntax in style queries
+### Plain versus range syntax in style queries
 
 When a `<style-feature>` includes a value, you can express the comparison in two different ways. They look similar but behave very differently, and choosing the right one matters.
 
-The **equality syntax** uses a colon, the same syntax used in a CSS declaration:
+The **plain syntax** uses a colon, the same syntax used in a CSS declaration:
 
 ```css
 @container style(--n: 3) {
@@ -429,7 +429,7 @@ The range syntax is also more flexible in how each side is written. Either side 
 }
 ```
 
-The equality syntax is more restrictive: the left-hand side must be the custom property name (without `var()`), and the value goes on the right. The following are all **invalid**:
+The plain syntax is more restrictive: the left-hand side must be the custom property name (without `var()`), and the value goes on the right. The following are all **invalid**:
 
 ```css example-bad
 @container style(var(--n): 3) {
