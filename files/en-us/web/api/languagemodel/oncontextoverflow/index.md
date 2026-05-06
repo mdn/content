@@ -1,18 +1,29 @@
 ---
-title: "LanguageModel: oncontextoverflow property"
-short-title: oncontextoverflow
-slug: Web/API/LanguageModel/oncontextoverflow
-page-type: web-api-instance-property
+title: "LanguageModel: contextoverflow event"
+short-title: contextoverflow
+slug: Web/API/LanguageModel/contextoverflow_event
+page-type: web-api-event
+browser-compat: api.LanguageModel.contextoverflow_event
 spec-urls: https://webmachinelearning.github.io/prompt-api/
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`oncontextoverflow`** property of the {{domxref("LanguageModel")}} interface is an event handler that is called when the `contextoverflow` event fires. This event fires when {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}} would cause the session's {{domxref("LanguageModel.contextUsage", "contextUsage")}} to exceed the {{domxref("LanguageModel.contextWindow", "contextWindow")}}.
+The **`contextoverflow`** event fires on a {{domxref("LanguageModel")}} instance when a call to {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}} causes the session's {{domxref("LanguageModel.contextUsage", "contextUsage")}} to exceed the {{domxref("LanguageModel.contextWindow", "contextWindow")}}.
 
-## Value
+## Syntax
 
-A function to be called when the `contextoverflow` event fires, or `null` if no handler is set.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener("contextoverflow", (event) => {})
+
+oncontextoverflow = (event) => {}
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

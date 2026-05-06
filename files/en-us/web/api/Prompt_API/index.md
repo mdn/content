@@ -15,11 +15,9 @@ The **Prompt API** allows web pages to directly prompt a browser-provided langua
 
 All interaction with the language model happens through a {{domxref("LanguageModel")}} session. A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option.
 
-Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple turns.
+Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple interactions.
 
 Use {{domxref("LanguageModel.append()")}} to preload content into the context window without generating a response — useful for providing documents, background information, or conversation history before asking a question.
-
-### Checking availability
 
 Before creating a session, call the static {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} method to determine whether the language model supports a given configuration on the current device. The method resolves with one of four string values: `"available"`, `"downloadable"`, `"downloading"`, or `"unavailable"`. This allows pages to adapt gracefully — for example, by displaying a download prompt or falling back to a server-side implementation — rather than creating a session only to have it fail.
 
@@ -37,7 +35,7 @@ The Prompt API supports tool use, allowing the language model to invoke develope
 
 ### Multimodal input
 
-Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts a sequence of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
+Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts an array of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
 
 Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} and {{domxref("LanguageModelMessageContent")}} dictionaries. When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
 

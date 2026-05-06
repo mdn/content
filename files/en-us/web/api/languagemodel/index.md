@@ -15,25 +15,25 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 
 ## Static methods
 
-- {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session, downloading the model if necessary.
 - {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an `Availability` value indicating whether the language model is available for the given options.
+- {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session, downloading the model if necessary.
 
 ## Instance methods
 
-- {{domxref("LanguageModel.prompt()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the model's complete response to the given input.
-- {{domxref("LanguageModel.promptStreaming()")}}
-  - : Returns a {{domxref("ReadableStream")}} that streams the model's response to the given input as it is generated.
 - {{domxref("LanguageModel.append()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the given input has been added to the session's context window, without generating a response.
-- {{domxref("LanguageModel.measureContextUsage()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the number of context window tokens that the given input would consume.
 - {{domxref("LanguageModel.clone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session that is a copy of the current session, including all context.
 - `LanguageModel.destroy()`
   - : Destroys the session and frees any associated resources. Inherited from `DestroyableModel`.
+- {{domxref("LanguageModel.measureContextUsage()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with the number of context window tokens that the given input would consume.
+- {{domxref("LanguageModel.prompt()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with the model's complete response to the given input.
+- {{domxref("LanguageModel.promptStreaming()")}}
+  - : Returns a {{domxref("ReadableStream")}} that streams the model's response to the given input as it is generated.
 
 ## Instance properties
 
@@ -41,12 +41,10 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
   - : Returns the number of context window tokens currently consumed by this session.
 - {{domxref("LanguageModel.contextWindow")}} {{ReadOnlyInline}}
   - : Returns the total context window size available for this session, in tokens.
-- {{domxref("LanguageModel.oncontextoverflow")}}
-  - : An event handler for the `contextoverflow` event, which fires when a prompt would exceed the session's context window.
-
+  
 ## Events
 
-- `contextoverflow`
+- {{domxref("LanguageModel.oncontextoverflow")}}
   - : Fired when a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window size. Handled by the {{domxref("LanguageModel.oncontextoverflow")}} property.
 
 ## Examples

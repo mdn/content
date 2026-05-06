@@ -22,9 +22,9 @@ promptStreaming(input, options)
 ### Parameters
 
 - `input`
-  - : The prompt to send to the model. This is a `LanguageModelPrompt`, which is either:
+  - : The prompt to send to the model. One of the following:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence representing a single message in a conversation with a language model. Options include:
+    - An array representing a single message in a conversation with a language model. Options include:
       - `role`
         - : A string indicating who sent the message. Must be one of:
           - `"system"`
@@ -32,11 +32,11 @@ promptStreaming(input, options)
           - `"user"`
             - : message from the user.
           - `"assistant"`
-            - : A message from the model (used for few-shot examples or continued dialogue).
+            - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
 - `options` {{optional_inline}}
   - : Options for streaming a prompt. Options include:
     - `responseConstraint`
-      - : Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An implementation-defined object that contrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`
@@ -58,9 +58,9 @@ Errors are surfaced as stream errors rather than as rejected promises. Consumers
     - The input or output text is in a language the user agent doesn't support for prompting.
     - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
 - `OperationError` {{domxref("DOMException")}}
-  - : Surfaced if the model fails to generate a response for any other reason.
+  - : Thrown if promptstreaming fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Surfaced if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
+  - : Thrown if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
 
 Like `prompt()`, each call to `promptStreaming()` adds to the session's running context.
 

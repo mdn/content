@@ -24,9 +24,9 @@ measureContextUsage(input, options)
 ### Parameters
 
 - `input`
-  - : The input to measure. This is a `LanguageModelPrompt`, which is either:
+  - : The input to measure. One of the following:
     - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - A sequence for multi-turn or multimodal input. Represents a single message in a conversation with a language model. Options include:
+    - An array for multi-turn or multimodal input. Represents a single message in a conversation with a language model. Options include:
       - `role`
         - : A string indicating who sent the message. Must be one of:
           - `"system"`
@@ -34,11 +34,11 @@ measureContextUsage(input, options)
           - `"user"`
             - : A message from the user.
           - `"assistant"`
-            - : A message from the model (used for few-shot examples or continued dialogue).
+            - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
   - `content`
     - : The content of the message. This is either:
       - A string — Shorthand for a single text content part. For example: `[{ type: "text", value: providedValue }]`.
-      - A sequence of multimodal messages or messages with multiple content parts. Options include:
+      - An array of multimodal messages or messages with multiple content parts. Options include:
         - `type` - A string from the `LanguageModelMessageType` enumeration indicating the kind of content. Must be one of:
           - `"text"`
             - : Plain text content.
@@ -60,7 +60,7 @@ measureContextUsage(input, options)
 - `options` {{optional_inline}}
   - : Options for measuring context usage. Options include:
     - `responseConstraint`
-      - : Constraints on the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An implementation-defined object that contrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`

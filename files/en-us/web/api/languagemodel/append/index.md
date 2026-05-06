@@ -31,7 +31,7 @@ append(input, options)
         - `"user"`
           - : A message from the user.
         - `"assistant"`
-          - : A message from the model. Use this for few-shot examples or continued dialogue.
+          - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
       - `content` — An object containing the text to add to the context.
         - `type`
           - : One of `"text"`, `"image"`, `"audio"`, `"tool-call"`, or `"tool-response"`.

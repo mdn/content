@@ -28,7 +28,7 @@ LanguageModel.create(options)
 - `options` {{optional_inline}}
   - : Represents the options for creating a {{domxref("LanguageModel")}} session. Options include:
     - `expectedInputs`
-      - : A sequence representing the required input modalities and languages. Options include:
+      - : An array representing the required input modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
           - `"text"`
@@ -42,9 +42,9 @@ LanguageModel.create(options)
           - `"tool-response"`
             - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
-      - : A sequence representing the required output modalities and languages. Options include:
+      - : An array representing the required output modalities and languages. Options include:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
           - `"text"`
@@ -58,9 +58,9 @@ LanguageModel.create(options)
           - `"tool-response"`
             - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : A sequence of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `initialPrompts`
-      - : A sequence representing a single message in a conversation with a language model. Options include:
+      - : An array of messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Options include:
         - `role`
           - : A string indicating who sent the message. Must be one of:
             - `"system"`
@@ -68,13 +68,13 @@ LanguageModel.create(options)
             - `"user"`
               - : A message from the user.
             - `"assistant"`
-              - : A message from the model (used for few-shot examples or continued dialogue).
+              - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
       - `monitor`
         - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
       - `signal`
         - : An {{domxref("AbortSignal")}} to cancel session creation.
       - `tools`
-        — A sequence of tools to verify support for. Options include:
+        — An array of tools to verify support for. Options include:
         - `name`
           - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
         - `description`
@@ -98,7 +98,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
     - The input or output text is in a language the user agent doesn't support for prompting.
     - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if session initialization fails for any other reason.
+  - : Thrown if creation fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the content provided in `initialPrompts` exceeds the model's context window size.
 
@@ -113,6 +113,8 @@ console.log(answer); // "4"
 ```
 
 ### Creating a session with a system prompt
+
+The following example provides the AI with instructions on the personal to adopt before generating an answer.
 
 ```js
 const session = await LanguageModel.create({
@@ -142,7 +144,7 @@ const session = await LanguageModel.create({
 
 ### Providing few-shot examples
 
-A few-shot example is a set of input-output pairs passed to an AI before asking it to complete a similar task.
+A few-shot example is a set of user role (input) and assistant role (output) pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
 
 ```js
 const session = await LanguageModel.create({
@@ -159,19 +161,28 @@ const result = await session.prompt("Good morning");
 console.log(result); // "Bonjour matin" or "Bonjour"
 ```
 
-### Cancelling session creation
+### Cancelling a session
+
+The following example enables a user to cancel a prompt. It does this by first creating an {{domxref("AbortController")}} and assigning its `abort()` method to a cancel button's click handler. Next, it calls `create()` and passes `AbortController.signal` as the `signal` property.
 
 ```js
 const controller = new AbortController();
-setTimeout(() => controller.abort(), 10_000);
 
-try {
-  const session = await LanguageModel.create({ signal: controller.signal });
-} catch (err) {
-  if (err.name === "AbortError") {
-    console.log("Session creation was cancelled.");
-  }
-}
+const cancelButton = document.getElementById("cancel-button");
+cancelButton.addEventListener("click", () => controller.abort());
+
+const session = await LanguageModel.create({
+  signal: controller.signal,
+  initialPrompts: [
+    {
+      role: "system",
+      content: "You are a helpful assistant."
+    }
+  ]
+});
+
+const response = await session.prompt("Tell me about the web platform.");
+console.log(response);
 ```
 
 ## Specifications

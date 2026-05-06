@@ -35,7 +35,7 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 ### Exceptions
 
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if the clone operation fails.
+  - : Thrown if cloning fails for any other reason not listed in the other exception types.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
 
