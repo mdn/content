@@ -165,14 +165,14 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 > [!NOTE]
 > Animating [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) properties is discouraged as it leads to layout reflow and repaints. Animating any box model property is inherently CPU-intensive; consider animating the [transform](/en-US/docs/Web/CSS/Reference/Properties/transform) property instead.
 
-### Basic usage: a sun rise
+### Basic usage: a sunrise
 
-In this example, we demonstrate the basic usage of the `animate` shorthand by animating a yellow sun across a light blue sky. The sun rises
+In this example, we demonstrate basic usage of the `animate` shorthand by animating a yellow sun across a light blue sky. The sun rises
 to the center of the viewport and then falls out of sight.
 
 #### HTML
 
-We include one element: our sun.
+We include a single {{htmlelement("div")}} element to represent our sun.
 
 ```html
 <div class="sun"></div>
@@ -180,7 +180,7 @@ We include one element: our sun.
 
 #### CSS
 
-We start by creating the sun and the sky. The sky is the root of the HTML document. We hide any content that is outside the viewport, which in our case will be any part of the sun below the horizon, by setting the {{cssxref("overflow")}} to hidden, and use the {{cssxref("justify-content")}} property to center the sun in the background. We make the sun yellow, declaring the {{cssxref("height")}} to be the height of the viewport at `100vh`, and setting the width to be the same as the height by setting the {{cssxref("aspect-ratio")}} to `1`. We turn the square into a circle with the {{cssxref("border-radius")}} property.
+We start by creating the sun and the sky. The sky is the {{cssxref(":root")}} of the HTML document. We hide any content that is outside the viewport, which in our case will be any part of the sun below the horizon, by setting the {{cssxref("overflow")}} to hidden. We also use the {{cssxref("justify-content")}} property to center the sun in the background. We make the sun yellow, declare its {{cssxref("height")}} to be the height of the viewport (`100vh`), and set its width to equal its height by setting the {{cssxref("aspect-ratio")}} to `1`. We turn the square `<div>` into a circle using the {{cssxref("border-radius")}} property.
 
 ```css
 :root {
@@ -199,10 +199,10 @@ We start by creating the sun and the sky. The sky is the root of the HTML docume
 }
 ```
 
-Next, we create a CSS {{cssxref("@keyframes")}} animation that will push the element on which it is applied down past the viewport and then return the element to its default position using [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms):
+Next, we define some animation {{cssxref("@keyframes")}} that will push the element on which they are applied down past the viewport and then return the element to its default position using [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms):
 
 ```css
-@keyframes sun-rise {
+@keyframes sunrise {
   from {
     transform: translateY(110vh);
   }
@@ -212,7 +212,7 @@ Next, we create a CSS {{cssxref("@keyframes")}} animation that will push the ele
 }
 ```
 
-The last step is to apply the animation! We use the `animation` shorthand property to apply the `sun-rise` keyframe animation to the `.sun`; setting each iteration of the infinite iterations to take 4 seconds, with the direction of the animation alternating between each iteration:
+The last step is to apply the animation! We use the `animation` shorthand property to apply the `sunrise` keyframe animation to the `.sun` `<div>`. The animation is set to play for infinite iterations, with each one lasting 4 seconds; the animation direction alternates with each iteration:
 
 ```css
 .sun {
@@ -226,7 +226,7 @@ The last step is to apply the animation! We use the `animation` shorthand proper
 
 ### Applying multiple animations
 
-This example demonstrates applying multiple, comma-separated animations to a single element. Expanding on the previous example, with a sun that rises and falls on a lightblue background, here we will gradually rotate the sun through a rainbow of colors. The timing of the sun's position and color are independent.
+This example demonstrates applying multiple animations to a single element. Expanding on the previous example, with a sun that rises and falls on a light blue background, here we will gradually rotate the sun through a rainbow of colors. The timing of the sun's position and color are independent.
 
 ```html hidden
 <div class="sun"></div>
@@ -257,7 +257,7 @@ This example demonstrates applying multiple, comma-separated animations to a sin
 }
 ```
 
-We include the same HTML and CSS as in the previous example, and add a second `@keyframe` animation that adds a {{cssxref("filter")}} that rotates the hue through all the values using the {{cssxref("hue-rotate()")}} filter function:
+We include the same HTML and CSS as in the previous example, and add a second set of animation `@keyframes` to apply a {{cssxref("filter")}} that rotates the hue through all possible values using the {{cssxref("hue-rotate()")}} filter function:
 
 ```css
 @keyframes psychedelic {
@@ -270,7 +270,7 @@ We include the same HTML and CSS as in the previous example, and add a second `@
 }
 ```
 
-We then apply the two animations to our sun. Multiple animations are separated by commas, each animation's parameters are set independently
+We then apply the two animations to our sun. Multiple animations are separated by commas, and each animation's parameters are set independently
 
 ```css
 .sun {
@@ -308,7 +308,7 @@ This example demonstrates what happens when multiple animations define values fo
 }
 ```
 
-We use the same HTML and CSS as in the first example, including the original `rise` animation, and a second, `bounce` animation. The two animations declare values for the same property:
+We use the same HTML and CSS as in the first example, including the original `sunrise` animation, and a second animation named `bounce`. The two animations declare values for the same property:
 
 ```css
 @keyframes rise {
@@ -330,12 +330,12 @@ We use the same HTML and CSS as in the first example, including the original `ri
 }
 ```
 
-We apply both animations to the sun. When two animations apply different values to the same property, animations declared later in the cascade will override the properties of previously declared animations. In this case, the `transform` value on the `bounce` animation 'wins' the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade), and 'overwrites' the transform set by `rise`, so the sun will only move horizontally.
+We apply both animations to the sun. When two animations apply different values to the same property, animations declared later in the cascade override previously-declared animations. In this case, the `transform` value on the `bounce` animation "wins" the [cascade](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade), and overrides the transform set by `sunrise`, so the sun will only move horizontally.
 
 ```css
 .sun {
   animation:
-    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate sunrise,
     4s linear 0s infinite alternate bounce;
 }
 ```
@@ -345,9 +345,9 @@ We apply both animations to the sun. When two animations apply different values 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
 The sun bounces between the
-left and right sides of the viewport. The sun remains in the viewport even
-though a rise animation is defined. The rise animation's transform property
-is 'overwritten' by the bounce animation.
+left- and right-hand sides of the viewport. The sun remains in the viewport even
+though the `sunrise` animation is defined. The `sunrise` animation's transform property
+is overridden by the bounce animation.
 
 ## Specifications
 
