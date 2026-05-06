@@ -24,7 +24,8 @@ append(input, options)
 - `input`
   - : The content to append to the context window. This is either:
     - A string — Shorthand for a single message. Sending only a string is equivalent to sending the following with a `"user"` role in the next option: `[{ type: "text", value: "Some string" }]`.
-    - An array of ojbects each of which represents a single message in a conversation with a language model. Options include:
+    - An array of objects, each representing a single message in a conversation with a language model.
+      Objects may have the following properties:
       - `role`
         - : A string indicating who sent the message. Must be one of:
         - `"user"`
