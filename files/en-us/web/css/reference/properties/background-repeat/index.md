@@ -50,6 +50,16 @@ background-repeat: space repeat;
 }
 ```
 
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
+
+> [!WARNING]
+> {{cssxref("background-repeat-x")}} and {{cssxref("background-repeat-y")}} have very low browser support compared to `background-repeat`.
+
 ## Syntax
 
 ```css
