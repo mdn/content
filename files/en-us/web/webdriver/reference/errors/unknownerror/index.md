@@ -1,5 +1,6 @@
 ---
-title: Unknown error
+title: "`unknown` error code"
+short-title: unknown
 slug: Web/WebDriver/Reference/Errors/UnknownError
 page-type: webdriver-error
 sidebar: webdriver

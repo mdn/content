@@ -32,6 +32,8 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
@@ -94,3 +96,4 @@ sidebar:
     path: /Web/WebDriver/Reference/Errors
     link: /Web/WebDriver/Reference/Errors
     details: closed
+    code: true

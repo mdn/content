@@ -85,7 +85,7 @@ The browser may also return vendor-specific capabilities prefixed with a browser
 
 ### Errors
 
-- session not created
+- `session not created`
   - : A session already exists, or the browser is unable to create a new session (for example, because a requested capability cannot be satisfied).
 
 ## Examples
