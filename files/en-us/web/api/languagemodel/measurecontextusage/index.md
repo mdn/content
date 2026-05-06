@@ -8,7 +8,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state. 
+The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state.
 
 This allows you check how much of the context window a given input requires before deciding whether to send it. The result can be compared the result of {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input can fit in the windo limit.
 

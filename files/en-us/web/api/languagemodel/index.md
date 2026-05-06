@@ -41,7 +41,6 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
   - : Returns the number of context window tokens currently consumed by this session.
 - {{domxref("LanguageModel.contextWindow")}} {{ReadOnlyInline}}
   - : Returns the total context window size available for this session, in tokens.
-  
 ## Events
 
 - {{domxref("LanguageModel.oncontextoverflow")}}

@@ -176,9 +176,9 @@ const session = await LanguageModel.create({
   initialPrompts: [
     {
       role: "system",
-      content: "You are a helpful assistant."
-    }
-  ]
+      content: "You are a helpful assistant.",
+    },
+  ],
 });
 
 const response = await session.prompt("Tell me about the web platform.");
