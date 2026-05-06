@@ -175,13 +175,13 @@ The `result` field in the response is an empty object (`{}`).
 Consider a scenario where you want to hold the <kbd>Shift</kbd> key while clicking an element, for example to extend a text selection.
 
 With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) and the element identifier using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes).
-Send the following message with two outer `actions` objects — a `"key"` source and a `"pointer"` source — running in parallel across the following three ticks:
+Send the following message with two outer `actions` objects — a `"key"` source and a `"pointer"` source — each with an outer `type` and an inner `actions` array, running in parallel across the following three ticks:
 
 - Tick 1: The keyboard presses <kbd>Shift</kbd> while the pointer moves to the element. Since the `duration` of `pointerMove` is specified as `300`, the tick lasts `300 ms`, which is the longest `duration` in this tick.
 - Tick 2: The keyboard pauses while the pointer button is pressed (`pointerDown`). This tick lasts for `0 ms`.
 - Tick 3: The <kbd>Shift</kbd> key is released (`keyUp`) and the pointer button is released (`pointerUp`) simultaneously. This tick also lasts for `0 ms`.
 
-```json
+```json-nolint
 {
   "id": 1,
   "method": "input.performActions",
@@ -193,14 +193,14 @@ Send the following message with two outer `actions` objects — a `"key"` source
         "id": "keyboard1",
         "actions": [
           {
-            "type": "keyDown",
+            "type": "keyDown", // Tick 1: Shift key down (0 ms)
             "value": "\uE008"
           },
           {
-            "type": "pause"
+            "type": "pause"    // Tick 2: Keyboard pause (0 ms)
           },
           {
-            "type": "keyUp",
+            "type": "keyUp",   // Tick 3: Shift key up (0 ms)
             "value": "\uE008"
           }
         ]
@@ -213,7 +213,7 @@ Send the following message with two outer `actions` objects — a `"key"` source
         },
         "actions": [
           {
-            "type": "pointerMove",
+            "type": "pointerMove", // Tick 1: Move to element (300 ms)
             "x": 0,
             "y": 0,
             "duration": 300,
@@ -225,11 +225,11 @@ Send the following message with two outer `actions` objects — a `"key"` source
             }
           },
           {
-            "type": "pointerDown",
+            "type": "pointerDown", // Tick 2: Press button (0 ms)
             "button": 0
           },
           {
-            "type": "pointerUp",
+            "type": "pointerUp",   // Tick 3: Release button (0 ms)
             "button": 0
           }
         ]
