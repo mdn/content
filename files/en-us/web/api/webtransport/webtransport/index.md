@@ -64,7 +64,7 @@ new WebTransport(url, options)
             At time of writing, `SHA-256` is the only hash algorithm listed in the specification.
 
         - `value`
-          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{jsxref("TypedArray")}} containing the hash value.
+          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{jsxref("TypedArray")}} or [`DataView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) containing the hash value.
 
 ### Exceptions
 
@@ -140,16 +140,30 @@ The example below shows the code to construct a `WebTransport` that specifies th
 In this case the array contains two hashes, both encoded using the SHA-256 algorithm.
 Note that the `allowPooling` option must be `false` (the default).
 
+The value can be an `ArrayBuffer`, a `TypedArray` (for example, `Uint8Array`), or a `DataView`. The example below shows a SHA-256 hash as a sequence of bytes for example, the hexadecimal string `5a1559...` corresponds to the byte values `0x5a`, `0x15`, `0x59` and so on.
+
 ```js
 const transport = new WebTransport(url, {
   serverCertificateHashes: [
     {
+      // 5a155927eba7996228455e4721e6fe5f739ae15db6915d765e5db302b4f8a274
       algorithm: "sha-256",
-      value: "5a155927eba7996228455e4721e6fe5f739ae15db6915d765e5db302b4f8a274",
+      value: new Uint8Array([
+        0x5a, 0x15, 0x59, 0x27, 0xeb, 0xa7, 0x99, 0x62,
+        0x28, 0x45, 0x5e, 0x47, 0x21, 0xe6, 0xfe, 0x5f,
+        0x73, 0x9a, 0xe1, 0x5d, 0xb6, 0x91, 0x5d, 0x76,
+        0x5e, 0x5d, 0xb3, 0x02, 0xb4, 0xf8, 0xa2, 0x74
+      ]),
     },
     {
+      // 7d7094e7a8d3097feff3b5ee84fa5cab58e4de78f38bcfdee5ea8b51f4bfa8fd
       algorithm: "sha-256",
-      value: "7d7094e7a8d3097feff3b5ee84fa5cab58e4de78f38bcfdee5ea8b51f4bfa8fd",
+      value: new Uint8Array([
+        0x7d, 0x70, 0x94, 0xe7, 0xa8, 0xd3, 0x09, 0x7f,
+        0xef, 0xf3, 0xb5, 0xee, 0x84, 0xfa, 0x5c, 0xab,
+        0x58, 0xe4, 0xde, 0x78, 0xf3, 0x8b, 0xcf, 0xde,
+        0xe5, 0xea, 0x8b, 0x51, 0xf4, 0xbf, 0xa8, 0xfd
+      ]),
     },
   ],
 });
