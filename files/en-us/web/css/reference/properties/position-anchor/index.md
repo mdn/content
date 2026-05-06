@@ -1,5 +1,6 @@
 ---
-title: position-anchor
+title: "`position-anchor` CSS property"
+short-title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
 page-type: css-property
 browser-compat: css.properties.position-anchor

@@ -4,6 +4,9 @@ sidebar:
   - type: section
     link: /Web/WebDriver
   - type: section
+    link: /Web/WebDriver/How_to
+  - link: /Web/WebDriver/How_to/Create_BiDi_connection
+  - type: section
     link: /Web/WebDriver/Reference
   - type: section
     link: /Web/WebDriver/Reference/BiDi
@@ -12,7 +15,10 @@ sidebar:
     children:
       - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
         code: true
-      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules/browser
+        link: /Web/WebDriver/Reference/BiDi/Modules/browser
+        details: closed
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true
@@ -20,7 +26,10 @@ sidebar:
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
         code: true
-      - link: /Web/WebDriver/Reference/BiDi/Modules/log
+      - type: listSubPages
+        path: /Web/WebDriver/Reference/BiDi/Modules/log
+        link: /Web/WebDriver/Reference/BiDi/Modules/log
+        details: closed
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
         code: true

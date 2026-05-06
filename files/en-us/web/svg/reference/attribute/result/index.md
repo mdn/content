@@ -2,7 +2,7 @@
 title: result
 slug: Web/SVG/Reference/Attribute/result
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-result
 sidebar: svgref
 ---
 

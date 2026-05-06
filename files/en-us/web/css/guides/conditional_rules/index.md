@@ -33,6 +33,16 @@ There are plans to further extend possible queries by adding the generalized con
 ### At-rules and descriptors
 
 - {{cssxref("@container")}}
+  - [`aspect-ratio`](/en-US/docs/Web/CSS/Reference/At-rules/@container#aspect-ratio)
+  - [`block-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#block-size)
+  - [`fallback`](/en-US/docs/Web/CSS/Reference/At-rules/@container#fallback)
+  - [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@container#height)
+  - [`inline-size`](/en-US/docs/Web/CSS/Reference/At-rules/@container#inline-size)
+  - [`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@container#orientation)
+  - [`scrollable`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scrollable)
+  - [`snapped`](/en-US/docs/Web/CSS/Reference/At-rules/@container#snapped)
+  - [`stuck`](/en-US/docs/Web/CSS/Reference/At-rules/@container#stuck)
+  - [`width`](/en-US/docs/Web/CSS/Reference/At-rules/@container#width)
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
@@ -40,9 +50,11 @@ The CSS conditional rules module also introduces the `@else` and `@when` at-rule
 
 ### Functions
 
+- [`anchored()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#anchored_container_descriptors)
 - [`style()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)
 - [`font-tech()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-tech)
 - [`font-format()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#font-format)
+- [`scroll-state()`](/en-US/docs/Web/CSS/Reference/At-rules/@container#scroll-state_container_descriptors)
 - [`selector()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#function_syntax)
 - [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition)
 
@@ -115,6 +127,9 @@ The CSS conditional rules module also introduces a `media()` CSS function. Curre
 
 - [CSS namespaces](/en-US/docs/Web/CSS/Guides/Namespaces) module
   - {{cssxref("@namespace")}} at-rule
+
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+  - [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 
 ## Specifications
 

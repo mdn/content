@@ -3,6 +3,8 @@ title: "Navigator: preferences property"
 short-title: preferences
 slug: Web/API/Navigator/preferences
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Navigator.preferences
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: word-spacing
+title: "`word-spacing` CSS property"
+short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 page-type: css-property
 browser-compat: css.properties.word-spacing
@@ -156,7 +157,7 @@ Our CSS starts by applying increasing {{cssxref("font-size")}} values to each su
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 

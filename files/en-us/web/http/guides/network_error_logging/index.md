@@ -33,7 +33,7 @@ The following object keys can be specified in the NEL header:
 - max_age
   - : Specifies the lifetime of the policy, in seconds (in a similar way to e.g., HSTS policies are time-restricted). The referenced reporting group should have a lifetime at least as long as the NEL policy.
 - include_subdomains
-  - : If true, the policy applies to all subdomains under the origin that the policy header is set. The reporting group should also be set to include subdomains, if this option is to be enabled.
+  - : If `true`, this NEL policy is also enabled for all subdomains of the origin, but only for network errors that occur during DNS resolution. The NEL policy will not be enabled for subdomains if `include_subdomains` is not present, is `false`, or for other (non-DNS-related) network errors. The reporting group must also be set to include subdomains for this option to have effect.
 - success_fraction
   - : Floating point value between 0 and 1 which specifies the proportion of **successful** network requests to report. Defaults to 0, so that no successful network requests will be reported if the key is not present in the JSON payload.
 - failure_fraction

@@ -1,5 +1,6 @@
 ---
-title: text-justify
+title: "`text-justify` CSS property"
+short-title: text-justify
 slug: Web/CSS/Reference/Properties/text-justify
 page-type: css-property
 browser-compat: css.properties.text-justify

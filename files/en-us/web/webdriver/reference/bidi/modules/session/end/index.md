@@ -3,9 +3,13 @@ title: session.end command
 short-title: session.end
 slug: Web/WebDriver/Reference/BiDi/Modules/session/end
 page-type: webdriver-command
+status:
+  - experimental
 browser-compat: webdriver.bidi.session.end
 sidebar: webdriver
 ---
+
+{{SeeCompatTable}}
 
 The `session.end` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`session`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session) module ends the client's current BiDi session with the browser.
 
@@ -30,7 +34,7 @@ The `result` field in the response is an empty object (`{}`).
 
 ### Ending an automation session with the browser
 
-With a WebDriver BiDi connection established, send the following message to end the current session:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) established, send the following message to end the current session:
 
 ```json
 {

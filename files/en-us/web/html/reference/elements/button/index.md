@@ -1,5 +1,6 @@
 ---
-title: "<button>: The Button element"
+title: "`<button>` HTML button element"
+short-title: <button>
 slug: Web/HTML/Reference/Elements/button
 page-type: html-element
 browser-compat: html.elements.button

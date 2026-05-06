@@ -1,5 +1,6 @@
 ---
-title: line-break
+title: "`line-break` CSS property"
+short-title: line-break
 slug: Web/CSS/Reference/Properties/line-break
 page-type: css-property
 browser-compat: css.properties.line-break

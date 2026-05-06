@@ -36,6 +36,7 @@ allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
@@ -59,11 +60,14 @@ assetlinks
 associationlist
 associationlistitemkey
 associationlistitemvalue
+attributiondestination
+attributionsourceid
 attributionsrc
 audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -81,6 +85,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -92,6 +97,7 @@ browser.safebrowsing
 browser.sessionhistory
 browsingtopics
 bstack
+bufferedchange
 buttondisabledaccept
 bvec
 byterange
@@ -220,6 +226,7 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
 enterpictureinpicture
 equalsize
 EquationiOES
@@ -228,7 +235,9 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
 fgets
@@ -279,6 +288,7 @@ hansfin
 hantfin
 hebr
 highp
+hiliteColor
 HMDVRDevice
 hmng
 hmnp
@@ -372,6 +382,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -432,6 +443,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -525,6 +537,7 @@ oldstyle
 oldstyle-nums
 onao
 onbeforematch
+onbufferedchange
 oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
@@ -535,6 +548,7 @@ ondequeue
 ondispose
 ondownloadprogress
 onefive
+onendstreaming
 ongesturestart
 oninterest
 onlocation
@@ -555,6 +569,7 @@ onscreenschange
 onscrollsnapchange
 onscrollsnapchanging
 onsinkchange
+onstartstreaming
 ontextformatupdate
 ontextupdate
 onuncapturederror
@@ -605,6 +620,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -642,6 +659,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -738,6 +756,7 @@ sscanf
 stackoverflow_url
 startapp
 startproject
+startstreaming
 staticfiles
 storageaccess
 strcmp
@@ -745,6 +764,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu

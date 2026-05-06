@@ -1,5 +1,6 @@
 ---
-title: order
+title: "`order` CSS property"
+short-title: order
 slug: Web/CSS/Reference/Properties/order
 page-type: css-property
 browser-compat: css.properties.order
