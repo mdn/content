@@ -257,7 +257,7 @@ This example demonstrates applying multiple animations to a single element. Expa
 }
 ```
 
-We include the same HTML and CSS as in the previous example, and add a second set of animation `@keyframes` to apply a {{cssxref("filter")}} that rotates the hue through all possible values using the {{cssxref("hue-rotate()")}} filter function:
+We include the same HTML and CSS as in the previous example, and add a second set of animation `@keyframes` to apply a {{cssxref("filter")}} that rotates the hue through all possible values using the [`hue-rotate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/hue-rotate) filter function:
 
 ```css
 @keyframes psychedelic {
