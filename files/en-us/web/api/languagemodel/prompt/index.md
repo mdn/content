@@ -10,15 +10,6 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`prompt()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{jsxref("Promise")}} that resolves with the model's complete response as a string.
 
-<<<<<<< Updated upstream
-The `prompt()` method is the primary mechanism for interacting with a language model session. It prefills the context window with the provided input and generates a response. The entire response is buffered and returned as a single string when generation completes.
-
-For long responses or streaming use cases, use {{domxref("LanguageModel.promptStreaming()")}} instead to receive the response incrementally. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
-
-Each call to `prompt()` adds to the session's context. To branch from a given state without affecting the original session, call {{domxref("LanguageModel.clone()")}}.
-
-=======
->>>>>>> Stashed changes
 ## Syntax
 
 ```js-nolint
