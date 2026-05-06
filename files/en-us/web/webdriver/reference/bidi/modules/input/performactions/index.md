@@ -39,20 +39,24 @@ The `params` field contains:
 - `context`
   - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context in which to perform the actions. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `actions`
-  - : An array of objects, each representing an input source (`"key"`, `"pointer"`, or `"wheel"`) and the actions to perform for that source.
+  - : An array of objects, each representing an input source and the actions to perform for that source.
+    Each such object represents the outer `actions` object, which in turn, contains an outer `type` (input source type can be `"key"`, `"pointer"`, or `"wheel"`) and an inner `actions` array.
+    Each object in the inner `actions` array has its own inner `type` and additional fields that depend on it.
+
     All input sources are processed in parallel.
     In each tick (step), every input source performs one action simultaneously or does nothing if assigned a `"pause"` action.
     This allows combining input sources, for example, holding <kbd>Shift</kbd> while clicking.
 
-    Each `actions` object has the following fields:
+    Each outer `actions` object has the following fields:
     - `id`
       - : A string that uniquely identifies this input source within the action sequence, for example, `"mouse1"` or `"keyboard1"`.
     - `type`
-      - : A string that identifies the type of input source. Accepted values are `"none"`, `"key"`, `"pointer"`, and `"wheel"`.
+      - : A string (the outer `type`) that identifies the type of input source. Accepted values are `"none"`, `"key"`, `"pointer"`, and `"wheel"`.
     - `actions`
-      - : An array of objects, each representing an action for the input source specified in the [`type`](#type) field.
+      - : An array of objects (the inner `actions`), each representing an action for the input source specified in the outer [`type`](#type) field.
 
-        Each object has a `type` field that specifies the type of operation and additional fields that depend on the value of this `type`. The `type` field accepts the following values:
+        Each inner `actions` object has an inner `type` field that specifies the operation to perform and additional fields that depend on it.
+        The inner `type` accepts the following values:
         - `"pause"`: Waits for the given duration before the next step.
         - `"keyDown"`: Simulates pressing a key.
         - `"keyUp"`: Simulates releasing a key.
@@ -61,83 +65,97 @@ The `params` field contains:
         - `"pointerMove"`: Simulates moving the pointer.
         - `"scroll"`: Simulates a mouse wheel scroll.
 
-        The following table shows, for each input source `type` value, the `type` values valid inside the nested `actions` array:
+        The following table shows, for each outer `type` value, the valid values for the inner `type`:
 
-        | Input source `type` values | Accepted operation `type` values                           |
-        | -------------------------- | ---------------------------------------------------------- |
-        | `"none"`                   | `"pause"`                                                  |
-        | `"key"`                    | `"pause"`, `"keyDown"`, `"keyUp"`                          |
-        | `"pointer"`                | `"pause"`, `"pointerDown"`, `"pointerUp"`, `"pointerMove"` |
-        | `"wheel"`                  | `"pause"`, `"scroll"`                                      |
+        | Outer `type` values | Accepted inner `type` values                               |
+        | ------------------- | ---------------------------------------------------------- |
+        | `"none"`            | `"pause"`                                                  |
+        | `"key"`             | `"pause"`, `"keyDown"`, `"keyUp"`                          |
+        | `"pointer"`         | `"pause"`, `"pointerDown"`, `"pointerUp"`, `"pointerMove"` |
+        | `"wheel"`           | `"pause"`, `"scroll"`                                      |
 
-        The following table shows the additional fields in the nested `actions` object for each operation type:
+        The following table shows, for each inner `type` value, the fields available in the inner `actions` object:
 
-        | Operation `type` values | Fields available with this `type` value                                                                              |
-        | ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
-        | `"pause"`               | [`duration`](#duration)                                                                                              |
-        | `"keyDown"`, `"keyUp"`  | [`value`](#value)                                                                                                    |
-        | `"pointerDown"`         | [`button`](#button), [pointer properties](#common_pointer_properties)                                                |
-        | `"pointerUp"`           | [`button`](#button)                                                                                                  |
-        | `"pointerMove"`         | [`x`](#x), [`y`](#y), [`duration`](#duration), [`origin`](#origin), [pointer properties](#common_pointer_properties) |
-        | `"scroll"`              | [`x`](#x), [`y`](#y), [`deltaX`](#deltax), [`deltaY`](#deltay), [`duration`](#duration), [`origin`](#origin)         |
+        | Inner `type` values    | Fields available in the inner `actions` object                                                                |
+        | ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+        | `"pause"`              | [`duration`](#duration)                                                                                       |
+        | `"keyDown"`, `"keyUp"` | [`value`](#value)                                                                                             |
+        | `"pointerDown"`        | [`button`](#button), [pointer properties](#pointer_properties)                                                |
+        | `"pointerUp"`          | [`button`](#button)                                                                                           |
+        | `"pointerMove"`        | [`x`](#x), [`y`](#y), [`duration`](#duration), [`origin`](#origin), [pointer properties](#pointer_properties) |
+        | `"scroll"`             | [`x`](#x), [`y`](#y), [`deltaX`](#deltax), [`deltaY`](#deltay), [`duration`](#duration), [`origin`](#origin)  |
 
-    The outer `actions` object also supports the following optional field:
+    The outer `actions` object also supports the following field:
     - `parameters` {{optional_inline}}
-      - : An object with a `pointerType` field that specifies the pointer device type. Accepted values are `"mouse"` (default), `"pen"`, or `"touch"`. This field is valid only when the input source [`type`](#type) is `"pointer"`.
+      - : An object with a `pointerType` field that specifies the pointer device type. Accepted values are `"mouse"` (default), `"pen"`, or `"touch"`. This field is valid only when the outer [`type`](#type) is `"pointer"`.
 
-The following fields are available in each nested `actions` object, depending on the operation `type`:
+The following fields are available in each inner `actions` object, depending on the inner `type`:
 
 - `button`
   - : A non-negative integer that identifies the pointer button (`0` = primary, `1` = middle, `2` = secondary).
-    Specify this when the `type` field value is `"pointerDown"` or `"pointerUp"`.
+    Specify this when the inner `type` field value is `"pointerDown"` or `"pointerUp"`.
 - `deltaX`
   - : An integer that specifies the horizontal scroll delta in CSS pixels.
-    Specify this when the `type` field value is `"scroll"`.
+    Specify this when the inner `type` field value is `"scroll"`.
 - `deltaY`
   - : An integer that specifies the vertical scroll delta in CSS pixels.
-    Specify this when the `type` field value is `"scroll"`.
+    Specify this when the inner `type` field value is `"scroll"`.
 - `duration` {{optional_inline}}
-  - : A non-negative integer that specifies the time in milliseconds.
-    This value determines the number of ticks into which the action is divided; for example, a `"pointerMove"` with a 100 ms duration gets split across multiple ticks, each tick moving the pointer a fraction of the distance.
-    Specify `duration` when the `type` field value is `"pause"`, `"pointerMove"`, or `"scroll"`.
+  - : A non-negative integer that specifies the time in milliseconds over which the action is performed.
+    Specify this when the inner `type` field value is `"pause"`, `"pointerMove"`, or `"scroll"`.
+    For `"pointerMove"` and `"scroll"`, the overall movement occurs as a series of small movements over this period at a browser-defined rate (for example, one step per animation frame).
+    When multiple outer `actions` objects run in parallel, the tick lasts as long as the longest `duration` value in that tick.
 - `origin` {{optional_inline}}
-  - : A string or an object that specifies the origin for the move or scroll. Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
+  - : A string or an object that specifies the origin for the move or scroll.
+    Specify this when the inner `type` field value is `"pointerMove"` or `"scroll"`.
 
-    If a string, accepted values are:
-    - `"viewport"`: Indicates that the x and y coordinates are relative to the viewport's top-left corner. Use this for absolute positioning within the page. This is the default value for `"scroll"` if `origin` is omitted.
-    - `"pointer"`: Indicates that the x and y coordinates are relative to the current pointer position. Use this for relative moves from where the pointer currently is.
+    If `origin` is a string, accepted values are:
+    - `"viewport"`: Indicates that the x and y coordinates are relative to the viewport's top-left corner.
+      Use this for absolute positioning within the page.
+      This is the default value for `"scroll"` if `origin` is omitted.
+    - `"pointer"`: Indicates that the x and y coordinates are relative to the current pointer position.
+      Use this for relative moves from where the pointer currently is.
 
-    If an object, include the following fields:
+    If `origin` is an object, include the following fields:
     - `type`
       - : A string set to `"element"`.
     - `element`
-      - : An object containing the ID that uniquely identifies the DOM element to use as the origin. The ID is returned by the browser when you locate the element using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes), [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
+      - : An object containing the ID that uniquely identifies the DOM element to use as the origin.
+        The ID is returned by the browser when you locate the element using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes), [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
 
 - `value`
   - : A string that contains the key value, such as <kbd>a</kbd>, <kbd>Enter</kbd>, or <kbd>Shift</kbd>.
-    Specify this when the `type` field value is `"keyDown"` or `"keyUp"`.
-- Common pointer properties
-  - : The following optional fields describe the physical characteristics of the pointer device, such as a mouse, stylus, or touchscreen. Specify these when the `type` field value is `"pointerDown"` or `"pointerMove"`.
+    Specify this when the inner `type` field value is `"keyDown"` or `"keyUp"`.
+- Pointer properties
+  - : The following fields are part of the inner `actions` object and describe the physical characteristics of the pointer device, such as a mouse, stylus, or touchscreen.
+    Specify these when the inner `type` is `"pointerDown"` or `"pointerMove"`.
     - `width` {{optional_inline}}
-      - : A non-negative integer that specifies the width, in CSS pixels, of the pointer contact area. See {{domxref("PointerEvent.width")}}.
+      - : A non-negative integer that specifies the width, in CSS pixels, of the pointer contact area.
+        See {{domxref("PointerEvent.width")}}.
     - `height` {{optional_inline}}
-      - : A non-negative integer that specifies the height, in CSS pixels, of the pointer contact area. See {{domxref("PointerEvent.height")}}.
+      - : A non-negative integer that specifies the height, in CSS pixels, of the pointer contact area.
+        See {{domxref("PointerEvent.height")}}.
     - `pressure` {{optional_inline}}
-      - : A float that specifies the normalized pressure of the pointer in the range `0.0`–`1.0`. See {{domxref("PointerEvent.pressure")}}.
+      - : A float that specifies the normalized pressure of the pointer in the range `0.0`–`1.0`.
+        See {{domxref("PointerEvent.pressure")}}.
     - `tangentialPressure` {{optional_inline}}
-      - : A float that specifies the normalized tangential pressure in the range `-1.0`–`1.0`. See {{domxref("PointerEvent.tangentialPressure")}}.
+      - : A float that specifies the normalized tangential pressure in the range `-1.0`–`1.0`.
+        See {{domxref("PointerEvent.tangentialPressure")}}.
     - `twist` {{optional_inline}}
-      - : An integer that specifies the clockwise rotation, in degrees, of the pointer in the range `0`–`359`. See {{domxref("PointerEvent.twist")}}.
+      - : An integer that specifies the clockwise rotation, in degrees, of the pointer in the range `0`–`359`.
+        See {{domxref("PointerEvent.twist")}}.
     - `altitudeAngle` {{optional_inline}}
-      - : A float that specifies the altitude angle, in radians, of the pointer in the range `0.0`–`π/2`. See {{domxref("PointerEvent.altitudeAngle")}}.
+      - : A float that specifies the altitude angle, in radians, of the pointer in the range `0.0`–`π/2`.
+        See {{domxref("PointerEvent.altitudeAngle")}}.
     - `azimuthAngle` {{optional_inline}}
-      - : A float that specifies the azimuth angle, in radians, of the pointer in the range `0.0`–`2π`. See {{domxref("PointerEvent.azimuthAngle")}}.
+      - : A float that specifies the azimuth angle, in radians, of the pointer in the range `0.0`–`2π`.
+        See {{domxref("PointerEvent.azimuthAngle")}}.
 - `x`
   - : A number (for `"pointerMove"`) or an integer (for `"scroll"`) that specifies the x-coordinate.
-    Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
+    Specify this when the inner `type` field value is `"pointerMove"` or `"scroll"`.
 - `y`
   - : A number (for `"pointerMove"`) or an integer (for `"scroll"`) that specifies the y-coordinate.
-    Specify this when the `type` field value is `"pointerMove"` or `"scroll"`.
+    Specify this when the inner `type` field value is `"pointerMove"` or `"scroll"`.
 
 ### Return value
 
@@ -146,17 +164,22 @@ The `result` field in the response is an empty object (`{}`).
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : The action sequence is malformed; for example, if a required field is missing, a field value is of the wrong type, or an input source `type` value is not `"none"`, `"key"`, `"pointer"`, or `"wheel"`.
+  - : The action sequence is malformed; for example, if a required field is missing, a field value is of the wrong type, or an outer `type` value is not `"none"`, `"key"`, `"pointer"`, or `"wheel"`.
 - `no such frame`
   - : No context with the given context ID is found.
 
 ## Examples
 
-### Clicking an element
+### Holding Shift while clicking an element
 
-Consider a scenario where you want to simulate a mouse click on an element.
+Consider a scenario where you want to hold the <kbd>Shift</kbd> key while clicking an element, for example to extend a text selection.
+
 With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) and the element identifier using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes).
-Send the following message that uses three sequential steps: moving (`pointerMove`) the pointer to the center of the element (`x: 0, y: 0` relative to the element), pressing (`pointerDown`) the primary mouse button (`0`), and then releasing (`pointerUp`) it.
+Send the following message with two outer `actions` objects — a `"key"` source and a `"pointer"` source — running in parallel across the following three ticks:
+
+- Tick 1: The keyboard presses <kbd>Shift</kbd> while the pointer moves to the element. Since the `duration` of `pointerMove` is specified as `300`, the tick lasts `300 ms`, which is the longest `duration` in this tick.
+- Tick 2: The keyboard pauses while the pointer button is pressed (`pointerDown`). This tick lasts for `0 ms`.
+- Tick 3: The <kbd>Shift</kbd> key is released (`keyUp`) and the pointer button is released (`pointerUp`) simultaneously. This tick also lasts for `0 ms`.
 
 ```json
 {
@@ -165,6 +188,23 @@ Send the following message that uses three sequential steps: moving (`pointerMov
   "params": {
     "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
     "actions": [
+      {
+        "type": "key",
+        "id": "keyboard1",
+        "actions": [
+          {
+            "type": "keyDown",
+            "value": "\uE008"
+          },
+          {
+            "type": "pause"
+          },
+          {
+            "type": "keyUp",
+            "value": "\uE008"
+          }
+        ]
+      },
       {
         "type": "pointer",
         "id": "mouse1",
@@ -176,6 +216,7 @@ Send the following message that uses three sequential steps: moving (`pointerMov
             "type": "pointerMove",
             "x": 0,
             "y": 0,
+            "duration": 300,
             "origin": {
               "type": "element",
               "element": {
@@ -211,6 +252,7 @@ The browser responds as follows:
 ### Scrolling the page
 
 Consider a scenario where you want to simulate scrolling a page down.
+
 With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 Send the following message that scrolls from the top-left of the viewport (`x: 0, y: 0`) by `300` CSS pixels downward (`deltaY: 300`) with no horizontal scrolling (`deltaX: 0`).
 
