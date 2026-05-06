@@ -132,7 +132,7 @@ Alternatively, the `<animation-timeline>` can be set within the `animation` shor
 
 ```css
 @supports (animation: view()) {
-  /* CSS for browsers that support setting <animation-timeline> within the animation shorthand */
+  /* CSS for browsers supporting <animation-timeline> within `animation` shorthand */
 }
 ```
 
