@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browser.setDownloadBehavior
 sidebar: webdriver
 ---
 
-The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module allows file downloads to a specified folder, or blocks file downloads entirely. The behavior can be configured for all or some [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
+The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browser`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser) module allows file downloads to a specified folder, blocks file downloads entirely, or resets the behavior to the browser's default. The behavior can be configured for all or some [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
 
 ## Syntax
 
