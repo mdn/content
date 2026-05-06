@@ -195,7 +195,7 @@ We start by creating the sun and the sky. The sky is the {{cssxref(":root")}} of
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1;
-  animation: 4s linear 0s infinite alternate sun-rise;
+  animation: 4s linear 0s infinite alternate sunrise;
 }
 ```
 
@@ -216,13 +216,13 @@ The last step is to apply the animation! We use the `animation` shorthand proper
 
 ```css
 .sun {
-  animation: 4s linear 0s infinite alternate sun-rise;
+  animation: 4s linear 0s infinite alternate sunrise;
 }
 ```
 
 #### Results
 
-{{EmbedLiveSample('Basic usage: a sun rise')}}
+{{EmbedLiveSample('Basic usage: a sunrise')}}
 
 ### Applying multiple animations
 
@@ -247,7 +247,7 @@ This example demonstrates applying multiple animations to a single element. Expa
   aspect-ratio: 1 / 1;
 }
 
-@keyframes rise {
+@keyframes sunrise {
   from {
     transform: translateY(110vh);
   }
@@ -275,7 +275,7 @@ We then apply the two animations to our sun. Multiple animations are separated b
 ```css
 .sun {
   animation:
-    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate sunrise,
     24s linear 0s infinite psychedelic;
 }
 ```
@@ -286,7 +286,7 @@ We then apply the two animations to our sun. Multiple animations are separated b
 
 ### Cascading multiple animations
 
-This example demonstrates what happens when multiple animations define values for the same property. This example expands upon the [basic usage](#basic_usage_a_sun_rise) example, with two animations applied that both set a {{cssxref("transform")}} value.
+This example demonstrates what happens when multiple animations define values for the same property. This example expands upon the [basic usage](#basic_usage_a_sunrise) example, with two animations applied that both set a {{cssxref("transform")}} value.
 
 ```html hidden
 <div class="sun"></div>
@@ -311,7 +311,7 @@ This example demonstrates what happens when multiple animations define values fo
 We use the same HTML and CSS as in the first example, including the original `sunrise` animation, and a second animation named `bounce`. The two animations declare values for the same property:
 
 ```css
-@keyframes rise {
+@keyframes sunrise {
   from {
     transform: translateY(110vh);
   }
