@@ -1811,7 +1811,8 @@ optionList.forEach((option, index) => {
 });
 
 select.addEventListener("click", (event) => {
-  if (event.target.closest(".option")) return;
+  if (event.target instanceof Element && event.target.closest(".option"))
+    return;
   toggleOptList(select);
 });
 ```
@@ -2098,7 +2099,8 @@ selectList.forEach((select) => {
   });
 
   select.addEventListener("click", (event) => {
-    if (event.target.closest(".option")) return;
+    if (event.target instanceof Element && event.target.closest(".option"))
+      return;
     toggleOptList(select);
   });
 
