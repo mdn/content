@@ -249,8 +249,8 @@ document.addEventListener("keydown", (event) => {
 ```html hidden
 <p>
   The video element below shows a time-lapse of a flower blooming. You can
-  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift</kbd> +
-  <kbd>F</kbd> (uppercase "F"). The embedded document needs to have
+  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift+F</kbd> (uppercase "F").
+  The embedded document needs to have
   <a
     href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
     focus
@@ -285,9 +285,8 @@ kbd {
 
 #### Results
 
-Select the frame and press <kbd>Shift + F</kbd>.
+Select the frame and press <kbd>Shift+F</kbd>.
 When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
-On Firefox this says "Exit full screen (Press and hold Esc)".
 
 {{embedlivesample("Using keyboard lock", , "400", "", "", "", "fullscreen")}}
 
