@@ -834,4 +834,5 @@ There is a lot more that can be done with forms (check out our [See also](#see_a
 - [Creating forms from models](https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/) (Django docs)
 - [Generic editing views](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/) (Django docs)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+
