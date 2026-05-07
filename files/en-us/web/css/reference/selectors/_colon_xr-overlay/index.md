@@ -9,6 +9,8 @@ browser-compat: css.selectors.xr-overlay
 sidebar: cssref
 ---
 
+{{SeeCompatTable}}
+
 The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
 
 ## Syntax
@@ -38,7 +40,7 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 
 ```css
 :xr-overlay {
-  background-color: rgba(0 0 0 / 0.5);
+  background-color: rgb(0 0 0 / 0.5);
   color: white;
 }
 ```

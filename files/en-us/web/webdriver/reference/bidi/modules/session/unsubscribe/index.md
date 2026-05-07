@@ -1,6 +1,6 @@
 ---
-title: session.unsubscribe command
-short-title: session.unsubscribe
+title: "`session.unsubscribe` command"
+short-title: unsubscribe
 slug: Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.unsubscribe

@@ -1,5 +1,6 @@
 ---
-title: z-index
+title: "`z-index` CSS property"
+short-title: z-index
 slug: Web/CSS/Reference/Properties/z-index
 page-type: css-property
 browser-compat: css.properties.z-index

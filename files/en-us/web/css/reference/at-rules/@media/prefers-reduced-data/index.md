@@ -1,5 +1,6 @@
 ---
-title: prefers-reduced-data
+title: "`prefers-reduced-data` CSS media feature"
+short-title: prefers-reduced-data
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-data
 page-type: css-media-feature
 status:

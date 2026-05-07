@@ -1,5 +1,6 @@
 ---
 title: '`<input type="number">` HTML attribute value'
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number

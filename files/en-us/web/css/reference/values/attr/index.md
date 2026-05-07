@@ -1,5 +1,6 @@
 ---
-title: attr()
+title: "`attr()` CSS function"
+short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 page-type: css-function
 browser-compat: css.types.attr
@@ -79,7 +80,7 @@ The parameters are:
         ```css
         @namespace svg url("http://www.w3.org/2000/svg");
         a {
-          fill: attr(svg|myattr type(*), green);
+          fill: attr(svg|myAttr type(*), green);
         }
         ```
 

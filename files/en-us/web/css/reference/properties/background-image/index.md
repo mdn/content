@@ -1,5 +1,6 @@
 ---
-title: background-image
+title: "`background-image` CSS property"
+short-title: background-image
 slug: Web/CSS/Reference/Properties/background-image
 page-type: css-property
 browser-compat: css.properties.background-image

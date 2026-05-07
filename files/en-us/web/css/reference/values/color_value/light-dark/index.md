@@ -1,5 +1,6 @@
 ---
-title: light-dark()
+title: "`light-dark()` CSS function"
+short-title: light-dark()
 slug: Web/CSS/Reference/Values/color_value/light-dark
 page-type: css-function
 browser-compat: css.types.color.light-dark
