@@ -104,11 +104,11 @@ A `view-transition-class` value can be a space-separated list of identifiers, le
 }
 
 #card1 {
-  view-transition-name: card1;
+  view-transition-name: card-1;
 }
 
 #card2 {
-  view-transition-name: card2;
+  view-transition-name: card-2;
 }
 
 /* The `slide` class drives which animation runs... */
