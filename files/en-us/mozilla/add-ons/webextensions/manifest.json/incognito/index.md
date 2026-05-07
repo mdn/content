@@ -36,6 +36,11 @@ Use the `incognito` key to control how the extension works with private browsing
 > [!NOTE]
 > By default, extensions do not run in private browsing windows. Whether an extension can access private browsing windows is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}.
 
+> [!NOTE]
+> If your extension needs to maintain the privacy expectations of Private browsing mode, don't include the incognito key.
+>
+> This recommendation is made to avoid leaking state information from private browsing to non-private browsing. A common mistake in extensions is sending data from a content script (potentially in a tab in a private browsing window) to an external server through a network request from the background page. Because the background script shares the same cookies as the main browsing session, this could result in activity leaking from the private browsing window to the non-private browsing session. A way to avoid this is to use the `credentials: "omit"` flag in {{DOMxRef("fetch")}} (along with `cache: "no-cache"`), or the `mozAnon: true` option in {{DOMxRef("XMLHttpRequest")}}.
+
 This is a string that can take any of these values:
 
 - "spanning" (the default): the extension sees events from private and non-private windows and tabs. Windows and tabs gets an `incognito` property in the [`Window`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) or [`Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) that represents them. This property indicates whether or not the object is private:
