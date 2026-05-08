@@ -48,6 +48,17 @@ const memory = new WebAssembly.Memory({
 });
 ```
 
+The following snippet creates a new WebAssembly Memory instance with a 64-bit address type.
+The size values are {{jsxref("BigInt")}} values:
+
+```js
+const memory = new WebAssembly.Memory({
+  address: "i64",
+  initial: 1n,
+  maximum: 10n,
+});
+```
+
 The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded "memory.wasm" bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values. Note the use of {{jsxref("DataView")}} to access the memory so we always use little-endian format.
 
 ```js
