@@ -154,7 +154,7 @@ These are represented by two nested {{htmlelement("div")}} elements.
 #### CSS
 
 The CSS for the example is shown below.
-The CSS first specifies the {{cssxref("container-type")}} for the container element (`post`). 
+The CSS first specifies the {{cssxref("container-type")}} for the container element (`post`).
 The `@container` rule then applies a new `width`, `background-color`, and `font-size` to the card if the width is less than `650px`.
 
 ```html
