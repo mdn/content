@@ -1998,12 +1998,14 @@ Check out the [full source code here](/en-US/docs/Learn_web_development/Extensio
 // -------------------- //
 
 function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+  const selectedOption = select.querySelectorAll(".option")[getIndex(select)];
 
-  const optList = select.querySelector(".optList");
+  if (selectedOption) {
+    highlightOption(select, selectedOption);
+  }
 
-  optList.classList.add("hidden");
   select.classList.remove("active");
+  select.querySelector(".optList").classList.add("hidden");
   select.setAttribute("aria-expanded", "false");
 }
 
@@ -2027,11 +2029,11 @@ function toggleOptList(select) {
 function highlightOption(select, option) {
   const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  optionList.forEach((otherOption) => {
+    otherOption.classList.toggle("highlight", otherOption === option);
   });
 
-  option.classList.add("highlight");
+  select.setAttribute("aria-activedescendant", option.id);
 }
 
 function updateValue(select, index) {
