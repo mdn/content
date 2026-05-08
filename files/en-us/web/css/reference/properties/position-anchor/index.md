@@ -30,7 +30,7 @@ position-anchor: unset;
 ### Values
 
 - `normal`
-  - : If {{cssXRef("position-area")}} is `none`, behaves as `none`. Otherwise, behaves as `auto`.
+  - : If {{cssxref("position-area")}} is `none`, behaves as `none`. Otherwise, behaves as `auto`.
 
 - `auto`
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
