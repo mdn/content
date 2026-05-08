@@ -15,17 +15,23 @@ For details on how sunsetting works, see the [Sunsetting content](/en-US/docs/MD
 
 - **Sunset:** June 2022
 - **Archived content:** [canvas-raycaster](https://github.com/mdn/museum/tree/main/canvas-raycaster)
-- **Discussion:** [Move canvas-raycaster into mdn/museum](https://github.com/mdn/mdn/issues/193)
+- **Reference:** [Move canvas-raycaster into mdn/museum](https://github.com/mdn/mdn/issues/193)
 
 A Canvas API raycaster demo and its accompanying documentation page. The content was moved to the museum as part of repository maintenance work.
+
+> [!NOTE]
+> This sunsetting predated the [Sunsetting content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content) process. There's no discussion left.
 
 ### WebVR
 
 - **Sunset:** September 2022
 - **Archived content:** [webvr](https://github.com/mdn/museum/tree/main/webvr)
-- **Discussion:** [import webvr tests](https://github.com/mdn/museum/pull/6)
+- **Reference:** [Import webvr tests](https://github.com/mdn/museum/pull/6)
 
 A collection of WebVR API test examples, including basic display info, stage parameters, raw WebGL, VR controller demos, and an A-Frame demo. The WebVR API was deprecated in favor of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
+
+> [!NOTE]
+> This sunsetting predated the [Sunsetting content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content) process. There's no discussion left.
 
 <!--
 ### Section name
