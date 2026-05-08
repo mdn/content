@@ -249,8 +249,8 @@ document.addEventListener("keydown", (event) => {
 ```html hidden
 <p>
   The video element below shows a time-lapse of a flower blooming. You can
-  toggle fullscreen on and off using <kbd>Enter</kbd> or <kbd>Shift+F</kbd> (uppercase "F").
-  The embedded document needs to have
+  toggle fullscreen on and off using <kbd>Enter</kbd> or
+  <kbd>Shift+F</kbd> (uppercase "F"). The embedded document needs to have
   <a
     href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
     focus
