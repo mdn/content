@@ -42,8 +42,8 @@ Codecs will then store the first video frame in a sequence as a key frame, and t
 
 ![Key frames vs delta frames](key-frames.png)
 
-Videos are typically encoded with key frames at regular intervals. To reconstruct a given delta frame, it is necessary to decode the previous key frame, and then all the previous delta frames, in order, up until the current delta frame, in order to properly add up all the frame differences and construct the full current frame for display.
-In WebCodecs, the `EncodedVideoChunk` interface has a `type` property which can take the value `"key"` or `"delta"` denoting whether or not the chunk represents a key frame or a delta frame.
+Videos are typically encoded with key frames at regular intervals. To construct the full current frame for display of a given delta frame, you have to decode the previous key frame and all the subsequent delta frames (in order) up to the current delta frame.
+In WebCodecs, the `EncodedVideoChunk` interface has a `type` property, which can take the value `"key"` or `"delta"` to indicate whether or not the chunk represents a key frame or a delta frame.
 
 Because delta frames depend on all previous frames since the last key frame, a decoder cannot start decoding from an arbitrary point in a video — it must always start from a key frame. This has two practical implications: **seeking** to a specific timestamp requires finding the nearest preceding key frame and decoding every frame in order up to the target, and **error recovery** requires skipping forward to the next key frame before resuming decoding.
 
@@ -57,9 +57,9 @@ When encoding with a `VideoEncoder`, it is possible to determine when to set a v
 
 ### Codec compatibility
 
-For codecs to be useful, it is necessary to be able to both encode video (turn raw video into compressed binary data) with a codec, and to be able to decode the same video (turn the compressed binary data back into raw video frames) with the same codec. The video industry has therefore coalesced around a handful of standard codecs such as `vp9`, `h264`, `hevc` and `av1`.
+For codecs to be useful, you have to be able to both encode video (turn raw video into compressed binary data) with a codec, and to be able to decode the same video (turn the compressed binary data back into raw video frames) with the same codec. The video industry has therefore coalesced around a handful of standard codecs such as `vp9`, `h264`, `hevc` and `av1`.
 
-Applications which primarily create video content (e.g., video editing tools), and therefore primarily encode video, typically choose a video codec for encoding in order to maximize compatibility with video player software.
+Applications that primarily create video content (e.g., video editing tools), and therefore primarily encode video, typically choose a video codec for encoding in order to maximize compatibility with video player software.
 
 Applications which primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many codecs as possible.
 
