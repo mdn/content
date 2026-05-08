@@ -42,7 +42,7 @@ position-anchor: unset;
   - : The name of the anchor element to associate the positioned element with, as listed in the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
 
 - `match-parent`
-  - : Uses the same default anchor element as the parent ​or originating element, if this is a [pseudo-element](/en-US/docs/Glossary/Pseudo-element) ​if any, and if that would be an acceptable anchor element. Otherwise it has no default anchor element.
+  - : Uses the same default anchor element as the parent or originating element, if this is a [pseudo-element](/en-US/docs/Glossary/Pseudo-element) ​if any, and if that would be an acceptable anchor element. Otherwise it has no default anchor element.
 
 ## Description
 
