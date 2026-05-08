@@ -32,18 +32,18 @@ Generally there is a 1:1 correspondence between the raw and encoded versions of 
 
 ### Video
 
-A `VideoFrame` represents a video frame, and is tied both to actual pixel data on the device's graphics memory, as well as metadata such as the timestamp and duration (in microseconds), format and resolution. A `VideoFrame` can be constructed from any image source, and can also be rendered to a {{domxref("Canvas")}} using any of the canvas rendering methods.
+A `VideoFrame` represents a video frame, and is tied to actual pixel data on the device's graphics memory, as well as metadata such as the timestamp and duration (in microseconds), format and resolution. A `VideoFrame` can be constructed from any image source, and can also be rendered to a {{domxref("Canvas")}} using any of the canvas rendering methods.
 
 `EncodedVideoChunk` represents the encoded (compressed) version of the same frame, tied to binary data in regular memory and the same metadata.
-The only difference is that it has one additional field: `type`, which can be "key" or "delta", representing whether or not it corresponds to a [key frame](https://webcodecsfundamentals.org/basics/encoded-video-chunk/#key-frames). An `EncodedVideoChunk` typically stores 10 to 100 types less data than it's corresponding raw `VideoFrame`.
+The only difference is that it has one additional field: `type`, which can be "key" or "delta", representing whether or not it corresponds to a [key frame](https://webcodecsfundamentals.org/basics/encoded-video-chunk/#key-frames). An `EncodedVideoChunk` typically stores 10 to 100 times less data than its corresponding raw `VideoFrame`.
 
 ![VideoFrame and EncodedVideoChunk](video-frame.png)
 
 ### Audio
 
-An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), however the extracted `Float32Array` samples can be copied directly into a {{domxref("AudioBuffer")}} for playback.
+An `AudioData` object represents a number of individual audio samples (1024 is a typical number). Audio sample data can be extracted as a {{jsxref("Float32Array")}} via the `copyTo` method. There is no direct integration with the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API); however, the extracted `Float32Array` samples can be copied directly into a {{domxref("AudioBuffer")}} for playback.
 
-Likewise, the `EncodedAudioChunk` represents the encoded (compressed) version of an `AudioData` objects, containing compressed audio sample data.
+Likewise, the `EncodedAudioChunk` represents the encoded (compressed) version of an `AudioData` object, containing compressed audio sample data.
 
 ![AudioData and EncodedAudioChunk](audio-data.png)
 
@@ -81,7 +81,7 @@ A codec is a specific algorithm for encoding (compressing) and decoding (decompr
 - PCM
   - : Uncompressed audio. No quality loss, but large file sizes.
 
-The WebCodecs specification supports a particular set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. The [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) provides guidance on choosing an appropriate codec string (see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) (webcodecsfundamentals.org) for a complete list of codec strings and their browser support). 
+The WebCodecs specification supports a particular set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. The [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) provides guidance on choosing an appropriate codec string (see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) (webcodecsfundamentals.org) for a complete list of codec strings and their browser support).
 
 ### Muxing and demuxing
 
@@ -137,7 +137,7 @@ You can find more information on muxing and demuxing in the [Muxing and Demuxing
 
 ### Basic usage
 
-To instantiate a `VideoEncoder` we pass an object that specifies a callback function that will be called when `EncodedVideoChunk` instances are available for processing, and an error function that will be called if there are errors.
+To instantiate a `VideoEncoder`, we pass an object that specifies a callback function that will be called when `EncodedVideoChunk` instances are available for processing, and an error function that will be called if there are errors.
 This is shown in the following code:
 
 ```js
@@ -163,7 +163,7 @@ encoder.configure({
 });
 ```
 
-You can then start encoding frames to the encoder. You can construct a `VideoFrame` from a `Canvas`
+You can then start encoding frames to the encoder. You can construct a `VideoFrame` from a `Canvas`.
 
 ```js
 for (let i = 0; i < 60; i++) {

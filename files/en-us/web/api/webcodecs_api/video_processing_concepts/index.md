@@ -47,7 +47,7 @@ In WebCodecs, the `EncodedVideoChunk` interface has a `type` property, which can
 
 Because delta frames depend on all previous frames since the last key frame, a decoder cannot start decoding from an arbitrary point in a video — it must always start from a key frame. This has two practical implications: **seeking** to a specific timestamp requires finding the nearest preceding key frame and decoding every frame in order up to the target, and **error recovery** requires skipping forward to the next key frame before resuming decoding.
 
-When encoding with a `VideoEncoder`, it is possible to determine when to set a video as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method.
+When encoding with a `VideoEncoder`, it is possible to determine when to set a frame as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method.
 
 ```js
  encoder.encode(frame, { keyFrame: /* */ })
@@ -61,9 +61,9 @@ For codecs to be useful, you have to be able to both encode video (turn raw vide
 
 Applications that primarily create video content (e.g., video editing tools), and therefore primarily encode video, typically choose a video codec for encoding in order to maximize compatibility with video player software.
 
-Applications which primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many codecs as possible.
+Applications that primarily consume video content (e.g., video player software) and therefore primarily decode video will typically try to support as many codecs as possible.
 
-Applications which control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
+Applications that control both encoding and decoding (e.g., a video streaming website) have much more flexibility on codec choice, and can therefore choose codecs based on factors such as cost and encoding speed.
 
 ### Encoding is expensive
 
@@ -71,19 +71,19 @@ Encoding is significantly more computationally expensive than decoding, typicall
 
 ### Hardware acceleration
 
-Most consumer devices include specialized hardware specifically designed to encode and decode video. Leveraging these specialized chips for encoding and decoding is called hardware acceleration, and can speed up encoding tasks by 2 orders of magnitude compared to standard CPU based encoding.
+Most consumer devices include specialized hardware specifically designed to encode and decode video. Leveraging these specialized chips for encoding and decoding is called hardware acceleration, and can speed up encoding tasks by 2 orders of magnitude compared to standard CPU-based encoding.
 
-H.264 and H.265 encoding are most commonly hardware accelerated, while hardware accelerated encoding of VP9 and AV1 is less common. Hardware accelerated decoding is broadly available for all major codecs, though AV1 decode acceleration is still more limited given its relative newness.
+H.264 and H.265 encoding are most commonly hardware accelerated, while hardware-accelerated encoding of VP9 and AV1 is less common. Hardware-accelerated decoding is broadly available for all major codecs, though AV1 decode acceleration is still more limited given its relative newness.
 
-One of the key advantages of the WebCodecs API is the ability to use hardware accelerated encoding, making applications like video editing and high performance streaming practical on consumer devices.
+One of the key advantages of the WebCodecs API is the ability to use hardware accelerated encoding, making applications like video editing and high-performance streaming practical on consumer devices.
 
 ## Containers
 
-Codecs only deal with encoding raw media data into a binary compressed form and vice-versa. A video file, such as a WebM, MP4 or MKV file, contains both metadata such as track information, duration etc., as well as encoded media data.
+Codecs only deal with encoding raw media data into a binary compressed form and vice-versa. A video file, such as a WebM, MP4 or MKV file, contains both metadata such as track information, duration etc., and encoded media data.
 
 ![Containers](containers.png)
 
-Each type of video file has its own container spec, such the [WebM spec](https://www.w3.org/TR/mse-byte-stream-format-webm/) and the [MP4 Spec](https://github.com/alfg/quick-dive-into-mp4), which specifies how metadata and encoded media should be formatted and stored within the file stream.
+Each type of video file has its own container spec, such as the [WebM spec](https://www.w3.org/TR/mse-byte-stream-format-webm/) and the [MP4 Spec](https://github.com/alfg/quick-dive-into-mp4), which specifies how metadata and encoded media should be formatted and stored within the file stream.
 
 A given container format can actually support a variety of different codecs. Here are the most common containers and the codecs they support:
 
@@ -95,7 +95,7 @@ A given container format can actually support a variety of different codecs. Her
 | MPEG-TS (.ts) | H.264, H.265           | AAC, MP3             |
 | OGG (.ogg)    | Theora                 | Vorbis, Opus         |
 
-A video player needs to both follow the container spec to extract metadata and encoded chunks (called demuxing), as well as to decode the encoded video/audio in order to play the video file.
+A video player needs to both follow the container spec to extract metadata and encoded chunks (called demuxing), and decode the encoded video/audio in order to play the video file.
 
 While the {{domxref("HTMLVideoElement")}} handles both demuxing and decoding, and primarily supports MP4 and WebM formats, the WebCodecs API does not deal with container formats.
 
@@ -103,7 +103,7 @@ To play a video with WebCodecs, it is necessary to both demux the file (typicall
 
 ![Demuxing](decoder-demuxer.png)
 
-Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a 3rd party library like [Mediabunny](https://mediabunny.dev/)
+Likewise, to write a video file with WebCodecs it is necessary to also follow the container spec, writing metadata and placing the encoded chunks at the correct position in the output file stream. This is called muxing, and is not handled natively by the WebCodecs API, instead requiring a third-party library like [Mediabunny](https://mediabunny.dev/).
 
 See the [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing) section on the WebCodecs API overview page for library options for demuxing and muxing.
 

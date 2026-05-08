@@ -35,7 +35,7 @@ encoder.configure({
 });
 ```
 
-You would then start encoding VideoFrames, where you would not only specify the `VideoFrame` to be encoded, but also the `keyFrame` parameter indicating whether or not the frame should be encoded as a key frame.
+You would then start encoding `VideoFrame` objects, where you would not only specify the `VideoFrame` to be encoded, but also the `keyFrame` parameter indicating whether or not the frame should be encoded as a key frame.
 
 ```js
 for (let i = 0; i < 60; i++) {
@@ -50,7 +50,7 @@ The first frame encoded should be a key frame — while `VideoEncoder` will auto
 
 It is important to close `VideoFrame` objects as soon as they are sent for encoding to avoid memory leaks. `VideoFrame` objects are large enough that applications can crash with fewer than 100 active frames in memory.
 
-Note that `VideoEncoder` also has a queue of frames to encode called the `encodeQueue`. If you are rendering an animation at 30fps run `encoder.encode(frame)` on each render, but the encoder is only able to encode at 10 fps, the encoder queue will eventually grow until it runs out of video memory and the process crashes.
+Note that `VideoEncoder` also has a queue of frames to encode called the `encodeQueue`. If you are rendering an animation at 30 fps, run `encoder.encode(frame)` on each render, but the encoder is only able to encode at 10 fps, the encoder queue will eventually grow until it runs out of video memory and the process crashes.
 
 You therefore need to manage how and when you send frames to the encoder, checking {{domxref("VideoEncoder.encodeQueueSize")}} within your render loop, and ensuring that it does not grow unbounded.
 
@@ -86,7 +86,7 @@ encoder.encode(frame, { keyFrame: true });
 
 ## Decoding video
 
-Likewise, for decoding video, you start with instantiating the {{domxref("VideoDecoder")}} with the `output` and `error` callback functions, where the `output` callback will return `VideoFrame` objects returned by the decoder.
+Likewise, for decoding video, you start by instantiating the {{domxref("VideoDecoder")}} with the `output` and `error` callback functions, where the `output` callback receives `VideoFrame` objects returned by the decoder.
 
 ```js
 const decoder = new VideoDecoder({
@@ -99,13 +99,13 @@ const decoder = new VideoDecoder({
 });
 ```
 
-You need to then configure the decoder. If you are decoding a video file, a demuxing library can provide the correct decoder config (see [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing)). If streaming video between a WebCodecs sender and receiver, the decoder config would be identical to the meta returned by the `VideoEncoder` which generated the encoded chunks.
+You then need to configure the decoder. If you are decoding a video file, a demuxing library can provide the correct decoder config (see [Muxing and Demuxing](/en-US/docs/Web/API/WebCodecs_API#muxing_and_demuxing)). If streaming video between a WebCodecs sender and receiver, the decoder config would be identical to the meta returned by the `VideoEncoder` which generated the encoded chunks.
 
 ```js
 decoder.configure(/**config */);
 ```
 
-If you are decoding a video file, you will need a demuxing library to extract video chunks. You can then submit the chunks for decoding. Keep in mind that you should not send just one chunk for decoding and wait for the frame to output before feeding the next chunk. Depending on the browser/device and video itself, you may need to send multiple chunks before the decoder begins returning frames, and the minimum number of chunks will depend on the device.
+If you are decoding a video file, you will need a demuxing library to extract video chunks. You can then submit the chunks for decoding. Keep in mind that you should not send just one chunk for decoding and wait for the frame to be output before feeding the next chunk. Depending on the browser/device and video itself, you may need to send multiple chunks before the decoder begins returning frames, and the minimum number of chunks will depend on the device.
 
 ```js
 let chunk_index = 0;
@@ -160,7 +160,7 @@ for (let i = 0; i < BATCH_LENGTH; i++) {
 
 ## VideoFrame
 
-A {{domxref("VideoFrame")}} represents a single uncompressed video frame, including its pixel data and metadata such as its timestamp. It is both what is returned by the `VideoDecoder` when decoding encoded video, and can be generated from a variety of source images.
+A {{domxref("VideoFrame")}} represents a single uncompressed video frame, including its pixel data and metadata such as its timestamp. It is both returned by the `VideoDecoder` when decoding encoded video, and generated from a variety of source images.
 
 ### Creating video frames
 
@@ -175,7 +175,7 @@ const canvasFrame = new VideoFrame(canvasEl, { timestamp: 0 });
 
 Constructing a `VideoFrame` from a `Canvas` is typically how you would encode video in a video editing application, where source video and images are used within a canvas context, applying effects and transformations, and the `Canvas` can both be previewed by the user and used as the image source for a `VideoFrame` to be encoded.
 
-You can also directly create a `VideoFrame` from binary data, such as an `ArrayBuffer`, however you will need to specify the `format` and metadata and ensure that the data being used to construct the frame follows the specified [format](/en-US/docs/Web/API/VideoFrame/format).
+You can also directly create a `VideoFrame` from binary data, such as an `ArrayBuffer`; however, you will need to specify the `format` and metadata and ensure that the data being used to construct the frame follows the specified [format](/en-US/docs/Web/API/VideoFrame/format).
 
 ```js
 const rgbaFrame = new VideoFrame(rgbaData, {
@@ -190,7 +190,7 @@ const rgbaFrame = new VideoFrame(rgbaData, {
 
 A `VideoFrame` constructed from binary data (e.g., `ArrayBuffer` or `Uint8ClampedArray`) will incur a CPU→graphics memory copy operation, which can be a performance penalty if done repeatedly.
 
-Finally, `VideoFrame` objects can also be generated by decoding `EncodedVideoChunk` objects via a `VideoDecoder`, as shown in the [Decoding Video](#decoding-video) section above.
+Finally, `VideoFrame` objects can also be generated by decoding `EncodedVideoChunk` objects via a `VideoDecoder`, as shown in the [Decoding video](#decoding-video) section above.
 
 ### Consuming video frames
 
@@ -225,13 +225,13 @@ This method involves making a single copy of the frame in graphics memory, resul
 
 #### WebGPU
 
-The most efficient way to render a `VideoFrame` to a canvas would be via the [importExternalTexture](/en-US/docs/Web/API/GPUDevice/importExternalTexture) method in WebGPU.
+The most efficient way to render a `VideoFrame` to a canvas is via the [importExternalTexture](/en-US/docs/Web/API/GPUDevice/importExternalTexture) method in WebGPU.
 
 ```js
 const externalTexture = device.importExternalTexture({ source: frame });
 ```
 
-`importExternalTexture` is efficient as it incurs a zero-copy operation, using the same exact `VideoFrame` object in memory within a WebGPU pipeline. It is the most performant method for rendering a `VideoFrame`, but also the most complex to set up.
+`importExternalTexture` is efficient as it incurs a zero-copy operation, using the exact same `VideoFrame` object in memory within a WebGPU pipeline. It is the most performant method for rendering a `VideoFrame`, but also the most complex to set up.
 
 ### Memory
 

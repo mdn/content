@@ -36,7 +36,7 @@ VP9 is an open source codec developed by Google, and offers better compression t
 
 VP9 within WebM containers is also supported by native video players on Windows (Windows Media Player) and third-party players such as VLC, but currently lacks native playback support on macOS and iOS.
 
-VP9 is sometimes, but not always supported as a codec within MP4 files, as support for this configuration depends on playback software.
+VP9 is sometimes, but not always, supported as a codec within MP4 files, as support for this configuration depends on playback software.
 
 VP9 is often chosen for internal use cases for its better compression, or when open source licensing matters.
 
@@ -196,7 +196,7 @@ Use {{domxref("AudioEncoder/isConfigSupported_static", "AudioEncoder.isConfigSup
 You need to choose a video codec and an audio codec, along with the container format, together as a package. For practical quickstart guidance, here are some common configurations:
 
 - **Targeting maximum compatibility** (video intended for playback in third-party software or on a wide range of devices): H.264 (e.g., `avc1.4d0034`) + AAC (`mp4a.40.2`) in an MP4 container is the most common choice in practice.
-- **Open-source projects or applications controlling both encoding and playback** (e.g., internal tooling, in-app streaming) VP9 (e.g., `vp09.00.40.08.00`) + Opus (`opus`) in a WebM container is a natural fit — both are open-source, and WebM is the standard container for this combination.
+- **Open-source projects or applications controlling both encoding and playback** (e.g., internal tooling, in-app streaming): VP9 (e.g., `vp09.00.40.08.00`) + Opus (`opus`) in a WebM container is a natural fit — both are open-source, and WebM is the standard container for this combination.
 - **Maximum compression** (e.g., large-scale streaming): AV1 + Opus in a WebM container, provided your target audience has sufficient hardware support. Use {{domxref("VideoEncoder/isConfigSupported_static", "VideoEncoder.isConfigSupported()")}} to verify before committing to this combination.
 
 ## Checking support at runtime
