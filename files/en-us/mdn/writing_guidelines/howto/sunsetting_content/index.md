@@ -10,6 +10,13 @@ This article describes the process for retiring entire sections of MDN Web Docs 
 
 Sunsetting is a very rare occurrence, and the process will differ depending on the circumstances. This guide provides an overview of when and how to sunset a section, and the steps to follow to do so responsibly. For a list of sections that have already been sunset, see [Sunset content](/en-US/docs/MDN/Writing_guidelines/Howto/Sunsetting_content/Sunset_content).
 
+In this guide, a _section_ means a self-contained area of MDN Web Docs — typically a top-level folder (for example, `/Web/SECTION_NAME`) or a coherent sub-tree (for example, `/Learn_web_development/PATH/SECTION_NAME`), such as an entire technology reference or a complete learning track. This process does _not_ apply to:
+
+- Marking an individual web platform feature as deprecated within an otherwise active area, which follows the standard [deprecation process](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete).
+- Removing a single page or guide, which is covered by the [Deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#deleting_pages) guide.
+
+If you're unsure whether a removal qualifies as sunsetting, raise it in a [GitHub discussion](https://github.com/orgs/mdn/discussions) before starting the process.
+
 ## When to consider sunsetting content
 
 You may want to propose sunsetting a section of MDN Web Docs content if any of the following apply:
