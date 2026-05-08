@@ -81,7 +81,7 @@ A codec is a specific algorithm for encoding (compressing) and decoding (decompr
 - PCM
   - : Uncompressed audio. No quality loss, but large file sizes.
 
-The WebCodecs specification supports a particular set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. For a full list of codec strings and their browser support, see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) (webcodecsfundamentals.org), or the [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) for guidance on choosing the right codec string.
+The WebCodecs specification supports a particular set of codecs, and individual devices and browsers may only support a subset of those. Encoders and decoders must be configured with fully specified codec strings (such as `"vp09.00.40.08.00"` for VP9 or `"avc1.4d0034"` for H.264) instead of ambiguous codec names like `"vp9"` or `"h264"`. The [Codec selection guide](/en-US/docs/Web/API/WebCodecs_API/Codec_selection) provides guidance on choosing an appropriate codec string (see the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/) (webcodecsfundamentals.org) for a complete list of codec strings and their browser support). 
 
 ### Muxing and demuxing
 
@@ -93,14 +93,14 @@ Reading encoded chunks from a video file is a completely different process calle
 
 These libraries will follow the video container specifications (e.g., webm, mp4) to extract the track data and byte offsets for each encoded chunk, and provide methods for extracting the actual chunks from the raw file.
 
-Likewise, to write to a playable video file, you will need a muxing library, with [Mediabunny](https://mediabunny.dev/) being the primary option for muxing. Muxing libraries will handle formatting the binary encoded data, and placing it in the correct byte position in the output file stream according to the container specification, so that the output video is playable.
+Likewise, to write to a playable video file, you will need a muxing library, with [Mediabunny](https://mediabunny.dev/) being the primary option. Muxing libraries handle formatting the binary encoded data, and placing it in the correct byte position in the output file stream according to the container specification, so that the output video is playable.
 
 You can find more information on muxing and demuxing in the [Muxing and Demuxing guide](https://webcodecsfundamentals.org/basics/muxing/) (webcodecsfundamentals.org).
 
 ## Guides
 
 - [Video processing concepts](/en-US/docs/Web/API/WebCodecs_API/Video_processing_concepts)
-  - : A brief primer on video processing, covering codecs and containers, muxing and demuxing, and provides conceptual information to understand how the WebCodecs API implements these concepts.
+  - : A brief primer on video processing, covering codecs and containers, muxing and demuxing, and conceptual information that explains how the WebCodecs API implements these concepts.
 - [Using the WebCodecs API](/en-US/docs/Web/API/WebCodecs_API/Using_the_WebCodecs_API)
   - : In depth guide to how to actually use the WebCodecs API, including how to instantiate and configure encoders and decoders, how to create and consume video frames, and how to extract samples from `AudioData`.
 - [Codec selection](/en-US/docs/Web/API/WebCodecs_API/Codec_selection)
