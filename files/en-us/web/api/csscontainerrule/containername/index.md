@@ -30,7 +30,7 @@ For example, the value of `containerName` for the {{cssxref("@container")}} belo
 ```
 
 > [!NOTE]
-> This value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used on supporting browsers.
+> The `containerName` value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used in supporting browsers.
 > Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions.
 
 ## Examples
@@ -78,7 +78,7 @@ These are represented by two nested {{htmlelement("div")}} elements.
 #### CSS
 
 The CSS for the container element specifies the type of the container along with a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the `width` is greater than `700px`.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if its `width` is greater than or equal to `700px`.
 
 ```html
 <style id="example-styles">
@@ -112,8 +112,8 @@ const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 ```
 
-We then use `containerRule` to show the name of the first container condition.
-If `CSSContainerRule.conditions` is supported on the browser, we show the name and query from that as well.
+We then use `containerRule` to log the name of the first container condition.
+If the browser supports `CSSContainerRule.conditions`, we show the name and query from that as well.
 
 ```js
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
@@ -141,7 +141,7 @@ Note that the text in the card `<div>` should double in size as the container `w
 
 The example below is almost exactly the same as the previous example except that the CSS specifies multiple container conditions.
 
-Note that we've hidden the HTML, as it is the same as in the previous example.
+Note that we've hidden the HTML because it is the same as in the previous example.
 
 ```html hidden
 <pre id="log"></pre>
@@ -175,7 +175,7 @@ function log(text) {
 
 #### CSS
 
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the `width` is greater than `700px` or if the container has the name `other-name`.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if its `width` is greater than `700px` or if the container has the name `other-name`.
 Note that this condition is contrived to demonstrate the effect of multiple conditions (it does not affect the behavior of the example).
 
 ```html
@@ -211,7 +211,7 @@ const containerRule = exampleRules[2]; // a CSSContainerRule representing the co
 ```
 
 The code is slightly different from the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
-Instead we only log the value of `containerName` if the browser supports multiple container conditions.
+We therefore only log the value of `containerName` if the browser supports multiple container conditions — it will be the empty string.
 
 ```js
 if (!containerRule) {

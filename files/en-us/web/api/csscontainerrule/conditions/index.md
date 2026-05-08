@@ -25,7 +25,7 @@ Either the `name` or `query` may be the empty string, but not both.
 The **`conditions`** property represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects.
 
 Each object represents a container condition as a `name` string property and a `query` string property, either of which may be the empty string if not defined.
-The `name` represents the name of a container, and the `query` string represents the set of feature tests that must all be true for the particular container condition to match.
+The `name` represents the name of a container, and the `query` string represents the set of feature tests that must be true for the particular container condition to match.
 
 For example, given the following {{cssxref("@container")}}:
 

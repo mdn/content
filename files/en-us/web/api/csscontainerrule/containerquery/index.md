@@ -31,7 +31,7 @@ For example, the value of `containerQuery` for the {{cssxref("@container")}} bel
 ```
 
 > [!NOTE]
-> This value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used on supporting browsers.
+> The `containerQuery` value has been superseded by {{domxref("CSSContainerRule.conditions")}}, which should be used in supporting browsers.
 > Browsers that do not support `conditions` cannot parse `@container` definitions with multiple container conditions.
 
 ## Examples
@@ -79,7 +79,7 @@ These are represented by two nested {{htmlelement("div")}} elements.
 #### CSS
 
 The CSS for the container element specifies the type of the container along with a name.
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than `700px`.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if its width is greater than or equal to `700px`.
 
 ```html
 <style id="example-styles">
@@ -113,8 +113,8 @@ const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 ```
 
-We then use `containerRule` to show the query of the first container condition.
-If `CSSContainerRule.conditions` is supported on the browser, we show the name and query from that as well.
+We then use `containerRule` to log the query of the container condition.
+If `CSSContainerRule.conditions` is supported in the browser, we show the name and query from that as well.
 
 ```js
 log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
@@ -134,7 +134,7 @@ The example output is shown below.
 The log section lists the query of the only container condition using `containerQuery`.
 It also shows the name and query using the `conditions` property, if supported.
 
-{{EmbedLiveSample("Basic usage","100%","250px")}}
+{{EmbedLiveSample("Basic usage","100%","320px")}}
 
 The text in the card `<div>` should double in size as the page width reaches `700px`, and halve as it goes below `700px` again.
 
@@ -142,7 +142,7 @@ The text in the card `<div>` should double in size as the page width reaches `70
 
 The example below is almost exactly the same as the previous example except that the CSS specifies multiple container conditions.
 
-Note that we've hidden the HTML, as it is the same as in the previous example.
+Note that we've hidden the HTML because it is the same as in the previous example.
 
 ```html hidden
 <pre id="log"></pre>
@@ -176,7 +176,7 @@ function log(text) {
 
 #### CSS
 
-The card has a default font size, which is overridden for the `@container` named `sidebar` if the width is greater than `700px` or if the container has the name `other-name`.
+The card has a default font size, which is overridden for the `@container` named `sidebar` if its width is greater than or equal to `700px` or if the container has the name `other-name`.
 Note that this condition is contrived to demonstrate the effect of multiple conditions (it does not affect the behavior of the example).
 
 ```html
@@ -212,7 +212,7 @@ const containerRule = exampleRules[2]; // a CSSContainerRule representing the co
 ```
 
 The code is slightly different from the previous case because if multiple container conditions are not supported by the browser, the `containerRule` will be `undefined`.
-Instead we only log the value of `containerQuery` if the browser supports multiple container conditions.
+We therefore only log the value of `containerQuery` if the browser supports multiple container conditions — it will be the empty string.
 
 ```js
 if (!containerRule) {

@@ -18,12 +18,12 @@ _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxr
 - {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}}
   - : Returns an array of objects, each of which specifies a container condition in a {{cssxref("@container")}} rule.
     The objects have a `name` string property and a `query` string property, either of which may be the empty string if not defined.
-    The `name` represents the name of a container, and the `query` represents the set of feature tests that must all be true for the particular condition to apply.
+    The `name` represents the name of a container, and the `query` represents the set of feature tests that must be true for the particular condition to apply.
 - {{domxref("CSSContainerRule.containerName")}} {{ReadOnlyInline}}
-  - : Returns a string representing the name of the first container condition of a {{cssxref("@container")}}, when there is just one condition.
+  - : Returns a string representing the name of the container condition of a {{cssxref("@container")}}, when there is just one condition.
     If there are multiple container conditions, or if there is just one condition that does not specify a name, this is the empty string.
 - {{domxref("CSSContainerRule.containerQuery")}} {{ReadOnlyInline}}
-  - : Returns a string representing the container query for the first container condition of a {{cssxref("@container")}}, when there is only one condition.
+  - : Returns a string representing the container query for the container condition of a {{cssxref("@container")}}, when there is only one condition.
     This represents a set of feature tests that must all be true for the condition to apply.
     If there are multiple container conditions, or if there is just one condition that does not specify a query, this is the empty string.
 
@@ -36,7 +36,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 A `CSSContainerRule` object represents a {{cssxref("@container")}} rule.
 
 A `@container` rule defines one or more comma-separated _container conditions_.
-Each container condition consists of at least one of a "name" and "query", where the "name" indicates the name of the container to which the condition applies and the "query" specifies one or more logically combined feature checks on the properties of a container.
+Each container condition consists of a "name" and/or a "query", where the "name" indicates the name of the container to which the condition applies and the "query" specifies one or more logically combined feature checks on a container's properties.
 If any of the container conditions match a container, the indicated styles are applied.
 
 > [!NOTE]
@@ -52,7 +52,7 @@ This will match a container named `main-content` if its width is between `600px`
 }
 ```
 
-On browsers that support the `CSSContainerRule.conditions` property, it represents a `@container` as an array of objects, each of which defines a single container condition.
+In supporting browsers, the `CSSContainerRule.conditions` property represents a `@container` as an array of objects, each of which defines a single container condition.
 The objects have the properties `name` and `query`, which may be the empty string (`""`).
 The `conditions` property for the `@container` example above would look like this:
 
@@ -77,9 +77,9 @@ You can also get the text for the whole condition using {{domxref("CSSConditionR
 
 ### Feature testing
 
-Feature testing can be complicated because you may need to handle the cases where `CSSContainerRule` or `CSSContainerRule.conditions` are not supported, and also the particular case where `conditions` is not supported but multiple container conditions have been specified in the CSS.
+Feature testing can be complicated because you may need to handle cases where `CSSContainerRule` or `CSSContainerRule.conditions` are not supported, and also the particular case where `conditions` is not supported but multiple container conditions have been specified in the CSS.
 
-This code shows how you can do it, assuming that you have already obtained `containerRule`, a `CSSContainerRule` instance that corresponds to an `@container` rule defined in the page CSS (the next example shows how you might get `containerRule`).
+This code shows how you can do it, assuming that you have already obtained `containerRule`, a `CSSContainerRule` instance that corresponds to an {{cssxref("@container")}} rule defined in the page CSS (the next example shows how you might get `containerRule`).
 
 ```js
 if (typeof CSSContainerRule === "undefined") {
@@ -154,8 +154,8 @@ These are represented by two nested {{htmlelement("div")}} elements.
 #### CSS
 
 The CSS for the example is shown below.
-As described in the corresponding {{cssxref("@container")}} example, the CSS for the container element specifies the type of the container.
-The {{cssxref("@container")}} then applies a new `width`, `background-color`, and `font-size` to the card if the width is less than `650px`.
+The CSS first specifies the {{cssxref("container-type")}} for the container element (`post`). 
+The `@container` rule then applies a new `width`, `background-color`, and `font-size` to the card if the width is less than `650px`.
 
 ```html
 <style id="example-styles">
@@ -267,7 +267,7 @@ function log(text) {
 
 #### CSS
 
-In this example, the {{cssxref("@container")}} specifies a name for the container — `sidebar`, as well as the container type.
+In this example, the {{cssxref("@container")}} specifies a container name, `sidebar`, as well as the container type.
 The card has a default font size, which is overridden when it is contained inside a `sidebar` `@container` when its width is greater than or equal to `700px`.
 
 ```html
@@ -425,7 +425,7 @@ if (typeof CSSContainerRule === "undefined") {
 
 The example output is shown below.
 Browsers that support the `conditions` property will show both conditions.
-Those that do not will log a note that the multiple conditions cannot be parsed.
+Those that do not will log a note indicating that multiple conditions cannot be parsed.
 
 {{EmbedLiveSample("Multiple container conditions","100%","300px")}}
 
