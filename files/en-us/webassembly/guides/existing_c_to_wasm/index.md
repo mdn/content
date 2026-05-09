@@ -34,6 +34,7 @@ To compile this program, you need to tell the compiler where it can find libwebp
 ```bash
 emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     -I libwebp \
+    -I libwebp/src \
     webp.c \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c \
     libwebp/sharpyuv/*.c
