@@ -71,13 +71,11 @@ The simplest solution is to use `TextEncoder` and `TextDecoder` to convert betwe
 ```js
 function base64ToBytes(base64) {
   const binString = atob(base64);
-  return Uint8Array.from(binString, (m) => m.codePointAt(0));
+  return Uint8Array.from(binString, (m) => m.charCodeAt(0));
 }
 
 function bytesToBase64(bytes) {
-  const binString = Array.from(bytes, (byte) =>
-    String.fromCodePoint(byte),
-  ).join("");
+  const binString = String.fromCharCode(...bytes);
   return btoa(binString);
 }
 
