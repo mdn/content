@@ -34,7 +34,7 @@ const stats = audioCtx.playbackStats;
 
 // ...
 
-// Reset latency measurements to current time onwards
+// Reset the latency measurement to the current time
 stats.resetLatency();
 ```
 
