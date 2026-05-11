@@ -56,6 +56,7 @@ This property is a shorthand for the following CSS properties:
 
 - {{cssxref("background-repeat-x")}}
 - {{cssxref("background-repeat-y")}}
+
 ## Syntax
 
 ```css
