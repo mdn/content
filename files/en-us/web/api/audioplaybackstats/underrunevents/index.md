@@ -24,7 +24,7 @@ const stats = audioCtx.playbackStats;
 
 // ...
 
-// Log current number of underrun events
+// Log the number of underrun events
 console.log(stats.underrunEvents);
 ```
 
