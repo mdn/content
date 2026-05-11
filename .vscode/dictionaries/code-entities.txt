@@ -36,6 +36,7 @@ allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
@@ -66,6 +67,7 @@ audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -83,6 +85,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -232,7 +235,9 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
 fgets
@@ -377,6 +382,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -437,6 +443,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -613,6 +620,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -650,6 +659,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -754,6 +764,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu

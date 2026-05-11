@@ -40,7 +40,7 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 
 ```css
 :xr-overlay {
-  background-color: rgba(0 0 0 / 0.5);
+  background-color: rgb(0 0 0 / 0.5);
   color: white;
 }
 ```
