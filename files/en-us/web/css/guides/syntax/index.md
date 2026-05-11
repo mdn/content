@@ -22,7 +22,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 
 ### Key concepts
 
-- {{cssxref("at-rule")}}
+- [At-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [character escaping](/en-US/docs/Web/CSS/Reference/Values/custom-ident#escaping_characters)
 - [CSS comments](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
 - [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
