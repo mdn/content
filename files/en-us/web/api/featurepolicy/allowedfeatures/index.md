@@ -5,10 +5,11 @@ slug: Web/API/FeaturePolicy/allowedFeatures
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`allowedFeatures()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface returns a list of directive names of all

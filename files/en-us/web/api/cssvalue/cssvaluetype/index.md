@@ -5,10 +5,11 @@ slug: Web/API/CSSValue/cssValueType
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSValue.cssValueType
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`cssValueType`** read-only property of the
 {{domxref("CSSValue")}} interface represents the type of the current computed CSS

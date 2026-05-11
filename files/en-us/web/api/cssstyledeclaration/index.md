@@ -50,7 +50,7 @@ For example, it provides {{DOMxRef("CSSStyleDeclaration/getPropertyValue","getPr
   - : Removes a property from the CSS declaration block.
 - {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
   - : Modifies an existing CSS property or creates a new CSS property in the declaration block.
-- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
+- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : **Only supported via getComputedStyle in Firefox.** Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or `null` for [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 ## Example
