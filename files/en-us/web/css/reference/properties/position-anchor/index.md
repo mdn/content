@@ -7,7 +7,8 @@ browser-compat: css.properties.position-anchor
 sidebar: cssref
 ---
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the default **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property), which is used by {{cssxref("position-area")}}, {{cssxref("position-try")}}, and (by default) all anchor functions ({{cssxref("anchor()")}} and {{cssxref("anchor-size()")}}) applied to this element.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the default **anchor element** for a positioned element.
+This default is used by {{cssxref("position-area")}} and {{cssxref("position-try")}}, and by anchor functions ({{cssxref("anchor()")}} and {{cssxref("anchor-size()")}}) when no `<anchor-name>` argument is provided to those functions.
 
 ## Syntax
 
