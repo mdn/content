@@ -270,7 +270,7 @@ We include the same HTML and CSS as in the previous example, and add a second se
 }
 ```
 
-We then apply the two animations to our sun. Multiple animations are separated by commas, and each animation's parameters are set independently
+We then apply the two animations to our sun. Multiple animations are separated by commas, and each animation's parameters are set independently:
 
 ```css
 .sun {
