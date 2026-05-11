@@ -375,7 +375,7 @@
       "overview": ["CSSOM view API"],
       "guides": [
         "/docs/Web/API/CSSOM_view_API/Coordinate_systems",
-        "/docs/Web/CSS/CSSOM_view/Viewport_concepts"
+        "/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts"
       ],
       "interfaces": [
         "CaretPosition",
@@ -867,16 +867,16 @@
         "Element: contextmenu",
         "Element: DOMActivate",
         "Element: focus",
-        "Element: select",
+        "Element: input",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
-        "HTMLElement: input",
         "HTMLElement: beforetoggle",
+        "HTMLElement: change",
         "HTMLElement: toggle",
         "HTMLFormElement: reset",
         "HTMLFormElement: submit",
-        "HTMLInputElement: change",
         "HTMLInputElement: invalid",
+        "HTMLInputElement: select",
         "HTMLMediaElement: abort",
         "HTMLMediaElement: canplay",
         "HTMLMediaElement: canplaythrough",
@@ -975,8 +975,8 @@
       "overview": ["IndexedDB API"],
       "guides": [
         "/docs/Web/API/IndexedDB_API/Using_IndexedDB",
-        "/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB",
-        "/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria",
+        "/docs/Web/API/IndexedDB_API/Basic_Terminology",
+        "/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
         "/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due"
       ],
       "interfaces": [
@@ -1514,7 +1514,7 @@
       "interfaces": ["Selection"],
       "properties": [],
       "methods": ["Document.getSelection()", "Window.getSelection()"],
-      "events": ["Document: selectionchange", "Document: selectstart"]
+      "events": ["Document: selectionchange", "Node: selectstart"]
     },
     "Sensor API": {
       "overview": ["Sensor APIs"],
@@ -1767,7 +1767,7 @@
       "events": [
         "Element: focusin",
         "Element: focusout",
-        "Element: activate",
+        "Element: DOMActivate",
         "Element: click",
         "Element: mousedown",
         "Element: mouseup",
@@ -1851,8 +1851,7 @@
         "Element: keydown",
         "Element: keypress",
         "Element: keyup",
-        "Element: select",
-        "Window: abort",
+        "HTMLInputElement: select",
         "Window: error",
         "Window: load",
         "Window: unload"
@@ -2058,9 +2057,9 @@
     "Web Components": {
       "overview": ["Web components"],
       "guides": [
-        "/docs/Web/Web_Components/Using_custom_elements",
-        "/docs/Web/Web_Components/Using_shadow_DOM",
-        "/docs/Web/Web_Components/Using_templates_and_slots"
+        "/docs/Web/API/Web_components/Using_custom_elements",
+        "/docs/Web/API/Web_components/Using_shadow_DOM",
+        "/docs/Web/API/Web_components/Using_templates_and_slots"
       ],
       "interfaces": [
         "CustomElementRegistry",
@@ -2561,8 +2560,6 @@
         "Window: vrdisplaydisconnect",
         "Window: vrdisplayactivate",
         "Window: vrdisplaydeactivate",
-        "Window: vrdisplayblur",
-        "Window: vrdisplayfocus",
         "Window: vrdisplaypresentchange"
       ]
     },
