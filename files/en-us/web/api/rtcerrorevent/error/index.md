@@ -12,7 +12,7 @@ The **`error`** read-only property of the {{domxref("RTCErrorEvent")}} interface
 
 ## Value
 
-An {{domxref("RTCError")}} object whose properties provide RTC-specific details about the error.
+An {{domxref("RTCError")}} object.
 
 ## Examples
 
@@ -36,7 +36,7 @@ dataChannel.addEventListener("error", (event) => {
 });
 ```
 
-If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}} property being `sdp-syntax-error`— a message string is constructed to present the error message and the line number within the SDP at which the error occurred.
+If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}} property being `sdp-syntax-error`— a message string is constructed to present the error message and the SDP message line number where the error occurred.
 This message is then displayed using a function called `showMyAlertMessage()`, which stands in for whatever output mechanism this code might use.
 
 Any other error is treated as terminal, causing a `terminateMyConnection()` function to be called.

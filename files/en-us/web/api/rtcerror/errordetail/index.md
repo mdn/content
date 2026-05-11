@@ -20,10 +20,10 @@ The possible values are:
 - `dtls-failure`
   - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error.
     The error's {{domxref("DOMException.message", "message")}} contains details about the nature of the error.
-    If a fatal error is _received_, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLSL alert received.
-    If, on the other hand, a fatal error was _sent_, the {{domxref("RTCError.sentAlert", "sentAlert")}} is set to the alert's value.
+    If a fatal error is _received_, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLS alert received.
+    If, on the other hand, a fatal error was _sent_, the {{domxref("RTCError.sentAlert", "sentAlert")}} property is set to the alert's value.
 - `fingerprint-failure`
-  - : The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the SDP.
+  - : The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the {{Glossary("SDP")}}.
     If the remote peer can't match the local certificate against the provided fingerprints, this error doesn't occur, though this situation may result instead in a `dtls-failure` error.
 - `hardware-encoder-error`
   - : The hardware encoder doesn't support the given configuration parameters.
@@ -31,11 +31,11 @@ The possible values are:
   - : The hardware encoder resources required to accomplish the requested operation aren't available.
 - `sctp-failure`
   - : The {{Glossary("SCTP")}} negotiation has failed, or the connection has terminated with a fatal error.
-    The SCTP cause code can be found in the `RTCError` object's {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}}.
+    The SCTP cause code can be found in the `RTCError` object's {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}} property.
     SCTP error cause codes 1-13 are defined in the SCTP specification: {{RFC(4960, "", "3.3.10")}}.
 - `sdp-syntax-error`
   - : The SDP syntax is invalid.
-    The error's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property indicates the line number within the SDP at which the error was detected.
+    The error's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property indicates the SDP message line number where the error was detected.
 
 ## Specifications
 

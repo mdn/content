@@ -21,7 +21,7 @@ Note that WebRTC defines other error event interfaces, which are used for errors
 
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{domxref("Event")}}_
+_Also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
   - : An {{domxref("RTCError")}} object specifying RTC-specific information about the error.
@@ -29,7 +29,7 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}_
 
 ## Instance methods
 
-_Only inherits properties from its parent interface, {{domxref("Event")}}_
+_Only inherits properties from its parent interface, {{domxref("Event")}}._
 
 ## Events
 

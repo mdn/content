@@ -12,8 +12,8 @@ The **`sctpCauseCode`** read-only property of the {{domxref("RTCError")}} interf
 
 ## Value
 
-An unsigned long integer value specifying SCTP cause code explaining why the error occurred.
-This property is `null` if the error isn't an SCTP error, with its {{domxref("RTCError.errorDetail", "errorDetail")}} property set to `sctp-failure`.
+A positive integer specifying the SCTP cause code explaining why the error occurred.
+This property is `null` if the error isn't an SCTP error, indicated by the {{domxref("RTCError.errorDetail", "errorDetail")}} property being set to `sctp-failure`.
 
 The standard SCTP error cause codes, numbered 1-13, are defined in the SCTP specification: {{RFC(4960, "", "3.3.10")}}.
 

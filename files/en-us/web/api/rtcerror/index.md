@@ -15,16 +15,16 @@ It's based upon the standard {{domxref("DOMException")}} interface that describe
 ## Constructor
 
 - {{domxref("RTCError.RTCError", "RTCError()")}}
-  - : Creates and returns a new `RTCError` object initialized with the different parameters and, optionally, a string to use as the value of the error's {{domxref("DOMException.message", "message")}} property.
+  - : Creates and returns a new `RTCError` object instance.
 
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("DOMException")}}_
+_Also inherits properties from its parent interface, {{DOMxRef("DOMException")}}._
 
 - {{domxref("RTCError.errorDetail", "errorDetail")}} {{ReadOnlyInline}}
   - : A string specifying the WebRTC-specific error code identifying the type of error that occurred.
 - {{domxref("RTCError.receivedAlert", "receivedAlert")}} {{ReadOnlyInline}}
-  - : A positive integer value indicating the fatal {{Glossary("DTLS")}} error which was received from the network.
+  - : A positive integer value indicating the fatal {{Glossary("DTLS")}} error received from the network.
     Only valid if the `errorDetail` string is `dtls-failure`.
     If `null`, no DTLS error was received.
 - {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}} {{ReadOnlyInline}}
@@ -65,7 +65,7 @@ dataChannel.addEventListener("error", (event) => {
 });
 ```
 
-If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}} property being `sdp-syntax-error`—, a message string is constructed to present the error message and the line number within the SDP at which the error occurred.
+If the error is an SDP syntax error—as indicated by the {{domxref("RTCError.errorDetail", "errorDetail")}} property being set to `sdp-syntax-error`— a message string is constructed to present the error message and line number within the SDP message where the error occurred.
 This message is then displayed using a function called `showMyAlertMessage()`, which stands in for whatever output mechanism this code might use.
 
 Any other error is treated as terminal, causing a `terminateMyConnection()` function to be called.

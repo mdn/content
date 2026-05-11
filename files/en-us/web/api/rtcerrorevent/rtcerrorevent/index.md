@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.RTCErrorEvent.RTCErrorEvent
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers}}
 
 The **`RTCErrorEvent()`** constructor creates a new {{domxref("RTCErrorEvent")}} object.
 
@@ -25,7 +25,7 @@ new RTCErrorEvent(type, options)
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `error`
-      - : A {{domxref("RTCError")}} describing the type (cause) and location of the error.
+      - : A {{domxref("RTCError")}} describing the cause and the location of the error.
 
 ### Return value
 

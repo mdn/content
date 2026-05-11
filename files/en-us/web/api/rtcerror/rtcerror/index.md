@@ -30,10 +30,10 @@ new RTCError(options, message)
         - `dtls-failure`
           - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error.
             The error's {{domxref("DOMException.message", "message")}} contains details about the nature of the error.
-            - If a fatal error is _received_, set [`receivedAlert`](#receivedalert) to the value of the received DTLSL alert.
+            - If a fatal error is _received_, set [`receivedAlert`](#receivedalert) to the value of the received DTLS alert.
             - If a fatal error was _sent_, set [`sentAlert`](#sentalert) to the alert's value.
         - `fingerprint-failure`
-          - : The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the SDP.
+          - : The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the {{Glossary("SDP")}} message.
             If the remote peer can't match the local certificate against the provided fingerprints, this error doesn't occur, though this situation may result instead in a `dtls-failure` error.
         - `hardware-encoder-error`
           - : The hardware encoder doesn't support the given configuration parameters.
@@ -45,7 +45,7 @@ new RTCError(options, message)
             SCTP error cause codes 1-13 are defined in the SCTP specification: {{RFC(4960, "", "3.3.10")}}.
         - `sdp-syntax-error`
           - : The SDP syntax is invalid.
-            The line number within the SDP at which the error was detected should be set in [`sdpLineNumber`](#sdplinenumber).
+            The SDP message line number at which the error was detected should be set in [`sdpLineNumber`](#sdplinenumber).
 
     - `receivedAlert` {{optional_inline}}
       - : A positive integer value indicating a fatal {{Glossary("DTLS")}} error that was received from the network.
@@ -56,7 +56,7 @@ new RTCError(options, message)
         This should only be set if `errorDetail` is `sctp-failure`.
 
     - `sdpLineNumber` {{optional_inline}}
-      - : An integer identifying the line number of the {{Glossary("SDP")}} on which a syntax error occurred.
+      - : An integer identifying the {{Glossary("SDP")}} message line number at which a syntax error occurred.
         Only set if `errorDetail` is `sdp-syntax-error`.
     - `sentAlert` {{optional_inline}}
       - : A positive integer indicating s fatal DTLS error that was sent out by this device.
@@ -68,8 +68,7 @@ new RTCError(options, message)
 
 ### Return value
 
-A newly-created {{domxref("RTCError")}} object.
-The properties of the object are set to the values passed in the [`options`](#options) parameter, or otherwise `null`.
+A newly-created {{domxref("RTCError")}} object instance.
 
 ## Usage notes
 
