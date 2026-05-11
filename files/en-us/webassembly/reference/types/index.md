@@ -9,6 +9,8 @@ This section documents the different WebAssembly types.
 
 ## Reference types
 
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref)
+  - : Represents a thrown exception in a Wasm module, allowing it to be rethrown.
 - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
   - : References a JavaScript value, enabling it to be given to a Wasm module without the need for copying or serializing.
 - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)

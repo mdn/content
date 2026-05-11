@@ -278,6 +278,8 @@ wasm.then((result) => {
 
 ## See also
 
+- [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
+- [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
 - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
 - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
