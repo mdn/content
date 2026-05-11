@@ -8,7 +8,7 @@ browser-compat: api.RTCError.RTCError
 
 {{APIRef("WebRTC")}}
 
-The **`RTCError()`** constructor creates and returns a new {{domxref("RTCError")}} object initialized with the different parameters and, optionally, a string to use as the value of the error's message property.
+The **`RTCError()`** constructor creates and returns a new {{domxref("RTCError")}} object instance.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ new RTCError(options, message)
 ### Parameters
 
 - `options`
-  - : An object that can be provided to set the details of the specific error in an RTCErrorEvent.
+  - : An object providing the details of the specific error in an `RTCErrorEvent`.
     The object has the following properties:
     - `errorDetail`
       - : A string specifying the WebRTC-specific error code identifying the type of error that occurred.
