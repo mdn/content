@@ -35,7 +35,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/Refe
 
 - {{glossary("CSS descriptor")}}
 - {{glossary("Parse")}}
-- {{glossary("Stylesheet")}}
+- {{glossary("Style sheet")}}
 - {{glossary("Whitespace")}}
 
 ## Guides

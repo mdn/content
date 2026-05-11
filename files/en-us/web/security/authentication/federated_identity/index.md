@@ -67,7 +67,7 @@ In the authentication request:
    - `client_id`: Identifies this RP to the IdP.
    - `response_type`: Always `"code"` if we are using the two-part flow described here, which is the recommended option.
    - `redirect_uri`: The URL in the RP, that the IdP should redirect to once it has attempted to authenticate the user. This is the URL to which the IdP will deliver the authorization code.
-   - `code_challenge`: A cryptographic {{glossary("hash")}} of a secret specific to this authorization request, which will be used by the token endpoint to ensure that the token request is really the counterpart of this authorization request.
+   - `code_challenge`: A cryptographic {{glossary("hash function", "hash")}} of a secret specific to this authorization request, which will be used by the token endpoint to ensure that the token request is really the counterpart of this authorization request.
    - `scope`: A list of strings that specify which sets of user data the RP wishes to access.
 
 3. The IdP authenticates the user. The protocol does not specify a particular method for this: the IdP could use a password, a one-time password, a biometric, or any other appropriate method.
@@ -122,7 +122,7 @@ The `code_challenge` and `code_verifier` values that the RP provides in the auth
 In the authentication request:
 
 - The RP generates a value that is hard to guess and is specific to this authentication request. This value is called the _code verifier_.
-- The RP creates a {{glossary("hash", "cryptographic hash")}} of the code verifier, and uses it as the `code_challenge` parameter in the authentication request.
+- The RP creates a {{glossary("hash function", "cryptographic hash")}} of the code verifier, and uses it as the `code_challenge` parameter in the authentication request.
 - The IdP stores the code challenge, and associates it with the authorization code that it returns to the RP.
 
 In the token request:
