@@ -222,7 +222,7 @@ The specification also includes detailed recommendations for security practices 
 Sign-out scenarios are more complex in a federated identity system than in a non-federated system, because:
 
 - The user might sign out of the RP either on the RP's site or on the IdP's site.
-- The user might choose to sign out of the RP only, or to sign out globally: that is, to sign out of all RPs that they are signed into with this IdP. This is a common requirement when we use federated identity to build a {{glossary("single sign-on", "single sign-on (SSO)")}} system, in which an employee might use a single set of corporate credentials to sign into email, a bug tracker, and a discussion forum.
+- The user might choose to sign out of the RP only, or to sign out globally: that is, to sign out of all RPs that they are signed into with this IdP. This is a common requirement when we use federated identity to build a single sign-on (SSO) system, in which an employee might use a single set of corporate credentials to sign into email, a bug tracker, and a discussion forum.
 
 Supporting these scenarios means implementing some communication mechanism between the RP and the IdP. For example:
 
