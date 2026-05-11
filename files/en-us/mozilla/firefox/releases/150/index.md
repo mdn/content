@@ -64,9 +64,9 @@ No notable changes.
 
 - {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now supported, allowing reporting of SDP parse errors.
   ([Firefox bug 1814459](https://bugzil.la/1814459)).
-- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported.
   ([Firefox bug 1561441](https://bugzil.la/1561441)).
-- {{domxref("RTCIceTransport.role")}} is now supported
+- {{domxref("RTCIceTransport.role")}} is now supported.
   ([Firefox bug 2018843](https://bugzil.la/2018843)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
