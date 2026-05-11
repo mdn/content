@@ -24,7 +24,7 @@ const stats = audioCtx.playbackStats;
 
 // ...
 
-// Log current minimum latency
+// Log minimum latency
 console.log(stats.minimumLatency);
 ```
 

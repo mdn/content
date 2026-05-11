@@ -24,7 +24,7 @@ const stats = audioCtx.playbackStats;
 
 // ...
 
-// Log the total duration of underrun events
+// Log total duration of underrun events
 console.log(stats.underrunDuration);
 ```
 

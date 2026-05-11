@@ -129,7 +129,7 @@ Interfaces for extracting audio graph statistics, for the purposes of data analy
 - {{domxref("AnalyserNode")}}
   - : Represents a node able to provide real-time frequency and time-domain analysis information.
 - {{domxref("AudioPlaybackStats")}}
-  - : Provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow developers to measure audio delay and glitchiness.
+  - : Provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow you to measure audio delay and glitches.
 
 ### Splitting and merging audio channels
 

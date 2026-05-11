@@ -7,7 +7,7 @@ browser-compat: api.AudioPlaybackStats
 
 {{APIRef("Web Audio API")}}
 
-The **`AudioPlaybackStats`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow you to measure audio delay and glitchiness.
+The **`AudioPlaybackStats`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow you to measure audio delay and glitches.
 
 An audio context's `AudioPlaybackStats` object can be accessed via its {{domxref("AudioContext.playbackStats")}} property. The returned `AudioPlaybackStats` object is live — the contained property values are updated once every second.
 
@@ -59,12 +59,12 @@ It is possible to retrieve the immediate playout latency of the audio context vi
 - {{domxref("AudioPlaybackStats.underrunDuration")}} {{ReadOnlyInline}}
   - : A number indicating the total duration of the underrun events since the audio context was initialized.
 - {{domxref("AudioPlaybackStats.underrunEvents")}} {{ReadOnlyInline}}
-  - : A number indicating the number of underrun events since the audio context was initialized.
+  - : An integer indicating the number of underrun events since the audio context was initialized.
 
 ## Instance methods
 
 - {{domxref("AudioPlaybackStats.resetLatency()")}}
-  - : Sets the interval over which the latency stats are measured to the current time onwards.
+  - : Resets the start of the interval during which latency statistics are measured to the current time.
 - {{domxref("AudioPlaybackStats.toJSON()")}}
   - : A {{Glossary("Serialization","serializer")}} that returns a JSON representation of the {{domxref("AudioPlaybackStats")}} object.
 

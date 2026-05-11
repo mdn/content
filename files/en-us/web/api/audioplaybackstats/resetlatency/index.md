@@ -8,7 +8,7 @@ browser-compat: api.AudioPlaybackStats.resetLatency
 
 {{APIRef("Web Audio API")}}
 
-The **`resetLatency()`** method of the {{domxref("AudioPlaybackStats")}} interface sets the interval over which the latency stats are measured to the {{domxref("BaseAudioContext.currentTime")}} onwards.
+The **`resetLatency()`** method of the {{domxref("AudioPlaybackStats")}} interface resets the start of the interval during which latency statistics are measured to the {{domxref("BaseAudioContext.currentTime")}}.
 
 ## Syntax
 

@@ -8,7 +8,7 @@ browser-compat: api.AudioContext.playbackStats
 
 {{APIRef("Web Audio API")}}
 
-The **`playbackStats`** read-only property of the {{domxref("AudioContext")}} interface returns an {{domxref("AudioPlaybackStats")}} object providing access to duration, underrun, and latency statistics for the `AudioContext`. These statistics allow you to measure audio delay and glitchiness.
+The **`playbackStats`** read-only property of the {{domxref("AudioContext")}} interface returns an {{domxref("AudioPlaybackStats")}} object providing access to duration, underrun, and latency statistics for the `AudioContext`. These statistics allow you to measure audio delay and glitches.
 
 It is possible to retrieve the immediate playout latency of the context via the {{domxref("AudioContext.outputLatency")}} property; `playbackStats`, however, provides access to more detailed statistics that update over time, including average, minimum, and maximum latency.
 

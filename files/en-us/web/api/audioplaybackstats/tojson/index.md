@@ -36,7 +36,7 @@ const stats = audioCtx.playbackStats;
 
 // ...
 
-// Log current total duration
+// Log playbackStats JSON
 console.log(stats.toJSON());
 ```
 
