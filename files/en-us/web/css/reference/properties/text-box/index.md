@@ -1,5 +1,6 @@
 ---
-title: text-box
+title: "`text-box` CSS property"
+short-title: text-box
 slug: Web/CSS/Reference/Properties/text-box
 page-type: css-shorthand-property
 browser-compat: css.properties.text-box

@@ -1,5 +1,6 @@
 ---
-title: :muted
+title: "`:muted` CSS pseudo-class"
+short-title: :muted
 slug: Web/CSS/Reference/Selectors/:muted
 page-type: css-pseudo-class
 browser-compat: css.selectors.muted

@@ -34,10 +34,6 @@ The `External` object has the following methods:
       <td><code>IsSearchProviderInstalled()</code></td>
       <td>Dummy function; does nothing.</td>
     </tr>
-    <tr>
-      <td><code>getHostEnvironmentValue(name)</code> {{non-standard_inline}}</td>
-      <td>Microsoft Edge proprietary API. See <a href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399(v=vs.85)">Microsoft docs</a> for more information.</td>
-    </tr>
   </tbody>
 </table>
 

@@ -14,8 +14,8 @@ Values of this type are an object containing these properties:
 
 - `file` {{optional_inline}}
   - : `string`. The path of the file containing the user script code. The path is relative to the extension's root directory.
-- `allFrames` {{optional_inline}}
-  - : `code`. JavaScript code for the user script.
+- `code` {{optional_inline}}
+  - : `string`. JavaScript code for the user script.
 
 `file` or `code` must be specified, not both.
 

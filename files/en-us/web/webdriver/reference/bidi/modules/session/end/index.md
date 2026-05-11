@@ -1,6 +1,6 @@
 ---
-title: session.end command
-short-title: session.end
+title: "`session.end` command"
+short-title: end
 slug: Web/WebDriver/Reference/BiDi/Modules/session/end
 page-type: webdriver-command
 status:

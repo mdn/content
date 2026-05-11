@@ -1,5 +1,6 @@
 ---
-title: :lang()
+title: "`:lang()` CSS pseudo-class"
+short-title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
 page-type: css-pseudo-class
 browser-compat: css.selectors.lang

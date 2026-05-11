@@ -3,12 +3,10 @@ title: "SerialPort: open() method"
 short-title: open()
 slug: Web/API/SerialPort/open
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SerialPort.open
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The `baudRate` parameter is required.
 

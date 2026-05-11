@@ -1,5 +1,6 @@
 ---
-title: place-items
+title: "`place-items` CSS property"
+short-title: place-items
 slug: Web/CSS/Reference/Properties/place-items
 page-type: css-shorthand-property
 browser-compat: css.properties.place-items

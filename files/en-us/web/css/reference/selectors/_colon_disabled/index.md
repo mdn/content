@@ -1,5 +1,6 @@
 ---
-title: :disabled
+title: "`:disabled` CSS pseudo-class"
+short-title: :disabled
 slug: Web/CSS/Reference/Selectors/:disabled
 page-type: css-pseudo-class
 browser-compat: css.selectors.disabled

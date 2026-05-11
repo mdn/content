@@ -1,5 +1,6 @@
 ---
-title: color-interpolation
+title: "`color-interpolation` CSS property"
+short-title: color-interpolation
 slug: Web/CSS/Reference/Properties/color-interpolation
 page-type: css-property
 browser-compat: css.properties.color-interpolation

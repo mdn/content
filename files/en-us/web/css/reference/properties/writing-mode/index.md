@@ -1,5 +1,6 @@
 ---
-title: writing-mode
+title: "`writing-mode` CSS property"
+short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
 page-type: css-property
 browser-compat: css.properties.writing-mode

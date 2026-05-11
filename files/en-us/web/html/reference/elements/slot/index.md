@@ -1,5 +1,6 @@
 ---
-title: "<slot>: The Web Component Slot element"
+title: "`<slot>` HTML web component slot element"
+short-title: <slot>
 slug: Web/HTML/Reference/Elements/slot
 page-type: html-element
 browser-compat: html.elements.slot

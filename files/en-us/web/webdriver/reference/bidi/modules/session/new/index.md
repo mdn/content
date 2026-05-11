@@ -1,6 +1,6 @@
 ---
-title: session.new command
-short-title: session.new
+title: "`session.new` command"
+short-title: new
 slug: Web/WebDriver/Reference/BiDi/Modules/session/new
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.new
@@ -41,8 +41,8 @@ The `params` field contains:
 
 The `alwaysMatch` and `firstMatch` objects can include the following features:
 
-- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
-  - : A boolean that indicates whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
+- `acceptInsecureCerts` {{optional_inline}}
+  - : A boolean that controls whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
 - `browserName` {{optional_inline}}
   - : A string that specifies the name of the browser to use (for example, `"firefox"` or `"chrome"`).
 - `browserVersion` {{optional_inline}}
@@ -85,7 +85,7 @@ The browser may also return vendor-specific capabilities prefixed with a browser
 
 ### Errors
 
-- session not created
+- `session not created`
   - : A session already exists, or the browser is unable to create a new session (for example, because a requested capability cannot be satisfied).
 
 ## Examples
