@@ -60,6 +60,15 @@ No notable changes.
   This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
 
+#### Media, WebRTC, and Web Audio
+
+- {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now supported, allowing reporting of SDP parse errors.
+  ([Firefox bug 1814459](https://bugzil.la/1814459)).
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported
+  ([Firefox bug 1561441](https://bugzil.la/1561441)).
+- {{domxref("RTCIceTransport.role")}} is now supported
+  ([Firefox bug 2018843](https://bugzil.la/2018843)).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
