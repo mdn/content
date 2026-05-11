@@ -20,13 +20,13 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `name` {{deprecated_inline}}
+- `name` {{deprecated_inline}} {{non-standard_inline}}
   - : Name of the parameter.
-- `value` {{deprecated_inline}}
+- `value` {{deprecated_inline}} {{non-standard_inline}}
   - : Specifies the value of the parameter.
-- `type` {{deprecated_inline}}
+- `type` {{deprecated_inline}} {{non-standard_inline}}
   - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
-- `valuetype` {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}} {{non-standard_inline}}
   - : Specifies the type of the `value` attribute. Possible values are:
     - `data`: Default value. The value is passed to the object's implementation as a string.
     - `ref`: The value is a URI to a resource where run-time values are stored.

@@ -38,7 +38,9 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2016929](https://bugzil.la/2016929)), ([Firefox bug 2019254](https://bugzil.la/2019254)), ([Firefox bug 2024601](https://bugzil.la/2024601)), [Firefox bug 2030645](https://bugzil.la/2030645)).
+- The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2016929](https://bugzil.la/2016929), ([Firefox bug 2019254](https://bugzil.la/2019254)), ([Firefox bug 2024601](https://bugzil.la/2024601)), [Firefox bug 2030645](https://bugzil.la/2030645)).
+
+- The {{cssxref("position-anchor")}} CSS property now supports the `normal` (default) value. This allows the matching of the {{cssxref("position-area")}} property, so if the `position-area` property updates the `position-anchor` property will also. ([Firefox bug 2030351](https://bugzil.la/2030351)).
 
 <!-- #### Removals -->
 
@@ -64,6 +66,9 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This makes it possible to open an [always-on-top window](/en-US/docs/Web/API/Document_Picture-in-Picture_API#how_does_it_work) that can be populated with arbitrary HTML content.
   It can be used to display any content that a user might want to view separate from the launching page (or even the browser), such as a set of streams showing the participants of a video conference call, a stock ticker, or a countdown timer.
   ([Firefox bug 2006594](https://bugzil.la/2006594)).
+- The {{domxref("CanvasRenderingContext2D.lang")}} property is supported for setting the language of the canvas drawing context.
+  While a DOM canvas can inherit this context from the `lang` attribute of its associated {{htmlelement("canvas")}} element, this is useful for setting the context for an offscreen canvas, which may be rendered before being associated with a `<canvas>`.
+  ([Firefox bug 1943070](https://bugzil.la/1943070)).
 - The [`options.keyboardLock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) property can now be passed as an option to {{domxref("Element.requestFullscreen()")}}, allowing websites to request keyboard lock when the element is displayed in fullscreen mode.
   This stops the <kbd>Esc</kbd> key from causing the element to leave fullscreen (a long-press is required instead), and some formerly-reserved browser hotkeys can now be intercepted and their default action prevented.
   ([Firefox bug 2032302](https://bugzil.la/2032302)).

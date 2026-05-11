@@ -349,7 +349,7 @@ Later on, you will need to include the following URLs in your page.
 - `bee.jpg`: [Image for the "Bees, Wasps, Ants (Hymenoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.jpg).
 - `beetle.png`: [Image for the "Beetles (Coleoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.png).
 - `butterfly.jpg`: [Image for the "Butterflies & Moths (Lepidoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/butterfly.jpg).
-- `mosquito.jpg`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg).
+- `fly.jpg`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg).
 - `spider.jpg`: [Image for the "Spiders (Araneae)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.jpg).
 - `true_bug.jpg`: [Image for the "True Bugs (Hemiptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.jpg).
 - `bug_video_640.mp4`: [header video](https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4).
@@ -561,11 +561,11 @@ Your finished HTML should look something like this:
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg"
             alt="A hairy flying insect with long legs"
             width="250"
             height="180" />
-          <figcaption>A mosquito.</figcaption>
+          <figcaption>A fly.</figcaption>
         </figure>
 
         <p>
