@@ -15,7 +15,13 @@ There are a number of scenarios in which a site might want to make a request to 
 - A website accessing a local device to provide configuration details during a setup procedure.
 - A website connecting to a local site (such as an intranet) to provide authentication information, or as part of test environment.
 
-Allowing local network access comes with risks — attackers can use such requests to initiate [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks against local network devices such as routers and printers, and fingerprint the user's local network. Local network access mitigates these risks, controlling local network access via a set of permission prompts and {{httpheader("Permissions-Policy")}} directives.
+Allowing local network access comes with risks — attackers can use such requests to initiate certain classes of [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks against local network devices such as routers and printers.
+
+A common attack typically involves an attacker's site attempting to access a user's router and change their DNS settings. If successful, DNS queries can be resolved by a DNS server of the attacker's choice, meaning that the attacker can send users to different sites to what they intended such as phishing or clickjacking sites, potentially compromising their credentials.
+
+The attacker could also replace the router's firmware and host malicious sites on it, or steal ad traffic and redirect it to other sites. This kind of attack is made easier by the fact that many users don't change their local device's default management passwords.
+
+Local network access mitigates these risks, controlling local network access via a set of permission prompts and {{httpheader("Permissions-Policy")}} directives.
 
 ## Address spaces
 
