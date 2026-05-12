@@ -9,6 +9,9 @@ sidebar: htmlsidebar
 
 The **`text-scale`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element enables opting the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings.
 
+> [!WARNING]
+> If you include `<meta name="text-scale" content="scale" />` on your website to opt in to this text scaling behavior, you must test to make sure it supports text sizes up to the maximum text-scaling factors for your target platforms. For example, Android can scale text up to 200%, while iPhones can scale text up to 310%. Some accessibility features may enable even larger text scaling. You should make sure your website does not look broken at higher zoom levels.
+
 ## Usage notes
 
 A `<meta name="text-scale">` element has the following additional attributes:
@@ -23,7 +26,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
 
 ## Description
 
-The `<meta name="text-scale">` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences; it also disables existing browser-based mechanisms and heuristics.
+The `<meta name="text-scale" content="scale" />` element can be included in a document's {{htmlelement("head")}} to signal to the browser that the page is sized in a way that will scale well across various user-selected font size preferences; it also disables existing browser-based mechanisms and heuristics.
 
 Specifically, it defines the value of the {{htmlelement("html")}} root element's initial `font-size` to scale in proportion to user-defined OS and browser-level font size settings. The {{cssxref("initial")}} value of the root {{cssxref("font-size")}} is `medium`, which defines the [`rem`](/en-US/docs/Web/CSS/Reference/Values/length#rem) unit's value. Provided you set or allow the root `font-size` to default to a [local or root font-relative `<length>`](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) unit, any subsequent keyword (like `medium`) or font-relative length (such as `em` and `rem`) will be scaled in proportion to OS or browser font size settings.
 
@@ -37,7 +40,7 @@ p {
 
 would result in all {{htmlelement("p")}} elements receiving a scaled font size. You could also set `font-size` to `initial` to get the same effect.
 
-On mobile platforms, this is not the case by default. `<meta name="text-scale">` enables this scaling. On desktop platforms, the effect is that the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable is made to reflect the multiplier that corresponds to browser font size settings, but other than that, it has no discernable advantage.
+On mobile platforms, this is not the case by default. `<meta name="text-scale" content="scale" />` enables this scaling. On desktop platforms, the effect is that the [`env(preferred-text-scale)`](/en-US/docs/Web/CSS/Reference/Values/env#preferred-text-scale) environment variable is made to reflect the multiplier that corresponds to browser font size settings, but other than that, it has no discernable advantage.
 
 ### Usage summary
 
@@ -77,7 +80,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
       level.
     </p>
     <p class="fixed">
-      This font size does NOT respect the user's font preferences.
+      This font size does NOT respect the user's font preferences, even with text-scale set.
       <div class="text-scale">But this font size does!</div>
     </p>
   </body>
@@ -92,13 +95,13 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
   </head>
   <body>
     <p class="text-scale">
-      This font size obeys the user's font preferences, whether those
+      This font size does not obey the user's font preferences, whether those
       preferences are specified at the operating system level or the user agent
       level.
     </p>
     <p class="fixed">
       This font size does NOT respect the user's font preferences.
-      <div class="text-scale">But this font size does!</div>
+      <div class="text-scale">Neither does this!</div>
     </p>
   </body>
 </html>
@@ -120,22 +123,24 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 #### Result
 
-The following shows the live rendered example, followed by another version without the `<meta name="text-scale">` element:
+The following shows the live rendered example with the `<meta name="text-scale">` element included:
 
 {{embedlivesample("text-scale", "100%", "200")}}
 
+This version doesn't have the `<meta name="text-scale">` element included:
+
 {{embedlivesample("no-text-scale", "100%", "200")}}
 
-Test these examples in a supporting mobile browser and try adjusting the OS font size settings. To make testing easier, you can open both versions full screen in a separate tab using the links below:
+Test these examples in a mobile browser. Change the preferred font size in the mobile device's accessibility settings. Note how, in the first example, when `<meta name="text-scale">` is included, the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size. Without the `<meta name="text-scale">` element, none of the text scales in proportion to the OS settings.
 
-- {{ LiveSampleLink("text-scale", "The first example") }}
-- {{ LiveSampleLink("no-text-scale", "The second example (without <code>&lt;meta name=&quot;text-scale&quot;&gt;</code>)") }}
+To make testing easier, you can open both versions full screen in a separate tab using the links below:
 
-In the first version of the example, you'll see that the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size. In the second version of the example without the `<meta name="text-scale">` element, none of the lines of text scale in proportion to the OS settings.
+- {{ LiveSampleLink("text-scale", "Example with <code>&lt;meta name=&quot;text-scale&quot;&gt;</code>") }}
+- {{ LiveSampleLink("no-text-scale", "Example without <code>&lt;meta name=&quot;text-scale&quot;&gt;</code>") }}
 
 ### A text-scale-responsive layout
 
-The following example demonstrates that with `<meta name="text-scale">` applied to a page, font-relative sizes can be used inside {{cssxref("@media")}} queries to cause supporting browsers to automatically adjust breakpoints as the OS text size is changed.
+This example demonstrates that with `<meta name="text-scale">` applied to a page, font-relative sizes can be used inside {{cssxref("@media")}} queries to cause mobile browsers to automatically adjust breakpoints as the OS text size is changed.
 
 #### HTML
 
@@ -157,14 +162,10 @@ Like the previous example, our markup again includes the `<meta name="text-scale
 
 #### CSS
 
-We set our body element to have a {{cssxref("display")}} of `grid` and give the grid a {{cssxref("gap")}} of `24px`. By default, the main content and sidebar are laid out one below the other.
+By default, the main content and sidebar are laid out one below the other. We include a {{cssxref("@media")}} query that lays the elements out side-by-side using [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) when the viewport becomes wider than `35rem`.
 
-We then include a {{cssxref("@media")}} query that lays the elements out side-by-side via {{cssxref("grid-template-columns")}} when the viewport becomes wider than `40rem`.
-
-```css live-sample___text-scale-layout
+```css hidden live-sample___text-scale-layout
 body {
-  display: grid;
-  gap: 24px;
   margin: 0;
 }
 
@@ -174,9 +175,13 @@ aside {
   padding: 24px;
   font-size: 1.5rem;
 }
+```
 
-@media (width > 40rem) {
+```css live-sample___text-scale-layout
+@media (width > 35rem) {
   body {
+    display: grid;
+    gap: 24px;
     grid-template-columns: 1fr 18.75rem;
   }
 }
@@ -186,11 +191,11 @@ aside {
 
 {{embedlivesample("text-scale-layout", "100%", "200")}}
 
-Test this in a supporting mobile browser. You can open the demo in a separate tab using the link below to make testing easier:
+Test this in a mobile browser. You'll see that, as the OS font size is increased, the breakpoint size increases in proportion to it. At larger OS font sizes, the main and aside will start to appear on top of each other whereas previously they appeared side-by-side. You may have to look at it in landscape orientation to see the effect.
+
+You can open the demo in a separate tab using the link below to make testing easier:
 
 {{ LiveSampleLink("text-scale-layout", "Open the example in a separate tab") }}
-
-You'll see that, as the OS font size is increased, the breakpoint size increases in proportion to it. At larger OS font sizes, the main and aside will start to appear on top of each other whereas previously they appeared side-by-side.
 
 ## Specifications
 
