@@ -40,15 +40,9 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
   - : A string containing the STUN reason text returned by the STUN or TURN server. If communication with the STUN or TURN server couldn't be established at all, this string will be a browser-specific string explaining the error.
 - {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}
   - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in [`address`](#address).
-  This is `null` if the connection hasn't been established (that is, if `address` is `null`).
+    This is `null` if the connection hasn't been established (that is, if `address` is `null`).
 - {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
   - : A string indicating the URL of the STUN or TURN server with which the error occurred.
-
-## Description
-
-The error object's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property is one of the numeric STUN error codes. There is one additional WebRTC-specific error that lies outside the valid STUN error code range: 701. Error 701 indicates that none of the ICE candidates were able to successfully make contact with the STUN or TURN server.
-
-The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's [ICE gathering state](/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState) is `gathering`.
 
 ## Examples
 
