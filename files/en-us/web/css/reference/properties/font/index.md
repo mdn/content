@@ -112,15 +112,15 @@ If `font` is specified as a system keyword, it must be one of: `caption`, `icon`
 If `font` is specified as a shorthand for several font-related properties, then:
 
 - it must include values for:
-  - {{cssxref("&lt;font-size&gt;")}}
-  - {{cssxref("&lt;font-family&gt;")}}
+  - {{cssxref("font-size")}}
+  - {{cssxref("font-family")}}
 
 - it may optionally include values for:
-  - {{cssxref("&lt;font-style&gt;")}}
-  - {{cssxref("&lt;font-variant&gt;")}}
-  - {{cssxref("&lt;font-weight&gt;")}}
-  - {{cssxref("&lt;font-stretch&gt;")}}
-  - {{cssxref("&lt;line-height&gt;")}}
+  - {{cssxref("font-style")}}
+  - {{cssxref("font-variant")}}
+  - {{cssxref("font-weight")}}
+  - {{cssxref("font-stretch")}}
+  - {{cssxref("line-height")}}
 
 - `font-style`, `font-variant` and `font-weight` must precede `font-size`.
 - `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`.

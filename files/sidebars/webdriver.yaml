@@ -15,33 +15,63 @@ sidebar:
     children:
       - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/browser
-        link: /Web/WebDriver/Reference/BiDi/Modules/browser
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
         details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browser#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/log
-        link: /Web/WebDriver/Reference/BiDi/Modules/log
+      - link: /Web/WebDriver/Reference/BiDi/Modules/log
         details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/log#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/network
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
         code: true
-      - type: listSubPages
-        path: /Web/WebDriver/Reference/BiDi/Modules/session
-        link: /Web/WebDriver/Reference/BiDi/Modules/session
+      - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/session#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/subscribe
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/storage
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
@@ -66,3 +96,4 @@ sidebar:
     path: /Web/WebDriver/Reference/Errors
     link: /Web/WebDriver/Reference/Errors
     details: closed
+    code: true

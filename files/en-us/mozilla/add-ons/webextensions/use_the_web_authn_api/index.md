@@ -176,6 +176,6 @@ The JSON you use to perform the assertion, with `rpId` set to an external domain
 When your relying party server validates a WebAuthn response originating from an extension, it must accept the **extension origin** in addition to regular web origins. Parse `clientDataJSON` and check the `origin` field:
 
 - For Chrome extensions: `chrome-extension://<extension-id>`
-- For Firefox extensions: `moz-extension://<sha256-hash>` (using the `a'–`p` encoding described in [Extension origin and server-side validation](#extension_origin_and_server-side_validation)).
+- For Firefox extensions: `moz-extension://<sha256-hash>` (using the `a`–`p` encoding described in [Extension origin and server-side validation](#extension_origin_and_server-side_validation)).
 
 Your server's origin allowlist must include these values for end-to-end authentication.
