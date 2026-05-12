@@ -32,8 +32,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ### Basic usage
 
-This HTML shows how a number of named slots might be declared within a {{htmlelement(template)}} element.
-Note that these slots are only used as slots when the template used inside a shadow root.
+This HTML shows how a number of named slots might be declared within a {{htmlelement("template")}} element.
+Note that these slots are only used as slots when the template is used inside a shadow root.
 
 ```html
 <template id="element-details-template">

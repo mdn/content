@@ -89,7 +89,7 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
 
-This the programmatic mechanism to create a `ShadowRoot`, which is the root node of a [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) attached to a host element (it is also possible to create a `ShadowRoot` declaratively using the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of {{htmlelement("template")}} element).
+This is the programmatic mechanism to create a `ShadowRoot`, which is the root node of a [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) attached to a host element (it is also possible to create a `ShadowRoot` declaratively using the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the {{htmlelement("template")}} element).
 It is used for creating [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 ## Elements you can attach a shadow to
@@ -311,7 +311,7 @@ The example below should show the content of the slots displayed in the appropri
 {{EmbedLiveSample('Shadow DOM with named slot assignment','100', '220px')}}
 
 > [!NOTE]
-> The example will still work even if the warning is displayed that shadow root slot assignment is not supported.
+> The example will still work even if the warning that shadow root slot assignment is not supported is displayed.
 > This is because `named` assignment predates the introduction of the `slotAssignment` property.
 
 ## Specifications

@@ -370,7 +370,7 @@ The example below should show the content of the slots displayed in the appropri
 {{EmbedLiveSample('Declarative shadow DOM with named slot assignment','100', '220px')}}
 
 > [!NOTE]
-> The example will still work even if the warning is displayed that shadowroot slot assignment is not supported.
+> The example will still work even if the warning that shadow root slot assignment is not supported is displayed.
 > This is because `named` assignment predates the introduction of the `shadowrootslotassignment` attribute.
 
 ### Declarative shadow DOM with manual slot assignment

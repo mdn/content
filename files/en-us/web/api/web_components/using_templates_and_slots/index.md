@@ -158,12 +158,12 @@ In this example:
 ## Named and manual slots
 
 The previous example uses _named slot assignment_, populating named {{htmlelement("slot")}} elements in a template with the content of elements in the custom component (or more generally the host element) that have matching names in their [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute.
-This is the original mechanism used for slot assignment, is the most suitable method for most use cases.
+This is the original mechanism used for slot assignment and is the most suitable method for most use cases.
 
-More recently _manual slot assignment_ has been introduced as an alternative.
+More recently, _manual slot assignment_ has been introduced as an alternative.
 With this approach, elements are manually assigned to slots using {{domxref("HTMLSlotElement.assign()")}}.
 
-Manual assignment is useful when you want to use something other approach than the `slot=` attribute for slot assignment.
+Manual assignment is useful when you want to use some other approach than the `slot=` attribute for slot assignment.
 One such case is when the content to be inserted is dynamic.
 For example, a `<movie-picker>` custom element like the one below, might use the `<select>` to filter on genre, slotting only the elements that have a matching data-genre on change.
 
