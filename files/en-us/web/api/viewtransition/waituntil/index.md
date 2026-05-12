@@ -36,7 +36,7 @@ Repeated calls to `waitUntil()` specifying multiple different promises will dela
 Use cases include:
 
 - Combining a view transition with [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations). When the transition animation is controlled by a scroll progress or view progress timeline, the subtree should persist when the animations finish since scrolling back should be able to animate the pseudo-elements in reverse.
-- Combining a view transition with {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}. When you're updating the state of your elements in `requestAnimationFrame()` callbacks, the view transition system does not know how long to persist the pseudo-element tree for, and will do it immediately as soon as the CSS animations are finished.
+- Combining a view transition with {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}. When you're updating the state of your elements in `requestAnimationFrame()` callbacks, the view transition system does not know how long to persist the pseudo-element tree for, and will destroy it immediately as soon as the CSS animations are finished.
 - Any situation in which you want to delay the view transition finishing until an event has occurred. You might for example want to start the view transition on `pointerdown` and not finish it until `pointerup`.
 
 ## Examples
