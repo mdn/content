@@ -30,14 +30,14 @@ clone(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} instance. The new instance has the same internal model state, context history, and configuration as the original session at the time of cloning.
+A {{jsxref("Promise")}} that resolves with a cloned {{domxref("LanguageModel")}} instance.
 
 ### Exceptions
 
-- `OperationError` {{domxref("DOMException")}}
-  - : Thrown if cloning fails for any other reason not listed in the other exception types.
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if cloning fails for any other reason not listed in the other exception types.
 
 ## Examples
 

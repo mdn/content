@@ -44,8 +44,8 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 
 ## Events
 
-- {{domxref("LanguageModel.oncontextoverflow")}}
-  - : Fired when a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window size. Handled by the {{domxref("LanguageModel.oncontextoverflow")}} property.
+- [`contextoverflow`](/en-US/docs/Web/API/LanguageModel/contextoverflow_event)
+  - : Fired when a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window size.
 
 ## Examples
 

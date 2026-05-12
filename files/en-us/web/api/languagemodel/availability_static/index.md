@@ -24,9 +24,10 @@ LanguageModel.availability(options)
 - `options` {{optional_inline}}
   - : Represents the base set of options used when checking language model availability or creating a session. Options include:
     - `expectedInputs`
-      - : An array representing the required input modalities and languages. Options include:
+      - : An array representing the required input modalities and languages.
+        Each entry is an object that may define the following options:
         - `type`
-          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - : A string indicating the content type. Must be one of:
           - `"text"`
             - : Plain text content.
           - `"image"`
@@ -104,7 +105,7 @@ switch (status) {
 
 ### Requesting input support
 
-This example shows how to determine whether a particular type of input is supported by the model.
+This example shows how to determine whether text and image inputs are supported by the model.
 
 ```js
 const status = await LanguageModel.availability({
@@ -114,7 +115,7 @@ const status = await LanguageModel.availability({
 
 ### Checking availability for a specific language
 
-The following example tests whether the model suports English before asking it to translate Japanes text to English.
+The following example tests whether the model suports English before asking it to translate Japanese text to English.
 
 ```js
 const status = await LanguageModel.availability({

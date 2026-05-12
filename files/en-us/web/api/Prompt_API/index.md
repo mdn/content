@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
 
-The **Prompt API** allows web pages to directly prompt a browser-provided language model through a uniform JavaScript interface, without needing to manage implementation-specific details such as prompt templating and tokenization.
+The **Prompt API** allows web pages to directly prompt a browser-provided language model through a uniform JavaScript interface, without needing to manage implementation-specific details of the AI model being used.
 
 ## Concepts and usage
 
@@ -23,21 +23,24 @@ Before creating a session, call the static {{domxref("LanguageModel.availability
 
 ### The context window
 
-Every `LanguageModel` session has a finite context window, measured in tokens, which is the total amount of input and output it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
+Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
 
-When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, it throws a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
+When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, they throw a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
 
 To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()")}}.
 
-### Tool use
+### Trigger developer functions from prompts
 
-The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
+The Prompt API allows the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
 
 ### Multimodal input
 
-Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts an array of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
+Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. 
+You should test which capabilities are available before creating a session using the  {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}  method [INSERT HERE WHY - presumably because it costs time and tokens JUST to try?].
 
-Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} and {{domxref("LanguageModelMessageContent")}} dictionaries. When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
+If the model supports your desired options, you can specify them when you create a session, using the `expectedInputs` and `expectedOutputs` options,.
+
+When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
 
 ### Permissions policy
 
