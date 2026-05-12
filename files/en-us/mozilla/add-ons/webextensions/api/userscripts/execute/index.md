@@ -15,14 +15,14 @@ Injects a user script into a target context (e.g., tab or frame).
 
 ```js-nolint
 let executeUserScript = browser.userScripts.execute(
-  injection, // array of objects
+  injection, // object
 );
 ```
 
 ### Parameters
 
 - `injection`
-  - : An array of objects specifying what user scripts to inject, where, and how.
+  - : An object specifying what user scripts to inject, where, and how.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. If set to `true`, the injection is triggered as soon as possible in the target context. This doesn't guarantee that the injection occurs before the page finishes loading, as the page may load before the script has reached the target.
 
@@ -59,12 +59,10 @@ A {{JSxRef("Promise")}} fulfilled with an array of objects describing the outcom
 ## Examples
 
 ```js
-await browser.userScripts.execute([
-  {
-    js: [{ code: "console.log('Hello world!');" }],
-    target: { tabId: 1 },
-  },
-]);
+await browser.userScripts.execute({
+  js: [{ code: "console.log('Hello world!');" }],
+  target: { tabId: 1 },
+});
 ```
 
 ## Browser compatibility

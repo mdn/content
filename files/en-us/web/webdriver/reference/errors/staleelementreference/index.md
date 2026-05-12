@@ -1,5 +1,6 @@
 ---
-title: Stale element reference
+title: "`stale element reference` error code"
+short-title: stale element reference
 slug: Web/WebDriver/Reference/Errors/StaleElementReference
 page-type: webdriver-error
 sidebar: webdriver

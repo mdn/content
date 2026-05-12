@@ -1,5 +1,5 @@
 ---
-title: browser module
+title: "`browser` module"
 short-title: browser
 slug: Web/WebDriver/Reference/BiDi/Modules/browser
 page-type: listing-page
@@ -35,7 +35,13 @@ User contexts can be created using [`browser.createUserContext`](/en-US/docs/Web
 
 ## Commands
 
-{{ListSubPages}}
+- [`browser.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/close)
+- [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext)
+- [`browser.getClientWindows`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows)
+- [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts)
+- [`browser.removeUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext)
+- [`browser.setClientWindowState`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState)
+- [`browser.setDownloadBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior)
 
 ## Events
 
