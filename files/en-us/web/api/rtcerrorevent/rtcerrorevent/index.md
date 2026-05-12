@@ -10,7 +10,7 @@ browser-compat: api.RTCErrorEvent.RTCErrorEvent
 
 The **`RTCErrorEvent()`** constructor creates a new {{domxref("RTCErrorEvent")}} object.
 
-This is called by the browser to create the RTC events.
+Note that you will not normally create an object of this type yourself.
 
 ## Syntax
 
