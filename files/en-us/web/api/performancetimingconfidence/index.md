@@ -32,11 +32,15 @@ If a website has loaded after a browser "cold start" or session restore, its pag
 
 This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors. There is often a significant difference between real-world dashboard metrics and performance observations in page profiling tools.
 
-### Interpreting confidence data
+### Using the data
 
-Since the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} can vary across records, per-record weighting is needed to recover unbiased aggregates, to improve consistency of data, cut down on compound errors, and generally produce more realistic and reliable results. The procedures below illustrate how weighting based on {{domxref("PerformanceTimingConfidence.value", "value")}} can be applied before computing summary statistics based on the confidence data.
+Since the `randomizedTriggerRate` can vary across records, per-record weighting is needed to recover unbiased aggregates, to improve consistency of data, cut down on compound errors, and generally produce more realistic and reliable results. You should use the data as follows, to get effective results:
 
-Once you have debiased the data and computed realistic summary statistics, you can focus on measuring and improving performance for issues under your control.
+1. When collecting {{domxref("PerformanceNavigationTiming")}} records, collect {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} and {{domxref("PerformanceTimingConfidence.value", "value")}} for each record.
+2. When computing statistics such as p75 {{glossary("Largest_contentful_paint", "LCP")}} or mean {{glossary("page load time")}}, apply the weighting formulas explained below instead of a plain average — this gives you separate, corrected metrics for "typical" loads vs. "degraded" loads.
+3. Use the "high" confidence mean/percentile as your "real" performance baseline, and use the "low" one to understand what typical data looks like in cold-start scenarios.
+
+The procedures below illustrate how weighting based on `value` can be applied before computing summary statistics based on the confidence data.
 
 #### Computing debiased means
 
