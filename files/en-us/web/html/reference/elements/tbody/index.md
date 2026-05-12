@@ -87,7 +87,7 @@ The following attributes are deprecated and should not be used. They are documen
 - `align` {{deprecated_inline}}
   - : Specifies the horizontal alignment of each body cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
-- `bgcolor` {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}} {{non-standard_inline}}
   - : Defines the background color of each body cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}

@@ -35,7 +35,7 @@ available(options)
 
 ### Return value
 
-A {{domxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.
+A {{jsxref("Promise")}} that resolves with an enumerated value indicating the availability of the specified languages for speech recognition.
 
 Possible values include:
 
