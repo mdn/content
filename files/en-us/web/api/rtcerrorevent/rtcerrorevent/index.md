@@ -22,8 +22,9 @@ new RTCErrorEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
+    This is usually `"error"`.
 - `options`
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `error`
       - : A {{domxref("RTCError")}} describing the cause and the location of the error.
 

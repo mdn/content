@@ -72,6 +72,8 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`options.keyboardLock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) property can now be passed as an option to {{domxref("Element.requestFullscreen()")}}, allowing websites to request keyboard lock when the element is displayed in fullscreen mode.
   This stops the <kbd>Esc</kbd> key from causing the element to leave fullscreen (a long-press is required instead), and some formerly-reserved browser hotkeys can now be intercepted and their default action prevented.
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
+- The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
+  ([Firefox bug 1943070](https://bugzil.la/1943070)).
 
 <!-- #### DOM -->
 

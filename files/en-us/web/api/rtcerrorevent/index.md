@@ -10,7 +10,9 @@ browser-compat: api.RTCErrorEvent
 The **`RTCErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an error event sent to a WebRTC object.
 
 It inherits from the standard {{domxref("Event")}} interface, adding RTC-specific information describing the error.
-Note that WebRTC defines other error event interfaces, which are used for errors that have other special information sharing requirements.
+
+> [!NOTE]
+> WebRTC defines other error event interfaces, such as {{domxref("RTCPeerConnectionIceErrorEvent")}}, which are used for errors that have other special information sharing requirements.
 
 {{InheritanceDiagram}}
 
@@ -25,16 +27,16 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
   - : An {{domxref("RTCError")}} object specifying RTC-specific information about the error.
-    This includes information such as the type/cause of the error and the location that triggered the error.
+    This includes information such as the error type and cause, and the location that triggered the error.
 
 ## Instance methods
 
-_Only inherits properties from its parent interface, {{domxref("Event")}}._
+_Only inherits methods from its parent interface, {{domxref("Event")}}._
 
 ## Events
 
 - {{domxref("RTCDataChannel.error_event", "error")}}
-  - : An error that occurred on the{{domxref("RTCDataChannel")}}.
+  - : An error that occurred on the {{domxref("RTCDataChannel")}}.
 - {{domxref("RTCDtlsTransport.error_event", "error")}}
   - : An error that occurred on the {{domxref("RTCDtlsTransport")}}.
 

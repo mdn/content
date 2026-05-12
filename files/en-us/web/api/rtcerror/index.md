@@ -19,7 +19,7 @@ It's based upon the standard {{domxref("DOMException")}} interface that describe
 
 ## Instance properties
 
-_Also inherits properties from its parent interface, {{DOMxRef("DOMException")}}._
+_Also inherits properties from its parent interface, {{domxref("DOMException")}}._
 
 - {{domxref("RTCError.errorDetail", "errorDetail")}} {{ReadOnlyInline}}
   - : A string specifying the WebRTC-specific error code identifying the type of error that occurred.

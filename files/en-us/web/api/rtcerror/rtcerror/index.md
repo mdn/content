@@ -59,8 +59,8 @@ new RTCError(options, message)
       - : An integer identifying the {{Glossary("SDP")}} message line number at which a syntax error occurred.
         Only set if `errorDetail` is `sdp-syntax-error`.
     - `sentAlert` {{optional_inline}}
-      - : A positive integer indicating s fatal DTLS error that was sent out by this device.
-        Only set is `errorDetail` is `dtls-failure`.
+      - : A positive integer indicating a fatal DTLS error that was sent out by this device.
+        Only set if `errorDetail` is `dtls-failure`.
 
 - `message` {{optional_inline}}
   - : A string for the error message.
