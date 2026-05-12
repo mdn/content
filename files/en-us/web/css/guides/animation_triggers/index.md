@@ -165,7 +165,7 @@ html {
 
 {{embedlivesample("in-action", "100%", 400)}}
 
-This example uses the {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}} properties to create animaton triggers on the "bouncer" and "another bouncer" paragraphs. The bouncing ball has multiple {{cssxref("animation")}}s set on it, plus an {{cssxref("animation-trigger")}} property that references the trigger names set on the "bouncer" and "another bouncer" paragraphs and specifies animation actions to perform when the animations are triggered. This causes the ball's animations to play when the paragraphs appear in the viewport, and play in reverse when they scroll off the top of the viewport.
+Both trigger elements have a {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}}, defining the text blocks as named scroll-view animation triggers. The bouncing ball has the bouncing {{cssxref("animation")}} set on it twice, plus an {{cssxref("animation-trigger")}} property that references both trigger names and specifies animation actions to perform whenever an animation is activated by a trigger coming into view and deactivated when the trigger exits the viewport.
 
 ## Reference
 
