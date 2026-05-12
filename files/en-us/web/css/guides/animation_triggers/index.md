@@ -64,7 +64,8 @@ html {
   section {
     border: solid;
     width: 200px;
-    height: 400px;
+    height: 250px;
+    margin-top: 50px;
     overflow: scroll;
   }
   p {
