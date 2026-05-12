@@ -8,9 +8,7 @@ browser-compat: api.XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The WebXR Device API's
-**`XRVisibilityMaskChangeEvent()`** constructor creates and returns a new
-{{domxref("XRVisibilityMaskChangeEvent")}} object.
+The **`XRVisibilityMaskChangeEvent()`** constructor creates and returns a new {{domxref("XRVisibilityMaskChangeEvent")}} object.
 
 ## Syntax
 
@@ -29,11 +27,11 @@ new XRVisibilityMaskChangeEvent(type, options)
     - `index`
       - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
     - `indices`
-      - : A {{domxref("Uint32Array")}} of indices specifying the vertices in the [`vertices`](#vertices) array that should be drawn to display the currently visible part of the scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
+      - : A {{domxref("Uint32Array")}} of values specifying the array positions of the vertices in the [`vertices`](#vertices) array that define the currently visible part of the scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
     - `session`
       - : The {{domxref("XRSession")}} to which the event belongs.
     - `vertices`
-      - : A {{domxref("Float32Array")}} of coordinates representing the vertices required to draw the entire scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
+      - : A {{domxref("Float32Array")}} of coordinates representing a visbility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ### Return value
 

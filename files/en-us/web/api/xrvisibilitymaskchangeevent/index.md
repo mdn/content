@@ -7,9 +7,9 @@ browser-compat: api.XRVisibilityMaskChangeEvent
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The **`XRVisibilityMaskChangeEvent`** of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) describes the portion of an {{domxref("XRView")}} visible to the user (that is, the portion not hidden by the mask) after the view has changed. This enables performance improvements by allowing the browser to draw only the visible part of the updated view.
+The **`XRVisibilityMaskChangeEvent`** of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) describes the portion of an {{domxref("XRView")}} visible to the user after the view has changed, for example by specifying the eye that the view is relevant to, and the vertices of a visibility mask that defines the visible part of the view. This enables performance improvements by allowing the browser to draw only the visible part of the updated view.
 
-An `XRVisibilityMaskChangeEvent` object is made available as the event object of a {{domxref("XRSession.visibilitymaskchange_event", "visibilitymaskchange")}} event, fired when the portion of the view displayed to the user changes.
+An `XRVisibilityMaskChangeEvent` object is made available as the event object of a {{domxref("XRSession.visibilitymaskchange_event", "visibilitymaskchange")}} event, fired each time the portion of the view displayed to the user changes to provide new information to update the view.
 
 {{InheritanceDiagram}}
 
@@ -27,11 +27,11 @@ _In addition to properties inherited from its parent interface, {{domxref("Event
 - {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}}
   - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
 - {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}}
-  - : An array of indices specifying the vertices in the [`vertices`](#vertices) array that should be drawn to display the currently visible part of the scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
+  - : An array of values specifying the array positions of the vertices in the [vertices](#vertices) array that define the currently visible part of the scene displayed in the {{domxref("XRView")}}. If this array is empty, the whole region of the `XRView` will be drawn.
 - {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which the event belongs.
 - {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}}
-  - : An array of coordinates representing the vertices required to draw the entire scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
+  - : An array of coordinate values representing a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Instance methods
 

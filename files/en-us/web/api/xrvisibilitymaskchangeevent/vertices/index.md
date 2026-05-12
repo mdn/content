@@ -8,9 +8,11 @@ browser-compat: api.XRVisibilityMaskChangeEvent.vertices
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array of coordinates representing the vertices required to draw the entire scene displayed in the {{domxref("XRView")}}. If this array is empty, the whole region of the `XRView` will be drawn.
+The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array of coordinate values representing a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
-The {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} array specifies the indices of the `vertices` array that should be drawn to display the currently visible part of the scene displayed in the `XRView`.
+The {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} array specifies the array positions of the vertices inside the `vertices` array that define the currently visible part of the scene displayed in the `XRView`.
+
+The coordinate values available in the `vertices` array are x and y value pairs representing points on a flat mask in clip space. They define the boundary of the visibility mask — the region of the display that is actually visible to the user. Anything outside the mask is not visible to the user, and does not need to be drawn. It can be skipped to improve performance.
 
 ## Value
 
