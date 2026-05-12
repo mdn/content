@@ -147,3 +147,4 @@ Note that these slots are only used as slots when the template used inside a sha
 - CSS {{CSSXref("::slotted")}} pseudo-element
 - CSS {{cssxref(":has-slotted")}} pseudo-class
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
+- [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
