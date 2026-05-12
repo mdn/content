@@ -140,7 +140,7 @@ The example below shows the code to construct a `WebTransport` that specifies th
 In this case the array contains two hashes, both encoded using the SHA-256 algorithm.
 Note that the `allowPooling` option must be `false` (the default).
 
-The value can be an `ArrayBuffer`, a `TypedArray` (for example, `Uint8Array`), or a `DataView`. The example below shows a SHA-256 hash as a sequence of bytes for example, the hexadecimal string `5a1559...` corresponds to the byte values `0x5a`, `0x15`, `0x59` and so on.
+The `value` of each hash can be an `ArrayBuffer`, a `TypedArray` (for example, `Uint8Array`), or a `DataView`. The example below represents each SHA-256 hash value as a `Uint8Array`; for example, the hexadecimal string `5a1559...` corresponds to the byte values `0x5a`, `0x15`, `0x59`, and so on.
 
 ```js
 const transport = new WebTransport(url, {
