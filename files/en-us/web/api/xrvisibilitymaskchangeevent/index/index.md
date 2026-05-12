@@ -8,7 +8,9 @@ browser-compat: api.XRVisibilityMaskChangeEvent.index
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`index`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
+The **`index`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
+
+For a stereo view, there will be two views in the array. The `index` property allows you to identify the correct view to re-render, rather than having to re-render all views unnecessarily.
 
 ## Value
 
