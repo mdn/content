@@ -8,7 +8,7 @@ browser-compat: api.XRVisibilityMaskChangeEvent.eye
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`eye`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the eye the mask applies to.
+The **`eye`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the eye the mask applies to.
 
 ## Value
 
