@@ -8,7 +8,7 @@ browser-compat: api.XRView.index
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`index`** property of the {{domxref("XRView")}} interface indicates the index of the current `XRView` in the {{domxref("XRViewerPose.views")}} array.
+The **`index`** read-only property of the {{domxref("XRView")}} interface indicates the index of the current `XRView` in the {{domxref("XRViewerPose.views")}} array.
 
 ## Value
 
