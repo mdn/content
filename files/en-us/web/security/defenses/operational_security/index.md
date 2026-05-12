@@ -62,12 +62,11 @@ See the OpenSSF's [Source Code Management Platform Configuration Best Practices]
 
 Third-party dependencies include not only libraries and frameworks that your code uses, but all third-party tools involved in the development process, including editors, IDEs, source control systems, package managers, and build tools.
 
-To mitigate problems with third-party dependencies, we'll discuss four practices:
+To mitigate problems with third-party dependencies, we'll discuss the following practices:
 
 1. Evaluating new dependencies
 2. Updating existing dependencies
 3. Maintaining a _Software Bill of Materials_ (SBOM)
-4. Using Subresource Integrity for external scripts
 
 ### Evaluating new dependencies
 
