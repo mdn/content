@@ -210,7 +210,7 @@ In the case of radio buttons, you generally need to provide the value that would
 
 The second exercise above raises an interesting point. The second input field specifically expects an email address and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`.
 
-There are several specialized text field input types designed to handle specific types of data — [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color), [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url), etc.
+There are several specialized text field input types designed to handle specific types of data such as [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url), and so on.
 
 Follow some of the links above to find out what these input types are used for. Have a look around our [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) reference and see if you can find any more specialized text field input types.
 
