@@ -20,11 +20,11 @@ The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, col
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `color` {{Deprecated_Inline}}
+- `color` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
-- `face` {{Deprecated_Inline}}
+- `face` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute contains a comma-separated list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.
-- `size` {{Deprecated_Inline}}
+- `size` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute specifies the font size as either a numeric or relative value. Numeric values range from `1` to `7` with `1` being the smallest and `3` the default. It can be defined using a relative value, like `+2` or `-3`, which sets it relative to `3`, the default value.
 
 ## DOM interface

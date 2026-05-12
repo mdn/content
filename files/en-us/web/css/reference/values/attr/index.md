@@ -80,7 +80,7 @@ The parameters are:
         ```css
         @namespace svg url("http://www.w3.org/2000/svg");
         a {
-          fill: attr(svg|myattr type(*), green);
+          fill: attr(svg|myAttr type(*), green);
         }
         ```
 

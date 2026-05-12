@@ -28,11 +28,11 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Classic/Timeouts
 - `pageLoad`
   - : Time in milliseconds to wait for the document to finish loading. By default, WebDriver will wait five minutes (or 300,000 ms).
 - `script`
-  - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [script timeout error](/en-US/docs/Web/WebDriver/Reference/Errors/ScriptTimeoutError) will be returned. Defaults to 30 seconds (or 30,000 ms).
+  - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [`script timeout error`](/en-US/docs/Web/WebDriver/Reference/Errors/ScriptTimeoutError) will be returned. Defaults to 30 seconds (or 30,000 ms).
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
 
 ## Specifications

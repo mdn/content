@@ -364,6 +364,7 @@ Lianghekou
 Libera.Chat
 Libertinus
 Lighttpd
+LINDDUN
 Lindenberg
 Lindesay
 Liskov
@@ -680,6 +681,7 @@ Yoshi
 Yousafzai
 Yslow
 YubiKey
+YubiKeys
 Yuki
 Yura
 Yusuf
