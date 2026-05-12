@@ -41,7 +41,7 @@ Use cases include:
 
 ## Examples
 
-### Basic `waitUntil()` usage
+### Basic usage
 
 This example demonstrates basic usage of the `waitUntil()` method to delay a view transition started by a button or key press from finishing until the button or key press ends.
 
