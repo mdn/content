@@ -57,9 +57,9 @@ It is possible to retrieve the immediate playout latency of the audio context vi
 - {{domxref("AudioPlaybackStats.totalDuration")}} {{ReadOnlyInline}}
   - : A number indicating the total duration of all audio frames since the audio context was initialized.
 - {{domxref("AudioPlaybackStats.underrunDuration")}} {{ReadOnlyInline}}
-  - : A number indicating the total duration of the underrun events since the audio context was initialized.
+  - : A number indicating the total duration of the underrun events that have occurred since the audio context was initialized.
 - {{domxref("AudioPlaybackStats.underrunEvents")}} {{ReadOnlyInline}}
-  - : An integer indicating the number of underrun events since the audio context was initialized.
+  - : A number indicating how many underrun events have occurred since the audio context was initialized.
 
 ## Instance methods
 

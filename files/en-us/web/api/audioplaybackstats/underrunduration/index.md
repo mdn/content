@@ -8,7 +8,7 @@ browser-compat: api.AudioPlaybackStats.underrunDuration
 
 {{APIRef("Web Audio API")}}
 
-The **`underrunDuration`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the total duration of the underrun events since the audio context was initialized.
+The **`underrunDuration`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the total duration of the [underrun events](/en-US/docs/Web/API/AudioPlaybackStats#underrun_event) that have occurred since the audio context was initialized.
 
 ## Value
 
