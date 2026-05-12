@@ -11,7 +11,7 @@ The **CSS animation triggers** module provides functionality for triggering stan
 
 ## Animation triggers in action
 
-In the below example, start scrolling down. When the first "bouncer" text appears in the viewport, the ball will bounce off to the right. When the "bouncer" text scrolls off the top of the viewport, the ball animation will play in reverse, moving it back up to the top-left. Keep scrolling: when the "another bouncer" text appears in the viewport and scrolls off to the top, the same process will repeat.
+Scroll down and up the box of text. The appearance of the "bouncer" text will trigger the ball's animation. The "bouncer" text scrolling out of the viewport triggers a reverse animation. Keep scrolling: the same process will repeat when the "another bouncer" text appears in and then disappears from the viewport.
 
 ```html hidden live-sample___in-action
 <section>
