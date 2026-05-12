@@ -462,11 +462,10 @@ The `<select>` element wraps all the different value choices. It is where you se
 
 Each possible value for the data item is represented by an `<option>` element, nested inside the `<select>` element. Each `<option>` element can take a `value` attribute, which specifies the value to be submitted if that option is chosen from the drop-down list. If you don't specify a `value`, the text inside the `<option></option>` tags is used as the value.
 
-> [!NOTE]
-> If you want to have a specific option selected on page load, you can add a `selected` attribute to the relevant `<option>` element.
+You can also split the options inside a `<select>` drop-down menu into multiple subgroups using the {{htmlelement("optgroup")}} element. Take a look at this element's reference page to find out how.
 
 > [!NOTE]
-> It is possible to split the options inside a `<select>` drop-down menu into multiple subgroups using the {{htmlelement("optgroup")}} element. Have a look at this element's reference page to find out how it works!
+> If you want to have a specific option selected on page load, you can add a `selected` attribute to the relevant `<option>` element.
 
 ### Multi-line text input fields
 
