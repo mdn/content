@@ -12,14 +12,15 @@ The **`eye`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")
 
 ## Value
 
-An emumerated value indicating which eye the mask applies to, which can be one of:
+An emumerated value indicating which eye the mask applies to from the viewer's perspective.
+This can be one of:
 
 - `left`
-  - : The {{domxref("XRView")}} represents the point-of-view of the viewer's left eye.
+  - : The viewer's left eye.
 - `right`
-  - : The view represents the viewer's right eye.
+  - : The viewer's right eye.
 - `none`
-  - : The `XRView` describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
+  - : A monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
 
 ## Examples
 
