@@ -24,6 +24,8 @@ A number representing the current context window usage in tokens.
 
 ### Monitoring context usage during a conversation
 
+This example write context usage to the console after a session prompt completes.
+
 ```js
 const session = await LanguageModel.create();
 
@@ -38,10 +40,6 @@ console.log(
 
 ```js
 const session = await LanguageModel.create();
-
-session.addEventListener("contextoverflow", () => {
-  console.warn("Context window is full.");
-});
 
 async function safePrompt(text) {
   const remaining = session.contextWindow - session.contextUsage;

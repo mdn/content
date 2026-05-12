@@ -28,8 +28,7 @@ LanguageModel.create(options)
 - `options` {{optional_inline}}
   - : Represents the options for creating a {{domxref("LanguageModel")}} session. Options include:
     - `expectedInputs`
-      - : An array representing the required input modalities and languages. 
-        Each entry is an object that may define the following options:
+      - : An array representing the required input modalities and languages. Each entry is an object that may define the following options:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
           - `"text"`

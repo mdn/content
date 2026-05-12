@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns the availability status of the browser's language model for the given options, without creating a session or triggering a download.
 
-Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
+Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session (and spending tokens) only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
 
 ## Syntax
 
@@ -69,7 +69,7 @@ LanguageModel.availability(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with one of the values listed below. If you request multiple input types and any are unavailable, then the promise resovles with `"unavailable"`.
+A {{jsxref("Promise")}} that resolves with one of the values listed below. If you request multiple input types and any are unavailable, then the promise resolves with `"unavailable"`.
 
 - `"available"`
   - : The model is ready to use with the given options.
@@ -133,7 +133,9 @@ if (status === "available") {
 }
 ```
 
-### Checking availability for a multimodal configuration
+### Checking availability for multimodal input
+
+{{MacroName("Prompt_API", "Multimodal input", "#multimodal-input")}} is when different types of input such as text and image may be used in the same session. Since the availability of input types varies by language model, your code should check the availability of desired modes before creating a session. An example is shown here.
 
 ```js
 const availability = await LanguageModel.availability({
@@ -159,11 +161,7 @@ The following example enables or disables a translation button based on the avai
 const translateButton = document.querySelector("#translate");
 
 const status = await LanguageModel.availability();
-<<<<<<< Updated upstream
-translateButton.disabled = status === "unavailable";
-=======
 translateButton.disabled = status !== "unavailable";
->>>>>>> Stashed changes
 
 if (status === "downloadable" || status === "downloading") {
   translateButton.textContent = "Download model to enable translation";

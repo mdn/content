@@ -32,6 +32,16 @@ A generic {{domxref("Event")}}.
 ```js
 const session = await LanguageModel.create();
 
+session.addEventListener("contextoverflow", () => {
+  console.warn("Context overflow detected.");
+});
+```
+
+Alternatively:
+
+```js
+const session = await LanguageModel.create();
+
 session.oncontextoverflow = () => {
   console.warn(
     "The session's context window is full. " +
@@ -39,10 +49,6 @@ session.oncontextoverflow = () => {
   );
 };
 
-// Alternatively, use addEventListener:
-session.addEventListener("contextoverflow", () => {
-  console.warn("Context overflow detected.");
-});
 ```
 
 ### Resetting the session on overflow
@@ -52,7 +58,7 @@ let session = await LanguageModel.create({
   initialPrompts: [{ role: "system", content: "You are a helpful assistant." }],
 });
 
-session.oncontextoverflow = async () => {
+session.addEventListener("contextoverflow", async () => {
   console.log("Context full — creating a fresh session.");
   session.destroy();
   session = await LanguageModel.create({
@@ -60,7 +66,7 @@ session.oncontextoverflow = async () => {
       { role: "system", content: "You are a helpful assistant." },
     ],
   });
-};
+});
 
 async function chat(userMessage) {
   const response = await session.prompt(userMessage);
@@ -73,9 +79,9 @@ async function chat(userMessage) {
 ```js
 const session = await LanguageModel.create();
 
-session.oncontextoverflow = () => {
-  updateUI("warning", "Context window is full.");
-};
+session.addEventListener("contextoverflow", () => {
+  updateUI("Warning", "Context window is full.");
+});
 
 async function safeSend(text) {
   const usage = await session.measureContextUsage(text);

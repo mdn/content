@@ -7,13 +7,13 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
 
-The **Prompt API** allows web pages to directly prompt a browser-provided language model through a uniform JavaScript interface, without needing to manage implementation-specific details of the AI model being used.
+The **Prompt API** allows web pages to directly prompt a language model provided by the user agent model through a uniform JavaScript interface, without needing to manage implementation-specific details of the AI model being used. The API does not provide a way to specify a model other than the one provided by the user agent.
 
 ## Concepts and usage
 
 ### Sessions
 
-All interaction with the language model happens through a {{domxref("LanguageModel")}} session. A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option.
+All interaction with the language model happens through a {{domxref("LanguageModel")}} session. A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option passed to the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method.
 
 Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple interactions.
 
@@ -31,22 +31,19 @@ To branch from a session at a specific point in a conversation — for example, 
 
 ### Trigger developer functions from prompts
 
-The Prompt API allows the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
+The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
 
 ### Multimodal input
 
-Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. 
-You should test which capabilities are available before creating a session using the  {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}  method [INSERT HERE WHY - presumably because it costs time and tokens JUST to try?].
+Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts an array of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
 
-If the model supports your desired options, you can specify them when you create a session, using the `expectedInputs` and `expectedOutputs` options,.
-
-When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
+Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} and {{domxref("LanguageModelMessageContent")}} dictionaries. When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
 
 ### Permissions policy
 
 Access to the Prompt API is controlled by the `language-model` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin {{HTMLElement("iframe")}} elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
 
-### Security and privacy
+### Security considerations
 
 The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) (HTTPS). The privacy and security considerations for the API — including protections against fingerprinting through model capability queries, restrictions on the information revealed by availability checks, and requirements on how user agents must handle sensitive or harmful outputs — are discussed in the [Writing Assistance APIs](https://webmachinelearning.github.io/writing-assistance-apis/) specification, which defines the shared infrastructure on which the Prompt API is built.
 

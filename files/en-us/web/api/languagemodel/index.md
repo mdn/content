@@ -26,8 +26,6 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
   - : Returns a {{jsxref("Promise")}} that resolves when the given input has been added to the session's context window, without generating a response.
 - {{domxref("LanguageModel.clone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session that is a copy of the current session, including all context.
-- `LanguageModel.destroy()`
-  - : Destroys the session and frees any associated resources.
 - {{domxref("LanguageModel.measureContextUsage()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with the number of context window tokens that the given input would consume.
 - {{domxref("LanguageModel.prompt()")}}
@@ -44,12 +42,16 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 
 ## Events
 
-- [`contextoverflow`](/en-US/docs/Web/API/LanguageModel/contextoverflow_event)
+- {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}}
   - : Fired when a `prompt()`, `promptStreaming()`, or `append()` call would exceed the context window size.
 
 ## Examples
 
 ### Creating a session and prompting the model
+
+This example first calls {{domxref("LanguageModel.create()", "create()"}} to get a new session. It specifies that the language model adopt a `"system"` role and defines how it should behave. Note that the example uses `await` because `create()` returns a {{jsxref("Promise")}}. This may take some tiem to resolve if the model needs to be downloaded.
+
+After creating the session, the example calls {{domxref("LanguageModel.prompt()", "prompt()")}} to ask a specific question.
 
 ```js
 const session = await LanguageModel.create({
@@ -67,38 +69,15 @@ console.log(response); // "The capital of France is Paris."
 
 ### Streaming a response
 
+This example calls {{domxref("LanguageModel.promptStreaming()", "promptStreaming()"}} to get an instance if {{domxref("ReadableStream")}} and writes it to the console in chunks.
+
 ```js
 const session = await LanguageModel.create();
-const stream = session.promptStreaming("Tell me a short story.");
+const readableStream = session.promptStreaming("Tell me a short story.");
 
-for await (const chunk of stream) {
-  process.stdout.write(chunk);
+for await (const chunk of readableStream) {
+  console.log(chunk);
 }
-```
-
-### Cloning a session
-
-```js
-const session = await LanguageModel.create({
-  initialPrompts: [{ role: "system", content: "You are a poet." }],
-});
-
-// Share context between two branches without re-creating the session
-const clone = await session.clone();
-
-const [response1, response2] = await Promise.all([
-  session.prompt("Write a haiku about rain."),
-  clone.prompt("Write a haiku about snow."),
-]);
-```
-
-### Checking context usage
-
-```js
-const session = await LanguageModel.create();
-const usage = await session.measureContextUsage("How long is this prompt?");
-
-console.log(`Prompt uses ${usage} of ${session.contextWindow} tokens.`);
 ```
 
 ## Specifications

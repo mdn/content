@@ -43,8 +43,9 @@ A {{jsxref("Promise")}} that resolves with a cloned {{domxref("LanguageModel")}}
 
 ### Exploring multiple response paths
 
+The following example shows how to explore different response paths. First, it creates a single session with the start of a story. Then it clones the original session twice before prompting for different endings. This approach preserves the original session in case more exploration is wanted.
+
 ```js
-// Set up system and user context
 const session = await LanguageModel.create({
   initialPrompts: [
     { role: "system", content: "You are a creative writing assistant." },
@@ -55,7 +56,6 @@ await session.append(
   "The story begins in a small coastal town during a storm.",
 );
 
-// Branch into two different continuations
 const [clone1, clone2] = await Promise.all([session.clone(), session.clone()]);
 
 const [ending1, ending2] = await Promise.all([
