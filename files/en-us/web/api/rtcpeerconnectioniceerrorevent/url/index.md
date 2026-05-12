@@ -18,8 +18,8 @@ A string.
 
 ### Basic usage
 
-This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server that was being used to try to open the connection.
-It then calls a function to display the messages and the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}}.
+This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server used to attempt the connection.
+It then calls a function to display those messages and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property.
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {

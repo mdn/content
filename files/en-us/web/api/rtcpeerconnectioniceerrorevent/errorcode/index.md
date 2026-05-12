@@ -15,7 +15,7 @@ The **`errorCode`** property of the {{domxref("RTCPeerConnectionIceErrorEvent")}
 A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server.
 
 If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes.
-The 701 error is fired only once per server URL, and only while the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`.
+This value is reported only once per server URL, and only while the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`.
 
 ## Examples
 
@@ -26,8 +26,8 @@ It then calls a function to display those messages and the value of the event's 
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {
-  let networkInfo = `[Local interface: ${event.address}:${event.port}]`;
-  let iceServerInfo = `[ICE server: ${event.url}]`;
+  const networkInfo = `[Local interface: ${event.address}:${event.port}]`;
+  const iceServerInfo = `[ICE server: ${event.url}]`;
 
   showMessage(event.errorCode, iceServerInfo, networkInfo);
 });

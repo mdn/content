@@ -10,7 +10,7 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent.port
 
 The **`port`** property of the {{domxref("RTCPeerConnectionIceErrorEvent")}} interface represents the port number over which communication with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server is taking place.
 
-This is `null` if the connection hasn't yet been established ({{domxref("RTCPeerConnectionIceErrorEvent/address","address")}} is `null`).
+This is `null` if the connection hasn't been established ({{domxref("RTCPeerConnectionIceErrorEvent/address","address")}} is `null`).
 
 ## Value
 
@@ -22,7 +22,8 @@ A positive integer.
 
 ### Basic usage
 
-This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server that was being used to try to open the connection, then calls a function to display those and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property.
+This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server used to attempt the connection.
+It then calls a function to display those messages and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property.
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {

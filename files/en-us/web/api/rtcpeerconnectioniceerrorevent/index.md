@@ -7,7 +7,7 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnectionIceErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error that occurred while handling {{Glossary("ICE")}} negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
+The **`RTCPeerConnectionIceErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error that occurred while handling {{Glossary("ICE")}} negotiation through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 
 It inherits from the {{domxref("Event")}} interface, adding details that are relevant to errors in ICE negotiations.
 

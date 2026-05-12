@@ -10,7 +10,7 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent.errorText
 
 The **`errorText`** property of the {{domxref("RTCPeerConnectionIceErrorEvent")}} interface represents the STUN error reason text returned by the {{Glossary("STUN")}} or {{Glossary("TURN")}} server if there was an error during ICE negotiation.
 
-If communication with the STUN or TURN server couldn't be established at all, this string will be a browser-specific string explaining the error.
+If communication with the STUN or TURN server couldn't be established at all, this will be a browser-specific string explaining the error.
 
 ## Value
 
