@@ -10,7 +10,8 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent
 The **`RTCPeerConnectionIceErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error that occurred while handling {{Glossary("ICE")}} negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 
 It inherits from the {{domxref("Event")}} interface, adding details that are relevant to errors in ICE negotiations.
-Events of this type are sent to the {{domxref("RTCPeerConnection")}} object.
+
+The {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} event fired at {{domxref("RTCPeerConnection")}} is an instance of this object.
 
 {{InheritanceDiagram}}
 
@@ -39,11 +40,6 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 ## Instance methods
 
 _`RTCPeerConnectionIceErrorEvent` has no methods other than any provided by the parent interface, {{domxref("Event")}}._
-
-## Events
-
-- {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
-  - : Error event sent to the {{domxref("RTCPeerConnection")}} object if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 
 ## Examples
 
