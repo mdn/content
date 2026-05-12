@@ -30,7 +30,7 @@ new RTCPeerConnectionIceErrorEvent(type, options)
         This should be set to `null` if the local IP address has not yet been exposed as part of a local {{Glossary("ICE")}} candidate.
     - `errorCode`
       - : A positive number providing the [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server.
-        If no host candidate can reach the server and the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`, this can be indicated by setting this to 701.
+        If no host candidate can reach the server and the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`, this should be set to `701`.
     - `errorText` {{optional_inline}}
       - : A string providing the STUN reason text returned by the STUN or TURN server.
     - `port` {{optional_inline}}
