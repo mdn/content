@@ -27,7 +27,7 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 - {{domxref("LanguageModel.clone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session that is a copy of the current session, including all context.
 - `LanguageModel.destroy()`
-  - : Destroys the session and frees any associated resources. Inherited from `DestroyableModel`.
+  - : Destroys the session and frees any associated resources.
 - {{domxref("LanguageModel.measureContextUsage()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with the number of context window tokens that the given input would consume.
 - {{domxref("LanguageModel.prompt()")}}
