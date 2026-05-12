@@ -98,7 +98,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
       </td>
       <td>
-        Depends on the specific attribute
+        All elements
       </td>
       <td>
         Depending on the specific attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/">ARIA</a> attributes modify an element's state or properties as defined in the accessibility tree.
