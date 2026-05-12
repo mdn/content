@@ -23,6 +23,8 @@ An emumerated value indicating which eye the mask applies to, which can be one o
 
 ## Examples
 
+### Basic usage
+
 This example indicates how you might check the `eye` value when the `visibilitymaskchange` event fires and then render a suitable display update depending on the result.
 
 ```js
