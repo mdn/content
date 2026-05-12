@@ -108,7 +108,7 @@ At version `1.0.2`, which is the point you added it to the project, "example-dep
 
 All this has happened without any changes to your project's direct artifacts, or any opportunity for you to review the update and see if it looks suspicious.
 
-The solution to this is to use a lockfile when building your project. A lockfile is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project.
+The solution to this is to use a lockfile when building your project. A lockfile is automatically generated whenever a project's dependencies are installed, and it lists the exact versions of the direct and indirect dependencies used in a project. With the lockfile present, you can no longer install versions of the dependencies other than the ones listed in it.
 
 That is, if _package.json_ tells you that your project is using "example-dependency", then _package.lock_ will tell you exactly which version of "example-dependency" to use, and what the versions of its dependencies are.
 
