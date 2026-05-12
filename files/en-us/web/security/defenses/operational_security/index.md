@@ -7,7 +7,7 @@ sidebar: security
 
 In this guide we'll cover security practices that are not directly related to the code you write, but are concerned with how you develop, build, ship, and update your project.
 
-Many of these are defenses against [supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks), in which the attacker subverts the processes that you follow in developing the site, to introduce malicious or vulnerable code into it. For this reason, defenses against supply chain attacks are usually about securing your development process.
+Many of these are defenses against [supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks), in which the attacker subverts the processes you follow to develop your sites, to introduce malicious or vulnerable code into them. Defenses against supply chain attacks are usually about securing your development process.
 
 We've split this guide into three sections:
 
@@ -23,7 +23,7 @@ In this section we'll describe steps you can take to prevent attackers from comp
 
 ### Requiring strong authentication for project maintainers
 
-By gaining control of a maintainer's account an attacker can introduce malicious code or ship a malicious update of the product.
+By gaining control of a maintainer's account, an attacker can introduce malicious code or ship a malicious update of their product.
 
 This means that a project must use a strong authentication method for maintainer accounts.
 
@@ -71,7 +71,7 @@ To mitigate problems with third-party dependencies, we'll discuss four practices
 
 ### Evaluating new dependencies
 
-Before adding a new dependency, you should assess how much of a security risk it represents. You need to be confident that the dependency is actively maintained, that it has a record of fixing issues and a process for reporting and responding to security vulnerabilities.
+Before adding a new dependency, you should assess how much of a security risk it represents. You need to be confident that the dependency is actively maintained, has a record of fixing issues, and has a process for reporting and responding to security vulnerabilities.
 
 You should consider whether the risk of adding the dependency outweighs the cost of implementing the feature yourself.
 
@@ -136,7 +136,7 @@ To get a deeper insight into your dependencies, you can maintain a detailed inve
 A lockfile is really a kind of SBOM: however, the term "SBOM" usually refers to a separate standard format for representing dependencies. These standards are usually both broader and deeper than a lockfile. That is:
 
 - They can capture dependencies, such as web services, that are not represented in a lockfile.
-- They can capture additional information about each dependency, that is not represented in a lockfile.
+- They can capture additional information about each dependency that is not represented in a lockfile.
 
 Using a standard format for representing an SBOM also means you can:
 
@@ -148,7 +148,7 @@ The two most common standards for representing a software bill of materials are:
 - [CycloneDX](https://cyclonedx.org/), originally developed by [OWASP](https://owasp.org/).
 - [SPDX](https://spdx.dev/), maintained by the [Linux Foundation](https://www.linuxfoundation.org/).
 
-Both these standards have good support, and you can use either to represent the SBOM for your project. SPDX was initially focused on helping products ensure that they are compliant with open source software licenses, but has added features to support security use cases. CycloneDX is a newer and more lightweight standard which was focused from the start on promoting supply chain security.
+Both these standards have good support, and you can use either to represent the SBOM for your project. SPDX was initially focused on helping products ensure compliance with open source software licenses, but has added features to support security use cases. CycloneDX is a newer and more lightweight standard focused from the start on promoting supply chain security.
 
 #### Anatomy of an SBOM
 
@@ -172,10 +172,10 @@ You can generate an SBOM for a product using a separate tool such as [cdxgen](ht
 
 #### Using an SBOM
 
-An SBOM enables you to implement several defenses against supply chain attacks, and we'll list three important ones here:
+An SBOM enables you to implement several defenses against supply chain attacks; the three most important ones are as follows:
 
 - **Vulnerability management**: one of the main uses for an SBOM is to respond to vulnerabilities that have been identified in your dependencies. You can use third-party tools such as OWASP's [Dependency-Track](https://dependencytrack.org/), which automate this by scanning sources of vulnerability reports such as the [NIST National Vulnerability Database](https://nvd.nist.gov/) or [GitHub Advisories](https://github.com/advisories).
-- **Integrity verification**: if the SBOM contains hashes for dependencies, it's possible to verify that the source of the component you're depending on has not been modified from its original released form.
+- **Integrity verification**: if the SBOM contains hashes for dependencies, it's possible to verify that the source of a dependency has not been modified from its original released form.
 - **Supplier risk management**: by capturing information about the supplier of your dependencies, an SBOM can help you understand when you are depending on components or services from suppliers that are no longer considered reliable.
 
 ## Monitoring and response
@@ -184,7 +184,7 @@ Once a website is deployed, you can help detect and respond to attacks by loggin
 
 You need to find a balance in which maintainers are alerted about real problems, but are not constantly being alerted by false alarms. The specific events which should be logged, and the subset of events that should trigger alarms, is dependent on the project and its threat model, but commonly includes:
 
-- Input validation failures: cases when user input isn't what your website expects. Input types include form input, URL parameters, or file uploads. Validation failures include input with unexpected values, formats, or lengths, or unexpected parameter names. User input that could not have been entered manually, such as a nonexistent {{htmlelement("select")}} option, is especially suspicious.
+- Input validation failures: cases when user input isn't what your website expects. Input types include form input, URL parameters, or file uploads. Validation failures include input with unexpected values, formats, lengths, or parameter names. User input that could not have been entered manually, such as a nonexistent {{htmlelement("select")}} option, is especially suspicious.
 
 - Events related to authentication:
   - Failed attempts to sign in, especially repeated failures in a short space of time.
