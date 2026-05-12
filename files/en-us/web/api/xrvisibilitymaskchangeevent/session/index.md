@@ -8,7 +8,7 @@ browser-compat: api.XRVisibilityMaskChangeEvent.session
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`session`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the {{domxref("XRSession")}} to which the event belongs.
+The **`session`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the {{domxref("XRSession")}} to which the event belongs.
 
 ## Value
 
