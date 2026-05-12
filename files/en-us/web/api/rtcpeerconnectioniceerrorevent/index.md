@@ -7,7 +7,7 @@ browser-compat: api.RTCPeerConnectionIceErrorEvent
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnectionIceErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error that occurred while handling {{Glossary("ICE")}} negotiations.
+The **`RTCPeerConnectionIceErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error that occurred while handling {{Glossary("ICE")}} negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server.
 
 It inherits from the {{domxref("Event")}} interface, adding details that are relevant to errors in ICE negotiations.
 Events of this type are sent to the {{domxref("RTCPeerConnection")}} object.
@@ -31,8 +31,8 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
   - : A string containing the STUN reason text returned by the STUN or TURN server, or a browser-specific string explaining why communication with the server could not be established.
 - {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}
-  - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in `address`.
-    `null` if the connection hasn't been established (that is, if `address` is `null`).
+  - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in [`address`](#address).
+    This is `null` if the connection hasn't been established (that is, if `address` is `null`).
 - {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
   - : A string indicating the URL of the STUN or TURN server with which the error occurred.
 

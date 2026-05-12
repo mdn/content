@@ -21,8 +21,8 @@ The 701 error is fired only once per server URL, and only while the {{domxref("R
 
 ### Basic usage
 
-This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events which creates human-readable messages describing the local network interface for the connection as well as the ICE server that was being used to try to open the connection.
-It then calls a function to display those messages as well as the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property.
+This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server used to attempt the connection.
+It then calls a function to display those messages and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property.
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {

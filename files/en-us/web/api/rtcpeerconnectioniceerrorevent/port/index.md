@@ -14,7 +14,7 @@ This is `null` if the connection hasn't yet been established ({{domxref("RTCPeer
 
 ## Value
 
-A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in `address`.
+A positive integer.
 
 `null` if the connection hasn't been established (that is, if `address` is `null`).
 
@@ -22,12 +22,12 @@ A positive integer value giving the port number over which communication with th
 
 ### Basic usage
 
-This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events which creates human-readable messages describing the local network interface for the connection as well as the ICE server that was being used to try to open the connection, then calls a function to display those as well as the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property.
+This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server that was being used to try to open the connection, then calls a function to display those and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} property.
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {
-  let networkInfo = `[Local interface: ${event.address}:${event.port}]`;
-  let iceServerInfo = `[ICE server: ${event.url}]`;
+  const networkInfo = `[Local interface: ${event.address}:${event.port}]`;
+  const iceServerInfo = `[ICE server: ${event.url}]`;
 
   showMessage(event.errorText, iceServerInfo, networkInfo);
 });
