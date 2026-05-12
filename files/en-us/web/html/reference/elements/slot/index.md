@@ -7,7 +7,11 @@ browser-compat: html.elements.slot
 sidebar: htmlsidebar
 ---
 
-The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element—part of the [Web Components](/en-US/docs/Web/API/Web_components) technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
+The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element is a placeholder inside a [Web Component](/en-US/docs/Web/API/Web_components) that you can fill with your own markup when the component is used.
+This lets you create separate DOM trees and present them together.
+
+A slot can contain default content, such as plain text, other HTML elements, or other web components.
+This is displayed if the slot is not assigned another element when the web component is used.
 
 ## Attributes
 
@@ -25,6 +29,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     For more information see [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) on the `<template>` element and [`Element.attachShadow()`](/en-US/docs/Web/API/Element/attachShadow#slotassignment).
 
 ## Examples
+
+### Basic usage
+
+This HTML shows how a number of named slots might be declared within a {{htmlelement(template)}} element.
+Note that these slots are only used as slots when the template used inside a shadow root.
 
 ```html
 <template id="element-details-template">
