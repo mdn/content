@@ -21,9 +21,11 @@ sidebar: addonsidebar
 
 <!-- Write one or two sentences describing when the event fires and why it is useful -->
 
-Fired when …
+Fires when …
 
 ## Syntax
+
+<!-- If addListener doesn't accept extra parameters, use this form -->
 
 ```js-nolint
 browser.Namespace.onEventName.addListener(listener)
@@ -31,17 +33,26 @@ browser.Namespace.onEventName.removeListener(listener)
 browser.Namespace.onEventName.hasListener(listener)
 ```
 
-<!-- If addListener accepts extra parameters (e.g. webRequest events), use this form instead -->
-<!-- browser.Namespace.onEventName.addListener(listener, filter, extraInfoSpec) -->
+<!-- If addListener accepts extra parameters, use this form -->
+
+```js-nolint
+browser.Namespace.onEventName.addListener(
+  listener,                    // function
+  filter,                      //  object
+  extraInfoSpec                //  optional array of strings
+)
+browser.Namespace.onEventName.removeListener(listener)
+browser.Namespace.onEventName.hasListener(listener)
+```
 
 Events have three functions:
 
 - `addListener(listener)` <!-- or addListener(listener, filter, extraInfoSpec) -->
   - : Adds a listener to this event.
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : Stops listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : Checks whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
 ## addListener syntax
 
@@ -52,29 +63,40 @@ Events have three functions:
     - `param1`
       - : `type`. Description of the parameter.
 
-<!-- If addListener accepts extra parameters, document them here -->
+<!-- If addListener accepts extra parameters, document them here. For example: -->
 
-- `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Description of the filter parameter.
-- `extraInfoSpec` {{optional_inline}}
-  - : `array` of `string`. Description of extra options.
+- `extraParam1`
+  - : `type`. Description of the parameter.
+- `extraParam2` {{optional_inline}}
+  - : `type`. Description of the parameter. If the parameter accepts a fixed set of values, list them, for example:
+    - `"value1"`: Description of the first value.
+    - `"value2"`: Description of the second value.
+    - `"value3"`: Description of the third value.
 
-<!-- Remove the filter/extraInfoSpec parameters above if addListener only takes a listener -->
+<!-- Remove the extra parameters above if addListener only takes a listener -->
 
 <!-- If the listener is expected to return a value or a Promise, document it below. Otherwise, remove the Return value section -->
 
 ### Return value
 
-<!-- For events that can modify or block requests, describe the expected return value -->
+<!-- Describe the value or Promise the listener can return, and the circumstances under which it is used. For example: -->
 
-## Additional objects
+Returns a {{jsxref("Promise")}} that resolves to an `object` with the following properties, or `undefined` to take no action:
+
+- `property1`
+  - : `type`. Description of the property.
+- `property2`
+  - : `type`. Description of the property.
+
+## Listener objects
 
 <!-- If the listener receives complex objects, document their shape here under H3 headings -->
-<!-- This section is used when the details object has many fields (see tabs.onActivated, webRequest.onBeforeSendHeaders) -->
+<!-- This section is used when the listener object has more than five fields across its objects (see webRequest.onBeforeSendHeaders) -->
+<!-- Rename the H3 heading below to match the listener parameter (for example, `details`) -->
 <!-- Remove this section if the listener parameters are simple enough to document inline above. -->
 <!-- When removed, the Description section below moves up to follow addListener syntax directly. -->
 
-### details
+### objectName
 
 - `field1`
   - : `type`. Description of the field.
