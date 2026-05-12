@@ -371,7 +371,7 @@ The example below should show the content of the slots displayed in the appropri
 
 > [!NOTE]
 > The example will still work even if the warning is displayed that shadowroot slot assignment is not supported.
-> This is because `named` assignment precedes the introduction of the `shadowrootslotassignment` attribute.
+> This is because `named` assignment predates the introduction of the `shadowrootslotassignment` attribute.
 
 ### Declarative shadow DOM with manual slot assignment
 
@@ -395,7 +395,7 @@ This warning is later set to be displayed via JavaScript if the browser doesn't 
 Next, we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
 This contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute, and will use manual slot assignment because `shadowrootslotassignment="manual"` is set.
 
-The template defines elements that have slots for "header", "meta", and body information, that can be separately referenced by their `id` attribute.
+The template defines elements that have slots for "header", "meta", and "body" information, that can be separately referenced by their `id` attribute.
 The elements are styled differently so it is easy to differentiate them.
 
 ```html
@@ -483,7 +483,7 @@ The example below should show the content of the slots displayed in the appropri
 {{EmbedLiveSample('Declarative shadow DOM with manual slot assignment','100', '220px')}}
 
 > [!NOTE]
-> If the `shadowrootslotassignment` attribute is not supported a warning note is displayed and the browser will use `named` assignment.
+> If the `shadowrootslotassignment` attribute is not supported, a warning note is displayed and the browser will use `named` assignment.
 > However, because none of the slots or elements to be inserted are named, all the elements will be inserted into the title slot (because this is the first unnamed slot, and hence is the "default" slot).
 
 ### Data on the DocumentFragment is not cloned

@@ -99,7 +99,7 @@ attachShadow(options)
         - `named`
           - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
             Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
-            Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+            Any top-level children of the host with no `slot` attribute will be assigned to the first `<slot>` with no `name` attribute (the "default slot"), if one is present.
             This is the default value.
         - `manual`
           - : Elements are manually assigned to particular slot elements using {{domxref("HTMLSlotElement.assign()")}}.

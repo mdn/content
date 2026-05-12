@@ -18,8 +18,8 @@ A string that can be one of:
 
 - `named`
   - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
-    Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
-    Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+    Any descendants of the host with a `slot` attribute that matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
+    Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot"), if one is present.
 - `manual`
   - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements.
     Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
@@ -30,7 +30,7 @@ A string that can be one of:
 
 In the example below, the `assign()` method is used to display the correct tab in a tabbed application.
 The function is called and passed the panel to show, which is then assigned to the slot.
-We test if the `slotAssignment` is `named` to prevent an exception to be raised when {{domxref("HTMLSlotElement.assign()")}} is called.
+We test if the `slotAssignment` is `named` to prevent an exception from being raised when {{domxref("HTMLSlotElement.assign()")}} is called.
 
 ```js
 function UpdateDisplayTab(elem, tabIdx) {
