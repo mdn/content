@@ -12,7 +12,7 @@ browser-compat: api.SVGScriptElement.defer
 
 The **`defer`** property of the {{domxref("SVGScriptElement")}} interface is a boolean value that controls how the script should be executed. For classic scripts, if the `defer` property is set to `true`, the external script will be executed after the document has been parsed, but before firing the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the `defer` property has no effect.
 
-It reflects the `defer` attribute of the {{SVGElement("script")}} element.
+It reflects the [`defer`](/en-US/docs/Web/SVG/Reference/Element/script#defer) attribute of the {{SVGElement("script")}} element.
 
 ## Value
 
