@@ -292,5 +292,6 @@ The {{cssxref(":has", ":has()")}} pseudo-class enables powerful selection capabi
 - [CSS animation performance](/en-US/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
 - [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)
+- [CSS Minifier and Compressor](https://99tools.net/css-minifier/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
