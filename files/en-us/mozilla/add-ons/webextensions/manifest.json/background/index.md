@@ -195,7 +195,7 @@ To support browsers with different Manifest V3 background script implementations
 
 You do not need to include `preferred_environment` for this fallback behavior. Use `preferred_environment` only when you want Safari, or another browser that supports more than one background environment, to prefer `service_worker` where available.
 
-The following example shows the relevant parts of a manifest that includes both `scripts` and `service_worker`:
+This example shows the relevant parts of a manifest that includes both `scripts` and `service_worker`:
 
 ```json
 {
