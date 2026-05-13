@@ -189,13 +189,21 @@ Support for the `scripts`, `page`, and `service_worker` properties varies betwee
   - when both are specified, Safari uses `background.scripts` (or `background.page`) unless `preferred_environment` is set to `service_worker`.
   - when `preferred_environment` is set to `service_worker` and `background.service_worker` isn't specified, Safari generates a service worker from `background.scripts` if present.
 
-To illustrate, this is an example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
+### Cross-browser Manifest V3 background scripts
+
+To support browsers with different Manifest V3 background script implementations, specify both `scripts` and `service_worker` in the `background` key. Browsers that support extension background service workers can use `service_worker`, while browsers that use event pages for this case can use `scripts`.
+
+You do not need to include `preferred_environment` for this fallback behavior. Use `preferred_environment` only when you want Safari, or another browser that supports more than one background environment, to prefer `service_worker` where available.
+
+The following compact example shows the relevant parts of a script-on-click pattern, where the extension runs a script when the user clicks its toolbar button. The manifest includes both `scripts` and `service_worker`:
 
 ```json
 {
-  "name": "Demo of service worker + event page",
-  "version": "1",
   "manifest_version": 3,
+  "name": "Script on click",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {},
   "background": {
     "scripts": ["background.js"],
     "service_worker": "background.js"
@@ -203,23 +211,31 @@ To illustrate, this is an example of a cross-browser extension that supports `sc
 }
 ```
 
-And, background.js contains:
+The background script handles the action click:
 
 ```js
 if (typeof browser === "undefined") {
   // Chrome does not support the browser namespace yet.
   globalThis.browser = chrome;
 }
-browser.runtime.onInstalled.addListener(() => {
-  browser.tabs.create({ url: "http://example.com/first-run.html" });
+
+browser.action.onClicked.addListener(async (tab) => {
+  await browser.scripting.executeScript({
+    target: {
+      tabId: tab.id,
+    },
+    func: () => {
+      document.body.style.border = "5px solid red";
+    },
+  });
 });
 ```
 
-When the extension is executed, this happens:
+With this `background` configuration, this happens:
 
-- in Chrome, the `service_worker` property is used, and a service worker starts that opens the tab because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
-- in Firefox, the `scripts` property is used, and a script starts that opens the tab because Firefox only supports scripts for background scripts.
-- in Safari, the `service_worker` property is used, and a service worker starts that opens the tab because Safari gives priority to using service workers for background scripts.
+- in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
+- in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
+- in Safari, the `scripts` property is used by default. Set `preferred_environment` to `service_worker` only if you want Safari to prefer the service worker context.
 
 ## Examples
 
