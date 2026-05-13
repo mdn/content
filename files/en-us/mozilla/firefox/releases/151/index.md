@@ -38,7 +38,9 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
-- The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2016929](https://bugzil.la/2016929)), ([Firefox bug 2019254](https://bugzil.la/2019254)), ([Firefox bug 2024601](https://bugzil.la/2024601)), [Firefox bug 2030645](https://bugzil.la/2030645)).
+- The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2016929](https://bugzil.la/2016929), ([Firefox bug 2019254](https://bugzil.la/2019254)), ([Firefox bug 2024601](https://bugzil.la/2024601)), [Firefox bug 2030645](https://bugzil.la/2030645)).
+
+- The {{cssxref("position-anchor")}} CSS property now supports the `normal` (default) value. This allows the matching of the {{cssxref("position-area")}} property, so if the `position-area` property updates the `position-anchor` property will also. ([Firefox bug 2030351](https://bugzil.la/2030351)).
 
 <!-- #### Removals -->
 
@@ -70,6 +72,8 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [`options.keyboardLock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) property can now be passed as an option to {{domxref("Element.requestFullscreen()")}}, allowing websites to request keyboard lock when the element is displayed in fullscreen mode.
   This stops the <kbd>Esc</kbd> key from causing the element to leave fullscreen (a long-press is required instead), and some formerly-reserved browser hotkeys can now be intercepted and their default action prevented.
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
+- The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
+  ([Firefox bug 1943070](https://bugzil.la/1943070)).
 
 <!-- #### DOM -->
 
@@ -107,3 +111,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`@container style()` range syntax queries**: `layout.css.attr.enabled`
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries now supports the _range syntax_. This allows you to check if a container has a valid CSS custom property and compare its value with comparison operators like `>`, `<`, `>=`, and `<=` and apply styles to its children accordingly. ([Firefox bug 2024601](https://bugzil.la/2024601)).
+
+- **Fix for nested scrollable areas**: `layout.css.fake-webkit-scrollbar.enabled`
+
+  This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. ([Firefox bug 1977511](https://bugzil.la/1977511)).
