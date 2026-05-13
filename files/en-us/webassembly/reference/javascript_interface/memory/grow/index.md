@@ -23,7 +23,7 @@ grow(delta)
 ### Return value
 
 The previous size of the memory, in units of WebAssembly pages.
-For memories with an address type of `"i64"`, this is returned as a {{jsxref("BigInt")}} value.
+For memories with an address type of `"i64"`, this is a {{jsxref("BigInt")}} value.
 
 ### Exceptions
 

@@ -51,7 +51,7 @@ new WebAssembly.Memory(memoryDescriptor)
 - {{jsxref("RangeError")}}
   - : Thrown if at least one of these conditions is met:
     - `maximum` is specified and is smaller than `initial`.
-    - `address` is `"i32"` or omitted, and `initial` exceeds 65,536 (2^16). 2^16 pages is 2^16 \* 64KiB = 4GiB bytes, which is the maximum range that a Wasm module can address with 32-bit addressing.
+    - `address` is set to `"i32"` or omitted, and `initial` exceeds `65,536` (2^16). 2^16 pages is equivalent to 4GiB (2^16 \* 64KiB), which is the maximum range that a Wasm module can address with 32-bit addressing.
     - Allocation fails. This may occur due to attempting to allocate too much at once, or if the User Agent is otherwise out of memory.
 
 ## Examples
