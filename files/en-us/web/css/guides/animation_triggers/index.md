@@ -54,6 +54,7 @@ Scroll down and up the box of text. The appearance of the "bouncer" text will tr
 
 html {
   font-family: sans-serif;
+  font-size: 1.3rem;
 }
 
 * {
@@ -70,7 +71,7 @@ html {
   }
   p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 100% 0;
   }
   #trigger,
@@ -159,6 +160,22 @@ html {
     74% {
       transform: translatey(-0.97vh);
     }
+  }
+}
+```
+
+```css hidden live-sample___in-action
+@supports not (timeline-trigger-name: --t) {
+  body::before {
+    content: "Your browser does not support scroll-triggered animations.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
   }
 }
 ```
