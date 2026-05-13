@@ -20,7 +20,7 @@ In applications that play audio, it is beneficial to measure audio {{glossary("l
 - **Underrun**
   - : A gap in playback when the audio application runs out of buffered audio data to play before new data arrives to replace it — in other words, it can't provide audio frames to the output device fast enough. This can happen due to audio graph complexity, CPU overload, or malfunctions in other audio programs. The result is an audible "glitch" — a click, a pop, or an audio dropout — because the application has nothing to play and fills the gap with silence or noise.
 
-If you detect underruns, take action to avoid more in future – for example, by providing a larger buffer or by freeing up system resources. Use a larger buffer carefully because they can increase latency; it is important to achieve a balance. You can reduce latency by simplifying the required processing or by reducing the playback buffer size.
+If you detect underruns, take action to avoid more in the future – for example, by providing a larger buffer or by freeing up system resources. Use a larger buffer carefully because it can increase latency; it is important to achieve a balance. You can reduce latency by simplifying the required processing or by reducing the playback buffer size.
 
 Web audio performance varies greatly across devices, from high-end modern desktop computers to low-end budget mobile phones. The `AudioPlaybackStats` object allows you to collect telemetry data from your users to understand how your app performs in the "real world". Use this data to identify and respond to latency and underrun problems.
 
@@ -115,7 +115,7 @@ resetBtn.disabled = true;
 Next, we add a `click` event listener to the play button so that when it is clicked, we:
 
 - Create a new {{domxref("AudioContext")}} and disable the play button so it can't be pressed again.
-- Run some feature detection code that checks if the {{domxref("AudioContext.playbackStats")}} property exists. If it doesn't, we display a "Your browser doesn't support AudioPlaybackStats." message in a list item in the output list, and `return` out of the function.
+- Run some feature detection code that checks if the {{domxref("AudioContext.playbackStats")}} property exists. If it doesn't, we display a "Your browser doesn't support `AudioPlaybackStats`." message in a list item in the output list, and `return` out of the function.
 - Create a basic audio graph consisting of of an {{domxref("OscillatorNode")}} and a {{domxref("GainNode")}} and start the oscillator playing.
 - Enable the stats button and give it a `click` event listener so that when it is clicked, we write the different stats available in the audio context's {{domxref("AudioPlaybackStats")}} object into a text string and display it in a list item in the output list.
 - Enable the reset button and give it a `click` event listener so that when it is clicked, we run the {{domxref("AudioPlaybackStats.resetLatency()")}} method.
@@ -170,9 +170,9 @@ The rendered output looks like this:
 
 {{embedlivesample("playback-stats", "100%", "400")}}
 
-Click the "Play audio" button to start the ocillator tone playing. Now when you click the "Display stats" button, you'll see the different stats available in the {{domxref("AudioPlaybackStats")}} object displayed in a list item.
+Click the "Play audio" button to start the oscillator tone playing. Now, when you click the "Display stats" button, you'll see the different stats available in the {{domxref("AudioPlaybackStats")}} object displayed in a list item.
 
-If you click the "Reset latency" button, then click the "Display stats" button, you'll see new stats displayed, but the minimum latency will no longer be zero. This is because the latency stats will now only be measured from the time you clicked the "Reset latency" button, not from the start of the audio graph.
+If you click the "Reset latency" button and then click the "Display stats" button, new statistics will appear, but the minimum latency will no longer be zero. This is because the latency is now measured from when you clicked the "Reset latency" button, not from when the audio context was initialized.
 
 ## Specifications
 
