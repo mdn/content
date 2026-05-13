@@ -22,6 +22,10 @@ new WebAssembly.Memory(memoryDescriptor)
 
 - `memoryDescriptor`
   - : An object that can contain the following members:
+    - `address` {{optional_inline}}
+      - : A string value that specifies the address type of the memory. This can be
+        `"i32"` or `"i64"`. The default is `"i32"`.
+        If `address` is `"i64"`, `initial` and `maximum`, if present, must be {{jsxref("BigInt")}} values.
     - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
     - `maximum` {{optional_inline}}
@@ -30,10 +34,6 @@ new WebAssembly.Memory(memoryDescriptor)
         to the engine to reserve memory up front. However, the engine may ignore or clamp
         this reservation request. Unshared WebAssembly memories don't need to set a
         `maximum`, but shared memories do.
-    - `address` {{optional_inline}}
-      - : A string value that specifies the address type of the memory. This can be
-        `"i32"` or `"i64"`. The default is `"i32"`.
-        If `address` is `"i64"`, `initial` and `maximum`, if present, must be {{jsxref("BigInt")}} values.
     - `shared` {{optional_inline}}
       - : A boolean value that defines whether the memory is a shared memory or not. If
         set to `true`, it is a shared memory. The default is `false`.
@@ -80,19 +80,6 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 });
 ```
 
-### Creating a 64-bit memory
-
-To create a memory with a 64-bit address type, pass `address: "i64"`.
-The `initial` and `maximum` values must be {{jsxref("BigInt")}} values:
-
-```js
-const memory = new WebAssembly.Memory({
-  address: "i64",
-  initial: 1n,
-  maximum: 10n,
-});
-```
-
 ### Creating a shared memory
 
 By default, WebAssembly memories are unshared.
@@ -108,6 +95,19 @@ const memory = new WebAssembly.Memory({
 ```
 
 This memory's `buffer` property will return a {{jsxref("SharedArrayBuffer")}}.
+
+### Using a 64-bit address
+
+To create a memory with a 64-bit address type, pass `address: "i64"`.
+The `initial` and `maximum` values must be {{jsxref("BigInt")}} values:
+
+```js
+const memory = new WebAssembly.Memory({
+  address: "i64",
+  initial: 1n,
+  maximum: 10n,
+});
+```
 
 ## Specifications
 
