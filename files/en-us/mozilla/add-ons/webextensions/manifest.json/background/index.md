@@ -191,7 +191,7 @@ Support for the `scripts`, `page`, and `service_worker` properties varies betwee
 
 ### Cross-browser Manifest V3 background scripts
 
-To support browsers with different Manifest V3 background script implementations, specify both `scripts` and `service_worker` in the `background` key. Browsers that support extension background service workers can use `service_worker`, while browsers that use event pages for this case can use `scripts`.
+To support browsers with different Manifest V3 background script implementations, specify both `scripts` and `service_worker` in the `background` key. Browsers that support extension background service workers use `service_worker`, while browsers that use event pages for this case use `scripts`.
 
 You do not need to include `preferred_environment` for this fallback behavior. Use `preferred_environment` only when you want Safari, or another browser that supports more than one background environment, to prefer `service_worker` where available.
 
