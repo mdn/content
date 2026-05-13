@@ -195,15 +195,13 @@ To support browsers with different Manifest V3 background script implementations
 
 You do not need to include `preferred_environment` for this fallback behavior. Use `preferred_environment` only when you want Safari, or another browser that supports more than one background environment, to prefer `service_worker` where available.
 
-The following compact example shows the relevant parts of a script-on-click pattern, where the extension runs a script when the user clicks its toolbar button. The manifest includes both `scripts` and `service_worker`:
+The following example shows the relevant parts of a manifest that includes both `scripts` and `service_worker`:
 
 ```json
 {
   "manifest_version": 3,
-  "name": "Script on click",
+  "name": "Background script example",
   "version": "1.0",
-  "permissions": ["activeTab", "scripting"],
-  "action": {},
   "background": {
     "scripts": ["background.js"],
     "service_worker": "background.js"
@@ -211,31 +209,11 @@ The following compact example shows the relevant parts of a script-on-click patt
 }
 ```
 
-The background script handles the action click:
-
-```js
-if (typeof browser === "undefined") {
-  // Chrome does not support the browser namespace yet.
-  globalThis.browser = chrome;
-}
-
-browser.action.onClicked.addListener(async (tab) => {
-  await browser.scripting.executeScript({
-    target: {
-      tabId: tab.id,
-    },
-    func: () => {
-      document.body.style.border = "5px solid red";
-    },
-  });
-});
-```
-
 With this `background` configuration, this happens:
 
 - in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
 - in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
-- in Safari, the `scripts` property is used by default. Set `preferred_environment` to `service_worker` only if you want Safari to prefer the service worker context.
+- in Safari, the `scripts` property is used by default.
 
 ## Examples
 
