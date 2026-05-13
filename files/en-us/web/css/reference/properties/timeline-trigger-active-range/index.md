@@ -67,11 +67,13 @@ The `timeline-trigger-active-range` shorthand property is specified as one or mo
 
 Each longhand property value is specified as one of:
 
-- A {{cssxref("timeline-range-name")}} value.
+- A {{cssxref("timeline-range-name")}} value specifying a named timeline range within the overall timeline.
 - A {{cssxref("length-percentage")}} value.
 - The keyword `normal`.
 - The keyword `auto`.
 - A `<timeline-range-name>` followed by a `<length-percentage>` value.
+
+Percentages are relative to the length of the named timeline range if one is specified, or the entire timeline if not.
 
 ### Values
 
@@ -373,7 +375,9 @@ div.trigger:has(+ form input:checked) {
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content. Initially the rotation will start when the tracked `<div>` enters the viewport, but won't stop until the tracked `<div>` has completely exited the viewport again. Now uncheck the checkbox and try scrolling the content again. Without the active range set, the rotation will start when the tracked `<div>` enters the viewport and then stop as soon as it has completely entered the viewport.
+Try scrolling the content. Initially the animation will start when the trigger `<div>` enters the scrollport, but won't stop until the trigger has completely exited the scrollport again.
+
+Now uncheck the checkbox and try scrolling the content again. Without the active range set, the animation will start when the trigger starts to enter the scrollport and then stop as soon as it has completely entered the scrollport.
 
 ## Specifications
 

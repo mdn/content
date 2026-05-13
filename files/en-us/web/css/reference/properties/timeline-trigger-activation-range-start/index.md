@@ -57,6 +57,8 @@ The `timeline-trigger-activation-range-start` property is specified as one or mo
 - `<timeline-range-name>` `<length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
+Percentages are relative to the length of the named timeline range if one is specified, or the entire timeline if not.
+
 ## Description
 
 When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-activation-range-start` property can be used to explicitly define the start of the trigger's [activation range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description).
@@ -68,13 +70,13 @@ Allowed values for the `timeline-trigger-activation-range-start` property are:
 - A `<timeline-range-name>`
 - A `<timeline-range-name>` and a `<length-percentage>` separated by a space.
 
-If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `0%`.
+If the `<timeline-range-name>` value does not include a `<length-percentage>`, it defaults to `0%` of the named timeline range. If a `<timeline-range-name>` is not included, the timeline range defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover).
 
-The `timeline-trigger-activation-range-start` and {{cssxref("timeline-trigger-activation-range-end")}} properties can both be set in a single declaration using the {{cssxref("timeline-trigger-activation-range")}} shorthand.
+The `timeline-trigger-activation-range-start` and {{cssxref("timeline-trigger-activation-range-end")}} properties can also be set using the {{cssxref("timeline-trigger-activation-range")}} shorthand.
 
 ### Specifying multiple range start values
 
-When multiple values are specified in a single `timeline-trigger-activation-range-start` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as other [multiple animation property values are set](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+When multiple, comma-separated values are specified in a single `timeline-trigger-activation-range-start` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as other [multiple animation property values are set](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 For example, if multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range-start` value is set, the `timeline-trigger-activation-range-start` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-activation-range-start` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-activation-range-start` value set. And so on.
 
@@ -271,7 +273,7 @@ div.trigger {
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. The tracked `<div>` plays when `50%` of it has entered the viewport, pausing when the tracked `<div>` has completely exited the viewport.
+Try scrolling the content up and down. The animation plays when `50%` of the trigger `<div>` has entered the scrollport and pauses when the trigger has completely exited the scrollport at the opposite edge.
 
 ## Specifications
 

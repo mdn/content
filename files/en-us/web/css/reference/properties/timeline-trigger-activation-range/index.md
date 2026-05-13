@@ -67,10 +67,12 @@ The `timeline-trigger-activation-range` shorthand property is specified as one o
 
 Each longhand property value is specified as one of:
 
-- A {{cssxref("timeline-range-name")}} value.
+- A {{cssxref("timeline-range-name")}} value specifying a named timeline range within the overall timeline.
 - A {{cssxref("length-percentage")}} value.
 - The keyword `normal`.
 - A `<timeline-range-name>` followed by a `<length-percentage>` value.
+
+Percentages are relative to the length of the named timeline range if one is specified, or the entire timeline if not.
 
 ### Values
 
@@ -320,7 +322,7 @@ div.trigger {
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. When `50%` of the tracked `<div>` has entered the viewport, the animation will play; when `50%` of the tracked `<div>` has exited the viewport at either edge, the animation will pause.
+Try scrolling the content up and down. The animation plays when `50%` of the trigger `<div>` has entered the scrollport and pauses when `50%` of the trigger has exited the scrollport at the opposite edge.
 
 ### Comparing multiple range values
 
