@@ -27,8 +27,8 @@ The `params` field contains:
 - `background` {{optional_inline}}
   - : A boolean that indicates whether the context is created in the background or the foreground.
     The default value is `false`.
-    - `false`: The context receives focus after it is created.
-    - `true`: The context is created in the background. See [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) to bring it to the foreground.
+    - `false`: The context is brought to the foreground and receives focus after it is created.
+    - `true`: The context is created in the background. See [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) to bring it to the foreground and give it focus.
 - `referenceContext` {{optional_inline}}
   - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of an existing [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) that is used to position the new context.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
@@ -62,7 +62,8 @@ The `result` object in the response contains the following fields:
 ### Errors
 
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : A required parameter is missing or has an invalid type. Also returned when the context specified by `referenceContext` is not a top-level context.
+  - : A required parameter is missing or has an invalid type.
+    This error is also returned when the context specified by `referenceContext` is not a top-level context.
 - [`no such frame`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchFrame)
   - : No context with the given `referenceContext` ID is found.
 - [`no such user context`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchUserContext)
