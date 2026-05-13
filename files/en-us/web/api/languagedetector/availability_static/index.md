@@ -38,7 +38,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration.
+  - : The browser does not support the given configuration or the Language Detector API is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
@@ -48,8 +48,6 @@ Possible values include:
   - : Thrown if initialization of the AI model failed for any reason.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `availability()` call failed for any other reason, or a reason the user agent did not wish to disclose.
-
-If usage of the method is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}, the promise rejects with a value of `unavailable`.
 
 ## Examples
 
