@@ -12,4 +12,4 @@ This page lists the guides for using HTML.
 
 ## See also
 
-- <a href="/en-US/docs/Web/Accessibility/ARIA/Guides">ARIA Guides</a>
+- [ARIA Guides](/en-US/docs/Web/Accessibility/ARIA/Guides): use Accessible Rich Internet Applications to write HTML pages that are more accessible to people with disabilities.
