@@ -112,6 +112,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries now supports the _range syntax_. This allows you to check if a container has a valid CSS custom property and compare its value with comparison operators like `>`, `<`, `>=`, and `<=` and apply styles to its children accordingly. ([Firefox bug 2024601](https://bugzil.la/2024601)).
 
+- **`field-sizing` property**: `layout.css.field-sizing.enabled`
+
+  The {{cssxref("field-sizing")}} CSS property lets you to control the sizing behavior of form control elements. This property has 2 values `content` which allows elements to grow with the content and `fixed` stay at fixed size. ([Firefox bug 1977176](https://bugzil.la/1977176)).
+
 - **Fix for nested scrollable areas**: `layout.css.fake-webkit-scrollbar.enabled`
 
   This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. ([Firefox bug 1977511](https://bugzil.la/1977511)).
