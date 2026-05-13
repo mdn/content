@@ -125,6 +125,7 @@ The following fields are available in each inner `actions` object, depending on 
 
 - `value`
   - : A string that contains the key value, such as <kbd>a</kbd>, <kbd>Enter</kbd>, or <kbd>Shift</kbd>.
+    See [Key values for keyboard events](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values) for the full list of valid values.
     Specify this when the inner `type` field value is `"keyDown"` or `"keyUp"`.
 - Pointer properties
   - : The following fields are part of the inner `actions` object and describe the physical characteristics of the pointer device, such as a mouse, stylus, or touchscreen.
