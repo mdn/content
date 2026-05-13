@@ -8,11 +8,11 @@ browser-compat: api.SVGScriptElement.crossOrigin
 
 {{APIRef("SVG")}}
 
-The **`crossOrigin`** property of the {{domxref("SVGScriptElement")}} interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if full error information will be exposed. For module scripts, it controls the script itself and any script it imports. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details.
+The **`crossOrigin`** property of the {{domxref("SVGScriptElement")}} interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the `<script>` element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls whether full error information will be exposed. For module scripts, it controls the script itself and any scripts it imports. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details.
 
 ## Value
 
-A string of a keyword specifying the CORS mode to use when fetching the resource. Possible values are:
+A string containing a keyword specifying the CORS mode to use when fetching the resource. Possible values are:
 
 - `anonymous` or an empty string (`""`)
   - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `same-origin` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode. This means that CORS is enabled and credentials are sent _if_ the resource is fetched from the same origin from which the document was loaded.
@@ -21,7 +21,7 @@ A string of a keyword specifying the CORS mode to use when fetching the resource
 
 If the `crossOrigin` property is specified with any other value, it is the same as specifying it as `anonymous`.
 
-If the `crossOrigin` property is not specified, the resource is fetched without CORS (the `no-cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `same-origin` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode).
+If the `crossOrigin` property is not specified, the resource is fetched without CORS (equivalent to using the `no-cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `same-origin` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode).
 
 ## Specifications
 
