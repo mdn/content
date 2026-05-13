@@ -127,7 +127,7 @@ The thrown exception could then be handled and the payload accessed using a Wasm
 - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
 - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all)
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref)
-- [`catch_ref_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref_all)
+- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref)
 
 ### Handling Wasm exceptions in JavaScript
 
@@ -284,7 +284,7 @@ wasm.then((result) => {
 - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
 - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_ref_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref_all) instruction
+- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface
 - [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) JavaScript interface

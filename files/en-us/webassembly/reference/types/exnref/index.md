@@ -3,8 +3,7 @@ title: "exnref: Wasm type"
 short-title: exnref
 slug: WebAssembly/Reference/Types/exnref
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/bikeshed/#syntax-reftype
+browser-compat: webassembly.types.exnref
 sidebar: webassemblysidebar
 ---
 
@@ -58,7 +57,7 @@ The **`exnref`** value type represents a thrown exception in a Wasm module, allo
 // Define error tag in JS
 const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
 
-// import the tag into the module
+// Import the tag into the module
 const env = {
   my_error: myErrorTag,
 };
@@ -91,7 +90,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { env }).then(
 
 ## Description
 
-The `exnref` type represents a thrown exception in a Wasm module. These values types are returned by the [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_ref_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref_all) instructions, providing a reference to the exception that was just thrown, and allowing it to be rethrown if required using the [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
+The `exnref` type represents a thrown exception in a Wasm module. These values types are returned by the [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instructions, providing a reference to the exception that was just thrown, and allowing it to be rethrown if required using the [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
 ## See also
 
@@ -101,5 +100,5 @@ The `exnref` type represents a thrown exception in a Wasm module. These values t
 - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
 - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_ref_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref_all) instruction
+- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

@@ -125,6 +125,11 @@ sidebar:
         title: Control flow
         details: closed
       - type: listSubPages
+        path: /WebAssembly/Reference/Exception_handling
+        link: /WebAssembly/Reference/Exception_handling
+        title: Exception handling
+        details: closed
+      - type: listSubPages
         path: /WebAssembly/Reference/Memory
         link: /WebAssembly/Reference/Memory
         title: Memory
