@@ -209,6 +209,14 @@ This example shows the relevant parts of a manifest that includes both `scripts`
 }
 ```
 
+And, background.js contains:
+
+```js
+browser.runtime.onInstalled.addListener(() => {
+  console.log("Extension installed");
+});
+```
+
 With this `background` configuration, this happens:
 
 - in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
