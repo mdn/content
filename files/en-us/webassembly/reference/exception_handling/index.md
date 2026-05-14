@@ -34,3 +34,5 @@ WebAssembly exception handling instructions.
 
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition
+- [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface
+- [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) JavaScript interface

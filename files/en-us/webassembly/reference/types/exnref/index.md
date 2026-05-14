@@ -92,13 +92,13 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { env }).then(
 
 The `exnref` type represents a thrown exception in a Wasm module. These values types are returned by the [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instructions, providing a reference to the exception that was just thrown, and allowing it to be rethrown if required using the [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
+The [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface represents a Wasm exception in the JavaScript host.
+
 ## See also
 
-- [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
 - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition
+- [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface

@@ -80,7 +80,7 @@ tag identifier parameters
 - `identifier` {{optional_inline}}
   - : An identifying name for the tag. This must begin with a `$` symbol, for example `$my_error`.
 - `parameters`
-  - : One or more values specifying the exception's parameters and their types. Each one consists of:
+  - : One or more values specifying the exception type's parameters and their types. Each one consists of:
     - The keyword `param`
     - The type of the parameter. Possible types are:
       - `i32`
