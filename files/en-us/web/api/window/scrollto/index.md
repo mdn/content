@@ -29,9 +29,9 @@ scrollTo(options)
 - `options`
   - : An object containing the following properties:
     - `top`
-      - : Specifies the number of pixels along the Y axis to scroll the window or element.
+      - : The pixel along the vertical axis of the document that you want displayed in the upper left. This is the same as the `yCoord` parameter.
     - `left`
-      - : Specifies the number of pixels along the X axis to scroll the window or element.
+      - : The pixel along the horizontal axis of the document that you want displayed in the upper left. This is the same as the `xCoord` parameter.
     - `behavior`
       - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
         - `smooth`: scrolling should animate smoothly
