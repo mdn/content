@@ -85,7 +85,7 @@ Percentages are relative to the length of the named timeline range if one is spe
 
 The `timeline-trigger-activation-range` property can be used to set a custom **activation range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger. The activation range is the range between the scrolling offset at which the trigger is activated, and the scrolling offset at which the trigger is deactivated.
 
-By default, the activation range along the timeline is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the viewport, and deactivates when the end edge of the tracked element has exited either edge of the viewport. This can be changed by setting a different `timeline-trigger-activation-range` value.
+By default, the activation range along the timeline is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited either edge of the scrollport. This can be changed by setting a different `timeline-trigger-activation-range` value.
 
 For example:
 
@@ -99,7 +99,7 @@ For example:
 
 An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which sets the timeline tracking the element to a view progress timeline based on its nearest scrolling ancestor element.
 
-We also set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to 100% of the way through the `entry` range and the end of the activation range to 50% of the way through the `exit` range. The result is that the animated element's trigger will activate when the tracked element has completely entered the viewport, and deactivate when 50% of the tracked element has left the viewport.
+We also set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to 100% of the way through the `entry` range and the end of the activation range to 50% of the way through the `exit` range. The result is that the animated element's trigger will activate when the tracked element has completely entered the scrollport, and deactivate when 50% of the tracked element has left the scrollport.
 
 An animated element can be triggered by the previously-described trigger by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
 
@@ -248,7 +248,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
+We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
@@ -281,7 +281,7 @@ div.animated {
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we will apply below:
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we will apply later:
 
 ```css live-sample___basic-example live-sample___compare-multiple-values
 @keyframes rotate {
@@ -295,7 +295,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we w
 }
 ```
 
-The `.animated` `<div>` has the `rotate` `animation` applied. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+We apply the animation to the `.animated` `<div>` for infinite iterations using the {{cssxref("animation")}} shorthand. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 div.animated {
@@ -308,7 +308,7 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
 
 - A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A `timeline-trigger-activation-range` of `entry 50% exit 50%`, which sets the trigger's activation range to a range between `50%` through the `entry` range (when `50%` of the tracked element has entered the viewport via the scrollport's end edge) and `50%` through the `exit` range (when `50%` of the tracked element has exited the viewport via the scrollport's start edge).
+- A `timeline-trigger-activation-range` of `entry 50% exit 50%`, which sets the trigger's activation range to a range between `50%` through the `entry` range (when `50%` of the tracked element has entered the scrollport via the scrollport's end edge) and `50%` through the `exit` range (when `50%` of the tracked element has exited the scrollport via the scrollport's start edge).
 
 ```css live-sample___basic-example
 div.trigger {
@@ -411,9 +411,9 @@ div.trigger {
 ```
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
-@supports not (timeline-trigger-name: --t) {
+@supports not (timeline-trigger-activation-range: entry 50% exit 50%) {
   body::before {
-    content: "Your browser does not support scroll-triggered animations.";
+    content: "Your browser does not support the timeline-trigger-activation-range property.";
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
@@ -430,7 +430,7 @@ div.trigger {
 
 {{EmbedLiveSample("compare-multiple-values", "100%", "240")}}
 
-Try selecting different range values from the `<select>` dropdown and then for each one scrolling the tracked element up through the viewport to see where the animated element starts and stops rotating. This will give you an idea of each activation range's effect.
+Try selecting different range values from the `<select>` dropdown and then for each one scrolling the tracked element up through the scrollport to see where the animated element starts and stops rotating. This will give you an idea of each activation range's effect.
 
 ## Specifications
 
@@ -448,4 +448,5 @@ Try selecting different range values from the `<select>` dropdown and then for e
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

@@ -73,7 +73,7 @@ For example:
 
 An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`, and a `timeline-trigger-source` value of `view()`, which creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) to control triggering animations.
 
-The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the viewport, and deactivation occurs when the tracked element completely exits the viewport.
+The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the scrollport, and deactivation occurs when the tracked element completely exits the scrollport.
 
 An animated element can be triggered by the previously-described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property:
 
@@ -98,17 +98,17 @@ The {{cssxref("animation-action")}} keywords specified in the `animation-trigger
 
 The `timeline-trigger-source` property can take one of three main value types:
 
-- A [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function referencing an anonymous view progress timeline trigger. This is the nearest scrolling ancestor of the element that creates the trigger. As described previously, this allows you to create functionality whereby an element will start animating when it (or another element) reaches a certain scroll offset in the viewport, and stop animating (or some other action) when it (or another element) reaches a different scroll offset.
-- A [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function referencing an anonymous scroll progress timeline trigger. This can be the root element or nearest scroller of the element that creates the trigger, or the element itself. This allows you to create functionality whereby an element will start animating when it (or another element) reaches an absolute scroll offset relative to the scrollport (not the viewport), and stop animation (or some other action) when it (or another element) reaches a different position in the scrollport.
+- A [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function referencing an anonymous view progress timeline trigger. This is the nearest scrolling ancestor of the element that creates the trigger. As described previously, this allows you to create functionality whereby an element will start animating when it (or another element) reaches a certain offset in the scrollport, and stop animating (or some other action) when it (or another element) reaches a different scroll offset.
+- A [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function referencing an anonymous scroll progress timeline trigger. This can be the root element or nearest scroller of the element that creates the trigger, or the element itself. This allows you to create functionality whereby an element will start animating when it (or another element) reaches an absolute scroll offset relative to the viewport, and stop animation (or some other action) when it (or another element) reaches a different position in the viewport.
 - A {{cssxref("dashed-ident")}} referencing a named view- or scroll-progress timeline. This references a {{cssxref("view-timeline-name")}} or {{cssxref("scroll-timeline-name")}} set on the trigger.
 
-Scroll progress timelines are arguably not as useful for scroll-triggered animations as view progress timelines. You are more likely to want an animation to start at an scroll offset relative to the viewport, not the entire scrollport, where the animation may well trigger off screen on smaller screens.
+Scroll progress timelines are arguably not as useful for scroll-triggered animations as view progress timelines. You are more likely to want an animation to start at an scroll offset relative to the scrollport, not the viewport, where the animation may well trigger off screen on smaller screens.
 
 ### Setting the trigger's activation and active range
 
-By default, the trigger's **activation range** is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the viewport. A custom activation range can be set via the {{cssxref("timeline-trigger-activation-range")}} property.
+By default, the trigger's **activation range** is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the scrollport. A custom activation range can be set via the {{cssxref("timeline-trigger-activation-range")}} property.
 
-The trigger's default **active range** is the same as the activation range (therefore `cover`, if the activation range is not set to a different range), which means that the trigger deactivates when the end edge of the tracked element has exited either edge of the viewport. A custom active range can be set via the {{cssxref("timeline-trigger-active-range")}} property.
+The trigger's default **active range** is the same as the activation range (therefore `cover`, if the activation range is not set to a different range), which means that the trigger deactivates when the end edge of the tracked element has exited either edge of the scrollport. A custom active range can be set via the {{cssxref("timeline-trigger-active-range")}} property.
 
 ### Multiple sources
 
@@ -217,7 +217,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
+We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 body {
@@ -250,7 +250,7 @@ div.animated {
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply below:
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply later:
 
 ```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 @keyframes rotate {
@@ -264,7 +264,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'l
 }
 ```
 
-The `.animated` `<div>` has the `rotate` `animation` applied. We then set an {{cssxref("animation-trigger")}} value on it that references a `timeline-trigger-name` of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
+We apply the animation to the `.animated` `<div>` for infinite iterations using the {{cssxref("animation")}} shorthand. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
 
 ```css live-sample___basic-view-progress-example
 div.animated {
@@ -289,7 +289,7 @@ div.trigger {
 
 {{EmbedLiveSample("basic-view-progress-example", "100%", "240")}}
 
-Try scrolling the content up. When any part of the `.trigger` `<div>` appears in the viewport, the animation will play; when it has completely left the viewport at either edge, the animation will pause.
+Try scrolling the content up. When any part of the `.trigger` `<div>` appears in the scrollport, the animation will play; when it has completely left the scrollport at either edge, the animation will pause.
 
 ### Basic scroll progress timeline source usage
 
@@ -315,9 +315,9 @@ div.trigger {
 ```
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
-@supports not (timeline-trigger-name: --t) {
+@supports not (timeline-trigger-source: scroll()) {
   body::before {
-    content: "Your browser does not support scroll-triggered animations.";
+    content: "Your browser does not support the timeline-trigger-source property.";
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
@@ -352,4 +352,5 @@ The animation will start when the tracked element scrolls `600px` upwards.
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

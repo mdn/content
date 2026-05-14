@@ -279,7 +279,7 @@ form {
 }
 ```
 
-We give each `.animated` `<div>` a {{cssxref("position")}} of `fixed`, and position them near the top of the viewport. We do this so it is easy to see their animated state at all times. We also give each animated element the same `animation-trigger` value — their animations will all be triggered by a trigger with `timeline-trigger-name: --t`, and the animation will play when it activates and then reset when it deactivates.
+We give each `.animated` `<div>` a {{cssxref("position")}} of `fixed`, and position them near the top of the scrollport. We do this so it is easy to see their animated state at all times. We also give each animated element the same `animation-trigger` value — their animations will all be triggered by a trigger with `timeline-trigger-name: --t`, and the animation will play when it activates and then reset when it deactivates.
 
 ```css live-sample___trigger-scope
 .animated {
@@ -340,9 +340,9 @@ checkbox.addEventListener("change", () => {
 ```
 
 ```css hidden live-sample___trigger-scope
-@supports not (timeline-trigger-name: --t) {
+@supports not (trigger-scope: all) {
   body::before {
-    content: "Your browser does not support scroll-triggered animations.";
+    content: "Your browser does not support the trigger-scope property.";
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
@@ -359,9 +359,9 @@ checkbox.addEventListener("change", () => {
 
 {{embedlivesample("trigger-scope", "100%", 400)}}
 
-Scroll through the example content without checking the checkbox. None of the red squares (the `.animated` `<div>` elements) animate until the third `.trigger` `<div>` is visible in the viewport, at which point all of the red squares will start to animate — they are all using the last trigger element in the DOM as their trigger.
+Scroll through the example content without checking the checkbox. None of the red squares (the `.animated` `<div>` elements) animate until the third `.trigger` `<div>` is visible in the scrollport, at which point all of the red squares will start to animate — they are all using the last trigger element in the DOM as their trigger.
 
-Now scroll up to the top of the content, check the checkbox to apply `trigger-scope: all` to all of the `<section>` elements, and scroll through the content again. This time you will only see one red square animate at a time — each one animates only when the trigger element located inside the same `<section>` is visible in the viewport.
+Now scroll up to the top of the content, check the checkbox to apply `trigger-scope: all` to all of the `<section>` elements, and scroll through the content again. This time you will only see one red square animate at a time — each one animates only when the trigger element located inside the same `<section>` is visible in the scrollport.
 
 ## Specifications
 
@@ -378,4 +378,5 @@ Now scroll up to the top of the content, check the checkbox to apply `trigger-sc
 - {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

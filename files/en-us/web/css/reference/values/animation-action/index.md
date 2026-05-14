@@ -14,7 +14,7 @@ The `<animation-action>` keyword values are used in the following properties:
 
 ## Syntax
 
-The `<animation-action>` enumerated type is specified using one of the values listed below:
+The `<animation-action>` enumerated type is specified using one of the the following values:
 
 - `none`
   - : No action is specified for the animation.
@@ -145,13 +145,13 @@ It doesn't make sense to combine `play-once` with `play` or `play-forwards`.
 
 ### Pausing the animation
 
-The `pause` value is used to pause the animation at whatever point it reached in its playback upon activation/deactivation. Using this in combination with other values has largely been discussed above. One case that was not mentioned above is using `pause` as the activation action, for example:
+The `pause` value is used to pause the animation at whatever point it reached in its playback upon activation/deactivation. Using this in combination with other values was discussed earlier, although one case not mentioned was using `pause` as the activation action, for example:
 
 ```css
 animation-trigger: --t pause play;
 ```
 
-This has an interesting effect of no playback on activation, but playback on subsequent deactivation: useful if you want an animation to play only when the subject leaves the viewport.
+This has an interesting effect of no playback on activation, but playback on subsequent deactivation: useful if you want an animation to play only when the subject leaves the scrollport.
 
 It doesn't make sense to combine `pause` with `reset`.
 
@@ -162,7 +162,7 @@ The `replay` and `reset` values are similar to `pause`, except that:
 - `reset` pauses the animation but also sets its progress back to `0`.
 - `replay` sets the animation progress back to `0` and then starts playing it again from that point.
 
-Using these values in combination with other values has largely been discussed above. One case that was not mentioned above is using these values as the activation action.
+Using these values in combination with other values was discussed earlier, although one case not mentioned was using these values as the activation action.
 
 For example:
 
@@ -170,7 +170,7 @@ For example:
 animation-trigger: --t replay pause;
 ```
 
-This has an interesting effect of playing on activation (the same as an action like `play`) and pausing on deactivation. However, on subsequent activation, it will play from the start again, regardless of the play state before that. This is useful if you want an animation to play when the subject enters the viewport, pause when it leaves the viewport, but then play from the start on each subsequent entry.
+This has an interesting effect of playing on activation (the same as an action like `play`) and pausing on deactivation. However, on subsequent activation, it will play from the start again, regardless of the play state before that. This is useful if you want an animation to play when the subject enters the scrollport, pause when it leaves the scrollport, but then play from the start on each subsequent entry.
 
 Another interesting example is as follows:
 
@@ -178,7 +178,7 @@ Another interesting example is as follows:
 animation-trigger: --t reset play;
 ```
 
-This has an interesting effect of not playing on activation and then playing on deactivation. On subsequent activation, it will reset to progress `0`, regardless of the play state before that. This is useful if you want an animation to play when the subject leaves the viewport, and then reset to the beginning on each subsequent entry.
+This has an interesting effect of not playing on activation and then playing on deactivation. On subsequent activation, it will reset to progress `0`, regardless of the play state before that. This is useful if you want an animation to play when the subject leaves the scrollport, and then reset to the beginning on each subsequent entry.
 
 It doesn't make sense to combine `replay` with `reset` or `pause`.
 
@@ -270,7 +270,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-We give the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
+We give the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -329,7 +329,7 @@ div.animated {
 The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
 
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` `<div>` is fully inside the viewport, and deactivate when it stops being fully inside the viewport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` `<div>` is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport.
 
 ```css live-sample___basic-example
 div.trigger {
@@ -341,7 +341,7 @@ div.trigger {
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. When the tracked `<div>` fully appears in the viewport, the animation will play; when it starts to leave the viewport at either edge, the animation will play in reverse.
+Try scrolling the content up. When the tracked `<div>` fully appears in the scrollport, the animation will play; when it starts to leave the scrollport at either edge, the animation will play in reverse.
 
 ### Comparing the `<animation-action>` values
 
@@ -461,7 +461,7 @@ div {
 }
 ```
 
-Next, we set the `<section>` element to create an animation trigger, with a `timeline-trigger` value of `--t view() contain 20% contain 80%`. There is nothing unusual going on here, except that we've set a {{cssxref("timeline-trigger-activation-range")}} value to `contain 20% contain 80%`. This means that the trigger will activate when the `<section>` element has scrolled around `20%` of the way up the viewport, and deactivate when it has scrolled around `80%` of the way up the viewport. This allows you to see the `<animation-action>` effects more clearly than if the activation range covered the entire viewport.
+Next, we set the `<section>` element to create an animation trigger, with a `timeline-trigger` value of `--t view() contain 20% contain 80%`. There is nothing unusual going on here, except that we've set a {{cssxref("timeline-trigger-activation-range")}} value to `contain 20% contain 80%`. This means that the trigger will activate when the `<section>` element has scrolled around `20%` of the way up the scrollport, and deactivate when it has scrolled around `80%` of the way up the scrollport. This allows you to see the `<animation-action>` effects more clearly than if the activation range covered the entire scrollport.
 
 ```css live-sample___different-effects
 section {
@@ -495,7 +495,7 @@ Next, we set a different {{cssxref("animation-trigger")}} property value on each
 ```
 
 ```css hidden live-sample___basic-example live-sample___different-effects
-@supports not (timeline-trigger-name: --t) {
+@supports not (animation-trigger: --t play-once reset) {
   body::before {
     content: "Your browser does not support scroll-triggered animations.";
     background-color: wheat;
@@ -514,11 +514,11 @@ Next, we set a different {{cssxref("animation-trigger")}} property value on each
 
 {{EmbedLiveSample("different-effects", "100%", "240")}}
 
-Scroll down to the point where the `<section>` and `<div>` elements enter the viewport. Move them through the start and end of the trigger activation range, concentrating on a different `<div>` each time, to visualize the effects of each set of `<animation-action>`s.
+Scroll down to the point where the `<section>` and `<div>` elements enter the scrollport. Move them through the start and end of the trigger activation range, concentrating on a different `<div>` each time, to visualize the effects of each set of `<animation-action>`s.
 
 The effects are:
 
-1. The first `<div>` (far left) has `play-forwards play-backwards` set. When the tracked element enters the activation range, the animation starts to play forwards. When it leaves the activation range (at the top or bottom of the viewport), it will start to play backwards.
+1. The first `<div>` (far left) has `play-forwards play-backwards` set. When the tracked element enters the activation range, the animation starts to play forwards. When it leaves the activation range (at the top or bottom of the scrollport), it will start to play backwards.
 2. The second `<div>` has a single `<animation-action>` set — `play`. When the tracked element enters the activation range, the animation starts to play. However, given that there is no deactivation action set to change its behavior, the animation continues to play forever until the page reloads.
 3. The third `<div>` has `play replay` set. When the tracked element enters the activation range, the animation starts to play forwards. When it leaves the activation range, the animation resets to progress `0`, and then starts to play again.
 4. The fourth `<div>` has `pause play` set. When the tracked element enters the activation range, the animation continues to not play, as it is set to a paused state. However, when it leaves the activation range, the animation starts to play. From then on, the animation will pause when the tracked element is inside the activation range, and play when it is outside it.
@@ -539,4 +539,5 @@ The effects are:
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("trigger-scope")}}
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

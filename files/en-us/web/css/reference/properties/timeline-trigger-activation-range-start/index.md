@@ -183,7 +183,7 @@ Our markup contains two {{htmlelement("div")}} elements, plus some basic text co
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the viewport so we can see when its animation starts and stops.
+We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -216,7 +216,7 @@ div.animated {
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply below:
+Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply later:
 
 ```css live-sample___basic-example
 @keyframes rotate {
@@ -230,7 +230,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'l
 }
 ```
 
-The `.animated` `<div>` has the `rotate` `animation` applied. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+We apply the animation to the `.animated` `<div>` for infinite iterations using the {{cssxref("animation")}} shorthand. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 div.animated {
@@ -243,7 +243,7 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
 
 - A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A `timeline-trigger-activation-range-start` of `entry 50%`, which sets the trigger's activation range start point to `50%` through the `entry` range (when `50%` of the tracked element has entered the viewport via the scrollport's end edge). The {{cssxref("timeline-trigger-activation-range-end")}} value defaults to `100%` of the way through the `cover` range, meaning that the animation won't pause until the tracked element has left the viewport in either direction.
+- A `timeline-trigger-activation-range-start` of `entry 50%`, which sets the trigger's activation range start point to `50%` through the `entry` range (when `50%` of the tracked element has entered the scrollport via the scrollport's end edge). The {{cssxref("timeline-trigger-activation-range-end")}} value defaults to `100%` of the way through the `cover` range, meaning that the animation won't pause until the tracked element has left the scrollport in either direction.
 
 ```css live-sample___basic-example
 div.trigger {
@@ -254,9 +254,9 @@ div.trigger {
 ```
 
 ```css hidden live-sample___basic-example
-@supports not (timeline-trigger-name: --t) {
+@supports not (timeline-trigger-activation-range-start: entry 50%) {
   body::before {
-    content: "Your browser does not support scroll-triggered animations.";
+    content: "Your browser does not support the timeline-trigger-activation-range-start property.";
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
@@ -290,4 +290,5 @@ Try scrolling the content up and down. The animation plays when `50%` of the tri
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

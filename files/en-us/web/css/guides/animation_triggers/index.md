@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/animation-triggers-1/
 sidebar: cssref
 ---
 
-The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling an element to a certain scroll offset inside the viewport.
+The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling an element to a certain scroll offset inside the scrollport.
 
 ## Animation triggers in action
 
-Scroll down and up the box of text. The appearance of the "bouncer" text will trigger the ball's animation. The "bouncer" text scrolling out of the viewport triggers a reverse animation. Keep scrolling: the same process will repeat when the "another bouncer" text appears in and then disappears from the viewport.
+Scroll down and up the box of text. The appearance of the "bouncer" text will trigger the ball's animation. The "bouncer" text scrolling out of the scrollport triggers a reverse animation. Keep scrolling: the same process will repeat when the "another bouncer" text appears in and then disappears from the scrollport.
 
 ```html hidden live-sample___in-action
 <section>
@@ -182,7 +182,7 @@ html {
 
 {{embedlivesample("in-action", "100%", 400)}}
 
-Both trigger elements have a {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}}, defining the text blocks as named scroll-view animation triggers. The bouncing ball has the bouncing {{cssxref("animation")}} set on it twice, plus an {{cssxref("animation-trigger")}} property that references both trigger names and specifies animation actions to perform whenever an animation is activated by a trigger coming into view and deactivated when the trigger exits the viewport.
+Both trigger elements have a {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}}, defining the text blocks as named scroll-view animation triggers. The bouncing ball has the bouncing {{cssxref("animation")}} set on it twice, plus an {{cssxref("animation-trigger")}} property that references both trigger names and specifies animation actions to perform whenever an animation is activated by a trigger coming into view and deactivated when the trigger exits the scrollport.
 
 ## Reference
 
