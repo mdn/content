@@ -131,7 +131,7 @@ This version does NOT have the `<meta name="text-scale">` element included:
 
 {{embedlivesample("no-text-scale", "100%", "200")}}
 
-Test these examples in a mobile browser. Change the preferred font size in the mobile device's accessibility settings. Note how, in the first example, when `<meta name="text-scale">` is included, the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line of text doesn't change size. Without the `<meta name="text-scale">` element, none of the text scales in proportion to the OS settings.
+Test these examples in a mobile browser. Change the preferred font size in the mobile device's display or accessibility settings. Note how, in the first example, when `<meta name="text-scale">` is included, the top and bottom lines of text scale in proportion to the OS settings, whereas the middle line, with the `font-size` set using absolute units, doesn't change size. Without the `<meta name="text-scale">` element, text does not scale proportionally with OS settings.
 
 To make testing easier, you can open both versions full screen in a separate tab using the links below:
 
