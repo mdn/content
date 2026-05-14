@@ -69,13 +69,10 @@ See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integr
 
 ## Defense summary checklist
 
-- Require {{glossary("multi-factor authentication")}} for team members and minimize permissions granted.
-- Assess tools involved in your build, test, and deployment processes.
-- Ensure pull requests go through review and pass {{glossary("continuous integration")}} checks.
-- Minimize your dependencies, and follow a process for evaluating new dependencies.
-- Use a lockfile to control updates to your dependencies, and follow a process for accepting updates.
-- Maintain an SBOM and use it to check for vulnerabilities.
-- Use Subresource Integrity for externally referenced scripts and stylesheets.
+- Follow operational security practices to:
+  - [Secure your own development environment](/en-US/docs/Web/Security/Defenses/Operational_security#securing_your_development_environment).
+  - [Limit the risk of any third-party dependencies](/en-US/docs/Web/Security/Defenses/Operational_security#managing_third-party_dependencies).
+- Use [Subresource Integrity](#using_subresource_integrity) for externally referenced scripts and stylesheets.
 
 ## See also
 
