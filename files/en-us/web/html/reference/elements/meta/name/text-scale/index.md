@@ -127,7 +127,7 @@ This version has the `<meta name="text-scale">` element included:
 
 {{embedlivesample("text-scale", "100%", "200")}}
 
-This version doesn't have the `<meta name="text-scale">` element included:
+This version does NOT have the `<meta name="text-scale">` element included:
 
 {{embedlivesample("no-text-scale", "100%", "200")}}
 
