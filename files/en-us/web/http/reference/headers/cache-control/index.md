@@ -97,7 +97,7 @@ This section lists directives that affect caching — both response directives a
 
 ### Response Directives
 
-#### `max-age`
+#### `max-age` response directive
 
 The `max-age=N` response directive indicates that the response remains [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) until _N_ seconds after the response is generated.
 
@@ -282,7 +282,7 @@ The `no-store` request directive allows a client to request that caches refrain 
 Cache-Control: no-store
 ```
 
-#### `max-age`
+#### `max-age` request directive
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 

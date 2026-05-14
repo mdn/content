@@ -113,7 +113,7 @@ Cache-Control: max-age=604800
 
 The cache that stored the example response calculates the time elapsed since the response was generated and uses the result as the response's _age_.
 
-For the example response, the meaning of `max-age` is the following:
+For the example response, the meaning of the [`max-age` response directive](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#max-age_response_directive) is the following:
 
 - If the age of the response is _less_ than one week, the response is _fresh_.
 - If the age of the response is _more_ than one week, the response is _stale_.
