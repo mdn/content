@@ -10,7 +10,7 @@ sidebar: htmlsidebar
 The **`text-scale`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element enables opting the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings.
 
 > [!WARNING]
-> If you include `<meta name="text-scale" content="scale" />` on your website to opt in to this text scaling behavior, you must test to make sure it supports text sizes up to the maximum text-scaling factors for your target platforms. For example, Android can scale text up to 200%, while iPhones can scale text up to 310%. Some accessibility features may enable even larger text scaling. You should make sure your website does not look broken at higher zoom levels.
+> If you include `<meta name="text-scale" content="scale" />` on your website to opt in to this text scaling behavior, you must test that it supports text sizes up to the maximum text-scaling factor for your target platforms. This typically ranges from 200% to over 300% on mobile platforms, with some accessibility features enabling even larger text scaling. Make sure your website does not look broken for users setting larger or smaller operating system font-size preferences.
 
 ## Usage notes
 
