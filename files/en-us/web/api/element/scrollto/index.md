@@ -23,15 +23,15 @@ scrollTo(options)
 ### Parameters
 
 - `xCoord`
-  - : The x-coordinate of the element's scrollable content that you want the element's left edge to scroll to.
+  - : The x-coordinate of the element's scrollable content that you want the left edge of the element's scrollport to scroll to.
 - `yCoord`
-  - : The y-coordinate of the element's scrollable content that you want the element's top edge to scroll to.
+  - : The y-coordinate of the element's scrollable content that you want the top edge of the element's scrollport to scroll to.
 - `options`
   - : An object containing the following properties:
     - `top`
-      - : The y-coordinate of the element's scrollable content that you want the element's top edge to scroll to. This is the same as the `yCoord` parameter.
+      - : The y-coordinate of the element's scrollable content that you want the top edge of the element's scrollport to scroll to. This is the same as the `yCoord` parameter.
     - `left`
-      - : The x-coordinate of the element's scrollable content that you want the element's left edge to scroll to. This is the same as the `xCoord` parameter.
+      - : The x-coordinate of the element's scrollable content that you want the left edge of the element's scrollport to scroll to. This is the same as the `xCoord` parameter.
     - `behavior`
       - : Determines whether the scrolling is instant or animates smoothly. This option is a string that must take one of the following values:
         - `smooth`: The scrolling animates smoothly.
