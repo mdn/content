@@ -195,7 +195,7 @@ Test this in a mobile browser. You'll see that, as the OS font size is increased
 
 You can open the demo in a separate tab using the link below to make testing easier:
 
-{{ LiveSampleLink("text-scale-layout", "Open the example in a separate tab") }}
+{{ LiveSampleLink("text-scale-layout", "Responsive layout example") }}
 
 ## Specifications
 
