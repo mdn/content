@@ -32,11 +32,11 @@ So for example, you can start by constructing an error tag type like this:
 const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
 ```
 
-You can then import it into a Wams module like this:
+You can then import it into a Wasm module like this:
 
 ```js
 const env = {
-  my_error: myErrorTag, // import the tag into the module
+  my_error: myErrorTag,
 };
 
 WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
@@ -81,7 +81,7 @@ WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
 );
 ```
 
-You need to check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
 
 > [!NOTE]
 > You can't access the values of an exception with a new tag that just happens to have the same parameters; it's a different tag!
