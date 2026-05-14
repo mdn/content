@@ -21,15 +21,15 @@ scrollTo(options)
 ### Parameters
 
 - `xCoord`
-  - : The pixel along the horizontal axis of the document that you want displayed at the left edge of the viewport.
+  - : The x-coordinate of the document that you want the viewport's left edge to scroll to.
 - `yCoord`
-  - : The pixel along the vertical axis of the document that you want displayed at the top edge of the viewport.
+  - : The y-coordinate of the document that you want the viewport's top edge to scroll to.
 - `options`
   - : An object containing the following properties:
     - `top`
-      - : The pixel along the vertical axis of the document that you want displayed at the top edge of the viewport. This is the same as the `yCoord` parameter.
+      - : The y-coordinate of the document that you want the viewport's top edge to scroll to. This is the same as the `yCoord` parameter.
     - `left`
-      - : The pixel along the horizontal axis of the document that you want displayed at the left edge of the viewport. This is the same as the `xCoord` parameter.
+      - : The x-coordinate of the document that you want the viewport's left edge to scroll to. This is the same as the `xCoord` parameter.
     - `behavior`
       - : Determines whether the scrolling is instant or animates smoothly. This option is a string that must take one of the following values:
         - `smooth`: The scrolling animates smoothly.
