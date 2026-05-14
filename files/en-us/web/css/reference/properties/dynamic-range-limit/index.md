@@ -78,13 +78,13 @@ In the markup, we embed an HDR image using an {{htmlelement("img")}} element. We
 ```html
 <img
   src="https://mdn.github.io/shared-assets/images/examples/hi-res/lights.jpg"
-  alt="White strip lights lighting in a subway station"
+  alt="A subway station platform with bright white overhead strip lights"
   tabindex="0" />
 ```
 
 #### CSS
 
-We display the image as if it were and SDR image by setting the `dynamic-range-limit` property to `standard`, which means it won't be displayed any brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value will transition over `0.6` seconds when its state changes.
+We constrain the image to SDR brightness by setting the `dynamic-range-limit` property to `standard`, which makes the image no brighter than HDR reference white. We also set a {{cssxref("transition")}} property so that the `<img>` element's `dynamic-range-limit` value transitions over `0.6` seconds when its state changes.
 
 ```css
 img {
@@ -128,7 +128,7 @@ img {
 
 {{EmbedLiveSample("Examples", 300, 400)}}
 
-The image is HDR, but is displayed as muted by default. Hover or focus the image. Note how it transitions to vivid HDR colors in displays capable of displaying them.
+The image is ultra HDR but is constrained to SDR brightness by default. Hover over or focus the image. Note how it transitions to vivid HDR colors on capable displays.
 
 ## Specifications
 
