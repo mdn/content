@@ -1,5 +1,6 @@
 ---
-title: "@supports"
+title: "`@supports` CSS at-rule"
+short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports

@@ -5,10 +5,11 @@ slug: Web/API/SharedStorage/set
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.SharedStorage.set
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`set()`** method of the {{domxref("SharedStorage")}} interface either stores a new key-value pair in the current origin's shared storage or updates an existing one.
 

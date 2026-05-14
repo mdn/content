@@ -1,5 +1,6 @@
 ---
-title: font-style
+title: "`font-style` CSS property"
+short-title: font-style
 slug: Web/CSS/Reference/Properties/font-style
 page-type: css-property
 browser-compat: css.properties.font-style

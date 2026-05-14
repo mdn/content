@@ -12,7 +12,6 @@ browser-compat:
   - webassembly.garbage-collection
   - webassembly.multiMemory
   - webassembly.multi-value
-  - webassembly.mutable-globals
   - webassembly.non-trapping-float-to-int-conversions
   - webassembly.reference-types
   - webassembly.sign-extension-operations

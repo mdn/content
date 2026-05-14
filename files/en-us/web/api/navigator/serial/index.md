@@ -3,12 +3,10 @@ title: "Navigator: serial property"
 short-title: serial
 slug: Web/API/Navigator/serial
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigator.serial
 ---
 
-{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}
 
 The **`serial`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API).
 

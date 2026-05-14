@@ -1,5 +1,6 @@
 ---
-title: y
+title: "`y` CSS property"
+short-title: y
 slug: Web/CSS/Reference/Properties/y
 page-type: css-property
 browser-compat: css.properties.y

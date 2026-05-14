@@ -55,7 +55,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface with the feature policies applied to the document.
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of the current document.
@@ -280,7 +280,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Allows a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
-- {{DOMxRef("Document.requestStorageAccessFor()")}} {{deprecated_inline}}
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}}
   - : Starts a new {{domxref("View Transition API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
@@ -302,7 +302,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : This method does nothing.
 - {{DOMxRef("Document.close()")}}
   - : Closes a document stream for writing.
-- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : On an editable document, executes a formatting command.
 - {{DOMxRef("Document.getElementsByName()")}}
   - : Returns a list of elements with the given name.
@@ -312,13 +312,13 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Opens a document stream for writing.
 - {{DOMxRef("Document.queryCommandEnabled()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command can be executed on the current range.
-- `Document.queryCommandIndeterm()` {{Deprecated_Inline}}
+- `Document.queryCommandIndeterm()` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Returns true if the formatting command is in an indeterminate state on the current range.
 - {{DOMxRef("Document.queryCommandState()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command has been executed on the current range.
 - {{DOMxRef("Document.queryCommandSupported()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns true if the formatting command is supported on the current range.
-- `Document.queryCommandValue()` {{Deprecated_Inline}}
+- `Document.queryCommandValue()` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Returns the current value of the current range for a formatting command.
 - {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.

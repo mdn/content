@@ -1,6 +1,6 @@
 ---
-title: session.new command
-short-title: session.new
+title: "`session.new` command"
+short-title: new
 slug: Web/WebDriver/Reference/BiDi/Modules/session/new
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.new
@@ -85,7 +85,7 @@ The browser may also return vendor-specific capabilities prefixed with a browser
 
 ### Errors
 
-- session not created
+- `session not created`
   - : A session already exists, or the browser is unable to create a new session (for example, because a requested capability cannot be satisfied).
 
 ## Examples

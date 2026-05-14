@@ -1,5 +1,6 @@
 ---
-title: -webkit-transition
+title: "`-webkit-transition` CSS media feature"
+short-title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 page-type: css-media-feature
 status:

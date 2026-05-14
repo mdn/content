@@ -1,5 +1,6 @@
 ---
-title: ::-moz-range-track
+title: "`::-moz-range-track` CSS pseudo-element"
+short-title: ::-moz-range-track
 slug: Web/CSS/Reference/Selectors/::-moz-range-track
 page-type: css-pseudo-element
 status:

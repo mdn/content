@@ -1,5 +1,6 @@
 ---
-title: prefix
+title: "`prefix` CSS at-rule descriptor"
+short-title: prefix
 slug: Web/CSS/Reference/At-rules/@counter-style/prefix
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.prefix

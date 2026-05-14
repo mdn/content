@@ -1,5 +1,6 @@
 ---
-title: saturate()
+title: "`saturate()` CSS function"
+short-title: saturate()
 slug: Web/CSS/Reference/Values/filter-function/saturate
 page-type: css-function
 browser-compat: css.types.filter-function.saturate
