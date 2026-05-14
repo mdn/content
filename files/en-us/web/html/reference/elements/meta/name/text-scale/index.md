@@ -123,7 +123,7 @@ Text containers with a `class` of `text-scale` are given a {{cssxref("font-size"
 
 #### Result
 
-The following shows the live rendered example with the `<meta name="text-scale">` element included:
+This version has the `<meta name="text-scale">` element included:
 
 {{embedlivesample("text-scale", "100%", "200")}}
 
