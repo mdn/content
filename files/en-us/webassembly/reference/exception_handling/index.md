@@ -23,6 +23,8 @@ WebAssembly exception handling instructions.
 
 - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
   - : Catches exceptions matching a specified error `tag`, pushing the exception payload to the stack.
+- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref)
+  - : Catches exceptions matching a specified error `tag`, pushing the exception payload and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception to the stack.
 
 ## See also
 
