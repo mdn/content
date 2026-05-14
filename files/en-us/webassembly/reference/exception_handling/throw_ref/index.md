@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.throw_ref
 sidebar: webassemblysidebar
 ---
 
-The **`throw_ref`** [exception handling](/en-US/docs/WebAssembly/Reference/Exception_handling) instruction rethrows a previously-thrown exception represented by an [exnref](/en-US/docs/WebAssembly/Reference/Types/exnref) value.
+The **`throw_ref`** [exception handling](/en-US/docs/WebAssembly/Reference/Exception_handling) instruction rethrows a previously-thrown exception represented by an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value.
 
 {{InteractiveExample("Wat Demo: throw_ref", "tabbed-taller")}}
 
@@ -101,7 +101,7 @@ throw_ref
 
 ## Description
 
-A `throw_ref` instruction can be used to rethrow a previously-thrown exception, as represented by an [exnref](/en-US/docs/WebAssembly/Reference/Types/exnref) value. Values of type `exnref` are pushed onto the stack by [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instructions.
+A `throw_ref` instruction can be used to rethrow a previously-thrown exception, as represented by an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value. Values of type `exnref` are pushed onto the stack by [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instructions.
 
 Generally, rethrowing exceptions is useful because you might want to perform an action such as cleanup or logging but then still let users know that an error ocurred.
 
