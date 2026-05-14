@@ -27,14 +27,14 @@ scrollBy(options)
 - `options`
   - : An object containing the following properties:
     - `top`
-      - : Specifies the number of pixels to scroll by along the Y axis.
+      - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`
-      - : Specifies the number of pixels to scroll by along the X axis.
+      - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
-        - `smooth`: scrolling should animate smoothly
-        - `instant`: scrolling should happen instantly in a single jump
-        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
+      - : Determines whether the scrolling is instant or animates smoothly. This option is a string that must take one of the following values:
+        - `smooth`: The scrolling animates smoothly.
+        - `instant`: The scrolling happens instantly in a single jump.
+        - `auto`: The scroll behavior is determined by the computed value of the {{cssxref("scroll-behavior")}} CSS property on the document.
 
 ### Return value
 
