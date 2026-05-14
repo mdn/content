@@ -170,7 +170,7 @@ For depth/stencil attachment objects:
   - If `view`'s format has a depth aspect:
     - `depthLoadOp` is `"clear"`.
     - `depthStoreOp` is `"discard"`.
-  - If format has a stencil aspect:
+  - If `view`'s format has a stencil aspect:
     - `stencilLoadOp` is `"clear"`.
     - `stencilStoreOp` is `"discard"`.
 
