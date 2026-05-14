@@ -44,7 +44,7 @@ On mobile platforms, this is not the case by default. `<meta name="text-scale" c
 
 ### Usage summary
 
-To summarize, recommended usage is to:
+To summarize, set `scale` only if your app is designed to support font scaling. Recommended usage is to:
 
 1. Include `<meta name="text-scale" content="scale" />` in the `<head>` of your page.
 2. Don't override the initial {{cssxref(":root")}} `font-size` with an absolute length value like `16px`.
