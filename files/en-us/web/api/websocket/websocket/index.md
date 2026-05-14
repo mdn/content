@@ -85,6 +85,37 @@ relativeWebSocket = new WebSocket("/local/url");
 relativeWebSocket.close();
 ```
 
+The previous examples show how to _construct_ a `WebSocket`, but the connection is established asynchronously. Calling {{domxref("WebSocket/send", "send()")}} before the {{domxref("WebSocket/open_event", "open")}} event fires throws an `InvalidStateError` exception, because {{domxref("WebSocket/readyState", "readyState")}} is still `CONNECTING`. The example below shows how to wait for the connection before sending, and how to handle the {{domxref("WebSocket/error_event", "error")}} and {{domxref("WebSocket/close_event", "close")}} events:
+
+```js
+// Create WebSocket connection.
+const socket = new WebSocket("wss://websocket.example.org");
+
+// Connection opened
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
+});
+
+// Listen for messages
+socket.addEventListener("message", (event) => {
+  console.log("Message from server:", event.data);
+});
+
+// Handle errors
+socket.addEventListener("error", (event) => {
+  console.error("WebSocket error:", event);
+});
+
+// Handle disconnection
+socket.addEventListener("close", (event) => {
+  if (event.wasClean) {
+    console.log(`Closed cleanly, code=${event.code}, reason=${event.reason}`);
+  } else {
+    console.log("Connection died");
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}
