@@ -195,6 +195,14 @@ You need to find a balance in which maintainers are alerted about real problems,
 
 - [CSP](/en-US/docs/Web/HTTP/Guides/CSP) violations.
 
+## Making backups
+
+Making regular backups of your site and, especially, your data, provides a defense against a number of problems, including but not limited to active attacks:
+
+- Errors by maintainers or buggy tools resulting in data loss or corruption.
+- Vandalism by an attacker with write access.
+- [Ransomware](https://en.wikipedia.org/wiki/Ransomware) attacks, in which an attacker makes the victim's data inaccessible (for example, by encrypting it) unless the victim pays a ransom to recover it.
+
 ## See also
 
 - [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) (OWASP)
