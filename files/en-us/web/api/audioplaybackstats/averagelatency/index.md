@@ -3,10 +3,12 @@ title: "AudioPlaybackStats: averageLatency property"
 short-title: averageLatency
 slug: Web/API/AudioPlaybackStats/averageLatency
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioPlaybackStats.averageLatency
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`averageLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the average latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
 

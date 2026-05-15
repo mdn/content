@@ -3,10 +3,12 @@ title: "CSSContainerRule: conditions property"
 short-title: conditions
 slug: Web/API/CSSContainerRule/conditions
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSContainerRule.conditions
 ---
 
-{{ APIRef("CSSOM") }}
+{{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
 The read-only **`conditions`** property of the {{domxref("CSSContainerRule")}} interface represents an associated CSS {{cssxref("@container")}} at-rule as an array of objects, where each object represents a single container condition.
 

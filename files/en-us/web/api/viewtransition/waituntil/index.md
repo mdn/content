@@ -3,10 +3,12 @@ title: "ViewTransition: waitUntil() method"
 short-title: waitUntil()
 slug: Web/API/ViewTransition/waitUntil
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ViewTransition.waitUntil
 ---
 
-{{APIRef("View Transition API")}}
+{{APIRef("View Transition API")}}{{SeeCompatTable}}
 
 The **`waitUntil()`** method of the {{domxref("ViewTransition")}} interface delays finishing the view transition and the destruction of the associated pseudo-element tree until a {{jsxref("Promise")}} passed into the method has resolved.
 

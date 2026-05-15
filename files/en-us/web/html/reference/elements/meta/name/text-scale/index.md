@@ -3,9 +3,13 @@ title: <meta name="text-scale">
 short-title: text-scale
 slug: Web/HTML/Reference/Elements/meta/name/text-scale
 page-type: html-attribute-value
+status:
+  - experimental
 browser-compat: html.elements.meta.name.text-scale
 sidebar: htmlsidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`text-scale`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element enables opting the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings.
 
