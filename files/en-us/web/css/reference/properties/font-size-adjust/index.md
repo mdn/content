@@ -69,6 +69,9 @@ To ensure compatibility with browsers that don't support `font-size-adjust`, thi
 > [!NOTE]
 > If the specified `<font-metric>` has been overridden in {{cssxref("@font-face")}}, e.g., by using the [`size-adjust`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) descriptor, then the overridden metric will be used in the `font-size-adjust` calculation. This means that when `font-size-adjust` and `size-adjust` are applied together, `size-adjust` does not have any effect.
 
+> [!NOTE]
+> Font metrics can vary between faces in the same {{cssxref("font-family")}}, such as different weights, styles, or variants. When `font-size-adjust` uses `from-font` or a fixed metric value, those metric differences can cause text in those faces to be adjusted differently even when the family name is unchanged.
+
 The adjusted font size is calculated using the formula `u  =  ( m / m′ ) s`, where:
 
 - `m` is the ratio of the specified `<font-metric>` to the first-choice font size.
