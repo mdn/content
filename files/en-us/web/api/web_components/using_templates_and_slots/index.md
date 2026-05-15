@@ -186,7 +186,7 @@ For example, a `<movie-picker>` custom element might use a `<select>` element to
 ```
 
 Named slot assignment is the default behavior.
-On user agents that support manual assignment, you can enable this feature when you attach the shadow root.
+On user agents that support setting the shadow root slot assignment method, you can enable this feature when you attach the shadow root.
 This is done programmatically using the [`options.slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) parameter passed to {{domxref("Element.attachShadow()")}}, or declaratively by setting the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on the {{htmlelement("template")}} element.
 
 The following HTML shows a basic example of how you can set `shadowrootslotassignment` when declaratively creating a shadow root (using `shadowrootmode`).
