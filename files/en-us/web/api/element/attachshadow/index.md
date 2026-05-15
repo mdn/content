@@ -24,21 +24,9 @@ attachShadow(options)
       - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
         - `open`
-          - : Elements of the shadow root are accessible from JavaScript outside the root, for example using {{domxref("Element.shadowRoot")}}:
-
-            ```js
-            element.attachShadow({ mode: "open" });
-            element.shadowRoot; // Returns a ShadowRoot obj
-            ```
-
+          - : Elements inside the shadow root are accessible from JavaScript via the element's {{domxref("Element.shadowRoot","shadowRoot")}} property.
         - `closed`
-          - : Denies access to the node(s) of a closed shadow root
-            from JavaScript outside it:
-
-            ```js
-            element.attachShadow({ mode: "closed" });
-            element.shadowRoot; // Returns null
-            ```
+          - : Elements inside the shadow root cannot be accessed from JavaScript via the {{domxref("Element.shadowRoot","shadowRoot")}} property, which is set to `null`.
 
     - `clonable` {{Optional_Inline}}
       - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
@@ -126,6 +114,26 @@ In this case the {{domxref("ShadowRoot")}} that was already present will be clea
 This allows for cases where, for example, server-side rendering has already declaratively created a shadow root, and then client-side code attempts to attach the root again.
 
 Otherwise calling `attachShadow()` on an element that already has a shadow root will throw an exception.
+
+### Open and closed shadow roots
+
+A shadow root can be attached with an encapsulation [mode](#mode), which is specified as either `open` or `closed`.
+
+If the `{mode: "open"}` argument is passed, the host element's {{domxref("Element.shadowRoot","shadowRoot")}} property can subsequently be used to get the attached shadow root.
+This can be used to access elements in the Shadow DOM:
+
+```js
+element.attachShadow({ mode: "open" });
+element.shadowRoot; // Returns a ShadowRoot obj
+```
+
+If `{mode: "closed"}` is passed then the Element's {{domxref("Element.shadowRoot","shadowRoot")}} property is set to `null`.
+Note that JavaScript can still access a closed shadow root by storing the value returned by the function.
+
+```js
+element.attachShadow({ mode: "closed" });
+element.shadowRoot; // Returns null
+```
 
 ## Examples
 
