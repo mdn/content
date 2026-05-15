@@ -66,13 +66,13 @@ It is possible to retrieve the immediate playout latency of the audio context vi
 - {{domxref("AudioPlaybackStats.resetLatency()")}}
   - : Resets the start of the interval during which latency statistics are measured to the current time.
 - {{domxref("AudioPlaybackStats.toJSON()")}}
-  - : A {{Glossary("Serialization","serializer")}} that returns a JSON representation of the {{domxref("AudioPlaybackStats")}} object.
+  - : A {{Glossary("Serialization","serializer")}} that returns a JSON representation of the `AudioPlaybackStats` object.
 
 ## Examples
 
 ### Reporting audio playback stats
 
-This example demonstrates how to report audio stats accessed via the {{domxref("AudioPlaybackStats")}} object.
+This example demonstrates how to report audio stats accessed via the `AudioPlaybackStats` object.
 
 #### HTML
 
@@ -117,7 +117,7 @@ Next, we add a `click` event listener to the play button so that when it is clic
 - Create a new {{domxref("AudioContext")}} and disable the play button so it can't be pressed again.
 - Run some feature detection code that checks if the {{domxref("AudioContext.playbackStats")}} property exists. If it doesn't, we display a "Your browser doesn't support `AudioPlaybackStats`." message in a list item in the output list, and `return` out of the function.
 - Create a basic audio graph consisting of of an {{domxref("OscillatorNode")}} and a {{domxref("GainNode")}} and start the oscillator playing.
-- Enable the stats button and give it a `click` event listener so that when it is clicked, we write the different stats available in the audio context's {{domxref("AudioPlaybackStats")}} object into a text string and display it in a list item in the output list.
+- Enable the stats button and give it a `click` event listener so that when it is clicked, we write the different stats available in the audio context's `AudioPlaybackStats` object into a text string and display it in a list item in the output list.
 - Enable the reset button and give it a `click` event listener so that when it is clicked, we run the {{domxref("AudioPlaybackStats.resetLatency()")}} method.
 
 ```js live-sample___playback-stats
@@ -170,7 +170,7 @@ The rendered output looks like this:
 
 {{embedlivesample("playback-stats", "100%", "400")}}
 
-Click the "Play audio" button to start the oscillator tone playing. Now, when you click the "Display stats" button, you'll see the different stats available in the {{domxref("AudioPlaybackStats")}} object displayed in a list item.
+Click the "Play audio" button to start the oscillator tone playing. Now, when you click the "Display stats" button, you'll see the different stats available in the `AudioPlaybackStats` object displayed in a list item.
 
 If you click the "Reset latency" button and then click the "Display stats" button, new statistics will appear, but the minimum latency will no longer be zero. This is because the latency is now measured from when you clicked the "Reset latency" button, not from when the audio context was initialized.
 

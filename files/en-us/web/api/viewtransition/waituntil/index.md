@@ -47,7 +47,7 @@ This example demonstrates basic usage of the `waitUntil()` method to delay a vie
 
 #### HTML
 
-We include a {{htmlelement("div")}} element containing page content, which includes a {{htmlelement("p")}} element and a {{htmlelement("button")}} element that when pressed will change the displayed content. The paragraph includes an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute so that DOM updates are announced to screenreader users.
+We include a {{htmlelement("div")}} element containing page content, which includes a {{htmlelement("p")}} element and a {{htmlelement("button")}} element that when pressed will change the displayed content. The paragraph includes an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute so that DOM updates are announced to screen reader users.
 
 ```html live-sample___basic-waituntil
 <div class="page">
