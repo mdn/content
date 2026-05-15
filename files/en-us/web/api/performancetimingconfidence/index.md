@@ -25,7 +25,7 @@ The `PerformanceTimingConfidence` object for each navigation timing entry is acc
 
 ## Description
 
-If a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. 
+If a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result.
 This can cause a significant difference between real-world dashboard metrics and performance observations in page profiling tools, making it hard for a developer to understand whether a performance issue is a legitimate concern or an outlier caused by external factors.
 
 The `PerformanceTimingConfidence` interface allows developers to compensate for this problem by returning a browser estimate (in the {{domxref("PerformanceTimingConfidence.value", "value")}} property) of the likelihood that a returned performance record represents typical application performance.
