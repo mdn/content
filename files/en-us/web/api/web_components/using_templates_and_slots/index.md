@@ -157,15 +157,13 @@ In this example:
 
 ## Named and manual slots
 
-The previous example uses _named slot assignment_, populating named {{htmlelement("slot")}} elements in a template with the content of elements in the custom component (or more generally the host element) that have matching names in their [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute.
+The previous example uses _named slot assignment_, which means the named {{htmlelement("slot")}} elements in a template are populated with the content of elements in the custom component (or more generally the host element) that have matching names in their [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attributes.
 This is the original mechanism used for slot assignment and is the most suitable method for most use cases.
 
-More recently, _manual slot assignment_ has been introduced as an alternative.
-With this approach, elements are manually assigned to slots using {{domxref("HTMLSlotElement.assign()")}}.
+_Manual slot assignment_ is an alternative approach in which elements are manually assigned to slots using {{domxref("HTMLSlotElement.assign()")}}.
 
-Manual assignment is useful when you want to use some other approach than the `slot=` attribute for slot assignment.
-One such case is when the content to be inserted is dynamic.
-For example, a `<movie-picker>` custom element like the one below, might use the `<select>` to filter on genre, slotting only the elements that have a matching data-genre on change.
+Manual assignment is useful when you want to dynamically select the content to be slotted, or if you want to assign slots based on some other element attribute such as their `id`, without having to add duplicate `slot` attributes.
+For example, a `<movie-picker>` custom element might use a `<select>` element to filter on genre, slotting only the elements that have a matching `data-genre` attribute value on change.
 
 ```html
 <movie-picker>
@@ -187,11 +185,11 @@ For example, a `<movie-picker>` custom element like the one below, might use the
 </movie-picker>
 ```
 
-Named slot assignment predates manual assignment, and remains the default.
+Named slot assignment is the default behavior.
 On user agents that support manual assignment, you can enable this feature when you attach the shadow root.
 This is done programmatically using the [`options.slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) parameter passed to {{domxref("Element.attachShadow()")}}, or declaratively by setting the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on the {{htmlelement("template")}} element.
 
-The following HTML shows a simple example of how you can set `shadowrootslotassignment` when declaratively creating a shadow root (using `shadowrootmode`).
+The following HTML shows a basic example of how you can set `shadowrootslotassignment` when declaratively creating a shadow root (using `shadowrootmode`).
 
 ```html
 <article id="host">

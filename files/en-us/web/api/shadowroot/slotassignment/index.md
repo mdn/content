@@ -10,7 +10,7 @@ browser-compat: api.ShadowRoot.slotAssignment
 
 The read-only **`slotAssignment`** property of the {{domxref("ShadowRoot")}} interface returns the _slot assignment mode_ for the shadow DOM tree. Nodes are either automatically assigned based on name matching (`named`) or manually assigned (`manual`).
 
-The value of this property is defined using the `slotAssignment` option when calling {{domxref("Element.attachShadow()")}}, or using the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on {{htmlelement("template")}} when declaratively creating a shadow root.
+The value of this property is defined using the `slotAssignment` option when calling {{domxref("Element.attachShadow()")}}, or using the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on a {{htmlelement("template")}} element when declaratively creating a shadow root.
 
 ## Value
 
@@ -18,7 +18,7 @@ A string that can be one of:
 
 - `named`
   - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
-    Any descendants of the host with a `slot` attribute that matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
+    Any top-level children of the host with a `slot` attribute that matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
     Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot"), if one is present.
 - `manual`
   - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements.

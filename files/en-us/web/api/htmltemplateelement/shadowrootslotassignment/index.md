@@ -21,9 +21,9 @@ The property has no other purpose for developers:
 
 A string that reflects the value of the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) element. Possible values are `"named"` and `"manual"`.
 
-## Example
+## Examples
 
-### Basic usage
+### Feature detection for `shadowrootslotassignment`
 
 This code shows how you can check if the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute is supported on {{htmlelement("template")}} elements.
 

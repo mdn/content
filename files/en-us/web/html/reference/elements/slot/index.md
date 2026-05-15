@@ -10,8 +10,7 @@ sidebar: htmlsidebar
 The **`<slot>`** [HTML](/en-US/docs/Web/HTML) element is a placeholder inside a [Web Component](/en-US/docs/Web/API/Web_components) that you can fill with your own markup when the component is used.
 This lets you create separate DOM trees and present them together.
 
-A slot can contain default content, such as plain text, other HTML elements, or other web components.
-This is displayed if the slot is not assigned another element when the web component is used.
+Slots can contain plain text, other HTML elements, or other web components. A slot can also contain default content, which is displayed if the slot is not assigned other content when the web component is used.
 
 ## Attributes
 
@@ -19,11 +18,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `name`
   - : The slot's name.
-    A _named slot_ is a `<slot>` element with a `name` attribute, while unnamed slots have no `name` attribute, and the name defaults to the empty string.
+    A _named slot_ is a `<slot>` element with a `name` attribute, while an _unnamed slot_ has no `name` attribute, and the name defaults to the empty string.
 
     When the associated shadow root uses [named slot assignment](/en-US/docs/Web/HTML/Reference/Elements/template#named), the slot's containing element is rendered with elements in the same host that have a [`slot` attribute](/en-US/docs/Web/API/Element/slot) with the same name.
     All elements that don't have a `slot` attribute are rendered in the first unnamed `<slot>` element, which is referred to as the _default slot_.
-    Slot names should be unique per shadow root: if you have two slots with the same name, all of the elements with a matching `slot` attribute will be assigned to the first slot with that name.
+    Slot names should be unique per shadow root: if you have two slots with the same name, _all_ of the elements with a matching `slot` attribute are rendered in the first slot that has the name.
     The `name` has no effect if [manual slot assignment](/en-US/docs/Web/HTML/Reference/Elements/template#manual) is used.
 
     For more information see [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) on the `<template>` element and [`Element.attachShadow()`](/en-US/docs/Web/API/Element/attachShadow#slotassignment).

@@ -63,7 +63,7 @@ attachShadow(options)
       - : A string specifying the _slot assignment mode_ for the shadow DOM tree. This can be one of:
         - `named`
           - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
-            Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
+            Any top-level children of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
             Any top-level children of the host with no `slot` attribute will be assigned to the first `<slot>` with no `name` attribute (the "default slot"), if one is present.
             This is the default value.
         - `manual`
@@ -92,7 +92,7 @@ The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specif
 This is the programmatic mechanism to create a `ShadowRoot`, which is the root node of a [Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) attached to a host element (it is also possible to create a `ShadowRoot` declaratively using the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the {{htmlelement("template")}} element).
 It is used for creating [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
-## Elements you can attach a shadow to
+### Elements you can attach a shadow to
 
 Note that you can't attach a shadow root to every type of element.
 There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
@@ -119,7 +119,7 @@ The following is a list of elements you _can_ attach a shadow root to:
 - {{htmlelement("section")}}
 - {{htmlelement("span")}}
 
-## Calling this method on an element that is already a shadow host
+### Calling this method on an element that is already a shadow host
 
 The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
 In this case the {{domxref("ShadowRoot")}} that was already present will be cleared and returned.

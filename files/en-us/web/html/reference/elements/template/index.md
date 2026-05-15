@@ -58,8 +58,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
         This is the default value.
 
-        Elements with the [`slot` attribute](/en-US/docs/Web/API/Element/slot) are assigned to the {{htmlelement("slot")}} in the template that has the corresponding `name` attribute.
-        If multiple elements specify the same slot, they are added in the order they are declared.
+        Elements with the [`slot` attribute](/en-US/docs/Web/API/Element/slot) are assigned to the first {{htmlelement("slot")}} in the template that has the corresponding `name` attribute.
+        If multiple elements specify the same slot name, they are all added to the first slot in the template that has that name, and rendered in the order they are declared.
         All unnamed elements — elements that don't specify a `slot` attribute — are assigned to the default slot in the order they are declared.
         This is the first unnamed `<slot>` in the template.
 
