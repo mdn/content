@@ -282,23 +282,14 @@ This also focuses the parent element as shown below.
 
 ### Declarative shadow DOM with named slot assignment
 
-This example shows how elements can be assigned to slots in a shadow DOM based on their [`slot` attribute](/en-US/docs/Web/API/Element/slot) (matched against the slot's `name` attribute) and the template's `shadowrootslotassignment` attribute.
+This example shows how elements can be assigned to slots in a shadow DOM based on their [`slot` attribute](/en-US/docs/Web/API/Element/slot) (matched against the slot's `name` attribute).
 
 #### HTML
 
-First we have a hidden support warning.
-This warning is later set to be displayed via JavaScript if the browser doesn't support the `shadowrootslotassignment` attribute.
+First we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
 
-```html
-<p id="support-warning" hidden>
-  ⛔ Your browser doesn't support the
-  <code>shadowrootslotassignment</code> attribute yet.
-</p>
-```
-
-Next, we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
-
-The article contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute, and will use named slot assignment because `shadowrootslotassignment="named"` is set.
+The article contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute.
+We don't need to set its `shadowrootslotassignment` attribute because named slot assignment is the default.
 
 The template defines elements that have named slots for "header" and "meta" information, and an unnamed slot for "body" information.
 The elements are styled differently so it is easy to differentiate them.
@@ -348,30 +339,11 @@ Inside the same host, below the template, we have four elements for populating t
 The {{htmlelement("span")}} elements have `slot` attributes that match the `name` attributes on slots in the template, and will populate the corresponding slots.
 The two {{htmlelement("p")}} elements are unnamed, so are both inserted into the unnamed `<slot>` in the "body" element.
 
-#### JavaScript
-
-The code displays the hidden support warning if slot assignment is not supported.
-
-```js
-const isShadowRootSlotAssignmentSupported = Object.hasOwn(
-  HTMLTemplateElement.prototype,
-  "shadowRootSlotAssignment",
-);
-
-document
-  .querySelector("p[hidden]")
-  .toggleAttribute("hidden", isShadowRootSlotAssignmentSupported);
-```
-
 #### Results
 
 The example below should show the content of the slots displayed in the appropriate sections.
 
 {{EmbedLiveSample('Declarative shadow DOM with named slot assignment','100', '220px')}}
-
-> [!NOTE]
-> The example will still work even if the warning that shadow root slot assignment is not supported is displayed.
-> This is because `named` assignment predates the introduction of the `shadowrootslotassignment` attribute.
 
 ### Declarative shadow DOM with manual slot assignment
 

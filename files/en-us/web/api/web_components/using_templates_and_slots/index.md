@@ -155,7 +155,7 @@ In this example:
 - Content with `slot="my-text"` goes into the named slot.
 - All other content automatically goes into the unnamed slot.
 
-## Named and manual slots
+## Named and manual slot assignment
 
 The previous example uses _named slot assignment_, which means the named {{htmlelement("slot")}} elements in a template are populated with the content of elements in the custom component (or more generally the host element) that have matching names in their [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attributes.
 This is the original mechanism used for slot assignment and is the most suitable method for most use cases.
