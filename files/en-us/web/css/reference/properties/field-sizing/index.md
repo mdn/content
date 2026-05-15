@@ -76,7 +76,7 @@ This example illustrates the effect of `field-sizing: content` on single- and mu
 
 #### HTML
 
-The HTML in this example contains four form fields, each with an associated {{htmlelement("label")}}: three `<input>` elements of types [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) and [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and a {{htmlelement("textarea")}} element.
+The HTML in this example contains four form fields, each with an associated {{htmlelement("label")}}: three `<input>` elements of types [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email), and [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), and a {{htmlelement("textarea")}} element.
 
 ```html
 <div>
