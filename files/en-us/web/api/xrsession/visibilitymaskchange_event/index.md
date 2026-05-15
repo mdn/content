@@ -10,7 +10,9 @@ browser-compat: api.XRSession.visibilitymaskchange_event
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`visibilitymaskchange`** event is sent to an {{domxref("XRSession")}} when the portion of an {{domxref("XRView")}} visible to the user changes, for example, specified by the eye that the view is relevant to, and the vertices of a visibility mask that defines the visible part of the view, available in the {{domxref("XRVisibilityMaskChangeEvent")}} event object.
+The **`visibilitymaskchange`** event is sent to an {{domxref("XRSession")}} when the portion of an {{domxref("XRView")}} visible to the user changes.
+
+Note that the view is associated with a particular eye, and the part that is visible to the user is defined by a visibility mask. For more information see the {{domxref("XRVisibilityMaskChangeEvent")}} interface.
 
 This enables performance improvements by allowing the browser to draw only the visible part of the updated view.
 
