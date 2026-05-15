@@ -68,7 +68,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 
 ```html live-sample___text-scale
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta name="text-scale" content="scale" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -80,8 +80,9 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
       level.
     </p>
     <p class="fixed">
-      This font size does NOT respect the user's font preferences, even with text-scale set.
-      <div class="text-scale">But this font size does!</div>
+      This font size does NOT respect the user's font preferences, even with
+      text-scale set.
+      <span class="text-scale">But this font size does!</span>
     </p>
   </body>
 </html>
@@ -89,7 +90,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 
 ```html hidden live-sample___no-text-scale
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -101,7 +102,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
     </p>
     <p class="fixed">
       This font size does NOT respect the user's font preferences.
-      <div class="text-scale">Neither does this!</div>
+      <span class="text-scale">Neither does this!</span>
     </p>
   </body>
 </html>

@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-The following example clears the override of the {{domxref("PreferenceObject.colorScheme", "color scheme")}}.
+The following example clears the override of the [color scheme](/en-US/docs/Web/API/PreferenceObject/colorScheme).
 
 ```js
 navigator.preferences.colorScheme.clearOverride();

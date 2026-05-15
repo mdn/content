@@ -50,7 +50,7 @@ Because delta frames depend on all previous frames since the last key frame, a d
 When encoding with a `VideoEncoder`, it is possible to determine when to set a frame as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method.
 
 ```js
- encoder.encode(frame, { keyFrame: /* */ })
+encoder.encode(frame, { keyFrame: true });
 ```
 
 ## Encoding and decoding

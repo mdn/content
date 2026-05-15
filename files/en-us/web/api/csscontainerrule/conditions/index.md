@@ -15,7 +15,7 @@ The read-only **`conditions`** property of the {{domxref("CSSContainerRule")}} i
 An array of objects where each object has the form:
 
 ```js
-{ name: "<container-name>", query: "<container-query>" };
+({ name: "<container-name>", query: "<container-query>" });
 ```
 
 Either the `name` or `query` may be the empty string, but not both.
