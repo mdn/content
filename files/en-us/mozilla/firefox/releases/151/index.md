@@ -74,6 +74,9 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
 - The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
   ([Firefox bug 1943070](https://bugzil.la/1943070)).
+- The {{domxref("CSSContainerRule.conditions")}} property is now supported, mirroring [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule support for multiple comma-separated container conditions.
+  The `condition` property reflects a corresponding `@container` as an array of objects, where each object represents a single container condition.
+  ([Firefox bug 2022827](https://bugzil.la/2022827)).
 
 <!-- #### DOM -->
 
