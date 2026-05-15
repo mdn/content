@@ -100,7 +100,7 @@ The HTML in this example contains four form fields, each with an associated {{ht
 Note the following points about the HTML:
 
 - The first two fields have no length restrictions set.
-- The third field (`tel`) has a [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/input#maxlength) attribute set, which stops the size of the field from increasing when the character limit is reached.
+- The third field (of type `tel`) has a [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/input#maxlength) attribute set, which stops the size of the field from increasing when the character limit is reached.
 - The `<textarea>` will grow in the inline direction until the edge of the {{cssxref("min-width")}} constraint (set in the CSS code below) is reached, then start to add new lines in the block direction to contain subsequent characters.
 - The `email` input has a placeholder set. This causes the field to render big enough to show the entire placeholder. Once the field is focused and the user starts typing, the field changes size to the `min-width` value. The `text` field, which doesn't have a placeholder, renders initially at `min-width`.
 
