@@ -114,7 +114,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`field-sizing` property**: `layout.css.field-sizing.enabled`
 
-  The {{cssxref("field-sizing")}} CSS property lets you to control the sizing behavior of form control elements. This property has 2 values `content` which allows elements to grow with the content and `fixed` stay at fixed size. ([Firefox bug 1977176](https://bugzil.la/1977176)).
+  The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements. ([Firefox bug 1977176](https://bugzil.la/1977176)).
 
 - **Fix for nested scrollable areas**: `layout.css.fake-webkit-scrollbar.enabled`
 
