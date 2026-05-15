@@ -66,6 +66,8 @@ When reading from the clipboard, the specification requires that a user has rece
 For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 Browsers may place additional restrictions over use of the methods to access the clipboard.
 
+The {{domxref("Clipboard.clipboardchange_event", "clipboardchange")}} event is only fired with [sticky activation](/en-US/docs/Glossary/Sticky_activation) or after the `clipboard-read` permission is granted.
+
 Browser implementations have diverged from the specification.
 The differences are captured in the [Browser compatibility](#browser_compatibility) section and the current state is summarized below:
 

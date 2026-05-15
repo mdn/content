@@ -1,5 +1,6 @@
 ---
-title: page-break-inside
+title: "`page-break-inside` CSS property"
+short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
 page-type: css-property
 status:

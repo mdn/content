@@ -1,5 +1,6 @@
 ---
-title: border-collapse
+title: "`border-collapse` CSS property"
+short-title: border-collapse
 slug: Web/CSS/Reference/Properties/border-collapse
 page-type: css-property
 browser-compat: css.properties.border-collapse

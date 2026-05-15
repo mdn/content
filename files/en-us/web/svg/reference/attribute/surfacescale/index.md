@@ -3,8 +3,8 @@ title: surfaceScale
 slug: Web/SVG/Reference/Attribute/surfaceScale
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fediffuselighting-surfacescale
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-surfacescale
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fediffuselighting-surfacescale
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespecularlighting-surfacescale
 sidebar: svgref
 ---
 

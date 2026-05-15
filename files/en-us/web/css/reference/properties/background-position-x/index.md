@@ -1,5 +1,6 @@
 ---
-title: background-position-x
+title: "`background-position-x` CSS property"
+short-title: background-position-x
 slug: Web/CSS/Reference/Properties/background-position-x
 page-type: css-property
 browser-compat: css.properties.background-position-x

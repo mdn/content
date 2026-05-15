@@ -1,5 +1,6 @@
 ---
-title: <input type="image">
+title: '`<input type="image">` HTML attribute value'
+short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_image

@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 In the previous articles, we covered the styling of various form controls in a general manner. This included some usage of pseudo-classes, for example, using `:checked` to target a checkbox only when it is selected. In this article, we explore the different UI pseudo-classes available for styling forms in different states.
 
@@ -1484,4 +1484,4 @@ The following are also interesting, but as yet not well-supported in browsers:
 
 This completes our look at UI pseudo-classes that relate to form inputs. Keep playing with them, and create some fun form styles! Next up, we'll move on to something different — [client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

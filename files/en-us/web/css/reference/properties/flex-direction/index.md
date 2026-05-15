@@ -1,5 +1,6 @@
 ---
-title: flex-direction
+title: "`flex-direction` CSS property"
+short-title: flex-direction
 slug: Web/CSS/Reference/Properties/flex-direction
 page-type: css-property
 browser-compat: css.properties.flex-direction

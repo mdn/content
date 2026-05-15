@@ -1,10 +1,15 @@
 ---
-title: font-width
+title: "`font-width` CSS property"
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.font-width
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 > [!NOTE]
 > The `font-width` property is the modern replacement for {{cssxref("font-stretch")}}, which is a legacy alias. While `font-width` is the specification's preferred name, `font-stretch` currently has broader browser support. Check the [fallback example](#providing_a_font-stretch_fallback) and [browser compatibility](#browser_compatibility) table for details.
@@ -335,6 +340,7 @@ p {
 - Legacy {{cssxref("font-stretch")}} alias property with better browser support
 - {{cssxref("font-style")}} property
 - {{cssxref("font-weight")}} property
+- SVG {{SVGAttr("font-width")}} attribute
 - SVG {{SVGAttr("font-stretch")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

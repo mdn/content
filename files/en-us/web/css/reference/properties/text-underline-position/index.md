@@ -1,5 +1,6 @@
 ---
-title: text-underline-position
+title: "`text-underline-position` CSS property"
+short-title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position
@@ -63,7 +64,7 @@ text-underline-position: unset;
 ### Values
 
 - `auto`
-  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("/Baseline/Typography", "alphabetic baseline")}}.
+  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("Baseline/Typography", "alphabetic baseline")}}.
 - `from-font`
   - : If the font file includes information about a preferred position, use that value. If the font file doesn't include this information, behave as if `auto` was set, with the browser choosing an appropriate position.
 - `under`

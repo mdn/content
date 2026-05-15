@@ -157,15 +157,15 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 - `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap_i64).
 
 ### WebDriver page types
 
 This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow).
-- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Classic/Capabilities/acceptInsecureCerts).
-- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InsecureCertificate).
+- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts).
+- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate).
 
 ### WebExtensions page types
 

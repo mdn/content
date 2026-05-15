@@ -41,6 +41,8 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : Returns a number representing the inner width of the element.
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : A number indicating the effective zoom size of the element, or 1.0 if the element is not rendered.
+- {{DOMxRef("Element.customElementRegistry")}} {{ReadOnlyInline}}
+  - : The {{domxref("CustomElementRegistry")}} object associated with this element, or `null` if one has not been set.
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
@@ -215,7 +217,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
-- {{DOMxRef("Element.ariaNotify()")}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{DOMxRef("Element.ariaNotify()")}}
   - : Specifies that a given string of text should be announced by a screen reader.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.

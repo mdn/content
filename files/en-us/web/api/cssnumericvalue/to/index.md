@@ -8,9 +8,7 @@ browser-compat: api.CSSNumericValue.to
 
 {{APIRef("CSS Typed OM")}}
 
-The **`to()`** method of the
-{{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to
-another.
+The **`to()`** method of the {{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to another.
 
 ## Syntax
 
@@ -25,16 +23,22 @@ to(unit)
 
 ### Return value
 
-A {{domxref('CSSMathSum')}}.
+A {{domxref('CSSUnitValue')}}.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if an invalid type was passed to the method.
+  - : Thrown if an invalid unit was passed to the method.
 - {{jsxref("TypeError")}}
-  - : Thrown if the passed values cannot be summed.
+  - : Thrown if:
+    - The `CSSNumericValue` on which the method is being called can't be resolved to a single value and type.
+      This might occur if the value is calculated from a variable when the value of that variable can't be known in the context.
+    - The value can't be converted to the new unit because it's not of the same category.
+      For example, you can't convert meters to seconds.
 
 ## Examples
+
+### Basic usage
 
 ```js
 // Prints "0.608542cm"

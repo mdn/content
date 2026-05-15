@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-left
+title: "`scroll-padding-left` CSS property"
+short-title: scroll-padding-left
 slug: Web/CSS/Reference/Properties/scroll-padding-left
 page-type: css-property
 browser-compat: css.properties.scroll-padding-left

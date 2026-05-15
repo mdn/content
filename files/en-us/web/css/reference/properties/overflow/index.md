@@ -1,5 +1,6 @@
 ---
-title: overflow
+title: "`overflow` CSS property"
+short-title: overflow
 slug: Web/CSS/Reference/Properties/overflow
 page-type: css-shorthand-property
 browser-compat: css.properties.overflow

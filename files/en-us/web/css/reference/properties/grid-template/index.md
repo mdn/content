@@ -1,5 +1,6 @@
 ---
-title: grid-template
+title: "`grid-template` CSS property"
+short-title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-template

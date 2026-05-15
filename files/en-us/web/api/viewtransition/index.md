@@ -34,6 +34,8 @@ When a view transition is triggered by a `startViewTransition()` call (or a page
 
 - {{domxref("ViewTransition.skipTransition", "skipTransition()")}}
   - : Skips the animation part of the view transition, but doesn't skip running the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} callback that updates the DOM.
+- {{domxref("ViewTransition.waitUntil", "waitUntil()")}}
+  - : Delays finishing the view transition and the destruction of the associated pseudo-element tree until a {{jsxref("Promise")}} passed into the method has resolved.
 
 ## Examples
 

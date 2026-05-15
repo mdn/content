@@ -1,10 +1,15 @@
 ---
-title: scroll-initial-target
+title: "`scroll-initial-target` CSS property"
+short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.scroll-initial-target
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`scroll-initial-target`** [CSS](/en-US/docs/Web/CSS) property enables the definition of elements that are potential snap targets when their ancestor {{glossary("scroll container")}} is first rendered.
 
@@ -174,13 +179,12 @@ p {
 }
 
 @supports not (scroll-initial-target: nearest) {
-  body::before {
+  :root::before {
     content: "Your browser doesn't support the scroll-initial-target property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```

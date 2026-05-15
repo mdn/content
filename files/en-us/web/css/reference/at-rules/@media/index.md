@@ -1,5 +1,6 @@
 ---
-title: "@media"
+title: "`@media` CSS at-rule"
+short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 page-type: css-at-rule
 browser-compat: css.at-rules.media
