@@ -25,12 +25,19 @@ The `PerformanceTimingConfidence` object for each navigation timing entry is acc
 
 ## Description
 
-If a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. In such cases, a `low` confidence {{domxref("PerformanceTimingConfidence.value", "value")}} is returned for an associated performance record. On the other hand, if the browser determines a returned performance record to be representative of typical application performance, a `high` confidence value is returned.
+If a website has loaded after a browser "cold start" or session restore, its pages may load more slowly as a result. 
+This can cause a significant difference between real-world dashboard metrics and performance observations in page profiling tools, making it hard for a developer to understand whether a performance issue is a legitimate concern or an outlier caused by external factors.
+
+The `PerformanceTimingConfidence` interface allows developers to compensate for this problem by returning a browser estimate (in the {{domxref("PerformanceTimingConfidence.value", "value")}} property) of the likelihood that a returned performance record represents typical application performance.
+This is a value of either `"low"` or `"high"`, indicating the browser's confidence in the measurement.
 
 > [!NOTE]
 > Device factors such as CPU do not contribute to the performance assessment. Other factors than browser "cold start" and session restore may be taken into account in future updates.
 
-This confidence measure is useful for developers when trying to determine whether a performance issue is a legitimate concern, or an outlier being caused by external factors. There is often a significant difference between real-world dashboard metrics and performance observations in page profiling tools.
+To reduce the possibility of using the value for fingerprinting, noise is added to the estimate, meaning the `value` will deliberately be wrong for some proportion of results.
+The trigger rate for the noise is given in the {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} property.
+
+Since this can vary across records, per-record weighting is needed to recover unbiased aggregates, to improve data consistency, reduce the number of compound errors, and generally to produce a baseline against which the measured results can be evaluated.
 
 ### Using the data
 
