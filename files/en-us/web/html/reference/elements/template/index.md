@@ -423,7 +423,7 @@ const titleSlot = shadow.querySelector("#titleSlot");
 const metaSlot = shadow.querySelector("#metaSlot");
 const bodySlot = shadow.querySelector("#bodySlot");
 
-// 2. Target your light DOM elements
+// 2. Target the Elements to slot
 const body1Text = document.querySelector("#text_body_1");
 const body2Text = document.querySelector("#text_body_2");
 const titleText = document.querySelector("#text_title");

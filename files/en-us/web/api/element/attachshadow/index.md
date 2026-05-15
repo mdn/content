@@ -209,47 +209,23 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-### Shadow DOM with named slot assignment
+### Named slot assignment
 
 This example demonstrates named slot assignment.
-
-#### Feature checking
-
-This part of the example defines a warning that will indicate if the type of slot assignment can be changed.
-
-First we create HTML that displays the warning if the mechanism is not supported.
-
-```html
-<p id="support-warning" hidden>
-  ⛔ Your browser doesn't support setting slot assignment (named assignment is
-  used).
-</p>
-```
-
-This code tests if the {{domxref("ShadowRoot.slotAssignment")}} property is defined, and uses the result to display the warning if it is not.
-
-```js
-const isSlotAssignmentSupported = Object.hasOwn(
-  ShadowRoot.prototype,
-  "slotAssignment",
-);
-
-document
-  .querySelector("p[hidden]")
-  .toggleAttribute("hidden", isSlotAssignmentSupported);
-```
 
 #### Creating the web component
 
 This code creates a web component that has three named slots for an article's title, metadata, and body section.
-The ShadowRoot is created with `slotAssignment: "named"`.
+
+The `ShadowRoot` is attached in the custom element's constructor.
+We don't need to explicitly set the option `slotAssignment: "named"` because it is the default.
 
 ```js
 class MyArticle extends HTMLElement {
   constructor() {
     super();
-    // Attach the shadow root specifying that slotAssignment is "named" (not manual)
-    this.attachShadow({ mode: "open", slotAssignment: "named" });
+    // Attach the shadow root
+    this.attachShadow({ mode: "open" /*, slotAssignment: "named"*/ });
   }
 
   connectedCallback() {
@@ -316,11 +292,128 @@ The unnamed elements are rendered in the component's unnamed slot (the body).
 
 The example below should show the content of the slots displayed in the appropriate sections.
 
-{{EmbedLiveSample('Shadow DOM with named slot assignment','100', '220px')}}
+{{EmbedLiveSample('Named slot assignment','100', '220px')}}
+
+### Unnamed slot assignment
+
+This example demonstrates [manual slot assignment](/en-US/docs/Web/API/HTMLSlotElement/assign).
+With this approach, each element must be manually assigned to a particular slot using {{domxref("HTMLSlotElement.assign()")}}.
+There is no default assignment, so any slot that is not assigned will be empty.
+
+#### HTML
+
+First we have a hidden support warning, displayed via JavaScript if the browser doesn't support `slotAssignment: "manual"`.
+
+```html
+<p id="support-warning" hidden>
+  ⛔ Your browser doesn't support manual slot assignment (named assignment is
+  used).
+</p>
+```
+
+Next, we define our `<my-article>` custom element with child elements for the title, metadata, and body content.
+Each child is identified by `id`; unlike named slot assignment, no `slot` attribute is needed.
+
+```html
+<my-article>
+  <span id="text_title">Text for the title slot</span>
+  <span id="text_meta">Text for the meta slot</span>
+  <p id="text_body_1">Text 1 for body slot.</p>
+  <p id="text_body_2">Text 2 for body slot.</p>
+</my-article>
+```
+
+#### JavaScript
+
+The custom element attaches a shadow root with `slotAssignment: "manual"`.
+The shadow DOM contains unnamed slots identified by `id`.
+The `assignSlots()` method manually assigns the light DOM elements to the slots.
+Note that multiple nodes can be assigned to a single slot — the order they are specified controls the render order.
+
+```js
+class MyArticle extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open", slotAssignment: "manual" });
+  }
+
+  connectedCallback() {
+    this.render();
+    this.assignSlots();
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
+      <style>
+        .header {
+          background-color: plum;
+        }
+        .meta {
+          background-color: green;
+        }
+        .body {
+          background-color: lightblue;
+        }
+      </style>
+
+      <h2 class="header">
+        <slot id="titleSlot"></slot>
+      </h2>
+
+      <div class="meta">
+        <slot id="metaSlot"></slot>
+      </div>
+
+      <div class="body">
+        <slot id="bodySlot"></slot>
+      </div>
+    `;
+  }
+
+  assignSlots() {
+    // 1. Target your slots
+    const titleSlot = this.shadowRoot.querySelector("#titleSlot");
+    const metaSlot = this.shadowRoot.querySelector("#metaSlot");
+    const bodySlot = this.shadowRoot.querySelector("#bodySlot");
+
+    // 2. Target your light DOM elements
+    const titleText = this.querySelector("#text_title");
+    const metaText = this.querySelector("#text_meta");
+    const body1Text = this.querySelector("#text_body_1");
+    const body2Text = this.querySelector("#text_body_2");
+
+    // 3. Manually assign them
+    titleSlot.assign(titleText);
+    metaSlot.assign(metaText);
+    bodySlot.assign(body2Text, body1Text);
+  }
+}
+
+customElements.define("my-article", MyArticle);
+```
+
+This code tests if the {{domxref("ShadowRoot.slotAssignment")}} property is defined, and displays the warning if it is not.
+
+```js
+const isSlotAssignmentSupported = Object.hasOwn(
+  ShadowRoot.prototype,
+  "slotAssignment",
+);
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isSlotAssignmentSupported);
+```
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Unnamed slot assignment','100', '220px')}}
 
 > [!NOTE]
-> The example will still work even if the warning that shadow root slot assignment is not supported is displayed.
-> This is because `named` assignment predates the introduction of the `slotAssignment` property.
+> If manual slot assignment is not supported, a warning is displayed and the browser will use `named` assignment.
+> However, because none of the light DOM elements have a `slot` attribute, they will all be inserted into the first unnamed slot (the title slot).
 
 ## Specifications
 
