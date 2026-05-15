@@ -97,7 +97,7 @@ To solve this challenge, we are expecting you to create a basic website project,
 
 3. Save the following CSS listing inside a file inside your folder called `style.css` (or paste it into your online editor's CSS pane).
 
-   ```css
+   ```css live-sample___form-finished
    /* Basic font styles */
 
    body {
@@ -105,7 +105,7 @@ To solve this challenge, we are expecting you to create a basic website project,
      color: #333333;
      font: 1em / 1.4 system-ui;
      padding: 1em;
-     width: 800px;
+     max-width: 800px;
      margin: 0 auto;
    }
 
@@ -245,16 +245,16 @@ We'd like you to imagine that you have just been to stay at a hotel called the l
 
 ## Example
 
-The following screenshot shows an example of what the form might look like after being marked up. If you are getting stuck on how to achieve some of this, see the solution below the live example.
+The following live example shows what the form might look like after being marked up. If you are getting stuck on how to achieve some of this, see the solution below.
 
-![The finished example for the challenge; a feedback form showing two sets of radio buttons, a set of checkboxes, and two drop-down select menus](example-page.png)
+{{embedlivesample("form-finished", "100%", 500)}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html-nolint live-sample___form-finished
 <!doctype html>
 <html lang="en">
   <head>
@@ -284,62 +284,48 @@ Your finished HTML should look like this:
 
         <fieldset>
           <legend>Was the porridge</legend>
-          <input
-            type="radio"
-            id="porridge-1"
-            name="porridge"
-            value="hot"
-            checked /><label for="porridge-1">Too hot?</label>
-          <input
-            type="radio"
-            id="porridge-2"
-            name="porridge"
-            value="cold" /><label for="porridge-2">Too cold?</label>
-          <input
-            type="radio"
-            id="porridge-3"
-            name="porridge"
-            value="right" /><label for="porridge-3">Just right?</label>
+
+          <input type="radio" id="porridge-1" name="porridge" value="hot"
+                 checked />
+          <label for="porridge-1">Too hot?</label>
+
+          <input type="radio" id="porridge-2" name="porridge" value="cold" />
+          <label for="porridge-2">Too cold?</label>
+
+          <input type="radio" id="porridge-3" name="porridge" value="right" />
+          <label for="porridge-3">Just right?</label>
         </fieldset>
 
         <fieldset>
           <legend>Were the beds</legend>
-          <input
-            type="radio"
-            id="beds-1"
-            name="beds"
-            value="hard"
-            checked /><label for="beds-1">Too hard?</label>
-          <input type="radio" id="beds-2" name="beds" value="soft" /><label
-            for="beds-2"
-            >Too soft?</label
-          >
-          <input type="radio" id="beds-3" name="beds" value="right" /><label
-            for="beds-3"
-            >Just right?</label
-          >
+
+          <input type="radio" id="beds-1" name="beds" value="hard" checked />
+          <label for="beds-1">Too hard?</label>
+
+          <input type="radio" id="beds-2" name="beds" value="soft" />
+          <label for="beds-2">Too soft?</label>
+
+          <input type="radio" id="beds-3" name="beds" value="right" />
+          <label for="beds-3">Just right?</label>
         </fieldset>
 
         <fieldset>
           <legend>Describe the chairs (select all you agree with)</legend>
-          <input type="checkbox" id="comfy" name="comfy" /><label for="comfy"
-            >Comfy</label
-          >
-          <input type="checkbox" id="luxurious" name="luxurious" /><label
-            for="luxurious"
-            >Luxurious</label
-          >
-          <input type="checkbox" id="hi-tech" name="hi-tech" /><label
-            for="hi-tech"
-            >Hi-tech</label
-          >
-          <input type="checkbox" id="pretty" name="pretty" /><label for="pretty"
-            >Pretty</label
-          >
-          <input type="checkbox" id="majestic" name="majestic" /><label
-            for="majestic"
-            >Majestic</label
-          >
+
+          <input type="checkbox" id="comfy" name="comfy" />
+          <label for="comfy">Comfy</label>
+
+          <input type="checkbox" id="luxurious" name="luxurious" />
+          <label for="luxurious">Luxurious</label>
+
+          <input type="checkbox" id="hi-tech" name="hi-tech" />
+          <label for="hi-tech">Hi-tech</label>
+
+          <input type="checkbox" id="pretty" name="pretty" />
+          <label for="pretty">Pretty</label>
+
+          <input type="checkbox" id="majestic" name="majestic" />
+          <label for="majestic">Majestic</label>
         </fieldset>
       </div>
 
