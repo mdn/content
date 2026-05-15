@@ -333,7 +333,7 @@ div.animated {
 }
 ```
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using:
+The `.trigger` `<div>` element creates a trigger for the animated `<div>` using:
 
 - A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
