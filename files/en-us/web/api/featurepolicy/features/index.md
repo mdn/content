@@ -5,10 +5,11 @@ slug: Web/API/FeaturePolicy/features
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.FeaturePolicy.features
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`features()`** method of the
 {{DOMxRef("FeaturePolicy")}} interface returns a list of names of all features

@@ -481,6 +481,18 @@
     "zh-CN": "来源：",
     "zh-TW": "來源："
   },
+  "external_link": {
+    "de": "Externer Link (öffnet in neuem Tab)",
+    "en-US": "External link (opens in new tab)",
+    "es": "Enlace externo (se abre en una nueva pestaña)",
+    "fr": "Lien externe (ouvre un nouvel onglet)",
+    "ja": "外部リンク（新しいタブで開きます）",
+    "ko": "외부 링크 (새 탭에서 열림)",
+    "pt-BR": "Link externo (abre em uma nova aba)",
+    "ru": "Внешняя ссылка (открывается в новой вкладке)",
+    "zh-CN": "外部链接（在新标签页中打开）",
+    "zh-TW": "外部連結（在新分頁開啟）"
+  },
   "formal_syntax_footer": {
     "de": "Diese Syntax spiegelt den neuesten Standard gemäß { $specs } wider. Möglicherweise haben nicht alle Browser jeden Teil implementiert. Siehe <a href=\"#browser-kompatibilität\">Browserkompatibilität</a> für Informationen zur Unterstützung.",
     "en-US": "This syntax reflects the latest standard as per { $specs }. Not all browsers may have implemented every part. See <a href=\"#browser_compatibility\">Browser compatibility</a> for support information.",

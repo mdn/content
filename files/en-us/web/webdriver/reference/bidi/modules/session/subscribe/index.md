@@ -1,6 +1,6 @@
 ---
-title: session.subscribe command
-short-title: session.subscribe
+title: "`session.subscribe` command"
+short-title: subscribe
 slug: Web/WebDriver/Reference/BiDi/Modules/session/subscribe
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.subscribe

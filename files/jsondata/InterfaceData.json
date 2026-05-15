@@ -1292,10 +1292,6 @@
       "inh": "",
       "impl": []
     },
-    "ForDebuggingOnly": {
-      "inh": "",
-      "impl": []
-    },
     "FormData": {
       "inh": "",
       "impl": []
@@ -2000,26 +1996,6 @@
       "inh": "",
       "impl": []
     },
-    "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupBiddingScriptRunnerGlobalScope": {
-      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupReportingScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupScriptRunnerGlobalScope": {
-      "inh": "",
-      "impl": []
-    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -2065,6 +2041,14 @@
       "impl": []
     },
     "LanguageDetector": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModel": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "LanguageModelParams": {
       "inh": "",
       "impl": []
     },
@@ -2792,10 +2776,6 @@
       "inh": "",
       "impl": []
     },
-    "PrivateAggregation": {
-      "inh": "",
-      "impl": []
-    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2810,14 +2790,6 @@
     },
     "PromiseRejectionEvent": {
       "inh": "Event",
-      "impl": []
-    },
-    "ProtectedAudience": {
-      "inh": "",
-      "impl": []
-    },
-    "ProtectedAudienceUtilities": {
-      "inh": "",
       "impl": []
     },
     "ProximitySensor": {
@@ -2901,10 +2873,6 @@
       "impl": []
     },
     "ReadableStreamDefaultReader": {
-      "inh": "",
-      "impl": []
-    },
-    "RealTimeReporting": {
       "inh": "",
       "impl": []
     },
@@ -3174,42 +3142,6 @@
     },
     "ShadowRoot": {
       "inh": "DocumentFragment",
-      "impl": []
-    },
-    "SharedStorage": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageAppendMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageClearMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageDeleteMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageModifierMethod": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageSetMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageWorklet": {
-      "inh": "Worklet",
-      "impl": []
-    },
-    "SharedStorageWorkletGlobalScope": {
-      "inh": "WorkletGlobalScope",
-      "impl": []
-    },
-    "SharedStorageWorkletNavigator": {
-      "inh": "",
       "impl": []
     },
     "SharedWorker": {

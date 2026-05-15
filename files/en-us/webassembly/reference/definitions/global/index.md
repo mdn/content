@@ -96,7 +96,7 @@ The WebAssembly `global` definition enables globally-scoped variables to be defi
 
 ### Creating globals from JavaScript
 
-It is also possible to create a Wasm global from within the JavaScript host using the {{jsxref("WebAssembly.Global.Global", "WebAssembly.Global()")}} constructor then importing it into the module.
+It is also possible to create a Wasm global from within the JavaScript host using the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) constructor then importing it into the module.
 
 For example:
 
