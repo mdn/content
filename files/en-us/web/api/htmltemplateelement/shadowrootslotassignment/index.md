@@ -14,7 +14,7 @@ This property can be used to detect support for the declarative attribute.
 
 The property has no other purpose for developers:
 
-- If a `<template>` element is used to declaratively create a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), then no instance of this object and property exist.
+- If a `<template>` element is used to declaratively create a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), then no instance of the `HTMLTemplateElement` interface is created (or this property on it).
 - If an `HTMLTemplateElement` is created, the value of this property is irrelevant because the object is not a shadow root and cannot subsequently be changed to a shadow root.
 
 ## Value
