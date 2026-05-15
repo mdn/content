@@ -168,10 +168,10 @@ currentscreenchange
 cwrap
 daala
 dangi
+demuxer
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
-demuxer
 diak
 dialogtext
 diffe
