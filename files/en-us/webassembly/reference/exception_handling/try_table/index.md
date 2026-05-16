@@ -111,7 +111,7 @@ Each `catch` clause that branches to an outer `block` must produce values matchi
 
 | Instruction | Binary format                                                            |
 | ----------- | ------------------------------------------------------------------------ |
-| `try_table` | `0x1f bt:blocktype n:u32 (ct:catchtype tl:labelidx)^n instruction* 0x0b` |
+| `try_table` | `0x1f bt:blocktype n:u32 (ct:catch)^n instruction* 0x0b` |
 
 A basic `try_table` with a single `catch` clause:
 
