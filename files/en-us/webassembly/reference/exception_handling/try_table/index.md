@@ -92,7 +92,7 @@ try_table catch* instruction*
 
 ## Description
 
-A `table_ref` instruction, when combined with `catch` instruction types, creates the Wasm equivalent of a JavaScript [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. The instructions inside the `try_table` block are run, and if an exception is thrown that is caught by the available `catch` instructions, the code branches to the specified outer [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), and the values produced by the `catch` instruction are pushed onto the stack.
+A `try_table` instruction, when combined with `catch` instruction types, creates the Wasm equivalent of a JavaScript [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. The instructions inside the `try_table` block are run, and if an exception is thrown that is caught by the available `catch` instructions, the code branches to the specified outer [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), and the values produced by the `catch` instruction are pushed onto the stack.
 
 The different `catch` instructions behave as follows:
 
