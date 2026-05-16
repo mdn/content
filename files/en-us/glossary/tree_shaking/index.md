@@ -13,5 +13,5 @@ In modern JavaScript applications, we use module bundlers (e.g., [webpack](https
 
 ## See also
 
-- ["Benefits of dead code elimination during bundling"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
+- ["Benefits of dead code elimination during bundling"](https://web.archive.org/web/20260514074407/https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
 - [Tree shaking implementation with webpack](https://webpack.js.org/guides/tree-shaking/)
