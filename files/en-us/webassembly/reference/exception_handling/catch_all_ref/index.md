@@ -20,7 +20,7 @@ The **`catch_all_ref`** [exception handling](/en-US/docs/WebAssembly/Reference/E
   (func $try_and_catch (param $value i32)
     ;; Define a variable to store an exnref
     (local $err exnref)
-    ;; catch_all catches any exception thrown and pushes an exnref
+    ;; catch_all_ref catches any exception thrown and pushes an exnref
     (block $handler (result exnref)
       (try_table (catch_all_ref $handler)
         (call $might_throw (local.get $value))
