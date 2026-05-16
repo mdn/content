@@ -84,20 +84,6 @@ catch_all block_identifier
 [] -> []
 ```
 
-## Description
-
-The `catch_all` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`.
-
-`catch_all` is useful when you don't need to rethrow an exception, and you don't want to catch a specific exception, but you do want to report that an exception of some kind has been thrown.
-
-In the case of `catch_all`, the referenced block doesn't need to declare a result type that matches the exception's payload, because no result is pushed to the stack. In the example shown earlier, the `block` has no result type declared:
-
-```wat
-(block $handler
-  ...
-)
-```
-
 ### Binary encoding
 
 | Instruction | catch_all type byte |
@@ -116,12 +102,26 @@ would be encoded like this:
 ... 0x01 0x02 0x00 ...
 ```
 
+## Description
+
+The `catch_all` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`.
+
+`catch_all` is useful when you don't need to rethrow an exception, and you don't want to catch a specific exception, but you do want to report that an exception of some kind has been thrown.
+
+In the case of `catch_all`, the referenced block doesn't need to declare a result type that matches the exception's payload, because no result is pushed to the stack. In the example shown earlier, the `block` has no result type declared:
+
+```wat
+(block $handler
+  ...
+)
+```
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
+- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
 - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type

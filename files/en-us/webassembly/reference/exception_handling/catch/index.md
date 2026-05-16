@@ -93,6 +93,24 @@ catch tag_identifier block_identifier
 
 These values are not pushed onto the stack directly at the site of the `catch` instruction, rather they are pushed onto the stack at the site of the block branched to when the exception is thrown.
 
+### Binary encoding
+
+| Instruction | Catch type byte |
+| ----------- | --------------- |
+| `catch`     | `0x00`          |
+
+`catch` is not a standalone instruction — instead, it is encoded as a clause within a `try_table` instruction with a byte of `0x00`. A `try_table` with a single `catch` clause:
+
+```wat
+(try_table (catch $my_error $handler) ... )
+```
+
+would be encoded like this:
+
+```plain
+... 0x01 0x00 0x00 0x00 ...
+```
+
 ## Description
 
 The `catch` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch exceptions with a specific error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag). When such an exception is thrown, the code branches to the specified `block`, at which point the exception's payload values are pushed to the stack.
@@ -111,24 +129,6 @@ When the exception is caught, the block branched to specifies the same data type
 (block $handler (result i32)
   ...
 )
-```
-
-### Binary encoding
-
-| Instruction | Catch type byte |
-| ----------- | --------------- |
-| `catch`     | `0x00`          |
-
-`catch` is not a standalone instruction — instead, it is encoded as a clause within a `try_table` instruction with a byte of `0x00`. A `try_table` with a single `catch` clause:
-
-```wat
-(try_table (catch $my_error $handler) ... )
-```
-
-would be encoded like this:
-
-```plain
-... 0x01 0x00 0x00 0x00 ...
 ```
 
 ## See also

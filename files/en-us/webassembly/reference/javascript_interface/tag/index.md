@@ -120,7 +120,7 @@ The WebAssembly module might then import the tag as shown below:
 
 ```wat
 (module
-  (import "extmod" "exttag" (tag $tagname (param i32 f32))
+  (import "extmod" "exttag" (tag $tagname (param i32 f32)))
 )
 ```
 

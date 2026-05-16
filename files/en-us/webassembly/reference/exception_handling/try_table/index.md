@@ -67,11 +67,13 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { env }).then(
 ## Syntax
 
 ```plain
-try_table catch* instruction*
+try_table blocktype catch* instruction*
 ```
 
 - `try_table`
   - : The `try_table` instruction.
+- `blocktype` {{optional_inline}}
+  - : Specifies one or more parameters that will be passed into the `try_table` block and provided as a result value after the block has run.
 - `catch*`
   - : One or more `catch` clauses, each representing criteria for catching exceptions, and specifying a [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block) to branch to as a result. Each clause can be one of the following instructions:
     - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
@@ -84,28 +86,13 @@ try_table catch* instruction*
 ### Type
 
 ```plain
-[] -> [result*]
+[param*] -> [result*]
 ```
 
+- `param*`
+  - : Zero or more param values consumed by the `try_table` block, as declared by the `blocktype`.
 - `result*`
-  - : Zero or more result values produced by the `try_table` block, as declared in the corresponding `block` instruction.
-
-## Description
-
-A `try_table` instruction, when combined with `catch` instruction types, creates the Wasm equivalent of a JavaScript [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. The instructions inside the `try_table` block are run, and if an exception is thrown that is caught by the available `catch` instructions, the code branches to the specified outer [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), and the values produced by the `catch` instruction are pushed onto the stack.
-
-The different `catch` instructions behave as follows:
-
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
-  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values onto the stack.
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all)
-  - : If any exception is thrown, branch to the specified `block`, pushing nothing onto the stack.
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref)
-  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref)
-  - : If any exception is thrown, branch to the specified `block`, pushing an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
-
-Each `catch` clause that branches to an outer `block` must produce values matching that `block`'s result type when a thrown exception is caught.
+  - : Zero or more result values produced by the `try_table` block, as declared by the `blocktype`.
 
 ### Binary encoding
 
@@ -126,6 +113,52 @@ Would be encoded like so:
 ```plain
 0x1f 0x40 0x01 0x00 0x00 0x00 ...instructions binary... 0x0b
 ```
+
+## Description
+
+A `try_table` instruction, when combined with `catch` instruction types, creates the Wasm equivalent of a JavaScript [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. The instructions inside the `try_table` block are run, and if an exception is thrown that is caught by the available `catch` instructions, the code branches to the specified outer [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block), and the values produced by the `catch` instruction are pushed onto the stack.
+
+The different `catch` instructions behave as follows:
+
+- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
+  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values onto the stack.
+- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all)
+  - : If any exception is thrown, branch to the specified `block`, pushing nothing onto the stack.
+- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref)
+  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
+- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref)
+  - : If any exception is thrown, branch to the specified `block`, pushing an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
+
+Each `catch` clause that branches to an outer `block` must produce values matching that `block`'s result type when a thrown exception is caught.
+
+### Blocktype parameters
+
+The optional blocktype parameters will be passed into the `try_table` block and provided as a result value after the block has run. The value can be specified before the `try_table` block, or inside. For example:
+
+```wat
+;; Push an i32
+i32.const 42
+
+;; pops an i32 as the param
+try_table (param i32)
+  ;; The single i32 const 42 is still on the stack
+end
+```
+
+Or:
+
+```wat
+try_table (result i32)
+  ;; Push an i32
+  i32.const 42
+
+  ;; The end of the block pops the results
+end
+
+;; The result i32 is now available to be used here
+```
+
+Or you can use any combination of these structures.
 
 ## Examples
 

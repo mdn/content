@@ -18,5 +18,13 @@ This section documents the different WebAssembly types.
 
 ## Value types
 
+- `i32`
+  - : A 32-bit integer.
+- `i64`
+  - : A 64-bit integer ({{glossary("BigInt")}}).
+- `f32`
+  - : A 32-bit floating-point number.
+- `f64`
+  - : A 64-bit floating-point number (BigInt).
 - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
   - : A vector type representing a 128-bit vector of packed integer or floating-point data. A `v128` value can be interpreted in several different ways by [SIMD instructions](/en-US/docs/WebAssembly/Reference/SIMD).

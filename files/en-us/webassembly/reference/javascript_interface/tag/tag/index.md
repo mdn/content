@@ -19,15 +19,7 @@ new WebAssembly.Tag(type)
 - `type`
   - : An object that can contain the following members:
     - `parameters`
-      - : An array of [value types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#types) representing the exception type's parameters and their types. The possible types are:
-        - `i32`
-        - `i64`
-        - `f32`
-        - `f64`
-        - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
-        - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
-        - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
-        - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref)
+      - : An array of strings representing the exception type's parameters and their types. The strings can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Types).
 
 ### Exceptions
 

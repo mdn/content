@@ -96,22 +96,6 @@ catch_all_ref block_identifier
 
 This value is not pushed onto the stack directly at the site of the `catch_all_ref` instruction, rather it is pushed onto the stack at the site of the block branched to when the exception is thrown.
 
-## Description
-
-The `catch_all_ref` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception is pushed to the stack.
-
-The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
-
-`catch_all_ref` is useful when you want to report that some kind of exception has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that an error ocurred.
-
-The referenced block must declare a result type that matches the pushed `exnref`. In the example shown earlier, the block branched to when the exception is caught specifies an `exnref` type in its `result`:
-
-```wat
-(block $handler (result exnref)
-  ...
-)
-```
-
 ### Binary encoding
 
 | Instruction     | catch_all_ref type byte |
@@ -128,6 +112,22 @@ would be encoded like this:
 
 ```plain
 ... 0x01 0x03 0x00 ...
+```
+
+## Description
+
+The `catch_all_ref` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception is pushed to the stack.
+
+The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
+
+`catch_all_ref` is useful when you want to report that some kind of exception has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that an error ocurred.
+
+The referenced block must declare a result type that matches the pushed `exnref`. In the example shown earlier, the block branched to when the exception is caught specifies an `exnref` type in its `result`:
+
+```wat
+(block $handler (result exnref)
+  ...
+)
 ```
 
 ## See also

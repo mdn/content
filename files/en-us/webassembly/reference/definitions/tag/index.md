@@ -82,15 +82,7 @@ tag identifier parameters
 - `parameters`
   - : One or more values specifying the exception type's parameters and their types. Each one consists of:
     - The keyword `param`
-    - The type of the parameter. Possible types are:
-      - `i32`
-      - `i64`
-      - `f32`
-      - `f64`
-      - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
-      - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
-      - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
-      - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref)
+    - The type of the parameter. This can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Types).
 
 ## Description
 
