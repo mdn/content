@@ -19,7 +19,7 @@ new WebAssembly.Tag(type)
 - `type`
   - : An object that can contain the following members:
     - `parameters`
-      - : An array of [data types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#types) representing the exception type's parameters and their types. The possible types are:
+      - : An array of [value types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#types) representing the exception type's parameters and their types. The possible types are:
         - `i32`
         - `i64`
         - `f32`
