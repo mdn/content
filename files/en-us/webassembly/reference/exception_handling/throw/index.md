@@ -89,8 +89,8 @@ See the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition re
 
 ### Binary encoding
 
-| Instruction | Binary format   | Example text => binary                            |
-| ----------- | --------------- | ------------------------------------------------- |
+| Instruction | Binary format   | Example text => binary                                 |
+| ----------- | --------------- | ------------------------------------------------------ |
 | `throw`     | `0x08 x:tagidx` | `(throw $tag (i32.const 42))` => `0x41 0x2a 0x08 0x00` |
 
 ## See also
