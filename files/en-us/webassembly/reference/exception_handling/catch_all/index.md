@@ -51,7 +51,7 @@ The **`catch_all`** [exception handling](/en-US/docs/WebAssembly/Reference/Excep
 // Define error tag in JS
 const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
 
-// Import the tag ad the log function into the module
+// Import the tag and the log function into the module
 const env = {
   my_error: myErrorTag,
   log: () => {
