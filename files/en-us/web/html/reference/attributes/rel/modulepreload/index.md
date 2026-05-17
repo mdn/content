@@ -22,7 +22,7 @@ If `crossorigin` is set to [`anonymous`](/en-US/docs/Web/HTML/Reference/Attribut
 If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
 
 The [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
-It can be set to `"script"`, `"style"`, `"json"`, or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`.
+Other possible values are governed by [Links spec](https://html.spec.whatwg.org/multipage/links.html#module-preload-destination). For list of script-like destinations refer [Fetch spec](https://fetch.spec.whatwg.org/#request-destination-script-like).
 An [`Event`](/en-US/docs/Web/API/Event/Event) named "error" is fired on the element if any other destination is used.
 
 A browser _may_ additionally also choose to automatically fetch any dependencies of the module resource.
