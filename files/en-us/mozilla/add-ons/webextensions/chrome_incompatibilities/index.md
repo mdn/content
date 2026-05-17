@@ -13,7 +13,7 @@ However, there are significant differences between Chrome (and Chromium-based br
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) on the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
 - Extension API namespace:
   - **In Firefox and Safari:** Extension APIs are accessed under the `browser` namespace. The `chrome` namespace is also supported for compatibility with Chrome.
-  - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. Starting with Chrome 148, the `browser` namespace is also supported, except for extensions with a DevTools page. See [Chrome browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+  - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. Starting with Chrome 148, the `browser` namespace is also supported, except for extensions with a DevTools page. See [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
 - Asynchronous APIs:
   - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
@@ -31,7 +31,7 @@ The rest of this page details these and other incompatibilities.
   browser.browserAction.setIcon({ path: "path/to/icon.png" });
   ```
 
-- **In Chrome:** The APIs are accessed using the `chrome` namespace. Starting with Chrome 148, the `browser` namespace is also supported, except for extensions with a DevTools page. See [Chrome browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+- **In Chrome:** The APIs are accessed using the `chrome` namespace. Starting with Chrome 148, the `browser` namespace is also supported, except for extensions with a DevTools page. See [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
   ```js
   chrome.browserAction.setIcon({ path: "path/to/icon.png" });
@@ -75,7 +75,7 @@ The rest of this page details these and other incompatibilities.
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
 
 > [!NOTE]
-> The `browser` namespace is supported by Firefox and Safari. Starting with Chrome 148, the `browser` namespace is also supported in Chrome, except for extensions with a DevTools page. See [Chrome browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+> The `browser` namespace is supported by Firefox and Safari. Starting with Chrome 148, the `browser` namespace is also supported in Chrome, except for extensions with a DevTools page. See [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
 If you choose to write your extension to use `browser` and promises, Firefox provides a polyfill that should enable it to run in older versions of Chrome: <https://github.com/mozilla/webextension-polyfill>. For more information, see [Build a cross-browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension).
 

@@ -56,7 +56,7 @@ Firefox also supports callbacks for the APIs that support the `chrome.*` namespa
 #### The WebExtension browser API Polyfill
 
 > [!NOTE]
-> With Chrome providing supports the `browser.*` namespace from Chrome 148, the polyfill is unnecessary for most extensions. The except is for extensions with a DevTools page. See [Chrome browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+> With Chrome providing supports the `browser.*` namespace from Chrome 148, the polyfill is unnecessary for most extensions. The except is for extensions with a DevTools page. See [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
 So, how do you take advantage of promises easily? The solution is to code for Firefox using promises and use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/) to address Chrome, Opera, and Edge.
 
