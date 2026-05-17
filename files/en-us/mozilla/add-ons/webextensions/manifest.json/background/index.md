@@ -207,7 +207,7 @@ And, background.js contains:
 
 ```js
 if (typeof browser === "undefined") {
-  // Chrome does not support the browser namespace yet.
+  // Chrome supports the browser namespace from Chrome 148, except for extensions with a DevTools page.
   globalThis.browser = chrome;
 }
 browser.runtime.onInstalled.addListener(() => {
