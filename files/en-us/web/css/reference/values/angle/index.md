@@ -47,7 +47,8 @@ transform: rotate(1.75turn);
 
 ## Syntax
 
-The `<angle>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number. Some legacy uses of `<angle>` allow a unitless zero angle, but this is not generally true. To represent a zero angle, include a unit such as `0deg`, `0grad`, `0rad`, or `0turn`.
+The `<angle>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number.
+While some legacy uses accept a unitless `0`, you should always include a unit for zero values, such as: `0deg`, `0grad`, `0rad`, or `0turn`.
 
 Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers represent clockwise angles, while negative numbers represent counterclockwise angles. For static properties of a given unit, any angle can be represented by various equivalent values. For example, `90deg` equals `-270deg`, and `1turn` equals `4turn`. For dynamic properties, like when applying an {{cssxref("animation")}} or {{cssxref("transition")}}, the effect will nevertheless be different.
 
