@@ -25,9 +25,11 @@ copyTo(destination, options)
     - `planeIndex`
       - : The index of the plane to copy from.
     - `frameOffset` {{optional_inline}}
-      - : An integer giving an offset into the plane data indicating which plane to begin copying from. Defaults to `0`.
+      - : An integer giving the number of frames to skip before reading output. Defaults to `0`.
     - `frameCount` {{optional_inline}}
-      - : An integer giving the number of frames to copy. If omitted then all frames in the plane will be copied, beginning with the frame specified in `frameOffset`.
+      - : An integer giving the number of frames to copy. If omitted, all frames from `frameOffset` to the end of the plane are copied.
+    - `format` {{optional_inline}}
+      - : An {{domxref("AudioData.format", "AudioSampleFormat")}} to convert the samples to when writing them to `destination`. If omitted, the samples are copied in the `AudioData`'s own format. If `format` differs from the `AudioData`'s format, format conversion occurs during the copy.
 
 ### Return value
 
