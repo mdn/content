@@ -34,12 +34,18 @@ If there is no matching cache or preloaded response, the code fetches the respon
 addEventListener("fetch", (event) => {
   event.respondWith(
     (async () => {
+      const preloadResponsePromise = Promise.resolve(event.preloadResponse);
+
       // Respond from the cache if we can
       const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) return cachedResponse;
+      if (cachedResponse) {
+        // Keep the navigation preload request alive even if we do not use its response.
+        event.waitUntil(preloadResponsePromise.catch(() => undefined));
+        return cachedResponse;
+      }
 
       // Else, use the preloaded response, if it's there
-      const response = await event.preloadResponse;
+      const response = await preloadResponsePromise;
       if (response) return response;
 
       // Else try the network.
