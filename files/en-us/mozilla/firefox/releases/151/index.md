@@ -1,22 +1,15 @@
 ---
-title: Firefox 151 release notes for developers (Beta)
-short-title: Firefox 151 (Beta)
+title: Firefox 151 release notes for developers (Stable)
+short-title: Firefox 151 (Stable)
 slug: Mozilla/Firefox/Releases/151
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 151 that affect developers.
-Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 151 was released on [May 19, 2026](https://whattrainisitnow.com/release/?version=151).
 
 ## Changes for web developers
-
-<!-- ### Developer Tools -->
 
 ### HTML
 
@@ -24,39 +17,15 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   The attribute is reflected in JavaScript by {{domxref("ShadowRoot.slotAssignment")}} or {{domxref("HTMLTemplateElement.shadowRootSlotAssignment")}}
   ([Firefox bug 2031295](https://bugzil.la/2031295), [Firefox bug 2023824](https://bugzil.la/2023824)).
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 ### CSS
 
 - The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2016929](https://bugzil.la/2016929), ([Firefox bug 2019254](https://bugzil.la/2019254)), ([Firefox bug 2024601](https://bugzil.la/2024601)), [Firefox bug 2030645](https://bugzil.la/2030645)).
 
 - The {{cssxref("position-anchor")}} CSS property now supports the `normal` (default) value. This allows the matching of the {{cssxref("position-area")}} property, so if the `position-area` property updates the `position-anchor` property will also. ([Firefox bug 2030351](https://bugzil.la/2030351)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -83,16 +52,6 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This lets you, for example, program microcontrollers and development boards, such as ESP devices, BBCmicro:bit, and Raspberry Pi Picos, 3D printers and CNC machines, and other supported devices.
   Use of the API will require that website users install a [synthetically generated site permission add-on](https://support.mozilla.org/en-US/kb/site-permission-add-ons) — this is the same approach used to safely manage access to WebMIDI.
   ([Firefox bug 2029625](https://bugzil.la/2029625)).
-
-<!-- #### DOM -->
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -121,10 +80,6 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{WebExtAPIRef("webRequest.onErrorOccurred")}} event now falls back to `NS_ERROR_NET_ON_RECEIVING_FROM` instead of a string starting with `NS_ERROR_NET_ON_` or `NS_ERROR_NET_UNKNOWN_`. This change is part of performance and reliability improvements to the `onErrorOccurred` event. ([Firefox bug 1881986](https://bugzil.la/1881986))
 - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} now correctly add and remove a split view when a call includes one of the split view's tabs. Previously, a call would fail or separate the split view. ([Firefox bug 2029099](https://bugzil.la/2029099))
 - {{WebExtAPIRef("tabs.move()")}} now correctly moves a split view to the right when a call includes one of the split view's tabs. Previously, a call moved a split view only to the left or to the end of the tab list. ([Firefox bug 2027855](https://bugzil.la/2027855))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 

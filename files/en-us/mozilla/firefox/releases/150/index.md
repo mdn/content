@@ -1,8 +1,8 @@
 ---
-title: Firefox 150 release notes for developers (Stable)
-short-title: Firefox 150 (Stable)
+title: Firefox 150 release notes for developers
+short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
