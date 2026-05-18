@@ -106,6 +106,7 @@ The JavaScript debugger allows you to watch the value of variables and set break
 To get to the debugger:
 
 **Firefox**: Open the Developer tools and select the **Debugger** tab.
+
 **Other browsers**: Open the Developer tools and select the **Sources** tab.
 
 ### Exploring the debugger
