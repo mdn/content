@@ -3,10 +3,12 @@ title: "CrashReportContext: delete() method"
 short-title: delete()
 slug: Web/API/CrashReportContext/delete
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CrashReportContext.delete
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("CrashReportContext")}} interface deletes a previously-stored key-value pair.
 
@@ -41,7 +43,7 @@ window.crashReport.initialize(1024).then(() => {
   // Set a possible crash-causing value, and try
   // running an operation that may cause a crash
   window.crashReport.set("crash-arg", "00031");
-  operationThatMightCrash(00031);
+  operationThatMightCrash("00031");
   // Delete the key-value pair if it doesn't cause a crash
   window.crashReport.delete("crash-arg");
 });

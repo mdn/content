@@ -5,10 +5,11 @@ slug: Web/API/SharedStorage/delete
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.SharedStorage.delete
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`delete()`** method of the {{domxref("SharedStorage")}} interface deletes an existing key-value pair from the current origin's shared storage.
 

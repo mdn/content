@@ -21,7 +21,7 @@ Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/releas
 
 - The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
   This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
-  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  This is simpler than specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
   ([Firefox bug 1819581](https://bugzil.la/1819581)).
 
 ### CSS
@@ -32,8 +32,6 @@ Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/releas
   ([Firefox bug 2023569](https://bugzil.la/2023569)).
 
 - The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} are now supported. They allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 2020775](https://bugzil.la/2020775)).
-
-- The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties (and the {{cssxref("animation-range")}} shorthand property) are now supported. These properties set the start and end of an animation's attachment range along its timeline, allowing you to control where along a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) timeline an animation will start and end. ([Firefox bug 1825427](https://bugzil.la/1825427)).
 
 - The {{cssxref("revert-rule")}} CSS keyword is now supported. It allows a property's value to be determined as if the current style rule had not been present, so that the value from another matching rule can take effect instead. ([Firefox bug 2017307](https://bugzil.la/2017307)).
 
@@ -61,6 +59,15 @@ No notable changes.
 - The `ariaNotify()` method is now supported on {{domxref("Document/ariaNotify","Document")}} and {{domxref("Element/ariaNotify","Element")}}.
   This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
+
+#### Media, WebRTC, and Web Audio
+
+- {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now supported, allowing reporting of SDP parse errors.
+  ([Firefox bug 1814459](https://bugzil.la/1814459)).
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported.
+  ([Firefox bug 1561441](https://bugzil.la/1561441)).
+- {{domxref("RTCIceTransport.role")}} is now supported.
+  ([Firefox bug 2018843](https://bugzil.la/2018843)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

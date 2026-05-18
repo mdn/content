@@ -3,10 +3,12 @@ title: "CrashReportContext: set() method"
 short-title: set()
 slug: Web/API/CrashReportContext/set
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CrashReportContext.set
 ---
 
-{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CrashReportContext")}} interface stores a key-value pair in the memory initialized by {{domxref("CrashReportContext.initialize", "initialize()")}}.
 
@@ -45,7 +47,7 @@ window.crashReport.initialize(1024).then(() => {
   // Set a possible crash-causing value, and try
   // running an operation that may cause a crash
   window.crashReport.set("crash-arg", "00031");
-  operationThatMightCrash(00031);
+  operationThatMightCrash("00031");
   // Delete the key-value pair if it doesn't cause a crash
   window.crashReport.delete("crash-arg");
 });

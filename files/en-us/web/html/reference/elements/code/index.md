@@ -1,5 +1,6 @@
 ---
-title: "<code>: The Inline Code element"
+title: "`<code>` HTML inline code element"
+short-title: <code>
 slug: Web/HTML/Reference/Elements/code
 page-type: html-element
 browser-compat: html.elements.code

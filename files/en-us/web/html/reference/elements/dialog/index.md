@@ -1,5 +1,6 @@
 ---
-title: "<dialog>: The Dialog element"
+title: "`<dialog>` HTML dialog element"
+short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 page-type: html-element
 browser-compat: html.elements.dialog

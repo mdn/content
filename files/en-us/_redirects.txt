@@ -3605,6 +3605,7 @@
 /en-US/docs/Glossary/Simple_response_header	/en-US/docs/Glossary/CORS-safelisted_response_header
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/Property/JavaScript
+/en-US/docs/Glossary/Stylesheet	/en-US/docs/Glossary/Style_sheet
 /en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
 /en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
@@ -16923,6 +16924,7 @@
 /en-US/docs/WebAssembly/Reference/Variables/Local_get	/en-US/docs/WebAssembly/Reference/Variables/local.get
 /en-US/docs/WebAssembly/Reference/Variables/Local_set	/en-US/docs/WebAssembly/Reference/Variables/local.set
 /en-US/docs/WebAssembly/Reference/Variables/Local_tee	/en-US/docs/WebAssembly/Reference/Variables/local.tee
+/en-US/docs/WebAssembly/Reference/Variables/global	/en-US/docs/WebAssembly/Reference/Definitions/global
 /en-US/docs/WebAssembly/Rust_to_Wasm	/en-US/docs/WebAssembly/Guides/Rust_to_Wasm
 /en-US/docs/WebAssembly/Text_format_to_Wasm	/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm
 /en-US/docs/WebAssembly/Understanding_the_text_format	/en-US/docs/WebAssembly/Guides/Understanding_the_text_format

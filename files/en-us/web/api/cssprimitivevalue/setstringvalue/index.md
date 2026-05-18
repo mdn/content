@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/setStringValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`setStringValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the

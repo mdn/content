@@ -13,6 +13,8 @@ sidebar: cssref
 
 The **`caret-shape`** [CSS](/en-US/docs/Web/CSS) property sets the shape of the **insertion caret**, the visible marker that appears in editable elements to indicate where the next character will be inserted or deleted.
 
+The `caret-shape` property can also be set as part of the {{cssxref("caret")}} shorthand property.
+
 {{InteractiveExample("CSS Demo: caret-shape")}}
 
 ```css interactive-example-choice

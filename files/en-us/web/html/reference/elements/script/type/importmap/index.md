@@ -1,5 +1,5 @@
 ---
-title: <script type="importmap">
+title: '`<script type="importmap">` HTML attribute value'
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 page-type: html-attribute-value

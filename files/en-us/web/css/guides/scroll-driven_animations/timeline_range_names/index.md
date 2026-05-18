@@ -162,11 +162,16 @@ body::before {
 
 @layer no-support {
   @supports not (animation-timeline: view()) {
-    body::before {
+    body::after {
       content: "Your browser doesn't support view progress scrolling.";
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
+
+      position: absolute;
+      inset: 0;
+      bottom: auto;
     }
   }
 }
