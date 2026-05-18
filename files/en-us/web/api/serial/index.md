@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Serial
 ---
 
-{{securecontext_header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) provides attributes and methods for finding and connecting to serial ports from a web page.
 
@@ -14,11 +14,11 @@ The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_AP
 ## Instance methods
 
 - {{domxref("Serial.requestPort()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user. This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
+  - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user.
+    This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
 
 - {{domxref("Serial.getPorts()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
-    the host which the origin has permission to access.
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
 
 ## Events
 
@@ -31,11 +31,15 @@ The following events are available to `Serial` via event bubbling from {{domxref
 
 ## Examples
 
+### Basic usage
+
 The following example shows how a site can check for available ports and allow the user to grant it permission to access additional ports.
 
 On load event listeners are added for the {{domxref("SerialPort.connect_event", "connect")}} and {{domxref("SerialPort.disconnect_event", "disconnect")}} events so that the site can react when a device is connected or disconnected from the system. The {{domxref("Serial.getPorts()","getPorts()")}} method is then called to see which ports are connected that the site already has access to.
 
-If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
+If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed.
+In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task.
+A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
 ```js
 navigator.serial.addEventListener("connect", (e) => {
