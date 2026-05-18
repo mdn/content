@@ -144,3 +144,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`<timeline-range-name>` values**: `layout.css.scroll-driven-animations.enabled`
 
   The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
+
+- **GeometryUtils methods: `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()`**: `layout.css.convertFromNode.enabled`
+
+  The GeometryUtils methods: `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` are no longer enabled by default in Firefox Nightly. ([Firefox bug 2026051](https://bugzil.la/2026051)).
+
+- **GeometryUtils methods: `getBoxQuads()`**: `layout.css.getBoxQuads.enabled`
+
+  The GeometryUtils methods: `getBoxQuads()` is no longer enabled by default in Firefox Nightly. ([Firefox bug 2026051](https://bugzil.la/2026051)).
