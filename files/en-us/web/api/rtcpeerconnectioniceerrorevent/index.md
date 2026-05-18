@@ -32,7 +32,7 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
   - : A string containing the STUN reason text returned by the STUN or TURN server, or a browser-specific string explaining why communication with the server could not be established.
 - {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}
-  - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in [`address`](#address).
+  - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in [`address`](/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent/address).
     This is `null` if the connection hasn't been established (that is, if `address` is `null`).
 - {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
   - : A string indicating the URL of the STUN or TURN server with which the error occurred.

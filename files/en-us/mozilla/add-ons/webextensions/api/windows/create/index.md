@@ -116,7 +116,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let popupURL = browser.extension.getURL("popup/popup.html");
+  let popupURL = browser.runtime.getURL("popup/popup.html");
 
   let creating = browser.windows.create({
     url: popupURL,

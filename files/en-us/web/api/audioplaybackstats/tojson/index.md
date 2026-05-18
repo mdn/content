@@ -3,10 +3,12 @@ title: "AudioPlaybackStats: toJSON() method"
 short-title: toJSON()
 slug: Web/API/AudioPlaybackStats/toJSON
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioPlaybackStats.toJSON
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("AudioPlaybackStats")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("AudioPlaybackStats")}} object.
 

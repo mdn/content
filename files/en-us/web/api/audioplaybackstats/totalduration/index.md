@@ -3,10 +3,12 @@ title: "AudioPlaybackStats: totalDuration property"
 short-title: totalDuration
 slug: Web/API/AudioPlaybackStats/totalDuration
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioPlaybackStats.totalDuration
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`totalDuration`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the total duration of all audio frames since the audio context was initialized.
 
