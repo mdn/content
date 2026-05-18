@@ -7,7 +7,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{DefaultAPISidebar("Prompt API")}}{{SecureContext_Header}}
 
-The **Prompt API** allows web pages to directly prompt a language model provided by the user agent model through a uniform JavaScript interface, without needing to manage implementation-specific details of the AI model being used. The API does not provide a way to specify a model other than the one provided by the user agent.
+The **Prompt API** allows web pages to directly prompt a language model provided by the user agent through a uniform JavaScript interface, without needing to manage implementation-specific details of the AI model being used. The API does not provide a way to specify a model other than the one provided by the user agent.
 
 ## Concepts and usage
 

@@ -78,7 +78,7 @@ A {{jsxref("Promise")}} that resolves with one of the values listed below. If yo
 - `"downloading"`
   - : The model can support the given options and a download is currently in progress.
 - `"unavailable"`
-  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In which case, the caller should retry or fall back to an alternative implementation.
+  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In that case, the caller should retry or fall back to an alternative implementation.
 
 ## Examples
 
@@ -115,7 +115,7 @@ const status = await LanguageModel.availability({
 
 ### Checking availability for a specific language
 
-The following example tests whether the model suports English before asking it to translate Japanese text to English.
+The following example tests whether the model supports English before asking it to translate Japanese text to English.
 
 ```js
 const status = await LanguageModel.availability({

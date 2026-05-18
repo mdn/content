@@ -18,8 +18,6 @@ The value is implementation-specific and varies depending on the model, device c
 
 An unrestricted double representing the session's context window capacity in tokens. This value may be `Infinity` if the user agent does not impose a specific limit beyond available memory or JavaScript string constraints.
 
-## Description
-
 ## Examples
 
 ### Displaying context window information

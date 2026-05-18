@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`append()`** method of the {{domxref("LanguageModel")}} interface adds content to the session's context window without generating a model response. It returns a {{jsxref("Promise")}} that resolves when the content has been successfully loaded into context. Use this method to preload a context before asking the model a question.
 
-A context may be a document, conversation, history or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` to set the context. You can call the `append()` method at any point during the session's lifetime.
+A context may be a document, conversation, history, or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` to set the context. You can call the `append()` method at any point during the session's lifetime.
 
 ## Syntax
 
@@ -104,7 +104,7 @@ console.log(result); // "Bonjour matin" or "Bonjour"
 
 ### Appending context with an abort signal
 
-An abort signal lets you cancel an append message. The example below passes an {{domxref("AbortSignal")}} to the `signal` member and calls its `abort()` method after 3 seconds.
+An abort signal lets you cancel an append operation. The example below passes an {{domxref("AbortSignal")}} to the `signal` member and calls its `abort()` method after 3 seconds.
 
 ```js
 const controller = new AbortController();

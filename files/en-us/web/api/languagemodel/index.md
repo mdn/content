@@ -49,7 +49,7 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
 
 ### Creating a session and prompting the model
 
-This example first calls {{domxref("LanguageModel.create()", "create()"}} to get a new session. It specifies that the language model adopt a `"system"` role and defines how it should behave. Note that the example uses `await` because `create()` returns a {{jsxref("Promise")}}. This may take some tiem to resolve if the model needs to be downloaded.
+This example first calls {{domxref("LanguageModel.create_static", "create()")}} to get a new session. It specifies that the language model adopt a `"system"` role and defines how it should behave. Note that the example uses `await` because `create()` returns a {{jsxref("Promise")}}. This may take some time to resolve if the model needs to be downloaded.
 
 After creating the session, the example calls {{domxref("LanguageModel.prompt()", "prompt()")}} to ask a specific question.
 
@@ -69,7 +69,7 @@ console.log(response); // "The capital of France is Paris."
 
 ### Streaming a response
 
-This example calls {{domxref("LanguageModel.promptStreaming()", "promptStreaming()"}} to get an instance if {{domxref("ReadableStream")}} and writes it to the console in chunks.
+This example calls {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}} to get an instance of {{domxref("ReadableStream")}} and writes it to the console in chunks.
 
 ```js
 const session = await LanguageModel.create();

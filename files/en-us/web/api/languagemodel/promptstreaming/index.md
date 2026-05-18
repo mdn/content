@@ -28,15 +28,15 @@ promptStreaming(input, options)
       - `role`
         - : A string indicating who sent the message. Must be one of:
           - `"system"`
-            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, and {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
           - `"user"`
-            - : message from the user.
+            - : A message from the user.
           - `"assistant"`
             - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
 - `options` {{optional_inline}}
   - : Options for streaming a prompt. Options include:
     - `responseConstraint`
-      - : An implementation-defined object that contrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An implementation-defined object that constrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`
@@ -58,7 +58,7 @@ Errors are surfaced as stream errors rather than as rejected promises. Consumers
     - The input or output text is in a language the user agent doesn't support for prompting.
     - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if promptstreaming fails for any other reason not listed in the other exception types.
+  - : Thrown if `promptStreaming()` fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
 

@@ -32,11 +32,11 @@ prompt(input, options)
 - `options` {{optional_inline}}
   - : Options for creating a prompt. Options include:
     - `responseConstraint`
-      - : An implementation-defined object that contrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An implementation-defined object that constrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`
-      - : An {{domxref("AbortSignal")}} that can be used cancel the operation.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation.
 
 ### Return value
 

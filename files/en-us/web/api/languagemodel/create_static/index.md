@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, automatically downloading the model if it is not already available.
 
-You can you can monitor progress of a model download using the `monitor` option.
+You can monitor progress of a model download using the `monitor` option.
 
 Before calling `create()`, use {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
 
@@ -64,7 +64,7 @@ LanguageModel.create(options)
         - `role`
           - : A string indicating who sent the message. Must be one of:
             - `"system"`
-              - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+              - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, and {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
             - `"user"`
               - : A message from the user.
             - `"assistant"`
@@ -114,7 +114,7 @@ console.log(answer); // "4"
 
 ### Creating a session with a system prompt
 
-The following example provides the AI with instructions on the personal to adopt before generating an answer.
+The following example provides the AI with instructions on the persona to adopt before generating an answer.
 
 ```js
 const session = await LanguageModel.create({

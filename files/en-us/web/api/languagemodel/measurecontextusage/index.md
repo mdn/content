@@ -10,7 +10,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 The **`measureContextUsage()`** method of the {{domxref("LanguageModel")}} interface estimates how many context window tokens the given input would consume without sending it to the model or modifying the session's state.
 
-This allows you check how much of the context window a given input requires before deciding whether to send it. The result can be compared the result of {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input can fit in the windo limit.
+This allows you to check how much of the context window a given input requires before deciding whether to send it. The result can be compared against {{domxref("LanguageModel.contextWindow")}} and {{domxref("LanguageModel.contextUsage")}} to determine whether the input can fit in the window limit.
 
 This is particularly useful for long-context applications such as document summarization, where you need to split or truncate content to stay within the context window limit.
 
@@ -30,7 +30,7 @@ measureContextUsage(input, options)
       - `role`
         - : A string indicating who sent the message. Must be one of:
           - `"system"`
-            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, and {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
           - `"user"`
             - : A message from the user.
           - `"assistant"`
@@ -60,7 +60,7 @@ measureContextUsage(input, options)
 - `options` {{optional_inline}}
   - : Options for measuring context usage. Options include:
     - `responseConstraint`
-      - : An implementation-defined object that contrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An implementation-defined object that constrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
       - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
     - `signal`

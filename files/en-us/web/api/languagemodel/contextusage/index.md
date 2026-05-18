@@ -24,7 +24,7 @@ A number representing the current context window usage in tokens.
 
 ### Monitoring context usage during a conversation
 
-This example write context usage to the console after a session prompt completes.
+This example writes context usage to the console after a session prompt completes.
 
 ```js
 const session = await LanguageModel.create();
