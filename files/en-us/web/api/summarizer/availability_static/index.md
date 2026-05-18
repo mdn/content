@@ -49,7 +49,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it needs to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration or the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
+  - : The browser does not support the given configuration, or the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 

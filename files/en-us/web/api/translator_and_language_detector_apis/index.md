@@ -43,9 +43,11 @@ See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Transl
 ## HTTP headers
 
 - {{httpheader("Permissions-Policy")}}; the {{httpheader("Permissions-Policy/language-detector", "language-detector")}} directive
-  - : Controls access to the language detection functionality. Where a policy specifically disallows its use, the {{domxref("LanguageDetector.availability_static", "LanguageDetector.availability()")}} static method will return `unavailable` and any attempts to call other `LanguageDetector` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+  - : Controls access to the language detection functionality.
+    Where a policy specifically disallows its use, the {{domxref("LanguageDetector.availability_static", "LanguageDetector.availability()")}} static method will return `unavailable`, and any attempts to call other `LanguageDetector` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 - {{httpheader("Permissions-Policy")}}; the {{httpheader("Permissions-Policy/translator", "translator")}} directive
-  - : Controls access to the translation functionality. Where a policy specifically disallows its use, the {{domxref("Translator.availability_static", "Translator.availability()")}} static method will return `unavailable` and any attempts to call other `Translator` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+  - : Controls access to the translation functionality.
+    Where a policy specifically disallows its use, the {{domxref("Translator.availability_static", "Translator.availability()")}} static method will return `unavailable`, and any attempts to call other `Translator` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Security considerations
 

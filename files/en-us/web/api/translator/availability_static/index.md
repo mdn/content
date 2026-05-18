@@ -40,7 +40,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same or the Translator API is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}.
+  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same, or if the Translator API is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 

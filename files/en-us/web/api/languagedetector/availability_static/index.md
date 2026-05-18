@@ -38,7 +38,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration or the Language Detector API is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}.
+  - : The browser does not support the given configuration, or the Language Detector API is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
