@@ -79,6 +79,7 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2022827](https://bugzil.la/2022827)).
 - The [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) is supported on desktop platforms, allowing the control of microcontrollers that support serial communications.
   This lets you, for example, program microcontrollers and development boards, such as ESP devices, BBCmicro:bit, and Raspberry Pi Picos, 3D printers and CNC machines, and other supported devices.
+  Use of the API will require that website users install a synthetically generated site permission addon — this is the same approach used to safely manage access to WebMIDI.
   ([Firefox bug 2029625](https://bugzil.la/2029625)).
 
 <!-- #### DOM -->
