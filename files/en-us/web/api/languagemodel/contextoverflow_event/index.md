@@ -48,7 +48,6 @@ session.oncontextoverflow = () => {
       "Consider cloning the session or starting a new one.",
   );
 };
-
 ```
 
 ### Resetting the session on overflow
