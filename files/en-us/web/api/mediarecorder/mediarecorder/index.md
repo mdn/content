@@ -64,7 +64,7 @@ new MediaRecorder(stream, options)
 
     > [!NOTE]
     > If bits per second values are not specified for video and/or audio, the default
-    > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
+    > adopted for video is 2.5Mbps or 10 Mbps, depending on the browser, while the audio default is adaptive, depending upon
     > the sample rate and the number of channels.
 
     > [!NOTE]
@@ -118,3 +118,4 @@ if (navigator.mediaDevices.getUserMedia) {
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("MediaDevices.getUserMedia")}}
+- [MediaRecorder Video Bitrates](https://blog.addpipe.com/mediarecorder-video-bitrates/)
