@@ -41,7 +41,7 @@ Since this can vary across records, per-record weighting is needed to recover un
 
 ### Using the data
 
-You should use the data as follows to extract meaninful information from the randomized values:
+You should use the data as follows to extract meaningful information from the randomized values:
 
 1. When collecting {{domxref("PerformanceNavigationTiming")}} records, collect {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} and {{domxref("PerformanceTimingConfidence.value", "value")}} for each record.
 2. When computing statistics such as 75th-percentile {{glossary("Largest_contentful_paint", "Largest contentful paint (LCP)")}} or mean {{glossary("page load time")}}, apply the weighting formulas explained below instead of a plain average — this gives you separate, corrected metrics for "typical" loads vs. "degraded" loads.
