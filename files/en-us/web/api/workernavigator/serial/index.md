@@ -18,7 +18,7 @@ A {{domxref("Serial")}} object.
 
 ## Examples
 
-### List available ports
+### List the available ports
 
 The following example uses the `getPorts()` method to initialize a list of available ports.
 

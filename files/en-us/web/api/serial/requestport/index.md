@@ -35,7 +35,7 @@ requestPort(options)
           - : A positive integer that identifies a USB device.
             Each vendor assigns IDs to its products.
     - `allowedBluetoothServiceClassIds` {{optional_inline}}
-      - : A list of unsigned long integers and/or strings representing Bluetooth service class IDs.
+      - : A list of positive integers and/or strings representing Bluetooth service class IDs.
         Bluetooth ports with custom service class IDs are excluded from the list of ports presented to the user unless the service class ID is included in this list.
         This is true whether you filter the list or not.
 

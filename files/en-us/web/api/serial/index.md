@@ -18,7 +18,7 @@ The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_AP
     This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
 
 - {{domxref("Serial.getPorts()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host that the origin has permission to access.
 
 ## Events
 

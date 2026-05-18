@@ -34,9 +34,11 @@ Closing a serial port is more complicated when using [transform streams](/en-US/
 
 ## Examples
 
-### Closing a port after reading until the stream is done
+### Closing a port after reading once the stream is done
 
-The following example shows how to close a port while continuously reading data from it. A `keepReading` flag is used to control when to stop reading. A button click sets `keepReading` to `false` and cancels the reader, which causes `reader.read()` to resolve immediately so the loop can release the lock and `close()` can be called.
+The following example shows how to close a port after continuously reading data from it, once the stream is done.
+A `keepReading` flag controls when to stop reading.
+A button click sets `keepReading` to `false` and cancels the reader, which causes `reader.read()` to resolve immediately so the loop can release the lock and `close()` can be called.
 
 ```js
 // Without transform streams.

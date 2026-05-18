@@ -33,7 +33,11 @@ An object containing the following properties:
 
 ## Examples
 
-This snippet calls the {{domxref("Serial.requestPort()")}} method when a `<button>` is pressed. We pass a filter to `requestPort()` to filter for Arduino Uno USB devices. Once a port is requested, we call `getInfo()` to return the device's `usbProductId` and `usbVendorId`.
+### Get information from a selected device
+
+This snippet calls the {{domxref("Serial.requestPort()")}} method when a `<button>` is pressed.
+We pass a filter to `requestPort()` to filter for Arduino Uno USB devices.
+Once a port is requested, we call `getInfo()` to return the device's `usbProductId` and `usbVendorId`.
 
 ```html
 <button id="connect">Connect</button>

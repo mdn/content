@@ -14,7 +14,7 @@ The **Web Serial API** provides a way for websites to read from and write to ser
 The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer.
 It provides the ability to connect to devices that communicate via a serial port, rather than USB devices accessible via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), or input devices accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
-Examples of serial devices include 3D printers, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
+Examples of serial devices include 3D printers, ESP32 devices, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
 
 ## Interfaces
 
@@ -46,7 +46,7 @@ The following example shows how to check for available ports and allows the user
 The `connect` and `disconnect` events let sites react when a device is connected or disconnected from the system. The {{domxref("Serial.getPorts()","getPorts()")}} method is then called to see connected ports that the site already has access to.
 
 If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed.
-In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task.
+In this example, we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task.
 A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
 ```js
