@@ -77,6 +77,10 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("CSSContainerRule.conditions")}} property is now supported, mirroring [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule support for multiple comma-separated container conditions.
   The `condition` property reflects a corresponding `@container` as an array of objects, where each object represents a single container condition.
   ([Firefox bug 2022827](https://bugzil.la/2022827)).
+- The [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) is supported on desktop platforms, allowing the control of microcontrollers that support serial communications.
+  This lets you, for example, program microcontrollers and development boards, such as ESP devices, BBCmicro:bit, and Raspberry Pi Picos, 3D printers and CNC machines, and other supported devices.
+  Use of the API will require that website users install a [synthetically generated site permission add-on](https://support.mozilla.org/en-US/kb/site-permission-add-ons) — this is the same approach used to safely manage access to WebMIDI.
+  ([Firefox bug 2029625](https://bugzil.la/2029625)).
 
 <!-- #### DOM -->
 
