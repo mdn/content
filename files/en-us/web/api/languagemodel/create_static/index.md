@@ -82,7 +82,7 @@ LanguageModel.create(options)
         - `inputSchema`
           - : A [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
         - `execute`
-          - : A `LanguageModelToolFunction` callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+          - : A callback function that the user agent invokes when the model calls this tool. Its arguments are specific to the model being used. It must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 

@@ -23,7 +23,7 @@ LanguageModel.availability(options)
 
 - `options` {{optional_inline}}
   - : Represents the base set of options used when checking language model availability or creating a session. Options include:
-    - `expectedInputs`
+    - `expectedInputs` {{optional_inline}}
       - : An array representing the required input modalities and languages.
         Each entry is an object that may define the following options:
         - `type`

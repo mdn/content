@@ -25,19 +25,41 @@ Before creating a session, call the static {{domxref("LanguageModel.availability
 
 Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
 
-When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, they throw a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.oncontextoverflow", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
+When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, they throw a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
 
 To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()")}}.
 
 ### Trigger developer functions from prompts
 
-The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when creating a session via the `tools` option of {{domxref("LanguageModelCreateOptions")}}. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters. When the model decides to call a tool, the user agent invokes the tool's {{domxref("LanguageModelToolFunction")}} callback with the arguments the model specified, and feeds the returned string back to the model to continue generation.
+The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when {{domxref("languageModel.create_static", "creating a session")}} via the `tools.execute` option. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters.
+
+When the model decides to call a tool, the user agent invokes the callback with arguments specific to the model being use, and feeds the returned string back to the model to continue generation.
 
 ### Multimodal input
 
-Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts an array of {{domxref("LanguageModelExpected")}} objects. These declarations also allow {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
+Sessions can accept text, image, and audio input, depending on the capabilities of the underlying model. Declare the expected input and output modalities when creating a session using the `expectedInputs` and `expectedOutputs` options, each of which accepts an array as shown here:
 
-Multimodal messages are expressed using the {{domxref("LanguageModelMessage")}} and {{domxref("LanguageModelMessageContent")}} dictionaries. When a session is configured to accept images or audio, you can include `ImageBitmapSource` or `AudioBuffer` values alongside text parts in a single message.
+```js
+[{ type: "text" }, { type: "image" }];
+```
+
+First, call {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation. If `availability()` returns a value other than `"unavailable"`. You may proceed. Here's an example:
+
+```js
+const availability = await LanguageModel.availability({
+  expectedInputs: [{ type: "text" }, { type: "image" }],
+  expectedOutputs: [{ type: "text", languages: ["en"] }],
+});
+
+if (availability === "unavailable") {
+  console.warn("This configuration is not supported.");
+} else {
+  const session = await LanguageModel.create({
+    expectedInputs: [{ type: "text" }, { type: "image" }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+  });
+}
+```
 
 ### Permissions policy
 
@@ -55,7 +77,7 @@ The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secur
 ## Callback functions
 
 - {{domxref("LanguageModelToolFunction")}}
-  - : The type of function assigned to the `execute` property of a {{domxref("LanguageModelTool")}}. Called by the user agent when the language model invokes a tool; must return a {{jsxref("Promise")}} that resolves with a string representing the tool's result.
+  - : The type of function assigned to the `tool.execute` property that was passed to {{domxref("LanguageModel.create_static", "create()")}}. Called by the user agent when the language model invokes a tool. the callback must return a {{jsxref("Promise")}} that resolves with a string representing the tool's result.
 
 ## Specifications
 
