@@ -74,6 +74,13 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
 - The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
   ([Firefox bug 1943070](https://bugzil.la/1943070)).
+- The {{domxref("CSSContainerRule.conditions")}} property is now supported, mirroring [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule support for multiple comma-separated container conditions.
+  The `condition` property reflects a corresponding `@container` as an array of objects, where each object represents a single container condition.
+  ([Firefox bug 2022827](https://bugzil.la/2022827)).
+- The [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) is supported on desktop platforms, allowing the control of microcontrollers that support serial communications.
+  This lets you, for example, program microcontrollers and development boards, such as ESP devices, BBCmicro:bit, and Raspberry Pi Picos, 3D printers and CNC machines, and other supported devices.
+  Use of the API will require that website users install a [synthetically generated site permission add-on](https://support.mozilla.org/en-US/kb/site-permission-add-ons) — this is the same approach used to safely manage access to WebMIDI.
+  ([Firefox bug 2029625](https://bugzil.la/2029625)).
 
 <!-- #### DOM -->
 
@@ -85,13 +92,27 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Added support for `altitudeAngle` and `azimuthAngle` to pointer actions of subtype `touch`. These properties allow simulating touch interactions with precise angular orientation data, specifying the angle at which a pointer contacts a surface and its rotational direction. ([Firefox bug 2022644](https://bugzil.la/2022644)).
+- Fixed a bug where `UnknownError` DOM exceptions originating from content pages were incorrectly treated as internal WebDriver errors. ([Firefox bug 2032387](https://bugzil.la/2032387)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Implemented the `browser.setClientWindowState` command. This command allows clients to change the OS-level window state of a browser window, such as maximized, minimized, fullscreen, or normal. It also allows repositioning and resizing the window. ([Firefox bug 1855028](https://bugzil.la/1855028)).
+- Added support for worker realms (for dedicated, shared and service workers) in the `script.getRealms` command. The command now returns realm information for worker scripts in addition to window contexts. ([Firefox bug 2016097](https://bugzil.la/2016097)).
+- Included the top-most stack frame in `log.entryAdded` events for all Console API messages. ([Firefox bug 1941813](https://bugzil.la/1941813)).
+- Improved the `text` field of the `log.entryAdded` event to better align with Firefox DevTools behavior and Google Chrome WebDriver BiDi implementation. ([Firefox bug 2005054](https://bugzil.la/2005054)).
+- Fixed network event cookies to include all properties, not just `name` and `value`. ([Firefox bug 1887118](https://bugzil.la/1887118)).
+- Fixed the `network.getData` command timing out for redirects. ([Firefox bug 2009916](https://bugzil.la/2009916)).
+- Fixed the `browsingContext.reload` command not resetting the location of a navigated iframe. ([Firefox bug 2023917](https://bugzil.la/2023917)).
+- Removed the empty `proxy` capability from the `session.new` command response when no proxy is specified. ([Firefox bug 1916463](https://bugzil.la/1916463)).
+
+#### Marionette
+
+- Enabled browser window repositioning on Linux Wayland in headless mode. ([Firefox bug 2023978](https://bugzil.la/2023978)).
 
 ## Changes for add-on developers
 
@@ -112,6 +133,14 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries now supports the _range syntax_. This allows you to check if a container has a valid CSS custom property and compare its value with comparison operators like `>`, `<`, `>=`, and `<=` and apply styles to its children accordingly. ([Firefox bug 2024601](https://bugzil.la/2024601)).
 
+- **`field-sizing` property**: `layout.css.field-sizing.enabled`
+
+  The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements. ([Firefox bug 1977176](https://bugzil.la/1977176)).
+
 - **Fix for nested scrollable areas**: `layout.css.fake-webkit-scrollbar.enabled`
 
   This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. ([Firefox bug 1977511](https://bugzil.la/1977511)).
+
+- **`<timeline-range-name>` values**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).

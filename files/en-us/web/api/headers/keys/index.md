@@ -47,6 +47,10 @@ content-type
 vary
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

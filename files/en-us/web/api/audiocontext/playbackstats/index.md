@@ -3,10 +3,12 @@ title: "AudioContext: playbackStats property"
 short-title: playbackStats
 slug: Web/API/AudioContext/playbackStats
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioContext.playbackStats
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`playbackStats`** read-only property of the {{domxref("AudioContext")}} interface returns an {{domxref("AudioPlaybackStats")}} object providing access to duration, underrun, and latency statistics for the `AudioContext`. These statistics allow you to measure audio delay and glitches.
 
