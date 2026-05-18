@@ -5,7 +5,7 @@ page-type: learn-faq
 sidebar: learn-how-to
 ---
 
-Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
+Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS, and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
 > [!NOTE]
 > Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) article series. You should have this open as you follow the steps below.
@@ -42,7 +42,7 @@ The developer tools usually open by default to the inspector, which looks someth
 
 ![A test website is opened in a tab in the browser. The browser developer tools sub-window is open. The developer tools has several tabs. Inspector is one of those tabs. Inspector tab displays the HTML code of the website. An image tag is selected from the HTML code. This results in highlighting of the image corresponding to the selected tag in the website.](inspector_highlighted.png)
 
-If you _don't_ see the inspector,
+If you _don't_ see the inspector:
 
 - **Firefox:** Select the **Inspector** tab.
 - **Other browsers:** Select the **Elements** tab.
@@ -73,16 +73,16 @@ These features are especially handy:
 - Click the checkboxes next to each declaration to see what would happen if you removed the declaration.
 - Click the little arrow next to each shorthand property to show the property's longhand equivalents.
 - Click a property name or value to bring up a text box, where you can key in a new value to get a live preview of a style change.
-- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the dev tools to jump to show it in its own view, where it can generally be edited and saved.
+- Next to each rule is the file name and line number the rule is defined in. Clicking that rule causes the dev tools to show it in its own view, where it can generally be edited and saved.
 - You can also click the closing curly brace of any rule to bring up a text box on a new line, where you can write a completely new declaration for your page.
 
-You'll notice a number of clickable tabs at the top of the CSS Viewer:
+You'll notice several clickable tabs at the top of the CSS Viewer:
 
 - _Computed_: This shows the computed styles for the currently selected element (the final, normalized values that the browser applies).
 - _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) layout modes if the element you are inspecting uses them.
 - _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
-The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab, and in other browsers it is in the _Computed_ tab.
+The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab; in other browsers, it is in the _Computed_ tab.
 
 In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab, but are in separate tabs in Chrome, Opera, and Edge.
 
@@ -105,17 +105,16 @@ The JavaScript debugger allows you to watch the value of variables and set break
 
 To get to the debugger:
 
-**Firefox**: Open the Developer tools and select the **Debugger** tab.
-
-**Other browsers**: Open the Developer tools and select the **Sources** tab.
+- **Firefox**: Open the Developer tools and select the **Debugger** tab.
+- **Other browsers**: Open the Developer tools and select the **Sources** tab.
 
 ### Exploring the debugger
 
-Each browser's JavaScript debugger is divided into three panes. The layout of these is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
+Each browser's JavaScript debugger is divided into three panes. The layout of these differs across browsers; this guide uses Firefox as a reference.
 
 #### File list
 
-The first pane on the left contains the list of files associated with the page you are debugging. Select the file you want to work with from this list. Click on a file to select it and view its contents in the center pane of the Debugger.
+The first pane on the left contains the list of files associated with the page you are debugging. Select the file you want to work with from this list. Click a file to select it and view its contents in the Debugger's center pane.
 
 ![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is same as the url of the site that is open in the current browser tab.](file_list.png)
 
@@ -129,7 +128,7 @@ Set breakpoints where you want to pause execution. In the following image, the h
 
 The right-hand pane shows a list of the watch expressions you have added and breakpoints you have set.
 
-In the image, the first section, **Watch expressions**, shows that the listItems variable has been added. You can expand the list to view the values in the array.
+In the image, the first section, **Watch expressions**, shows that the `listItems` variable has been added. You can expand the list to view the values in the array.
 
 The next section, **Breakpoints**, lists the breakpoints set on the page. In example.js, a breakpoint has been set on the statement `listItems.push(inputNewItem.value);`
 
@@ -195,7 +194,7 @@ banana.setAttribute(
 document.querySelector("h1").appendChild(loginImage);
 ```
 
-You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
+You'll start to see the kind of errors that the browser returns. Often, these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
 
 ### Find out more
 
