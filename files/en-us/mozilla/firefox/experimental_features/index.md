@@ -582,12 +582,12 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Set to `true` to enable.
 
 ### GeometryUtils method: getBoxQuads()
@@ -596,7 +596,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |

@@ -74,6 +74,8 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
 - The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
   ([Firefox bug 1943070](https://bugzil.la/1943070)).
+- The `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` properties are now supported on {{domxref("GPUSupportedLimits")}}, defining the maximum number of storage buffers and textures allowed in the fragment and vertex shader stages.
+  ([Firefox bug 2006720](https://bugzil.la/2006720)).
 - The {{domxref("CSSContainerRule.conditions")}} property is now supported, mirroring [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule support for multiple comma-separated container conditions.
   The `condition` property reflects a corresponding `@container` as an array of objects, where each object represents a single container condition.
   ([Firefox bug 2022827](https://bugzil.la/2022827)).
@@ -116,6 +118,7 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("webRequest.onErrorOccurred")}} event now falls back to `NS_ERROR_NET_ON_RECEIVING_FROM` instead of a string starting with `NS_ERROR_NET_ON_` or `NS_ERROR_NET_UNKNOWN_`. This change is part of performance and reliability improvements to the `onErrorOccurred` event. ([Firefox bug 1881986](https://bugzil.la/1881986))
 - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} now correctly add and remove a split view when a call includes one of the split view's tabs. Previously, a call would fail or separate the split view. ([Firefox bug 2029099](https://bugzil.la/2029099))
 - {{WebExtAPIRef("tabs.move()")}} now correctly moves a split view to the right when a call includes one of the split view's tabs. Previously, a call moved a split view only to the left or to the end of the tab list. ([Firefox bug 2027855](https://bugzil.la/2027855))
 
@@ -144,3 +147,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`<timeline-range-name>` values**: `layout.css.scroll-driven-animations.enabled`
 
   The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
+
+- **GeometryUtils methods: `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()`**: `layout.css.convertFromNode.enabled`
+
+  The GeometryUtils methods: `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` are no longer enabled by default in Firefox Nightly. ([Firefox bug 2026051](https://bugzil.la/2026051)).
+
+- **GeometryUtils methods: `getBoxQuads()`**: `layout.css.getBoxQuads.enabled`
+
+  The GeometryUtils methods: `getBoxQuads()` is no longer enabled by default in Firefox Nightly. ([Firefox bug 2026051](https://bugzil.la/2026051)).
