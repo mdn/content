@@ -140,6 +140,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements. ([Firefox bug 1977176](https://bugzil.la/1977176)).
 
+- **Disable MathML `href` on non-`<a>` elements**: `mathml.href_link_on_non_anchor_element.disabled`
+
+  When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) global attribute no longer creates a hyperlink on MathML elements other than `<a>`, matching the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element). ([Firefox bug 2026848](https://bugzil.la/2026848)).
+
 - **Fix for nested scrollable areas**: `layout.css.fake-webkit-scrollbar.enabled`
 
   This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. ([Firefox bug 1977511](https://bugzil.la/1977511)).
