@@ -1,6 +1,6 @@
 ---
-title: log.entryAdded event
-short-title: log.entryAdded
+title: "`log.entryAdded` event"
+short-title: entryAdded
 slug: Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
 page-type: webdriver-event
 browser-compat: webdriver.bidi.log.entryAdded_event

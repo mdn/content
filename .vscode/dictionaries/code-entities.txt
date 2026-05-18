@@ -732,6 +732,7 @@ SHA-256-sess
 SHA-512-sess
 shadowrootcustomelementregistry
 shadowrootreferencetarget
+shadowrootslotassignment
 sharpyuv
 shrd
 shtm

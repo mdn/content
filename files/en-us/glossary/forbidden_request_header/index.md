@@ -43,7 +43,7 @@ Forbidden headers are one of the following:
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPHeader("Via")}}
-- `X-HTTP-Method`, but only when it contains a forbidden method name ({{HTTPMethod("CONNECT")}}, {{HTTPMethod("TRACE")}}, {{HTTPMethod("TRACK")}})
+- `X-HTTP-Method`, but only when it contains a forbidden method name ({{HTTPMethod("CONNECT")}}, {{HTTPMethod("TRACE")}}, `TRACK`)
 - `X-HTTP-Method-Override`, but only when it contains a forbidden method name
 - `X-Method-Override`, but only when it contains a forbidden method name
 
