@@ -118,6 +118,7 @@ Firefox 151 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("webRequest.onErrorOccurred")}} event now falls back to `NS_ERROR_NET_ON_RECEIVING_FROM` instead of a string starting with `NS_ERROR_NET_ON_` or `NS_ERROR_NET_UNKNOWN_`. This change is part of performance and reliability improvements to the `onErrorOccurred` event. ([Firefox bug 1881986](https://bugzil.la/1881986))
 - {{WebExtAPIRef("tabs.group()")}} and {{WebExtAPIRef("tabs.ungroup()")}} now correctly add and remove a split view when a call includes one of the split view's tabs. Previously, a call would fail or separate the split view. ([Firefox bug 2029099](https://bugzil.la/2029099))
 - {{WebExtAPIRef("tabs.move()")}} now correctly moves a split view to the right when a call includes one of the split view's tabs. Previously, a call moved a split view only to the left or to the end of the tab list. ([Firefox bug 2027855](https://bugzil.la/2027855))
 
