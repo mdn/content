@@ -30,9 +30,9 @@ copyTo(destination, options)
       - : An integer giving the number of frames to copy. If omitted, all frames from `frameOffset` to the end of the plane are copied.
     - `format` {{optional_inline}}
       - : A string indicating the audio format that the source samples should be converted to when copied to the destination.
-      This can be any of the values: `"u8"`, `"s16"`, `"s32"`, `"f32"`, `"u8-planar"`, `"s16-planar"`, `"s32-planar"`, and `"f32-planar"` (see {{domxref("AudioData.format")}} for more information).
-      Note that `"f32-planar"` must be supported.
-      If omitted, the samples are copied in the `AudioData`'s own format. 
+        This can be any of the values: `"u8"`, `"s16"`, `"s32"`, `"f32"`, `"u8-planar"`, `"s16-planar"`, `"s32-planar"`, and `"f32-planar"` (see {{domxref("AudioData.format")}} for more information).
+        Note that `"f32-planar"` must be supported.
+        If omitted, the samples are copied in the `AudioData`'s own format.
 
 ### Return value
 
