@@ -62,19 +62,6 @@ body {
 
 When implemented, this element will be exposed via the `MathMLAnchorElement` interface defined in the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element). At the time of writing, no browser exposes this interface yet, and the element is accessed through the base {{domxref("MathMLElement")}} interface.
 
-## Technical summary
-
-<table class="properties">
-  <tr>
-    <th scope="row">
-      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">Implicit ARIA role</a>
-    </th>
-    <td>
-      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> when the <code>href</code> attribute is present, otherwise no corresponding role
-    </td>
-  </tr>
-</table>
-
 ## Specifications
 
 {{Specifications}}
