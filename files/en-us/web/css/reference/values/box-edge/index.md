@@ -15,7 +15,7 @@ The box-edge keywords are the components of, but not limited to, the data types 
 
 ```plain
 <visual-box> = content-box | padding-box | border-box /* the three <box> values */
-<layout-box> = <visual-box> | margin-box /* the <shape-box> values */
+<layout-box> or <shape-box> = <visual-box> | margin-box
 <paint-box> = <visual-box> | fill-box | stroke-box
 <coord-box> = <paint-box> | fill-box | stroke-box | view-box
 <geometry-box> = <shape-box> | fill-box | stroke-box | view-box
@@ -38,7 +38,7 @@ A `<box-edge>` can be of the type `<visual-box>`, `<layout-box>`, `<paint-box>`,
   - : Refers to the coordinate box used for positioning and sizing an element within its parent container. It is used to control how content flows around the edges of the box. It excludes the margin area. This value type is used for the {{cssxref("offset-path")}} property.
 
 - `<geometry-box>`
-  - : Defines the reference box for a [basic shape](/en-US/docs/Web/CSS/Reference/Values/basic-shape), or if specified by itself, causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. This value type is used for the {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, and {{cssxref("mask-origin")}} properties and the SVG {{SVGAttr("clip-path")}} attribute.
+  - : Defines the reference box for a [basic shape](/en-US/docs/Web/CSS/Reference/Values/basic-shape), or if specified by itself, causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. This value type is used for the {{cssxref("clip-path")}}, {{cssxref("mask-clip")}}, and {{cssxref("mask-origin")}} properties and the SVG {{SVGAttr("clip-path")}} attribute; it is also used as part of the {{cssxref("border-shape")}} property values.
 
 ### Keywords
 
