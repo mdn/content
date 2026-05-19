@@ -562,7 +562,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 #### Range syntax
 
-In addition to the plain `<style-feature-name>: <value>` form described above, a `<style-feature>` can be written as a **range** comparison using `=`, `<`, `<=`, `>`, or `>=`. Range syntax compares the resolved values of both sides numerically, which makes it suitable for queries such as `style(--columns >= 3)` or `style(--gap = 1rem)`.
+In addition to the plain `<style-feature-name>: <value>` form described above, a `<style-feature>` can be written as a **range** comparison using `=`, `<`, `<=`, `>`, or `>=`. Range syntax was added to express **numeric** comparisons that the plain form can't, such as `style(--columns >= 3)` or `style(--gap = 1rem)`. It compares the resolved values of both sides numerically.
 
 To evaluate a range, the browser:
 
