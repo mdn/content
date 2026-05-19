@@ -8,13 +8,7 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`create()`** static method of the {{domxref("LanguageModel")}} interface creates a new language model session, automatically downloading the model if it is not already available.
-
-You can monitor progress of a model download using the `monitor` option.
-
-Before calling `create()`, use {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
-
-Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
+The **`create()`** static method of the {{domxref("LanguageModel")}} interface constructs a new {{domxref("LanguageModel")}} instance, automatically downloading the corresponding model if it is not already available.
 
 ## Syntax
 
@@ -28,35 +22,37 @@ LanguageModel.create(options)
 - `options` {{optional_inline}}
   - : Represents the options for creating a {{domxref("LanguageModel")}} session. Options include:
     - `expectedInputs`
-      - : An array representing the required input modalities and languages. Each entry is an object that may define the following options:
+      - : An array representing the required input modalities and languages.
+        Each entry is an object that may define the following options:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"`
-            - : Plain text content.
-          - `"image"`
-            - : Image content.
-          - `"audio"`
-            - : Audio content.
-          - `"tool-call"`
-            - : A tool invocation issued by the model.
-          - `"tool-response"`
-            - : The result of a tool invocation.
+            - `"text"`
+              - : Plain text content.
+            - `"image"`
+              - : Image content.
+            - `"audio"`
+              - : Audio content.
+            - `"tool-call"`
+              - : A tool invocation issued by the model.
+            - `"tool-response"`
+              - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
-      - : An array representing the required output modalities and languages. Options include:
+      - : An array representing the required output modalities and languages.
+        Each entry is an object that may define the following options:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"`
-            - : Plain text content.
-          - `"image"`
-            - : Image content.
-          - `"audio"`
-            - : Audio content.
-          - `"tool-call"`
-            - : A tool invocation issued by the model.
-          - `"tool-response"`
-            - : The result of a tool invocation.
+            - `"text"`
+              - : Plain text content.
+            - `"image"`
+              - : Image content.
+            - `"audio"`
+              - : Audio content.
+            - `"tool-call"`
+              - : A tool invocation issued by the model.
+            - `"tool-response"`
+              - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `initialPrompts`
@@ -69,12 +65,13 @@ LanguageModel.create(options)
               - : A message from the user.
             - `"assistant"`
               - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
-      - `monitor`
-        - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
-      - `signal`
-        - : An {{domxref("AbortSignal")}} to cancel session creation.
-      - `tools`
-        — An array of tools to verify support for. Options include:
+    - `monitor`
+      - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
+    - `signal`
+      - : An {{domxref("AbortSignal")}} to cancel session creation.
+    - `tools`
+      - : An array representing tools available to the AI.
+        Each entry is an object that may define the following options:
         - `name`
           - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
         - `description`
@@ -102,9 +99,21 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the content provided in `initialPrompts` exceeds the model's context window size.
 
+## Description
+
+The `create()` method constructs a new language model session, automatically downloading the model if it is not already available.
+You can monitor progress of a model download using the [`monitor`](#monitor) option.
+
+Before calling `create()`, use {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired configuration is supported.
+
+Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
+
 ## Examples
 
 ### Creating a basic session
+
+This example creates the default session and then prompts it for the result of summing `2` and `2`.
+Note that text is supported by default, so the downloaded model should be suitable for this case.
 
 ```js
 const session = await LanguageModel.create();
@@ -131,6 +140,9 @@ console.log(response);
 ```
 
 ### Monitoring download progress
+
+This code shows how you can monitor the download progress of a model.
+Note that if the model is unavailable or already available, the event will never fire.
 
 ```js
 const session = await LanguageModel.create({

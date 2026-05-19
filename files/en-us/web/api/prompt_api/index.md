@@ -13,26 +13,34 @@ The **Prompt API** allows web pages to directly prompt a language model provided
 
 ### Sessions
 
-All interaction with the language model happens through a {{domxref("LanguageModel")}} session. A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance. If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option passed to the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method.
+All interaction with the language model happens through a {{domxref("LanguageModel")}} session.
+You can use this session to specify context for the model, such as providing documents, background information, or conversation history, and to prompt it for responses to specific questions.
 
-Once you have a session, use {{domxref("LanguageModel.prompt()")}} to send text or multimodal input and receive the model's complete response, or {{domxref("LanguageModel.promptStreaming()")}} to receive the response incrementally as it is generated. Both methods add to the session's running context, maintaining conversational history across multiple interactions.
+Before creating a session, you can call the static {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} method to determine whether the language model supports a given configuration on the current device.
+The method resolves with one of four string values: `"available"`, `"downloadable"`, `"downloading"`, or `"unavailable"`.
+This allows pages to adapt gracefully if the desired model can't be provided or not yet downloaded — for example, by displaying a download prompt or falling back to a server-side implementation — rather than creating a session only to have it fail.
 
-Use {{domxref("LanguageModel.append()")}} to preload content into the context window without generating a response — useful for providing documents, background information, or conversation history before asking a question.
+A session is created by calling the static {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method, which returns a {{jsxref("Promise")}} that resolves with a `LanguageModel` instance.
+If the model is not yet downloaded, the browser begins the download automatically; you can monitor progress with the `monitor` option passed to the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} method.
 
-Before creating a session, call the static {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} method to determine whether the language model supports a given configuration on the current device. The method resolves with one of four string values: `"available"`, `"downloadable"`, `"downloading"`, or `"unavailable"`. This allows pages to adapt gracefully — for example, by displaying a download prompt or falling back to a server-side implementation — rather than creating a session only to have it fail.
+Once you have a session, you can call {{domxref("LanguageModel.append()", "append()")}} to preload content into the context window without generating a response, and {{domxref("LanguageModel.prompt()","prompt()")}} or {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}} to send text or multimodal input and receive the response (the difference is that `prompt()` returns the response immediately, while `promptStreaming()` returns the response incrementally as it is generated).
+Note that both prompting methods add to the session's running context, maintaining conversational history across multiple interactions.
 
 ### The context window
 
-Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. The {{domxref("LanguageModel.contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage")}} reports how many tokens have been consumed so far.
+Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. The {{domxref("LanguageModel.contextWindow", "contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage", "contextUsage")}} reports how many tokens have been consumed so far.
 
-When a {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, or {{domxref("LanguageModel.append()")}} call would exceed the context window, they throw a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event fires. To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()")}}.
+When a {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}} call would exceed the context window, they throw a `QuotaExceededError` {{domxref("DOMException")}} and the {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event fires.
+To check how many tokens a piece of input would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()", "measureContextUsage()")}}.
 
-To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()")}}.
+To branch from a session at a specific point in a conversation — for example, to explore different response paths in parallel without affecting each other — use {{domxref("LanguageModel.clone()", "clone()")}}.
 
 ### Trigger developer functions from prompts
 
-The Prompt API supports tool use, allowing the language model to invoke developer-defined functions during generation. Tools are registered when {{domxref("languageModel.create_static", "creating a session")}} via the `tools.execute` option. Each tool is described with a name, a natural-language description, and a JSON Schema object defining its input parameters.
+The Prompt API allows the language model to invoke tools and capture their output.
 
+Tools are registered when {{domxref("languageModel.create_static", "creating a session")}} via the `tools` option.
+Each tool is described by a name, a natural-language description, a JSON Schema object defining its input parameters, and a callback function that is used to invoke it.
 When the model decides to call a tool, the user agent invokes the callback with arguments specific to the model being use, and feeds the returned string back to the model to continue generation.
 
 ### Multimodal input
@@ -43,7 +51,10 @@ Sessions can accept text, image, and audio input, depending on the capabilities 
 [{ type: "text" }, { type: "image" }];
 ```
 
-First, call {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation. If `availability()` returns a value other than `"unavailable"`. You may proceed. Here's an example:
+First, call {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} to check whether the desired modalities and languages are supported before committing to session creation.
+If `availability()` returns a value other than `"unavailable"` the configuration is supported, and you can proceed to create the corresponding model:
+
+Here's an example:
 
 ```js
 const availability = await LanguageModel.availability({
