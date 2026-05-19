@@ -1,12 +1,12 @@
 ---
 title: WebAssembly.JSTag
 slug: WebAssembly/Reference/JavaScript_interface/JSTag_static
-page-type: webassembly-instance-property
+page-type: webassembly-static-property
 browser-compat: webassembly.api.JSTag
 sidebar: webassemblysidebar
 ---
 
-The **`JSTag`** read-only property of the [`WebAssembly`](/en-US/docs/WebAssembly/Reference/JavaScript_interface) interface is a built-in [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) representing exceptions thrown in the JavaScript host — it allows exceptions thrown in JavaScript to be handled from inside a Wasm module.
+The **`JSTag`** read-only static property of the [`WebAssembly`](/en-US/docs/WebAssembly/Reference/JavaScript_interface) interface is a built-in [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) representing exceptions thrown in the JavaScript host — it allows exceptions thrown in JavaScript to be handled from inside a Wasm module.
 
 {{InteractiveExample("WebAssembly.JSTag demo", "tabbed-taller")}}
 

@@ -46,7 +46,9 @@ sidebar:
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface
-        tags: webassembly-function
+        tags:
+          - webassembly-function
+          - unknown
         link: /WebAssembly/Reference/JavaScript_interface
         title: <code>WebAssembly</code>
         details: closed
