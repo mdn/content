@@ -12,12 +12,34 @@ spec-urls: https://notifications.spec.whatwg.org/
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user.
-These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app.
-The API is designed to be compatible with existing notification systems, across different platforms.
 
 ## Concepts and usage
 
-Showing a system notification generally involves first requesting permission to use the feature, and then creating a notification.
+A notification is a system-level UI element rendered by the operating system's native notification system, making it identical to notifications from any other app on the platform.
+It is used to inform users of events.
+Because it is a system-level element, it is outside the top-level browsing context viewport, and can be displayed even when the user has switched tabs or moved to a different app.
+
+There are two types of notifications: persistent and non-persistent.
+Persistent notifications can run on mobile devices, are created through service workers, and can exist after their originating page has been closed.
+By contrast, non-persistent notifications can only be used in desktop operating systems and have a lifetime bounded by the {{domxref("Notification")}} instance — and hence their originating page.
+Both types require user-permission before a notification can be created.
+
+### Persistent and non-persistent notifications
+
+The Notifications API supports two types of notifications:
+
+- **Non-persistent notifications** are created in a browsing context, such as a web page or tab.
+  Their lifetime is tied to the lifetime of the page — if the page is closed, the notification can no longer be interacted with.
+
+  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance
+
+- **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
+
+  They are created using {{domxref("ServiceWorkerRegistration.showNotification()")}} from a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
+
+> [!NOTE]
+> If your code needs to run on mobile devices then you **must** use persistent notifications!
+> The {{domxref("Notification.Notification","Notification()")}} constructor will throw a {{jsxref("TypeError")}} on most mobile browsers.
 
 ### Notifications require user permission
 
@@ -57,19 +79,6 @@ if (Notification.permission === "granted") {
 ```
 
 For more usage examples see [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API).
-
-### Persistent and non-persistent notifications
-
-The Notifications API supports two types of notifications:
-
-- **Non-persistent notifications** are created in a browsing context, such as a web page or tab.
-  Their lifetime is tied to the lifetime of the page — if the page is closed, the notification can no longer be interacted with.
-
-  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance
-
-- **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
-
-  They are created using {{domxref("ServiceWorkerRegistration.showNotification()")}} from a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Interfaces
 
