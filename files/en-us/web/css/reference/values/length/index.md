@@ -193,6 +193,12 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 - `pt`
   - : One point. `1pt` = `1in / 72`.
 
+## Rounding
+
+### Snap a length as a line width
+
+While the exact supported precision of numeric values, and how they are rounded to match that precision, is generally implementation-defined, computed `<length>` values in `border-width` and a few other properties are rounded in a specific way to ensure reasonable visual display. This rounding method effectively rounds `<length>` to an integer number of device pixels, while ensuring non-zero values remain visible. The <a href="https://drafts.csswg.org/css-values/#snap-as-a-line-width" title="To snap a &lt;length&gt; len as a line width:&#10;1. If len is an integer number of device pixels, leave it as is.&#10;2. If the absolute value of len is greater than zero, but less than 1 device pixel, round it away from zero to &pm;1 device pixel.&#10;3. If the absolute value of len is greater than 1 device pixel, round it towards zero to the nearest integer number of device pixels.">CSS-Values specification</a> provides the details.
+
 ## Interpolation
 
 When animated, values of the `<length>` data type are interpolated as real, floating-point numbers. The {{glossary("interpolation")}} happens on the calculated value. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) associated with the animation.
