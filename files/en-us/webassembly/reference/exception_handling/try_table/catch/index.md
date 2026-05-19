@@ -1,13 +1,13 @@
 ---
-title: "catch: Wasm exception handling instruction"
+title: "catch: try_table clause"
 short-title: catch
-slug: WebAssembly/Reference/Exception_handling/catch
+slug: WebAssembly/Reference/Exception_handling/try_table/catch
 page-type: webassembly-instruction
-browser-compat: webassembly.instructions.catch
+browser-compat: webassembly.instructions.try_table.catch
 sidebar: webassemblysidebar
 ---
 
-The **`catch`** [exception handling](/en-US/docs/WebAssembly/Reference/Exception_handling) instruction catches exceptions matching a specified error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag), pushing the exception payload to the stack.
+The **`catch`** clause catches exceptions matching a specified error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag), pushing the exception payload to the stack.
 
 {{InteractiveExample("Wat Demo: catch", "tabbed-taller")}}
 
@@ -72,7 +72,7 @@ catch tag_identifier block_identifier
 ```
 
 - `catch`
-  - : The `catch` instruction.
+  - : The `catch` clause.
 - `tag_identifier`
   - : The identifier for the exception type to catch. This can be:
     - An identifying name, as defined by the [`identifier`](/en-US/docs/WebAssembly/Reference/Definitions/tag#identifier) of the corresponding tag type.
@@ -91,13 +91,13 @@ catch tag_identifier block_identifier
 - `payload*`
   - : Zero or more payload values created by the thrown exception, which typically represent identifying error codes.
 
-These values are not pushed onto the stack directly at the site of the `catch` instruction, rather they are pushed onto the stack at the site of the block branched to when the exception is thrown.
+These values are not pushed onto the stack directly at the site of the `catch` clause, rather they are pushed onto the stack at the site of the block branched to when the exception is thrown.
 
 ### Binary encoding
 
-| Instruction | Catch type byte |
-| ----------- | --------------- |
-| `catch`     | `0x00`          |
+| Clause  | Catch type byte |
+| ------- | --------------- |
+| `catch` | `0x00`          |
 
 `catch` is not a standalone instruction — instead, it is encoded as a clause within a `try_table` instruction with a byte of `0x00`. A `try_table` with a single `catch` clause:
 
@@ -113,7 +113,7 @@ would be encoded like this:
 
 ## Description
 
-The `catch` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch exceptions with a specific error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag). When such an exception is thrown, the code branches to the specified `block`, at which point the exception's payload values are pushed to the stack.
+The `catch` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch exceptions with a specific error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag). When such an exception is thrown, the code branches to the specified `block`, at which point the exception's payload values are pushed to the stack.
 
 `catch` is useful when you don't need to rethrow an exception, but you do want to report that a specific exception type has been thrown.
 
@@ -136,8 +136,8 @@ When the exception is caught, the block branched to specifies the same data type
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
+  - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
+  - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

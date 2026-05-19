@@ -1,13 +1,13 @@
 ---
-title: "catch_all: Wasm exception handling instruction"
+title: "catch_all: try_table clause"
 short-title: catch_all
-slug: WebAssembly/Reference/Exception_handling/catch_all
+slug: WebAssembly/Reference/Exception_handling/try_table/catch_all
 page-type: webassembly-instruction
-browser-compat: webassembly.instructions.catch_all
+browser-compat: webassembly.instructions.try_table.catch_all
 sidebar: webassemblysidebar
 ---
 
-The **`catch_all`** [exception handling](/en-US/docs/WebAssembly/Reference/Exception_handling) instruction catches any exception and pushes nothing to the stack.
+The **`catch_all`** clause catches any exception and pushes nothing to the stack.
 
 {{InteractiveExample("Wat Demo: catch_all", "tabbed-taller")}}
 
@@ -72,7 +72,7 @@ catch_all block_identifier
 ```
 
 - `catch_all`
-  - : The `catch_all` instruction.
+  - : The `catch_all` clause.
 - `block_identifier`
   - : The identifier for the [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block) to branch to when the exception is caught. This can be:
     - An identifying name, as defined by the identifier of the corresponding block.
@@ -86,11 +86,11 @@ catch_all block_identifier
 
 ### Binary encoding
 
-| Instruction | catch_all type byte |
+| Clause      | catch_all type byte |
 | ----------- | ------------------- |
 | `catch_all` | `0x02`              |
 
-`catch_all` is not a standalone instruction — instead, it is encoded as a clause within a `try_table` instruction with a byte of `0x02`. A `try_table` with a single `catch_all` clause:
+`catch_all` is not a standalone clause — instead, it is encoded as a clause within a `try_table` instruction with a byte of `0x02`. A `try_table` with a single `catch_all` clause:
 
 ```wat
 (try_table (catch_all $handler) ... )
@@ -104,7 +104,7 @@ would be encoded like this:
 
 ## Description
 
-The `catch_all` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`.
+The `catch_all` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`.
 
 `catch_all` is useful when you don't need to rethrow an exception, and you don't want to catch a specific exception, but you do want to report that an exception of some kind has been thrown.
 
@@ -121,8 +121,8 @@ In the case of `catch_all`, the referenced block doesn't need to declare a resul
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
+  - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
+  - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

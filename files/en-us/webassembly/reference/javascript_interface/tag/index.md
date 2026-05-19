@@ -20,7 +20,7 @@ The **`WebAssembly.Tag`** object represents a WebAssembly exception _type_ that 
 
 ## Description
 
-WebAssembly modules can define exception types using the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) module definition. Exceptions of those types can then be thrown using the [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction, and caught and handled using [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) blocks containing [catch](/en-US/docs/WebAssembly/Reference/Exception_handling#catch) instructions.
+WebAssembly modules can define exception types using the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) module definition. Exceptions of those types can then be thrown using the [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction, and caught and handled using [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) blocks containing [catch clauses](/en-US/docs/WebAssembly/Reference/Exception_handling#catch_clauses).
 
 If wished, you can define a Wasm exception type in the JavaScript host using the [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag) constructor, before importing it into the Wasm module to use there.
 

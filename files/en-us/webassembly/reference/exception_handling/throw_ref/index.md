@@ -107,7 +107,7 @@ throw_ref
 
 ## Description
 
-A `throw_ref` instruction can be used to rethrow a previously-thrown exception, as represented by an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value. Values of type `exnref` are pushed onto the stack by [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instructions.
+A `throw_ref` instruction can be used to rethrow a previously-thrown exception, as represented by an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value. Values of type `exnref` are pushed onto the stack by [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clauses.
 
 Generally, rethrowing exceptions is useful because you might want to perform an action such as cleanup or logging but then still let users know that an error ocurred.
 
@@ -115,9 +115,9 @@ Generally, rethrowing exceptions is useful because you might want to perform an 
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
+  - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
+  - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
+  - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

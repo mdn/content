@@ -124,11 +124,19 @@ sidebar:
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
-      - type: listSubPages
-        path: /WebAssembly/Reference/Exception_handling
-        link: /WebAssembly/Reference/Exception_handling
+      - link: /WebAssembly/Reference/Exception_handling
         title: Exception handling
         details: closed
+        children:
+          - link: /WebAssembly/Reference/Exception_handling/throw
+            title: throw
+          - link: /WebAssembly/Reference/Exception_handling/throw_ref
+            title: throw_ref
+          - type: listSubPages
+            path: /WebAssembly/Reference/Exception_handling/try_table
+            link: /WebAssembly/Reference/Exception_handling/try_table
+            title: try_table
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Memory
         link: /WebAssembly/Reference/Memory

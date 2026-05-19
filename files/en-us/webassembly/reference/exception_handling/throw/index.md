@@ -83,7 +83,7 @@ throw identifier
 - `payload` values
   - : The payload values, which typically represents identifying error codes.
 
-The payload values can be retrieved when the exception is caught, either by wasm instructions such as [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) and [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref), or in JavaScript via a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement.
+The payload values can be retrieved when the exception is caught, either by clauses such as [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) and [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref), or in JavaScript via a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement.
 
 See the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition reference page for examples of both.
 
@@ -97,9 +97,9 @@ See the [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition re
 
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
+  - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
+  - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
+  - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

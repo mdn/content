@@ -1,13 +1,13 @@
 ---
-title: "catch_all_ref: Wasm exception handling instruction"
+title: "catch_all_ref: try_table clause"
 short-title: catch_all_ref
-slug: WebAssembly/Reference/Exception_handling/catch_all_ref
+slug: WebAssembly/Reference/Exception_handling/try_table/catch_all_ref
 page-type: webassembly-instruction
-browser-compat: webassembly.instructions.catch_all_ref
+browser-compat: webassembly.instructions.try_table.catch_all_ref
 sidebar: webassemblysidebar
 ---
 
-The **`catch_all_ref`** [exception handling](/en-US/docs/WebAssembly/Reference/Exception_handling) instruction catches any exception and pushes an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception to the stack.
+The **`catch_all_ref`** clause catches any exception and pushes an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception to the stack.
 
 {{InteractiveExample("Wat Demo: catch_all_ref", "tabbed-taller")}}
 
@@ -79,7 +79,7 @@ catch_all_ref block_identifier
 ```
 
 - `catch_all_ref`
-  - : The `catch_all_ref` instruction.
+  - : The `catch_all_ref` clause.
 - `block_identifier`
   - : The identifier for the [`block`](/en-US/docs/WebAssembly/Reference/Control_flow/block) to branch to when the exception is caught. This can be:
     - An identifying name, as defined by the identifier of the corresponding block.
@@ -94,11 +94,11 @@ catch_all_ref block_identifier
 - `exception_ref`
   - : An [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception.
 
-This value is not pushed onto the stack directly at the site of the `catch_all_ref` instruction, rather it is pushed onto the stack at the site of the block branched to when the exception is thrown.
+This value is not pushed onto the stack directly at the site of the `catch_all_ref` clause, rather it is pushed onto the stack at the site of the block branched to when the exception is thrown.
 
 ### Binary encoding
 
-| Instruction     | catch_all_ref type byte |
+| Clause          | catch_all_ref type byte |
 | --------------- | ----------------------- |
 | `catch_all_ref` | `0x03`                  |
 
@@ -116,7 +116,7 @@ would be encoded like this:
 
 ## Description
 
-The `catch_all_ref` instruction can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception is pushed to the stack.
+The `catch_all_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception is pushed to the stack.
 
 The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
@@ -135,8 +135,8 @@ The referenced block must declare a result type that matches the pushed `exnref`
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
+  - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
+  - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

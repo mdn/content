@@ -116,10 +116,10 @@ For example, the following function takes an `i32` parameter and evaluates wheth
 The thrown exception could then be handled and the payload accessed using a Wasm try/catch block. You can see an example in the [Try it](#try_it) section at the top of the page; also see the following pages for more examples:
 
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table)
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch)
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all)
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref)
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref)
+- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch)
+- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all)
+- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref)
+- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref)
 
 ### Handling Wasm exceptions in JavaScript
 
@@ -273,10 +273,10 @@ wasm.then((result) => {
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction
 - [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction
 - [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) instruction
-- [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch) instruction
-- [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all) instruction
-- [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_ref) instruction
-- [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/catch_all_ref) instruction
+  - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
+  - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
+  - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
+  - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
 - [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
 - [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface
 - [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) JavaScript interface
