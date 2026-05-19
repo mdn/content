@@ -31,7 +31,7 @@ The Notifications API supports two types of notifications:
 - **Non-persistent notifications** are created in a browsing context, such as a web page or tab.
   Their lifetime is tied to the lifetime of the page — if the page is closed, the notification can no longer be interacted with.
 
-  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance
+  They are created using the {{domxref("Notification.Notification","Notification()")}} constructor and fire events such as {{domxref("Notification/click_event", "click")}} directly on the `Notification` instance.
 
 - **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
 
@@ -67,7 +67,7 @@ Once a choice has been made, the setting will generally persist for the current 
 Notifications are created using the {{domxref("Notification.Notification","Notification()")}} constructor.
 This must be passed a title argument, and can optionally be passed a parameter to specify options such as text direction, body text, icon to display, notification sound to play, and more.
 
-For example, the following code shows how you might create a notification that sets the [`navigate`](/en-US/docs/Web/API/Notification/Notification#navigate) option, specifying a URL that will be opened if the notification is accepted (you can also defined click handlers to process notification actions).
+For example, the following code shows how you might create a notification that sets the [`navigate`](/en-US/docs/Web/API/Notification/Notification#navigate) option, specifying a URL that will be opened if the notification is accepted (you can also define click handlers to process notification actions).
 
 ```js
 if (Notification.permission === "granted") {

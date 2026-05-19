@@ -23,13 +23,13 @@ Each element in the array is an object with the following members:
   - : A string containing the URL of an icon to display with the action.
 - `navigate` {{optional_inline}} {{experimental_inline}}
   - : A string containing a URL to navigate to when the user activates this action.
-    When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event
+    When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
     See {{domxref("Notification.navigate")}} for more information.
 
 ## Description
 
 Notification actions are buttons or controls that appear within [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications).
-They are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
+They are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
 Note that actions are not available for non-persistent notifications: a `TypeError` is thrown if you pass an options object with a non-`null` actions property to the {{domxref("Notification/Notification", "Notification()")}} constructor.
 
 Clicking the button associated with an action navigates to the URL set in the [`navigate`](#navigate) option if one is specified.
@@ -37,7 +37,7 @@ Otherwise it fires a [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlob
 
 > [!NOTE]
 > Browsers typically limit the maximum number of actions they will display for a particular notification.
-> Check the static {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} property to determine the limit.
+> Check the static {{domxref("Notification.maxActions_static", "Notification.maxActions")}} property to determine the limit.
 
 ## Examples
 
@@ -69,4 +69,4 @@ self.addEventListener("notificationclick", (event) => {
 ## See also
 
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}}

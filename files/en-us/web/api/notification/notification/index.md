@@ -122,9 +122,9 @@ if (Notification.permission === "granted") {
 
 ### Using Notification() as a fallback
 
-This example shows a more robust approach, that allows showing notifications on both desktop and mobile devices.
+This example shows a more robust approach that allows showing notifications on both desktop and mobile devices.
 
-First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning if either are not true.
+First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning if either is not true.
 We then check if there is an active service worker.
 If there is an active service worker we use it to call {{domxref("ServiceWorkerRegistration.showNotification()")}}, but if not, we fall back to calling the constructor.
 
@@ -147,7 +147,7 @@ async function showNotification(title, options = {}) {
 ```
 
 Note that this will still throw an error if called on a mobile device if the page does not have a service worker ready.
-Depending on your application you might wrap the method code in a `try..catch` block.
+Depending on your application you might wrap the method code in a `try...catch` block.
 
 ## Specifications
 

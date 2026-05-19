@@ -6,7 +6,7 @@ page-type: web-api-static-property
 browser-compat: api.Notification.maxActions_static
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`maxActions`** read-only static property of the {{domxref("Notification")}} interface returns the maximum number of actions supported by the device and the user agent.
 
@@ -16,11 +16,11 @@ An integer number.
 
 ## Description
 
-Notification actions are buttons or controls that appear within [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications), created using {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} on a service worker.
-Actions are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
+Notification actions are buttons or controls that appear within [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications).
+Actions are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
 
 Browsers typically limit the maximum number of actions they will display for a particular notification.
-This property returns that limit, which is the maximum number of elements in {{domxref("Notification.actions")}} array that will be respected by the user agent.
+This property returns that limit, which is the maximum number of elements in the {{domxref("Notification.actions")}} array that will be respected by the user agent.
 
 ## Examples
 
