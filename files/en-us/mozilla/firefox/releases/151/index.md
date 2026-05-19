@@ -43,7 +43,9 @@ No notable changes.
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
 - The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
   ([Firefox bug 1943070](https://bugzil.la/1943070)).
-- The `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` properties are now supported on {{domxref("GPUSupportedLimits")}}, defining the maximum number of storage buffers and textures allowed in the fragment and vertex shader stages.
+- The `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` properties on {{domxref("GPUSupportedLimits")}} are now partially supported.
+  These properties report the value of the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits.
+  When creating a device, requested values for the *In*Stage limits are ignored.
   ([Firefox bug 2006720](https://bugzil.la/2006720)).
 - The {{domxref("CSSContainerRule.conditions")}} property is now supported, mirroring [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule support for multiple comma-separated container conditions.
   The `condition` property reflects a corresponding `@container` as an array of objects, where each object represents a single container condition.
