@@ -3,14 +3,18 @@ title: href
 slug: Web/MathML/Reference/Global_attributes/href
 page-type: mathml-attribute
 status:
+  - deprecated
   - non-standard
 browser-compat: mathml.global_attributes.href
 sidebar: mathmlref
 ---
 
-{{Non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
+
+> [!WARNING]
+> Setting `href` on MathML elements other than {{MathMLElement("a")}} is deprecated. Use the {{MathMLElement("a")}} element to create hyperlinks within MathML content instead, as defined in the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element).
 
 ## Example
 
