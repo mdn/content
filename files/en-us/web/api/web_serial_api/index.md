@@ -16,6 +16,8 @@ This includes USB and Bluetooth devices that connect over USB or Bluetooth but e
 
 Note that these are distinct from devices accessed via the  [WebUSB API](/en-US/docs/Web/API/WebUSB_API), — which provides raw access to USB devices that have not been claimed by an OS driver — or input devices that use the USB HID class, which are accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
+Note that these are distinct from devices accessed via the  [WebUSB API](/en-US/docs/Web/API/WebUSB_API), — which provides raw access to USB devices that have not been claimed by an OS driver — or input devices that use the USB HID class, which are accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
+
 Examples of serial devices include 3D printers, ESP32 devices, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
 
 ## Interfaces
