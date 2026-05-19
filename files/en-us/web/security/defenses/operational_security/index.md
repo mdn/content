@@ -9,13 +9,15 @@ In this guide we'll cover security practices that are not directly related to th
 
 Many of these are defenses against [supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks), in which the attacker subverts the processes you follow to develop your sites, to introduce malicious or vulnerable code into them. Defenses against supply chain attacks are usually about securing your development process.
 
-We've split this guide into three sections:
+We've split this guide into the following sections:
 
 - Securing your development environment: this includes practices to follow regarding the way you develop and update your own code.
 
 - Managing dependencies: almost all software projects depend on packages written by a third party. This section lists practices to follow that reduce the risk involved when you choose to do this.
 
 - Monitoring and response: this section lists practices that help you discover security problems in your project and respond to them.
+
+- Making secure backups.
 
 ## Securing your development environment
 
@@ -57,6 +59,14 @@ Understand and apply secure settings for your tools, especially your source cont
 - Requiring that commits are signed.
 
 See the OpenSSF's [Source Code Management Platform Configuration Best Practices](https://best.openssf.org/SCM-BestPractices/), which includes specific checklists for GitHub and GitLab.
+
+### Handling secrets securely
+
+Project maintainers typically need to use credentials, such as passwords or API keys, that need to be kept secret. Projects should ensure that these are handled properly:
+
+- Secrets should be stored securely.
+- Access to secrets should be controlled and limited to the maintainers who need them.
+- Secrets should never be checked into public repositories. Tools to scan repositories for secrets are available, either as part of source control or hosting systems, or as third party services.
 
 ## Managing third-party dependencies
 
@@ -181,7 +191,7 @@ An SBOM enables you to implement several defenses against supply chain attacks; 
 
 Once a website is deployed, you can help detect and respond to attacks by logging relevant events and alerting project maintainers when potentially suspicious activity is detected.
 
-You need to find a balance in which maintainers are alerted about real problems, but are not constantly being alerted by false alarms. The specific events which should be logged, and the subset of events that should trigger alarms, is dependent on the project and its threat model, but commonly includes:
+You need to find a balance in which maintainers are alerted about real problems, but are not constantly being alerted by false alarms. The specific events which should be logged, and the subset of events that should trigger alarms, is dependent on the project and its [threat model](/en-US/docs/Web/Security/Threat_modeling), but commonly includes:
 
 - Input validation failures: cases when user input isn't what your website expects. Input types include form input, URL parameters, or file uploads. Validation failures include input with unexpected values, formats, lengths, or parameter names. User input that could not have been entered manually, such as a nonexistent {{htmlelement("select")}} option, is especially suspicious.
 
@@ -193,7 +203,11 @@ You need to find a balance in which maintainers are alerted about real problems,
 
 - Access control failures: attempts to access resources without the correct level of authorization.
 
-- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) violations.
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) violations, which can be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+
+You should also proviude a way for users to report security problems with your site. Projects can communicate their security policy using a `SECURITY.md` file in the root directory of their repository. This file explains how users or researchers can report vulnerabilities, goe you will handle these reports, and details you your bug bounty program, if you have one.
+
+Websites can also provide a means for end users to report security problems, for example using a dedicated email address.
 
 ## Making backups
 
@@ -202,6 +216,8 @@ Making regular backups of your site and, especially, your data, provides a defen
 - Errors by maintainers or buggy tools resulting in data loss or corruption.
 - Vandalism by an attacker with write access.
 - [Ransomware](https://en.wikipedia.org/wiki/Ransomware) attacks, in which an attacker makes the victim's data inaccessible (for example, by encrypting it) unless the victim pays a ransom to recover it.
+
+You should also protect the confidentiality and integrity of backups: that is, ensure that attackers can't access or modify any sensitive data that they contain.
 
 ## See also
 
