@@ -90,29 +90,6 @@ If you request multiple input types and any are unavailable, then the promise re
 
 ## Examples
 
-### Checking model availability
-
-This example checks whether the model is available without specifying any restraints and then logs the status.
-
-```js
-const status = await LanguageModel.availability();
-
-switch (status) {
-  case "available":
-    console.log("Model is ready.");
-    break;
-  case "downloadable":
-    console.log("Model needs to be downloaded first.");
-    break;
-  case "downloading":
-    console.log("Model is currently downloading.");
-    break;
-  case "unavailable":
-    console.log("Model is not available on this device.");
-    break;
-}
-```
-
 ### Requesting input support
 
 This example shows how to determine whether text and image inputs are supported by the model.
