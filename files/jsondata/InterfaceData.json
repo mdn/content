@@ -2120,6 +2120,10 @@
       "inh": "SourceBuffer",
       "impl": []
     },
+    "MathMLAnchorElement": {
+      "inh": "MathMLElement",
+      "impl": []
+    },
     "MathMLElement": {
       "inh": "Element",
       "impl": []

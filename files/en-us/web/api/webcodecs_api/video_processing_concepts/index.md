@@ -50,7 +50,7 @@ Because delta frames depend on all previous frames since the last key frame, a d
 When encoding with a `VideoEncoder`, it is possible to determine when to set a frame as a key frame or a delta frame by using the `keyFrame` parameter in the encoder method.
 
 ```js
- encoder.encode(frame, { keyFrame: /* */ })
+encoder.encode(frame, { keyFrame: true });
 ```
 
 ## Encoding and decoding
@@ -83,7 +83,7 @@ Codecs only deal with encoding raw media data into a binary compressed form and 
 
 ![Containers](containers.png)
 
-Each type of video file has its own container spec, such as the [WebM spec](https://www.w3.org/TR/mse-byte-stream-format-webm/) and the [MP4 Spec](https://github.com/alfg/quick-dive-into-mp4), which specifies how metadata and encoded media should be formatted and stored within the file stream.
+Each type of video file has its own container spec, such as the [WebM spec](https://w3c.github.io/mse-byte-stream-format-webm/) and the [MP4 Spec](https://github.com/alfg/quick-dive-into-mp4), which specifies how metadata and encoded media should be formatted and stored within the file stream.
 
 A given container format can actually support a variety of different codecs. Here are the most common containers and the codecs they support:
 
