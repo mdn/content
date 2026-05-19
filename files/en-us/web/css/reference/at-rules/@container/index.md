@@ -560,14 +560,47 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-#### Plain (`:`) versus range (`<`, `>`, `=`) syntax
+#### Range syntax
 
-When a `<style-feature>` includes a value, you can write the comparison in two forms that look similar but behave differently:
+In addition to the plain `<style-feature-name>: <value>` form described above, a `<style-feature>` can be written as a **range** comparison using `=`, `<`, `<=`, `>`, or `>=`. Range syntax compares the resolved values of both sides numerically, which makes it suitable for queries such as `style(--columns >= 3)` or `style(--gap = 1rem)`.
 
-- `style(--n: 3)` (plain) matches the property's _computed value_ against the right-hand side. For an unregistered custom property, the computed value is the value as authored, so `style(--n: 3)` is false when `--n` is `calc(6/2)`. Use this form for keyword-like values, such as `style(--stock: low)`.
-- `style(--n = 3)` (range) parses both sides as a number, length, percentage, etc., and compares numerically. With the same `--n: calc(6/2)`, `style(--n = 3)` is true. The range syntax also supports `<`, `<=`, `>`, `>=`, three-value intervals such as `style(0 < --n < 10)`, and flexible operand ordering.
+To evaluate a range, the browser:
 
-For the full rules and more examples, see [Plain versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries) in the container style queries guide.
+1. Resolves each side (custom property names are looked up as if used with [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)).
+2. Parses each side as a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, or {{cssxref("&lt;resolution&gt;")}}. If either side can't be parsed as one of those types, or the two sides don't have the same type, the query is false.
+3. Computes each side (evaluating any `calc()` expressions) and performs the numeric comparison.
+
+This means range syntax can't be used to compare keyword-like values: `style(--theme = dark)` is always false because `dark` isn't a numeric type. Use the plain syntax for those, for example `style(--theme: dark)`.
+
+Either side of a range can be a custom property name, a `var()` reference, a literal value, or a `calc()` expression, in either order:
+
+```css
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
+}
+```
+
+A range can also take a three-value form, with both comparators pointing the same way, to test whether a value falls within an interval:
+
+```css
+@container style(0 < --n < 10) {
+  /* true when --n is greater than 0 and less than 10 */
+}
+@container style(100px > --width > 50px) {
+  /* true when --width is less than 100px and greater than 50px */
+}
+```
+
+In other words, `style(0 < --n < 10)` is equivalent to `style(0 < --n) and style(--n < 10)`. The middle value is tested against both bounds, rather than being chained left-to-right.
+
+> [!NOTE]
+> Plain and range syntax behave differently even when they look similar. Given `--n: calc(6/2)`, the query `style(--n: 3)` is **false** because the plain form compares the property's computed value (`calc(6/2)`) directly against `3`. The equivalent range query `style(--n = 3)` is **true** because the range form computes both sides numerically before comparing. See [Plain versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries) in the container style queries guide for more details.
 
 ### Scroll-state queries
 
