@@ -22,54 +22,61 @@ LanguageModel.availability(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : Represents the base set of options used when checking language model availability or creating a session. Options include:
+  - : An object that represents the base set of options used when checking language model availability or creating a session.
+    This has the following properties:
     - `expectedInputs` {{optional_inline}}
       - : An array representing the required input modalities and languages.
         Each entry is an object that may define the following options:
         - `type`
           - : A string indicating the content type. Must be one of:
-          - `"text"`
-            - : Plain text content.
-          - `"image"`
-            - : Image content.
-          - `"audio"`
-            - : Audio content.
-          - `"tool-call"`
-            - : A tool invocation issued by the model.
-          - `"tool-response"`
-            - : The result of a tool invocation.
+            - `"text"`
+              - : Plain text content.
+            - `"image"`
+              - : Image content.
+            - `"audio"`
+              - : Audio content.
+            - `"tool-call"`
+              - : A tool invocation issued by the model.
+            - `"tool-response"`
+              - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
-      - : An array representing the required output modalities and languages. Options include:
+      - : An array representing the required output modalities and languages.
+        Each entry is an object that may define the following options:
         - `type`
           - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
-          - `"text"`
-            - : Plain text content.
-          - `"image"`
-            - : Image content.
-          - `"audio"`
-            - : Audio content.
-          - `"tool-call"`
-            - : A tool invocation issued by the model.
-          - `"tool-response"`
-            - : The result of a tool invocation.
+            - `"text"`
+              - : Plain text content.
+            - `"image"`
+              - : Image content.
+            - `"audio"`
+              - : Audio content.
+            - `"tool-call"`
+              - : A tool invocation issued by the model.
+            - `"tool-response"`
+              - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `tools`
-      — An array verifying tool support. Options include:
-      - `name`
-        - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
-      - `description`
-        - : A string describing what the tool does. The model uses this description to decide when and whether to invoke the tool.
-      - `inputSchema`
-        - : An object containing a [JSON Schema](https://json-schema.org/) that describes the tool's input parameters. The model uses this schema to construct the arguments it passes to the tool's `execute` function.
-      - `execute`
-        - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool. It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+      - : An array representing tools available to the AI.
+        Each entry is an object that may define the following options:
+        - `name`
+          - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
+        - `description`
+          - : A string describing what the tool does.
+            The model uses this description to decide when and whether to invoke the tool.
+        - `inputSchema`
+          - : An object containing a [JSON Schema](https://json-schema.org/) that describes the tool's input parameters.
+            The model uses this schema to construct the arguments it passes to the tool's `execute` function.
+        - `execute`
+          - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool.
+            It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with one of the values listed below. If you request multiple input types and any are unavailable, then the promise resolves with `"unavailable"`.
+A {{jsxref("Promise")}} that resolves with one of the values listed below.
+If you request multiple input types and any are unavailable, then the promise resolves with `"unavailable"`.
 
 - `"available"`
   - : The model is ready to use with the given options.
@@ -78,11 +85,14 @@ A {{jsxref("Promise")}} that resolves with one of the values listed below. If yo
 - `"downloading"`
   - : The model can support the given options and a download is currently in progress.
 - `"unavailable"`
-  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error). This value may sometimes indicate a transient error. In that case, the caller should retry or fall back to an alternative implementation.
+  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error).
+    This value may sometimes indicate a transient error. In that case, the caller should retry or fall back to an alternative implementation.
 
 ## Examples
 
-### Checking basic availability
+### Checking model availability
+
+This example checks whether the model is available without specifying any restraints and then logs the status.
 
 ```js
 const status = await LanguageModel.availability();
@@ -115,7 +125,7 @@ const status = await LanguageModel.availability({
 
 ### Checking availability for a specific language
 
-The following example tests whether the model supports English before asking it to translate Japanese text to English.
+This example tests whether the model supports English before asking it to translate Japanese text to English.
 
 ```js
 const status = await LanguageModel.availability({
@@ -135,7 +145,9 @@ if (status === "available") {
 
 ### Checking availability for multimodal input
 
-{{MacroName("Prompt_API", "Multimodal input", "#multimodal-input")}} is when different types of input such as text and image may be used in the same session. Since the availability of input types varies by language model, your code should check the availability of desired modes before creating a session. An example is shown here.
+[Multimodal input](/en-US/docs/Web/API/Prompt_API#multimodal_input) describes sessions that can use more than one type of input, such as text and images.
+Since the availability of input types varies by language model, your code should check the availability of desired modes before creating a session.
+An example is shown here.
 
 ```js
 const availability = await LanguageModel.availability({
@@ -155,7 +167,8 @@ if (availability === "unavailable") {
 
 ### Gating UI on availability
 
-The following example enables or disables a translation button based on the availability of a model. It gives the user the option to download the model if it is not available.
+The following example enables or disables a translation button based on the availability of a model.
+It gives the user the option to download the model if it is not available.
 
 ```js
 const translateButton = document.querySelector("#translate");
