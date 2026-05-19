@@ -14,7 +14,7 @@ The **Web Serial API** provides a way for websites to read from and write to ser
 The Web Serial API provides the ability to connect to devices that communicate via a serial protocol.
 This includes USB and Bluetooth devices that connect over USB or Bluetooth but expose a virtual serial port to the operating system (via USB CDC-ACM or Bluetooth SPP).
 
-Note that these are distinct from devices accessed via the  [WebUSB API](/en-US/docs/Web/API/WebUSB_API), — which provides raw access to USB devices that have not been claimed by an OS driver — or input devices that use the USB HID class, which are accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
+Note that these are distinct from devices accessed via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), — which provides raw access to USB devices that have not been claimed by an OS driver — or input devices that use the USB HID class, which are accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
 Note that these are distinct from devices accessed via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), — which provides raw access to USB devices that have not been claimed by an OS driver — or input devices that use the USB HID class, which are accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
