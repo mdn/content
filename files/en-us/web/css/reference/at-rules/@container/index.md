@@ -560,7 +560,7 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-#### Plain (`:`) versus range (`=`) syntax
+#### Plain (`:`) versus range (`<`, `>`, `=`) syntax
 
 When a `<style-feature>` includes a value, you can write the comparison in two forms that look similar but behave differently:
 
