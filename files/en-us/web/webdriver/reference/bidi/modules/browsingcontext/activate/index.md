@@ -25,7 +25,7 @@ The `browsingContext.activate` [command](/en-US/docs/Web/WebDriver/Reference/BiD
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to bring to the foreground and give focus.
+  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to bring to the foreground and give focus.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
 ### Return value

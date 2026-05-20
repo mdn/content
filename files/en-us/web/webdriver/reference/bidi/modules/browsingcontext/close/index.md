@@ -25,7 +25,7 @@ The `browsingContext.close` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/M
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to close.
+  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to close.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `promptUnload` {{optional_inline}}
   - : A boolean that indicates whether the browser runs [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handlers before closing the context.

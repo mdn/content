@@ -30,7 +30,7 @@ The `params` field contains:
     - `false`: The context is brought to the foreground and receives focus after it is created.
     - `true`: The context is created in the background. See [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) to bring it to the foreground and give it focus.
 - `referenceContext` {{optional_inline}}
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of an existing [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) that is used to position the new context.
+  - : A string that contains the ID of an existing [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) that is used to position the new context.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
     When `type` is `"tab"`, the new context opens in the same window as the context specified by `referenceContext`.
@@ -45,7 +45,7 @@ The `params` field contains:
       If `referenceContext` is provided, the new tab opens next to it.
     - `"window"`: Creates the context in a new browser window.
 - `userContext` {{optional_inline}}
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the context is created.
+  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the context is created.
     User context IDs are returned by [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts) or [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext).
 
     If not specified, the new context uses the `"default"` user context or inherits the user context of `referenceContext` if provided.
@@ -55,9 +55,7 @@ The `params` field contains:
 The `result` object in the response contains the following fields:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the newly created context.
-- `userContext` {{optional_inline}}
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) associated with the new context.
+  - : A string that contains the ID of the newly created context.
 
 ### Errors
 

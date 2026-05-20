@@ -12,7 +12,7 @@ The **`browsingContext`** module contains commands and events for managing conte
 ## Contexts
 
 A context is a navigable that can load a document, such as a tab, an iframe, or a popup.
-Each context has a unique string identifier called a context ID, expressed as a [UUID](/en-US/docs/Glossary/UUID), that is used to reference it across commands and events.
+Each context has a unique string identifier called a context ID that is used to reference it across commands and events.
 
 There are two types of contexts:
 
@@ -23,9 +23,9 @@ There are two types of contexts:
   - : This type of context is nested inside a top-level context, such as an {{HTMLElement("iframe")}}.
     Child contexts are returned as children of their parent by [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
-For example, if you open a browser window and navigate to `https://example.com`, that creates one top-level context (with a UUID as its context ID).
+For example, if you open a browser window and navigate to `https://example.com`, that creates one top-level context with its own context ID.
 If that page contains an `<iframe>` loading `https://other.com`, that creates a child context nested under the top-level context.
-Opening a new tab creates a second top-level context with its own UUID.
+Opening a new tab creates a second top-level context with its own context ID.
 Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) would return both top-level contexts, with the first one having a child context.
 
 ## Commands
