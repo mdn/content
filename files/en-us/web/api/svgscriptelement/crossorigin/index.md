@@ -15,13 +15,31 @@ The **`crossOrigin`** property of the {{domxref("SVGScriptElement")}} interface 
 A string containing a keyword specifying the CORS mode to use when fetching the resource. Possible values are:
 
 - `anonymous` or an empty string (`""`)
-  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `same-origin` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode. This means that CORS is enabled and credentials are sent _if_ the resource is fetched from the same origin from which the document was loaded.
+  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode")}} and the `same-origin` {{domxref("Request.credentials")}} mode. This means that CORS is enabled and credentials are sent _if_ the resource is fetched from the same origin from which the document was loaded.
 - `use-credentials`
-  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `include` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode. All resources requested by the element will use CORS, regardless of which domain the fetch is from.
+  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode")}} and the `include` {{domxref("Request.credentials")}} mode. All resources requested by the element will use CORS, regardless of which domain the fetch is from.
 
 If the `crossOrigin` property is specified with any other value, it is the same as specifying it as `anonymous`.
 
-If the `crossOrigin` property is not specified, the resource is fetched without CORS (equivalent to using the `no-cors` {{domxref("Request.mode", "mode", "", "nocode")}} and the `same-origin` {{domxref("Request.credentials", "credentials", "", "nocode")}} mode).
+If the `crossOrigin` property is not specified, the resource is fetched without CORS (equivalent to using the `no-cors` {{domxref("Request.mode")}} and the `same-origin` {{domxref("Request.credentials")}} mode).
+
+## Examples
+
+### Accessing the `crossOrigin` property
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <script
+    id="myScript"
+    href="https://example.com/script.js"
+    crossorigin="anonymous"></script>
+</svg>
+```
+
+```js
+const scriptElement = document.getElementById("myScript");
+console.log(scriptElement.crossOrigin); // Output: "anonymous"
+```
 
 ## Specifications
 
