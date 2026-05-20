@@ -1,13 +1,13 @@
 ---
 title: "f32: Wasm type"
 short-title: f32
-slug: WebAssembly/Reference/Types/f32
+slug: WebAssembly/Reference/Value_types/f32
 page-type: webassembly-instruction
 spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
 sidebar: webassemblysidebar
 ---
 
-The **`f32`** value type holds a 32-bit IEEE 754 single-precision floating-point value.
+The **`f32`** value type holds a 32-bit single-precision floating-point value.
 
 ## Syntax
 
@@ -31,11 +31,11 @@ The **`f32`** value type holds a 32-bit IEEE 754 single-precision floating-point
 
 Arithmetic instructions ([`f32.add`](/en-US/docs/WebAssembly/Reference/Numeric/add), [`f32.mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul), and so on) follow IEEE 754 round-to-nearest-ties-to-even semantics. The exact bit pattern of a NaN produced by arithmetic is non-deterministic, so do not rely on specific NaN payloads being the same across implementations or architectures.
 
-`f32` is _transparent_: its bit pattern is observable, and `f32` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory). [`f32.reinterpret_i32`](/en-US/docs/WebAssembly/Reference/Numeric) and its inverse let you move bits between `f32` and `i32` without conversion.
+`f32` is _transparent_: its bit pattern is observable, and `f32` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory). `f32.reinterpret_i32` and its inverse let you move bits between `f32` and `i32` without conversion.
 
 ### JavaScript boundary
 
-`f32` values cross the JavaScript boundary as JavaScript [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) values. Values from JavaScript are coerced via [`ToNumber`](https://tc39.es/ecma262/#sec-tonumber) and then rounded to the nearest representable `f32`.
+`f32` values cross the JavaScript boundary as JavaScript [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) values. Values from JavaScript are rounded to the nearest representable `f32`.
 
 ## Specifications
 
@@ -43,6 +43,6 @@ Arithmetic instructions ([`f32.add`](/en-US/docs/WebAssembly/Reference/Numeric/a
 
 ## See also
 
-- [`f64`](/en-US/docs/WebAssembly/Reference/Types/f64)
-- [`i32`](/en-US/docs/WebAssembly/Reference/Types/i32), [`i64`](/en-US/docs/WebAssembly/Reference/Types/i64)
+- [`f64`](/en-US/docs/WebAssembly/Reference/Value_types/f64)
+- [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32), [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64)
 - [Numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric)

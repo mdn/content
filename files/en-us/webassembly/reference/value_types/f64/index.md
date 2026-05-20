@@ -1,13 +1,13 @@
 ---
 title: "f64: Wasm type"
 short-title: f64
-slug: WebAssembly/Reference/Types/f64
+slug: WebAssembly/Reference/Value_types/f64
 page-type: webassembly-instruction
 spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
 sidebar: webassemblysidebar
 ---
 
-The **`f64`** value type holds a 64-bit IEEE 754 double-precision floating-point value.
+The **`f64`** value type holds a 64-bit double-precision floating-point value.
 
 ## Syntax
 
@@ -29,9 +29,9 @@ The **`f64`** value type holds a 64-bit IEEE 754 double-precision floating-point
 
 `f64` values follow the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) binary64 (double-precision) format: one sign bit, eleven exponent bits, fifty-two significand bits. They cover roughly fifteen to seventeen decimal digits of precision over the range ±1.8 × 10³⁰⁸, plus the special values ±0, ±∞, and NaN.
 
-Arithmetic instructions ([`f64.add`](/en-US/docs/WebAssembly/Reference/Numeric/add), [`f64.mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul), and so on) follow IEEE 754 round-to-nearest-ties-to-even semantics. As with [`f32`](/en-US/docs/WebAssembly/Reference/Types/f32), the exact bit pattern of a NaN produced by arithmetic is non-deterministic.
+Arithmetic instructions ([`f64.add`](/en-US/docs/WebAssembly/Reference/Numeric/add), [`f64.mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul), and so on) follow IEEE 754 round-to-nearest-ties-to-even semantics. As with [`f32`](/en-US/docs/WebAssembly/Reference/Value_types/f32), the exact bit pattern of a NaN produced by arithmetic is non-deterministic.
 
-`f64` is _transparent_: its bit pattern is observable, and `f64` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory). [`f64.reinterpret_i64`](/en-US/docs/WebAssembly/Reference/Numeric) and its inverse let you move bits between `f64` and `i64` without conversion.
+`f64` is _transparent_: its bit pattern is observable, and `f64` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory). `f64.reinterpret_i64` and its inverse let you move bits between `f64` and `i64` without conversion.
 
 ### JavaScript boundary
 
@@ -43,6 +43,6 @@ Arithmetic instructions ([`f64.add`](/en-US/docs/WebAssembly/Reference/Numeric/a
 
 ## See also
 
-- [`f32`](/en-US/docs/WebAssembly/Reference/Types/f32)
-- [`i32`](/en-US/docs/WebAssembly/Reference/Types/i32), [`i64`](/en-US/docs/WebAssembly/Reference/Types/i64)
+- [`f32`](/en-US/docs/WebAssembly/Reference/Value_types/f32)
+- [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32), [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64)
 - [Numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric)
