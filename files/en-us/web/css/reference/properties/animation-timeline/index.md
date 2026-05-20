@@ -170,7 +170,7 @@ The only difference is the `animation-timeline` declaration (or lack thereof in 
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -256,7 +256,7 @@ The CSS below defines a square that rotates in alternate directions according to
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -290,7 +290,7 @@ We include all the CSS from the previous example, only setting the `animation-ti
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

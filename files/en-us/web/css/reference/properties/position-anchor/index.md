@@ -7,15 +7,18 @@ browser-compat: css.properties.position-anchor
 sidebar: cssref
 ---
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e., an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the default **anchor element** for a positioned element.
+This default is used by {{cssxref("position-area")}} and {{cssxref("position-try")}}, and by anchor functions ({{cssxref("anchor()")}} and {{cssxref("anchor-size()")}}) when no `<anchor-name>` argument is provided to those functions.
 
 ## Syntax
 
 ```css
 /* Single values */
+position-anchor: normal;
 position-anchor: auto;
 position-anchor: none;
 position-anchor: --anchor-name;
+position-anchor: match-parent;
 
 /* Global values */
 position-anchor: inherit;
@@ -27,14 +30,20 @@ position-anchor: unset;
 
 ### Values
 
+- `normal`
+  - : If {{cssxref("position-area")}} is `none`, it behaves as `none`. Otherwise it behaves as `auto`.
+
 - `auto`
   - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
 
 - `none`
-  - : The initial (default) value. The positioned element is not associated with an anchor element.
+  - : The positioned element is not associated with an anchor element.
 
 - {{cssxref("dashed-ident")}}
   - : The name of the anchor element to associate the positioned element with, as listed in the anchor element's {{cssxref("anchor-name")}} property. This is known as the **default anchor specifier**.
+
+- `match-parent`
+  - : Uses the same default anchor element as the parent element, or the originating element if this is a [pseudo-element](/en-US/docs/Glossary/Pseudo-element), provided that would be an acceptable anchor element (that is [part of the tree](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#tree-abiding_pseudo-elements)). Otherwise, it has no default anchor element.
 
 ## Description
 

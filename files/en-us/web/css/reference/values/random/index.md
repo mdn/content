@@ -231,10 +231,16 @@ We render the five badges as circles. We use the `random()` function within an {
 .badge.unique {
   background: hsl(random(0, 360) 50% 50%);
 }
+```
 
+```css hidden
 @supports not (order: random(1, 2)) {
-  :root::after {
+  body::before {
     content: "Your browser doesn't support the random() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -283,8 +289,11 @@ body {
 ```css hidden
 @supports not (order: random(1, 2)) {
   body::before {
-    color: white;
     content: "Your browser doesn't support the random() function.";
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

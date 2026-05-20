@@ -1,5 +1,6 @@
 ---
-title: "@starting-style"
+title: "`@starting-style` CSS at-rule"
+short-title: "@starting-style"
 slug: Web/CSS/Reference/At-rules/@starting-style
 page-type: css-at-rule
 browser-compat: css.at-rules.starting-style

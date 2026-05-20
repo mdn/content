@@ -6,9 +6,9 @@ browser-compat: css.types.global_keywords.revert-rule
 sidebar: cssref
 ---
 
-The **`revert-rule`** [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) rolls back the cascaded value of a property to the value it would have had if the current [style rule](/en-US/docs/Web/CSS/Syntax#css_rulesets) had not been present. The cascade then determines the value from the remaining declarations — this could be another rule in the same [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a rule in a different layer, a different [style origin](/en-US/docs/Glossary/Style_origin), or a [default value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#defaulting) (`inherited` or `initial`).
+The **`revert-rule`** [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) rolls back the cascaded value of a property to the value it would have had if the current [style rule](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_rulesets) had not been present. The cascade then determines the value from the remaining declarations — this could be another rule in the same [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer), a rule in a different layer, a different [style origin](/en-US/docs/Glossary/Style_origin), or a [default value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#defaulting) (`inherited` or `initial`).
 
-When used inside a [CSS animation](/en-US/docs/Web/CSS/CSS_animations) (the animation origin), the `revert-rule` keyword behaves like {{cssxref("revert-layer")}}.
+When used inside a [CSS animation](/en-US/docs/Web/CSS/Guides/Animations) (the animation origin), the `revert-rule` keyword behaves like {{cssxref("revert-layer")}}.
 
 This keyword can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 

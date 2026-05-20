@@ -1,5 +1,6 @@
 ---
-title: "<link>: The External Resource Link element"
+title: "`<link>` HTML external resource link element"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link

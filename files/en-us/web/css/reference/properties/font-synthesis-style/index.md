@@ -121,10 +121,10 @@ p {
 @supports not (font-synthesis-style: oblique-only) {
   body::before {
     content: "Your browser doesn't support the 'oblique-only' value.";
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

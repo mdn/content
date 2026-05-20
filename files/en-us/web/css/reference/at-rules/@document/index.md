@@ -1,5 +1,6 @@
 ---
-title: "@document"
+title: "`@document` CSS at-rule"
+short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 page-type: css-at-rule
 status:

@@ -190,7 +190,7 @@ This is a collision algorithm that can detect a collision between any two _conve
 
 Implementing SAT is out of scope for this page so see the recommended tutorials below:
 
-1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)
+1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/blog/sat/)
 2. [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
 3. [Collision detection Using the Separating Axis Theorem](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
