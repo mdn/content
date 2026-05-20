@@ -103,7 +103,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>audioworklet</td>
           <td>modulepreload</td>
-          <td><a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a></td>
+          <td><a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a> modules</td>
         </tr>
         <tr>
           <td>fetch</td>
