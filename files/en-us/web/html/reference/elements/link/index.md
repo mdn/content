@@ -150,7 +150,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>paintworklet</td>
           <td>modulepreload</td>
-          <td><a href="/en-US/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a></td>
+          <td><a href="/en-US/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a> modules</td>
         </tr>
         <tr>
           <td>script</td>
