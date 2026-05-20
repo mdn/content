@@ -34,7 +34,7 @@ The **`i64`** value type holds a 64-bit integer.
 
 ### JavaScript boundary
 
-JavaScript's `Number` cannot losslessly represent the full `i64` range, so `i64` values cross the JavaScript boundary as [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Values coming from JavaScript are coerced via [`ToBigInt64`](https://tc39.es/ecma262/#sec-tobigint64), so out-of-range BigInts wrap modulo 2⁶⁴. Passing a plain `Number` where an `i64` is expected throws a `TypeError`.
+JavaScript's `Number` cannot losslessly represent the full `i64` range, so `i64` values cross the JavaScript boundary as [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Out-of-range BigInts wrap modulo 2⁶⁴. Passing a plain `Number` where an `i64` is expected throws a `TypeError`.
 
 ## Specifications
 

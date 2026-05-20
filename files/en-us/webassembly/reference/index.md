@@ -15,7 +15,7 @@ This page lists references for [WebAssembly](/en-US/docs/WebAssembly).
 
 ## Value Types
 
-- [WebAssembly types](/en-US/docs/WebAssembly/Reference/Value_types)
+- [WebAssembly value types](/en-US/docs/WebAssembly/Reference/Value_types)
   - : The different WebAssembly value types.
 
 ## Definitions

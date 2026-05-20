@@ -36,7 +36,7 @@ The **`i32`** value type holds a 32-bit integer.
 
 ### JavaScript boundary
 
-At the JavaScript boundary, `i32` values cross as JavaScript [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) values. Values coming from JavaScript are coerced via [`ToInt32`](https://tc39.es/ecma262/#sec-toint32), so out-of-range JavaScript numbers wrap modulo 2³².
+At the JavaScript boundary, `i32` values cross as JavaScript [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) values. Out-of-range JavaScript numbers wrap modulo 2³².
 
 ## Specifications
 
