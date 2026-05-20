@@ -190,7 +190,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>worker</td>
           <td>modulepreload</td>
-          <td><a href="/en-US/docs/Web/API/Worker">Worker</a></td>
+          <td><a href="/en-US/docs/Web/API/Worker">Worker</a> modules</td>
         </tr>
       </tbody>
     </table>
