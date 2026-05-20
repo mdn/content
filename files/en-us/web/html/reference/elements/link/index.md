@@ -185,7 +185,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>track</td>
           <td>preload</td>
-          <td><code>&#x3C;track></code> <a href="/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">elements</a> (MIME type <code>text/vtt</code>)</td>
+          <td><code>&#x3C;track></code> elements (<a href="/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">WebVTT</a>, MIME type <code>text/vtt</code>)</td>
         </tr>
         <tr>
           <td>worker</td>
