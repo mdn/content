@@ -162,7 +162,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         <tr>
           <td>serviceworker</td>
           <td>modulepreload</td>
-          <td><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a></td>
+          <td><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a> modules</td>
         </tr>
         <tr>
           <td>sharedworker</td>
