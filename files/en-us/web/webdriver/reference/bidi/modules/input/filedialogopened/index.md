@@ -1,5 +1,5 @@
 ---
-title: input.fileDialogOpened event
+title: "`input.fileDialogOpened` event"
 short-title: fileDialogOpened
 slug: Web/WebDriver/Reference/BiDi/Modules/input/fileDialogOpened
 page-type: webdriver-event

@@ -1,5 +1,5 @@
 ---
-title: input module
+title: "`input` module"
 short-title: input
 slug: Web/WebDriver/Reference/BiDi/Modules/input
 page-type: listing-page
@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.input
 sidebar: webdriver
 ---
 
-The **`input`** module contains commands for simulating user input actions such as key presses, mouse clicks, scrolling, and file selection.
+The **`input`** module provides commands and an event for simulating and observing user input actions such as key presses, mouse clicks, scrolling, and file selection.
 
 ## Commands
 

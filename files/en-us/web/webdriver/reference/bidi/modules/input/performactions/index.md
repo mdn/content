@@ -124,9 +124,9 @@ The following fields are available in each inner `actions` object, depending on 
         The ID is returned by the browser when you locate the element using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes), [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction).
 
 - `value`
-  - : A string that contains the key value, such as <kbd>a</kbd>, <kbd>Enter</kbd>, or <kbd>Shift</kbd>.
-    See [Key values for keyboard events](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values) for the full list of valid values.
+  - : A string that contains the key value.
     Specify this when the inner `type` field value is `"keyDown"` or `"keyUp"`.
+    For special keys such as <kbd>Shift</kbd> or <kbd>Enter</kbd>, use the Unicode code points defined in the [WebDriver keyboard actions](https://w3c.github.io/webdriver/#keyboard-actions) table (for example, `"\uE008"` for the <kbd>Shift</kbd> key). For printable characters, use the character directly (for example, `"a"`).
 - Pointer properties
   - : The following fields are part of the inner `actions` object and describe the physical characteristics of the pointer device, such as a mouse, stylus, or touchscreen.
     Specify these when the inner `type` is `"pointerDown"` or `"pointerMove"`.
@@ -178,9 +178,9 @@ Consider a scenario where you want to hold the <kbd>Shift</kbd> key while clicki
 With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), get the context ID using [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) and the element identifier using [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes).
 Send the following message with two outer `actions` objects — a `"key"` source and a `"pointer"` source — each with an outer `type` and an inner `actions` array, running in parallel across the following three ticks:
 
-- Tick 1: The keyboard presses <kbd>Shift</kbd> while the pointer moves to the element. Since the `duration` of `pointerMove` is specified as `300`, the tick lasts `300 ms`, which is the longest `duration` in this tick.
-- Tick 2: The keyboard pauses while the pointer button is pressed (`pointerDown`). This tick lasts for `0 ms`.
-- Tick 3: The <kbd>Shift</kbd> key is released (`keyUp`) and the pointer button is released (`pointerUp`) simultaneously. This tick also lasts for `0 ms`.
+- Tick 1: The keyboard presses <kbd>Shift</kbd> while the pointer moves to the element. Since the `duration` of `pointerMove` is specified as `300`, the tick lasts 300 ms, which is the longest `duration` in this tick.
+- Tick 2: The keyboard pauses while the pointer button is pressed (`pointerDown`). This tick lasts for 0 ms.
+- Tick 3: The <kbd>Shift</kbd> key is released (`keyUp`) and the pointer button is released (`pointerUp`) simultaneously. This tick also lasts for 0 ms.
 
 ```json-nolint
 {
@@ -198,10 +198,10 @@ Send the following message with two outer `actions` objects — a `"key"` source
             "value": "\uE008"
           },
           {
-            "type": "pause"    // Tick 2: Keyboard pause (0 ms)
+            "type": "pause" // Tick 2: Keyboard pause (0 ms)
           },
           {
-            "type": "keyUp",   // Tick 3: Shift key up (0 ms)
+            "type": "keyUp", // Tick 3: Shift key up (0 ms)
             "value": "\uE008"
           }
         ]
@@ -230,7 +230,7 @@ Send the following message with two outer `actions` objects — a `"key"` source
             "button": 0
           },
           {
-            "type": "pointerUp",   // Tick 3: Release button (0 ms)
+            "type": "pointerUp", // Tick 3: Release button (0 ms)
             "button": 0
           }
         ]
