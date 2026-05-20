@@ -1,13 +1,13 @@
 ---
-title: Firefox 152 release notes for developers (Nightly)
-short-title: Firefox 152 (Nightly)
+title: Firefox 152 release notes for developers (Beta)
+short-title: Firefox 152 (Beta)
 slug: Mozilla/Firefox/Releases/152
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 152 that affect developers.
-Firefox 152 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
+Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -71,6 +71,10 @@ Firefox 152 is the current [Nightly version of Firefox](https://www.firefox.com/
 <!-- #### Marionette -->
 
 ## Changes for add-on developers
+
+- The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} has been removed. This feature was deprecated in Firefox 149. ([Firefox bug 2015559](https://bugzil.la/2015559))
+
+  As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
 
 <!-- ### Removals -->
 

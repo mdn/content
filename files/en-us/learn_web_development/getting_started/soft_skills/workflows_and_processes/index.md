@@ -57,7 +57,7 @@ Your own, built around a server product such as Apache, or a service like Netlif
 ```
 
 > [!NOTE]
-> You will often see acronyms that refer to poplar tech stacks, such as [MEAN](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) or [LAMP](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>) (Linux, Apache, MySQL, PHP or Python).
+> You will often see acronyms that refer to popular tech stacks, such as [MEAN](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) or [LAMP](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>) (Linux, Apache, MySQL, PHP or Python).
 
 On MDN, we are mainly concerned with the front-end part, but even that can be broken down into lots of different pieces. Take the front-end for example:
 

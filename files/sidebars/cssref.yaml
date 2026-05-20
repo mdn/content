@@ -313,6 +313,7 @@ sidebar:
     link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Selectors
     tags: css-selector
@@ -331,30 +332,35 @@ sidebar:
     link: /Web/CSS/Reference/Selectors/Pseudo-classes
     title: Pseudo-classes
     details: closed
+    code: true
   - type: listSubPagesGrouped
     path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-element
     link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/At-rules
     tags: css-at-rule
     link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-keyword
     link: /Web/CSS/Reference/Values
     title: Values
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-type
     link: /Web/CSS/Reference/Values/Data_types
     title: Types
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-function
@@ -362,6 +368,7 @@ sidebar:
     link: /Web/CSS/Reference/Values/Functions
     title: Functions
     details: closed
+    code: true
 l10n:
   de:
     Guides: Leitfäden

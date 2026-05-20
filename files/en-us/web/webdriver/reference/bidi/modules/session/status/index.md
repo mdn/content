@@ -1,6 +1,6 @@
 ---
-title: session.status command
-short-title: session.status
+title: "`session.status` command"
+short-title: status
 slug: Web/WebDriver/Reference/BiDi/Modules/session/status
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.status

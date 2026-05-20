@@ -162,6 +162,7 @@ Deinonychus
 demi
 demultiplexing
 demux
+demuxer
 demuxing
 deoptimize
 deprioritized
@@ -437,6 +438,8 @@ multivalued
 multiview
 muscaria
 musicogenic
+muxer
+muxing
 MVVM
 namedspace
 narrowband
@@ -571,6 +574,7 @@ QWERTZ
 RAII
 rari
 rasterizes
+raycaster
 RDBMS
 RDBMSes
 readback

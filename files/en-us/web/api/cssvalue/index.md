@@ -4,10 +4,11 @@ slug: Web/API/CSSValue
 page-type: web-api-interface
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSValue
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.
 
@@ -22,9 +23,9 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 
 ## Instance properties
 
-- {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : A string representing the current value.
-- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : An `unsigned short` representing a code defining the type of the value. Possible values are:
 
     | Constant              | Description                                                                                                                                                                                              |
