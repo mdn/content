@@ -144,7 +144,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
           <td>json</td>
           <td>modulepreload</td>
           <td>
-            Link to supplementary JSON file.
+            Supplementary JSON file
           </td>
         </tr>
         <tr>
