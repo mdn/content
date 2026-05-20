@@ -394,6 +394,22 @@ The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS
 
 **No experimental features in this release cycle.**
 
+## MathML
+
+### Disable `href` on non-`<a>` MathML elements
+
+When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) global attribute no longer creates a hyperlink on MathML elements other than `<a>`, aligning Firefox with the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element), which only defines hyperlinks on the `<a>` element. ([Firefox bug 2026848](https://bugzil.la/2026848)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `mathml.href_link_on_non_anchor_element.disabled`
+  - : Set to `true` to enable.
+
 ## JavaScript
 
 ### Multiple import maps
@@ -582,12 +598,12 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Set to `true` to enable.
 
 ### GeometryUtils method: getBoxQuads()
@@ -596,7 +612,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
