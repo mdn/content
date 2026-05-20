@@ -171,7 +171,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>style</td>
-          <td>preload</td>
+          <td>preload or modulepreload</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
             <code>@import</code> and <code>modulepreload</code> destinations.
