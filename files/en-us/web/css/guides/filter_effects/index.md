@@ -239,6 +239,8 @@ function sepia() {
 
 {{EmbedLiveSample("filters", "", "550px")}}
 
+## Reference
+
 ### Properties
 
 - {{cssxref("backdrop-filter")}}
