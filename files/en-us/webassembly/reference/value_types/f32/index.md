@@ -27,7 +27,7 @@ The **`f32`** value type holds a 32-bit single-precision floating-point value.
 
 ## Description
 
-`f32` values follow the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) binary32 (single-precision) format: one sign bit, eight exponent bits, twenty-three significand bits. They cover roughly seven decimal digits of precision over the range ±3.4 × 10³⁸, plus the special values ±0, ±∞, and NaN.
+`f32` values follow the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) binary32 (single-precision) format: one sign bit, eight exponent bits, and twenty-three significand bits. They cover roughly seven decimal digits of precision over the range ±3.4 × 10³⁸, plus the special values ±0, ±∞, and NaN.
 
 Arithmetic instructions ([`f32.add`](/en-US/docs/WebAssembly/Reference/Numeric/add), [`f32.mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul), and so on) follow IEEE 754 round-to-nearest-ties-to-even semantics. The exact bit pattern of a NaN produced by arithmetic is non-deterministic, so do not rely on specific NaN payloads being the same across implementations or architectures.
 
