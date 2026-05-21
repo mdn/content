@@ -31,7 +31,7 @@ decode(options)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with an object containing the following members:
+A {{jsxref("Promise")}} that resolves with an object containing the following members:
 
 - `image`
   - : A {{domxref("VideoFrame")}} containing the decoded image.
