@@ -28,7 +28,7 @@ The **`i32`** value type holds a 32-bit integer.
 
 ## Description
 
-`i32` values are 32 bits wide and are not inherently signed or unsigned. The interpretation is chosen by each instruction: [`i32.div_s`](/en-US/docs/WebAssembly/Reference/Numeric/div) treats its operands as two's-complement signed integers, while `i32.div_u` treats them as unsigned. Where the distinction does not affect the result, such as addition, subtraction, multiplication, and bitwise operations, a single instruction handles both interpretations.
+`i32` values are 32 bits wide and are not inherently signed or unsigned. The interpretation is chosen by each instruction: [`i32.div_s`](/en-US/docs/WebAssembly/Reference/Numeric/div) for example treats its operands as two's-complement signed integers, while `i32.div_u` treats them as unsigned. Where the distinction does not affect the result, such as in addition, subtraction, multiplication, and bitwise operations, a single instruction handles both interpretations.
 
 `i32` is the default address type for memory and table operations. Addresses, offsets, and sizes passed to instructions such as [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/load) and [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get) are `i32` unless a module opts into a wider address type for the memory.
 
