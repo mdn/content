@@ -39,7 +39,23 @@ sidebar:
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/input#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/performActions
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/releaseActions
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/setFiles
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/input#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/fileDialogOpened
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/log
         details: closed
         code: true

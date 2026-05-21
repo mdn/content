@@ -1,7 +1,7 @@
 ---
 title: "v128: Wasm type"
 short-title: v128
-slug: WebAssembly/Reference/Types/v128
+slug: WebAssembly/Reference/Value_types/v128
 page-type: webassembly-instruction
 browser-compat: webassembly.simd
 sidebar: webassemblysidebar

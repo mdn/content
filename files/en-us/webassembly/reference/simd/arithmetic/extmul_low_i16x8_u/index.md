@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extmul_low_i16x8_u
 sidebar: webassemblysidebar
 ---
 
-The **`extmul_low_i16x8_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) takes lanes 0–3 of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
+The **`extmul_low_i16x8_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) takes lanes 0–3 of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: extmul_low_i16x8_u", "tabbed-taller")}}
 

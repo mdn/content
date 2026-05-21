@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.bitselect
 sidebar: webassemblysidebar
 ---
 
-The **`bitselect`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) takes three [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) values as inputs — two inputs and a mask value — and returns a new `v128` value with each byte calculated using the formula `output = (input1 AND mask) OR (input2 AND NOT mask)`.
+The **`bitselect`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) takes three [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) values as inputs — two inputs and a mask value — and returns a new `v128` value with each byte calculated using the formula `output = (input1 AND mask) OR (input2 AND NOT mask)`.
 
 {{InteractiveExample("Wat Demo: bitselect", "tabbed-taller")}}
 
