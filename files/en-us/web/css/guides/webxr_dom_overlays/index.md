@@ -19,11 +19,12 @@ The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when
 ### Events
 
 - {{domxref("Element")}} events
-  - {{domxref("Element/beforexrselect", "beforexrselect")}}
+  - {{domxref("Element/beforexrselect_event", "beforexrselect")}}
 
 ### Interfaces
 
-- {{domxref("XRSession.domOverlayState")}}
+- {{domxref("XRSession")}}
+  - {{domxref("XRSession.domOverlayState", "domOverlayState")}} property
 
 ## Guides
 
@@ -37,6 +38,9 @@ The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when
   - {{CSSxRef(":fullscreen")}}
   - {{CSSxRef(":picture-in-picture")}}
 
+- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
+  - {{domxref("XRWebGLLayer")}} interface
+
 ## Specifications
 
 {{Specifications}}
@@ -44,7 +48,5 @@ The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when
 ## See also
 
 - [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
-- {{domxref("XRWebGLLayer")}}
-- [CSS Object Model (CSSOM)](/en-US/docs/Web/CSS/CSS_Object_Model) module
-- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) API
-- [CSSOM View API](/en-US/docs/Web/CSS/CSSOM_view_API)
+- [CSSOM view module](/en-US/docs/Web/CSS/CSSOM_view)
+- [CSSOM View API](/en-US/docs/Web/API/CSSOM_view_API)
