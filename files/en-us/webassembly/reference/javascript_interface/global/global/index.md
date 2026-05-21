@@ -26,8 +26,8 @@ new WebAssembly.Global(descriptor, value)
         - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
         - `f32`: A 32-bit floating point number.
         - `f64`: A 64-bit floating point number.
-        - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
-        - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+        - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
+        - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
     - `mutable`
       - : A boolean value that determines whether the global is mutable or not. By default, this is `false`.
 

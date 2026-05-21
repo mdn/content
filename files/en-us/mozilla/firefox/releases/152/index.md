@@ -50,11 +50,18 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
 
-<!-- #### Media, WebRTC, and Web Audio -->
+- The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported.
+  These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the platform-dependent maximum number of actions that can be set for a notification, respectively.
+  ([Firefox bug 1959931](https://bugzil.la/1959931)).
+
+#### Media, WebRTC, and Web Audio
+
+- The `recieveTime` property is now included in the metadata returned from [`RTCEncodedVideoFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata#receivetime) and [`RTCEncodedAudioFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata#receivetime), and can be passed to the [`RTCEncodedVideoFrame()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/RTCEncodedVideoFrame) and [`RTCEncodedAudioFrame()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/RTCEncodedAudioFrame) constructors as a property in the `options` parameter.
+  ([Firefox bug 2033420](https://bugzil.la/2033420)).
 
 <!-- #### Removals -->
 
