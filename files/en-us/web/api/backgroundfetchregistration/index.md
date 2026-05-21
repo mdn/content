@@ -34,7 +34,7 @@ _Also inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string with a value that indicates a reason for a background fetch failure. Can be one of the following values: `""`, `"aborted"`, `"bad-status"`, `"fetch-error"`, `"quota-exceeded"`, `"download-total-exceeded"`.
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
+  - : A {{jsxref("Boolean")}} indicating whether the `recordsAvailable` flag is set.
 
 ## Instance methods
 
