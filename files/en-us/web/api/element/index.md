@@ -19,6 +19,8 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on an element.
 - {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 - {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
