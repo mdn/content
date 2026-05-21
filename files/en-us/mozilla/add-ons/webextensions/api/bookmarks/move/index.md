@@ -27,7 +27,7 @@ let movingBookmark = browser.bookmarks.move(
 - `id`
   - : A {{jsxref("String")}} containing the ID of the bookmark or folder to move.
 - `destination`
-  - : An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:
+  - : An {{jsxref("Object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:
     - `parentId` {{optional_inline}}
       - : A {{jsxref("String")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.
     - `index` {{optional_inline}}

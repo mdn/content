@@ -23,7 +23,7 @@ let searching = browser.bookmarks.search(
 ### Parameters
 
 - `query`
-  - : A {{jsxref("String")}} or {{jsxref("object")}} describing the query to perform.
+  - : A {{jsxref("String")}} or {{jsxref("Object")}} describing the query to perform.
 
     If `query` is a **string**, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.
 

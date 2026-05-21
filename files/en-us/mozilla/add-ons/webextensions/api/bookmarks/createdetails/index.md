@@ -10,7 +10,7 @@ The `CreateDetails` type is used to describe the properties of a new, bookmark, 
 
 ## Type
 
-An {{jsxref("object")}} containing some combination of the following fields:
+An {{jsxref("Object")}} containing some combination of the following fields:
 
 - `index` {{optional_inline}}
   - : An integer {{jsxref("Number")}} which specifies the position at which to place the new bookmark under its parent. A value of 0 will put it at the top of the list.

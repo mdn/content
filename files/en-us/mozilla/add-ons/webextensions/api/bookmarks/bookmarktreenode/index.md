@@ -10,7 +10,7 @@ An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark
 
 ## Type
 
-An {{jsxref("object")}} with the following properties:
+An {{jsxref("Object")}} with the following properties:
 
 - `children` {{optional_inline}}
   - : An {{jsxref("array")}} of `bookmarks.BookmarkTreeNode` objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
