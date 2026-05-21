@@ -22,13 +22,13 @@ _Also inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the background fetch's ID.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
+  - : A {{jsxref("Number")}} containing the total number of bytes to be uploaded.
 - {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes successfully sent, initially `0`.
+  - : A {{jsxref("Number")}} containing the size in bytes successfully sent, initially `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
+  - : A {{jsxref("Number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
+  - : A {{jsxref("Number")}} containing the size in bytes that has been downloaded, initially `0`.
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
