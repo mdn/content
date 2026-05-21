@@ -611,7 +611,7 @@ Several general notes about the table:
       <td>1: comma</td>
       <td>left-to-right</td>
       <td>
-        {{jsxref("Operators/comma_operator", "Comma operator", "", 1)}}<br><code>x, y</code>
+        {{jsxref("Operators/Comma_operator", "Comma operator", "", 1)}}<br><code>x, y</code>
       </td>
     </tr>
   </tbody>
