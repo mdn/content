@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.add_sat_s
 sidebar: webassemblysidebar
 ---
 
-The **`add_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+The **`add_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
 
 {{InteractiveExample("Wat Demo: add_sat_s", "tabbed-taller")}}
 

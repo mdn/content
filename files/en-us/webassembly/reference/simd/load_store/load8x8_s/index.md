@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load8x8_s
 sidebar: webassemblysidebar
 ---
 
-The **`load8x8_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads eight 8-bit integers from a given memory address and sign extends each one to a 16-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i16x8` value interpretation.
+The **`load8x8_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads eight 8-bit integers from a given memory address and sign extends each one to a 16-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i16x8` value interpretation.
 
 {{InteractiveExample("Wat Demo: load8x8_s", "tabbed-taller")}}
 

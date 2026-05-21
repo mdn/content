@@ -1,7 +1,7 @@
 ---
 title: "externref: Wasm type"
 short-title: externref
-slug: WebAssembly/Reference/Types/externref
+slug: WebAssembly/Reference/Value_types/externref
 page-type: webassembly-instruction
 browser-compat: webassembly.reference-types
 spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-types
@@ -147,5 +147,5 @@ The value `16` is displayed inside the output `<p>` element. This makes sense, a
 
 ## See also
 
-- [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
+- [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
