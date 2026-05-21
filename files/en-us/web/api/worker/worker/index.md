@@ -104,7 +104,7 @@ Classic workers are fetched and executed as scripts:
 
 ### Importing scripts or modules
 
-Module workers can import [ECMASCript modules](/en-US/docs/Web/JavaScript/Guide/Modules) using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Module workers can import [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Modules are fetched using CORS, so cross-origin modules must be served with the {{httpheader("Access-Control-Allow-Origin")}} header in order to be loaded.
 Developers can specify whether or not credentials should be sent in cross-origin imports.
 
