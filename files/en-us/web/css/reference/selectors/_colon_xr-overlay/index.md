@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
+The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), defined in the [WebXR DOM overlays](/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays) module, matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
 
 ## Syntax
 
@@ -59,5 +59,6 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 - {{CSSxRef(":fullscreen")}}
 - {{CSSxRef(":picture-in-picture")}}
 - [CSS pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [WebXR DOM overlays](/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays) module
 - [WebXR device API fundamentals](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)
 - {{domxref("XRSession.domOverlayState")}}
