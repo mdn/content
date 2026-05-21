@@ -185,7 +185,7 @@ div {
 
 {{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
 
-### Gradient hints
+### Controlling the progression of a gradient using color hints
 
 By default, a gradient transitions evenly from one color to the next. You can include a color-hint to move the midpoint of the transition value to a certain point along the gradient, letting you control the {{Glossary("interpolation")}}, or progression, between two color stops. In this example, we've moved the midpoint of the transition from the 50% mark to the 10% mark. To highlight the difference the color hint can make, the second example does not contain the hint:
 
