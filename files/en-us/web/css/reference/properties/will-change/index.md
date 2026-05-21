@@ -7,18 +7,7 @@ browser-compat: css.properties.will-change
 sidebar: cssref
 ---
 
-The **`will-change`** [CSS](/en-US/docs/Web/CSS) property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
-
-> [!WARNING]
-> `will-change` is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
-
-Proper usage of this property can be a bit tricky:
-
-- _Don't apply will-change to too many elements._ The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to `will-change` end up using a lot of a machine's resources, and when overused like this can cause the page to slow down or consume a lot of resources.
-- _Use sparingly._ The normal behavior for optimizations that the browser make is to remove the optimizations as soon as it can and revert back to normal. But adding `will-change` directly in a stylesheet implies that the targeted elements are always a few moments away from changing and the browser will keep the optimizations for much longer time than it would have otherwise. So it is a good practice to switch `will-change` on and off using script code before and after the change occurs.
-- _Don't apply will-change to elements to perform premature optimization_. If your page is performing well, don't add the `will-change` property to elements just to wring out a little more speed. `will-change` is intended to be used as something of a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems. Excessive use of `will-change` will result in excessive memory use and will cause more complex rendering to occur as the browser attempts to prepare for the possible change. This will lead to worse performance.
-- _Give it sufficient time to work_. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set `will-change` then.
-- _Be aware, that will-change may actually influence the visual appearance of elements_, when used with property values, that create a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (e.g., will-change: opacity), as the stacking context is created up front.
+The **`will-change`** [CSS](/en-US/docs/Web/CSS) property enables optimizing animations by providing a rendering hint to the user agent about how an element is expected to change.
 
 ## Syntax
 
@@ -27,9 +16,13 @@ Proper usage of this property can be a bit tricky:
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform; /* Example of <custom-ident> */
-will-change: opacity; /* Example of <custom-ident> */
-will-change: left, top; /* Example of two <animatable-feature> */
+
+/* <custom-ident> values */
+will-change: transform;
+will-change: opacity;
+
+/* multiple values */
+will-change: left, top;
 
 /* Global values */
 will-change: inherit;
@@ -41,17 +34,44 @@ will-change: unset;
 
 ### Values
 
+The value is either `auto` or one or more comma separated `<animateable-feature>` values:
+
 - `auto`
-  - : This keyword expresses no particular intent; the user agent should apply whatever heuristics and optimizations it normally does.
+  - : The default value. The browser applies whatever heuristics and optimizations it normally does.
 
-The `<animatable-feature>` can be one of the following values:
+- `<animateable-feature>`
+  - : Either `scroll-position`, `contents`, or a {{cssxref("custom-ident")}} matching for the name of a built-in CSS property.
+    - `scroll-position`
+      - : The scroll position of the element is expected to change in the near future, indicating the browser can optimize the rendering of overflowing content.
 
-- `scroll-position`
-  - : Indicates that the author expects to animate or change the scroll position of the element in the near future.
-- `contents`
-  - : Indicates that the author expects to animate or change something about the element's contents in the near future.
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : Indicates that the author expects to animate or change the property with the given name on the element in the near future. If the property given is a shorthand, it indicates the expectation for all the longhands the shorthand expands to. It cannot be one of the following values: `unset`, `initial`, `inherit`, `will-change`, `auto`, `scroll-position`, or `contents`. The spec doesn't define the behavior of particular value, but it is common for `transform` to be a compositing layer hint. [Chrome currently takes two actions](https://github.com/operasoftware/devopera/pull/330), given particular CSS property idents: establish a new compositing layer or a new {{Glossary("stacking context")}}.
+    - `contents`
+      - : The element's contents, including all the elements in its subtree, are expected to change in the near future, indicating the browser can cache the element less aggressively.
+
+    - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+      - : The name of a CSS property, as an {{cssxref("ident")}}, whose value will be animated or otherwise change in the near future. If the `<ident>` given represents a property shorthand, all of its longhand components are applied. The value cannot be `will-change`, `none`, `all` `auto`, `scroll-position`, or `contents`.
+
+## Description
+
+The `will-change` property provides a rendering hint to the browser indicating which properties are expected to be animated or otherwise changed. This enables browser to create the necessary rendering optimizations to enable smoother changes, and avoid {{glossary("jank")}}.
+
+The `will-change` property is aimed at improving rendering performance. This property can improve performance for elements with frequent repaints and reflows or complex visual effects like {{cssxref("box-shadow")}} and {{cssxref("clip-path")}}.
+
+Applying the property to an element applies the value to the element's entire subtree, indicating any of the descendants can change. For this reason, applying a non-`auto` value on a large section, such at the {{htmlelement("body")}}, can actually be bad for a page's performance. Instead,limit the use of this property to deeply nested elements, containing as little of the document as possible.
+
+> [!WARNING]
+> The `will-change` property is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
+
+Proper usage of this property can be a bit tricky:
+
+- _Don't apply will-change to too many elements._ The browser already tries as hard as it can to optimize everything. Some of the stronger optimizations that are likely to be tied to `will-change` end up using a lot of a machine's resources, and when overused like this can cause the page to slow down or consume a lot of resources.
+- _Use sparingly._ The normal behavior for optimizations that the browser make is to remove the optimizations as soon as it can and revert back to normal. But adding `will-change` directly in a stylesheet implies that the targeted elements are always a few moments away from changing and the browser will keep the optimizations for much longer time than it would have otherwise. So it is a good practice to switch `will-change` on and off using script code before and after the change occurs.
+- _Don't apply will-change to elements to perform premature optimization_. If your page is performing well, don't add the `will-change` property to elements just to wring out a little more speed. `will-change` is intended to be used as something of a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems. Excessive use of `will-change` will result in excessive memory use and will cause more complex rendering to occur as the browser attempts to prepare for the possible change. This will lead to worse performance.
+- _Give it sufficient time to work_. This property is intended as a method for authors to let the user-agent know about properties that are likely to change ahead of time. Then the browser can choose to apply any ahead-of-time optimizations required for the property change before the property change actually happens. So it is important to give the browser some time to actually do the optimizations. Find some way to predict at least slightly ahead of time that something will change, and set `will-change` then.
+- _Be aware, that will-change may actually influence the visual appearance of elements_, when used with property values, that create a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) (e.g., will-change: opacity), as the stacking context is created up front.
+
+### Animations
+
+If applying `will-change` to improve animations, add the property before the start of the animation. Animated properties behave as if included in a set `will-change` property value. For this reason, there is no reason to add the property within your {{cssxref("@keyframes")}} animation definitions.
 
 ### Via stylesheet
 
@@ -73,20 +93,35 @@ It may be appropriate to include `will-change` in your style sheet for an applic
 
 ## Examples
 
+### Basic usage
+
+This example demonstrates basic CSS application of the `will-change` property.
+
+#### CSS
+
+We use CSS to apply the `will-change` property to our `#element`, proving a hint to the browse that the {{cssxref("transform")}} and {{cssxref("opacity")}} property values will be animated or otherwise change in the near future.
+
+```css
+#element {
+  willchange: transform, opacity;
+}
+```
+
 ### Via script
 
-This is an example showing how to apply the `will-change` property through scripting, which is probably what you should be doing in most cases.
+This example shows how to apply the `will-change` property when needed and remove optimizations when done using JavaScript, which is generally how `will-change` should be applied.
+
+#### JavaScript
+
+We use JavaScript to add the `will-change` property to our `#element` when the element is hovered by using the {{domxref("Element/mouseenter_event", "mouseenter")}} event. Setting `will-change` to `transform, opacity` tells the browser to optimize for changes to the {{cssxref("transform")}} and {{cssxref("opacity")}} properties. When the {{domxref("Element/animationend_event", "animationend")}} event occurs, our script sets the value to `auto`.
 
 ```js
 const el = document.getElementById("element");
 
-// Set will-change when the element is hovered
 el.addEventListener("mouseenter", hintBrowser);
 el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
-  // The optimizable properties that are going to change
-  // in the animation's keyframes block
   this.style.willChange = "transform, opacity";
 }
 
@@ -106,8 +141,6 @@ function removeHint() {
 ## See also
 
 - {{cssxref("transform")}}
-- Individual transform properties:
-  - {{cssxref("translate")}}
-  - {{cssxref("scale")}}
-  - {{cssxref("rotate")}}
-  - Note: there is no individual `skew` property
+- Individual transform properties: {{cssxref("translate")}}, {{cssxref("scale")}}, {{cssxref("rotate")}}
+- {{cssxref("animation")}}
+- [CSS will change](/en-US/docs/Web/CSS/Guides/Will_change) module
