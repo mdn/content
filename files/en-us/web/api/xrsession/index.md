@@ -123,3 +123,7 @@ if (XR) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref(":xr-overlay")}} pseudo-class

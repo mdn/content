@@ -81,7 +81,7 @@ For vertical languages, we use the {{cssxref("writing-mode")}} and {{cssxref("te
 {{EmbedLiveSample("Writing system modes", "100%", "500")}}
 
 ```css hidden
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap";
 
 :lang(ja),
 :lang(mn-Mong) {

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.promote_low_f32x4
 sidebar: webassemblysidebar
 ---
 
-The **`promote_low_f32x4`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the first two lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into an `f64x2` value interpretation.
+The **`promote_low_f32x4`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the first two lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `f32x4` value interpretation into an `f64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: promote_low_f32x4", "tabbed-taller")}}
 
@@ -36,7 +36,7 @@ value_type.promote_low_f32x4
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `promote_low_f32x4`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `promote_low_f32x4`:
     - `f64x2`
 - `promote_low_f32x4`
   - : The `promote_low_f32x4` instruction. Must always be included after the `value_type` and a period (`.`).

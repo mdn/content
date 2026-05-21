@@ -87,7 +87,7 @@ The following documents list a broad and diverse set of threats and threat model
 
 - [RFC 9620 Human Rights Considerations](https://datatracker.ietf.org/doc/rfc9620/)
 - [W3C TAG: Ethical Web Principles](https://w3ctag.github.io/ethical-web-principles/)
-- [W3C Self-Review Questionnaire: Security and Privacy](https://www.w3.org/TR/security-privacy-questionnaire/#missing-questions)
+- [W3C Self-Review Questionnaire: Security and Privacy](https://w3c.github.io/security-questionnaire/)
 - [RFC 6973 Privacy Considerations for Internet Protocols](https://datatracker.ietf.org/doc/html/rfc6973)
 - [RFC 3552 Guidelines for Writing RFC Text on Security Considerations](https://datatracker.ietf.org/doc/html/rfc3552)
 - [Invariant-centric threat modeling](https://github.com/defuse/ictm)

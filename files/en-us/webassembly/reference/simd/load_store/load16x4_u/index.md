@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load16x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`load16x4_u`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads four 16-bit integers from a given memory address and zero extends each one to a 32-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i32x4` value interpretation.
+The **`load16x4_u`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads four 16-bit integers from a given memory address and zero extends each one to a 32-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: load16x4_u", "tabbed-taller")}}
 

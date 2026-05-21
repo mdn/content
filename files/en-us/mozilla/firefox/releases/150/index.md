@@ -1,8 +1,8 @@
 ---
-title: Firefox 150 release notes for developers (Stable)
-short-title: Firefox 150 (Stable)
+title: Firefox 150 release notes for developers
+short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -21,7 +21,7 @@ Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/releas
 
 - The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
   This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
-  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  This is simpler than specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
   ([Firefox bug 1819581](https://bugzil.la/1819581)).
 
 ### CSS
@@ -59,6 +59,15 @@ No notable changes.
 - The `ariaNotify()` method is now supported on {{domxref("Document/ariaNotify","Document")}} and {{domxref("Element/ariaNotify","Element")}}.
   This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
+
+#### Media, WebRTC, and Web Audio
+
+- {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now supported, allowing reporting of SDP parse errors.
+  ([Firefox bug 1814459](https://bugzil.la/1814459)).
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported.
+  ([Firefox bug 1561441](https://bugzil.la/1561441)).
+- {{domxref("RTCIceTransport.role")}} is now supported.
+  ([Firefox bug 2018843](https://bugzil.la/2018843)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
