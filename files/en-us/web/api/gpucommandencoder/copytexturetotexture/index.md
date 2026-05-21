@@ -55,7 +55,7 @@ A copy texture object has the following structure:
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

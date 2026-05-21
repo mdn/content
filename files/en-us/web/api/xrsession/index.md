@@ -47,7 +47,7 @@ _`XRSession` provides the following methods in addition to those inherited from 
 - {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} {{Experimental_Inline}}
   - : Removes a callback from the animation frame painting callback from `XRSession`'s set of animation frame rendering callbacks, given the identifying handle returned by a previous call to {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 - {{DOMxRef("XRSession.end", "end()")}} {{Experimental_Inline}}
-  - : Ends the WebXR session. Returns a {{jsxref("promise")}} which resolves when the session has been shut down.
+  - : Ends the WebXR session. Returns a {{jsxref("Promise")}} which resolves when the session has been shut down.
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} {{Experimental_Inline}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
 - {{DOMxRef("XRSession.requestHitTestSource", "requestHitTestSource()")}} {{Experimental_Inline}}

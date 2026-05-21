@@ -330,7 +330,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 
 [JavaScript classes.](/en-US/docs/Web/JavaScript/Reference/Classes)
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
 - [Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
