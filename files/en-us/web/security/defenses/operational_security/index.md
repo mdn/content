@@ -205,7 +205,7 @@ You need to find a balance in which maintainers are alerted about real problems,
 
 - [CSP](/en-US/docs/Web/HTTP/Guides/CSP) violations, which can be reported using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
-You should also proviude a way for users to report security problems with your site. Projects can communicate their security policy using a `SECURITY.md` file in the root directory of their repository. This file explains how users or researchers can report vulnerabilities, goe you will handle these reports, and details you your bug bounty program, if you have one.
+You should also provide a way for users to report security problems with your site. Projects can communicate their security policy using a `SECURITY.md` file in the root directory of their repository. This file explains how users or researchers can report vulnerabilities, how you will handle these reports, and details of your bug bounty program, if you have one.
 
 Websites can also provide a means for end users to report security problems, for example using a dedicated email address.
 
