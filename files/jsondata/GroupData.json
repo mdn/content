@@ -1915,7 +1915,8 @@
       "overview": ["View Transition API"],
       "guides": [
         "/docs/Web/API/View_Transition_API/Using",
-        "/docs/Web/API/View_Transition_API/Using_types"
+        "/docs/Web/API/View_Transition_API/Using_types",
+        "/docs/Web/API/View_Transition_API/Using_element-scoped"
       ],
       "interfaces": [
         "CSSViewTransitionRule",

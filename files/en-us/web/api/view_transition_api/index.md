@@ -12,7 +12,7 @@ spec-urls:
 
 {{DefaultAPISidebar("View Transition API")}}
 
-The **View Transition API** provides a mechanism for easily creating animated transitions between different website views. This includes animating between DOM states in a single-page app (SPA), and animating the navigation between documents in a multi-page app (MPA).
+The **View Transition API** provides a mechanism for easily creating animated transitions between different website and element views. This includes animating between DOM states in a single-page app (SPA), and animating the navigation between documents in a multi-page app (MPA).
 
 ## Concepts and usage
 
@@ -32,7 +32,11 @@ The View Transition API provides an easy way of handling the required view chang
 
 Creating a view transition that uses the browser's default transition animations is very quick to do, and there are features that allow you to both customize the transition animation and manipulate the view transition itself (for example specify circumstances under which the animation is skipped), for both SPA and MPA view transitions.
 
-See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using) for more information.
+For more information, see:
+
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
+- [Using view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types)
+- [Using element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped)
 
 ## Interfaces
 
@@ -116,3 +120,4 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) on developer.chrome.com (2024)
 - [View Transition API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/) on stackdiary.com (2023)
 - [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework) on DebugBear (2024)
+- [Run concurrent and nested view transitions with element-scoped view transitions](https://developer.chrome.com/docs/css-ui/view-transitions/element-scoped-view-transitions) on developer.chrome.com

@@ -13,11 +13,11 @@ This article explains the theory behind how the [View Transition API](/en-US/doc
 Let's walk through the process by which a view transition works:
 
 1. A view transition is triggered. How this is done depends on the type of view transition:
-   - In the case of same-document transitions (SPAs), a view transition is triggered by passing the function that would trigger the view change DOM update as a callback to the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method.
+   - In the case of same-document transitions (SPAs), a view transition is triggered by passing the function that would trigger the view change DOM update as a callback to the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method, or {{domxref("Element.startViewTransition()", "element.startViewTransition()")}} in the case of [element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped).
    - In the case of cross-document transitions (MPAs), a view transition is triggered by initiating navigation to a new document. Both the current and destination documents of the navigation need to be on the same origin, and opt-in to the view transition by including a {{cssxref("@view-transition")}} at rule in their CSS with a `navigation` descriptor of `auto`.
      > [!NOTE]
      > An active view transition has an associated {{domxref("ViewTransition")}} instance (for example, returned by `startViewTransition()` in the case of same-document (SPA) transitions). The `ViewTransition` object includes several promises, allowing you to run code in response to different parts of the view transition process being reached. See [Controlling view transitions with JavaScript](#controlling_view_transitions_with_javascript) for more information.
-2. On the current (old page) view, the API captures static image **snapshots** of elements that have a {{cssxref("view-transition-name")}} declared on them.
+2. On the current (old) view, the API captures static image **snapshots** of elements that have a {{cssxref("view-transition-name")}} declared on them that are inside the view transition scope. By default, the scope is the entire document in the case of document-scoped view transitions, and the element `startViewTransition()` is called on and all its descendants in the case of element-scoped view transitions.
 3. The view change occurs:
    - In the case of same-document transitions (SPAs), the callback passed to `startViewTransition()` is invoked, which causes the DOM to change.
 
@@ -29,7 +29,7 @@ Let's walk through the process by which a view transition works:
 
    At this point, the view transition is about to run, and the {{domxref("ViewTransition.ready")}} promise fulfills, allowing you to respond by running a custom JavaScript animation instead of the default, for example.
 
-5. The old page snapshots animate "out", while the new view snapshots animate "in". By default, the old view snapshots animate from {{cssxref("opacity")}} 1 to 0, and the new view snapshots animate from `opacity` 0 to 1, which creates a cross-fade.
+5. The old snapshots animate "out", while the new snapshots animate "in". By default, the old snapshots animate from {{cssxref("opacity")}} 1 to 0, and the new snapshots animate from `opacity` 0 to 1, which creates a cross-fade.
 6. When the transition animations have reached their end states, the snapshots are destroyed, and the {{domxref("ViewTransition.finished")}} promise fulfills, allowing you to respond. If needed, you can delay a view transition from reaching its finished state until a specified {{domxref("Promise")}} is resolved using the {{domxref("ViewTransition.waitUntil()")}} method.
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Let's walk through the process by which a view transition works:
 
 ### An aside on snapshots
 
-It is worth noting that when talking about view transitions, we commonly use the term _snapshot_ to refer to a part of the page that has a `view-transition-name` declared on it. These sections will be animated separately from other parts of the page with different `view-transition-name` values set on them. While the process of animating a snapshot via a view transition actually involves two separate snapshots—one of the old and one of the new UI states—we use snapshot to refer to the whole page area for simplicity.
+It is worth noting that when talking about view transitions, we commonly use the term _snapshot_ to refer to a part of the scope that has a `view-transition-name` declared on it. These sections will be animated separately from other parts of the scope with different `view-transition-name` values set on them. While the process of animating a snapshot via a view transition actually involves two separate snapshots—one of the old and one of the new UI states—we use snapshot to refer to both for simplicity.
 
 The snapshot of the old UI state is a static image, so that the user can't interact with it as it animates "out".
 
@@ -48,14 +48,20 @@ The snapshot of the new UI state is an interactive DOM region, so that the user 
 To handle creating the outbound and inbound transition animations, the API constructs a pseudo-element tree with the following structure:
 
 ```plain
-::view-transition
-└─ ::view-transition-group(root)
-  └─ ::view-transition-image-pair(root)
-      ├─ ::view-transition-old(root)
-      └─ ::view-transition-new(root)
+root
+  ├─ ::view-transition
+  │  └─ ::view-transition-group(root)
+  │     └─ ::view-transition-image-pair(root)
+  │        ├─ ::view-transition-old(root)
+  │        └─ ::view-transition-new(root)
+  ├─ head
+  └─ body
+     └─ …
 ```
 
-In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
+In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. For document-scoped view transitions, the root element is the `<html>` element. For element-scoped view transitions, the root element is the element `startViewTransition()` was called on.
+
+In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 
 The most interesting parts of the tree structure are as follows:
 
@@ -70,7 +76,7 @@ The most interesting parts of the tree structure are as follows:
 
   Be aware however that page authors can change this by unsetting the above, and setting `view-transition-name: root` on a different element.
 
-- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old page element, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new page element. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
+- {{cssxref("::view-transition-old()")}} targets the static snapshot of the old view, and {{cssxref("::view-transition-new()")}} targets the live snapshot of the new view. Both of these render as replaced content, in the same manner as an {{htmlelement("img")}} or {{htmlelement("video")}}, meaning that they can be styled with properties like {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
 
 > [!NOTE]
 > It is possible to target different DOM elements with different custom view transition animations by setting a different {{cssxref("view-transition-name")}} on each one. In such cases, a `::view-transition-group()` is created for each one. See [Different animations for different elements](#different_animations_for_different_elements) for an example.
@@ -211,15 +217,19 @@ figcaption {
 With this CSS applied, the generated pseudo-element tree will now look like this:
 
 ```plain
-::view-transition
-├─ ::view-transition-group(root)
-│ └─ ::view-transition-image-pair(root)
-│     ├─ ::view-transition-old(root)
-│     └─ ::view-transition-new(root)
-└─ ::view-transition-group(figure-caption)
-  └─ ::view-transition-image-pair(figure-caption)
-      ├─ ::view-transition-old(figure-caption)
-      └─ ::view-transition-new(figure-caption)
+html
+  ├─ ::view-transition
+  |  ├─ ::view-transition-group(root)
+  │  │  └─ ::view-transition-image-pair(root)
+  │  │     ├─ ::view-transition-old(root)
+  │  │     └─ ::view-transition-new(root)
+  |  └─ ::view-transition-group(figure-caption)
+  │     └─ ::view-transition-image-pair(figure-caption)
+  │        ├─ ::view-transition-old(figure-caption)
+  │        └─ ::view-transition-new(figure-caption)
+  ├─ head
+  └─ body
+     └─ …
 ```
 
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new view captures are handled separately from one another.
@@ -306,7 +316,7 @@ A view transition has an associated {{domxref("ViewTransition")}} object instanc
 
 The `ViewTransition` can be accessed like so:
 
-1. Via the {{domxref("Document.activeViewTransition")}} property. This provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.
+1. Via the {{domxref("Document.activeViewTransition")}}/{{domxref("Element.startViewTransition()")}} property. This provides a consistent way to access the active view transition in any context, without having to worry about saving it for easy access later on.
 2. In the case of same-document (SPA) transitions, the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method returns the `ViewTransition` associated with the transition.
 3. In the case of cross-document (MPA) transitions:
    - A {{domxref("Window.pageswap_event", "pageswap")}} event is fired when a document is about to be unloaded due to a navigation. Its event object ({{domxref("PageSwapEvent")}}) provides access to the `ViewTransition` via the {{domxref("PageSwapEvent.viewTransition")}} property, as well as a {{domxref("NavigationActivation")}} via {{domxref("PageSwapEvent.activation")}} containing the navigation type and current and destination document history entries.
