@@ -8,11 +8,8 @@ browser-compat: api.Element.getAnimations
 
 {{APIRef("Web Animations")}}
 
-The `getAnimations()` method of the {{domxref("Element")}} interface
-(specified on the `Animatable` mixin) returns an array of all
-{{domxref("Animation")}} objects affecting this element or which are scheduled to do so
-in future. It can optionally return {{domxref("Animation")}} objects for descendant
-elements too.
+The `getAnimations()` method of the {{domxref("Element")}} interface (specified on the `Animatable` mixin) returns an array of all {{domxref("Animation")}} objects affecting this element or which are scheduled to do so in future.
+It can optionally return {{domxref("Animation")}} objects for descendant elements too.
 
 > [!NOTE]
 > This array includes [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations), [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
@@ -29,21 +26,17 @@ getAnimations(options)
 - `options` {{optional_inline}}
   - : An options object containing the following property:
     - `subtree`
-      - : A boolean value which, if `true`, causes animations that target
-        descendants of _Element_ to be returned as well. This includes animations
-        that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) attached to
-        _Element_ or one of its descendants. Defaults to `false`.
+      - : A boolean value which, if `true`, causes animations that target descendants of _Element_ to be returned as well.
+        This includes animations that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) attached to _Element_ or one of its descendants.
+        Defaults to `false`.
 
 ### Return value
 
-An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an
-animation currently targeting the {{domxref("Element")}} on which this method is called,
-or one of its descendant elements if `{ subtree: true }` is specified.
+An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an animation currently targeting the {{domxref("Element")}} on which this method is called, or one of its descendant elements if `{ subtree: true }` is specified.
 
 ## Examples
 
-The following code snippet will wait for all animations on `elem` and its
-descendants to finish before removing the element from the document.
+The following code snippet will wait for all animations on `elem` and its descendants to finish before removing the element from the document.
 
 ```js
 Promise.all(
