@@ -18,6 +18,8 @@ A {{domxref("ViewTransition")}} or `null` if the element has no active view tran
 
 ## Examples
 
+### Basic usage
+
 ```js
 const myElement = document.querySelector(".my-element");
 
