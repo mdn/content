@@ -18,11 +18,6 @@ The Notifications API allows web pages to control the display of system notifica
 A web notification is a message box used to inform users when events occur on web apps. Web notifications are rendered by the operating system's native notification system, making them display identically to notifications from any other app on the platform.
 Web notifications are displayed by the underlying OS; they are therefore outside the top-level browsing context viewport, and can be shown even when the user has switched tabs or moved to a different app.
 
-There are two types of notifications: persistent and non-persistent.
-Persistent notifications can run on mobile devices, are created through service workers, and can exist after their originating page has been closed.
-By contrast, non-persistent notifications can only be used in desktop operating systems and have a lifetime bounded by the {{domxref("Notification")}} instance — and hence their originating page.
-Both types require the user's permission before a notification can be created.
-
 ### Persistent and non-persistent notifications
 
 The Notifications API supports two types of notifications:
