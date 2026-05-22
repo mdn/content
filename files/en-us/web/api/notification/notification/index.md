@@ -95,9 +95,6 @@ An instance of the {{domxref("Notification")}} object.
 
 The constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
 
-Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`.
-Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
-
 You must get permission to display notifications using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
 The permission may not be grantable, for example if the page is in private browsing mode.
 
