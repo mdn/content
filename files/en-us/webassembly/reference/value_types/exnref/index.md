@@ -1,5 +1,5 @@
 ---
-title: "exnref: Wasm type"
+title: "exnref: Wasm value type"
 short-title: exnref
 slug: WebAssembly/Reference/Value_types/exnref
 page-type: webassembly-instruction
@@ -93,6 +93,9 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { env }).then(
 The `exnref` type represents a thrown exception in a Wasm module. This value type is returned by the [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) and [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clauses, providing a reference to the exception that was just thrown, and allowing it to be rethrown if required using the [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
 The [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface represents a Wasm exception in the JavaScript host.
+
+> [!NOTE]
+> You cannot call a Wasm function from JavaScript that has an `exnref` value as a parameter or result. Trying to do so will result in an error.
 
 ## See also
 

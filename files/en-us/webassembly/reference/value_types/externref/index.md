@@ -1,5 +1,5 @@
 ---
-title: "externref: Wasm type"
+title: "externref: Wasm value type"
 short-title: externref
 slug: WebAssembly/Reference/Value_types/externref
 page-type: webassembly-instruction
