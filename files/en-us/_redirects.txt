@@ -15528,9 +15528,14 @@
 /en-US/docs/Web/JavaScript/Reference/Symbols	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Web/JavaScript/Reference/arrow_functions	/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /en-US/docs/Web/JavaScript/Reference/default_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/en-US/docs/Web/JavaScript/Reference/delete	/en-US/docs/Web/JavaScript/Reference/Operators/delete
 /en-US/docs/Web/JavaScript/Reference/eval	/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+/en-US/docs/Web/JavaScript/Reference/instanceof	/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
+/en-US/docs/Web/JavaScript/Reference/new	/en-US/docs/Web/JavaScript/Reference/Operators/new
+/en-US/docs/Web/JavaScript/Reference/null	/en-US/docs/Web/JavaScript/Reference/Operators/null
 /en-US/docs/Web/JavaScript/Reference/rest_parameters	/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /en-US/docs/Web/JavaScript/Reference/template_strings	/en-US/docs/Web/JavaScript/Reference/Template_literals
+/en-US/docs/Web/JavaScript/Reference/this	/en-US/docs/Web/JavaScript/Reference/Operators/this
 /en-US/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Defenses/Same-origin_policy
 /en-US/docs/Web/JavaScript/Shells	/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /en-US/docs/Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
