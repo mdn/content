@@ -327,6 +327,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
+- {{DOMxRef("Element.startViewTransition()")}}
+  - : Starts a new same-document (SPA) [element-scoped](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 - {{DOMxRef("Element.toggleAttribute()")}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 

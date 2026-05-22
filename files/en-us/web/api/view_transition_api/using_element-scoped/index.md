@@ -161,7 +161,9 @@ ul::before {
 
 ### JavaScript
 
-In our script, we grab a reference to the `<ul>` element and add a `click` event listener to it. When it is clicked, we check that the event target is an `<a>` element. If so, we invoke {{domxref("Element.startViewTransition()", "startViewTransition()")}} on the clicked `<a>` element, toggling its content between "Standard" and "Alternative".
+In our script, we grab a reference to the `<ul>` element and add a `click` event listener to it. When it is clicked, we check that the event target is an `<a>` element. If so, we invoke {{domxref("Element.startViewTransition()", "startViewTransition()")}} on the clicked `<a>` element, toggling its content between "Standard" and "Alternative" via the `toggleText()` function.
+
+Note how we also include feature detection: before running `startViewTransition()`, we check that it exists on the target element. If not, we just run the `toggleText()` function and then `return`. This means that non-supporting browsers will still update the DOM, but without the transition animation.
 
 ```js live-sample___basic-element-scoped
 const list = document.querySelector("ul");
@@ -169,13 +171,20 @@ const list = document.querySelector("ul");
 list.addEventListener("click", handleClick);
 
 function handleClick(e) {
+  function toggleText() {
+    if (e.target.textContent === "Standard") {
+      e.target.textContent = "Alternative";
+    } else {
+      e.target.textContent = "Standard";
+    }
+  }
   if (e.target.tagName === "A") {
+    if (!e.target.startViewTransition) {
+      toggleText();
+      return;
+    }
     e.target.startViewTransition(() => {
-      if (e.target.textContent === "Standard") {
-        e.target.textContent = "Alternative";
-      } else {
-        e.target.textContent = "Standard";
-      }
+      toggleText();
     });
   }
 }
@@ -350,19 +359,27 @@ const para = document.querySelector("section p");
 const btn = document.querySelector("button");
 ```
 
-Next, we add an `click` event listener to the `<button>`. Each time the button is clicked, we trigger a view transition; inside the `startViewTransition()` call, we toggle the `<p>` element's `textContent` between the two `content` array elements.
+Next, we add an `click` event listener to the `<button>`. Each time the button is clicked, we trigger a view transition; inside the `startViewTransition()` call, we toggle the `<p>` element's `textContent` between the two `content` array elements via the `toggleText()` function. We also include simple feature detection to just run the `toggleText()` function in browsers that don't support `Element.startViewTransition()`.
 
 ```js live-sample___element-scoped-clipping
 btn.addEventListener("click", handleClick);
 
+function toggleText() {
+  if (para.className === "1") {
+    para.className = "0";
+  } else {
+    para.className = "1";
+  }
+  para.textContent = content[Number(para.className)];
+}
+
 function handleClick() {
+  if (!section.startViewTransition) {
+    toggleText();
+    return;
+  }
   const vt = section.startViewTransition(() => {
-    if (para.className === "1") {
-      para.className = "0";
-    } else {
-      para.className = "1";
-    }
-    para.textContent = content[Number(para.className)];
+    toggleText();
   });
 }
 ```
@@ -527,7 +544,7 @@ We have hidden the rest of the CSS for brevity.
 
 ### JavaScript
 
-The JavaScript is similar to the first example, except that this time we run two element-scoped view transitions each time a link is clicked. The first one toggles the text of the link between "Standard" and "Alternative", and the second one swaps the position of the two lists inside the DOM.
+The JavaScript is similar to the first example, except that this time we run two element-scoped view transitions each time a link is clicked. The first one toggles the text of the link between "Standard" and "Alternative" (via the `toggleText()` function), and the second one swaps the position of the two lists inside the DOM (via the `togglePosition()` function). As before, we include rudimentary feature detection code to enable the functionality in non-supporting browsers.
 
 ```js live-sample___element-scoped-nested
 const lists = document.querySelectorAll("ul");
@@ -538,21 +555,32 @@ lists.forEach((list) => {
 });
 
 function handleClick(e) {
+  function toggleText() {
+    if (e.target.textContent === "Standard") {
+      e.target.textContent = "Alternative";
+    } else {
+      e.target.textContent = "Standard";
+    }
+  }
+  function togglePosition() {
+    if (lists[0].nextElementSibling === lists[1]) {
+      wrapper.insertBefore(lists[1], lists[0]);
+    } else {
+      wrapper.insertBefore(lists[0], lists[1]);
+    }
+  }
   if (e.target.tagName === "A") {
-    e.target.startViewTransition(() => {
-      if (e.target.textContent === "Standard") {
-        e.target.textContent = "Alternative";
-      } else {
-        e.target.textContent = "Standard";
-      }
-    });
+    if (!e.target.startViewTransition) {
+      toggleText();
+      togglePosition();
+      return;
+    }
 
+    e.target.startViewTransition(() => {
+      toggleText();
+    });
     wrapper.startViewTransition(() => {
-      if (lists[0].nextElementSibling === lists[1]) {
-        wrapper.insertBefore(lists[1], lists[0]);
-      } else {
-        wrapper.insertBefore(lists[0], lists[1]);
-      }
+      togglePosition();
     });
   }
 }
