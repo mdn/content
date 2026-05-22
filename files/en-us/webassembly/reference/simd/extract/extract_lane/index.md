@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extract_lane
 sidebar: webassemblysidebar
 ---
 
-The **`extract_lane`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation.
+The **`extract_lane`** [SIMD extract instruction](/en-US/docs/WebAssembly/Reference/SIMD/extract) extracts the value contained within the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation.
 
 {{InteractiveExample("Wat Demo: extract_lane", "tabbed-taller")}}
 
@@ -38,7 +38,7 @@ value_type.extract_lane
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `extract_lane`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `extract_lane`:
     - `i32x4`
     - `i64x2`
     - `f32x4`
@@ -61,12 +61,12 @@ value_type.extract_lane
 
 ### Binary encoding
 
-| Instruction          | Binary format           | Example text => binary                     |
-| -------------------- | ----------------------- | ------------------------------------------ |
-| `i32x4.extract_lane` | `0xfd 27:u32 l:laneidx` | `i32x4.extract_lane 3` => `0xfd 0x1b 0x03` |
-| `i64x2.extract_lane` | `0xfd 29:u32 l:laneidx` | `i64x2.extract_lane 1` => `0xfd 0x1d 0x01` |
-| `f32x4.extract_lane` | `0xfd 31:u32 l:laneidx` | `f32x4.extract_lane 3` => `0xfd 0x1f 0x03` |
-| `f64x2.extract_lane` | `0xfd 33:u32 l:laneidx` | `f64x2.extract_lane 1` => `0xfd 0x21 0x01` |
+| Instruction          | Binary format            | Example text => binary                     |
+| -------------------- | ------------------------ | ------------------------------------------ |
+| `i32x4.extract_lane` | `0xfd 27:u32 l:lane_idx` | `i32x4.extract_lane 3` => `0xfd 0x1b 0x03` |
+| `i64x2.extract_lane` | `0xfd 29:u32 l:lane_idx` | `i64x2.extract_lane 1` => `0xfd 0x1d 0x01` |
+| `f32x4.extract_lane` | `0xfd 31:u32 l:lane_idx` | `f32x4.extract_lane 3` => `0xfd 0x1f 0x03` |
+| `f64x2.extract_lane` | `0xfd 33:u32 l:lane_idx` | `f64x2.extract_lane 1` => `0xfd 0x21 0x01` |
 
 ## Specifications
 

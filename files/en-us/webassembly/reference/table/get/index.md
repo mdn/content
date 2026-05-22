@@ -87,15 +87,15 @@ table.get identifier
 
 ### Opcodes
 
-| Instruction | Binary format     | Example text => binary       |
-| ----------- | ----------------- | ---------------------------- |
-| `table.get` | `0x25 𝑥:tableidx` | `table.get 0` => `0x25 0x01` |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.get` | `0x25 𝑥:table_idx` | `table.get 0` => `0x25 0x01` |
 
 ## Description
 
 The `table.get` instruction retrieves a value stored at a given index of an existing table.
 
-If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
+If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
 
 Wasm table values can be retrieved from JavaScript using the [`table.get()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/get) method.
 
@@ -157,7 +157,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), imports).then(
 
 In our Wasm module, we first import our two imported items:
 
-- The JavaScript `output()` function, which we make sure to declare with two [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) parameters.
+- The JavaScript `output()` function, which we make sure to declare with two [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) parameters.
 - The table of strings, which we call `$string_table`.
 
 We then export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we run our imported `output()` function twice. We specify the same `$elem` reference for the first parameter in both cases, and then use `table.get` to retrieve a different string from the imported table to use as the second parameter in each case.

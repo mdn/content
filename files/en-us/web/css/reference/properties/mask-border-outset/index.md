@@ -1,5 +1,6 @@
 ---
-title: mask-border-outset
+title: "`mask-border-outset` CSS property"
+short-title: mask-border-outset
 slug: Web/CSS/Reference/Properties/mask-border-outset
 page-type: css-property
 browser-compat: css.properties.mask-border-outset

@@ -3,12 +3,10 @@ title: "CanvasRenderingContext2D: lang property"
 short-title: lang
 slug: Web/API/CanvasRenderingContext2D/lang
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CanvasRenderingContext2D.lang
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.lang`** property of the Canvas 2D API gets or sets the language of the canvas drawing context.
 
@@ -37,8 +35,9 @@ When the `inherit` value is used, the language of the canvas context is inherite
 
 Due to technical limitations, the `inherit` value behaves differently for on-screen and off-screen canvases:
 
-- For on-screen canvases, the `lang` value is inherited when the associated `CanvasRenderingContext2D` object is first created; the inherited `lang` value then changes dynamically if the `lang` attribute value is updated.
-- For off-screen canvases, the `lang` value is inherited when the associated `OffscreenCanvasRenderingContext2D` object is first created, and then fixed for the lifetime of the {{domxref("OffscreenCanvas")}}. It **does not** change if the `lang` attribute value is updated. Because of this, the language of an off-screen canvas can only be changed by setting the `lang` value explicitly.
+- For on-screen canvases, the `lang` value of the context is inherited when the associated `CanvasRenderingContext2D` object is first created, and is updated dynamically if the `lang` attribute of the associated canvas is updated (either directly or by inheritance).
+- For off-screen canvases, the `lang` value is inherited when the associated `OffscreenCanvasRenderingContext2D` object is first created "as a snapshot"; subsequent updates to the `lang` attribute from which the offscreen context inherited its value do not change its `lang` attribute.
+  For this reason, the language of an off-screen canvas can only be changed by setting its `lang` value explicitly.
 
 ## Examples
 

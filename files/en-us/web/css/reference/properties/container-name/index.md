@@ -1,5 +1,6 @@
 ---
-title: container-name
+title: "`container-name` CSS property"
+short-title: container-name
 slug: Web/CSS/Reference/Properties/container-name
 page-type: css-property
 browser-compat: css.properties.container-name

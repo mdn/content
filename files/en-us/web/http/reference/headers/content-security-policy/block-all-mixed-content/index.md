@@ -48,8 +48,7 @@ Content-Security-Policy: img-src https:
 
 ## Specifications
 
-Not part of any current specification.
-Used to be defined in the outdated [Mixed Content Level 1](https://www.w3.org/TR/2015/CR-mixed-content-20150317/#strict-opt-in) specification.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: rgb()
+title: "`rgb()` CSS function"
+short-title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
 page-type: css-function
 browser-compat: css.types.color.rgb

@@ -5,10 +5,11 @@ slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
 
-{{ APIRef("CSSOM") }} {{deprecated_header}}
+{{ APIRef("CSSOM") }} {{deprecated_header}}{{non-standard_header}}
 
 The **CSSStyleDeclaration.getPropertyCSSValue()**
 method interface returns a {{domxref('CSSValue')}} containing the CSS value for a

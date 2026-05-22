@@ -5,7 +5,7 @@ page-type: svg-attribute
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dx
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dx
-  - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementDXAttribute
 sidebar: svgref
 ---
 

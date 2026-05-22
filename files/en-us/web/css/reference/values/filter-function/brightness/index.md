@@ -1,5 +1,6 @@
 ---
-title: brightness()
+title: "`brightness()` CSS function"
+short-title: brightness()
 slug: Web/CSS/Reference/Values/filter-function/brightness
 page-type: css-function
 browser-compat: css.types.filter-function.brightness

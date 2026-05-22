@@ -1,5 +1,6 @@
 ---
-title: color-interpolation-filters
+title: "`color-interpolation-filters` CSS property"
+short-title: color-interpolation-filters
 slug: Web/CSS/Reference/Properties/color-interpolation-filters
 page-type: css-property
 browser-compat: css.properties.color-interpolation-filters

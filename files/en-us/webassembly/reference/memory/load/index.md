@@ -58,7 +58,7 @@ Load from default memory
 i32.const 0 ;; Stack variable containing memory offset (0) of number to be loaded.
 i32.load    ;; Load from specified offset in default memory
 
-;; Load from same location using an S-function
+;; Load from same location using an S-expression
 (i32.load (i32.const 0))
 ```
 
@@ -73,7 +73,7 @@ i32.load (memory 1) ;; load from memory index 1
 i32.const 1  ;; offset in memory to load from (1)
 i32.load (memory $memory1) ;; load from named memory $memory1
 
-;; Load from memory specified by name using an S-function
+;; Load from memory specified by name using an S-expression
 (i32.load (memory $memory1) (i32.const 0))
 ```
 

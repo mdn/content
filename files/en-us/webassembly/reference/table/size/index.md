@@ -65,9 +65,9 @@ table.size identifier
 
 ### Opcodes
 
-| Instruction  | Binary format            | Example text => binary             |
-| ------------ | ------------------------ | ---------------------------------- |
-| `table.size` | `0xFC 16:u32 𝑥:tableidx` | `table.size 0` => `0xfc 0x10 0x00` |
+| Instruction  | Binary format             | Example text => binary             |
+| ------------ | ------------------------- | ---------------------------------- |
+| `table.size` | `0xFC 16:u32 𝑥:table_idx` | `table.size 0` => `0xfc 0x10 0x00` |
 
 ## Description
 
@@ -111,7 +111,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a `table` that stores function references (hence `funcref` being specified) and is empty.
 

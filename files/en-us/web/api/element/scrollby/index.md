@@ -33,7 +33,10 @@ scrollBy(options)
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
+      - : Determines whether the scrolling is instant or animates smoothly. This option is a string that must take one of the following values:
+        - `smooth`: The scrolling animates smoothly.
+        - `instant`: The scrolling happens instantly in a single jump.
+        - `auto`: The scroll behavior is determined by the computed value of the {{cssxref("scroll-behavior")}} CSS property on the element.
 
 ### Return value
 

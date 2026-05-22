@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.shuffle
 sidebar: webassemblysidebar
 ---
 
-The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
+The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
 
 {{InteractiveExample("Wat Demo: shuffle", "tabbed-taller")}}
 
@@ -39,7 +39,7 @@ value_type.shuffle indices
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `shuffle`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `shuffle`:
     - `i8x16`
 - `shuffle`
   - : The `shuffle` instruction. Must always be included after the `value_type` and a period (`.`).
@@ -61,9 +61,9 @@ value_type.shuffle indices
 
 ### Binary encoding
 
-| Instruction     | Binary format             | Example text => binary                                                                                                                                    |
-| --------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `i8x16.shuffle` | `0xfd 13:u32 l:laneidx¹⁶` | `i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19` => `0xfd 0x0d 0x00 0x11 0x02 0x03 0x08 0x09 0x0a 0x0b 0x1f 0x1e 0x1c 0x1b 0x10 0x11 0x12 0x13` |
+| Instruction     | Binary format              | Example text => binary                                                                                                                                    |
+| --------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `i8x16.shuffle` | `0xfd 13:u32 l:lane_idx¹⁶` | `i8x16.shuffle 0 17 2 3 8 9 10 11 31 30 28 27 16 17 18 19` => `0xfd 0x0d 0x00 0x11 0x02 0x03 0x08 0x09 0x0a 0x0b 0x1f 0x1e 0x1c 0x1b 0x10 0x11 0x12 0x13` |
 
 ## Specifications
 

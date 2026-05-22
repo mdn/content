@@ -63,7 +63,7 @@ You can use any of them, as they will have similar functionality, though some ar
 
 If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).
 
-For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.vegascreativesoftware.com/us/sound-forge-pro/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://support.apple.com/imovie) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
+For audio files, you can find free software ([Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)), or paying up to a few hundred dollars ([Sound Forge](https://www.vegascreativesoftware.com/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)). Likewise, video-editing software can be free ([PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://support.apple.com/imovie) for Mac), less than $100 ([Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)), or several hundred dollars ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). The software you received with your digital camera may cover all your needs.
 
 ### Publishing tools
 
@@ -71,7 +71,7 @@ You also need a way to upload files: from your hard drive to a distant web serve
 
 Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 
-If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows, [and more](https://en.wikipedia.org/wiki/List_of_FTP_server_software).
+If you want to install an (S)FTP client, there are several reliable and free options: for example, [FileZilla](https://filezilla-project.org/) for all platforms, [WinSCP](https://winscp.net/eng/index.php) for Windows, [Cyberduck](https://cyberduck.io/) for Mac or Windows.
 
 Because FTP is inherently insecure, you should make sure to use SFTP — the secure, encrypted version of FTP that most hosting sites you'll deal with these days will offer by default — or another secure solution like Rsync over SSH.
 

@@ -8,7 +8,7 @@ browser-compat: api.Window.load_event
 
 {{APIRef}}
 
-The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts (including async, deferred, and module scripts), iframes, and images, except those that are [loaded lazily](/en-US/docs/Web/Performance/Guides/Lazy_loading#images_iframes_video_audio).
+The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts (including async, deferred, and module scripts), iframes, and images, except those that are [loaded lazily](/en-US/docs/Web/Performance/Guides/Lazy_loading#images_iframes_videos_and_audio).
 This is in contrast to {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
 
 This event is not cancelable and does not bubble.
