@@ -25,9 +25,7 @@ It is a low-level assembly-like language with a compact binary format that runs 
 
 WebAssembly is designed to complement and run alongside JavaScript — using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same app, even if you don't know how to write WebAssembly code.
 
-WebAssembly has big implications for the web platform, not only because it provides a way for code written in multiple languages to run on the web at near-native speed, but also because it enables client apps to run on the web that previously could not.
-
-And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
+WebAssembly provides a way for code written in multiple languages to run on the web at near-native speed, and it enables client apps to run on the web that previously could not.
 
 ## Guides
 

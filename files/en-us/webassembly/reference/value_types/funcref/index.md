@@ -1,5 +1,5 @@
 ---
-title: "funcref: Wasm type"
+title: "funcref: Wasm value type"
 short-title: funcref
 slug: WebAssembly/Reference/Value_types/funcref
 page-type: webassembly-instruction
