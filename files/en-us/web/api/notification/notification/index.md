@@ -33,7 +33,7 @@ new Notification(title, options)
         `actions` is only supported for [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications) fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
     - `badge` {{optional_inline}}
       - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
-        On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
+        On Android devices, the badge should support devices with up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
         The default is the empty string.
@@ -59,7 +59,7 @@ new Notification(title, options)
     - `renotify` {{optional_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one.
         The default is `false`, which means they won't be notified.
-        If `true`, then `tag` also must be set.
+        If `true`, `tag` must also be set.
     - `requireInteraction` {{optional_inline}}
       - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
         The default value is `false`.
@@ -98,9 +98,9 @@ The constructor creates a new {{domxref("Notification")}} object instance, which
 You must get permission to display notifications using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
 The permission may not be grantable, for example if the page is in private browsing mode.
 
-This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
+This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers, and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
 Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
-See [Chrome issue](https://crbug.com/481856) for more information.
+See [Chrome issue #481856](https://crbug.com/481856) for more information.
 
 ## Examples
 
@@ -121,7 +121,7 @@ if (Notification.permission === "granted") {
 
 This example shows a more robust approach that allows showing notifications on both desktop and mobile devices.
 
-First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning if either is not true.
+First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning early if either condition is not met.
 We then check if there is an active service worker.
 If so, we use it to call {{domxref("ServiceWorkerRegistration.showNotification()")}}; if not, we fall back to calling the constructor.
 
@@ -143,8 +143,8 @@ async function showNotification(title, options = {}) {
 }
 ```
 
-Note that this will still throw an error if called on a mobile device if the page does not have a service worker ready.
-Depending on your application you might wrap the method code in a `try...catch` block.
+Note that this will still throw an error on a mobile device if the page does not have a service worker ready.
+Depending on your application, you might wrap this code in a `try...catch` block.
 
 ## Specifications
 

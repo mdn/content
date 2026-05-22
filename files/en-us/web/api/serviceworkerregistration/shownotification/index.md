@@ -30,7 +30,10 @@ showNotification(title, options)
       - : An array of actions to display in the notification, for which the default is an empty array.
         Each element in the array can be an object with the following members:
         - `action`
-          - : A string identifying a user action to be displayed on the notification.
+          - : A string that uniquely identifies this particular action within the array of actions.
+
+            When an action button without a `navigate` URL is clicked, you can determine which button was selected by checking `event.action` inside your {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event listener
+
         - `title`
           - : A string containing action text to be shown to the user.
         - `icon` {{optional_inline}}
@@ -39,8 +42,6 @@ showNotification(title, options)
           - : A string containing a URL to navigate to when the user activates this action.
             When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event
             See {{domxref("Notification.navigate")}} for more information.
-
-        Appropriate responses are built using `event.action` within the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
@@ -105,31 +106,84 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 
 ## Examples
 
+### Basic usage
+
+This example shows a function running in a service worker that displays a notification after first requesting, and being granted, permission.
+Code to actually call the function is not shown.
+
 ```js
 navigator.serviceWorker.register("sw.js");
 
-function showNotification() {
-  Notification.requestPermission().then((result) => {
-    if (result === "granted") {
-      navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification("Vibration Sample", {
-          body: "Buzz! Buzz!",
-          icon: "../images/touch/chrome-touch-icon-192x192.png",
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: "vibration-sample",
-        });
-      });
-    }
-  });
+async function showNotification() {
+  const result = await Notification.requestPermission();
+
+  if (result === "granted") {
+    const registration = await navigator.serviceWorker.ready;
+
+    registration.showNotification("Vibration Sample", {
+      body: "Buzz! Buzz!",
+      icon: "../images/touch/chrome-touch-icon-192x192.png",
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      tag: "vibration-sample",
+    });
+  }
 }
 ```
 
-To invoke the above function at an appropriate time, you could listen to the
-{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
+The following code shows how you might listen to the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event in order to handle user interaction with this particular notification.
 
-You can also retrieve details of the {{domxref("Notification")}}s that have been fired
-from the current service worker using
-{{domxref("ServiceWorkerRegistration.getNotifications()")}}.
+```js
+self.addEventListener("notificationclick", (event) => {
+  const notification = event.notification;
+
+  // Close notification if we don't need it any more.
+  notification.close();
+
+  // Process our particular notification
+  if (notification.tag === "vibration-sample") {
+    // Use event.waitUntil to keep the service worker alive until the promise resolves
+    event
+      .waitUntil
+      // Code to handle the particular event.
+      ();
+  }
+});
+```
+
+You can also retrieve details of the {{domxref("Notification")}}s that have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
+
+### Notifications with actions and action handlers
+
+This example shows how you might display a persistent notification, such as might be triggered by a push message when an email is received.
+
+The code to display the notification includes two `actions` that will be displayed on the notification: one to reply to the message, and the other to dismiss the notification.
+Each action includes a `title`, which is usually rendered as button text on the notification, and an `action`, which is used to identify the action that was selected if a user interacts with the notification.
+
+```js
+registration.showNotification("New Message", {
+  body: "You've got mail.",
+  icon: "/images/icon.png",
+  actions: [
+    { action: "reply", title: "Reply" },
+    { action: "dismiss", title: "Dismiss" },
+  ],
+});
+```
+
+The following code shows how you can listen for `notificationclick` events from the notification, and then use the value of the `event.action` property to determine which action was selected.
+Note that if the user clicks the notification body instead of an action button, `event.action` will be an empty string.
+
+```js
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+
+  if (event.action === "reply") {
+    // handle reply
+  } else if (event.action === "dismiss") {
+    // handle dismiss
+  }
+});
+```
 
 ## Specifications
 
