@@ -3,10 +3,12 @@ title: "PerformanceTimingConfidence: toJSON() method"
 short-title: toJSON()
 slug: Web/API/PerformanceTimingConfidence/toJSON
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PerformanceTimingConfidence.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceTimingConfidence")}} interface is a {{Glossary("Serialization","serializer")}} that returns a JSON representation of the {{domxref("PerformanceTimingConfidence")}} object.
 

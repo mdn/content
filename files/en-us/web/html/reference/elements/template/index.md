@@ -51,7 +51,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
 
-- `shadowrootslotassignment`
+- `shadowrootslotassignment` {{experimental_inline}}
   - : Sets the [`slotAssignment`](/en-US/docs/Web/API/ShadowRoot/slotAssignment) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element.
     This is the declarative equivalent of the [`slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) option of the {{domxref("Element.attachShadow()")}} method.
     - `named`
