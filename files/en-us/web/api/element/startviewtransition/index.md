@@ -35,6 +35,32 @@ startViewTransition(options)
 
 A {{domxref("ViewTransition")}} object instance.
 
+## Description
+
+Calling `Element.startViewTransition()` on an element creates a view transition scoped to that particular element's DOM subtree. Any DOM changes performed inside the `startViewTransition()` callback will only transition if those updates happen inside the calling element's DOM subtree. The element is referred to as the **root** of the view transition, and the DOM subtree is referred to as the **scope** of the view transition.
+
+An element-scoped view transition's [pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#different_animations_for_different_elements) is placed inside the transition root element, for example, if we were running a view transition on a link:
+
+```plain
+<a href="#">
+  ├─ ::view-transition
+  │  └─ ::view-transition-group(root)
+  │     └─ ::view-transition-image-pair(root)
+  │        ├─ ::view-transition-old(root)
+  │        └─ ::view-transition-new(root)
+  |
+  |
+  "Link text"
+</a>
+```
+
+Element-scoped view transitions have many advantages over their document-scoped counterparts:
+
+- You can run more than one at a time.
+- When running, only the view transition's scope ceases to be interactive until the transition is finished; the rest of the page continues to be interactive. Document-scoped view transitions render the entire page non-interactive until the transition is complete.
+- The transition pseudo-element tree only sits over the top of the element scope, not the entire page, meaning that you don't get the same issues associated with stacked elements disappearing underneath the updating part of the page when a document-scoped transition animation starts.
+- If the contents of the scope are clipped using {{cssxref("overflow")}}, they will stay clipped while undergoing a view transition. Document-scoped view transitions spill out of clipping containers because their pseudo-element trees are drawn over the top of the entire page.
+
 ## Examples
 
 See [Using element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) for other examples.
