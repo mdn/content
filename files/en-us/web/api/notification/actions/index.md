@@ -30,10 +30,11 @@ Each element in the array is an object with the following members:
 
 Notification actions are buttons or controls that appear within [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications).
 They are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
-Note that actions are not available for non-persistent notifications: a `TypeError` is thrown if you pass an options object with a non-`null` actions property to the {{domxref("Notification/Notification", "Notification()")}} constructor.
+Note that actions are not available for non-persistent notifications.
+If you pass an `options` object with an `actions` property that is anything other than `null` to the {{domxref("Notification/Notification", "Notification()")}} constructor, a `TypeError` is thrown.
 
 Clicking the button associated with an action navigates to the URL set in the [`navigate`](#navigate) option if one is specified.
-Otherwise it fires a [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) event on the service worker that includes the action that was selected (and the associated `Notification` instance), so the worker can handle it without the user ever switching to your page.
+Otherwise, it fires a [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) event on the service worker that includes the action that was selected (and the associated `Notification` instance), so the worker can handle it without the user ever switching to your page.
 
 > [!NOTE]
 > Browsers typically limit the maximum number of actions they will display for a particular notification.
@@ -43,7 +44,7 @@ Otherwise it fires a [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlob
 
 ### Basic usage
 
-The following code shows how a service worker might listen for the `notificationclick` event and use it to get both the clicked action and all the actions.
+The following code shows how a service worker might listen for the `notificationclick` event and use it to retrieve both the clicked action and an array of all actions.
 
 ```js
 // sw.js

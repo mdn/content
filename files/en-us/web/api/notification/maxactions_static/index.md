@@ -8,11 +8,11 @@ browser-compat: api.Notification.maxActions_static
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`maxActions`** read-only static property of the {{domxref("Notification")}} interface returns the maximum number of actions supported by the device and the user agent.
+The **`maxActions`** read-only static property of the {{domxref("Notification")}} interface returns the maximum number of actions that can be displayed in a notification.
 
 ## Value
 
-An integer number.
+An integer.
 
 ## Description
 
@@ -20,7 +20,7 @@ Notification actions are buttons or controls that appear within [persistent noti
 Actions are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
 
 Browsers typically limit the maximum number of actions they will display for a particular notification.
-This property returns that limit, which is the maximum number of elements in the {{domxref("Notification.actions")}} array that will be respected by the user agent.
+The `maxActions` property returns that limit, which is the maximum number of elements in the {{domxref("Notification.actions")}} array that will be respected by the user agent.
 
 ## Examples
 

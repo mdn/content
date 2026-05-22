@@ -98,7 +98,7 @@ The constructor creates a new {{domxref("Notification")}} object instance, which
 Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`.
 Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
-You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
+You must get permission to display notifications using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
 The permission may not be grantable, for example if the page is in private browsing mode.
 
 This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
@@ -126,7 +126,7 @@ This example shows a more robust approach that allows showing notifications on b
 
 First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning if either is not true.
 We then check if there is an active service worker.
-If there is an active service worker we use it to call {{domxref("ServiceWorkerRegistration.showNotification()")}}, but if not, we fall back to calling the constructor.
+If so, we use it to call {{domxref("ServiceWorkerRegistration.showNotification()")}}; if not, we fall back to calling the constructor.
 
 ```js
 async function showNotification(title, options = {}) {

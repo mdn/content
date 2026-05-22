@@ -15,14 +15,13 @@ The Notifications API allows web pages to control the display of system notifica
 
 ## Concepts and usage
 
-A notification is a system-level UI element rendered by the operating system's native notification system, making it identical to notifications from any other app on the platform.
-It is used to inform users of events.
-Because it is a system-level element, it is outside the top-level browsing context viewport, and can be displayed even when the user has switched tabs or moved to a different app.
+A web notification is a message box used to inform users when events occur on web apps. Web notifications are rendered by the operating system's native notification system, making them display identically to notifications from any other app on the platform.
+Web notifications are displayed by the underlying OS; they are therefore outside the top-level browsing context viewport, and can be shown even when the user has switched tabs or moved to a different app.
 
 There are two types of notifications: persistent and non-persistent.
 Persistent notifications can run on mobile devices, are created through service workers, and can exist after their originating page has been closed.
 By contrast, non-persistent notifications can only be used in desktop operating systems and have a lifetime bounded by the {{domxref("Notification")}} instance — and hence their originating page.
-Both types require user-permission before a notification can be created.
+Both types require the user's permission before a notification can be created.
 
 ### Persistent and non-persistent notifications
 
@@ -35,7 +34,7 @@ The Notifications API supports two types of notifications:
 
 - **Persistent notifications** are created from a service worker, and can remain interactive beyond the lifetime of an individual page.
 
-  They are created using {{domxref("ServiceWorkerRegistration.showNotification()")}} from a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
+  They are created by calling {{domxref("ServiceWorkerRegistration.showNotification()")}} from inside a service worker and fire {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} and {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
 
 > [!NOTE]
 > If your code needs to run on mobile devices then you **must** use persistent notifications!
