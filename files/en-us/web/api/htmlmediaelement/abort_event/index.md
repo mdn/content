@@ -28,19 +28,26 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
+The following example starts loading one video resource, then starts another load before the
+first resource has finished.
+If the first resource is still loading when `load()` is called again, the `abort` event fires.
+
 ```js
 const video = document.querySelector("video");
-const videoSrc = "https://example.org/path/to/video.webm";
+const firstVideoSrc = "https://example.org/path/to/video.webm";
+const secondVideoSrc = "https://example.org/path/to/another-video.webm";
 
 video.addEventListener("abort", () => {
-  console.log(`Abort loading: ${videoSrc}`);
+  console.log(`Aborted loading: ${firstVideoSrc}`);
 });
 
-const source = document.createElement("source");
-source.setAttribute("src", videoSrc);
-source.setAttribute("type", "video/webm");
+video.src = firstVideoSrc;
+video.load();
 
-video.appendChild(source);
+setTimeout(() => {
+  video.src = secondVideoSrc;
+  video.load();
+}, 1000);
 ```
 
 ## Specifications
