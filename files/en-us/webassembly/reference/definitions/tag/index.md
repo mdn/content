@@ -82,7 +82,7 @@ tag identifier parameters
 - `parameters`
   - : One or more values specifying the exception type's parameters and their types. Each one consists of:
     - The keyword `param`
-    - The type of the parameter. This can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Types).
+    - The type of the parameter. This can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Value_types).
 
 ## Description
 
@@ -277,6 +277,6 @@ wasm.then((result) => {
   - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
   - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
   - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type
 - [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) JavaScript interface
 - [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) JavaScript interface

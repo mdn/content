@@ -40,7 +40,7 @@ value_type.div
   - : The type of value the instruction is being run on. The following types support `div`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `div`
@@ -61,7 +61,7 @@ value_type.div
 
 For a non-SIMD `div`, these will be basic numeric values such as `3` or `3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `div`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the result of the division of the first input's corresponding lane by the second input's corresponding lane.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `div`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the result of the division of the first input's corresponding lane by the second input's corresponding lane.
 
 ### Binary encoding
 

@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.try_table.catch_all_ref
 sidebar: webassemblysidebar
 ---
 
-The **`catch_all_ref`** clause catches any exception and pushes an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception to the stack.
+The **`catch_all_ref`** clause catches any exception and pushes an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the exception to the stack.
 
 {{InteractiveExample("Wat Demo: catch_all_ref", "tabbed-taller")}}
 
@@ -92,7 +92,7 @@ catch_all_ref block_identifier
 ```
 
 - `exception_ref`
-  - : An [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception.
+  - : An [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the thrown exception.
 
 This value is not pushed onto the stack directly at the site of the `catch_all_ref` clause, rather it is pushed onto the stack at the site of the block branched to when the exception is thrown.
 
@@ -116,7 +116,7 @@ would be encoded like this:
 
 ## Description
 
-The `catch_all_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception is pushed to the stack.
+The `catch_all_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch any thrown exceptions. When an exception is thrown, the code branches to the specified `block`, at which point an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the thrown exception is pushed to the stack.
 
 The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
@@ -138,5 +138,5 @@ The referenced block must declare a result type that matches the pushed `exnref`
   - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
   - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
   - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

@@ -19,7 +19,7 @@ new WebAssembly.Tag(type)
 - `type`
   - : An object that can contain the following members:
     - `parameters`
-      - : An array of strings representing the exception type's parameters and their types. The strings can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Types).
+      - : An array of strings representing the exception type's parameters and their types. The strings can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Value_types).
 
 ### Exceptions
 
@@ -53,4 +53,4 @@ const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type

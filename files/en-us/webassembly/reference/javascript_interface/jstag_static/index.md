@@ -60,7 +60,7 @@ run();
 
 ## Value
 
-A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) with a type of [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) (`(tag (param externref))`).
+A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) with a type of [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) (`(tag (param externref))`).
 
 ## Specifications
 

@@ -125,9 +125,9 @@ The different `catch` clauses behave as follows:
 - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all)
   - : If any exception is thrown, branch to the specified `block`, pushing nothing onto the stack.
 - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref)
-  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
+  - : If an exception with a matching tag is thrown, branch to the specified `block`, pushing the payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the exception onto the stack.
 - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref)
-  - : If any exception is thrown, branch to the specified `block`, pushing an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception onto the stack.
+  - : If any exception is thrown, branch to the specified `block`, pushing an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the exception onto the stack.
 
 Each `catch` clause that branches to an outer `block` must produce values matching that `block`'s result type when a thrown exception is caught.
 
@@ -283,5 +283,5 @@ We call the `try_multiple()` function three times. The first time throws a `$typ
   - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
   - [`catch_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_ref) clause
   - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

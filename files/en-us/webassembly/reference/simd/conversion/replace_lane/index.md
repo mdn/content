@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.replace_lane
 sidebar: webassemblysidebar
 ---
 
-The **`replace_lane`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) replaces the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation with a new value and returns the resulting `v128` value interpretation.
+The **`replace_lane`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) replaces the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation with a new value and returns the resulting `v128` value interpretation.
 
 {{InteractiveExample("Wat Demo: replace_lane", "tabbed-taller")}}
 
@@ -37,7 +37,7 @@ value_type.replace_lane index
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `replace_lane`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `replace_lane`:
     - `i8x16`
     - `i16x8`
     - `i32x4`

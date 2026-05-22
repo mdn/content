@@ -73,7 +73,7 @@ The [WebAssembly guides](/en-US/docs/WebAssembly/Guides) cover topics such as hi
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : The `WebAssembly.validate()` function validates a given typed array of WebAssembly binary code.
 - [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
+  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
 - [`WebAssembly.Table()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : A `WebAssembly.Table` object is a resizable typed array of opaque values, like function references, that are accessed by an `Instance`.
 - [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag)

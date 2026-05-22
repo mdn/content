@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.try_table.catch_ref
 sidebar: webassemblysidebar
 ---
 
-The **`catch_ref`** clause catches exceptions matching a specified error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag), pushing the exception payload and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the exception to the stack.
+The **`catch_ref`** clause catches exceptions matching a specified error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag), pushing the exception payload and an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the exception to the stack.
 
 {{InteractiveExample("Wat Demo: catch_ref", "tabbed-taller")}}
 
@@ -107,7 +107,7 @@ catch_ref tag_identifier block_identifier
 - `payload*`
   - : Zero or more payload values created by the thrown exception, which typically represent identifying error codes.
 - `exception_ref`
-  - : An [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception.
+  - : An [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the thrown exception.
 
 These values are not pushed onto the stack directly at the site of the `catch_ref` clause, rather they are pushed onto the stack at the site of the block branched to when the exception is thrown.
 
@@ -131,7 +131,7 @@ would be encoded like this:
 
 ## Description
 
-The `catch_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch exceptions with a specific error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag). When such an exception is thrown, the code branches to the specified `block`, at which point the exception's payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) value representing the thrown exception are pushed to the stack.
+The `catch_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table) block to catch exceptions with a specific error [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag). When such an exception is thrown, the code branches to the specified `block`, at which point the exception's payload values and an [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) value representing the thrown exception are pushed to the stack.
 
 The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
@@ -159,5 +159,5 @@ When the exception is caught, the block branched to specifies the same data type
   - [`catch`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch) clause
   - [`catch_all`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all) clause
   - [`catch_all_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/try_table/catch_all_ref) clause
-- [`exnref`](/en-US/docs/WebAssembly/Reference/Types/exnref) type
+- [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref) type
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag) definition

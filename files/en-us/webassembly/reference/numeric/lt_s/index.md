@@ -53,7 +53,7 @@ value_type.lt_s
   - : The type of value the instruction is being run on. The following types support `lt_s`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -76,7 +76,7 @@ value_type.lt_s
 
 For a non-SIMD `lt_s`, the inputs will be basic numeric values such as `3` or `12`. If the first input is less than the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `lt_s`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `lt_s`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than the corresponding lane of the second input value.
 
 ### Binary encoding
 

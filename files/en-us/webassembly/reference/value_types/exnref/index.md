@@ -1,7 +1,7 @@
 ---
 title: "exnref: Wasm type"
 short-title: exnref
-slug: WebAssembly/Reference/Types/exnref
+slug: WebAssembly/Reference/Value_types/exnref
 page-type: webassembly-instruction
 browser-compat: webassembly.types.exnref
 sidebar: webassemblysidebar
