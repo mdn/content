@@ -2,10 +2,12 @@
 title: PerformanceTimingConfidence
 slug: Web/API/PerformanceTimingConfidence
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.PerformanceTimingConfidence
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 
@@ -13,14 +15,14 @@ The `PerformanceTimingConfidence` object for each navigation timing entry is acc
 
 ## Instance properties
 
-- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A number indicating how often noise is applied when exposing the `value`.
-- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An enumerated value indicating a broad confidence measure of whether a performance record reflects typical application performance, or is likely affected by external factors.
 
 ## Instance methods
 
-- {{domxref("PerformanceTimingConfidence.toJSON()")}}
+- {{domxref("PerformanceTimingConfidence.toJSON()")}} {{experimental_inline}}
   - : Returns a JSON representation of the `PerformanceTimingConfidence` object.
 
 ## Description
