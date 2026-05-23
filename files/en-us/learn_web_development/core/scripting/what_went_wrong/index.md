@@ -32,10 +32,11 @@ When you built up the "Guess the number" game in the previous article, you may h
 
 ## Types of error
 
-Generally speaking, when you do something wrong in code, there are two main types of error that you'll come across:
+Generally speaking, when you do something wrong in code, there are three main types of error that you'll come across:
 
 - **Syntax errors**: These are spelling errors in your code that actually cause the program not to run at all, or stop working part way through — you will usually be provided with some error messages too. These are usually not too hard to fix, as long as you are familiar with the right tools and know what the error messages mean!
 - **Logic errors**: These are errors where the syntax is actually correct but the code is not what you intended it to be, meaning that program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.
+- **Runtime errors**: Runtime errors occur when the code has valid syntax, so the program starts running, but an error happens during execution. Examples include TypeError, ReferenceError, and RangeError.
 
 Okay, so it's not quite _that_ simple — there are some other differentiators as you drill down deeper. But the above classifications will do at this early stage in your career. We'll look at both of these types going forward.
 
@@ -51,9 +52,9 @@ To get started, let's return to our number guessing game — except this time we
 
 At this point, let's consult the developer console to see if it reports any syntax errors, then try to fix them. You'll learn how below.
 
-## Fixing syntax errors
+## Fixing errors reported in the console
 
-Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
+Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
 
 1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:87:19)".](not-a-function.png)
 2. The first line of the error message is:
@@ -78,7 +79,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 > [!NOTE]
 > See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
-### Syntax errors round two
+### Fixing errors round two
 
 1. Save your page and refresh, and you should see the error has gone.
 2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
@@ -133,7 +134,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 > [!NOTE]
 > See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
 
-### Syntax errors round three
+### Fixing errors round three
 
 1. Now if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
 2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 95.
