@@ -77,7 +77,7 @@ copyExternalImageToTexture(source, destination, copySize)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

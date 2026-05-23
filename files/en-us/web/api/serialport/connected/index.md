@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SerialPort.connected
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`connected`** read-only property of the {{domxref("SerialPort")}} interface returns a boolean value that indicates whether the port is [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) to the device.
 

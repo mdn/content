@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 sidebar: webassemblysidebar
 ---
 
-The **`min_s`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) signed integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
+The **`min_s`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) signed integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
 
 {{InteractiveExample("Wat Demo: min_s", "tabbed-taller")}}
 

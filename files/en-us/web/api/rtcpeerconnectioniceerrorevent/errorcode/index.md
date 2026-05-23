@@ -22,7 +22,7 @@ This value is reported only once per server URL, and only while the {{domxref("R
 ### Basic usage
 
 This example creates a handler for {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} events, which creates human-readable messages describing the local network interface for the connection and the ICE server used to attempt the connection.
-It then calls a function to display those messages and the value of the event's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property.
+It then calls a function to display those messages and the value of the event's `errorCode` property.
 
 ```js
 pc.addEventListener("icecandidateerror", (event) => {

@@ -3,10 +3,12 @@ title: "AudioPlaybackStats: resetLatency() method"
 short-title: resetLatency()
 slug: Web/API/AudioPlaybackStats/resetLatency
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioPlaybackStats.resetLatency
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`resetLatency()`** method of the {{domxref("AudioPlaybackStats")}} interface resets the start of the interval during which latency statistics are measured to the {{domxref("BaseAudioContext.currentTime")}}.
 

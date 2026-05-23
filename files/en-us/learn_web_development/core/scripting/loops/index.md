@@ -148,7 +148,7 @@ But there are other collections in JavaScript as well, including {{jsxref("Set")
 
 ### The for...of loop
 
-The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
+The basic tool for looping through a collection is the {{jsxref("Statements/for...of","for...of")}} loop:
 
 ```js
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
@@ -225,7 +225,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that, you can use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you can use the {{jsxref("Statements/for","for")}} loop.
 This has the following syntax:
 
 ```js-nolint

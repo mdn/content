@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.narrow_i32x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`narrow_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretations into an `i16x8` value interpretation.
+The **`narrow_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` value interpretations into an `i16x8` value interpretation.
 
 {{InteractiveExample("Wat Demo: narrow_i32x4_s", "tabbed-taller")}}
 

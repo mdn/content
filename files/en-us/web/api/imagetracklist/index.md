@@ -12,7 +12,7 @@ The **`ImageTrackList`** interface of the {{domxref('WebCodecs API','','','true'
 ## Instance properties
 
 - {{domxref("ImageTrackList.ready")}} {{ReadOnlyInline}}
-  - : Returns a {{jsxref("promise")}} that resolves once the `ImageTrackList` has been populated with {{domxref("ImageTrack","tracks")}}.
+  - : Returns a {{jsxref("Promise")}} that resolves once the `ImageTrackList` has been populated with {{domxref("ImageTrack","tracks")}}.
 - {{domxref("ImageTrackList.length")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the length of the `ImageTrackList`.
 - {{domxref("ImageTrackList.selectedIndex")}} {{ReadOnlyInline}}
