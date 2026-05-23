@@ -1,7 +1,7 @@
 ---
-title: "funcref: Wasm type"
+title: "funcref: Wasm value type"
 short-title: funcref
-slug: WebAssembly/Reference/Types/funcref
+slug: WebAssembly/Reference/Value_types/funcref
 page-type: webassembly-instruction
 browser-compat: webassembly.reference-types
 spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-types
@@ -154,5 +154,5 @@ The original array has all its values multiplied by `2`, and the resulting new a
 
 ## See also
 
-- [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+- [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
