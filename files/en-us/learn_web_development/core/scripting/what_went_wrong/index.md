@@ -79,7 +79,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 > [!NOTE]
 > See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
-### Fixing errors round two
+### Fixing runtime error
 
 1. Save your page and refresh, and you should see the error has gone.
 2. Now if you try to enter a guess and press the Submit guess button, you'll see another error! ![Screenshot of the same "Number guessing game" demo. This time, a different error is visible in the console, reading "X TypeError: lowOrHi is null".](variable-is-null.png)
