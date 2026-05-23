@@ -1,5 +1,5 @@
 ---
-title: "f32: Wasm type"
+title: "f32: Wasm value type"
 short-title: f32
 slug: WebAssembly/Reference/Value_types/f32
 page-type: webassembly-instruction
