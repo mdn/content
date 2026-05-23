@@ -5,7 +5,7 @@ page-type: javascript-error
 sidebar: jssidebar
 ---
 
-The JavaScript exception "class constructors must be invoked with 'new'" occurs when a [class constructor](/en-US/docs/Web/JavaScript/Reference/Classes) is called without the {{jsxref("Operators/new", "new")}} keyword. All class constructors must be called with `new`.
+The JavaScript exception "class constructors must be invoked with 'new'" occurs when a [class constructor](/en-US/docs/Web/JavaScript/Reference/Classes) is called without the {{jsxref("new")}} keyword. All class constructors must be called with `new`.
 
 ## Message
 
@@ -47,4 +47,4 @@ new X();
 ## See also
 
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}

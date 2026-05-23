@@ -9,7 +9,7 @@ browser-compat: mathml.global_attributes.href
 sidebar: mathmlref
 ---
 
-{{non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
 

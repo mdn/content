@@ -42,7 +42,7 @@ value_type.sub
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `18x16`
       - `i16x8`
       - `i32x4`
@@ -67,7 +67,7 @@ value_type.sub
 
 For a non-SIMD `sub`, these will be basic numeric values such as `14` or `3.1`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sub`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack is equal to the second input's corresponding lane subtracted from the first input's corresponding lane.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sub`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack is equal to the second input's corresponding lane subtracted from the first input's corresponding lane.
 
 ### Binary encoding
 

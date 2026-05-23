@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.demote_f64x2_zero
 sidebar: webassemblysidebar
 ---
 
-The **`demote_f64x2_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f64x2` value interpretation into an `f32x4` value interpretation. The two higher lanes of the result are initialized to zero.
+The **`demote_f64x2_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `f64x2` value interpretation into an `f32x4` value interpretation. The two higher lanes of the result are initialized to zero.
 
 {{InteractiveExample("Wat Demo: demote_f64x2_zero", "tabbed-taller")}}
 
@@ -36,7 +36,7 @@ value_type.demote_f64x2_zero
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `demote_f64x2_zero`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `demote_f64x2_zero`:
     - `f32x4`
 - `demote_f64x2_zero`
   - : The `demote_f64x2_zero` instruction. Must always be included after the `value_type` and a period (`.`).

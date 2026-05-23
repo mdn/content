@@ -60,16 +60,16 @@ table name initial_size max_size type
   - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
 - `type`
   - : The name of the function type to store. Possible values are:
-    - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
+    - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
       - : Stores references to functions defined inside Wasm.
-    - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+    - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
       - : Store references to external values defined inside JavaScript.
 
 ## Description
 
 WebAssembly tables allow storage of reference values separate from byte-oriented WebAssembly memories. The primary use-case is for storing function references that can be used with `call_indirect` to support indirect function calls for languages that have them. The `table` definition creates a new table.
 
-A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)):
+A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
 
 ```wat
 (table 2 funcref)
@@ -103,7 +103,7 @@ It is possible to mutate tables at runtime using instructions like [`table.set`]
 
 ### External references
 
-You can also store external references defined in JavaScript inside a Wasm table, by specifying the [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) keyword. For example:
+You can also store external references defined in JavaScript inside a Wasm table, by specifying the [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) keyword. For example:
 
 ```wat
 (table $my_table 2 10 externref)

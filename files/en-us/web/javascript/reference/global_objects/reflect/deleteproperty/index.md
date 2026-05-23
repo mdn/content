@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.deleteProperty
 sidebar: jsref
 ---
 
-The **`Reflect.deleteProperty()`** static method is like the {{jsxref("Operators/delete", "delete")}} operator, but as a function. It deletes a property from an object.
+The **`Reflect.deleteProperty()`** static method is like the {{jsxref("delete")}} operator, but as a function. It deletes a property from an object.
 
 {{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
 

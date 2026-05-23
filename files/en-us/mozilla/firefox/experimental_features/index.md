@@ -467,22 +467,6 @@ For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxre
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
-### Notification actions and maxActions properties
-
-The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
-These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
-([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | Yes (desktop only)  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.webnotifications.actions.enabled`
-  - : Set to `true` to enable.
-
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions

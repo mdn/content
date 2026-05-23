@@ -3,10 +3,12 @@ title: "HTMLTemplateElement: shadowRootSlotAssignment property"
 short-title: shadowRootSlotAssignment
 slug: Web/API/HTMLTemplateElement/shadowRootSlotAssignment
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLTemplateElement.shadowRootSlotAssignment
 ---
 
-{{APIRef("Web Components")}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`shadowRootSlotAssignment`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether the element has been configured to use [named or unnamed slot assignment](/en-US/docs/Web/API/Web_components/Using_templates_and_slots#named_and_manual_slot_assignment).
 
