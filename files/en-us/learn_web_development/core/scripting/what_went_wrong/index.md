@@ -38,7 +38,7 @@ Generally speaking, when you do something wrong in code, there are three main ty
 - **Logic errors**: These are errors where the syntax is actually correct but the code is not what you intended it to be, meaning that program runs successfully but gives incorrect results. These are often harder to fix than syntax errors, as there usually isn't an error message to direct you to the source of the error.
 - **Runtime errors**: Runtime errors occur when the code has valid syntax, so the program starts running, but an error happens during execution. Examples include TypeError, ReferenceError, and RangeError.
 
-Okay, so it's not quite _that_ simple — there are some other differentiators as you drill down deeper. But the above classifications will do at this early stage in your career. We'll look at both of these types going forward.
+Okay, so it's not quite _that_ simple — there are some other differentiators as you drill down deeper. But the above classifications will do at this early stage in your career. We'll look at these types going forward.
 
 ## An erroneous example
 
