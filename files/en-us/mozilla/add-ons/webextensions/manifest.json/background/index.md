@@ -199,9 +199,9 @@ This example shows the relevant parts of a manifest that includes both `scripts`
 
 ```json
 {
+  "name": "Demo of service worker + event page",
+  "version": "1",
   "manifest_version": 3,
-  "name": "Background script example",
-  "version": "1.0",
   "background": {
     "scripts": ["background.js"],
     "service_worker": "background.js"
@@ -213,7 +213,7 @@ And, background.js contains:
 
 ```js
 browser.runtime.onInstalled.addListener(() => {
-  console.log("Extension installed");
+  browser.tabs.create({ url: "http://example.com/first-run.html" });
 });
 ```
 
