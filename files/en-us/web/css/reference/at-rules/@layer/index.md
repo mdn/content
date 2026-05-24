@@ -6,8 +6,10 @@ page-type: css-at-rule
 browser-compat: css.at-rules.layer
 sidebar: cssref
 ---
+Style statements are read and interpreted in order they appear, meaning the last style always has precedence. The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) 
+is used to declare new cascade layers. Multiple cascade layers can be defined to allow a greater control over precedency.
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+Styles that are not defined in a layer always come last and override styles declared in named and anonymous layers.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -55,9 +57,11 @@ where:
 - _rules_
   - : Is the set of CSS rules in the cascade layer.
 
+In block at-rules the layer-name can be ommited to define an anonymous layer. Comma seperated layer names dictate the order the layers are interpreted.
+
 ## Description
 
-Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Styles that are not defined in a layer always override styles declared in named and anonymous layers.
+Rules within a cascade layer cascade together.
 
 The following diagram shows layer priorities where layers are declared in 1, 2, ..., N order.
 
@@ -68,7 +72,9 @@ As noted in the above diagram, _important declarations_, declarations with the `
 Within author styles, all important declarations within CSS layers take precedence over any important declarations declared outside of a layer, while all normal declarations within CSS layers have a lower priority than declarations declared outside of a layer.
 The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) flag is used.
 
-The `@layer` at-rule is used to create a cascade layer in one of three ways.
+The `@layer` at-rule is used to create a cascade layer in three ways.
+
+### Group rules in one layer
 
 The first way is to use a `@layer` block at-rule to create a named cascade layer with the CSS rules for that layer inside, like so:
 
@@ -84,7 +90,11 @@ The first way is to use a `@layer` block at-rule to create a named cascade layer
 }
 ```
 
-The second way is to use a `@layer` statement at-rule to create one or more comma-separated named cascade layers without assigning any styles. This can be a single layer, as shown below:
+The rules in a layer can be specifed in multiple `@layer` block with the same name.
+
+### Ordering layers
+
+Multiple layers are normally interpreted top to bottom. A `@layer` statement at-rule with one or more comma-separated names specify a new order. This can be a single layer, as shown below:
 
 ```css
 @layer utilities;
@@ -101,9 +111,11 @@ This is useful because the initial order in which layers are declared indicates 
 A rule in `utilities` would be applied _even if it has lower specificity_ than the rule in `theme`. This is because once the layer order has been established, specificity and order of appearance are ignored. This enables using simpler CSS selectors because you do not have to ensure that a selector will have high enough specificity to override competing rules; all you need to ensure is that it appears in a later layer.
 
 > [!NOTE]
-> Having declared your layer names, thus setting their order, you can add CSS rules to the layer by re-declaring the name. The styles are then appended to the layer and the layer order will not be changed.
+> Having declared your layer names, thus setting their order, you can add CSS rules to the layer by re-using the name. The styles are then appended to the layer and the layer order will not be changed.
 
-The third way is to create an unnamed layer using a `@layer` block at-rule without including a layer name. For example:
+### Anonymous layers
+
+The third way is to create an unnamed layer using a `@layer` block at-rule without a layer name. For example:
 
 ```css
 @layer {
