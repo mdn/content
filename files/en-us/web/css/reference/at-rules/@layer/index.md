@@ -6,7 +6,8 @@ page-type: css-at-rule
 browser-compat: css.at-rules.layer
 sidebar: cssref
 ---
-Style statements are read and interpreted in order they appear, meaning the last style always has precedence. The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) 
+
+Style statements are read and interpreted in order they appear, meaning the last style always has precedence. The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 is used to declare new cascade layers. Multiple cascade layers can be defined to allow a greater control over precedency.
 
 Styles that are not defined in a layer always come last and override styles declared in named and anonymous layers.
