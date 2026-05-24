@@ -16,7 +16,7 @@ The Notifications API allows web pages to control the display of system notifica
 ## Concepts and usage
 
 A web notification is a message box used to inform users when events occur on web apps. Web notifications are rendered by the operating system's native notification system, making them display identically to notifications from any other app on the platform.
-Web notifications are displayed by the underlying OS; they are therefore outside the top-level browsing context viewport, and can be shown even when the user has switched tabs or moved to a different app.
+Because the underlying OS renders web notifications, they are outside the top-level browsing context viewport, and can be shown even when the user has switched tabs or moved to a different app.
 
 ### Persistent and non-persistent notifications
 

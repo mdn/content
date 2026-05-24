@@ -32,7 +32,7 @@ showNotification(title, options)
         - `action`
           - : A string that uniquely identifies this particular action within the array of actions.
 
-            When an action button without a `navigate` URL is clicked, you can determine which button was selected by checking `event.action` inside your {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event listener
+            When an action button without a `navigate` URL is clicked, you can determine which button was selected by checking `event.action` inside your {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event listener.
 
         - `title`
           - : A string containing action text to be shown to the user.
@@ -154,9 +154,9 @@ You can also retrieve details of the {{domxref("Notification")}}s that have been
 
 ### Notifications with actions and action handlers
 
-This example shows how you might display a persistent notification, such as might be triggered by a push message when an email is received.
+This example shows how you might display a persistent notification, which might be triggered by a push message when an email is received, for example.
 
-The code to display the notification includes two `actions` that will be displayed on the notification: one to reply to the message, and the other to dismiss the notification.
+The code to generate the notification includes two `actions` that will be displayed on the notification: one to reply to the message, and the other to dismiss the notification.
 Each action includes a `title`, which is usually rendered as button text on the notification, and an `action`, which is used to identify the action that was selected if a user interacts with the notification.
 
 ```js
