@@ -29,6 +29,8 @@ A generic {{domxref("Event")}}.
 
 ### Reacting to a context overflow
 
+The code below shows two methods of creating an event listener for the `contextoverflow` event.
+
 ```js
 const session = await LanguageModel.create();
 
@@ -52,6 +54,8 @@ session.oncontextoverflow = () => {
 
 ### Resetting the session on overflow
 
+The following example creates a new session when the `contextoverflow` event is triggered.
+
 ```js
 let session = await LanguageModel.create({
   initialPrompts: [{ role: "system", content: "You are a helpful assistant." }],
@@ -70,26 +74,6 @@ session.addEventListener("contextoverflow", async () => {
 async function chat(userMessage) {
   const response = await session.prompt(userMessage);
   return response;
-}
-```
-
-### Checking context before prompting to avoid overflow
-
-```js
-const session = await LanguageModel.create();
-
-session.addEventListener("contextoverflow", () => {
-  updateUI("Warning", "Context window is full.");
-});
-
-async function safeSend(text) {
-  const usage = await session.measureContextUsage(text);
-  if (session.contextUsage + usage > session.contextWindow) {
-    updateUI("error", "Message too long for remaining context.");
-    return;
-  }
-  const response = await session.prompt(text);
-  renderResponse(response);
 }
 ```
 

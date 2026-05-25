@@ -69,6 +69,8 @@ console.log("Mysterious ending:", ending2);
 
 ### Cloning to retry after a context overflow
 
+This example uses a checkpoint and rolloback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` ensures that the app has a way to restore a safe state before attempting something risky.
+
 ```js
 let session = await LanguageModel.create();
 const checkpoint = await session.clone();
@@ -77,13 +79,15 @@ try {
   await session.append(veryLargeDocument);
 } catch (err) {
   if (err.name === "QuotaExceededError") {
-    console.warn("Document too large; reverting to checkpoint.");
+    console.warn("Document too large.");
     session = checkpoint;
   }
 }
 ```
 
 ### Cloning a session with an abort signal
+
+The following example creates a timeout to abort the clone operation if it takes more than three seconds.
 
 ```js
 const controller = new AbortController();

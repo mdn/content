@@ -20,29 +20,26 @@ An unrestricted double representing the session's context window capacity in tok
 
 ## Examples
 
-### Displaying context window information
+### Warning when the context is nearly full
+
+The following example uses a function to verify that context is available before calling `prompt()`. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less than `remaining`, it returns `true` and the session continues.
 
 ```js
+async function contextAvailable(text) {
+  const remaining = session.contextWindow - session.contextUsage;
+  const needed = await session.measureContextUsage(text);
+
+  return needed <= remaining;
+}
+
 const session = await LanguageModel.create();
+const promptText = "Your text goes here";
 
-console.log(`Context window: ${session.contextWindow} tokens`);
-console.log(`Currently used: ${session.contextUsage} tokens`);
-console.log(
-  `Remaining: ${session.contextWindow - session.contextUsage} tokens`,
-);
-```
-
-### Adapting behavior based on context window size
-
-```js
-const session = await LanguageModel.create();
-
-if (session.contextWindow < 4096) {
-  console.log("Small context window — keep prompts brief.");
-} else if (session.contextWindow === Infinity) {
-  console.log("No context window limit reported by this user agent.");
+if (await contextAvailable(promptText)) {
+  const response = await session.prompt(promptText);
+  console.log(response);
 } else {
-  console.log(`Context window: ${session.contextWindow} tokens.`);
+  console.warn("Prompt skipped: Not enough context window remaining.");
 }
 ```
 

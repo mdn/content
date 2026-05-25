@@ -38,18 +38,24 @@ console.log(
 
 ### Warning when the context is nearly full
 
-```js
-const session = await LanguageModel.create();
+The following example uses a function to verify that context is available before calling `prompt()`. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less than `remaining`, it returns `true` and the session continues.
 
-async function safePrompt(text) {
+```js
+async function contextAvailable(text) {
   const remaining = session.contextWindow - session.contextUsage;
   const needed = await session.measureContextUsage(text);
 
-  if (needed > remaining) {
-    console.warn(`Prompt needs ${needed} tokens but only ${remaining} remain.`);
-    return null;
-  }
-  return session.prompt(text);
+  return needed <= remaining;
+}
+
+const session = await LanguageModel.create();
+const promptText = "Your text goes here";
+
+if (await contextAvailable(promptText)) {
+  const response = await session.prompt(promptText);
+  console.log(response);
+} else {
+  console.warn("Prompt skipped: Not enough context window remaining.");
 }
 ```
 

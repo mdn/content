@@ -68,6 +68,8 @@ Like `prompt()`, each call to `promptStreaming()` adds to the session's running 
 
 ### Streaming a response to the page
 
+This exaxmple writes out chunks from an instance of {{domxref("ReadableStream")}} as they arrive.
+
 ```js
 const session = await LanguageModel.create();
 const output = document.querySelector("#output");
@@ -80,6 +82,8 @@ for await (const chunk of stream) {
 ```
 
 ### Streaming with an abort signal
+
+This example shows how to use an {{domxref("AbortController")}} with prompt streaming.
 
 ```js
 const controller = new AbortController();
@@ -103,6 +107,8 @@ try {
 ```
 
 ### Collecting streamed chunks into a single string
+
+In this example, chucks from a {{domxref("ReadableStream")}} are collected before the whole stream is written out.
 
 ```js
 const session = await LanguageModel.create();

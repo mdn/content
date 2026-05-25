@@ -173,6 +173,43 @@ const result = await session.prompt("Good morning");
 console.log(result); // "Bonjour matin" or "Bonjour"
 ```
 
+### Defining a tool with a callback
+
+This example creates a session with a hypothetical "get weather" tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
+
+```js
+async function getWeatherData(location) {
+  const response = await fetch(
+    `https://api.example.com/weather?city=${location}`,
+  );
+  const data = await response.json();
+  return `${data.temp}°C, ${data.description}`;
+}
+
+const session = await LanguageModel.create({
+  tools: [
+    {
+      name: "getWeather",
+      description: "Returns the current weather for a given city.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          location: { type: "string", description: "The city name." },
+        },
+        required: ["location"],
+      },
+      execute: async (...args) => {
+        const location = args[0];
+        return await getWeatherData(location);
+      },
+    },
+  ],
+});
+
+const response = await session.prompt("What's the weather like in Tokyo?");
+console.log(response);
+```
+
 ### Cancelling a session
 
 The following example enables a user to cancel a prompt. It does this by first creating an {{domxref("AbortController")}} and assigning its `abort()` method to a cancel button's click handler. Next, it calls `create()` and passes `AbortController.signal` as the `signal` property.

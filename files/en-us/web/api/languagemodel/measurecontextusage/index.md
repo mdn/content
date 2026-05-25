@@ -79,147 +79,27 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 
 ## Examples
 
-### Checking whether a prompt fits in the remaining context
+### Warning when the context is nearly full
+
+The following example uses a function to verify that context is available before calling `prompt()`. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less than `remaining`, it returns `true` and the session continues.
 
 ```js
+async function contextAvailable(text) {
+  const remaining = session.contextWindow - session.contextUsage;
+  const needed = await session.measureContextUsage(text);
+
+  return needed <= remaining;
+}
+
 const session = await LanguageModel.create();
-const userInput = document.querySelector("#user-input").value;
+const promptText = "Your text goes here";
 
-const usage = await session.measureContextUsage(userInput);
-const remaining = session.contextWindow - session.contextUsage;
-
-if (usage > remaining) {
-  console.warn(
-    `Input is too long: needs ${usage} tokens, only ${remaining} available.`,
-  );
-} else {
-  const response = await session.prompt(userInput);
+if (await contextAvailable(promptText)) {
+  const response = await session.prompt(promptText);
   console.log(response);
+} else {
+  console.warn("Prompt skipped: Not enough context window remaining.");
 }
-```
-
-### Splitting a document to fit the context window
-
-```js
-const session = await LanguageModel.create();
-const paragraphs = document.body.innerText.split("\n\n");
-const chunks = [];
-let currentChunk = "";
-
-for (const paragraph of paragraphs) {
-  const candidate = currentChunk + "\n\n" + paragraph;
-  const usage = await session.measureContextUsage(candidate);
-
-  if (usage > session.contextWindow * 0.8) {
-    chunks.push(currentChunk.trim());
-    currentChunk = paragraph;
-  } else {
-    currentChunk = candidate;
-  }
-}
-if (currentChunk) chunks.push(currentChunk.trim());
-
-// Process each chunk separately
-for (const chunk of chunks) {
-  const summary = await session.prompt(`Summarize: ${chunk}`);
-  console.log(summary);
-}
-```
-
-### Building a conversation with initial prompts
-
-```js
-const session = await LanguageModel.create({
-  initialPrompts: [
-    {
-      role: "system",
-      content:
-        "You are a helpful coding assistant. Always use JavaScript examples.",
-    },
-    {
-      role: "user",
-      content: "How do I reverse a string?",
-    },
-    {
-      role: "assistant",
-      content:
-        'Use split, reverse, and join: `str.split("").reverse().join("")`.',
-    },
-  ],
-});
-
-const response = await session.prompt(
-  "How do I check if a string is a palindrome?",
-);
-console.log(response);
-```
-
-### Using multimodal content parts
-
-This example shows how to create a prompt with multiple content types.
-
-```js
-const imageBitmap = await createImageBitmap(imageElement);
-
-const session = await LanguageModel.create({
-  expectedInputs: [{ type: "text" }, { type: "image" }],
-});
-
-const response = await session.prompt([
-  {
-    role: "user",
-    content: [
-      { type: "text", value: "What is shown in this image?" },
-      { type: "image", value: imageBitmap },
-    ],
-  },
-]);
-console.log(response);
-```
-
-### A text content part
-
-```js
-const textPart = {
-  type: "text",
-  value: "Describe the following image:",
-};
-```
-
-### A multimodal message with text and image parts
-
-```js
-const imageBitmap = await createImageBitmap(imageBlob);
-
-const message = {
-  role: "user",
-  content: [
-    { type: "text", value: "What breed is this dog?" },
-    { type: "image", value: imageBitmap },
-  ],
-};
-
-const session = await LanguageModel.create({
-  expectedInputs: [{ type: "text" }, { type: "image" }],
-});
-
-const response = await session.prompt([message]);
-console.log(response);
-```
-
-### An audio content part
-
-```js
-const audioContext = new AudioContext();
-const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-
-const message = {
-  role: "user",
-  content: [
-    { type: "text", value: "Transcribe this audio clip." },
-    { type: "audio", value: audioBuffer },
-  ],
-};
 ```
 
 ## Specifications

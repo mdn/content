@@ -92,6 +92,8 @@ console.log(reply2); // "Your name is Alex."
 
 ### Constrained JSON output
 
+The following example shows how do pass JSON to the `responseConstraint` argument to specify that you want an array returned by the call to `prompt()`.
+
 ```js
 const session = await LanguageModel.create();
 const raw = await session.prompt("Name three planets in our solar system.", {
@@ -113,18 +115,29 @@ console.log(planets); // ["Mercury", "Venus", "Earth"]
 
 ### Cancelling a prompt
 
+The following example shows how to enabled a user to cancel a prompt with a button. It does this by creating an {{domxref("AbortController")}}. Its `abort()` is callable from a button's `click` handler. For this to work a reference to the controller's `signal` property must be passed to `prompt()`.
+
 ```js
 const controller = new AbortController();
-setTimeout(() => controller.abort(), 5000);
+
+// Select your cancel button from the DOM
+const cancelButton = document.querySelector("#btn-cancel");
+
+// Trigger the abort when the user clicks the button
+cancelButton.addEventListener("click", () => {
+  controller.abort();
+});
 
 try {
-  const response = await session.prompt("Write a very long story.", {
+  const response = await session.prompt("write a very long story.", {
     signal: controller.signal,
   });
   console.log(response);
 } catch (err) {
   if (err.name === "AbortError") {
-    console.log("Prompt was cancelled.");
+    console.log("prompt was cancelled.");
+  } else {
+    console.error("An unexpected error occurred:", err);
   }
 }
 ```
