@@ -221,7 +221,7 @@ With this `background` configuration, this happens:
 
 - in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
 - in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
-- in Safari, the `scripts` property is used by default.
+- in Safari, the `scripts` property is used by default, and an event page starts.
 
 ## Examples
 
