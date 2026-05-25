@@ -24,7 +24,7 @@ localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > [!NOTE]
-> It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
+> It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the pitfalls associated with using plain objects as key-value stores.
 
 The two mechanisms within Web Storage are as follows:
 
