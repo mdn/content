@@ -9,7 +9,7 @@ This chapter documents all of JavaScript's standard, built-in objects, including
 
 The term "global objects" (or standard built-in objects) here is not to be confused with **the global object**. Here, "global objects" refer to **objects in the global scope**.
 
-The **global object** itself can be accessed using the {{jsxref("Operators/this", "this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
+The **global object** itself can be accessed using the {{jsxref("this")}} operator in the global scope. In fact, the global scope **consists of** the properties of the global object, including inherited properties, if any.
 
 Other objects in the global scope are either [created by the user script](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) or provided by the host application. The host objects available in browser contexts are documented in the [API reference](/en-US/docs/Web/API).
 

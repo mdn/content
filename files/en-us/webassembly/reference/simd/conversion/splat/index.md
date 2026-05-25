@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.splat
 sidebar: webassemblysidebar
 ---
 
-The **`splat`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) copies the same value to all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation.
+The **`splat`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) copies the same value to all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation.
 
 {{InteractiveExample("Wat Demo: splat", "tabbed-taller")}}
 
@@ -51,7 +51,7 @@ value_type.splat
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `splat`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `splat`:
     - `i8x16`
     - `i16x8`
     - `i32x4`

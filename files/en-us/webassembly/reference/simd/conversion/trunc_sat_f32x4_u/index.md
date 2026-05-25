@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.trunc_sat_f32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_sat_f32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f32x4` value interpretation into an unsigned `i32x4` value interpretation, clamping the output to the range allowed by the value type.
+The **`trunc_sat_f32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `f32x4` value interpretation into an unsigned `i32x4` value interpretation, clamping the output to the range allowed by the value type.
 
 {{InteractiveExample("Wat Demo: trunc_sat_f32x4_u", "tabbed-taller")}}
 
@@ -38,7 +38,7 @@ value_type.trunc_sat_f32x4_u
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `trunc_sat_f32x4_u`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `trunc_sat_f32x4_u`:
     - `i32x4`
 - `trunc_sat_f32x4_u`
   - : The `trunc_sat_f32x4_u` instruction. Must always be included after the `value_type` and a period (`.`).

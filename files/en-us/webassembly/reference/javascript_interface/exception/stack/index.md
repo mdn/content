@@ -10,36 +10,38 @@ sidebar: webassemblysidebar
 
 {{non-standard_header}}
 
-The read-only **`stack`** property of an object instance of type [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) _may_ contain a stack trace.
-
-Exceptions from WebAssembly code do not include a stack trace by default.
-
-If WebAssembly code needs to provide a stack trace, it must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the [constructor](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception).
-The virtual machine can then attach a stack trace to the exception object returned by the constructor.
-
-> [!NOTE]
-> Stack traces are not normally sent from WebAssembly code to improve performance.
-> The ability to add stack traces to these exceptions is provided for developer tooling, and is not generally recommended for broader use.
+The **`stack`** read-only property of the [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object _may_ contain a stack trace.
 
 ## Value
 
 A string containing the stack trace, or {{jsxref("undefined")}} if no trace has been assigned.
 
 The stack trace string lists the locations of each operation on the stack in WebAssembly format.
-This is a human-readable string indicating the URL, name of the function type called, the function index, and its offset in the module binary.
+This is a human-readable string indicating the URL, name of the function type called, function index, and its offset in the module binary.
 It has approximately this format (see [stack trace conventions](https://webassembly.github.io/spec/web-api/index.html#conventions) in the specification for more information):
 
 ```plain
 ${url}:wasm-function[${funcIndex}]:${pcOffset}
 ```
 
+## Description
+
+Exceptions from WebAssembly code do not include a stack trace by default.
+
+If WebAssembly code needs to provide a stack trace, it must call a JavaScript function to create the exception, passing the `options.traceStack=true` parameter in the [constructor](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception).
+The virtual machine can then attach a stack trace to the exception object returned by the constructor.
+
+> [!NOTE]
+> Stack traces are not normally sent from WebAssembly code to improve performance.
+> The ability to add stack traces to these exceptions is provided for developer tooling, and is not generally recommended for broader use.
+
 ## Examples
 
 This example demonstrate how to throw an exception from WebAssembly that includes a stack trace.
 
-Consider the following WebAssembly code, which is assumed to be compiled to a file named **example.wasm**.
+Consider the following WebAssembly code, which is assumed to be compiled to a file named `example.wasm`.
 This imports a tag, which it refers to as `$tagname` internally, and imports a function that it refers to as `$throwExnWithStack`.
-It exports the method `run` that can be called by external code to call `$throwExnWithStack` (and hence the JavaScript function).
+It exports the method `run` that can be called by external code to call `$throwExnWithStack`.
 
 ```wat
 (module
@@ -57,10 +59,10 @@ It exports the method `run` that can be called by external code to call `$throwE
 )
 ```
 
-The JavaScript code below defines a new tag `tag` and the function `throwExceptionWithStack`.
+The JavaScript code below defines a new tag `tag` and the function `throwExceptionWithStack()`.
 These are passed to the WebAssembly module in the `importObject` when it is instantiated.
 
-Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.
+Once the module is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.
 The stack is then logged from the `catch` statement.
 
 ```js
@@ -93,7 +95,7 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
 // @http://<url>/main.js:82:38
 ```
 
-The most "relevant" part of this code is the line where the exception is created:
+The most significant part of this code is the line where the exception is created:
 
 ```js
 new WebAssembly.Exception(tag, [param], { traceStack: true });
