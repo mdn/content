@@ -10,15 +10,9 @@ browser-compat: api.Notification.Notification
 
 The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
 
-Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`.
-Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
-
-You must first get permission before being able to display notifications, using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
-The permission may not be grantable, for example if the page is in private browsing mode.
-
-This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
-Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
-See [Chrome issue](https://crbug.com/481856) for more information.
+> [!WARNING]
+> This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers.
+> Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
 ## Syntax
 
@@ -39,7 +33,7 @@ new Notification(title, options)
         `actions` is only supported for [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications) fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
     - `badge` {{optional_inline}}
       - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
-        On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
+        On Android devices, the badge should support devices with up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
         The default is the empty string.
@@ -65,7 +59,7 @@ new Notification(title, options)
     - `renotify` {{optional_inline}}
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one.
         The default is `false`, which means they won't be notified.
-        If `true`, then `tag` also must be set.
+        If `true`, `tag` must also be set.
     - `requireInteraction` {{optional_inline}}
       - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
         The default value is `false`.
@@ -97,16 +91,60 @@ An instance of the {{domxref("Notification")}} object.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if serializing the `data` option failed for some reason.
 
+## Description
+
+The constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
+
+You must get permission to display notifications using {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}.
+The permission may not be grantable, for example if the page is in private browsing mode.
+
+This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers, and this is unlikely to change, because web pages on mobile devices almost never "run in the background", which is the main use case for notifications.
+Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+See [Chrome issue #481856](https://crbug.com/481856) for more information.
+
 ## Examples
 
-Here is a most basic example to only show a notification if permission is already granted.
-For more complete examples, see the {{domxref("Notification")}} page.
+For more examples, see the {{domxref("Notification")}} page and [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+
+### Basic example
+
+This is a basic example that shows a notification if permission is already granted.
+This will not work on mobile devices.
 
 ```js
 if (Notification.permission === "granted") {
   const notification = new Notification("Hi there!");
 }
 ```
+
+### Using Notification() as a fallback
+
+This example shows a more robust approach that allows showing notifications on both desktop and mobile devices.
+
+First we check if {{domxref("Notification")}} is supported, and if permission has been granted, returning early if either condition is not met.
+We then check if there is an active service worker.
+If so, we use it to call {{domxref("ServiceWorkerRegistration.showNotification()")}}; if not, we fall back to calling the constructor.
+
+```js
+async function showNotification(title, options = {}) {
+  if (!("Notification" in window)) return;
+  if (Notification.permission !== "granted") return;
+
+  // Only use SW if one is already active — don't hang waiting
+  const swReg = navigator.serviceWorker?.controller
+    ? await navigator.serviceWorker.getRegistration()
+    : null;
+
+  if (swReg) {
+    await swReg.showNotification(title, options);
+  } else {
+    new Notification(title, options);
+  }
+}
+```
+
+Note that this will still throw an error on a mobile device if the page does not have a service worker ready.
+Depending on your application, you might wrap this code in a `try...catch` block.
 
 ## Specifications
 
