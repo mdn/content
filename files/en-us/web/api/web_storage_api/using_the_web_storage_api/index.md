@@ -24,7 +24,8 @@ localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > [!NOTE]
-> It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the pitfalls associated with using plain objects as key-value stores.
+> You should always use the Web Storage API (`setItem()`, `getItem()`, `removeItem()`, `key`, `length`) instead of direct object property access such as `localStorage.key = value` or `localStorage["key"] = value`.
+> This avoids colliding with built-in storage members like `clear()` or `getItem()`, avoids surprising results from inherited properties, and reduces prototype-pollution risk when working with untrusted keys.
 
 The two mechanisms within Web Storage are as follows:
 
