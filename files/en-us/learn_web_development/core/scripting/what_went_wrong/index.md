@@ -50,7 +50,7 @@ To get started, let's return to our number guessing game — except this time we
 > [!NOTE]
 > You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
 
-At this point, let's consult the developer console to see if it reports any syntax errors, then try to fix them. You'll learn how below.
+At this point, let's consult the developer console to see if it reports any errors, then try to fix them. You'll learn how below.
 
 ## Fixing errors reported in the console
 
