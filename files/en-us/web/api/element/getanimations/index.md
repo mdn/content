@@ -8,8 +8,8 @@ browser-compat: api.Element.getAnimations
 
 {{APIRef("Web Animations")}}
 
-The `getAnimations()` method of the {{domxref("Element")}} interface returns an array of all {{domxref("Animation")}} objects affecting this element or which are scheduled to do so in future.
-It can optionally return {{domxref("Animation")}} objects for descendant elements and their [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), or just for a specified pseudo-element.
+The `getAnimations()` method of the {{domxref("Element")}} interface returns an array of all {{domxref("Animation")}} objects affecting this element, or that are scheduled to do so in the future.
+It can optionally return {{domxref("Animation")}} objects either for descendant elements and their [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) or just for the specified pseudo-element.
 
 > [!NOTE]
 > This array includes [CSS Animations](/en-US/docs/Web/CSS/Guides/Animations), [CSS Transitions](/en-US/docs/Web/CSS/Guides/Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
@@ -24,25 +24,27 @@ getAnimations(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An options object containing the following property:
+  - : An options object containing the following properties:
     - `subtree`
-      - : A boolean value which, if `true`, causes animations that target descendants of _Element_ to be returned as well.
+      - : A boolean value, which if `true`, causes animations that target descendants of _Element_ to be returned as well.
         This includes animations that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) attached to _Element_ or one of its descendants.
         Defaults to `false`.
     - `pseudoElement`
-      - : A string specifying a pseudo selector, such as [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after).
-        If set, this indicates that the target of the operation is the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) identified by this pseudo selector.
+      - : A string that specifies a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) to be the target element, such as [`::after`](/en-US/docs/Web/CSS/Reference/Selectors/::after).
 
     Note that specifying both `pseudoElement` and `subtree` is equivalent to specifying just `pseudoElement`.
 
 ### Return value
 
-An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an animation currently targeting the {{domxref("Element")}} on which this method is called, or one of its descendant elements if `{ subtree: true }` is specified.
+An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an animation currently targeting the {{domxref("Element")}}.
+
+If the `{ subtree: true }` parameter is specified, the returned value also includes animation objects targeting descendant elements, including pseudo-elements.
+If `options.pseudoElement` is specified, the return value includes just the animation objects that match the selected pseudo-element.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : An invalid pseudo element was passed in the [`options.pseudoElement`](#pseudoelement) parameter.
+  - : An invalid pseudo-element was passed in the [`options.pseudoElement`](#pseudoelement) parameter.
 
 ## Examples
 
@@ -58,10 +60,10 @@ Promise.all(
 
 ### Get animations for a pseudo-element target
 
-This example displays a progress bar using a pseudo-elements.
-It uses `getAnimations()` to return the animations for the pseudo element, and uses these to start the animation, and to remove the bar once the animation is complete.
+This example displays a progress bar using a pseudo-element.
+It uses `getAnimations()` to return the animations for the pseudo-element, starts them, and then removes the progress bar once the animation is complete.
 
-Note that the code uses a fallback approach to get the animations, in case the `pseudoElement` option is not supported.
+Note that the code uses a fallback approach to get the animations in case the `pseudoElement` option is not supported.
 There is also hidden code to display a "Restart" button.
 
 #### HTML
@@ -72,8 +74,8 @@ There is also hidden code to display a "Restart" button.
 
 #### CSS
 
-The CSS draws and animates a progress bar element that progresses across the width of its container in three seconds.
-The animation is initially paused, so that we can start it in JavaScript.
+The CSS styles the progress bar element to animate across the width of its container in 3 seconds.
+The animation is initially paused so that we can start it in JavaScript.
 
 ```css
 .progress-bar {
@@ -107,8 +109,7 @@ The animation is initially paused, so that we can start it in JavaScript.
 #### JavaScript
 
 First we define a function to get the animations associated with a specified element and pseudo element.
-This first calls `getAnimations()` with the [`pseudoElement`](#pseudoelement) option, and then, if the first method doesn't return any animations, falls back to filtering the animations returned by passing [`subtree`](#subtree).
-This approach is needed because `pseudoElement` is not yet widely supported, and there is no simpler way to feature test.
+It calls `getAnimations()` with the [`pseudoElement`](#pseudoelement) option, and if that doesn't return any animations, falls back to filtering the animations returned by [`subtree`](#subtree).
 
 ```js
 function getAnimationsForPseudo(element, pseudo) {
@@ -130,7 +131,7 @@ function getAnimationsForPseudo(element, pseudo) {
 ```
 
 We use this function to get all the animations associated with the progress bar pseudo element.
-The code iterates through the animations to start them, and then removes the bar when all bar has finished animating.
+The code iterates through the animations to start them, and then removes the progress bar when all animations have finished.
 Note that we run the code in `requestAnimationFrame()` to ensure that the animation is ready to run before our JavaScript is executed.
 
 ```js
@@ -155,10 +156,10 @@ reload.addEventListener("click", () => {
 });
 ```
 
-#### Results
+#### Result
 
-The bar should progress across the width of the page, and then disappear.
-It can be restarted by pressing the "Restart" button.
+The bar should progress across the width of its container and then disappear.
+You can restart it by pressing the "Restart" button.
 
 {{EmbedLiveSample("Get animations for a pseudo-element target", "100%", "50px")}}
 
