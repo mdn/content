@@ -39,9 +39,9 @@ One issue that can arise is naming collisions between different view transitione
 
 You could solve this problem by setting a `view-transition-name` of `match-element` on the elements, to let the browser auto-assign internal unique names, but this won't work if you are including multiple components from different sources that you don't control. A naming collision might still occur.
 
-The `view-transition-scope` property was implemented so that element-scoped view transitions can be made self-contained. When `view-transition-scope: all` is set on an element, it limits the scope of [element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) to that element and its descendants, which can be used to solve the above problem.
+The `view-transition-scope` property was implemented so that view transitions can be made self-contained. When `view-transition-scope: all` is set on an element, it limits the transition scope to that element and its descendants, which can be used to solve the above problem.
 
-Whenever an element-scoped view transition is triggered, the browser automatically sets `view-transition-scope: all` on the transition scope's root element so that elements are only snapshotted and view transition animations applied inside the transition scope.
+Whenever a view transition is triggered, the browser automatically sets `view-transition-scope: all` on the transition scope's root element so that elements are only snapshotted and view transition animations applied inside the transition scope.
 
 ## Formal definition
 
@@ -110,12 +110,11 @@ section {
 
 #### JavaScript
 
-In our script, we start off by grabbing references to our button, the `<div>` elements (our components), and the `<section>` element.
+In our script, we start off by grabbing references to our button and the `<div>` elements (our components).
 
 ```js live-sample___vt-scope
 const btn = document.querySelector("button");
 const divs = document.querySelectorAll("div");
-const section = document.querySelector("section");
 ```
 
 Next, we define a function called `updateDivs()`, which toggles the text content of each component's nested {{htmlelement("span")}} element between two values, and also toggles the component's foreground and background colors between two values.
@@ -136,18 +135,18 @@ function updateDivs() {
 }
 ```
 
-Finally, we add a `click` event listener to the `<button>` element. When it is clicked, we first check whether `startViewtransition()` exists on the `<section>`
-element — if not, we run `updateDivs()` and then `return` out of the function. This first part allows browsers that don't support element-scoped view transitions to still update the DOM without error. Next, we run `updateDivs()` inside a `startViewTransition()` callback to trigger the view transition as the DOM updates.
+Finally, we add a `click` event listener to the `<button>` element. When it is clicked, we first check whether `startViewtransition()` exists on the `document`
+object — if not, we run `updateDivs()` and then `return` out of the function. This first part allows browsers that don't support view transitions to still update the DOM without error. Next, we run `updateDivs()` inside a `startViewTransition()` callback to trigger the view transition as the DOM updates.
 
 ```js live-sample___vt-scope
 btn.addEventListener("click", handleClick);
 
 function handleClick(e) {
-  if (!section.startViewTransition) {
+  if (!document.startViewTransition) {
     updateDivs();
     return;
   }
-  section.startViewTransition(() => {
+  document.startViewTransition(() => {
     updateDivs();
   });
 }
