@@ -57,6 +57,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported.
   These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the platform-dependent maximum number of actions that can be set for a notification, respectively.
   ([Firefox bug 1959931](https://bugzil.la/1959931)).
+- The {{domxref("Element.getAnimations()")}} method can now accept the [`options.pseudoElement`](/en-US/docs/Web/API/Element/getAnimations#pseudoelement) parameter.
+  This allows you to directly target a specific pseudo-element, rather than filtering the results of `{ subtree: true }`.
+  ([Firefox bug 1935557](https://bugzil.la/1935557)).
 
 #### Media, WebRTC, and Web Audio
 
