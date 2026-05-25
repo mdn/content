@@ -78,6 +78,8 @@ For more information, see:
   - : Specifies the view transition snapshot that selected elements will participate in, which enables an element to be animated separately from the rest of the page during a view transition.
 - {{cssxref("view-transition-class")}}
   - : Provides an additional method of styling selected elements that have a `view-transition-name`.
+- {{cssxref("view-transition-scope")}}
+  - : Enables the discoverability of elements with `view-transition-name` values set on them (for the purposes of creating view transition [snapshots](/en-US/docs/Web/API/View_Transition_API/Using#an_aside_on_snapshots)) to be isolated to a specific element subtree.
 
 ### Pseudo-classes
 
