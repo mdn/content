@@ -108,7 +108,7 @@ The animation is initially paused so that we can start it in JavaScript.
 
 #### JavaScript
 
-First we define a function to get the animations associated with a specified element and pseudo element.
+First we define a function to get the animations associated with a specified element and pseudo-element.
 It calls `getAnimations()` with the [`pseudoElement`](#pseudoelement) option, and if that doesn't return any animations, falls back to filtering the animations returned by [`subtree`](#subtree).
 
 ```js
