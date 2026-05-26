@@ -85,6 +85,74 @@ The `border-shape` property enables you to set the border shape of any element (
 - {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon shape via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
 - {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()`, and solves its shortcomings.
 
+When a `border-shape` is applied to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element will follow the shape of the border.
+
+This allows precise creation of speech bubbles and abstract tooltip shapes without resorting to hacks. For example,
+
+```html hidden live-sample___speech-bubble-demo
+<img src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg" />
+<p>I am a leopard</p>
+```
+
+```css hidden live-sample___speech-bubble-demo
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  width: 300px;
+  anchor-name: --leopard;
+  position: relative;
+  top: 45px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  padding: 15px 0;
+  margin: 0 0 -30px -110px;
+  background-color: chartreuse;
+  border: 7px solid rgb(50 50 50);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+
+  width: 250px;
+  height: 100px;
+  border-shape: shape(
+      from 50.08% 0%,
+      curve to 97.71% 25.55% with 72.95% 0%/93.9% 8.76%,
+      curve to 97.71% 62.04% with 100.76% 37.96%/100.76% 49.64%,
+      curve to 50.08% 83.94% with 93.9% 75.18%/72.95% 83.94%,
+      curve to 23.41% 82.48% with 36.75% 83.94%/27.22% 83.21%,
+      curve to 17.7% 100% with 21.51% 87.59%/19.22% 94.16%,
+      curve to 11.98% 82.48% with 16.17% 94.16%/13.89% 87.59%,
+      curve to 1.31% 62.04% with 13.5% 81.75%/3.98% 76.64%,
+      curve to 2.45% 25.55% with -0.59% 49.64%/-0.59% 37.96%,
+      curve to 50.08% 0% with 6.26% 8.76%/27.22% 0%,
+      close
+    )
+    content-box;
+
+  text-align: center;
+  line-height: 4;
+
+  position: absolute;
+  position-anchor: --leopard;
+  bottom: anchor(top);
+  left: anchor(right);
+}
+```
+
+{{EmbedLiveSample("speech-bubble-demo", "100%", "240")}}
+
 The `border-shape` property has two different modes:
 
 - If a single basic shape is provided in the value, that shape defines the border shape of the element, with defined border styles drawn as a stroke around the shape. This is known as **stroke mode**.
@@ -94,8 +162,6 @@ The `border-shape` property has two different modes:
 > It doesn't make sense to define a bigger shape for the inner boundary than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered, or one shape rendered behind the other.
 
 Optionally, you can include a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value, to specify the reference box the shapes should be drawn relative to.
-
-When a `border-shape` is applied to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element will follow the shape of the border (the outer shape, in fill mode).
 
 The `border-shape` creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
@@ -135,6 +201,19 @@ The rendered box will have a rectangular border with rounded corners. The border
 The {{cssxref("border-radius")}} and {{cssxref("corner-shape")}} properties are incompatible with `border-shape`. When a `border-shape` is set on an element, any set `border-radius` is ignored, therefore `corner-shape` will also have no effect.
 
 If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
+
+### Comparison between `border-shape` and `clip-path`
+
+The {{cssxref("clip-path")}} property takes similar values to `border-shape`, and produces similar effects — both properties can be used to change the shape of an element and therefore the element's hit area, altering the boundary of where `:hover` effects and pointer-related events will activate.
+
+However, there is a fundamental difference in how the two properties work:
+
+- `clip-path` hides the area of the element that sits outside the region defined by the provided shape.
+- `border-shape` changes the visual rendering of the element so that it sits inside the region defined by the provided shape.
+
+This means that, whereas `border-shape` clips the element's content, allowing its display to be controlled by the {{cssxref("overflow")}} property, `clip-path` hides it altogether, meanng that overflow control is not possible.
+
+More significantly, properties such as `box-shadow` and `outline` will not follow the shape created by `clip-path` — it chops off the outside of the element, meaning that such effects are truncated in an ugly fashion, or removed altogether. The `border-shape` property on the other hand creates a differently-shaped border that is neatly followed by such effects.
 
 ### Handling backgrounds inside larger border-shapes
 
