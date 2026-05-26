@@ -127,3 +127,9 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported on nightly builds if the preference is enabled.
   This includes all the [`Intl.Locale` instance methods prefixed with "get"](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#instance_methods).
   ([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+- **Text module import**: `javascript.options.experimental.import_text`
+
+  The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) is now supported for importing a text module into a string value.
+  This can be used to ensure that a module served with the media type of `text/plain` is imported as text, even if it contains JavaScript or some other format.
+  ([Firefox bug 2024854](https://bugzil.la/2024854)).

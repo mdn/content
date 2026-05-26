@@ -445,6 +445,22 @@ This includes all the instance methods on `Intl.Locale` that are prefixed with "
 - `javascript.options.experimental.intl_locale_info`
   - : Set to `true` to enable on Nightly.
 
+### Text module import
+
+The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+([Firefox bug 2024854](https://bugzil.la/2024854)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `javascript.options.experimental.import_text`
+  - : Set to `true` to enable.
+
 ### Multiple import maps
 
 Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
