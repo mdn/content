@@ -518,10 +518,8 @@ Together, these also bring object literals and class declarations closer togethe
 
 ```js
 const theProtoObj = {
-  /*The proto Object*/
 };
 const handler = {
-  /*Handler*/
 };
 const obj = {
   // __proto__
