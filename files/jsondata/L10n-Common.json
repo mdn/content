@@ -47,6 +47,16 @@
     "zh-CN": "指南",
     "zh-TW": "指南"
   },
+  "Handler_methods": {
+    "de": "Handler-Methoden",
+    "en-US": "Handler methods",
+    "es": "Métodos del manejador",
+    "fr": "Méthodes du gestionnaire",
+    "ja": "ハンドラーメソッド",
+    "ko": "처리기 메서드",
+    "ru": "Методы обработчика",
+    "zh-CN": "处理器方法"
+  },
   "Implemented_by": {
     "de": "Implementiert von",
     "en-US": "Implemented by",
