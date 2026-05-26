@@ -33,7 +33,7 @@ setScissorRect(x, y, width, height)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

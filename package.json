@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@apideck/better-ajv-errors": "^0.3.7",
-    "@mdn/fred": "2.6.1",
+    "@mdn/fred": "2.6.4",
     "@octokit/rest": "^22.0.1",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
@@ -71,14 +71,14 @@
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^12.0.0",
     "is-svg": "^6.1.0",
-    "lefthook": "^2.1.6",
+    "lefthook": "^2.1.8",
     "markdownlint-cli2": "0.22.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.1.0",
     "parse-diff": "^0.12.0",
     "prettier": "3.8.3",
     "tempy": "^3.2.0",
-    "yaml": "^2.8.4",
+    "yaml": "^2.9.0",
     "yargs": "^18.0.0"
   }
 }

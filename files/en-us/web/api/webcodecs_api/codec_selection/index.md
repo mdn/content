@@ -116,7 +116,7 @@ See the [Codec Support Table](https://webcodecsfundamentals.org/datasets/codec-s
 
 The fully qualified codec string encodes the codec family, profile, level, and other parameters that affect which hardware can encode or decode the stream and at what resolution and quality.
 
-The format for these codec strings is specified in the [W3C codec registry](https://www.w3.org/TR/webcodecs-codec-registry/), and the format is different for each codec family.
+The format for these codec strings is specified in the [W3C codec registry](https://w3c.github.io/webcodecs/codec_registry.html), and the format is different for each codec family.
 
 #### H.264
 

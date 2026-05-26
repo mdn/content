@@ -233,15 +233,12 @@ document.addEventListener("keydown", (event) => {
       event.preventDefault();
       // Do whatever else you might want to do when escape is pressed
     }
-  } else {
-    // Open full screen if Enter or F is pressed.
-    // Note that "F" is case-sensitive (uppercase):
-    if (event.key === "Enter" || event.key === "F") {
-      // Otherwise enter fullscreen mode
-      video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
-        console.error(`Error enabling fullscreen: ${err.message}`);
-      });
-    }
+  } else if (event.key === "Enter" || event.key === "F") {
+    // Open full screen if Enter or F is pressed and not already fullscreen.
+    // Note that "F" is case-sensitive (uppercase).
+    video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
+      console.error(`Error enabling fullscreen: ${err.message}`);
+    });
   }
 });
 ```

@@ -61,7 +61,7 @@ Highlights:
 - Duplicated parameter name is no longer allowed when rest-parameter is present ([Firefox bug 1096376](https://bugzil.la/1096376)).
 - Duplicated parameter name is no longer allowed in arrow functions ([Firefox bug 1096377](https://bugzil.la/1096377)).
 - Duplicated parameter name is no longer allowed in concise method definitions ([Firefox bug 1096378](https://bugzil.la/1096378)).
-- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("Operators/new", "new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
+- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
 - The {{jsxref("WeakMap.get", "get")}}, {{jsxref("WeakMap.has", "has")}}, and {{jsxref("WeakMap.delete", "delete")}} methods of {{jsxref("WeakMap")}} objects no longer throw when the `key` parameter is not an object ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - The optional and non-standard second `fallback` parameter for {{jsxref("WeakMap.prototype.get()")}} has been removed ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), `set` and `get` are no longer invalid names ([Firefox bug 1073809](https://bugzil.la/1073809)).
