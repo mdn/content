@@ -372,12 +372,15 @@ article {
     linear-gradient(
       to top,
       transparent 0 calc(var(--containerHeight) * 0.2 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.2 - 0.5px) calc(var(--containerHeight) * 0.2 + 0.5px),
-      transparent calc(var(--containerHeight) * 0.2 + 0.5px) calc(var(--containerHeight) * 0.6 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.6 - 0.5px) calc(var(--containerHeight) * 0.6 + 0.5px),
+      #3333 calc(var(--containerHeight) * 0.2 - 0.5px)
+        calc(var(--containerHeight) * 0.2 + 0.5px),
+      transparent calc(var(--containerHeight) * 0.2 + 0.5px)
+        calc(var(--containerHeight) * 0.6 - 0.5px),
+      #3333 calc(var(--containerHeight) * 0.6 - 0.5px)
+        calc(var(--containerHeight) * 0.6 + 0.5px),
       transparent 0 calc(var(--containerHeight) * 0.6 + 0.5px)
     );
-    background-position: local, local, fixed;
+  background-position: local, local, fixed;
 }
 ```
 
@@ -439,9 +442,9 @@ You may have noticed something interesting about the dashed horizontal lines: wh
 
 ### Subject size matters
 
-As we've seen, the size of the subject can make a difference. For some named ranges, the size of the attachment range is based on the subject size.
+As we saw when we [set insets with lengths](#setting_insets_using_lengths), the size of the subject can make a difference. When setting animation ranges, percentage values are relative to the size of animation attachment range, not the scrollport. For most named ranges, the size of the attachment range depends partially on the subject size. As percentages are based on the size of the range, the named range impacts the resolved size of the insets. Depending on the name, the start position may also change, impacting the location of the range and therefore the location of progress points.
 
-The percentage values are relative to the size of animation attachment range, not the scrollport. Percentages are based on the size of the range, impacting the insets. Depending on the name, the start position may also change, impacting the location of the range and therefore the location of progress points.
+In this example, we define an active range that is 40% of the size of the subject:
 
 ```css live-sample___exit_percent
 .animated_element {
@@ -461,13 +464,17 @@ body .animated_element {
 
 {{EmbedLiveSample("exit_percent", "100%", "400")}}
 
-The animation lasts `40%` of the animation-attachment range. As you scroll, note how the larger the subject, the longer the range.
+The animation lasts `40%` of the animation-attachment range. As you scroll, note how the larger the subject, the longer the range. With exit-crossing, the animation range is not cropped; it is the size of the subject even if the subject is larger than the viewport, with the range abutting the start edge of the scrollport, and extending off the end edge if the subject is larger than the scrollport.
+
+With the `-20%` and `20%` insets, the `50px` subject's will animation over `20px`: the animation starts when the subject's end is `-10px` from range start, or `60px` from exiting the screen, and ends when the subject's end is `40px` from exiting the screen. The middle subject will animate over `100px`: the animation starts when the subject end is `-50px` from range start, which is `50px` off of the scrollport's end edge, and ends when the subject's end is `50px` into the scrollport. The large subject animates over `200px`, starting when the bottom is `600px` from the the container's start edge, with only `150px` in view, and ends when the bottom is 400px from that start edge, when `100px` have scrolled off the start edge.
 
 ### Percentages equal to the scrollport
 
-For the start and end percentages to be relative to the scrollport and the subjects, we use the `<timeline-range-name>` keyword `contain` along with the percentage for each of our `animation-range-*` values.
+When it comes to offsetting with percentages, the least complicated named timeline range is `contain`. With `contain`, the animation range is the size of the scrollport, meaning the start and end percentages are relative to the scrollport. For this reason, when using offsets, you may want to use `contain` instead of letting the range default and resolve to `cover`.
 
 The `contain` range fully _contains_ the animation within the scrollport. It represents the range during which the principal box is either fully contained by, or fully covers, its view progress visibility range within the scrollport. With `contain`, if the subject is the same size or smaller than the scrollport, it can be fully visible, but if the element is the same size as the container, the animation is over `0px`, so happens, but is not visible to the user.
+
+In other words, without needing to know the size of the container or the subjects, we are able to limit our animation to the middle of scrollport, though the animation will happen over `0px` if the subject is the same size as the scrollport.
 
 ```css live-sample___center
 .animated_element {
@@ -496,12 +503,11 @@ body .animated_element {
     center 25%,
     center 75%;
   background-repeat: repeat-x;
-}
 ```
 
-Without needing to know the size of the container or the subjects, we are able to limit our animation to the middle of scrollport.
-
 {{EmbedLiveSample("center", "100%", "310")}}
+
+The horizontal lines denote the middle half of the scrollport and the middle half of each subject.
 
 ```html hidden live-sample___svg_contain live-sample___svg_insets2 live-sample___svg_view
 <svg class="gradient">
