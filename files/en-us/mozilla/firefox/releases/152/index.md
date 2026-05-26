@@ -117,3 +117,9 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether the iterator will produce a specified value.
   ([Firefox bug 2025779](https://bugzil.la/2025779)).
+
+- **TC39 Intl.Locale info proposal**: `javascript.options.experimental.intl_locale_info`
+
+  The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported on nightly builds if the preference is enabled.
+  This includes all the [`Intl.Locale` instance methods prefixed with "get"](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#instance_methods).
+  ([Firefox bug 1693576](https://bugzil.la/1693576)).

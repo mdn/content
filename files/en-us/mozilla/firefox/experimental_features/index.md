@@ -429,6 +429,22 @@ This algorithm is similar to strict equality `===` (where `-0` and `+0` are cons
 - `javascript.options.experimental.iterator_includes`
   - : Set to `true` to enable.
 
+### TC39 Intl.Locale info proposal
+
+The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
+([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | NA            | -                   |
+| Beta              | NA            | -                   |
+| Release           | NA            | -                   |
+
+- `javascript.options.experimental.intl_locale_info`
+  - : Set to `true` to enable on Nightly.
+
 ### Multiple import maps
 
 Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
