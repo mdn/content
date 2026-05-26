@@ -259,20 +259,20 @@ The default allowlist value for `on-device-speech-recognition` is `self`. This m
 
 The `available()` and `install()` methods both support the [`quality`](/en-US/docs/Web/API/SpeechRecognition/available_static#quality) option. This allows you to check support for varying speech recognition complexity levels — for example, processing short voice commands is much simpler than handling dictation/transcription, and the former use case is likely to be supported by more hardware and language pack combinations than the latter.
 
-For example, the following code snippet is a modification of code from the On-device speech color changer example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` to force the API to use a cloud recognition service, then `start()` the recognition service.
+For example, the following code snippet is a modification of code from the [On-device speech color changer](#demo_2) example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` to force the API to use a cloud recognition service, then `start()` the recognition service.
 
 If the result is `available`, we are good to go, so we just call `start()` to start on-device recognition. If the result is any other value, we run the `install()` method with the `quality` option set to `dictation` to install the required language packs.
 
 ```js
 startBtn.addEventListener("click", () => {
-  // check availability of on-device target language dictation quality
+  // Check availability of on-device target language dictation quality
   SpeechRecognition.available({
     langs: ["en-US"],
     processLocally: true,
     quality: "dictation",
   }).then((result) => {
     if (result === "unavailable") {
-      diagnostic.textContent = `on-device recognition for dictation not available, running with cloud recognition`;
+      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
       recognition.processLocally = false;
       recognition.start();
     } else if (result === "available") {

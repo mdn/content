@@ -68,7 +68,7 @@ These steps are handled using the following code snippet:
 
 ```js
 startBtn.addEventListener("click", () => {
-  // check availability of target language
+  // Check availability of target language
   SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
     (result) => {
       if (result === "unavailable") {
@@ -112,14 +112,14 @@ If the result is `available`, we are good to go, so we just call `start()` to st
 
 ```js
 startBtn.addEventListener("click", () => {
-  // check availability of on-device target language dictation quality
+  // Check availability of on-device target language dictation quality
   SpeechRecognition.available({
     langs: ["en-US"],
     processLocally: true,
     quality: "dictation",
   }).then((result) => {
     if (result === "unavailable") {
-      diagnostic.textContent = `on-device recognition for dictation not available, running with cloud recognition`;
+      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
       recognition.processLocally = false;
       recognition.start();
     } else if (result === "available") {

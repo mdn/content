@@ -10,7 +10,7 @@ browser-compat: api.SpeechRecognition.available_static
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether specified languages and quality level are available for speech recognition.
+The **`available()`** static method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) checks whether the specified languages are available for speech recognition at the given quality level.
 
 To install a language pack for speech recognition locally, use the {{domxref("SpeechRecognition.install_static", "SpeechRecognition.install()")}} method.
 
@@ -48,15 +48,15 @@ A {{jsxref("Promise")}} that resolves with an enumerated value indicating the av
 Possible values include:
 
 - `available`
-  - : Indicates that support for all the specified languages is available, at the specified `quality` level.
+  - : Indicates that all the specified languages are supported at the given `quality` level.
     - If `processLocally` is set to `true`, `available` means that speech recognition is available for those languages on-device (the required language packs have been downloaded and installed on the user's computer).
     - If `processLocally` is set to `false`, `available` means that speech recognition is available for those languages either on-device or remotely.
 - `downloading`
-  - : Indicates that support for the specified languages is available on-device, at the specified `quality` level, and the relevant language pack for at least one language is in the process of being downloaded. Only relevant when `processLocally` is `true`.
+  - : Indicates that all the specified languages are supported at the given `quality` level for on-device processing, and that the relevant language pack for at least one language is in the process of being downloaded. Only relevant when `processLocally` is `true`.
 - `downloadable`
   - : Indicates that support for the specified languages is available on-device, at the specified `quality` level, but the relevant language pack for at least one language has not yet been downloaded. Only relevant when `processLocally` is `true`.
 - `unavailable`
-  - : Indicates that support for at least one of the specified languages is not available, at the specified `quality` level.
+  - : Indicates that at least one of the specified languages is not supported at the given `quality` level.
     - If `processLocally` is set to `true`, `unavailable` means that on-device speech recognition is not available for at least one of the specified languages.
     - If `processLocally` is set to `false`, `unavailable` means that speech recognition is not available for at least one of the specified languages either on-device or remotely.
 
@@ -98,7 +98,7 @@ These steps are handled using the following code snippet:
 
 ```js
 startBtn.addEventListener("click", () => {
-  // check availability of target language
+  // Check availability of target language
   SpeechRecognition.available({ langs: ["en-US"], processLocally: true }).then(
     (result) => {
       if (result === "unavailable") {
@@ -140,14 +140,14 @@ The following code snippet is a modification of the previous example in which we
 
 ```js
 startBtn.addEventListener("click", () => {
-  // check availability of on-device target language dictation quality
+  // Check availability of on-device target language dictation quality
   SpeechRecognition.available({
     langs: ["en-US"],
     processLocally: true,
     quality: "dictation",
   }).then((result) => {
     if (result === "unavailable") {
-      diagnostic.textContent = `on-device recognition for dictation not available, running with cloud recognition`;
+      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
       recognition.processLocally = false;
       recognition.start();
     }
