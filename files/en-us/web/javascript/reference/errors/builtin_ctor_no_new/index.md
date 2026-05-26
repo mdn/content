@@ -5,7 +5,7 @@ page-type: javascript-error
 sidebar: jssidebar
 ---
 
-The JavaScript exception "calling a builtin X constructor without new is forbidden" occurs when you try to call a builtin constructor without using the {{jsxref("Operators/new", "new")}} keyword. All modern constructors, such as {{jsxref("Promise")}} and {{jsxref("Map")}}, must be called with `new`.
+The JavaScript exception "calling a builtin X constructor without new is forbidden" occurs when you try to call a builtin constructor without using the {{jsxref("new")}} keyword. All modern constructors, such as {{jsxref("Promise")}} and {{jsxref("Map")}}, must be called with `new`.
 
 ## Message
 
@@ -52,4 +52,4 @@ const m = new Map();
 
 ## See also
 
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
