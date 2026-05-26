@@ -517,10 +517,6 @@ Object literals support a range of shorthand syntaxes that include setting the p
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
 ```js
-// If `theProtoObj` and `handler` are not declared,
-// the code will throw a ReferenceError:
-// "theProtoObj is not defined" or "handler is not defined"
-
 const theProtoObj = {
   /*The proto Object*/
 };
