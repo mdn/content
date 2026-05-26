@@ -15,10 +15,10 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
 @font-face {
   font-family: "Trickster";
   src:
-    local("Trickster"),
-    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
-    url("trickster-outline.woff2") format("woff2"),
-    url("trickster-outline.woff2") format("woff2");
+  local("Trickster"),
+  url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+  url("trickster-outline.woff2") format("woff2"),
+  url("trickster-outline.woff2") format("woff2");
 }
 ```
 
