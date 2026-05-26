@@ -8,15 +8,29 @@ browser-compat: api.XRVisibilityMaskChangeEvent.vertices
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array of coordinate values representing a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
-
-The {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} array specifies the array positions of the vertices inside the `vertices` array that define the currently visible part of the scene displayed in the `XRView`.
-
-The coordinate values available in the `vertices` array are x and y value pairs representing points on a flat mask in clip space. They define the boundary of the visibility mask — the region of the display that is actually visible to the user. Anything outside the mask is not visible to the user, and does not need to be drawn. It can be skipped to improve performance.
+The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array representing the coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Value
 
 A {{domxref("Float32Array")}}.
+
+## Description
+
+Each pair of values available in the `vertices` array represents the `x` and `y` coordinate values of a point on a flat mask in clip space. In each case, the `z` coordinate value is implied to be a constant value, `-1`. So for example, a simple square mask might be represented by the following array:
+
+```plain
+[0, 0, 0, 1, 1, 1, 1, 0]
+```
+
+which represents the x,y coordinates (0,0), (0,1), (1,1), and (1,0). These coordinates the boundary of the visibility mask — the region of the display that is actually visible to the user. Anything outside the mask is not visible to the user, and does not need to be drawn. It can be skipped to improve performance.
+
+The {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} array specifies the index position of each coordinate pair (not individual array index) inside the `vertices` array that define the triangles used to draw the currently visible part of the scene displayed in the `XRView`. The number of contained values should therefore be a multiple of three. A sample `indices` array related to the above `vertices` example might looks like this:
+
+```plain
+[0,1,2,0,3,2]
+```
+
+Which represent two triangles represented by coordinate pairs 0, 1, and 2, and 0, 3, and 2, which can be used to create a basic mesh. The `vertices` and `indices` arrays are designed to be passed to a graphics library.
 
 ## Examples
 

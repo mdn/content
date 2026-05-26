@@ -27,11 +27,11 @@ _In addition to properties inherited from its parent interface, {{domxref("Event
 - {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}}
   - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
 - {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}}
-  - : An array of values specifying the array positions of the vertices in the [vertices](#vertices) array that define the currently visible part of the scene displayed in the {{domxref("XRView")}}. If this array is empty, the whole region of the `XRView` will be drawn.
+  - : Specifies the index position of each coordinate pair (not individual array index) inside the [`vertices`](#vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
 - {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which the event belongs.
 - {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}}
-  - : An array of coordinate values representing a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
+  - : An array representing the coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Instance methods
 
