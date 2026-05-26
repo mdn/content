@@ -205,7 +205,7 @@ Specifically:
 2. Make the table's top and bottom borders `1px` thick, solid, and colored `#999999`.
 3. Give the table header cells and normal cells `0.6em` of padding, and make their content vertically aligned to the top of the cells.
 4. Give the table header cells a bottom border that is `1px` thick, solid, and colored `#999999`.
-5. Give all of the table rows a width of `20%`, except for the fourth row, which should have a width of `40%`.
+5. Give all of the table columns a width of `20%`, except for the fourth column, which should have a width of `40%`.
 6. Inside the table body, there are four rows. The second cell inside each of these rows contains text for an `rgb()` color. Give each one of these cells a background color that corresponds to its text.
 7. Create zebra stripes: Give each odd-numbered row a background color of `#eeeeee`, inside the table body only.
 8. Give the caption padding of `1em`, an italic font style, and letter spacing of `1px`.
@@ -345,10 +345,10 @@ th {
   border-bottom: 1px solid #999999;
 }
 
-tr {
-  width: 20%;
-}
-
+/* There’s no need to explicitly specify the width of the other
+   columns: The 4th column has an explicit width of 40% and the
+   remaining columns will get the remaining width of 60% equally
+   distributed to them (20% each) */
 tr :nth-of-type(4) {
   width: 40%;
 }
