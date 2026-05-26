@@ -13,9 +13,6 @@ This guide explains how to limit the animation timeline to a specific portion of
 
 [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) are created by defining named {{cssxref("@keyframes")}} animations, which define an animation's behavior, and then attaching the keyframe animation to an element using the animation's name.
 
-> [!NOTE]
-> In all the examples and explanations in this guide, we will be using the default values for most {{cssxref("animation")}} properties. The {{cssxref("animation-iteration-count")}} will always be set to default to `1` and the {{cssxref("animation-direction")}} will default to `normal`. In some examples, we have set the {{cssxref("animation-fill-mode")}} to `forward` to make the animation completion apparent. See the [Using CSS animations guide](/en-US/docs/Web/CSS/Guides/Animations/Using) to learn more.
-
 The element's animation timeline, defined by the {{cssxref("animation-timeline")}} property, determines how and when the element progresses through those keyframes. By default, the timeline is time-based, using the document's default time-based {{domxref("DocumentTimeline")}}.
 
 The [CSS scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module defines scroll-based and view-based timelines, which are methods of animating property values along a scroll-based timeline rather than the default time-based document timeline.
@@ -36,7 +33,10 @@ Setting an {{cssxref("animation-name")}} applies the animation to the selected e
 > [!NOTE]
 > The `animation-timeline` property should always come after any `animation` shorthand declarations. While the shorthand property can not be used to set the `animation-timeline` property, it does reset the timeline to the default time-based document timeline.
 
-In every example, the {{glossary("scroll container")}} is `250px` tall. As you scroll up, the animation progresses. As you scroll down, the animation reverses.
+> [!NOTE]
+> In all the examples, the {{glossary("scroll container")}} is `250px` tall and we are using the default values for {{cssxref("animation-iteration-count")}} (`1`), {{cssxref("animation-delay")}} (`0s`), and {{cssxref("animation-direction")}} (`normal`). We set the {{cssxref("animation-timing-function")}} to `step-end` and the {{cssxref("animation-fill-mode")}} is to `forward` to make the it more apparent when the animation iteration has not yet started, when it is active, and when it is complete. See the [Using CSS animations guide](/en-US/docs/Web/CSS/Guides/Animations/Using) to learn more.
+
+As you scroll up, the animation progresses. As you scroll down, the animation reverses.
 
 {{EmbedLiveSample("initial", "100%", "400")}}
 
@@ -44,13 +44,9 @@ In this example, note how any time any part of the subject element is visible in
 
 ### Animation attachment ranges
 
-When no animation range properties are defined, the the animation is applied the entire time any portion of the subject element is visible, meaning the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge. The default `<timeline-range-name>` is `normal`, which defaults to `cover`.
+In a [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), when no animation range properties are defined, the `<timeline-range-name>` is `normal`, which defaults to `cover`. The animation is applied the entire time any portion of the subject element is visible, meaning the default **animation attachment range** is the sum of the height of the scroll container and the height of the subject element, with that extra height being at the scroll end edge. In our example, as the scroll container is `250px` tall, and the subject is `50px`, `250px`, or `500px` tall, with the vertical animation attachment range being `300px`, `500px`, or `750px` respectively.
 
-By default, the `0%` progression in a [view timeline progress](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) occurs when the subject element's start edge intersects the scrollport at the end edge, reaching `100%` progress when the subject's end edge exits via the scrollport's start edge. These are the subject and scrollport's top and bottom edges when scrolling vertically, and the left and right or right and left edges when scrolling horizontally, depending on the writing mode.
-
-In our example, as the scroll container is `250px` tall, and the subject is either `50px`, `250px`, or `500px` tall, the vertical animation attachment range is `300px`, `500px`, or `750px`, depending on which radio button is selected.
-
-Whether the range is `300px`, `500px`, or `750px` tall, the animation's `0%` progress mark is when the top edge of the subject aligns with the bottom of the scrollport and the `100%` progress is when the bottom edge of the subject aligns with the scrollport's top edge.
+The `0%` progression occurs when the subject element's start edge intersects the scrollport at the end edge, reaching `100%` progress when the subject's end edge exits via the scrollport's start edge. These are the subject and scrollport's top and bottom edges when scrolling vertically, and the left and right or right and left edges when scrolling horizontally, depending on the writing mode.
 
 We can visualize the position of the subject at the `0%` and `100%` progress points for the three subject sizes:
 
@@ -77,11 +73,11 @@ We can visualize the position of the subject at the `0%` and `100%` progress poi
 
 The yellow subject elements represents the position of the element when the `from` keyframe is applied, which is the animation range's `0%` progress mark. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied, which is the end of the animation, or the `100%` progress mark. The grey represents the scrollport.
 
-By default, the element animates while it is "in view", but this default definition of "in view" may not fit your needs. Fortunately, animation range properties enable us to control which edges define the ends of the edges of the animation attachment range and then the start and end of that range by a {{cssxref("length")}} or a {{cssxref("percentage")}} relative to named or default timeline range.
+By default, the element animates while it is "in view", but this default definition of "in view" may not fit your needs. Fortunately, we can control which edges define the edges of the animation attachment range and then offset the start and end of that range with the animation range properties.
 
 ### Animation range properties
 
-The {{cssxref("animation-range")}} properties enable defining a named timeline range and then insetting animations from the animation attachment ranges by setting a {{cssxref("timeline-range-name")}}, such as `contain` or `exit-crossing`, and {{cssxref("length-percentage")}} inset values from the start of the range, such as `20%` or `100px`.
+The {{cssxref("animation-range")}} properties enable defining a named timeline range and then insetting animations from the animation attachment ranges by setting a {{cssxref("timeline-range-name")}}, such as `contain` or `exit-crossing`, and {{cssxref("length-percentage")}} inset values from the start of the range, with percentages being relative to that named or default timeline range.
 
 Named timeline ranges define the portions of a {{domxref("ViewTimeline")}} that define an animation's range, specifying the start and end of the animations's attachment range.
 
@@ -94,7 +90,7 @@ See the [timeline range name guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_ani
 The `animation-range-start` and `animation-range-end` properties each accept a named animation range, a {{cssxref("length-percentage")}} offset value, or both. Any length or percentage offset is measured from the _start_ of the animation attachment range.
 
 When a {{cssxref("length")}} is set, the offset is fairly intuitive.
-Here we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline. In this way, we define a subsection of the element's full animation attachment range as the active interval, set the distance from the start of the animation attachment range.
+Here we use the `animation-range-start` and `animation-range-end` properties to inset the animation timeline. In this way, we define a subsection of the element's full animation attachment range as the active interval, set the distance from the start of the default `normal` animation attachment range.
 
 ```css live-sample___inset_length
 .animated_element {
@@ -103,7 +99,7 @@ Here we use the `animation-range-start` and `animation-range-end` properties to 
 }
 ```
 
-This defines the start and end of the animation as being `1em` and `125px` from the start of the animation attachment range, respectively. In this case, the start of the animation attachment range is the block end edge of the container.
+This defines the start and end of the animation as being `1em` and `125px` from the start of the animation attachment range, respectively. Because the timeline range default is `normal`, which resolves to `cover`, the start of the animation attachment range is the block end edge of the container.
 
 ```css hidden live-sample___inset_length
 :root {
@@ -127,11 +123,11 @@ main {
 
 We've added lines `1em` and `125px` from the block end edge of the scroll container. The animation starts when the block start edge of the subject element reaches the `1em` line and ends when it reaches the `125px` line.
 
-In this case, as the animation attachment range is the same for both the start and end inset values, the location of the insets is fairly straightforward.
+In this case, as the animation attachment range resolves to `cover` for both the start and end inset values, the location of the insets is fairly straightforward.
 
-## Lengths and ranges
+### Effect of named ranges on length offsets
 
-The offset distance is always from the start of the associated animation range. If you set the following, the animation will start `50px` from the start of the `normal` range and end `100px` from the start of the `entry` range:
+The offset distance is always from the start of the associated animation range. In this example, we set the `animation-range-start` to be 50px from the start of the default `normal` range and set the `animation-range-end` to be `100px` from the start of the explicitly set `entry` range:
 
 ```css live-sample___different_length
 .animated_element {
@@ -176,22 +172,46 @@ For example, when setting `exit` as the timeline range name, the subject size ma
 
 ```css live-sample___exit_length
 .animated_element {
-  animation-range-start: entry 50px;
+  animation-range-start: entry 60px;
   animation-range-end: exit 75px;
 }
 ```
 
-The offset position is relative to the start of the declaration's animation range. With `animation-range-start` set to `entry 50px`, the animation's `0%` progress occurs `50px` from the container's end edge (denoted by the blue line) for all three subject sizes; this is the same as in the previous example.
+With both `entry` and `exit`, the range is the size of the subject, with the size clamped to the size of the scrollport. This means that the height of the `entry` and `exit` ranges are the height of the box in both the `50px` and `250px` examples, while in the `500px` example, the range is clamped to the height of the scrollport, which is `250px` tall.
+
+{{EmbedLiveSample("exit_length", "100%", "310")}}
+
+We added a few lines to facilitate the explanations that follow: the bottom blue line is `60px` from the end edge of the scrollport, and the top red line is `75px` from that same edge. The start and the ends of the range are [measured from their respective named ranges](#measured_from_the_start_edge_of_the_range), potentially occurring [beyond the edges of the scrollport](#beyond_the_scrollport_edges), remembering the size of the named range may be [clamped, effecting the offset's starting point](#effects_of__clamping).
+
+#### Measured from the start edge of the range
+
+As the offset position is always relative to the start of the declaration's animation range, the start of the animation for all three elements occurs when the elements start edge crosses the point that is `60px` from the start of the `entry` range.
+
+Don't be confused by the fact the `entry` range for the `50px` subject is only `50px` tall: the size of the named animation range is clamped by the size of the viewport. We are defining the element's animation range - which goes from the scroll position defined by the `animation-range-start` value to the position defined by the animation-range-end value.
+
+#### Beyond the scrollport edges
+
+For our `50px` tall subject, the `exit` range is 50px tall abutting the start edge of the scroll port. Setting `animation-range-end: exit 75px` for any element less than `75px` tall means end of the range is outside the scrollport as the point `75px` from the start of the `exit` range is past the start edge of the scrollport. In our example, the end of the animation range for the `50px` subject occurs when the subject's start edge is `75px` past the scrollport's start edge. The animation ends, reaching the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event only occuring, if the element is scrolled `25px` out of view.
+
+The animation ends, meaning animation continues to the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event occurs, even if the animation range end is outside of the scrollport, as long as there is room to scroll to that point. Had we set `animation-range-end: exit 250px`, the animation would have ended when the end edge of the medium and tall subjects exited the scrollport at the container's start edge. The small subject's animation may not end as there may not be `450px` worth of content after the subject in our example for the user to scroll until the animation end is reached.
+
+#### Effects of clamping
+
+With our `250px` tall container, when the subject is `250px` or `500px` tall, the `exit` range is the size of the container, with the start being the scroll container's end edge. With a `75px` offset, the end of the animation occurs when the end edge of the subject is `75px` from the end edge of the scroll container (denoted by the top red line).
+
+As the offset position is always relative to the start of the named or default animation range, in our example, clamping impacts the large subject's `animation-range-end`. We set the end of the range to `exit 75px` which is `75px` from the start edge of the `exit` range. When the subject is the same size as the scrollport (our `250px` subject) or larger (our `500px` subject), the animation range end is `75px` from the end edge of the scrollport, `75px` from the start of the scrollport-clamped range.
 
 ```css hidden live-sample___exit_length
 article {
   background-image: linear-gradient(
     to top,
-    transparent 49.5px,
-    blue 49.5px 50.5px,
-    transparent 50.5px 74.5px,
+    transparent 59.5px,
+    blue 59.5px 60.5px,
+    transparent 60.5px 74.5px,
     red 74.5px 75.5px,
-    transparent 75.5px
+    transparent 75.5px /* 174.5px,
+    green 174.5px 154.5px,
+    transparent 175.5px*/
   );
 }
 .animated_element {
@@ -220,7 +240,7 @@ article {
   }
   article {
     outline: 3px dashed;
-    width: 500px;
+    width: 475px;
     margin: auto;
     overflow: scroll;
     position: relative;
@@ -277,23 +297,9 @@ article {
 }
 ```
 
-{{EmbedLiveSample("exit_length", "100%", "310")}}
-
-The `animation-range-end` is where things get interesting. We've set the end of the range to be `75px` from the start edge of the `exit` range. The `exit` attachment range is the opposite of `entry`. With `exit`, the range being the size of the subject, up to the size of the scrollport, with the `0%` progress occurring when the animated element's start edge crosses the scrollport's start edge and the `100%` progress occurring when the subject's end edge crosses the scrollport's start edge.
-
-### Beyond the scrollport edges
-
-Offsets that are larger than the subject create `animations-range-start` or `animation-range-end` points that occur when no part of the subject is visible.
-
-When the subject is `50px` tall, the `exit` range is `50px`. The point `75px` from the start of the `exit` range past the start edge of the scrollport. The animation only ends when the subject's start edge is `75px` past the scrollport's start edge and the end edge is `25px` past.
-
-With our `250px` tall container, when the subject is `250px` or `500px` tall, the `exit` range is the size of the container, with the start being the scroll container's end edge. With a `75px` offset, the end of the animation occurs when the end edge of the subject is `75px` from the end edge of the scroll container (denoted with a red line).
-
-The animation ends, meaning animation continues to the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event occurs, even if the animation range end is outside of the scrollport, as long as there is room to scroll to that point. Had we set `animation-range-end: exit 250px`, the animation would have ended when the end edge of the medium and tall subjects exited the scrollport at the container's start edge. The small subject's animation may not end as there may not be `450px` worth of content after the subject in our example for the user to scroll until the animation end is reached.
-
 ### Negative lengths
 
-Negative lengths are valid. A negative offset on the `animation-range-start` makes the range longer while a negative offset on the `animation-range-end` makes the range shorter.
+Up to this point, all the offsets have been greater than zero. It's important to note that negative lengths are valid. A negative offset on the `animation-range-start` makes the range longer while a negative offset on the `animation-range-end` makes the range shorter.
 
 Let's compare the negative insets compared to the `0` values:
 
@@ -326,7 +332,7 @@ fieldset.double {
 
 ## Setting insets using percentages
 
-Like length values, percentage values define offsets from the _start_ of the animation attachment range. The percentage offsets are relative to the timeline range dimension, not relative to the scrollport. For this reason, percentage values are not as intuitive as length values for most people.
+Like length values, percentage values define offsets from the _start_ of the animation attachment range. The percentage offsets are relative to the timeline range dimension, not relative to the scrollport. For this reason, percentage values are not as intuitive as length values for most people (realizing length values weren't that intuitive either).
 
 Here use `animation-range-start` and `animation-range-end` to inset the animation timeline. While we are using the same properties, we set `<percentage>` values instead of `<length>` values:
 
@@ -342,22 +348,11 @@ i {
   background-image: linear-gradient(
     to bottom,
     transparent calc(20% - 1px),
-    #333 calc(20% - 1px) calc(20% + 1px),
+    #3333 calc(20% - 1px) calc(20% + 1px),
     transparent calc(20% + 1px) calc(60% - 1px),
-    #333 calc(60% - 1px) calc(60% + 1px),
+    #3333 calc(60% - 1px) calc(60% + 1px),
     transparent calc(60% + 1px)
   );
-}
-main {
-  background-image: linear-gradient(
-    to top,
-    transparent calc(20% - 1px),
-    #ccc calc(20% - 1px) calc(20% + 1px),
-    transparent calc(20% + 1px) calc(60% - 1px),
-    #ccc calc(60% - 1px) calc(60% + 1px),
-    transparent calc(60% + 1px)
-  );
-  background-origin: content-box;
 }
 article {
   --total: calc(var(--animElHeight) + 250px);
@@ -373,7 +368,16 @@ article {
       transparent 0 calc(var(--total) * 0.6 - 1px),
       red calc(var(--total) * 0.6 - 1px) calc((var(--total) * 0.6) + 1px),
       transparent calc(var(--total) * 0.6 + 1px)
+    ),
+    linear-gradient(
+      to top,
+      transparent 0 calc(var(--containerHeight) * 0.2 - 0.5px),
+      #3333 calc(var(--containerHeight) * 0.2 - 0.5px) calc(var(--containerHeight) * 0.2 + 0.5px),
+      transparent calc(var(--containerHeight) * 0.2 + 0.5px) calc(var(--containerHeight) * 0.6 - 0.5px),
+      #3333 calc(var(--containerHeight) * 0.6 - 0.5px) calc(var(--containerHeight) * 0.6 + 0.5px),
+      transparent 0 calc(var(--containerHeight) * 0.6 + 0.5px)
     );
+    background-position: local, local, fixed;
 }
 ```
 
@@ -381,11 +385,9 @@ This defines the active interval to begin `20%` into the default attachment rang
 
 {{EmbedLiveSample("inset_percent", "100%", "400")}}
 
-For illustrative purposes, there are grey lines crossing the container at the 20% and 60% points of the scrollport's height, measured from from the bottom of the scrollport. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. Based on the height of our subjects, the `20%` mark is either `60px`, `100px`, or `150px` from the end edge of the scrollport (marked with a red line), and the `60%` mark is `180px`, `300px`, or `450px` from the same point (marked with a green line).
+For illustrative purposes, there are to dark lines crossing the container at the `20%` and `60%` points of the full animation range. The animation starts when the block-start edge reaches the `20%` point, which is the bottom green line. The animation ends when the start block edge is 60% of the way through the normal range, which is the top red line. Only when the element is `50px` tall is the top of the subject still in the scrollport when the end of the animation is reached; there are no top red lines when `250px` or `500px` are selected, as the end of the animation range is outside of the scrollport. Based on the height of our subjects, the `20%` mark is either `60px`, `100px`, or `150px` from the end edge of the scrollport (marked with a red line, which is always in the scrollport), and the `60%` mark is `180px`, `300px`, or `450px` from the same point (marked with a green line, but only visible for the 50px subject).
 
-The animation starts when the block-start edge reaches the green `20%` line and ends when the start block edge meets the `60%` line. Only when the element is `50px` tall is the top of the subject still in the scrollport when the end of the animation is reached; there are no red lines when `250px` or `500px` are selected.
-
-We've added grey horizontal lines `20%` and `60%` from the _bottom_ of the container to demonstrate their lack of reference; reinforcing that the animation attachment range on which the offsets are based is not the container.
+For illustrative purposes, there are two light grey lines crossing the container `20%` and `60%` of the way through the scrollport. These two lines are 50px and 150px from the bottom of the scrollport. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. They do align with the very light grey lines that are `20%` and `60%` of the way through the subject when the animation starts and ends, respectively.
 
 The following image demonstrates where the subject elements are located when the animation starts (the `0%` keyframe) and ends (the `100% keyframe`).
 This image includes the insets from the animation timeline in the previous demonstration and the timeline without insets for comparison.
@@ -429,11 +431,11 @@ This image includes the insets from the animation timeline in the previous demon
 
 As before, the yellow represents the position of the element when the `from` keyframe is applied, the red represents the location when the `to` keyframe is applied, and the grey represents the scrollport. The striped areas are where the red and yellow element representations overlap. For illustrative purposes, we've added dashed black horizontal lines `20%` and `60%` way through the scrollport, starting from the bottom.
 
-The animation only begins when the element reaches the 20% mark along the animation attachment range. This point is that is `60px`, `100px`, or `150px` from the bottom edge of the scroll port, depending on the the size of the element, is the animation's `0%` progress point. The location of the subject element at this point, representing the position of the element when the `from` or `0%` keyframe is applied, is shown in yellow.
+The animation only begins when the element reaches the 20% mark along the animation attachment range. This point is `60px`, `100px`, or `150px` from the bottom edge of the scroll port, depending on the the size of the element. The location of the subject element at this point, representing the position of the element when the `from` or `0%` keyframe is applied, is shown in yellow.
 
-The red represents the location of the animated element relative to the scrollport when the `to` or `100%` keyframe is applied, which is the end of the animation. This point is either `180px`, `300px`, or `450px` from the bottom edge of the scrollport, depending on the subject size. The animation occurs when the element is between the `to` and the `from` positions; between the positions along the animation attachment range defined.
+The red represents the location of the animated element relative to the scrollport when the `to` or `100%` keyframe is applied, which is the end of the animation. This point is either `180px`, `300px`, or `450px` from the bottom edge of the scrollport, depending on the subject size. The animation occurs when the element is between the `to` and the `from` positions.
 
-You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is 20% from the end edge of the viewport is 20% from the _top_ of the subject element and the line that is 60% from the end edge of the viewport is 60% from the _top_ of the subject element when the animation ends.
+You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is 20% from the end edge of the viewport is 20% from the _top_ of the subject element and the line that is 60% from the end edge of the viewport is 60% from the _top_ of the subject element when the animation ends. This is what was illustrated by the very light grey lines in the live demo for this example.
 
 ### Subject size matters
 
@@ -614,6 +616,8 @@ line {
     --animElHeight: 50px;
     --animElHeightWord: "50px";
     --barColor: black;
+    padding-top: 20px;
+    --containerHeight: 250px;
   }
   body:has(input[value="250"]:checked) {
     --animElHeight: 250px;
@@ -629,11 +633,11 @@ line {
   }
   article {
     outline: 3px dashed;
-    width: 500px;
+    width: 475px;
     margin: auto;
     overflow: scroll;
     position: relative;
-    height: 250px;
+    height: var(--containerHeight);
     box-sizing: content-box;
   }
 
