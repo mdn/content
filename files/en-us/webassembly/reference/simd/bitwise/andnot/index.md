@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.andnot
 sidebar: webassemblysidebar
 ---
 
-The **`andnot`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) takes two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) input values. It performs a bitwise AND on the first value and a second value equal to the result of performing a bitwise NOT on each byte of the second original value. It returns a new `v128` value containing the result.
+The **`andnot`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) takes two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) input values. It performs a bitwise AND on the first value and a second value equal to the result of performing a bitwise NOT on each byte of the second original value. It returns a new `v128` value containing the result.
 
 {{InteractiveExample("Wat Demo: andnot", "tabbed-taller")}}
 

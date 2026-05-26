@@ -52,7 +52,7 @@ value_type.and
   - : The type of value the instruction is being run on. The following types support `and`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
 - `and`
   - : The `and` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -71,7 +71,7 @@ value_type.and
 
 For a non-SIMD `and`, these will be basic numeric values such as `14` or `3`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise AND of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `and`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 9 4 -16 100`. Each lane of the output pushed to the stack is the bitwise AND of the corresponding lanes in the input values.
 
 ### Binary encoding
 

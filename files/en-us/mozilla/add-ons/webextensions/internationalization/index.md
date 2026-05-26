@@ -251,7 +251,7 @@ With the `default_locale` set to `fr`.
   - `getMessage("colorLocalized")` returns "color" because there is no `_locales/en_US/messages.json` file, so it falls back to the message present in `_locales/en/messages.json`.
   - `getMessage("colorBlue")` returns "blue" because it falls back to the `colorBlue` message in `_locales/en/messages.json`.
 - If the browser's locale is `zh-Hans-CN`:
-  - `getMessage("colorLocalized")` returns "couleur" because there is no region, script, or language match to the `zh-Hans-CN` locale (i.e., no `messages.json` file in a `zh-Hans-CN`, `zh-Hans`, or`zh` folder).
+  - `getMessage("colorLocalized")` returns "couleur" because there is no region, script, or language match to the `zh-Hans-CN` locale (i.e., no `messages.json` file in a `zh-Hans-CN`, `zh-Hans`, or `zh` folder).
   - `getMessage("colorBlue")` returns "bleu" because there is no region, script, or language match to the `zh-Hans-CN` locale.
 
 If the extension were to call `getMessage("colorRed")` it's returned an empty string, as there is no property for `"colorRed"` in any of the language files.

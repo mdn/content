@@ -54,6 +54,10 @@ The result is:
 <span>
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

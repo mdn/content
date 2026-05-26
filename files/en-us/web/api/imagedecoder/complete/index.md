@@ -12,7 +12,7 @@ The **`complete`** read-only property of the {{domxref("ImageDecoder")}} interfa
 
 ## Value
 
-A {{jsxref("boolean")}}, `true` if buffering is complete.
+A {{jsxref("Boolean")}}, `true` if buffering is complete.
 
 ## Examples
 
