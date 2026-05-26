@@ -394,6 +394,22 @@ The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS
 
 **No experimental features in this release cycle.**
 
+## MathML
+
+### Disable `href` on non-`<a>` MathML elements
+
+When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) global attribute no longer creates a hyperlink on MathML elements other than `<a>`, aligning Firefox with the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element), which only defines hyperlinks on the `<a>` element. ([Firefox bug 2026848](https://bugzil.la/2026848)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `mathml.href_link_on_non_anchor_element.disabled`
+  - : Set to `true` to enable.
+
 ## JavaScript
 
 ### Multiple import maps
@@ -451,22 +467,6 @@ For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxre
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
-### Notification actions and maxActions properties
-
-The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
-These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
-([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | Yes (desktop only)  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.webnotifications.actions.enabled`
-  - : Set to `true` to enable.
-
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions
@@ -496,6 +496,23 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
 ### WebRTC and media
 
 The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+
+#### Checking browser support for encoding/decoding WebRTC media
+
+The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc).
+This allows developers to check how well a user agent can decode or encode a particular configuration for WebRTC.
+Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
+([Firefox bug 1825286](https://bugzil.la/1825286)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `media.mediacapabilities.webrtc.enabled`
+  - : Set to `true` to enable.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks
 
@@ -582,12 +599,12 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Set to `true` to enable.
 
 ### GeometryUtils method: getBoxQuads()
@@ -596,7 +613,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |

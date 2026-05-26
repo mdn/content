@@ -48,7 +48,7 @@ value_type.trunc
   - : The type of value the instruction is being run on. The following types support `trunc`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `trunc`
@@ -67,7 +67,7 @@ value_type.trunc
 
 For a non-SIMD `trunc`, these will be basic numeric values such as `14.3` or `3.0`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`. Each lane of the output pushed to the stack is equal to the input value's corresponding lane with the fractional part removed.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `trunc`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 100.5 6.0 7.8 83.1`. Each lane of the output pushed to the stack is equal to the input value's corresponding lane with the fractional part removed.
 
 ### Binary encoding
 

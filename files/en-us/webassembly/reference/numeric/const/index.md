@@ -40,7 +40,7 @@ value_type.const
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
 - `const`
   - : The `const` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -53,7 +53,7 @@ value_type.const
 - `output`
   - : The value being pushed onto the stack:
     - For a non-SIMD `value_type`, this will be a basic numeric value such as `3` or `3.5`.
-    - For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `value_type`, this will be a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type followed by a SIMD value interpretation, for example `i32x4 0x9 0xa 0xb 0xc`.
+    - For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `value_type`, this will be a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type followed by a SIMD value interpretation, for example `i32x4 0x9 0xa 0xb 0xc`.
 
 ### Binary encoding
 

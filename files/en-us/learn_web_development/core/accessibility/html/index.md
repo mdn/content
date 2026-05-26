@@ -63,7 +63,7 @@ We've already talked about the importance of proper semantics, and why we should
 
 Out there on the web, the truth is that people do some very strange things with HTML markup. Often, misuse of HTML is because of legacy practices that haven't gone away yet, but sometimes it occurs because authors don't know any better. Whatever the case, you should replace bad code with good semantic markup wherever possible, in both static HTML pages and dynamically-generated HTML from [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) code or [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries) such as React.
 
-Sometimes you are not in a position to get rid of lousy markup — your pages might be dependant on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
+Sometimes you are not in a position to get rid of lousy markup — your pages might be dependent on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
 
 The goal isn't "all or nothing"; every improvement you can make will help the cause of accessibility.
 

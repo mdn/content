@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Angular articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
 
 <table>
