@@ -60,6 +60,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("Element.getAnimations()")}} method can now accept the [`options.pseudoElement`](/en-US/docs/Web/API/Element/getAnimations#pseudoelement) parameter.
   This allows you to directly target a specific pseudo-element, rather than filtering the results of `{ subtree: true }`.
   ([Firefox bug 1935557](https://bugzil.la/1935557)).
+- The {{domxref("Element.requestPointerLock()")}} method now supports the [`options.unadjustedMovement`](/en-US/docs/Web/API/Element/requestPointerLock#unadjustedmovement) parameter.
+  This allows code to disable OS-level mouse acceleration and use raw mouse input instead, which is useful in cases where slow and precise control over mouse movement is needed.
+  ([Firefox bug 2037802](https://bugzil.la/2037802)).
 
 #### Media, WebRTC, and Web Audio
 
