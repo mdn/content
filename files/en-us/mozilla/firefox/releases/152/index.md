@@ -98,6 +98,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Check if a media encoding/decoding configuration is supported for WebRTC**: `media.mediacapabilities.webrtc.enabled`
 
-  The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) in order to check if the configuration can be used for WebRTC.
-  This replaces the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) that was previously used as an alias in Firefox.
+  The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) to check if an encoding/decoding configuration can be used for WebRTC.
+  This replaces the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was previously used as an alias in Firefox.
   ([Firefox bug 1825286](https://bugzil.la/1825286)).

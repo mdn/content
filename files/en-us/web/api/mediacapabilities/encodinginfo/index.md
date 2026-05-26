@@ -85,7 +85,7 @@ All supported audio codecs are reported to be power efficient.
 ```js
 // Create media configuration to be tested
 const mediaConfig = {
-  type: "record", // or "webrtc"
+  type: "record",
   video: {
     contentType: "video/webm;codecs=vp8.0", // valid content type
     width: 1920, // width of the video

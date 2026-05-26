@@ -497,7 +497,7 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
 
 The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
 
-#### Checking browser support for encoding/decoding media for WebRTC
+#### Checking browser support for encoding/decoding WebRTC media
 
 The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc).
 This allows developers to check how well a user agent can decode or encode a particular configuration for WebRTC.
