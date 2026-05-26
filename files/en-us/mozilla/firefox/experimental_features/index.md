@@ -552,7 +552,7 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 90            | No                  |
+| Nightly           | 90            | Yes                  |
 | Developer Edition | 152           | No                  |
 | Beta              | 152           | No                  |
 | Release           | 152           | No                  |
