@@ -522,11 +522,11 @@ Together, these also bring object literals and class declarations closer togethe
 // "theProtoObj is not defined" or "handler is not defined"
 
 const theProtoObj = {
-    /*The proto Object*/
+  /*The proto Object*/
 };
 const handler = {
-    /*Handler*/
-}
+  /*Handler*/
+};
 const obj = {
   // __proto__
   __proto__: theProtoObj,
