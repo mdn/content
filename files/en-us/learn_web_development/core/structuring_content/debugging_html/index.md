@@ -229,4 +229,6 @@ You will know when all your errors are fixed when you see a nice little green ba
 
 So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when debugging HTML, but also CSS and JavaScript code later on in the course. This also marks the end of the _Structuring content with HTML_ module.
 
+Your next step is to start learning about styling the web, in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
+
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
