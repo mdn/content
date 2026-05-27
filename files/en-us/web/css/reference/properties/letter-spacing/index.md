@@ -83,6 +83,9 @@ letter-spacing: unset;
 
     Percentage values are calculated relative to the width of the space character of the font applied to the text.
 
+    > [!NOTE]
+    > When `letter-spacing` is non-zero, user agents do not apply optional ligatures (such as the `liga` and `clig` OpenType features controlled by {{cssxref("font-variant-ligatures")}}). See the [CSS Text](https://www.w3.org/TR/css-text-3/#letter-spacing-property) specification.
+
 ## Accessibility
 
 A large positive or negative `letter-spacing` value will make the word(s) the styling is applied to unreadable. For text styled with a very large positive value, the letters will be so far apart that the word(s) will appear like a series of individual, unconnected letters. For text styled with a very large negative value, the letters can overlap each other to the point where the word(s) may be unrecognizable.
