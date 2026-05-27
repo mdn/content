@@ -6,13 +6,7 @@ browser-compat: webassembly.api.Exception.Exception
 sidebar: webassemblysidebar
 ---
 
-The **`WebAssembly.Exception()`** constructor is used to create a new [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception).
-
-The constructor accepts a [`Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) argument and a `payload` array of data fields.
-The data types of each of the payload elements must match the corresponding data type specified in the `Tag`.
-
-The constructor may also take an `options` object.
-The `options.traceStack` property can be set `true` (by default it is `false`) to indicate that a Wasm stack trace may be attached to the exception's [`stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) property.
+The **`WebAssembly.Exception()`** constructor is used to create a new [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object instance.
 
 ## Syntax
 
@@ -24,7 +18,7 @@ new Exception(tag, payload, options)
 ### Parameters
 
 - `tag`
-  - : A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) defining the data types expected for each of the values in the `payload`.
+  - : A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) instance defining the data types expected for each of the values in the `payload`.
 - `payload`
   - : An array of one or more data fields comprising the payload of the exception.
     The elements must match the data types of the corresponding elements in the `tag`.
@@ -33,16 +27,48 @@ new Exception(tag, payload, options)
   - : An object with the following optional fields:
     - `traceStack` {{optional_inline}} {{non-standard_inline}}
       - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) property, otherwise `false`.
-        This is `false` by default (if `options` or `options.traceStack` are not provided).
+        Defaults to `false`.
 
 ### Exceptions
 
 - `TypeError`
   - : The `payload` and `tag` sequences do not have the same number of elements and/or the elements are not of matching types.
 
+## Description
+
+The [`Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception) constructor accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag), an array of values, and an `options` object as arguments.
+The tag uniquely defines the _type_ of an exception, including the order of its arguments and their data types.
+The same tag that was used to create the `Exception` is required to access the arguments of a thrown exception (using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+
 ## Examples
 
-This example shows the creation of an exception using a simple tag.
+### Basic usage
+
+You would not normally use this contructor to manually create a Wasm exception. Instead, a `WebAssembly.Exception` object is normally created when handling Wasm exceptions, for example:
+
+```js
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
+  (result) => {
+    try {
+      // Cause function to throw
+      result.instance.exports.throw(-1);
+    } catch (e) {
+      if (e instanceof WebAssembly.Exception && e.is(myErrorTag)) {
+        const errorCode = e.getArg(myErrorTag, 0); // 0 = first payload value
+        console.log("Error code:", errorCode); // 42
+      } else {
+        throw e; // throw other errors
+      }
+    }
+  },
+);
+```
+
+For a working example, see the [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction reference page.
+
+### Manual usage
+
+This example shows manual creation of an `WebAssembly.Exception` instance.
 
 ```js
 // Create tag and use it to create an exception
@@ -50,7 +76,8 @@ const tag = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
 const exception = new WebAssembly.Exception(tag, [42, 42.3]);
 ```
 
-The [`stack` example](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack#examples) shows the creation of an exception that uses the `options` parameter.
+> [!NOTE]
+> The [`stack` example](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack#examples) shows the creation of an exception that uses the `options` parameter.
 
 ## Specifications
 

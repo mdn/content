@@ -122,7 +122,7 @@ Logical keywords can be used to define the container condition:
 
 - `and` combines two or more conditions.
 - `or` combines two or more conditions.
-- `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
+- `not` negates the condition. Only one `not` condition is allowed per container query and it cannot be used with the `and` or `or` keywords.
 
 ```css
 @container (width > 400px) and (height > 400px) {
@@ -173,7 +173,7 @@ The `<container-condition>` queries include [size](#size_container_descriptors),
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for {{cssxref("@media")}} size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measure the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for {{cssxref("@media")}} size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -526,7 +526,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) (the **plain** form), a CSS property or [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values) on its own (the **boolean** form), or a [range comparison](#range_syntax) (the **range** form).
 
 ```css
 @container style(--themeBackground),
@@ -565,48 +565,47 @@ Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allo
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-### Container style range queries
+#### Range syntax
 
-The range syntax of _container style query_ is a `@container` query that compares a `<style-feature>` to a value.
+In addition to the plain `<style-feature-name>: <value>` form described above, a `<style-feature>` can be written as a **range** comparison using `=`, `<`, `<=`, `>`, or `>=`. Range syntax enables **numeric** comparisons that the plain form can't, such as `style(--columns >= 3)` or `style(--gap = 1rem)`. It compares the resolved values of both sides numerically.
 
-The following container query checks if the custom-property (`--price`) has a value larger than or equal to `25.00`:
+To evaluate a range, the browser:
 
-```html
-<ul>
-  <li data-price="15.00">Red Curry</li>
-  <li data-price="20.00">Green Curry</li>
-  <li data-price="25.00">Massaman Curry</li>
-  <li data-price="30.00">Khoa Soi</li>
-</ul>
-```
+1. Resolves each side (custom property names are looked up as if used with [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)).
+2. Parses each side as a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, or {{cssxref("&lt;resolution&gt;")}}. If either side can't be parsed as one of those types, or the two sides don't have the same type, the query is false.
+3. Computes each side (evaluating any `calc()` expressions) and performs the numeric comparison.
 
-Firstly each `<li>` item is assigned the value in the `data-price` to the `--price` custom-property, the important part here is the attribute `type()` so that a value can be compared otherwise it will just behave as a string.
+This means range syntax can't be used to compare keyword-like values: `style(--theme = dark)` is always false because `dark` isn't a numeric type. Use the plain syntax for those, for example `style(--theme: dark)`.
+
+Either side of a range can be a custom property name, a `var()` reference, a literal value, or a `calc()` expression, in either order:
 
 ```css
-li {
-  --price: attr(data-price type(<number>));
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
 }
 ```
 
-Next the data attribute is applied as content using the {{cssxRef("::after")}} pseudo-element.
+A range can also take a three-value form, with both comparators pointing the same way, to test whether a value falls within an interval:
 
 ```css
-li::after {
-  content: " - £" attr(data-price);
+@container style(0 < --n < 10) {
+  /* true when --n is greater than 0 and less than 10 */
+}
+@container style(100px > --width > 50px) {
+  /* true when --width is less than 100px and greater than 50px */
 }
 ```
 
-Finally the range syntax is used to see if the `--price` custom-property has a value greater than or equal to `25.00`, if so then the `::after` pseudo-element is styled `red`.
+In other words, `style(0 < --n < 10)` is equivalent to `style(0 < --n) and style(--n < 10)`. The middle value is tested against both bounds, rather than being chained left-to-right.
 
-```css
-@container style(--price >= 25.00) {
-  ::after {
-    color: red;
-  }
-}
-```
-
-{{EmbedLiveSample('container_style_queries_range_syntax', 100, 100)}}
+> [!NOTE]
+> Plain and range syntax behave differently even when they look similar. Given `--n: calc(6/2)`, the query `style(--n: 3)` is **false** because the plain form compares the property's computed value (`calc(6/2)`) directly against `3`. The equivalent range query `style(--n = 3)` is **true** because the range form computes both sides numerically before comparing. See [Plain versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries) in the container style queries guide for more details.
 
 ### Scroll-state queries
 

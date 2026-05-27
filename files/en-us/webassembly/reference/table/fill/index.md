@@ -126,7 +126,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function type called `$ret_i32` that returns an `i32`, and a `table` that stores function references (hence `funcref` being specified) and has three elements.
 

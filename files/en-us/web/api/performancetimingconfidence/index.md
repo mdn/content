@@ -2,10 +2,12 @@
 title: PerformanceTimingConfidence
 slug: Web/API/PerformanceTimingConfidence
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.PerformanceTimingConfidence
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`PerformanceTimingConfidence`** interface provides access to information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 
@@ -13,14 +15,14 @@ The `PerformanceTimingConfidence` object for each navigation timing entry is acc
 
 ## Instance properties
 
-- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceTimingConfidence.randomizedTriggerRate")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A number indicating how often noise is applied when exposing the `value`.
-- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}}
+- {{domxref("PerformanceTimingConfidence.value")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An enumerated value indicating a broad confidence measure of whether a performance record reflects typical application performance, or is likely affected by external factors.
 
 ## Instance methods
 
-- {{domxref("PerformanceTimingConfidence.toJSON()")}}
+- {{domxref("PerformanceTimingConfidence.toJSON()")}} {{experimental_inline}}
   - : Returns a JSON representation of the `PerformanceTimingConfidence` object.
 
 ## Description
@@ -41,7 +43,7 @@ Since this can vary across records, per-record weighting is needed to recover un
 
 ### Using the data
 
-You should use the data as follows to extract meaninful information from the randomized values:
+You should use the data as follows to extract meaningful information from the randomized values:
 
 1. When collecting {{domxref("PerformanceNavigationTiming")}} records, collect {{domxref("PerformanceTimingConfidence.randomizedTriggerRate", "randomizedTriggerRate")}} and {{domxref("PerformanceTimingConfidence.value", "value")}} for each record.
 2. When computing statistics such as 75th-percentile {{glossary("Largest_contentful_paint", "Largest contentful paint (LCP)")}} or mean {{glossary("page load time")}}, apply the weighting formulas explained below instead of a plain average — this gives you separate, corrected metrics for "typical" loads vs. "degraded" loads.

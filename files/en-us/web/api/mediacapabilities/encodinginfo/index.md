@@ -28,7 +28,7 @@ encodingInfo(configuration)
         - `webrtc`
           - : Represents a configuration meant to be transmitted over electronic means (e.g., using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
         - `transmission` {{non-standard_inline}}
-          - : The synonym of `webrtc` to be used in Firefox.
+          - : A synonym of `webrtc` (used in Firefox).
 
     - `video`
       - : Configuration object for a video media source.
@@ -80,10 +80,12 @@ All supported audio codecs are reported to be power efficient.
 
 ## Examples
 
+### Setting a media configuration
+
 ```js
 // Create media configuration to be tested
 const mediaConfig = {
-  type: "record", // or 'transmission'
+  type: "record",
   video: {
     contentType: "video/webm;codecs=vp8.0", // valid content type
     width: 1920, // width of the video
