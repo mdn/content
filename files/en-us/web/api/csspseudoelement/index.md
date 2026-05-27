@@ -9,20 +9,27 @@ browser-compat: api.CSSPseudoElement
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.
+The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo()"")}}.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
-- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
+_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits its properties._
+
+- {{DOMxRef("CSSPseudoElement.element")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the originating parent {{DOMxRef("Element")}} of the pseudo-element.
+- {{DOMxRef("CSSPseudoElement.parent")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the immediate parent of the pseudo-element.
+- {{DOMxRef("CSSPseudoElement.type")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
 ## Instance methods
 
-_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:_
+_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits its methods._
+
+- {{DOMxRef("CSSPseudoElement.pseudo()")}}
+  - : Returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the parent pseudo-element.
 
 ## Examples
 
@@ -50,3 +57,4 @@ console.log(cssPseudoElement.type); // Outputs '::before'
 - {{DOMxRef('Element.pseudo()')}}
 - {{DOMxRef('Web Animations API', '', '', 'true')}}
 - {{DOMxRef('Element.animate()')}}
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module

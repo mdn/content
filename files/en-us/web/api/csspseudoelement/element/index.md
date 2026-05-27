@@ -11,17 +11,17 @@ browser-compat: api.CSSPseudoElement.element
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the
-{{DOMxRef('CSSPseudoElement')}} interface returns a reference to the originating element
-of the pseudo-element, in other words its parent element.
+{{DOMxRef("CSSPseudoElement")}} interface returns a reference to the originating parent element
+of the pseudo-element.
 
 ## Value
 
-An {{DOMxRef('Element')}} representing the pseudo-element's originating element.
+An {{DOMxRef("Element")}} representing the pseudo-element's originating parent element.
 
 ## Examples
 
 The example below demonstrates the relationship between
-`CSSPseudoElement.element` and {{DOMxRef('Element.pseudo()')}}:
+`CSSPseudoElement.element` and {{DOMxRef("Element.pseudo()")}}:
 
 ```js
 const myElement = document.querySelector("q");
@@ -46,4 +46,6 @@ console.log(myElement.nextSibling === cssPseudoElement); // Outputs false
 
 ## See also
 
-- {{DOMxRef('Element.pseudo()')}}
+- {{DOMxRef("CSSPseudoElement.parent")}}
+- {{DOMxRef("CSSPseudoElement.pseudo()")}}
+- {{DOMxRef("Element.pseudo()")}}
