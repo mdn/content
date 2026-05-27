@@ -24,7 +24,7 @@ The `params` field contains:
 
 - `maxDepth` {{optional_inline}}
   - : A non-negative integer that specifies the maximum depth of the tree to return.
-    If not included, the full tree is returned.
+    If not included, which is equivalent to the value `null`, the full tree is returned.
     A value of `0` returns only the root context itself.
     For example, if a top-level context contains an `<iframe>`, which itself contains another `<iframe>`, then a `maxDepth` of `0` returns only the top-level context; a `maxDepth` of `1` returns the top-level context and the first `<iframe>`, but not the nested one.
 - `root` {{optional_inline}}
@@ -106,26 +106,26 @@ The `contexts` array lists the two top-level contexts. The `<iframe>` inside Tab
           {
             "context": "6442450945", // The <iframe>
             "children": [], // No child contexts
-            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
             "originalOpener": null,
             "url": "https://example.com/frame.html",
-            "userContext": "default"
+            "userContext": "default",
+            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386"
           }
         ],
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": null,
-        "parent": null,
         "url": "https://example.com/page1.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       },
       {
         "context": "32ed30da-24ad-459d-8f0d-660526e92d96", // Tab 2
         "children": [], // No child contexts
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
-        "parent": null,
         "url": "https://example.com/page2.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       }
     ]
   }
@@ -161,17 +161,17 @@ The browser responds with Tab 1 and its immediate child. The `children` field fo
           {
             "context": "6442450945",
             "children": null,
-            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
             "originalOpener": null,
             "url": "https://example.com/frame.html",
-            "userContext": "default"
+            "userContext": "default",
+            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386"
           }
         ],
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": null,
-        "parent": null,
         "url": "https://example.com/page1.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       }
     ]
   }
@@ -204,11 +204,11 @@ The browser responds as follows:
       {
         "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
         "children": null,
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": null,
-        "parent": null,
         "url": "https://example.com/page1.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       }
     ]
   }
@@ -241,26 +241,26 @@ The browser responds with the full context tree. The `originalOpener` field iden
           {
             "context": "6442450945",
             "children": [],
-            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
             "originalOpener": null,
             "url": "https://example.com/frame.html",
-            "userContext": "default"
+            "userContext": "default",
+            "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386"
           }
         ],
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": null, // Opened directly
-        "parent": null,
         "url": "https://example.com/page1.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       },
       {
         "context": "32ed30da-24ad-459d-8f0d-660526e92d96",
         "children": [],
-        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
         "originalOpener": "93ee5bd6-d256-4608-a002-9a8995cc0e5f", // Opened by Tab 1
-        "parent": null,
         "url": "https://example.com/page2.html",
-        "userContext": "default"
+        "userContext": "default",
+        "clientWindow": "08c697a1-2664-447d-9c88-52bcee3bb386",
+        "parent": null
       }
     ]
   }
