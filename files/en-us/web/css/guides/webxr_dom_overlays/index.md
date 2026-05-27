@@ -6,9 +6,11 @@ spec-urls: https://immersive-web.github.io/dom-overlays
 sidebar: cssref
 ---
 
-The **WebXR DOM overlays** module, an immersive web specificationsn expands the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) with mechanisms for users to interact with the DOM overlay's content when the overlay is active.
+The **WebXR DOM overlays** module, an immersive web specification, expands the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) with mechanisms for users to interact with the DOM overlay's content when the overlay is active, displaying the content of a single DOM element as a transparent-background 2D rectangle. The [WebXR Device API defines the features for virtual reality (VR) and augmented reality (AR) devices, including sensors and head-mounted displays, on the Web.
 
-The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
+In an immersive AR or VR environment, content is generally rendered onto a canvas. To enable user interaction, WebXR environments display a DOM overlay rendered on top of a scene. This is used to draw the interactive content, such as stylable menus and dialogs, on top of the scene. The overlay is composited into the immersive view, while allowing regular, stylable content to appear and be interacted with.
+
+The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment, allowing it to be styled appropriately for its underlying content. This overlay is a [backdrop root](/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter#backdrop_root), defining the border where any effects can happen].
 
 ## Reference
 
