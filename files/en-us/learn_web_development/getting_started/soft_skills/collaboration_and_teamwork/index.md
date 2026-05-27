@@ -122,7 +122,7 @@ Even if you are not doing a real work project — you might be doing a college m
 It is also a good idea to start doing peer reviews — colleagues will review each other's work and provide feedback on how it could be improved. Areas looked at might include general code quality and adherence to code style guides, performance, sticking to best practices, usability, and quality of documentation. You can benefit greatly, whether you are the reviewer, or the person being reviewed:
 
 - If you are reviewing someone else's work, aim to provide a balance between encouragement and praise for good work, and critical feedback. Practice how to deliver that feedback constructively and respectfully. Even if they seem somewhat trivial, always come up with one or two questions to ask when discussing or reviewing peer work.
-- If you work is being reviewed, try not to take criticism personally, and focus on the positives and what you can learn. Assume the best of intentions from your reviewer — they are just trying to help.
+- If your work is being reviewed, try not to take criticism personally, and focus on the positives and what you can learn. Assume the best of intentions from your reviewer — they are just trying to help.
 
 ## Learn to embrace failure
 
