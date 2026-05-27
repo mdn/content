@@ -210,8 +210,8 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 @font-face {
   font-family: "Trickster";
   src:
-  url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
-  url("trickster-outline.woff2") format("woff2");
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+    url("trickster-outline.woff2") format("woff2");
 }
 
 /* Using the font face */
