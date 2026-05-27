@@ -387,7 +387,7 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     cacheFirst({
       request: event.request,
-      preloadResponsePromise: Promise.resolve(event.preloadResponse),
+      preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
       event,
     }),
