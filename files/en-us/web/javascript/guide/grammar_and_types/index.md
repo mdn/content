@@ -517,10 +517,8 @@ Object literals support a range of shorthand syntaxes that include setting the p
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
 ```js
-const theProtoObj = {
-};
-const handler = {
-};
+const theProtoObj = {};
+const handler = {};
 const obj = {
   // __proto__
   __proto__: theProtoObj,
