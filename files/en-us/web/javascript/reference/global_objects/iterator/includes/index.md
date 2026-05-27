@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.includes
 sidebar: jsref
 ---
 
-The **`includes()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.includes()")}}: it returns `true` if it finds an element that is strictly equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
+The **`includes()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.includes()")}}: it returns `true` if it finds an element that is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 
 ## Syntax
 
@@ -36,9 +36,13 @@ A boolean value which is `true` if the value `searchElement` is found within the
 
 ## Description
 
-The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). It works like strict equality `===` (where `-0` and `+0` are considered equal), with the exception that {{jsxref("NaN")}} is considered equal to itself.
+The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). This algorithm works like strict equality `===` (where `-0` and `+0` are considered equal), with the exception that {{jsxref("NaN")}} is considered equal to itself.
+
+Unlike `Array.prototype.includes()`, the `fromIndex` parameter of `Iterator.prototype.includes()` is not allowed to be negative, because the iterator does not have a known length. The type validation is also stricter: non-integer values are not truncated to integers.
 
 The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators. With infinite iterators, `includes()` returns `true` as soon as the first match is found. If the value is never encountered, the method never returns.
+
+Calling `includes()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
 
 ## Examples
 
@@ -59,7 +63,7 @@ console.log(fibonacci().take(10).includes(7)); // false
 console.log(fibonacci().includes(7)); // Never completes
 ```
 
-Calling `includes()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
+The method closes the iterator after returning.
 
 ```js
 const seq = fibonacci();

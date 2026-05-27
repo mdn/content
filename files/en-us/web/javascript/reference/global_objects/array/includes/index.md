@@ -51,7 +51,7 @@ A boolean value which is `true` if the value `searchElement` is found within the
 
 ## Description
 
-The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). It works like strict equality `===` (where `-0` and `+0` are considered equal), with the exception that {{jsxref("NaN")}} is considered equal to itself.
+The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). This algorithm works like strict equality `===` (where `-0` and `+0` are considered equal), with the exception that {{jsxref("NaN")}} is considered equal to itself.
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
 
