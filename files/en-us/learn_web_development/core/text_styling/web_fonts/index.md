@@ -194,7 +194,9 @@ Let's go through it to see what it does:
 
 ## Summary
 
-Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our challenge for the module: Typesetting a community school homepage.
+Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our challenge for the module: [Typesetting a community school homepage](/en-US/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage).
+
+Once you're done with the challenge, you can move on to learning about [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout).
 
 ## See also
 
