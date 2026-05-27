@@ -8,24 +8,12 @@ sidebar: webassemblysidebar
 
 {{AvailableInWorkers}}
 
-The **`WebAssembly.Exception`** object represents a runtime exception thrown from WebAssembly to JavaScript, or thrown from JavaScript to a WebAssembly exception handler.
-
-The [constructor](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception) accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag), an array of values, and an `options` object as arguments.
-The tag uniquely defines the _type_ of an exception, including the order of its arguments and their data types.
-The same tag that was used to create the `Exception` is required to access the arguments of a thrown exception.
-Methods are provided to test whether an exception matches a particular tag, and also to get a particular value by index (if the exception matches specified tag).
-
-JavaScript and other client code can only access WebAssembly exception values, and vice versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
-Without the matching tag, exceptions can be caught and re-thrown, but they can't be inspected.
-
-In order to make exception-throwing faster, exceptions thrown from WebAssembly generally do not include a stack trace.
-WebAssembly code that needs to provide a stack trace must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the constructor.
-The constructor may then return an exception with a stack trace attached to the [`stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) property.
+The **`WebAssembly.Exception`** object represents a runtime exception thrown in a Wasm module.
 
 ## Constructor
 
 - [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)
-  - : Creates a new `WebAssembly.Exception` object.
+  - : Creates a new `WebAssembly.Exception` object instance.
 
 ## Instance methods
 
@@ -38,7 +26,56 @@ The constructor may then return an exception with a stack trace attached to the 
 ## Instance properties
 
 - [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) {{non-standard_inline}}
-  - : Returns the stack trace for the exception, or `undefined`.
+  - : Returns the stack trace for the exception.
+
+## Description
+
+When handling Wasm exceptions from the JavaScript host, caught exceptions will have a `WebAssembly.Exception` object type.
+
+For example, you could start by constructing an error tag type using the [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag) constructor, like this:
+
+```js
+const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
+```
+
+You can then import it into a Wasm module like this:
+
+```js
+const env = {
+  my_error: myErrorTag,
+};
+
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
+```
+
+You could then try running an exported Wasm function in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. If the function throws, the error propagated to the `catch` block will be a [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object instance.
+
+```js
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
+  (result) => {
+    try {
+      // Cause function to throw
+      result.instance.exports.throw(-1);
+    } catch (e) {
+      if (e instanceof WebAssembly.Exception && e.is(myErrorTag)) {
+        const errorCode = e.getArg(myErrorTag, 0); // 0 = first payload value
+        console.log("Error code:", errorCode); // 42
+      } else {
+        throw e; // throw other errors
+      }
+    }
+  },
+);
+```
+
+You can check whether it has the same exception type we defined earlier (`myErrorTag`) using [`Exception.prototype.is()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is), and then access the exception's payload using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
+
+JavaScript and other client code can only access WebAssembly exception values, and vice versa, when the associated tag is shared (you can't just use another tag that happens to define the same data types).
+Without the matching tag, exceptions can be caught and re-thrown, but they can't be inspected.
+
+In order to make exception-throwing faster, exceptions thrown from WebAssembly generally do not include a stack trace.
+WebAssembly code that needs to provide a stack trace must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the constructor.
+The constructor may then return an exception with a stack trace attached to the [`stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) property.
 
 ## Examples
 

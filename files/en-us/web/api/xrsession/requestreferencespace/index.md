@@ -11,7 +11,7 @@ browser-compat: api.XRSession.requestReferenceSpace
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestReferenceSpace()`** method of the
-{{DOMxRef("XRSession")}} interface returns a {{JSxRef("promise")}} that resolves with
+{{DOMxRef("XRSession")}} interface returns a {{JSxRef("Promise")}} that resolves with
 an instance of either {{DOMxRef("XRReferenceSpace")}}
 or {{DOMxRef("XRBoundedReferenceSpace")}} as appropriate given the type of reference
 space requested.

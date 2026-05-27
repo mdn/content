@@ -28,14 +28,14 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
-- {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.actions")}} {{ReadOnlyInline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.badge")}} {{ReadOnlyInline}}
   - : A string containing the URL of an image to represent the notification when there is not enough space to display the notification itself such as for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.

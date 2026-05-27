@@ -61,4 +61,4 @@ new Derived(); // { x: 1 }
 
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/extends", "extends")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}

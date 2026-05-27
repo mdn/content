@@ -10,7 +10,7 @@ A `Permissions` object represents a collection of permissions.
 
 ## Type
 
-An {{jsxref("object")}} with these properties:
+An {{jsxref("Object")}} with these properties:
 
 - `origins` {{optional_inline}}
   - : An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), representing [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).

@@ -1,5 +1,5 @@
 ---
-title: "i64: Wasm type"
+title: "i64: Wasm value type"
 short-title: i64
 slug: WebAssembly/Reference/Value_types/i64
 page-type: webassembly-instruction
