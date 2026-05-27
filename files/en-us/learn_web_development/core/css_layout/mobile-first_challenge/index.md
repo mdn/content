@@ -9,7 +9,7 @@ sidebar: learnsidebar
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 This challenge rounds off the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module by asking you to update an existing mobile layout so that it also works well on desktop browsers. Along the way, you'll also be tested on responsive layout features such as media queries, CSS grid, flexbox, and responsive images.
 
-After you're done with this challenge, you can move on to learn about implementing dynamic behavior with [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
+After you're done with this challenge, you can move on to learning about implementing dynamic behavior with [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 
 ## Starting point
 
