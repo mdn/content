@@ -6,7 +6,7 @@ spec-urls: https://immersive-web.github.io/dom-overlays
 sidebar: cssref
 ---
 
-The **WebXR DOM overlays** module, an immersive web specifications. expands the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) with mechanisms for users to interact with the DOM overlay's content when the overlay is active.
+The **WebXR DOM overlays** module, an immersive web specificationsn expands the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) with mechanisms for users to interact with the DOM overlay's content when the overlay is active.
 
 The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
 
