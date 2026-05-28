@@ -345,9 +345,9 @@ th {
   border-bottom: 1px solid #999999;
 }
 
-/* There's no need to specify the width of the other
-   columns explicitly: The 4th column has an explicit width of 40% set, and the
-   remaining columns will get the remaining 60% equally
+/* There's no need to specify the width of the other columns
+   explicitly: The 4th column has an explicit width of 40% set, and
+   the remaining columns will get the remaining 60% equally
    distributed between them (20% each) */
 tr :nth-of-type(4) {
   width: 40%;
