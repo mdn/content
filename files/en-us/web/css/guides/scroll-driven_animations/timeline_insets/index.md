@@ -107,7 +107,7 @@ The start and end of the animation range are `1em` and `125px` from the start of
   --end: 125px;
 }
 
-main {
+article {
   background-image: linear-gradient(
     to top,
     transparent calc(var(--start) - 1px),
@@ -181,17 +181,23 @@ With both `entry` and `exit`, the range is the size of the subject, with the siz
 
 {{EmbedLiveSample("exit_length", "100%", "310")}}
 
-We added a few lines to facilitate the explanations that follow: the bottom blue line is `60px` from the end edge of the scrollport, and the top red line is `75px` from that same edge. The start and the ends of the range are [measured from their respective named ranges](#measured_from_the_start_edge_of_the_range), potentially occurring [beyond the edges of the scrollport](#beyond_the_scrollport_edges), remembering the size of the named range may be [clamped, effecting the offset's starting point](#effects_of__clamping).
+We added a few lines to facilitate the explanations that follow: the bottom blue line is `60px` from the end edge of the scrollport, and the top red line is `75px` from that same edge. These are where the animation range start and end respectively.
+
+This example demonstrates several important features, which we'll explain in greater detail, including:
+
+- Offsets are [measured from their respective named ranges](#measured_from_the_start_edge_of_the_range)
+- Offsets can occur [beyond the edges of the scrollport](#beyond_the_scrollport_edges)
+- [Ranges may be clamped](#effects_of_clamping) if the subject is larger than the scrollport
 
 #### Measured from the start edge of the range
 
 As the offset position is always relative to the start of the declaration's animation range, the start of the animation for all three elements occurs when the elements start edge crosses the point that is `60px` from the start of the `entry` range.
 
-Don't be confused by the fact the `entry` range for the `50px` subject is only `50px` tall: the size of the named animation range is clamped by the size of the viewport. We are defining the element's animation range - which goes from the scroll position defined by the `animation-range-start` value to the position defined by the animation-range-end value.
+The `animation-range-end` value defines the position where the animation. The `exit 75px` value basically means "when `75px` of the subject has exited the start edge of the scrollport." This varies for each subject. For the `50px` subject, this only occurs `25px` after it has left the scrollport; when the element is not visible. The animation range end for both the `250px` and `500px` subjects occurs when their bottom end edge intersects the top blue line; 75 pixels from the end edge of the scrollport. Why are their end offsets the same? Because of [clamping](#effects_of_clamping)! The maximum size of the named animation range is clamped to the size of the scrollport. The `exit` range for both subjects is the same, so the range end offsets are the same.
 
 #### Beyond the scrollport edges
 
-For our `50px` tall subject, the `exit` range is 50px tall abutting the start edge of the scroll port. Setting `animation-range-end: exit 75px` for any element less than `75px` tall means end of the range is outside the scrollport as the point `75px` from the start of the `exit` range is past the start edge of the scrollport. In our example, the end of the animation range for the `50px` subject occurs when the subject's start edge is `75px` past the scrollport's start edge. The animation ends, reaching the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event only occuring, if the element is scrolled `25px` out of view.
+For our `50px` tall subject, the `exit` range is 50px tall abutting the start edge of the scroll port. Setting `animation-range-end: exit 75px` for any element less than `75px` tall means the end of the range is outside the scrollport, as the point `75px` from the start of the `exit` range is past the start edge of the scrollport. In our example, the end of the animation range for the `50px` subject occurs when the subject's start edge is `75px` past the scrollport's start edge. The animation ends, reaching the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event, only when (and if) the element is scrolled `25px` out of view.
 
 The animation ends, meaning animation continues to the `to` keyframe and the {{domxref("Element/animationend_event", "animationend")}} event occurs, even if the animation range end is outside of the scrollport, as long as there is room to scroll to that point. Had we set `animation-range-end: exit 250px`, the animation would have ended when the end edge of the medium and tall subjects exited the scrollport at the container's start edge. The small subject's animation may not end as there may not be `450px` worth of content after the subject in our example for the user to scroll until the animation end is reached.
 
