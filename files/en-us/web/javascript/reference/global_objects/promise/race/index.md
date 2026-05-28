@@ -188,6 +188,29 @@ const data = Promise.race([
 
 If the `data` promise fulfills, it will contain the data fetched from `/api`; otherwise, it will reject if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer.
 
+> [!NOTE]
+> Capturing and clearing the timeout handle from `setTimeout` is _not_ required. `Promise.race` will capture and discard any errors thrown by any of the losing promises, and they will not bubble up and become `unhandledRejection`s. In other words, this is not necessary:
+
+```js
+let rejectTimeoutHandle;
+const data = Promise.race([
+  fetch("/api"),
+  new Promise((resolve, reject) => {
+    // Reject after 5 seconds
+    rejectTimeoutHandle = setTimeout(() => reject(new Error("Request timed out")), 5000);
+  }),
+])
+  .then((res) => {
+    clearTimeout(rejectTimeoutHandle);
+    return res.json();
+  })
+  .catch((err) => {
+    // Clear the timeout in case the error was thrown by fetch
+    clearTimeout(rejectTimeoutHandle);
+    displayError(err);
+  });
+```
+
 ### Using Promise.race() to detect the status of a promise
 
 Because `Promise.race()` resolves to the first non-pending promise in the iterable, we can check a promise's state, including if it's pending. This example is adapted from [`promise-status-async`](https://github.com/kudla/promise-status-async/blob/master/lib/promiseState.js).
