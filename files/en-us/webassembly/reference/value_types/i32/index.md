@@ -1,5 +1,5 @@
 ---
-title: "i32: Wasm type"
+title: "i32: Wasm value type"
 short-title: i32
 slug: WebAssembly/Reference/Value_types/i32
 page-type: webassembly-instruction

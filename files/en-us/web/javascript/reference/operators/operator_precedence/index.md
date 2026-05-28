@@ -277,7 +277,7 @@ Several general notes about the table:
       <td>[3]</td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new", "new")}} with argument list<br><code>new x(y)</code></td>
+      <td>{{jsxref("new")}} with argument list<br><code>new x(y)</code></td>
       <td rowspan="3">[4]</td>
     </tr>
     <tr>
@@ -291,7 +291,7 @@ Several general notes about the table:
     <tr>
       <td>16: new</td>
       <td>n/a</td>
-      <td>{{jsxref("Operators/new", "new")}} without argument list<br><code>new x</code></td>
+      <td>{{jsxref("new")}} without argument list<br><code>new x</code></td>
     </tr>
     <tr>
       <td rowspan="2">15: postfix operators</td>

@@ -43,7 +43,7 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; expected result
 
 ### Deleting a property from an object
 
-There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete()")}}). To do so, one must use the {{jsxref("Operators/delete", "delete")}} operator.
+There isn't any method in an Object itself to delete its own properties (such as {{jsxref("Map.prototype.delete()")}}). To do so, one must use the {{jsxref("delete")}} operator.
 
 ### null-prototype objects
 

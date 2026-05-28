@@ -135,7 +135,7 @@ It is often desirable to reference the element on which the event handler was fi
 such as when using a generic handler for a set of similar elements.
 
 When attaching a handler function to an element using `addEventListener()`,
-the value of {{jsxref("Operators/this","this")}} inside the handler will be a reference to
+the value of {{jsxref("this")}} inside the handler will be a reference to
 the element. It will be the same as the value of the `currentTarget` property of
 the event argument that is passed to the handler.
 
