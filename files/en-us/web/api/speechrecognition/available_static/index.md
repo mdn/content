@@ -138,6 +138,8 @@ This code is excerpted from our [on-device speech color changer](https://github.
 
 The following code snippet is a modification of the previous example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` (assuming it was previously set to `true`) to force the API to use a cloud recognition service, then `start()` the recognition service.
 
+If the result is `available`, we are good to go, so we just call {{domxref("SpeechRecognition.start", "start()")}} to start on-device recognition. If the result is any other value, we run the {{domxref("SpeechRecognition.install", "install()")}} method with the `quality` option set to `dictation` to install the required language packs.
+
 ```js
 startBtn.addEventListener("click", () => {
   // Check availability of on-device target language dictation quality
@@ -150,6 +152,22 @@ startBtn.addEventListener("click", () => {
       diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
       recognition.processLocally = false;
       recognition.start();
+    } else if (result === "available") {
+      recognition.start();
+      console.log("Ready to receive a color command.");
+    } else {
+      diagnostic.textContent = `en-US language pack downloading`;
+      SpeechRecognition.install({
+        langs: ["en-US"],
+        processLocally: true,
+        quality: "dictation",
+      }).then((result) => {
+        if (result) {
+          diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+        } else {
+          diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+        }
+      });
     }
   });
 });
