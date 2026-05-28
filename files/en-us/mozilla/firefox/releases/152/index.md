@@ -16,7 +16,11 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The developer tools now have a "Show comments" option to toggle the display of HTML comment nodes in the Inspector.
+  This option can be found in the [Settings panel](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#settings-inspector).
+  ([Firefox bug 1455294](https://bugzil.la/1455294)).
 
 <!-- ### HTML -->
 
