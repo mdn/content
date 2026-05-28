@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.abort_event
 
 {{APIRef("HTML DOM")}}
 
-The **`abort`** event is fired when the resource was not fully loaded, but not as the result of an error.
+The **`abort`** event is fired when the loading of a media resource is canceled before it completes, but not as the result of an error. Common triggers include the user pressing the browser's stop button, or the page changing or clearing the element's `src` while the load is in progress.
 
 This event is not cancelable and does not bubble.
 
@@ -30,17 +30,19 @@ A generic {{domxref("Event")}}.
 
 ```js
 const video = document.querySelector("video");
-const videoSrc = "https://example.org/path/to/video.webm";
 
 video.addEventListener("abort", () => {
-  console.log(`Abort loading: ${videoSrc}`);
+  console.log("Video loading was aborted.");
 });
 
-const source = document.createElement("source");
-source.setAttribute("src", videoSrc);
-source.setAttribute("type", "video/webm");
+// Start loading a video.
+video.setAttribute("src", "https://example.org/path/to/video.webm");
 
-video.appendChild(source);
+// While the load is still in progress, changing `src` to a different
+// resource (or clearing it) cancels the in-progress load and fires the
+// `abort` event. The user pressing the browser's stop button has the
+// same effect.
+video.setAttribute("src", "https://example.org/path/to/other-video.webm");
 ```
 
 ## Specifications
