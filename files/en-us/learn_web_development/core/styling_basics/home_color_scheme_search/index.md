@@ -346,7 +346,7 @@ th {
 }
 
 /* There's no need to specify the width of the other
-   columns: The 4th column has an explicit width of 40% and the
+   columns explicitly: The 4th column has an explicit width of 40% set, and the
    remaining columns will get the remaining width of 60% equally
    distributed to them (20% each) */
 tr :nth-of-type(4) {
