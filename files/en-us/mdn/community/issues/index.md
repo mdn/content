@@ -86,7 +86,7 @@ These are the general steps for working on an issue:
 
 1. **Find an issue:** If you're looking to contribute, search for issues with a priority label, `p2` or `p3` (see what these [priority labels](#set_a_priority_label) mean). Alternatively, look for issues with [one of these labels that indicate we're inviting PRs from the community](#apply_type_goal_and_effort_labels): `good first issue`, `accepting PR`, and `help wanted`. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set.
 
-   Another useful place to look for issues is the [MDN Issue Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. If you're curious, read the meanings of the [labels](#apply_type_goal_and_effort_labels) that get applied during the issue triage process.
+   Another useful place to look for issues is the [MDN Contributor Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. If you're curious, read the meanings of the [labels](#apply_type_goal_and_effort_labels) that get applied during the issue triage process.
 
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN team has not reviewed the issue yet, and you shouldn't begin work on it.
@@ -180,7 +180,7 @@ These are some of the things to keep in mind while reviewing the validity of an 
 - Evaluate if the fix will improve the content for the readers and the website.
 - Evaluate if the impact of the fix will be small or site-wide.
 - Evaluate if the fix for the issue will need a discussion first, in which case, point the author to open a [discussion](https://github.com/orgs/mdn/discussions) instead.
-- Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types).—for example, whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
+- Check if the issue complies with our [writing guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and [templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types). For example, whether suggestions for adding links comply with our [external links policy](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links).
 - Check if the issue is a duplicate of an existing issue. If it is, you can [close the issue as a duplicate](#closing_an_issue_as_a_duplicate).
 
 #### Review the issue for completeness of information
@@ -271,9 +271,9 @@ After you've analyzed and validated the issue, and applied the appropriate label
 
 If an issue does not map to any actionable task, you should consider closing the issue as not planned. Click the dropdown next to the **Close issue** button, and select **Close as not planned**. Post a comment explaining the reason for closing the issue. Also add one of the following labels:
 
-- `closed: browser bug`: The issue reports unexpected behavior (with their code or MDN's code) that's actually a browser bug, and it's not significant enough to warrant a BCD note.
-- `closed: question`: The issue is based on a user error or misunderstanding, and the content is sufficiently correct and clear. However, usually do give some acknowledgment of the issue and consider whether the content can be clarified further to avoid similar questions.
-- `closed: wontfix`: The issue reports a valid "problem", but MDN decides not to fix it. Reasons include too much effort, out of scope, working as intended, etc.
+- `closed: browser bug`: The issue reports unexpected behavior in the reporter's code or in MDN's code, but the cause is a browser bug. The issue is also not significant enough to warrant a BCD note.
+- `closed: question`: The issue is based on the reporter's error or misunderstanding, and the content is already correct and clear. However, you should still acknowledge the report and consider whether the content can be clarified further to prevent similar questions in the future.
+- `closed: wontfix`: The issue reports a valid problem, but MDN decides not to fix it. Common reasons include the work being out of scope, the required effort outweighing the benefit, or content and code working as intended.
 
 ### Closing an issue as a duplicate
 
