@@ -414,7 +414,7 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
 
 ### TC39 Iterator includes proposal
 
-Support for the [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method, which allows testing of whether an `Iterator` instance will return a specified value.
+The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether an `Iterator` instance will produce a specified value.
 The comparison uses the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
 This algorithm is similar to strict equality `===` (where `-0` and `+0` are considered equal), but differs in that {{jsxref("NaN")}} is considered equal to itself.
 ([Firefox bug 2025779](https://bugzil.la/2025779)).

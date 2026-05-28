@@ -104,5 +104,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **TC39 Iterator includes proposal**: `javascript.options.experimental.iterator_includes`
 
-  The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method is supported for testing whether the iterator will return a specified value.
+  The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether the iterator will produce a specified value.
   ([Firefox bug 2025779](https://bugzil.la/2025779)).
