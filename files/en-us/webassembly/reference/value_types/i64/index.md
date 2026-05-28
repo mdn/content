@@ -47,8 +47,6 @@ An `i64` return value becomes a `BigInt` in JavaScript automatically.
 
 When moving from JavaScript over to Wasm, a `BigInt` passed as an `i64` argument is truncated to 64 bits, wrapped modulo 2⁶⁴. Passing a plain `Number` where an `i64` is expected throws a `TypeError`.
 
-An `i64` value stored in a Wasm [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) is also exposed as a `BigInt` when exported to JavaScript
-
 ## Specifications
 
 {{Specifications}}
