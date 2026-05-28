@@ -345,7 +345,7 @@ th {
   border-bottom: 1px solid #999999;
 }
 
-/* There’s no need to explicitly specify the width of the other
+/* There's no need to specify the width of the other
    columns: The 4th column has an explicit width of 40% and the
    remaining columns will get the remaining width of 60% equally
    distributed to them (20% each) */
