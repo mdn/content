@@ -51,7 +51,7 @@ URL is from the same origin as the service worker or a {{Glossary("null", "null 
 
 ### Opening a window on a notification click
 
-In this example a service worker creates and then shows a that contains an associated URL, which is under the service worker's scope. When the user clicks the notification:
+In this example a service worker creates and then shows a notification that contains an associated URL, which is under the service worker's scope. When the user clicks the notification:
 
 - If the page at the notification's URL is already open, the service worker focuses it.
 - Otherwise, the service worker opens the page in a new window.
