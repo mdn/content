@@ -448,7 +448,7 @@ This includes all the instance methods on `Intl.Locale` that are prefixed with "
 ### Text module import
 
 The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
-The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+The import ignores the media type of the response: the content is parsed as text even if the source contains scripts or other executable code.
 ([Firefox bug 2024854](https://bugzil.la/2024854)).
 
 | Release channel   | Version added | Enabled by default? |
