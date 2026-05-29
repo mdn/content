@@ -108,3 +108,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) to check if an encoding/decoding configuration can be used for WebRTC.
   This replaces the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was previously used as an alias in Firefox.
   ([Firefox bug 1825286](https://bugzil.la/1825286)).
+
+- **TC39 Iterator includes proposal**: `javascript.options.experimental.iterator_includes`
+
+  The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether the iterator will produce a specified value.
+  ([Firefox bug 2025779](https://bugzil.la/2025779)).
