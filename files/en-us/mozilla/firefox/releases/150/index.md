@@ -52,6 +52,12 @@ No notable changes.
   This allows the method to return the node containing the caret from within a shadow DOM, provided its associated {{domxref("ShadowRoot")}} was passed as an option.
   ([Firefox bug 1914596](https://bugzil.la/1914596)).
 
+- The {{domxref("HighlightRegistry.highlightsFromPoint()")}} method is now supported, providing an mechanism for web pages to get information about all the [CSS custom highlights](/en-US/docs/Web/API/CSS_Custom_Highlight_API) at a particular point.
+  This includes highlights that are inside shadow roots, provided the associated {{domxref("ShadowRoot")}} instance was passed to the method.
+  ([Firefox bug 1917991](https://bugzil.la/1917991)).
+
+  highlightsFromPoint() allows web pages to interact with CSS Highlights by returning all Highlights at a given point.
+
 - The {{domxref("CSSFontFaceDescriptors")}} interface is now supported, and an instance of this type is returned by the {{domxref("CSSFontFaceRule.style")}} property. ([Firefox bug 2019904](https://bugzil.la/2019904)).
 
 - The non-standard {{domxref("Document/caretRangeFromPoint","caretRangeFromPoint()")}} method of the {{domxref("Document")}} interface is now supported. ([Firefox bug 1550635](https://bugzil.la/1550635)).
