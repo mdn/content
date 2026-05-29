@@ -15,6 +15,8 @@ This set of pages details the top-level module definition features available in 
 
 ## Definitions
 
+- [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data)
+  - : Defines a segment of bytes that can be copied into linear memory.
 - [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
   - : Creates a new global.
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table)

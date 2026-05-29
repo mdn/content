@@ -142,6 +142,8 @@ sidebar:
         children:
           - link: /WebAssembly/Reference/Definitions/types/func
             title: <code>func</code>
+      - link: /WebAssembly/Reference/Definitions/data
+        title: <code>data</code>
       - link: /WebAssembly/Reference/Definitions/global
         title: <code>global</code>
       - link: /WebAssembly/Reference/Definitions/table
