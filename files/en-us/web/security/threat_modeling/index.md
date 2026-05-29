@@ -12,7 +12,7 @@ Depending on your goal, threat modeling can be more involved than described here
 This page describes the overall threat modeling process. For threat model frameworks and resources, see:
 
 - [Threat modeling frameworks and tools](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
-  - : Overview of the STRIDE and LUNDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling tools.
+  - : Overview of the STRIDE and LINDDUN frameworks that provide structure for threat modeling processes, and additional threat modeling tools.
 
 For an example threat model, see:
 
@@ -210,7 +210,7 @@ You can revisit the issues you filed and the documentation you've written in the
 
 We provide an [example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model) for inspiration. Threat model documents don't get published very often and aren't shared broadly unfortunately; they are often an internal resource. Although it is good practice to publish your threat model, both to demonstrate trustworthiness and to solicit additional feedback.
 
-In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). Frameworks exist, including STRIDE and LUNDDUN, that provide structure for threat modeling processes. See the [threat modeling frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks) guide for a list of privacy and security threats, along with example questions that may help guide you in your own threat model development.
+In our threat modeling above, we focus on the four key questions as defined in the [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org). Frameworks exist, including STRIDE and LINDDUN, that provide structure for threat modeling processes. See the [threat modeling frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks) guide for a list of privacy and security threats, along with example questions that may help guide you in your own threat model development.
 
 ## See also
 

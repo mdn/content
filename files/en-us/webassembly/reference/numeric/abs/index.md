@@ -39,7 +39,7 @@ value_type.abs
   - : The type of value the instruction is being run on. The following types support `abs`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -62,7 +62,7 @@ value_type.abs
 
 For a non-SIMD `abs`, the `input` and `output` will be basic numeric values such as `3.5` or `10`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack is the absolute value of the corresponding lane in the input.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `abs`, the `input` and `output` will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 4 8 12 16`. Each lane of the output pushed to the stack is the absolute value of the corresponding lane in the input.
 
 ### Binary encoding
 

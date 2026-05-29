@@ -33,6 +33,8 @@ These types include keywords and identifiers as well as strings, and URLs.
       - : Rolls back the cascade to the value of the earlier origin.
     - {{CSSXref("revert-layer")}}
       - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer).
+    - {{CSSXref("revert-rule")}}
+      - : Rolls back the cascade to the value of an earlier matching style rule.
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
@@ -119,7 +121,7 @@ The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines the data type
 
 ## 2D positioning
 
-The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("&lt;background-position&gt;")}} property.
+The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("background-position")}} property.
 
 - {{cssxref("&lt;position&gt;")}}
   - : Defines the position of an object area. Accepts a keyword value such as `top` or `left`, or a `<length-percentage>`.

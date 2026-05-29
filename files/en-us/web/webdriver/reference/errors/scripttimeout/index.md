@@ -1,5 +1,6 @@
 ---
-title: Script timeout
+title: "`script timeout` error code"
+short-title: script timeout
 slug: Web/WebDriver/Reference/Errors/ScriptTimeout
 page-type: webdriver-error
 sidebar: webdriver

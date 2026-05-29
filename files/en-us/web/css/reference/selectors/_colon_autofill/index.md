@@ -120,9 +120,8 @@ input:autofill {
     content: "Your browser doesn't support the :autofill selector.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 1rem 0;
   }
 }
 ```

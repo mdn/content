@@ -1,5 +1,6 @@
 ---
-title: all
+title: "`all` CSS property"
+short-title: all
 slug: Web/CSS/Reference/Properties/all
 page-type: css-shorthand-property
 browser-compat: css.properties.all

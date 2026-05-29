@@ -364,6 +364,7 @@ Lianghekou
 Libera.Chat
 Libertinus
 Lighttpd
+LINDDUN
 Lindenberg
 Lindesay
 Liskov
@@ -398,6 +399,7 @@ mcdetect
 McLellan
 McNally
 McVerry
+Mediabunny
 Megalosaurus
 Menard
 Mensah
@@ -680,6 +682,7 @@ Yoshi
 Yousafzai
 Yslow
 YubiKey
+YubiKeys
 Yuki
 Yura
 Yusuf

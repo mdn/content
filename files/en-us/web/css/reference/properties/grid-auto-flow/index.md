@@ -1,5 +1,6 @@
 ---
-title: grid-auto-flow
+title: "`grid-auto-flow` CSS property"
+short-title: grid-auto-flow
 slug: Web/CSS/Reference/Properties/grid-auto-flow
 page-type: css-property
 browser-compat: css.properties.grid-auto-flow

@@ -1,5 +1,6 @@
 ---
-title: align-self
+title: "`align-self` CSS property"
+short-title: align-self
 slug: Web/CSS/Reference/Properties/align-self
 page-type: css-property
 browser-compat: css.properties.align-self

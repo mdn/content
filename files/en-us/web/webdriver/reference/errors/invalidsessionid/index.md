@@ -1,5 +1,6 @@
 ---
-title: Invalid session ID
+title: "`invalid session id` error code"
+short-title: invalid session id
 slug: Web/WebDriver/Reference/Errors/InvalidSessionID
 page-type: webdriver-error
 sidebar: webdriver

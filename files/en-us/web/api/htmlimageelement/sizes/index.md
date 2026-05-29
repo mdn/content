@@ -88,7 +88,7 @@ function log(text) {
 #scroll-container {
   height: 600px;
   overflow-y: scroll;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
 }
 #spacer {
   height: 620px;
@@ -101,7 +101,7 @@ function log(text) {
   padding: 16px;
 }
 .img-container {
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   overflow: hidden;
 }
 .img-square {
@@ -118,7 +118,7 @@ function log(text) {
 .label {
   font-size: 13px;
   padding: 6px 10px;
-  background: #f5f5f5;
+  background: whitesmoke;
 }
 #resizable {
   width: 100%;
@@ -198,7 +198,7 @@ It also allows you to see the effect of changing the size of a container on the 
 
 #### HTML
 
-The HTML is similar to that in the previous example, except that it defines three near-identical {{htmlelement("img")}} elements, each with a `scrset` indicating 3 images that are `600px`, `400px`, and `200px` wide, and with a `sizes` value of `auto`.
+The HTML is similar to that in the previous example, except that it defines three near-identical {{htmlelement("img")}} elements, each with a `srcset` indicating 3 images that are `600px`, `400px`, and `200px` wide, and with a `sizes` value of `auto`.
 These are constrained within containers that are sized to select the different images.
 
 ```html
@@ -283,7 +283,7 @@ Here we show the CSS classes that set the size of the different image containers
 #scroll-container {
   height: 400px;
   overflow-y: scroll;
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
 }
 #spacer {
   height: 600px;
@@ -296,7 +296,7 @@ Here we show the CSS classes that set the size of the different image containers
   padding: 16px;
 }
 .img-container {
-  border: 2px solid #ccc;
+  border: 2px solid #cccccc;
   overflow: hidden;
 }
 .img-square {
@@ -313,7 +313,7 @@ Here we show the CSS classes that set the size of the different image containers
 .label {
   font-size: 13px;
   padding: 6px 10px;
-  background: #f5f5f5;
+  background: whitesmoke;
 }
 ```
 
@@ -350,15 +350,15 @@ const resizableLabel = resizable.querySelector(".label strong");
 
 function setSize(px) {
   px = Math.min(700, Math.max(100, px));
-  resizable.style.width = px + "px";
-  resizableImg.sizes = px + "px"; // update sizes so browser can pick new srcset candidate
-  resizableLabel.textContent = px + "px";
+  resizable.style.width = `${px}px`;
+  resizableImg.sizes = `${px}px`; // update sizes so browser can pick new srcset candidate
+  resizableLabel.textContent = `${px}px`;
   slider.value = px;
   number.value = px;
 }
 
-slider.addEventListener("input", () => setSize(parseInt(slider.value)));
-number.addEventListener("input", () => setSize(parseInt(number.value)));
+slider.addEventListener("input", () => setSize(slider.valueAsNumber));
+number.addEventListener("input", () => setSize(number.valueAsNumber));
 
 // Logging
 const images = document.querySelectorAll(".img-square img");
@@ -501,7 +501,7 @@ break50.addEventListener(
 The page is best {{LiveSampleLink('Blog example', 'viewed in its own window')}}, so you can adjust the sizes fully, and the example is not constrained by its containing frame.
 
 1. Enable the developer tools and change the width of the page — you should see the image change (and jump in size) at the sizes media query break points: `640px` (`40em`), and `800px` (`50em`).
-2. Set the width between `50em` `(800px)` and `60em` (960px`) so that the last media query is selected.
+2. Set the width between `50em` `(800px)` and `60em` (`960px`) so that the last media query is selected.
    Then alternately press each of the buttons and note how the layout size of the image is changed.
 
 {{EmbedLiveSample("Blog example", "", 1050)}}

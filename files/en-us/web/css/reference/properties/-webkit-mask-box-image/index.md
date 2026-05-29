@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-box-image
+title: "`-webkit-mask-box-image` CSS property"
+short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 page-type: css-shorthand-property
 status:

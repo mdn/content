@@ -1,5 +1,6 @@
 ---
-title: background-repeat-y
+title: "`background-repeat-y` CSS property"
+short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 page-type: css-property
 status:
@@ -166,8 +167,8 @@ div {
       content: "Your browser doesn't support the `background-repeat-y` property.";
       background-color: wheat;
       display: block;
-      padding: 1em;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }

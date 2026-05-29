@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior
+title: "`overscroll-behavior` CSS property"
+short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
 page-type: css-shorthand-property
 browser-compat: css.properties.overscroll-behavior

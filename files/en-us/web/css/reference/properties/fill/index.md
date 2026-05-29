@@ -1,5 +1,6 @@
 ---
-title: fill
+title: "`fill` CSS property"
+short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 page-type: css-property
 browser-compat: css.properties.fill

@@ -1,18 +1,13 @@
 ---
-title: Firefox 150 release notes for developers (Beta)
-short-title: Firefox 150 (Beta)
+title: Firefox 150 release notes for developers
+short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 150 that affect developers.
-Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 150 was released on [April 21, 2026](https://whattrainisitnow.com/release/?version=150).
 
 ## Changes for web developers
 
@@ -20,25 +15,14 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - A specific message is now displayed in the [_Response tab_ of the Network pane](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) to indicate why there is no response data when a request has been redirected.
   ([Firefox bug 2016679](https://bugzil.la/2016679)).
+- A new "Element-specific pseudo-classes" section has been added to the [pseudo-class toggle pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes), including a toggle for the {{cssxref(":open")}} pseudo-class, which is only available for elements that have an open state like `<dialog>` elements. The existing toggle for the {{cssxref(":visited")}} pseudo-class was also moved there, as it only applies to `<a>` and `<area>` elements. ([Firefox bug 2014442](https://bugzil.la/2014442)).
 
 ### HTML
 
 - The `"auto"` keyword is now supported as an option for the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute of `<img>` elements (and [`HTMLImageElement.sizes`](/en-US/docs/Web/API/HTMLImageElement/sizes)).
   This allows lazy-loaded `<img>` elements to use the calculated image layout size, after any CSS has been applied, to select which image to display from a [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset).
-  This is simpler that specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
+  This is simpler than specifying media conditions and their associated sizes in the attribute, which likely duplicates behavior that is already captured in CSS media queries.
   ([Firefox bug 1819581](https://bugzil.la/1819581)).
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -49,27 +33,13 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The media-based pseudo-classes {{cssxref(":buffering")}}, {{cssxref(":muted")}}, {{cssxref(":paused")}}, {{cssxref(":playing")}}, {{cssxref(":seeking")}}, {{cssxref(":stalled")}}, and {{cssxref(":volume-locked")}} are now supported. They allow you to style {{htmlelement("audio")}} and {{htmlelement("video")}} elements based on their current state, such as playing or paused. ([Firefox bug 2020775](https://bugzil.la/2020775)).
 
-- The {{cssxref("animation-range-start")}} and {{cssxref("animation-range-end")}} properties (and the {{cssxref("animation-range")}} shorthand property) are now supported. These properties set the start and end of an animation's attachment range along its timeline, allowing you to control where along a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) timeline an animation will start and end. ([Firefox bug 1825427](https://bugzil.la/1825427)).
-
 - The {{cssxref("revert-rule")}} CSS keyword is now supported. It allows a property's value to be determined as if the current style rule had not been present, so that the value from another matching rule can take effect instead. ([Firefox bug 2017307](https://bugzil.la/2017307)).
 
 - The {{cssxref("overscroll-behavior")}} CSS property (and its longhand properties {{cssxref("overscroll-behavior-x")}}, {{cssxref("overscroll-behavior-y")}}, {{cssxref("overscroll-behavior-block")}}, and {{cssxref("overscroll-behavior-inline")}}) now correctly apply to scroll containers that have no scrollable overflow, such as elements with `overflow: hidden`. Previously, the property was ignored on such elements. ([Firefox bug 1837436](https://bugzil.la/1837436)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -90,13 +60,14 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This queues a string of text to be announced by a {{glossary("screen reader")}}, providing a more ergonomic and reliable alternative to [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([Firefox bug 2018095](https://bugzil.la/2018095)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
+- {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now supported, allowing reporting of SDP parse errors.
+  ([Firefox bug 1814459](https://bugzil.la/1814459)).
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} and [`RTCPeerConnection.icecandidateerror` event](/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event) are now supported.
+  ([Firefox bug 1561441](https://bugzil.la/1561441)).
+- {{domxref("RTCIceTransport.role")}} is now supported.
+  ([Firefox bug 2018843](https://bugzil.la/2018843)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -122,11 +93,8 @@ Firefox 150 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The behavior of {{WebExtAPIRef("tabs.move")}} is updated for split views so that:
   - The order of tabs in a split view can be swapped. ([Firefox bug 2016762](https://bugzil.la/2016762))
   - When the list of tabs includes both split view tabs and places one or more tabs between them, the tabs are moved apart and the split view closed. ([Firefox bug 2022549](https://bugzil.la/2022549))
+- Extension documents can now use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) and assert a [Relying Party ID (RP ID)](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#rp) for any domain covered by the extension's [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions). This change means that {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} and {{domxref("CredentialsContainer.create()", "navigator.credentials.get()")}} can specify an RP ID matching a host-permitted domain, enabling extensions to create and retrieve WebAuthn credentials on behalf of web services. See [Use Web Authn API in web extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api) for details. ([Firefox bug 1956484](https://bugzil.la/1956484)).
 - Resolved an issue with some JavaScript [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) calls failing to import CSS. ([Firefox bug 2016369](https://bugzil.la/2016369))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
@@ -137,6 +105,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Namespaced attributes in `attr()` CSS function**: `layout.css.attr.enabled`
 
   The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060))
+
+- **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
+
+  The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This has been updated to support the nesting of `style()` queries. ([Firefox bug 2014098](https://bugzil.la/2014098)).
 
 - **Absolutely positioned elements in multi-column containers and when printing**: `layout.abspos.fragmentainer-aware-positioning.enabled`
 

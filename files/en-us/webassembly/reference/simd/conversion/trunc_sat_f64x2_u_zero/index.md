@@ -7,9 +7,7 @@ browser-compat: webassembly.simd.trunc_sat_f64x2_u_zero
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_sat_f64x2_u_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a saturating conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `f64x2` value interpretation into an unsigned `i32x4` value interpretation. The two higher lanes of the result are initialized to zero.
-
-If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0`. If the rounded integer value of a lane is outside the range of the destination type, the result is saturated to the nearest representable integer value.
+The **`trunc_sat_f64x2_u_zero`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of the lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `f64x2` value interpretation into an unsigned `i32x4` value interpretation, clamping the output to the range allowed by the value type. The two higher lanes of the result are initialized to zero.
 
 {{InteractiveExample("Wat Demo: trunc_sat_f64x2_u_zero", "tabbed-taller")}}
 
@@ -31,6 +29,8 @@ If any input lane is a {{jsxref("NaN")}}, the resulting output lane is set to `0
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
+Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation. Allowed output values are `0` to `4,294,967,295` (the full range of an unsigned 32-bit integer). {{jsxref("NaN")}} values are converted to `0`.
+
 ## Syntax
 
 ```plain
@@ -38,7 +38,7 @@ value_type.trunc_sat_f64x2_u_zero
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `trunc_sat_f64x2_u_zero`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `trunc_sat_f64x2_u_zero`:
     - `i32x4`
 - `trunc_sat_f64x2_u_zero`
   - : The `trunc_sat_f64x2_u_zero` instruction. Must always be included after the `value_type` and a period (`.`).

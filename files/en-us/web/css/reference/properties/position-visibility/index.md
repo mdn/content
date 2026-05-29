@@ -1,5 +1,6 @@
 ---
-title: position-visibility
+title: "`position-visibility` CSS property"
+short-title: position-visibility
 slug: Web/CSS/Reference/Properties/position-visibility
 page-type: css-property
 browser-compat: css.properties.position-visibility

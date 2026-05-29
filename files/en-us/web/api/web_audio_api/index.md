@@ -13,7 +13,7 @@ The Web Audio API provides a powerful and versatile system for controlling audio
 
 The Web Audio API involves handling audio operations inside an **audio context**, and has been designed to allow **modular routing**. Basic audio operations are performed with **audio nodes**, which are linked together to form an **audio routing graph**. Several sources — with different types of channel layout — are supported even within a single context. This modular design provides the flexibility to create complex audio functions with dynamic effects.
 
-Audio nodes are linked into chains and simple webs by their inputs and outputs. They typically start with one or more sources. Sources provide arrays of sound intensities (samples) at very small timeslices, often tens of thousands of them per second. These could be either computed mathematically (such as {{domxref("OscillatorNode")}}), or they can be recordings from sound/video files (like {{domxref("AudioBufferSourceNode")}} and {{domxref("MediaElementAudioSourceNode")}}) and audio streams ({{domxref("MediaStreamAudioSourceNode")}}). In fact, sound files are just recordings of sound intensities themselves, which come in from microphones or electric instruments, and get mixed down into a single, complicated wave.
+Audio nodes are linked into chains and simple webs by their inputs and outputs. They typically start with one or more sources. Sources provide arrays of samples — measurements of the audio signal's amplitude at successive moments in time — often tens of thousands per second. These could be either computed mathematically (such as {{domxref("OscillatorNode")}}), or they can be recordings from sound/video files (like {{domxref("AudioBufferSourceNode")}} and {{domxref("MediaElementAudioSourceNode")}}) and audio streams ({{domxref("MediaStreamAudioSourceNode")}}). In fact, sound files are just recordings of sound intensities themselves, which come in from microphones or electric instruments, and get mixed down into a single, complicated wave.
 
 Outputs of these nodes could be linked to inputs of others, which mix or modify these streams of sound samples into different streams. A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with {{domxref("GainNode")}}). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination ({{domxref("BaseAudioContext.destination")}}), which sends the sound to the speakers or headphones. This last connection is only necessary if the user is supposed to hear the audio.
 
@@ -80,7 +80,7 @@ Interfaces that define audio sources for use in the Web Audio API.
 - {{domxref("AudioScheduledSourceNode")}}
   - : The **`AudioScheduledSourceNode`** is a parent interface for several types of audio source node interfaces. It is an {{domxref("AudioNode")}}.
 - {{domxref("OscillatorNode")}}
-  - : The **`OscillatorNode`** interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _frequency_ of wave to be created.
+  - : The **`OscillatorNode`** interface represents a periodic waveform, which can be sine, square, sawtooth, triangle, or custom. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _frequency_ of wave to be created.
 - {{domxref("AudioBuffer")}}
   - : The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext.decodeAudioData") }} method, or created with raw data using {{ domxref("BaseAudioContext.createBuffer") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}
@@ -124,10 +124,12 @@ Once you are done processing your audio, these interfaces define where to output
 
 ### Data analysis and visualization
 
-If you want to extract time, frequency, and other data from your audio, the `AnalyserNode` is what you need.
+Interfaces for extracting audio graph statistics, for the purposes of data analysis and visualization.
 
 - {{domxref("AnalyserNode")}}
-  - : The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information, for the purposes of data analysis and visualization.
+  - : Represents a node able to provide real-time frequency and time-domain analysis information.
+- {{domxref("AudioPlaybackStats")}}
+  - : Provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow you to measure audio delay and glitches.
 
 ### Splitting and merging audio channels
 

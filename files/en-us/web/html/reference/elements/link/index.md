@@ -1,5 +1,6 @@
 ---
-title: "<link>: The External Resource Link element"
+title: "`<link>` HTML external resource link element"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
@@ -93,25 +94,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <table class="standard-table">
       <thead>
         <tr>
-          <th scope="col">Value</th>
+          <th scope="col"><code>As</code> value</th>
+          <th scope="col"><code>Rel</code> value</th>
           <th scope="col">Applies To</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>audio</td>
-          <td><code>&#x3C;audio></code> elements</td>
-        </tr>
-        <tr>
-          <td>document</td>
-          <td><code>&#x3C;iframe></code> and <code>&#x3C;frame></code> elements</td>
-        </tr>
-        <tr>
-          <td>embed</td>
-          <td><code>&#x3C;embed></code> elements</td>
+          <td>audioworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a> modules</td>
         </tr>
         <tr>
           <td>fetch</td>
+          <td>preload</td>
           <td>
             <p>fetch, XHR</p>
             <div class="notecard note">
@@ -124,6 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>font</td>
+          <td>preload</td>
           <td>
             <p>CSS @font-face</p>
             <div class="notecard note">
@@ -136,6 +133,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>image</td>
+          <td>preload</td>
           <td>
             <code>&#x3C;img></code> and <code>&#x3C;picture></code> elements with
             srcset or imageset attributes, SVG <code>&#x3C;image></code> elements,
@@ -144,38 +142,55 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>json</td>
+          <td>modulepreload</td>
           <td>
-            <code>modulepreload</code> destinations.
+            Supplementary JSON file
           </td>
         </tr>
         <tr>
-          <td>object</td>
-          <td><code>&#x3C;object></code> elements</td>
+          <td>paintworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a> modules</td>
         </tr>
         <tr>
           <td>script</td>
+          <td>preload or modulepreload</td>
           <td>
             <code>&#x3C;script></code> elements, Worker <code>importScripts</code>, and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
+          <td>serviceworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a> modules</td>
+        </tr>
+        <tr>
+          <td>sharedworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></td>
+        </tr>
+        <tr>
           <td>style</td>
+          <td>preload or modulepreload</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
             <code>@import</code> and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
-          <td>track</td>
-          <td><code>&#x3C;track></code> elements</td>
+          <td>text</td>
+          <td>modulepreload</td>
+          <td>Supplementary plain text file</td>
         </tr>
         <tr>
-          <td>video</td>
-          <td><code>&#x3C;video></code> elements</td>
+          <td>track</td>
+          <td>preload</td>
+          <td><code>&#x3C;track></code> elements (<a href="/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">WebVTT</a>, MIME type <code>text/vtt</code>)</td>
         </tr>
         <tr>
           <td>worker</td>
-          <td>Worker, SharedWorker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/Worker">Worker</a> modules</td>
         </tr>
       </tbody>
     </table>

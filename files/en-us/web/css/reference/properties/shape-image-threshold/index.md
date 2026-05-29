@@ -1,5 +1,6 @@
 ---
-title: shape-image-threshold
+title: "`shape-image-threshold` CSS property"
+short-title: shape-image-threshold
 slug: Web/CSS/Reference/Properties/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold

@@ -1,5 +1,6 @@
 ---
-title: -moz-orient
+title: "`-moz-orient` CSS property"
+short-title: -moz-orient
 slug: Web/CSS/Reference/Properties/-moz-orient
 page-type: css-property
 status:

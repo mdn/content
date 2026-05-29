@@ -1,5 +1,6 @@
 ---
-title: "<video>: The Video Embed element"
+title: "`<video>` HTML video embed element"
+short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 page-type: html-element
 browser-compat: html.elements.video

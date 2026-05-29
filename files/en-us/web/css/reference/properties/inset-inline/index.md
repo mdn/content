@@ -1,5 +1,6 @@
 ---
-title: inset-inline
+title: "`inset-inline` CSS property"
+short-title: inset-inline
 slug: Web/CSS/Reference/Properties/inset-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-inline
