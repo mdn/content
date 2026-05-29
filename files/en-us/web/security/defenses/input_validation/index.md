@@ -13,7 +13,7 @@ Users typically provide input using {{htmlelement("input")}} elements in a {{htm
 
 If the input provided by the user doesn't have the form or content that the server expects — for example, if they enter an invalid email address — this can cause the site to malfunction. Catching problems like this as early as possible improves the user's experience.
 
-However, aside from innocent errors by the user, supplying unexpected input enables a malicious actor to attempt various security attacks, including cross-site scripting (XSS), SQL injection, and command injection. In these situations, the attacker deliberately crafts some input that will enable an attack, and passes it to the application. The attacker might completely bypasses the website's front-end, providing the malicious input directly in an HTTP request. Although input validation is not usually a complete solution to these security threats, it's an important first line of defense.
+However, aside from innocent errors by the user, supplying unexpected input enables a malicious actor to attempt various security attacks, including cross-site scripting (XSS), SQL injection, and command injection. In these situations, the attacker deliberately crafts some input that will enable an attack, and passes it to the application. The attacker might completely bypass the website's front-end, providing the malicious input directly in an HTTP request. Although input validation is not usually a complete solution to these security threats, it's an important first line of defense.
 
 ## Validation guidelines
 
@@ -52,7 +52,9 @@ We can distinguish two types of input validation:
 - _syntactic validation_, which checks that input is in the correct format. For example, if the application expects a number, it is receiving a number.
 - _semantic validation_, which checks that the content of the input is within expected bounds. For example, a number that should be within a specific range, or a string value that should exactly match one of a set of values.
 
-Applications typically implement syntactic validation using type-checking features of the programming languages that they use. To implement semantic validation, they can use various methods including range checking, checking a value against a set of allowed values, or, for more complex cases, regular expressions.
+Applications typically implement syntactic validation using type-checking features of the programming languages that they use.
+
+To implement semantic validation, they can use various methods including range checking, checking a value against a set of allowed values, or, for more complex cases, regular expressions.
 
 Note that regular expressions can be hard to get right, and can make an application vulnerable to [denial of service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS) in some cases. For this reason, it's usually better to use well-regarded third party libraries here. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
 
@@ -106,7 +108,7 @@ In this section we'll outline a few practices to help defend against these threa
 
 - Filenames are also user input, so they need to be validated. If possible, generate your own name for files you save. If you have to use the names provided by users, be highly restrictive in the characters that users may choose, and validate names against this.
 
-- Determine which file types you need to support, and allow only these types, based on the file extension. Be especially wary of web-executable file types such as HTML or JavaScript. Since checking file extensions involves processing the filesnames provided by users, be sure to validate filenames first.
+- Determine which file types you need to support, and allow only these types, based on the file extension. Be especially wary of web-executable file types such as HTML or JavaScript. Since checking file extensions involves processing the filenames provided by users, be sure to validate filenames first.
 
 - Restrict the size of files that can be uploaded.
 
