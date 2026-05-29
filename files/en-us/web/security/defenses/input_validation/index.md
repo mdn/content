@@ -132,7 +132,7 @@ Instead, applications should use defenses that are specific to these attacks:
 
 - [Cross-site scripting (XSS) defenses](/en-US/docs/Web/Security/Attacks/XSS).
 
-- [SQL injection defenses ](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html).
+- [SQL injection defenses](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html).
 
 - [Command injection defenses](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html).
 
