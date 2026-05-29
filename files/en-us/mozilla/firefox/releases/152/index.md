@@ -130,6 +130,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Text module import**: `javascript.options.experimental.import_text`
 
-  The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) is now supported for importing a text module into a string value.
-  This can be used to ensure that a module served with the media type of `text/plain` is imported as text, even if it contains JavaScript or some other format.
+  The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+  The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
   ([Firefox bug 2024854](https://bugzil.la/2024854)).
