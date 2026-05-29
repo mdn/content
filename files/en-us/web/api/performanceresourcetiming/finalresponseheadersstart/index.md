@@ -16,6 +16,8 @@ When there are no interim responses, `requestStart` is the same as `finalRespons
 
 There is no _end_ property for `finalResponseHeadersStart`.
 
+## Value
+
 The `finalResponseHeadersStart` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first bytes of the final response from the server.
