@@ -47,7 +47,7 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 
 ### Targeting an overlay's contents
 
-In this example, we use the `:xr-overlay` selector to style the {{htmlelement("button")}} elements within a XR DOM overlay.
+In this example, we use the `:xr-overlay` selector to style the {{htmlelement("button")}} elements within an XR DOM overlay.
 
 ```css
 :xr-overlay button {
