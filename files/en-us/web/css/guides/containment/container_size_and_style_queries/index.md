@@ -78,7 +78,7 @@ A `<container-condition>` can include an optional case-sensitive {{cssxref("cont
 The {{cssxref("container-name")}} property specifies a list of query `<container-name>` values that can be used in `@container` rules to target specific query containers; these are case-sensitive {{cssxref("ident")}} values. Without a `<container-name>`, the query matches only the nearest container ancestor, and without a `<container-query>`, the query will match elements with the specified `container-name` set on them (see [Name-only container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries)).
 
 ```css
-@container [ <container-name>? <container-query>? ]! {
+@container [ <container-name>? <container-query>? ]!# {
   /* <stylesheet> */
 }
 ```
