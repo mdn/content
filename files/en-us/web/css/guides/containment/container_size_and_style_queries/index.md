@@ -115,7 +115,7 @@ In the above example, the styles within the container query block will apply to 
 
 In the above example, the element has two container names, `wide` and `narrow`. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied.
 
-The default value `container-type: normal` prevents the container from being a size container, but it can still be a [style container](#container_style_queries), and it can still be targetted by a [name-only container query](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries). The default value `container-name: none` states the container has no name, but it does not prevent the element from matching unnamed queries.
+The default value `container-type: normal` prevents the container from being a size container, but it can still be a [style container](#container_style_queries), and it can still be targeted by a [name-only container query](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries). The default value `container-name: none` states the container has no name, but it does not prevent the element from matching unnamed queries.
 
 ## Container style queries
 

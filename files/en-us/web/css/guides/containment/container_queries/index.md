@@ -105,7 +105,7 @@ More information on naming containment contexts is available on the {{cssxref("c
 
 ## Name-only container queries
 
-It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existance of that name in the associated `@container` at-rule. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have a specific `container-name` set.
+It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have a specific `container-name` set.
 
 For example, consider the following HTML:
 
