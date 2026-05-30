@@ -31,7 +31,7 @@ new XRVisibilityMaskChangeEvent(type, options)
     - `session`
       - : The {{domxref("XRSession")}} to which the event belongs.
     - `vertices`
-      - : A {{domxref("Float32Array")}} of coordinates representing the set of possible coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
+      - : A {{domxref("Float32Array")}} of coordinates representing the set of possible coordinate values that may be used in a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ### Return value
 
