@@ -320,6 +320,8 @@ const cacheFirst = async ({
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
+    // Keep the navigation preload request alive even if we do not use its response.
+    event.waitUntil(preloadResponsePromise.catch(() => undefined));
     return responseFromCache;
   }
 
