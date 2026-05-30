@@ -8,7 +8,7 @@ browser-compat: api.XRVisibilityMaskChangeEvent.vertices
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
-The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array representing the coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
+The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array representing all the coordinate values that may be used in the visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Value
 
