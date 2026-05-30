@@ -31,7 +31,7 @@ _In addition to properties inherited from its parent interface, {{domxref("Event
 - {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which the event belongs.
 - {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}}
-  - : An array representing the coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
+  - : An array representing the set of possible coordinate values of a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Instance methods
 
