@@ -423,24 +423,36 @@ That's why the `color-black` is inside a nested declaration even though it is a 
 > Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
 > Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) may parse nested rules in the wrong order.
 
-## Concatenation (is not possible)
+## Concatenation is not possible
 
-In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
+In CSS preprocessors such as [Sass](https://sass-lang.com/), the nesting selector (`&`) can _concatenate_ — it joins the parent selector and the nested text into a single new class name. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/), where `&__child-element` compiles to a `.component__child-element` class:
 
-```css example-bad
+```css
+/* the following Sass rule... */
 .component {
   &__child-element {
   }
 }
-/* In Sass this becomes */
+
+/* ...compiles to this CSS class */
 .component__child-element {
 }
 ```
 
-> [!WARNING]
-> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors). Allowing concatenation would break this.
+CSS nesting does not concatenate in this way. The `&` nesting selector is one element of a [compound selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) — it is not joined to the text that follows it. The browser reads `&__child-element` as the nesting selector followed by a separate `__child-element` [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors):
 
-In [compound selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
+```css example-bad
+.component {
+  &__child-element {
+    /* this nested rule is invalid, so the browser ignores it */
+  }
+}
+```
+
+> [!WARNING]
+> In a compound selector, the type selector must come first. `&__child-element` places the `__child-element` type selector after the nesting selector, which is invalid — so the browser discards the nested rule. The surrounding `.component` rule is unaffected.
+
+To attach a compound selector to the parent, write the type selector first, followed by `&`. Writing `&Element` is invalid, so the selector must be written as `Element&`:
 
 ```css example-good
 .my-class {
