@@ -34,6 +34,8 @@ The first element produced by the iterator that satisfies the provided testing f
 
 The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators. With infinite iterators, `find()` returns the first satisfying element as soon as it is found. If the `callbackFn` always returns a falsy value, the method never returns.
 
+Calling `find()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
+
 ## Examples
 
 ### Using find()
@@ -56,7 +58,7 @@ console.log(fibonacci().take(10).find(isNegative)); // undefined
 console.log(fibonacci().find(isNegative)); // Never completes
 ```
 
-Calling `find()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
+The method closes the iterator after returning.
 
 ```js
 const seq = fibonacci();

@@ -95,4 +95,10 @@ While routing is traditionally handled by a server and not an application on the
 > [!NOTE]
 > Client-side routing can make your application feel fast, but it poses a number of accessibility problems, especially for people who rely on assistive technology. You can read more about this in Marcy Sutton's article, ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing).
 
+## Summary
+
+That's it for JavaScript frameworks. We hope this module has given you a good idea of why frameworks exist and how to use them.
+
+In the next module, we'll focus on [web accessibility](/en-US/docs/Learn_web_development/Core/Accessibility).
+
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
