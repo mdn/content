@@ -16,7 +16,7 @@ A {{domxref("Float32Array")}}.
 
 ## Description
 
-Each pair of values available in the `vertices` array represents the `x` and `y` coordinate values of a point on a flat mask in clip space. In each case, the `z` coordinate value is implied to be a constant value, `-1`. So for example, a simple square mask might be represented by the following array:
+Each pair of values available in the `vertices` array represents the `x` and `y` coordinate values of a point on a flat mask in clip space. So for example, a simple square mask might be represented by the following array:
 
 ```plain
 [0, 0, 0, 1, 1, 1, 1, 0]
