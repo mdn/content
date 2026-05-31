@@ -81,6 +81,9 @@ Size containers additionally have size containment applied to them — this turn
 
 The container size has to be set by context, such as block-level elements that stretch to the full width of their parent, or explicitly defined. If a contextual or explicit size is not available, elements with size containment will collapse.
 
+> [!NOTE]
+> Size containers can be sized using [container query length units](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units).
+
 ### Container scroll-state queries
 
 [Container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as:

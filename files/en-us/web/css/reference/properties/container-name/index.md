@@ -31,7 +31,7 @@ container-name: unset;
 ### Values
 
 - `none`
-  - : Default value. The query container has no name.
+  - : The default value. The query container has no name.
 
 - {{cssxref("custom-ident")}}
   - : A case-sensitive string that is used to identify the container.
@@ -51,11 +51,14 @@ container-name: unset;
 
 ## Description
 
-With no name specified, a container query will apply styles to elements based on attributes such as the [size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
+With no name specified, a container query will apply styles to elements based on attributes such as the [size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
+
+> [!NOTE]
+> Size containers can be sized using [container query length units](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units).
 
 When a containment context is given a name, it can be specifically targeted by setting that name on a {{Cssxref("@container")}} at-rule.
 
-It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule, with no query expression specified. These so-called **name-only container queries** enable selectively applying styles to elements based only on whether they have a specific `container-name` set.
+It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule, with no query expression specified. These so-called [**name-only container queries**](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries) enable selectively applying styles to elements based only on whether they have a specific `container-name` set.
 
 ## Examples
 
@@ -167,15 +170,15 @@ We assign a name to the container:
 }
 ```
 
-We can then selectively apply styles only to elements inside containers with that name set, as shown in the next snippet. This also enables using [container query length units](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units) in those styles:
+We can then selectively apply styles only to elements inside containers with that name set, as shown in the next snippet.
 
 ```css live-sample_name-only
 @container my-container {
   p {
     background-color: lime;
-    font-size: 3cqw;
-    width: 50cqw;
-    padding: 2cqw;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
     font-family: sans-serif;
   }
 }

@@ -8,7 +8,7 @@ sidebar: cssref
 
 Container queries enable you to apply styles to an element based on certain attributes of its container:
 
-- The container's {{cssxref("container-name")}}.
+- The {{cssxref("container-name")}}.
 - The container's size.
 - Styles applied to the container.
 - The container's scroll-state or that of its scrolling ancestor.
@@ -22,7 +22,7 @@ This article provides an introduction to using container queries, specifically f
 
 ## Using container size queries
 
-While container queries apply styles based on the container name or type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+While container queries apply styles based on the container name or type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts) on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
@@ -34,7 +34,7 @@ These values have the following effects:
   - : The query will be based on the [inline](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
     Applies layout, style, and inline-size containment to the element.
 - `normal`
-  - : The element is not a query container for any container size queries, but can still be used as a query container for [name-only container queries](#name-only_container_queries) or container style queries.
+  - : The default value. The element is not a query container for any container size queries, but can still be used as a query container for [name-only container queries](#name-only_container_queries) or container style queries.
 
 Consider the following example of a card component for a blog post with a title and some text:
 
@@ -105,7 +105,7 @@ More information on naming containment contexts is available on the {{cssxref("c
 
 ## Name-only container queries
 
-It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have a specific `container-name` set.
+As well as using a {{cssxref("container-name")}} along with a [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query), you can query a container using just its name. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have a specific `container-name` set.
 
 For example, consider the following HTML:
 
@@ -125,15 +125,15 @@ If we assign a name to the container:
 }
 ```
 
-We can then selectively apply styles only to elements inside that container, which can include [Container query length units](#container_query_length_units):
+We can then selectively apply styles only to elements inside that container:
 
 ```css
 @container my-container {
   p {
     background-color: lime;
-    font-size: 1.5cqw;
-    width: 50cqw;
-    padding: 2cqw;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
     font-family: sans-serif;
   }
 }
@@ -155,7 +155,7 @@ For more information on this property, see the {{Cssxref("container")}} referenc
 
 ## Container query length units
 
-When applying styles to a container using container queries, you can use container query length units.
+When applying styles to a container using size container queries (that is, the {{cssxref("container-type")}} is set to `size` or `inline-size`), you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
