@@ -304,6 +304,20 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
+### Customizable select elements
+
+The {{cssxref("appearance")}} CSS property supports the `base-select` value for {{htmlelement("select")}} elements and their {{cssxref("::picker()", "::picker(select)")}} pickers. This allows select controls and their pickers to be styled as [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select). ([Firefox bug 1974787](https://bugzil.la/1974787)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `layout.css.appearance-base-select.enabled`
+  - : Set to `true` to enable.
+
 ### Namespaced attributes in `attr()` CSS function
 
 The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060).
