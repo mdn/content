@@ -105,7 +105,7 @@ More information on naming containment contexts is available on the {{cssxref("c
 
 ## Name-only container queries
 
-As well as using a {{cssxref("container-name")}} along with a [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query), you can query a container using just its name. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have a specific `container-name` set.
+As well as using a {{cssxref("container-name")}} along with a [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query), you can query a container using just its name. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have an ancestor with a specific `container-name` set.
 
 For example, consider the following HTML:
 
@@ -155,7 +155,7 @@ For more information on this property, see the {{Cssxref("container")}} referenc
 
 ## Container query length units
 
-When applying styles to a container using size container queries (that is, the {{cssxref("container-type")}} is set to `size` or `inline-size`), you can use container query length units.
+When applying styles to the descendants of a container using size container queries (that is, its {{cssxref("container-type")}} is set to `size` or `inline-size`), you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
