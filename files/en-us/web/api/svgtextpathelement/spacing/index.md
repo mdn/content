@@ -8,7 +8,8 @@ browser-compat: api.SVGTextPathElement.spacing
 
 {{APIRef("SVG")}}
 
-The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the [`TEXTPATH_SPACINGTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#static_properties) defined on this interface.
+The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element.
+Possible values are defined by the [`TEXTPATH_SPACINGTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#static_properties) constants defined on this interface.
 
 ## Value
 
@@ -49,4 +50,5 @@ console.log(textPath.spacing.baseVal); // Output: 1 (TEXTPATH_SPACINGTYPE_AUTO)
 ## See also
 
 - {{domxref("SVGTextPathElement.method")}}
+- {{domxref("SVGTextPathElement.side")}}
 - [`SVGTextPathElement` spacing types](/en-US/docs/Web/API/SVGTextPathElement#static_properties)
