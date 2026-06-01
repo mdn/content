@@ -65,7 +65,7 @@ elem name declare value_type element_list
 - `offset` {{optional_inline}}
   - : An integer representing the offset at which to start placing the elements into the `table`. This is written as a Wasm [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) value (for example `(i32.const 0)`), and is only included if the `table_index` is written in `(table num)` form.
 - `declare` {{optional_inline}}
-  - : A keyword that identifies the `elem` definition as being of the declaration form, meaning that it identifies function references that may have already been taken.
+  - : A keyword that identifies the `elem` definition as being of the declarative form, meaning that it identifies function references so they can be referenced later on, with them being inserted in a `table`.
 - `value_type` {{optional_inline}}
   - : A value type that defines which type of reference will be stored in this table. All references in the `element_list` must match this type. The value can be:
     - `func`: Function names, for example `$my_func`.
@@ -86,7 +86,7 @@ Wasm `elem` definitions define a series of function references that can be copie
 
 - [Active form](#active_form)
 - [Passive form](#passive_form)
-- [Declaration form](#declaration_form)
+- [Declarative form](#declarative_form)
 
 ### Active form
 
@@ -142,7 +142,27 @@ We can then call `table.init`, referencing the `elem` `name`, to copy those func
 
 You can see a full working example at [Passive `elem` example](#passive_elem_example).
 
-### Declaration form
+### Declarative form
+
+The declarative form of `elem` is needed when you want to use `ref.func` in your code without putting the function into a table. It allows you to create a reference to that function that can be referenced via `ref.func`:
+
+```wat
+(module
+  Create a reference to the $add function
+  (elem declare func $add)
+
+  (func $add (param i32 i32) (result i32)
+    local.get 0
+    local.get 1
+    i32.add
+  )
+
+  (func (export "getRef") (result funcref)
+    ;; only valid because of the declarative elem above
+    ref.func $add
+  )
+)
+```
 
 ## Examples
 
