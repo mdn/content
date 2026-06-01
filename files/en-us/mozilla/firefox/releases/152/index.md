@@ -32,7 +32,11 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- The {{domxref("SVGTextPathElement.side")}} read-only property is now supported, indicating whether text is drawn on the left or right hand side of a text path.
+  This reflects the corresponding [`path`](/en-US/docs/Web/SVG/Reference/Attribute/path) attribute on the [`<textPath>`](/en-US/docs/Web/SVG/Reference/Element/textPath) element.
+  ([Firefox bug 2034371](https://bugzil.la/2034371)).
 
 <!-- #### Removals -->
 
