@@ -162,6 +162,16 @@ sidebar:
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Data
+        link: /WebAssembly/Reference/Data
+        title: Data
+        details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Elem
+        link: /WebAssembly/Reference/Elem
+        title: Elem
+        details: closed
       - link: /WebAssembly/Reference/Exception_handling
         title: Exception handling
         details: closed
