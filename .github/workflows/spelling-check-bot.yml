@@ -1,3 +1,4 @@
+```yaml
 name: Create an issue to report typos
 
 on:
@@ -6,71 +7,143 @@ on:
   workflow_dispatch:
 
 permissions:
-  # Create issue.
   issues: write
 
 jobs:
-  sync:
+  spellcheck:
     if: github.repository == 'mdn/content'
+
     runs-on: ubuntu-latest
+
+    timeout-minutes: 10
+
     permissions:
       issues: write
-    timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version-file: ".nvmrc"
           package-manager-cache: false
 
-      - name: Install
+      - name: Install dependencies
         run: npm ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run scripts
+      - name: Run typo checker
         id: check
+        shell: bash
         run: |
-          echo Running spelling check...
-          output=$(npm run --silent lint:typos-group-by-file || exit 0)
-          if [ -n "${output}" ]; then
-            output=$(node scripts/linkify-logs.js "${output}")
-            output=$(echo "$output" | sed 's/^/- /')
-            echo "Log size is ${#output} characters"
-            echo "$output"
+          echo "Running spelling check..."
 
-            # Trim output to avoid GraphQL 'Body is too long (maximum is 65536 characters)' error
+          output=$(npm run --silent lint:typos-group-by-file || true)
+
+          if [ -n "${output}" ]; then
+            echo "Typos detected"
+
+            # Convert logs into clickable GitHub links
+            output=$(node scripts/linkify-logs.js "${output}")
+
+            # Format output as markdown bullet list
+            output=$(echo "${output}" | sed 's/^/- /')
+
+            # Count typo entries
+            count=$(echo "${output}" | wc -l)
+
+            echo "Found ${count} typo entries"
+
+            # Save full report locally
+            echo "${output}" > typo-report.txt
+
+            echo "Log size is ${#output} characters"
+
+            # Prevent GraphQL body limit issues
             maxLength=64000
+
             if [ ${#output} -gt ${maxLength} ]; then
-              output=$(echo "$output" | head -c $maxLength)
-              output+=$'\n...\n\n> [!WARNING]\n> The report is too long to be posted in full. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
+              output=$(echo "${output}" | head -c ${maxLength})
+
+              output+=$'\n...\n\n> [!WARNING]\n'
+              output+='> The report is too long to display completely. '
+              output+='Please check the workflow artifacts or logs for the full report.'
             fi
 
-            echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
-            echo "$output" >> "$GITHUB_OUTPUT"
-            echo "EOF" >> "$GITHUB_OUTPUT"
+            {
+              echo "OUTPUT<<EOF"
+              echo "${output}"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+
+            {
+              echo "COUNT=${count}"
+            } >> "$GITHUB_OUTPUT"
+
           else
-            echo "No typos found! 🎉"
+            echo "No typos found 🎉"
           fi
 
-      - name: Report spellcheck errors
+      - name: Upload typo report artifact
         if: steps.check.outputs.OUTPUT != ''
-        run: |
-          issue=$(gh issue create --title "$TITLE" --label "$LABELS" --body "$BODY")
-          echo Issue URL ${issue}
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-typo-report
+          path: typo-report.txt
+
+      - name: Create or update typo issue
+        if: steps.check.outputs.OUTPUT != ''
+        shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TITLE: Weekly spelling check
           LABELS: reported by automation
+          TITLE: Weekly spelling check - $(date +'%Y-%m-%d')
           BODY: |
-            Typos and unknown words:
+            ## Weekly Spellcheck Report
+
+            Found typo entries: ${{ steps.check.outputs.COUNT }}
+
+            ### Typos and unknown words
 
             ${{ steps.check.outputs.OUTPUT }}
 
             > [!TIP]
-            > If the word is actually valid or it is required to be ignored, consider adding it to one of the dictionaries under [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries).
+            > If a word is valid and should not be flagged,
+            > consider adding it to one of the dictionaries under:
+            >
+            > `.vscode/dictionaries`
+
+        run: |
+          echo "Checking for existing open issue..."
+
+          existing_issue=$(gh issue list \
+            --label "${LABELS}" \
+            --state open \
+            --search "Weekly spelling check" \
+            --json number \
+            --jq '.[0].number')
+
+          if [ -n "${existing_issue}" ] && [ "${existing_issue}" != "null" ]; then
+            echo "Existing issue found: #${existing_issue}"
+
+            gh issue comment "${existing_issue}" \
+              --body "${BODY}"
+
+            echo "Updated existing issue"
+
+          else
+            echo "Creating new issue..."
+
+            new_issue=$(gh issue create \
+              --title "${TITLE}" \
+              --label "${LABELS}" \
+              --body "${BODY}")
+
+            echo "Created issue: ${new_issue}"
+          fi
+```
