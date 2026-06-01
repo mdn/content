@@ -36,7 +36,10 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements.
+([Firefox bug 2036620](https://bugzil.la/2036620)).
 
 <!-- #### Removals -->
 
