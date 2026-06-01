@@ -438,9 +438,9 @@ This includes all the instance methods on `Intl.Locale` that are prefixed with "
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 152           | No                  |
-| Developer Edition | NA            | -                   |
-| Beta              | NA            | -                   |
-| Release           | NA            | -                   |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
 
 - `javascript.options.experimental.intl_locale_info`
   - : Set to `true` to enable on Nightly.
