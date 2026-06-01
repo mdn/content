@@ -19,7 +19,7 @@ All interactive elements must have an accessible name. `aria-labelledby` can be 
 
 If there is no content that can be referenced to create an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute should be used instead.
 
-The purpose of `aria-labelledby` is the same as that of `aria-label`. It provides the user with a recognizable, accessible name for an interactive element. If an element has both attributes set, `aria-labelledby` will be used. `aria-labelledby` takes precedence over all other methods of providing an accessible name, including `aria-label`, {{HTMLElement('label')}}, and the element's inner text.
+The purpose of `aria-labelledby` is the same as that of `aria-label`. It provides the user with a recognizable, accessible name for an interactive element. If an element has both attributes set, `aria-labelledby` will be used. `aria-labelledby` also takes precedence over most other methods of providing an accessible name, such as {{HTMLElement('label')}}, and the element's inner text. Note that {{domxref("Element.ariaLabelledByElements")}} has the highest precedence for setting the ARIA label.
 
 The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attributes both reference other elements to calculate text alternatives. `aria-labelledby` should reference brief text that provides the element with an accessible name. `aria-describedby` is used to reference longer content that provides a description. If there is no element in the DOM that provides a brief label appropriate for an accessible name for an interactive element, use `aria-label` to define the accessible name for an interactive element.
 
@@ -37,7 +37,11 @@ The following example uses `aria-labelledby` to provide an accessible name for a
 <span id="tac">I agree to the Terms and Conditions.</span>
 ```
 
-Note that while using `aria-labelledby` is similar in this situation to using an HTML {{HTMLElement('label')}} element with the `for` attribute, there are some very important differences. The `aria-labelledby` attribute only defines the accessible name. It doesn't provide any of `<label>`'s other functionality, such as making clicking on the labeling element activate the input it is associated with. That has to be added back in with JavaScript.
+> [!NOTE]
+> {{htmlelement("span")}} elements have the [`generic` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) by default, and can't use `aria-labelledby` unless they also specify a role that can provide an accessible name.
+> Here we do that with `role="checkbox"`.
+
+While using `aria-labelledby` is similar in this situation to using an HTML {{HTMLElement('label')}} element with the `for` attribute, there are some very important differences. The `aria-labelledby` attribute only defines the accessible name. It doesn't provide any of `<label>`'s other functionality, such as making clicking on the labeling element activate the input it is associated with. That has to be added back in with JavaScript.
 
 Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with native `<label>`. When feasible, use the following:
 

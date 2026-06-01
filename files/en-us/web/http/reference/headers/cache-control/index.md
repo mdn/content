@@ -450,7 +450,7 @@ Note that this will not affect shared or intermediate caches.
 ## See also
 
 - [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)
-- [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
+- [Caching Tutorial for Web Authors and Webmasters](https://mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
 - [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)

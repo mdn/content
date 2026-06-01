@@ -1,5 +1,6 @@
 ---
-title: <system-color>
+title: "`<system-color>` CSS type"
+short-title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color

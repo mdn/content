@@ -18,4 +18,4 @@ Forks are often seen in free and open source software development. This is now a
 - Various "well-known" forks
   - [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
   - [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
-  - [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)
+  - [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/who-are-we/)

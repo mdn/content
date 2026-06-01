@@ -1,5 +1,6 @@
 ---
-title: corner-inline-start-shape
+title: "`corner-inline-start-shape` CSS property"
+short-title: corner-inline-start-shape
 slug: Web/CSS/Reference/Properties/corner-inline-start-shape
 page-type: css-property
 status:

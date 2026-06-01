@@ -46,7 +46,9 @@ sidebar:
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface
-        tags: webassembly-function
+        tags:
+          - webassembly-function
+          - unknown
         link: /WebAssembly/Reference/JavaScript_interface
         title: <code>WebAssembly</code>
         details: closed
@@ -111,11 +113,41 @@ sidebar:
         title: <code>WebAssembly.RuntimeError</code>
         details: closed
         code: true
-  - type: listSubPages
-    path: /WebAssembly/Reference/Definitions
-    link: /WebAssembly/Reference/Definitions
+  - link: /WebAssembly/Reference/Value_types
+    title: Value_types
+    details: closed
+    children:
+      - link: /WebAssembly/Reference/Value_types/i32
+        title: <code>i32</code>
+      - link: /WebAssembly/Reference/Value_types/i64
+        title: <code>i64</code>
+      - link: /WebAssembly/Reference/Value_types/f32
+        title: <code>f32</code>
+      - link: /WebAssembly/Reference/Value_types/f64
+        title: <code>f64</code>
+      - link: /WebAssembly/Reference/Value_types/v128
+        title: <code>v128</code>
+      - link: /WebAssembly/Reference/Value_types/funcref
+        title: <code>funcref</code>
+      - link: /WebAssembly/Reference/Value_types/exnref
+        title: <code>exnref</code>
+      - link: /WebAssembly/Reference/Value_types/externref
+        title: <code>externref</code>
+  - link: /WebAssembly/Reference/Definitions
     title: Definitions
     details: closed
+    children:
+      - title: Types
+        details: closed
+        children:
+          - link: /WebAssembly/Reference/Definitions/types/func
+            title: <code>func</code>
+      - link: /WebAssembly/Reference/Definitions/global
+        title: <code>global</code>
+      - link: /WebAssembly/Reference/Definitions/table
+        title: <code>table</code>
+      - link: /WebAssembly/Reference/Definitions/tag
+        title: <code>tag</code>
   - title: Instructions
     details: closed
     children:
@@ -124,6 +156,19 @@ sidebar:
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
+      - link: /WebAssembly/Reference/Exception_handling
+        title: Exception handling
+        details: closed
+        children:
+          - link: /WebAssembly/Reference/Exception_handling/throw
+            title: throw
+          - link: /WebAssembly/Reference/Exception_handling/throw_ref
+            title: throw_ref
+          - type: listSubPages
+            path: /WebAssembly/Reference/Exception_handling/try_table
+            link: /WebAssembly/Reference/Exception_handling/try_table
+            title: try_table
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Memory
         link: /WebAssembly/Reference/Memory
@@ -138,6 +183,11 @@ sidebar:
         title: SIMD
         details: closed
         children:
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/arithmetic
+            link: /WebAssembly/Reference/SIMD/arithmetic
+            title: Arithmetic
+            details: closed
           - type: listSubPages
             path: /WebAssembly/Reference/SIMD/bitwise
             link: /WebAssembly/Reference/SIMD/bitwise
@@ -154,9 +204,9 @@ sidebar:
             title: Extract
             details: closed
           - type: listSubPages
-            path: /WebAssembly/Reference/SIMD/load
-            link: /WebAssembly/Reference/SIMD/load
-            title: Load
+            path: /WebAssembly/Reference/SIMD/load_store
+            link: /WebAssembly/Reference/SIMD/load_store
+            title: Load and store
             details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Table
@@ -168,11 +218,6 @@ sidebar:
         link: /WebAssembly/Reference/Variables
         title: Variables
         details: closed
-  - type: listSubPages
-    path: /WebAssembly/Reference/Types
-    link: /WebAssembly/Reference/Types
-    title: Types
-    details: closed
 l10n:
   de:
     WebAssembly_concepts: WebAssembly-Konzepte
@@ -192,6 +237,8 @@ l10n:
     Compiling_WebAssembly: Compiling WebAssembly
     Language_guide: WebAssembly language
     API_guide: JavaScript API guide
+    Value_types: Value types
+    Types: Types
     Compiling_to_Wasm: Compiling a new C/C++ module to WebAssembly
     Existing_C_to_Wasm: Compiling an existing C module to WebAssembly
     Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly

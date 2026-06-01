@@ -1,5 +1,6 @@
 ---
-title: box-orient
+title: "`box-orient` CSS property"
+short-title: box-orient
 slug: Web/CSS/Reference/Properties/box-orient
 page-type: css-property
 status:

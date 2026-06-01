@@ -1,5 +1,6 @@
 ---
-title: <shape>
+title: "`<shape>` CSS type"
+short-title: <shape>
 slug: Web/CSS/Reference/Values/shape
 page-type: css-type
 status:

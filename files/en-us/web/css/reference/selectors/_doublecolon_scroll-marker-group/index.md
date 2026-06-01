@@ -1,5 +1,6 @@
 ---
-title: ::scroll-marker-group
+title: "`::scroll-marker-group` CSS pseudo-element"
+short-title: ::scroll-marker-group
 slug: Web/CSS/Reference/Selectors/::scroll-marker-group
 page-type: css-pseudo-element
 status:

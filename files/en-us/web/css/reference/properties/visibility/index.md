@@ -1,5 +1,6 @@
 ---
-title: visibility
+title: "`visibility` CSS property"
+short-title: visibility
 slug: Web/CSS/Reference/Properties/visibility
 page-type: css-property
 browser-compat: css.properties.visibility

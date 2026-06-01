@@ -9,7 +9,7 @@ By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_a
 
 This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used.
 
-<!--Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).-->
+Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 ## View progress timeline primer
 
@@ -162,11 +162,16 @@ body::before {
 
 @layer no-support {
   @supports not (animation-timeline: view()) {
-    body::before {
+    body::after {
       content: "Your browser doesn't support view progress scrolling.";
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
+
+      position: absolute;
+      inset: 0;
+      bottom: auto;
     }
   }
 }
@@ -204,7 +209,7 @@ The [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_anim
 
 The animation-range properties accept the keyword `normal`, a {{cssxref("timeline-range-name")}}, a {{cssxref("length-percentage")}}, or both a `<timeline-range-name>` and the `<length-percentage>`. In this guide, we are covering the values for the `<timeline-range-name>` component of the value only.
 
-<!--The length-percentage values, such as `20%` or `100px`, inset the animation timeline from the named animation attachment ranges, by the set amount, with the value defaulting to `0`. This is covered in xxx.-->
+The length-percentage values, such as `20%` or `100px`, inset the animation timeline from the named animation attachment ranges, by the set amount, with the value defaulting to `0`. This is covered in [Understanding timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 ## Timeline range names
 
@@ -523,7 +528,13 @@ The animation attachment range is the size of the subject, and not clamped to th
     <rect class="small start" width="100" height="50" x="10" y="750" />
     <rect class="medium start" width="100" height="250" x="120" y="750" />
     <rect class="large start" width="100" height="500" x="230" y="750" />
-    <rect class="orange" width="100" height="250" x="230" y="750" fill="url(#g)" />
+    <rect
+      class="orange"
+      width="100"
+      height="250"
+      x="230"
+      y="750"
+      fill="url(#g)" />
     <text y="460" x="10">entry</text>
     <text y="520" x="360">100%</text>
     <text y="690" x="-50">100%</text>
@@ -546,7 +557,7 @@ The animation attachment range is the size of the subject, and not clamped to th
     <text y="490" x="80">100%</text>
     <text y="690" x="-50">100%</text>
     <line x1="225" x2="345" y1="250" y2="250" />
-    <line x1n h0" x2="230" y1="500" y2="500" />
+    <line x1="0" x2="230" y1="500" y2="500" />
     <line x1="-10" x2="120" y1="700" y2="700" />
     <line x1="0" x2="350" y1="750" y2="750" />
     <text y="760" x="360">0%</text>
@@ -700,16 +711,16 @@ line {
 }
 ```
 
-<!--
 ### Other progress values
 
-In this guide, we have mentioned `0%` and `100%` progress points. The animation-range values aren't limited to these to progress points. You can inset any of the named animation ranges by a set amount or a percentage of the full animation attachment range. This is discussed in the [insets]() guide. -->
+In this guide, we have mentioned `0%` and `100%` progress points. The animation-range values aren't limited to these to progress points. You can inset any of the named animation ranges by a set amount or a percentage of the full animation attachment range. This is discussed in the [insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) guide.
 
 ## See also
 
 - {{cssxref("timeline-range-name")}} data type
 - [Keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
 - [Scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

@@ -1,5 +1,6 @@
 ---
-title: justify-content
+title: "`justify-content` CSS property"
+short-title: justify-content
 slug: Web/CSS/Reference/Properties/justify-content
 page-type: css-property
 browser-compat: css.properties.justify-content
