@@ -59,19 +59,13 @@ The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions
 To test it:
 
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-- Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
-- Enable _Show Content Messages_ in the menu:
-
-![Browser console menu: Show Content Messages](browser_console_show_content_messages.png)
-
+- In `about:debugging`, **This Firefox** (or **This Nightly**), click **Inspect** next to the extension.
 - Open some web pages.
 
-In the Browser Console, you should see the URLs for any resources the browser requests.
+In the Developer Tools console, you see the URLs for any resources the browser requests.
 For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![Browser console menu: URLs from extension](browser_console_url_from_extension.png)
-
-<!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
+![The Developer Tools console showing logged call URLs.](browser_console_url_from_extension.png)
 
 ### Redirecting requests
 
@@ -204,7 +198,7 @@ Then reload the extension, reload [useragentstring.com](https://useragentstring.
 
 ![useragentstring.com showing details of the modified user agent string](modified_request_header.png)
 
-## Using the `declarativeNetRequest` API
+## Using the declarativeNetRequest API
 
 To illustrate the use of the `declarativeNetRequest` API, this section includes examples showing how to redirect requests and modify request headers using declarative rules.
 
