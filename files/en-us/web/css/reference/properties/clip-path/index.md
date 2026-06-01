@@ -1,5 +1,6 @@
 ---
-title: clip-path
+title: "`clip-path` CSS property"
+short-title: clip-path
 slug: Web/CSS/Reference/Properties/clip-path
 page-type: css-property
 browser-compat: css.properties.clip-path
@@ -43,11 +44,11 @@ clip-path: xywh(0 5px 100% 75% round 15% 0);
       src="/shared-assets/images/examples/balloon-small.jpg"
       width="150" />
     We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    after dinner, not later than eleven o'clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up "ballooning"
     as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
+    in ordinary sports, even those of "automobiling" at a breakneck speed, the
+    members of the "Aéro Club" now seek in the air, where they indulge in all
     kinds of daring feats, the nerve-racking excitement that they have ceased to
     find on earth.
   </div>

@@ -82,14 +82,16 @@ We include the static resources created in other sections of this tutorial that 
 const VERSION = "v1";
 
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/app.js",
-  "/cycletracker.json",
-  "/icons/wheel.svg",
+  "./",
+  "./index.html",
+  "./style.css",
+  "./app.js",
+  "./cycletracker.json",
+  "./icons/wheel.svg",
 ];
 ```
+
+As we are storing the PWA in a GitHub subdirectory, we prefix the paths with a `./` rather than linking to resources at the root with `/`.
 
 We included the `wheel.svg` icon, even though our current application doesn't use it, in case you are enhancing the PWA UI, such as displaying the logo when there is no period data.
 
@@ -131,7 +133,7 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     (async () => {
       const cache = await caches.open("cacheName_identifier");
-      cache.addAll(["/", "/index.html", "/style.css", "/app.js"]);
+      cache.addAll(["./", "./index.html", "./style.css", "./app.js"]);
     })(),
   );
 });
@@ -191,7 +193,7 @@ Add the above `activate` eventListener to your `sw.js` file.
 
 ### The fetch event
 
-We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is online. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
+We can take advantage of the [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event, to prevent an installed PWA from making requests if the user is offline. Listening to the fetch event makes it possible to intercept all requests and respond with cached responses instead of going to the network. Most applications don't require this behavior. In fact, many business models want users to regularly make server requests for tracking and marketing purposes. So, while intercepting requests may be an anti-pattern for some, to improve the privacy of our CycleTracker app, we don't want the app to make unnecessary server requests.
 
 As our PWA consists of a single page, for page navigation requests, we go back to the `index.html` home page. There are no other pages and we don't ever want to go to the server. If the Fetch API's [`Request`](/en-US/docs/Web/API/Request) readonly [`mode`](/en-US/docs/Web/API/Request/mode) property is `navigate`, meaning it's looking for a web page, we use the FetchEvent's [`respondWith()`](/en-US/docs/Web/API/FetchEvent/respondWith) method to prevent the browser's default fetch handling, providing our own response promise employing the [`caches.match()`](/en-US/docs/Web/API/CacheStorage/match) method.
 
@@ -204,7 +206,7 @@ self.addEventListener("fetch", (event) => {
   // when seeking an HTML page
   if (event.request.mode === "navigate") {
     // Return to the index.html page
-    event.respondWith(caches.match("/"));
+    event.respondWith(caches.match("./"));
     return;
   }
 
@@ -237,11 +239,11 @@ const CACHE_NAME = `period-tracker-${VERSION}`;
 
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/app.js",
-  "/style.css",
-  "/icons/wheel.svg",
+  "./",
+  "./index.html",
+  "./app.js",
+  "./style.css",
+  "./icons/wheel.svg",
 ];
 
 // On install, cache the static resources
@@ -277,7 +279,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   // As a single page app, direct app to always go to cached home page.
   if (event.request.mode === "navigate") {
-    event.respondWith(caches.match("/"));
+    event.respondWith(caches.match("./"));
     return;
   }
 
@@ -296,6 +298,9 @@ self.addEventListener("fetch", (event) => {
   );
 });
 ```
+
+> [!NOTE]
+> If your PWA's main page is at the root of your site, you can use `/` instead of `./` for the array of resources (`APP_STATIC_RESOURCES`) and the fetch response (`match("/"`).
 
 When updating a service worker, the VERSION constant doesn't need to be updated, as any change in the content of the service worker script itself will trigger the browser to install the new service worker. However, it is a good practice to update the version number as it makes it easier for devs, including yourself, to see which version of the service worker is currently running in the browser, by [checking the name of the Cache in the Application tool](#with_developer_tools) (or Sources tool).
 

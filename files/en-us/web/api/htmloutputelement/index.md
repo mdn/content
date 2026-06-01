@@ -11,6 +11,11 @@ The **`HTMLOutputElement`** interface provides properties and methods (beyond th
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("HTMLOutputElement.HTMLOutputElement", "HTMLOutputElement()")}} {{experimental_inline}}
+  - : Creates a new `HTMLOutputElement` object.
+
 ## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._

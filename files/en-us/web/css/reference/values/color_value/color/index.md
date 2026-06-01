@@ -1,5 +1,6 @@
 ---
-title: color()
+title: "`color()` CSS function"
+short-title: color()
 slug: Web/CSS/Reference/Values/color_value/color
 page-type: css-function
 browser-compat: css.types.color.color

@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/primitiveType
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.

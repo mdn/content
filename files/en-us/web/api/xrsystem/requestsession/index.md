@@ -11,7 +11,7 @@ browser-compat: api.XRSystem.requestSession
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
-**`requestSession()`** method returns a {{jsxref("promise")}}
+**`requestSession()`** method returns a {{jsxref("Promise")}}
 which resolves to an {{domxref("XRSession")}} object through which you can manage the
 requested type of WebXR session.
 

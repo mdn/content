@@ -13,7 +13,7 @@ browser-compat:
   - http.headers.Content-Encoding.dcz
   - http.headers.Dictionary-ID
   - http.headers.Use-As-Dictionary
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
+spec-urls: https://www.rfc-editor.org/rfc/rfc9842
 sidebar: http
 ---
 
@@ -212,5 +212,5 @@ In particular, when loading a [separate dictionary](#separate_dictionary) using 
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}
 - {{HTTPHeader("Use-As-Dictionary")}}
-- [Draft specification](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/)
+- [RFC 9842: Compression Dictionary Transport](https://www.rfc-editor.org/rfc/rfc9842)
 - [Resources for Compression Dictionary Transport](https://use-as-dictionary.com/)

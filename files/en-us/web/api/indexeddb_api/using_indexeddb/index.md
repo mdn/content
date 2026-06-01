@@ -44,8 +44,9 @@ The open request doesn't open the database or start the transaction right away. 
 The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an `onupgradeneeded` event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in [Creating or updating the version of the database](#creating_or_updating_the_version_of_the_database) below, and the {{ domxref("IDBFactory.open") }} reference page.
 
 > [!WARNING]
-> The version number is an `unsigned long long` number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the `upgradeneeded` event trigger. So for example, don't use 2.4 as a version number:
-> `const request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
+> Version numbers are integers, so the values passed are subject to rounding—for example, values of 2.1 and 2.4 are both rounded to 2.
+> Attempting to upgrade between numbers that round to the same integer will not fire an `onupgradeneeded` event.
+> When working with large version numbers please also note the [range of integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) representable in JavaScript.
 
 #### Generating handlers
 

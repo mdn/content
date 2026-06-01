@@ -8,6 +8,9 @@
 # Default content owners
 /files/en-us/ @mdn/web
 
+# Learn
+/files/en-us/learn_web_development @mdn/learn
+
 # MDN Firefox release notes
 /files/en-us/mozilla/ @mdn/content-team
 
@@ -23,8 +26,11 @@
 # CSS
 /files/en-us/web/css/ @mdn/css
 
+# Web
+files/en-us/web/ @mdn/web
+
 # HTML
-/files/en-us/web/html/ @mdn/web
+/files/en-us/web/html/ @mdn/html
 
 # HTTP
 /files/en-us/web/http/ @mdn/http

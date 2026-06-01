@@ -257,8 +257,8 @@ For more information, see:
 
 The practices described above help reduce the risks of a password-based authentication system, but passwords remain an inherently vulnerable authentication method:
 
-- Although password managers and good password policies can help users choose strong passwords and not reuse passwords, they can't guarantee either outcome, leaving users vulnerable to credential stuffing and guessing attacks.
+- Although password managers and good password policies can help users choose strong passwords and not reuse passwords, they can't guarantee either outcome, leaving users vulnerable to [credential stuffing](#credential_stuffing) and [guessing](#guessing) attacks.
 
-- Even if users have strong passwords and do not reuse them, users remain vulnerable to phishing attacks.
+- Even if users have strong passwords and do not reuse them, users remain vulnerable to [phishing](#phishing) attacks.
 
 To address these weaknesses, consider using alternative methods, either instead of passwords or as {{glossary("multi-factor authentication", "additional authentication factors")}}. For example, websites sometimes use passwords with a [one-time password](/en-US/docs/Web/Security/Authentication/OTP) as a second factor, and some websites support [passkeys](/en-US/docs/Web/Security/Authentication/Passkeys), which are resistant to phishing attacks.

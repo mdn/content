@@ -2,12 +2,10 @@
 title: WebTransportReceiveStream
 slug: Web/API/WebTransportReceiveStream
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WebTransportReceiveStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The `WebTransportReceiveStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a {{domxref("ReadableStream")}} that can be used to read from an incoming unidirectional or bidirectional {{domxref("WebTransport")}} stream.
 
@@ -28,7 +26,7 @@ _Inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
 _Also inherits properties from its parent interface, {{domxref("ReadableStream")}}._
 
-- {{domxref("WebTransportReceiveStream.getStats()")}} {{Experimental_Inline}}
+- {{domxref("WebTransportReceiveStream.getStats()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
 
 ## Examples

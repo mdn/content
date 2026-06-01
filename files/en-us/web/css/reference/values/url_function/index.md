@@ -1,5 +1,6 @@
 ---
-title: url()
+title: "`url()` CSS function"
+short-title: url()
 slug: Web/CSS/Reference/Values/url_function
 page-type: css-function
 browser-compat: css.types.url
@@ -91,9 +92,9 @@ body {
 
 ```html hidden
 <ul>
-  <li>one</li>
-  <li>two</li>
-  <li>there</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 

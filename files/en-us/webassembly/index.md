@@ -12,7 +12,6 @@ browser-compat:
   - webassembly.garbage-collection
   - webassembly.multiMemory
   - webassembly.multi-value
-  - webassembly.mutable-globals
   - webassembly.non-trapping-float-to-int-conversions
   - webassembly.reference-types
   - webassembly.sign-extension-operations
@@ -23,13 +22,10 @@ sidebar: webassemblysidebar
 
 WebAssembly is a type of code that can be run in modern web browsers.
 It is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages such as C/C++, C# and Rust with a compilation target so that they can run on the web.
-It is also designed to run alongside JavaScript, allowing both to work together.
 
 WebAssembly is designed to complement and run alongside JavaScript — using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same app, even if you don't know how to write WebAssembly code.
 
-WebAssembly has big implications for the web platform, not only because it provides a way for code written in multiple languages to run on the web at near-native speed, but also because it enables client apps to run on the web that previously could not.
-
-And what's even better is that it is being developed as a web standard via the [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) and [Community Group](https://www.w3.org/community/webassembly/) with active participation from all major browser vendors.
+WebAssembly provides a way for code written in multiple languages to run on the web at near-native speed, and it enables client apps to run on the web that previously could not.
 
 ## Guides
 
@@ -77,7 +73,7 @@ The [WebAssembly guides](/en-US/docs/WebAssembly/Guides) cover topics such as hi
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : The `WebAssembly.validate()` function validates a given typed array of WebAssembly binary code.
 - [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
+  - : A `WebAssembly.Memory` object is a resizable {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} that holds the raw bytes of memory accessed by an `Instance`.
 - [`WebAssembly.Table()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : A `WebAssembly.Table` object is a resizable typed array of opaque values, like function references, that are accessed by an `Instance`.
 - [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag)

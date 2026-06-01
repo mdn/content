@@ -35,7 +35,7 @@ If another website wants to establish trust in the same user, it can do so by re
 
 1. Let's say the user visits a different website, `redeemer.example`.
 2. `redeemer.example` can make a request to a server to redeem a token for that specific user and device.
-3. The browser checks to see whether it has a token stored for that user and device. If it does, and the token is good to use (it has not already been redeemed, and it has not expired), it sends the token to a server to be redeemed. In this context, `redeemer.example` is called an **redeemer**. The server is called an **redeemer server**.
+3. The browser checks to see whether it has a token stored for that user and device. If it does, and the token is good to use (it has not already been redeemed, and it has not expired), it sends the token to a server to be redeemed. In this context, `redeemer.example` is called a **redeemer**. The server is called a **redeemer server**.
 4. If the token is redeemed successfully, the redeemer server sends a **redemption record** to the browser to verify the user trust.
 
 ### Redemption record usage

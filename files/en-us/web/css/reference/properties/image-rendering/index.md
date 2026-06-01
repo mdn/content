@@ -1,5 +1,6 @@
 ---
-title: image-rendering
+title: "`image-rendering` CSS property"
+short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 page-type: css-property
 browser-compat: css.properties.image-rendering

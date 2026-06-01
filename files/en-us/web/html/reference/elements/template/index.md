@@ -1,5 +1,6 @@
 ---
-title: "<template>: The Content Template element"
+title: "`<template>` HTML content template element"
+short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 page-type: html-element
 browser-compat: html.elements.template
@@ -33,18 +34,38 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 
+- `shadowrootcustomelementregistry`
+  - : Sets the [`customElementRegistry`](/en-US/docs/Web/API/ShadowRoot/customElementRegistry) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `null`, rather than the document's [custom element registry](/en-US/docs/Web/API/Document/customElementRegistry).
+    This allows a scoped {{domxref("CustomElementRegistry")}} to be attached later using {{domxref("CustomElementRegistry.initialize()")}}.
+
 - `shadowrootdelegatesfocus`
   - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
-- `shadowrootreferencetarget` {{Experimental_Inline}}
+- `shadowrootreferencetarget` {{Experimental_Inline}} {{non-standard_inline}}
   - : Sets the value of the `referenceTarget` property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 
 - `shadowrootserializable`
   - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
     If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
+
+- `shadowrootslotassignment` {{experimental_inline}}
+  - : Sets the [`slotAssignment`](/en-US/docs/Web/API/ShadowRoot/slotAssignment) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element.
+    This is the declarative equivalent of the [`slotAssignment`](/en-US/docs/Web/API/Element/attachShadow#slotassignment) option of the {{domxref("Element.attachShadow()")}} method.
+    - `named`
+      - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
+        This is the default value.
+
+        Elements with the [`slot` attribute](/en-US/docs/Web/API/Element/slot) are assigned to the first {{htmlelement("slot")}} in the template that has the corresponding `name` attribute.
+        If multiple elements specify the same slot name, they are all added to the first slot in the template that has that name, and rendered in the order they are declared.
+        All unnamed elements — elements that don't specify a `slot` attribute — are assigned to the default slot in the order they are declared.
+        This is the first unnamed `<slot>` in the template.
+
+    - `manual`
+      - : Elements are manually assigned to particular slot elements using {{domxref("HTMLSlotElement.assign()")}}.
+        No automatic assignment takes place.
 
 ## Usage notes
 
@@ -70,6 +91,8 @@ This is the declarative equivalent of calling {{domxref("Element.attachShadow()"
 
 If the element has any other value for `shadowrootmode`, or does not have the `shadowrootmode` attribute, the parser generates a {{domxref("HTMLTemplateElement")}}.
 Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
+
+Other attributes prefixed with `shadowroot` allow declarative customization of the `ShadowRoot`, such as controlling how slots are assigned.
 
 ## Examples
 
@@ -257,13 +280,191 @@ This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
-## Data on the DocumentFragment is not cloned
+### Declarative shadow DOM with named slot assignment
+
+This example shows how elements can be assigned to slots in a shadow DOM based on their [`slot` attribute](/en-US/docs/Web/API/Element/slot) (matched against the slot's `name` attribute).
+
+#### HTML
+
+First we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
+
+The article contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute.
+We don't need to set its `shadowrootslotassignment` attribute because named slot assignment is the default.
+
+The template defines elements that have named slots for "header" and "meta" information, and an unnamed slot for "body" information.
+The elements are styled differently so it is easy to differentiate them.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="named">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot name="title"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot name="meta"></slot>
+    </div>
+
+    <div class="body">
+      <slot></slot>
+    </div>
+  </template>
+
+  <p>
+    Text 1 with no slot attribute. Goes into default (unnamed) slot inside the
+    "body" div.
+  </p>
+  <span slot="title">Text for the title slot</span>
+  <span slot="meta">Text for the meta slot</span>
+  <p>
+    Text 2 with no slot attribute. Also goes into default (unnamed) slot inside
+    the "body" div.
+  </p>
+</article>
+```
+
+Inside the same host, below the template, we have four elements for populating the slots.
+The {{htmlelement("span")}} elements have `slot` attributes that match the `name` attributes on slots in the template, and will populate the corresponding slots.
+The two {{htmlelement("p")}} elements are unnamed, so are both inserted into the unnamed `<slot>` in the "body" element.
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Declarative shadow DOM with named slot assignment','100', '220px')}}
+
+### Declarative shadow DOM with manual slot assignment
+
+This example shows how elements can be assigned to slots in a shadow DOM using manual slot assignment.
+
+With this approach, each element must manually be assigned to a particular slot.
+There is no default assignment, so any slot that is not assigned will be empty.
+
+#### HTML
+
+First we have a hidden support warning.
+This warning is later set to be displayed via JavaScript if the browser doesn't support the `shadowrootslotassignment` attribute.
+
+```html
+<p id="support-warning" hidden>
+  ⛔ Your browser doesn't support the
+  <code>shadowrootslotassignment</code> attribute yet.
+</p>
+```
+
+Next, we define an {{HTMLElement("article")}} element that presents title, metadata, and article body information.
+This contains a `<template>` element that will become a shadow root, because of the presence of the `shadowrootmode` attribute, and will use manual slot assignment because `shadowrootslotassignment="manual"` is set.
+
+The template defines elements that have slots for "header", "meta", and "body" information, that can be separately referenced by their `id` attribute.
+The elements are styled differently so it is easy to differentiate them.
+
+```html
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="manual">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot id="titleSlot"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot id="metaSlot"></slot>
+    </div>
+
+    <div class="body">
+      <slot id="bodySlot"></slot>
+    </div>
+  </template>
+
+  <span id="text_title">Text for the title slot</span>
+  <span id="text_meta">Text for the meta slot</span>
+  <p id="text_body_1">Text 1 for body slot.</p>
+  <p id="text_body_2">Text 2 for body slot.</p>
+</article>
+```
+
+Inside the same host, below the template, we have four elements for populating the slots.
+These are also identified by id.
+
+#### JavaScript
+
+The JavaScript for manual slot assignment is shown below.
+First the code gets the slots within the shadow root, then the text to be inserted, and finally assigns the text to the slot.
+Note that you can only assign a node once to any particular slot, and that if you assign multiple nodes to a single slot using {{domxref("HTMLSlotElement.assign()")}}, the order they are specified controls the order they are added.
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.shadowRoot;
+
+// 1. Target your slots
+const titleSlot = shadow.querySelector("#titleSlot");
+const metaSlot = shadow.querySelector("#metaSlot");
+const bodySlot = shadow.querySelector("#bodySlot");
+
+// 2. Target the Elements to slot
+const body1Text = document.querySelector("#text_body_1");
+const body2Text = document.querySelector("#text_body_2");
+const titleText = document.querySelector("#text_title");
+const metaText = document.querySelector("#text_meta");
+
+// 3. Manually assign them
+titleSlot.assign(titleText);
+metaSlot.assign(metaText);
+bodySlot.assign(body2Text, body1Text);
+```
+
+The code displays the hidden support warning if slot assignment is not supported.
+
+```js
+const isShadowRootSlotAssignmentSupported = Object.hasOwn(
+  HTMLTemplateElement.prototype,
+  "shadowRootSlotAssignment",
+);
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootSlotAssignmentSupported);
+```
+
+#### Results
+
+The example below should show the content of the slots displayed in the appropriate sections.
+
+{{EmbedLiveSample('Declarative shadow DOM with manual slot assignment','100', '220px')}}
+
+> [!NOTE]
+> If the `shadowrootslotassignment` attribute is not supported, a warning note is displayed and the browser will use `named` assignment.
+> However, because none of the slots or elements to be inserted are named, all the elements will be inserted into the title slot (because this is the first unnamed slot, and hence is the "default" slot).
+
+### Data on the DocumentFragment is not cloned
 
 When a {{domxref("DocumentFragment")}} value is passed, {{domxref("Node.appendChild")}} and similar methods move only the _child nodes_ of that value into the target node. Therefore, it is usually preferable to attach event handlers to the children of a `DocumentFragment`, rather than to the `DocumentFragment` itself.
 
 Consider the following HTML and JavaScript:
 
-### HTML
+#### HTML
 
 ```html
 <div id="container"></div>
@@ -273,7 +474,7 @@ Consider the following HTML and JavaScript:
 </template>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const container = document.getElementById("container");
@@ -292,7 +493,7 @@ secondClone.children[0].addEventListener("click", clickHandler);
 container.appendChild(secondClone);
 ```
 
-### Result
+#### Result
 
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 

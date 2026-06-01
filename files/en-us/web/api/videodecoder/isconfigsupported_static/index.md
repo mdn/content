@@ -80,3 +80,8 @@ for (const config of configs) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("VideoDecoder.configure()")}}
+- [Codec String Support Table](https://webcodecsfundamentals.org/datasets/codec-support-table/)

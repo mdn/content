@@ -1,5 +1,6 @@
 ---
-title: oklch()
+title: "`oklch()` CSS function"
+short-title: oklch()
 slug: Web/CSS/Reference/Values/color_value/oklch
 page-type: css-function
 browser-compat: css.types.color.oklch

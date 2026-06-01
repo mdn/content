@@ -1,5 +1,6 @@
 ---
-title: interpolate-size
+title: "`interpolate-size` CSS property"
+short-title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
 page-type: css-property
 status:

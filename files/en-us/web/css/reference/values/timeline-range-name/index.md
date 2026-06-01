@@ -1,5 +1,6 @@
 ---
-title: <timeline-range-name>
+title: "`<timeline-range-name>` CSS type"
+short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 page-type: css-type
 browser-compat: css.types.timeline-range-name
@@ -9,7 +10,7 @@ sidebar: cssref
 
 The **`<timeline-range-name>`** {{glossary("enumerated")}} data type is a CSS identifier representing one of the predefined named timeline ranges inside a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines).
 
-The `<timeline-range-name>` keyword values are used in the following longhand and shorthand properties:
+The `<timeline-range-name>` keyword values are used in [keyframe selectors](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors) and the following longhand and shorthand properties:
 
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
@@ -39,9 +40,12 @@ Valid `<timeline-range-name>` values:
 - `exit-crossing`
   - : Represents the range where the principal box crosses the start border edge. The range start (0% progress) occurs when the start border edge of the element's principal box coincides with the start edge of its view progress visibility range. The range end (100% progress) is the point at which the end border edge of the element's principal box coincides with the start edge of its view progress visibility range. The size of the range is the size of the element's principle box in the scroll direction.
 
+- `scroll`
+  - : Represents the full range of the {{glossary("scroll container")}} on which the view progress timeline is defined. The range start (0% progress) and end (100% progress) occur at the very start and end positions of the scroll container underlying the view progress timeline.
+
 ## Formal syntax
 
-{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing`)}}
+{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing | scroll`)}}
 
 ## Examples
 
@@ -61,6 +65,7 @@ See the [View timeline range visualizer](https://scroll-driven-animations.style/
 - {{cssxref("animation-timeline")}}
 - {{cssxref("scroll-timeline")}}
 - {{cssxref("view-timeline-inset")}}
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

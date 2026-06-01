@@ -78,11 +78,11 @@ let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function. Remember though that the `SAFE_FOR_JQUERY` flag needs to be used in this case:
+You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function:
 
 ```js
 let elem = $("<div/>");
-let cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
+let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.html(cleanHTML);
 ```
 

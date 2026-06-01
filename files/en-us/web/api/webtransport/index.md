@@ -22,7 +22,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a promise that resolves when the transport is closed.
 - {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WebTransportDatagramDuplexStream")}} instance that can be used to send and receive datagrams.
-- {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}}
   - : Returns a string that indicates the application preference for either high throughput or low-latency when sending data.
 - {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
   - : Represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to read data from the server and write data back to it.
@@ -30,7 +30,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to read data from the server.
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
   - : Returns a promise that resolves when the transport is ready to use.
-- {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
 
 ## Instance methods
@@ -41,7 +41,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Asynchronously opens a bidirectional stream ({{domxref("WebTransportBidirectionalStream")}}) that can be used to read from and write to the server.
 - {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : Asynchronously opens a unidirectional stream ({{domxref("WritableStream")}}) that can be used to write to the server.
-- {{domxref("WebTransport.getStats", "getStats()")}} {{Experimental_Inline}}
+- {{domxref("WebTransport.getStats", "getStats()")}}
   - : Asynchronously returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.
 
 ## Examples

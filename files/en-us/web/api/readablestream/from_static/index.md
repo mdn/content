@@ -92,7 +92,7 @@ consumeStream(myReadableStream);
 
 // Iterate a ReadableStream asynchronously
 async function consumeStream(readableStream) {
-  for await (const chunk of myReadableStream) {
+  for await (const chunk of readableStream) {
     // Do something with each chunk
     // Here we just log the values
     log(`chunk: ${chunk}`);
@@ -142,7 +142,7 @@ consumeStream(myReadableStream);
 
 // Iterate a ReadableStream asynchronously
 async function consumeStream(readableStream) {
-  for await (const chunk of myReadableStream) {
+  for await (const chunk of readableStream) {
     // Do something with each chunk
     // Here we just log the values
     log(`chunk: ${chunk}`);

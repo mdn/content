@@ -42,6 +42,7 @@ sidebar:
       - /Web/HTTP/Guides/Permissions_Policy
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
       - /Web/HTTP/Guides/IFrame_credentialless
+      - /Web/HTTP/Guides/Fetch_metadata
       - /Web/HTTP/Guides/CORS
       - type: listSubPages
         path: /Web/HTTP/Guides/CORS/Errors

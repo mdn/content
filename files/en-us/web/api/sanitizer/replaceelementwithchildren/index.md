@@ -3,12 +3,10 @@ title: "Sanitizer: replaceElementWithChildren() method"
 short-title: replaceElementWithChildren()
 slug: Web/API/Sanitizer/replaceElementWithChildren
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.replaceElementWithChildren
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`replaceElementWithChildren()`** method of the {{domxref("Sanitizer")}} interface sets an element to be replaced by its child HTML elements when the sanitizer is used.
 This is primarily used for stripping styles from text.
@@ -31,13 +29,49 @@ replaceElementWithChildren(element)
 
 ### Return value
 
-`true` if the operation changed the configuration to set the element to be replaced by its children, and `false` if the sanitizer was already replacing the element.
+A boolean value: `true` if the operation updated the `Sanitizer` configuration to replace the element with its children, and `false` otherwise.
+
+The method returns `false` if the sanitizer is already configured to replace the given element, or if the resolved element is [not allowed](#disallowed_replacement_elements).
+
+## Description
+
+The **`replaceElementWithChildren()`** method specifies an element that will be replaced by its child elements and/or text nodes when the sanitizer is used.
+This is primarily used for stripping styles from text.
+
+### Disallowed replacement elements
+
+The following elements are not allowed as replacement elements:
+
+- {{htmlelement("html")}} in the HTML namespace (`http://www.w3.org/1999/xhtml`).
+- {{svgelement("svg")}} in the SVG namespace (`http://www.w3.org/2000/svg`).
+- {{mathmlelement("math")}} in the MathML namespace (`http://www.w3.org/1998/Math/MathML`).
+
+All the following method calls return `false` because the `Sanitizer` can't be updated for these elements:
+
+```js
+const sanitizer = new Sanitizer();
+
+sanitizer.replaceElementWithChildren("html");
+sanitizer.replaceElementWithChildren({ name: "html" });
+sanitizer.replaceElementWithChildren({
+  name: "html",
+  namespace: "http://www.w3.org/1999/xhtml",
+});
+sanitizer.replaceElementWithChildren({
+  name: "svg",
+  namespace: "http://www.w3.org/2000/svg",
+});
+sanitizer.replaceElementWithChildren({
+  name: "math",
+  namespace: "http://www.w3.org/1998/Math/MathML",
+});
+```
 
 ## Examples
 
 ### Basic usage
 
-This example shows the basic usage of the method, configuring a sanitizer that replaces the `<em>` element in inputs with its child content.
+This example shows the basic usage of the method, configuring a `Sanitizer` that replaces the `<em>` element in inputs with its child content.
 
 ```js
 // Create sanitizer (in this case the default)

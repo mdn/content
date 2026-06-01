@@ -1,5 +1,6 @@
 ---
-title: content
+title: "`content` CSS property"
+short-title: content
 slug: Web/CSS/Reference/Properties/content
 page-type: css-property
 browser-compat: css.properties.content
@@ -110,11 +111,11 @@ The keywords and data types mentioned above are described in more detail below:
   - : An {{cssxref("image")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("gradient")}} data type, or a part of the webpage itself, defined by the {{cssxref("element()")}} function.
 
 - `<counter>`
-  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
+  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
     - {{cssxref("counter()")}}
-      - : The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+      - : The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("list-style-type")}} (`decimal` by default).
     - {{cssxref("counters()")}}
-      - : The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+      - : The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("list-style-type")}} (`decimal` by default).
 
 - `<quote>`
   - : The `<quote>` data type includes language- and position-dependent keywords:
@@ -345,7 +346,7 @@ If using a screen reader, it should speak the word "MOZILLA" when it reaches the
 
 ### Including counters in alternative text
 
-This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screenreader users when the link receives focus.
+This example features a list of links to a set of book chapters, and shows how to use generated content to include a book icon and a counter before each one, with alternative text that includes the literal word "Chapter" in place of the icon. This results in the word "chapter" and the chapter number preceding the text in each link's {{glossary("accessible name")}}, which will be announced to screen reader users when the link receives focus.
 
 #### HTML
 
@@ -391,7 +392,7 @@ a::before {
 
 {{EmbedLiveSample('alt-counter', '100%', 270)}}
 
-When a screenreader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
+When a screen reader navigates to a link within the list, supporting browsers will announce "Chapter" followed by the current counter number, followed by the link text, for example, "Chapter 1 A stranger calls" and "Chapter 2 Two owls".
 
 ### Element replacement with URL
 

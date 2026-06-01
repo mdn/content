@@ -1,5 +1,6 @@
 ---
-title: accent-color
+title: "`accent-color` CSS property"
+short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 page-type: css-property
 browser-compat: css.properties.accent-color

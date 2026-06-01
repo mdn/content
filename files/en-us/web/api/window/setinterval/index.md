@@ -113,37 +113,73 @@ While this pattern does not guarantee execution on a fixed interval, it does gua
 
 ### Functions are called with the global `this`
 
-Methods or functions passed to `setInterval()` do not run in the same execution context as `setInterval()`, and hence do not have the same [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) as the function that called `setInterval()`.
-Instead the called function has a `this` keyword set to the `window` (or `global`) object.
+The functions passed to `setInterval()` is run with normal function call semantics for determining the reference of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
-The following example demonstrates how this can cause unexpected behavior (using `setTimeout()` instead of `setInterval()`, but the problem applies to both timers):
+For non-arrow functions, the `this` context is set to the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) (an alias for [`window`](/en-US/docs/Web/API/Window/window) in browsers) object.
+
+The following example demonstrates how this can cause unexpected behavior. Here, when we pass the method `counter.count` directly to `setInterval()`, the `this` context is lost, and the method is called on the global object instead of the `Counter` instance, resulting in a `TypeError` when the `count` method tries to access `this`:
 
 ```js
-myArray = ["zero", "one", "two"];
+class Counter {
+  constructor() {
+    this.data = new Map();
+  }
 
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
-};
+  count(item) {
+    this.data.set(item, (this.data.get(item) || 0) + 1);
+  }
+}
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
+const counter = new Counter();
+
+counter.count("foo"); // Successfully adds "foo" to the map
+setInterval(counter.count, 1000, "bar");
+// TypeError: Cannot read properties of undefined (reading 'set')
 ```
 
-You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
+To work around this, you must make sure that the function passed to `setInterval` has the correct `this` context. There are three main ways to do this:
 
-You can test this with the following code.
+1. If you want to explicitly specify the `this` context, instead of passing the method directly, wrap the method call in another anonymous function that explicitly calls the method with the correct context:
 
-```js
-setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
-setTimeout(() => myArray.myMethod(1), 1500); // Alert "one" after 1.5 seconds
-setTimeout(() => myArray.myMethod(2), 3000); // Alert "one" after 3 seconds
-```
+   ```js
+   setInterval(() => counter.count("bar"), 1000);
+   setInterval(function () {
+     counter.count("bar");
+   }, 1000);
+   ```
 
-You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
-That lets you bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
+2. If you want to use the `this` context of the code that calls `setInterval()`, always use an arrow function, which inherits the `this` context of its enclosing scope:
+
+   ```js example-bad
+   class Counter {
+     // …
+     repeatedCount(item) {
+       // BAD: the `this` context is lost in the callback
+       setInterval(function () {
+         this.data.set(item, (this.data.get(item) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
+
+   ```js example-good
+   class Counter {
+     // …
+     repeatedCount(item) {
+       // GOOD: the arrow function inherits the `this` context of `repeatedCount()`
+       setInterval(() => {
+         this.data.set(item, (this.data.get(item) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
+
+3. If you want to avoid extra function wrappers (which increase memory usage) while explicitly specifying the `this` context, you can use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method to create a new function with the correct `this` context:
+
+   ```js
+   setInterval(counter.count.bind(counter), 1000, "bar");
+   ```
 
 ### Security considerations
 

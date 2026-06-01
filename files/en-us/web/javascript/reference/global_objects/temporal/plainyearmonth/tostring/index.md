@@ -51,11 +51,11 @@ const ym = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
 console.log(ym.toString()); // '2021-08'
 
 const ym2 = Temporal.PlainYearMonth.from({
-  year: 4658,
+  year: 5781,
   monthCode: "M08",
-  calendar: "chinese",
+  calendar: "hebrew",
 });
-console.log(ym2.toString()); // '2021-09-07[u-ca=chinese]'
+console.log(ym2.toString()); // '2021-04-13[u-ca=hebrew]'
 ```
 
 ### Using options
@@ -63,18 +63,18 @@ console.log(ym2.toString()); // '2021-09-07[u-ca=chinese]'
 ```js
 const isoYM = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
 const ym = Temporal.PlainYearMonth.from({
-  year: 4658,
+  year: 5781,
   monthCode: "M08",
-  calendar: "chinese",
+  calendar: "hebrew",
 });
 console.log(isoYM.toString({ calendarName: "auto" })); // '2021-08'
-console.log(ym.toString({ calendarName: "auto" })); // '2021-09-07[u-ca=chinese]'
+console.log(ym.toString({ calendarName: "auto" })); // '2021-04-13[u-ca=hebrew]'
 console.log(isoYM.toString({ calendarName: "always" })); // '2021-08-01[u-ca=iso8601]'
-console.log(ym.toString({ calendarName: "always" })); // '2021-09-07[u-ca=chinese]'
+console.log(ym.toString({ calendarName: "always" })); // '2021-04-13[u-ca=hebrew]'
 console.log(isoYM.toString({ calendarName: "never" })); // '2021-08'
-console.log(ym.toString({ calendarName: "never" })); // '2021-09-07'
+console.log(ym.toString({ calendarName: "never" })); // '2021-04-13'
 console.log(isoYM.toString({ calendarName: "critical" })); // '2021-08-01[!u-ca=iso8601]'
-console.log(ym.toString({ calendarName: "critical" })); // '2021-09-07[!u-ca=chinese]'
+console.log(ym.toString({ calendarName: "critical" })); // '2021-04-13[!u-ca=hebrew]'
 ```
 
 ## Specifications
