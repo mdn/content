@@ -144,6 +144,8 @@ sidebar:
             title: <code>func</code>
       - link: /WebAssembly/Reference/Definitions/data
         title: <code>data</code>
+      - link: /WebAssembly/Reference/Definitions/elem
+        title: <code>elem</code>
       - link: /WebAssembly/Reference/Definitions/global
         title: <code>global</code>
       - link: /WebAssembly/Reference/Definitions/memory

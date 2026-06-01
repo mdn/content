@@ -27,7 +27,7 @@ The **`table`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) crea
     (i32.const 100)
   )
 
-  ;; initialize table slots
+  ;; initialize table slots actively
   (elem (i32.const 0) $f1 $f2)
 
   (func (export "accessTable") (param $index i32) (result i32)
