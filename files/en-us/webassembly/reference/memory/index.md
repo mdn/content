@@ -19,3 +19,8 @@ WebAssembly memory instructions.
   - : Copy data from one region in memory to another
 - [`fill`](/en-US/docs/WebAssembly/Reference/Memory/fill)
   - : Set all values in a region to a specific byte
+
+## See also
+
+- [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
+- [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API

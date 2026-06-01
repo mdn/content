@@ -146,6 +146,8 @@ sidebar:
         title: <code>data</code>
       - link: /WebAssembly/Reference/Definitions/global
         title: <code>global</code>
+      - link: /WebAssembly/Reference/Definitions/memory
+        title: <code>memory</code>
       - link: /WebAssembly/Reference/Definitions/table
         title: <code>table</code>
       - link: /WebAssembly/Reference/Definitions/tag
