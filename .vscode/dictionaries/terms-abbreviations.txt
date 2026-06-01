@@ -969,3 +969,6 @@ zoomable
 ZQSD
 ZWNBSP
 ZWSP
+mediacapabilities
+debiased
+signedness

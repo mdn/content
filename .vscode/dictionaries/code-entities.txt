@@ -934,3 +934,5 @@ xpidl
 xpinstall
 xywh
 zoomlevelchange
+tagidx
+ifrac
