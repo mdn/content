@@ -72,6 +72,8 @@ console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/animals/cats"
 ```
 
+See [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) for how the `url` parameter is interpreted relative to `base`.
+
 The constructor will raise an exception if the URL cannot be parsed to a valid URL.
 You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the {{domxref("URL.canParse_static", "canParse()")}} static method to first check the URL is valid:
 
