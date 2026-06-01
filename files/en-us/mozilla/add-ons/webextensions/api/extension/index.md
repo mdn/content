@@ -34,9 +34,9 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.getViews()")}}
   - : Returns an array of the [`Window`](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension.
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
-  - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
+  - : Retrieves the state of the extension's access to tabs opened in "private browsing" mode (as determined by the user-controlled '_Run in Private Windows_' option in the extension's permissions).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Access local files on your computer_' option in the extension's permissions).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}
