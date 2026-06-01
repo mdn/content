@@ -167,7 +167,7 @@ You can then start encoding frames to the encoder. You can construct a `VideoFra
 
 ```js
 for (let i = 0; i < 60; i++) {
-  const frame = new VideoFrame(canvas, { timestamp: (i * 1e6) / 30 }); //30 fps, in microseconds
+  const frame = new VideoFrame(canvas, { timestamp: (i * 1e6) / 30 }); // 30 fps, in microseconds
   encoder.encode(frame, { keyFrame: i % 60 === 0 });
 }
 ```

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extadd_pairwise_i16x8_s
 sidebar: webassemblysidebar
 ---
 
-The **`extadd_pairwise_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) adds each adjacent pair of lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretation, outputting the results into an `i32x4` value interpretation.
+The **`extadd_pairwise_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) adds each adjacent pair of lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretation, outputting the results into an `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: extadd_pairwise_i16x8_s", "tabbed-taller")}}
 

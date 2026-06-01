@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load32_splat
 sidebar: webassemblysidebar
 ---
 
-The **`load32_splat`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads a single value from a given memory address into all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` type value interpretation.
+The **`load32_splat`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads a single value from a given memory address into all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` type value interpretation.
 
 {{InteractiveExample("Wat Demo: load32_splat", "tabbed-taller")}}
 

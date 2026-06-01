@@ -3,10 +3,12 @@ title: "AudioPlaybackStats: maximumLatency property"
 short-title: maximumLatency
 slug: Web/API/AudioPlaybackStats/maximumLatency
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioPlaybackStats.maximumLatency
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The **`maximumLatency`** read-only property of the {{domxref("AudioPlaybackStats")}} interface is a number indicating the maximum latency since the audio context was initialized or since {{domxref("AudioPlaybackStats.resetLatency()")}} was last called.
 

@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.convert_i32x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`convert_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation into an `f32x4` value interpretation.
+The **`convert_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts the lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` value interpretation into an `f32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: convert_i32x4_s", "tabbed-taller")}}
 
@@ -36,7 +36,7 @@ value_type.convert_i32x4_s
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `convert_i32x4_s`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `convert_i32x4_s`:
     - `f32x4`
 - `convert_i32x4_s`
   - : The `convert_i32x4_s` instruction. Must always be included after the `value_type` and a period (`.`).

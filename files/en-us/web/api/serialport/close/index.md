@@ -8,7 +8,7 @@ browser-compat: api.SerialPort.close
 
 {{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port closes.
+The **`close()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port closes.
 
 ## Syntax
 
@@ -29,6 +29,16 @@ A {{jsxref("Promise")}}.
 `close()` closes the serial port if previously-locked {{domxref("SerialPort.readable")}} and {{domxref("SerialPort.writable")}} members are unlocked, meaning the `releaseLock()` methods have been called for their respective reader and writer.
 
 However, when continuously reading data from a serial device using a loop, the associated [readable stream](/en-US/docs/Web/API/ReadableStream) will always be locked until the [reader](/en-US/docs/Web/API/ReadableStreamDefaultReader) encounters an error. In this case, calling [`reader.cancel()`](/en-US/docs/Web/API/ReadableStreamDefaultReader/cancel) will force [`reader.read()`](/en-US/docs/Web/API/ReadableStreamDefaultReader/read) to resolve immediately with `{ value: undefined, done: true }` allowing the loop to call [`reader.releaseLock()`](/en-US/docs/Web/API/ReadableStreamDefaultReader/releaseLock).
+
+Closing a serial port is more complicated when using [transform streams](/en-US/docs/Web/API/TransformStream). See [Close a serial port](https://developer.chrome.com/docs/capabilities/serial#close-port) for guidance.
+
+## Examples
+
+### Closing a port after reading once the stream is done
+
+The following example shows how to close a port after continuously reading data from it, once the stream is done.
+A `keepReading` flag controls when to stop reading.
+A button click sets `keepReading` to `false` and cancels the reader, which causes `reader.read()` to resolve immediately so the loop can release the lock and `close()` can be called.
 
 ```js
 // Without transform streams.
@@ -71,8 +81,6 @@ document.querySelector("button").addEventListener("click", async () => {
   await closedPromise;
 });
 ```
-
-Closing a serial port is more complicated when using [transform streams](/en-US/docs/Web/API/TransformStream). See [Close a serial port](https://developer.chrome.com/docs/capabilities/serial#close-port) for guidance.
 
 ## Specifications
 

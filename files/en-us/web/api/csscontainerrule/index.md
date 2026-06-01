@@ -15,7 +15,7 @@ The **`CSSContainerRule`** interface represents a single CSS {{cssxref("@contain
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}}
+- {{domxref("CSSContainerRule.conditions")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of objects, each of which specifies a container condition in a {{cssxref("@container")}} rule.
     The objects have a `name` string property and a `query` string property, either of which may be the empty string if not defined.
     The `name` represents the name of a container, and the `query` represents the set of feature tests that must be true for the particular condition to apply.

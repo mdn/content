@@ -3,9 +3,13 @@ title: <meta name="text-scale">
 short-title: text-scale
 slug: Web/HTML/Reference/Elements/meta/name/text-scale
 page-type: html-attribute-value
+status:
+  - experimental
 browser-compat: html.elements.meta.name.text-scale
 sidebar: htmlsidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`text-scale`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element enables opting the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings.
 
@@ -20,7 +24,7 @@ A `<meta name="text-scale">` element has the following additional attributes:
   - : Specifies the {{cssxref("font-size")}} scale opt-in behavior.
     Its value is a keyword, which can be one of the following:
     - `scale`
-      - : Opts the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. It also causes the browser to disable existing browser-based mechanisms and heuristics (for example, text autosizing on mobile).
+      - : Opts the page in to having the {{htmlelement("html")}} root element's initial {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. It also causes the browser to disable existing browser-based mechanisms and heuristics (for example, text auto-sizing on mobile).
     - `legacy`
       - : The default value. The page is not opted in to the root element's `font-size` scaling in proportion to OS and browser-level text scale settings. This has the same effect as not including the `<meta>` element at all (OS-level font preferences are ignored.)
 
@@ -68,7 +72,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 
 ```html live-sample___text-scale
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta name="text-scale" content="scale" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -80,8 +84,9 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
       level.
     </p>
     <p class="fixed">
-      This font size does NOT respect the user's font preferences, even with text-scale set.
-      <div class="text-scale">But this font size does!</div>
+      This font size does NOT respect the user's font preferences, even with
+      text-scale set.
+      <span class="text-scale">But this font size does!</span>
     </p>
   </body>
 </html>
@@ -89,7 +94,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 
 ```html hidden live-sample___no-text-scale
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
@@ -101,7 +106,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
     </p>
     <p class="fixed">
       This font size does NOT respect the user's font preferences.
-      <div class="text-scale">Neither does this!</div>
+      <span class="text-scale">Neither does this!</span>
     </p>
   </body>
 </html>

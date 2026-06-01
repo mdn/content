@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.dot_i16x8_s
 sidebar: webassemblysidebar
 ---
 
-The **`dot_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [dot product](https://en.wikipedia.org/wiki/Dot_product) calculation on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations. The corresponding lanes of the input values are multiplied together, then each adjacent pair of products are added together. The four results of these additions are output as an `i32x4` value interpretation.
+The **`dot_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [dot product](https://en.wikipedia.org/wiki/Dot_product) calculation on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations. The corresponding lanes of the input values are multiplied together, then each adjacent pair of products are added together. The four results of these additions are output as an `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: dot_i16x8_s", "tabbed-taller")}}
 
