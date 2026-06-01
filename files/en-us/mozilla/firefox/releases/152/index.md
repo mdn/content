@@ -61,7 +61,7 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - The {{domxref("PerformanceResourceTiming.firstInterimResponseStart","firstInterimResponseStart")}} and {{domxref("PerformanceResourceTiming.finalResponseHeadersStart","finalResponseHeadersStart")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are supported.
-  These can be used to measure how long it takes to the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
+  These can be used to measure how long it takes for the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
   ([Firefox bug 2006340](https://bugzil.la/2006340)).
 
 #### DOM
