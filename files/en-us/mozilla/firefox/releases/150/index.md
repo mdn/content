@@ -46,6 +46,10 @@ No notable changes.
 - The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{htmlelement("html")}} in the HTML [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
   In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the `<html>` element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
 
+- The [`scrollend` event](/en-US/docs/Web/API/VisualViewport/scrollend_event) is now supported on {{domxref("VisualViewport")}}, allowing elements to be updated when a scrolling action is completed.
+  This might be used, for example, to unhide or otherwise adjust the position of fixed UI elements once a user finishes panning around a pinch-zoomed screen.
+  ([Firefox bug 1801658](https://bugzil.la/1801658)).
+
 #### DOM
 
 - The [`options.shadowRoots`](/en-US/docs/Web/API/Document/caretPositionFromPoint#shadowroots) argument of the {{domxref('Document.caretPositionFromPoint()')}} method is now supported.
