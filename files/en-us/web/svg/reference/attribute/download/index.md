@@ -50,7 +50,7 @@ svg {
 }
 
 body {
-  dusplay: flex;
+  display: flex;
 }
 ```
 
