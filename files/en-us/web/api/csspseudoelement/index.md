@@ -13,11 +13,7 @@ The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/W
 
 Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo()")}} or {{DOMxRef("CSSPseudoElement.pseudo()")}}.
 
-{{InheritanceDiagram}}
-
 ## Instance properties
-
-_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits its properties._
 
 - {{DOMxRef("CSSPseudoElement.element")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the originating parent {{DOMxRef("Element")}} of the pseudo-element.
@@ -28,14 +24,10 @@ _`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits its prope
 
 ## Instance methods
 
-_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits its methods._
-
 - {{DOMxRef("CSSPseudoElement.pseudo()")}}
   - : Returns a `CSSPseudoElement` instance representing a specific [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements)
 
 ## Description
-
-The `CSSPseudoElement`
 
 The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). You can retrieve a representation of a pseudo-element attached to a DOM element using the {{DOMxRef("Element.pseudo()")}} method, or representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) (for example, the `::marker` in `::before::marker`) using the {{DOMxRef("CSSPseudoElement.pseudo()")}} method.
 
