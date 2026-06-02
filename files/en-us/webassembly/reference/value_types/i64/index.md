@@ -32,9 +32,20 @@ The **`i64`** value type holds a 64-bit integer.
 
 `i64` is _transparent_: its bit pattern is observable, and `i64` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory).
 
-### JavaScript boundary
+### `i64` intergration with JavaScript BigInt
 
-JavaScript's `Number` type cannot losslessly represent the full `i64` range, so `i64` values cross the JavaScript boundary as [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Out-of-range BigInts wrap modulo 2⁶⁴. Passing a plain `Number` where an `i64` is expected throws a `TypeError`.
+JavaScript's `Number` type cannot losslessly represent the full `i64` range, therefore `i64` values are converted to [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values (and vice versa) when they cross the JavaScript boundary; for example, when exporting or importing functions involving `i64` parameters or return values.
+
+When exporting a Wasm function with the signature: `[i64] -> [i64]`, the parameter has to be expressed as a `BigInt` value:
+
+```js
+const result = wasmInstance.exports.myFunc(42n);
+console.log(result); // also a BigInt
+```
+
+An `i64` return value becomes a `BigInt` in JavaScript automatically.
+
+When moving from JavaScript over to Wasm, a `BigInt` passed as an `i64` argument is truncated to 64 bits, wrapped modulo 2⁶⁴. Passing a plain `Number` where an `i64` is expected throws a `TypeError`.
 
 ## Specifications
 
