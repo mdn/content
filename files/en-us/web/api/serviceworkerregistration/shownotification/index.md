@@ -46,10 +46,9 @@ showNotification(title, options)
     - `badge` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of a small icon representing the web application itself.
         The badge is used by the platform when there is not enough space to display the full notification —
-        for example, in the Android status bar. It should have less visual priority than the `icon` and `image` options.
+        for example, in a status bar. It should have less visual priority than the `icon` and `image` options.
         On Android, the badge should accommodate up to 4x display resolution (about 96×96px),
         and the image will be automatically masked to a monochrome silhouette.
-        Not all platforms support this option.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
         The default is the empty string.
@@ -63,19 +62,16 @@ showNotification(title, options)
     - `icon` {{optional_inline}}
       - : A string containing the URL of a small image that reinforces the notification — for example,
         an app logo or a photo of the message sender. It is displayed alongside the notification title and body.
-        This is the most widely supported image option across platforms.
     - `image` {{optional_inline}} {{experimental_inline}}
       - : A string containing the URL of a large image displayed as part of the notification's content body —
         for example, a news photo or product thumbnail. It has the highest visual priority of the three image options
-        (`image`, `icon`, `badge`), but platform support is inconsistent:
-        it is supported on Android and Windows, but ignored on macOS and iOS.
+        (`image`, `icon`, `badge`).
 
     > [!NOTE]
     > The three image options serve distinct purposes and appear in different locations:
     > `image` is a large content picture inside the notification body (highest priority),
-    > `icon` is a small reinforcing image next to the title (most widely supported),
+    > `icon` is a small reinforcing image next to the title,
     > and `badge` is a tiny monochrome app icon for constrained UI surfaces like status bars (lowest priority).
-    > Not all platforms render all three — test on Android and Windows for the broadest coverage.
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
         The default is the empty string.
