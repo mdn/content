@@ -19,8 +19,7 @@ A string.
 ## Examples
 
 ```js
-const previewFrame = document.querySelector("iframe");
-myForm.target = previewFrame.name;
+myForm.target = frames[1].name;
 ```
 
 ## Specifications
