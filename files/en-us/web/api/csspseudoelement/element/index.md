@@ -11,8 +11,7 @@ browser-compat: api.CSSPseudoElement.element
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the
-{{DOMxRef("CSSPseudoElement")}} interface returns a reference to the originating parent element
-of the pseudo-element.
+{{DOMxRef("CSSPseudoElement")}} interface returns a reference to the originating parent element of the pseudo-element.
 
 ## Value
 
