@@ -16,9 +16,9 @@ Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo
 ## Instance properties
 
 - {{DOMxRef("CSSPseudoElement.element")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the originating parent {{DOMxRef("Element")}} of the pseudo-element.
+  - : Returns the ultimate originating {{DOMxRef("Element")}} of the pseudo-element.
 - {{DOMxRef("CSSPseudoElement.parent")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the immediate parent of the pseudo-element.
+  - : Returns the immediate originating element of the pseudo-element.
 - {{DOMxRef("CSSPseudoElement.type")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
@@ -39,8 +39,8 @@ The {{DOMxRef("CSSPseudoElement.type")}} property returns a string representing 
 
 The {{DOMxRef("CSSPseudoElement.element")}} and {{DOMxRef("CSSPseudoElement.parent")}} properties sound similar, but they have a difference in functionality:
 
-- The `element` property always returns an {{domxref("Element")}}: A reference to the originating parent element of the pseudo-element or nested pseudo-element.
-- The `parent` property returns a reference to the pseudo-element's _immediate_ parent: This can be either an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
+- The `element` property always returns an {{domxref("Element")}}: A reference to the ultimate originating element of the pseudo-element or nested pseudo-element.
+- The `parent` property returns a reference to the pseudo-element's _immediate_ originating element: This can be either an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
 ## Examples
 

@@ -10,9 +10,9 @@ browser-compat: api.CSSPseudoElement.parent
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`parent`** read-only property of the {{DOMxRef("CSSPseudoElement")}} interface returns a reference to the immediate parent of the pseudo-element, which can be an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
+The **`parent`** read-only property of the {{DOMxRef("CSSPseudoElement")}} interface returns a reference to the immediate originating element of the pseudo-element, which can be an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
-This differs from the {{DOMxRef("CSSPseudoElement.element")}} property, which always returns an `Element`: A reference to the originating parent element of the pseudo-element.
+This differs from the {{DOMxRef("CSSPseudoElement.element")}} property, which always returns an `Element`: A reference to the ultimate originating element of the pseudo-element.
 
 ## Value
 
@@ -73,7 +73,7 @@ const output = document.querySelector("output");
 try {
   const pseudoElem = pElem.pseudo("::after");
   const pseudoPseudoElem = pseudoElem.pseudo("::marker");
-  output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent}. Originating parent element: ${pseudoPseudoElem.element}`;
+  output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent}. Ultimate originating element: ${pseudoPseudoElem.element}`;
 } catch (e) {
   output.textContent = `Your browser doesn't support CSSPseudoElement and/or the pseudo() method: ${e}`;
 }
