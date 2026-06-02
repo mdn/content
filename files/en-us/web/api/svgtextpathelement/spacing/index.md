@@ -8,12 +8,22 @@ browser-compat: api.SVGTextPathElement.spacing
 
 {{APIRef("SVG")}}
 
-The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element.
-Possible values are defined by the [`TEXTPATH_SPACINGTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#static_properties) constants defined on this interface.
+The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface represents the spacing between typographic characters that are to be rendered along a path.
+
+Note that the `spacing.baseVal` property reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
+
+The object's `baseVal` and `animVal` properties can get or set the following static property values:
+
+- [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_unknown) (0)
+  - : The type is not one of predefined types.
+- [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_AUTO`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_auto) (1)
+  - : Corresponds to the value [`auto`](/en-US/docs/Web/SVG/Reference/Attribute/spacing#auto).
+- [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_EXACT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_exact) (2)
+  - : Corresponds to the value [`exact`](/en-US/docs/Web/SVG/Reference/Attribute/spacing#exact).
 
 ## Examples
 

@@ -8,24 +8,36 @@ browser-compat: api.SVGTextPathElement.side
 
 {{APIRef("SVG")}}
 
-The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("side")}} attribute of the given {{SVGElement("textPath")}} element.
-Possible values are defined by the [`TEXTPATH_SIDETYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#static_properties) constants defined on this interface.
+The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} interface represents the side of the path that the text is placed on (relative to the path direction).
+
+Note that the `side.baseVal` property reflects the {{SVGAttr("side")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
+The object's `baseVal` and `animVal` properties can get or set the following static property values:
+
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_left) (0)
+  - : The side type is unknown or invalid.
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_unknown) (1)
+  - : The text is rendered on the left side of the path (the default).
+    This corresponds to a value of `"left"` on the SVG `side` attribute.
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_right) (2)
+  - : The text is rendered on the right side of the path.
+    This corresponds to a value of `"right"` on the SVG `side` attribute.
+
 ## Examples
 
 Also see the [Example](/en-US/docs/Web/API/SVGTextPathElement#basic_usage) in `SVGTextPathElement`, which allows you to toggle the `side` attribute.
 
-### Accessing the `side` property
+### Basic usage
 
-This example demonstrates how you can read the `side` property.
+This example demonstrates how you can set and get the `side` property, and in particular its `baseVal`.
 
 #### HTML
 
-First we define HTML and CSS for an SVG path that draws text on the right on supporting browsers.
+First we define HTML and CSS for an SVG path that draws text on the right on supporting browsers using the SVG `side` attribute.
 
 ```css hidden
 html,
@@ -52,6 +64,13 @@ svg {
 </svg>
 ```
 
+We also add a button for toggling the value of the `side.baseVal` property.
+Note that there is also logging code, that is hidden as it is not relevant.
+
+```html
+<button id="toggle-side">Toggle Side</button>
+```
+
 ```html hidden
 <pre id="log"></pre>
 ```
@@ -75,27 +94,67 @@ function log(text) {
 
 #### JavaScript
 
-The code below logs the `baseVal` of the `side` property and uses the `TEXTPATH_SIDETYPE_RIGHT` static property to indicate whether text is drawn on the left or right of the path.
-If the `side` property isn't defined the code will throw, and we assume that text is drawn to the left.
+The code below first gets the `side.baseVal` property and compares it to the enumerated static property values to determine (and log) which side of the path the text is drawn on.
+If the `side` property isn't defined the code will throw, and we note that the `side` property isn't supported.
 
 ```js
 const textPath = document.querySelector("textPath");
+const button = document.querySelector("#toggle-side");
 
-// Log right or left based on value
-try {
-  const side =
-    textPath.side.baseVal == SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT
-      ? "right"
-      : "left";
-  log(`side: ${side}`);
-} catch {
-  log(`side: left`);
+// Helper function to read and log the current side
+function logCurrentSide() {
+  try {
+    let side;
+
+    if (textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT) {
+      side = "right";
+    } else if (
+      textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT
+    ) {
+      side = "left";
+    } else if (
+      textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN
+    ) {
+      side = "unknown";
+    } else {
+      side = "unexpected value";
+    }
+    log(`Current side: ${side}`);
+  } catch {
+    log(`side property is not supported in this browser`);
+  }
 }
+
+// Log the initial state on load
+logCurrentSide();
+```
+
+The code below shows how you can set `side.baseVal` with the enumerated static values.
+The event handler first checks the current value of `side.baseVal` and then toggles the value to the static property that matches the other side.
+
+```js
+// Toggle the side when the button is clicked
+button.addEventListener("click", () => {
+  try {
+    if (textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT) {
+      // Change to left
+      textPath.side.baseVal = SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT;
+    } else {
+      // Change to right
+      textPath.side.baseVal = SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT;
+    }
+
+    // Log the updated state
+    logCurrentSide();
+  } catch (e) {
+    log("Setting the side property is not supported in this browser.");
+  }
+});
 ```
 
 #### Result
 
-Browsers that support the `side` attribute on paths will draw the text on the right hand side of the path below and log which side the text has been drawn on.
+Toggle the button to move the text from one side to the other.
 
 {{EmbedLiveSample('Accessing the `side` property', 200, 500)}}
 
