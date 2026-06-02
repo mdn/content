@@ -19,7 +19,7 @@ A string.
 ## Examples
 
 ```js
-myForm.target = document.frames[1].name;
+myForm.target = window.frames[1].name;
 ```
 
 ## Specifications
