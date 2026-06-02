@@ -8,7 +8,7 @@ browser-compat: api.Request.targetAddressSpace
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`targetAddressSpace`** property of the {{DOMxRef("Request")}} interface returns the request's target address space, which indicates whether it is intended to be a loopback, local, or public request.
+The **`targetAddressSpace`** read-only property of the {{DOMxRef("Request")}} interface returns the request's target address space, which indicates whether it is intended to be a loopback, local, or public request.
 
 ## Value
 
