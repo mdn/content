@@ -14,21 +14,21 @@ You can use this attribute with the following SVG elements:
 
 ## Value
 
-The `download` attribute can take no value (that is, a boolean attribute) or a string:
+The `download` attribute can take an optional string value:
 
-- When written in boolean form, the browser will suggest a filename/extension to download the resource with, generated from various sources:
+- Without a value (boolean form), the browser will suggest a filename and extension for the download, which may be derived from the following sources:
   - The {{HTTPHeader("Content-Disposition")}} HTTP header
   - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
   - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/URI/Reference/Schemes/blob))
-- When written with a string value, the browser will use that string as a suggested filename when downloading. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+- With a string value, the browser will use that string as a suggested filename when downloading. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
 ## Description
 
 The `download` attribute works for only [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy) or for the `blob:` and `data:` schemes.
 
-How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
+The download behavior varies by browser, user settings, and other factors. The user may be prompted before the download starts, and the file may be saved and/or opened automatically, either in an external application or in the browser itself.
 
-If the {{httpheader("Content-Disposition")}} header has different information from the `download` attribute, resulting behavior may differ:
+If the {{httpheader("Content-Disposition")}} header conflicts with the `download` attribute, the resulting behavior depends on the header:
 
 - If the header specifies a filename, it takes priority over the filename specified in the `download` attribute.
 - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the `download` attribute and treat the resource as a download.
@@ -47,10 +47,6 @@ body {
 
 svg {
   height: 100px;
-}
-
-body {
-  display: flex;
 }
 ```
 
@@ -95,3 +91,4 @@ Click the two links to see the difference in effect. The first navigates to the 
 
 - {{SVGElement("a")}}
 - {{SVGAttr("href")}}
+- {{domxref("SVGAElement.download")}}
