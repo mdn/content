@@ -252,8 +252,10 @@ With `clip`, content that overflows is by default hidden, there are no scroll ba
 
 With `clip`, overflow content is clipped at the element's _overflow clip edge_ that is defined using the {{cssxref("overflow-clip-margin")}} property. The clipped content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin`, which defaults to `0px`.
 
-```html hidden live-sample___clip
-div { overflow: clip; }
+```css hidden live-sample___clip
+div {
+  overflow: clip;
+}
 ```
 
 {{EmbedLiveSample("clip", "", "350")}}
