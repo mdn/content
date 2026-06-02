@@ -37,7 +37,7 @@ If the {{httpheader("Content-Disposition")}} header has different information fr
 
 ### Demonstrating the effect of `download`
 
-This example shows the difference in behavior caused by the `download` attribute.
+This example shows the effect of adding the `download` attribute to an SVG link.
 
 ```css hidden live-sample___download-effect
 html,
