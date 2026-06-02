@@ -16,7 +16,11 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The developer tools now have a "Show comments" option to toggle the display of HTML comment nodes in the Inspector.
+  This option can be found in the [Settings panel](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#settings-inspector).
+  ([Firefox bug 1455294](https://bugzil.la/1455294)).
 
 <!-- ### HTML -->
 
@@ -28,7 +32,11 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- The {{domxref("SVGTextPathElement.side")}} read-only property is now supported, indicating whether text is drawn on the left-hand side or right-hand side of a text path.
+  This reflects the corresponding [`side`](/en-US/docs/Web/SVG/Reference/Attribute/side) attribute on the [`<textPath>`](/en-US/docs/Web/SVG/Reference/Element/textPath) element.
+  ([Firefox bug 2034371](https://bugzil.la/2034371)).
 
 <!-- #### Removals -->
 
@@ -51,6 +59,10 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 <!-- #### Removals -->
 
 ### APIs
+
+- The {{domxref("PerformanceResourceTiming.firstInterimResponseStart","firstInterimResponseStart")}} and {{domxref("PerformanceResourceTiming.finalResponseHeadersStart","finalResponseHeadersStart")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are supported.
+  These can be used to measure how long it takes for the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
+  ([Firefox bug 2006340](https://bugzil.la/2006340)).
 
 #### DOM
 
@@ -104,3 +116,20 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) to check if an encoding/decoding configuration can be used for WebRTC.
   This replaces the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was previously used as an alias in Firefox.
   ([Firefox bug 1825286](https://bugzil.la/1825286)).
+
+- **TC39 Iterator includes proposal**: `javascript.options.experimental.iterator_includes`
+
+  The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether the iterator will produce a specified value.
+  ([Firefox bug 2025779](https://bugzil.la/2025779)).
+
+- **TC39 Intl.Locale info proposal**: `javascript.options.experimental.intl_locale_info`
+
+  The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported on nightly builds if the preference is enabled.
+  This includes all the [`Intl.Locale` instance methods prefixed with "get"](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#instance_methods).
+  ([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+- **Text module import**: `javascript.options.experimental.import_text`
+
+  The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+  The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+  ([Firefox bug 2024854](https://bugzil.la/2024854)).
