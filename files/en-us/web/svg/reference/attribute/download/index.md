@@ -30,8 +30,8 @@ How browsers treat downloads varies by browser, user settings, and other factors
 
 If the {{httpheader("Content-Disposition")}} header has different information from the `download` attribute, resulting behavior may differ:
 
-- If the header specifies a filename, it takes priority over a filename specified in the `download` attribute.
-- If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download.
+- If the header specifies a filename, it takes priority over the filename specified in the `download` attribute.
+- If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the `download` attribute and treat the resource as a download.
 
 ## Examples
 
