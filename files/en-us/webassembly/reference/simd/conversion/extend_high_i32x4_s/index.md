@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.extend_high_i32x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`extend_high_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 2–3 of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation into an `i64x2` value interpretation.
+The **`extend_high_i32x4_s`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 2–3 of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` value interpretation into an `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: extend_high_i32x4_s", "tabbed-taller")}}
 

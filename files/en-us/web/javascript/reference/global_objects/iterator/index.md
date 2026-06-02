@@ -77,16 +77,17 @@ You cannot convert `seq` to an array, because it is infinite. Instead, you can u
 
 You will find many iterator methods analogous to array methods, such as:
 
-| Iterator method                            | Array method                            |
-| ------------------------------------------ | --------------------------------------- |
-| {{jsxref("Iterator.prototype.every()")}}   | {{jsxref("Array.prototype.every()")}}   |
-| {{jsxref("Iterator.prototype.filter()")}}  | {{jsxref("Array.prototype.filter()")}}  |
-| {{jsxref("Iterator.prototype.find()")}}    | {{jsxref("Array.prototype.find()")}}    |
-| {{jsxref("Iterator.prototype.flatMap()")}} | {{jsxref("Array.prototype.flatMap()")}} |
-| {{jsxref("Iterator.prototype.forEach()")}} | {{jsxref("Array.prototype.forEach()")}} |
-| {{jsxref("Iterator.prototype.map()")}}     | {{jsxref("Array.prototype.map()")}}     |
-| {{jsxref("Iterator.prototype.reduce()")}}  | {{jsxref("Array.prototype.reduce()")}}  |
-| {{jsxref("Iterator.prototype.some()")}}    | {{jsxref("Array.prototype.some()")}}    |
+| Iterator method                             | Array method                             |
+| ------------------------------------------- | ---------------------------------------- |
+| {{jsxref("Iterator.prototype.every()")}}    | {{jsxref("Array.prototype.every()")}}    |
+| {{jsxref("Iterator.prototype.filter()")}}   | {{jsxref("Array.prototype.filter()")}}   |
+| {{jsxref("Iterator.prototype.find()")}}     | {{jsxref("Array.prototype.find()")}}     |
+| {{jsxref("Iterator.prototype.flatMap()")}}  | {{jsxref("Array.prototype.flatMap()")}}  |
+| {{jsxref("Iterator.prototype.forEach()")}}  | {{jsxref("Array.prototype.forEach()")}}  |
+| {{jsxref("Iterator.prototype.includes()")}} | {{jsxref("Array.prototype.includes()")}} |
+| {{jsxref("Iterator.prototype.map()")}}      | {{jsxref("Array.prototype.map()")}}      |
+| {{jsxref("Iterator.prototype.reduce()")}}   | {{jsxref("Array.prototype.reduce()")}}   |
+| {{jsxref("Iterator.prototype.some()")}}     | {{jsxref("Array.prototype.some()")}}     |
 
 {{jsxref("Iterator.prototype.drop()")}} and {{jsxref("Iterator.prototype.take()")}} combined are somewhat analogous to {{jsxref("Array.prototype.slice()")}}.
 
@@ -172,6 +173,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper object that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
+- {{jsxref("Iterator.prototype.includes()")}}
+  - : Returns `true` if an element produced by the iterator is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 - {{jsxref("Iterator.prototype.map()")}}
   - : Returns a new iterator helper object that yields elements of the iterator, each transformed by a mapping function.
 - {{jsxref("Iterator.prototype.reduce()")}}
