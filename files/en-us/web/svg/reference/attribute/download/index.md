@@ -81,7 +81,7 @@ In this example, we present two very similar SVG links that point to the same [`
 
 {{EmbedLiveSample("download-effect", "320", "220")}}
 
-Click on the two links to see the difference in effect. The first one, when clicked, will navigate to the linked image and display it in the embedded document. The second one, when clicked, will trigger the image to be downloaded.
+Click the two links to see the difference in effect. The first navigates to the linked image and displays it in the embedded document. The second triggers the image to be downloaded.
 
 ## Specifications
 
