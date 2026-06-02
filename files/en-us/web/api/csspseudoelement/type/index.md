@@ -11,8 +11,7 @@ browser-compat: api.CSSPseudoElement.type
 {{APIRef}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the
-{{DOMxRef("CSSPseudoElement")}} interface returns the type of the pseudo-element as a
-string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/Guides/Pseudo-elements#selectors).
+{{DOMxRef("CSSPseudoElement")}} interface returns the type of the pseudo-element as a string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/Guides/Pseudo-elements#selectors).
 
 ## Value
 
