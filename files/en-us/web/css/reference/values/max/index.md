@@ -55,7 +55,7 @@ You can use different units for each value in your expression. You may also use 
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `min()` and other `max()` functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
-- The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
+- The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `\*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
 - You can (and often need to) combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
 ## Formal syntax
