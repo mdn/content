@@ -66,7 +66,7 @@ You normally create a new `URL` object by specifying the URL as a string when ca
 
 The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL.
 
-Note that in the case below "dogs" is the filename segment (because it has no trailing slash), and the relative URL "cats" is interpreted relative to the *directory* part of the base URL, which is `http://www.example.com/animals/`. See [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) for more information.
+Note that in the case below "dogs" is the filename segment (because it has no trailing slash), and the relative URL "cats" is interpreted relative to the _directory_ part of the base URL, which is `http://www.example.com/animals/`. See [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) for more information.
 
 ```js
 const url = new URL("cats", "http://www.example.com/animals/dogs");
