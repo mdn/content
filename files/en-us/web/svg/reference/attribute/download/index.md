@@ -56,7 +56,7 @@ body {
 
 #### HTML
 
-In this example, we present two very similar SVG links that point to the same [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), which encodes a read heart-shape image. The first one _doesn't_ include the `download` attribute and has the link text "Display my image". The second one _does_ include the `download` attribute and has the link text "Download my image".
+In this example, we present two very similar SVG links that point to the same [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), which encodes a red heart-shaped image. The first one _doesn't_ include the `download` attribute and has the link text "Display my image". The second one includes the `download` attribute and has the link text "Download my image".
 
 ```html live-sample___download-effect
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
