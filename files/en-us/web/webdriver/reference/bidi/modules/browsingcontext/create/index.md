@@ -15,7 +15,7 @@ The `browsingContext.create` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/
 {
   "method": "browsingContext.create",
   "params": {
-    "type": "tab" / "window"
+    "type": "tab"
   }
 }
 ```
@@ -62,11 +62,11 @@ The `result` object in the response contains the following fields:
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : A required parameter is missing or has an invalid type.
     This error is also returned when the context specified by `referenceContext` is not a top-level context.
-- [`no such frame`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchFrame)
+- `no such frame`
   - : No context with the given `referenceContext` ID is found.
-- [`no such user context`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchUserContext)
+- `no such user context`
   - : No user context with the given `userContext` ID is found.
-- [`unsupported operation`](/en-US/docs/Web/WebDriver/Reference/Errors/UnsupportedOperation)
+- `unsupported operation`
   - : The browser is unable to create a new [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context).
 
 ## Description

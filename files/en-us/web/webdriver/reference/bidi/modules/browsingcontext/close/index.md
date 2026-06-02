@@ -43,7 +43,7 @@ The `result` field in the response is an empty object (`{}`).
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : A required parameter is missing or has an invalid type.
     This error is also returned when the context specified by `context` is not a top-level context.
-- [`no such frame`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchFrame)
+- `no such frame`
   - : No context with the given context ID is found.
 
 ## Examples

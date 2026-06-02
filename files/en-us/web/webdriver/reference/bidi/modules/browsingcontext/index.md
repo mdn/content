@@ -1,5 +1,5 @@
 ---
-title: browsingContext module
+title: "`browsingContext` module"
 short-title: browsingContext
 slug: Web/WebDriver/Reference/BiDi/Modules/browsingContext
 page-type: listing-page
