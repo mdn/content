@@ -124,7 +124,7 @@ For example, if `https://example.com` navigated the `<iframe>` to `https://examp
   allow="local-network https://example.com https://example2.com"></iframe>
 ```
 
-You could also specify `allow="local-network *"` to allow any origin loaded in the `<iframe>` to make local network requests. For example, this can be useful in cases where an `<iframe>` makes arbitrary redirects to another origin (such as for SSO) before redirecting back to `localhost`.
+You could also specify `allow="local-network *"` to allow any origin loaded in the `<iframe>` to make local network requests. This can be useful in cases where an `<iframe>` makes arbitrary redirects to another origin (such as for SSO) before redirecting back to `localhost`.
 
 ## The `local-network-access` alias
 
