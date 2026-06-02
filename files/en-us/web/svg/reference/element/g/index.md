@@ -19,15 +19,16 @@ Transformations applied to the `<g>` element are performed on its child elements
 This element only includes global attributes.
 
 Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
-However, it is important to note that this inheritance rule is superseded by SVG's rules for which element supports which attribute.
-This means that geometric attributes which are specific to one or several elements will be ignored on a <g> element and not inherited by its children. Such attributes include:
-- cx and cy, which are specific to <circle> and <ellipse>
-- height, width, x and y, which are specific to <foreignObject>, <image>, <rect>, <svg>, <symbol> and <use>
-- r, which is specific to <circle>
-- rx and ry, which are specific to <ellipse> and <rect>
-- d, which is specific to <path>
+However, SVG-specific element rules supersede inheritance.
+Geometric attributes specific to certain elements are ignored on a `<g>` container and **not** inherited by its children.
 
-Other attributes taken by <g>, such as id or class, are not inherited.
+These non-inherited attributes include:
+* {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}
+* {{SVGAttr("rx")}}, {{SVGAttr("ry")}}: {{SVGElement("ellipse")}}, {{SVGElement("rect")}}
+* {{SVGAttr("d")}}: {{SVGElement("path")}}
+* {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}: {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+
+In addition, non-presentation attributes valid on `<g>` (such as {{SVGAttr("id")}} or {{SVGAttr("class")}}) are not inherited by its children.
 
 ## DOM Interface
 
