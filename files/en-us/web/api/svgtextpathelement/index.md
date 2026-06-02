@@ -19,15 +19,15 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("side")}} attribute of the given element.
-    Possible values are defined by the `TEXTPATH_SIDETYPE_*` constants defined on this interface.
+    Allowed values are defined by the [`TEXTPATH_SIDETYPE_*`](#textpath_sidetype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element.
-    Possible values are defined by the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
+    Allowed values are defined by the [`TEXTPATH_METHODTYPE_*`](#textpath_methodtype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element.
-    Possible values are defined by the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
+    Allowed values are defined by the [`TEXTPATH_SPACINGTYPE_*`](#textpath_spacingtype_unknown) constants defined on this interface.
 
 ## Instance methods
 
@@ -58,7 +58,7 @@ _This interface does not provide any specific methods, but implements those of i
 
 ### Basic usage
 
-This example shows how you can read the properties of an `SVGTextPathElement`.
+This example shows how you can set and get the properties of an `SVGTextPathElement`.
 
 #### HTML
 
@@ -89,11 +89,11 @@ svg {
 </svg>
 ```
 
-We also add a button for cycling through the possible values of the `side` attribute, allowing us to control which side of the path the text is drawn on.
+We also add a button for toggling the `side` property in order to change what side of the path the text is drawn on.
 Note that there is also hidden logging code that is not relevant to the example.
 
 ```html
-<button id="cycleBtn">Cycle side [none]</button>
+<button id="toggleBtn">Toggle side</button>
 ```
 
 ```html hidden
@@ -102,7 +102,7 @@ Note that there is also hidden logging code that is not relevant to the example.
 
 ```css hidden
 #log {
-  height: 100px;
+  height: 120px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -119,74 +119,76 @@ function log(text) {
 
 #### JavaScript
 
-The code below cycles the `side` attribute on the `textPath` between `none` (by removing it), `"left"`, and `"right"`.
-If the state is `none` or `"left"` the text is drawn on the left of the path, and otherwise it is drawn on the right.
-The code also updates the button text with the current state, and logs the `baseVal` for each of the properties (the `animVal` will have the same value, as we are not animating the attribute).
+The code below toggles the `side.baseVal` property on the `textPath`, causing the text to swap sides.
+
+First we define a function to log each of the properties of the the path element, and call it to log the initial state on load.
+The `side.baseVale` property is logged first, and demonstrates how the enumerated constants may be read and interpreted (this is done in a `try...catch` block, because `side` is not supported in all browsers).
+The other properties of the text path are also logged, but as raw values of their associated `baseVal` property.
 
 ```js
 const textPath = document.querySelector("textPath");
-const button = document.getElementById("cycleBtn");
 
-// States indicating the side of the path
-const states = ["none", "left", "right"];
+function logPathBaseVal() {
+  // Log the baseVal for each property
+  log("LOG:");
 
-button.addEventListener("click", () => {
-  // Get the current state from attribute: side
-  let currentSide;
-  if (!textPath.hasAttribute("side")) {
-    currentSide = "none";
-  } else {
-    currentSide = textPath.getAttribute("side");
+  try {
+    let side;
+
+    if (textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT) {
+      side = "right";
+    } else if (
+      textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT
+    ) {
+      side = "left";
+    } else if (
+      textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN
+    ) {
+      side = "unknown";
+    } else {
+      side = "unexpected value";
+    }
+    log(` Current side: ${side}`);
+  } catch {
+    log(`side property is not supported in this browser`);
   }
 
-  // Advance to the next state
-  let currentIndex = states.indexOf(currentSide);
-  let nextIndex = (currentIndex + 1) % states.length;
-  let nextState = states[nextIndex];
+  log(` href: ${textPath.href.baseVal}`);
+  log(` method: ${textPath.method.baseVal}`);
+  log(` spacing: ${textPath.spacing.baseVal}`);
+  log(` startOffset: ${textPath.startOffset.baseVal}`);
+}
 
-  // Apply the state changes to the SVG
-  if (nextState === "none") {
-    textPath.removeAttribute("side");
-  } else {
-    textPath.setAttribute("side", nextState);
-  }
-
-  // Update the button text to reflect the new state
-  button.textContent = `Cycle side [${nextState}]`;
-
-  // Log the SVG properties
-  console.log(textPath.method.baseVal);
-  logPathBaseVal(nextState);
-});
+// Log the initial state on load
+logPathBaseVal();
 ```
 
-The code to log the `baseVal` of each of the properties is shown below.
-For just the `side` property we show how you can compare the returned value to one of the constants.
+The toggle button event handler code is shown below This reads the current value of the `side.baseVal` property, and toggles the value to match the other side.
+It then logs the current state.
 
 ```js
-function logPathBaseVal(currentSide) {
-  // Select the textPath element
-  const textPathElement = document.querySelector("textPath");
+// Toggle the side when the button is clicked
+toggleBtn.addEventListener("click", () => {
+  try {
+    if (textPath.side.baseVal === SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT) {
+      // Change to left
+      textPath.side.baseVal = SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT;
+    } else {
+      // Change to right
+      textPath.side.baseVal = SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT;
+    }
 
-  // Log the baseVal for each property
-  log(`LOG: ${currentSide}`);
-  log(` href: ${textPathElement.href.baseVal}`);
-  log(` method: ${textPathElement.method.baseVal}`);
-  log(` spacing: ${textPathElement.spacing.baseVal}`);
-  log(` startOffset: ${textPathElement.startOffset.baseVal}`);
-  const side =
-    textPath.side.baseVal == SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT
-      ? "right"
-      : "left";
-  log(` side: ${side}`);
-}
+    // Log the updated state
+    logPathBaseVal();
+  } catch (e) {
+    log("Setting the side property is not supported in this browser.");
+  }
+});
 ```
 
 #### Result
 
-Press the button to cycle through the states.
-On browsers that support the `side` attribute, the text will be drawn on the right of the path when the button displays `Cycle side [right]`.
-Note that by default (and on browsers that don't support attribute) the text is drawn on the left.
+Press the button to toggle the states.
 
 {{EmbedLiveSample('Basic usage', 200, 600)}}
 
