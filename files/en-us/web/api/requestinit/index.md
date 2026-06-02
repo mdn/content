@@ -215,7 +215,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 - `signal` {{optional_inline}}
   - : An {{domxref("AbortSignal")}}. If this option is set, the request can be canceled by calling {{domxref("AbortController.abort()", "abort()")}} on the corresponding `AbortController`.
 - `targetAddressSpace` {{optional_inline}}
-  - : An enumerated value that specifies whether the request is intended to be a loopback, local, or public request. Valid values are:
+  - : An enumerated value that specifies whether the request is intended to be a loopback, local, or public request. This controls how the user agent will handle mixed-content.
+    Valid values are:
     - `local`
       - : The request is to a local address, which is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
     - `loopback`
