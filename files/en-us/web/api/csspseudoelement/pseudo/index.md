@@ -8,8 +8,7 @@ browser-compat: api.CSSPseudoElement.pseudo
 
 {{APIRef("CSSOM view API")}}
 
-The **`pseudo()`** method of the {{domxref("CSSPseudoElement")}}
-interface returns a `CSSPseudoElement` object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the parent pseudo-element.
+The **`pseudo()`** method of the {{domxref("CSSPseudoElement")}} interface returns a `CSSPseudoElement` object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the parent pseudo-element.
 
 This is useful for returning a representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements), for example the `::marker` pseudo-element in `::after::marker`.
 
