@@ -267,11 +267,11 @@ In this case, the `<figcaption>` fades into view when it starts to appear in the
 
 In the previous couple of examples, the trigger is activated (fade-in starts) when the tracked element starts to enter the scrollport from either edge, and the trigger is deactivated (fade-out starts) when the tracked element has completely left the scrollport at either edge — hence the fade out never being visible.
 
-This is because the default activation range and active range is the {{cssxref("timeline-range-name")}} `cover` value — the trigger activates as soon as the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited the start edge of the scrollport.
+This is because the default activation range and active range when using a `view()` `timeline-trigger-source()` is the {{cssxref("timeline-range-name")}} `cover` value — the trigger activates as soon as the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited the start edge of the scrollport.
 
 We can change the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
 
-- A {{cssxref("length-percentage")}} value to specify a different point along the `cover` range (by default, the `timeline-trigger-activation-range-start` value computes to `cover 0%` and the `timeline-trigger-activation-range-end` value computes to `cover 100%`).
+- A {{cssxref("length-percentage")}} value to specify a different point along the default range.
 - A different `timeline-range-name` keyword to specify a different range.
 - A `timeline-range-name` and a `<length-percentage>` to specify a certain point along a different range.
 

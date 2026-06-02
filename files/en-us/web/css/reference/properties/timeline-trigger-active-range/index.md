@@ -88,8 +88,6 @@ The `timeline-trigger-active-range` property can be used to set a custom **activ
 
 This is useful in situations where you want an animation to be triggered in a small activation range, but then you want the trigger to stay active within a larger range. The trigger will only deactivate when the tracked element leaves the active range.
 
-The active range's default value is `auto`, which sets the active range to the same as the activation range. The activation range's default value is `cover`. This means that the trigger activates when the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited either edge of the scrollport. The trigger will also stay active over this same range.
-
 The ranges can be changed by setting different `timeline-trigger-activation-range` and `timeline-trigger-active-range` values.
 
 For example:
@@ -137,17 +135,19 @@ If two values are specified as components of the `timeline-trigger-active-range`
 
 The value of each component can be one of the following:
 
-- The keyword `normal`, which is equivalent to `0%` for start and `100%` for end.
-- A `<length-percentage>`, which sets a specific length or percentage through the default `cover` range.
+- The keyword `auto`.
+- The keyword `normal`.
+- A `<length-percentage>`, which sets a specific length or percentage through the default `normal` range.
 - A {{cssxref("timeline-range-name")}}, which sets a different timeline range with an implicit percentage of `0%` for start and `100%` for end.
 - A `<timeline-range-name>` followed by a `<length-percentage>`, which sets a specific percentage through a different timeline range. These values are space-separated.
 
+The active range's default value is `auto`, which sets the active range to the same as the activation range.
+
+A value of `normal` is equivalent to `cover 0% cover 100%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `0% 100%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
+
 See [Explicitly defining both range start and range end with two values](/en-US/docs/Web/CSS/Reference/Properties/animation-range#explicitly_defining_both_range_start_and_range_end_with_two_values) for more information.
 
-> [!NOTE]
-> Unlike `animation-range`, `timeline-trigger-active-range` also has a special value available, `auto`, which sets it to the same range as the `timeline-trigger-activation-range`. This is the default value.
-
-When defining a `timeline-trigger-active-range-start` value explicitly and letting the `timeline-trigger-active-range-end` value adopt a default value, what the default value is depends on the supplied start value, and the rules to determine this are complex. Read [Defining range start and defaulting range end](/en-US/docs/Web/CSS/Reference/Properties/animation-range#defining_range_start_and_defaulting_range_end) for more details.
+When defining a `timeline-trigger-active-range-start` value explicitly and letting the `timeline-trigger-active-range-end` value adopt a default value, what the default value is depends on the supplied start value, and the rules to determine this are complex. Read [Defining range start and defaulting range end](/en-US/docs/Web/CSS/Reference/Properties/animation-range#defining_range_start_and_defaulting_range_end) for more details. One special case in which `timeline-trigger-active-range` differs from `animation-range` is the use of the special `auto` keyword: When setting `timeline-trigger-active-range` to `normal` or `auto`, the `timeline-trigger-active-range-end` value is set to `auto`.
 
 ### Specifying multiple ranges
 

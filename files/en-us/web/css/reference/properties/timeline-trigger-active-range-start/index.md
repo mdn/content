@@ -74,6 +74,10 @@ Allowed values for the `timeline-trigger-active-range-start` property are:
 - A `<timeline-range-name>`
 - A `<timeline-range-name>` and a `<length-percentage>` separated by a space.
 
+The default value is `auto`, which sets the `timeline-trigger-active-range-start` value to the same as the {{cssxref("timeline-trigger-activation-range-start")}}.
+
+A value of `normal` is equivalent to `cover 0%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `0%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
+
 If the `<timeline-range-name>` value does not include a `<length-percentage>`, it defaults to `0%` of the named timeline range. If a `<timeline-range-name>` is not included, the timeline range defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover).
 
 The `timeline-trigger-active-range-start` and {{cssxref("timeline-trigger-active-range-end")}} properties can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand.

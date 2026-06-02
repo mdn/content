@@ -49,7 +49,7 @@ The `timeline-trigger-activation-range-end` property is specified as one or more
 ### Values
 
 - `normal`
-  - : Represents the end of the `cover` timeline. This is the default value.
+  - : The default value. Equivalent to `cover 100%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `100%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - {{cssxref("timeline-range-name")}}
@@ -69,6 +69,8 @@ Allowed values for the `timeline-trigger-activation-range-end` property are:
 - A `<length-percentage>`
 - A `<timeline-range-name>`
 - A `<timeline-range-name>` and a `<length-percentage>`, separated by a space.
+
+The default value, `normal`, is equivalent to `cover 100%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `100%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
 
 If the `<timeline-range-name>` value does not include a `<length-percentage>`, it defaults to `100%` of the named timeline range. If a `<timeline-range-name>` is not included, the timeline range defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover).
 

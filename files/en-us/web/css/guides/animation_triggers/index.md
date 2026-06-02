@@ -7,7 +7,9 @@ spec-urls: https://drafts.csswg.org/animation-triggers-1/
 sidebar: cssref
 ---
 
-The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular trigger occurs, such as the user scrolling an element to a certain scroll offset inside the scrollport.
+The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when a particular timeline trigger occurs, such as a scrolling element entering or leaving certain timeline ranges (this is called a **scroll-triggered animation**).
+
+The source of these ranges is normally [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), enabling an animation to be started when an element enters a scrollport and ended when it leaves the scrollport. These concepts were introduced in the [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module.
 
 ## Animation triggers in action
 
@@ -165,7 +167,7 @@ html {
 ```
 
 ```css hidden live-sample___in-action
-@supports not (timeline-trigger-name: --t) {
+@supports not (timeline-trigger-source: view()) {
   body::before {
     content: "Your browser does not support scroll-triggered animations.";
     background-color: wheat;
@@ -212,6 +214,8 @@ The CSS animation triggers module also introduces the `event-trigger`, `event-tr
   - : A guide to implementing CSS scroll-triggered animations.
 - [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
   - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
+- [Understanding timeline insets](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
+  - : Understanding the animation attachment range syntax used to inset scroll-driven and scroll-triggered animations.
 
 ## Related concepts
 

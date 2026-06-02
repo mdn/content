@@ -130,10 +130,12 @@ If two values are specified as components of the `timeline-trigger-activation-ra
 
 The value of each component can be one of the following:
 
-- The keyword `normal`, which is equivalent to `0%` for start and `100%` for end.
-- A `<length-percentage>`, which sets a specific length or percentage through the default `cover` range.
+- The keyword `normal`.
+- A `<length-percentage>`, which sets a specific length or percentage through the default `normal` range.
 - A {{cssxref("timeline-range-name")}}, which sets a different timeline range with an implicit percentage of `0%` for start and `100%` for end.
 - A `<timeline-range-name>` followed by a `<length-percentage>`, which sets a specific percentage through a different timeline range. These values are space-separated.
+
+The activation range's default value is `normal`, which is equivalent to `cover 0% cover 100%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `0% 100%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
 
 See [Explicitly defining both range start and range end with two values](/en-US/docs/Web/CSS/Reference/Properties/animation-range#explicitly_defining_both_range_start_and_range_end_with_two_values) for more information.
 
