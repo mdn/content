@@ -2120,6 +2120,10 @@
       "inh": "SourceBuffer",
       "impl": []
     },
+    "MathMLAnchorElement": {
+      "inh": "MathMLElement",
+      "impl": []
+    },
     "MathMLElement": {
       "inh": "Element",
       "impl": []
@@ -2313,7 +2317,7 @@
       "impl": []
     },
     "ModelContext": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "ModelContextClient": {
@@ -3012,6 +3016,14 @@
       "inh": "",
       "impl": []
     },
+    "RTCRtpSFrameDecrypter": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "RTCRtpSFrameEncrypter": {
+      "inh": "",
+      "impl": []
+    },
     "RTCRtpTransceiver": {
       "inh": "",
       "impl": []
@@ -3021,14 +3033,6 @@
       "impl": []
     },
     "RTCSessionDescription": {
-      "inh": "",
-      "impl": []
-    },
-    "RTCSFrameReceiverTransform": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "RTCSFrameSenderTransform": {
       "inh": "",
       "impl": []
     },
@@ -3129,7 +3133,7 @@
       "impl": []
     },
     "SFrameEncrypterStream": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {

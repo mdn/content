@@ -1,8 +1,8 @@
 ---
-title: Firefox 150 release notes for developers (Stable)
-short-title: Firefox 150 (Stable)
+title: Firefox 150 release notes for developers
+short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -46,11 +46,19 @@ No notable changes.
 - The {{domxref("Sanitizer.replaceElementWithChildren()")}} method will now return `false` if the element to be replaced is {{htmlelement("html")}} in the HTML [namespace](/en-US/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
   In other words, you can't use this method to create a {{domxref("Sanitizer")}} that will replace the `<html>` element with its inner content. ([Firefox bug 2022176](https://bugzil.la/2022176)).
 
+- The [`scrollend` event](/en-US/docs/Web/API/VisualViewport/scrollend_event) is now supported on {{domxref("VisualViewport")}}, allowing elements to be updated when a scrolling action is completed.
+  This might be used, for example, to unhide or otherwise adjust the position of fixed UI elements once a user finishes panning around a pinch-zoomed screen.
+  ([Firefox bug 1801658](https://bugzil.la/1801658)).
+
 #### DOM
 
 - The [`options.shadowRoots`](/en-US/docs/Web/API/Document/caretPositionFromPoint#shadowroots) argument of the {{domxref('Document.caretPositionFromPoint()')}} method is now supported.
   This allows the method to return the node containing the caret from within a shadow DOM, provided its associated {{domxref("ShadowRoot")}} was passed as an option.
   ([Firefox bug 1914596](https://bugzil.la/1914596)).
+
+- The {{domxref("HighlightRegistry.highlightsFromPoint()")}} method is now supported, providing an mechanism for web pages to get information about all the [CSS custom highlights](/en-US/docs/Web/API/CSS_Custom_Highlight_API) applied at a particular point.
+  This includes highlights that are inside shadow roots, provided the associated {{domxref("ShadowRoot")}} instance was passed to the method.
+  ([Firefox bug 1917991](https://bugzil.la/1917991)).
 
 - The {{domxref("CSSFontFaceDescriptors")}} interface is now supported, and an instance of this type is returned by the {{domxref("CSSFontFaceRule.style")}} property. ([Firefox bug 2019904](https://bugzil.la/2019904)).
 

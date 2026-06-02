@@ -39,7 +39,7 @@ value_type.sqrt
   - : The type of value the instruction is being run on. The following types support `sqrt`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `sqrt`
@@ -58,7 +58,7 @@ value_type.sqrt
 
 For a non-SIMD `sqrt`, these will be basic numeric values such as `3.5` or `9`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sqrt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack contains the square root of the corresponding lane in the input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sqrt`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack contains the square root of the corresponding lane in the input value.
 
 ### Binary encoding
 

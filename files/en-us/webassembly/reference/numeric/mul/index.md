@@ -42,7 +42,7 @@ value_type.mul
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i16x8`
       - `i32x4`
       - `i64x2`
@@ -66,7 +66,7 @@ value_type.mul
 
 For a non-SIMD `mul`, these will be basic numeric values such as `3` or `3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `mul`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the product of the two inputs' corresponding lane values being multiplied together.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `mul`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the product of the two inputs' corresponding lane values being multiplied together.
 
 ### Binary encoding
 

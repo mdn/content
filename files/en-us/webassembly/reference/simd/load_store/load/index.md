@@ -7,7 +7,7 @@ browser-compat: webassembly.simd.load
 sidebar: webassemblysidebar
 ---
 
-The **`load`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation with values from a given memory address.
+The **`load`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation with values from a given memory address.
 
 {{InteractiveExample("Wat Demo: load", "tabbed-taller")}}
 
