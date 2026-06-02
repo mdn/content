@@ -25,14 +25,15 @@ The **`getConfiguration()`** method of the {{domxref("MediaKeySystemAccess")}} i
   - : Indicates whether the ability to persist state is required.
 - `sessionTypes` {{ReadOnlyInline}}
   - : An array of strings indicating the session types that are supported by the configuration.
-        Permitted values include:
-        - `temporary`
-          - : A session for which the license, key(s) and record of or data related to the session are not persisted.
-            The application does not need to manage such storage.
-            Implementations must support this option, and it is the default.
-        - `persistent-license`
-          - : A session for which the license (and potentially other data related to the session) will be persisted.
-            A record of the license and associated keys persists even if the license is destroyed, providing an attestation that the license and key(s) it contains are no longer usable by the client.
+
+    Permitted values include:
+    - `temporary`
+      - : A session for which the license, key(s) and record of or data related to the session are not persisted.
+        The application does not need to manage such storage.
+        Implementations must support this option, and it is the default.
+    - `persistent-license`
+      - : A session for which the license (and potentially other data related to the session) will be persisted.
+        A record of the license and associated keys persists even if the license is destroyed, providing an attestation that the license and key(s) it contains are no longer usable by the client.
 
 ## Syntax
 
