@@ -10,14 +10,17 @@ browser-compat: api.CSSPseudoElement.element
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`element`** read-only property of the
-{{DOMxRef("CSSPseudoElement")}} interface returns a reference to the originating parent element of the pseudo-element.
+The **`element`** read-only property of the {{DOMxRef("CSSPseudoElement")}} interface returns a reference to the originating parent element of the pseudo-element.
+
+This differs from the {{DOMxRef("CSSPseudoElement.parent")}} property, which returns a reference to the pseudo-element's _immediate_ parent: This can be either an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
 ## Value
 
 An {{DOMxRef("Element")}} representing the pseudo-element's originating parent element.
 
 ## Examples
+
+### Basic usage
 
 The example below demonstrates the relationship between
 `CSSPseudoElement.element` and {{DOMxRef("Element.pseudo()")}}:

@@ -8,8 +8,9 @@ browser-compat: api.Element.pseudo
 
 {{APIRef("CSSOM view API")}}
 
-The **`pseudo()`** method of the {{domxref("Element")}}
-interface returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
+The **`pseudo()`** method of the {{domxref("Element")}} interface returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
+
+Provided its `type` property contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling element.
 
 ## Syntax
 
@@ -20,13 +21,14 @@ pseudo(type)
 ### Parameters
 
 - `type`
-  - : A string representing the type of pseudo-element to return a representation of, for example {{cssxref("::after")}} or {{cssxref("::marker")}}.
+  - : A string representing the type of pseudo-element to return a representation of. Valid values are:
+    - {{cssxref("::after")}}
+    - {{cssxref("::before")}}
+    - {{cssxref("::marker")}}
 
 ### Return value
 
 A {{domxref("CSSPseudoElement")}} object instance, or `null` if `type` is not equal to a valid pseudo-element type.
-
-`CSSPseudoElement` is a proxy object representing a pseudo-element. Therefore, provided `type` contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling element.
 
 ## Examples
 
@@ -69,14 +71,18 @@ p::after {
 
 #### JavaScript
 
-In our script, we grab references to our `<p>` and `<output>` elements, and retrieve a `CSSPseudoElement` representing the `<p>` element's `::after` pseudo-element via the `pseudo()` method. We then log some details of the pseudo-element to our `<output>` element.
+In our script, we grab references to our `<p>` and `<output>` elements, and retrieve a `CSSPseudoElement` representing the `<p>` element's `::after` pseudo-element via the `pseudo()` method. We then log some details of the pseudo-element to our `<output>` element. We also include some rudimentary error handling via a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) structure, to print an error message in non-supporting browsers.
 
 ```js live-sample___basic
 const pElem = document.querySelector("p");
 const output = document.querySelector("output");
-const pseudoElem = pElem.pseudo("::after");
 
-output.textContent = `${pseudoElem.type} pseudo-element. Parent: ${pseudoElem.parent}`;
+try {
+  const pseudoElem = pElem.pseudo("::after");
+  output.textContent = `${pseudoElem.type} pseudo-element. Parent: ${pseudoElem.parent}`;
+} catch (e) {
+  output.textContent = `Your browser doesn't support CSSPseudoElement and/or the pseudo() method: ${e}`;
+}
 ```
 
 #### Result

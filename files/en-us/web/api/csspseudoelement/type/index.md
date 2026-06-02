@@ -10,14 +10,19 @@ browser-compat: api.CSSPseudoElement.type
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`type`** read-only property of the
-{{DOMxRef("CSSPseudoElement")}} interface returns the type of the pseudo-element as a string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/Guides/Pseudo-elements#selectors).
+The **`type`** read-only property of the {{DOMxRef("CSSPseudoElement")}} interface returns the type of the pseudo-element as a string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/Guides/Pseudo-elements#selectors).
 
 ## Value
 
-A string representing the type of pseudo-element represented by the `CSSPseudoElement`, for example {{CSSxRef("::before")}}, {{CSSxRef("::after")}}, or {{CSSxRef("::marker")}}.
+A string representing the type of pseudo-element represented by the `CSSPseudoElement`. Possible values are:
+
+- {{cssxref("::after")}}
+- {{cssxref("::before")}}
+- {{cssxref("::marker")}}
 
 ## Examples
+
+### Basic usage
 
 The example below demonstrates the relationship between
 `CSSPseudoElement.type` and {{DOMxRef("Element.pseudo()")}}:

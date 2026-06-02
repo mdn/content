@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSPseudoElement.pseudo
 ---
 
-{{APIRef("CSSOM view API")}}
+{{APIRef}}
 
-The **`pseudo()`** method of the {{domxref("CSSPseudoElement")}} interface returns a `CSSPseudoElement` object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the parent pseudo-element.
-
-This is useful for returning a representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements), for example the `::marker` pseudo-element in `::after::marker`.
+The **`pseudo()`** method of the {{domxref("CSSPseudoElement")}} interface returns a `CSSPseudoElement` instance representing a specific [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
 ## Syntax
 
@@ -21,13 +19,20 @@ pseudo(type)
 ### Parameters
 
 - `type`
-  - : A string representing the type of pseudo-element to return a representation of, for example {{cssxref("::marker")}}.
+  - : A string representing the type of pseudo-element to return a representation of. Valid values are:
+    - {{cssxref("::after")}}
+    - {{cssxref("::before")}}
+    - {{cssxref("::marker")}}
 
 ### Return value
 
 A {{domxref("CSSPseudoElement")}} object instance, or `null` if `type` is not equal to a valid pseudo-element type.
 
-`CSSPseudoElement` is a proxy object representing a pseudo-element. Therefore, provided `type` contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling pseudo-element.
+## Description
+
+The `CSSPseudoElement.pseudo()` method is used to target a pseudo-element that is attached to another pseudo-element, rather than directly to a standard DOM element. For example, if a `::before` pseudo-element generates a list marker — selectable via `::before::marker` — this method can retrieve the `::marker` nested inside that `::before`. You call the method on the parent pseudo-element and pass the type of the nested child pseudo-element as an argument.
+
+Provided its `type` property contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling pseudo-element.
 
 ## Examples
 
@@ -75,15 +80,19 @@ p::after::marker {
 
 #### JavaScript
 
-In our script, we grab references to our `<p>` and `<output>` elements, and retrieve `CSSPseudoElement` objects via the `pseudo()` method representing the `<p>` element's `::after` pseudo-element, and the `::after` pseudo-element's `::marker` pseudo-element. We then log some details of the child pseudo-element to our `<output>` element.
+In our script, we grab references to our `<p>` and `<output>` elements, and retrieve `CSSPseudoElement` objects via the `pseudo()` method representing the `<p>` element's `::after` pseudo-element, and the `::after` pseudo-element's `::marker` pseudo-element. We then log some details of the child pseudo-element to our `<output>` element. We also include some rudimentary error handling via a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) structure, to print an error message in non-supporting browsers.
 
 ```js live-sample___basic
 const pElem = document.querySelector("p");
 const output = document.querySelector("output");
-const pseudoElem = pElem.pseudo("::after");
-const pseudoPseudoElem = pseudoElem.pseudo("::marker");
 
-output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent}. Originating parent element: ${pseudoPseudoElem.element}`;
+try {
+  const pseudoElem = pElem.pseudo("::after");
+  const pseudoPseudoElem = pseudoElem.pseudo("::marker");
+  output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent}. Originating parent element: ${pseudoPseudoElem.element}`;
+} catch (e) {
+  output.textContent = `Your browser doesn't support CSSPseudoElement and/or the pseudo() method: ${e}`;
+}
 ```
 
 #### Result
