@@ -24,7 +24,7 @@ The `download` attribute can take no value (that is, a boolean attribute) or a s
 
 ## Description
 
-The `download` attribute only works for [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy), or the `blob:` and `data:` schemes.
+The `download` attribute works for only [same-origin URLs](/en-US/docs/Web/Security/Defenses/Same-origin_policy) or for the `blob:` and `data:` schemes.
 
 How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
 
