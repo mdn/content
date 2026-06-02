@@ -18,7 +18,7 @@ The HTTP {{HTTPHeader("Permissions-Policy")}} header `local-network-access` dire
 
 Specifically, where a defined policy blocks use of this feature, requests to local and loopback addresses will always fail. If you want more granular control over local and loopback addresses, you should use the newer directives linked above.
 
-See [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access) for more details.
+See [Local Network Access > The `local-network-access` alias](/en-US/docs/Web/Security/Defenses/Local_network_access#the_local-network-access_alias) for more details.
 
 ## Syntax
 

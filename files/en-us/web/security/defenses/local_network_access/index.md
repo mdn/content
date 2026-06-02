@@ -73,7 +73,7 @@ The permissions are restricted to secure contexts. On non-secure contexts, all r
 
 ## Relaxing mixed content
 
-If granted, the permissions additionally relax [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) blocking for local network requests. This is useful because many local devices are not able to obtain publicly trusted TLS certificates for various reasons. For example, it allows public websites to access local testing servers or devices running on HTTP.
+If granted, the permissions additionally relax [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) blocking for local network requests. This is needed because many local devices are not able to obtain publicly trusted TLS certificates for various reasons. For example, it allows public websites to access local testing servers or devices running on HTTP.
 
 To explicitly tell supporting browsers to skip mixed content checks, set the {{domxref("Request.targetAddressSpace")}} property to `local` or `loopback` on new requests (via the {{domxref("Request.Request", "Request()")}} constructor or directly in the {{domxref("Window.fetch", "fetch()")}} method).
 
@@ -90,9 +90,9 @@ console.log(req.targetAddressSpace);
 // loopback
 ```
 
-This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://internal.example.com`.
+Setting `targetAddressSpace: "loopback"` is required in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://internal.example.com`. If this is omitted, a request from an HTTPS site to access the HTTP resource will fail mixed content checks.
 
-Some addresses such as private IP literals (for example, `192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
+Some addresses, such as private IP literals (for example, `192.168.0.1`) and `.local` addresses (such as `http://router.local`), have mixed content checks relaxed in cases where local network access permissions are granted, so don't need the `targetAddressSpace` property to be set. However, if local network access permissions are not granted, mixed content checks still apply, regardless of whether `targetAddressSpace` is set or not.
 
 ## Local network access permissions policies
 

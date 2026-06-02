@@ -30,7 +30,36 @@ Permissions-Policy: local-network=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `local-network` is `self`.
+The default allowlist for `local-network` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `local-network` feature by default.
+
+## Examples
+
+### Basic usage
+
+SecureCorp Inc. wants to disallow `local-network` within all cross-origin iframes except those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
+
+```http
+Permissions-Policy: local-network=(self "https://example.com")
+```
+
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `local-network` is to be allowed:
+
+```html
+<iframe src="https://example.com/lna" allow="local-network"></iframe>
+```
+
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `local-network` for other origins, even if they are allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+If an allowlist for `local-network` is not defined by a `Permissions-Policy` response header, user agents will apply the default allowlist `self`. In this mode, `local-network` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+
+To allow `local-network` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+
+```html
+<iframe src="https://other.com/lna" allow="local-network"></iframe>
+```
 
 ## Specifications
 

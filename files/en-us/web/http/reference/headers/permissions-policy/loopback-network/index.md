@@ -30,7 +30,36 @@ Permissions-Policy: loopback-network=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `loopback-network` is `self`.
+The default allowlist for `loopback-network` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `loopback-network` feature by default.
+
+## Examples
+
+### Basic usage
+
+SecureCorp Inc. wants to disallow `loopback-network` within all cross-origin iframes except those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
+
+```http
+Permissions-Policy: loopback-network=(self "https://example.com")
+```
+
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `loopback-network` is to be allowed:
+
+```html
+<iframe src="https://example.com/lna" allow="loopback-network"></iframe>
+```
+
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `loopback-network` for other origins, even if they are allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+If an allowlist for `loopback-network` is not defined by a `Permissions-Policy` response header, user agents will apply the default allowlist `self`. In this mode, `loopback-network` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+
+To allow `loopback-network` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+
+```html
+<iframe src="https://other.com/lna" allow="loopback-network"></iframe>
+```
 
 ## Specifications
 

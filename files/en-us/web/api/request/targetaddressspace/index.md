@@ -31,7 +31,7 @@ This permission is restricted to secure contexts. If granted, the permissions ad
 
 The `targetAddressSpace` property, when set to `local` or `loopback` on new requests (via the {{domxref("Request.Request", "Request()")}} constructor or directly in the {{domxref("Window.fetch", "fetch()")}} method), explicitly tells supporting browsers to skip mixed content checks. This is needed in cases where a URL is a public domain address, but ends up resolving to a local network address, such as `http://internal.example.com`.
 
-Some addresses such as private IP literals (for example, `192.168.0.1`) and `local` addresses (such as `http://router.local`) are exempt from mixed content checks, so don't need the `targetAddressSpace` property to be set.
+Some addresses, such as private IP literals (for example, `192.168.0.1`) and `.local` addresses (such as `http://router.local`), have mixed content checks relaxed in cases where local network access permissions are granted, so don't need the `targetAddressSpace` property to be set. However, if local network access permissions are not granted, mixed content checks still apply, regardless of whether `targetAddressSpace` is set or not.
 
 ## Examples
 
