@@ -18,7 +18,7 @@ Transformations applied to the `<g>` element are performed on its child elements
 
 This element only includes global attributes.
 
-Most of the [presentation attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
+Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
 However, it is important to note that this inheritance rule is superseded by SVG's rules for which element supports which attribute.
 This means that geometric attributes which are specific to one or several elements will be ignored on a <g> element and not inherited by its children. Such attributes include:
 - cx and cy, which are specific to <circle> and <ellipse>
