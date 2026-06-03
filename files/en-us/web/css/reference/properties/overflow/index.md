@@ -86,15 +86,20 @@ The `overflow` property is specified as one or two {{CSSXref("overflow_value", "
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value.
 - `hidden`
-  - : Overflow content is clipped at the element's padding box, hiding the clipped content. The element box is a {{glossary("scroll container")}} with no scroll bars; scrolling is still possible via other methods including tabbing to hidden focusable elements, properties such as {{domxref("Element.scrollLeft", "scrollLeft")}} property, and methods like {{domxref("Element.scrollTo", "scrollTo()")}}.
+  - : Overflow content is clipped at the element's padding box, hiding the clipped content. When overflowing, the element box is a {{glossary("scroll container")}} with no scroll bars; scrolling is still possible via other methods including tabbing to hidden focusable elements, properties such as {{domxref("Element.scrollLeft", "scrollLeft")}} property, and methods like {{domxref("Element.scrollTo", "scrollTo()")}}.
 - `clip`
   - : Overflow content is clipped at the element's _overflow clip edge_ defined by the {{cssxref("overflow-clip-margin")}} property. The element box is not a scroll container, clipped content is not visible, and programmatic scrolling is not supported.
 - `scroll`
-  - : Overflow content is clipped at the element's padding box. The element box is a scroll container always displaying scroll bars.
+  - : Overflow content is clipped at the element's padding box. Whether overflowing or not, the element box is always a scroll container displaying scroll bars.
 - `auto`
-  - : Overflow content is clipped at the element's padding box. The element box is a scroll container displaying scroll bars _only if_ content is overflowing. Establishes a new formatting context.
+  - : Overflow content is clipped at the element's padding box. When overflowing, the element box is a scroll container displaying scroll bars.
 
-Some browsers support the `overlay` value. This value was implemented as an internal Safari feature to allow the scrollbar to overlap the content, but was never part of the specification. Browsers support `overlay` as an alias for `auto`. Its use is discouraged.
+#### Non-standard values
+
+Some non-standard values are also supported in some browsers:
+
+- `overlay`
+  - : Alias for `auto`. Implemented as an internal Safari feature to allow the scrollbar to overlap the content, `overlay` was never part of the specification. Its use is discouraged.
 
 ## Description
 
