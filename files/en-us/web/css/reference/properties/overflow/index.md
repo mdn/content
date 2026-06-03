@@ -79,7 +79,7 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
+The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values.
 
 ### Values
 
@@ -103,7 +103,9 @@ Some non-standard values are also supported in some browsers:
 
 ## Description
 
-By default, block level elements grow to fit their content. If the size is of a container is constrained, the content will overflow. This overflowing behavior is controlled by the `overflow` property, shorthand for the horizontal {{cssxref("overflow-x")}} and vertical {{cssxref("overflow-y")}} properties, which determines how a container handles this content that overflows its edges by default.
+By default, block level elements grow to fit their content. If the size is of a container is constrained, the content will overflow. This overflowing behavior is controlled by the `overflow` property determines how a container handles this content that overflows its edges by default.
+
+The `overflow` property is shorthand for the horizontal {{cssxref("overflow-x")}} and vertical {{cssxref("overflow-y")}} properties. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
 
 Overflow options include hiding overflow content, enabling scroll bars to view overflow content or displaying the content flowing out of an element box into the surrounding area, and combinations there of.
 
@@ -114,7 +116,7 @@ All values, except `visible` and `clip`, create a new [block formatting context]
 Overflow occurs when a block-level element has content that overflows its constrained space. The alloted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size (({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
 
 The following CSS limits the size of the container, defining [box model](/en-US/docs/Web/CSS/Guides/Box_model) property values that limit the container's size.
-We've also added a background color, clipped to the `content-box`, to help demonstrate how overflowing content overflows the content box.
+We've also added a background color, clipped to the `content-box`, to help demonstrate how overflowing content overflows the content box in the explanations that follow.
 
 ```css
 div {
@@ -130,11 +132,11 @@ div {
 
 ### Understanding overflow values
 
-The different `overflow` values define whether an element has scrollbars, whether it is user and programmatically scrollable, and whether it is a scroll container, both when that element's contents overflow and when they don't.
+The different `overflow` values define whether an element has scrollbars, whether it is user and programmatically scrollable, and whether it is a scroll container (which creates a new [block formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context)) when that element's contents overflow and, in the case of `scroll`, even when they don't.
 
 #### The `visible` value
 
-The default value is `visible`, in which case overflowing content will not be contained to the container. With `visible`, no clipping occurs, so any overflowing content may be visible outside the element's padding box, potentially overlapping adjacent content. An element that defaults or is explicitly set to `visible` doesn't not have scrollbars, is not user or programmatically scrollable, and is not a {{glossary("scroll container")}}.
+The default value is `visible`. By default, if content overflows a container's constraints, the contents are not contained to the container. An element that defaults or is explicitly set to `visible` doesn't not have scrollbars, is not user or programmatically scrollable, and is not a {{glossary("scroll container")}}. This value does not create a new block formatting context.
 
 ```css live-sample___visible
 div {
@@ -157,9 +159,13 @@ div {
 </div>
 ```
 
+With `visible`, no clipping occurs, so the overflowing content is visible outside the element's padding box, potentially overlapping adjacent content.
+
 #### The `scroll` value
 
-With `scroll`, if the content overflows, it is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. User agents display scroll bars whether or not any content is overflowing, so in the horizontal and vertical directions if the value applies to both directions. The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflow content. The element box is a scroll container.
+With `scroll`, if the content overflows, it is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. User agents display scroll bars whether or not any content is overflowing, in both the horizontal and vertical directions if the value applies to both directions.
+
+The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflow content. The element box is a scroll container.
 
 When `overflow` is set to `scroll`, the element has scrollbars and is user and programmatically scrollable. With `scroll`, the element is a {{glossary("scroll container")}}, even if there is no overflow.
 
@@ -251,6 +257,8 @@ div {
 </div>
 ```
 
+The first example does not have overflowing content and is not a scroll container. The second example has overflowing content that is clipped to the padding box. Even though there is no scroll bar enabling scrolling to the overflowing content, the content can be scrolled into view, such as by tabbing to the {{htmlelement("input")}} in the hidden content. The second example is a scroll container.
+
 ### The `clip` value
 
 With `clip`, content that overflows is by default hidden, there are no scroll bars, and programmatic scrolling is not possible. The element is not a scroll container and no new [formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) is created. If the clipped content includes interactive content, hidden focusable content still receives keyboard focus, but that content will not scroll into view, which is bad user experience.
@@ -270,7 +278,13 @@ div {
   <h2>overflow: clip;</h2>
 </div>
 <div>
-  <p>The <code>overflow</code> property in this example is set to <code>clip</code>. Overflowing content is clipped the container.No scroll container is created; the content just overflows the container. </p>
+  <p>The <code>overflow</code> property in this example is set to <code>clip</code>. When hidden,
+    <a
+      href="https://mozilla.developer.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
+      >interactive content</a
+    >
+    can NOT be scrolled into view when focused. Overflowing content is clipped the container. No scroll container is created. Tabbing will give this
+    <input aria-label="input" placeholder="input" /> focus but will not scroll it into view, which is terrible user experience. This content is not programmatically scrollable. </p>
 </div>
 <fieldset><legend>Select a <code>overflow-clip-margin</code> value</legend>
 <ul>
@@ -279,6 +293,8 @@ div {
 </ul>
 </fieldset>
 ```
+
+The second example's overflowing content is clipped. Tabbing to the {{htmlelement("input")}} in the hidden content gives the element focus, but does not scroll it into view, creating inaccessible, bad user experience.
 
 When using the two value syntax, if one value is set to `clip`, that `clip` overflow direction will behave as `hidden` if the other value is not set to `visible` or `clip`.
 
@@ -311,11 +327,11 @@ label {
 
 #### With scroll driven animations
 
-When clipping overflow when creating [scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
+When creating [scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) using the {{cssxref("scroll()")}} function, consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
 
 With both `hidden` and `clip`, the overflow gets clipped, but `overflow: clip` doesn't create a scroll container, so clipped elements are skipped when the user agent goes up the DOM treen looking for the nearest ancestor scroll container.
 
-Because `overflow: hidden` creates a scroll container when there is overflowing content, you might accidentally create a scrolling-ancestor that doesn't scroll. But only use `clip` if you are certain you won't create inaccessible interactive content.
+Because `overflow: hidden` creates a scroll container when there is overflowing content, you might accidentally create a scrolling-ancestor that doesn't scroll. But only use `clip` if you are certain you won't clip any interactive content.
 
 ```css hidden live-sample___visible live-sample___scroll live-sample___auto live-sample___clip live-sample___hidden
 div {
@@ -495,5 +511,7 @@ p.overlay {
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - SVG {{SVGAttr("overflow")}} attribute
+- [Scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
