@@ -27,7 +27,7 @@ One of the following value types can be used:
 
 ## Examples
 
-Use CSS `background-color` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/background-color#basic_example) is available on the {{cssxref("background-color")}} page.
+Use CSS `background-color` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/background-color#colorized_tables) is available on the {{cssxref("background-color")}} page.
 
 ## Specifications
 
