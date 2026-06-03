@@ -12,15 +12,25 @@ The `browsingContext.getTree` [command](/en-US/docs/Web/WebDriver/Reference/BiDi
 ## Syntax
 
 ```json-nolint
+/* Without optional parameters */
 {
   "method": "browsingContext.getTree",
   "params": {}
+}
+
+/* With optional parameters */
+{
+  "method": "browsingContext.getTree",
+  "params": {
+    "maxDepth": 1,
+    "root": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
+  }
 }
 ```
 
 ### Parameters
 
-The `params` field contains:
+The `params` field can contain:
 
 - `maxDepth` {{optional_inline}}
   - : A non-negative integer that specifies the maximum depth of the tree to return.
@@ -50,7 +60,7 @@ The `result` object in the response contains the following fields:
         The value is `null` if the context was opened directly (not by another context).
 
         > [!NOTE]
-        > `originalOpener` is set once at the time the context is created, never changes, and always retains the opener's context ID. This differs from the JavaScript [`window.opener`](/en-US/docs/Web/API/Window/opener) property, which references the window that opened the current window — it becomes `null` if the [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener) attribute is used on the link or if the [`noopener`](/en-US/docs/Web/API/Window/open#noopener) window feature is specified in {{domxref("window.open()")}}.
+        > `originalOpener` is set once when the context is created. It never changes and always retains the opener's context ID. This differs from the JavaScript [`window.opener`](/en-US/docs/Web/API/Window/opener) property, which references the window that opened the current window — it becomes `null` if the [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener) attribute is used on the link or if the [`noopener`](/en-US/docs/Web/API/Window/open#noopener) window feature is specified in {{domxref("window.open()")}}.
 
     - `parent` {{optional_inline}}
       - : A string that contains the ID of the parent context.
@@ -147,7 +157,7 @@ Using the same setup as in the previous example, to get only Tab 1 and its immed
 }
 ```
 
-The browser responds with Tab 1 and its immediate child. The `children` field for the iframe is `null`; the `maxDepth` setting of `1` limits the response to one level below the root, so the iframe's own children are not included:
+The browser responds with Tab 1 and its immediate child. The `children` field for the iframe is `null`; the `maxDepth` setting of `1` limits the response to one level below the root, so the `<iframe>`'s own children are not included:
 
 ```json
 {
@@ -178,7 +188,7 @@ The browser responds with Tab 1 and its immediate child. The `children` field fo
 }
 ```
 
-In this example, if the `root` parameter of the `browsingContext.getTree` message were set to the iframe's context ID (`"6442450945"`), the iframe's `parent` field in the response would be `"93ee5bd6-d256-4608-a002-9a8995cc0e5f"` (Tab 1's context ID) rather than `null`.
+In this example, if the `root` parameter of the `browsingContext.getTree` message were set to the iframe's context ID (`"6442450945"`), the `<iframe>`'s `parent` field in the response would be `"93ee5bd6-d256-4608-a002-9a8995cc0e5f"` (Tab 1's context ID) rather than `null`.
 
 To limit the lookup to only the root context with no children, set `maxDepth` to `0`:
 

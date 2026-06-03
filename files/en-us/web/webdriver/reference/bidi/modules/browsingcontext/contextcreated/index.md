@@ -11,10 +11,10 @@ The `browsingContext.contextCreated` [event](/en-US/docs/Web/WebDriver/Reference
 
 ## Event data
 
-The `params` field in the event notification is a context object with the following properties:
+The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following properties:
 
 - `children`
-  - : An array of context objects that represents child contexts.
+  - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.
     This event does not include child contexts ([`maxDepth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#maxdepth) is `0`).
     To retrieve the children of a context, use [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `clientWindow`
@@ -44,7 +44,9 @@ If the [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/s
 
 ### Receiving an event for a new tab
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextCreated` active, consider a scenario where your automation script creates a new tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create). The browser sends the following notification when the tab is created:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextCreated` active.
+
+When your automation script creates a tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create), the browser sends the following notification:
 
 ```json
 {
@@ -64,7 +66,9 @@ With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_
 
 ### Receiving an event for a child context
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextCreated` active, consider a scenario where a page containing an `<iframe>` loads. The browser sends the following notification for the new child context:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextCreated` active.
+
+Suppose a page containing an `<iframe>` loads. The browser sends the following notification for the new child context:
 
 ```json
 {
@@ -84,7 +88,9 @@ With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_
 
 ### Identifying the opener of a context
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), consider a scenario where two tabs are already open: Tab 1 at `https://example.com/page1.html`, and Tab 2 at `https://example.com/page2.html`, which was opened from Tab 1 using `window.open()`. When you subscribe to `browsingContext.contextCreated`, the browser fires events for the two existing contexts. The `originalOpener` field in Tab 2's notification identifies the context that opened it.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
+
+Consider a scenario where two tabs are already open: Tab 1 at `https://example.com/page1.html`, and Tab 2 at `https://example.com/page2.html`, which was opened from Tab 1 using `window.open()`. When you subscribe to `browsingContext.contextCreated`, the browser fires events for the two existing contexts. The `originalOpener` field in Tab 2's notification identifies the context that opened it.
 
 The browser sends the following notification for Tab 1:
 

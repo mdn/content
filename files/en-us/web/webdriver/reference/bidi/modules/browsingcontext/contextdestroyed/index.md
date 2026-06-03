@@ -11,10 +11,10 @@ The `browsingContext.contextDestroyed` [event](/en-US/docs/Web/WebDriver/Referen
 
 ## Event data
 
-The `params` field in the event notification is a context object with the following properties, describing the discarded context and its subtree:
+The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following properties, describing the discarded context and its subtree:
 
 - `children`
-  - : An array of context objects that represents child contexts.
+  - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.
     This event includes the full subtree of child contexts that were discarded ([`maxDepth`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#maxdepth) is `null`).
     An empty array indicates that the context had no children.
 - `clientWindow`
@@ -43,7 +43,9 @@ If the discarded context was the only context in the subscription's scope, the s
 
 ### Receiving an event when a tab is closed
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextDestroyed` active, consider a scenario where your automation script closes a tab using [`browsingContext.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/close). The browser sends the following notification when the tab is closed:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextDestroyed` active.
+
+When your automation script closes a tab using [`browsingContext.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/close), the browser sends the following notification:
 
 ```json
 {
@@ -63,7 +65,9 @@ With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_
 
 ### Receiving an event when a tab with child frames is closed
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextDestroyed` active, consider a scenario where a tab that contains two `<iframe>`s is closed. The browser sends the following notification, which includes the full subtree in the `children` field:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.contextDestroyed` active.
+
+Suppose a tab that contains two `<iframe>`s is closed. The browser sends the following notification, which includes the full subtree in the `children` field:
 
 ```json
 {

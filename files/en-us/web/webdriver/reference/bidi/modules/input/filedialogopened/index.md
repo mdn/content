@@ -30,7 +30,9 @@ The `params` field in the event notification is an object with the following fie
 
 ### Receiving an event when a file picker dialog opens
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `input.fileDialogOpened` active, consider a scenario where a page has an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element that accepts a single file and your script calls [`click()`](/en-US/docs/Web/API/HTMLElement/click) on it. The browser sends the following notification when the file picker dialog opens:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `input.fileDialogOpened` active.
+
+Suppose your page has an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element that accepts a single file and your script calls [`click()`](/en-US/docs/Web/API/HTMLElement/click) on the `<input>`. The browser sends the following notification when the file picker dialog opens:
 
 ```json
 {
