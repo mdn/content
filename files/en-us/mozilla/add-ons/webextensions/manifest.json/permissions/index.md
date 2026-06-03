@@ -159,7 +159,7 @@ The extra privileges are:
 
 The intent of this permission is to enable extensions to fulfill a common use case without granting them overly powerful permissions. Many extensions want to "do something to the current page when the user asks".
 
-For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it can now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
+For example, take an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission wasn't available, the extension would need the host permission `<all_urls>`. But this permission gives the extension more power than it needs: it can now execute scripts in any tab at any time, instead of only in the active tab in response to a user action. The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example demonstrates this in action.
 
 > [!NOTE]
 > Your extension can only access the tab or data that existed when the user interaction occurred (e.g., a click). When the active tab navigates away (e.g., due to page load finishing or another event), the extension no longer has permission to access the tab.
