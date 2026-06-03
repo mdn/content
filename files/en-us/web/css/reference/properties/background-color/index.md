@@ -213,7 +213,7 @@ td {
 
 #### Result
 
-{{EmbedLiveSample('Colorize tables', "100%", "100%")}}
+{{EmbedLiveSample('Colorized tables', "100%", "100%")}}
 
 ## Specifications
 
