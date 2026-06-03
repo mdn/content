@@ -29,22 +29,59 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-The following example starts loading a video resource, then provides a button that stops the load.
+### Abort loading a media resource
+
+The following example starts loading a video resource, then aborts the load by removing the `src` attribute and calling `load()`.
 If the video resource is still loading when `load()` is called, the `abort` event fires.
+
+#### HTML
+
+```html
+<video controls width="250"></video>
+
+<button id="loadAndAbort">Load and abort video</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+video,
+button,
+pre {
+  display: block;
+  margin-block: 1rem;
+}
+```
+
+#### JavaScript
 
 ```js
 const video = document.querySelector("video");
-const stopButton = document.querySelector("#stopBtn");
+const loadAndAbortButton = document.querySelector("#loadAndAbort");
+const log = document.querySelector("#log");
 
 video.addEventListener("abort", () => {
-  console.log("Video loading aborted");
+  log.textContent += "Video loading aborted\n";
 });
 
-stopButton.addEventListener("click", () => {
-  video.removeAttribute("src");
+loadAndAbortButton.addEventListener("click", () => {
+  log.textContent = "Loading video...\n";
+
+  video.src = `/shared-assets/videos/flower.webm?nocache=${Date.now()}`;
   video.load();
+
+  setTimeout(() => {
+    video.removeAttribute("src");
+    video.load();
+  }, 50);
 });
 ```
+
+#### Result
+
+{{EmbedLiveSample("Abort_loading_a_media_resource", "100%", 300)}}
 
 ## Specifications
 
