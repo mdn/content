@@ -17,6 +17,12 @@ returns a boolean indicating whether the node is connected
 A boolean value that is `true` if the node is connected to its relevant context object,
 and `false` if not.
 
+> [!NOTE]
+> An {{domxref("Attr")}} node always returns `false` for `isConnected`, even when its
+> {{domxref("Attr.ownerElement", "ownerElement")}} is connected. An attribute is not a
+> child of its owner element, so an `Attr` node has no parent node and its root is
+> itself rather than a document — meaning it is never considered connected.
+
 ## Examples
 
 ### Standard DOM
