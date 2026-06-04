@@ -7,6 +7,9 @@ sidebar: webassemblysidebar
 
 When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 
+> [!NOTE]
+> This guide uses Emscripten, which is the most full-featured toolchain: it emulates a C standard library, a file system, and other operating-system features that C programs commonly expect. If your code doesn't need that runtime support, you can also compile C directly to WebAssembly with a lower-level toolchain such as [Clang/LLVM](https://surma.dev/things/c-to-webassembly/) or the [WASI SDK](https://github.com/WebAssembly/wasi-sdk), which produce smaller modules with fewer dependencies.
+
 ## Emscripten Environment Setup
 
 First, let's set up the required development environment.
