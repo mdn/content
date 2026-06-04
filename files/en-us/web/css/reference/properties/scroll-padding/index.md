@@ -122,14 +122,6 @@ While defined in the [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) m
 
 {{csssyntax}}
 
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Preventing content from being hidden by a fixed header
@@ -148,6 +140,14 @@ html {
   scroll-padding-top: 60px;
 }
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
