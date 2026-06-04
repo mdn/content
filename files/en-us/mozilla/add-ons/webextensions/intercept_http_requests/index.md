@@ -29,11 +29,12 @@ In that directory, create a file called "manifest.json" and add:
 ```json
 {
   "description": "Demonstrating webRequests",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": ["webRequest", "<all_urls>"],
+  "permissions": ["webRequest"],
+  "host_permissions": ["<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -74,15 +75,12 @@ Now use `webRequest` to redirect HTTP requests. First, replace "manifest.json" w
 ```json
 {
   "description": "Demonstrating webRequests",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "https://developer.mozilla.org/"
-  ],
+  "permissions": ["webRequest", "webRequestBlocking"],
+  "host_permissions": ["https://developer.mozilla.org/"],
 
   "background": {
     "scripts": ["background.js"]
@@ -144,15 +142,12 @@ Update the "manifest.json" to include `https://useragentstring.com/` like this:
 ```json
 {
   "description": "Demonstrating webRequests",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "https://useragentstring.com/"
-  ],
+  "permissions": ["webRequest", "webRequestBlocking"],
+  "host_permissions": ["https://useragentstring.com/"],
 
   "background": {
     "scripts": ["background.js"]
@@ -202,7 +197,7 @@ Then reload the extension, reload [useragentstring.com](https://useragentstring.
 
 To illustrate the use of the `declarativeNetRequest` API, this section includes examples showing how to redirect requests and modify request headers using declarative rules.
 
-Unlike `webRequest`, `declarativeNetRequest` doesn't notify the extension about individual network requests, so there is no equivalent to the [logging example](#logging_request_urls) example.
+Unlike `webRequest`, `declarativeNetRequest` doesn't notify the extension about individual network requests, so there is no equivalent to the [logging example](#logging_request_urls).
 
 ### Redirecting requests
 
@@ -238,15 +233,6 @@ Next, create a file called "rules.json" and add:
 [
   {
     "id": 1,
-    "priority": 2,
-    "action": { "type": "allow" },
-    "condition": {
-      "urlFilter": "frog.jpg",
-      "resourceTypes": ["image"]
-    }
-  },
-  {
-    "id": 2,
     "priority": 1,
     "action": {
       "type": "redirect",
@@ -258,14 +244,23 @@ Next, create a file called "rules.json" and add:
       "urlFilter": "||developer.mozilla.org",
       "resourceTypes": ["image"]
     }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": { "type": "allow" },
+    "condition": {
+      "urlFilter": "frog.jpg",
+      "resourceTypes": ["image"]
+    }
   }
 ]
 ```
 
 This ruleset has two rules:
 
-- Rule 2 redirects all image requests to URLs under `https://developer.mozilla.org/` to the frog image from the [your second extension tutorial](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
-- Rule 1 uses the "allow" action with a higher priority to prevent the frog image itself from being redirected, which would otherwise cause an infinite redirect loop.
+- Rule 1 redirects all image requests to URLs under `https://developer.mozilla.org/` to the frog image from the [your second extension tutorial](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
+- Rule 2 uses the "allow" action with a higher priority to prevent the frog image itself from being redirected, which would otherwise cause an infinite redirect loop.
 
 See {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}} and {{WebExtAPIRef("declarativeNetRequest.RuleAction")}} for more on conditions and actions, and [Matching precedence](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence) for details on how rule priority works.
 
