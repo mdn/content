@@ -1,5 +1,6 @@
 ---
-title: <input type="password">
+title: '`<input type="password">` HTML attribute value'
+short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_password

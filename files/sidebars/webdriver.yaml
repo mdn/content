@@ -3,23 +3,124 @@
 sidebar:
   - type: section
     link: /Web/WebDriver
-    title: WebDriver
+  - type: section
+    link: /Web/WebDriver/How_to
+  - link: /Web/WebDriver/How_to/Create_BiDi_connection
   - type: section
     link: /Web/WebDriver/Reference
-  - link: /Web/WebDriver/Reference/Timeouts
-    title: Timeouts
+  - type: section
+    link: /Web/WebDriver/Reference/BiDi
+  - link: /Web/WebDriver/Reference/BiDi/Modules
+    details: closed
+    children:
+      - link: /Web/WebDriver/Reference/BiDi/Modules/bluetooth
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browser
+        details: closed
+        code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browser#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
+        details: closed
+        code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/create
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/input
+        details: closed
+        code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/input#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/performActions
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/releaseActions
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/setFiles
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/input#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/input/fileDialogOpened
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/log
+        details: closed
+        code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/log#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/log/entryAdded
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/network
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/session
+        details: closed
+        code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/session#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/end
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/new
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/status
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/subscribe
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/session/unsubscribe
+            code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/storage
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/userAgentClientHints
+        code: true
+      - link: /Web/WebDriver/Reference/BiDi/Modules/webExtension
+        code: true
+  - type: section
+    link: /Web/WebDriver/Reference/Classic
   - type: listSubPages
-    path: /Web/WebDriver/Reference/Commands
-    link: /Web/WebDriver/Reference/Commands
-    details: open
-    code: true
+    path: /Web/WebDriver/Reference/Classic/Commands
+    link: /Web/WebDriver/Reference/Classic/Commands
+    details: closed
+  - link: /Web/WebDriver/Reference/Classic/Timeouts
+  - type: section
+    title: Shared
   - type: listSubPages
     path: /Web/WebDriver/Reference/Capabilities
     link: /Web/WebDriver/Reference/Capabilities
-    details: open
+    details: closed
     code: true
   - type: listSubPages
     path: /Web/WebDriver/Reference/Errors
     link: /Web/WebDriver/Reference/Errors
-    details: open
+    details: closed
     code: true

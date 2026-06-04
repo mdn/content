@@ -3,12 +3,10 @@ title: "HighlightRegistry: highlightsFromPoint() method"
 short-title: highlightsFromPoint()
 slug: Web/API/HighlightRegistry/highlightsFromPoint
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.highlightsFromPoint
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`highlightsFromPoint()`** method of the {{domxref("HighlightRegistry")}} interface returns an array of objects representing the custom highlights applied at a specific point within the viewport.
 
@@ -32,9 +30,9 @@ highlightsFromPoint(x, y, options)
 
 ### Return value
 
-An array of `HighlightHitResult` objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
+An array of objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
 
-Each `HighlightHitResult` object contains the following properties:
+Each object contains the following properties:
 
 - `highlight`
   - : A {{domxref("Highlight")}} object representing the applied custom highlight.
@@ -138,7 +136,7 @@ let highlightCount = 1;
 
 Next, we define a [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handler that applies a custom highlight to any selected text if <kbd>h</kbd> is pressed on the keyboard. Inside, we start by grabbing the selected text using {{domxref("Window.getSelection()")}} and converting it to a {{domxref("Range")}} using {{domxref("Selection.getRangeAt()")}}.
 
-We check that the `selectedRange` object's [`startContainer`](/en-US/docs/Web/API/Range/startContainer) and [`endContainer`](/en-US/docs/Web/API/Range/endContainer) are both equal to the paragraph `textNode`, to make sure we don't allow any cross-container highlights. If so, we set the custom `highlightName` we want to apply to the `selectedRange` using `highlight${highlightCount++}`. Since we are incrementing `highlightCount`, we add in a check — when it reaches `4`, we set it back to `1`. This has the effect of cycling through the available highlights in order as they are set.
+We check that the `selectedRange` object's [`startContainer`](/en-US/docs/Web/API/AbstractRange/startContainer) and [`endContainer`](/en-US/docs/Web/API/AbstractRange/endContainer) are both equal to the paragraph `textNode`, to make sure we don't allow any cross-container highlights. If so, we set the custom `highlightName` we want to apply to the `selectedRange` using `highlight${highlightCount++}`. Since we are incrementing `highlightCount`, we add in a check — when it reaches `4`, we set it back to `1`. This has the effect of cycling through the available highlights in order as they are set.
 
 Finally for the `keydown` event handler, we create a new `highlight` object using the {{domxref("Highlight.Highlight", "Highlight()")}} constructor, passing it the `selectedRange` we created earlier. We then apply the chosen custom highlight referenced in `highlightName` to `highlight` using the {{domxref("HighlightRegistry.set()")}} method.
 
@@ -202,5 +200,5 @@ pElem.addEventListener("dblclick", (event) => {
 
 ## See also
 
-- {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}
 - [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

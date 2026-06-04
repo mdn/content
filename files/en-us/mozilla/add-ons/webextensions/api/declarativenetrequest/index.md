@@ -138,7 +138,7 @@ When the browser evaluates how to handle requests, it checks each extension's ru
 > To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
 
 > [!NOTE]
-> After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
+> After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > static rulesets.
 > This cannot be relied upon across browsers, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:

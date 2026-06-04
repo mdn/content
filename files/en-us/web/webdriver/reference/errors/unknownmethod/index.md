@@ -1,5 +1,6 @@
 ---
-title: Unknown method
+title: "`unknown method` error code"
+short-title: unknown method
 slug: Web/WebDriver/Reference/Errors/UnknownMethod
 page-type: webdriver-error
 sidebar: webdriver
@@ -35,4 +36,4 @@ But it does not, for example, provide a `GET` method, and this will consequently
 ## See also
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
-- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+- [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)

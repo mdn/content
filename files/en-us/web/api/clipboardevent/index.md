@@ -38,5 +38,6 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 ## See also
 
 - Copy-related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- {{domxref("ClipboardChangeEvent")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

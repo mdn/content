@@ -43,15 +43,32 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html live-sample___string-concat-name
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Button showing Player 1: Chris with no styling](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css live-sample___string-concat-name
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
@@ -66,11 +83,11 @@ button {
 }
 ```
 
-![Button showing Player 1: Chris with styling](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js live-sample___string-concat-name
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
@@ -81,10 +98,9 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-You can click "Play" to see and edit the example in the MDN Playground.
-Try clicking on the text label to see what happens.
+Try clicking on the text label, entering a name into the dialog box that opens, and pressing the OK button.
 
-{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -97,7 +113,7 @@ The core client-side JavaScript language consists of some common programming fea
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.

@@ -20,8 +20,9 @@ There are three types of container queries:
 - **Container size queries**
   - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/Reference/At-rules/@container#descriptors) of a containing element, including the orientation and {{glossary("aspect ratio")}}. The containing elements need to be explicitly declared as _size query containers_.
 
-- **Container style queries**
-  - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). In this case, the query returns true or false depending on the computed value of the containing element's custom properties. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
+- **[Container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries)**
+  - : Style queries enable applying styles to elements based on a containing element's style features, where any non-empty element can be a style query container. A style feature can be a CSS property, CSS [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), or a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations).
+    This allows you to apply styles to any container element's descendants based on its style features — such as whether it has a `display: inline` flex declaration set, or the value of a custom property.
 
 - **[Container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)**
   - : Scroll-state queries allow you to selectively apply CSS rules to a container's descendants based on scroll-state conditions, such as whether the queried element is partially scrolled or whether the container is snapped to a scroll snap container. The containing elements need to be explicitly declared as _scroll-state query containers_.
@@ -351,6 +352,100 @@ If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {
 
 > [!NOTE]
 > When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+
+### Plain versus range syntax in style queries
+
+When a `<style-feature>` includes a value, you can express the comparison in two different ways. They look similar but behave very differently, and choosing the right one matters.
+
+The **plain syntax** uses a colon, the same syntax used in a CSS declaration:
+
+```css
+@container style(--n: 3) {
+  /* … */
+}
+```
+
+This form is true if the [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of the property matches the value on the right. For an [unregistered](#unregistered_custom_properties) custom property, the computed value is the property's value as written: the browser doesn't evaluate `calc()` or other expressions inside it. The match is essentially a comparison of the two values' tokens. To match equivalent values (such as `blue` and `#0000ff`), [register the custom property](#registered_properties) with `@property` and a `syntax` descriptor.
+
+The **range syntax** uses a comparison operator (`=`, `<`, `<=`, `>`, or `>=`):
+
+```css
+@container style(--n = 3) {
+  /* … */
+}
+```
+
+To evaluate this form, the browser:
+
+1. Resolves each side (custom property names are looked up as if used with [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)).
+2. Parses each side as one of {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, or {{cssxref("&lt;resolution&gt;")}}. If either side can't be parsed as one of those types, the query is false.
+3. If both sides have the same type, computes each side (evaluating any `calc()` expressions) and performs the numeric comparison. Otherwise, the query is false.
+
+Consider the following example, where `--n` is set to a `calc()` expression:
+
+```css
+.box {
+  --n: calc(6/2);
+}
+
+/* Evaluates to FALSE: */
+/* the computed value of --n is the string `calc(6/2)`, which is */
+/* not equal to the string `3`. */
+@container style(--n: 3) {
+  /* … */
+}
+
+/* Evaluates to TRUE: */
+/* both sides are parsed as <integer>, calc(6/2) is computed to 3, */
+/* and 3 = 3. */
+@container style(--n = 3) {
+  /* … */
+}
+```
+
+The range syntax also supports a three-value form for testing whether a value falls within an interval. Both comparators must point the same way:
+
+```css
+@container style(0 < --n < 10) {
+  /* true when --n is greater than 0 and less than 10 */
+}
+
+@container style(100px > --width > 50px) {
+  /* true when --width is less than 100px and greater than 50px */
+}
+```
+
+The range syntax is also more flexible in how each side is written. Either side can be a custom property name, a [`var()`](/en-US/docs/Web/CSS/Reference/Values/var) reference, a literal value, or a `calc()` expression, and the operands can appear in any order. The following are all valid:
+
+```css
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
+}
+```
+
+The plain syntax is more restrictive: the left-hand side must be the custom property name (without `var()`), and the value goes on the right. The following are all **invalid**:
+
+```css example-bad
+@container style(var(--n): 3) {
+  /* … */
+}
+@container style(3: --n) {
+  /* … */
+}
+```
+
+Because the range syntax requires both sides to parse as one of the listed numeric types, it can't be used to compare keyword-like values. For example, given `--s: new`, the query `style(--s = new)` is false (because `new` isn't a number, length, etc.), while `style(--s: new)` is true.
+
+In short:
+
+- Use **`style(--variable: value)`** for keyword-like or string-like matching, such as `style(--stock: low)` or `style(--theme: dark)`.
+- Use **`style(--variable = value)`** (or `<`, `<=`, `>`, `>=`) for numeric comparisons, such as `style(--columns >= 3)` or `style(--gap = 1rem)`.
 
 ### Nested queries
 

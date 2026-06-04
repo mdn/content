@@ -1,5 +1,6 @@
 ---
-title: mask-origin
+title: "`mask-origin` CSS property"
+short-title: mask-origin
 slug: Web/CSS/Reference/Properties/mask-origin
 page-type: css-property
 browser-compat: css.properties.mask-origin

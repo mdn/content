@@ -1,5 +1,6 @@
 ---
-title: "<ruby>: The Ruby Annotation element"
+title: "`<ruby>` HTML ruby annotation element"
+short-title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 page-type: html-element
 browser-compat: html.elements.ruby
@@ -135,3 +136,4 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 - {{HTMLElement("rp")}}
 - {{cssxref("ruby-overhang")}}
 - {{CSSxRef("text-transform")}}: full-size-kana
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

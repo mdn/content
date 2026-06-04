@@ -49,6 +49,8 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a boolean that indicates whether the media element has finished playing.
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
+- {{domxref("HTMLMediaElement.loading")}} {{experimental_inline}}
+  - : A string indicating whether the browser should load the media immediately (`eager`) or when it is needed (`lazy`). See [`<video loading>`](/en-US/docs/Web/HTML/Reference/Elements/video#loading) and [`<audio loading>`](/en-US/docs/Web/HTML/Reference/Elements/audio#loading) HTML attributes for more information.
 - {{domxref("HTMLMediaElement.loop")}}
   - : A boolean that reflects the [`loop`](/en-US/docs/Web/HTML/Reference/Elements/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -96,9 +98,9 @@ These properties are obsolete and should not be used, even if a browser still su
   - : A {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A string that reflects the `mediagroup` HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
-- {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozAudioCaptured` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns a boolean. Related to audio stream capture.
-- {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozFragmentEnd` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : A `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 
 ## Instance methods
@@ -113,6 +115,8 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
+- {{domxref("HTMLMediaElement.getStartDate()")}}
+  - : Returns a {{jsxref("Date")}} object representing the real-world date and time corresponding to the beginning of the media. For live streams, this is the time the broadcast began on the server, which may be before the user started watching.
 - {{domxref("HTMLMediaElement.load()")}}
   - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.pause()")}}
@@ -132,9 +136,9 @@ _These methods are obsolete and should not be used, even if a browser still supp
 
 - {{domxref("HTMLMediaElement.captureStream", "HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
   - : The Firefox-prefixed equivalent of {{domxref("HTMLMediaElement.captureStream()")}}. See its [browser compatibility](/en-US/docs/Web/API/HTMLMediaElement/captureStream#browser_compatibility) for details.
-- {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : \[enter description]
-- {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `HTMLMediaElement.mozCaptureStreamUntilEnded()` {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : A non-standard, deprecated, method to capture the steam until it ended.
+- `HTMLMediaElement.mozGetMetadata()` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [`loadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 
 ## Events

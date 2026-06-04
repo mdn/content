@@ -1,5 +1,6 @@
 ---
-title: inset-inline
+title: "`inset-inline` CSS property"
+short-title: inset-inline
 slug: Web/CSS/Reference/Properties/inset-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-inline
@@ -94,7 +95,7 @@ inset-inline: unset;
 
 ### Values
 
-The `inset-inline` property takes the same values as the {{cssxref("left")}} property.
+The `inset-inline` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

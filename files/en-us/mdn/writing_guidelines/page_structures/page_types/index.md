@@ -66,7 +66,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [HTML element reference page](#html_element_reference_page)
 - [HTML attribute reference page](#html_attribute_reference_page)
 - [SVG element reference page](#svg_element_reference_page)
-- [CSS module landing page](#css_module_landing_page)
+- [CSS module page](#css_module_page)
 - [CSS feature reference page](#css_feature_reference_page)
 - [HTTP header reference page](#http_header_reference_page)
 - [ARIA reference page](#aria_reference_page)
@@ -171,15 +171,15 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 - [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
-### CSS module landing page
+### CSS module page
 
 Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module represents the [specification](/en-US/docs/Web/CSS/Guides/Box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
 
-A **CSS module landing page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module landing page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
-The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
+A **CSS module page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
+The module page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
 
 Some related properties and features that belong in other modules, but that are closely related to the functionality offered by the module you are documenting, can also be covered in a _Related concepts_ section.
-For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/Guides/Animations#related_concepts) section of the CSS animations module landing page.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/Guides/Animations#related_concepts) section of the CSS animations module page.
 
 #### Examples
 
@@ -190,7 +190,7 @@ For example, the `<easing-function>` data type and the `prefers-reduced-motion` 
 
 #### Templates
 
-- [CSS module landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template)
+- [CSS module page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
 
 ### CSS feature reference page
 

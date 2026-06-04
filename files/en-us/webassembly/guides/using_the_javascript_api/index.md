@@ -5,12 +5,12 @@ page-type: guide
 sidebar: webassemblysidebar
 ---
 
-If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/Guides/C_to_Wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Guides/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
+This article teaches you how to use the key features of the WebAssembly JavaScript API, including loading Wasm modules and manipulating WebAssembly memories, tables, and globals.
 
 > [!NOTE]
 > If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts) first, then come back.
 
-## Some examples
+## Loading Wasm modules in JavaScript
 
 Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a Wasm module in a web page.
 

@@ -1,5 +1,6 @@
 ---
-title: :defined
+title: "`:defined` CSS pseudo-class"
+short-title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined

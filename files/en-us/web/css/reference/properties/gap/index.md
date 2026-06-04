@@ -1,5 +1,6 @@
 ---
-title: gap
+title: "`gap` CSS property"
+short-title: gap
 slug: Web/CSS/Reference/Properties/gap
 page-type: css-shorthand-property
 browser-compat: css.properties.gap
@@ -62,8 +63,8 @@ gap: calc(20px + 10%);
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("column-gap")}}
 - {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
 
 ## Syntax
 

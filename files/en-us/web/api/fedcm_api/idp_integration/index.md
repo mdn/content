@@ -105,7 +105,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests (i.e., with a cookie that identifies the user that is signed in) to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
+The browser sends requests to this endpoint using the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
 For example:
 
@@ -117,7 +117,11 @@ Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
 ```
 
-The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
+The request is credentialed: that is, it includes cookies for the IdP's site, which the IdP can use to identify which IdP accounts the user is signed into.
+
+Note that because the browser's request to this endpoint is a cross-site request, cookies will only be included if they have a [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute value of `None`. This means that IdP's can't use `SameSite` as part of their defense against [Cross-Site Request Forgery(CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks, so they must implement alternative defenses.
+
+The response returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
 
 ```json
 {

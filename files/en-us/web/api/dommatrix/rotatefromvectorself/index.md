@@ -23,9 +23,9 @@ rotateFromVectorSelf(rotX, rotY)
 ### Parameters
 
 - `rotX` {{optional_inline}}
-  - : A number; The x-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
+  - : A number; the x-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
 - `rotY` {{optional_inline}}
-  - : A number; The y-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
+  - : A number; the y-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
 
 ### Return value
 

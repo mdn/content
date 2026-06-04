@@ -1,12 +1,13 @@
 ---
-title: font-variant-ligatures
+title: "`font-variant-ligatures` CSS property"
+short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 page-type: css-property
 browser-compat: css.properties.font-variant-ligatures
 sidebar: cssref
 ---
 
-The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
+The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and contextual forms are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
 {{InteractiveExample("CSS Demo: font-variant-ligatures")}}
 

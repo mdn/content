@@ -8,7 +8,7 @@ browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) is available.
+The **`isConditionalMediationAvailable()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} which resolves to `true` if [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui) is available.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 Before invoking a conditional WebAuthn API call, check if:
 
 - The browser supports the Web Authentication API.
-- The browser supports WebAuthn conditional UI.
+- The browser supports conditional mediation.
 
 ```js
 // Availability of `window.PublicKeyCredential` means WebAuthn is usable.
@@ -64,9 +64,6 @@ if (
   }
 }
 ```
-
-> [!NOTE]
-> See [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more information about using conditional mediation.
 
 ## Specifications
 

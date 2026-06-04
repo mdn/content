@@ -93,6 +93,5 @@ Certain technologies such as browser extensions can generate lists of all landma
 - [\<aside>: The Aside element](/en-US/docs/Web/HTML/Reference/Elements/aside)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)

@@ -1,5 +1,6 @@
 ---
-title: mask-size
+title: "`mask-size` CSS property"
+short-title: mask-size
 slug: Web/CSS/Reference/Properties/mask-size
 page-type: css-property
 browser-compat: css.properties.mask-size

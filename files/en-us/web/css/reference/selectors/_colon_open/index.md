@@ -1,5 +1,6 @@
 ---
-title: :open
+title: "`:open` CSS pseudo-class"
+short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
 page-type: css-pseudo-class
 browser-compat: css.selectors.open
@@ -20,7 +21,7 @@ The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Re
 
 The `:open` pseudo-class selects any element currently in the open state, which includes the following elements:
 
-- {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they have the `open` attribute set.
+- {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they have the `open` attribute set. This selection can also be done using an attribute selector: `details[open]`.
 - {{htmlelement("input")}} elements that display a picker interface for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)), when the picker is displayed.
 - {{htmlelement("select")}} elements that display a drop-down picker for the user to choose a value from, when the picker is displayed. Note that when implementing [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the picker itself can be selected using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element.
 
@@ -49,15 +50,11 @@ details:open > summary {
 ```css hidden
 @supports not selector(:open) {
   body::before {
-    content: "Your browser doesn't support :open selector.";
+    content: "Your browser doesn't support the :open selector.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

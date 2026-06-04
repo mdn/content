@@ -9,26 +9,35 @@ sidebar:
     title: Guides
   - link: /WebAssembly/Guides/Concepts
     title: WebAssembly_concepts
-  - link: /WebAssembly/Guides/C_to_Wasm
-    title: Compiling_to_Wasm
-  - link: /WebAssembly/Guides/Existing_C_to_Wasm
-    title: Existing_C_to_Wasm
-  - link: /WebAssembly/Guides/Rust_to_Wasm
-    title: Compiling_Rust_to_Wasm
-  - link: /WebAssembly/Guides/Using_the_JavaScript_API
-    title: JavaScript_API
-  - link: /WebAssembly/Guides/Understanding_the_text_format
-    title: Text_format
-  - link: /WebAssembly/Guides/Text_format_to_Wasm
-    title: Text_format_to_Wasm
-  - link: /WebAssembly/Guides/Loading_and_running
-    title: Loading_and_running
-  - link: /WebAssembly/Guides/Exported_functions
-    title: Exported_functions
-  - link: /WebAssembly/Guides/JavaScript_builtins
-    title: JavaScript_builtins
-  - link: /WebAssembly/Guides/Imported_string_constants
-    title: Imported_string_constants
+  - title: Compiling_WebAssembly
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/C_to_Wasm
+        title: Compiling_to_Wasm
+      - link: /WebAssembly/Guides/Existing_C_to_Wasm
+        title: Existing_C_to_Wasm
+      - link: /WebAssembly/Guides/Rust_to_Wasm
+        title: Compiling_Rust_to_Wasm
+  - title: Language_guide
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/Understanding_the_text_format
+        title: Text_format
+      - link: /WebAssembly/Guides/Text_format_to_Wasm
+        title: Text_format_to_Wasm
+      - link: /WebAssembly/Guides/Exported_functions
+        title: Exported_functions
+      - link: /WebAssembly/Guides/JavaScript_builtins
+        title: JavaScript_builtins
+      - link: /WebAssembly/Guides/Imported_string_constants
+        title: Imported_string_constants
+  - title: API_guide
+    details: closed
+    children:
+      - link: /WebAssembly/Guides/Using_the_JavaScript_API
+        title: JavaScript_API
+      - link: /WebAssembly/Guides/Loading_and_running
+        title: Loading_and_running
   - type: section
     link: /WebAssembly/Reference
     title: Reference
@@ -37,7 +46,9 @@ sidebar:
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface
-        tags: webassembly-function
+        tags:
+          - webassembly-function
+          - unknown
         link: /WebAssembly/Reference/JavaScript_interface
         title: <code>WebAssembly</code>
         details: closed
@@ -102,6 +113,41 @@ sidebar:
         title: <code>WebAssembly.RuntimeError</code>
         details: closed
         code: true
+  - link: /WebAssembly/Reference/Value_types
+    title: Value_types
+    details: closed
+    children:
+      - link: /WebAssembly/Reference/Value_types/i32
+        title: <code>i32</code>
+      - link: /WebAssembly/Reference/Value_types/i64
+        title: <code>i64</code>
+      - link: /WebAssembly/Reference/Value_types/f32
+        title: <code>f32</code>
+      - link: /WebAssembly/Reference/Value_types/f64
+        title: <code>f64</code>
+      - link: /WebAssembly/Reference/Value_types/v128
+        title: <code>v128</code>
+      - link: /WebAssembly/Reference/Value_types/funcref
+        title: <code>funcref</code>
+      - link: /WebAssembly/Reference/Value_types/exnref
+        title: <code>exnref</code>
+      - link: /WebAssembly/Reference/Value_types/externref
+        title: <code>externref</code>
+  - link: /WebAssembly/Reference/Definitions
+    title: Definitions
+    details: closed
+    children:
+      - title: Types
+        details: closed
+        children:
+          - link: /WebAssembly/Reference/Definitions/types/func
+            title: <code>func</code>
+      - link: /WebAssembly/Reference/Definitions/global
+        title: <code>global</code>
+      - link: /WebAssembly/Reference/Definitions/table
+        title: <code>table</code>
+      - link: /WebAssembly/Reference/Definitions/tag
+        title: <code>tag</code>
   - title: Instructions
     details: closed
     children:
@@ -110,6 +156,19 @@ sidebar:
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
+      - link: /WebAssembly/Reference/Exception_handling
+        title: Exception handling
+        details: closed
+        children:
+          - link: /WebAssembly/Reference/Exception_handling/throw
+            title: throw
+          - link: /WebAssembly/Reference/Exception_handling/throw_ref
+            title: throw_ref
+          - type: listSubPages
+            path: /WebAssembly/Reference/Exception_handling/try_table
+            link: /WebAssembly/Reference/Exception_handling/try_table
+            title: try_table
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Memory
         link: /WebAssembly/Reference/Memory
@@ -119,6 +178,40 @@ sidebar:
         path: /WebAssembly/Reference/Numeric
         link: /WebAssembly/Reference/Numeric
         title: Numeric
+        details: closed
+      - link: /WebAssembly/Reference/SIMD
+        title: SIMD
+        details: closed
+        children:
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/arithmetic
+            link: /WebAssembly/Reference/SIMD/arithmetic
+            title: Arithmetic
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/bitwise
+            link: /WebAssembly/Reference/SIMD/bitwise
+            title: Bitwise
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/conversion
+            link: /WebAssembly/Reference/SIMD/conversion
+            title: Conversion
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/extract
+            link: /WebAssembly/Reference/SIMD/extract
+            title: Extract
+            details: closed
+          - type: listSubPages
+            path: /WebAssembly/Reference/SIMD/load_store
+            link: /WebAssembly/Reference/SIMD/load_store
+            title: Load and store
+            details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Table
+        link: /WebAssembly/Reference/Table
+        title: Table
         details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Variables
@@ -141,12 +234,17 @@ l10n:
     JavaScript_interface: JavaScript-Schnittstelle
   en-US:
     WebAssembly_concepts: WebAssembly concepts
-    Compiling_to_Wasm: Compiling from C/C++ to WebAssembly
+    Compiling_WebAssembly: Compiling WebAssembly
+    Language_guide: WebAssembly language
+    API_guide: JavaScript API guide
+    Value_types: Value types
+    Types: Types
+    Compiling_to_Wasm: Compiling a new C/C++ module to WebAssembly
     Existing_C_to_Wasm: Compiling an existing C module to WebAssembly
     Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly
     JavaScript_API: Using the WebAssembly JavaScript API
     Text_format: Understanding WebAssembly text format
-    Text_format_to_Wasm: Converting WebAssembly text format
+    Text_format_to_Wasm: Converting WebAssembly text format to binary
     Loading_and_running: Loading and running WebAssembly code
     Exported_functions: Exported WebAssembly functions
     JavaScript_builtins: JavaScript builtins

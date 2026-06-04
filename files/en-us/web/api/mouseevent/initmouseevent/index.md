@@ -8,7 +8,7 @@ status:
 browser-compat: api.MouseEvent.initMouseEvent
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("Pointer Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
 value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).

@@ -1,5 +1,6 @@
 ---
-title: page-break-after
+title: "`page-break-after` CSS property"
+short-title: page-break-after
 slug: Web/CSS/Reference/Properties/page-break-after
 page-type: css-property
 status:

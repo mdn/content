@@ -7,7 +7,7 @@ browser-compat: http.headers.Sec-Fetch-Mode
 sidebar: http
 ---
 
-The HTTP **`Sec-Fetch-Mode`** {{Glossary("fetch metadata request header")}} indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.
+The HTTP **`Sec-Fetch-Mode`** [fetch metadata request header](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.
 
 Broadly speaking, this allows a server to distinguish between requests originating from a user navigating between HTML pages, and requests to load images and other resources.
 For example, this header would contain `navigate` for top level navigation requests, while `no-cors` is used for loading an image.

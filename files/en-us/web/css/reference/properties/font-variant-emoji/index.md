@@ -1,5 +1,6 @@
 ---
-title: font-variant-emoji
+title: "`font-variant-emoji` CSS property"
+short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 page-type: css-property
 browser-compat: css.properties.font-variant-emoji

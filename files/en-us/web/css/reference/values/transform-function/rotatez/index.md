@@ -1,5 +1,6 @@
 ---
-title: rotateZ()
+title: "`rotateZ()` CSS function"
+short-title: rotateZ()
 slug: Web/CSS/Reference/Values/transform-function/rotateZ
 page-type: css-function
 browser-compat: css.types.transform-function.rotateZ

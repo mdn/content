@@ -50,12 +50,12 @@ From the assistive technology user's perspective, the heading does not exist sin
 #### Associated Roles
 
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-  - : An `option` _must_ be contained in or owned by a `listbox`
+  - : An `option` _must_ be contained in or owned by a `listbox`.
 
 #### States and Properties
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-  - : Used to describe the selection state of the option. Required.
+  - : Used to describe the selection state of the option.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
   - : Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.

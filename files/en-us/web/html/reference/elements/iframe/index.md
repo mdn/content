@@ -1,5 +1,6 @@
 ---
-title: "<iframe>: The Inline Frame element"
+title: "`<iframe>` HTML inline frame element"
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element
 browser-compat: html.elements.iframe
@@ -76,9 +77,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
         This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
-        > [!NOTE]
-        > Loading is only deferred when JavaScript is enabled.
-        > This is an anti-tracking measure.
+        Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing iframes in a page's markup such that a server can track how many iframes are requested and when.
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method. In addition, the name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
@@ -125,6 +124,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
       - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+        > [!NOTE]
+        > When `allow-same-origin` is present, a same-origin parent document can still access and interact with the iframe's DOM even if `allow-scripts` is not set. The `allow-scripts` token only controls script execution within the embedded browsing context and does not affect DOM access from the parent.
     - `allow-scripts`
       - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-storage-access-by-user-activation` {{experimental_inline}}

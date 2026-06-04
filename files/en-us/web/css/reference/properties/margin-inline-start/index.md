@@ -1,5 +1,6 @@
 ---
-title: margin-inline-start
+title: "`margin-inline-start` CSS property"
+short-title: margin-inline-start
 slug: Web/CSS/Reference/Properties/margin-inline-start
 page-type: css-property
 browser-compat: css.properties.margin-inline-start
@@ -85,7 +86,7 @@ It relates to {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}
 
 ### Values
 
-The `margin-inline-start` property takes the same values as the {{cssxref("margin-left")}} property.
+The `margin-inline-start` property takes the same values as the {{cssxref("margin-top")}} property.
 
 ## Formal definition
 

@@ -1,5 +1,6 @@
 ---
-title: overflow-anchor
+title: "`overflow-anchor` CSS property"
+short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
 page-type: css-property
 browser-compat: css.properties.overflow-anchor

@@ -2,14 +2,12 @@
 title: SanitizerConfig
 slug: Web/API/SanitizerConfig
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat:
   - api.Sanitizer.get
   - api.Sanitizer.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 

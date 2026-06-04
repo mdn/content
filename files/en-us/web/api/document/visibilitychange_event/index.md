@@ -8,7 +8,7 @@ browser-compat: api.Document.visibilitychange_event
 
 {{APIRef}}
 
-The `visibilitychange` event is fired at the document when the contents of its tab have become visible or have been hidden.
+The `visibilitychange` event is fired at the document when its visibility status changes — for example, when the user switches browser tabs, navigates to a new page, minimizes or closes the browser, or on mobile, switches to a different app.
 
 The event is not cancelable.
 

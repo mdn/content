@@ -8,7 +8,7 @@ browser-compat: api.Performance.eventCounts
 
 {{APIRef("Performance API")}}
 
-The read-only `performance.eventCounts` property is an {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type.
+The read-only `performance.eventCounts` property is an {{domxref("EventCounts")}} map containing the number of events which have been dispatched per event type since the page was loaded.
 
 Not all event types are exposed. You can only get counts for event types supported by the {{domxref("PerformanceEventTiming")}} interface.
 

@@ -197,7 +197,7 @@ const sanitizer = new Sanitizer({
 In both cases you can also specify each attribute as an object with `name` and `namespace` properties.
 You can also use set the attribute properties using the same element object passed to {{domxref("Sanitizer.allowElement()")}}.
 
-Note that it is impossible to define per-element attribute behavior on a Sanitizer with a remove configuration, as the (needed) `elements` array is not present.
+Note that it is impossible to define per-element attribute behavior on a `Sanitizer` with a remove configuration, as the (needed) `elements` array is not present.
 Other restrictions on per-element attributes are covered in [Valid configurations](/en-US/docs/Web/API/SanitizerConfig#valid_configuration)
 
 ### Replacing child elements
