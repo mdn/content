@@ -1,5 +1,6 @@
 ---
-title: :dir()
+title: "`:dir()` CSS pseudo-class"
+short-title: :dir()
 slug: Web/CSS/Reference/Selectors/:dir
 page-type: css-pseudo-class
 browser-compat: css.selectors.dir

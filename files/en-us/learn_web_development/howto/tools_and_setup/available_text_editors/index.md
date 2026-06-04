@@ -124,7 +124,7 @@ Here are some popular editors:
           >FAQ</a
         >,
         <a
-          href="https://mail.gnu.org/mailman/listinfo/help-gnu-emacs"
+          href="https://lists.gnu.org/mailman/listinfo/help-gnu-emacs"
           rel="external"
           >Mailing list</a
         >, <a href="news://gnu.emacs.help" rel="external">News Group</a>
@@ -143,7 +143,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://discourse.gnome.org/tag/gedit"
+        <a href="https://discourse.gnome.org/tag/gedit/27"
           rel="external">Discourse</a>, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
       </td>
       <td>

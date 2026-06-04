@@ -1,5 +1,6 @@
 ---
-title: mask-border-repeat
+title: "`mask-border-repeat` CSS property"
+short-title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
 page-type: css-property
 browser-compat: css.properties.mask-border-repeat

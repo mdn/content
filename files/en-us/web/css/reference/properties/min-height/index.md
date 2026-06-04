@@ -1,5 +1,6 @@
 ---
-title: min-height
+title: "`min-height` CSS property"
+short-title: min-height
 slug: Web/CSS/Reference/Properties/min-height
 page-type: css-property
 browser-compat: css.properties.min-height

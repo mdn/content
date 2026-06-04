@@ -1,5 +1,6 @@
 ---
-title: font-display
+title: "`font-display` CSS at-rule descriptor"
+short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-feature-values/font-display
 page-type: css-at-rule-descriptor
 spec-urls: https://drafts.csswg.org/css-fonts/#descdef-font-feature-values-font-display

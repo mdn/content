@@ -1,5 +1,6 @@
 ---
-title: device-height
+title: "`device-height` CSS media feature"
+short-title: device-height
 slug: Web/CSS/Reference/At-rules/@media/device-height
 page-type: css-media-feature
 status:

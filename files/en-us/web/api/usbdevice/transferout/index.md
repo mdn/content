@@ -11,7 +11,7 @@ browser-compat: api.USBDevice.transferOut
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
-interface returns a {{jsxref("promise")}} that resolves with a
+interface returns a {{jsxref("Promise")}} that resolves with a
 {{domxref("USBOutTransferResult")}} when bulk or interrupt data is sent to the USB
 device.
 
@@ -30,7 +30,7 @@ transferOut(endpointNumber, data)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
 
 ## Specifications
 

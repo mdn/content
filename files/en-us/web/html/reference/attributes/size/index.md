@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: size"
+title: "`size` HTML attribute"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
 page-type: html-attribute

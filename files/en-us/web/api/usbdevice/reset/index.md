@@ -11,7 +11,7 @@ browser-compat: api.USBDevice.reset
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`reset()`** method of the {{domxref("USBDevice")}}
-interface returns a {{jsxref("promise")}} that resolves when the device is reset and all
+interface returns a {{jsxref("Promise")}} that resolves when the device is reset and all
 app operations canceled and their promises rejected.
 
 ## Syntax
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A {{jsxref("promise")}}.
+A {{jsxref("Promise")}}.
 
 ## Specifications
 

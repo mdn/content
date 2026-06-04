@@ -3,10 +3,12 @@ title: "BufferedChangeEvent: BufferedChangeEvent() constructor"
 short-title: BufferedChangeEvent()
 slug: Web/API/BufferedChangeEvent/BufferedChangeEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.BufferedChangeEvent.BufferedChangeEvent
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`BufferedChangeEvent()`** constructor of the {{domxref("BufferedChangeEvent")}} interface creates a new `BufferedChangeEvent` object instance.
 

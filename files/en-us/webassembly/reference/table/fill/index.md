@@ -84,11 +84,11 @@ table.fill identifier
 
 - `index` + `length` is greater than [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size).
 
-### Opcodes
+### Binary encoding
 
-| Instruction  | Binary opcode                                                                                                  |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| `table.fill` | `𝟶𝚡𝙵𝙲 17:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction  | Binary format | Example text => binary                                                                                        |
+| ------------ | ------------- | ------------------------------------------------------------------------------------------------------------- |
+| `table.fill` | `0xfc 17:u32` | `(table.fill 0 (i32.const 0) (ref.func $f1) (i32.const 3))` => `0xfc 0x11 0x00 0x41 0x00 0xd2 0x00 0x41 0x03` |
 
 ## Examples
 
@@ -126,7 +126,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function type called `$ret_i32` that returns an `i32`, and a `table` that stores function references (hence `funcref` being specified) and has three elements.
 

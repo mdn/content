@@ -1,5 +1,6 @@
 ---
-title: lighting-color
+title: "`lighting-color` CSS property"
+short-title: lighting-color
 slug: Web/CSS/Reference/Properties/lighting-color
 page-type: css-property
 browser-compat: css.properties.lighting-color

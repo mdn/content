@@ -3,10 +3,12 @@ title: "ManagedMediaSource: startstreaming event"
 short-title: startstreaming
 slug: Web/API/ManagedMediaSource/startstreaming_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ManagedMediaSource.startstreaming_event
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`startstreaming`** event of the {{domxref("ManagedMediaSource")}} interface is fired when the {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `false` to `true`. This indicates that the user agent needs more data to ensure uninterrupted playback, and the application should begin fetching and appending media segments.
 

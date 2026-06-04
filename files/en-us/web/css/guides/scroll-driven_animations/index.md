@@ -97,6 +97,7 @@ div::after {
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }
@@ -141,10 +142,10 @@ Scroll the element in the inline direction to see its background color change. S
 
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
   - : Scroll-driven animation timelines and creating scroll-driven animations.
-- [Effective scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
-  - : Changing the range of scroll driven animations with insets, ranges, and keyframe selectors.
 - [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
-  - : Understanding the various timeline range names.
+  - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
+- [Insetting view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
+  - : Insetting the animation attachment ranges of scroll-driven animations.
 
 ## Related concepts
 

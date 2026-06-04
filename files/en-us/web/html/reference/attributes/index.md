@@ -710,16 +710,15 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/Security/Subresource_Integrity">integrity</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/integrity">integrity</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("script") }}
       </td>
       <td>
         <p>
-          Specifies a
-          <a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
-          value that allows browsers to verify what they fetch.
+          This attribute contains one or more <a href="/en-US/docs/Glossary/Hash_function">hashes</a> of the resource, and is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a <a href="/en-US/docs/Web/Security/Attacks/Supply_chain_attacks">supply chain attack</a>.</p>
+          <p>See <a href="/en-US/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>.
         </p>
       </td>
     </tr>

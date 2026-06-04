@@ -1,5 +1,6 @@
 ---
-title: stroke-linejoin
+title: "`stroke-linejoin` CSS property"
+short-title: stroke-linejoin
 slug: Web/CSS/Reference/Properties/stroke-linejoin
 page-type: css-property
 browser-compat: css.properties.stroke-linejoin

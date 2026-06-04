@@ -140,8 +140,6 @@ The updated styling should look like this:
 
 {{EmbedLiveSample("values2-finish", "", "430px")}}
 
-Here's the underlying code for this starting point:
-
 <details>
 <summary>Click here to show the solution</summary>
 

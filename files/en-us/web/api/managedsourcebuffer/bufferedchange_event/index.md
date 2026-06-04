@@ -3,10 +3,12 @@ title: "ManagedSourceBuffer: bufferedchange event"
 short-title: bufferedchange
 slug: Web/API/ManagedSourceBuffer/bufferedchange_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ManagedSourceBuffer.bufferedchange_event
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`bufferedchange`** event of the {{domxref("ManagedSourceBuffer")}} interface is fired when the `ManagedSourceBuffer`'s buffered range changes. This can occur following a call to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}}, {{domxref("SourceBuffer.remove", "remove()")}}, {{domxref("MediaSource.endOfStream", "endOfStream()")}}, or as a consequence of the user agent running the memory cleanup algorithm.
 

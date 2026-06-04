@@ -53,6 +53,10 @@ Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

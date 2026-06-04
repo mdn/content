@@ -89,9 +89,9 @@ table.set identifier
 
 ### Opcodes
 
-| Instruction | Binary opcode                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| `table.set` | `𝟶𝚡𝟸𝟼` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.set` | `0x26 𝑥:table_idx` | `table.set 0` => `0x26 0x01` |
 
 ## Description
 
@@ -181,7 +181,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function `type` called `$ret_i32`, which returns an `i32` value. We then define two functions based on this type called `$f1` and `$f2`, which return the values defined within, and forward-declare them using `(elem declare func $f1 $f2)` so they can be referenced later on. Next, we define a `table` called `$func_table`, which stores function references (hence `funcref` being specified) and is initially empty.
 

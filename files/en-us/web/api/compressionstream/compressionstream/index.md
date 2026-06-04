@@ -21,7 +21,7 @@ new CompressionStream(format)
 - `format`
   - : One of the following allowed compression formats:
     - `"brotli"`
-      - : Compresses the stream using the [Brotli](https://www.rfc-editor.org/rfc/rfc1952) algorithm.
+      - : Compresses the stream using the [Brotli](https://www.rfc-editor.org/rfc/rfc7932) algorithm.
     - `"gzip"`
       - : Compresses the stream using the [GZIP](https://www.rfc-editor.org/rfc/rfc1952) format.
     - `"deflate"`

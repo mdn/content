@@ -8,9 +8,9 @@ spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fepointlight-y
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-y
   - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-y
-  - https://svgwg.org/svg2-draft/geometry.html#Y
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementYAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Y
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementYAttribute
 sidebar: svgref
 ---
 

@@ -23,22 +23,20 @@ scrollTo(options)
 ### Parameters
 
 - `xCoord`
-  - : The pixel along the horizontal axis of the
-    element that you want displayed in the upper left.
+  - : The x-coordinate of the element's scrollable content that you want the left edge of the element's scrollport to scroll to.
 - `yCoord`
-  - : The pixel along the vertical axis of the element
-    that you want displayed in the upper left.
+  - : The y-coordinate of the element's scrollable content that you want the top edge of the element's scrollport to scroll to.
 - `options`
   - : An object containing the following properties:
     - `top`
-      - : Specifies the number of pixels along the Y axis to scroll the window or element.
+      - : The y-coordinate of the element's scrollable content that you want the top edge of the element's scrollport to scroll to. This is the same as the `yCoord` parameter.
     - `left`
-      - : Specifies the number of pixels along the X axis to scroll the window or element.
+      - : The x-coordinate of the element's scrollable content that you want the left edge of the element's scrollport to scroll to. This is the same as the `xCoord` parameter.
     - `behavior`
-      - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
-        - `smooth`: scrolling should animate smoothly
-        - `instant`: scrolling should happen instantly in a single jump
-        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
+      - : Determines whether the scrolling is instant or animates smoothly. This option is a string that must take one of the following values:
+        - `smooth`: The scrolling animates smoothly.
+        - `instant`: The scrolling happens instantly in a single jump.
+        - `auto`: The scroll behavior is determined by the computed value of the {{cssxref("scroll-behavior")}} CSS property on the element.
 
 ### Return value
 

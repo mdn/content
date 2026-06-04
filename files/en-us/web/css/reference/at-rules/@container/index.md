@@ -1,18 +1,25 @@
 ---
-title: "@container"
+title: "`@container` CSS at-rule"
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 page-type: css-at-rule
 browser-compat: css.at-rules.container
+spec-urls:
+  - https://drafts.csswg.org/css-conditional-5/#container-type
+  - https://drafts.csswg.org/css-anchor-position-2/#container-rule-anchored
 sidebar: cssref
 ---
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
-Style declarations are filtered by a condition and applied to the container if the condition is true.
+Style declarations are filtered by a condition and applied to the elements within the container if the condition is true.
 The condition is evaluated when the queried container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
-The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
+The condition must specify one or both of {{cssxref("container-name")}} and `<container-query>`.
 
-Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
+The {{cssxref("container-name")}} property specifies a list of query container names, which are used to filter which containers are targeted by the `@container` rules.
+The container features in the `<container-query>` are evaluated against the selected containers.
+If no `<container-name>` is specified, the `<container-query>` features are evaluated against the nearest ancestor query container that has the matching [`container-type`](/en-US/docs/Web/CSS/Reference/Properties/container-type).
+If no `<container-query>` is specified, named containers are selected.
 
 ## Syntax
 
@@ -31,10 +38,26 @@ Once an eligible query container has been selected for an element, each containe
   }
 }
 
+/* With a <container-name> only (query is optional) */
+@container sidebar {
+  h2 {
+    background: blue;
+  }
+}
+
 /* With a <scroll-state> */
 @container scroll-state(scrollable: top) {
   .back-to-top-link {
     visibility: visible;
+  }
+}
+
+/* With an anchored query */
+@container anchored(fallback: bottom) {
+  .infobox::before {
+    content: "▲";
+    bottom: 100%;
+    top: auto;
   }
 }
 
@@ -59,16 +82,39 @@ Once an eligible query container has been selected for an element, each containe
     font-size: 1.5em;
   }
 }
+
+/* Boolean style() queries */
+@container style(--theme: one) or style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* matched container styles */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* matched container styles */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* matched container styles */
+}
+@container not style(--theme: one) {
+  /* matched container styles */
+}
+
+/* range style() queries */
+@container style(--number > 4) {
+  /* matched container styles */
+}
 ```
 
 ### Parameters
 
 - `<container-condition>`
-  - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
-    - `<container-name>`
-      - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
-    - `<container-query>`
-      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
+  - : One or both of `<container-name>` and `<container-query>`.
+    Styles defined in the `<stylesheet>` are applied if the condition is `true`.
+    - `<container-name>` {{optional_inline}}
+      - : The name of the container to query; it is specified as an {{cssxref("ident")}}. If the query evaluates to `true`, the declared styles are applied to the container's descendant elements.
+    - `<container-query>` {{optional_inline}}
+      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), scroll-state, or applied position-try fallback of the container changes.
 
 ### Logical keywords in container queries
 
@@ -76,7 +122,7 @@ Logical keywords can be used to define the container condition:
 
 - `and` combines two or more conditions.
 - `or` combines two or more conditions.
-- `not` negates the condition. Only one 'not' condition is allowed per container query and cannot be used with the `and` or `or` keywords.
+- `not` negates the condition. Only one `not` condition is allowed per container query and it cannot be used with the `and` or `or` keywords.
 
 ```css
 @container (width > 400px) and (height > 400px) {
@@ -123,11 +169,11 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The `<container-condition>` queries include [size](#size_container_descriptors) and [scroll-state](#scroll-state_container_descriptors) container descriptors.
+The `<container-condition>` queries include [size](#size_container_descriptors), [scroll-state](#scroll-state_container_descriptors), and [anchored](#anchored_container_descriptors) container descriptors.
 
 #### Size container descriptors
 
-The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measures the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for {{cssxref("@media")}} size feature queries.
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The queries always measure the [content box](/en-US/docs/Web/CSS/Reference/Values/box-edge#content-box) as the comparison. The syntax for including multiple conditions is the same as for {{cssxref("@media")}} size feature queries.
 
 ```css
 @container (min-width: 400px) {
@@ -161,7 +207,7 @@ The `<container-condition>` can include one or more boolean size queries, each w
 
 #### Scroll-state container descriptors
 
-Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
+Scroll-state container descriptors are specified inside the `<container-condition>` as an argument for the `scroll-state()` function, for example:
 
 ```css
 @container scroll-state(scrollable: top) {
@@ -308,7 +354,7 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
 
     To evaluate a container with a non-`none` `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
 
-    It is possible for two values from opposite axes to match at the same time:
+    It is possible for two values from adjacent axes to match at the same time:
 
     ```css
     @container scroll-state((stuck: top) and (stuck: left)) {
@@ -331,6 +377,27 @@ Supported keywords for scroll-state container descriptors include {{glossary("ph
       /* … */
     }
     ```
+
+#### Anchored container descriptors
+
+Anchored container descriptors are specified inside the `<container-condition>` as an argument for the `anchored()` function, for example:
+
+```css
+@container anchored(fallback: top) {
+  /* … */
+}
+@container anchored(fallback: flip-block flip-inline) {
+  /* … */
+}
+@container anchored(fallback: --custom-fallback) {
+  /* … */
+}
+```
+
+- `fallback`
+  - : Queries whether a specific position-try fallback is currently active on an anchor-positioned container, as specified via the {{cssxref("position-try-fallbacks")}} property. Valid `fallback` values include any component value that is valid for inclusion in a `position-try-fallbacks` property value.
+
+    If the `fallback` value named in the test is currently active on the anchor-positioned container, the test passes, and the rules inside the `@container` block are applied to descendants of the anchor-positioned container.
 
 ## Formal syntax
 
@@ -459,7 +526,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) (the **plain** form), a CSS property or [`<custom-property-name>`](/en-US/docs/Web/CSS/Reference/Values/var#values) on its own (the **boolean** form), or a [range comparison](#range_syntax) (the **range** form).
 
 ```css
 @container style(--themeBackground),
@@ -487,11 +554,66 @@ The following container query checks if the [computed value](/en-US/docs/Web/CSS
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 
+Note that [`!important`](/en-US/docs/Web/CSS/Reference/Values/important) is allowed in style queries but is ignored.
+
+```css
+/* !important is valid but has no effect */
+@container style(--themeColor: purple !important) {
+  /* <stylesheet> */
+}
+```
+
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+
+#### Range syntax
+
+In addition to the plain `<style-feature-name>: <value>` form described above, a `<style-feature>` can be written as a **range** comparison using `=`, `<`, `<=`, `>`, or `>=`. Range syntax enables **numeric** comparisons that the plain form can't, such as `style(--columns >= 3)` or `style(--gap = 1rem)`. It compares the resolved values of both sides numerically.
+
+To evaluate a range, the browser:
+
+1. Resolves each side (custom property names are looked up as if used with [`var()`](/en-US/docs/Web/CSS/Reference/Values/var)).
+2. Parses each side as a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, or {{cssxref("&lt;resolution&gt;")}}. If either side can't be parsed as one of those types, or the two sides don't have the same type, the query is false.
+3. Computes each side (evaluating any `calc()` expressions) and performs the numeric comparison.
+
+This means range syntax can't be used to compare keyword-like values: `style(--theme = dark)` is always false because `dark` isn't a numeric type. Use the plain syntax for those, for example `style(--theme: dark)`.
+
+Either side of a range can be a custom property name, a `var()` reference, a literal value, or a `calc()` expression, in either order:
+
+```css
+@container style(3 = --n) {
+  /* … */
+}
+@container style(var(--n) = 3) {
+  /* … */
+}
+@container style(calc(6/2) = var(--n)) {
+  /* … */
+}
+```
+
+A range can also take a three-value form, with both comparators pointing the same way, to test whether a value falls within an interval:
+
+```css
+@container style(0 < --n < 10) {
+  /* true when --n is greater than 0 and less than 10 */
+}
+@container style(100px > --width > 50px) {
+  /* true when --width is less than 100px and greater than 50px */
+}
+```
+
+In other words, `style(0 < --n < 10)` is equivalent to `style(0 < --n) and style(--n < 10)`. The middle value is tested against both bounds, rather than being chained left-to-right.
+
+> [!NOTE]
+> Plain and range syntax behave differently even when they look similar. Given `--n: calc(6/2)`, the query `style(--n: 3)` is **false** because the plain form compares the property's computed value (`calc(6/2)`) directly against `3`. The equivalent range query `style(--n = 3)` is **true** because the range form computes both sides numerically before comparing. See [Plain versus range syntax in style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#plain_versus_range_syntax_in_style_queries) in the container style queries guide for more details.
 
 ### Scroll-state queries
 
-See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) for scroll-state query examples.
+
+### Anchored queries
+
+See [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) for anchored query examples.
 
 ## Specifications
 
@@ -506,9 +628,11 @@ See [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditiona
 - [Using container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
+- [`CSSContainerRule`](/en-US/docs/Web/API/CSSContainerRule) API
 - [CSS containment module](/en-US/docs/Web/CSS/Guides/Containment)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/Reference/At-rules/At-rule_functions)

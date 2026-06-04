@@ -1,5 +1,6 @@
 ---
-title: <display-box>
+title: "`<display-box>` CSS type"
+short-title: <display-box>
 slug: Web/CSS/Reference/Values/display-box
 page-type: css-type
 browser-compat: css.properties.display.contents
