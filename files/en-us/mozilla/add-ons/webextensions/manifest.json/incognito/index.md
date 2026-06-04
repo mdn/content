@@ -53,7 +53,22 @@ This is a string that can take any of these values:
 
 - "not_allowed": private tabs and windows are invisible to the extension.
 
-## Example
+## Privacy considerations
+
+If your extension needs to maintain the privacy expectations of the private browsing mode, omit the `incognito` key from your `manifest.json`. Omitting the key preserves the default behavior where the extension doesn't run in private browsing windows.
+
+If your extension uses `"spanning"` mode to access private and non-private windows, take care not to leak state from private to non-private browsing sessions. A common mistake is sending data from a content script running in a private browsing tab to an external server with a network request made from the background page. Because the background page shares cookies with the main browsing session, this can make private browsing activity linkable to the non-private session.
+
+To avoid this, use [`credentials: "omit"`](/en-US/docs/Web/API/RequestInit#credentials) and [`cache: "no-cache"`](/en-US/docs/Web/API/RequestInit#cache) in any `fetch()` calls from the background page that may involve data originating from private browsing windows:
+
+```js
+fetch(url, {
+  credentials: "omit",
+  cache: "no-cache",
+});
+```
+
+## Examples
 
 ```json
 "incognito": "spanning"
