@@ -134,7 +134,7 @@ While defined in the [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) m
 
 ### Preventing content from being hidden by a fixed header
 
-A common use case for `scroll-padding` is when a page includes a fixed-position header.
+A common use case for `scroll-padding` is to prevent scrolling content from being hidden by a fixed-position header. This example demonstrates how to use `scroll-padding` for this purpose.
 Without `scroll-padding`, content linked via fragment identifiers can be hidden beneath the header.
 
 ```css
