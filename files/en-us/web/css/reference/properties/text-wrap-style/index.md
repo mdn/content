@@ -74,7 +74,7 @@ text-wrap-style: unset;
 
 ### Values
 
-The `text-wrap-style` property is specified as one of the keyword values listed below.
+The `text-wrap-style` property is specified as one of the following keyword values:
 
 - `auto`
   - : Text is wrapped in the most performant way for the browser and does not take into account the number of characters.
