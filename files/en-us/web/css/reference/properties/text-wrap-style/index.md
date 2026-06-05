@@ -7,7 +7,7 @@ browser-compat: css.properties.text-wrap-style
 sidebar: cssref
 ---
 
-The **`text-wrap-style`** [CSS](/en-US/docs/Web/CSS) property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
+The **`text-wrap-style`** [CSS](/en-US/docs/Web/CSS) property controls how text inside an element is wrapped, providing alternate ways of determining where to create line breaks in order to fit the content within a block element.
 
 {{InteractiveExample("CSS Demo: text-wrap-style")}}
 
@@ -72,9 +72,9 @@ text-wrap-style: revert-layer;
 text-wrap-style: unset;
 ```
 
-When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-style` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+The `text-wrap-style` property is specified as one of the keyword values listed below.
 
 - `auto`
   - : Text is wrapped in the most performant way for the browser and does not take into account the number of characters.
@@ -85,12 +85,15 @@ When wrapping is allowed (see {{CSSXRef("text-wrap-mode")}}), the `text-wrap-sty
 - `stable`
   - : Text is wrapped such that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
-> [!NOTE]
-> The [CSS text](/en-US/docs/Web/CSS/Guides/Text) module defines an `avoid-orphans` value for the `text-wrap-style` property to avoid excessively short last lines and expect the user agent to consider more than one line when making break decisions. This value is not yet supported in any browser.
+The specification defines an `avoid-orphans` value in which browsers consider more than one line when making break decisions to avoid excessively short last lines. This value is not yet supported in any browser.
 
 ## Description
 
-When the content is allowed to wrap, which it does by default, then there are a number of choices that can effect the way the content is wrapped.
+The `text-wrap-style` property can be use to inform how the user agent should determine where to insert soft line breaks when the content is allowed to wrap. Each value defines a different approaches for wrapping lines, trading off between speed, quality and style of layout, or stability, providing alternate ways of wrapping the content of a block element.
+
+When the content is allowed to wrap, which it does by default `wrap` value of the {{CSSXRef("text-wrap-mode")}} property, the single keyword value of the `text-wrap-style` property defines how the user agent determines. The values have no effect on where a soft wrap opportunity exists, just how the browser should selects among them. If `text-wrap-mode` is set to `nowrap`, this property has no effect.
+
+### Selecting a value
 
 The value you choose, for `text-wrap-style`, depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
 
@@ -160,3 +163,6 @@ p {
 
 - {{CSSxRef("text-wrap")}}
 - {{CSSxRef("text-wrap-mode")}}
+- {{CSSxRef("hyphens")}}
+- {{CSSxRef("hyphenate-limit-chars")}}
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
