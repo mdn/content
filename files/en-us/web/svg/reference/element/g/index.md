@@ -23,10 +23,11 @@ However, SVG-specific element rules supersede inheritance.
 Geometric attributes specific to certain elements are ignored on a `<g>` container and **not** inherited by its children.
 
 These non-inherited attributes include:
-* {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}
-* {{SVGAttr("rx")}}, {{SVGAttr("ry")}}: {{SVGElement("ellipse")}}, {{SVGElement("rect")}}
-* {{SVGAttr("d")}}: {{SVGElement("path")}}
-* {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}: {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+
+- {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}
+- {{SVGAttr("rx")}}, {{SVGAttr("ry")}}: {{SVGElement("ellipse")}}, {{SVGElement("rect")}}
+- {{SVGAttr("d")}}: {{SVGElement("path")}}
+- {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}: {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
 
 In addition, non-presentation attributes valid on `<g>` (such as {{SVGAttr("id")}} or {{SVGAttr("class")}}) are not inherited by its children.
 
