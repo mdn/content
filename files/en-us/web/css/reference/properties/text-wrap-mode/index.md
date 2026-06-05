@@ -64,7 +64,7 @@ text-wrap-mode: unset;
 
 ## Values
 
-The `text-wrap-mode` property is specified as one of the keyword values listed below.
+The `text-wrap-mode` property is specified as one of the following keyword values:
 
 - `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
