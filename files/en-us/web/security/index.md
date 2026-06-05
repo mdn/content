@@ -72,7 +72,7 @@ In this section we also outline good practices for [session management](/en-US/d
 
 ## HTTP Observatory
 
-The [HTTP Observatory](https://developer.mozilla.org/en-US/observatory) tool enables you to scan your website to check whether it's following certain good security practices. Our [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides) provide explanations of how to implement these practices, and the threats they defend against.
+The [HTTP Observatory](/en-US/observatory) tool enables you to scan your website to check whether it's following certain good security practices. Our [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides) provide explanations of how to implement these practices, and the threats they defend against.
 
 ## See also
 
