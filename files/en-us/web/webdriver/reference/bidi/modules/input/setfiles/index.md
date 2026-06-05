@@ -27,7 +27,7 @@ The `input.setFiles` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context with the target [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element.
+  - : A string that contains the ID of the context with the target [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `element`
   - : An object containing the ID that uniquely identifies the `<input type="file">` DOM element to use for file selection.

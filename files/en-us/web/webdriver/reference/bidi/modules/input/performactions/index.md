@@ -37,7 +37,7 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context in which to perform the actions. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+  - : A string that contains the ID of the context in which to perform the actions. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `actions`
   - : An array of objects, each representing an input source and the actions to perform for that source.
     Each such object represents the outer `actions` object, which in turn, contains an outer `type` (input source type can be `"key"`, `"pointer"`, or `"wheel"`) and an inner `actions` array.
