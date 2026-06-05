@@ -16,16 +16,19 @@ Note that the `side.baseVal` property reflects the {{SVGAttr("side")}} attribute
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
-The object's `baseVal` and `animVal` properties can get or set the following static property values:
+The object's `baseVal` property can get or set the following static property values:
 
-- [`SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_left) (0)
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_unknown) (0)
   - : The side type is unknown or invalid.
-- [`SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_unknown) (1)
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_left) (1)
   - : The text is rendered on the left side of the path (the default).
     This corresponds to a value of `"left"` on the SVG `side` attribute.
 - [`SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_right) (2)
   - : The text is rendered on the right side of the path.
     This corresponds to a value of `"right"` on the SVG `side` attribute.
+
+The object's `animVal` can be used to get, but not set, the animated value of the property.
+Code that attempts to set `animVal` will throw.
 
 ## Examples
 
@@ -65,7 +68,7 @@ svg {
 ```
 
 We also add a button for toggling the value of the `side.baseVal` property.
-Note that there is also logging code, that is hidden as it is not relevant.
+Note that there is also logging code, which is hidden as it is not relevant.
 
 ```html
 <button id="toggle-side">Toggle Side</button>
@@ -156,7 +159,7 @@ button.addEventListener("click", () => {
 
 Toggle the button to move the text from one side to the other.
 
-{{EmbedLiveSample('Accessing the `side` property', 200, 500)}}
+{{EmbedLiveSample('Basic usage', 200, 500)}}
 
 ## Specifications
 
@@ -168,5 +171,4 @@ Toggle the button to move the text from one side to the other.
 
 ## See also
 
-- {{domxref("SVGTextPathElement.side")}}
-- [`SVGTextPathElement` method types](/en-US/docs/Web/API/SVGTextPathElement#static_properties)
+- [`SVGTextPathElement` side types](/en-US/docs/Web/API/SVGTextPathElement#static_properties)

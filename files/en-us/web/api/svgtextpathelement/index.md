@@ -121,8 +121,8 @@ function log(text) {
 
 The code below toggles the `side.baseVal` property on the `textPath`, causing the text to swap sides.
 
-First we define a function to log each of the properties of the the path element, and call it to log the initial state on load.
-The `side.baseVale` property is logged first, and demonstrates how the enumerated constants may be read and interpreted (this is done in a `try...catch` block, because `side` is not supported in all browsers).
+First we define a function to log each of the properties of the path element, and call it to log the initial state on load.
+The `side.baseVal` property is logged first, and demonstrates how the enumerated constants may be read and interpreted (this is done in a `try...catch` block, because `side` is not supported in all browsers).
 The other properties of the text path are also logged, but as raw values of their associated `baseVal` property.
 
 ```js
@@ -163,7 +163,7 @@ function logPathBaseVal() {
 logPathBaseVal();
 ```
 
-The toggle button event handler code is shown below This reads the current value of the `side.baseVal` property, and toggles the value to match the other side.
+The toggle button event handler code is shown below. This reads the current value of the `side.baseVal` property, and toggles the value to match the other side.
 It then logs the current state.
 
 ```js

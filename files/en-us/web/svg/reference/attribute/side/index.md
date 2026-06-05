@@ -67,7 +67,7 @@ text {
 
 #### Result
 
-Browsers that support setting the `side` attribute will display text to the left (outide) and to the right (inside) of the circular text path below.
+Browsers that support setting the `side` attribute will display text to the left (outside) and to the right (inside) of the circular text path below.
 
 {{EmbedLiveSample("Basic usage", "420", "220")}}
 
