@@ -20,6 +20,8 @@ The **`AnimationEvent`** interface represents events providing information relat
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
+- {{domxref("AnimationEvent.animation")}} {{ReadOnlyInline}}
+  - : A {{domxref("CSSAnimation")}} read-only property containing the animation that triggered the event, or `null`.
 - {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
   - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
