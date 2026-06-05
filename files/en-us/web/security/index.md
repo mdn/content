@@ -18,27 +18,34 @@ The [Attacks](/en-US/docs/Web/Security/Attacks) section includes guides to commo
 
 In this section, each guide describes an attack, or in some cases a class of related attacks. Each guide explains how the attack works, the conditions in which a website is vulnerable to it, and the methods to defend against it.
 
-The attacks described include, among others:
+The attacks described include:
 
-- [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
+- [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking)
 - [Cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF)
-- [Phishing](/en-US/docs/Web/Security/Attacks/phishing)
+- [Cross-site leaks (XS-Leaks)](/en-US/docs/Web/Security/Attacks/XS-Leaks)
+- [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
+- [Insecure Direct Object Reference (IDOR)](/en-US/docs/Web/Security/Attacks/IDOR)
+- [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+- [Phishing](/en-US/docs/Web/Security/Attacks/Phishing)
+- [Prototype pollution](/en-US/docs/Web/Security/Attacks/Prototype_pollution)
+- [Server Side Request Forgery (SSRF)](/en-US/docs/Web/Security/Attacks/SSRF)
+- [Subdomain takeover](/en-US/docs/Web/Security/Attacks/Subdomain_takeover)
 - [Supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks)
 
 ## Defenses
 
 The [Defenses](/en-US/docs/Web/Security/Defenses) section includes guides to features or practices that you can use to protect yourself against various attacks. In general, there's a many-to-many relationship between attack and defenses. That is, a single defense can protect against multiple attacks, and defending against a single attack may require multiple defenses, so as to provide defense in depth.
 
-Defenses include features that browsers provide, such as:
+In this section we document the following defenses:
 
-- [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
-- [The same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
-- [Subresource Integrity](/docs/Web/Security/Defenses/Subresource_Integrity)
-
-Defense also include practices you can follow, such as:
-
+- [Certificate transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
+- [Mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content)
 - [Operational security](/en-US/docs/Web/Security/Defenses/Operational_security)
-- [Input validation](/en-US/docs/Web/Security/Defenses/Input_validation)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
+- [Secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
+- [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)
+- [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
+- [User activation](/en-US/docs/Web/Security/Defenses/User_activation)
 
 Note that not all defenses are described in this section: some, such as [CSP](2/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
 
@@ -57,13 +64,9 @@ If users can log into your website, there are typically things logged-in users c
 In this set of guides we'll look at the main techniques available for authenticating users on the web, and good practices for them. We describe four methods:
 
 - [Passwords](/en-US/docs/Web/Security/Authentication/Passwords)
-  - : Passwords are the most well-known authentication method. They have many well-known security weaknesses, and in this article we'll explain the best practices to minimize the risks of using them: however, some threats don't have effective defenses.
 - [One-time passwords (OTP)](/en-US/docs/Web/Security/Authentication/OTP)
-  - : A one-time password is a generated code that is specific to a single login attempt. These are often used in combination with another method such as a password.
 - [Federated identity](/en-US/docs/Web/Security/Authentication/Federated_identity)
-  - : In a federated identity system, a website delegates authentication to a third party, which is called an _identity provider_. When the user tries to sign into the website, the website asks the identity provider to identify the user, and if the identification is successful, logs the user in.
 - [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys)
-  - : Passkeys enable websites to authenticate users without the user having to enter any passwords or other secret codes on the site itself. They rely on a module called an _authenticator_, that's in, or attached to, the user's device.
 
 In this section we also outline good practices for [session management](/en-US/docs/Web/Security/Authentication/Session_management), which is how a website remembers the signed-in status of a user.
 
