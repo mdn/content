@@ -66,24 +66,32 @@ It should also be used instead of {{domxref("Element.setHTMLUnsafe()")}}, unless
 
 Note that since this method always sanitizes input strings of XSS-unsafe entities, it is not secured or validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
 
-## Re-parsing and mutated XSS (mXSS)
+### Re-parsing and mutated XSS (mXSS)
 
-Sanitizing HTML with the Sanitizer API or using `setHTML()` helps remove unsafe nodes and attributes, but it does not eliminate the risk of mutated XSS (mXSS) when the sanitized HTML is serialized and later re-parsed. If sanitized HTML is serialized (for example via `innerHTML`) and later re-parsed by the browser, parsing-time transformations can re-introduce executable content or attributes that the sanitizer did not anticipate.
+Even after sanitizing HTML input with `setHTML()`, it is still not safe to serialize the HTML and reparse it using `innerHTML`.
+For example, the following code is unsafe.
 
-Example — unsafe flow
-
-```js
-// `code` comes from an untrusted source
-div.setHTML(code); // Sanitizer runs here
-other_div.innerHTML = div.innerHTML; // Re-parsing `innerHTML` — can trigger mXSS
+```js example-bad
+div.setHTML(unsafeString); //Safe
+const serializedHTML = div.innerHTML; //No longer sanitized!
+other_element.innerHTML = serializedHTML;
 ```
 
-Recommendations
+The reason for this is that sanitization is context-aware.
+When you call `setHTML()` on a particular element the unsafe elements and attributes for that context are removed.
+If you serialize the code and use it directly in another element, it may still contain elements that are unsafe in that element.
 
-- Avoid round-tripping sanitized `innerHTML` as a string. If you must persist markup, re-sanitize on every parse before insertion.
-- Prefer structured, safe representations (for example, store content as sanitized fragments or a safe data model) instead of raw HTML strings.
-- Use defensive headers and policies: Content Security Policy (CSP), Trusted Types, and server-side validation.
-- See also the WICG discussion on mutated XSS: https://wicg.github.io/sanitizer-api/#mutated-xss
+This would be safe (if pointless):
+
+```js example-good
+div.setHTML(unsafeString); // Safe
+const serializedHTML = div.innerHTML; //No longer sanitized!
+// This is safe
+other_div.innerHTML = setHTML(serializedHTML);
+```
+
+There is a class of attacks that take advantage of this flaw, referred to as [mutated XSS](https://wicg.github.io/sanitizer-api/#mutated-xss).
+The simple rule to avoid this problem is to only ever inject HTML strings using safe methods such as `setHTML()`.
 
 ## Examples
 
