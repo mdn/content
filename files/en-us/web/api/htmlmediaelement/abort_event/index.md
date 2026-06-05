@@ -31,7 +31,9 @@ A generic {{domxref("Event")}}.
 
 ### Abort loading a media resource
 
-The following example starts loading a video resource, then aborts the load by removing the `src` attribute and calling `load()`.
+The following example demonstrates how to abort a video.
+When you press the button it starts loading a video resource.
+After a short timeout it aborts the load by removing the `src` attribute and calling the `load()` method.
 If the video resource is still loading when `load()` is called, the `abort` event fires.
 
 #### HTML
