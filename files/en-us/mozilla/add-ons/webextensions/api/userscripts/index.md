@@ -22,7 +22,7 @@ To use this API, you need the `userScripts` permission and [`host_permissions`](
 
 ## Execution worlds
 
-When a user script is registered or updated (using {{WebExtAPIRef("userScripts.register()")}} or {{WebExtAPIRef("userScripts.update()")}}), your extension can set it to run in an isolated `USER_SCRIPT` world or the `MAIN` world.
+When a user script is registered, updated, or executed (using {{WebExtAPIRef("userScripts.register()")}}, {{WebExtAPIRef("userScripts.update()")}}, or {{WebExtAPIRef("userScripts.execute()")}}), your extension can set it to run in an isolated `USER_SCRIPT` world or the `MAIN` world.
 
 A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This isolation is similar to a [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment), except `USER_SCRIPT` worlds cannot access extension APIs.
 
@@ -51,8 +51,7 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
 ## Types
 
 - {{WebExtAPIRef("userScripts.ExecutionWorld")}}
-  - : The execution environment for a script injected with {{WebExtAPIRef("userScripts.register()")}}
-    or {{WebExtAPIRef("userScripts.update()")}}.
+  - : The execution environment for a script injected with {{WebExtAPIRef("userScripts.execute()")}}, {{WebExtAPIRef("userScripts.register()")}}, or {{WebExtAPIRef("userScripts.update()")}}.
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
   - : An `object` returned by {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} representing registered user scripts and used as input to {{WebExtAPIRef("userScripts.register","register()")}} and {{WebExtAPIRef("userScripts.update","update()")}}.
 - {{WebExtAPIRef("userScripts.ScriptSource")}}
