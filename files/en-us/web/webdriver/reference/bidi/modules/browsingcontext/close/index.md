@@ -29,8 +29,7 @@ The `params` field contains:
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `promptUnload` {{optional_inline}}
   - : A boolean that indicates whether the browser runs [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handlers before closing the context.
-    The default value is `false`.
-    - `false`: The specified context closes immediately without running `beforeunload` event handlers.
+    - `false`: The specified context closes immediately without running `beforeunload` event handlers. This is the default.
     - `true`: The browser runs `beforeunload` event handlers before closing the specified context.
       Any resulting prompt is handled as defined by the `unhandledPromptBehavior` capability specified via the [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#unhandledpromptbehavior) command.
 
