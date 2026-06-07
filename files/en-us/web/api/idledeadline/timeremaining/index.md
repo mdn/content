@@ -17,6 +17,9 @@ example, if the callback finishes a task and has another one to begin, it can ca
 there isn't, the callback can just return immediately, or look for other work to do with
 the remaining time.
 
+> [!NOTE]
+> The value returned by `timeRemaining()` is an estimate of how much time the user agent believes is available before the next latency-critical task needs to run. This estimate is not fixed and can suddenly drop to 0 if higher-priority work arrives. Developers should not assume the value always decreases linearly like a countdown timer.
+
 By the time `timeRemaining()` reaches 0, it is suggested that the callback
 should return control to the user agent's event loop.
 
