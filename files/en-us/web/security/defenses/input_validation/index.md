@@ -19,7 +19,7 @@ However, aside from innocent errors by the user, supplying unexpected input enab
 
 ### Implement validation as an allowlist
 
-Applications should implement validation as an allowlist, rather than a denylist. That is, applications should allow only input that positively matches the expected value.
+Applications should implement validation as an allowlist, rather than a denylist. That is, applications should allow only input that positively matches expected values.
 
 For example, suppose we wanted to check that a numeric input is between zero and 10. We can test that the input matches this range, and deny everything else:
 
