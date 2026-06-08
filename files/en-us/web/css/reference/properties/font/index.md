@@ -121,7 +121,6 @@ The `font` shorthand property is either multiple data-types specifying the vario
   - : See the {{cssxref("line-height")}} CSS property. Defaults to `normal`.
 - `<'font-family'>`
   - : See the {{cssxref("font-family")}} CSS property. Required value.
- 
 
 - `<system-font-family-name>`
   - : A single keyword representing a system font, including:
@@ -140,7 +139,6 @@ The `font` shorthand property is either multiple data-types specifying the vario
 
     There are several non-standard values are implemented with prefixes. Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`. Webkit add `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with seveal `-apple-system-*` prefixed keywords. Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
 
- 
 ## Description
 
 Depending on its value, the `font` property value is either a single keyword reresenting a system-font-family-name or multiple longhand property value used to set all the different properties of an element's font.
@@ -149,7 +147,7 @@ Depending on its value, the `font` property value is either a single keyword rer
 
 If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to either `caption`, `icon`, `menu`, `message-box`, `small-caption` or `status-bar`. These values are only treated as keywords when they occur as the full property value.
 
-System fonts can only be set with the `font` property. The single keyword value, such as `font: icon` sets the font family, size, weight, style, etc. to the values the browser defined for the named system font.  The browser values can all be changed with longhand declarations coming after the `font` declaration. Setting any font components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration: `font: icon small` is invalid.
+System fonts can only be set with the `font` property. The single keyword value, such as `font: icon` sets the font family, size, weight, style, etc. to the values the browser defined for the named system font. The browser values can all be changed with longhand declarations coming after the `font` declaration. Setting any font components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration: `font: icon small` is invalid.
 
 If a `<system-font-family-name>` keyword appears anywhere in the value other than as the first component, the keyword is treated as an {{cssxref("ident")}} representing a `font-family` name. For example, the declaration `font: small icon` sets the `font-family` to a font named `icon`, a non-system font which may or may not exist, while also setting `font-size: small` and resetting all the other shorthand component properties to their initial value.
 
@@ -168,7 +166,7 @@ If `font` is specified as a shorthand for several font-related properties, then:
   - {{cssxref("font-stretch")}}
   - {{cssxref("line-height")}}
 
-As with any shorthand property, any of the longhand component properties not  value that is not specified is set to its initial value, possibly overriding values previously set using non-shorthand properties. In addition, the shorthand resets the following properties to their initial values that can not be set by the shorthand:
+As with any shorthand property, any of the longhand component properties not value that is not specified is set to its initial value, possibly overriding values previously set using non-shorthand properties. In addition, the shorthand resets the following properties to their initial values that can not be set by the shorthand:
 
 - {{cssxref("font-feature-settings")}}
 - {{cssxref("font-kerning")}}
@@ -219,7 +217,11 @@ p {
 ```
 
 ```html hidden
-<p>This is a paragraph of sans-serif text. The font-size is small, at just 12px. If this text wraps, the line height is pretty tight at 14px, so this may be difficult to read.</p>
+<p>
+  This is a paragraph of sans-serif text. The font-size is small, at just 12px.
+  If this text wraps, the line height is pretty tight at 14px, so this may be
+  difficult to read.
+</p>
 ```
 
 {{ EmbedLiveSample('basic usage','100%', '100')}}
@@ -235,7 +237,10 @@ p {
 ```
 
 ```html hidden
-<p>In this example, we set the font weight to bold, the font style to italic, the font size to large, the line height to 1.6, and the font family to serif.</p>
+<p>
+  In this example, we set the font weight to bold, the font style to italic, the
+  font size to large, the line height to 1.6, and the font family to serif.
+</p>
 ```
 
 {{ EmbedLiveSample(' Multiple properties','100%', '100')}}
@@ -252,7 +257,9 @@ p {
 ```
 
 ```html hidden
-<p>Take a look at your status bar. The font of this text should look the same.</p>
+<p>
+  Take a look at your status bar. The font of this text should look the same.
+</p>
 ```
 
 {{ EmbedLiveSample('System font','100%', '100')}}
@@ -582,4 +589,4 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [System font stack](https://css-tricks.com/snippets/css/system-font-stack/) on CSS-Tricks (2017) 
+- [System font stack](https://css-tricks.com/snippets/css/system-font-stack/) on CSS-Tricks (2017)
