@@ -268,7 +268,7 @@ console.log(Array.prototype.map.call(arrayLike, (x) => x ** 2));
 // [ 4, 9, 16 ]
 ```
 
-This example shows how to iterate through a collection of objects collected by `querySelectorAll`. This is because `querySelectorAll` returns a `NodeList` (which is a collection of objects). In this case, we return all the selected `option`s' values on the screen:
+This example shows how to iterate through a collection of objects collected by `querySelectorAll`. Because `querySelectorAll` returns a `NodeList` (which is a collection of objects), `Array.prototype.map.call()` is used to return an array containing the values of all the selected `option` elements:
 
 ```js
 const elems = document.querySelectorAll("select option:checked");
