@@ -79,7 +79,7 @@ const output = document.querySelector("output");
 
 try {
   const pseudoElem = pElem.pseudo("::after");
-  output.textContent = `${pseudoElem.type} pseudo-element. Parent: ${pseudoElem.parent}`;
+  output.textContent = `${pseudoElem.type} pseudo-element. Parent: <${pseudoElem.parent.tagName.toLowerCase()}>`;
 } catch (e) {
   output.textContent = `Your browser doesn't support CSSPseudoElement and/or the pseudo() method: ${e}`;
 }

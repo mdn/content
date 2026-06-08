@@ -73,7 +73,7 @@ const output = document.querySelector("output");
 try {
   const pseudoElem = pElem.pseudo("::after");
   const pseudoPseudoElem = pseudoElem.pseudo("::marker");
-  output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent}. Ultimate originating element: ${pseudoPseudoElem.element}`;
+  output.textContent = `${pseudoPseudoElem.type} pseudo-element. Parent: ${pseudoPseudoElem.parent.type}. Ultimate originating element: <${pseudoPseudoElem.element.tagName.toLowerCase()}>`;
 } catch (e) {
   output.textContent = `Your browser doesn't support CSSPseudoElement and/or the pseudo() method: ${e}`;
 }
