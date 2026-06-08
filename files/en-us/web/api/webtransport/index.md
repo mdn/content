@@ -39,6 +39,8 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Closes an ongoing WebTransport session.
 - {{domxref("WebTransport.createBidirectionalStream", "createBidirectionalStream()")}}
   - : Asynchronously opens a bidirectional stream ({{domxref("WebTransportBidirectionalStream")}}) that can be used to read from and write to the server.
+- {{domxref("WebTransport.createSendGroup", "createSendGroup()")}}
+  - : Returns a {{domxref("WebTransportSendGroup")}} that can be used to group together streams and datagrams so that their relative sending priority can be prioritized.
 - {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : Asynchronously opens a unidirectional stream ({{domxref("WritableStream")}}) that can be used to write to the server.
 - {{domxref("WebTransport.getStats", "getStats()")}}
