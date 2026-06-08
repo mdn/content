@@ -29,7 +29,7 @@ Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo
 
 ## Description
 
-The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). You can retrieve a representation of a pseudo-element attached to a DOM element using the {{DOMxRef("Element.pseudo()")}} method, or representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) (for example, the `::marker` in `::before::marker`) using the {{DOMxRef("CSSPseudoElement.pseudo()")}} method.
+The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). You can retrieve a representation of a pseudo-element attached to a DOM element using the {{DOMxRef("Element.pseudo()")}} method, or a representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) (for example, the `::marker` in `::before::marker`) using the {{DOMxRef("CSSPseudoElement.pseudo()")}} method.
 
 The {{DOMxRef("CSSPseudoElement.type")}} property returns a string representing the type of the pseudo-element. Supported types are:
 
