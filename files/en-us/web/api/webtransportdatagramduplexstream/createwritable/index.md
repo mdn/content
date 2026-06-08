@@ -27,7 +27,7 @@ createWritable(options)
       - : A {{domxref("WebTransportSendGroup")}} that the returned stream's datagrams should be grouped under for the purposes of `sendOrder` prioritization, or `null` if they should be part of the default group.
         The default value is `null`.
     - `sendOrder` {{optional_inline}}
-      - : An integer value that, if specified, opts the returned stream's datagrams in to participating in strict per-group send-order prioritization.
+      - : An integer value specifying the send priority of the returned stream's datagrams.
         Within the stream's `sendGroup`, bytes queued on higher-priority streams and datagrams are sent ahead of those from lower-priority ones.
         The default value is `0`.
 
@@ -48,7 +48,7 @@ The method allows you to specify a `sendGroup` for specifying the group of strea
 Within a group, bytes queued on higher-priority streams and datagrams are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 
-The transmission is unreliable, meaning while you can define the priory order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
+The transmission is unreliable, meaning while you can define the priority order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
 
 ## Examples
 
@@ -56,11 +56,11 @@ The transmission is unreliable, meaning while you can define the priory order, t
 
 This code shows how you can use the `createWritable()` method to get a `WebTransportDatagramDuplexStream` and use it to send data.
 
-First we define a function to to wrap our stream creation and closing code.
+First we define a function to wrap our stream creation and closing code.
 This first constructs a `WebTransport`, and uses it with `createWritable()` to create a writable stream.
-Note that because `createWritable()` is not supported on all browsers, the code falls back to the {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} property for creating the writable.
+Note that because `createWritable()` is not supported on all browsers, the code falls back to the {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} property for creating the writable.
 
-`getWriter()` is then called on writable to create a writer.
+`getWriter()` is then called on `writable` to create a writer.
 Because datagram delivery is unreliable, queued outgoing datagrams that aren't sent in time are dropped.
 For this reason, the code awaits the writer's {{domxref("WritableStreamDefaultWriter.ready", "ready")}} promise before each write, so that datagrams are only written once the underlying transport is ready to send them.
 It also catches any errors from `write()`, since a rejection means that a particular datagram was not sent.
@@ -68,6 +68,7 @@ It also catches any errors from `write()`, since a rejection means that a partic
 ```js
 async function sendDatagrams(url, datagrams, writableOptions = {}) {
   const wt = new WebTransport(url);
+  await wt.ready;
   const writable =
     typeof wt.datagrams.createWritable === "function"
       ? wt.datagrams.createWritable(writableOptions)
@@ -77,11 +78,10 @@ async function sendDatagrams(url, datagrams, writableOptions = {}) {
     await writer.ready;
     writer.write(bytes).catch(() => {});
   }
-  await writer.close();
 }
 ```
 
-This code shows how you might use the above method, passing a `sendOrder` priority of `1` for in the `null` send group for this stream:
+This code shows how you might use the above method, passing a `sendOrder` priority of `1` in the `null` send group for this stream:
 
 ```js
 const url = "https://example.com/webtransport";
@@ -99,5 +99,5 @@ await sendDatagrams(url, datagrams, { sendOrder: 1 });
 
 ## See also
 
-- {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("Streams API", "Streams API", "", "nocode")}}

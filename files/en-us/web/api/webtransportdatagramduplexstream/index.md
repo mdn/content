@@ -22,14 +22,14 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
 - {{domxref("WebTransportDatagramDuplexStream.incomingMaxAge", "incomingMaxAge")}}
   - : Gets or sets the maximum age for incoming datagrams, in milliseconds. Returns `null` if no maximum age has been set.
 - {{domxref("WebTransportDatagramDuplexStream.maxDatagramSize", "maxDatagramSize")}} {{ReadOnlyInline}}
-  - : Returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}}.
+  - : Returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}}.
 - {{domxref("WebTransportDatagramDuplexStream.outgoingHighWaterMark", "outgoingHighWaterMark")}}
   - : Gets or sets the high water mark for outgoing chunks of data — this is the maximum size, in chunks, that the outgoing {{domxref("WritableStream")}}'s internal queue can reach before it is considered full. See [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) for more information.
 - {{domxref("WebTransportDatagramDuplexStream.outgoingMaxAge", "outgoingMaxAge")}}
   - : Gets or sets the maximum age for outgoing datagrams, in milliseconds. Returns `null` if no maximum age has been set.
 - {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming datagrams from the stream.
-- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing datagrams to the stream.
 
 ## Instance methods

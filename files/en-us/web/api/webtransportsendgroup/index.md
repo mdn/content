@@ -16,23 +16,16 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 ## Instance methods
 
 - {{domxref("WebTransportSendGroup.getStats", "getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with statistics aggregated across all of the streams and datagram writables currently associated with this group.
+  - : Returns a {{jsxref("Promise")}} that resolves with statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
 
 ## Description
 
-By default, the relative order in which a user agent sends queued bytes from different streams and datagrams is implementation-defined.
+Unlike for {{domxref("WritableStream")}} instances, for which the priority at which bytes are sent on different streams is implementation-dependent, a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} allows you to set the priority at which bytes will be sent on each instance relative to others in the same `sendGroup`.
+A send group is defined using the `WebTransportSendGroup` interface, and the relative priority is defined by the `sendOrder` property of `WebTransportDatagramsWritable` or `WebTransportSendStream` instances.
+Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though again the precise way bandwidth is divided between groups depends on the implementation.
 
-http://localhost:5042/en-US/docs/Web/API/WebTransportDatagramsWritable
-
-A `WebTransportSendGroup` allows you to gropu
-
-relative send order (within the group)
-
-Associating two or more streams and/or datagrams with the same `WebTransportSendGroup`, and giving each a `sendOrder` value, allows their priorities to be compared directly: queued bytes belonging to the group member with the highest `sendOrder` are sent first, ahead of other members of the same group that have a lower value. The relative priority of streams and datagrams that belong to different groups (or that have no group at all) remains implementation-defined.
-
-A `WebTransportSendGroup` is created using the `createSendGroup()` method of the {{domxref("WebTransport")}} interface. You can then associate it with a stream or datagram writable by passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} — or by setting the object's `sendGroup` property afterwards, for example {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
-
-The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a group of streams and datagrams whose relative send priority can be compared and prioritized as a set, based on the `sendOrder` value of each member.
+A `WebTransportSendGroup` is created using the `createSendGroup()` method of the {{domxref("WebTransport")}} interface.
+You can then associate it with a `WebTransportDatagramsWritable` or `WebTransportSendStream` by passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} — or by setting the object's `sendGroup` property afterwards, for example {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 ## Examples
 
@@ -67,5 +60,5 @@ const datagrams = transport.datagrams.createWritable({
 
 ## See also
 
-- {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("Streams API", "Streams API", "", "nocode")}}

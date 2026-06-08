@@ -60,5 +60,5 @@ console.log(`Bytes sent but not yet acknowledged: ${bytesNotAcknowledged}`);
 
 ## See also
 
-- {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
