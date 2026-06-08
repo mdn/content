@@ -5,7 +5,7 @@ page-type: guide
 sidebar: security
 ---
 
-**Local network access** places restrictions on the ability of websites to make requests to the user's local network, mitigating the risk of attacks such as cross-site request forgeries. This article explains how local network access works, and what web developers need to do to interact with it.
+The [**Local network access**](https://wicg.github.io/local-network-access/) technology places restrictions on the ability of websites to make requests to the user's local network, mitigating the risk of attacks such as cross-site request forgeries. This article explains how local network access works, and what web developers need to do to interact with it.
 
 ## Background
 
@@ -49,7 +49,7 @@ Local network access restrictions apply to:
 
 ## Local network access permissions
 
-In browsers that support local network access, loopback and local requests are gated behind specific permissions — `local-network` and `loopback-network`, respectively. This means that when a website makes a request to a local IP or loopback address, or a local website (for example, an intranet) makes a request to a loopback address, the user will be shown a permission dialog asking them to allow or deny the request.
+In browsers that support the local network access specification, loopback and local requests are gated behind specific permissions — `local-network` and `loopback-network`, respectively. This means that when a website makes a request to a local IP or loopback address, or a local website (for example, an intranet) makes a request to a loopback address, the user will be shown a permission dialog asking them to allow or deny the request.
 
 You can check on the permission status using the {{domxref("Permissions.query()")}} method, for example to check whether a local request will succeed and advise the user accordingly:
 
@@ -96,7 +96,7 @@ Some addresses, such as private IP literals (for example, `192.168.0.1`) and `.l
 
 ## Local network access permissions policies
 
-You can control local network access to local and loopback addresses at the document level using the {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{httpheader('Permissions-Policy')}} directives.
+You can control access to local and loopback addresses at the document level using the {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{httpheader('Permissions-Policy')}} directives.
 
 The default allowlist for these directives is `self`, which means that requests will be allowed in the current document and embedded browsing contexts in the same origin only. To allow local or loopback requests at the document level for a particular origin, use these directives in an `Permissions-Policy` HTTP header:
 
@@ -128,7 +128,7 @@ You could also specify `allow="local-network *"` to allow any origin loaded in t
 
 ## The `local-network-access` alias
 
-Local network access was originally implemented with the {{httpheader('Permissions-Policy/local-network-access','local-network-access')}} permission, which was used to control network requests to both local and loopback addresses together. This was updated to the more granular {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} permissions, which you should use going forward.
+The local network access technology was originally specified with the {{httpheader('Permissions-Policy/local-network-access','local-network-access')}} permission, which was used to control network requests to both local and loopback addresses together. This was updated to the more granular {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} permissions, which you should use going forward.
 
 However, the `local-network-access` permission continues to be supported for backwards-compatibility [where already implemented](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/local-network-access#browser_compatibility), as an alias of `local-network` and `loopback-network`.
 

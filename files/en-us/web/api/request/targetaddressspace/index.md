@@ -25,7 +25,7 @@ An enumerated value, which can be one of:
 
 ## Description
 
-In browsers that support [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access), loopback and local requests are gated behind specific permissions — `local-network` and `loopback-network`, respectively. Requiring user permissions for such requests mitigates the risk of [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks against local network devices such as routers and printers, and reduces the ability of sites to use these requests to fingerprint the user's local network.
+In browsers that support the [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access) specification, loopback and local requests are gated behind specific permissions — `local-network` and `loopback-network`, respectively. Requiring user permissions for such requests mitigates the risk of [cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF) attacks against local network devices such as routers and printers, and reduces the ability of sites to use these requests to fingerprint the user's local network.
 
 These permissions are restricted to secure contexts. If granted, the permissions additionally relax [mixed content](/en-US/docs/Web/Security/Defenses/Mixed_content) blocking for local network requests. This is needed because many local devices are not able to obtain publicly trusted TLS certificates for various reasons. For example, it allows public websites to access local testing servers or devices running on HTTP.
 
