@@ -19,7 +19,11 @@ The documentation is organized into four main sections:
 - [Threat modeling](/en-US/docs/Web/Security/Threat_modeling)
 - [Authentication](/en-US/docs/Web/Security/Authentication)
 
-In this page we'll introduce each of these sections and list the guides they contain. Before we do this, though, we'll state what we think are the core security practices that web developers should follow.
+In this page we'll introduce each of these sections and list the guides they contain. 
+
+## Core security practices
+
+Before we cover the separate aspects of website security, this section provides the core security practices that we think all web developers should follow.
 
 - **Use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)** to serve all your site's pages and subresources.
 
