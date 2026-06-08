@@ -19,7 +19,7 @@ The documentation is organized into four main sections:
 - [Threat modeling](/en-US/docs/Web/Security/Threat_modeling)
 - [Authentication](/en-US/docs/Web/Security/Authentication)
 
-In this page we'll introduce each of these sections and list the guides they contain. 
+In this page we'll introduce each of these sections and list the guides they contain.
 
 ## Core security practices
 
