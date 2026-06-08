@@ -44,6 +44,8 @@ In this page we'll introduce each of these sections and list the guides they con
 
 - **Follow good [operational security practices](/en-US/docs/Web/Security/Defenses/Operational_security)**: control access to your project's source code, handle secrets securely, and control your dependencies.
 
+See also the [Secure Web Application Guidelines](https://w3c-cg.github.io/swag/docs/swag.html).
+
 ## Attacks
 
 The [Attacks](/en-US/docs/Web/Security/Attacks) section includes guides to common attacks on websites. An attack is a specific technique that an attacker can use to harm websites or their users.
