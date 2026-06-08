@@ -12,7 +12,14 @@ The kind of damage done can be reputational, financial, or even physical. It can
 
 In this part of MDN we've written guides to help web developers understand how to protect their websites, and their users, against these attacks.
 
-Before listing these detailed guides, though, we'll summarize the most important security practices:
+The documentation is organized into four main sections:
+
+- [Attacks](/en-US/docs/Web/Security/Attacks)
+- [Defenses](/en-US/docs/Web/Security/Defenses)
+- [Threat modeling](/en-US/docs/Web/Security/Threat_modeling)
+- [Authentication](/en-US/docs/Web/Security/Authentication)
+
+In this page we'll introduce each of these sections and list the guides they contain. Before we do this, though, we'll state what we think are the core security practices that web developers should follow.
 
 - **Use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)** to serve all your site's pages and subresources.
 
