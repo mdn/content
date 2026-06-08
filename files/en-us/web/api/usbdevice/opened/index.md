@@ -16,7 +16,7 @@ paired USB device. A device must be opened before it can be controlled by a web 
 
 ## Value
 
-A {{jsxref("boolean")}}.
+A {{jsxref("Boolean")}}.
 
 ## Examples
 

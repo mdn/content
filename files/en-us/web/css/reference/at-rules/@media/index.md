@@ -205,7 +205,7 @@ You can also combine multiple media queries into a single rule by separating the
     If you use the `only` operator, you _must also_ specify a media type.
 - `,` (comma)
   - : Commas are used to combine multiple media queries into a single rule.
-    Each query in a comma-separated list is treated separately from the others
+    Each query in a comma-separated list is treated separately from the others.
     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
     In other words, lists behave like a logical `or` operator.
 - `or`

@@ -13,6 +13,8 @@ As a rule, there's a many-to-many relationship between attacks and defenses. In 
   - : Provides a publicly visible log of issued {{glossary("TLS")}} certificates, making it easier to detect those which were malicious or incorrectly issued.
 - [Mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content)
   - : Prevents a document that was delivered over HTTPS from loading subresources (such as scripts, images, or fonts) over HTTP.
+- [Operational security](/en-US/docs/Web/Security/Defenses/Operational_security)
+  - : Security practices that are concerned with the processes to follow in developing, building, shipping, and updating a project.
 - [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
   - : Restricts the ways in which content loaded from one {{glossary("origin")}} can access content loaded from a different origin. It controls the extent to which websites can access each other's state.
 - [Secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)

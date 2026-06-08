@@ -8,20 +8,29 @@ browser-compat: api.ShadowRoot.slotAssignment
 
 {{APIRef("Shadow DOM")}}
 
-The read-only **`slotAssignment`** property of the {{domxref("ShadowRoot")}} interface returns the _slot assignment mode_ for the shadow DOM tree. Nodes are either automatically assigned (`named`) or manually assigned (`manual`). The value of this property defined using the `slotAssignment` option when calling {{domxref("Element.attachShadow()")}}.
+The read-only **`slotAssignment`** property of the {{domxref("ShadowRoot")}} interface returns the _slot assignment mode_ for the shadow DOM tree. Nodes are either automatically assigned based on name matching (`named`) or manually assigned (`manual`).
+
+The value of this property is defined using the `slotAssignment` option when calling {{domxref("Element.attachShadow()")}}, or using the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute on a {{htmlelement("template")}} element when declaratively creating a shadow root.
 
 ## Value
 
 A string that can be one of:
 
 - `named`
-  - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root. Any descendants of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot. Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
+  - : Elements are automatically assigned to {{HTMLElement("slot")}} elements within this shadow root.
+    Any top-level children of the host with a `slot` attribute that matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot.
+    Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot"), if one is present.
 - `manual`
-  - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
+  - : Elements are not automatically assigned to {{HTMLElement("slot")}} elements.
+    Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
 
 ## Examples
 
-In the example below, the `assign()` method is used to display the correct tab in a tabbed application. The function is called and passed the panel to show, which is then assigned to the slot. We test if the `slotAssignment` is `named` to prevent an exception to be raised when {{domxref("HTMLSlotElement.assign()")}} is called.
+### Basic usage
+
+In the example below, the `assign()` method is used to display the correct tab in a tabbed application.
+The function is called and passed the panel to show, which is then assigned to the slot.
+We test if the `slotAssignment` is `named` to prevent an exception from being raised when {{domxref("HTMLSlotElement.assign()")}} is called.
 
 ```js
 function UpdateDisplayTab(elem, tabIdx) {
@@ -55,3 +64,5 @@ function UpdateDisplayTab(elem, tabIdx) {
 
 - {{domxref("Element.attachShadow()")}}
 - {{domxref("HTMLSlotElement.assign()")}}
+- [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute of the `<template>` element
+- {{domxref("HTMLTemplateElement.shadowRootSlotAssignment")}}

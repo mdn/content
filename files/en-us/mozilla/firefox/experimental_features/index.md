@@ -109,7 +109,7 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
 
 ### fit-content() function
 
-The {{cssxref("fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
+The [`fit-content()`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function) function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -133,7 +133,7 @@ You can alternatively use the {{cssxref("animation-timeline/scroll")}} functiona
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-The {{cssxref('timeline-scope')}} property is not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
+The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -183,7 +183,7 @@ See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 114           | No                  |
+| Nightly           | 136           | Yes                 |
 | Developer Edition | 114           | No                  |
 | Beta              | 114           | No                  |
 | Release           | 114           | No                  |
@@ -199,7 +199,7 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 114           | No                  |
+| Nightly           | 136           | Yes                 |
 | Developer Edition | 114           | No                  |
 | Beta              | 114           | No                  |
 | Release           | 114           | No                  |
@@ -230,21 +230,6 @@ Specifically, this preference will disable the following prefixed properties:
 - `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
-#### Relative control points in CSS `shape()` curve commands
-
-You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
-([Firefox bug 1921501](https://bugzil.la/1921501)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 146           | Yes                 |
-| Developer Edition | 146           | No                  |
-| Beta              | 146           | No                  |
-| Release           | 146           | No                  |
-
-- `layout.css.basic-shape-shape.enabled`
-  - : Set to `true` to enable.
-
 ### Symmetrical `letter-spacing`
 
 The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text.
@@ -258,20 +243,6 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
 | Release           | 127           | No                  |
 
 - `layout.css.letter-spacing.model`
-  - : Set to `true` to enable.
-
-### `calc()` color channel support in relative colors
-
-The CSS {{cssxref("calc()")}} function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 127           | Yes                 |
-| Developer Edition | 127           | No                  |
-| Beta              | 127           | No                  |
-| Release           | 127           | No                  |
-
-- `layout.css.relative-color-syntax.enabled`
   - : Set to `true` to enable.
 
 ### Allow pseudo-elements after element-backed pseudo-elements
@@ -305,20 +276,6 @@ The {{cssxref(":heading")}} pseudo-class allows you to style all [heading elemen
 - `layout.css.heading-selector.enabled`
   - : Set to `true` to enable.
 
-### `text-decoration-trim`
-
-The CSS `text-decoration-trim` property allows you to specify {{cssxref("text-decoration")}} start and end offsets to shorten, lengthen, or shift the position of text decorations with respect to the text ([Firefox bug 1979915](https://bugzil.la/1979915)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | No                  |
-| Developer Edition | 145           | No                  |
-| Beta              | 145           | No                  |
-| Release           | 145           | No                  |
-
-- `layout.css.text-decoration-trim.enabled`
-  - : Set to `true` to enable.
-
 ### `@custom-media` at-rule
 
 The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).
@@ -339,7 +296,7 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 149           | No                  |
+| Nightly           | 152           | Yes                 |
 | Developer Edition | 149           | No                  |
 | Beta              | 149           | No                  |
 | Release           | 149           | No                  |
@@ -361,20 +318,6 @@ The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### `@container style()` queries
-
-The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)), [Firefox bug 2014098](https://bugzil.la/2014098)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 149           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.style-queries.enabled`
-  - : Set to `true` to enable.
-
 ### Absolutely positioned elements in multi-column containers and printing
 
 Absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing are now correctly positioned and fragmented.
@@ -391,11 +334,118 @@ This improves interoperability with other browsers and prevents layout issues su
 - `layout.abspos.fragmentainer-aware-positioning.enabled`
   - : Set to `true` to enable.
 
+### `@container style()` range syntax queries
+
+The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries now supports the _range syntax_. This allows you to check if a container has a valid CSS custom property and compare its value with comparison operators like `>`, `<`, `>=`, and `<=` and apply styles to its children accordingly. ([Firefox bug 2024601](https://bugzil.la/2024601)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | No                  |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
+### Fix for nested scrollable areas
+
+This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. This does however mean that the `@supports selector(::-webkit-scrollbar)` check will return `true` even though the [`::-webkit-scrollbar`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) pseudo-element is not truly supported. ([Firefox bug 1977511](https://bugzil.la/1977511)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `layout.css.fake-webkit-scrollbar.enabled`
+  - : Set to `true` to enable.
+
+### `<timeline-range-name>` values
+
+The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
 
+## MathML
+
+### Disable `href` on non-`<a>` MathML elements
+
+When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) global attribute no longer creates a hyperlink on MathML elements other than `<a>`, aligning Firefox with the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element), which only defines hyperlinks on the `<a>` element. ([Firefox bug 2026848](https://bugzil.la/2026848)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `mathml.href_link_on_non_anchor_element.disabled`
+  - : Set to `true` to enable.
+
 ## JavaScript
+
+### TC39 Iterator includes proposal
+
+The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether an `Iterator` instance will produce a specified value.
+The comparison uses the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
+This algorithm is similar to strict equality `===` (where `-0` and `+0` are considered equal), but differs in that {{jsxref("NaN")}} is considered equal to itself.
+([Firefox bug 2025779](https://bugzil.la/2025779)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `javascript.options.experimental.iterator_includes`
+  - : Set to `true` to enable.
+
+### TC39 Intl.Locale info proposal
+
+The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
+([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.intl_locale_info`
+  - : Set to `true` to enable on Nightly.
+
+### Text module import
+
+The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+([Firefox bug 2024854](https://bugzil.la/2024854)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `javascript.options.experimental.import_text`
+  - : Set to `true` to enable.
 
 ### Multiple import maps
 
@@ -452,22 +502,6 @@ For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxre
 - `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
-### Notification actions and maxActions properties
-
-The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
-These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
-([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | Yes (desktop only)  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.webnotifications.actions.enabled`
-  - : Set to `true` to enable.
-
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions
@@ -497,6 +531,23 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
 ### WebRTC and media
 
 The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+
+#### Checking browser support for encoding/decoding WebRTC media
+
+The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc).
+This allows developers to check how well a user agent can decode or encode a particular configuration for WebRTC.
+Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
+([Firefox bug 1825286](https://bugzil.la/1825286)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `media.mediacapabilities.webrtc.enabled`
+  - : Set to `true` to enable.
 
 #### HTMLMediaElement properties: audioTracks and videoTracks
 
@@ -583,12 +634,12 @@ The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, a
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Set to `true` to enable.
 
 ### GeometryUtils method: getBoxQuads()
@@ -597,7 +648,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
@@ -747,24 +798,6 @@ When `Integrity-Policy` is used, the browser blocks the loading of styles refere
 | Release           | 142           | No                  |
 
 - `security.integrity_policy.stylesheet.enabled`
-  - : Set to `true` to enable.
-
-### Storage Access headers
-
-The {{httpheader("Sec-Fetch-Storage-Access")}} and {{httpheader("Activate-Storage-Access")}} HTTP headers are now supported, enabling a more efficient [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) workflow. ([Firefox bug 1991688](https://bugzil.la/1991688)).
-
-In the JavaScript-only workflow, a third-party resource must be requested and loaded to activate a storage-access permission for a particular context (such as a new browser tab). This is required even if the permission has already been granted.
-The storage access headers allow the browser to advertise the permission state for the particular context, so the server can request activation of an already-granted permission.
-This avoids the overhead of unnecessarily fetching and loading the resource.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 145           | Yes                 |
-| Developer Edition | 145           | No                  |
-| Beta              | 145           | No                  |
-| Release           | 145           | No                  |
-
-- `dom.storage_access.headers.enabled`
   - : Set to `true` to enable.
 
 ### Idempotency-Key

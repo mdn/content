@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Vue articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
 
 <table>
