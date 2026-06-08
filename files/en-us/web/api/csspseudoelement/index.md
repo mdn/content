@@ -65,7 +65,7 @@ console.log(cssPseudoElement.type); // Outputs '::before'
 
 ## See also
 
-- {{DOMxRef('Element.pseudo()')}}
-- {{DOMxRef('Web Animations API', '', '', 'true')}}
-- {{DOMxRef('Element.animate()')}}
+- {{DOMxRef("Element.pseudo()")}}
+- {{DOMxRef("Web Animations API", "", "", "true")}}
+- {{DOMxRef("Element.animate()")}}
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
