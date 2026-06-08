@@ -50,15 +50,17 @@ Install the _STIX Two Math_ font as follows:
 ### Linux
 
 Below, you can find commands to execute on popular Linux distributions
-in order to install the _Latin Modern Math_ and _STIX Two Math_ fonts from your
-package manager. Alternative approaches are also provided if your Linux
-distribution does not provide dedicated packages for these fonts.
+in order to install math fonts from your package manager. Alternative
+approaches are also provided if your Linux distribution does not provide
+dedicated packages for these fonts.
 
 #### Debian-based distributions (including Ubuntu and Mint)
 
 ```bash
-sudo apt-get install fonts-lmodern fonts-stix
+sudo apt-get install fonts-lmodern
 ```
+
+The Debian `fonts-stix` package installs STIX 1.x fonts, not _STIX Two Math_.
 
 #### Fedora-based distributions
 
