@@ -10,7 +10,7 @@ browser-compat: api.Element.pseudo
 
 The **`pseudo()`** method of the {{domxref("Element")}} interface returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
 
-Provided its `type` property contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling element.
+Provided its `type` parameter contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling element.
 
 ## Syntax
 
