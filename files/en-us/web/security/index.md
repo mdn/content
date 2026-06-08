@@ -31,7 +31,7 @@ In this page we'll introduce each of these sections and list the guides they con
 
 - **Control cross-origin requests**: consider whether and in which circumstances you want to allow other {{glossary("origin", "origins")}} to make requests to your site, and use [fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) to control this.
 
-- **Limit access to any cookies** your site sets: in particular, [set the `SameSite` attribute to `Strict` if possible, or `Lax` otherwise](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies).
+- **Limit access to any cookies your site sets**: in particular, [set the `SameSite` attribute to `Strict` if possible, or `Lax` otherwise](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies).
 
 - **Handle input securely**: if your site accepts input from the user or another system, [validate it](/en-US/docs/Web/Security/Defenses/Input_validation). Before integrating any input into your site's pages, perform [output encoding](/en-US/docs/Web/Security/Attacks/XSS#output_encoding) or [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
 
