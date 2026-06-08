@@ -140,6 +140,7 @@ In the future, service workers will be able to do several other useful things fo
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service Worker Lifecycle](https://web.dev/articles/service-worker-lifecycle)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)
 - Web APIs that are related to the Service Worker API:
   - {{domxref("Background Fetch API", "", "", "nocode")}}
   - {{domxref("Background Synchronization API", "", "", "nocode")}}

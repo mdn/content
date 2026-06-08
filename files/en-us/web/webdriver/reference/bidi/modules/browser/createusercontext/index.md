@@ -37,7 +37,7 @@ Set `params` to an empty object (`{}`) or include any of the following optional 
 The following field in the `result` object of the response describes the created user context:
 
 - `userContext`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) that uniquely identifies the created user context.
+  - : A string that contains the ID that uniquely identifies the created user context.
 
 ### Errors
 

@@ -296,7 +296,7 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 149           | No                  |
+| Nightly           | 152           | Yes                 |
 | Developer Edition | 149           | No                  |
 | Beta              | 149           | No                  |
 | Release           | 149           | No                  |
@@ -348,20 +348,6 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### `field-sizing` property
-
-The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements. ([Firefox bug 1977176](https://bugzil.la/1977176)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 151           | Yes                 |
-| Developer Edition | 151           | No                  |
-| Beta              | 151           | No                  |
-| Release           | 151           | No                  |
-
-- `layout.css.field-sizing.enabled`
-  - : Set to `true` to enable.
-
 ### Fix for nested scrollable areas
 
 This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. This does however mean that the `@supports selector(::-webkit-scrollbar)` check will return `true` even though the [`::-webkit-scrollbar`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) pseudo-element is not truly supported. ([Firefox bug 1977511](https://bugzil.la/1977511)).
@@ -411,6 +397,55 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
   - : Set to `true` to enable.
 
 ## JavaScript
+
+### TC39 Iterator includes proposal
+
+The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether an `Iterator` instance will produce a specified value.
+The comparison uses the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
+This algorithm is similar to strict equality `===` (where `-0` and `+0` are considered equal), but differs in that {{jsxref("NaN")}} is considered equal to itself.
+([Firefox bug 2025779](https://bugzil.la/2025779)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `javascript.options.experimental.iterator_includes`
+  - : Set to `true` to enable.
+
+### TC39 Intl.Locale info proposal
+
+The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
+([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.intl_locale_info`
+  - : Set to `true` to enable on Nightly.
+
+### Text module import
+
+The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+([Firefox bug 2024854](https://bugzil.la/2024854)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `javascript.options.experimental.import_text`
+  - : Set to `true` to enable.
 
 ### Multiple import maps
 

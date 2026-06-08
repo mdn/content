@@ -30,9 +30,9 @@ highlightsFromPoint(x, y, options)
 
 ### Return value
 
-An array of `HighlightHitResult` objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
+An array of objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
 
-Each `HighlightHitResult` object contains the following properties:
+Each object contains the following properties:
 
 - `highlight`
   - : A {{domxref("Highlight")}} object representing the applied custom highlight.
