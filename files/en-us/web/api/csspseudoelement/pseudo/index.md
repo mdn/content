@@ -32,7 +32,7 @@ A {{domxref("CSSPseudoElement")}} object instance, or `null` if `type` is not eq
 
 The `CSSPseudoElement.pseudo()` method is used to target a pseudo-element that is attached to another pseudo-element, rather than directly to a standard DOM element. For example, if a `::before` pseudo-element generates a list marker — selectable via `::before::marker` — this method can retrieve the `::marker` nested inside that `::before`. You call the method on the parent pseudo-element and pass the type of the nested child pseudo-element as an argument.
 
-Provided its `type` property contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling pseudo-element.
+Provided its `type` parameter contains a valid pseudo-element type, `pseudo()` will always return a `CSSPseudoElement` instance, even if that pseudo-element hasn't been generated on the calling pseudo-element.
 
 ## Examples
 
