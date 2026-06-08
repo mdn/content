@@ -12,6 +12,28 @@ The kind of damage done can be reputational, financial, or even physical. It can
 
 In this part of MDN we've written guides to help web developers understand how to protect their websites, and their users, against these attacks.
 
+Before listing these detailed guides, though, we'll summarize the most important security practices:
+
+- **Use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)** to serve all your site's pages and subresources.
+
+- **Set a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)** for your site.
+  - If possible, set a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp), but if not, at least set a policy that [disallows inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript).
+  - Set the [`frame-ancestors`](/en-US/docs/Web/HTTP/Guides/CSP#clickjacking_protection) CSP directive, to control whether pages can be embedded in nested browsing contexts.
+
+  - Set the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Guides/CSP#requiring_trusted_types) CSP directive, to help ensure that content has been sanitized before it is passed to potentially dangerous APIs.
+
+- **Control cross-origin requests**: consider whether and in which circumstances you want to allow other {{glossary("origin", "origins")}} to make requests to your site, and use [fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) to control this.
+
+- **Limit access to any cookies** your site sets: in particular, [set the `SameSite` attribute to `Strict` if possible, or `Lax` otherwise](/en-US/docs/Web/Security/Attacks/CSRF#defense_in_depth_samesite_cookies).
+
+- **Handle input securely**: if your site accepts input from the user or another system, [validate it](/en-US/docs/Web/Security/Defenses/Input_validation). Before integrating any input into your site's pages, perform [output encoding](/en-US/docs/Web/Security/Attacks/XSS#output_encoding) or [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
+
+- **Use [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)** for any scripts that you load from external sources (such as {{glossary("CDN", "CDNs")}}).
+
+- **Use strong authentication methods**: if you authenticate users on your site, don't use [passwords](/en-US/docs/Web/Security/Authentication/Passwords) alone. [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) are the most secure authentication method, but if you can't use them, then [time-based one-time passwords (TOTP)](/en-US/docs/Web/Security/Authentication/OTP#totp) are more secure than traditional passwords.
+
+- **Follow good [operational security practices](/en-US/docs/Web/Security/Defenses/Operational_security)**: control access to your project's source code, handle secrets securely, and control your dependencies.
+
 ## Attacks
 
 The [Attacks](/en-US/docs/Web/Security/Attacks) section includes guides to common attacks on websites. An attack is a specific technique that an attacker can use to harm websites or their users.
