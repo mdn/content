@@ -198,7 +198,7 @@ The rendered box will have a rectangular border with rounded corners. The border
 
 ### Interaction with `border-radius` and `corner-shape`
 
-The {{cssxref("border-radius")}} and {{cssxref("corner-shape")}} properties are incompatible with `border-shape`. When a `border-shape` is set on an element, any set `border-radius` is ignored, therefore `corner-shape` will also have no effect.
+The {{cssxref("border-radius")}} and {{cssxref("corner-shape")}} properties are incompatible with `border-shape`. When a `border-shape` is set on an element, any set `border-radius` is ignored, therefore `corner-shape` will also have no effect. The `border-shape` and `border-radius`/`corner-shape` properties have different effects, and are used separately.
 
 If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
 
@@ -896,6 +896,7 @@ Hover or focus the nav items to see the animated effects. Note how naturally the
 ## See also
 
 - {{cssxref("border")}}
+- {{cssxref("corner-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [border-shape: the future of the non-rectangular web](https://una.im/border-shape) by Una Kravets (2026)
