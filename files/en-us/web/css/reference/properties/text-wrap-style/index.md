@@ -89,7 +89,7 @@ The specification also defines an `avoid-orphans` value in which browsers consid
 
 ## Description
 
-The `text-wrap-style` property can be used to provide a hint as to how the user agent should insert soft line breaks when the content is allowed to wrap. Each value defines a different approach for wrapping lines, trading off between speed, quality and style of layout, or stability, providing alternate ways of wrapping the content of a block element.
+The `text-wrap-style` property can be used to provide a hint as to how the user agent should insert soft line breaks when the content is allowed to wrap. Each value defines a different approach to wrapping lines, balancing speed, quality, layout style, and stability, providing alternative ways to wrap the content of a block element.”
 
 When the content is allowed to wrap — the usual behavior because the default value of the {{CSSXRef("text-wrap-mode")}} property is `wrap` — the single keyword value of the `text-wrap-style` property specifies _how_ the developer would like the text to be wrapped. The values have no effect on where a soft wrap opportunity exists, just how the browser should selects among them. If `text-wrap-mode` is set to `nowrap`, this property has no effect.
 
