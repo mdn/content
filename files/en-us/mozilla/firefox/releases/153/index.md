@@ -76,6 +76,8 @@ Firefox 153 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- ### Other -->
 
+- Extension content scripts can now read and modify constructed stylesheets in {{domxref("document.adoptedStyleSheets")}} and {{domxref("ShadowRoot.adoptedStyleSheets")}}, without `.wrappedJSObject`. ([Firefox bug 1751346](https://bugzil.la/1751346))
+
 ## Experimental web features
 
 These features are shipping in Firefox 153 but are disabled by default.

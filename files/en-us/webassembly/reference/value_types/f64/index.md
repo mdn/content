@@ -1,5 +1,5 @@
 ---
-title: "f64: Wasm type"
+title: "f64: Wasm value type"
 short-title: f64
 slug: WebAssembly/Reference/Value_types/f64
 page-type: webassembly-instruction
