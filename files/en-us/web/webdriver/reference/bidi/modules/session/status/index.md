@@ -28,14 +28,12 @@ None. However, you must include the `params` field and set it to an empty object
 
 The following fields in the `result` object of the response describe the current status of the browser:
 
-- `ready`
-  - : A boolean that indicates whether the browser is ready to create new sessions.
-    - `true`
-      - : The browser is ready to create a new session.
-    - `false`
-      - : The browser cannot accept new sessions because it already has an active session or is otherwise in a state where creating a session would fail.
 - `message`
   - : A string with information about the browser's current status.
+- `ready`
+  - : A boolean that indicates whether the browser is ready to create new sessions.
+    - `false`: The browser cannot accept new sessions because it already has an active session or is otherwise in a state where creating a session would fail.
+    - `true`: The browser is ready to create a new session.
 
 ## Examples
 

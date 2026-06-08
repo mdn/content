@@ -36,8 +36,6 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 
 The `params` field contains:
 
-- `context`
-  - : A string that contains the ID of the context in which to perform the actions. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `actions`
   - : An array of objects, each representing an input source and the actions to perform for that source.
     Each such object represents the outer `actions` object, which in turn, contains an outer `type` (input source type can be `"key"`, `"pointer"`, or `"wheel"`) and an inner `actions` array.
@@ -48,29 +46,25 @@ The `params` field contains:
     This allows combining input sources, for example, holding <kbd>Shift</kbd> while clicking.
 
     Each outer `actions` object has the following fields:
-    - `id`
-      - : A string that uniquely identifies this input source within the action sequence, for example, `"mouse1"` or `"keyboard1"`.
-    - `type`
-      - : A string (the outer `type`) that identifies the type of input source. Accepted values are `"none"`, `"key"`, `"pointer"`, and `"wheel"`.
     - `actions`
       - : An array of objects (the inner `actions`), each representing an action for the input source specified in the outer [`type`](#type) field.
 
         Each inner `actions` object has an inner `type` field that specifies the operation to perform and additional fields that depend on it.
         The inner `type` accepts the following values:
-        - `"pause"`: Waits for the given duration before the next step.
         - `"keyDown"`: Simulates pressing a key.
         - `"keyUp"`: Simulates releasing a key.
+        - `"pause"`: Waits for the given duration before the next step.
         - `"pointerDown"`: Simulates pressing a pointer button.
-        - `"pointerUp"`: Simulates releasing a pointer button.
         - `"pointerMove"`: Simulates moving the pointer.
+        - `"pointerUp"`: Simulates releasing a pointer button.
         - `"scroll"`: Simulates a mouse wheel scroll.
 
         The following table shows, for each outer `type` value, the valid values for the inner `type`:
 
         | Outer `type` values | Accepted inner `type` values                               |
         | ------------------- | ---------------------------------------------------------- |
-        | `"none"`            | `"pause"`                                                  |
         | `"key"`             | `"pause"`, `"keyDown"`, `"keyUp"`                          |
+        | `"none"`            | `"pause"`                                                  |
         | `"pointer"`         | `"pause"`, `"pointerDown"`, `"pointerUp"`, `"pointerMove"` |
         | `"wheel"`           | `"pause"`, `"scroll"`                                      |
 
@@ -78,16 +72,22 @@ The `params` field contains:
 
         | Inner `type` values    | Fields available in the inner `actions` object                                                                |
         | ---------------------- | ------------------------------------------------------------------------------------------------------------- |
-        | `"pause"`              | [`duration`](#duration)                                                                                       |
         | `"keyDown"`, `"keyUp"` | [`value`](#value)                                                                                             |
+        | `"pause"`              | [`duration`](#duration)                                                                                       |
         | `"pointerDown"`        | [`button`](#button), [pointer properties](#pointer_properties)                                                |
-        | `"pointerUp"`          | [`button`](#button)                                                                                           |
         | `"pointerMove"`        | [`x`](#x), [`y`](#y), [`duration`](#duration), [`origin`](#origin), [pointer properties](#pointer_properties) |
+        | `"pointerUp"`          | [`button`](#button)                                                                                           |
         | `"scroll"`             | [`x`](#x), [`y`](#y), [`deltaX`](#deltax), [`deltaY`](#deltay), [`duration`](#duration), [`origin`](#origin)  |
 
-    The outer `actions` object also supports the following field:
+    - `id`
+      - : A string that uniquely identifies this input source within the action sequence, for example, `"mouse1"` or `"keyboard1"`.
     - `parameters` {{optional_inline}}
       - : An object with a `pointerType` field that specifies the pointer device type. Accepted values are `"mouse"` (default), `"pen"`, or `"touch"`. This field is valid only when the outer [`type`](#type) is `"pointer"`.
+    - `type`
+      - : A string (the outer `type`) that identifies the type of input source. Accepted values are `"none"`, `"key"`, `"pointer"`, and `"wheel"`.
+
+- `context`
+  - : A string that contains the ID of the context in which to perform the actions. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
 The following fields are available in each inner `actions` object, depending on the inner `type`:
 

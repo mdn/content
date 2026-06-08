@@ -58,8 +58,6 @@ The `alwaysMatch` and `firstMatch` objects can include the following features:
 
 The following fields in the `result` object of the response describe the characteristics of the created session:
 
-- `sessionId`
-  - : A string that contains the unique identifier for the newly created session.
 - `capabilities`
   - : An object that describes the capabilities that were negotiated and are active for the session. It includes the following fields:
     - [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts)
@@ -70,16 +68,19 @@ The following fields in the `result` object of the response describe the charact
       - : A string that contains the version of the browser.
     - `platformName`
       - : A string that contains the name of the operating system.
+    - `proxy` {{optional_inline}}
+      - : An object that describes the active proxy configuration.
+        An empty object (`{}`) indicates no proxy is configured.
     - `setWindowRect`
       - : A boolean that indicates whether the browser window can be resized and repositioned using the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetWindowRect) command.
-    - `userAgent`
-      - : A string that contains the browser's user agent string (for example, `"Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"`).
-    - `proxy` {{optional_inline}}
-      - : An object that describes the active proxy configuration. An empty object (`{}`) indicates no proxy is configured.
     - `unhandledPromptBehavior` {{optional_inline}}
       - : An object that describes the default behavior when a user prompt (such as an `alert`, `confirm`, or `prompt` dialog) is encountered during a command. This field is present only when specified in the `capabilities` parameter.
+    - `userAgent`
+      - : A string that contains the browser's user agent string (for example, `"Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0"`).
     - [`webSocketUrl`](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) {{optional_inline}}
       - : A string that contains the WebSocket URL for the session.
+- `sessionId`
+  - : A string that contains the unique identifier for the newly created session.
 
 The browser may also return vendor-specific capabilities prefixed with a browser identifier (for example, `moz:buildID` for Firefox).
 

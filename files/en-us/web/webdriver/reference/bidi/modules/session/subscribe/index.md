@@ -24,8 +24,6 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 
 The `params` field contains:
 
-- `events`
-  - : An array of one or more event name strings. Use a module name (for example, `"log"`) to subscribe to all events in that module or a specific event name (for example, `"log.entryAdded"`) to subscribe to only that event.
 - `contexts` {{optional_inline}}
   - : An array of one or more context ID strings, each corresponding to a tab or frame.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
@@ -34,6 +32,9 @@ The `params` field contains:
 
     This field cannot be used if `userContexts` is also specified.
 
+- `events`
+  - : An array of one or more event name strings.
+    Use a module name (for example, `"log"`) to subscribe to all events in that module or a specific event name (for example, `"log.entryAdded"`) to subscribe to only that event.
 - `userContexts` {{optional_inline}}
   - : An array of one or more user context ID strings, each corresponding to a browser context or container.
     User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
