@@ -37,13 +37,11 @@ font: caption;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
-  </p>
+  <q id="example-element">
+    Prejudices, it is well known, are most difficult to eradicate from the heart
+    whose soil has never been loosened or fertilised by education: they grow
+    there, firm as weeds among stones.
+  </q>
 </section>
 ```
 
@@ -88,16 +86,16 @@ This property is a shorthand for the following CSS properties:
 
 ```css-nolint
 /* font-size font-family */
-font: 1.2em "Fira Sans", sans-serif;
+font: 1.2em sans-serif;
 
 /* font-size/line-height font-family */
 font: 1.2em/2 "Fira Sans", sans-serif;
 
 /* font-style font-weight font-size font-family */
-font: italic bold 1.2em "Fira Sans", sans-serif;
+font: italic bold 1.2em monospace;
 
 /* font-width font-variant font-size font-family */
-font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+font: ultra-condensed small-caps 1.2em Montserrat, Helvetica, sans-serif;
 
 /* system font */
 font: caption;
@@ -109,11 +107,11 @@ The value is either a shorthand specifying the various font-related properties o
 
 - `<'font-style'>`
   - : See the {{cssxref("font-style")}} CSS property. Defaults to `normal`.
-- `<font-variant>`
+- `<font-variant-css2>`
   - : Either the `normal` or `small-caps` value of the {{cssxref("font-variant")}} property. Defaults to `normal`.
 - `<'font-weight'>`
   - : See the {{cssxref("font-weight")}} CSS property. Defaults to `normal`.
-- `<font-width>`
+- `<font-width-css3>`
   - : The keywords supported by the legacy `font-stretch` property. See the {{cssxref("font-width")}} CSS property. Defaults to `normal`.
 - `<'font-size'>`
   - : See the {{cssxref("font-size")}} CSS property. Required value.
@@ -145,7 +143,9 @@ Depending on its value, the `font` property value is either a single keyword rep
 
 ### System font declarations
 
-If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to that single, case-insensitive keyword. Valid values include `caption`, `icon`, `menu`, `message-box`, `small-caption` or `status-bar`. Browsers also support non-standard prefixed values. Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`. Webkit includes these, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names. Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to that single, case-insensitive keyword. Valid values include `caption`, `icon`, `menu`, `message-box`, `small-caption` or `status-bar`.
+
+Browsers also support non-standard prefixed values. Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`. Webkit includes these, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names. Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
 
 The system font, or `<system-font-family-name>`, can only be set with the `font` property. Defining a single keyword value, such as `font: icon`, sets the font's family, size, weight, style, etc. to the values the browser defined for the named system font. These values can all be changed with longhand declarations coming _after_ the `font` declaration. Including any `font` longhand components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration. For example, `font: icon small` is invalid.
 
@@ -161,7 +161,7 @@ If `font` is specified as a shorthand for several font-related properties, then:
 
 - it may optionally include values for:
   - {{cssxref("font-style")}}
-  - {{cssxref("font-variant")}}, limited to `normal` or `small-caps`
+  - {{cssxref("font-variant")}}
   - {{cssxref("font-weight")}}
   - {{cssxref("font-width")}}
   - {{cssxref("line-height")}}
@@ -186,19 +186,20 @@ As with any shorthand property, any of the longhand component properties not val
 
 The order of some of the longhand values within the shorthand `font` declaration is partially important and must therefore follow a few rules:
 
-- Both the `font-size` and `font-family` components are required (unless setting a system font).
+- Both the `font-size` and `font-family` components are required (except for [system font declarations](#system_font_declarations)).
 - The `font-style`, `font-variant` and `font-weight` components must precede the `font-size` value.
 - A `line-height` can only be included if `font-size` is included. If present, the `line-height` must immediately follow the `font-size`, with the two values separated by a forward slash (`/`), for example: `16px / 3`.
 - The `font-family` must be the last value specified.
 
-### Longhands with limited values
+### Components with limited values
 
-For backward compatibility, the valid values of the `<font-variant>` and `<font-variant>` components do not include all the valid values or the longhand equivalents.
+For backward compatibility, the valid values of the `font-variant` and `font-width` components do not include all the valid values or the longhand equivalents.
 
 - The valid values for the `font-variant` component are limited `normal` or `small-caps`.
-  - : The `<font-variant>` component of the shorthand is limited to the two values supported in CSS 2.1, including `normal` and `small-caps`. While no other values are supported, the shorthand `font` declaration resets the {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}} properties to `normal`.
-- The `font-width` may only be a single keyword value
- : The `<font-width>` component of the shorthand is limited to `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. These keyword values were originally defined by the legacy `font-stretch` property, which is now an alias to `font-width`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, which are not valid within the shorthand.
+  - : The `<font-variant-css2>` component of the shorthand is limited to the two values supported in CSS 2.1, including `normal` and `small-caps`. While no other values are supported, the shorthand `font` declaration resets the {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}} properties to `normal`.
+
+- The valid values for the `font-width` component are limited to keyword values
+  - : The `<font-width-css3>` component of the shorthand is limited to `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. These keyword values were originally defined by the legacy `font-stretch` property, which is now an alias to `font-width`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, which are not valid within the shorthand.
 
 ## Formal definition
 
@@ -262,13 +263,29 @@ p {
 
 ```html hidden
 <p>
-  Take a look at your status bar. The font of this text should look the same.
+  <a
+    href="/%20The%20font%20should%20be%20the%20same%20family%20and%20size%20and%20the%20text%20in%20the%20example."
+    >Hover or focus this text. The font should be the same family and size and
+    the text in your status bar.</a
+  >
 </p>
+```
+
+```js hidden
+const a = document.querySelector("a");
+a.addEventListener("click", function (e) {
+  e.preventDefault();
+  return false;
+});
 ```
 
 {{ EmbedLiveSample('System font','100%', '100')}}
 
-### Live sample
+Hover or focus the link, then look at your status bar. The font should be the same family and size and the text in your status bar. We added a script to disable the link, which we hid for brevity.
+
+### Shorthand declaration creator
+
+In this live demonstration, you can select different radio buttons to generate different shorthand values, while visualizing the effects of the shorthand declarations you create.
 
 ```html hidden
 <p>
@@ -284,7 +301,7 @@ p {
         name="font_style"
         checked
         value="" />
-      <label for="font-style-none">none</label><br />
+      <label for="font-style-none">omit value</label><br />
       <input
         type="radio"
         id="font-style-normal"
@@ -313,7 +330,7 @@ p {
         name="font_variant"
         checked
         value=" " />
-      <label for="font-variant-none">none</label><br />
+      <label for="font-variant-none">omit value</label><br />
       <input
         type="radio"
         id="font-variant-normal"
@@ -331,7 +348,7 @@ p {
     <div class="setPropCont">
       font-weight<br />
       <input type="radio" id="font-weight-none" name="font_weight" value="" />
-      <label for="font-weight-none">none</label><br />
+      <label for="font-weight-none">omit value</label><br />
       <input
         type="radio"
         id="font-weight-normal"
@@ -370,7 +387,7 @@ p {
         name="line_height"
         checked
         value="" />
-      <label for="line-height-none">none</label><br />
+      <label for="line-height-none">omit value</label><br />
       <input
         type="radio"
         id="line-height-1-2"
@@ -472,8 +489,10 @@ p {
   </div>
 </form>
 
-<div class="fontShortHand">This is some sample text.</div>
-<br /><br /><br /><br /><br /><br />
+<div class="fontShortHand">
+  This is some sample text.<br />
+  This is some more sample text.
+</div>
 ```
 
 ```css hidden
@@ -579,7 +598,7 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 });
 ```
 
-{{ EmbedLiveSample('Live_sample','100%', '440px')}}
+{{ EmbedLiveSample('Shorthand declaration creator','100%', '500px')}}
 
 ## Specifications
 
