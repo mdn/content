@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.pseudo
 ---
 
-{{APIRef("CSSOM view API")}}
+{{APIRef("DOM")}}.
 
 The **`pseudo()`** method of the {{domxref("Element")}} interface returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
 
