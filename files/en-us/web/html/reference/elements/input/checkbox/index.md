@@ -410,12 +410,6 @@ otherCheckbox.addEventListener("change", () => {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
