@@ -85,13 +85,13 @@ The `text-wrap-style` property is specified as one of the following keyword valu
 - `stable`
   - : Text is wrapped such that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
-The specification defines an `avoid-orphans` value in which browsers consider more than one line when making break decisions to avoid excessively short last lines. This value is not yet supported in any browser.
+The specification also defines an `avoid-orphans` value in which browsers consider more than one line when making break decisions to avoid excessively short last lines. This value is not yet supported in any browser.
 
 ## Description
 
-The `text-wrap-style` property can be use to inform how the user agent should determine where to insert soft line breaks when the content is allowed to wrap. Each value defines a different approaches for wrapping lines, trading off between speed, quality and style of layout, or stability, providing alternate ways of wrapping the content of a block element.
+The `text-wrap-style` property can be used to provide a hint as to how the user agent should insert soft line breaks when the content is allowed to wrap. Each value defines a different approach for wrapping lines, trading off between speed, quality and style of layout, or stability, providing alternate ways of wrapping the content of a block element.
 
-When the content is allowed to wrap, which it does by default `wrap` value of the {{CSSXRef("text-wrap-mode")}} property, the single keyword value of the `text-wrap-style` property defines how the user agent determines. The values have no effect on where a soft wrap opportunity exists, just how the browser should selects among them. If `text-wrap-mode` is set to `nowrap`, this property has no effect.
+When the content is allowed to wrap — the usual behavior because the default value of the {{CSSXRef("text-wrap-mode")}} property is `wrap` — the single keyword value of the `text-wrap-style` property specifies _how_ the developer would like the text to be wrapped. The values have no effect on where a soft wrap opportunity exists, just how the browser should selects among them. If `text-wrap-mode` is set to `nowrap`, this property has no effect.
 
 ### Selecting a value
 
