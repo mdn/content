@@ -68,3 +68,4 @@ document
 - {{domxref("XRSession/select_event", "select")}} event
 - {{domxref("XRSession/selectstart_event", "selectstart")}} event
 - {{domxref("XRSession/selectend_event", "selectend")}} event
+- {{cssxref(":xr-overlay")}} pseudo-class
