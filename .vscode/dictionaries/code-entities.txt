@@ -308,6 +308,7 @@ iexact
 ifchanged
 ifequal
 ifnotequal
+ifrac
 imageset
 imghp
 imgur
@@ -778,6 +779,7 @@ tabbox
 tabbrowser
 tabs-closebutton
 tabular-nums
+tagidx
 takr
 talu
 taml
@@ -934,5 +936,3 @@ xpidl
 xpinstall
 xywh
 zoomlevelchange
-tagidx
-ifrac
