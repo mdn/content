@@ -16,7 +16,7 @@ In this part of MDN we've written guides to help web developers understand how t
 
 The [Attacks](/en-US/docs/Web/Security/Attacks) section includes guides to common attacks on websites. An attack is a specific technique that an attacker can use to harm websites or their users.
 
-In this section, each guide describes an attack, or in some cases a class of related attacks. Each guide explains how the attack works, the conditions in which a website is vulnerable to it, and the methods to defend against it.
+Each guide covers a specific attack (or class of related attacks), explaining how it works, the conditions under which a website becomes vulnerable, and how to defend against it.
 
 The attacks described include:
 
