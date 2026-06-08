@@ -51,9 +51,11 @@ Note that not all defenses are described in this section: some, such as [CSP](2/
 
 ## Threat modeling
 
-The [Threat modeling](/en-US/docs/Web/Security/Threat_modeling) section introduces a process that web developers can follow to develop a structured representation of the potential threats that their site faces, based on the features it provides and the way these features are implemented.
+Not all websites are vulnerable to all attacks: which attacks a developer needs to worry about depends on the features that the site provides and how they are implemented.
 
-That is, threat modeling helps you understand which attacks you need to defend against.
+[Threat modeling](/en-US/docs/Web/Security/Threat_modeling) is a process that web developers can follow to develop a structured representation of the potential threats that their site faces, and the corresponding defenses that they should employ.
+
+That is, threat modeling helps you understand which attacks you need to defend against, and how to defend against them.
 
 ## Authentication
 
