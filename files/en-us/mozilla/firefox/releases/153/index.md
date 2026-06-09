@@ -72,12 +72,12 @@ Firefox 153 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
-<!-- ### Removals -->
-
-### Other
-
 - Supports the {{WebExtAPIRef("userScripts.execute()")}} method, enabling extensions to inject user scripts on demand into a tab or frame. Unlike {{WebExtAPIRef("userScripts.register()")}}, this method supports one-off injection of multiple script sources executed in a defined order. ([Firefox bug 1930776](https://bugzil.la/1930776))
 - Extension content scripts can now read and modify constructed stylesheets in {{domxref("document.adoptedStyleSheets")}} and {{domxref("ShadowRoot.adoptedStyleSheets")}}, without `.wrappedJSObject`. ([Firefox bug 1751346](https://bugzil.la/1751346))
+
+<!-- ### Removals -->
+
+<!-- ### Other -->
 
 ## Experimental web features
 
