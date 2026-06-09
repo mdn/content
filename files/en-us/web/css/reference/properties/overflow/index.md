@@ -99,11 +99,11 @@ The `overflow` property is specified as one or two {{CSSXref("overflow_value", "
 Some non-standard values are also supported in some browsers:
 
 - `overlay`
-  - : Alias for `auto`. Implemented as an internal Safari feature to allow the scrollbar to overlap the content, `overlay` was never part of the specification. Its use is discouraged.
+  - : A legacy alias for `auto`, defined in the specification for web compatibility. Originally implemented as a non-standard value to render scrollbars on top of content rather than taking up space. Its use in new code is discouraged.
 
 ## Description
 
-By default, block level elements grow to fit their content. If the size is of a container is constrained, the content will overflow. This overflowing behavior is controlled by the `overflow` property determines how a container handles this content that overflows its edges by default.
+By default, block level elements grow to fit their content. If the size of a container is constrained, the content will overflow. The `overflow` property determines how a container handles content that overflows its edges.
 
 The `overflow` property is shorthand for the horizontal {{cssxref("overflow-x")}} and vertical {{cssxref("overflow-y")}} properties. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
 
@@ -116,7 +116,7 @@ All values, except `visible` and `clip`, create a new [block formatting context]
 Overflow occurs when a block-level element has content that overflows its constrained space. The alloted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size (({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
 
 The following CSS limits the size of the container, defining [box model](/en-US/docs/Web/CSS/Guides/Box_model) property values that limit the container's size.
-We've also added a background color, clipped to the `content-box`, to help demonstrate how overflowing content overflows the content box in the explanations that follow.
+A background color, clipped to the `content-box`, is also added to help demonstrate how overflowing content overflows the content box in the explanations that follow.
 
 ```css
 div {
@@ -136,7 +136,7 @@ The different `overflow` values define whether an element has scrollbars, whethe
 
 #### The `visible` value
 
-The default value is `visible`. By default, if content overflows a container's constraints, the contents are not contained to the container. An element that defaults or is explicitly set to `visible` doesn't not have scrollbars, is not user or programmatically scrollable, and is not a {{glossary("scroll container")}}. This value does not create a new block formatting context.
+The default value is `visible`. By default, if content overflows a container's constraints, the contents are not contained to the container. An element that defaults or is explicitly set to `visible` doesn't have scrollbars, is not user or programmatically scrollable, and is not a {{glossary("scroll container")}}. This value does not create a new block formatting context.
 
 ```css live-sample___visible
 div {
@@ -163,11 +163,9 @@ With `visible`, no clipping occurs, so the overflowing content is visible outsid
 
 #### The `scroll` value
 
-With `scroll`, if the content overflows, it is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. User agents display scroll bars whether or not any content is overflowing, in both the horizontal and vertical directions if the value applies to both directions.
+With `scroll`, content is clipped at the element's padding box and can be scrolled into view. User agents display scroll bars in both directions whether or not any content is overflowing, which prevents scroll bars from appearing and disappearing as content changes. Printers may still print overflow content.*
 
-The use of this keyword, therefore, can prevent scroll bars from appearing and disappearing as content changes. Printers may still print overflow content. The element box is a scroll container.
-
-When `overflow` is set to `scroll`, the element has scrollbars and is user and programmatically scrollable. With `scroll`, the element is a {{glossary("scroll container")}}, even if there is no overflow.
+The element is always a {{glossary("scroll container")}} — even when there is no overflowing content — and is both user-scrollable and programmatically scrollable.
 
 ```css live-sample___scroll
 div {
@@ -226,7 +224,7 @@ With `hidden`, overflowing content is clipped at the element's padding box. Ther
 
 If there is overflowing content, the element is a scroll container! While there are no scroll bars and the user cannot view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse, the hidden overflow content can be scrolled into view.
 
-If the content contains focusable elements, tabbing brings the currently focused element into view. Content can also be scrolled to programmatically. Setting a value for the {{domxref("Element.scrollLeft", "scrollLeft")}} or {{domxref("Element.scrollTop", "scrollTop")}} property scrolls that distance from the left or top edge, respectively. You an also scroll using the {{domxref("Element.scrollTo", "scrollTo()")}} method.
+If the content contains focusable elements, tabbing brings the currently focused element into view. Content can also be scrolled to programmatically. Setting a value for the {{domxref("Element.scrollLeft", "scrollLeft")}} or {{domxref("Element.scrollTop", "scrollTop")}} property scrolls that distance from the left or top edge, respectively. You can also scroll using the {{domxref("Element.scrollTo", "scrollTo()")}} method.
 
 ```css live-sample___hidden
 div {
@@ -245,7 +243,7 @@ div {
     The <code>overflow</code> property in this example is set to
     <code>hidden</code>. While hidden,
     <a
-      href="https://mozilla.developer.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
       >interactive content</a
     >
     can be scrolled into view when focused. Because content overflows, the
@@ -259,9 +257,9 @@ div {
 
 The first example does not have overflowing content and is not a scroll container. The second example has overflowing content that is clipped to the padding box. Even though there is no scroll bar enabling scrolling to the overflowing content, the content can be scrolled into view, such as by tabbing to the {{htmlelement("input")}} in the hidden content. The second example is a scroll container.
 
-### The `clip` value
+#### The `clip` value
 
-With `clip`, content that overflows is by default hidden, there are no scroll bars, and programmatic scrolling is not possible. The element is not a scroll container and no new [formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) is created. If the clipped content includes interactive content, hidden focusable content still receives keyboard focus, but that content will not scroll into view, which is bad user experience.
+With `clip`, content that overflows is by default hidden, there are no scroll bars, and programmatic scrolling is not possible. The element is not a scroll container and no new [formatting context](/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context) is created. If the clipped content includes interactive content, hidden focusable content still receives keyboard focus, but that content will not scroll into view, making it inaccessible to keyboard users.
 
 With `clip`, overflow content is clipped at the element's _overflow clip edge_ that is defined using the {{cssxref("overflow-clip-margin")}} property. The clipped content overflows the element's padding box by the {{cssxref("&lt;length&gt;")}} value of `overflow-clip-margin`, which defaults to `0px`.
 
@@ -280,16 +278,16 @@ div {
 <div>
   <p>The <code>overflow</code> property in this example is set to <code>clip</code>. When hidden,
     <a
-      href="https://mozilla.developer.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
       >interactive content</a
     >
     can NOT be scrolled into view when focused. Overflowing content is clipped the container. No scroll container is created. Tabbing will give this
-    <input aria-label="input" placeholder="input" /> focus but will not scroll it into view, which is terrible user experience. This content is not programmatically scrollable. </p>
+    <input aria-label="input" placeholder="input" /> focus but will not scroll it into view. Keyboard users will not be able to reach this content. This content is also not programmatically scrollable.</p>
 </div>
 <fieldset><legend>Select a <code>overflow-clip-margin</code> value</legend>
 <ul>
-  <li><label><input type="radio" name="overflow" value="0"> overflow-clip-margin: 0;</li>
-  <li><label><input type="radio" name="overflow" value="3em"> overflow-clip-margin: 3em;</li>
+  <li><label><input type="radio" name="overflow" value="0"> overflow-clip-margin: 0;</label></li>
+  <li><label><input type="radio" name="overflow" value="3em"> overflow-clip-margin: 3em;</label></li>
 </ul>
 </fieldset>
 ```
@@ -325,11 +323,11 @@ label {
 }
 ```
 
-#### With scroll driven animations
+#### With scroll-driven animations
 
-When creating [scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) using the {{cssxref("scroll()")}} function, consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
+When creating [scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) using the {{cssxref("animation-timeline/scroll", "scroll()")}} function, consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
 
-With both `hidden` and `clip`, the overflow gets clipped, but `overflow: clip` doesn't create a scroll container, so clipped elements are skipped when the user agent goes up the DOM treen looking for the nearest ancestor scroll container.
+With both `hidden` and `clip`, the overflow gets clipped, but `overflow: clip` doesn't create a scroll container, so clipped elements are skipped when the user agent goes up the DOM tree looking for the nearest ancestor scroll container.
 
 Because `overflow: hidden` creates a scroll container when there is overflowing content, you might accidentally create a scrolling-ancestor that doesn't scroll. But only use `clip` if you are certain you won't clip any interactive content.
 
@@ -363,7 +361,7 @@ body {
 
 Setting `overflow` on images and other {{glossary("replaced elements")}} works as expected in browsers that support CSS Overflow Module Level 4; in previous versions of the specification, replaced elements were always clipped to the bounding container.
 
-See the [browser compatibility](#browser_compatibility) chart for current browse support information.
+See the [browser compatibility](#browser_compatibility) chart for current browser support information.
 
 ## Formal definition
 
@@ -375,7 +373,7 @@ See the [browser compatibility](#browser_compatibility) chart for current browse
 
 ## Accessibility
 
-In some browsers, scrolling content areas are not keyboard-focusable, so it cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To ensure the screen reader user has context when encountering the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name usinh the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)) attributes.
+In some browsers, scrolling content areas are not keyboard-focusable, so they cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To ensure the screen reader user has context when encountering the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)) attributes.
 
 ## Examples
 
