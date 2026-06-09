@@ -12,10 +12,20 @@ The `browsingContext.close` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/M
 ## Syntax
 
 ```json-nolint
+/* Without optional parameters */
 {
   "method": "browsingContext.close",
   "params": {
-    "context": "<contextId>"
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
+  }
+}
+
+/* With optional parameters */
+{
+  "method": "browsingContext.close",
+  "params": {
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
+    "promptUnload": true
   }
 }
 ```

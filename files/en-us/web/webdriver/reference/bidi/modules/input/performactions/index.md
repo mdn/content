@@ -12,18 +12,97 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 ## Syntax
 
 ```json-nolint
+/* Key action */
 {
   "method": "input.performActions",
   "params": {
-    "context": "<contextId>",
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
     "actions": [
       {
-        "type": "<outerType>",
-        "id": "<sourceId>",
+        "type": "key",
+        "id": "keyboard1",
         "actions": [
           {
-            "type": "<innerType>",
-            ...
+            "type": "keyDown",
+            "value": "a"
+          },
+          {
+            "type": "keyUp",
+            "value": "a"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/* Pointer action */
+{
+  "method": "input.performActions",
+  "params": {
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
+    "actions": [
+      {
+        "type": "pointer",
+        "id": "mouse1",
+        "actions": [
+          {
+            "type": "pointerMove",
+            "x": 100,
+            "y": 200
+          },
+          {
+            "type": "pointerDown",
+            "button": 0
+          },
+          {
+            "type": "pointerUp",
+            "button": 0
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/* Wheel action */
+{
+  "method": "input.performActions",
+  "params": {
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
+    "actions": [
+      {
+        "type": "wheel",
+        "id": "wheel1",
+        "actions": [
+          {
+            "type": "scroll",
+            "x": 0,
+            "y": 0,
+            "deltaX": 0,
+            "deltaY": 300,
+            "duration": 0,
+            "origin": "viewport"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/* Pause */
+{
+  "method": "input.performActions",
+  "params": {
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
+    "actions": [
+      {
+        "type": "none",
+        "id": "none1",
+        "actions": [
+          {
+            "type": "pause",
+            "duration": 500
           }
         ]
       }

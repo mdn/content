@@ -17,10 +17,29 @@ Since this command is used to create a new session, it runs without an already a
 ## Syntax
 
 ```json-nolint
+/* Without optional capabilities */
 {
   "method": "session.new",
   "params": {
     "capabilities": {}
+  }
+}
+
+/* With optional capabilities */
+{
+  "method": "session.new",
+  "params": {
+    "capabilities": {
+      "alwaysMatch": {
+        "acceptInsecureCerts": true,
+        "browserName": "firefox",
+        "browserVersion": "135.0",
+        "platformName": "mac",
+        "unhandledPromptBehavior": {
+          "default": "accept"
+        }
+      }
+    }
   }
 }
 ```

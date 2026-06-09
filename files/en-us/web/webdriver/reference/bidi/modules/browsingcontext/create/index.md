@@ -12,10 +12,47 @@ The `browsingContext.create` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/
 ## Syntax
 
 ```json-nolint
+/* Window */
+{
+  "method": "browsingContext.create",
+  "params": {
+    "type": "window"
+  }
+}
+
+/* Window with optional parameters */
+{
+  "method": "browsingContext.create",
+  "params": {
+    "type": "window",
+    "background": true
+  }
+}
+
+/* Tab */
 {
   "method": "browsingContext.create",
   "params": {
     "type": "tab"
+  }
+}
+
+/* Tab next to an existing tab */
+{
+  "method": "browsingContext.create",
+  "params": {
+    "type": "tab",
+    "background": true,
+    "referenceContext": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
+  }
+}
+
+/* Tab in a specific user context */
+{
+  "method": "browsingContext.create",
+  "params": {
+    "type": "tab",
+    "userContext": "4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"
   }
 }
 ```

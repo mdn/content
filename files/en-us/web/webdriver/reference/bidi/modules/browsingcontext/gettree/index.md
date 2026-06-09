@@ -82,7 +82,9 @@ The `result` object in the response contains the following fields:
 
 ### Getting all top-level contexts
 
-With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), consider a scenario where two tabs are open in the browser: the first tab at `https://example.com/page1.html` has an `<iframe>` loading `https://example.com/frame.html`, and the second tab shows `https://example.com/page2.html`:
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
+
+Suppose two tabs are open in the browser: the first tab at `https://example.com/page1.html` has an `<iframe>` loading `https://example.com/frame.html`, and the second tab shows `https://example.com/page2.html`:
 
 ```plain
 Browser
@@ -103,7 +105,7 @@ Send the following message to get the full context tree:
 
 The `contexts` array lists the two top-level contexts. The `<iframe>` inside Tab 1 appears nested under its `children`. The browser responds as follows:
 
-```json
+```json-nolint
 {
   "id": 1,
   "type": "success",
@@ -239,7 +241,7 @@ Expanding on the same setup, consider that Tab 2 (`https://example.com/page2.htm
 
 The browser responds with the full context tree. The `originalOpener` field identifies the context that opened Tab 2:
 
-```json
+```json-nolint
 {
   "id": 4,
   "type": "success",

@@ -12,10 +12,37 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 ## Syntax
 
 ```json-nolint
+/* Subscription to all module events */
 {
   "method": "session.subscribe",
   "params": {
-    "events": ["<event name>"]
+    "events": ["log"]
+  }
+}
+
+/* Subscription to a specific event */
+{
+  "method": "session.subscribe",
+  "params": {
+    "events": ["log.entryAdded"]
+  }
+}
+
+/* Scoped to a context */
+{
+  "method": "session.subscribe",
+  "params": {
+    "events": ["log.entryAdded"],
+    "contexts": ["93ee5bd6-d256-4608-a002-9a8995cc0e5f"]
+  }
+}
+
+/* Scoped to a user context */
+{
+  "method": "session.subscribe",
+  "params": {
+    "events": ["log.entryAdded"],
+    "userContexts": ["4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"]
   }
 }
 ```
