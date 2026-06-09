@@ -233,7 +233,7 @@ p {
 </p>
 ```
 
-{{ EmbedLiveSample('basic usage','100%', '100')}}
+{{EmbedLiveSample('basic usage','100%', '100')}}
 
 ### Multiple properties
 
@@ -252,7 +252,7 @@ p {
 </p>
 ```
 
-{{ EmbedLiveSample(' Multiple properties','100%', '100')}}
+{{EmbedLiveSample(' Multiple properties','100%', '100')}}
 
 ### System font
 
@@ -298,7 +298,7 @@ a.addEventListener("click", function (e) {
 
 #### Result
 
-{{ EmbedLiveSample('System font','100%', '100')}}
+{{EmbedLiveSample('System font','100%', '100')}}
 
 Hover or focus the link, then look at your status bar. The font should be the same family and size and the text in your status bar at the bottom of your browser window..
 
@@ -617,7 +617,7 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 });
 ```
 
-{{ EmbedLiveSample('Shorthand declaration creator','100%', '500px')}}
+{{EmbedLiveSample('Shorthand declaration creator','100%', '500px')}}
 
 ## Specifications
 
