@@ -49,13 +49,11 @@ This is a string that can take any of these values:
 - "split": the extension is split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/en-US/docs/Web/API/Window/localStorage) is not shared). However, the WebExtension API [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared.
 
   > [!NOTE]
-  > Firefox doesn't support "split" mode. Extensions that request this option in Firefox are installed using "not_allowed".
+  > Firefox doesn't support "split" mode. Extensions that request this option in Firefox are installed using "not_allowed". However, it's recommended that the `incognito` key is deleted from migrated extensions to preserve the default ("spanning") behavior.
 
 - "not_allowed": private tabs and windows are invisible to the extension.
 
 ## Privacy considerations
-
-If your extension needs to maintain the privacy expectations of the private browsing mode, omit the `incognito` key from your `manifest.json`. Omitting the key preserves the default behavior where the extension doesn't run in private browsing windows.
 
 If your extension uses `"spanning"` mode to access private and non-private windows, take care not to leak state from private to non-private browsing sessions. A common mistake is sending data from a content script running in a private browsing tab to an external server with a network request made from the background page. Because the background page shares cookies with the main browsing session, this can make private browsing activity linkable to the non-private session.
 
