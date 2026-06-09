@@ -147,9 +147,9 @@ If `font` is specified as a `<system-font-family-name>` keyword, the full proper
 
 Browsers also support non-standard prefixed values:
 
- Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`.
- Webkit includes the Chromium values, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names.
- Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+- Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`.
+- Webkit includes the Chromium values, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names.
+- Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
 
 The system font, or `<system-font-family-name>`, can only be set with the `font` property. Defining a single keyword value, such as `font: icon`, sets the font's family, size, weight, style, etc., to the values the browser defines for the named system font. These values can all be changed with longhand declarations placed _after_ the `font` declaration.
 
