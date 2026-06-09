@@ -19,18 +19,25 @@ the request object returned from this method, with its `result` set to
 `error` event is fired on the request object that is returned from this
 method.
 
-The deletion does not complete while other connections to the database are still open.
 When `deleteDatabase()` is called, any other open connections to this particular database
 are sent a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event,
 giving them the opportunity to close so that the deletion can proceed.
 
-> [!NOTE]
-> If a connection is not closed in response to the `versionchange` event, the deletion is
-> blocked: the request's `success` event does not fire, and a
-> [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event is fired on the
-> request instead. The deletion stays pending until every connection to the database is
-> closed. To let it complete, close each connection — for example by calling
-> {{domxref("IDBDatabase.close()")}}, typically from a `versionchange` event handler.
+If a connection is not closed in response to the `versionchange` event, the deletion is
+blocked: the request's `success` event does not fire, and a
+[`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event is fired on the
+request instead. The deletion stays pending until every connection to the database is
+closed.
+
+To let it complete, close each connection. This is typically done by calling
+{{domxref("IDBDatabase.close()")}} from inside the `versionchange` event handler:
+
+```js
+// db is an open connection (e.g. from a previous indexedDB.open() success)
+db.onversionchange = () => {
+  db.close();
+};
+```
 
 ## Syntax
 
