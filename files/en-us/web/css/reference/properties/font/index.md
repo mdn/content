@@ -252,7 +252,7 @@ p {
 </p>
 ```
 
-{{EmbedLiveSample(' Multiple properties','100%', '100')}}
+{{EmbedLiveSample('Multiple properties','100%', '100')}}
 
 ### System font
 
