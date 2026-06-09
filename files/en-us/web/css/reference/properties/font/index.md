@@ -273,7 +273,7 @@ p {
 
 Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover over or focus on the rendered link, your browser's status bar should display the value of this `href` attribute.
 
-```html bad
+```html
 <p>
   <a
     href="/%20The%20font%20should%20be%20the%20same%20
