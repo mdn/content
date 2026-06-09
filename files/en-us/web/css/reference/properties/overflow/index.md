@@ -163,7 +163,7 @@ With `visible`, no clipping occurs, so the overflowing content is visible outsid
 
 #### The `scroll` value
 
-With `scroll`, content is clipped at the element's padding box and can be scrolled into view. User agents display scroll bars in both directions whether or not any content is overflowing, which prevents scroll bars from appearing and disappearing as content changes. Printers may still print overflow content.*
+With `scroll`, content is clipped at the element's padding box and can be scrolled into view. User agents display scroll bars in both directions, whether or not any content is overflowing, which prevents scroll bars from appearing and disappearing as content changes. Printers may still print overflow content.
 
 The element is always a {{glossary("scroll container")}} — even when there is no overflowing content — and is both user-scrollable and programmatically scrollable.
 
@@ -276,19 +276,36 @@ div {
   <h2>overflow: clip;</h2>
 </div>
 <div>
-  <p>The <code>overflow</code> property in this example is set to <code>clip</code>. When hidden,
+  <p>
+    The <code>overflow</code> property in this example is set to
+    <code>clip</code>. When hidden,
     <a
       href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
       >interactive content</a
     >
-    can NOT be scrolled into view when focused. Overflowing content is clipped the container. No scroll container is created. Tabbing will give this
-    <input aria-label="input" placeholder="input" /> focus but will not scroll it into view. Keyboard users will not be able to reach this content. This content is also not programmatically scrollable.</p>
+    can NOT be scrolled into view when focused. Overflowing content is clipped
+    the container. No scroll container is created. Tabbing will give this
+    <input aria-label="input" placeholder="input" /> focus but will not scroll
+    it into view. Keyboard users will not be able to reach this content. This
+    content is also not programmatically scrollable.
+  </p>
 </div>
-<fieldset><legend>Select a <code>overflow-clip-margin</code> value</legend>
-<ul>
-  <li><label><input type="radio" name="overflow" value="0"> overflow-clip-margin: 0;</label></li>
-  <li><label><input type="radio" name="overflow" value="3em"> overflow-clip-margin: 3em;</label></li>
-</ul>
+<fieldset>
+  <legend>Select a <code>overflow-clip-margin</code> value</legend>
+  <ul>
+    <li>
+      <label
+        ><input type="radio" name="overflow" value="0" /> overflow-clip-margin:
+        0;</label
+      >
+    </li>
+    <li>
+      <label
+        ><input type="radio" name="overflow" value="3em" />
+        overflow-clip-margin: 3em;</label
+      >
+    </li>
+  </ul>
 </fieldset>
 ```
 
