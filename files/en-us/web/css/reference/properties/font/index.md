@@ -105,20 +105,20 @@ font: caption;
 
 The value is either a shorthand specifying the various font-related properties or a single `<system-font-family-name>` keyword:
 
-- `<'font-style'>`
+- `<'font-style'>` {{optional_inline}}
   - : See the {{cssxref("font-style")}} CSS property. Defaults to `normal`.
-- `<font-variant-css2>`
+- `<font-variant-css2>` {{optional_inline}}
   - : Either the `normal` or `small-caps` value of the {{cssxref("font-variant")}} property. Defaults to `normal`.
-- `<'font-weight'>`
+- `<'font-weight'>` {{optional_inline}}
   - : See the {{cssxref("font-weight")}} CSS property. Defaults to `normal`.
-- `<font-width-css3>`
-  - : The keywords supported by the legacy `font-stretch` property. See the {{cssxref("font-width")}} CSS property. Defaults to `normal`.
+- `<font-width-css3>` {{optional_inline}}
+  - : The keywords supported by the {{cssxref("font-width")}} CSS property. Defaults to `normal`.
 - `<'font-size'>`
-  - : See the {{cssxref("font-size")}} CSS property. Required value.
-- `<'line-height'>`
+  - : See the {{cssxref("font-size")}} CSS property.
+- `<'line-height'>` {{optional_inline}}
   - : See the {{cssxref("line-height")}} CSS property. Defaults to `normal`.
 - `<'font-family'>`
-  - : See the {{cssxref("font-family")}} CSS property. Required value.
+  - : See the {{cssxref("font-family")}} CSS property. Must be the last value.
 
 - `<system-font-family-name>`
   - : A single keyword representing a system font, including:
@@ -135,23 +135,29 @@ The value is either a shorthand specifying the various font-related properties o
     - `status-bar`
       - : The system font used in window status bars.
 
-    There are several non-standard values are implemented with prefixes.
+    There are several non-standard values implemented with prefixes.
 
 ## Description
 
-Depending on its value, the `font` property value is either a single keyword representing a system-font-family-name or multiple longhand property value used to set all the different properties of an element's font.
+The `font` property value is either a single keyword representing a system-font-family-name or multiple longhand property values used to set all the different properties of an element's font.
 
 ### System font declarations
 
-If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to that single, case-insensitive keyword. Valid values include `caption`, `icon`, `menu`, `message-box`, `small-caption` or `status-bar`.
+If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to that single, case-insensitive keyword. Valid values include `caption`, `icon`, `menu`, `message-box`, `small-caption`, or `status-bar`.
 
-Browsers also support non-standard prefixed values. Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`. Webkit includes these, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names. Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+Browsers also support non-standard prefixed values:
 
-The system font, or `<system-font-family-name>`, can only be set with the `font` property. Defining a single keyword value, such as `font: icon`, sets the font's family, size, weight, style, etc. to the values the browser defined for the named system font. These values can all be changed with longhand declarations coming _after_ the `font` declaration. Including any `font` longhand components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration. For example, `font: icon small` is invalid.
+ Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`.
+ Webkit includes the Chromium values, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names.
+ Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+
+The system font, or `<system-font-family-name>`, can only be set with the `font` property. Defining a single keyword value, such as `font: icon`, sets the font's family, size, weight, style, etc., to the values the browser defines for the named system font. These values can all be changed with longhand declarations placed _after_ the `font` declaration.
+
+Including any `font` longhand components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration. For example, `font: icon small` is invalid.
 
 If a `<system-font-family-name>` keyword appears anywhere in the value other than as the first component, the keyword is treated as an {{cssxref("ident")}} representing a standard `font-family` name. For example, the declaration `font: small icon` sets the `font-family` to a font named `icon`, a non-system font which may or may not exist. This declaration also sets the `font-size` to `small` and resets all the other shorthand component properties to their initial values.
 
-### As a shorthand
+### Shorthand font declarations
 
 If `font` is specified as a shorthand for several font-related properties, then:
 
@@ -166,7 +172,7 @@ If `font` is specified as a shorthand for several font-related properties, then:
   - {{cssxref("font-width")}}
   - {{cssxref("line-height")}}
 
-As with any shorthand property, any of the longhand component properties not value that is not specified is set to its initial value, possibly overriding values previously set using non-shorthand properties. In addition, the shorthand resets the following properties to their initial values that can not be set by the shorthand:
+As with any shorthand property, any of the longhand component properties not specified are set to their initial values, possibly overriding values previously set using non-shorthand properties. In addition, the shorthand resets the following properties to their initial values. The shorthand cannot explicitly set them:
 
 - {{cssxref("font-feature-settings")}}
 - {{cssxref("font-kerning")}}
@@ -184,7 +190,7 @@ As with any shorthand property, any of the longhand component properties not val
 
 ### Shorthand property order
 
-The order of some of the longhand values within the shorthand `font` declaration is partially important and must therefore follow a few rules:
+The order of some of the longhand values within the shorthand `font` declaration must follow a few rules:
 
 - Both the `font-size` and `font-family` components are required (except for [system font declarations](#system_font_declarations)).
 - The `font-style`, `font-variant` and `font-weight` components must precede the `font-size` value.
@@ -195,11 +201,9 @@ The order of some of the longhand values within the shorthand `font` declaration
 
 For backward compatibility, the valid values of the `font-variant` and `font-width` components do not include all the valid values or the longhand equivalents.
 
-- The valid values for the `font-variant` component are limited `normal` or `small-caps`.
-  - : The `<font-variant-css2>` component of the shorthand is limited to the two values supported in CSS 2.1, including `normal` and `small-caps`. While no other values are supported, the shorthand `font` declaration resets the {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}} properties to `normal`.
+The valid values for the `font-variant` component are limited `normal` or `small-caps`. While no other values are supported, the shorthand `font` declaration resets all the `font-variant-*` longhand properties to `normal`, including {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}}.
 
-- The valid values for the `font-width` component are limited to keyword values
-  - : The `<font-width-css3>` component of the shorthand is limited to `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. These keyword values were originally defined by the legacy `font-stretch` property, which is now an alias to `font-width`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, which are not valid within the shorthand.
+The valid values for the `font-width` component are limited to keyword values: `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, which are not valid within the shorthand.
 
 ## Formal definition
 
@@ -213,7 +217,7 @@ For backward compatibility, the valid values of the `font-variant` and `font-wid
 
 ### Basic usage
 
-This example defines the `font` for all {{htmlelement("p")}} elements. We set the `font-size` to `12px` and the `line-height` to `14px`, separating them with a forward slash (`/`). We know which {{cssxref("length")}} refers to each component because of the rule: "If present, the `line-height` must immediately follow the `font-size`, with the two values separated by a forward slash (`/`)". The declaration also sets the `font-family` to `sans-serif`.
+This example defines the `font` for all {{htmlelement("p")}} elements. We set the `font-size` to `12px` and the `line-height` to `14px`, separating them with a forward slash (`/`). The declaration also sets the `font-family` to `sans-serif`.
 
 ```css
 p {
@@ -252,7 +256,11 @@ p {
 
 ### System font
 
-This example demonstrates using the `font` property to set a system font. We set the paragraph's font to have the same `font-family`, `line-height`, `font-size`, etc., as the status bar of the window, then we set the `line-height` to `1.6`.
+This example demonstrates using the `font` property to set a system font.
+
+#### CSS
+
+We set the paragraph's font to have the same `font-family`, `line-height`, `font-size`, etc., as the status bar of the window, then we set the `line-height` to `1.6`.
 
 ```css
 p {
@@ -261,17 +269,26 @@ p {
 }
 ```
 
-```html hidden
+#### HTML
+
+Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover over or focus on the rendered link, your browser's status bar should display the value of this `href` attribute.
+
+```html bad
 <p>
   <a
-    href="/%20The%20font%20should%20be%20the%20same%20family%20and%20size%20and%20the%20text%20in%20the%20example."
+    href="/%20The%20font%20should%20be%20the%20same%20
+family%20and%20size%20and%20the%20text%20in%20the%20example."
     >Hover or focus this text. The font should be the same family and size and
     the text in your status bar.</a
   >
 </p>
 ```
 
-```js hidden
+#### JavaScript
+
+As the URL in our HTML link is not good practice, we include a script that prevents the document from redirecting to a non-existent page when the link is clicked.
+
+```js
 const a = document.querySelector("a");
 a.addEventListener("click", function (e) {
   e.preventDefault();
@@ -279,9 +296,11 @@ a.addEventListener("click", function (e) {
 });
 ```
 
+#### Result
+
 {{ EmbedLiveSample('System font','100%', '100')}}
 
-Hover or focus the link, then look at your status bar. The font should be the same family and size and the text in your status bar. We added a script to disable the link, which we hid for brevity.
+Hover or focus the link, then look at your status bar. The font should be the same family and size and the text in your status bar at the bottom of your browser window..
 
 ### Shorthand declaration creator
 
