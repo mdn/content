@@ -75,7 +75,9 @@ Hyphenation rules are language-specific. In HTML, the language is determined by 
 
 In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) attribute must be used. The specification does not define rules for hyphenation in XML content, so the exact hyphenation may vary from browser to browser.
 
-The {{cssxref("hyphenate-character")}} property can be used to specify an alternative hyphenation character to use at the end of the line being broken. If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/Reference/Properties/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point. If you apply {{cssxref("text-wrap-mode","text-wrap-mode: nowrap")}}, no wrapping occurs so no hyphens will appear.
+The {{cssxref("hyphenate-character")}} property can be used to specify an alternative hyphenation character to use at the end of the line, instead of the default language-specific hyphenation character.
+
+If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/Reference/Properties/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point. If you apply {{cssxref("text-wrap-mode","text-wrap-mode: nowrap")}}, no wrapping occurs, so no hyphens will appear.
 
 ### Suggesting line break opportunities
 
