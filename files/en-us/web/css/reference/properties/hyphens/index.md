@@ -73,7 +73,7 @@ The `hyphens` property can be used to define how words should be hyphenated when
 
 Hyphenation rules are language-specific. In HTML, the language is determined by the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute. Browsers will only hyphenate if this attribute is present and the appropriate hyphenation dictionary is available. The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules.
 
-In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) attribute must be used. The specification does not define rules for how hyphenation is performed, so the exact hyphenation may vary from browser to browser.
+In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) attribute must be used. The specification does not define rules for hyphenation in XML content, so the exact hyphenation may vary from browser to browser.
 
 The {{cssxref("hyphenate-character")}} property can be used to specify an alternative hyphenation character to use at the end of the line being broken. If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/Reference/Properties/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point. If you apply {{cssxref("text-wrap-mode","text-wrap-mode: nowrap")}}, no wrapping occurs so no hyphens will appear.
 
