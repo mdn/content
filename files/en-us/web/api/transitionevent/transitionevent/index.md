@@ -25,7 +25,7 @@ new TransitionEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `animation` {{optional_inline}}
-      - : A {{domxref("CSSTransition")}} containing the animation associated with the transition.
+      - : A {{domxref("CSSTransition")}} representing the animation associated with the event.
         It defaults to `null`.
     - `propertyName` {{optional_inline}}
       - : A string containing the name of the CSS property associated with the transition.
