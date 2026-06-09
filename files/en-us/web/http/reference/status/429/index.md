@@ -32,7 +32,7 @@ Host: example.com
 ```
 
 In this example, server-wide rate limiting is active when a client exceeds a set threshold of requests per minute.
-A 429 response is returned with a {{HTTPHeader("Retry-After")}} header that indicates that requests will be allowed for this client again in 60 minutes:
+A 429 response is returned with a {{HTTPHeader("Retry-After")}} header that indicates requests will be allowed for this client again after 3600 seconds (60 minutes):
 
 ```http
 HTTP/1.1 429 Too Many Requests

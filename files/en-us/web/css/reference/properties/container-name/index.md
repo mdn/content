@@ -8,8 +8,6 @@ sidebar: cssref
 ---
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/Reference/At-rules/@container) at-rule in a [container query](/en-US/docs/Web/CSS/Guides/Containment/Container_queries).
-A container query will apply styles to elements based on the [size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
-When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
 ## Syntax
 
@@ -33,7 +31,7 @@ container-name: unset;
 ### Values
 
 - `none`
-  - : Default value. The query container has no name.
+  - : The default value. The query container has no name.
 
 - {{cssxref("custom-ident")}}
   - : A case-sensitive string that is used to identify the container.
@@ -50,6 +48,17 @@ container-name: unset;
 ## Formal syntax
 
 {{CSSSyntax}}
+
+## Description
+
+With no name specified, a container query will apply styles to elements based on attributes such as the [size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts).
+
+> [!NOTE]
+> Size containers' descendants can be sized using [container query length units](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units).
+
+When a containment context is given a name, it can be specifically targeted by setting that name on a {{Cssxref("@container")}} at-rule.
+
+It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule, with no query expression specified. These so-called [**name-only container queries**](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries) enable selectively applying styles to elements based only on whether they have an ancestor with a specific `container-name` set.
 
 ## Examples
 
@@ -134,6 +143,52 @@ This is useful if you want to target the same container with multiple container 
   }
 }
 ```
+
+### Using a name-only container query
+
+This example demonstrates how to use a [name-only container query](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries).
+
+#### HTML
+
+We include a {{htmlelement("div")}} with an `id` of `container`, and three {{htmlelement("p")}} elements, two inside the container, and one outside the container:
+
+```html live-sample_name-only
+<div id="container">
+  <p>I'm in the container.</p>
+  <p>I'm also in the container.</p>
+</div>
+<p>I'm not in the container.</p>
+```
+
+#### CSS
+
+We assign a name to the container:
+
+```css live-sample_name-only
+#container {
+  container-name: my-container;
+}
+```
+
+We can then selectively apply styles only to elements inside containers with that name set, as shown in the next snippet.
+
+```css live-sample_name-only
+@container my-container {
+  p {
+    background-color: lime;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
+    font-family: sans-serif;
+  }
+}
+```
+
+#### Result
+
+{{embedlivesample("name-only", "100%", 300)}}
+
+The specified styles should be applied only to the first and second {{htmlelement("p")}} elements, but not to the third.
 
 ## Specifications
 
