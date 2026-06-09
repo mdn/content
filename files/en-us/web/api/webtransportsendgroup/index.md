@@ -7,7 +7,7 @@ browser-compat: api.WebTransportSendGroup
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a group of streams and datagrams whose relative send priority is prioritized as a set, based on the `sendOrder` value of each member.
+The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a group of streams and datagrams, within which relative send priority is determined by the `sendOrder` value of each member.
 
 `WebTransportSendGroup` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
@@ -21,7 +21,7 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 ## Description
 
 Unlike for {{domxref("WritableStream")}} instances, for which the priority at which bytes are sent on different streams is implementation-dependent, a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} allows you to set the priority at which bytes will be sent on each instance relative to others in the same `sendGroup`.
-A send group is defined using the `WebTransportSendGroup` interface, and the relative priority is defined by the `sendOrder` property of `WebTransportDatagramsWritable` or `WebTransportSendStream` instances.
+A send group is created using the {{domxref("WebTransport.createSendGroup", "createSendGroup()")}} method, and the relative priority is defined by the `sendOrder` property of `WebTransportDatagramsWritable` or `WebTransportSendStream` instances.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though again the precise way bandwidth is divided between groups depends on the implementation.
 
 A `WebTransportSendGroup` is created using the `createSendGroup()` method of the {{domxref("WebTransport")}} interface.

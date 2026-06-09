@@ -8,7 +8,7 @@ browser-compat: api.WebTransportDatagramsWritable.sendGroup
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`sendGroup`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets a {{domxref("WebTransportSendGroup")}} that the streams are grouped under for the purposes of {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} prioritization.
+The **`sendGroup`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets the {{domxref("WebTransportSendGroup")}} that this `WebTransportDatagramsWritable` is grouped under for the purposes of {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} prioritization.
 
 Within a group, bytes queued for sending on streams and datagrams with a higher `sendOrder` are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
@@ -21,7 +21,7 @@ A `WebTransportSendGroup` object, or `null` for the default send group.
 
 ### Basic usage
 
-The example below creates a send group using {{domxref("WebTransport.createSendGroup()")}} method, and then uses it with a `sendOrder` value, to prioritize the datagrams written to the stream relative to other streams and datagrams that are part of the same group:
+The example below creates a send group using the {{domxref("WebTransport.createSendGroup()")}} method, and then uses it with a `sendOrder` value, to prioritize the datagrams written to the stream relative to other streams and datagrams that are part of the same group:
 
 ```js
 const sendGroup = transport.createSendGroup();

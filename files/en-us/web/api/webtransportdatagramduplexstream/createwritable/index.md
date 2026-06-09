@@ -10,7 +10,7 @@ browser-compat: api.WebTransportDatagramDuplexStream.createWritable
 
 The **`createWritable()`** method of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WebTransportDatagramsWritable")}} instance that can be used to write outgoing datagrams to the transport.
 
-It should be used instead of the deprecated {{domxref("WebTransportDatagramDuplexStream/writable","writable")}} property on platforms where it is defined.
+It should be used instead of the deprecated {{domxref("WebTransportDatagramDuplexStream/writable","writable")}} property where it is supported.
 
 ## Syntax
 
@@ -33,7 +33,7 @@ createWritable(options)
 
 ### Return value
 
-A {{domxref("WebTransportDatagramsWritable")}} instance (this is a {{domxref("WritableStream")}}).
+A {{domxref("WebTransportDatagramsWritable")}} object, which extends {{domxref("WritableStream")}}.
 
 ### Exceptions
 
@@ -44,19 +44,19 @@ A {{domxref("WebTransportDatagramsWritable")}} instance (this is a {{domxref("Wr
 
 The **`createWritable()`** method is used to create a {{domxref("WebTransportDatagramsWritable")}} instance for writing outgoing datagrams.
 
-The method allows you to specify a `sendGroup` for specifying the group of streams and datagrams that this stream belongs to, and a `sendOrder` that sets the relative priority of this stream within that group.
+The method allows you to specify a `sendGroup` that defines the group of streams and datagrams that this stream belongs to, and a `sendOrder` that sets the relative priority of this stream within that group.
 Within a group, bytes queued on higher-priority streams and datagrams are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 
-The transmission is unreliable, meaning while you can define the priority order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
+The transmission is unreliable, meaning that even though you can define the priority order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
 
 ## Examples
 
 ### Basic usage
 
-This code shows how you can use the `createWritable()` method to get a `WebTransportDatagramDuplexStream` and use it to send data.
+This code shows how you can use the `createWritable()` method to get a `WebTransportDatagramsWritable` and use it to send data.
 
-First we define a function to wrap our stream creation and closing code.
+First we define a function to wrap our stream creation code.
 This first constructs a `WebTransport`, and uses it with `createWritable()` to create a writable stream.
 Note that because `createWritable()` is not supported on all browsers, the code falls back to the {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} property for creating the writable.
 
@@ -81,7 +81,7 @@ async function sendDatagrams(url, datagrams, writableOptions = {}) {
 }
 ```
 
-This code shows how you might use the above method, passing a `sendOrder` priority of `1` in the `null` send group for this stream:
+This code shows how you might use the above method, passing a `sendOrder` of `1` in the default send group:
 
 ```js
 const url = "https://example.com/webtransport";

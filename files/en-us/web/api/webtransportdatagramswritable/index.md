@@ -35,7 +35,7 @@ Different groups are expected to be treated as equals for the purposes of bandwi
 Objects of this type are not constructed directly.
 Instead, an instance is returned by the {{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}} method of {{domxref("WebTransportDatagramDuplexStream")}}, which can be accessed using the {{domxref("WebTransport.datagrams")}} property.
 
-The transmission is unreliable, meaning while you can define the priority order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
+The transmission is unreliable, meaning that even though you can define the priority order, there is no guarantee that every datagram will be sent, or that they will arrive in any particular order.
 
 ## Examples
 
