@@ -36,7 +36,7 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
   - : Retrieves the state of the extension's access to tabs opened in "private browsing" mode (as determined by the user-controlled '_Run in Private Windows_' option in the extension's permissions).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Access local files on your computer_' option in the extension's permissions).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by a user-controlled option in the extension's permissions: '_Allow access to File URLs_' on Chrome and '_Access local files on your computer_' on Firefox).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}
