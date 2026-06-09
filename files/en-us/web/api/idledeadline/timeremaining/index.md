@@ -9,7 +9,7 @@ browser-compat: api.IdleDeadline.timeRemaining
 {{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method
-on the {{domxref("IdleDeadline")}} interface returns the estimated number of
+of the {{domxref("IdleDeadline")}} interface returns the estimated number of
 milliseconds the user agent will remain idle for. The callback can call this method at
 any time to determine how much time it can continue to work before it must return. For
 example, if the callback finishes a task and has another one to begin, it can call
@@ -17,11 +17,11 @@ example, if the callback finishes a task and has another one to begin, it can ca
 there isn't, the callback can just return immediately, or look for other work to do with
 the remaining time.
 
+By the time `timeRemaining()` reaches `0`, it is suggested that the callback
+should return control to the user agent's event loop.
+
 > [!NOTE]
 > The value returned by `timeRemaining()` is an estimate of how much time the user agent believes is available before the next latency-critical task needs to run. This estimate is not fixed and can suddenly drop to 0 if higher-priority work arrives. For example, the browser's estimate can change in the middle of an idle callback if the user clicks. Developers should not assume the value always decreases linearly like a countdown timer.
-
-By the time `timeRemaining()` reaches 0, it is suggested that the callback
-should return control to the user agent's event loop.
 
 ## Syntax
 
