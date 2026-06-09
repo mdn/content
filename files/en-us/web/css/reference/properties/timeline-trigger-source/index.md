@@ -99,10 +99,10 @@ The {{cssxref("animation-action")}} keywords specified in the `animation-trigger
 The `timeline-trigger-source` property can take one of three main value types:
 
 - A [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function referencing an anonymous view progress timeline trigger. This is the nearest scrolling ancestor of the element that creates the trigger. As described previously, this allows you to create functionality whereby an element will start animating when it (or another element) reaches a certain offset in the scrollport, and stop animating (or some other action) when it (or another element) reaches a different scroll offset.
-- A [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function referencing an anonymous scroll progress timeline trigger. This can be the root element or nearest scroller of the element that creates the trigger, or the element itself. This allows you to create functionality whereby an element will start animating when it (or another element) reaches an absolute scroll offset relative to the viewport, and stop animation (or some other action) when it (or another element) reaches a different position in the viewport.
+- A [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function referencing an anonymous scroll progress timeline trigger. This can be the root element or nearest scroller of the element that creates the trigger, or the element itself. This allows you to create functionality whereby an element will start animating when it (or another element) reaches an absolute scroll offset (for example, it scrolls upwards by `600px`), and stop animating (or some other action) when it (or another element) reaches a different offset.
 - A {{cssxref("dashed-ident")}} referencing a named view- or scroll-progress timeline. This references a {{cssxref("view-timeline-name")}} or {{cssxref("scroll-timeline-name")}} set on the trigger.
 
-Scroll progress timelines are arguably not as useful for scroll-triggered animations as view progress timelines. You are more likely to want an animation to start at an scroll offset relative to the scrollport, not the viewport, where the animation may well trigger off screen on smaller screens.
+Scroll progress timelines are arguably not as useful for scroll-triggered animations as view progress timelines. You are more likely to want an animation to start at a scroll offset relative to the scrollport, not after an arbitrary amount of scrolling, where the animation may well trigger off screen on smaller screens.
 
 ### Setting the trigger's activation and active range
 
@@ -112,11 +112,11 @@ The trigger's default **active range** is the same as the activation range (ther
 
 ### Multiple sources
 
-When multiple, comma-separated timeline values are specified in a single `timeline-trigger-source` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as multiple {{cssxref("animation")}} values are distributed (see [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)).
+When you specify multiple comma-separated values on a single `timeline-trigger-source` property, they are applied to the timeline triggers in the order in which the {{cssxref("timeline-trigger-name")}}s appear. When the number of triggers and `timeline-trigger-source` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
-If multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-source` value is set, the `timeline-trigger-source` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-source` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-source` value set. And so on.
+For example, if multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-source` value is set, the `timeline-trigger-source` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-source` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-source` value set. And so on.
 
-For example, consider these declarations:
+Consider these declarations:
 
 ```css
 timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;

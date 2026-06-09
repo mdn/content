@@ -113,6 +113,8 @@ The `animation` property is specified as one or more single animations, separate
 > [!NOTE]
 > The `animation` shorthand property resets the {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} and {{cssxref("animation-trigger")}} properties to their initial values; `normal`, `normal` and `none`, respectively. These reset-only properties cannot be set in the `animation` shorthand, and including them invalidates the entire declaration. Because the `animation` declaration sets each of these properties to their initial values, they must either be declared after any `animation` shorthand declarations or with greater [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
+### animation-name
+
 The `<animation-name>` component of each animation is the name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}. The initial value of `animation-name` is `none`, meaning if no `animation-name` value is declared in the `animation` shorthand property, no animation is applied to any of the properties.
 
 The order of other values within an animation definition is important for distinguishing an {{cssxref("animation-name")}} value from other values. If a value in the `animation` shorthand can be parsed as a value for an animation property other than `animation-name`, then the value will be applied to that property first and not to `animation-name`. For this reason, the recommended practice is to specify a value for `animation-name` as the last value in a list of values when using the `animation` shorthand; this holds true even when you specify multiple, comma-separated animations using the `animation` shorthand.

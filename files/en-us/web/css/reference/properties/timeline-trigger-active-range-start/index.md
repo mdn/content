@@ -52,43 +52,35 @@ The `timeline-trigger-active-range-start` property is specified as one or more v
 - `auto`
   - : The `timeline-trigger-active-range-start` property is set to the same value as the {{cssxref("timeline-trigger-activation-range-start")}} property. This is the default value.
 - `normal`
-  - : Represents the end of the `cover` timeline.
+  - : Equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
 - {{cssxref("length-percentage")}}
-  - : Specifies a length or percentage value measured from the beginning of the timeline.
+  - : Specifies a length or percentage value measured from the beginning of the `normal` timeline.
 - {{cssxref("timeline-range-name")}}
-  - : Specifies a named timeline range within the overall timeline.
+  - : Specifies the start (`0%`) of the named timeline range.
 - `<timeline-range-name>` `<length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
-Percentages are relative to the length of the named timeline range if one is specified, or the entire timeline if not.
+Percentages are relative to the length of the named timeline range if one is specified, or the timeline represented by `normal` if not.
 
 ## Description
 
 When creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations), the `timeline-trigger-active-range-start` property can be set to explicitly define the start of the trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description).
 
-Allowed values for the `timeline-trigger-active-range-start` property are:
-
-- `auto`
-- `normal`
-- A `<length-percentage>`
-- A `<timeline-range-name>`
-- A `<timeline-range-name>` and a `<length-percentage>` separated by a space.
-
 The default value is `auto`, which sets the `timeline-trigger-active-range-start` value to the same as the {{cssxref("timeline-trigger-activation-range-start")}}.
 
-A value of `normal` is equivalent to `cover 0%` for a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) {{cssxref("timeline-trigger-source")}}, and `0%` for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) `timeline-trigger-source`.
+A value of `normal` is equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
 
-If the `<timeline-range-name>` value does not include a `<length-percentage>`, it defaults to `0%` of the named timeline range. If a `<timeline-range-name>` is not included, the timeline range defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover).
+If the `<timeline-range-name>` value does not include a `<length-percentage>`, it defaults to `0%` of the named timeline range. If a `<timeline-range-name>` is not included, the timeline range defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a view progress timeline source, and [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a scroll progress timeline source.
 
-The `timeline-trigger-active-range-start` and {{cssxref("timeline-trigger-active-range-end")}} properties can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand.
+The `timeline-trigger-active-range-start` property, along with the {{cssxref("timeline-trigger-active-range-end")}} property, can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand.
 
 ### Specifying multiple range start values
 
-When multiple, comma-separated values are specified in a single `timeline-trigger-active-range-start` property, they are distributed between the specified {{cssxref("timeline-trigger-name")}} values in the same fashion as other [multiple animation property values are set](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+When you specify multiple comma-separated values on a single `timeline-trigger-active-range-start` property, they are applied to the timeline triggers in the order in which the {{cssxref("timeline-trigger-name")}}s appear. When the number of triggers and `timeline-trigger-active-range-start` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 For example, if multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-active-range-start` value is set, the `timeline-trigger-active-range-start` will apply to all the `timeline-trigger-name`s. If two `timeline-trigger-active-range-start` values are set, they will cycle between the `timeline-trigger-name`s until all of them have a `timeline-trigger-active-range-start` value set. And so on.
 
-For example, consider these declarations:
+Consider these declarations:
 
 ```css
 timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;
@@ -111,7 +103,7 @@ In this case, `--my-trigger` will use the `contain` range start and `--my-other-
 
 ### Basic usage
 
-In this example, we show how to create a basic scroll-triggered animation with a custom active range start value.
+In this example, we inset the start of a scroll-triggered animation trigger's active range by setting a custom `timeline-trigger-active-range-start` value.
 
 #### HTML
 
@@ -252,7 +244,7 @@ The `.trigger` `<div>` element creates a trigger for the animated `<div>` using:
 - A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 - A {{cssxref("timeline-trigger-activation-range")}} of `contain 30% contain 60%`, which sets the trigger's activation range to a small portion of the `contain` range.
-- A `timeline-trigger-active-range-start` of `cover 0%`. The {{cssxref("timeline-trigger-active-range-end")}} value defaults to the {{cssxref("timeline-trigger-activation-range-end")}} value — `contain 60%` — so we end up with an overall {{cssxref("timeline-trigger-active-range")}} of `cover 0% contain 60%`.
+- A `timeline-trigger-active-range-start` of `cover 0%`. When not explicitly set, the {{cssxref("timeline-trigger-active-range-end")}} value defaults to the {{cssxref("timeline-trigger-activation-range-end")}} value — `contain 60%` — so we end up with an overall {{cssxref("timeline-trigger-active-range")}} of `cover 0% contain 60%`.
 
 ```css live-sample___basic-example
 div.trigger {
@@ -283,7 +275,9 @@ div.trigger {
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up and down. The animation plays when the trigger `<div>` moves into the narrow activation range between `30%` and `60%` of the way up the timeline range. At this point, if you scroll the trigger further upwards, the animation will stop as soon as it leaves the activation range. However, if after starting the animation, you start to scroll the trigger downwards again, you can move it completely off the bottom of the scrollport before the animation will stop again. This is because we extended the start of the active range, but not the end.
+Try scrolling the content up. The animation plays when the tracked `<div>` moves into the narrow activation range between `30%` and `60%` of the way through the timeline range. It will then pause as soon as the tracked `<div>` goes above the `60%` point.
+
+When you scroll downwards again, the animation will start when the tracked element reaches the `60%` point; you can now scroll the tracked element completely off the bottom of the scrollport before the animation will pause again. This is because we extended the start of the active range, but not the end.
 
 ## Specifications
 
