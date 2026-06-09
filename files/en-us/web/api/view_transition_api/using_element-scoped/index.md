@@ -7,18 +7,20 @@ page-type: guide
 
 {{DefaultAPISidebar("View Transition API")}}
 
-Element-scoped view transitions are scoped to a particular element's DOM subtree. They have many advantages over document-scoped view transitions: you can run transitions on subsections of the document while keeping the rest of it interactive, run multiple transitions simultaneously — including nested transitions — and solve several issues besides.
+Element-scoped view transitions are scoped to a particular element's DOM subtree. They have many advantages over document-scoped view transitions: you can run transitions on subsections of the document while keeping the rest of it interactive, run multiple transitions simultaneously — including nested transitions — and solve several other issues.
 
-This article covers how element-scoped view transitions work, and how to use them.
+This article covers how element-scoped view transitions work and how to use them.
 
 > [!NOTE]
-> In this article, by "document-scoped view transitions", we mean same-document view transitions, that is, transitions initiated via the {{domxref("Document.startViewTransition()")}} method. Element-scoped transitions are initiated via the same method, called on an individual element (see {{domxref("Element.startViewTransition()")}}). Element-scoped view transitions are not available for cross-document transitions.
+> "Document-scoped view transitions" refer to same-document view transitions, that is, transitions initiated via the {{domxref("Document.startViewTransition()")}} method.
+>
+> Element-scoped view transitions are initiated via the same method, called on an individual element (see {{domxref("Element.startViewTransition()")}}). Element-scoped view transitions are not available for cross-document transitions.
 
-## The problem with document-scoped view transitions
+## Problems with document-scoped view transitions
 
-Document-scoped view transitions are useful for animating DOM content updates across a whole document. You can apply one transition animation to the whole page as the content update occurs, or apply [different animations to different parts of the page](/en-US/docs/Web/API/View_Transition_API/Using#different_animations_for_different_elements) (or no animations).
+Document-scoped view transitions are useful for animating DOM content updates across a whole document. You can apply [different animations to different parts of the page](/en-US/docs/Web/API/View_Transition_API/Using#different_animations_for_different_elements), a single transition animation to the whole page, or no animations at all.
 
-You can also apply different [view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) so that different animations are applied to the same element in different circumstances (for example if it is the next element in a sequence or the previous one).
+You can also use different [view transition types](/en-US/docs/Web/API/View_Transition_API/Using_types) to apply different animations to the same element depending on the circumstance - for example, whether it is the next or previous element in a sequence.
 
 However, document-scoped view transitions have several shortcomings:
 
@@ -29,7 +31,7 @@ However, document-scoped view transitions have several shortcomings:
 
 Element-scoped view transitions solve these problems. Let's look at some examples to demonstrate how.
 
-## A basic element-scoped example
+## Basic element-scoped example
 
 This example features a list of links. When each link is clicked, its content changes, and that change is animated via an element-scoped view transition. We also include an element that slightly overlaps the transitioning element, to show how `z-index` problems are fixed.
 
@@ -397,7 +399,7 @@ One more aspect of element-scoped view transitions worth noting is that you can 
 
 Let's look at a demonstration of nested element-scoped view transitions.
 
-We won't show the HTML for this example; it is the same as for the [first example](#a_basic_element-scoped_example), except that this time we have two lists of links inside an extra wrapper element.
+We won't show the HTML for this example; it is the same as for the [first example](#basic_element-scoped_example), except that this time we have two lists of links inside an extra wrapper element.
 
 ```html hidden live-sample___element-scoped-nested
 <p>
