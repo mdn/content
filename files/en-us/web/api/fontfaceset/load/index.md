@@ -22,7 +22,7 @@ load(font, text)
 - `font`
   - : A font specification using the CSS value syntax, e.g., "italic bold 16px Roboto"
 - `text` {{optional_inline}}
-  - : Limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html). Defaults to [a string containing a single space character (U+0020 SPACE) `" "`](https://drafts.csswg.org/css-font-loading/#find-the-matching-font-faces).
+  - : Limit the font faces to those whose Unicode range contains at least one of the characters in text. This [does not check for individual glyph coverage](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html). Defaults to a string containing a single space character (`" "`).
 
 ### Return value
 
