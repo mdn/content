@@ -44,7 +44,7 @@ The same tag that was used to create the `Exception` is required to access the a
 
 ### Basic usage
 
-You would not normally use this contructor to manually create a Wasm exception. Instead, a `WebAssembly.Exception` object is normally created when handling Wasm exceptions, for example:
+You would not normally use this constructor to manually create a Wasm exception. Instead, a `WebAssembly.Exception` object is normally created when handling Wasm exceptions, for example:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(

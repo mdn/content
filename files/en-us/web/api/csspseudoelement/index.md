@@ -9,20 +9,38 @@ browser-compat: api.CSSPseudoElement
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.
+The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
-{{InheritanceDiagram}}
+Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo()")}} or {{DOMxRef("CSSPseudoElement.pseudo()")}}.
 
 ## Instance properties
 
-- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
-- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("CSSPseudoElement.element")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the ultimate originating {{DOMxRef("Element")}} of the pseudo-element.
+- {{DOMxRef("CSSPseudoElement.parent")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the immediate originating element of the pseudo-element.
+- {{DOMxRef("CSSPseudoElement.type")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the pseudo-element selector as a string.
 
 ## Instance methods
 
-_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:_
+- {{DOMxRef("CSSPseudoElement.pseudo()")}}
+  - : Returns a `CSSPseudoElement` instance representing a specific [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements)
+
+## Description
+
+The **`CSSPseudoElement`** interface represents a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). You can retrieve a representation of a pseudo-element attached to a DOM element using the {{DOMxRef("Element.pseudo()")}} method, or a representation of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) (for example, the `::marker` in `::before::marker`) using the {{DOMxRef("CSSPseudoElement.pseudo()")}} method.
+
+The {{DOMxRef("CSSPseudoElement.type")}} property returns a string representing the type of the pseudo-element. Supported types are:
+
+- {{cssxref("::after")}}
+- {{cssxref("::before")}}
+- {{cssxref("::marker")}}
+
+The {{DOMxRef("CSSPseudoElement.element")}} and {{DOMxRef("CSSPseudoElement.parent")}} properties sound similar, but they have a difference in functionality:
+
+- The `element` property always returns an {{domxref("Element")}}: A reference to the ultimate originating element of the pseudo-element or nested pseudo-element.
+- The `parent` property returns a reference to the pseudo-element's _immediate_ originating element: This can be either an {{DOMxRef("Element")}}, or a `CSSPseudoElement` in the case of a [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
 ## Examples
 
@@ -47,6 +65,7 @@ console.log(cssPseudoElement.type); // Outputs '::before'
 
 ## See also
 
-- {{DOMxRef('Element.pseudo()')}}
-- {{DOMxRef('Web Animations API', '', '', 'true')}}
-- {{DOMxRef('Element.animate()')}}
+- {{DOMxRef("Element.pseudo()")}}
+- {{DOMxRef("Web Animations API", "", "", "true")}}
+- {{DOMxRef("Element.animate()")}}
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module
