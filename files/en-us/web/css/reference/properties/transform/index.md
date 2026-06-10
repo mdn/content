@@ -152,9 +152,9 @@ div {
 
 ### Comparing the order of transform functions
 
-The order of transform functions matters. Visually, transforms follow the written order (left to right) because each function establishes a new coordinate system for the functions that follow it.
+The order of transform functions matters.
 
-In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
+In this example, two boxes are rotated and translated by the same values, but the functions are in the opposite order. The dotted lines mark the X-axis before and after rotation.
 
 #### HTML
 
