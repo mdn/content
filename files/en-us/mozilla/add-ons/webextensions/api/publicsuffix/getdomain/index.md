@@ -6,7 +6,7 @@ browser-compat: webextensions.api.publicSuffix.getDomain
 sidebar: addonsidebar
 ---
 
-Returns the registrable domain (eTLD+1) of the hostname, or `null` if no registrable domain can be determined.
+Returns the {{Glossary("Registrable_domain")}} (eTLD+1) of the hostname, or `null` if no registrable domain can be determined.
 
 The registrable domain is the public suffix plus one preceding label. For example, for `"sub.example.co.uk"`, the registrable domain is `"example.co.uk"`.
 
@@ -44,7 +44,7 @@ let domain = browser.publicSuffix.getDomain(hostname, options)
 
 A `string` containing the registrable domain of `hostname`, or `null` if no registrable domain can be determined.
 
-Throws an error with the message `"Invalid hostname: <hostname>"` if `hostname` is not a valid hostname.
+Throws an error if `hostname` is not a valid hostname.
 
 ## Examples
 

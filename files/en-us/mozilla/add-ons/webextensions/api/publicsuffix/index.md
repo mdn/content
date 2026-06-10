@@ -10,11 +10,11 @@ Use the `publicSuffix` API to work with domain names and public suffixes (effect
 
 Common use cases include:
 
-- Identifying the registrable domain (eTLD+1) of a hostname to group related domains or detect third-party requests.
+- Identifying the {{Glossary("Registrable_domain")}} (eTLD+1) of a hostname to group related domains or detect third-party requests.
 - Checking whether a hostname is itself a public suffix.
 - Extracting the public suffix portion of a hostname.
 
-To use this API, include the `"publicSuffix"` [optional permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) in your extension's manifest. This permission doesn't require user approval.
+To use this API, you must have the `"publicSuffix"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 This API is only available in background scripts. It is not available in content scripts.
 
