@@ -217,7 +217,6 @@ div {
 - Box 1 (first `translateX()`, then `rotate()`): The coordinate space first shifts `200px` along the X axis, then rotates `135deg` within that shifted space, so the element ends up to the right of its original position, rotated.
 - Box 2 (first `rotate()`, then `translateX()`): The coordinate space first rotates `135deg`, so the element then moves `200px` along the rotated axis, in the direction shown by the dotted lines.
   
-### More examples
 
 Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
