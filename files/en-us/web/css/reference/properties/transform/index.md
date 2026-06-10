@@ -101,7 +101,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right. Each function establishes a new coordinate system for the ones following it, so the visual result follows the written order. Mathematically, this is equivalent to applying them in reverse order (right to left).
+    The transform functions are combined from left to right – each function establishes a new coordinate space for the next function and so on – so the visual result matches the written order of the functions. Alternatively, keeping the parent coordinate space fixed, the same transformation can be described as applying the functions in reverse order (right to left).
 - `none`
   - : Specifies that no transform should be applied.
 
