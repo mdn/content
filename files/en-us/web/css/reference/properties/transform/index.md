@@ -150,7 +150,7 @@ div {
 
 {{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-### Transform order
+### Comparing the order of transform functions
 
 The order of transform functions matters. Visually, transforms follow the written order (left to right) because each function establishes a new coordinate system for the functions that follow it.
 
