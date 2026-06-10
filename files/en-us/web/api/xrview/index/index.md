@@ -3,10 +3,12 @@ title: "XRView: index property"
 short-title: index
 slug: Web/API/XRView/index
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRView.index
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`index`** read-only property of the {{domxref("XRView")}} interface indicates the index of the current `XRView` in the {{domxref("XRViewerPose.views")}} array.
 

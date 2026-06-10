@@ -277,6 +277,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
+- {{DOMxRef("Element.pseudo()")}}
+  - : Returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
 - {{DOMxRef("Element.querySelector()")}}
   - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
 - {{DOMxRef("Element.querySelectorAll()")}}
