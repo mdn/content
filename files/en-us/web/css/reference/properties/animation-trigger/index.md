@@ -252,7 +252,7 @@ The rendered result looks like this:
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. When any part of the `.trigger` `<div>` appears in the scrollport, the animation will play; when it has completely left the scrollport at either edge, the animation will pause.
+Try scrolling the content up and down. When any part of the `.trigger` `<div>` appears in the scrollport, the animation will play; when it has completely left the scrollport at either edge, the animation will pause.
 
 ### Making the animated element create the trigger
 
