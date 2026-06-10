@@ -72,8 +72,9 @@ Firefox 153 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
-- Adds the {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} methods to retrieve the colors and icons available for contextual identities (containers). ([Firefox bug 2044712](https://bugzil.la/2044712))
 - Extension content scripts can now read and modify constructed stylesheets in {{domxref("document.adoptedStyleSheets")}} and {{domxref("ShadowRoot.adoptedStyleSheets")}}, without `.wrappedJSObject`. ([Firefox bug 1751346](https://bugzil.la/1751346))
+- Adds the {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} methods to retrieve the colors and icons available for contextual identities (containers). ([Firefox bug 2044712](https://bugzil.la/2044712))
+- The colors available for contextual identities (containers) are updated: `"turquoise"` is renamed to `"cyan"`, `"toolbar"` is renamed to `"gray"`, and the color `"violet"` added. The legacy names `"turquoise"` and `"toolbar"` are accepted for backward compatibility. See {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} for the full list of supported colors. ([Firefox bug 2044354](https://bugzil.la/2044354))
 
 <!-- ### Removals -->
 

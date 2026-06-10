@@ -8,8 +8,6 @@ sidebar: addonsidebar
 
 Updates properties of a contextual identity, given its cookie store ID.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint
@@ -22,25 +20,26 @@ let createContext = browser.contextualIdentities.update(
 ### Parameters
 
 - `cookieStoreId`
-  - : `string`. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.
+  - : `string`. The ID of this contextual identity's cookie store. Because each contextual identity has its own cookie store, this serves as an identifier for that contextual identity.
 - `details`
-  - : `object`. An object containing new values for the properties that you wish to change. This may contain any of the following properties:
+  - : `object`. An object containing new values for the properties that you want to change. This object can contain any of these properties:
     - `name` {{optional_inline}}
-      - : `string`. A new name for the identity. This will be displayed in the browser's UI, enabling them to open a new tab in the identity. It will also be displayed in the URL bar for tabs belonging to this identity.
+      - : `string`. A new name for the identity. This name is displayed in the browser's UI, enabling users to open a new tab in the identity. It also displays in the URL bar for tabs belonging to this identity.
     - `color` {{optional_inline}}
-      - : `string`. A new color for the identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:
+      - : `string`. A new color for the identity. This color is used to highlight tabs belonging to this identity. Accepts any of these values:
         - "blue"
-        - "turquoise"
+        - "cyan"
         - "green"
         - "yellow"
         - "orange"
         - "red"
         - "pink"
         - "purple"
-        - "toolbar"
+        - "gray"
+        - "violet"
 
     - `icon` {{optional_inline}}
-      - : `string`. A new icon for the identity. You can supply any of the following values here:
+      - : `string`. A new icon for the identity. Accepts any of these values:
         - "fingerprint"
         - "briefcase"
         - "dollar"
@@ -57,7 +56,7 @@ let createContext = browser.contextualIdentities.update(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the updated identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the updated identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
 ## Examples
 
