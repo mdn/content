@@ -51,5 +51,5 @@ The {{cssxref(":xr-overlay")}} pseudo-class matches the DOM overlay element when
 ## See also
 
 - [Stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
-- [CSSOM view module](/en-US/docs/Web/CSS/CSSOM_view)
+- [CSSOM view module](/en-US/docs/Web/CSS/Guides/CSSOM_view)
 - [CSSOM View API](/en-US/docs/Web/API/CSSOM_view_API)
