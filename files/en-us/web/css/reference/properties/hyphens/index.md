@@ -7,7 +7,7 @@ browser-compat: css.properties.hyphens
 sidebar: cssref
 ---
 
-The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
+The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines.
 
 {{InteractiveExample("CSS Demo: hyphens")}}
 
@@ -38,15 +38,7 @@ hyphens: auto;
 }
 ```
 
-> [!NOTE]
-> In the above demo, the string "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
-
-Hyphenation rules are language-specific. In HTML, the language is determined by the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, and browsers will hyphenate only if this attribute is present and the appropriate hyphenation dictionary is available. In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) attribute must be used.
-
-> [!NOTE]
-> The rules defining how hyphenation is performed are not explicitly defined by the specification, so the exact hyphenation may vary from browser to browser.
-
-If supported, {{cssxref("hyphenate-character")}} may be used to specify an alternative hyphenation character to use at the end of the line being broken.
+The example text "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
 
 ## Syntax
 
@@ -75,13 +67,19 @@ The `hyphens` property is specified as a single keyword value chosen from the li
 - `auto`
   - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. However, suggested line break opportunities (see [Suggesting line break opportunities](#suggesting_line_break_opportunities) below) will override automatic break point selection when present.
 
-> [!NOTE]
-> The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules. You must specify a language using the `lang` HTML attribute to guarantee that automatic hyphenation is applied in that language.
+## Description
 
-> [!NOTE]
-> If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/Reference/Properties/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point.
+The `hyphens` property can be used to define how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
 
-## Suggesting line break opportunities
+Hyphenation rules are language-specific. In HTML, the language is determined by the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute. Browsers will only hyphenate if this attribute is present and the appropriate hyphenation dictionary is available. The `auto` setting's behavior depends on the language being properly tagged to select the appropriate hyphenation rules.
+
+In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Reference/Attribute/xml:lang) attribute must be used. The specification does not define rules for hyphenation in XML content, so the exact hyphenation may vary from browser to browser.
+
+The {{cssxref("hyphenate-character")}} property can be used to specify an alternative hyphenation character to use at the end of the line, instead of the default language-specific hyphenation character.
+
+If you apply [`word-break: break-all`](/en-US/docs/Web/CSS/Reference/Properties/word-break#break-all) then no hyphens are shown, even if the word breaks at a hyphenation point. If you apply {{cssxref("text-wrap-mode","text-wrap-mode: nowrap")}}, no wrapping occurs, so no hyphens will appear.
+
+### Suggesting line break opportunities
 
 There are two Unicode characters used to manually specify potential line break points within text:
 
@@ -103,11 +101,13 @@ There are two Unicode characters used to manually specify potential line break p
 
 ## Examples
 
-### Specifying text hyphenation
+### Basic example
 
-This example uses three classes, one for each possible configuration of the `hyphens` property.
+This example demonstrates the three values of the `hyphens` property.
 
 #### HTML
+
+We include three {{htmlelement("dd")}} elements containing the same text but with three different classes.
 
 ```html
 <dl>
@@ -123,6 +123,8 @@ This example uses three classes, one for each possible configuration of the `hyp
 ```
 
 #### CSS
+
+Each of the three classes is set to a different `hyphens` value.
 
 ```css
 dd {
@@ -142,7 +144,7 @@ dd.auto {
 
 #### Result
 
-{{EmbedLiveSample("Specifying_text_hyphenation", "100%", 490)}}
+{{EmbedLiveSample("Basic example", "100%", 490)}}
 
 ## Specifications
 
@@ -158,3 +160,4 @@ dd.auto {
 - {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
 - {{cssxref("word-break")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
