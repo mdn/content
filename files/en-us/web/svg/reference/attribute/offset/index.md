@@ -31,3 +31,4 @@ You can use this attribute with the following SVG elements:
 
   <rect width="200" height="100" fill="red" filter="url(#gamma)" />
 </svg>
+```
