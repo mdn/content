@@ -34,9 +34,9 @@ trigger-scope: revert-layer;
 trigger-scope: unset;
 ```
 
-The `trigger-scope` property is specified as the keyword `none`, the keyword `all`, or one or more {{cssxref("dashed-ident")}} values.
-
 ### Values
+
+Specified as the keyword `none`, the keyword `all`, or one or more {{cssxref("dashed-ident")}} values.
 
 - `none`
   - : Specifies that no trigger scoping is set. This is the default value.

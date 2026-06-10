@@ -41,9 +41,9 @@ animation-trigger: revert-layer;
 animation-trigger: unset;
 ```
 
-The `animation-trigger` property may be specified using one or more `animation-trigger` values separated by commas. Each `animation-trigger` value consists of the keyword `none`, or a {{cssxref("dashed-ident")}} followed by one or more {{cssxref("animation-action")}} values.
-
 ### Values
+
+Specified as one or more values, separated by commas. Each value consists of the keyword `none`, or a {{cssxref("dashed-ident")}} followed by one or more {{cssxref("animation-action")}} values.
 
 - `none`
   - : Specifies that the animation is not a triggered animation.
@@ -65,24 +65,13 @@ For example:
   animation: rotate 3s infinite linear both;
   animation-trigger: --my-trigger play-forwards play-backwards;
 }
-```
 
-In this case, the animation will be triggered by a trigger with a `timeline-trigger-name` of `--my-trigger`. Its `<animation-action>` keywords — `play-forwards play-backwards` — specify that the animation should play forwards on activation, and backwards on deactivation.
-
-The trigger is a timeline specified by a {{cssxref("timeline-trigger-source")}} property set on an element whose position will be tracked again that timeline. It is most commonly a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines): When the scrollport that defines the timeline is scrolled such that the tracked element moves inside its **activation range**, the animation will play. When the tracked element reaches the end of the activation range, the animation will play backwards.
-
-For example:
-
-```css
 .trigger {
   timeline-trigger: --my-trigger view();
 }
 ```
 
-An element with this declaration set will have an identifying `timeline-trigger-name` of `--my-trigger`, and a `timeline-trigger-source` value of `view()`, which selects the nearest ancestor scrolling element to define its timeline trigger.
-
-> [!NOTE]
-> The trigger can be defined using the {{cssxref("timeline-trigger")}} property, or its associated longhand properties — {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}.
+In this case, the animation will be triggered by a trigger with a `timeline-trigger-name` of `--my-trigger`, as specified in the second declaration {{cssxref("timeline-trigger")}} shorthand.
 
 > [!NOTE]
 > It is possible for the animated element and the element that creates the timeline to be the same element.

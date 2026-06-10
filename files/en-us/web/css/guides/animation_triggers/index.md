@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **CSS animation triggers** module provides functionality for triggering standard time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) that are initiated when a particular timeline trigger occurs.
 
-**scroll-triggered animations** allow you to control when a regular time-based animation starts, pauses, or stops based on when a trigger activates or deactivates, without using JavaScript. This could for example include when a scrolling element enters or leaves a [timeline range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
+**Scroll-triggered animations** allow you to control when a regular time-based animation starts, pauses, or stops based on when a trigger activates or deactivates, without using JavaScript. This could, for example, include when a scrolling element enters or leaves a [timeline range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 The source of these ranges is normally [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), enabling an animation to be started when an element enters a scrollport and ended when it leaves the scrollport. Triggers can specify different actions when entering versus exiting the timeline range, allowing control over animation playback.
 

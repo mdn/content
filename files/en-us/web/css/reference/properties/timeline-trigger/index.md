@@ -53,35 +53,30 @@ timeline-trigger: revert-layer;
 timeline-trigger: unset;
 ```
 
-The `timeline-trigger` shorthand property is specified as the keyword `none` or one or more timeline triggers, separated by commas. Each timeline trigger is specified as a {{cssxref("timeline-trigger-name")}} value, a {{cssxref("timeline-trigger-source")}} and optionally, a {{cssxref("timeline-trigger-activation-range")}} value, separated by spaces.
-
-If specified, the {{cssxref("timeline-trigger-activation-range")}} value can optionally be followed by a {{cssxref("timeline-trigger-active-range")}} value, with the two separated by a forward slash.
-
 ### Values
 
+A shorthand specifying the various timeline trigger-related properties separated by spaces, or the keyword `none`.
+
 - `none`
-  - : Specifies that the element does not create a scroll-triggered animation trigger. Equivalent to `none none normal`.
+  - : Specifies that the element does not create a trigger, resetting all four longhand properties to their default values.
 - `<'timeline-trigger-name'>`
   - : A {{cssxref("timeline-trigger-name")}} value representing the trigger's identifying name. Defaults to `none`.
 - `<'timeline-trigger-source'>`
   - : A {{cssxref("timeline-trigger-source")}} value representing the trigger's timeline. Defaults to `auto`.
-- `<'timeline-trigger-activation-range'>`
-  - : A {{cssxref("timeline-trigger-activation-range")}} value representing the trigger's activation range. Defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover).
-- `<'timeline-trigger-active-range'>`
-  - : A {{cssxref("timeline-trigger-active-range")}} value representing the trigger's activation range. Defaults to the same value as the `timeline-trigger-activation-range`.
-
-> [!NOTE]
-> Due to the potential for ambiguities in the syntax, this shorthand's values must be given in the specified order.
+- `<'timeline-trigger-activation-range'>` {{optional_inline}}
+  - : A {{cssxref("timeline-trigger-activation-range")}} value representing the trigger's activation range. Defaults to `normal`, which is equivalent to `cover 0% cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `0% 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
+- `<'timeline-trigger-active-range'>` {{optional_inline}}
+  - : A {{cssxref("timeline-trigger-active-range")}} value representing the trigger's activation range. Defaults to `auto`, which sets the `<'timeline-trigger-active-range'>` to the same value as the `<'timeline-trigger-activation-range'>`.
 
 ## Description
 
-The `timeline-trigger` property can be used to set all the properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration.
+The `timeline-trigger` property can be used to define all the longhand properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration, resetting those not explicitly set.
 
-For example:
+A typical example looks like so:
 
 ```css
 .trigger {
-  timeline-trigger: --my-trigger view() entry / entry exit 50%;
+  timeline-trigger: --my-trigger view() entry / contain;
 }
 ```
 
@@ -89,24 +84,25 @@ An element with this declaration set will have:
 
 - An identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function), which selects the element's nearest ancestor scrolling element to define its timeline trigger.
-- An activation range of [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry), meaning that the trigger will activate when its tracked element starts to enter the scrollport.
-- An active range of `entry exit 50%` meaning that once activated, the trigger will stay active until its tracked element leaves the range between the start of the `entry` range and `50%` of the way through the [`exit`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#exit) range (when `50%` of the tracked element has left the scrollport via the scrollport's start edge).
+- An activation range of `entry`, meaning that the trigger will activate when its tracked element moves into the [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range. This is the range between the element's start edge crossing the scrollport's end edge, and the element's end edge crossing the scrollport's end edge.
+- An active range of `contain` meaning that once activated, the trigger will stay active until its tracked element leaves the [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range: the range in which any part of the tracked element is visible in the scrollport.
 
-An animated element can be triggered by the previously-described trigger by referencing its identifying name in its {{cssxref("animation-trigger")}} property.
+An animated element can be triggered by the previously-described trigger by referencing its identifying name in its {{cssxref("animation-trigger")}} property. It is possible for the animated element and the element that creates the trigger to be the same element; that is, if a single element has both the `timeline-trigger`and `animation-trigger` properties set on it.
 
-For example:
+### The `none` value
 
-```css
-.animated {
-  animation: rotate 3s infinite linear both;
-  animation-trigger: --my-trigger play-forwards play-backwards;
-}
-```
+The `none` keyword specifies that the element does not create a scroll-triggered animation trigger. `none` is equivalent to setting `none auto normal / normal`, which effectively resets all four equivalent longhand properties to their default values.
 
-In this case, the animation will be controlled by a trigger with a `timeline-trigger-name` of `--my-trigger`. Its {{cssxref("animation-action")}} keywords — `play-forwards play-backwards` — specify that the animation should play forwards when the trigger activates (when the tracked element is scrolled into the activation range), and backwards on deactivation (when the tracked element is scrolled out of the active range).
+### Shorthand property order
 
-> [!NOTE]
-> It is possible for the animated element and the element that creates the trigger to be the same element.
+Due to the potential for ambiguities in the syntax, this shorthand's values must be given in the specified order.
+
+- {{cssxref("timeline-trigger-name")}}
+- {{cssxref("timeline-trigger-source")}}
+- Optionally, a {{cssxref("timeline-trigger-activation-range")}}
+- A {{cssxref("timeline-trigger-active-range")}} value, preceded by a forward slash.
+
+The `timeline-trigger-active-range` value can only be included if the {{cssxref("timeline-trigger-activation-range")}} value is included.
 
 ## Formal definition
 

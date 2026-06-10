@@ -44,9 +44,9 @@ timeline-trigger-activation-range-start: revert-layer;
 timeline-trigger-activation-range-start: unset;
 ```
 
-The `timeline-trigger-activation-range-start` property is specified as one or more values, separated by commas.
-
 ### Values
+
+Specified as one or more values, separated by commas. Possible values are:
 
 - `normal`
   - : The default value. Equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.

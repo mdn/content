@@ -63,29 +63,20 @@ timeline-trigger-activation-range: revert-layer;
 timeline-trigger-activation-range: unset;
 ```
 
-The `timeline-trigger-activation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation range is specified as a {{cssxref("timeline-trigger-activation-range-start")}} value, and optionally, a {{cssxref("timeline-trigger-activation-range-end")}} value.
-
-Each longhand property value is specified as one of:
-
-- A {{cssxref("timeline-range-name")}} value specifying a named timeline range within the overall timeline.
-- A {{cssxref("length-percentage")}} value.
-- The keyword `normal`.
-- A `<timeline-range-name>` followed by a `<length-percentage>` value.
-
-Percentages are relative to the length of the named timeline range if one is specified, or the timeline represented by `normal` if not.
-
 ### Values
 
+Specified as one or more single animation ranges, separated by commas. Each animation range is specified as a {{cssxref("timeline-trigger-activation-range-start")}} value, and optionally, a {{cssxref("timeline-trigger-activation-range-end")}} value.
+
 - `<'timeline-trigger-activation-range-start'>`
-  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name>` `<length-percentage>` pair, representing the {{cssxref("timeline-trigger-activation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
+  - : The keyword `normal`, a {{cssxref("length-percentage")}}, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name>` `<length-percentage>` pair, representing the {{cssxref("timeline-trigger-activation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
 - `<'timeline-trigger-activation-range-end'>`
   - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name>` `<length-percentage>` pair, representing the {{cssxref("timeline-trigger-activation-range-end")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
+
+Percentages are relative to the length of the named timeline range if one is specified, or the timeline represented by `normal` if not.
 
 ## Description
 
 The `timeline-trigger-activation-range` property can be used to set a custom **activation range** for a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger. The activation range is the range between the scrolling offset at which the trigger is activated, and the scrolling offset at which the trigger is deactivated.
-
-By default, the activation range along the timeline is `cover`, which means that the trigger activates when the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited either edge of the scrollport. This can be changed by setting a different `timeline-trigger-activation-range` value.
 
 For example:
 
@@ -97,22 +88,7 @@ For example:
 }
 ```
 
-An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`, and a {{cssxref("timeline-trigger-source")}} value of `view()`, which sets the timeline tracking the element to a view progress timeline based on its nearest scrolling ancestor element.
-
-We also set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to 100% of the way through the `entry` range and the end of the activation range to 50% of the way through the `exit` range. The result is that the animated element's trigger will activate when the tracked element has completely entered the scrollport, and deactivate when 50% of the tracked element has left the scrollport.
-
-An animated element can be triggered by the previously-described trigger by referencing the trigger's identifying name in its {{cssxref("animation-trigger")}} property.
-
-For example:
-
-```css
-.animated {
-  animation: rotate 3s infinite linear both;
-  animation-trigger: --my-trigger play-forwards play-backwards;
-}
-```
-
-In this case, the animation will be triggered by the trigger with the `timeline-trigger-name` of `--my-trigger`. Its {{cssxref("animation-action")}} keywords — `play-forwards play-backwards` — specify that the animation should play forwards on activation, and backwards on deactivation.
+Here we set a `timeline-trigger-activation-range` value of `entry 100% exit 50%`, which sets the start of the activation range to `100%` of the way through the `entry` range and the end of the activation range to `50%` of the way through the `exit` range. The result is that any animation using this trigger will start when the tracked element has completely entered the scrollport, and deactivate when `50%` of the tracked element has left the scrollport.
 
 > [!NOTE]
 > The `timeline-trigger-activation-range` property can also be set via the {{cssxref("timeline-trigger")}} shorthand property.

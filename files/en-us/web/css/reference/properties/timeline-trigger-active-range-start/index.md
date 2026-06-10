@@ -45,9 +45,9 @@ timeline-trigger-active-range-start: revert-layer;
 timeline-trigger-active-range-start: unset;
 ```
 
-The `timeline-trigger-active-range-start` property is specified as one or more values, separated by commas.
-
 ### Values
+
+Specified as one or more values, separated by commas. Possible values are:
 
 - `auto`
   - : The `timeline-trigger-active-range-start` property is set to the same value as the {{cssxref("timeline-trigger-activation-range-start")}} property. This is the default value.
