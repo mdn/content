@@ -219,6 +219,7 @@ div {
   
 Alternatively, when mapping a point to the parent coordinate space, the functions apply in the reverse order (right to left):
 - Box 1: The element first rotates `135deg`, then moves `200px` along the original X axis.
+
 - Box 2: The element first moves `200px` along the original X axis, then rotates `135deg`.
 
 ### More examples
