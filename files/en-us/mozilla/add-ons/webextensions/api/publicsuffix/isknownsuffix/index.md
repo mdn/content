@@ -23,7 +23,7 @@ let result = browser.publicSuffix.isKnownSuffix(hostname)
 
 `true` if `hostname` is a known public suffix, `false` otherwise.
 
-Throws an error with the message `"Invalid hostname: <hostname>"` if `hostname` is not a valid hostname.
+Throws an error if `hostname` is not a valid hostname.
 
 ## Examples
 

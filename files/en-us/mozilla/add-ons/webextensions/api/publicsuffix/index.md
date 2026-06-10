@@ -10,7 +10,7 @@ Use the `publicSuffix` API to work with domain names and public suffixes (effect
 
 Common use cases include:
 
-- Identifying the {{Glossary("Registrable_domain")}} (eTLD+1) of a hostname to group related domains or detect third-party requests.
+- Identifying the {{Glossary("Registrable_domain","registrable domain")}} (eTLD+1) of a hostname to group related domains or detect third-party requests.
 - Checking whether a hostname is itself a public suffix.
 - Extracting the public suffix portion of a hostname.
 

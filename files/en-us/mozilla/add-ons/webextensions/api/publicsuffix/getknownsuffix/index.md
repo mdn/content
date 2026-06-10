@@ -25,7 +25,7 @@ let suffix = browser.publicSuffix.getKnownSuffix(hostname)
 
 A `string` containing the public suffix of `hostname`, or `null` if no known public suffix exists for `hostname`.
 
-Throws an error with the message `"Invalid hostname: <hostname>"` if `hostname` is not a valid hostname.
+Throws an error if `hostname` is not a valid hostname.
 
 ## Examples
 
