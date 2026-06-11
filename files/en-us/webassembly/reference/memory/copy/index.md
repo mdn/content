@@ -132,5 +132,7 @@ memory.copy (memory $destMem) (memory $sourceMem) ;; Copy memory from "$sourceMe
 
 {{Compat}}
 
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `copy` can be used with a specified memory.
+## See also
+
+- [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
+- [WebAssembly memory instructions](/en-US/docs/WebAssembly/Reference/Memory)
