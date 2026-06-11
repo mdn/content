@@ -112,6 +112,73 @@ The `matrix3d()` function is specified with 16 values. They are described in the
 
 ## Examples
 
+## Using a 2D homography matrix
+
+Computer vision and image processing libraries often represent a planar projective transformation as a 3×3 homography matrix:
+
+[
+H =
+\begin{bmatrix}
+h_{11} & h_{12} & h_{13} \
+h_{21} & h_{22} & h_{23} \
+h_{31} & h_{32} & h_{33}
+\end{bmatrix}
+]
+
+where points are transformed in homogeneous coordinates:
+
+[
+\begin{bmatrix}
+x' \
+y' \
+w'
+\end{bmatrix}
+=============
+
+H
+\begin{bmatrix}
+x \
+y \
+1
+\end{bmatrix}
+]
+
+A homography can be embedded into a CSS `matrix3d()` transform as:
+
+```css
+transform: matrix3d(
+  h11, h21, 0, h31,
+  h12, h22, 0, h32,
+  0,   0,   1, 0,
+  h13, h23, 0, h33
+);
+```
+
+This mapping preserves the projective transformation, including perspective effects.
+
+The perspective coefficients `h31` and `h32` appear in the `m14` and `m24` positions because the parameters of `matrix3d()` are specified in column-major order.
+
+For example, the homography
+
+[
+\begin{bmatrix}
+1.2 & 0.1 & 100 \
+0.05 & 1.1 & 50 \
+0.0004 & 0.0002 & 1
+\end{bmatrix}
+]
+
+corresponds to:
+
+```css
+transform: matrix3d(
+  1.2,  0.05, 0, 0.0004,
+  0.1,  1.1,  0, 0.0002,
+  0,    0,    1, 0,
+  100,  50,   0, 1
+);
+```
+
 ### Cube squashing example
 
 The following example shows a 3D cube created from DOM elements and transforms, which can be hovered/focused to apply
