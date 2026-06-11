@@ -16,8 +16,6 @@ Common use cases include:
 
 To use this API, you must have the `"publicSuffix"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-This API is only available in background scripts. It is not available in content scripts.
-
 ## Types
 
 - {{WebExtAPIRef("publicSuffix.DomainEncoding")}}
