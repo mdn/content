@@ -163,7 +163,7 @@ ul::before {
 
 ### JavaScript
 
-In our script, we grab a reference to the `<ul>` element and add a `click` event listener to it. When it is clicked, we check that the event target is an `<a>` element. If so, we invoke {{domxref("Element.startViewTransition()", "startViewTransition()")}} on the clicked `<a>` element, toggling its content between "Standard" and "Alternative" via the `toggleText()` function.
+In the script, we grab a reference to the `<ul>` element and add a `click` event listener to it. When it is clicked, we check that the event target is an `<a>` element. If it is, we invoke {{domxref("Element.startViewTransition()", "startViewTransition()")}} on the clicked `<a>` element, toggling its content between "Standard" and "Alternative" via the `toggleText()` function.
 
 Note how we also include feature detection: before running `startViewTransition()`, we check that it exists on the target element. If not, we just run the `toggleText()` function and then `return`. This means that non-supporting browsers will still update the DOM, but without the transition animation.
 
