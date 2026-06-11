@@ -221,7 +221,7 @@ In the previous example, one of the pseudo-element trees would look like this:
 
 This means that the transition is scoped to the `<a>` element (referred to as the "transition root" or "scope") and its DOM content, so it doesn't interfere with other elements or ongoing view transitions. When the view transition starts, the browser looks for elements to snapshot only inside that scope. During the snapshotting process — up until the {{domxref("ViewTransition.updateCallbackDone")}} promise fulfills — rendering is paused only inside the scope.
 
-The `::view-transition` pseudo has the same size and shape as the transition root element, and renders only on top of it, not the rest of the page. Because of this, the layering order of elements outside of the transition root is respected.
+The `::view-transition` pseudo-element has the same size and shape as the transition root element, and renders only on top of it, not the rest of the page. Because of this, the layering order of elements outside of the transition root is respected.
 
 ## Self-participating scopes and clipping
 
