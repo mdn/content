@@ -9,6 +9,8 @@ WebAssembly memory instructions.
 
 - [`grow`](/en-US/docs/WebAssembly/Reference/Memory/grow)
   - : Increase the size of the memory instance.
+- [`init`](/en-US/docs/WebAssembly/Reference/Memory/init)
+  - : Copies the bytes from a passive [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition into a [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory).
 - [`size`](/en-US/docs/WebAssembly/Reference/Memory/size)
   - : Get the size of the memory instance.
 - [`load`](/en-US/docs/WebAssembly/Reference/Memory/load)

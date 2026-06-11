@@ -37,7 +37,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 In the above example, we specify two `data` definitions with identifiers `$greeting1` and `$greeting2`, containing the strings "Hello " and "World", respectively. The first `data` definition has a memory offset specified (`(i32.const 0)`), so immediately writes the string to the specified [`memory`](WebAssembly/Reference/Definitions/memory) at bytes 0–4. The second `data` definition doesn't have a memory offset specified, so isn't written to memory until the [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction is executed later on.
 
-In the JavaScript, we call the exported `init()` function to write the second data definition into memory, then decode the exported memory buffer and log the result ot the console.
+In the JavaScript, we call the exported `init()` function to write the second data definition into memory, then decode the exported memory buffer and log the result to the console.
 
 ## Syntax
 
@@ -52,7 +52,7 @@ data name data_string
 - `data`
   - : The `data` definition type. Must always be included first.
 - `name` {{optional_inline}}
-  - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the `data` can be identified (for example when calling `memory.init`) by its index, for example `0` for the first `data` in the wasm script, `1` for the second, etc.
+  - : An optional identifying name for the data. This must begin with a `$` symbol, for example `$my_data`. If this is omitted, the `data` can be identified (for example when calling `memory.init`) by its index, for example `0` for the first `data` in the wasm script, `1` for the second, etc.
 - `memory_index` {{optional_inline}}
   - : An integer representing the index number of the `memory` instance to write the data to, in the case of Wasm modules with multiple memories.
 - `offset` {{optional_inline}}

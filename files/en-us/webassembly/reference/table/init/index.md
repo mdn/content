@@ -56,6 +56,7 @@ table.init table_identifier elem_identifier
 
 - `table.init`
   - : The `table.init` instruction type. Must always be included first.
+
 - `table_identifier` {{optional_inline}}
   - : The identifier for the `table` you want to insert the function references into. This can be one of the following:
     - `name`
@@ -75,21 +76,21 @@ table.init table_identifier elem_identifier
 ### Type
 
 ```plain
-[destination offset length] -> []
+[dest_offset source_offset length] -> []
 ```
 
-- `destination`
-  - An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the table index to start copying the element references at.
-- `offset`
-  - An `i32` representing the starting offset in the `elem` [`element_list`](/en-US/docs/WebAssembly/Reference/Definitions/elem#element_list) to start copying the element references from.
+- `dest_offset`
+  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the table index to start copying the element references at.
+- `source_offset`
+  - : An `i32` representing the starting offset in the `elem` [`element_list`](/en-US/docs/WebAssembly/Reference/Definitions/elem#element_list) to start copying the element references from.
 - `length`
-  - An `i32` representing the number of function references to copy.
+  - : An `i32` representing the number of function references to copy.
 
 ### Binary encoding
 
-| Instruction  | Binary format               | Example text => binary                    |
-| ------------ | --------------------------- | ----------------------------------------- |
-| `table.init` | `0xfc x:tableidx x:elemidx` | `table.init 0 0` => `0xfc 0x0c 0x00 0x00` |
+| Instruction  | Binary format                      | Example text => binary                    |
+| ------------ | ---------------------------------- | ----------------------------------------- |
+| `table.init` | `0xfc 12:u32 x:tableidx x:elemidx` | `table.init 0 0` => `0xfc 0x0c 0x00 0x00` |
 
 ## Specifications
 

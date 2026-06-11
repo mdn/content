@@ -42,7 +42,7 @@ memory name min max
 - `memory`
   - : The `memory` definition type. Must always be included first.
 - `name` {{optional_inline}}
-  - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_mem`. If this is omitted, the `memory` can be identified (for example when calling `memory.grow`) by its index, for example `0` for the first `memory` in the wasm script, `1` for the second, etc.
+  - : An optional identifying name for the memory. This must begin with a `$` symbol, for example `$my_mem`. If this is omitted, the `memory` can be identified (for example when calling `memory.grow`) by its index, for example `0` for the first `memory` in the wasm script, `1` for the second, etc.
 - `min`
   - : The minimum number of 64KB pages in the `memory`, which is also the initial number of pages.
 - `max` {{optional_inline}}
