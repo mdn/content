@@ -141,7 +141,7 @@ Most relevant to view transitions, we define custom `animation` settings for the
 }
 ```
 
-Finally, we create some generated content on the `<ul>` element using the {{cssxref("::before")}} pseudo-element and position it over the `<ul>` element. It contains a transparent gradient effect.
+Finally, we create some generated content on the `<ul>` element using the {{cssxref("::before")}} pseudo-element and positioning it over the `<ul>` element. The generated content contains a transparent gradient effect.
 
 ```css live-sample___basic-element-scoped
 ul::before {
