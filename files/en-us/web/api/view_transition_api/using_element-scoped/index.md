@@ -227,7 +227,7 @@ The `::view-transition` pseudo-element has the same size and shape as the transi
 
 Another key feature of element-scoped view transitions is that, when the transitioned element is clipped by its container (via `overflow: scroll`, for example), the element remains clipped during the transition animation.
 
-This is because the following are automatically set on the scope root element:
+This happens because the following are automatically set on the scope root element:
 
 - A {{cssxref("view-transition-name")}} value of `root`, which ensures that the root element participates in its own transition (it is self-participating).
 - A `view-transition-group` value of `contain`, which enables [nested view transition groups](https://developer.chrome.com/docs/css-ui/view-transitions/nested-view-transition-groups) for the scope. An {{cssxref("overflow")}} value of `clip` is then set on the resulting {{cssxref("::view-transition-group()")}} pseudo-element, which causes the pseudo-element tree's contents to be clipped to the scope as well.
