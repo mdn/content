@@ -99,7 +99,7 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### WebDriver BiDi
 
 - Extended the `webExtension.install` command to support installing web extensions in Firefox enabled in Private Browsing mode. ([Firefox bug 1947679](https://bugzil.la/1947679)).
-- Improved the `brower.setDownloadBehavior` command to allow overriding the download target folder before the temporary file is created. ([Firefox bug 2017252](https://bugzil.la/2017252)).
+- Improved the `browser.setDownloadBehavior` command to allow overriding the download target folder before the temporary file is created. ([Firefox bug 2017252](https://bugzil.la/2017252)).
 - Fixed network events to only forward in-memory cached JavaScript responses when there is a matching network event collector, avoiding unnecessary data forwarding. ([Firefox bug 2018237](https://bugzil.la/2018237)).
 
 #### Marionette
