@@ -66,6 +66,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("PerformanceResourceTiming.firstInterimResponseStart","firstInterimResponseStart")}} and {{domxref("PerformanceResourceTiming.finalResponseHeadersStart","finalResponseHeadersStart")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are supported.
   These can be used to measure how long it takes for the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
   ([Firefox bug 2006340](https://bugzil.la/2006340)).
+- The {{domxref("AnimationEvent.animation")}} and {{domxref("TransitionEvent.animation")}} properties are now supported.
+  These provide a more ergonomic way to access the associated animation than calling {{domxref("element.getAnimations()")}} and filtering on the event's `animationName` or `propertyName`.
+  ([Firefox bug 1929118](https://bugzil.la/1929118)).
 
 #### DOM
 
