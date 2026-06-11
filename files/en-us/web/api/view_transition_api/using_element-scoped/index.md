@@ -95,7 +95,7 @@ ul {
 }
 ```
 
-Next, we give the {{htmlelement("a")}} elements their own `border` styles, and apply a {{cssxref("transition")}} so that `border` style updates on state changes will be smoothly animated. On {{cssxref(":hover")}} and {{cssxref(":focus")}}, we change the link {{cssxref("border-color")}} to `black`.
+Next, we give the {{htmlelement("a")}} elements their own `border` styles and apply a {{cssxref("transition")}} so that `border` style updates on state changes are smoothly animated. On {{cssxref(":hover")}} and {{cssxref(":focus")}}, we change the link {{cssxref("border-color")}} to `black`.
 
 ```css live-sample___basic-element-scoped
 a {
