@@ -1,5 +1,6 @@
 ---
-title: "@supports"
+title: "`@supports` CSS at-rule"
+short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 page-type: css-at-rule
 browser-compat: css.at-rules.supports
@@ -77,10 +78,20 @@ The following example returns true if the browser supports the expression `trans
 The function syntax checks if a browser supports values or expressions within the function.
 The functions supported in the function syntax are described in the following sections.
 
+#### `at-rule()`
+
+This function checks if a browser supports the specified [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The following example returns true and applies the contained CSS styles if the browser supports the {{cssxref("@keyframes")}} at-rule:
+
+```css
+@supports at-rule(@keyframes) {
+}
+```
+
 #### `selector()`
 
 This function evaluates if a browser supports the specified selector syntax.
-The following example returns true and applies the CSS style if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
+The following example returns true and applies the contained CSS styles if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
 
 ```css
 @supports selector(h2 > p) {
@@ -90,7 +101,7 @@ The following example returns true and applies the CSS style if the browser supp
 #### `font-tech()`
 
 This function checks if a browser supports the specified font technology for layout and rendering.
-The following example returns true and applies the CSS style if the browser supports the `COLRv1` font technology:
+The following example returns true and applies the contained CSS styles if the browser supports the `COLRv1` font technology:
 
 ```css
 @supports font-tech(color-COLRv1) {
@@ -121,7 +132,7 @@ The table below describes the font technologies (`<font-tech>`), including color
 #### `font-format()`
 
 This function checks if a browser supports the specified font format for layout and rendering.
-The following example returns true and applies the CSS style if the browser supports the `opentype` font format:
+The following example returns true and applies the contained CSS styles if the browser supports the `opentype` font format:
 
 ```css
 @supports font-format(opentype) {
@@ -335,6 +346,35 @@ However, a more efficient way to specify multiple font formats is to list them i
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+```
+
+### Testing for the support of an at-rule
+
+The following example applies a set of scoped color scheme styles if the browser supports the {{cssxref("@scope")}} at-rule:
+
+```css
+@supports at-rule(@scope) {
+  @scope (.light-scheme) {
+    :scope {
+      background-color: plum;
+    }
+
+    a {
+      color: darkmagenta;
+    }
+  }
+
+  @scope (.dark-scheme) {
+    :scope {
+      background-color: darkmagenta;
+      color: antiquewhite;
+    }
+
+    a {
+      color: plum;
+    }
+  }
 }
 ```
 

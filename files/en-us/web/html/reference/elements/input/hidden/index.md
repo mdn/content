@@ -1,5 +1,6 @@
 ---
-title: <input type="hidden">
+title: '`<input type="hidden">` HTML attribute value'
+short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_hidden
@@ -157,10 +158,6 @@ Even though the hidden input cannot be seen at all, its data is still submitted.
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

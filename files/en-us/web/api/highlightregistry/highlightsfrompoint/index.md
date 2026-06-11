@@ -3,12 +3,10 @@ title: "HighlightRegistry: highlightsFromPoint() method"
 short-title: highlightsFromPoint()
 slug: Web/API/HighlightRegistry/highlightsFromPoint
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.highlightsFromPoint
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`highlightsFromPoint()`** method of the {{domxref("HighlightRegistry")}} interface returns an array of objects representing the custom highlights applied at a specific point within the viewport.
 
@@ -32,9 +30,9 @@ highlightsFromPoint(x, y, options)
 
 ### Return value
 
-An array of `HighlightHitResult` objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
+An array of objects representing the custom highlights applied at the point in the viewport specified by the `x` and `y` parameters.
 
-Each `HighlightHitResult` object contains the following properties:
+Each object contains the following properties:
 
 - `highlight`
   - : A {{domxref("Highlight")}} object representing the applied custom highlight.
@@ -202,5 +200,5 @@ pElem.addEventListener("dblclick", (event) => {
 
 ## See also
 
-- {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
+- {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}
 - [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module

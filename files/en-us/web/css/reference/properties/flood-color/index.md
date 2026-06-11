@@ -1,5 +1,6 @@
 ---
-title: flood-color
+title: "`flood-color` CSS property"
+short-title: flood-color
 slug: Web/CSS/Reference/Properties/flood-color
 page-type: css-property
 browser-compat: css.properties.flood-color

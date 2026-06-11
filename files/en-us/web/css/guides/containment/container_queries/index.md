@@ -8,19 +8,21 @@ sidebar: cssref
 
 Container queries enable you to apply styles to an element based on certain attributes of its container:
 
+- The {{cssxref("container-name")}}.
 - The container's size.
 - Styles applied to the container.
 - The container's scroll-state or that of its scrolling ancestor.
+- Whether the container is [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and has a [position-try fallback option](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) applied to it.
 
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
-This article provides an introduction to using container queries, specifically focusing on size container queries. Other guides discuss [style](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) and [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries) container queries in detail.
+This article provides an introduction to using container queries, specifically focusing on size container queries. Other guides discuss [style](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries), [scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries), and [anchored](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) container queries in detail.
 
 ![Two different query types. First, a media query based on the viewport's width, which is the full width of the browser. Second, a container query based on the width of a container element.](container-query.svg)
 
 ## Using container size queries
 
-While container queries apply styles based on the container type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+While container queries apply styles based on the container name or type, container size queries apply styles specifically based on the container's dimensions. To use container size queries, you need to declare a [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts) on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
@@ -32,7 +34,7 @@ These values have the following effects:
   - : The query will be based on the [inline](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) dimensions of the container.
     Applies layout, style, and inline-size containment to the element.
 - `normal`
-  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
+  - : The default value. The element is not a query container for any container size queries, but can still be used as a query container for [name-only container queries](#name-only_container_queries) or container style queries.
 
 Consider the following example of a card component for a blog post with a title and some text:
 
@@ -76,7 +78,7 @@ If the container with the card is narrower than `700px`, the font of the card ti
 
 For more information on the syntax of container queries, see the {{cssxref("@container")}} page.
 
-### Naming containment contexts
+## Naming containment contexts
 
 In the previous section, a container query applied styles based on the nearest ancestor with a containment context.
 It's possible to give a containment context a name using the {{Cssxref("container-name")}} property. Once named, the name can be used in a `@container` query so as to target a specific container.
@@ -101,7 +103,45 @@ You can then target this containment context using the `@container` at-rule:
 
 More information on naming containment contexts is available on the {{cssxref("container-name")}} page.
 
-### Shorthand container syntax
+## Name-only container queries
+
+As well as using a {{cssxref("container-name")}} along with a [`<container-query>`](/en-US/docs/Web/CSS/Reference/At-rules/@container#container-query), you can query a container using just its name. These so-called **name-only container queries** enable selectively applying styles to elements based on whether they have an ancestor with a specific `container-name` set.
+
+For example, consider the following HTML:
+
+```html
+<div id="container">
+  <p>I'm in the container.</p>
+  <p>I'm also in the container.</p>
+</div>
+<p>I'm not in the container.</p>
+```
+
+If we assign a name to the container:
+
+```css
+#container {
+  container-name: my-container;
+}
+```
+
+We can then selectively apply styles only to elements inside that container:
+
+```css
+@container my-container {
+  p {
+    background-color: lime;
+    font-size: 1.3rem;
+    width: 50vw;
+    padding: 0.5rem;
+    font-family: sans-serif;
+  }
+}
+```
+
+In this example, the specified styles would be applied only to the first and second {{htmlelement("p")}} elements, but not to the third.
+
+## Shorthand container syntax
 
 The shorthand way of declaring a containment context is to use the `container` property:
 
@@ -113,9 +153,9 @@ The shorthand way of declaring a containment context is to use the `container` p
 
 For more information on this property, see the {{Cssxref("container")}} reference.
 
-### Container query length units
+## Container query length units
 
-When applying styles to a container using container queries, you can use container query length units.
+When applying styles to the descendants of a container using size container queries (that is, its {{cssxref("container-type")}} is set to `size` or `inline-size`), you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
@@ -174,6 +214,7 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 - CSS {{cssxref("content-visibility")}} property
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

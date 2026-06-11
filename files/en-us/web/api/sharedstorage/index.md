@@ -4,10 +4,11 @@ slug: Web/API/SharedStorage
 page-type: web-api-interface
 status:
   - deprecated
+  - non-standard
 browser-compat: api.SharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin, defining methods to write data to the shared storage.
 
@@ -20,13 +21,13 @@ The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared
 
 ## Instance methods
 
-- {{domxref("SharedStorage.append", "append()")}} {{deprecated_inline}}
+- {{domxref("SharedStorage.append", "append()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Appends a string to the value of an existing key-value pair in the current origin's shared storage.
-- {{domxref("SharedStorage.clear", "clear()")}} {{deprecated_inline}}
+- {{domxref("SharedStorage.clear", "clear()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Clears the current origin's shared storage, removing all data from it.
-- {{domxref("SharedStorage.delete", "delete()")}} {{deprecated_inline}}
+- {{domxref("SharedStorage.delete", "delete()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Deletes an existing key-value pair from the current origin's shared storage.
-- {{domxref("SharedStorage.set", "set()")}} {{deprecated_inline}}
+- {{domxref("SharedStorage.set", "set()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Stores a new key-value pair in the current origin's shared storage or updates an existing one.
 
 ## Examples

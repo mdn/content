@@ -1,5 +1,6 @@
 ---
-title: <input type="color">
+title: '`<input type="color">` HTML attribute value'
+short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
 browser-compat:
@@ -233,12 +234,6 @@ The final result looks like this:
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

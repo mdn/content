@@ -153,6 +153,9 @@ For color attachment objects
   - The sizes of the subresources that `view` and `resolveTarget` provide a view of match.
   - `view`'s and `resolveTarget`'s formats match.
 - [Color attachments bytes per sample](https://gpuweb.github.io/gpuweb/#abstract-opdef-validating-gpurenderpassdescriptors-color-attachment-bytes-per-sample) is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachmentBytesPerSample` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
+- If the [`usage`](/en-US/docs/Web/API/GPUTexture/createView#usage) of the `GPUTexture.createView()` operation that created the associated view includes the `TRANSIENT_ATTACHMENT` bit:
+  - `loadOp` is `"clear"`.
+  - `storeOp` is `"discard"`.
 
 For depth/stencil attachment objects:
 
@@ -163,6 +166,13 @@ For depth/stencil attachment objects:
 - If `view`'s format has a depth aspect, and `depthReadOnly` is `true`, `depthLoadOp` and `depthStoreOp` are not provided.
 - If `view`'s format has a stencil aspect, and `stencilReadOnly` is `false`, `stencilLoadOp` and `stencilStoreOp` are provided.
 - If `view`'s format has a stencil aspect, and `stencilReadOnly` is `true`, `stencilLoadOp` and `stencilStoreOp` are not provided.
+- If the [`usage`](/en-US/docs/Web/API/GPUTexture/createView#usage) of the `GPUTexture.createView()` operation that created the associated view includes the `TRANSIENT_ATTACHMENT` bit:
+  - If `view`'s format has a depth aspect:
+    - `depthLoadOp` is `"clear"`.
+    - `depthStoreOp` is `"discard"`.
+  - If `view`'s format has a stencil aspect:
+    - `stencilLoadOp` is `"clear"`.
+    - `stencilStoreOp` is `"discard"`.
 
 For timestamp queries:
 

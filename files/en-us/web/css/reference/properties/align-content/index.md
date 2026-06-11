@@ -1,5 +1,6 @@
 ---
-title: align-content
+title: "`align-content` CSS property"
+short-title: align-content
 slug: Web/CSS/Reference/Properties/align-content
 page-type: css-property
 browser-compat: css.properties.align-content

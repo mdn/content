@@ -1,5 +1,6 @@
 ---
-title: url()
+title: "`url()` CSS function"
+short-title: url()
 slug: Web/CSS/Reference/Values/url_function
 page-type: css-function
 browser-compat: css.types.url

@@ -1,5 +1,6 @@
 ---
-title: offset-path
+title: "`offset-path` CSS property"
+short-title: offset-path
 slug: Web/CSS/Reference/Properties/offset-path
 page-type: css-property
 browser-compat: css.properties.offset-path

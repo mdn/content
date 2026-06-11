@@ -1,5 +1,6 @@
 ---
-title: path()
+title: "`path()` CSS function"
+short-title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
@@ -178,7 +179,7 @@ svg {
 
 ## See also
 
-- {{cssxref("&lt;shape-outside&gt;")}}
+- {{cssxref("shape-outside")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) via CSS-tricks (2021)

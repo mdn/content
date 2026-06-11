@@ -1,5 +1,6 @@
 ---
-title: ruby-overhang
+title: "`ruby-overhang` CSS property"
+short-title: ruby-overhang
 slug: Web/CSS/Reference/Properties/ruby-overhang
 page-type: css-property
 browser-compat: css.properties.ruby-overhang

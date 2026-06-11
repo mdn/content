@@ -86,6 +86,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("fr")}}
 - {{SVGAttr("from")}}
 - {{SVGAttr("fx")}}
@@ -361,6 +362,7 @@ All SVG presentation attributes can be used as CSS properties.
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
+- {{SVGAttr("font-width")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("height")}}

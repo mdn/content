@@ -49,7 +49,9 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
 - {{domxref("Request.signal")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("AbortSignal")}} associated with the request
+  - : Returns the {{domxref("AbortSignal")}} associated with the request.
+- {{domxref("Request.targetAddressSpace")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns the request's target address space, which indicates whether it is a loopback, local, or public request.
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 

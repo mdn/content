@@ -1,5 +1,6 @@
 ---
-title: margin-right
+title: "`margin-right` CSS property"
+short-title: margin-right
 slug: Web/CSS/Reference/Properties/margin-right
 page-type: css-property
 browser-compat: css.properties.margin-right

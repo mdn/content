@@ -108,7 +108,7 @@ Lists the changes to the state of the tab that is updated. To learn more about t
 - `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
 - `splitViewId` {{optional_inline}}
-  - : `integer`. The ID of the split view the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} when the tab doesn't belong to a split view.
+  - : `integer`. The ID of the [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views) the tab belongs to. Set to {{WebExtAPIRef('tabs.SPLIT_VIEW_ID_NONE')}} when the tab doesn't belong to a split view.
 - `status` {{optional_inline}}
   - : `string`. The status of the tab. Can be either _loading_ or _complete_.
 - `title` {{optional_inline}}

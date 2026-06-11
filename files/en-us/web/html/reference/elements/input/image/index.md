@@ -1,5 +1,6 @@
 ---
-title: <input type="image">
+title: '`<input type="image">` HTML attribute value'
+short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_image
@@ -341,10 +342,6 @@ Here, `object-position` is configured to draw the image in the top-right corner 
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>None.</td>
-    </tr>
-     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>

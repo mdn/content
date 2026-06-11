@@ -41,6 +41,11 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception)
   - : A WebAssembly exception object that can be thrown, caught, and rethrown both within and across WebAssembly/JavaScript boundaries.
 
+## Static properties
+
+- [`WebAssembly.JSTag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/JSTag_static)
+  - : A built-in [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) representing exceptions thrown in the JavaScript host — it allows exceptions thrown in JavaScript to be handled from inside a Wasm module.
+
 ## Static methods
 
 - [`WebAssembly.compile()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compile_static)
