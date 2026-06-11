@@ -204,7 +204,7 @@ Looking at the above example, you can see how element-scoped view transitions fi
 
 The pseudo-element tree created when an element-scoped view transition is ongoing explains a lot of this. Instead of being added just inside the {{cssxref(":root")}} element, it is added inside the root of the element on which `Element.startViewTransition()` was called.
 
-In the above example, one of the pseudo-element trees would look like this:
+In the previous example, one of the pseudo-element trees would look like this:
 
 ```plain
 <a href="#">
