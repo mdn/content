@@ -29,7 +29,7 @@ However, document-scoped view transitions have several shortcomings:
 - The [pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#different_animations_for_different_elements) associated with a document-scoped view transition sits over the top of everything else on the page. If another element is positioned above the updating part of the page when the transition animation starts (for example, using {{cssxref("z-index")}}), the positioned element will disappear underneath the transition for the animation's duration, which is probably not the effect you want.
 - Related to the previous issue, if the updating part of the page is clipped by an ancestor wrapper using {{cssxref("overflow")}}, it will spill out of the container when the animation starts.
 
-Element-scoped view transitions solve these problems. Let's look at some examples to demonstrate how.
+Element-scoped view transitions can solve these problems. Let's look at some examples to see how.
 
 ## Basic element-scoped example
 
