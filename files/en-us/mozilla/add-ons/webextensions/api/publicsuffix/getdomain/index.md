@@ -63,10 +63,10 @@ Using `allowIPAddress` to return IP addresses as-is:
 
 ```js
 console.log(
-  browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true }),
+  browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true })
 ); // "192.0.2.1"
 console.log(
-  browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true }),
+  browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true })
 ); // "2001:db8::1"
 ```
 
@@ -74,7 +74,7 @@ Using `allowPlainSuffix` to return hostnames that are public suffixes:
 
 ```js
 console.log(
-  browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true }),
+  browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true })
 ); // "co.uk"
 ```
 
@@ -83,11 +83,11 @@ Using `allowUnknownSuffix` to handle private or local domains:
 ```js
 console.log(
   browser.publicSuffix.getDomain("mydevice.local", {
-    allowUnknownSuffix: true,
-  }),
+    allowUnknownSuffix: true
+  })
 ); // "mydevice.local"
 console.log(
-  browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true }),
+  browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true })
 ); // "host.intranet"
 ```
 
@@ -97,16 +97,16 @@ Using `encoding: "display"` for internationalized domain names:
 // "xn--nxasmq6b.com" is the punycode form of "βόλος.com"
 console.log(
   browser.publicSuffix.getDomain("sub.xn--nxasmq6b.com", {
-    encoding: "display",
-  }),
+    encoding: "display"
+  })
 ); // "βόλος.com"
 
 // Domains with confusable characters remain in punycode
 // "xn--bs-red.com" has characters confusable with another script
 console.log(
   browser.publicSuffix.getDomain("sub.xn--bs-red.com", {
-    encoding: "display",
-  }),
+    encoding: "display"
+  })
 ); // "xn--bs-red.com"
 ```
 
