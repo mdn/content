@@ -60,7 +60,7 @@ The markup includes a {{htmlelement("ul")}} list of links between two {{htmlelem
 
 ### CSS
 
-We start by giving the `<ul>` some background and {{cssxref("border")}} styling; we then give it a {{cssxref("position")}} of relative, so we can absolutely-position descendants relative to it.
+We start by giving the `<ul>` some background and {{cssxref("border")}} styling. We also give it a {{cssxref("position")}} of `relative`, so we can absolutely position descendants relative to the `<ul>`.
 
 ```css hidden live-sample___basic-element-scoped
 body {
