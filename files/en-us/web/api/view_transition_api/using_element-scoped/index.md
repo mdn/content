@@ -236,7 +236,7 @@ This happens because the following are automatically set on the scope root eleme
 > [!NOTE]
 > You can opt a view transition scope out of this self-participating behavior by setting `view-transition-name: none` on your transition root element. However, this can result in undesirable behavior such as the transition spilling out of the root in clipping cases. If you need to do this, you should test carefully, and make sure your scope does not clip its contents.
 
-Let's look at another example to demonstrate the clipping behavior.
+Let's look at another example, this time to demonstrate the clipping behavior.
 
 ### HTML
 
