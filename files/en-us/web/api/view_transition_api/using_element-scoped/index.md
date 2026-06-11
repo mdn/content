@@ -37,7 +37,7 @@ This example features a list of links. When a link is clicked, its content chang
 
 ### HTML
 
-We include a {{htmlelement("ul")}} list of links placed between two {{htmlelement("p")}} elements containing text content.
+The markup includes a {{htmlelement("ul")}} list of links between two {{htmlelement("p")}} elements containing text content.
 
 ```html live-sample___basic-element-scoped
 <p>
