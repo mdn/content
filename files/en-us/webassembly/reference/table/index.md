@@ -14,6 +14,8 @@ This set of pages details the table instructions available in Wasm to create and
 
 ## Instructions
 
+- [`table.copy`](/en-US/docs/WebAssembly/Reference/Table/copy)
+  - : Copies element references from one [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) location to another.
 - [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)
   - : Sets a range of table elements to the same value.
 - [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get)

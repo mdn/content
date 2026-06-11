@@ -43,7 +43,7 @@ In the JavaScript, we call the exported `init()` function to write the second da
 
 ```plain
 ;; Active form, written to memory immediately
-data name memory_index offset data_string
+data name memory_identifier offset data_string
 
 ;; Passive form, written later via memory.init
 data name data_string
@@ -53,8 +53,12 @@ data name data_string
   - : The `data` definition type. Must always be included first.
 - `name` {{optional_inline}}
   - : An optional identifying name for the data. This must begin with a `$` symbol, for example `$my_data`. If this is omitted, the `data` can be identified (for example when calling `memory.init`) by its index, for example `0` for the first `data` in the wasm script, `1` for the second, etc.
-- `memory_index` {{optional_inline}}
-  - : An integer representing the index number of the `memory` instance to write the data to, in the case of Wasm modules with multiple memories.
+- `memory_identifier` {{optional_inline}}
+  - : An identifier representing the `memory` instance to place the data into. This can be one of:
+    - `name`
+      - : An identifying name [set for the `memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory#name) when it was first defined. This must begin with a `$` symbol and be preceded by a `memory` keyword, for example `(memory $my_memory)`.
+    - `index`
+      - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) value representing the index number of the memory, for example `0` for the first memory in the module, `1` for the second, etc.
 - `offset` {{optional_inline}}
   - : An integer representing the offset at which to start writing the data in the `memory`.
 - `data_string`

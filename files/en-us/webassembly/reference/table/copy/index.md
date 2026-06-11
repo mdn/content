@@ -7,7 +7,7 @@ browser-compat: webassembly.table.copy
 sidebar: webassemblysidebar
 ---
 
-The **`table.copy`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) copies element references from one [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) to another.
+The **`table.copy`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) copies element references from one [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) location to another.
 
 {{InteractiveExample("Wat Demo: table.copy", "tabbed-taller")}}
 
@@ -49,7 +49,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 
 In the above example, we define two tables: `$first_table` with a capacity of two elements, and `$second_table` with a capacity of three elements. We then define two functions that each return a different integer and store those functions in `$first_table` using an active [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition.
 
-We then define two functions:
+We then define two exported functions:
 
 - `copy()`, which uses a `table.copy` instruction to copy the two function references from `$first_table` into the second and third element slots of `$second_table`.
 - `accessTable()`, which calls (via `call_indirect`) the element referenced in `$second_table` in the slot number equal to the function's parameter. It then returns the value returned by the called function.
@@ -85,11 +85,15 @@ If `dest_table` or `source_table` are omitted, they default to `0`.
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the offset to start writing the copied the element references to, in the destination table.
+  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the offset to start writing the copied element references to, in the destination table.
 - `source_offset`
   - : An `i32` representing the offset to start copying element references from, in the source table.
 - `length`
   - : An `i32` representing the number of function references to copy.
+
+### Traps
+
+If the source or destination offset are out of bounds, the instruction traps.
 
 ### Binary encoding
 

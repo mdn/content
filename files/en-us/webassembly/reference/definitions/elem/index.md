@@ -47,7 +47,7 @@ In the above example, we define a table with two function slots, define two func
 
 ```plain
 ;; Active form, table initialized immediately
-elem name table_index offset value_type element_list
+elem name table_identifier offset value_type element_list
 
 ;; Passive form, initialized later via table.init
 elem name value_type element_list
@@ -60,8 +60,12 @@ elem name declare value_type element_list
   - : The `elem` definition type. Must always be included first.
 - `name` {{optional_inline}}
   - : An optional identifying name for the elem. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the `elem` can be identified (for example when calling `elem.drop`) by its index, for example `0` for the first `elem` in the wasm script, `1` for the second, etc.
-- `table_index`
-  - : An integer representing the index number of the `table` instance to place the table elements into to. This can be written as a Wasm [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) value (for example `(i32.const 0)`) or as a `table` keyword followed by a number (for example `(table 0)`), in which case an `offset` value is included after it.
+- `table_identifier` {{optional_inline}}
+  - : An identifier representing the `table` instance to place the table elements into. This can be one of:
+    - `name`
+      - : An identifying name [set for the `table`](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first defined. This must begin with a `$` symbol and be preceded by a `table` keyword, for example `(table $my_table)`.
+    - `index`
+      - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) value representing the index number of the table, for example `0` for the first table in the module, `1` for the second, etc.
 - `offset` {{optional_inline}}
   - : An integer representing the offset at which to start placing the elements into the `table`. This is written as a Wasm [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) value (for example `(i32.const 0)`), and is only included if the `table_index` is written in `(table num)` form.
 - `declare` {{optional_inline}}
