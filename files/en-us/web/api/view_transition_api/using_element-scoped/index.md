@@ -109,7 +109,7 @@ a:focus {
 }
 ```
 
-Most relevant to view transitions, we define custom `animation` settings for the [old](/en-US/docs/Web/CSS/Reference/Selectors/::view-transition-old) and [new](/en-US/docs/Web/CSS/Reference/Selectors/::view-transition-new) transition states, so that it rotates the old DOM state out and rotates the new DOM state back in. Note how we've applied an {{cssxref("animation-delay")}} value to the `rotate-in` animation so that it only starts when the `rotate-out` animation ends.
+The most relevant CSS for view transitions defines custom `animation` settings for the [old](/en-US/docs/Web/CSS/Reference/Selectors/::view-transition-old) and [new](/en-US/docs/Web/CSS/Reference/Selectors/::view-transition-new) transition states, which rotate the old DOM state out and the new DOM state in. Note that we've applied an {{cssxref("animation-delay")}} value to the `rotate-in` animation (the second `0.3s` value) to ensure that it starts only when the `rotate-out` animation ends.
 
 ```css live-sample___basic-element-scoped
 ::view-transition-old(*) {
@@ -198,11 +198,11 @@ function handleClick(e) {
 
 Click/activate the links to see the view tranasition on each one.
 
+Each `<a>` element has its own view transition, scoped just to that element. The rest of the page stays interactive while a view transition is ongoing, so you can run multiple view transitions at the same time. In addition, the transitioning elements stay below the overlapping generated content positioned above them.
+
 ## Differences between element- and document-scoped transitions
 
-Looking at the above example, you can see how element-scoped view transitions fix some of the issues with their document counterparts. Each `<a>` element has its own view transition, scoped just to that element. The rest of the page stays interactive while a view transition is ongoing, meaning that you can run multiple view transitions at once. In addition, the transitioning elements stay below the overlapping generated content.
-
-The pseudo-element tree created when an element-scoped view transition is ongoing explains a lot of this. Instead of being added just inside the {{cssxref(":root")}} element, it is added inside the root of the element on which `Element.startViewTransition()` was called.
+The previous example demonstrates how element-scoped view transitions fix some of the issues with their document counterparts. This is largely thanks to the difference in pseudo-element tree placement. Instead of being added just inside the {{cssxref(":root")}} element, the browser adds element-scoped view transition trees inside the element on which `Element.startViewTransition()` is called.
 
 In the previous example, one of the pseudo-element trees would look like this:
 
@@ -230,11 +230,11 @@ Another key feature of element-scoped view transitions is that, when the transit
 This happens because the following are automatically set on the scope root element:
 
 - A {{cssxref("view-transition-name")}} value of `root`, which ensures that the root element participates in its own transition (referred to as self-participation).
-- A `view-transition-group` value of `contain`, which enables [nested view transition groups](https://developer.chrome.com/docs/css-ui/view-transitions/nested-view-transition-groups) for the scope. An {{cssxref("overflow")}} value of `clip` is then set on the resulting {{cssxref("::view-transition-group()")}} pseudo-element, which causes the pseudo-element tree's contents to be clipped to the scope as well.
+- A `view-transition-group` value of `contain`, which enables [nested view transition groups](https://developer.chrome.com/docs/css-ui/view-transitions/nested-view-transition-groups) for the scope. An {{cssxref("overflow")}} value of `clip` is then set on the resulting {{cssxref("::view-transition-group()")}} pseudo-element, which causes the pseudo-element tree's contents to be clipped to the scope.
 - A {{cssxref("view-transition-scope")}} value of `all`, which ensures that {{cssxref("view-transition-name")}} values scope to the element's subtree (see [Nested element-scoped view transitions](#nested_element-scoped_view_transitions) for more details).
 
 > [!NOTE]
-> You can opt a view transition scope out of this self-participating behavior by setting `view-transition-name: none` on your transition root element. However, this can result in undesirable behavior such as the transition spilling out of the root in clipping cases. If you need to do this, you should test carefully, and make sure your scope does not clip its contents.
+> You can opt out of self-participation by setting `view-transition-name: none` on the transition root element. However, this can result in undesirable behavior, such as the transition spilling out of the root in clipping cases. If you choose to do this, test carefully and make sure the scope does not clip its contents.
 
 Let's look at another example, this time to demonstrate the clipping behavior.
 
