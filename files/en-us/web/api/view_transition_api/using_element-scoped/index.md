@@ -33,7 +33,7 @@ Element-scoped view transitions can solve these problems. Let's look at some exa
 
 ## Basic element-scoped example
 
-This example features a list of links. When each link is clicked, its content changes, and that change is animated via an element-scoped view transition. We also include an element that slightly overlaps the transitioning element, to show how `z-index` problems are fixed.
+This example features a list of links. When a link is clicked, its content changes, and that change is animated via an element-scoped view transition. The example also contains an element that slightly overlaps the transitioning element; we're using this to show how `z-index` problems can be avoided.
 
 ### HTML
 
