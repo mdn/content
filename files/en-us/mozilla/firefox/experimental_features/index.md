@@ -376,6 +376,22 @@ The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
+### `base-select` value for `appearance` CSS property
+
+The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, only relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element (not yet supported), allows you to fully style them. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work and means that two flags need to be set. ([Firefox bug 1974787](https://bugzil.la/1974787)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `dom.select.customizable_select.enabled`
+  - : Set to `true` to enable.
+- `layout.css.appearance-base.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
