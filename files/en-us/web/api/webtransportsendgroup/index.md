@@ -22,13 +22,13 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 
 Unlike for {{domxref("WritableStream")}} instances, for which the priority at which bytes are sent on different streams is implementation-dependent, a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} allows you to set the priority at which bytes will be sent on each instance relative to others in the same `sendGroup`.
 A send group is created using the {{domxref("WebTransport.createSendGroup", "createSendGroup()")}} method, and the relative priority is defined by the `sendOrder` property of `WebTransportDatagramsWritable` or `WebTransportSendStream` instances.
-Different groups are expected to be treated as equals during bandwidth allocation — though again, the precise way bandwidth is divided between groups depends on the implementation.
+Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 
 A `WebTransportSendGroup` is created using the `createSendGroup()` method of the {{domxref("WebTransport")}} interface.
 You can then associate it with a `WebTransportDatagramsWritable` or `WebTransportSendStream` by:
 
- - Passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
- - Setting the object's `sendGroup` property afterwards, for example using {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
+- Passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
+- Setting the object's `sendGroup` property afterwards, for example using {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 ## Examples
 

@@ -33,7 +33,7 @@ A {{domxref("WebTransportSendGroup")}} object.
 
 The **`createSendGroup()`** method creates a new `WebTransportSendGroup` associated with the `WebTransport` object on which it is called.
 
-The `WebTransportSendGroup` is used to group together streams and datagrams created on the same `WebTransport`, for the purpose of controlling their relative priority for sending queued bytes.
+The `WebTransportSendGroup` object is used to group streams and/or datagrams created on the same `WebTransport`, to control their relative priority for sending queued bytes.
 Within the same group, bytes on higher-priority streams and datagrams are sent before bytes from lower-priority ones.
 
 The returned `WebTransportSendGroup` is not initially associated with any streams or datagrams.

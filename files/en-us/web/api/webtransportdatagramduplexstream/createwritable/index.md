@@ -10,7 +10,7 @@ browser-compat: api.WebTransportDatagramDuplexStream.createWritable
 
 The **`createWritable()`** method of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WebTransportDatagramsWritable")}} instance that can be used to write outgoing datagrams to the transport.
 
-It should be used instead of the deprecated {{domxref("WebTransportDatagramDuplexStream/writable","writable")}} property where it is supported.
+It should be used instead of the deprecated {{domxref("WebTransportDatagramDuplexStream.writable","writable")}} property where it is supported.
 
 ## Syntax
 

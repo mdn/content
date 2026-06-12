@@ -28,7 +28,7 @@ The returned object has the following properties:
 
 - `bytesAcknowledged`
   - : A positive integer indicating the number of bytes written to the group's members that have been sent and acknowledged as received by the server, using QUIC's ACK mechanism.
-    Only sequential bytes up to, but not including, the first non-acknowledged byte of each member, are counted.
+    Only sequential bytes up to, but not including, the first unacknowledged byte of each member, are counted.
     This number can only increase and is always less than or equal to `bytesSent`.
 - `bytesSent`
   - : A positive integer indicating the number of bytes written to the group's members that have been sent at least once (but not necessarily acknowledged).
