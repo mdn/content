@@ -15725,10 +15725,12 @@
 /en-US/docs/Web/Performance/dns-prefetch	/en-US/docs/Web/Performance/Guides/dns-prefetch
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/Guides/How_browsers_work
 /en-US/docs/Web/Privacy/Firefox_tracking_protection	/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection
-/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies     /en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned
+_cookies
+/en-US/docs/Web/Privacy/Partitioned_cookies    /en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 /en-US/docs/Web/Privacy/Privacy_sandbox	/en-US/docs/Web/Privacy/Guides/Privacy_sandbox
 /en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment	/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment
-/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies    /en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 /en-US/docs/Web/Privacy/Redirect_tracking_protection	/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection
 /en-US/docs/Web/Privacy/State_Partitioning	/en-US/docs/Web/Privacy/Guides/State_Partitioning
 /en-US/docs/Web/Privacy/Storage_Access_Policy	/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy
