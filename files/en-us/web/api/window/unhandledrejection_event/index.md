@@ -28,13 +28,6 @@ A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PromiseRejectionEvent")}}
 
-## Event properties
-
-- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onunhandledrejection` is also available on the following targets:

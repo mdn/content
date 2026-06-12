@@ -28,13 +28,6 @@ A {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("USBConnectionEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : The {{domxref("USBDevice")}} the event is fired for.
-
 ## Examples
 
 Once a USB device is disconnected, you might want to update the UI.

@@ -30,13 +30,6 @@ A {{domxref("BackgroundFetchUpdateUIEvent")}}.
 
 {{InheritanceDiagram("BackgroundFetchUpdateUIEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("BackgroundFetchEvent")}}._
-
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}
-  - : Updates the UI of the element that the browser displays to show the progress of the fetch operation.
-
 ## Description
 
 When a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation fails (meaning that at least one of the individual network requests has not completed successfully), the browser starts the service worker, if necessary, and fires the `backgroundfetchfail` event in the service worker's global scope.
