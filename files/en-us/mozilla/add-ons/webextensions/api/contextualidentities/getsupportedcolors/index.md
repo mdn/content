@@ -8,6 +8,33 @@ sidebar: addonsidebar
 
 Returns the colors supported by the browser for contextual identities.
 
+Prior to the availability of this method (Firefox 152 and earlier) these colors were supported:
+
+- `"blue"`
+- `"green"`
+- `"orange"`
+- `"pink"`
+- `"purple"`
+- `"red"`
+- `"toolbar"`
+- `"turquoise"`
+- `"yellow"`
+
+In Firefox 153 and later, these colors are supported:
+
+- `"blue"`
+- `"cyan"` (replacing `"turquoise"`)
+- `"gray"` (replacing `"toolbar"`)
+- `"green"`
+- `"orange"`
+- `"pink"`
+- `"purple"`
+- `"red"`
+- `"violet"` (added in Firefox 153)
+- `"yellow"`
+
+The legacy values `"turquoise"` and `"toolbar"` are accepted and resolve to `"cyan"` and `"gray"` respectively.
+
 ## Syntax
 
 ```js-nolint

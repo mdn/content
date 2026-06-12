@@ -26,33 +26,9 @@ let createContext = browser.contextualIdentities.update(
     - `name` {{optional_inline}}
       - : `string`. A new name for the identity. This name is displayed in the browser's UI, enabling users to open a new tab in the identity. It also displays in the URL bar for tabs belonging to this identity.
     - `color` {{optional_inline}}
-      - : `string`. A new color for the identity. This color is used to highlight tabs belonging to this identity. Accepts any of these values:
-        - "blue"
-        - "cyan"
-        - "green"
-        - "yellow"
-        - "orange"
-        - "red"
-        - "pink"
-        - "purple"
-        - "gray"
-        - "violet"
-
+      - : `string`. A new color for the identity. This color is used to highlight tabs belonging to this identity. See {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} for details of the supported color values. Use the method in Firefox 153 or later to retrieve the supported list.
     - `icon` {{optional_inline}}
-      - : `string`. A new icon for the identity. Accepts any of these values:
-        - "fingerprint"
-        - "briefcase"
-        - "dollar"
-        - "cart"
-        - "circle"
-        - "gift"
-        - "vacation"
-        - "food"
-        - "fruit"
-        - "pet"
-        - "tree"
-        - "chill"
-        - "fence"
+      - : `string`. A new icon for the identity. See {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} for details of the supported icon values. Use the method in Firefox 153 or later to retrieve the supported list.
 
 ### Return value
 

@@ -8,6 +8,22 @@ sidebar: addonsidebar
 
 Returns the icons supported by the browser for contextual identities.
 
+These icon names are supported:
+
+- `"briefcase"`
+- `"cart"`
+- `"chill"`
+- `"circle"`
+- `"dollar"`
+- `"fence"`
+- `"fingerprint"`
+- `"food"`
+- `"fruit"`
+- `"gift"`
+- `"pet"`
+- `"tree"`
+- `"vacation"`
+
 ## Syntax
 
 ```js-nolint
