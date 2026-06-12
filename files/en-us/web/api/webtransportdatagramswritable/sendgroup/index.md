@@ -15,7 +15,7 @@ Different groups are expected to be treated as equals for the purposes of bandwi
 
 ## Value
 
-A `WebTransportSendGroup` object, or `null` for the default send group.
+A `WebTransportSendGroup` object, or `null` to specify the default send group.
 
 ## Examples
 

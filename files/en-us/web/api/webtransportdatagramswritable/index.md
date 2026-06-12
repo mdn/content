@@ -28,7 +28,7 @@ _Inherits methods from its parent interface, {{domxref("WritableStream")}}._
 
 ## Description
 
-In addition to the functionality of a standard `WritableStream`, the interface provides the `sendGroup` property that indicates the group of streams and datagrams that this stream belongs to, and the `sendOrder` property that indicates the relative priority of this stream within that group.
+In addition to the functionality of a standard `WritableStream`, the `WebTransportDatagramsWritable` interface provides the `sendGroup` property that indicates the group of streams and datagrams that this stream belongs to, and the `sendOrder` property that indicates the relative priority of this stream within that group.
 Within a group, bytes queued on higher-priority streams and datagrams are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 

@@ -16,22 +16,26 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 ## Instance methods
 
 - {{domxref("WebTransportSendGroup.getStats", "getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
 
 ## Description
 
 Unlike for {{domxref("WritableStream")}} instances, for which the priority at which bytes are sent on different streams is implementation-dependent, a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} allows you to set the priority at which bytes will be sent on each instance relative to others in the same `sendGroup`.
 A send group is created using the {{domxref("WebTransport.createSendGroup", "createSendGroup()")}} method, and the relative priority is defined by the `sendOrder` property of `WebTransportDatagramsWritable` or `WebTransportSendStream` instances.
-Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though again the precise way bandwidth is divided between groups depends on the implementation.
+Different groups are expected to be treated as equals during bandwidth allocation — though again, the precise way bandwidth is divided between groups depends on the implementation.
 
 A `WebTransportSendGroup` is created using the `createSendGroup()` method of the {{domxref("WebTransport")}} interface.
-You can then associate it with a `WebTransportDatagramsWritable` or `WebTransportSendStream` by passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} — or by setting the object's `sendGroup` property afterwards, for example {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
+You can then associate it with a `WebTransportDatagramsWritable` or `WebTransportSendStream` by:
+
+ - Passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
+ - Setting the object's `sendGroup` property afterwards, for example using {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 ## Examples
 
 ### Basic usage
 
-The example below creates a send group, then associates a unidirectional stream and the connection's outgoing datagram stream with it, giving each a `sendOrder` so that their relative priority can be compared:
+The example below creates a send group, then associates a unidirectional stream and the connection's outgoing datagram stream with it, giving each a `sendOrder`.
+Bytes on the datagram stream will be prioritized ahead of any bytes on the unidirectional stream, because they are both in the same `sendGroup` and the datagram stream has a higher `sendOrder`.
 
 ```js
 const sendGroup = transport.createSendGroup();
@@ -45,9 +49,6 @@ const datagrams = transport.datagrams.createWritable({
   sendGroup,
   sendOrder: 2,
 });
-
-// Queued bytes for datagrams are sent ahead of those for stream, as the
-// two share a send group and datagrams has been given the higher sendOrder.
 ```
 
 ## Specifications

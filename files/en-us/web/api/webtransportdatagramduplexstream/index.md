@@ -29,7 +29,7 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
   - : Gets or sets the maximum age for outgoing datagrams, in milliseconds. Returns `null` if no maximum age has been set.
 - {{domxref("WebTransportDatagramDuplexStream.readable", "readable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ReadableStream")}} instance that can be used to read incoming datagrams from the stream.
-- {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a {{domxref("WritableStream")}} instance that can be used to write outgoing datagrams to the stream.
 
 ## Instance methods
@@ -48,7 +48,7 @@ Otherwise, it falls back to the {{domxref("WebTransportDatagramDuplexStream/writ
 const writableStream =
   typeof transport.datagrams.createWritable === "function"
     ? transport.datagrams.createWritable()
-    : transport.datagrams.writable; // Deprecated and non-standard.
+    : transport.datagrams.writable; // Deprecated and non-standard
 
 const writer = writableStream.getWriter();
 const data1 = new Uint8Array([65, 66, 67]);

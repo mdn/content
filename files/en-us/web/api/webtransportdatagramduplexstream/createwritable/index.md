@@ -58,7 +58,7 @@ This code shows how you can use the `createWritable()` method to get a `WebTrans
 
 First we define a function to wrap our stream creation code.
 This first constructs a `WebTransport`, and uses it with `createWritable()` to create a writable stream.
-Note that because `createWritable()` is not supported on all browsers, the code falls back to the {{domxref("WebTransportDatagramDuplexStream/writable", "writable")}} property for creating the writable.
+Note that because `createWritable()` is not supported on all browsers, the code falls back to the {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}} property for creating the writable.
 
 `getWriter()` is then called on `writable` to create a writer.
 Because datagram delivery is unreliable, queued outgoing datagrams that aren't sent in time are dropped.

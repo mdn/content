@@ -8,7 +8,7 @@ browser-compat: api.WebTransportSendGroup.getStats
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`getStats()`** method of the {{domxref("WebTransportSendGroup")}} interface returns a {{jsxref("Promise")}} that resolves to an object that contains statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects that are currently associated with this group.
+The **`getStats()`** method of the {{domxref("WebTransportSendGroup")}} interface returns a {{jsxref("Promise")}} that resolves to an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
 That is, every stream and datagram writable whose `sendGroup` is set to this `WebTransportSendGroup`.
 
 ## Syntax
@@ -42,7 +42,7 @@ The returned object has the following properties:
 
 ### Basic usage
 
-The code snippet below uses `await` to wait on the {{jsxref("Promise")}} returned by `getStats()`, then logs the number of bytes that have been sent across the group's members but not yet acknowledged:
+The code snippet below uses [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) to wait on the {{jsxref("Promise")}} returned by `getStats()`, then logs the number of bytes that have been sent across the group's members but not yet acknowledged:
 
 ```js
 const stats = await sendGroup.getStats();

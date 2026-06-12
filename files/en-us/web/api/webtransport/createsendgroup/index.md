@@ -37,7 +37,10 @@ The `WebTransportSendGroup` is used to group together streams and datagrams crea
 Within the same group, bytes on higher-priority streams and datagrams are sent before bytes from lower-priority ones.
 
 The returned `WebTransportSendGroup` is not initially associated with any streams or datagrams.
-You can associate it with a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} by passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} — or by setting the object's `sendGroup` property afterwards — see `WebTransportSendStream.sendGroup` and {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
+You can associate it with a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} object in a couple of different ways:
+
+- By passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
+- By setting the object's `sendGroup` property afterwards — see `WebTransportSendStream.sendGroup` and {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 
