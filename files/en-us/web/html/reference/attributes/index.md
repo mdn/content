@@ -101,7 +101,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         All elements
       </td>
       <td>
-        Modifies an element's state or properties in the accessibility tree. Applicability depends on the specific <a href="/en-US/docs/Web/Accessibility/ARIA/">ARIA</a> attribute.
+        Modifies an element's state or properties in the accessibility tree. Applicability depends on the specific <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> attribute.
       </td>
     </tr>
     <tr>
