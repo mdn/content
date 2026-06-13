@@ -73,6 +73,8 @@ You may imagine that we can connect switches together infinitely, to form a netw
 
 In reality, this leads to many engineering problems. The more switches a packet has to go through, the longer it takes to reach its destination. And you can't have just a tree of switches, because then a single switch failure may disconnect a large portion of devices. To solve this problem, we keep each local network as small as possible, and we connect these local networks using a separate device called a _router_. A router is a computer that knows how to forward messages between networks. The router is like a post office: when a packet arrives, it reads the recipient address and forwards the packet to the right recipient directly, without going through layers of relays.
 
+Switches and routers do different jobs rather than one replacing the other. On a local network, a switch forwards frames to the correct device using link-layer addresses (MAC addresses). A router connects separate networks and forwards packets between them using network-layer addresses (IP addresses). That is why large internetworks use routers to link many smaller switched local networks instead of trying to scale a single flat switched network indefinitely.
+
 Such a network comes very close to what we call the Internet. We just need the physical medium (cables) to connect all these routers. Luckily, such an infrastructure already existed prior to the Internet, and that's the telephone network. To connect our network to the telephone infrastructure, we need a special piece of equipment called a _modem_. This _modem_ turns the information from our network into information manageable by the telephone infrastructure and vice versa.
 
 ![A router linked to a modem](internet-schema-6.png)
