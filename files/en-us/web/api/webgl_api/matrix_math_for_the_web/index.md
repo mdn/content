@@ -18,8 +18,8 @@ Let's begin by considering the **identity matrix**. This is a special transforma
 
 The identity matrix looks like this in JavaScript:
 
+<!-- prettier-ignore -->
 ```js
-// prettier-ignore
 const identityMatrix = [
   1, 0, 0, 0,
   0, 1, 0, 0,
@@ -47,6 +47,7 @@ The `w` component has some additional uses that are out of scope for this articl
 
 In our example code we have defined a function to multiply a matrix and a point — `multiplyMatrixAndPoint()`:
 
+<!-- prettier-ignore -->
 ```js live-sample___translation_matrix_ex live-sample___scale_matrix_ex live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 // point • matrix
 function multiplyMatrixAndPoint(matrix, point) {
@@ -140,12 +141,23 @@ function multiplyMatrices(matrixA, matrixB) {
   const result3 = multiplyMatrixAndPoint(matrixA, row3);
 
   // Turn the result rows back into a single matrix
-  // prettier-ignore
   return [
-    result0[0], result0[1], result0[2], result0[3],
-    result1[0], result1[1], result1[2], result1[3],
-    result2[0], result2[1], result2[2], result2[3],
-    result3[0], result3[1], result3[2], result3[3],
+    result0[0],
+    result0[1],
+    result0[2],
+    result0[3],
+    result1[0],
+    result1[1],
+    result1[2],
+    result1[3],
+    result2[0],
+    result2[1],
+    result2[2],
+    result2[3],
+    result3[0],
+    result3[1],
+    result3[2],
+    result3[3],
   ];
 }
 
@@ -159,8 +171,8 @@ function multiplyArrayOfMatrices(matrices) {
 
 Let's look at this function in action:
 
+<!-- prettier-ignore -->
 ```js
-// prettier-ignore
 const someMatrix = [
   4, 0, 0, 0,
   0, 3, 0, 0,
@@ -168,7 +180,6 @@ const someMatrix = [
   4, 8, 4, 1,
 ];
 
-// prettier-ignore
 const identityMatrix = [
   1, 0, 0, 0,
   0, 1, 0, 0,
@@ -189,9 +200,9 @@ A **translation matrix** is based upon the identity matrix, and is used in 3D gr
 
 You can't actually drink the coffee using only a translation matrix, because to drink it, you have to be able to tilt or rotate the cup to pour the coffee into your mouth. We'll look at the type of matrix (cleverly called a **[rotation matrix](#rotation_matrix)**) you use to do this later.
 
+<!-- prettier-ignore -->
 ```js live-sample___translation_matrix_ex live-sample___matrix_composition_ex
 function translate(x, y, z) {
-  // prettier-ignore
   return [
     1, 0, 0, 0,
     0, 1, 0, 0,
@@ -287,9 +298,9 @@ A **scale matrix** makes something larger or smaller in one or more of the three
 
 The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.
 
+<!-- prettier-ignore -->
 ```js live-sample___scale_matrix_ex live-sample___matrix_composition_ex
 function scale(x, y, z) {
-  // prettier-ignore
   return [
     x, 0, 0, 0,
     0, y, 0, 0,
@@ -333,12 +344,12 @@ const transformedPoint = [
 
 It is possible to encode these type of steps into a matrix, and do it for each of the `x`, `y`, and `z` dimensions. Here are a set of functions that return rotation matrices for rotating around each of the three axes. One big note is that there is no perspective applied, so it might not feel very 3D yet. The flatness is equivalent to when a camera zooms in really close onto an object in the distance — the sense of perspective disappears.
 
+<!-- prettier-ignore -->
 ```js live-sample___rotation_matrix_ex live-sample___matrix_composition_ex
 const sin = Math.sin;
 const cos = Math.cos;
 
 function rotateX(a) {
-  // prettier-ignore
   return [
     1, 0, 0, 0,
     0, cos(a), -sin(a), 0,
@@ -348,7 +359,6 @@ function rotateX(a) {
 }
 
 function rotateY(a) {
-  // prettier-ignore
   return [
     cos(a), 0, sin(a), 0,
     0, 1, 0, 0,
@@ -358,7 +368,6 @@ function rotateY(a) {
 }
 
 function rotateZ(a) {
-  // prettier-ignore
   return [
     cos(a), -sin(a), 0, 0,
     sin(a), cos(a), 0, 0,
