@@ -33,6 +33,7 @@ observe(targetElement)
 - `targetElement`
   - : An {{domxref("element")}} whose visibility within the root is to be monitored.
     This element must be a descendant of the root element (or contained within the current document, if the root is the document's viewport).
+    If this element is already being observed, this method does nothing.
 
 ### Return value
 
