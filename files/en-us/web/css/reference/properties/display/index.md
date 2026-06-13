@@ -168,6 +168,8 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes`
       - : The element behaves like a block-level element and lays out its content using masonry (grid-lanes) layout. One axis follows a strict grid while the other uses masonry stacking. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
+    - `inline-grid-lanes`
+      - : The element behaves like an inline-level element and lays out its content using masonry (grid-lanes) layout. One axis follows a strict grid while the other uses masonry stacking. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
@@ -422,6 +424,8 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
     <option>inline flex</option>
     <option>inline-grid</option>
     <option>inline grid</option>
+    <option>grid-lanes</option>
+    <option>inline-grid-lanes</option>
   </select>
 </div>
 ```
