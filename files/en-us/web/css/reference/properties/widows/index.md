@@ -43,6 +43,14 @@ widows: unset;
 
 ### Controlling column widows
 
+This example shows three columns with a widows value of `2`.
+So supporting browsers will avoid wrapping if not enough space is left for 2 lines:
+
+![3 paragraphs rendered side-by-side in 3 columns. Each column has space for 4 rendered lines of text. The first paragraph requires 2 lines. Despite having space for 1 line left in the first column, the second paragraph does not start until the second column. The third paragraph exclusively occupies the third column.](with.png)
+
+This prevents breaking off a small number of lines like here:
+![Similar image with 3 paragraphs. This time the second paragraph starts at the end of the first column. The first column contains 1 line of text of the second paragraph while the second column contains the remainder of the text.](without.png)
+
 #### HTML
 
 ```html
