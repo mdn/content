@@ -25,6 +25,8 @@ showNotification(title, options)
   - : Defines a title for the notification, which is shown at the top of the notification window.
 - `options` {{optional_inline}}
   - : An options object containing any custom settings that you want to apply to the notification.
+    Notification UIs and support for visual options vary by platform, so browsers may display, crop, transform, or ignore `badge`, `icon`, and `image` values differently.
+    Do not rely on these values as the only way to communicate important information.
     The possible options are:
     - `actions` {{optional_inline}} {{experimental_inline}}
       - : An array of actions to display in the notification, for which the default is an empty array.
@@ -44,7 +46,8 @@ showNotification(title, options)
             See {{domxref("Notification.navigate")}} for more information.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
+      - : A string containing the URL of an image that represents the web application or notification category when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
+        A badge may also be shown inside the notification, but should have less visual priority than the `image` and `icon`.
         On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
@@ -57,9 +60,11 @@ showNotification(title, options)
       - : The direction in which to display the notification.
         It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
-      - : A string containing the URL of an icon to be displayed in the notification.
+      - : A string containing the URL of an icon to be displayed in the notification, such as an app icon or a sender's photo.
+        Use this to reinforce the notification's source or context.
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of an image to be displayed in the notification.
+      - : A string containing the URL of an image to be displayed as part of the notification's content, such as a preview image for a message or article.
+        An `image` usually has higher visual priority than the `icon` and `badge`, although it may be displayed in fewer circumstances.
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
         The default is the empty string.
