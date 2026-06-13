@@ -8,6 +8,8 @@ sidebar: addonsidebar
 
 Returns the icons supported by the browser for contextual identities.
 
+For Firefox 153 and later, use this method instead of hardcoding icon names in your extension. While the supported icons haven't changed since the introduction of contextual identities, using this method ensures your extension remains compatible with any changes.
+
 These icon names are supported:
 
 - `"briefcase"`
