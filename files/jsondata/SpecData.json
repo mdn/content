@@ -1005,9 +1005,9 @@
     "status": "REC"
   },
   "HTML Sanitizer API": {
-    "name": "HTML Sanitizer API",
-    "url": "https://wicg.github.io/sanitizer-api/",
-    "status": "WD"
+    "name": "HTML Living Standard",
+    "url": "https://html.spec.whatwg.org/multipage/#html-sanitization",
+    "status": "Living"
   },
   "HTML WHATWG": {
     "name": "HTML Living Standard",

@@ -89,7 +89,7 @@ const serializedHTML = div.innerHTML; // Serialized as a plain string
 other_div.setHTML(serializedHTML); // Safe — re-sanitized by setHTML()
 ```
 
-There is a class of attacks that take advantage of this flaw, referred to as [mutated XSS](https://wicg.github.io/sanitizer-api/#mutated-xss).
+There is a class of attacks that take advantage of this flaw, referred to as [mutated XSS](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#sanitizer-security-mxss).
 The simple rule to avoid this problem is to only ever inject HTML strings using safe methods such as `setHTML()`.
 
 ## Examples
