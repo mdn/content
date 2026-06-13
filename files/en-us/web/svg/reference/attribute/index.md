@@ -329,10 +329,23 @@ The XLink attributes can reference resources.
 
 ### Presentation attributes
 
-All SVG presentation attributes can be used as CSS properties.
+SVG presentation attributes are SVG attributes that can also be used as CSS properties on SVG elements.
+They set CSS property values on an element and are applied as author-level style rules with specificity `0`, so other author styles in a stylesheet or {{SVGAttr("style")}} attribute can override them.
+Presentation attribute values are parsed as CSS values, not declarations, so they cannot contain `!important`.
 
 > [!NOTE]
 > Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelement("circle")}}, but not for {{svgelement("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+
+#### Geometry properties
+
+Geometry properties describe the position and dimensions of some SVG elements.
+They are a subset of presentation attributes, but their attribute form is only a presentation attribute on the elements for which the matching CSS property applies.
+For example, {{SVGAttr("x")}} is a geometry property for {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("svg")}}, but not for {{SVGElement("text")}} or {{SVGElement("tspan")}}.
+
+Geometry properties are not inherited.
+Setting a geometry property on a container element, such as {{SVGElement("g")}}, has no effect on that element's children.
+
+SVG geometry properties include {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}, and {{cssxref("d")}}.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
