@@ -222,7 +222,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - `loopback`
       - : The request is to a loopback address, which is only accessible on the local device; its target will differ on every device. For example, `127.0.0.1`, which is generally known as `localhost`.
     - `public`
-      - : The request is to an address available from anywhere on the internet; its target is the same for all devices globally. 
+      - : The request is to an address available from anywhere on the internet; its target is the same for all devices globally.
 
     See [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access) for more information.
 
