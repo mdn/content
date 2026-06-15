@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.
 
-Early versions of the specification called this property `grid-row-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-row-gap` as an alias for `row-gap`.
-
 {{InteractiveExample("CSS Demo: row-gap")}}
 
 ```css interactive-example-choice
@@ -60,14 +58,16 @@ row-gap: 20px;
 ## Syntax
 
 ```css
-/* <length> values */
+/* keyword value */
+row-gap: normal;
+
+/* <length-percentage> value */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
-
-/* <percentage> value */
 row-gap: 10%;
+row-gap: calc(10% - 6px);
 
 /* Global values */
 row-gap: inherit;
@@ -79,8 +79,25 @@ row-gap: unset;
 
 ### Values
 
-- `<length-percentage>`
-  - : Is the width of the gutter separating the rows. {{CSSxRef("&lt;percentage&gt;")}} values are relative to the dimension of the element.
+- `normal`
+  - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : The size of the gap between rows, as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : The size of the gap between rows, defined as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value.
+
+## Description
+
+The `row-gap` property sets the size of the gap between an element's rows.
+This gap may contain a visible separator as a gap decoration. If there is a rule between rows, it will appear in the middle of the gap, but has no impact on the gap size. These decorative lines can be added to the otherwise "empty space" by using the {{cssxref("row-rule")}} property or {{cssxref("rule")}} shorthand..
+
+Defined in [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps), the property can be used in multi-column, flexible box, and grid layouts. It replaced the `grid-row-gap` property, which was limited to [CSS grid layouts](/en-US/docs/Web/CSS/Guides/Grid_layout). Now `grid-row-gap` is an alias for `row-gap`.
+
+The property specifies a fixed-length gutter between items in a container, separating boxes in the container's block axis. Negative values are invalid. The default value `normal` resolves to `1em` on multi-column containers, and `0` everywhere else.
+
+Percentages resolve against the are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's block axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
+
+In grid layouts, the effect of the gap is as though the grid lines between grid rows acquired the thickness of the property's value: the grid track between two rows is the space between the gutters that represent them. When it comes to track sizing, each gutter is treated as an extra, empty, fixed-size track of the specified size, which is spanned by any grid items that spans across more than one row. While treated as empty for sizing, the gap created may contain a {{cssxref("row-rule")}}.
 
 ## Formal definition
 
@@ -179,3 +196,4 @@ row-gap: unset;
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
