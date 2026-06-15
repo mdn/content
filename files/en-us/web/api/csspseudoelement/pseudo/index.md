@@ -3,10 +3,12 @@ title: "CSSPseudoElement: pseudo() method"
 short-title: pseudo()
 slug: Web/API/CSSPseudoElement/pseudo
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.pseudo
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`pseudo()`** method of the {{domxref("CSSPseudoElement")}} interface returns a `CSSPseudoElement` instance representing a specific [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements).
 
