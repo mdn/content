@@ -597,7 +597,7 @@ This allows Firefox users to display images that render on some other browsers, 
 
 #### JPEG XL support
 
-Firefox supports the [JPEG XL](https://jpeg.org/jpegxl/) image format, which generally provides better compression than WebP, JPEG, PNG, and GIF and is designed to supersede them.
+Firefox supports the [JPEG XL](https://jpeg.org/jpegxl/) image format, a modern successor to JPEG that offers improved compression and image quality, along with new capabilities such as transparency, animation, and HDR support.
 See [Firefox bug 1539075](https://bugzil.la/1539075) and [Firefox bug 2016688](https://bugzil.la/2016688) for more details.
 
 In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
