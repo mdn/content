@@ -180,7 +180,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{cssxref("place-items")}}
 - {{cssxref("place-self")}}
 
-[CSS gap](/en-US/docs/Web/CSS/Guides/Gap) module
+[CSS gap](/en-US/docs/Web/CSS/Guides/Gaps) module
 
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}

@@ -319,7 +319,7 @@ blockquote p::after {
 
 ## Related concepts
 
-[CSS gap](/en-US/docs/Web/CSS/Guides/Gap) module
+[CSS gap](/en-US/docs/Web/CSS/Guides/Gaps) module
 
 - {{cssxref("column-rule")}} shorthand
   - {{cssxref("column-rule-color")}}
