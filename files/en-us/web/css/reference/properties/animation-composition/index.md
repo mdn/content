@@ -129,24 +129,14 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  20%,
-  40% {
-    transform: translateX(100px);
-    background: yellow;
-  }
-  80%,
-  100% {
+  to {
     transform: translateX(150px);
-    background: orange;
   }
 }
 
 .target {
   transform: translateX(30px) rotate(45deg);
   animation: slide 5s linear infinite;
-}
-.target:hover {
-  animation-play-state: paused;
 }
 #replace {
   animation-composition: replace;
@@ -163,9 +153,9 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(30px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 20% mark. This is the default behavior.
-- With `add`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(30px) rotate(45deg) translateX(100px)`. So the element is first moved 30px to the right, rotated 45deg in place, then moved by 100px along the rotated X axis.
-- With `accumulate`, the final effect value in the `20%, 40%` keyframe is `translateX(130px) rotate(45deg)`. This means that the two X-axis translation values of `30px` and `100px` are combined or "accumulated".
+- With `replace`, at the end of the animation, the keyframe's `transform` property will entirely replace that of the original. Therefore, the final effect value for the `transform` property at the end of the animation would simply be `translateX(150px)`. The target animates from `transform: translateX(30px) rotate(45deg)` to `transform: translateX(150px)`.
+- With `add`, the final effect value would be the current `transform` property with the keyframe's `transform` added to it, meaning the target animates to `transform: translateX(30px) rotate(45deg) translateX(150px)`.
+- With `accumulate`, the keyframe's `translateX(150px)` will accumulate with the current `translateX(30px)`, resulting in `translateX(180px)` and the rotation left untouched. The target therefore animates to a final effect value of `transform: translateX(180px) rotate(45deg)`.
 
 ## Specifications
 
