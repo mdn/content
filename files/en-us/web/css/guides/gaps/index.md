@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-The **CSS gaps** module lets specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts, along with the decorating separators within those gaps.
+The **CSS gaps** module lets specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts. The [CSS multi-column layout]() module originally defined gaps and rules controlling the spacing between columns in multi-column containers. This module expands on these visible separators, called _gap decorations_, enabling the application to grid.
 
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
@@ -274,12 +274,8 @@ function setColSpan(control, element) {
 ```css hidden live-sample___multicol
 article {
   column-count: 5;
-  column-width: 8em;
-  widows: 3;
-  orphans: 3;
   gap: 1em;
-  column-rule: 0.25em dashed #666666;
-  height: 50em;
+  column-rule: 0.25em dashed currentcolor;
 }
 .title {
   column-span: all;
