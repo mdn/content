@@ -7,7 +7,7 @@ browser-compat: webassembly.table.init
 sidebar: webassemblysidebar
 ---
 
-The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) manually copies the element references from a passive [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table).
+The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) manually copies the references from a passive [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table).
 
 {{InteractiveExample("Wat Demo: table.init", "tabbed-taller")}}
 
@@ -46,7 +46,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 });
 ```
 
-In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two function. We then invoke `table.init` to copy the function references from the `$funcs` `elem` over to the `table`.
+In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`.
 
 ## Syntax
 
@@ -58,16 +58,16 @@ table.init table_identifier elem_identifier
   - : The `table.init` instruction type. Must always be included first.
 
 - `table_identifier` {{optional_inline}}
-  - : The identifier for the `table` you want to insert the function references into. This can be one of the following:
+  - : The identifier for the `table` you want to insert the references into. This can be one of the following:
     - `name`
       - : An identifying name [set for the `table`](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first defined. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
       - : The `table`'s index number, for example `0` for the first `table` in the wasm module, `1` for the second, etc.
 
-    If ommitted, `table_identifier` defaults to `0`.
+    If omitted, `table_identifier` defaults to `0`.
 
 - `elem_identifier`
-  - : The identifier for the `elem` you want to get the function references from to insert. This can be one of the following:
+  - : The identifier for the `elem` you want to get the references from to insert. This can be one of the following:
     - `name`
       - : An identifying name [set for the `elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem#name) when it was first defined. This must begin with a `$` symbol, for example `$my_elem`.
     - `index`
@@ -80,11 +80,19 @@ table.init table_identifier elem_identifier
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the table index to start copying the element references at.
+  - : An integer representing the table index to start copying the element references at. This will be an [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) or an [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64), to match the [`index_type`](/en-US/docs/WebAssembly/Reference/Definitions/table#index_type) the `table` was defined with.
 - `source_offset`
   - : An `i32` representing the starting offset in the `elem` [`element_list`](/en-US/docs/WebAssembly/Reference/Definitions/elem#element_list) to start copying the element references from.
 - `length`
-  - : An `i32` representing the number of function references to copy.
+  - : An `i32` representing the number of references to copy.
+
+### Traps
+
+The `table.init` instruction traps if:
+
+- The `dest_offset` plus the `length` exceeds the size of the `table`.
+- The [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) instruction was previously called on the [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) segment referenced in [`elem_identifier`](#elem_identifier).
+- The `dest_offset`, `source_offset`, or `length` values are negative or invalid types.
 
 ### Binary encoding
 

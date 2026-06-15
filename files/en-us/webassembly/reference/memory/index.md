@@ -10,7 +10,7 @@ WebAssembly memory instructions.
 - [`copy`](/en-US/docs/WebAssembly/Reference/Memory/copy)
   - : Copies data from one [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) region to another.
 - [`fill`](/en-US/docs/WebAssembly/Reference/Memory/fill)
-  - : Set all values in a region to a specific byte.
+  - : Sets all values in a region to a specific byte.
 - [`grow`](/en-US/docs/WebAssembly/Reference/Memory/grow)
   - : Increases the size of the memory instance.
 - [`init`](/en-US/docs/WebAssembly/Reference/Memory/init)

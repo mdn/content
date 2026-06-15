@@ -18,7 +18,7 @@ This set of pages details the top-level module definition features available in 
 - [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data)
   - : Defines a segment of bytes that can be copied into linear memory.
 - [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem)
-  - : Declares a series of function references that can be copied into a Wasm `table`.
+  - : Declares a series of references that can be copied into a Wasm `table`.
 - [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
   - : Creates a new global.
 - [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory)

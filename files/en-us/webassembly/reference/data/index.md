@@ -11,7 +11,7 @@ This set of pages details the instructions available in Wasm related to [data](/
 ## Instructions
 
 - [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop)
-  - : Discards the data contained by a passive `data` definition, freeing up its memory, after the associated `memory` has been initialized via [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
+  - : Discards the data contained by a passive `data` definition, freeing up its memory, after being used in a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
 
 ## Specifications
 

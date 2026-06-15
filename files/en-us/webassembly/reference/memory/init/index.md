@@ -19,7 +19,7 @@ The **`memory.init`** [memory instruction](/en-US/docs/WebAssembly/Reference/Mem
   (func (export "init")
     i32.const 0       ;; destination offset in memory
     i32.const 0       ;; offset into the data segment
-    i32.const 11       ;; number of bytes to copy
+    i32.const 11      ;; number of bytes to copy
     memory.init $greeting
   )
 )
@@ -54,7 +54,7 @@ memory.init memory_identifier data_identifier
     - `index`
       - : The `memory`'s index number, for example `0` for the first `memory` in the wasm module, `1` for the second, etc.
 
-    If ommitted, `memory_identifier` defaults to `0`.
+    If omitted, `memory_identifier` defaults to `0`.
 
 - `data_identifier`
   - : The identifier for the `data` definition you want to copy data from. This can be one of the following:
@@ -70,11 +70,19 @@ memory.init memory_identifier data_identifier
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the byte offset in memory to write to.
+  - : An integer representing the offset to start writing the copied data to, in the destination memory. This will be an [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) or an [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64), to match the [`address_type`](/en-US/docs/WebAssembly/Reference/Definitions/memory#address_type) the `memory` was defined with.
 - `source_offset`
   - : An `i32` representing the byte offset in the `data` segment to start reading data from.
 - `length`
   - : An `i32` representing the number of bytes to copy.
+
+### Traps
+
+The `memory.init` instruction traps if:
+
+- The `dest_offset` plus the `length` exceeds the size of the `memory`.
+- The [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop) instruction was previously called on the [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) segment referenced in [`data_identifier`](#data_identifier).
+- The `dest_offset`, `source_offset`, or `length` values are negative or invalid types.
 
 ### Binary encoding
 

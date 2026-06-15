@@ -12,19 +12,20 @@ sidebar: webassemblysidebar
 
 The **`memory.copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) copies data from one [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) region to another.
 
+This is analogous to [`memmove`](https://en.cppreference.com/cpp/string/byte/memmove) in C.
+
 {{InteractiveExample("Wat Demo: memory.copy", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
-  (memory $memory1 1)
-  (memory $memory2 (export "memory") 1)
-  (data $greeting (memory $memory1) (i32.const 0) "Hello World")
+  (memory $memory1 (export "memory") 1)
+  (data $greeting (memory $memory1) (i32.const 0) "Hello ")
 
   (func (export "copy")
-    i32.const 0       ;; destination memory offset
-    i32.const 6       ;; source memory offset
+    i32.const 6      ;; destination memory offset
+    i32.const 0      ;; source memory offset
     i32.const 5      ;; number of bytes to copy
-    memory.copy $memory2 $memory1
+    memory.copy
   )
 )
 ```
@@ -33,17 +34,17 @@ The **`memory.copy`** [memory instruction](/en-US/docs/WebAssembly/Reference/Mem
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
   result.instance.exports.copy();
   const memBuffer = result.instance.exports.memory.buffer;
-  const memArray = new Uint8Array(memBuffer, 0, 5);
+  const memArray = new Uint8Array(memBuffer, 0, 11);
   console.log(new TextDecoder().decode(memArray));
 });
 ```
 
-In the above example, we define two memories: `$memory1` and `$memory2`, both with a maximum size of one page. The second memory is exported. We then include:
+In the above example, we define an exported memory called `$memory1` with a maximum size of one page. We then include:
 
-- A [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition that contains the string "Hello World" and immediately copies the entire string into `$memory1`.
-- An exported `copy()` function that copies the string "World" from `$memory1` into `$memory2`.
+- A [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition that contains the string "Hello " and immediately copies it into `$memory1`.
+- An exported `copy()` function that copies the string "Hello" starting from byte `0` in `$memory1` to a region starting at byte 6 in `$memory1`. This results in the memory contents becoming "Hello Hello".
 
-In the JavaScript, we call the `copy()` function to populate the exported memory with data, then decode the exported memory's buffer and log the result to the console.
+In the JavaScript, we call the `copy()` function to update the exported memory's contents, then decode the exported memory's buffer and log the result to the console.
 
 ## Syntax
 
@@ -74,15 +75,18 @@ If `dest_memory` or `source_memory` are omitted, they default to `0`.
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the offset to start writing the copied data to, in the destination memory.
+  - : An integer representing the offset to start writing the copied data to, in the destination memory. This will be an [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) or an [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64), to match the [`address_type`](/en-US/docs/WebAssembly/Reference/Definitions/memory#address_type) the `memory` was defined with.
 - `source_offset`
-  - : An `i32` representing the offset to start copying data from, in the source memory.
+  - : An integer representing the offset to start copying data from, in the source memory. This will be an `i32` or an `i64`, to match the `address_type` the `memory` was defined with.
 - `length`
-  - : An `i32` representing the number of bytes to copy.
+  - : An integer representing the number of bytes to copy. This will be an `i32` or an `i64`, to match the `address_type` the `memory` was defined with. When copying between a 32-bit and 64-bit memory, an `i32` must be used for the `length`.
+
+> [!NOTE]
+> `memory.copy` copies memory regions in an overlap-aware way. In other words, the source data identified by `source_offset` and `length` is first copied into a temporary value before being copied starting at `dest_offset`, meaning that if your source and destination data overlap, they don't interfere with one another and the source is cleanly copied into the destination region as expected.
 
 ### Traps
 
-If the source or destination offset are out of bounds, the instruction traps.
+If any copied byte would be out of bounds in the source or destination, the instruction traps.
 
 ### Binary encoding
 

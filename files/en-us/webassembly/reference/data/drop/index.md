@@ -7,7 +7,7 @@ browser-compat: webassembly.data.drop
 sidebar: webassemblysidebar
 ---
 
-The **`data.drop`** [data instruction](/en-US/docs/WebAssembly/Reference/Data) discards the data contained by a passive `data` definition, freeing up its memory, after the associated `memory` has been initialized via [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
+The **`data.drop`** [data instruction](/en-US/docs/WebAssembly/Reference/Data) discards the data contained by a passive `data` definition, freeing up its memory, after being used in a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
 
 {{InteractiveExample("Wat Demo: data.drop", "tabbed-taller")}}
 

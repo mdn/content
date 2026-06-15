@@ -51,7 +51,7 @@ In the above example, we define two tables: `$first_table` with a capacity of tw
 
 We then define two exported functions:
 
-- `copy()`, which uses a `table.copy` instruction to copy the two function references from `$first_table` into the second and third element slots of `$second_table`.
+- `copy()`, which uses a `table.copy` instruction to copy the two references from `$first_table` into the second and third element slots of `$second_table`.
 - `accessTable()`, which calls (via `call_indirect`) the element referenced in `$second_table` in the slot number equal to the function's parameter. It then returns the value returned by the called function.
 
 In the JavaScript, we call the two Wasm functions, then log the value returned from `accessTable()` to the console, which is equal to the return value of the function stored in the third slot of `$second_table`.
@@ -65,9 +65,9 @@ table.copy dest_table source_table
 - `table.copy`
   - : The `table.copy` instruction type. Must always be included first.
 - `dest_table` {{optional_inline}}
-  - : The identifier for the `table` you want to copy the function references into.
+  - : The identifier for the `table` you want to copy the references into.
 - `source_table` {{optional_inline}}
-  - : The identifier for the `table` you want to copy the function references from.
+  - : The identifier for the `table` you want to copy the references from.
 
 `dest_table` and `source_table` can be one of the following:
 
@@ -85,15 +85,15 @@ If `dest_table` or `source_table` are omitted, they default to `0`.
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the offset to start writing the copied element references to, in the destination table.
+  - : An integer representing the offset to start writing the copied element references to, in the destination table. This will be an [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) or an [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64), to match the [`index_type`](/en-US/docs/WebAssembly/Reference/Definitions/table#index_type) the `table` was defined with.
 - `source_offset`
-  - : An `i32` representing the offset to start copying element references from, in the source table.
+  - : An integer representing the offset to start copying element references from, in the source table. This will be an `i32` or an `i64`, to match the `index_type` the `table` was defined with.
 - `length`
-  - : An `i32` representing the number of function references to copy.
+  - : An integer representing the number of references to copy. This will be an `i32` or an `i64`, to match the `index_type` the `table` was defined with. When copying between a 32-bit index table and a 64-bit index table, an `i32` must be used for the `length`.
 
 ### Traps
 
-If the source or destination offset are out of bounds, the instruction traps.
+If any copied element reference would be out of bounds in the source or destination, the instruction traps.
 
 ### Binary encoding
 

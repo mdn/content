@@ -7,7 +7,7 @@ browser-compat: webassembly.elem.drop
 sidebar: webassemblysidebar
 ---
 
-The **`elem.drop`** [elem instruction](/en-US/docs/WebAssembly/Reference/Elem) discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) `elem` segment, freeing up its memory, after the associated `table` has been initialized via [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init).
+The **`elem.drop`** [elem instruction](/en-US/docs/WebAssembly/Reference/Elem) discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) `elem` segment, freeing up its memory, after being used in a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init).
 
 {{InteractiveExample("Wat Demo: elem.drop", "tabbed-taller")}}
 
@@ -48,7 +48,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 });
 ```
 
-In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two function. We then invoke `table.init` to copy the function references from the `$funcs` `elem` over to the `table`. With this done, the `elem` is no longer needed, so we call `elem.drop` to free up the memory it was using.
+In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`. With this done, the `elem` is no longer needed, so we call `elem.drop` to free up the memory it was using.
 
 ## Syntax
 

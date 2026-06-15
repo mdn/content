@@ -12,6 +12,8 @@ sidebar: webassemblysidebar
 
 The **`memory.fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
 
+This is analogous to [`memset`](https://en.cppreference.com/cpp/string/byte/memset) in C.
+
 {{InteractiveExample("Wat Demo: memory.fill", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -64,11 +66,11 @@ memory.fill dest_memory
 ```
 
 - `dest_offset`
-  - : An [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) representing the offset at which to start filling the memory.
+  - : An integer representing the offset at which to start filling the memory. This will be an [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32) or an [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64), to match the [`address_type`](/en-US/docs/WebAssembly/Reference/Definitions/memory#address_type) the `memory` was defined with.
 - `value`
-  - : An `i32` representing the value to fill the selected bytes with.
+  - : An `i32` representing the value to fill the selected bytes with. The `value` is truncated to 8 bits so it can be applied to each byte.
 - `length`
-  - : An `i32` representing the number of bytes to fill with the `value`.
+  - : An `i32` representing the number of bytes to fill with the `value`. This will be an `i32` or an `i64`, to match the `address_type` the `memory` was defined with.
 
 ### Traps
 

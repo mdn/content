@@ -11,7 +11,7 @@ This set of pages details the instructions available in Wasm related to [elem](/
 ## Instructions
 
 - [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop)
-  - : Discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) `elem` segment, freeing up its memory, after the associated `table` has been initialized via [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init).
+  - : Discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) `elem` segment, freeing up its memory, after being used in a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init).
 
 ## Specifications
 
