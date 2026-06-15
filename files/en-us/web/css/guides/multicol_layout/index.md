@@ -286,12 +286,7 @@ blockquote p::after {
 ### Properties
 
 - {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
-- {{cssxref("column-rule")}} shorthand
-  - {{cssxref("column-rule-color")}}
-  - {{cssxref("column-rule-style")}}
-  - {{cssxref("column-rule-width")}}
 - {{cssxref("columns")}} shorthand
   - {{cssxref("column-count")}}
   - {{cssxref("column-height")}}
@@ -323,6 +318,16 @@ blockquote p::after {
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 
 ## Related concepts
+
+[CSS gap](/en-US/docs/Web/CSS/Guides/Gap) module
+
+- {{cssxref("column-rule")}} shorthand
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("column-rule-style")}}
+  - {{cssxref("column-rule-width")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 
 [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
 

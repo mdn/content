@@ -22,15 +22,12 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("justify-self")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 - {{cssxref("place-self")}}
-- {{cssxref("row-gap")}}
 
 ### Data types
 
@@ -74,6 +71,12 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 - SVG {{SVGAttr("dominant-baseline")}} attribute
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}
+
+[CSS gap](/en-US/docs/Web/CSS/Guides/Gap) module
+
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 
 ## Specifications
 
