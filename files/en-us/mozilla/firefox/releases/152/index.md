@@ -147,3 +147,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
   The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
   ([Firefox bug 2024854](https://bugzil.la/2024854)).
+
+- **`<timeline-range-name>` values in `@keyframe` selectors**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1824875](https://bugzil.la/1824875)).
