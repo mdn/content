@@ -129,7 +129,10 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  to {
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
     transform: translateX(150px);
   }
 }
@@ -153,9 +156,17 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, at the end of the animation, the keyframe's `transform` property will entirely replace that of the original. Therefore, the final effect value for the `transform` property at the end of the animation would simply be `translateX(150px)`. The target animates from `transform: translateX(30px) rotate(45deg)` to `transform: translateX(150px)`.
-- With `add`, the final effect value would be the current `transform` property with the keyframe's `transform` added to it, meaning the target animates to `transform: translateX(30px) rotate(45deg) translateX(150px)`.
-- With `accumulate`, the keyframe's `translateX(150px)` will accumulate with the current `translateX(30px)`, resulting in `translateX(180px)` and the rotation left untouched. The target therefore animates to a final effect value of `transform: translateX(180px) rotate(45deg)`.
+- With `replace`, the `transform` property in each keyframe will entirely replace that of the original one. The final effect value for the `transform` property at the 50% keyframe would simply be `translateY(30px)` on its own, and at the 100% keyframe would be `translateX(150px)` on its own.
+
+  Therefore, the target starts at `transform: translateX(30px) rotate(45deg)` and effectively animates to `transform: translateY(30px)`, then to `transform: translateX(150px)`.
+
+- With `add`, the final effect value at each keyframe would be the original `transform` property with the new one added after.
+
+  Therefore, the target effectively animates to `transform: translateX(30px) rotate(45deg) translateY(30px)` then to `transform: translateX(30px) rotate(45deg) translateX(150px)`.
+
+- With `accumulate`, the the final effect value would be the keyframe's `transform` combined with the original. At 50%, `translateY(30px)` combines with the original `translateX(30px)` into a single translation. At 100%, the `translateX(150px)` combines with the original `translateX(30px)`.
+
+  Therefore, the target effectively animates to `transform: translate(30px, 30px) rotate(45deg)` then to `transform: translateX(180px) rotate(45deg)`.
 
 ## Specifications
 
