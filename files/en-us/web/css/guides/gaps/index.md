@@ -346,6 +346,8 @@ blockquote p::after {
 
 {{EmbedLiveSample("multicol", "", "800px")}}
 
+When the column rule is larger than the column gap, the decorative line appears behind the text; it doesn't change the size of the gap.
+
 ## Reference
 
 ### Properties
