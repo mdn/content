@@ -2,7 +2,7 @@
 title: CrashReport
 slug: Web/API/CrashReport
 page-type: web-api-interface
-browser-compat: api.ReportingObserver.ReportingObserver.options_parameter.types_property.crash
+browser-compat: http.headers.Reporting-Endpoints.default.receives_crash_type
 ---
 
 {{APIRef("Reporting API")}}

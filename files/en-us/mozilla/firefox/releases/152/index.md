@@ -121,9 +121,15 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Experimental web features
 
-These features are shipping in Firefox 152 but are disabled by default.
+These features are shipping in Firefox 152 but are disabled by default unless otherwise noted.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Crash Reporting API** (Nightly): `dom.reporting.crash.enabled`
+
+  The [Crash Reporting API](/en-US/docs/Web/API/CrashReport) is now supported.
+  This exposes {{domxref("Window.crashReport")}} and {{domxref("CrashReportContext")}}, allowing pages to store key-value diagnostic data that can be included in {{domxref("CrashReport")}} objects sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+  ([Firefox bug 2036160](https://bugzil.la/2036160)).
 
 - **Check if a media encoding/decoding configuration is supported for WebRTC**: `media.mediacapabilities.webrtc.enabled`
 

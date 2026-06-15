@@ -465,6 +465,22 @@ These give developers more flexibility when structuring and loading JavaScript m
 
 ## APIs
 
+### Crash Reporting API
+
+The [Crash Reporting API](/en-US/docs/Web/API/CrashReport) provides a way for sites to include diagnostic data in browser crash reports sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+It exposes the {{domxref("Window.crashReport")}} property and the {{domxref("CrashReportContext")}} interface, which store key-value data for the current top-level browsing context.
+([Firefox bug 2036160](https://bugzil.la/2036160)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `dom.reporting.crash.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
+
 ### Scoped custom element registries
 
 Support for [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) is being implemented.
