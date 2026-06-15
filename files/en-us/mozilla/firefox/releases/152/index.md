@@ -148,6 +148,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
   ([Firefox bug 2024854](https://bugzil.la/2024854)).
 
-- **base-select value for appearance CSS property**: `dom.select.customizable_select.enabled` and `layout.css.appearance-base.enabled`
-
-  The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, only relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element (not yet supported), allows you to fully style them. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work and means that two flags need to be set. ([Firefox bug 1974787](https://bugzil.la/1974787)).
