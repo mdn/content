@@ -12,7 +12,7 @@ The `browsingContext.close` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/M
 ## Syntax
 
 ```json-nolint
-/* Without optional parameters */
+/* With required parameters */
 {
   "method": "browsingContext.close",
   "params": {

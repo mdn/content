@@ -12,7 +12,7 @@ The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/
 ## Syntax
 
 ```json-nolint
-/* Allow */
+/* With required parameters */
 {
   "method": "browser.setDownloadBehavior",
   "params": {
@@ -23,25 +23,7 @@ The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/
   }
 }
 
-/* Deny */
-{
-  "method": "browser.setDownloadBehavior",
-  "params": {
-    "downloadBehavior": {
-      "type": "denied"
-    }
-  }
-}
-
-/* Reset to browser default */
-{
-  "method": "browser.setDownloadBehavior",
-  "params": {
-    "downloadBehavior": null
-  }
-}
-
-/* Per user context */
+/* With optional parameters */
 {
   "method": "browser.setDownloadBehavior",
   "params": {
