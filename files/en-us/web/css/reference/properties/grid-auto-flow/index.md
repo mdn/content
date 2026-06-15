@@ -186,6 +186,10 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 #### Result
 
+In this example, `grid-template` defines four row tracks and two column tracks.
+When `grid-auto-flow` is set to `column`, auto-placed items fill each column top-to-bottom, then add new columns as needed.
+If your grid defines only column tracks, `column` auto-placement creates additional implicit columns instead of wrapping items into the existing columns, and those implicit columns are sized by {{cssxref("grid-auto-columns")}}.
+
 {{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
 
 ## Specifications
