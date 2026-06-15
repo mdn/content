@@ -17,7 +17,7 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
   - : Enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 - [Bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations)
   - : Bounce tracking mitigations protect users against bounce tracking by identifying tracker sites via a heuristic and periodically deleting cookies and other state data associated with them.
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies)
   - : Also known as **partitioned cookies**, CHIPS allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
   - : Provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements, which enable content to be embedded while solving the privacy issues of {{htmlelement("iframe")}}s.
