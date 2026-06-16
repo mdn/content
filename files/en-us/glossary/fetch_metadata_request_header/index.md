@@ -19,8 +19,8 @@ The fetch metadata request headers are:
 - {{HTTPHeader("Sec-Fetch-Dest")}}
 
 > [!NOTE]
-> Fetch Metadata request headers are only sent for potentially trustworthy URLs.
-> As a result, servers on non-secure `http://` origins may not receive these headers.
+> Fetch Metadata request headers are only sent in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls).
+> Servers on non-secure `http://` origins may not receive these headers.
 
 The following request headers are not _strictly_ "fetch metadata request headers", as they are not in the same specification, but similarly provide information about the context of how a resource will be used.
 A server might use them to modify its caching behavior, or the information that is returned:
