@@ -25,7 +25,7 @@ The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US
 
 ## User preferences
 
-Several operating systems support preferences for reduced data; a preference set at at the operating system level.
+Several operating systems support preferences for reduced data; a preference set at the operating system level.
 
 ## Examples
 
