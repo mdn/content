@@ -376,7 +376,7 @@ The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### `<timeline-range-name>` values in `@keyframe` selectors
+### `<timeline-range-name>` values in `@keyframes` selectors
 
 The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1824875](https://bugzil.la/1824875)).
 
