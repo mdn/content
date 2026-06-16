@@ -1,18 +1,13 @@
 ---
-title: Firefox 152 release notes for developers (Beta)
-short-title: Firefox 152 (Beta)
+title: Firefox 152 release notes for developers (Stable)
+short-title: Firefox 152 (Stable)
 slug: Mozilla/Firefox/Releases/152
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 152 that affect developers.
-Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 152 was released on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
 
 ## Changes for web developers
 
@@ -22,15 +17,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This option can be found in the [Settings panel](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#settings-inspector).
   ([Firefox bug 1455294](https://bugzil.la/1455294)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
@@ -38,28 +27,14 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This reflects the corresponding [`side`](/en-US/docs/Web/SVG/Reference/Attribute/side) attribute on the [`<textPath>`](/en-US/docs/Web/SVG/Reference/Element/textPath) element.
   ([Firefox bug 2034371](https://bugzil.la/2034371)).
 
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements.
   ([Firefox bug 2036620](https://bugzil.la/2036620)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -87,12 +62,6 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `receiveTime` property is now included in the metadata returned from [`RTCEncodedVideoFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata#receivetime) and [`RTCEncodedAudioFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata#receivetime), and can be passed to the [`RTCEncodedVideoFrame()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/RTCEncodedVideoFrame) and [`RTCEncodedAudioFrame()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/RTCEncodedAudioFrame) constructors as a property in the `options` parameter.
   ([Firefox bug 2033420](https://bugzil.la/2033420)).
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -114,10 +83,6 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The ability of extensions to dynamically execute code in their `moz-extension:` documents with {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} has been removed. This feature was deprecated in Firefox 149. ([Firefox bug 2015559](https://bugzil.la/2015559))
 
   As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
