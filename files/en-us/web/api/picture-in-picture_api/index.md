@@ -7,15 +7,38 @@ browser-compat: api.PictureInPictureWindow
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-The **Picture-in-Picture API** allow websites to create a floating, always-on-top video window. This allows users to continue consuming media while they interact with other sites or applications on their device.
-
-> [!NOTE]
-> The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
+The **Picture-in-Picture API** enables websites to create a floating, always-on-top video window.
+This allows users to continue consuming media while they interact with other sites or applications on their device.
 
 > [!NOTE]
 > You can run code when the always-on-top window is programmatically opened, using the {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event. However, this event isn't fired when the browser itself (rather than your code) triggers moving content into the always-on-top window. This can occur, for example, due to the content being occluded, by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from a video's context menu or the browser chrome.
 >
 > To run code in response to such actions, set up a media session action handler using {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`.
+
+> [!NOTE]
+> The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
+
+## Concepts
+
+It is often helpful to play video in a separate window to the rest of your website, allowing you to continue to watch while keeping associated app content in view, or even to view some other website.
+You could achieve this by just opening a regular new browser window, but this has two major issues:
+
+1. You have to handle sharing of state information between the two windows.
+2. The additional app window doesn't always stay on top, and can therefore get hidden by other windows.
+
+One way to solve these problems is to use [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which manages most of the complexity of placing a single {{htmlelement("video")}} element into a separate window.
+
+### Adding Controls
+
+If media action handlers have been set via the [Media Session API](/en-US/docs/Web/API/Media_Session_API), then appropriate controls for those actions will be added by the browser to the picture-in-picture overlay. For example, if a `"nexttrack"` action has been set, then a skip button might be displayed in the picture-in-picture view. There is no support for adding custom HTML buttons or controls.
+
+### Controlling styling
+
+The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
+
+### Security considerations
+
+The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). The picture-in-picture mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `*`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Interfaces
 
@@ -67,18 +90,6 @@ _The Picture-in-Picture API defines three events, which can be used to detect wh
   - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode.
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
-
-## Adding Controls
-
-If media action handlers have been set via the [Media Session API](/en-US/docs/Web/API/Media_Session_API), then appropriate controls for those actions will be added by the browser to the picture-in-picture overlay. For example, if a `"nexttrack"` action has been set, then a skip button might be displayed in the picture-in-picture view. There is no support for adding custom HTML buttons or controls.
-
-## Controlling styling
-
-The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
-
-## Controlling access
-
-The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). The picture-in-picture mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `*`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Examples
 
