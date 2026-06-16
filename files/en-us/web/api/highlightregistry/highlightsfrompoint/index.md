@@ -45,11 +45,13 @@ If no custom highlights are applied at the specified point, or the specified poi
 
 ### Output custom highlights applied at the mouse pointer position
 
-This example demonstrates using the `highlightsFromPoint()` method to return the content of all custom highlights located at the mouse pointer coordinates of a user's double-click. In this example, multiple custom highlights can be created on a paragraph of text, including overlapping ones. When the user presses the <kbd>h</kbd> key after selecting some text, a new {{domxref("Highlight")}} is named and registered, supporting up to three custom highlights at a time. When the user double-clicks on the paragraph, the content of all the double-clicked highlights, if any, are written to the page.
+This example demonstrates how to use the `highlightsFromPoint()` method to return the content of all custom highlights located at the mouse pointer coordinates of a user's double-click.
+
+In this example, multiple custom highlights can be created on a paragraph of text, and the highlights can overlap. When the user presses the <kbd>h</kbd> key after selecting some text, a new {{domxref("Highlight")}} is named and registered. This example supports up to three custom highlights at a time. When the user double-clicks within the highlighted area, the content of all highlights at that point, if any, is displayed in the output area.
 
 #### HTML
 
-The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section")}} element. The `<section>` is included as the container where the highlighted text fragments will be displayed.
+The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section")}} element. The `<section>` serves as the output area where the content of the double-clicked highlights are displayed.
 
 ```html live-sample___highlights-from-point-example
 <h1>highlightsFromPoint() demo</h1>
@@ -60,15 +62,17 @@ The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section"
   yellow, red, and blue, in that order. When you double-click on a highlighted
   section of text, that section will be outputted at the bottom of the UI. If
   multiple highlights overlap the section, you'll see multiple text sections
-  outputted.
+Select a portion of text, and then press the "h" key. The selected text gets a custom highlight, colored yellow, red, or blue, in that order. After the third highlight, each new one replaces the oldest, cycling through the colors in the same order.
+
+Next, double-click any highlighted text. The text in that highlight will appear in the output. If multiple highlights overlap a section, you'll see multiple text sections in the output.
 </p>
-<h2>Text of clicked highlights</h2>
+<h2>Text in double-clicked highlights</h2>
 <section></section>
 ```
 
 #### CSS
 
-In the CSS, we define styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`. We select each custom highlight by passing its name into the {{cssxref("::highlight()")}} pseudo-element, making their backgrounds semi-transparent yellow, red, or blue, respectively, with areas of combined colors where the semi-transparent backgrounds of the highlights overlap.
+In the CSS, we define styling for three custom highlights named `highlight1`, `highlight2`, and `highlight3`. We target each custom highlight using the {{cssxref("::highlight()")}} pseudo-element, making their backgrounds semi-transparent yellow, red, and blue, respectively. Where highlights overlap, the semi-transparent backgrounds combine to show a mixed color.
 
 ```css live-sample___highlights-from-point-example
 ::highlight(highlight1) {
@@ -118,7 +122,7 @@ article {
 
 #### JavaScript
 
-This example has two distinct areas of functionality. We first have to enable the creation of custom highlights when the user clicks <kbd>h</kbd> after having selected some text. We then have to enable writing highlighted content to the page when the user double clicks on one or more custom highlights.
+This example has two distinct areas of functionality. We first enable the creation of custom highlights when the user clicks the <kbd>h</kbd> key after selecting some text. We then enable writing the highlighted content to the page when the user double-clicks one or more custom highlights.
 
 ##### Creating and applying custom highlights
 
