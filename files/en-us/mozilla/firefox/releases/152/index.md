@@ -72,7 +72,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
-- Notification actions are supported. This includes the {{domxref("ServiceWorkerRegistration.showNotification#actions", "actions")}} parameter of {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface. ([Firefox bug 1959931](https://bugzil.la/1959931)).
+- Notification actions are supported. This includes the {{domxref("ServiceWorkerRegistration.showNotification#actions", "actions")}} parameter of {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface.
+  This allows you to include action buttons on device notifications, and react to when they're pressed.
+  ([Firefox bug 1959931](https://bugzil.la/1959931)).
 - The {{domxref("Element.getAnimations()")}} method can now accept the [`options.pseudoElement`](/en-US/docs/Web/API/Element/getAnimations#pseudoelement) parameter.
   This allows you to directly target a specific pseudo-element, rather than filtering the results of `{ subtree: true }`.
   ([Firefox bug 1935557](https://bugzil.la/1935557)).
