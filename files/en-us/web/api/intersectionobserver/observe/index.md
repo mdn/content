@@ -13,8 +13,7 @@ One observer has one set of thresholds and one root, but can watch multiple targ
 
 To stop observing the element, call {{domxref("IntersectionObserver.unobserve()")}}.
 
-When the visibility of the specified element crosses over one of the observer's visibility thresholds (as listed in {{domxref("IntersectionObserver.thresholds")}}), the observer's callback is executed with an array of {{domxref("IntersectionObserverEntry")}} objects representing the intersection changes
-which occurred.
+When the visibility of the specified element crosses over one of the observer's visibility thresholds (as listed in {{domxref("IntersectionObserver.thresholds")}}), the observer's callback is executed with an array of {{domxref("IntersectionObserverEntry")}} objects representing the intersection changes which occurred.
 Note that this design allows multiple elements' intersection changes to be processed by a single call to the callback.
 
 > [!NOTE]
