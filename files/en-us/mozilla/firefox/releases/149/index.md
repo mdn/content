@@ -140,7 +140,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **base-select value for appearance CSS property**: `dom.select.customizable_select.enabled` and `layout.css.appearance-base.enabled`
 
-  The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, only relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported and not `::picker(select)` pseudo-element. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work and means that two flags need to be set. ([Firefox bug 1974787](https://bugzil.la/1974787)).
+  The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported. Styling of the `::picker(select)` pseudo-element will be added in future versions. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work. Two preferences need be enabled to use it. ([Firefox bug 1974787](https://bugzil.la/1974787)).
 
 - **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
 
