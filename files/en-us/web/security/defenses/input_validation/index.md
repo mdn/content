@@ -19,9 +19,9 @@ However, aside from innocent errors by the user, supplying unexpected input enab
 
 ### Implement validation as an allowlist
 
-Applications should implement validation as an allowlist, rather than a denylist. That is, applications should allow only input that positively matches the expected value.
+Applications can often implement a given check as either an allowlist or a denylist.
 
-For example, suppose we wanted to check that a numeric input is between zero and 10. We can test that the input matches this range, and deny everything else:
+For example, suppose we wanted to check that a numeric input is between zero and 10. We can implement this as an allowlist by testing that the input matches this range, and denying everything else:
 
 ```js
 function checkRange(input) {
@@ -32,9 +32,9 @@ function checkRange(input) {
 }
 ```
 
-Alternatively, we can test whether the input is outside the range, and allow everything else:
+Alternatively, we can implement it as a denylist by testing whether the input is outside the range, and allowing everything else:
 
-```js example-bad
+```js
 function checkRange(input) {
   if (input < 0 || input > 10) {
     return false;
@@ -43,7 +43,7 @@ function checkRange(input) {
 }
 ```
 
-This is much less safe, because it's easier for an attacker to craft some input that would evade the check, and fall through to the default "allow" condition.
+It's usually more reliable to implement a check as an allowlist, as this defaults to denying values which the author didn't consider. This is especially true when the invalid input is being deliberately crafted by an attacker: it's easier for an attacker to provide some input that would evade the check, and fall through to the default "allow" condition.
 
 ### Syntactic and semantic validation
 
