@@ -44,6 +44,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{jsxref("Error.stackTraceLimit")}} static data property is supported for setting or getting the maximum number of stack frames captured in an error stack trace.
   Setting the value smaller than the default can improve performance.
   ([Firefox bug 2037856](https://bugzil.la/2037856)).
+- Text modules can now be imported into a string using [`with { type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text).
+  Unlike for JavaScript or CSS modules, the media type of the response is ignored, and the content is parsed as text even if the file contains scripts or other executable code.
+  ([Firefox bug 2039881](https://bugzil.la/2039881)).
 
 <!-- #### Removals -->
 
