@@ -14,6 +14,8 @@ Values of this type are objects. They contain the following properties:
 
 - `cookieStoreId`
   - : `string`. The cookie store ID of the current context. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
+- `documentId` {{optional_inline}}
+  - : `string`. The UUID of the document making the request.
 - `documentUrl`
   - : `string`. URL of the page into which the requested resource will be loaded.
 - `frameId`
@@ -26,6 +28,8 @@ Values of this type are objects. They contain the following properties:
   - : `string`. Standard HTTP method: for example, "GET" or "POST".
 - `originUrl`
   - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Reference/Elements/a#target), or a CSS document includes an image using the [`url()` functional notation](/en-US/docs/Web/CSS/Reference/Values/url_function), then this is the URL of the original document or of the CSS document, respectively.
+- `parentDocumentId` {{optional_inline}}
+  - : `string`. A UUID of the parent document that owns the frame. Not set if there is no parent.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
 - `requestId`

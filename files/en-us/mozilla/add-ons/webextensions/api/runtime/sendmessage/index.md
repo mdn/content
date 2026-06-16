@@ -40,6 +40,8 @@ let sending = browser.runtime.sendMessage(
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 - `options` {{optional_inline}}
   - : `object`.
+    - `documentId` {{optional_inline}}
+      - : `string`. Send the message to a document, instead of all frames in the extension.
     - `includeTlsChannelId` {{optional_inline}}
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
 

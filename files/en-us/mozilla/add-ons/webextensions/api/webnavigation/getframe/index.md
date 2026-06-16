@@ -31,8 +31,6 @@ let gettingFrame = browser.webNavigation.getFrame(
     - `documentId` {{optional_inline}}
       - : `string`. The UUID of the frame's document.
 
-Must include one of
-
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an object containing these properties:
