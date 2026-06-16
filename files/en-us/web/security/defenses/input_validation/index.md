@@ -11,7 +11,7 @@ For a website to provide almost any kind of interactivity or customization it wi
 
 Users typically provide input using {{htmlelement("input")}} elements in a {{htmlelement("form")}} element on the site's front end, and the input is typically sent to the server as the body of a {{httpmethod("POST")}} request, or as URL parameters appended to a {{httpmethod("GET")}} request. However, input might also arrive on the server via other means, such as cookie values or additional HTTP headers.
 
-If the input provided by the user doesn't have the form or content that the server expects — for example, if they enter an invalid email address — this can cause the site to malfunction. Catching problems like this as early as possible improves the user's experience.
+If the input provided by the user doesn't have the form or content that the site expects — for example, if they enter an invalid email address — this can cause the site to malfunction. Catching problems like this as early as possible improves the user's experience.
 
 However, aside from innocent errors by the user, supplying unexpected input enables a malicious actor to attempt various security attacks, including cross-site scripting (XSS), SQL injection, and command injection. In these situations, the attacker deliberately crafts some input that will enable an attack, and passes it to the application. The attacker might completely bypass the website's front-end, providing the malicious input directly in an HTTP request. Although input validation is not usually a complete solution to these security threats, it's an important first line of defense.
 
