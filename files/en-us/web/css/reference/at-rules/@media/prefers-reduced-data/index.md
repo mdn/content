@@ -25,7 +25,7 @@ The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US
 
 ## User preferences
 
-Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system.
+Several operating systems support preferences for reduced data; a preference set at at the operating system level.
 
 ## Examples
 
