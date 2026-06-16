@@ -54,12 +54,6 @@ sidebar:
         details: closed
         code: true
       - type: listSubPages
-        path: /WebAssembly/Reference/JavaScript_interface/Module
-        link: /WebAssembly/Reference/JavaScript_interface/Module
-        title: <code>WebAssembly.Module</code>
-        details: closed
-        code: true
-      - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface/Global
         link: /WebAssembly/Reference/JavaScript_interface/Global
         title: <code>WebAssembly.Global</code>
@@ -75,6 +69,18 @@ sidebar:
         path: /WebAssembly/Reference/JavaScript_interface/Memory
         link: /WebAssembly/Reference/JavaScript_interface/Memory
         title: <code>WebAssembly.Memory</code>
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /WebAssembly/Reference/JavaScript_interface/Module
+        link: /WebAssembly/Reference/JavaScript_interface/Module
+        title: <code>WebAssembly.Module</code>
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /WebAssembly/Reference/JavaScript_interface/Suspending
+        link: /WebAssembly/Reference/JavaScript_interface/Suspending
+        title: <code>WebAssembly.Suspending</code>
         details: closed
         code: true
       - type: listSubPages
