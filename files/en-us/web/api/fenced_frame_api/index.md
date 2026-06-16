@@ -129,7 +129,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ## Enrollment and local testing
 
-Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't do this, the API calls will fail with a console warning.
+Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment). If you don't do this, the API calls will fail with a console warning.
 
 > [!NOTE]
 > In Chrome, you can still test your fenced frame code locally without enrollment. To allow local testing, enable the following Chrome developer flag:

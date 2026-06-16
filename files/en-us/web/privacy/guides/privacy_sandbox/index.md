@@ -11,6 +11,9 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 > Some of these features are currently opposed by one or more browser vendors.
 > See specific API entry points for more details.
 
+> [!NOTE]
+> Google Chrome deprecated some of Privacy Sandbox features and suspended enrollment of new organizations into Privacy Sandbox console. Some Privacy Sandbox features require enrollment. See [enrollment](#enrollment) section for details.
+
 ## Privacy sandbox features
 
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) {{deprecated_inline}}
@@ -30,10 +33,21 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 - [Topics API](/en-US/docs/Web/API/Topics_API) {{deprecated_inline}}
   - : Provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with third-party cookies.
 
-## Other topics
+## Enrollment
 
-- [Privacy sandbox enrollment](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)
-  - : To access certain privacy sandbox features, developers must complete an **enrollment** process.
+Google deprecated some Privacy Sandbox features and suspended enrollment of new websites and organizations into Privacy Sandbox Console.
+
+### Features requiring enrollment
+
+The following features require enrollment to be usable:
+
+- [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) {{deprecated_inline}}
+- Protected Audience API {{deprecated_inline}}
+- Private Aggregation API {{deprecated_inline}}
+- [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) {{deprecated_inline}}
+- [Topics API](/en-US/docs/Web/API/Topics_API) {{deprecated_inline}}
+
+The documentation of each feature includes more details on exactly which sub-features will fail if enrollment is not completed, and how.
 
 ## See also
 
