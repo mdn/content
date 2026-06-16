@@ -59,6 +59,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("RTCDtlsTransport.getRemoteCertificates()")}} method gets the certificates used by the remote peer to secure the DTLS communication.
   These can be used for application-layer authentication of a remote peer.
   ([Firefox bug 1805446](https://bugzil.la/1805446)).
+- All mandatory and some optional WebRTC "transport" statistics can now be reported in a {{domxref("RTCStatsReport")}}.
+  The returned object is a {{domxref("RTCTransportStats")}} with the following properties: {{domxref("RTCTransportStats.dtlsCipher","dtlsCipher")}}, {{domxref("RTCTransportStats.dtlsRole","dtlsRole")}}, {{domxref("RTCTransportStats.dtlsState","dtlsState")}}, {{domxref("RTCTransportStats.iceLocalUsernameFragment","iceLocalUsernameFragment")}}, {{domxref("RTCTransportStats.iceRole","iceRole")}}, {{domxref("RTCTransportStats.iceState","iceState")}}, {{domxref("RTCTransportStats.id","id")}}, {{domxref("RTCTransportStats.selectedCandidatePairId","selectedCandidatePairId")}}, {{domxref("RTCTransportStats.srtpCipher","srtpCipher")}}, {{domxref("RTCTransportStats.timestamp","timestamp")}}, {{domxref("RTCTransportStats.tlsVersion","tlsVersion")}}, and {{domxref("RTCTransportStats.type","type")}}.
+  In addition the `transportId` property is now available on {{domxref("RTCOutboundRtpStreamStats.transportId","RTCOutboundRtpStreamStats")}}, {{domxref("RTCRemoteOutboundRtpStreamStats.transportId","RTCRemoteOutboundRtpStreamStats")}}, {{domxref("RTCRemoteInboundRtpStreamStats.transportId","RTCRemoteInboundRtpStreamStats")}} and {{domxref("RTCInboundRtpStreamStats.transportId","RTCInboundRtpStreamStats")}}.
+  ([Firefox bug 1225723](https://bugzil.la/1225723) and [Firefox bug 2019389](https://bugzil.la/2019389)).
 
 <!-- #### Removals -->
 
