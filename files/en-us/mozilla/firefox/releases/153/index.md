@@ -1,13 +1,13 @@
 ---
-title: Firefox 153 release notes for developers (Nightly)
-short-title: Firefox 153 (Nightly)
+title: Firefox 153 release notes for developers (Beta)
+short-title: Firefox 153 (Beta)
 slug: Mozilla/Firefox/Releases/153
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 153 that affect developers.
-Firefox 153 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
+Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
