@@ -77,6 +77,7 @@ The [Defenses](/en-US/docs/Web/Security/Defenses) section includes guides to fea
 In this section we document the following defenses:
 
 - [Certificate transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
+- [Input validation](/en-US/docs/Web/Security/Defenses/Input_validation)
 - [Mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content)
 - [Operational security](/en-US/docs/Web/Security/Defenses/Operational_security)
 - [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
