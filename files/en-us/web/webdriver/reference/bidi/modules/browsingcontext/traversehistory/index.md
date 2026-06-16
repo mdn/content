@@ -34,7 +34,9 @@ The `params` field contains:
 
 ### Return value
 
-The `result` field in the response is an empty object (`{}`). The command returns once the traversal has been queued, before the resulting navigation is complete.
+The `result` field in the response is an empty object (`{}`).
+The command returns once the traversal has been queued, before the resulting navigation is complete.
+The [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated) event fires when the traversal is complete.
 
 ### Errors
 
