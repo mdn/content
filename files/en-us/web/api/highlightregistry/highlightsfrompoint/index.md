@@ -56,15 +56,7 @@ The markup includes a {{htmlelement("p")}} element and a {{htmlelement("section"
 ```html live-sample___highlights-from-point-example
 <h1>highlightsFromPoint() demo</h1>
 <h2>Highlightable content</h2>
-<p class="highlightable-text">
-  When you select a section of text and then press "h" on the keyboard, the text you
-  selected will be given a custom highlight. Multiple highlights will be colored
-  yellow, red, and blue, in that order. When you double-click on a highlighted
-  section of text, that section will be output at the bottom of the UI. If
-  multiple highlights overlap the section, you'll see multiple text sections.
-Select a portion of text, and then press the "h" key. The selected text gets a custom highlight, colored yellow, red, or blue, in that order. After the third highlight, each new one replaces the oldest, cycling through the colors in the same order.
-
-Next, double-click any highlighted text. The highlighted text will appear in the output. If multiple highlights overlap a section, you'll see multiple text sections in the output.
+<p class="highlightable-text">When you select a section of text and then press "h" on the keyboard, the text you selected will be given a custom highlight. Multiple highlights will be colored yellow, red, and blue, in that order. When you double-click on a highlighted section of text, that section will be output at the bottom of the UI. If multiple highlights overlap the section, you'll see multiple text sections. Select a portion of text, and then press the "h" key. The selected text gets a custom highlight, colored yellow, red, or blue, in that order. After the third highlight, each new one replaces the oldest, cycling through the colors in the same order. Next, double-click any highlighted text. The highlighted text will appear in the output. If multiple highlights overlap a section, you'll see multiple text sections in the output.
 </p>
 <h2>Text in double-clicked highlights</h2>
 <section></section>
