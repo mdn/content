@@ -107,8 +107,6 @@ The example below shows the effect of different `animation-composition` values s
 
 #### CSS
 
-Here the underlying value is `translateX(50px) rotate(45deg)`.
-
 ```css hidden
 .container {
   width: 230px;
@@ -155,6 +153,8 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 #### Result
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
+
+Here, the underlying value for all examples' `transform` property is `translateX(50px) rotate(45deg)`. The different `animation-composition` values' effects are as follows:
 
 - With `replace`, the `transform` property in each keyframe entirely replaces the underlying `transform` property set on the animated element. The final effect value for the `transform` property at the `50%` keyframe is `translateY(30px)` (no `rotate` or `translateX`); at the `100%` keyframe, it is `translateX(150px)` (no `rotate` or `translateY`).
 
