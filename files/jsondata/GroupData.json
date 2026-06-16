@@ -2475,7 +2475,9 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportDatagramsWritable",
         "WebTransportReceiveStream",
+        "WebTransportSendGroup",
         "WebTransportSendStream",
         "WebTransportError"
       ],
