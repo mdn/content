@@ -9,7 +9,7 @@ browser-compat: api.XRSession
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`XRSession`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
+The **`XRSession`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) represents an ongoing session between a web application and a user's XR device (such as a VR headset), providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
 
@@ -47,7 +47,7 @@ _`XRSession` provides the following methods in addition to those inherited from 
 - {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} {{Experimental_Inline}}
   - : Removes a callback from the animation frame painting callback from `XRSession`'s set of animation frame rendering callbacks, given the identifying handle returned by a previous call to {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 - {{DOMxRef("XRSession.end", "end()")}} {{Experimental_Inline}}
-  - : Ends the WebXR session. Returns a {{jsxref("promise")}} which resolves when the session has been shut down.
+  - : Ends the WebXR session. Returns a {{jsxref("Promise")}} which resolves when the session has been shut down.
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} {{Experimental_Inline}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
 - {{DOMxRef("XRSession.requestHitTestSource", "requestHitTestSource()")}} {{Experimental_Inline}}
@@ -83,6 +83,8 @@ _The following events are delivered to `XRSession` objects._
   - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the `XRSession` when the user initially squeezes a squeezable controller. This may be, for example, a trigger which is used to represent grabbing objects, or might represent actual squeezing when wearing a haptic glove. Also available through the `onsqueezestart` event handler property.
 - {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{Experimental_Inline}}
   - : An {{domxref("XRSessionEvent")}} which is sent to the session when its visibility state as indicated by the {{domxref("XRSession.visibilityState", "visibilityState")}} changes. Also available through the `onvisibilitychange` event handler property.
+- {{domxref("XRSession.visibilitymaskchange_event", "visibilitymaskchange")}} {{Experimental_Inline}}
+  - : An {{domxref("XRVisibilityMaskChangeEvent")}} which is sent to the session when the portion of the {{domxref("XRView")}} visible to the user changes, enabling performance improvements by allowing the browser to draw only the visible part of the updated view. Also available through the `onvisibilitymaskchange` event handler property.
 
 ## Example
 

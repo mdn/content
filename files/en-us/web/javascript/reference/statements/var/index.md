@@ -74,7 +74,7 @@ for (var a of [1, 2, 3]);
 console.log(a); // 3
 ```
 
-In a script, a variable declared using `var` is added as a non-configurable property of the global object. This means its property descriptor cannot be changed and it cannot be deleted using {{jsxref("Operators/delete", "delete")}}. JavaScript has automatic memory management, and it would make no sense to be able to use the `delete` operator on a global variable.
+In a script, a variable declared using `var` is added as a non-configurable property of the global object. This means its property descriptor cannot be changed and it cannot be deleted using {{jsxref("delete")}}. JavaScript has automatic memory management, and it would make no sense to be able to use the `delete` operator on a global variable.
 
 ```js-nolint example-bad
 "use strict";

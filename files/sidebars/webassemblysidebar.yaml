@@ -46,7 +46,9 @@ sidebar:
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface
-        tags: webassembly-function
+        tags:
+          - webassembly-function
+          - unknown
         link: /WebAssembly/Reference/JavaScript_interface
         title: <code>WebAssembly</code>
         details: closed
@@ -127,6 +129,8 @@ sidebar:
         title: <code>v128</code>
       - link: /WebAssembly/Reference/Value_types/funcref
         title: <code>funcref</code>
+      - link: /WebAssembly/Reference/Value_types/exnref
+        title: <code>exnref</code>
       - link: /WebAssembly/Reference/Value_types/externref
         title: <code>externref</code>
   - link: /WebAssembly/Reference/Definitions
@@ -142,6 +146,8 @@ sidebar:
         title: <code>global</code>
       - link: /WebAssembly/Reference/Definitions/table
         title: <code>table</code>
+      - link: /WebAssembly/Reference/Definitions/tag
+        title: <code>tag</code>
   - title: Instructions
     details: closed
     children:
@@ -150,6 +156,19 @@ sidebar:
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
+      - link: /WebAssembly/Reference/Exception_handling
+        title: Exception handling
+        details: closed
+        children:
+          - link: /WebAssembly/Reference/Exception_handling/throw
+            title: throw
+          - link: /WebAssembly/Reference/Exception_handling/throw_ref
+            title: throw_ref
+          - type: listSubPages
+            path: /WebAssembly/Reference/Exception_handling/try_table
+            link: /WebAssembly/Reference/Exception_handling/try_table
+            title: try_table
+            details: closed
       - type: listSubPages
         path: /WebAssembly/Reference/Memory
         link: /WebAssembly/Reference/Memory

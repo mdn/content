@@ -14,7 +14,7 @@ The **`recordsAvailable`** read-only property of the {{domxref("BackgroundFetchR
 
 ## Value
 
-A {{jsxref("boolean")}}.
+A {{jsxref("Boolean")}}.
 
 ## Examples
 

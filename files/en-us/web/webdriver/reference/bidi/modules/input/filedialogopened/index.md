@@ -14,7 +14,7 @@ The `input.fileDialogOpened` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 The `params` field in the event notification is an object with the following fields:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context in which the file picker dialog was triggered.
+  - : A string that contains the ID of the context in which the file picker dialog was triggered.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `element` {{optional_inline}}
   - : An object containing the ID that uniquely identifies the [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) DOM element that triggered the file picker dialog.

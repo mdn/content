@@ -35,7 +35,18 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/close
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/create
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input

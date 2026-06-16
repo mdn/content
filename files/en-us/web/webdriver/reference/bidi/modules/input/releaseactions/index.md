@@ -25,7 +25,7 @@ The `input.releaseActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the context for which to release inputs. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+  - : A string that contains the ID of the context for which to release inputs. Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
 ### Return value
 

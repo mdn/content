@@ -16,7 +16,11 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The developer tools now have a "Show comments" option to toggle the display of HTML comment nodes in the Inspector.
+  This option can be found in the [Settings panel](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#settings-inspector).
+  ([Firefox bug 1455294](https://bugzil.la/1455294)).
 
 <!-- ### HTML -->
 
@@ -28,11 +32,18 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- The {{domxref("SVGTextPathElement.side")}} read-only property is now supported, indicating whether text is drawn on the left-hand side or right-hand side of a text path.
+  This reflects the corresponding [`side`](/en-US/docs/Web/SVG/Reference/Attribute/side) attribute on the [`<textPath>`](/en-US/docs/Web/SVG/Reference/Element/textPath) element.
+  ([Firefox bug 2034371](https://bugzil.la/2034371)).
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements.
+  ([Firefox bug 2036620](https://bugzil.la/2036620)).
 
 <!-- #### Removals -->
 
@@ -52,11 +63,21 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The {{domxref("PerformanceResourceTiming.firstInterimResponseStart","firstInterimResponseStart")}} and {{domxref("PerformanceResourceTiming.finalResponseHeadersStart","finalResponseHeadersStart")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are supported.
+  These can be used to measure how long it takes for the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
+  ([Firefox bug 2006340](https://bugzil.la/2006340)).
+
 #### DOM
 
 - The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported.
   These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the platform-dependent maximum number of actions that can be set for a notification, respectively.
   ([Firefox bug 1959931](https://bugzil.la/1959931)).
+- The {{domxref("Element.getAnimations()")}} method can now accept the [`options.pseudoElement`](/en-US/docs/Web/API/Element/getAnimations#pseudoelement) parameter.
+  This allows you to directly target a specific pseudo-element, rather than filtering the results of `{ subtree: true }`.
+  ([Firefox bug 1935557](https://bugzil.la/1935557)).
+- The {{domxref("Element.requestPointerLock()")}} method now supports the [`options.unadjustedMovement`](/en-US/docs/Web/API/Element/requestPointerLock#unadjustedmovement) parameter.
+  This allows code to disable OS-level mouse acceleration and use raw mouse input instead, which is useful in cases where slow and precise control over mouse movement is needed.
+  ([Firefox bug 2037802](https://bugzil.la/2037802)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -92,3 +113,26 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 152 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Check if a media encoding/decoding configuration is supported for WebRTC**: `media.mediacapabilities.webrtc.enabled`
+
+  The `webrtc` type can now be passed as an option for [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo#webrtc) and [`MediaCapabilities.encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#webrtc) to check if an encoding/decoding configuration can be used for WebRTC.
+  This replaces the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was previously used as an alias in Firefox.
+  ([Firefox bug 1825286](https://bugzil.la/1825286)).
+
+- **TC39 Iterator includes proposal**: `javascript.options.experimental.iterator_includes`
+
+  The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether the iterator will produce a specified value.
+  ([Firefox bug 2025779](https://bugzil.la/2025779)).
+
+- **TC39 Intl.Locale info proposal**: `javascript.options.experimental.intl_locale_info`
+
+  The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported on nightly builds if the preference is enabled.
+  This includes all the [`Intl.Locale` instance methods prefixed with "get"](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale#instance_methods).
+  ([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+- **Text module import**: `javascript.options.experimental.import_text`
+
+  The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
+  The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
+  ([Firefox bug 2024854](https://bugzil.la/2024854)).
