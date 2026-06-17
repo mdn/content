@@ -33,12 +33,12 @@ The `session.unsubscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 
 The `params` field contains one of the following fields:
 
-- `subscriptions`
-  - : An array of one or more subscription IDs that specifies the subscriptions to cancel, including both global and context-scoped subscriptions.
 - `events`
   - : An array of one or more strings that specifies event names for canceling subscriptions.
     Each string can be either a specific event name (for example, `"log.entryAdded"`) or a module name (for example, `"log"`) that unsubscribes the client from all events in that module.
     Only global subscriptions can be removed using event names; those created using [`contexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe#contexts) or [`userContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe#usercontexts) cannot be.
+- `subscriptions`
+  - : An array of one or more subscription IDs that specifies the subscriptions to cancel, including both global and context-scoped subscriptions.
 
 ### Return value
 
