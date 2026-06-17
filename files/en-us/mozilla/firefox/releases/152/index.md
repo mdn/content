@@ -92,7 +92,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **WebAssembly JavaScript Promise Integration (JS-PI)**: `javascript.options.wasm_js_promise_integration`
 
-  WebAssembly JavaScript Promise Integration (JS-PI) allows WebAssembly modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles. WebAssembly JS-PI is now available in nightly builds.
+  WebAssembly [JavaScript Promise Integration (JS-PI)](https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md) allows WebAssembly modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles.
   ([Firefox bug 2015877](https://bugzil.la/2015877)).
 
 - **Check if a media encoding/decoding configuration is supported for WebRTC**: `media.mediacapabilities.webrtc.enabled`
