@@ -1,0 +1,33 @@
+---
+title: "VTTRegion: regionAnchorX property"
+short-title: regionAnchorX
+slug: Web/API/VTTRegion/regionAnchorX
+page-type: web-api-instance-property
+browser-compat: api.VTTRegion.regionAnchorX
+---
+
+{{APIRef("WebVTT")}}
+
+The **`regionAnchorX`** property of the {{domxref("VTTRegion")}} interface represents the x-coordinate of the region anchor, as a percentage of the region.
+
+## Value
+
+A number, in the range `0` to `100`, giving the x-coordinate of the region anchor as a percentage of the region. The default is `0`.
+
+## Examples
+
+In the following example a new {{domxref("VTTRegion")}} is created, then the value of `regionAnchorX` is set to `30`. The value is then printed to the console.
+
+```js
+const region = new VTTRegion();
+region.regionAnchorX = 30;
+console.log(region.regionAnchorX);
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
