@@ -395,7 +395,7 @@ Click the button, and note how the transition remains clipped to the transition 
 
 ## Nested element-scoped view transitions
 
-One more aspect of element-scoped view transitions worth noting is that you can nest view transitions and have them running concurrently without interference. This is enabled because, as mentioned earlier, the browser automatically assigns a {{cssxref("view-transition-scope")}} value of `all` to the scope root elements. This ensures that {{cssxref("view-transition-name")}} values scope to the element's subtree, and prevents elements and their contents from capture by an outer, concurrent view transition. Browsers will ignore elements that have `view-transition-scope: all` set during the snapshotting process.
+One more aspect of element-scoped view transitions worth noting is that you can nest view transitions and have them running concurrently without interference. This is possible because, as mentioned earlier, the browser automatically assigns a {{cssxref("view-transition-scope")}} value of `all` to the scope root elements. This ensures that {{cssxref("view-transition-name")}} values scope to the element's subtree, and prevents elements and their contents from being captured by an outer, concurrent view transition. Browsers ignore elements that have `view-transition-scope: all` set during the snapshotting process.
 
 Let's look at a demonstration of nested element-scoped view transitions.
 
