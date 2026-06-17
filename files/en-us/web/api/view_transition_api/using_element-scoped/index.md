@@ -362,7 +362,7 @@ const para = document.querySelector("section p");
 const btn = document.querySelector("button");
 ```
 
-Next, we add an `click` event listener to the `<button>`. Each time the button is clicked, we trigger a view transition; inside the `startViewTransition()` call, we toggle the `<p>` element's `textContent` between the two `content` array elements via the `toggleText()` function. We also include simple feature detection to just run the `toggleText()` function in browsers that don't support `Element.startViewTransition()`.
+Next, we add a `click` event listener to the `<button>`. Each time the button is clicked, a view transition is triggered: inside the `startViewTransition()` call, the `<p>` element's `textContent` is toggled between the two `content` array elements via the `toggleText()` function. We've also included simple feature detection that falls back to running `toggleText()` directly in browsers that don't support `Element.startViewTransition()`.
 
 ```js live-sample___element-scoped-clipping
 btn.addEventListener("click", handleClick);
