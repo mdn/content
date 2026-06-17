@@ -60,7 +60,8 @@ dedicated packages for these fonts.
 sudo apt-get install fonts-lmodern
 ```
 
-The Debian `fonts-stix` package installs STIX 1.x fonts, not _STIX Two Math_.
+> [!NOTE]
+> The Debian `fonts-stix` package installs STIX 1.x fonts, not _STIX Two Math_.
 
 #### Fedora-based distributions
 
