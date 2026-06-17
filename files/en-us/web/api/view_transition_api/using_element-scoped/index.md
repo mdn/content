@@ -240,7 +240,7 @@ Let's look at another example, this time to demonstrate the clipping behavior.
 
 ### HTML
 
-Our HTML is similar to the last example, except that our central element is now a {{htmlelement("section")}} containing a paragraph of text and a {{htmlelement("button")}} that can be pressed to change the paragraph content. We've also included a `.wrapper` {{htmlelement("div")}} to use to create a scrolling container.
+The HTML is similar to the previous example, except that the central element is now a {{htmlelement("section")}} containing a paragraph of text. We also include a {{htmlelement("button")}} that can be pressed to change the paragraph content.
 
 ```html live-sample___element-scoped-clipping
 <p>
@@ -249,16 +249,14 @@ Our HTML is similar to the last example, except that our central element is now 
 </p>
 
 <section>
-  <div class="wrapper">
-    <p>
-      I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea
-      narwhal asymmetrical. Af health goth shaman in slow-carb godard echo park.
-      Tofu farm-to-table labore salvia tote bag food truck dolore gluten-free
-      poutine kombucha fanny pack +1 franzen lyft fugiat. Chicharrones next
-      level jianbing, enamel pin seitan cardigan bruh snackwave beard incididunt
-      dolor lumber before they sold out dreamcatcher single-origin coffee.
-    </p>
-  </div>
+  <p>
+    I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea
+    narwhal asymmetrical. Af health goth shaman in slow-carb godard echo park.
+    Tofu farm-to-table labore salvia tote bag food truck dolore gluten-free
+    poutine kombucha fanny pack +1 franzen lyft fugiat. Chicharrones next level
+    jianbing, enamel pin seitan cardigan bruh snackwave beard incididunt dolor
+    lumber before they sold out dreamcatcher single-origin coffee.
+  </p>
 </section>
 <button>Change!</button>
 
@@ -270,7 +268,7 @@ Our HTML is similar to the last example, except that our central element is now 
 
 ### CSS
 
-To begin with, we set a fixed `height` on our `.wrapper` `<div>` and set `overflow-y: scroll` on our `<section>` element to cause the `<p>` content to scroll vertically.
+To begin with, we set a fixed `height` and `overflow-y: scroll` on the `<section>` to cause the `<p>` content to scroll vertically.
 
 ```css hidden live-sample___element-scoped-clipping
 body {
@@ -312,11 +310,8 @@ section p {
 ```
 
 ```css live-sample___element-scoped-clipping
-.wrapper {
-  height: 150px;
-}
-
 section {
+  height: 150px;
   overflow-y: scroll;
 }
 ```
@@ -337,7 +332,7 @@ section p {
 }
 ```
 
-We have hidden the {{cssxref("@keyframes")}} definition for this example, for brevity. They are nearly identical to the previous example, except that the rotation happens around the `y` axis rather than the `x` axis.
+For brevity, the {{cssxref("@keyframes")}} definition code is hidden. It is nearly identical to the [previous example](#css:~:text=%40keyframes%20rotate%2Dout); the only difference is that the rotation in this example occurs around the y-axis rather than the x-axis.
 
 ### JavaScript
 
@@ -391,7 +386,7 @@ function handleClick() {
 
 {{embedlivesample("element-scoped-clipping", "100%", "520")}}
 
-Click the button, and note how the transition remains clipped to the transition scope.
+Click the button, and note how the transition doesn't spill outside the `<section>` — it remains clipped to the transition scope.
 
 ## Nested element-scoped view transitions
 
@@ -547,7 +542,7 @@ We have hidden the rest of the CSS for brevity.
 
 ### JavaScript
 
-The JavaScript is similar to the first example, except that this time we run two element-scoped view transitions each time a link is clicked. The first one toggles the text of the link between "Standard" and "Alternative" (via the `toggleText()` function), and the second one swaps the position of the two lists inside the DOM (via the `togglePosition()` function). As before, we include rudimentary feature detection code to enable the functionality in non-supporting browsers.
+The JavaScript is similar to the first example, except that here two element-scoped view transitions run concurrently each time a link is clicked. The first one toggles the text of the link between "Standard" and "Alternative" (via the `toggleText()` function), and the second one swaps the position of the two lists inside the DOM (via the `togglePosition()` function). As before, we've included feature detection code, so the example still works in browsers that don't support `Element.startViewTransition()`.
 
 ```js live-sample___element-scoped-nested
 const lists = document.querySelectorAll("ul");
@@ -602,17 +597,17 @@ The following properties enable you to query active element-scoped view transiti
 - {{domxref("ViewTransition.transitionRoot")}}: Returns a reference to the root element of the view transition's scope.
 - {{domxref("Element.activeViewTransition")}}: Returns a reference to an element's active `ViewTransition`, if one exists.
 
-For example, you might want to do some kind of processing on the animations active on an element during a transition:
+For example, if you want to process the animations active on an element in some way during a transition, you can access them using `transitionRoot`:
 
 ```js
 function processAnimations(transition) {
-  let anims = transition.transitionRoot.getAnimations();
+  const anims = transition.transitionRoot.getAnimations();
   // ...
 }
 
 // ...
 
-let transition = el.startViewTransition();
+const transition = el.startViewTransition();
 transition.ready.then(() => processAnimations(transition));
 ```
 
