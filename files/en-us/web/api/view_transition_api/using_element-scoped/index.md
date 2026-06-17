@@ -321,7 +321,7 @@ section {
 }
 ```
 
-Next, we set a {{cssxref("view-transition-name")}} on our nested `<p>` element, and set the same name inside our custom {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}} transition animation pseudo-elements. This means that only the `<p>` will animate, and not the rest of the transition scope.
+Next, we set a {{cssxref("view-transition-name")}} on the nested `<p>` element, with matching names in the custom {{cssxref("::view-transition-old()")}} and {{cssxref("::view-transition-new()")}} pseudo-elements. This means that only `<p>` will animate, not the rest of the transition scope.
 
 ```css live-sample___element-scoped-clipping
 section p {
