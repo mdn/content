@@ -341,7 +341,7 @@ We have hidden the {{cssxref("@keyframes")}} definition for this example, for br
 
 ### JavaScript
 
-We start off our script by defining a `content` array containing two different strings to swap our `<p>` content between. We then grab references to our `<section>`, `<p>`, and `<button>` elements.
+The script defines a `content` array containing two different strings to swap the `<p>` content between. We then grab references to the `<section>`, `<p>`, and `<button>` elements.
 
 ```js hidden live-sample___element-scoped-clipping
 const content = [
