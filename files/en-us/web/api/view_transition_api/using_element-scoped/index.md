@@ -593,7 +593,7 @@ function handleClick(e) {
 
 {{embedlivesample("element-scoped-nested", "100%", "520")}}
 
-Click a link, and note how both nested view transitions occur at the same time, without interfering with one another.
+Click the text inside any box. Note how the text toggle and the list swap happen simultaneously - both nested transitions run at the same time without interfering with one another.
 
 ## Querying active view transitions
 
