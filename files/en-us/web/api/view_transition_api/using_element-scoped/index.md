@@ -202,7 +202,7 @@ Each `<a>` element has its own view transition, scoped just to that element. The
 
 ## Differences between element- and document-scoped transitions
 
-The previous example demonstrates how element-scoped view transitions fix some of the issues with their document counterparts. This is largely thanks to the difference in pseudo-element tree placement. Instead of being added just inside the {{cssxref(":root")}} element, the browser adds element-scoped view transition trees inside the element on which `Element.startViewTransition()` is called.
+The previous example demonstrates how element-scoped view transitions fix some of the issues of their document-scoped counterparts. This is largely thanks to the difference in pseudo-element tree placement. Instead of being added inside the {{cssxref(":root")}} element, the browser adds element-scoped view transition trees inside the element on which `Element.startViewTransition()` is called.
 
 In the previous example, one of the pseudo-element trees would look like this:
 
