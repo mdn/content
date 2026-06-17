@@ -429,7 +429,7 @@ The HTML is the same as for the [first example](#basic_element-scoped_example), 
 
 ### CSS
 
-We lay the two lists out side-by-side within the `.wrapper` element using [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), give the wrapper a `view-transition-name` of `wrapper`, then give each list a different background color:
+The two lists are arranged side-by-side within the `.wrapper` element using [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). We give the wrapper a `view-transition-name` of `wrapper`, and then we give each list a different background color:
 
 ```css hidden live-sample___element-scoped-nested
 body {
