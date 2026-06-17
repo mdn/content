@@ -618,5 +618,5 @@ transition.ready.then(() => processAnimations(transition));
 
 ## See also
 
-- [View transition API](/en-US/docs/Web/API/View_Transition_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [Run concurrent and nested view transitions with element-scoped view transitions](https://developer.chrome.com/docs/css-ui/view-transitions/element-scoped-view-transitions) on developer.chrome.com
