@@ -108,10 +108,17 @@ The example below shows the effect of different `animation-composition` values s
 #### CSS
 
 ```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
 .container {
-  width: 230px;
+  flex: 1;
+  min-width: 200px;
   height: 200px;
-  background: cyan;
+  background: lightblue;
   display: inline-block;
   text-align: center;
 }
