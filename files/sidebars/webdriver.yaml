@@ -62,6 +62,16 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
