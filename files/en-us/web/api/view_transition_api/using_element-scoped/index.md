@@ -234,7 +234,7 @@ This happens because the following are automatically set on the scope root eleme
 - A {{cssxref("view-transition-scope")}} value of `all`, which ensures that {{cssxref("view-transition-name")}} values scope to the element's subtree (see [Nested element-scoped view transitions](#nested_element-scoped_view_transitions) for more details).
 
 > [!NOTE]
-> You can opt out of self-participation by setting `view-transition-name: none` on the transition root element. However, this can result in undesirable behavior, such as the transition spilling out of the root in clipping cases. If you choose to do this, test carefully and make sure the scope does not clip its contents.
+> You can opt a view transition out of self-participation by setting `view-transition-name: none` on the transition root element. However, this can result in undesirable behavior, such as the transition spilling out of the root in clipping cases. If you choose to do this, test carefully and make sure the scope does not clip its contents.
 
 Let's look at another example, this time to demonstrate the clipping behavior.
 
