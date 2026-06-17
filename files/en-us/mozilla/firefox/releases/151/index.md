@@ -1,8 +1,8 @@
 ---
-title: Firefox 151 release notes for developers (Stable)
-short-title: Firefox 151 (Stable)
+title: Firefox 151 release notes for developers
+short-title: Firefox 151
 slug: Mozilla/Firefox/Releases/151
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -41,8 +41,6 @@ No notable changes.
 - The [`options.keyboardLock`](/en-US/docs/Web/API/Element/requestFullscreen#keyboardlock) property can now be passed as an option to {{domxref("Element.requestFullscreen()")}}, allowing websites to request keyboard lock when the element is displayed in fullscreen mode.
   This stops the <kbd>Esc</kbd> key from causing the element to leave fullscreen (a long-press is required instead), and some formerly-reserved browser hotkeys can now be intercepted and their default action prevented.
   ([Firefox bug 2032302](https://bugzil.la/2032302)).
-- The {{domxref("CanvasRenderingContext2D.lang")}} property is now supported, allowing the rendering language of an offscreen canvas to be explicitly specified and changed after the rendering context is created.
-  ([Firefox bug 1943070](https://bugzil.la/1943070)).
 - The `maxStorageBuffersInFragmentStage`, `maxStorageBuffersInVertexStage`, `maxStorageTexturesInFragmentStage`, and `maxStorageTexturesInVertexStage` properties on {{domxref("GPUSupportedLimits")}} are now partially supported.
   These properties report the value of the `maxStorageBuffersPerShaderStage` and `maxStorageTexturesPerShaderStage` limits.
   When creating a device, requested values for the *In*Stage limits are ignored.
