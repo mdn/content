@@ -523,7 +523,7 @@ a:focus {
 }
 ```
 
-We also apply a different animation to the general old and new transition pseudos, and then a different animation to the `wrapper` old and new transition pseudos:
+We also apply different animations to the general old and new transition pseudo-elements, and then separate animations to the `wrapper` old and new transition pseudo-elements:
 
 ```css live-sample___element-scoped-nested
 ::view-transition-old(*) {
