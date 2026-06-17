@@ -12,10 +12,20 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "session.subscribe",
   "params": {
-    "events": ["<event name>"]
+    "events": ["log.entryAdded"]
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "session.subscribe",
+  "params": {
+    "events": ["log.entryAdded"],
+    "contexts": ["93ee5bd6-d256-4608-a002-9a8995cc0e5f"]
   }
 }
 ```

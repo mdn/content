@@ -17,10 +17,40 @@ Since this command is used to create a new session, it runs without an already a
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "session.new",
   "params": {
     "capabilities": {}
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "session.new",
+  "params": {
+    "capabilities": {
+      "alwaysMatch": {
+        "acceptInsecureCerts": true,
+        "proxy": {
+          "proxyType": "manual",
+          "httpProxy": "127.0.0.1:80"
+        },
+        "unhandledPromptBehavior": {
+          "default": "accept"
+        }
+      },
+      "firstMatch": [
+        {
+          "browserName": "firefox",
+          "platformName": "mac"
+        },
+        {
+          "browserName": "chrome",
+          "platformName": "windows"
+        }
+      ]
+    }
   }
 }
 ```
@@ -31,17 +61,17 @@ The `params` field contains:
 
 - `capabilities`
   - : An object that specifies the requested features for the session. It can include the following fields:
-    - `alwaysMatch` {{optional_inline}}
+    - [`alwaysMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#alwaysmatch) {{optional_inline}}
       - : An object that specifies the requested features that must all be satisfied by the browser for session creation.
         If the browser cannot satisfy all requested features in this object, the session is not created.
-    - `firstMatch` {{optional_inline}}
+    - [`firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#firstmatch) {{optional_inline}}
       - : An array of objects, each specifying an alternative set of requested features for session creation.
         The browser tries each set in the order specified and creates a session using the first where all requested features can be satisfied.
         If the browser cannot satisfy all requested features in any of the sets, the session is not created.
 
 The `alwaysMatch` and `firstMatch` objects can include the following features:
 
-- `acceptInsecureCerts` {{optional_inline}}
+- [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts) {{optional_inline}}
   - : A boolean that controls whether untrusted TLS certificates (for example, self-signed or expired) are accepted for the duration of the session.
 - `browserName` {{optional_inline}}
   - : A string that specifies the name of the browser to use (for example, `"firefox"` or `"chrome"`).
@@ -191,3 +221,4 @@ In browsers that don't support multiple sessions (e.g., Firefox), sending `sessi
 
 - [`session.status`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/status) command
 - [`session.end`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/end) command
+- [Combining `alwaysMatch` and `firstMatch`](/en-US/docs/Web/WebDriver/Reference/Capabilities#combining_alwaysmatch_and_firstmatch)

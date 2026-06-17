@@ -11,24 +11,20 @@ The `session.unsubscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 
 ## Syntax
 
-To unsubscribe using subscription ID:
-
 ```json-nolint
+/* Using event name */
 {
   "method": "session.unsubscribe",
   "params": {
-    "subscriptions": ["<subscription ID>"]
+    "events": ["log.entryAdded"]
   }
 }
-```
 
-To unsubscribe using event name:
-
-```json-nolint
+/* Using subscription ID */
 {
   "method": "session.unsubscribe",
   "params": {
-    "events": ["<event name>"]
+    "subscriptions": ["a1b2c3d4-e5f6-7890-abcd-ef1234567890"]
   }
 }
 ```

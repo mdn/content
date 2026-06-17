@@ -12,18 +12,45 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "input.performActions",
   "params": {
-    "context": "<contextId>",
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
     "actions": [
       {
-        "type": "<outerType>",
-        "id": "<sourceId>",
+        "type": "key",
+        "id": "keyboard1",
         "actions": [
           {
-            "type": "<innerType>",
-            ...
+            "type": "keyDown",
+            "value": "a"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "input.performActions",
+  "params": {
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
+    "actions": [
+      {
+        "type": "pointer",
+        "id": "mouse1",
+        "parameters": {
+          "pointerType": "mouse"
+        },
+        "actions": [
+          {
+            "type": "pointerMove",
+            "x": 100,
+            "y": 200,
+            "duration": 300,
+            "origin": "viewport"
           }
         ]
       }
