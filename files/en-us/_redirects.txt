@@ -10464,6 +10464,7 @@
 /en-US/docs/Web/API/TimeRanges.end	/en-US/docs/Web/API/TimeRanges/end
 /en-US/docs/Web/API/TimeRanges.length	/en-US/docs/Web/API/TimeRanges/length
 /en-US/docs/Web/API/TimeRanges.start	/en-US/docs/Web/API/TimeRanges/start
+/en-US/docs/Web/API/Topics_API/Using	/en-US/docs/Web/API/Topics_API
 /en-US/docs/Web/API/Touch.clientX	/en-US/docs/Web/API/Touch/clientX
 /en-US/docs/Web/API/Touch.clientY	/en-US/docs/Web/API/Touch/clientY
 /en-US/docs/Web/API/Touch.force	/en-US/docs/Web/API/Touch/force
