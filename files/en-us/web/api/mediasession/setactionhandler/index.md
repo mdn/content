@@ -22,6 +22,8 @@ setActionHandler(type, callback)
 - `type`
   - : A string representing an action type to listen for. It will be one
     of the following:
+    - `enterpictureinpicture`
+      - : The media is opened in a [picture-in-picture](/en-US/docs/Web/API/Picture-in-Picture_API) window.
     - `hangup`
       - : End a call.
     - `nextslide`
@@ -62,6 +64,14 @@ setActionHandler(type, callback)
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`
       - : A string representing the action type. This property allows a single callback to handle multiple action types.
+    - `enterPictureInPictureReason` {{optional_inline}}
+      - : This property will be available if the action is [`enterpictureinpicture`](#enterpictureinpicture). It is an enumerated value that indicates the reason why the browser triggered this action. Possible values are:
+        - `contentoccluded`
+          - : The page displaying the media has become occluded, for example, due to tab switching or minimization.
+        - `useraction`
+          - : The user has taken an explicit action to trigger picture-in-picture mode, such as selecting a "picture-in-picture" option from a context menu, clicking a "picture-in-picture" button in the browser chrome, or clicking a button in the web page that results in a call to {{domxref("HTMLVideoElement.requestPictureInPicture()")}}.
+        - `other`
+          - : The reason for entering picture-in-picture mode is something not covered by the other values.
     - `fastSeek` {{optional_inline}}
       - : A [`seekto`](#seekto) action may _optionally_ include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
