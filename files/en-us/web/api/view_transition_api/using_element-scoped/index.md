@@ -597,7 +597,7 @@ Click the text inside any box. Note how the text toggle and the list swap happen
 
 ## Querying active view transitions
 
-The following properties are available to enable querying active element-scoped view transitions:
+The following properties enable you to query active element-scoped view transitions:
 
 - {{domxref("ViewTransition.transitionRoot")}}: Returns a reference to the root element of the view transition's scope.
 - {{domxref("Element.activeViewTransition")}}: Returns a reference to an element's active `ViewTransition`, if one exists.
