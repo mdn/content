@@ -32,7 +32,7 @@ The `input.performActions` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mo
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "input.performActions",
   "params": {

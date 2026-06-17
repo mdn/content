@@ -20,7 +20,7 @@ The `session.subscribe` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "session.subscribe",
   "params": {

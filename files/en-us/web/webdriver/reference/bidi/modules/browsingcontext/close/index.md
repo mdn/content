@@ -20,7 +20,7 @@ The `browsingContext.close` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/M
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "browsingContext.close",
   "params": {

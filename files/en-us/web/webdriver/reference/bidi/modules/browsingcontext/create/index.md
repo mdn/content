@@ -20,7 +20,7 @@ The `browsingContext.create` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "browsingContext.create",
   "params": {

@@ -25,7 +25,7 @@ Since this command is used to create a new session, it runs without an already a
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "session.new",
   "params": {

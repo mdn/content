@@ -23,7 +23,7 @@ The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/
   }
 }
 
-/* With optional parameters */
+/* With required and optional parameters */
 {
   "method": "browser.setDownloadBehavior",
   "params": {
