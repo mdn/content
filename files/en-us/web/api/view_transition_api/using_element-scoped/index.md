@@ -399,7 +399,7 @@ One more aspect of element-scoped view transitions worth noting is that you can 
 
 Let's look at a demonstration of nested element-scoped view transitions.
 
-We won't show the HTML for this example; it is the same as for the [first example](#basic_element-scoped_example), except that this time we have two lists of links inside an extra wrapper element.
+The HTML is the same as for the [first example](#basic_element-scoped_example), except there are now two lists of links inside an extra wrapper element.
 
 ```html hidden live-sample___element-scoped-nested
 <p>
