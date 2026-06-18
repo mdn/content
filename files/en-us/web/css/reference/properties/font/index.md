@@ -123,7 +123,7 @@ The value is either a shorthand specifying the various font-related properties o
 - `<system-font-family-name>`
   - : A single keyword representing a system font, including:
     - `caption`
-      - : The system font used for captioned controls (e.g., buttons, drop-downs, etc.).
+      - : The system font used for captioned controls (buttons, drop-downs, etc.).
     - `icon`
       - : The system font used to label icons.
     - `menu`
@@ -201,9 +201,9 @@ The order of some of the longhand values within the shorthand `font` declaration
 
 For backward compatibility, the valid values of the `font-variant` and `font-width` components do not include all the valid values or the longhand equivalents.
 
-The valid values for the `font-variant` component are limited `normal` or `small-caps`. While no other values are supported, the shorthand `font` declaration resets all the `font-variant-*` longhand properties to `normal`, including {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}}.
+The valid values for the `font-variant` component are limited to `normal` or `small-caps`. While no other values are supported, the shorthand `font` declaration resets all the `font-variant-*` longhand properties to `normal`, including {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}}.
 
-The valid values for the `font-width` component are limited to keyword values: `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, which are not valid within the shorthand.
+The valid values for the `font-width` component are limited to keyword values: `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, but they are not valid within the shorthand.
 
 ## Formal definition
 
@@ -271,7 +271,7 @@ p {
 
 #### HTML
 
-Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover over or focus on the rendered link, your browser's status bar should display the value of this `href` attribute.
+Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover or focus the rendered link, your browser's status bar should display the value of the `href` attribute.
 
 ```html
 <p>
@@ -289,8 +289,8 @@ family%20and%20size%20and%20the%20text%20in%20the%20example."
 As the URL in our HTML link is not good practice, we include a script that prevents the document from redirecting to a non-existent page when the link is clicked.
 
 ```js
-const a = document.querySelector("a");
-a.addEventListener("click", function (e) {
+const aElem = document.querySelector("a");
+aElem.addEventListener("click", function (e) {
   e.preventDefault();
   return false;
 });
@@ -300,7 +300,7 @@ a.addEventListener("click", function (e) {
 
 {{EmbedLiveSample('System font','100%', '100')}}
 
-Hover or focus the link, then look at your status bar. The font should be the same family and size and the text in your status bar at the bottom of your browser window..
+Hover or focus the link. The font should be the same family and size as the text in your status bar at the bottom of your browser window.
 
 ### Shorthand declaration creator
 
