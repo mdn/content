@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-The **CSS gaps** module lets specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts. The [CSS multi-column layout]() module originally defined gaps and rules controlling the spacing between columns in multi-column containers. This module expands on these visible separators, called _gap decorations_, enabling the application to grid.
+The **CSS gaps** module lets you specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts. The [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module originally defined gaps and rules controlling the spacing between columns in multi-column containers. This module expands on these visible separators, called _gap decorations_, extending it to grid.
 
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
@@ -30,7 +30,7 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
   <p>
     We've learned that quiet isn't always peace and the norms and notions of
     what just is, isn't always justice. And yet the dawn is hours before we knew
-    it, somehow we do it, somehow we’ve weathered and witnessed a nation that
+    it, somehow we do it, somehow we've weathered and witnessed a nation that
     isn't broken but simply unfinished.
   </p>
 
@@ -57,9 +57,9 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
   </p>
 
   <p>
-    That even as we tired, we tried. That we’ll forever be tied together,
+    That even as we tired, we tried. That we'll forever be tied together,
     victorious, not because we will never again know defeat, but because we will
-    never again sow division.v
+    never again sow division.
   </p>
 
   <p>
@@ -96,8 +96,8 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
   </p>
 
   <p>
-    So, while once we asked, “how could we possibly prevail over catastrophe?”,
-    now we assert, “how could catastrophe possibly prevail over us?” We will not
+    So, while once we asked, "how could we possibly prevail over catastrophe?",
+    now we assert, "how could catastrophe possibly prevail over us?" We will not
     march back to what was, but move to what shall be, a country that is bruised
     but whole, benevolent but bold, fierce and free. We will not be turned
     around or interrupted by intimidation.
@@ -211,7 +211,7 @@ const columnRuleStyle = document.getElementById("columnRuleStyle");
 const ruleStyle = document.getElementById("ruleStyle");
 const columnRuleColor = document.getElementById("colColor");
 
-//make options visible if js is enabled
+// Make options visible if JavaScript is enabled
 option.style.display = "revert";
 
 legendBtn.addEventListener("click", () => {
@@ -411,7 +411,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
   - : Introduction to the fragmentation specification and how to control where column content breaks.
 - [Box alignment guides](/en-US/docs/Web/CSS/Guides/Box_alignment#guides)
-  - : How [box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview)works in the context of [flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout), and for [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
+  - : How [box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview) works in the context of [flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox), [grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout), and for [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
 
 ## Related concepts
 
