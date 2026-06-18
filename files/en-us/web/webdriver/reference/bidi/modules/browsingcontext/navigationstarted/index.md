@@ -13,6 +13,10 @@ The `browsingContext.navigationStarted` [event](/en-US/docs/Web/WebDriver/Refere
 
 The navigation to a different page can be triggered by the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, by user interaction with elements on the page, or by JavaScript running in the page's context.
 
+For cross-document navigations, this event is the first in the sequence of navigation events and fires when the browser begins fetching the URL.
+If the navigation succeeds, [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) fires next, when the browser has accepted the response and begun loading the new page.
+If the navigation fails, [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed) fires instead.
+
 > [!NOTE]
 > This event is not emitted when the initial `about:blank` page is loaded for a new top-level browsing context.
 
@@ -64,7 +68,7 @@ Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference
 
 ## See also
 
-- [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated) event
-- [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated) event
 - [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) event
 - [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed) event
+- [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated) event
+- [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated) event
