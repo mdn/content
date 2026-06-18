@@ -14,6 +14,11 @@ The **`regionAnchorX`** property of the {{domxref("VTTRegion")}} interface repre
 
 A number, in the range `0` to `100` inclusive, representing the x-coordinate of the region anchor as a percentage of the region's width. The default is `0`.
 
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when set to a value that is negative or greater than `100`.
+
 ## Examples
 
 In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `regionAnchorX` is set to `30`. The value is then printed to the console.

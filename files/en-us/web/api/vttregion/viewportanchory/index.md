@@ -14,6 +14,11 @@ The **`viewportAnchorY`** property of the {{domxref("VTTRegion")}} interface rep
 
 A number, in the range `0` to `100` inclusive, representing the y-coordinate of the viewport anchor as a percentage of the video's height. The default is `100`.
 
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when set to a value that is negative or greater than `100`.
+
 ## Examples
 
 In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `viewportAnchorY` is set to `75`. The value is then printed to the console.

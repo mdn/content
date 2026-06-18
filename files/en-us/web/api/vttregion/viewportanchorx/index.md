@@ -14,6 +14,11 @@ The **`viewportAnchorX`** property of the {{domxref("VTTRegion")}} interface rep
 
 A number, in the range `0` to `100` inclusive, representing the x-coordinate of the viewport anchor as a percentage of the video's width. The default is `0`.
 
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when set to a value that is negative or greater than `100`.
+
 ## Examples
 
 In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `viewportAnchorX` is set to `25`. The value is then printed to the console.
