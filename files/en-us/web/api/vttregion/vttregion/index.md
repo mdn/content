@@ -8,7 +8,7 @@ browser-compat: api.VTTRegion.VTTRegion
 
 {{APIRef("WebVTT")}}
 
-The **`VTTRegion()`** constructor creates and returns a new {{domxref("VTTRegion")}} object.
+The **`VTTRegion()`** constructor creates a new {{domxref("VTTRegion")}} object instance.
 
 ## Syntax
 

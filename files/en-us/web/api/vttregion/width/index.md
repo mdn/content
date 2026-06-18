@@ -8,19 +8,19 @@ browser-compat: api.VTTRegion.width
 
 {{APIRef("WebVTT")}}
 
-The **`width`** property of the {{domxref("VTTRegion")}} interface represents the width of the region, as a percentage of the video.
+The **`width`** property of the {{domxref("VTTRegion")}} interface represents the width of the region, as a percentage of the video's width.
 
 ## Value
 
-A number, in the range `0` to `100`, giving the width of the region as a percentage of the video. The default is `100`.
+A number in the range `0` to `100` inclusive, representing the width of the region as a percentage of the video's width. The default is `100`.
 
 ## Examples
 
-In the following example a new {{domxref("VTTRegion")}} is created, then the value of `width` is set to `50`. The value is then printed to the console.
+In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `width` is set to `50`. The value is then printed to the console.
 
 ```js
 const region = new VTTRegion();
-region.width = 50; // Use 50% of the video width
+region.width = 50; // Set the region to 50% of the video's width
 console.log(region.width);
 ```
 

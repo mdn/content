@@ -8,20 +8,20 @@ browser-compat: api.VTTRegion.scroll
 
 {{APIRef("WebVTT")}}
 
-The **`scroll`** property of the {{domxref("VTTRegion")}} interface is an enumerated value representing how adding a new cue will move existing cues in the region.
+The **`scroll`** property of the {{domxref("VTTRegion")}} interface is an enumerated value indicating how existing cues in the region move when a new cue is added.
 
 ## Value
 
 A string. Possible values are:
 
 - `""` (the empty string)
-  - : The cues in the region are not to scroll, and are instead displayed simultaneously. This is the default.
+  - : Existing cues in the region don't scroll; instead, they are displayed at the same time as new cues. This is the default.
 - `"up"`
-  - : The cues in the region are added at the bottom of the region and scroll any already-displayed cues upwards.
+  - : New cues are added at the bottom of the region, and existing cues scroll upwards to make space for them.
 
 ## Examples
 
-In the following example a new {{domxref("VTTRegion")}} is created, then the value of `scroll` is set to `"up"`. The value is then printed to the console.
+In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `scroll` is set to `"up"`. The value is then printed to the console.
 
 ```js
 const region = new VTTRegion();

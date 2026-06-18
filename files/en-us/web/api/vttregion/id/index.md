@@ -12,11 +12,11 @@ The **`id`** property of the {{domxref("VTTRegion")}} interface is a string that
 
 ## Value
 
-A string that identifies the region, or an empty string if none is set.
+A string that identifies the region. Initialized to an empty string when the `VTTRegion` object is first constructed.
 
 ## Examples
 
-In the following example a new {{domxref("VTTRegion")}} is created, then the value of `id` is set to `"region1"`. The value is then printed to the console.
+In the following example, a new {{domxref("VTTRegion")}} is created, then the value of `id` is set to `"region1"`. The value is then printed to the console.
 
 ```js
 const region = new VTTRegion();
