@@ -119,7 +119,7 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 
 ### Basic example
 
-This example demonstrates applying `background-color` to HTML {{HTMLelement("p")}} elements using different CSS {{cssxref("color_value", "&lt;color&gt;")}} data-type values.
+This example demonstrates applying `background-color` to HTML {{HTMLelement("p")}} elements using different CSS {{cssxref("color_value", "&lt;color&gt;")}} values.
 
 #### HTML
 
