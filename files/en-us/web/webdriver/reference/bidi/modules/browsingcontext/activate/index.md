@@ -15,7 +15,7 @@ The `browsingContext.activate` [command](/en-US/docs/Web/WebDriver/Reference/BiD
 {
   "method": "browsingContext.activate",
   "params": {
-    "context": "<contextId>"
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
   }
 }
 ```
