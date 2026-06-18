@@ -461,8 +461,8 @@ You can switch them to display in the block direction for the language of your d
 
 If you change `flex-direction` to one of the reverse values, they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. Then, `flex-start` will change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
 
-![Three items, placed in reversed row direction, aligned to the right of the container.](align9.png)
-![Three items, placed in reversed column direction.](align11.png)
+![Diagram showing flex-start on the right and flex-end on the left.](align9.png)
+![Diagram showing flex-start on the bottom and flex-end on the top.](align11.png)
 
 ## Using auto margins for main axis alignment
 
