@@ -21,15 +21,15 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-  - : `object`. Information about the frame to retrieve information about. Must include one of `tabId`, `frameId`, or `documentId`.
+  - : `object`. Information about the frame to retrieve. Must include either `documentId`, or `tabId` and `frameId`.
     - `tabId` {{optional_inline}}
-      - : `integer`. The ID of the tab in which the frame is.
+      - : `integer`. The ID of the tab in which the frame is. Required if `documentId` is not specified.
     - `processId` {{optional_inline}} {{deprecated_inline}}
       - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
     - `frameId` {{optional_inline}}
-      - : `integer`. The ID of the frame in the given tab.
+      - : `integer`. The ID of the frame in the given tab. Required if `documentId` is not specified.
     - `documentId` {{optional_inline}}
-      - : `string`. The UUID of the frame's document.
+      - : `string`. The UUID of the frame's document. If `tabId` and `frameId` are also specified, the frame is only returned if all properties match.
 
 ### Return value
 
