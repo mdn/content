@@ -80,10 +80,9 @@ Firefox 153 is the current [Nightly version of Firefox](https://www.firefox.com/
 - Adds support for `documentId`, a UUID that uniquely identifies a document across its lifetime, to several WebExtension APIs. ([Firefox bug 1891478](https://bugzil.la/1891478)):
   - The new {{WebExtAPIRef("runtime.getDocumentId()")}} method returns the document UUID of a target window or frame element.
   - {{WebExtAPIRef("runtime.getContexts()")}} now returns a `documentId` for each extension context, and the `documentIds` filter property is supported.
-  - {{WebExtAPIRef("runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage()")}} `options` now support `documentId` to target a specific document.
   - {{WebExtAPIRef("runtime.MessageSender")}} now includes `documentId`, available in {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, {{WebExtAPIRef("runtime.onUserScriptMessage")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners.
   - {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}} now support `target.documentIds` (see {{WebExtAPIRef("scripting.InjectionTarget")}}) to target specific documents; {{WebExtAPIRef("scripting.executeScript()")}} also returns `documentId` in each `InjectionResult`.
-  - {{WebExtAPIRef("userScripts.execute()")}} `target` now supports `documentIds`, and the results include `documentId`.
+  - {{WebExtAPIRef("userScripts.execute()")}} `target` supports `documentIds`, and the results include `documentId`.
   - {{WebExtAPIRef("tabs.connect()")}} and {{WebExtAPIRef("tabs.sendMessage()")}} `options` now support `documentId` to target a specific document in a tab.
   - {{WebExtAPIRef("webNavigation.getAllFrames()")}} now returns `documentId` and `parentDocumentId` for each frame.
   - {{WebExtAPIRef("webNavigation.getFrame()")}} now accepts `documentId` as an alternative to `tabId` and `frameId`, and returns `documentId` and `parentDocumentId`.

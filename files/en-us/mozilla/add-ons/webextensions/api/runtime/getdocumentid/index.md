@@ -23,7 +23,7 @@ let documentId = browser.runtime.getDocumentId(
 
 ### Return value
 
-Returns the document UUID of the target frame's document, or `undefined` if the frame doesn't exist.
+Returns the document UUID of the target. Throws an error if the window or frame was unloaded.
 
 ## Examples
 
