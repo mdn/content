@@ -93,7 +93,7 @@ The `background-color` property is specified as a single `<color>` value.
 
 ## Description
 
-The `background-color` property sets the background color of an element box. The color is drawn behind any background images. By default, the background color is painted within the [border-box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area), meaning is painted behind the border, ending at the outer edge of the border-box.
+The `background-color` property sets the background color of an element box. The color is drawn behind any background images. By default, the background color is painted within the [border-box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area), meaning it's painted behind the border, ending at the outer edge of the border-box.
 
 Clipping of the `background-color` paint area is controlled via the {{cssxref("background-clip")}} property. If multiple background images are set, the background color's clipping is determined by the value of the `background-clip` associated with the bottom-most background image.
 
@@ -133,7 +133,7 @@ This example demonstrates applying `background-color` to HTML {{HTMLelement("p")
 
 #### CSS
 
-Each paragraph is set to a different background color, including explicity setting the default [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent), an {{cssxref("rgb()")}} color function, and a {{cssxref("hex-color")}}. We also set the {{cssxref("color")}} proprty to ensure enough contrast between the text and its background.
+Each paragraph is set to a different background color, including explicitly setting the default [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent), an {{cssxref("rgb()")}} color function, and a {{cssxref("hex-color")}}. We also set the {{cssxref("color")}} property to ensure enough contrast between the text and its background.
 
 ```css
 .example-one {
