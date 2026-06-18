@@ -139,7 +139,6 @@ The browser responds as follows, once the document and all its subresources have
 - [`browsingContext.traverseHistory`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory) command
 - [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create) command
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) command
-- [`browsingContext.navigationAborted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationAborted) event
+- [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event
 - [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) event
 - [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed) event
-- [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event
