@@ -15,7 +15,7 @@ It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the `Port
 Values of this type are objects. They contain the following properties:
 
 - `documentId` {{optional_inline}}
-  - : `string`. A UUID of the document that opened the connection.
+  - : `string`. A UUID of the document that opened the connection. Available in {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, {{WebExtAPIRef("runtime.onUserScriptMessage")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners.
 - `documentLifecycle` {{optional_inline}}
   - : `string`. The lifecycle state the document that opened the connection was in when the port was created. Note that the lifecycle state of the document may have changed since the port was created.
 - `frameId` {{optional_inline}}
