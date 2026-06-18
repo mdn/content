@@ -89,7 +89,7 @@ row-gap: unset;
 ## Description
 
 The `row-gap` property sets the size of the gap between an element's rows.
-This gap may contain a visible separator as a gap decoration. If there is a rule between rows, it will appear in the middle of the gap, but has no impact on the gap size. These decorative lines can be added to the otherwise "empty space" by using the {{cssxref("row-rule")}} property or {{cssxref("rule")}} shorthand..
+This gap may contain a visible separator as a gap decoration. If there is a rule between rows, it will appear in the middle of the gap, but has no impact on the gap size. These decorative lines can be added to the otherwise "empty space" by using the {{cssxref("row-rule")}} property or {{cssxref("rule")}} shorthand.
 
 Defined in [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps), the property can be used in multi-column, flexible box, and grid layouts. It replaced the `grid-row-gap` property, which was limited to [CSS grid layouts](/en-US/docs/Web/CSS/Guides/Grid_layout). Now `grid-row-gap` is an alias for `row-gap`.
 

@@ -121,7 +121,7 @@ Gaps may contain visible separators as gap decorations. If there are decorative 
 
 ### In grid layouts
 
-In [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)grid layout, the `gap` property defines the space between rows and columns. The first value defines the gutter between rows, and the second defines the gutter between columns. If only one value is included, that value is used for both dimensions.
+In [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), the `gap` property defines the space between rows and columns. The first value defines the gutter between rows, and the second defines the gutter between columns. If only one value is included, that value is used for both dimensions.
 
 Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. Cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the grid container's content box when laying out the contents. Two examples below demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) in the examples section.
 

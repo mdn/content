@@ -104,7 +104,7 @@ body {
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 
-[CSS gap](/en-US/docs/Web/CSS/Guides/Gaps) module
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}

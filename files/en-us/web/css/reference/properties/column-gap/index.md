@@ -80,7 +80,7 @@ column-gap: unset;
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
 - {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap between columns, as a non-negative{{CSSxRef("&lt;length&gt;")}} value.
+  - : The size of the gap between columns, as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : The size of the gap between columns, defined as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value.
 
@@ -88,7 +88,7 @@ column-gap: unset;
 
 The `column-gap` property sets the size of the gap between an element's columns. The property specifies a fixed-length gutter between items in a container, separating boxes in the container's inline axis. Negative values are invalid. The default value `normal` resolves to `1em` on multi-column containers, and `0` everywhere else.
 
-Percentages resolve against the are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
+Percentages are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
 
 The column gap may contain a visible separator as a gap decoration. If there is a rule between the columns, set with the {{cssxref("column-rule")}} property or {{cssxref("rule")}} shorthand, it will appear in the middle of the gap, but has no effect on the size of the gaps between the column.
 

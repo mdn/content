@@ -72,7 +72,7 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}
 
-[CSS gap](/en-US/docs/Web/CSS/Guides/Gaps) module
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
