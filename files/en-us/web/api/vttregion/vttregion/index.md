@@ -24,6 +24,17 @@ None.
 
 A new {{domxref("VTTRegion")}} object.
 
+The properties of the returned object are initialized to the following values:
+
+- {{domxref("VTTRegion.id", "id")}}: `""` (the empty string)
+- {{domxref("VTTRegion.width", "width")}}: `100`
+- {{domxref("VTTRegion.lines", "lines")}}: `3`
+- {{domxref("VTTRegion.regionAnchorX", "regionAnchorX")}}: `0`
+- {{domxref("VTTRegion.regionAnchorY", "regionAnchorY")}}: `100`
+- {{domxref("VTTRegion.viewportAnchorX", "viewportAnchorX")}}: `0`
+- {{domxref("VTTRegion.viewportAnchorY", "viewportAnchorY")}}: `100`
+- {{domxref("VTTRegion.scroll", "scroll")}}: `""` (the empty string)
+
 ## Examples
 
 ```js
