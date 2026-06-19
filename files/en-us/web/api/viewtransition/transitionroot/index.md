@@ -3,10 +3,12 @@ title: "ViewTransition: transitionRoot property"
 short-title: transitionRoot
 slug: Web/API/ViewTransition/transitionRoot
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ViewTransition.transitionRoot
 ---
 
-{{APIRef("View Transition API")}}
+{{APIRef("View Transition API")}}{{SeeCompatTable}}
 
 The **`transitionRoot`** read-only property of the {{domxref("ViewTransition")}} interface is a reference to the root {{domxref("Element")}} of the [view transition](/en-US/docs/Web/API/View_Transition_API/Using) scope.
 

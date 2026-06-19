@@ -3,10 +3,12 @@ title: "Element: startViewTransition() method"
 short-title: startViewTransition()
 slug: Web/API/Element/startViewTransition
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.startViewTransition
 ---
 
-{{APIRef("View Transition API")}}
+{{APIRef("View Transition API")}}{{SeeCompatTable}}
 
 The **`startViewTransition()`** method of the {{domxref("Element")}} interface starts a new same-document ({{glossary("SPA")}}) [element-scoped](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 

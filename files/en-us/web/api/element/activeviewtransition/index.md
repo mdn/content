@@ -3,10 +3,12 @@ title: "Element: activeViewTransition property"
 short-title: activeViewTransition
 slug: Web/API/Element/activeViewTransition
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Element.activeViewTransition
 ---
 
-{{APIRef("View Transition API")}}
+{{APIRef("View Transition API")}}{{SeeCompatTable}}
 
 The **`activeViewTransition`** read-only property of the {{domxref("Element")}} interface returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on an element. It provides a consistent way to access an active [element-scoped view transition](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) without needing to save a reference to it for later.
 
