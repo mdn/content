@@ -65,7 +65,8 @@ setActionHandler(type, callback)
     - `action`
       - : A string representing the action type. This property allows a single callback to handle multiple action types.
     - `enterPictureInPictureReason` {{optional_inline}}
-      - : This property will be available if the action is [`enterpictureinpicture`](#enterpictureinpicture). It is an enumerated value that indicates the reason why the browser triggered this action. Possible values are:
+      - : This property will be available if the action is [`enterpictureinpicture`](#enterpictureinpicture).
+         It is an enumerated value that indicates the reason why the browser triggered this action. Possible values are:
         - `contentoccluded`
           - : The page displaying the media has become occluded, for example, due to tab switching or minimization.
         - `useraction`
