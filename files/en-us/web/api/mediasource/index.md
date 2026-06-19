@@ -67,7 +67,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ### Complete basic example
 
-The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
 
 ```js
 const video = document.querySelector("video");
@@ -79,7 +79,7 @@ const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 let mediaSource;
 
 if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  mediaSource = getMediaSource();
+  mediaSource = new MediaSource();
   console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener("sourceopen", sourceOpen);
