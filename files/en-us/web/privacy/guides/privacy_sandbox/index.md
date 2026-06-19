@@ -35,7 +35,7 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 
 ## Enrollment
 
-Google deprecated some Privacy Sandbox features and suspended enrollment of new websites and organizations into Privacy Sandbox Console.
+Google deprecated some Privacy Sandbox features and suspended enrollment of new websites and organizations into the Privacy Sandbox Console.
 
 ### Features requiring enrollment
 
