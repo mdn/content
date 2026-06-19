@@ -11,6 +11,8 @@ The **Prompt API** allows web pages to directly prompt a language model provided
 
 ## Concepts and usage
 
+The Prompt API lets web pages talk directly to a browser (user agent) provided language model without relying on a cloud service. This means sensitive data can stay on the user's device, the model works offline, and developers avoid the cost and latency of API calls to external services. It also provides a uniform JavaScript interface that abstracts away model-specific details such as tokenization and templating, so developers don't need to handle those differences across implementations.
+
 ### Sessions
 
 All interaction with the language model happens through a {{domxref("LanguageModel")}} session.
@@ -71,6 +73,17 @@ if (availability === "unavailable") {
   });
 }
 ```
+
+## Roles
+
+Role is a required field on every `LanguageModelMessage` that identifies who authored that message.
+
+`"system"`
+: A system-level instruction that configures or constrains the model's behavior before the conversation begins. System messages are only allowed in `initialPrompts`. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, {{domxref("LanguageModel.append()", "append()")}} throw a {{DOMxRef("NotSupportedError")}} {{DOMxRef("DOMException")}} if a message with `role: "system"` is passed to them. Additionally, system messages cannot be submitted after any input has already been appended to the context; attempting to do so throws a {{DOMxRef("TypeError")}}.
+`"user"` (default)
+: A message from the user. User messages support any content type supported by the underlying (user-agent defined) model.
+`"assistant"`
+: A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task. Only text is allowed for `"assistant"` messages. Any other content type throws a {{DomxRef("NotSupportedError")}}.
 
 ### Permissions policy
 
