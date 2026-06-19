@@ -3,9 +3,13 @@ title: "`view-transition-scope` CSS property"
 short-title: view-transition-scope
 slug: Web/CSS/Reference/Properties/view-transition-scope
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.view-transition-scope
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`view-transition-scope`** [CSS](/en-US/docs/Web/CSS) property enables the discoverability of elements with {{cssxref("view-transition-name")}} values set on them (and therefore the creation of view transition [snapshots](/en-US/docs/Web/API/View_Transition_API/Using#an_aside_on_snapshots)) to be isolated to a specific element subtree.
 

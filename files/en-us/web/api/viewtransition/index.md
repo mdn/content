@@ -25,7 +25,7 @@ When a view transition is triggered by a `startViewTransition()` call (or a page
   - : A {{jsxref("Promise")}} that fulfills once the transition animation is finished, and the new page view is visible and interactive to the user.
 - {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
-- {{domxref("ViewTransition.transitionRoot")}} {{ReadOnlyInline}}
+- {{domxref("ViewTransition.transitionRoot")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A reference to the root {{domxref("Element")}} of the view transition scope.
 - {{domxref("ViewTransition.types")}} {{ReadOnlyInline}}
   - : A {{domxref("ViewTransitionTypeSet")}} that allows the types set on the view transition to be accessed and modified.

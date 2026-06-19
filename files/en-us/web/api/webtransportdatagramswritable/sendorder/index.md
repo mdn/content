@@ -3,10 +3,12 @@ title: "WebTransportDatagramsWritable: sendOrder property"
 short-title: sendOrder
 slug: Web/API/WebTransportDatagramsWritable/sendOrder
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramsWritable.sendOrder
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`sendOrder`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets an integer indicating the priority of this stream's datagrams relative to other streams and datagrams in the same {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}}.
 

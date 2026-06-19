@@ -3,10 +3,12 @@ title: "WebTransportSendGroup: getStats() method"
 short-title: getStats()
 slug: Web/API/WebTransportSendGroup/getStats
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.WebTransportSendGroup.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`getStats()`** method of the {{domxref("WebTransportSendGroup")}} interface returns a {{jsxref("Promise")}} that resolves to an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
 That is, every stream and datagram writable whose `sendGroup` is set to this `WebTransportSendGroup`.
