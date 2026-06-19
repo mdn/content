@@ -7,9 +7,9 @@ sidebar: security
 
 Input validation is the practice of checking that any input that your website accepts is what you expect it to be.
 
-For a website to provide almost any kind of interactivity or customization it will need to accept some input, typically from users via a web browser, but also sometimes from other applications.
+For a website to provide almost any kind of interactivity or customization it will need to accept some input, typically from users via a web browser, and sometimes also from other applications.
 
-Users typically provide input using {{htmlelement("input")}} elements in a {{htmlelement("form")}} element on the site's front end, and the input is typically sent to the server as the body of a {{httpmethod("POST")}} request, or as URL parameters appended to a {{httpmethod("GET")}} request. However, input might also arrive on the server via other means, such as cookie values or additional HTTP headers.
+Users typically enter information into {{htmlelement("input")}} elements in a {{htmlelement("form")}} element on the site's front end, and the data is typically sent to the server as the body of a {{httpmethod("POST")}} request, or as URL parameters appended to a {{httpmethod("GET")}} request. However, input might also arrive on the server via other means, such as cookie values or additional HTTP headers.
 
 If the input provided by the user doesn't have the form or content that the site expects — for example, if they enter an invalid email address — this can cause the site to malfunction. Catching problems like this as early as possible improves the user's experience.
 
@@ -43,7 +43,7 @@ function checkRange(input) {
 }
 ```
 
-It's usually more reliable to implement a check as an allowlist, as this defaults to denying values which the author didn't consider. This is especially true when the invalid input is being deliberately crafted by an attacker: it's easier for an attacker to provide some input that would evade the check, and fall through to the default "allow" condition.
+It's usually more reliable to implement a check as an allowlist, as this defaults to denying values that the author didn't consider. This is especially true when the invalid input is being deliberately crafted by an attacker: it's easier for an attacker to provide some input that would evade the check, and fall through to the default "allow" condition.
 
 ### Syntactic and semantic validation
 
@@ -52,11 +52,11 @@ We can distinguish two types of input validation:
 - _syntactic validation_, which checks that input is in the correct format. For example, if the application expects a number, it is receiving a number.
 - _semantic validation_, which checks that the content of the input is within expected bounds. For example, a number that should be within a specific range, or a string value that should exactly match one of a set of values.
 
-Applications typically implement syntactic validation using type-checking features of the programming languages that they use.
+Applications typically implement syntactic validation using the type-checking features of their chosen programming language.
 
 To implement semantic validation, they can use various methods including range checking, checking a value against a set of allowed values, or, for more complex cases, regular expressions.
 
-Note that regular expressions can be hard to get right, and can make an application vulnerable to [denial of service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS) in some cases. For this reason, it's usually better to use well-regarded third party libraries here. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
+Note that regular expressions can be hard to get right, and some expressions may make an application vulnerable to [denial of service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). For this reason, it's usually better to use well-regarded third party validation libraries. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
 
 ### When to validate
 
@@ -97,12 +97,12 @@ When input is represented as JSON, you can use [JSON Schema](https://json-schema
 If your site allows file uploads, you need to consider various additional threats. Attackers may:
 
 - Upload malicious files that exploit bugs in the software that processes them.
-- Upload very large files, that create a denial of service attack.
+- Upload very large files as part of a denial of service attack.
 - Upload undesirable or illegal content.
 - Confuse file-handling code into overwriting your own site's files.
 - Upload files containing exploits such as XSS, and trick other users into downloading and executing them.
 
-In this section we'll outline a few practices to help defend against these threats. For more details, see OWASP's [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html).
+The following best practices are commonly used to mitigate these threats:
 
 - Only allow authenticated users to upload files.
 
@@ -115,6 +115,8 @@ In this section we'll outline a few practices to help defend against these threa
 - Allow users to report undesirable or illegal content, and have a process for removing it.
 
 - If possible, store files on a different host. If this is not possible, store files outside the website's root. This reduces the risk that malicious uploads could be served to other users in attacks such as XSS.
+
+For more details, see OWASP's [File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html).
 
 ## Input validation and security
 
