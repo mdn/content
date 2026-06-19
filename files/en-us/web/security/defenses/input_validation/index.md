@@ -19,7 +19,7 @@ However, aside from innocent errors by the user, supplying unexpected input enab
 
 ### Implement validation as an allowlist
 
-Applications can often implement a given check as either an allowlist or a denylist.
+Applications can often implement a given check by specifying it in terms of the values that are allowed (an "allowlist") or in terms of those that are denied (a "denylist").
 
 For example, suppose we wanted to check that a numeric input is between zero and 10. We can implement this as an allowlist by testing that the input matches this range, and denying everything else:
 
