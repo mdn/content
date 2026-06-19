@@ -8,9 +8,9 @@ browser-compat: api.Document.startViewTransition
 
 {{APIRef("View Transition API")}}
 
-The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document (SPA), document-scoped [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
+The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document ({{glossary("SPA")}}), document-scoped [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 
-When `startViewTransition()` is invoked, a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process).
+The sequence of steps followed when `startViewTransition()` is invoked is explained in [the view transition process](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process) section.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ startViewTransition(options)
 ### Parameters
 
 - `updateCallback` {{optional_inline}}
-  - : A callback function, invoked to update the DOM during the SPA view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a snapshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
+  - : A callback function invoked to update the DOM during the SPA view transition process. It returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a snapshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
 - `options` {{optional_inline}}
   - : An object containing options to configure the view transition. It can include the following properties:
     - `update` {{optional_inline}}
@@ -114,6 +114,7 @@ Otherwise, the background color is set using a fallback method, without any anim
 ## See also
 
 - {{domxref("Document.activeViewTransition")}}
+- {{domxref("Element.startViewTransition()")}}
 - {{CSSXRef(":active-view-transition")}} pseudo-class
 - {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)

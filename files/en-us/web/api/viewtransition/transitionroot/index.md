@@ -8,19 +8,20 @@ browser-compat: api.ViewTransition.transitionRoot
 
 {{APIRef("View Transition API")}}
 
-The **`transitionRoot`** read-only property of the
-{{domxref("ViewTransition")}} interface is a reference to the root {{domxref("Element")}} of the [view transition](/en-US/docs/Web/API/View_Transition_API/Using) scope.
+The **`transitionRoot`** read-only property of the {{domxref("ViewTransition")}} interface is a reference to the root {{domxref("Element")}} of the [view transition](/en-US/docs/Web/API/View_Transition_API/Using) scope.
 
 ## Value
 
 An {{domxref("Element")}}.
 
-- For document-scoped view transitions, `transitionRoot` will be a reference to the {{domxref("Document.documentElement")}} property, which for standard web documents is a reference to the {{htmlelement("html")}} element.
-- For [element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped), `transitionRoot` will be a reference to the `Element` that {{domxref("Element.startViewTransition()", "startViewTransition()")}} was called on to create the view transition.
+- For document-scoped view transitions, `transitionRoot` is a reference to the {{domxref("Document.documentElement")}} property, which for standard web documents is a reference to the {{htmlelement("html")}} element.
+- For [element-scoped view transitions](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped), `transitionRoot` is a reference to the `Element` that {{domxref("Element.startViewTransition()", "startViewTransition()")}} was called on to create the view transition.
 
 ## Examples
 
 ### Basic usage
+
+This snippet shows how to use `transitionRoot` to retrieve a reference to the element the view transition was created on.
 
 ```js
 const myElement = document.querySelector(".my-element");

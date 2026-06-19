@@ -1920,8 +1920,14 @@
         "ViewTransition",
         "ViewTransitionTypeSet"
       ],
-      "methods": ["Document.startViewTransition()"],
-      "properties": [],
+      "methods": [
+        "Document.startViewTransition()",
+        "Element.startViewTransition()"
+      ],
+      "properties": [
+        "Document.activeViewTransition",
+        "Element.activeViewTransition"
+      ],
       "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
