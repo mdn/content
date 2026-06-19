@@ -105,7 +105,7 @@ Events have three functions:
     - `port`
       - : `integer`. The server's port number.
 - `documentId` {{optional_inline}}
-  - : `string`. The UUID of the document making the request.
+  - : `string`. The UUID of the document making the request. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `cookieStoreId`

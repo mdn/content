@@ -34,7 +34,7 @@ Events have three functions:
     - `request`
       - : An object containing information about the request the rule matched.
         - `documentId` {{optional_inline}}
-          - : A `string`. The unique identifier for the frame's document, if this request is for a frame.
+          - : A `string`. The unique identifier for the frame's document, if this request is for a frame. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
         - `documentLifecycle` {{optional_inline}}
           - : A `string`. The lifecycle of the frame's document, if this request is for a frame. Possible values are: `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
         - `frameId`

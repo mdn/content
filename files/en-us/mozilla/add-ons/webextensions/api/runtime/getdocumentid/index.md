@@ -6,7 +6,7 @@ browser-compat: webextensions.api.runtime.getDocumentId
 sidebar: addonsidebar
 ---
 
-Returns the document ID of any window global or frame element.
+Returns the document ID of any window global or frame element. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 
 ## Syntax
 

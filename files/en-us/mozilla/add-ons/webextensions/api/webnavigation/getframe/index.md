@@ -29,7 +29,7 @@ let gettingFrame = browser.webNavigation.getFrame(
     - `frameId` {{optional_inline}}
       - : `integer`. The ID of the frame in the given tab. Required if `documentId` is not specified.
     - `documentId` {{optional_inline}}
-      - : `string`. The UUID of the frame's document. If `tabId` and `frameId` are also specified, the frame is only returned if all properties match.
+      - : `string`. The UUID of the frame's document. If `tabId` and `frameId` are also specified, the frame is only returned if all properties match. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 
 ### Return value
 
@@ -44,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 - `documentId`
-  - : `string`. A UUID of the frame's document.
+  - : `string`. A UUID of the frame's document. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentDocumentId`
   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
 - `documentLifecycle`

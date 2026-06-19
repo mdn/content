@@ -15,7 +15,7 @@ Values of this type are objects. They contain the following properties:
 - `cookieStoreId`
   - : `string`. The cookie store ID of the current context. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentId` {{optional_inline}}
-  - : `string`. The UUID of the document making the request.
+  - : `string`. The UUID of the document making the request. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentUrl`
   - : `string`. URL of the page into which the requested resource will be loaded.
 - `frameId`

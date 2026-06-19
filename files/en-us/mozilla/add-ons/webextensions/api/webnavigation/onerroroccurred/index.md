@@ -56,7 +56,7 @@ Events have three functions:
         - `parentFrameId`
           - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
         - `documentId`
-          - : `string`. A UUID of the document loaded.
+          - : `string`. A UUID of the document loaded. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
         - `parentDocumentId`
           - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
         - `documentLifecycle`
