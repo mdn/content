@@ -38,6 +38,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### JavaScript
 
+- The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+  This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "getTimeZones()")}}, and {{jsxref("Intl/Locale/getWeekInfo", "getWeekInfo()")}}.
+  ([Firefox bug 2037069](https://bugzil.la/2037069)).
 - The {{jsxref("Error.stackTraceLimit")}} static data property is supported for setting or getting the maximum number of stack frames captured in an error stack trace.
   Setting the value smaller than the default can improve performance.
   ([Firefox bug 2037856](https://bugzil.la/2037856)).
