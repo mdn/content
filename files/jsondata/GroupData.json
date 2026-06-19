@@ -1610,10 +1610,7 @@
     },
     "Storage Access API": {
       "overview": ["Storage Access API"],
-      "guides": [
-        "/docs/Web/API/Storage_Access_API/Using",
-        "/docs/Web/API/Storage_Access_API/Related_website_sets"
-      ],
+      "guides": ["/docs/Web/API/Storage_Access_API/Using"],
       "interfaces": ["StorageAccessHandle"],
       "methods": [
         "Document.hasStorageAccess()",
@@ -2479,7 +2476,9 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportDatagramsWritable",
         "WebTransportReceiveStream",
+        "WebTransportSendGroup",
         "WebTransportSendStream",
         "WebTransportError"
       ],

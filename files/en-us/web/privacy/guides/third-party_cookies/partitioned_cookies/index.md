@@ -1,7 +1,7 @@
 ---
 title: Cookies Having Independent Partitioned State (CHIPS)
 short-title: CHIPS
-slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+slug: Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies
 page-type: guide
 browser-compat: http.headers.Set-Cookie.Partitioned
 sidebar: privacy

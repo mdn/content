@@ -24,7 +24,7 @@ Instances of this interface may be obtained by calling {{DOMxRef("Element.pseudo
 
 ## Instance methods
 
-- {{DOMxRef("CSSPseudoElement.pseudo()")}}
+- {{DOMxRef("CSSPseudoElement.pseudo()")}} {{experimental_inline}}
   - : Returns a `CSSPseudoElement` instance representing a specific [nested pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements)
 
 ## Description

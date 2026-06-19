@@ -1,18 +1,13 @@
 ---
-title: Firefox 152 release notes for developers (Beta)
-short-title: Firefox 152 (Beta)
+title: Firefox 152 release notes for developers (Stable)
+short-title: Firefox 152 (Stable)
 slug: Mozilla/Firefox/Releases/152
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 152 that affect developers.
-Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 152 was released on [June 16, 2026](https://whattrainisitnow.com/release/?version=152).
 
 ## Changes for web developers
 
@@ -22,15 +17,9 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This option can be found in the [Settings panel](https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html#settings-inspector).
   ([Firefox bug 1455294](https://bugzil.la/1455294)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
@@ -38,39 +27,28 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This reflects the corresponding [`side`](/en-US/docs/Web/SVG/Reference/Attribute/side) attribute on the [`<textPath>`](/en-US/docs/Web/SVG/Reference/Element/textPath) element.
   ([Firefox bug 2034371](https://bugzil.la/2034371)).
 
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("field-sizing")}} CSS property lets you control the sizing behavior of form control elements. This property has two values: `content` allows elements to adjust in size to fit their content, and `fixed` sets a fixed size on elements.
   ([Firefox bug 2036620](https://bugzil.la/2036620)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
 - The {{domxref("PerformanceResourceTiming.firstInterimResponseStart","firstInterimResponseStart")}} and {{domxref("PerformanceResourceTiming.finalResponseHeadersStart","finalResponseHeadersStart")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are supported.
   These can be used to measure how long it takes for the browser to receive interim HTTP responses and the final HTTP response after sending a request, respectively.
   ([Firefox bug 2006340](https://bugzil.la/2006340)).
+- The {{domxref("AnimationEvent.animation")}} and {{domxref("TransitionEvent.animation")}} properties are now supported.
+  These provide a more ergonomic way to access the associated animation than calling {{domxref("element.getAnimations()")}} and filtering on the event's `animationName` or `propertyName`.
+  ([Firefox bug 1929118](https://bugzil.la/1929118)).
 
 #### DOM
 
-- The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported.
-  These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the platform-dependent maximum number of actions that can be set for a notification, respectively.
+- Notification actions are supported. This includes the {{domxref("ServiceWorkerRegistration.showNotification#actions", "actions")}} parameter of {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface.
+  This allows you to include action buttons on device notifications, and react to when they're pressed.
   ([Firefox bug 1959931](https://bugzil.la/1959931)).
 - The {{domxref("Element.getAnimations()")}} method can now accept the [`options.pseudoElement`](/en-US/docs/Web/API/Element/getAnimations#pseudoelement) parameter.
   This allows you to directly target a specific pseudo-element, rather than filtering the results of `{ subtree: true }`.
@@ -84,19 +62,21 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `receiveTime` property is now included in the metadata returned from [`RTCEncodedVideoFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/getMetadata#receivetime) and [`RTCEncodedAudioFrame.getMetadata()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/getMetadata#receivetime), and can be passed to the [`RTCEncodedVideoFrame()`](/en-US/docs/Web/API/RTCEncodedVideoFrame/RTCEncodedVideoFrame) and [`RTCEncodedAudioFrame()`](/en-US/docs/Web/API/RTCEncodedAudioFrame/RTCEncodedAudioFrame) constructors as a property in the `options` parameter.
   ([Firefox bug 2033420](https://bugzil.la/2033420)).
 
-<!-- #### Removals -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- ### WebAssembly -->
+#### General
 
-<!-- #### Removals -->
+- Improved the Marionette and WebDriver BiDi screenshot commands to enforce maximum allowed dimensions. ([Firefox bug 2020302](https://bugzil.la/2020302)).
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+#### WebDriver BiDi
 
-<!-- #### General -->
+- Extended the `webExtension.install` command to support installing web extensions in Firefox enabled in Private Browsing mode. ([Firefox bug 1947679](https://bugzil.la/1947679)).
+- Improved the `browser.setDownloadBehavior` command to allow overriding the download target folder before the temporary file is created. ([Firefox bug 2017252](https://bugzil.la/2017252)).
+- Fixed network events to only forward in-memory cached JavaScript responses when there is a matching network event collector, avoiding unnecessary data forwarding. ([Firefox bug 2018237](https://bugzil.la/2018237)).
 
-<!-- #### WebDriver BiDi -->
+#### Marionette
 
-<!-- #### Marionette -->
+- Improved the `WebDriver:Navigate` and `WebDriver:Refresh` commands to properly report errors when triggering the navigation fails, instead of silently ignoring them. ([Firefox bug 2033769](https://bugzil.la/2033769)).
 
 ## Changes for add-on developers
 
@@ -104,15 +84,16 @@ Firefox 152 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
   As an alternative, an extension can run code in its documents dynamically by registering a {{WebExtAPIRef("runtime.onMessage")}} listener in the document's script, then sending a message to trigger execution of the required code.
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
-
 ## Experimental web features
 
 These features are shipping in Firefox 152 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **WebAssembly JavaScript Promise Integration (JS-PI)**: `javascript.options.wasm_js_promise_integration`
+
+  WebAssembly [JavaScript Promise Integration (JS-PI)](https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md) allows WebAssembly modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles.
+  ([Firefox bug 2015877](https://bugzil.la/2015877)).
 
 - **Check if a media encoding/decoding configuration is supported for WebRTC**: `media.mediacapabilities.webrtc.enabled`
 
@@ -136,3 +117,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
   The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
   ([Firefox bug 2024854](https://bugzil.la/2024854)).
+
+- **`<timeline-range-name>` values in `@keyframes` selectors**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).

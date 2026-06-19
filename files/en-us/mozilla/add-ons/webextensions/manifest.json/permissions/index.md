@@ -111,6 +111,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `pageCapture`
 - `pkcs11`
 - `privacy`
+- `publicSuffix`
 - `proxy`
 - `scripting`
 - `search`

@@ -36,13 +36,14 @@ Local network access defines three different **address spaces**, which all netwo
 
 Depending on which address space a request URL is categorised in, the browser will handle its permissions differently.
 
-## What request types are effected?
+## What request types are affected?
 
 Local network access restrictions apply to:
 
 - Subresource requests
 - {{domxref("Window.fetch", "fetch()")}} requests
 - Navigating subframes
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API), including requests made via {{domxref("WindowClient.navigate()")}} when the navigated {{domxref("WindowClient")}} is a subframe
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 - [WebTransport](/en-US/docs/Web/API/WebTransport_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
