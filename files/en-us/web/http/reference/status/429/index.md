@@ -2,7 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-4
+spec-urls: https://www.rfc-editor.org/info/rfc6585/#section-4
 sidebar: http
 ---
 
