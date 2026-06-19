@@ -70,7 +70,7 @@ The `result` object in the response contains the following fields:
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new).
 
-Suppose you create a new tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create). Using the context ID of that tab, send the following message to navigate it to, say, `https://example.com/page.html`:
+Suppose you create a new tab using [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create). Using the context ID of that tab, send the following message to navigate it to `https://example.com/page.html`:
 
 ```json
 {
