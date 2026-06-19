@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.navigationFailed_event
 sidebar: webdriver
 ---
 
-The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the browser cannot successfully load a URL.
+The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation cannot be completed.
 
 ## Description
 
@@ -20,11 +20,14 @@ The `params` field in the event notification is a navigation object with the fol
 - `context`
   - : A string that contains the ID of the context in which the navigation failed.
 - `navigation`
-  - : A string that contains the ID of the failed navigation, or the value `null` if the navigation does not have an associated navigation ID.
+  - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
+    This ID matches the `navigation` value in the response of the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands.
 - `timestamp`
   - : A non-negative integer that represents the time in UTC when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL being loaded.
+- `userContext` {{optional_inline}}
+  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the navigation failed.
 
 ## Examples
 
