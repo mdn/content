@@ -155,22 +155,17 @@ nonASCIINumbers("𐆊0零1𝟜𑜹a"); // [ '𝟜', '𑜹' ]
 
 ### Matching strings
 
-The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF).
+The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF). In `v` mode, character classes attempt longer string alternatives first, so `\q{\r\n}` can appear at the end of the class and still be matched as a single sequence.
 
 ```js
-function getLineTerminators(str) {
+function getLineTerminatorSequences(str) {
   return str.match(/[\r\n\u2028\u2029\q{\r\n}]/gv);
 }
 
-getLineTerminators(`
-A poem\r
-Is split\r\n
-Into many
-Stanzas
-`); // [ '\r', '\r\n', '\n' ]
+getLineTerminatorSequences("CR \r LF \n CRLF \r\n"); // [ '\r', '\n', '\r\n' ]
 ```
 
-This example is exactly equivalent to `/(?:\r|\n|\u2028|\u2029|\r\n)/gu` or `/(?:[\r\n\u2028\u2029]|\r\n)/gu`, except shorter.
+This expression is functionally equivalent to `/\r\n|[\r\n\u2028\u2029]/gv`, with the `\r\n` alternative attempted before `\r` alone. It is not equivalent to `/[\r\n\u2028\u2029]|\r\n/gu`, because disjunction order matters when one alternative is a prefix of another.
 
 The most useful case of `\q{}` is when doing subtraction and intersection. Previously, this was possible with [multiple lookaheads](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection). The following function matches flags that are not one of the American, Chinese, Russian, British, and French flags.
 
