@@ -61,6 +61,12 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
 `(sx + sw - 1, sy + sh - 1)`.
 
+> [!NOTE]
+> Browsers may alter the data returned by `getImageData()` to protect users from
+> fingerprinting. For example, Firefox can add subtle noise to canvas data when
+> fingerprinting protection is enabled, so code that compares exact pixel values
+> may observe differences from the rendered canvas.
+
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
