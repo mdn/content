@@ -2320,10 +2320,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "ModelContextClient": {
-      "inh": "",
-      "impl": []
-    },
     "Module": {
       "inh": "",
       "impl": []
@@ -3016,11 +3012,11 @@
       "inh": "",
       "impl": []
     },
-    "RTCRtpSFrameDecrypter": {
+    "RTCRtpSFrameDecryptor": {
       "inh": "EventTarget",
       "impl": []
     },
-    "RTCRtpSFrameEncrypter": {
+    "RTCRtpSFrameEncryptor": {
       "inh": "",
       "impl": []
     },
@@ -3128,11 +3124,11 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameDecrypterStream": {
+    "SFrameDecryptorStream": {
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameEncrypterStream": {
+    "SFrameEncryptorStream": {
       "inh": "",
       "impl": []
     },
