@@ -25,7 +25,7 @@ A boolean value.
 
 The following example can be used inside a service worker script to check for reloads and respond appropriately.
 
-Inside a {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event handler, we check whether the event's {{domxref("Request.mode")}} is `navigate`, and if so, whether `isReloadNavigation` is `true`. If so, we've definitely got a reload navigation, so we fetch the page from the network to provide an updated version. If that fails, we try retrieving the page from the {{domxref("Cache")}} as a fallback.
+Inside a {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event handler, we first check whether the event's {{domxref("Request.mode")}} is `navigate` and `isReloadNavigation` properties are `true`. If so, this is a reload navigation; we therefore fetch the page from the network to provide an updated version. If that fails, we try retrieving the page from the {{domxref("Cache")}} as a fallback.
 
 If the navigation is not a reload navigation, we try retrieving the page from the `Cache` first, and only fetch from the network if a cached version of the page is not found.
 
