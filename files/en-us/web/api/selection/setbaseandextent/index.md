@@ -65,13 +65,9 @@ We also have a button that when pressed invokes a function that runs the `setBas
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one">
-    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
-  </p>
+  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
   <p>MIDDLE</p>
-  <p class="two">
-    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
-  </p>
+  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
 </div>
 
 <div>
