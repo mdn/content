@@ -9,7 +9,7 @@ A `documentId` is a UUID string that identifies a unique document loaded in a ta
 
 ## Tabs, frames, and documents
 
-A browser tab, identified by a `tabId`, is the top-level container for web content. Within a tab, content can be structured into multiple frames: the main (outermost) frame, which has a `frameId` of `0`, and any nested [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) elements, each with a `frameId`. Frame IDs are unique within a tab but not across tabs.
+A browser tab, identified by a `tabId`, is the top-level container for web content. Within a tab, content can be structured into multiple frames: the main (outermost) frame, which has a `frameId` of `0`, and any nested [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) elements, each with a `frameId`. Due to the top `frameId` being 0, `frameId` cannot be used to uniquely identify all frames across all tabs.
 
 Each frame holds a document, the HTML page loaded at a URL. The relationship between these three concepts is:
 
@@ -19,6 +19,12 @@ Each frame holds a document, the HTML page loaded at a URL. The relationship bet
 
 This means that the combination of `tabId` and `frameId` identifies a frame (a stable browsing context), but not the document loaded in that frame.
 
+Documents and frames may also exist in non-tab contexts, including but not limited to:
+
+- [Sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+- [Popups attached to extension buttons](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+- [Devtools panels](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
+- [Background pages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
 ## Operations using tab and frame IDs
 
 Many WebExtension APIs use `tabId` and `frameId` to identify where to perform an operation:
@@ -29,7 +35,7 @@ Many WebExtension APIs use `tabId` and `frameId` to identify where to perform an
 - **Frame information**: {{WebExtAPIRef("webNavigation.getFrame()")}} and {{WebExtAPIRef("webNavigation.getAllFrames()")}} use `tabId` and `frameId` to look up or enumerate frame details.
 - **Events**: Navigation events ({{WebExtAPIRef("webNavigation.onCommitted")}}, {{WebExtAPIRef("webNavigation.onCompleted")}}, and others), request events ({{WebExtAPIRef("webRequest.onBeforeRequest")}} and others), and {{WebExtAPIRef("proxy.onRequest")}} all include `tabId` and `frameId` to identify where an event occurred.
 
-Because `frameId` identifies the frame rather than its content, there is a potential race condition. After your extension has obtained the `tabId` and `frameId,` the loaded document may change, so the extension's subsequent operation no longer targets the intended document. `documentId` was introduced to address this problem.
+Because `frameId` identifies the frame rather than its content, there is a potential race condition. After your extension has obtained the `tabId` and `frameId`, the loaded document may change, so the extension's subsequent operation no longer targets the intended document. `documentId` was introduced to address this problem.
 
 ## What is a documentId?
 
@@ -43,14 +49,15 @@ The `documentId` also correctly handles edge cases that `frameId` cannot disting
 
 As it changes with each document load, the ID your extension obtained for a document remains valid only for that document. If the frame has navigated away, the `documentId` no longer matches. So, if your extension injects a script or sends a message using the documented ID after the navigation, the operation fails rather than silently targeting the wrong document.
 
+When a document is restored from the [back/forward cache (bfcache)](/en-US/docs/Glossary/bfcache), its original `documentId` is restored and becomes valid again.
 ## Getting a documentId
 
 There are several ways to obtain a `documentId`:
 
 - Call {{WebExtAPIRef("runtime.getDocumentId()")}} with a `window` or frame element from within a content script.
-- Read the `documentId` property in the results of {{WebExtAPIRef("webNavigation.getFrame()")}} or {{WebExtAPIRef("webNavigation.getAllFrames()")}}.
+- Read the `documentId` or `parentDocumentId` property in the results of {{WebExtAPIRef("webNavigation.getFrame()")}} or {{WebExtAPIRef("webNavigation.getAllFrames()")}}.
 - Read the `documentId` from event details in {{WebExtAPIRef("webNavigation.onCommitted")}}, {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}, {{WebExtAPIRef("webNavigation.onCompleted")}}, {{WebExtAPIRef("webNavigation.onErrorOccurred")}}, {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}, and {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}} listeners.
-- Read the `documentId` from `webRequest` event details.
+- Read the `documentId` from {{WebExtAPIRef("webRequest")}}` event details.
 - Read the `documentId` from {{WebExtAPIRef("runtime.MessageSender")}} when receiving messages using {{WebExtAPIRef("runtime.onMessage")}} and related listeners.
 - Read the `documentId` from the results of {{WebExtAPIRef("runtime.getContexts()")}}.
 
@@ -65,7 +72,7 @@ When you have a `documentId`, you can use it to target that document:
 
 ## APIs supporting documentId
 
-These APIs include `documentId` support, added in Firefox 153.
+These APIs include `documentId` support.
 
 ### Obtaining a documentId
 
