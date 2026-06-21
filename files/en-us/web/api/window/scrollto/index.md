@@ -9,7 +9,7 @@ browser-compat: api.Window.scrollTo
 {{APIRef}}
 
 **`Window.scrollTo()`** scrolls to a particular set of
-coordinates in the document.
+**`scrollTo()`** method of the {{domxref("Window")}} interface scrolls to a particular set of coordinates in the document.
 
 ## Syntax
 

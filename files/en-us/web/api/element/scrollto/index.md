@@ -9,7 +9,7 @@ browser-compat: api.Element.scrollTo
 {{APIRef("CSSOM view API")}}
 
 The **`scrollTo()`** method of the {{domxref("Element")}}
-interface scrolls to a particular set of coordinates inside a given element.
+The **`scrollTo()`** method of the {{domxref("Element")}} interface scrolls to a particular set of coordinates inside a given element.
 
 This method is an alias for {{domxref("Element.scroll()")}}.
 

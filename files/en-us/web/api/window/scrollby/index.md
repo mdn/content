@@ -9,7 +9,7 @@ browser-compat: api.Window.scrollBy
 {{APIRef}}
 
 The **`Window.scrollBy()`** method scrolls the document in the
-window by the given amount.
+The **`scrollBy()`** method of the {{domxref("Window")}} interface scrolls the document in the window by the given amount.
 
 ## Syntax
 

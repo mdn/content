@@ -9,7 +9,7 @@ browser-compat: api.Element.scrollBy
 {{APIRef("CSSOM view API")}}
 
 The **`scrollBy()`** method of the {{domxref("Element")}}
-interface scrolls an element by the given amount.
+The **`scrollBy()`** method of the {{domxref("Element")}} interface scrolls an element by the given amount.
 
 ## Syntax
 

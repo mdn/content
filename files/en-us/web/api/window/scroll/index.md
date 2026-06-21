@@ -9,7 +9,7 @@ browser-compat: api.Window.scroll
 {{APIRef}}
 
 The **`Window.scroll()`** method scrolls the window to a
-particular place in the document.
+The **`scroll()`** method of the {{domxref("Window")}} interface scrolls the window to a particular place in the document.
 
 ## Syntax
 
@@ -22,10 +22,10 @@ scroll(options)
 
 - `xCoord`
   - : The pixel along the horizontal axis of the document that you
-    want displayed in the upper left.
+- : The pixel along the horizontal axis of the document that you want displayed in the upper left.
 - `yCoord`
   - : The pixel along the vertical axis of the document that you
-    want displayed in the upper left.
+- : The pixel along the vertical axis of the document that you want displayed in the upper left.
 - `options`
   - : An object containing the following properties:
     - `top` {{optional_inline}}

@@ -10,7 +10,7 @@ browser-compat: api.Element.scroll
 
 The **`scroll()`** method of the {{domxref("Element")}}
 interface scrolls the element to a particular set of coordinates inside a given
-element.
+The **`scroll()`** method of the {{domxref("Element")}} interface scrolls the element to a particular set of coordinates inside a given element.
 
 ## Syntax
 

@@ -11,7 +11,7 @@ browser-compat: api.Element.scrollIntoView
 The {{domxref("Element")}} interface's
 **`scrollIntoView()`** method scrolls the element's ancestor
 containers such that the element on which `scrollIntoView()` is called is
-visible to the user.
+The **`scrollIntoView()`** method of the {{domxref("Element")}} interface  scrolls the element's ancestor containers such that the element on which `scrollIntoView()` is called is visible to the user.
 
 ## Syntax
 
@@ -31,7 +31,11 @@ scrollIntoView(options)
       the default value.
     - If `false`, the bottom of the element will be aligned to the bottom
       of the visible area of the scrollable ancestor. Corresponds to
-      `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
+- If `true`, the top of the element will be aligned to the top of the visible area of the scrollable ancestor. 
+  Corresponds to `scrollIntoViewOptions: {block: "start", inline: "nearest"}`.
+  This is the default value.
+- If `false`, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor. 
+  Corresponds to `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 
 - `options` {{optional_inline}}
   - : An object with the following properties:
