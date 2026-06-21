@@ -41,6 +41,9 @@ Apart from that, you can manipulate the Picture-in-Picture window's `Window` ins
 
 See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using) for a detailed usage guide.
 
+> [!NOTE]
+> You can run code in response to the browser moving content into a Document Picture-in-Picture always-on-top window by setting up a media session action handler via {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`. This action can occur, for example, due to the content being occluded by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from a context menu or the browser chrome.
+
 ## Interfaces
 
 - {{domxref("DocumentPictureInPicture")}}

@@ -12,6 +12,9 @@ The **Picture-in-Picture API** allow websites to create a floating, always-on-to
 > [!NOTE]
 > The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
+> [!NOTE]
+> You can run code in response to the browser moving content into a Picture-in-Picture always-on-top window by setting up a media session action handler via {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`. This action can occur, for example, due to the content being occulded by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from a context menu or the browser chrome.
+
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
