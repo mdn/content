@@ -100,11 +100,14 @@ body {
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
+
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
+
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
 
 [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
