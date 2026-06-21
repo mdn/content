@@ -107,13 +107,18 @@ The example below shows the effect of different `animation-composition` values s
 
 #### CSS
 
-Here the underlying value is `translateX(50px) rotate(45deg)`.
-
 ```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
 .container {
-  width: 230px;
+  flex: 1;
+  min-width: 200px;
   height: 200px;
-  background: cyan;
+  background: lightblue;
   display: inline-block;
   text-align: center;
 }
@@ -129,24 +134,17 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  20%,
-  40% {
-    transform: translateX(100px);
-    background: yellow;
+  50% {
+    transform: translateY(30px);
   }
-  80%,
   100% {
     transform: translateX(150px);
-    background: orange;
   }
 }
 
 .target {
   transform: translateX(30px) rotate(45deg);
   animation: slide 5s linear infinite;
-}
-.target:hover {
-  animation-play-state: paused;
 }
 #replace {
   animation-composition: replace;
@@ -163,9 +161,19 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(30px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 20% mark. This is the default behavior.
-- With `add`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(30px) rotate(45deg) translateX(100px)`. So the element is first moved 100px to the right, rotated 45deg around the origin, then moved to the right by 30px.
-- With `accumulate`, the final effect value in the `20%, 40%` keyframe is `translateX(130px) rotate(45deg)`. This means that the two X-axis translation values of `30px` and `100px` are combined or "accumulated".
+The underlying value for the `transform` property in all cases is `translateX(30px) rotate(45deg)`. The different `animation-composition` values' effects are as follows:
+
+- With `replace`, the `transform` property in each keyframe entirely replaces the underlying `transform` property set on the animated element. The final effect value for the `transform` property at the `50%` keyframe is `translateY(30px)` (no `rotate` or `translateX`); at the `100%` keyframe, it is `translateX(150px)` (no `rotate` or `translateY`).
+
+  The target starts at `transform: translateX(30px) rotate(45deg)` and effectively animates to `transform: translateY(30px)`, then to `transform: translateX(150px)`.
+
+- With `add`, the final effect value at each keyframe is the underlying `transform` value with the effect value placed immediately after it.
+
+  Therefore, the target starts at `transform: translateX(30px) rotate(45deg)` and effectively animates first to `transform: translateX(30px) rotate(45deg) translateY(30px)` (which is `30px` "downwards" on the rotated Y-axis), and then to `transform: translateX(30px) rotate(45deg) translateX(150px)`. Since the additive operation is relative to the underlying `transform` and not the previous keyframe, there is no `translateY(30px)` at `100%`, placing the element `150px` along the rotated X-axis from the original position.
+
+- With `accumulate`, the final effect value is the keyframe's effect `transform` combined with the underlying original. At `50%`, `translateY(30px)` combines with the original `translateX(30px)` into a single translation (`translate(30px, 30px)`). At `100%`, the `translateX(150px)` combines with the original `translateX(30px)` to create `translateX(180px)`.
+
+  Therefore, the target starts at `transform: translateX(30px) rotate(45deg)` and effectively animates first to `transform: translate(30px, 30px) rotate(45deg)`, and then to `transform: translateX(180px) rotate(45deg)`.
 
 ## Specifications
 

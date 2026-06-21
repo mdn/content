@@ -304,6 +304,22 @@ The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/We
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
+### `base-select` value for `appearance` CSS property
+
+The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported. Styling of the `::picker(select)` pseudo-element will be added in future versions. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work. Two preferences need be enabled to use it. ([Firefox bug 1974787](https://bugzil.la/1974787)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `dom.select.customizable_select.enabled`
+  - : Set to `true` to enable.
+- `layout.css.appearance-base.enabled`
+  - : Set to `true` to enable.
+
 ### Namespaced attributes in `attr()` CSS function
 
 The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060).
@@ -372,6 +388,20 @@ The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS
 | Developer Edition | 151           | No                  |
 | Beta              | 151           | No                  |
 | Release           | 151           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### `<timeline-range-name>` values in `@keyframes` selectors
+
+The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
 
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
