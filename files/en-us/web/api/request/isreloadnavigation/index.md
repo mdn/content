@@ -13,6 +13,7 @@ The **`isReloadNavigation`** read-only property of the {{domxref("Request")}} in
 A user-triggered reload is made via a programmatic reload (for example, by calling {{domxref("Location.reload()")}}, {{domxref("History.go()", "History.go(0)")}}, or {{domxref("Navigation.reload()")}}), or via a browser control such as pressing <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd> or clicking the browser's reload button.
 
 This property is primarily used within service worker {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handlers to respond appropriately to reload requests versus non-reload requests.
+For example, a reload request indicates that the user expects current data, so it should prefer content from the server over that from a cache.
 
 ## Value
 
