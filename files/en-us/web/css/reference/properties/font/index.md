@@ -37,13 +37,11 @@ font: caption;
 
 ```html interactive-example
 <section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
-  </p>
+  <q id="example-element">
+    Prejudices, it is well known, are most difficult to eradicate from the heart
+    whose soil has never been loosened or fertilised by education: they grow
+    there, firm as weeds among stones.
+  </q>
 </section>
 ```
 
@@ -72,15 +70,13 @@ section {
 }
 ```
 
-As with any shorthand property, any individual value that is not specified is set to its corresponding initial value (possibly overriding values previously set using non-shorthand properties). Though not directly settable by `font`, the longhands {{cssxref("font-size-adjust")}} and {{cssxref("font-kerning")}} are also reset to their initial values.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-size")}}
-- {{cssxref("font-stretch")}}
+- {{cssxref("font-width")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-variant")}}
 - {{cssxref("font-weight")}}
@@ -90,24 +86,78 @@ This property is a shorthand for the following CSS properties:
 
 ```css-nolint
 /* font-size font-family */
-font: 1.2em "Fira Sans", sans-serif;
+font: 1.2em sans-serif;
 
 /* font-size/line-height font-family */
 font: 1.2em/2 "Fira Sans", sans-serif;
 
 /* font-style font-weight font-size font-family */
-font: italic bold 1.2em "Fira Sans", sans-serif;
+font: italic bold 1.2em monospace;
 
-/* font-stretch font-variant font-size font-family */
-font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+/* font-width font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em Montserrat, Helvetica, sans-serif;
 
 /* system font */
 font: caption;
 ```
 
-The `font` property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.
+### Values
 
-If `font` is specified as a system keyword, it must be one of: `caption`, `icon`, `menu`, `message-box`, `small-caption`, `status-bar`.
+The value is either a shorthand specifying the various font-related properties or a single `<system-font-family-name>` keyword:
+
+- `<'font-style'>` {{optional_inline}}
+  - : See the {{cssxref("font-style")}} CSS property. Defaults to `normal`.
+- `<font-variant-css2>` {{optional_inline}}
+  - : Either the `normal` or `small-caps` value of the {{cssxref("font-variant")}} property. Defaults to `normal`.
+- `<'font-weight'>` {{optional_inline}}
+  - : See the {{cssxref("font-weight")}} CSS property. Defaults to `normal`.
+- `<font-width-css3>` {{optional_inline}}
+  - : The keywords supported by the {{cssxref("font-width")}} CSS property. Defaults to `normal`.
+- `<'font-size'>`
+  - : See the {{cssxref("font-size")}} CSS property.
+- `<'line-height'>` {{optional_inline}}
+  - : See the {{cssxref("line-height")}} CSS property. Defaults to `normal`.
+- `<'font-family'>`
+  - : See the {{cssxref("font-family")}} CSS property. Must be the last value.
+
+- `<system-font-family-name>`
+  - : A single keyword representing a system font, including:
+    - `caption`
+      - : The system font used for captioned controls (buttons, drop-downs, etc.).
+    - `icon`
+      - : The system font used to label icons.
+    - `menu`
+      - : The system font used in menus (e.g., dropdown menus and menu lists).
+    - `message-box`
+      - : The system font used in dialog boxes.
+    - `small-caption`
+      - : The system font used for labeling small controls.
+    - `status-bar`
+      - : The system font used in window status bars.
+
+    There are several non-standard values implemented with prefixes.
+
+## Description
+
+The `font` property value is either a single keyword representing a system-font-family-name or multiple longhand property values used to set all the different properties of an element's font.
+
+### System font declarations
+
+If `font` is specified as a `<system-font-family-name>` keyword, the full property value must be set to that single, case-insensitive keyword. Valid values include `caption`, `icon`, `menu`, `message-box`, `small-caption`, or `status-bar`.
+
+Browsers also support non-standard prefixed values:
+
+- Chromium implements `-webkit-control`, `-webkit-small-control`, and `-webkit-mini-control`.
+- Webkit includes the Chromium values, and adds `-webkit-body`, `-webkit-pictograph`, and `-webkit-ruby-text`, along with several `-apple-system-*` prefixed system font names.
+- Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+
+The system font, or `<system-font-family-name>`, can only be set with the `font` property. Defining a single keyword value, such as `font: icon`, sets the font's family, size, weight, style, etc., to the values the browser defines for the named system font. These values can all be changed with longhand declarations placed _after_ the `font` declaration.
+
+Including any `font` longhand components after the `<system-font-family-name>` keyword within a `font` property value invalidates the declaration. For example, `font: icon small` is invalid.
+
+If a `<system-font-family-name>` keyword appears anywhere in the value other than as the first component, the keyword is treated as an {{cssxref("ident")}} representing a standard `font-family` name. For example, the declaration `font: small icon` sets the `font-family` to a font named `icon`, a non-system font which may or may not exist. This declaration also sets the `font-size` to `small` and resets all the other shorthand component properties to their initial values.
+
+### Shorthand font declarations
 
 If `font` is specified as a shorthand for several font-related properties, then:
 
@@ -119,48 +169,41 @@ If `font` is specified as a shorthand for several font-related properties, then:
   - {{cssxref("font-style")}}
   - {{cssxref("font-variant")}}
   - {{cssxref("font-weight")}}
-  - {{cssxref("font-stretch")}}
+  - {{cssxref("font-width")}}
   - {{cssxref("line-height")}}
 
-- `font-style`, `font-variant` and `font-weight` must precede `font-size`.
-- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`.
-- `font-stretch` may only be a single keyword value.
-- `line-height` must immediately follow `font-size`, preceded by "/", like this: `16px/3`.
-- `font-family` must be the last value specified.
+As with any shorthand property, any of the longhand component properties not specified are set to their initial values, possibly overriding values previously set using non-shorthand properties. In addition, the shorthand resets the following properties to their initial values. The shorthand cannot explicitly set them:
 
-### Values
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
 
-- `<'font-style'>`
-  - : See the {{cssxref("font-style")}} CSS property.
-- `<'font-variant'>`
-  - : See the {{cssxref("font-variant")}} CSS property.
-- `<'font-weight'>`
-  - : See the {{cssxref("font-weight")}} CSS property.
-- `<'font-stretch'>`
-  - : See the {{cssxref("font-stretch")}} CSS property.
-- `<'font-size'>`
-  - : See the {{cssxref("font-size")}} CSS property.
-- `<'line-height'>`
-  - : See the {{cssxref("line-height")}} CSS property.
-- `<'font-family'>`
-  - : See the {{cssxref("font-family")}} CSS property.
+### Shorthand property order
 
-#### System font values
+The order of some of the longhand values within the shorthand `font` declaration must follow a few rules:
 
-- `caption`
-  - : The system font used for captioned controls (e.g., buttons, drop-downs, etc.).
-- `icon`
-  - : The system font used to label icons.
-- `menu`
-  - : The system font used in menus (e.g., dropdown menus and menu lists).
-- `message-box`
-  - : The system font used in dialog boxes.
-- `small-caption`
-  - : The system font used for labeling small controls.
-- `status-bar`
-  - : The system font used in window status bars.
-- Prefixed system font keywords
-  - : Browsers often implement several more, prefixed, keywords: Gecko implements `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, and `-moz-field`.
+- Both the `font-size` and `font-family` components are required (except for [system font declarations](#system_font_declarations)).
+- The `font-style`, `font-variant` and `font-weight` components must precede the `font-size` value.
+- A `line-height` can only be included if `font-size` is included. If present, the `line-height` must immediately follow the `font-size`, with the two values separated by a forward slash (`/`), for example: `16px / 3`.
+- The `font-family` must be the last value specified.
+
+### Components with limited values
+
+For backward compatibility, the valid values of the `font-variant` and `font-width` components do not include all the valid values or the longhand equivalents.
+
+The valid values for the `font-variant` component are limited to `normal` or `small-caps`. While no other values are supported, the shorthand `font` declaration resets all the `font-variant-*` longhand properties to `normal`, including {{cssxref("font-variation-settings")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-emoji")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-east-asian")}}, and {{cssxref("font-variant-alternates")}}.
+
+The valid values for the `font-width` component are limited to keyword values: `normal`, `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`. The {{cssxref("font-width")}} longhand property also supports {{cssxref("percentage")}} values, but they are not valid within the shorthand.
 
 ## Formal definition
 
@@ -172,37 +215,96 @@ If `font` is specified as a shorthand for several font-related properties, then:
 
 ## Examples
 
-### Setting font properties
+### Basic usage
+
+This example defines the `font` for all {{htmlelement("p")}} elements. We set the `font-size` to `12px` and the `line-height` to `14px`, separating them with a forward slash (`/`). The declaration also sets the `font-family` to `sans-serif`.
 
 ```css
-/* Set the font size to 12px and the line height to 14px.
-   Set the font family to sans-serif */
 p {
-  font: 12px/14px sans-serif;
-}
-
-/* Set the font size to 80% of the parent element
-   or default value (if no parent element present).
-   Set the font family to sans-serif */
-p {
-  font: 80% sans-serif;
-}
-
-/* Set the font weight to bold,
-   the font-style to italic,
-   the font size to large,
-   and the font family to serif. */
-p {
-  font: bold italic large serif;
-}
-
-/* Use the same font as the status bar of the window */
-p {
-  font: status-bar;
+  font: 12px / 14px sans-serif;
 }
 ```
 
-### Live sample
+```html hidden
+<p>
+  This is a paragraph of sans-serif text. The font-size is small, at just 12px.
+  If this text wraps, the line height is pretty tight at 14px, so this may be
+  difficult to read.
+</p>
+```
+
+{{EmbedLiveSample('basic usage','100%', '100')}}
+
+### Multiple properties
+
+In this example, we set the `font-weight` to `bold`, the `font-style` to `italic`, the `font-size` to `large`, the `line-height` to `1.6`, and the `font-family` to `serif`.
+
+```css
+p {
+  font: bold italic large / 1.6 serif;
+}
+```
+
+```html hidden
+<p>
+  In this example, we set the font weight to bold, the font style to italic, the
+  font size to large, the line height to 1.6, and the font family to serif.
+</p>
+```
+
+{{EmbedLiveSample('Multiple properties','100%', '100')}}
+
+### System font
+
+This example demonstrates using the `font` property to set a system font.
+
+#### CSS
+
+We set the paragraph's font to have the same `font-family`, `line-height`, `font-size`, etc., as the status bar of the window, then we set the `line-height` to `1.6`.
+
+```css
+p {
+  font: status-bar;
+  line-height: 1.6;
+}
+```
+
+#### HTML
+
+Our HTML includes a paragraph ({{htmlelement("p")}}) containing a link ({{htmlelement("a")}}) with a convoluted [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute value. When you hover or focus the rendered link, your browser's status bar should display the value of the `href` attribute.
+
+```html
+<p>
+  <a
+    href="/%20The%20font%20should%20be%20the%20same%20
+family%20and%20size%20and%20the%20text%20in%20the%20example."
+    >Hover or focus this text. The font should be the same family and size and
+    the text in your status bar.</a
+  >
+</p>
+```
+
+#### JavaScript
+
+As the URL in our HTML link is not good practice, we include a script that prevents the document from redirecting to a non-existent page when the link is clicked.
+
+```js
+const aElem = document.querySelector("a");
+aElem.addEventListener("click", function (e) {
+  e.preventDefault();
+  return false;
+});
+```
+
+#### Result
+
+{{EmbedLiveSample('System font','100%', '100')}}
+
+Hover or focus the link. The font should be the same family and size as the text in your status bar at the bottom of your browser window.
+
+### Shorthand declaration creator
+
+In this live demonstration, you can select different radio buttons to generate different shorthand values, while visualizing the effects of the shorthand declarations you create.
 
 ```html hidden
 <p>
@@ -218,7 +320,7 @@ p {
         name="font_style"
         checked
         value="" />
-      <label for="font-style-none">none</label><br />
+      <label for="font-style-none">omit value</label><br />
       <input
         type="radio"
         id="font-style-normal"
@@ -247,7 +349,7 @@ p {
         name="font_variant"
         checked
         value=" " />
-      <label for="font-variant-none">none</label><br />
+      <label for="font-variant-none">omit value</label><br />
       <input
         type="radio"
         id="font-variant-normal"
@@ -265,7 +367,7 @@ p {
     <div class="setPropCont">
       font-weight<br />
       <input type="radio" id="font-weight-none" name="font_weight" value="" />
-      <label for="font-weight-none">none</label><br />
+      <label for="font-weight-none">omit value</label><br />
       <input
         type="radio"
         id="font-weight-normal"
@@ -304,7 +406,7 @@ p {
         name="line_height"
         checked
         value="" />
-      <label for="line-height-none">none</label><br />
+      <label for="line-height-none">omit value</label><br />
       <input
         type="radio"
         id="line-height-1-2"
@@ -406,8 +508,10 @@ p {
   </div>
 </form>
 
-<div class="fontShortHand">This is some sample text.</div>
-<br /><br /><br /><br /><br /><br />
+<div class="fontShortHand">
+  This is some sample text.<br />
+  This is some more sample text.
+</div>
 ```
 
 ```css hidden
@@ -513,7 +617,7 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 });
 ```
 
-{{ EmbedLiveSample('Live_sample','100%', '440px')}}
+{{EmbedLiveSample('Shorthand declaration creator','100%', '500px')}}
 
 ## Specifications
 
@@ -527,4 +631,4 @@ document.querySelectorAll("input[type='radio']").forEach((el) => {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [System font stack](https://css-tricks.com/snippets/css/system-font-stack/) on CSS-Tricks (2017)

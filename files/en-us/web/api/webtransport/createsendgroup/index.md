@@ -3,10 +3,12 @@ title: "WebTransport: createSendGroup() method"
 short-title: createSendGroup()
 slug: Web/API/WebTransport/createSendGroup
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.WebTransport.createSendGroup
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`createSendGroup()`** method of the {{domxref("WebTransport")}} interface creates and returns a {{domxref("WebTransportSendGroup")}}.
 
