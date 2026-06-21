@@ -15,6 +15,9 @@ The event is not sent if a tab or window is created without a navigation target 
 
 If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
+> [!NOTE]
+> This event doesn't include `documentId` or `parentDocumentId` because the navigation's target document and its parent don't exist when the event fires. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+
 ## Syntax
 
 ```js-nolint

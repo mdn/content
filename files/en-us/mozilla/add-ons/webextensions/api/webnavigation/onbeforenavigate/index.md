@@ -57,6 +57,8 @@ Events have three functions:
   - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
 - `parentDocumentId`
   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+    > [!NOTE]
+    > This event doesn't include `documentId` because the navigation's target document doesn't exist when the event fires. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `timeStamp`

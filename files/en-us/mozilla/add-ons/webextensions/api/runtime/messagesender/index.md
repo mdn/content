@@ -8,14 +8,17 @@ sidebar: addonsidebar
 
 An object containing information about the sender of a message or connection request that is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
 
-It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the `Port` instance passed into the {{WebExtAPIRef("runtime.onConnect()")}} or {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners.
+Available for:
+
+- connections in the {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners. In the {{WebExtAPIRef("runtime.onConnect()")}} and {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners, it's a property of the `port` argument ({{WebExtAPIRef("runtime.Port")}}).
+- messages in {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, and {{WebExtAPIRef("runtime.runtime.onUserScriptMessage")}} listeners.
 
 ## Type
 
 Values of this type are objects. They contain the following properties:
 
 - `documentId` {{optional_inline}}
-  - : `string`. A UUID of the document that opened the connection. Available in {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, {{WebExtAPIRef("runtime.onUserScriptMessage")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+  - : `string`. A UUID of the document that opened the connection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle` {{optional_inline}}
   - : `string`. The lifecycle state the document that opened the connection was in when the port was created. Note that the lifecycle state of the document may have changed since the port was created.
 - `frameId` {{optional_inline}}
