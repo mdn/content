@@ -52,7 +52,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 ## Static methods
 
 - {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}
-  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
+  - : Returns a boolean value indicating whether the current user agent supports the given MIME type — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
 ## Events
 
@@ -61,13 +61,13 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaSource.sourceended_event", "sourceended")}}
   - : Fired when the `MediaSource` instance is still attached to a media element, but {{domxref("MediaSource.endOfStream", "endOfStream()")}} has been called.
 - {{domxref("MediaSource.sourceopen_event", "sourceopen")}}
-  - : Fired when the `MediaSource` instance has been opened by a media element and is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
+  - : Fired when a media element has opened the `MediaSource` instance and it is ready for data to be appended to the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}}.
 
 ## Examples
 
 ### Complete basic example
 
-The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
+The following basic example loads a video using {{domxref("XMLHttpRequest")}} and plays it as soon as it can. This example can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
 
 ```js
 const video = document.querySelector("video");
@@ -114,7 +114,7 @@ function fetchAB(url, cb) {
 
 ### Constructing a `MediaSource` in a dedicated worker and passing it to the main thread
 
-The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside a dedicated worker and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the thread that created the worker (in this case the main thread) via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
+The {{domxref("MediaSource.handle", "handle")}} property can be accessed inside a dedicated worker, and the resulting {{domxref("MediaSourceHandle")}} object is then transferred over to the thread that created the worker (in this case, the main thread) via a {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} call:
 
 ```js
 // Inside dedicated worker
