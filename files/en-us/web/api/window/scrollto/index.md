@@ -43,7 +43,7 @@ scrollTo(options)
 A {{jsxref("Promise")}} that fulfills with an object containing the following property:
 
 - `interrupted`
-  - : A boolean value indicating whether the scrolling operation was interrupted (`true`) or not (`false`).
+  - : A boolean value indicating whether the scrolling operation was interrupted (`true`) or not (`false`). Such an interruption typically happens when a programmatic scroll is ongoing, and another programmatic scroll is initiated on the window before the first one finishes.
 
 ## Examples
 
