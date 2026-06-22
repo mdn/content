@@ -53,7 +53,7 @@ Each {{domxref("IDBRecord")}} instance contains the following properties:
   - : A value representing the record's key.
     This is identical to the `primaryKey` property.
 - `primaryKey`
-  - : The record's primary key
+  - : The record's primary key.
 - `value`
   - : A value representing the record's value.
 

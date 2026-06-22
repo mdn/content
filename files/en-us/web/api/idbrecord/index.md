@@ -9,8 +9,8 @@ browser-compat: api.IDBRecord
 
 The **`IDBRecord`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a snapshot of a single record in an {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}}.
 
-A request for records using {{domxref("IDBObjectStore.getAllRecords()")}} or {{domxref("IDBIndex.getAllRecords()")}} returns a {{domxref("IDBRequest")}} instance.
-On success the returned object's {{domxref("IDBRequest.result", "result")}} method is populated with an array of `IDBRecord` instances.
+A request for records using {{domxref("IDBObjectStore.getAllRecords()")}} or {{domxref("IDBIndex.getAllRecords()")}} returns an {{domxref("IDBRequest")}} instance.
+On success the returned object's {{domxref("IDBRequest.result", "result")}} property is populated with an array of `IDBRecord` instances.
 
 ## Instance properties
 
