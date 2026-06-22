@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-An {{jsxref("ArrayBuffer")}} containing the public certificates of the remote peer of the connection.
+An array of {{jsxref("ArrayBuffer")}} objects containing the public certificates of the remote peer of the connection.
 
 For [`new`](/en-US/docs/Web/API/RTCDtlsTransport/state#new) connections this is an empty array.
 It is populated with the certificates from the remote peer when the state of the transport changes to [`connected`](/en-US/docs/Web/API/RTCDtlsTransport/state#connected).
@@ -38,17 +38,17 @@ The protocol automatically uses certificates to ensure that the communicating re
 This is done by checking that the certificate presented during the DTLS handshake matches the `a=fingerprint` provided in the SDP.
 
 DTLS guarantees the connected peer is the one you've been negotiating with, because only that peer has the private key matching the certificate whose fingerprint was exchanged during signaling.
-However it doesn't tell you who this remote peer is: DTLS can't help you if you initially connected to a compromised signaling server, or some unexpected peer.
+However, it doesn't tell you who this remote peer is: DTLS can't help you if you initially connected to a compromised signaling server, or some unexpected peer.
 Establishing the identity of the remote peer usually requires an out-of-band mechanism such as comparing certificate fingerprints verbally over a phone call, or using a separate authenticated channel.
 
 The `getRemoteCertificates()` method allows you to get the remote certificates used by DTLS and use them for _application-layer_ authentication of the remote peer.
 
 The way this works is that each peer must persist their own DTLS certificate across sessions, rather than generating a new one each time.
 After connecting to the remote peer, you'd exchange information out-of-band to verify that it is the intended party, and use `getRemoteCertificates()` to get its certificates.
-When you subsequently connect to that remote peer you'd only allow communication if it has exactly the same certificate fingerprints.
+When you subsequently connect to that remote peer, you'd only allow communication if it has exactly the same certificate fingerprints.
 There is still a window for a person-in-the-middle attack, but it only exists for the very first connection between peers.
 
-Note that `getRemoteCertificates()` returns an `ArrayBuffer`, which unlike {{domxref("RTCCertificate")}} does not provide direct access to fingerprint information.
+Note that `getRemoteCertificates()` returns `ArrayBuffer` objects, which unlike {{domxref("RTCCertificate")}} do not provide direct access to fingerprint information.
 Applications that need to compare fingerprints must parse the raw DER-encoded certificate data themselves, for example by hashing it with SHA-256.
 
 ## Example
@@ -58,8 +58,8 @@ Applications that need to compare fingerprints must parse the raw DER-encoded ce
 This function shows how you might get and fingerprint the remote peer's certificate after the DTLS handshake, and compare it to a stored value.
 
 ```js
-async function getRemoteFingerprint(pc) {
-  const certs = pc.getRemoteCertificates();
+async function getRemoteFingerprint(dtlsTransport) {
+  const certs = dtlsTransport.getRemoteCertificates();
   if (certs.length === 0) {
     return null;
   }
@@ -74,41 +74,21 @@ async function getRemoteFingerprint(pc) {
 }
 
 // Call once DTLS handshake is complete
-pc.oniceconnectionstatechange = async () => {
-  if (pc.iceConnectionState === "connected") {
-    const fingerprint = await getRemoteFingerprint(pc);
-    const stored = localStorage.getItem("remote-peer-id");
+pc.addEventListener("connectionstatechange", async () => {
+  if (pc.connectionState === "connected") {
+    const sender = pc.getSenders()[0];
+    if (!sender?.transport) return;
+
+    const fingerprint = await getRemoteFingerprint(sender.transport);
+    const stored = localStorage.getItem("remote-peer-fingerprint");
 
     if (!stored) {
-      localStorage.setItem("remote-peer-id", fingerprint);
+      localStorage.setItem("remote-peer-fingerprint", fingerprint);
     } else if (stored !== fingerprint) {
       console.error("Certificate mismatch — closing connection");
       pc.close();
     }
   }
-};
-```
-
-This code shows how you might persist your DTLS certificate across sessions.
-It is needed because by default DTLS will generate a fresh certificate each time.
-
-```js
-// Persist your own
-async function getOrCreateCertificate() {
-  const stored = localStorage.getItem("dtls-cert");
-  if (stored) {
-    return JSON.parse(stored);
-  }
-  const cert = await RTCPeerConnection.generateCertificate({
-    name: "ECDSA",
-    namedCurve: "P-256",
-  });
-  localStorage.setItem("dtls-cert", JSON.stringify(cert));
-  return cert;
-}
-
-const pc = new RTCPeerConnection({
-  certificates: [await getOrCreateCertificate()],
 });
 ```
 
