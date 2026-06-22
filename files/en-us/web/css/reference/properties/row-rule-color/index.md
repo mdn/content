@@ -173,13 +173,27 @@ We include an list of dynamic sports duos:
 We define the list to be a flex container, creating rows by setting the {{cssxref("flex-direction")}} to `column` using the {{cssxref("flex-flow")}} shorthand. We include a {{cssxref("gap")}} of `5px` to provide enough room between the rows to fit our `3px` dashed rule:
 
 ```css live-sample___basic live-sample___repeat live-sample___func live-sample___auto
-ul {c lc lc l
+ul {
   display: flex;
   flex-flow: column;
   gap: 5px;
   row-rule-style: dashed;
   row-rule-width: 3px;
   row-rule-color: blue;
+}
+```
+
+```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
+@layer no-support {
+  @supports not (row-rule-color: red, blue) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-color property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
