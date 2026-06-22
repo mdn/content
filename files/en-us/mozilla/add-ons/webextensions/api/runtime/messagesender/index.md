@@ -11,7 +11,7 @@ An object containing information about the sender of a message or connection req
 Available for:
 
 - connections in the {{WebExtAPIRef("runtime.onConnect")}}, {{WebExtAPIRef("runtime.onConnectExternal")}}, and {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners. In the {{WebExtAPIRef("runtime.onConnect()")}} and {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners, it's a property of the `port` argument ({{WebExtAPIRef("runtime.Port")}}).
-- messages in {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, and {{WebExtAPIRef("runtime.runtime.onUserScriptMessage")}} listeners.
+- messages in {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onMessageExternal")}}, and {{WebExtAPIRef("runtime.onUserScriptMessage")}} listeners.
 
 ## Type
 
