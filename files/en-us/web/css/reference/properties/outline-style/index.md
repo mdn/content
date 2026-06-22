@@ -80,7 +80,7 @@ The `outline-style` property is specified as any one of the values listed below.
 - `auto`
   - : Permits the user agent to render a custom outline style.
 - `none`
-  - : No outline is used. The {{cssxref("outline-width")}} is `0`.
+  - : No outline is used.
 - `dotted`
   - : The outline is a series of dots.
 - `dashed`
