@@ -113,7 +113,7 @@ All values, except `visible` and `clip`, create a new [block formatting context]
 
 ### What creates overflow
 
-Overflow occurs when a block-level element has content that overflows its constrained space. The alloted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size (({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
+Overflow occurs when a block-level element has content that overflows its constrained space. The allotted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size ({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size ({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
 
 The following CSS limits the size of the container, defining [box model](/en-US/docs/Web/CSS/Guides/Box_model) property values that limit the container's size.
 A background color, clipped to the `content-box`, is also added to help demonstrate how overflowing content overflows the content box in the explanations that follow.
@@ -222,7 +222,7 @@ When using the two value syntax, if one value is set to `visible`, that `visible
 
 With `hidden`, overflowing content is clipped at the element's padding box. There are no scroll bars and the clipped content is not visible (i.e., it's "hidden").
 
-If there is overflowing content, the element is a scroll container! While there are no scroll bars and the user cannot view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse, the hidden overflow content can be scrolled into view.
+If there is overflowing content, the element is a scroll container. While there are no scroll bars and the user cannot view the content outside the clipped region by actions such as dragging on a touch screen or using the scroll wheel on a mouse, the hidden overflow content can be scrolled into view.
 
 If the content contains focusable elements, tabbing brings the currently focused element into view. Content can also be scrolled to programmatically. Setting a value for the {{domxref("Element.scrollLeft", "scrollLeft")}} or {{domxref("Element.scrollTop", "scrollTop")}} property scrolls that distance from the left or top edge, respectively. You can also scroll using the {{domxref("Element.scrollTo", "scrollTo()")}} method.
 
@@ -284,7 +284,7 @@ div {
       >interactive content</a
     >
     can NOT be scrolled into view when focused. Overflowing content is clipped
-    the container. No scroll container is created. Tabbing will give this
+    to the container. No scroll container is created. Tabbing will give this
     <input aria-label="input" placeholder="input" /> focus but will not scroll
     it into view. Keyboard users will not be able to reach this content. This
     content is also not programmatically scrollable.
@@ -342,7 +342,7 @@ label {
 
 #### With scroll-driven animations
 
-When creating [scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) using the {{cssxref("animation-timeline/scroll", "scroll()")}} function, consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
+When creating [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) using the {{cssxref("animation-timeline/scroll", "scroll()")}} function, consider using `clip` instead of `hidden` if there is no interactive content within the clipped area, unless you explicitly want to create a scroll container.
 
 With both `hidden` and `clip`, the overflow gets clipped, but `overflow: clip` doesn't create a scroll container, so clipped elements are skipped when the user agent goes up the DOM tree looking for the nearest ancestor scroll container.
 
@@ -390,7 +390,7 @@ See the [browser compatibility](#browser_compatibility) chart for current browse
 
 ## Accessibility
 
-In some browsers, scrolling content areas are not keyboard-focusable, so they cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To ensure the screen reader user has context when encountering the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)) attributes.
+In some browsers, scrolling content areas are not keyboard-focusable, so they cannot be scrolled by a keyboard-only user. To ensure all keyboard-only users can scroll the container, enable the element to receive focus by setting [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on the container. To give screen reader users context when the container receives focus, set an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) on the container, such as `role="region"`, and an accessible name using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
 
 ## Examples
 
@@ -528,5 +528,5 @@ p.overlay {
 - SVG {{SVGAttr("overflow")}} attribute
 - [Scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
-- [CSS scroll driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
