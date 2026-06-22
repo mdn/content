@@ -1355,7 +1355,7 @@ Additionally, this key accepts various properties that are aliases for one of th
           An array of values defining the size of the corresponding
           <code>"additional_backgrounds":</code> array item. Accepts the same
           values as the CSS
-          <a href="/en-US/docs/Web/CSS/background-size"><code>background-size</code></a>
+          <a href="/en-US/docs/Web/CSS/Reference/Properties/background-size"><code>background-size</code></a>
           property, such as <code>"auto"</code>, <code>"cover"</code>,
           <code>"contain"</code>, or explicit width and height values (for
           example, <code>"100px 200px"</code>).
