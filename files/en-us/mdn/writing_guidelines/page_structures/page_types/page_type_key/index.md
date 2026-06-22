@@ -15,7 +15,7 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.100
 sidebar: http
 ---
 ```
