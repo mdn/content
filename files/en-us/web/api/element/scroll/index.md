@@ -8,8 +8,6 @@ browser-compat: api.Element.scroll
 
 {{APIRef("CSSOM view API")}}
 
-The **`scroll()`** method of the {{domxref("Element")}}
-interface scrolls the element to a particular set of coordinates inside a given
 The **`scroll()`** method of the {{domxref("Element")}} interface scrolls the element to a particular set of coordinates inside a given element.
 
 ## Syntax
@@ -144,13 +142,15 @@ const toolbar = document.querySelector("div");
 const section = document.querySelector("section");
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the `<section>` to scroll its content down 1000 pixels, `await`ing its promise resolution as we do so. When the promise has resolved, we log a message to say that the scroll operation has finished, and apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the `<section>` to scroll its content down 1000 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we log a message to say that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollBtn.addEventListener("click", async () => {
   toolbar.className = "fade-out";
-  await section.scroll(0, 1000);
-  console.log("Scroll finished");
+  const result = await section.scroll(0, 1000);
+  console.log(
+    `Scroll finished;${result.interrupted ? " " : " not "}interrupted`,
+  );
   toolbar.className = "fade-in";
 });
 ```
@@ -160,6 +160,8 @@ The code not relevant to `scroll()` is not shown, for brevity.
 #### Result
 
 Load our [element methods demo](https://mdn.github.io/dom-examples/scroll-promises/element-methods/) ([see source code](https://github.com/mdn/dom-examples/tree/main/scroll-promises/element-methods)) in a new tab and click the buttons to see the scrolling behavior. Note how the toolbar fades out when a button is pressed, and fades in again once the smooth scrolling is finished.
+
+Try pressing one button and then quickly pressing another button before the first scrolling operation has finished. Open your browser's JavaScript console and note how, in these cases, the scrolling is reported as interrupted.
 
 ## Specifications
 

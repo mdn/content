@@ -8,7 +8,6 @@ browser-compat: api.Window.scroll
 
 {{APIRef}}
 
-The **`Window.scroll()`** method scrolls the window to a
 The **`scroll()`** method of the {{domxref("Window")}} interface scrolls the window to a particular place in the document.
 
 ## Syntax
@@ -142,13 +141,15 @@ const scrollBtn = document.querySelector(".scroll");
 const toolbar = document.querySelector("div");
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the window to scroll its content down 1000 pixels, `await`ing its promise resolution as we do so. When the promise has resolved, we log a message to say that the scroll operation has finished, and apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the window to scroll its content down 1000 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we log a message to say that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollBtn.addEventListener("click", async () => {
   toolbar.className = "fade-out";
-  await window.scroll(0, 1000);
-  console.log("Scroll finished");
+  const result = await window.scroll(0, 1000);
+  console.log(
+    `Scroll finished;${result.interrupted ? " " : " not "}interrupted`,
+  );
   toolbar.className = "fade-in";
 });
 ```
@@ -158,6 +159,8 @@ The code not relevant to `scroll()` is not shown, for brevity.
 #### Result
 
 Load our [window methods demo](https://mdn.github.io/dom-examples/scroll-promises/window-methods/) ([see source code](https://github.com/mdn/dom-examples/tree/main/scroll-promises/window-methods)) in a new tab and click the buttons to see the scrolling behavior. Note how the toolbar fades out when a button is pressed, and fades in again once the smooth scrolling is finished.
+
+Try pressing one button and then quickly pressing another button before the first scrolling operation has finished. Open your browser's JavaScript console and note how, in these cases, the scrolling is reported as interrupted.
 
 ## Specifications
 
