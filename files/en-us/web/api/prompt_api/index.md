@@ -87,12 +87,6 @@ Role is a required field on every `LanguageModelMessage` that identifies who aut
 - `"assistant"`
   - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed to an AI model as an example before asking it to complete a similar task. Only text is allowed for `"assistant"` messages. Any other content type throws a {{DomxRef("NotSupportedError")}}.
 
-## Security considerations
-
-The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) (HTTPS).
-
-Access to the Prompt API is controlled by the `language-model` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin {{HTMLElement("iframe")}} elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
-
 ## Interfaces
 
 - {{domxref("LanguageModel")}}
@@ -102,6 +96,12 @@ Access to the Prompt API is controlled by the `language-model` [Permissions Poli
 
 - {{domxref("LanguageModelToolFunction")}}
   - : The type of function assigned to the `tool.execute` property that was passed to {{domxref("LanguageModel.create_static", "create()")}}. Called by the user agent when the language model invokes a tool. the callback must return a {{jsxref("Promise")}} that resolves with a string representing the tool's result.
+
+## Security considerations
+
+The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) (HTTPS).
+
+Access to the Prompt API is controlled by the `language-model` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) feature, whose default allowlist is `'self'`. This means the API is available to same-origin contexts by default. To enable it in cross-origin {{HTMLElement("iframe")}} elements, the embedding page must explicitly grant permission via the `allow` attribute or an appropriate `Permissions-Policy` response header.
 
 ## Specifications
 
