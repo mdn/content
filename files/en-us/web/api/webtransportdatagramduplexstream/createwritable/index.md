@@ -3,10 +3,12 @@ title: "WebTransportDatagramDuplexStream: createWritable() method"
 short-title: createWritable()
 slug: Web/API/WebTransportDatagramDuplexStream/createWritable
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.WebTransportDatagramDuplexStream.createWritable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`createWritable()`** method of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WebTransportDatagramsWritable")}} instance that can be used to write outgoing datagrams to the transport.
 

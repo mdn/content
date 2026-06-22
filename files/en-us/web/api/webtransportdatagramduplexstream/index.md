@@ -34,7 +34,7 @@ This is accessed via the {{domxref("WebTransport.datagrams")}} property.
 
 ## Instance methods
 
-- {{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}}
+- {{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}} {{experimental_inline}}
   - : Returns a {{domxref("WebTransportDatagramsWritable")}} instance that can be used to write outgoing datagrams to the stream.
 
 ## Examples
