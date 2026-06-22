@@ -183,20 +183,6 @@ ul {
 }
 ```
 
-```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
-@layer no-support {
-  @supports not (row-rule-color: red, blue) {
-    body::before {
-      content: "Your browser doesn't support the row-rule-color property";
-      background-color: wheat;
-      display: block;
-      text-align: center;
-      padding: 1rem 0;
-    }
-  }
-}
-```
-
 #### Result
 
 {{EmbedLiveSample("Basic")}}
@@ -249,6 +235,20 @@ ul {
 ```
 
 {{EmbedLiveSample("auto")}}
+
+```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
+@layer no-support {
+  @supports not (row-rule-color: red, blue) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-color property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+```
 
 ## Specifications
 
