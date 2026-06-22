@@ -3,7 +3,7 @@ title: URI authority
 short-title: Authority
 slug: Web/URI/Reference/Authority
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.2
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.2
 sidebar: urlsidebar
 ---
 
