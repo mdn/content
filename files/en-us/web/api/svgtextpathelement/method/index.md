@@ -19,7 +19,7 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 The object's `baseVal` and `animVal` properties can get or set the following static property values:
 
 - [`SVGTextPathElement.TEXTPATH_METHODTYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_methodtype_unknown) (0)
-  - : The type is not one of predefined types.
+  - : The type is not one of the predefined types.
 - [`SVGTextPathElement.TEXTPATH_METHODTYPE_ALIGN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_methodtype_align) (1)
   - : Corresponds to the value [`align`](/en-US/docs/Web/SVG/Reference/Attribute/method#align).
 - [`SVGTextPathElement.TEXTPATH_METHODTYPE_STRETCH`](/en-US/docs/Web/API/SVGTextPathElement#textpath_methodtype_stretch) (2)
