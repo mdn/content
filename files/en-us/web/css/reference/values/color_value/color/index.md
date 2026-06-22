@@ -62,7 +62,7 @@ The parameters are as follows:
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `colorspace`
-  - : An {{CSSXref("&lt;ident&gt;")}} denoting the {{glossary("color space")}} of the output color, generally one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
+  - : An {{CSSXref("&lt;ident&gt;")}} denoting the {{glossary("color space")}} of the output color, generally one of the predefined color spaces: `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
 - `c1`, `c2`, `c3`
   - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the output color. When using a `<number>` value, generally `0` to `1` represents the bounds of the color space. Values outside of that range are permitted but will be out of {{glossary("gamut")}} for the given color space. Generally, when using a percentage value, `100%` represents `1` and `0%` represents `0`.
 - `A` {{optional_inline}}
@@ -73,7 +73,7 @@ The parameters are as follows:
 When using relative color syntax inside a `color()` function, the browser converts the origin color into an equivalent color in the specified color space (if it is not already specified as such). The color is defined as three distinct color channel values plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The three color channel values of the origin color are resolved to a `<number>`. For predefined color spaces, depending on which is specified, these values will be one of the following:
-  - `r`, `g`, and `b`: Color channel values for the RGB-based color spaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
+  - `r`, `g`, and `b`: Color channel values for the RGB-based color spaces `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
   - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based color spaces `xyz`, `xyz-d50`, and `xyz-d65`.
 
     > [!NOTE]
@@ -162,6 +162,7 @@ The following example shows the effect of varying the lightness, a-axis, and b-a
 <div data-color="red-prophoto-rgb"></div>
 <div data-color="green-srgb-linear"></div>
 <div data-color="green-display-p3"></div>
+<div data-color="green-display-p3-linear"></div>
 <div data-color="blue-rec2020"></div>
 <div data-color="blue-srgb"></div>
 ```
@@ -189,8 +190,12 @@ div {
 [data-color="green-srgb-linear"] {
   background-color: color(srgb-linear 0 1 0);
 }
+/* display-p3 is gamma-encoded; display-p3-linear uses linear-light values */
 [data-color="green-display-p3"] {
-  background-color: color(display-p3 0 1 0);
+  background-color: color(display-p3 0 0.5 0);
+}
+[data-color="green-display-p3-linear"] {
+  background-color: color(display-p3-linear 0 0.5 0);
 }
 [data-color="blue-rec2020"] {
   background-color: color(rec2020 0 0 1);
