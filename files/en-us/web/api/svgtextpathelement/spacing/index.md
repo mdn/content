@@ -19,7 +19,7 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 The object's `baseVal` and `animVal` properties can get or set the following static property values:
 
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_unknown) (0)
-  - : The type is not one of predefined types.
+  - : The type is not one of the predefined types.
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_AUTO`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_auto) (1)
   - : Corresponds to the value [`auto`](/en-US/docs/Web/SVG/Reference/Attribute/spacing#auto).
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_EXACT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_exact) (2)

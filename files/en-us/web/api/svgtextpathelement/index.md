@@ -48,7 +48,7 @@ _This interface does not provide any specific methods, but implements those of i
 - `TEXTPATH_SPACINGTYPE_EXACT` (2)
   - : Corresponds to the value `exact`.
 - `TEXTPATH_SIDETYPE_UNKNOWN` (0)
-  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+  - : The type is not one of the predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
 - `TEXTPATH_SIDETYPE_LEFT` (1)
   - : Corresponds to the value `left`.
 - `TEXTPATH_SIDETYPE_RIGHT` (2)
