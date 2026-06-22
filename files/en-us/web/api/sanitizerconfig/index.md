@@ -127,7 +127,7 @@ The empty object `{}` is a valid configuration.
 
 > [!NOTE]
 > The conditions above are from the perspective of a web developer.
-> The [validity check defined in the specification](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#safe-and-unsafe) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
+> The [validity check defined in the specification](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-sanitizerconfig-valid) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
 
 ### Allow and remove configurations
 
