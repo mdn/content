@@ -29,7 +29,7 @@ Values of this type are objects. They contain the following properties:
 - `originUrl`
   - : `string`. URL of the resource that triggered the request. Note that this may not be the same as the URL of the page into which the requested resource will be loaded. For example, if a document triggers a load in a different window through the [target attribute of a link](/en-US/docs/Web/HTML/Reference/Elements/a#target), or a CSS document includes an image using the [`url()` functional notation](/en-US/docs/Web/CSS/Reference/Values/url_function), then this is the URL of the original document or of the CSS document, respectively.
 - `parentDocumentId` {{optional_inline}}
-  - : `string`. A UUID of the parent document that owns the frame. Not set if there is no parent.
+  - : `string`. A UUID of the parent document that owns the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
 - `requestId`

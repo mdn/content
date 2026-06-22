@@ -46,7 +46,7 @@ Events have three functions:
         - `method`
           - : A `string`. A standard HTTP method.
         - `parentDocumentId` {{optional_inline}}
-          - : A `string`. The unique identifier for the frame's parent document, if this request is for a frame and has a parent.
+          - : A `string`. The unique identifier for the frame's parent document, if this request is for a frame and has a parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
         - `parentFrameId`
           - : A `number`. The ID of the frame that wraps the frame which sent the request. Set to `-1` if there is no parent frame.
         - `requestId`
