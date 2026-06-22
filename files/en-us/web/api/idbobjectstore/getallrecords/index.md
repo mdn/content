@@ -10,10 +10,10 @@ browser-compat: api.IDBObjectStore.getAllRecords
 
 {{ APIRef("IndexedDB") }}{{SeeCompatTable}}
 
-The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}}
-interface retrieves all records (including primary keys and values) from the object store.
+The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}} interface retrieves all records (including primary keys and values) from the object store.
 
-`getAllRecords()` effectively combines the functionality of {{domxref("IDBObjectStore.getAllKeys", "getAllKeys()")}} and {{domxref("IDBObjectStore.getAll", "getAll()")}} by enumerating both primary keys and values at the same time. This combined operation enables certain data retrieval patterns to be significantly faster than alternatives such as iteration with cursors.
+`getAllRecords()` effectively combines the functionality of {{domxref("IDBObjectStore.getAllKeys", "getAllKeys()")}} and {{domxref("IDBObjectStore.getAll", "getAll()")}} by enumerating both primary keys and values at the same time.
+This combined operation enables certain data retrieval patterns to be significantly faster than alternatives such as iteration with cursors.
 
 ## Syntax
 
@@ -45,14 +45,15 @@ An options object whose properties can include:
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of objects representing all records that match the given query, up to the number specified by `count` (if provided).
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of {{domxref("IDBRecord")}} instances representing all records that match the given query, up to the number specified by `count` (if provided).
 
-Each object contains the following properties:
+Each {{domxref("IDBRecord")}} instance contains the following properties:
 
 - `key`
   - : A value representing the record's key.
+    This is identical to the `primaryKey` property.
 - `primaryKey`
-  - : The record's key; identical to the `key` property.
+  - : The record's primary key
 - `value`
   - : A value representing the record's value.
 
