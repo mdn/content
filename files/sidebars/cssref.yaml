@@ -450,29 +450,60 @@ l10n:
     Transitions: Transitions
     Tools: Tools
   fr:
+    Accessibility_Understanding_colors_and_luminance: "Accessibilité : Couleurs et luminance"
+    At-rules: Règles @
     Guides: Guides
+    Anchor_positioning: Positionnement par ancre
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
     Box_model: Modèle de boîte
+    Cascade: Cascade
+    Colors: Couleurs
+    Color_contrast: "Accessibilité : Contraste de la couleur"
     Columns: Colonnes
+    Combinators: Combinateurs
     Conditional_rules: Règles conditionnelles
+    Containment: Compartimentation
+    Coordinate_systems: Systèmes de coordonnées (API)
+    Contribute a recipe: Contribuer à une recette
     Counters: Compteurs
     CSSOM_view: Vue CSSOM
+    Custom_functions_and_mixins: Fonctions et composantes personnalisées
+    Display: Mise en page
+    Environment_variables: Variables d'environnement
+    Filter_effects: Effets de filtre
     Flexbox: Boîtes flexibles
-    Display: Mis en page
     Fonts: Polices
+    Functions: Fonctions
     Grid: Grille
     Images: Images
+    Layout cookbook: Recettes de mise en page
     Lists: Listes
     Logical_properties: Propriétés logiques
+    Masking: Masquage
     Media_queries: Requêtes média
+    Nesting: Imbrication
+    Overflow: Débordement
     Positioning: Positionnement
-    Scroll_snap: Ancrage du défilement
+    Properties: Propriétés
+    Properties and Values API: API des propriétés et des valeurs
+    Pseudo-classes: Pseudo-classes
+    Pseudo-elements: Pseudo-éléments
+    Selectors: Sélecteurs
+    Scroll_anchoring: Ancrage de défilement
+    Scroll-driven_animations: Animations pilotées par le défilement
+    Scroll_snap: Accrochage du défilement
     Shapes: Formes
+    Syntax: Syntaxe
     Text: Texte
+    Text decoration: Décoration de texte
     Transforms: Transformations
     Transitions: Transitions
     Tools: Outils
+    Types: Types
+    Values: Valeurs
+    Values and units: Valeurs et unités
+    Writing modes: Modes d'écriture
   ja:
     Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
     At-rules: アットルール
