@@ -93,6 +93,8 @@ The `row-rule-color` property defines the colors of any row rule lines drawn in 
 
 The value is a comma-separated list of `<line-color>`, `<repeated-line-color>`, and optionally an `<auto-repeat-line-color>`.
 
+The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
+
 ### Line colors
 
 A line-color can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the row rules will be that color. If we declare the following, all row rules will be blue:
