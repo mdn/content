@@ -19,7 +19,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("text")}}
 - {{SVGElement("tspan")}}
 
-
 ## animateMotion
 
 <table class="properties">
@@ -155,11 +154,10 @@ glyphs. If there are more numbers than glyphs, the extra numbers are ignored.
 
 ```html
 <svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
-  <text x="20" y="50" font-size="28" rotate="0 15 30 45 60 75">
-    Hello!
-  </text>
+  <text x="20" y="50" font-size="28" rotate="0 15 30 45 60 75">Hello!</text>
 </svg>
 ```
+
 #### Result
 
 {{EmbedLiveSample('Per-glyph_rotation_text', '100%', 80)}}
