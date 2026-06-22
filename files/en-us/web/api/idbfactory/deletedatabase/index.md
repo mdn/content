@@ -34,9 +34,9 @@ To let it complete, close each connection. This is typically done by calling
 
 ```js
 // db is an open connection (e.g. from a previous indexedDB.open() success)
-db.onversionchange = () => {
+db.addEventListener("versionchange", () => {
   db.close();
-};
+});
 ```
 
 ## Syntax
