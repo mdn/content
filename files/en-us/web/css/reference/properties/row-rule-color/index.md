@@ -107,7 +107,9 @@ When declaring more than one `<line-color>`, separate them with a comma. If ther
 row-rule-color: blue, yellow;
 ```
 
-line colors, with declared individual `<line-color>` values, repeated line colors defined with the `repeat()` function specifying a single color and the number of times to repeat it, and at most one `<auto-repeat-line-color>`. The value is a comma separated list of colors, defined either as individual {{cssxref("&lt;color>")}} values, or repeating colors defined using the {{cssxref("repeat()")}} function. The first argument specifies the number of repetitions, as an integer of `1` or greater, or the keyword `auto`. The second argument is the color to be repeated.
+### Repeated line colors
+
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat the valid CSS {{cssxref("&lt;color&gt;")}} passed as the second argument the specified number of times. This allows the same color to be repeated a set number of times without repeating the color, multiple times. The following declarations are equivalent:
 
 ```css
 row-rule-color: blue, yellow, yellow, yellow, red;
@@ -185,7 +187,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Basic")}}
+{{EmbedLiveSample("Basic", "", "180")}}
 
 ### Repeating values
 
@@ -199,7 +201,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("Repeat")}}
+{{EmbedLiveSample("Repeat", "", "180")}}
 
 ### Repeat() function
 
@@ -218,7 +220,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("func")}}
+{{EmbedLiveSample("func", "", "180")}}
 
 The middle color is repeated three times. The flex container has six rows, so five gutters. The `repeat()` function repeats our second color three times, creating a color-list with five colors. As there are the same number of row gutters as total colors, the colors are not repeated.
 
@@ -234,7 +236,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto")}}
+{{EmbedLiveSample("auto", "", "180")}}
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
