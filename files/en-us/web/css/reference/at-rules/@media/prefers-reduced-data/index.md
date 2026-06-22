@@ -11,9 +11,6 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-> [!WARNING]
-> This feature is not supported by any user agent and its specifics are subject to change.
-
 The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) is used to detect if the user has requested web content that consumes less internet traffic.
 
 The browser typically achieves this by querying the underlying operating system's preferences for reduced data.
