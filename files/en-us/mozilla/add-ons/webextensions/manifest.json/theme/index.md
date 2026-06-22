@@ -150,27 +150,46 @@ Images should be 200 pixels high to ensure they always fill the header space ver
     </tr>
     <tr>
       <td><code>additional_backgrounds</code></td>
-      <td><code>Array</code> of <code>String</code></td>
+      <td><code>Array</code> of <code>String</code> or <code>Object</code></td>
       <td>
         <div class="warning">
           <p>
             <strong>Warning:</strong> The
-            <code>additional_backgrounds</code> property is experimental. It is
-            currently accepted in release versions of Firefox, but its behavior
-            is subject to change. It is not supported in Firefox for Android.
+            <code>additional_backgrounds</code> property is experimental. It's
+            accepted in release versions of Firefox, but its behavior
+            is subject to change. It's not supported in Firefox for Android.
           </p>
         </div>
         <p>
-          An array of URLs for additional background images to be added to the
-          header area and displayed behind the
-          <code>"theme_frame":</code> image. These images layer the first image
-          in the array on top, the last image in the array at the bottom.
+          An array of additional background items to be added to the header area
+          and displayed behind the <code>"theme_frame":</code> image. These items
+          layer the first item in the array on top and the last item at the bottom.
         </p>
         <p>Optional.</p>
         <p>
-          By default all images are anchored to the upper right corner of the
-          header area, but their alignment and repeat behavior can be controlled
-          by properties of <code>"properties":</code>.
+          Each array item is either a URL string for a background image, or a
+          CSS gradient represented as an object in the form
+          <code>{ "GRADIENT_TYPE": "GRADIENT_PARAMS" }</code>, where:
+        </p>
+        <ul>
+          <li>
+            <code>GRADIENT_TYPE</code> is one of <code>linear-gradient</code>,
+            <code>radial-gradient</code>, <code>conic-gradient</code>,
+            <code>repeating-linear-gradient</code>,
+            <code>repeating-radial-gradient</code>, or
+            <code>repeating-conic-gradient</code>.
+          </li>
+          <li>
+            <code>GRADIENT_PARAMS</code> contains the parameters for that CSS
+            gradient function, as described in
+            <a href="/en-US/docs/Web/CSS/Reference/Values/gradient">CSS gradient values</a>.
+          </li>
+        </ul>
+        <p>CSS gradient objects are supported from Firefox 153.</p>
+        <p>
+          By default, all items are anchored to the upper right corner of the
+          header area, but their alignment, repeat, and size behavior can be
+          controlled by <a href="#properties"><code>"properties":</code></a>.
         </p>
       </td>
     </tr>
@@ -1326,6 +1345,25 @@ Additionally, this key accepts various properties that are aliases for one of th
       </td>
     </tr>
     <tr>
+      <td><code>additional_backgrounds_size</code></td>
+      <td>
+        <p><code>Array</code> of <code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          An array of values defining the size of the corresponding
+          <code>"additional_backgrounds":</code> array item. Accepts the same
+          values as the CSS
+          <a href="/en-US/docs/Web/CSS/background-size"><code>background-size</code></a>
+          property, such as <code>"auto"</code>, <code>"cover"</code>,
+          <code>"contain"</code>, or explicit width and height values (for
+          example, <code>"100px 200px"</code>).
+        </p>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
+      </td>
+    </tr>
+    <tr>
       <td><code>color_scheme</code></td>
       <td>
         <p><code>String</code></p>
@@ -1449,6 +1487,31 @@ It will give you a browser that looks like this:
 ![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content bellow them.](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
+
+This example (Firefox 153+) mixes image backgrounds with a CSS linear gradient:
+
+```json
+"theme": {
+  "images": {
+    "additional_backgrounds": [
+      "background-image1.svg",
+      "background-image2.svg",
+      { "linear-gradient": "to bottom, #FF6BBA -18.096%, #FFC999 50%" }
+    ]
+  },
+  "properties": {
+    "additional_backgrounds_alignment": ["right top", "left top", "right top"],
+    "additional_backgrounds_tiling": ["no-repeat", "no-repeat", "repeat-x"],
+    "additional_backgrounds_size": ["auto", "auto", "auto 144px"]
+  }
+}
+```
+
+This results in:
+
+- `background-image1.svg` displaying at the top right, at its natural size.
+- `background-image2.svg` displaying at the top left, at its natural size.
+- The `linear-gradient` displaying from the top right, tiled horizontally across the header (`repeat-x`), and sized to 144px tall (width is automatic). The gradient transitions from pink (`#FF6BBA`) at the top to peach (`#FFC999`) at the bottom.
 
 ## Browser compatibility
 
