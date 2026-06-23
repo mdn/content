@@ -167,9 +167,10 @@ The keyword values can be grouped into six value categories.
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes`
-      - : The element behaves like a block-level element and lays out its content using masonry (grid-lanes) layout. One axis follows a strict grid while the other uses masonry stacking. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
+      - : The element behaves like a block-level element and lays out its content using masonry layout. Columns are defined by {{cssxref("grid-template-columns")}} and behave like a strict grid, while items are packed in the block direction to fill gaps between items of different sizes. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
+
     - `inline-grid-lanes`
-      - : The element behaves like an inline-level element and lays out its content using masonry (grid-lanes) layout. One axis follows a strict grid while the other uses masonry stacking. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
+      - : The element behaves like an inline-level element and lays out its content using masonry layout. Rows are defined by {{cssxref("grid-template-rows")}} and behave like a strict grid, while items are packed in the inline direction to fill gaps between items of different sizes. See [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) for details.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
@@ -316,6 +317,7 @@ The individual pages for the different types of value that `display` can have se
 - [Grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
 
 ### Animating display
 
@@ -424,8 +426,6 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
     <option>inline flex</option>
     <option>inline-grid</option>
     <option>inline grid</option>
-    <option>grid-lanes</option>
-    <option>inline-grid-lanes</option>
   </select>
 </div>
 ```
