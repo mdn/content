@@ -130,11 +130,12 @@ Images should be 200 pixels high to ensure they always fill the header space ver
   <tbody>
     <tr>
       <td><code>theme_frame</code></td>
-      <td><code>String</code></td>
+      <td><code>String</code> or <code>Object</code></td>
       <td>
         <p>
-          The URL of a foreground image to be added to the header area and
-          anchored to the upper right corner of the header area.
+          A foreground image or <a href="#css_gradient_syntax">CSS gradient</a>
+          to be added to the header area and anchored to the upper right corner
+          of the header area. CSS gradients are supported from Firefox 153.
         </p>
         <div class="notecard note">
           <p>
@@ -161,31 +162,13 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          An array of additional background items to be added to the header area
-          and displayed behind the <code>"theme_frame":</code> image. These items
-          layer the first item in the array on top and the last item at the bottom.
+          An array of additional background items, image URLs or <a href="#css_gradient_syntax">CSS gradient</a>, to be added to
+          the header area and displayed behind the
+          <code>"theme_frame":</code> image. These items layer the first item in
+          the array on top and the last item at the bottom. CSS gradients are
+          supported from Firefox 153.
         </p>
         <p>Optional.</p>
-        <p>
-          Each array item is either a URL string for a background image, or a
-          CSS gradient represented as an object in the form
-          <code>{ "GRADIENT_TYPE": "GRADIENT_PARAMS" }</code>, where:
-        </p>
-        <ul>
-          <li>
-            <code>GRADIENT_TYPE</code> is one of <code>linear-gradient</code>,
-            <code>radial-gradient</code>, <code>conic-gradient</code>,
-            <code>repeating-linear-gradient</code>,
-            <code>repeating-radial-gradient</code>, or
-            <code>repeating-conic-gradient</code>.
-          </li>
-          <li>
-            <code>GRADIENT_PARAMS</code> contains the parameters for that CSS
-            gradient function, as described in
-            <a href="/en-US/docs/Web/CSS/Reference/Values/gradient">CSS gradient values</a>.
-          </li>
-        </ul>
-        <p>CSS gradient objects are supported from Firefox 153.</p>
         <p>
           By default, all items are anchored to the upper right corner of the
           header area, but their alignment, repeat, and size behavior can be
@@ -195,6 +178,19 @@ Images should be 200 pixels high to ensure they always fill the header space ver
     </tr>
   </tbody>
 </table>
+
+### CSS gradient syntax
+
+A CSS gradient is specified as an object in the form `{ "GRADIENT_TYPE": "GRADIENT_PARAMS" }`, where:
+
+- `GRADIENT_TYPE` is one of:
+  - `linear-gradient`
+  - `radial-gradient`
+  - `conic-gradient`
+  - `repeating-linear-gradient`
+  - `repeating-radial-gradient`
+  - `repeating-conic-gradient`
+- `GRADIENT_PARAMS` contains the parameters for that CSS gradient function, as described in [CSS gradient values](/en-US/docs/Web/CSS/Reference/Values/gradient).
 
 ### colors
 
