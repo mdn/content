@@ -8,6 +8,9 @@ sidebar: webassemblysidebar
 
 The **`WebAssembly.Suspending`** object represents a suspending function — an asynchronous ({{jsxref("Promise")}}-based) JavaScript function that, when imported into a Wasm module and called from inside, will result in execution being suspended until the promise resolves.
 
+> [!NOTE]
+> The only purpose of `WebAssembly.Suspending` is to mark which imported functions are suspending functions when passing them into a Wasm module imports object.
+
 ## Constructor
 
 - [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending)

@@ -23,7 +23,7 @@ WebAssembly.promising(function)
 
 ### Return value
 
-A `Promise` that fulfills with the return value of the exported function.
+A function that wraps the original function passed into the `promising()` call, and can itself be called. The wrapper function takes the same arguments as the wrapped function, and returns a promise that fulfills with the wrapped function's results.
 
 ### Exceptions
 

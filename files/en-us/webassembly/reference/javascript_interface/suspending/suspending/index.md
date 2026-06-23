@@ -26,6 +26,8 @@ A new `Suspending` object instance.
 
 ### Exceptions
 
+- [`WebAssembly.SuspendError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/SuspendError)
+  - : The corresponding exported function was not wrapped in a [`WebAssembly.promising()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/promising_static) call.
 - {{jsxref("TypeError")}}
   - : The referenced `function` is not callable.
 

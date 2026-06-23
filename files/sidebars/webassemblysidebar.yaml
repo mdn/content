@@ -119,6 +119,12 @@ sidebar:
         title: <code>WebAssembly.RuntimeError</code>
         details: closed
         code: true
+      - type: listSubPages
+        path: /WebAssembly/Reference/JavaScript_interface/SuspendError
+        link: /WebAssembly/Reference/JavaScript_interface/SuspendError
+        title: <code>WebAssembly.SuspendError</code>
+        details: closed
+        code: true
   - link: /WebAssembly/Reference/Value_types
     title: Value_types
     details: closed
