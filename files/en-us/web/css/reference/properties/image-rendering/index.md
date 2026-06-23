@@ -91,7 +91,7 @@ image-rendering: unset;
 
 ### Setting image scaling algorithms
 
-In this example, an image is repeated three times, with each having a different `image-rendering` value applied.
+In this example, an image is repeated four times, with each having a different `image-rendering` value applied.
 
 ```html hidden
 <div>
