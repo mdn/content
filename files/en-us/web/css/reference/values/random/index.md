@@ -208,7 +208,7 @@ In this case, `.a`, `.b`, and `.c` are each squares (same random width and heigh
 
 To link named groups of values within a shorthand across all elements, use `property-index` as the cache key type. In the following example, all three elements share the same top and bottom margin (via `--v-space`), and the same left and right margin (via `--h-space`), while the two margin groups remain independently random from each other:
 
-```css
+````css
 .a,
 .b,
 .c {
