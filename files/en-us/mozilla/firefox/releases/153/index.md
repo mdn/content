@@ -61,6 +61,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("RTCDtlsTransport.getRemoteCertificates()")}} method gets the certificates used by the remote peer to secure the DTLS communication.
   These can be used for application-layer authentication of a remote peer.
   ([Firefox bug 1805446](https://bugzil.la/1805446)).
+- The {{domxref("MediaCapabilities.decodingInfo()", "decodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()","encodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface now accept the `"webrtc"` configuration type.
+  This allows a site to query whether a given audio or video configuration can be decoded or encoded for WebRTC, and whether doing so will be smooth and/or power efficient.
+  ([Firefox bug 2037610](https://bugzil.la/2037610) and [Firefox bug 2032075](https://bugzil.la/2032075)).
 
 <!-- #### Removals -->
 
