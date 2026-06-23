@@ -20,11 +20,9 @@ scroll(options)
 ### Parameters
 
 - `xCoord`
-  - : The pixel along the horizontal axis of the document that you
-- : The pixel along the horizontal axis of the document that you want displayed in the upper left.
+  - : The pixel along the horizontal axis of the document that you want displayed in the upper left.
 - `yCoord`
-  - : The pixel along the vertical axis of the document that you
-- : The pixel along the vertical axis of the document that you want displayed in the upper left.
+  - : The pixel along the vertical axis of the document that you want displayed in the upper left.
 - `options`
   - : An object containing the following properties:
     - `top` {{optional_inline}}
@@ -97,8 +95,7 @@ We give the {{cssxref(":root")}} element a {{cssxref("scroll-behavior")}} proper
 }
 ```
 
-We also create two class selectors; when a `fade-out` or `fade-in` class is applied to an element, an {{cssxref("animation")}} is applied so that it smoothly fades
-out or in, respectively. We also define {{cssxref("@keyframes")}} blocks to define the required {{cssxref("opacity")}} changes for those animations.
+We also create two class selectors; when a `fade-out` or `fade-in` class is applied to an element, an {{cssxref("animation")}} is applied so that it smoothly fades out or in, respectively. We also define {{cssxref("@keyframes")}} blocks to define the required {{cssxref("opacity")}} changes for those animations.
 
 ```css
 .fade-out {
