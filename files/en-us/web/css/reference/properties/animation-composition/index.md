@@ -161,7 +161,7 @@ body {
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-The underlying value for the `transform` property in all cases is `translateX(50px) rotate(45deg)`. The different `animation-composition` values' effects are as follows:
+The underlying value for the `transform` property in all cases is `translateX(30px) rotate(45deg)`. The different `animation-composition` values' effects are as follows:
 
 - With `replace`, the `transform` property in each keyframe entirely replaces the underlying `transform` property set on the animated element. The final effect value for the `transform` property at the `50%` keyframe is `translateY(30px)` (no `rotate` or `translateX`); at the `100%` keyframe, it is `translateX(150px)` (no `rotate` or `translateY`).
 
