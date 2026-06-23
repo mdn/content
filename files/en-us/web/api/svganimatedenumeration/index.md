@@ -9,18 +9,23 @@ browser-compat: api.SVGAnimatedEnumeration
 
 The **`SVGAnimatedEnumeration`** interface describes attribute values which are constants from a particular enumeration and which can be animated.
 
+From SVG 2, both `baseVal` and `animVal` reflect the non-animated value of the attribute.
+The allowed values of its properties depend on the associated attribute.
+
 ## Instance properties
 
 - {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
   - : An integer that is the base value of the given attribute before applying any animations.
-- {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}
-  - : If the given attribute or property is being animated, it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as `baseVal`.
+- {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}} {{ReadOnlyInline}}
+  - : This is the same as [baseVal](#baseval).
 
 ## Instance methods
 
-The `SVGAnimatedEnumeration` interface do not provide any specific methods.
+The `SVGAnimatedEnumeration` interface does not provide any specific methods.
 
 ## Examples
+
+## Basic usage
 
 Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
 
@@ -35,7 +40,8 @@ Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAtt
 </svg>
 ```
 
-This snippet gets the element, and logs the `baseVal` and `animVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property. As no animation is happening, they have the same value.
+This snippet gets the element, and logs the `baseVal` and `animVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
+These values should be the same.
 
 ```js
 const clipPathElt = document.getElementById("clip1");

@@ -11,19 +11,26 @@ browser-compat: api.SVGTextPathElement.spacing
 The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface represents the spacing between typographic characters that are to be rendered along a path.
 
 Note that the `spacing.baseVal` property reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
+While `spacing` is read-only, you can use `spacing.baseVal` to modify the value of the corresponding attribute.
+
+Note that in SVG 2, `spacing.animVal` is an alias of `spacing.baseVal`.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
-The object's `baseVal` and `animVal` properties can get or set the following static property values:
+These static properties indicate the values that can be returned from `spacing.baseVal` (and `spacing.animVal`):
 
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_unknown) (0)
   - : The type is not one of the predefined types.
+    This value cannot be set.
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_AUTO`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_auto) (1)
   - : Corresponds to the value [`auto`](/en-US/docs/Web/SVG/Reference/Attribute/spacing#auto).
 - [`SVGTextPathElement.TEXTPATH_SPACINGTYPE_EXACT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_spacingtype_exact) (2)
   - : Corresponds to the value [`exact`](/en-US/docs/Web/SVG/Reference/Attribute/spacing#exact).
+
+Note that `baseVal` cannot be set to `0` (`TEXTPATH_SPACINGTYPE_UNKNOWN`) or any other value than those listed above.
+`animVal` is read-only and with throw if you attempt to write to it.
 
 ## Examples
 

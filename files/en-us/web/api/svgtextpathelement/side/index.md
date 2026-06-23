@@ -10,28 +10,35 @@ browser-compat: api.SVGTextPathElement.side
 
 The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} interface represents the side of the path that the text is placed on (relative to the path direction).
 
-Note that the `side.baseVal` property reflects the {{SVGAttr("side")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
+The `side.baseVal` property reflects the {{SVGAttr("side")}} content attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
+While `side` is read-only, you can use `side.baseVal` to modify the value of the corresponding attribute.
+
+Note that in SVG 2, `side.animVal` is an alias of `side.baseVal`.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
-The object's `baseVal` and `animVal` properties can get or set the following static property values:
+These static properties indicate the values that can be returned from `side.baseVal` (and `side.animVal`):
 
-- [`SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_left) (0)
-  - : The side type is unknown or invalid.
 - [`SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_unknown) (1)
   - : The text is rendered on the left side of the path (the default).
     This corresponds to a value of `"left"` on the SVG `side` attribute.
 - [`SVGTextPathElement.TEXTPATH_SIDETYPE_RIGHT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_right) (2)
   - : The text is rendered on the right side of the path.
     This corresponds to a value of `"right"` on the SVG `side` attribute.
+- [`SVGTextPathElement.TEXTPATH_SIDETYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_left) (0)
+  - : The side type is unknown or invalid.
+    This value cannot be set.
+
+Note that `baseVal` cannot be set to `0` (`TEXTPATH_SIDETYPE_UNKNOWN`) or any other value than those listed above.
+`animVal` is read-only and with throw if you attempt to write to it.
 
 ## Examples
 
 Also see the [Example](/en-US/docs/Web/API/SVGTextPathElement#basic_usage) in `SVGTextPathElement`, which allows you to toggle the `side` attribute.
 
-### Basic usage
+### Accessing the `side` property
 
 This example demonstrates how you can set and get the `side` property, and in particular its `baseVal`.
 

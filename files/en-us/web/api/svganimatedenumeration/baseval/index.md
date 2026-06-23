@@ -8,13 +8,22 @@ browser-compat: api.SVGAnimatedEnumeration.baseVal
 
 {{APIRef("SVG")}}
 
-The **`baseVal`** property of the {{domxref("SVGAnimatedEnumeration")}} interface contains the initial value of an SVG enumeration.
+The **`baseVal`** property of the {{domxref("SVGAnimatedEnumeration")}} interface represents the value of an SVG enumeration.
 
 ## Value
 
-An integer containing the initial value of the enumeration
+An integer representing the value of the enumeration.
+
+The allowed values depend on the attribute that is reflected.
+
+## Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the property is set to a constant that is not in the set of defined enumerations, or to `0`, which represents the "unknown attribute" value.
 
 ## Examples
+
+### Basic usage
 
 Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with an {{domxref("SVGAnimatedEnumeration")}} object.
 
