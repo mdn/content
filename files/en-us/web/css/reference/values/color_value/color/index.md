@@ -187,13 +187,15 @@ div {
 [data-color="red-prophoto-rgb"] {
   background-color: color(prophoto-rgb 1 0 0);
 }
+/* sRGB gamut, linear-light — full brightness (green channel 100%) */
 [data-color="green-srgb-linear"] {
   background-color: color(srgb-linear 0 1 0);
 }
-/* display-p3 is gamma-encoded; display-p3-linear uses linear-light values */
+/* P3 gamut (wider), gamma-encoded — low brightness (green channel ~21% light output) */
 [data-color="green-display-p3"] {
   background-color: color(display-p3 0 0.5 0);
 }
+/* P3 gamut (wider), linear-light — half brightness (green channel at 50% light output) */
 [data-color="green-display-p3-linear"] {
   background-color: color(display-p3-linear 0 0.5 0);
 }
