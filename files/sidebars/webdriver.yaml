@@ -49,6 +49,12 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
+            code: true
           - type: section
             link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#events
             title: Events

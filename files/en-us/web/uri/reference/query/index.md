@@ -3,7 +3,7 @@ title: URI query
 short-title: Query
 slug: Web/URI/Reference/Query
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.4
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.4
 sidebar: urlsidebar
 ---
 

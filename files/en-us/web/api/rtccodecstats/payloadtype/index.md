@@ -14,7 +14,7 @@ The **`payloadType`** property of the {{domxref("RTCCodecStats")}} dictionary is
 
 A positive integer between 0 and 127.
 
-The mappings of values to formats is defined in RFC3550, and more specifically in [Section 6: Payload Type Definitions](https://www.rfc-editor.org/rfc/rfc3551#section-6) of RFC3551.
+The mappings of values to formats is defined in RFC3550, and more specifically in [Section 6: Payload Type Definitions](https://www.rfc-editor.org/info/rfc3551/#section-6) of RFC3551.
 
 ## Specifications
 

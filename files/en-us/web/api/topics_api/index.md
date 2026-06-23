@@ -15,7 +15,7 @@ browser-compat: api.Document.browsingTopics
 > See the [Standards positions](#standards_positions) section below for details.
 
 > [!NOTE]
-> An [Enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
+> An [Enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
 
 The **Topics API** provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
@@ -67,7 +67,7 @@ The Topics API has no distinct interfaces of its own.
 
 ## Enrollment
 
-To use the Topics API in your sites, you must specify it in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't do this, the following sub-features won't work:
+To use the Topics API in your sites, you must specify it in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment). If you don't do this, the following sub-features won't work:
 
 - The promise returned by the {{domxref("Document.browsingTopics()")}} method will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 - Creating or modifying the {{httpheader("Sec-Browsing-Topics")}} header will fail silently, and any existing `Sec-Browsing-Topics` header will be deleted.
