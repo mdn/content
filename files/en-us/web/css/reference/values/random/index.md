@@ -202,7 +202,7 @@ To instead scope the custom key per element while still linking properties withi
 ``` The `--custom-name` key links the two properties within an element, and `element` ensures each element gets a distinct base value.
 
 
-```
+````
 
 In this case, `.a`, `.b`, and `.c` are each squares (same random width and height within each element), but their sizes differ from each other.
 
