@@ -17,7 +17,7 @@ In SVG 2 this is an alias for {{domxref("SVGAnimatedEnumeration.baseVal", "baseV
 An integer representing the value of the enumeration.
 
 The allowed values depend on the attribute that is reflected.
-This value cannot be written.
+This property cannot be written.
 
 ## Exceptions
 
