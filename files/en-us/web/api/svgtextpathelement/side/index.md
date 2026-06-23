@@ -13,7 +13,7 @@ The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} inter
 The `side.baseVal` property reflects the {{SVGAttr("side")}} content attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 While `side` is read-only, you can use `side.baseVal` to modify the value of the corresponding attribute.
 
-Note that in SVG 2, `side.animVal` is an alias of `side.baseVal`.
+In SVG 2 `side.animVal` also reflects the non-animated value of the attribute.
 
 ## Value
 

@@ -13,7 +13,7 @@ The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} in
 Note that the `spacing.baseVal` property reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 While `spacing` is read-only, you can use `spacing.baseVal` to modify the value of the corresponding attribute.
 
-Note that in SVG 2, `spacing.animVal` is an alias of `spacing.baseVal`.
+In SVG 2 `spacing.animVal` also reflects the non-animated value of the attribute.
 
 ## Value
 

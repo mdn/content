@@ -13,7 +13,7 @@ The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} int
 Note that the `method.baseVal` property reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 While `method` is read-only, you can use `method.baseVal` to modify the value of the corresponding attribute.
 
-Note that in SVG 2, `method.animVal` is an alias of `method.baseVal`.
+In SVG 2 `side.method` also reflects the non-animated value of the attribute.
 
 ## Value
 

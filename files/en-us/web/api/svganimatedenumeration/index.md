@@ -17,7 +17,7 @@ The allowed values of its properties depend on the associated attribute.
 - {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
   - : An integer that is the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}} {{ReadOnlyInline}}
-  - : This is the same as [baseVal](#baseval).
+  - : This is the same as [baseVal](#baseval) in SVG 2.
 
 ## Instance methods
 

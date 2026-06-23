@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedEnumeration.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedEnumeration")}} interface interface represents the value of an SVG enumeration.
 
-In SVG 2 this is an alias for {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}.
+In SVG 2 `animVal` reflects the non-animated value of the attribute: it is the same as {{domxref("SVGAnimatedEnumeration/baseVal", "baseVal")}} .
 
 ## Value
 

@@ -12,7 +12,8 @@ The **`baseVal`** property of the {{domxref("SVGAnimatedEnumeration")}} interfac
 
 ## Value
 
-An integer representing the value of the enumeration.
+An integer representing the base value of the enumeration.
+Ths is the non-animated content value of the corresponding attribute.
 
 The allowed values depend on the attribute that is reflected.
 
