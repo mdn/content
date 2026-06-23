@@ -8,7 +8,7 @@ sidebar: svgref
 
 The **`<g>`** [SVG](/en-US/docs/Web/SVG) element is a container used to group other SVG elements.
 
-Transformations applied to the `<g>` element are performed on its child elements, and its attributes are inherited by its children. It can also group multiple elements to be referenced later with the {{SVGElement("use")}} element.
+Transformations applied to the `<g>` element are performed on its child elements, and most of its presentation attributes are inherited by its children. It can also group multiple elements to be referenced later with the {{SVGElement("use")}} element.
 
 ## Usage context
 
@@ -17,6 +17,18 @@ Transformations applied to the `<g>` element are performed on its child elements
 ## Attributes
 
 This element only includes global attributes.
+
+Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
+However, [geometry properties](/en-US/docs/Web/SVG/Reference/Attribute#geometry_properties) are only valid as presentation attributes on their designated elements — they have no effect on a `<g>` element and are not passed to its children.
+
+These non-inherited attributes include:
+
+- {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}
+- {{SVGAttr("rx")}}, {{SVGAttr("ry")}}: {{SVGElement("ellipse")}}, {{SVGElement("rect")}}
+- {{SVGAttr("d")}}: {{SVGElement("path")}}
+- {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}: {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+
+Non-presentation attributes, even those that are valid on `<g>` (such as {{SVGAttr("id")}} or {{SVGAttr("class")}}), are also not inherited.
 
 ## DOM Interface
 

@@ -74,4 +74,4 @@ It is important to clarify the current standardization status of such features t
 - Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
 
 > [!NOTE]
-> See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.
+> See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.

@@ -2,10 +2,12 @@
 title: XRVisibilityMaskChangeEvent
 slug: Web/API/XRVisibilityMaskChangeEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`XRVisibilityMaskChangeEvent`** of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) describes the portion of an {{domxref("XRView")}} visible to the user after the view has changed, for example by specifying the eye that the view is relevant to, and the vertices of a visibility mask that defines the visible part of the view. This enables performance improvements by allowing the browser to draw only the visible part of the updated view.
 
@@ -15,22 +17,22 @@ An `XRVisibilityMaskChangeEvent` object is made available as the event object of
 
 ## Constructor
 
-- {{domxref("XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent", "XRVisibilityMaskChangeEvent()")}}
+- {{domxref("XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent", "XRVisibilityMaskChangeEvent()")}} {{experimental_inline}}
   - : Creates and returns a new `XRVisibilityMaskChangeEvent` object.
 
 ## Instance properties
 
 _In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRVisibilityMaskChangeEvent` provides the following:_
 
-- {{domxref("XRVisibilityMaskChangeEvent.eye", "eye")}} {{ReadOnlyInline}}
+- {{domxref("XRVisibilityMaskChangeEvent.eye", "eye")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The eye the mask applies to.
-- {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}}
+- {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
-- {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}}
+- {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Specifies the index position of each coordinate pair (not individual array index) inside the [`vertices`](#vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
-- {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}}
+- {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The {{domxref("XRSession")}} to which the event belongs.
-- {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}}
+- {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An array representing the set of possible coordinate values that may be used in a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ## Instance methods

@@ -173,7 +173,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper object that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
-- {{jsxref("Iterator.prototype.includes()")}}
+- {{jsxref("Iterator.prototype.includes()")}} {{experimental_inline}}
   - : Returns `true` if an element produced by the iterator is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 - {{jsxref("Iterator.prototype.map()")}}
   - : Returns a new iterator helper object that yields elements of the iterator, each transformed by a mapping function.
