@@ -91,6 +91,7 @@ random(--my-base element, 1em, 3rem, 2px)
             random(--h-space property-index, 5px, 30px);
         }
         ```
+
     - `fixed <number>`
       - : Specifies a fixed base value between `0` and `1`, inclusive, bypassing random generation entirely. This is useful for testing or when a specific, reproducible result is required.
 
