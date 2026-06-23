@@ -12,10 +12,26 @@ The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "browser.setDownloadBehavior",
   "params": {
-    "downloadBehavior": {}
+    "downloadBehavior": {
+      "type": "allowed",
+      "destinationFolder": "/tmp/downloads"
+    }
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "browser.setDownloadBehavior",
+  "params": {
+    "downloadBehavior": {
+      "type": "allowed",
+      "destinationFolder": "/tmp/downloads"
+    },
+    "userContexts": ["4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"]
   }
 }
 ```
