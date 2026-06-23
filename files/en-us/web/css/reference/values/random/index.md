@@ -192,7 +192,7 @@ Using `property` as the cache key type alongside a custom key means that `.a`, `
 
 To instead scope the custom key per element while still linking properties within each element, use `element` as the cache key type:
 
-```css
+````css
 .a,
 .b,
 .c {
