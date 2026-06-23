@@ -236,7 +236,7 @@ When the first parameter is omitted, or explicitly set to `auto`, a key is auto-
   margin: random(1px, 100px) random(1px, 100px) random(1px, 100px)
     random(1px, 100px);
 }
-```
+````
 
 When `<random-value-sharing>` defaults or is explicitly set to `auto`, the user agent auto-generates a key following consistent rules based on property name and position index. Because of this, `random()` functions can end up sharing the same auto-generated key and therefore the same random base value. In this example, the auto-generated key for the `random()` function in the `width` property is the same for `.foo` and `.foo:hover`, so the width value will not change between states. Similarly, the first two `random()` functions in both `margin` declarations share the same auto-generated keys, meaning the first two values in the `margin` shorthand are unchanged on hover; on hover, `.bar`'s top and right margins stay constant, while only the bottom and left margins receive new independent random values.
 
