@@ -46,14 +46,13 @@ The `documentId` also correctly handles edge cases that `frameId` cannot disting
 
 - **Navigations**: Each new document load, including cross-origin navigations, receives a new `documentId` even though the `frameId` is unchanged.
 - **Reloads**: A page reload creates a new `documentId`, indicating a fresh document.
-- **`history.pushState()` and fragment updates**: These don't create a new document, so the `documentId` is unchanged.
+- **{{DOMxRef("history.pushState()")}} and fragment updates**: These don't create a new document, so the `documentId` is unchanged.
 
 As it changes with each document load, the ID your extension obtained for a document remains valid only for that document. If the frame has navigated away, the `documentId` no longer matches. So, if your extension injects a script or sends a message using the documented ID after the navigation, the operation fails rather than silently targeting the wrong document.
 
 When a document is restored from the [back/forward cache (bfcache)](/en-US/docs/Glossary/bfcache), its original `documentId` is also restored.
 
-
-## Getting a documentId
+## Get a documentId
 
 There are several ways to obtain a `documentId`:
 
@@ -61,7 +60,7 @@ There are several ways to obtain a `documentId`:
 - Read the `documentId` or `parentDocumentId` property in the results of {{WebExtAPIRef("webNavigation.getFrame()")}} or {{WebExtAPIRef("webNavigation.getAllFrames()")}}.
 - Read the `documentId` or `parentDocumentId` from event details in {{WebExtAPIRef("webNavigation")}} events (for events where the document of the navigation target is known when the event fires).
 - Read the `documentId` from {{WebExtAPIRef("webRequest")}} event details.
-- Read the `documentId` from {{WebExtAPIRef("runtime.MessageSender")}} when receiving messages using {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onConnect")}} and related listeners.
+- Read the `documentId` from {{WebExtAPIRef("runtime.MessageSender")}} when receiving messages using {{WebExtAPIRef("runtime.onMessage")}}, {{WebExtAPIRef("runtime.onConnect")}}, and related listeners.
 - Read the `documentId` from the results of {{WebExtAPIRef("runtime.getContexts()")}}.
 
 ## Using documentId to target documents
@@ -77,7 +76,7 @@ When you have a `documentId`, you can use it to target that document:
 
 These APIs include `documentId` support.
 
-### Obtaining a documentId
+### Obtain a documentId
 
 - {{WebExtAPIRef("runtime.getDocumentId()")}} returns the document UUID of a target window or frame element.
 
@@ -89,7 +88,7 @@ These APIs include `documentId` support.
 - {{WebExtAPIRef("userScripts.execute()")}} results include `documentId`.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}} returns `documentId` and `parentDocumentId` for each frame.
 - {{WebExtAPIRef("webNavigation.getFrame()")}} returns `documentId` and `parentDocumentId`.
-- {{WebExtAPIRef("webNavigation.onCommitted")}}, {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}, {{WebExtAPIRef("webNavigation.onCompleted")}}, {{WebExtAPIRef("webNavigation.onErrorOccurred")}}, {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}, and {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}} include `documentId` and `parentDocumentId` in event details. {{WebExtAPIRef("webNavigation.onBeforeNavigate")}} may have a `parentDocumentId` when a frame navigates, but does not have `documentId` because the event fires before a document is loaded.
+- {{WebExtAPIRef("webNavigation.onCommitted")}}, {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}, {{WebExtAPIRef("webNavigation.onCompleted")}}, {{WebExtAPIRef("webNavigation.onErrorOccurred")}}, {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}, and {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}} include `documentId` and `parentDocumentId` in event details. {{WebExtAPIRef("webNavigation.onBeforeNavigate")}} may have a `parentDocumentId` when a frame navigates, but doesn't have `documentId` because the event fires before a document is loaded.
 - All `webRequest` events — {{WebExtAPIRef("webRequest.onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived")}}, {{WebExtAPIRef("webRequest.onAuthRequired")}}, {{WebExtAPIRef("webRequest.onBeforeRedirect")}}, {{WebExtAPIRef("webRequest.onResponseStarted")}}, {{WebExtAPIRef("webRequest.onCompleted")}}, and {{WebExtAPIRef("webRequest.onErrorOccurred")}} — include `documentId` and `parentDocumentId` when applicable.
 - {{WebExtAPIRef("proxy.RequestDetails")}} includes `documentId` and `parentDocumentId` when applicable.
 - {{WebExtAPIRef("declarativeNetRequest.onRuleMatchedDebug")}} includes `documentId` when applicable.
