@@ -139,3 +139,8 @@ sidebar:
     link: /Web/WebDriver/Reference/Errors
     details: closed
     code: true
+l10n:
+  fr:
+    Commands: Commandes
+    Events: Évènements
+    Shared: Partagé
