@@ -32,7 +32,11 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+#### Fix for nested scrollable areas
+
+This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. This does however mean that the `@supports selector(::-webkit-scrollbar)` check will return `true` even though the [`::-webkit-scrollbar`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) pseudo-element is not truly supported. ([Firefox bug 2038877](https://bugzil.la/2038877)).
 
 <!-- #### Removals -->
 
