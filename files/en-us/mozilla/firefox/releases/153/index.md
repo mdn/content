@@ -50,11 +50,15 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCDtlsTransport.getRemoteCertificates()")}} method gets the certificates used by the remote peer to secure the DTLS communication.
+  These can be used for application-layer authentication of a remote peer.
+  ([Firefox bug 1805446](https://bugzil.la/1805446)).
 
 <!-- #### Removals -->
 
