@@ -152,7 +152,7 @@ p.abc {
 
 ## See also
 
-- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-rule-style")}}
 - {{CSSXref("column-rule-width")}}
 - {{CSSXref("column-rule-color")}}
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

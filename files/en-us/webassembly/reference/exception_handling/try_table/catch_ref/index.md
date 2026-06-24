@@ -135,7 +135,7 @@ The `catch_ref` clause can be included inside a [`try_table`](/en-US/docs/WebAss
 
 The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
-`catch_ref` is useful when you want to report that a specific exception type has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that a specific error ocurred.
+`catch_ref` is useful when you want to report that a specific exception type has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that a specific error occurred.
 
 The referenced block must declare a result type that matches the exception's payload and the `exnref`. In the example shown earlier, the exception type is defined with a single `i32` parameter in its `tag` definition:
 

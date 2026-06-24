@@ -70,6 +70,8 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("border-image-source")}}
 - {{cssxref("border-image-width")}}
 
+This shorthand property is reset, with all the longhand properties set to their initial values, by the CSS {{cssxref("border")}} shorthand property.
+
 ## Syntax
 
 ```css

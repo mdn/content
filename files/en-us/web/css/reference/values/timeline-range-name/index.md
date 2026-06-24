@@ -27,7 +27,7 @@ The `<timeline-range-name>` keyword values are used in [keyframe selectors](/en-
 Valid `<timeline-range-name>` values:
 
 - `cover`
-  - : Represents the full range of a view progress timeline, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range (`0%` progress) to the point where the end border edge has completely left it (`100%` progress).
+  - : Represents the full range of a view progress timeline, from the point where the subject element's start border edge first enters the scrollport's view progress visibility range (`0%` progress) to the point where the end border edge has completely left it (`100%` progress). This is the default range for [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines).
 
 - `contain`
   - : Represents the range of a view progress timeline where the subject element is fully contained by, or fully contains, the view progress visibility range within the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
@@ -47,7 +47,7 @@ Valid `<timeline-range-name>` values:
   - : Represents the range where the principal box crosses the start border edge. The range start (0% progress) occurs when the start border edge of the element's principal box coincides with the start edge of its view progress visibility range. The range end (100% progress) is the point at which the end border edge of the element's principal box coincides with the start edge of its view progress visibility range. The size of the range is the size of the element's principle box in the scroll direction.
 
 - `scroll`
-  - : Represents the full range of the {{glossary("scroll container")}} on which the view progress timeline is defined. The range start (0% progress) and end (100% progress) occur at the very start and end positions of the scroll container underlying the view progress timeline.
+  - : Represents the full range of the {{glossary("scroll container")}} on which the view progress timeline is defined. The range start (0% progress) and end (100% progress) occur at the very start and end positions of the scroll container underlying the view progress timeline. This is the default range for [scroll progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines).
 
 ## Formal syntax
 
@@ -71,6 +71,7 @@ See the [View timeline range visualizer](https://scroll-driven-animations.style/
 - {{cssxref("animation-timeline")}}
 - {{cssxref("scroll-timeline")}}
 - {{cssxref("view-timeline-inset")}}
+- {{cssxref("animation-timeline/scroll", "scroll()")}}, {{cssxref("animation-timeline/view", "view()")}}
 - [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

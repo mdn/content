@@ -184,6 +184,8 @@ In addition to the standard DOM APIs, content scripts can use these WebExtension
 **From [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime):**
 
 - [`connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
+- {{WebExtAPIRef("runtime.getDocumentId()","getDocumentId()")}}
+- {{WebExtAPIRef("runtime.getFrameId()","getFrameId()")}}
 - [`getManifest()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
 - [`getURL()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
 - [`onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)

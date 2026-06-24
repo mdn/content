@@ -32,7 +32,7 @@ The **`i64`** value type holds a 64-bit integer.
 
 `i64` is _transparent_: its bit pattern is observable, and `i64` values may be stored in [linear memory](/en-US/docs/WebAssembly/Reference/Memory).
 
-### `i64` intergration with JavaScript BigInt
+### `i64` integration with JavaScript BigInt
 
 JavaScript's `Number` type cannot losslessly represent the full `i64` range, therefore `i64` values are converted to [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values (and vice versa) when they cross the JavaScript boundary; for example, when exporting or importing functions involving `i64` parameters or return values.
 
