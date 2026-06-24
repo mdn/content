@@ -5,6 +5,7 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.animateMotion.rotate
   - svg.elements.text.rotate
+  - svg.elements.tspan.rotate
 sidebar: svgref
 ---
 
@@ -78,8 +79,6 @@ A list of numbers (separated by spaces or commas), each specifying the
 rotation in degrees to apply to the corresponding glyph. If there are
 fewer numbers than glyphs, the last number is applied to all remaining
 glyphs. If there are more numbers than glyphs, the extra numbers are ignored.
-
-
 
 ## Examples
 
