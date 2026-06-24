@@ -66,6 +66,10 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/load
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed

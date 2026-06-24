@@ -13,8 +13,9 @@ The `browsingContext.navigationStarted` [event](/en-US/docs/Web/WebDriver/Refere
 
 The navigation to a different page can be triggered by the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, by user interaction with elements on the page, or by JavaScript running in the page's context.
 
-For cross-document navigations, this event is the first in the sequence of navigation events and fires when the browser begins fetching the URL.
+For cross-document navigations, this is the first in the sequence of navigation events and fires when the browser begins fetching the URL.
 If the navigation succeeds, [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) fires next, when the browser has accepted the response and begun loading the new page.
+After that, [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) fires when the HTML has been parsed, and [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) fires last when the document and all its subresources have finished loading.
 If the navigation fails, [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed) fires instead.
 
 > [!NOTE]
@@ -29,7 +30,7 @@ For URL changes made through the History API without a full navigation, see [`br
 The `params` field in the event notification is a navigation object with the following fields:
 
 - `context`
-  - : A string that contains the ID of the context in which the navigation is occurring.
+  - : A string that contains the ID of the context in which the navigation is starting.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
     This ID matches the `navigation` value in the response of the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands.
@@ -38,7 +39,7 @@ The `params` field in the event notification is a navigation object with the fol
 - `url`
   - : A string that contains the URL being loaded.
 - `userContext` {{optional_inline}}
-  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the navigation is occurring.
+  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the navigation is starting.
 
 ## Examples
 
@@ -46,7 +47,9 @@ The `params` field in the event notification is a navigation object with the fol
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.navigationStarted`.
 
-Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com`, passing the context ID you obtained from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree). The browser sends the following notification, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
+Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com`, passing the context ID you obtained from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+
+The browser sends the following notification, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
 
 ```json
 {

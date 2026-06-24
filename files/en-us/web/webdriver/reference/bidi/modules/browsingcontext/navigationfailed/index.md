@@ -35,7 +35,11 @@ The `params` field in the event notification is a navigation object with the fol
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.navigationFailed`.
 
-Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load a URL, passing the context ID you obtain from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree). The browser first fires a [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event (since this example only subscribes to `browsingContext.navigationFailed`, that notification is not received). The browser sends the following notification if the navigation cannot be completed, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
+Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load a URL, passing the context ID you obtain from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
+
+The browser first fires a [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event (that notification is not received since the subscription in this example is only to `browsingContext.navigationFailed`).
+
+The browser sends the following notification if the navigation cannot be completed, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
 
 ```json
 {
