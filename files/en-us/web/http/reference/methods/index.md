@@ -14,6 +14,9 @@ Each request method has its own semantics, but some characteristics are shared a
 - {{HTTPMethod("GET")}}
   - : The `GET` method requests a representation of the specified resource.
     Requests using `GET` should only retrieve data and should not contain a request {{Glossary("HTTP Content", "content")}}.
+- {{HTTPMethod("QUERY")}}
+  - : The `QUERY` method requests that the target resource process the request {{Glossary("HTTP Content", "content")}} in a safe and idempotent manner and respond with the result.
+    It is similar to `GET`, but allows request content to be sent, for example when query parameters are too large or complex to fit comfortably in the URI.
 - {{HTTPMethod("HEAD")}}
   - : The `HEAD` method asks for a response identical to a `GET` request, but without a response body.
 - {{HTTPMethod("POST")}}
@@ -38,6 +41,7 @@ The following table lists HTTP request methods and their categorization in terms
 | Method                    | Safe | Idempotent | Cacheable     |
 | ------------------------- | ---- | ---------- | ------------- |
 | {{HTTPMethod("GET")}}     | Yes  | Yes        | Yes           |
+| {{HTTPMethod("QUERY")}}   | Yes  | Yes        | Yes           |
 | {{HTTPMethod("HEAD")}}    | Yes  | Yes        | Yes           |
 | {{HTTPMethod("OPTIONS")}} | Yes  | Yes        | No            |
 | {{HTTPMethod("TRACE")}}   | Yes  | Yes        | No            |
