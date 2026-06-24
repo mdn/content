@@ -12,10 +12,26 @@ The `browser.setDownloadBehavior` [command](/en-US/docs/Web/WebDriver/Reference/
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "browser.setDownloadBehavior",
   "params": {
-    "downloadBehavior": {}
+    "downloadBehavior": {
+      "type": "allowed",
+      "destinationFolder": "/tmp/downloads"
+    }
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "browser.setDownloadBehavior",
+  "params": {
+    "downloadBehavior": {
+      "type": "allowed",
+      "destinationFolder": "/tmp/downloads"
+    },
+    "userContexts": ["4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"]
   }
 }
 ```
@@ -34,7 +50,7 @@ The `params` field contains:
       - : A string that specifies the path to the folder where downloaded files are saved.
         This field is required when `type` is `"allowed"`.
 - `userContexts` {{optional_inline}}
-  - : An array of strings where each string is the ID ([UUID](/en-US/docs/Glossary/UUID)) of a [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) to apply the download behavior to.
+  - : An array of strings where each string is the ID of a [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) to apply the download behavior to.
     User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
     - If included, the specified download behavior is applied to each listed user context. If `downloadBehavior` is `null`, the per-context override is reset for each listed user context.
     - If not included, the specified download behavior is applied as a global default to all user contexts.

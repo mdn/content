@@ -113,9 +113,9 @@ Each value is a keyword chosen from the list below.
 - `<line-style>`
   - : Describes the style of the border. It can have the following values:
     - `none`
-      - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
+      - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
     - `hidden`
-      - : Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed.
+      - : Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed.
     - `dotted`
       - : Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the computed value of the same side's {{cssxref("border-width")}}.
     - `dashed`

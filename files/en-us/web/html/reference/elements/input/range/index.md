@@ -350,13 +350,6 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/V
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role">slider</a></code>

@@ -56138,10 +56138,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGRenderingIntent": {
-    "modified": "2020-10-15T21:53:52.961Z",
-    "contributors": ["fscholz", "Sebastianz"]
-  },
   "Web/API/SVGSVGElement": {
     "modified": "2020-10-15T21:05:32.581Z",
     "contributors": [

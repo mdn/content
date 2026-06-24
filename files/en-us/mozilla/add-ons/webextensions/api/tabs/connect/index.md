@@ -28,7 +28,7 @@ browser.tabs.connect(
 - `connectInfo` {{optional_inline}}
   - : An object with the following properties:
     - `documentId` {{optional_inline}}
-      - : `string`. Open a port to a specific document identified by `documentId` instead of all frames in the tab.
+      - : `string`. Open a port to a specific document, instead of all frames in the tab. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
     - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
     - `frameId` {{optional_inline}}

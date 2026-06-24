@@ -19,6 +19,8 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on an element.
 - {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 - {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
@@ -277,6 +279,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node, without removing and then inserting the node.
 - {{DOMxRef("Element.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the element.
+- {{DOMxRef("Element.pseudo()")}} {{experimental_inline}}
+  - : Returns a {{domxref("CSSPseudoElement")}} object representing the [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) of the specified type associated with the element.
 - {{DOMxRef("Element.querySelector()")}}
   - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
 - {{DOMxRef("Element.querySelectorAll()")}}
@@ -325,6 +329,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
+- {{DOMxRef("Element.startViewTransition()")}} {{experimental_inline}}
+  - : Starts a new same-document (SPA) [element-scoped](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 - {{DOMxRef("Element.toggleAttribute()")}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
