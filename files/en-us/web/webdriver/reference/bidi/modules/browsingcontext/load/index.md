@@ -15,6 +15,8 @@ In the lifecycle of a successful navigation, this event fires after [`browsingCo
 
 At this point, the document and all its subresources have finished loading, equivalent to the {{domxref("Window/load_event", "load")}} event firing.
 
+If you set `wait` to `"complete"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.load` fires.
+
 ## Event data
 
 The `params` field in the event notification is a navigation object with the following fields:
@@ -50,7 +52,7 @@ Once the document and all its subresources have finished loading, the browser se
   "params": {
     "context": "5e5e96e8-5247-4f22-9b35-a4a2d841cbaa",
     "navigation": "a1b2c3d4-5678-90ab-cdef-1234567890ab",
-    "timestamp": 1712345678901,
+    "timestamp": 1782343062410,
     "url": "https://example.com"
   }
 }
