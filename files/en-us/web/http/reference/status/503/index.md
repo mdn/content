@@ -2,7 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.503
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.503
 sidebar: http
 ---
 
