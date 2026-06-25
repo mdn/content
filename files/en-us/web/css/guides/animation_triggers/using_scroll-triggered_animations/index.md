@@ -282,7 +282,7 @@ This is because the default activation range and active range when using a `view
 We can change the start and end offsets of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
 
 - A {{cssxref("length-percentage")}} value to specify a different point along the default range.
-- A different `timeline-range-name` keyword to specify a different range.
+- A {{cssxref("timeline-range-name")}} keyword specifying a named range.
 - A `timeline-range-name` and a `<length-percentage>` to specify a certain point along a different range.
 
 So for example, the following will cause the trigger to activate within a range between the end of the `entry` range (when the tracked element's end edge crosses the scrollport's end edge) and `70%` of the way through the `exit` range (slightly before the subject's end edge crosses the scrollport's start edge). Because the active range is the same as the activation range by default, the trigger will deactivate when the tracked element leaves that range.
