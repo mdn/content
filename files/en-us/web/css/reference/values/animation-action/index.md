@@ -65,15 +65,13 @@ animation-trigger: --t play reset;
 
 The animation will play on activation, and then `pause`, `replay` or `reset` on deactivation. On subsequent activation, the animation will play again.
 
-If combined with `play-backwards`, for example:
+When combining `play` with `play-backwards`, the animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation:
 
 ```css
 animation-trigger: --t play play-backwards;
-```
+```endcss
 
-The animation will play on activation, then play backwards through all the iterations it previously played forwards through on deactivation.
-
-It doesn't make sense to combine `play` with `play-forwards` or `play-once`.
+While valid, combining `play` with `play-once` is unnecessary, as it behaves the same as `play`. Similarly, combining `play` with `play-forwards` is unnecessary, because `play-forwards` plays the animation in the same direction as `play`, even when {{cssxref("animation-direction")}} is set to `reverse` or `alternate`.
 
 #### `play-forwards` and `play-backwards`
 
