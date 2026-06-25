@@ -31,13 +31,12 @@ Throws an error if `hostname` is not a valid hostname.
 
 Get the public suffix of a hostname:
 
-<!-- prettier-ignore -->
 ```js
-console.log(browser.publicSuffix.getKnownSuffix("example.com")); // "com"
-console.log(browser.publicSuffix.getKnownSuffix("example.co.uk")); // "co.uk"
-console.log(browser.publicSuffix.getKnownSuffix("user.github.io")); // "github.io"
-console.log(browser.publicSuffix.getKnownSuffix("com")); // "com"
-console.log(browser.publicSuffix.getKnownSuffix("localhost")); // null
+browser.publicSuffix.getKnownSuffix("example.com"); // "com"
+browser.publicSuffix.getKnownSuffix("example.co.uk"); // "co.uk"
+browser.publicSuffix.getKnownSuffix("user.github.io"); // "github.io"
+browser.publicSuffix.getKnownSuffix("com"); // "com"
+browser.publicSuffix.getKnownSuffix("localhost"); // null
 ```
 
 {{WebExtExamples}}

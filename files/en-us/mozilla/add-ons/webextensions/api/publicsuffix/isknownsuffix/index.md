@@ -29,13 +29,12 @@ Throws an error if `hostname` is not a valid hostname.
 
 Check whether a string is a known public suffix:
 
-<!-- prettier-ignore -->
 ```js
-console.log(browser.publicSuffix.isKnownSuffix("com")); // true
-console.log(browser.publicSuffix.isKnownSuffix("co.uk")); // true
-console.log(browser.publicSuffix.isKnownSuffix("github.io")); // true
-console.log(browser.publicSuffix.isKnownSuffix("example.com")); // false
-console.log(browser.publicSuffix.isKnownSuffix("localhost")); // false
+browser.publicSuffix.isKnownSuffix("com"); // true
+browser.publicSuffix.isKnownSuffix("co.uk"); // true
+browser.publicSuffix.isKnownSuffix("github.io"); // true
+browser.publicSuffix.isKnownSuffix("example.com"); // false
+browser.publicSuffix.isKnownSuffix("localhost"); // false
 ```
 
 {{WebExtExamples}}
