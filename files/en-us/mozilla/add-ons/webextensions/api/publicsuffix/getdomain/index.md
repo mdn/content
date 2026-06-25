@@ -62,32 +62,41 @@ browser.publicSuffix.getDomain("localhost"); // null (no known suffix)
 Using `allowIPAddress` to return IP addresses as-is:
 
 ```js
-browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true }); // "192.0.2.1"
-browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true }); // "2001:db8::1"
+browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true });
+// "192.0.2.1"
+
+browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true });
+// "2001:db8::1"
 ```
 
 Using `allowPlainSuffix` to return hostnames that are public suffixes:
 
 ```js
-browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true }); // "co.uk"
+browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true });
+// "co.uk"
 ```
 
 Using `allowUnknownSuffix` to handle private or local domains:
 
 ```js
-browser.publicSuffix.getDomain("mydevice.local", { allowUnknownSuffix: true }); // "mydevice.local"
-browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true }); // "host.intranet"
+browser.publicSuffix.getDomain("mydevice.local", { allowUnknownSuffix: true });
+// "mydevice.local"
+
+browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true });
+// "host.intranet"
 ```
 
 Using `encoding: "display"` for internationalized domain names:
 
 ```js
 // "xn--nxasmq6b.com" is the punycode form of "βόλος.com"
-browser.publicSuffix.getDomain("sub.xn--nxasmq6b.com", { encoding: "display" }); // "βόλος.com"
+browser.publicSuffix.getDomain("sub.xn--nxasmq6b.com", { encoding: "display" });
+// "βόλος.com"
 
 // Domains with confusable characters remain in punycode
 // "xn--bs-red.com" has characters confusable with another script
-browser.publicSuffix.getDomain("sub.xn--bs-red.com", { encoding: "display" }); // "xn--bs-red.com"
+browser.publicSuffix.getDomain("sub.xn--bs-red.com", { encoding: "display" });
+// "xn--bs-red.com"
 ```
 
 {{WebExtExamples}}
