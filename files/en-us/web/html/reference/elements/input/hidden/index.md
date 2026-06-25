@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_hidden
 sidebar: htmlsidebar
 ---
 
-{{HTMLElement("input")}} elements of type **`hidden`** allow web developers to include data in a form that is not visually accessible to users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, but are still submitted as any other form input. While the data is not presented to users in the rendered content, it is still accessible in the HTML output and is editable to users using tools such as their [browser's developer tools](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
+{{HTMLElement("input")}} elements of type **`hidden`** allow web developers to include data in a form that is not visually accessible to users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, but are still submitted as any other form input. While the data is not presented to users in the rendered content, it is still accessible in the HTML output and is editable to users using tools such as their [browser's developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 > [!NOTE]
 > The {{domxref("Element/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g., `hiddenInput.focus()`).
