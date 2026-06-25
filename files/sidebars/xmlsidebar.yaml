@@ -80,3 +80,11 @@ sidebar:
         link: /Web/XML/EXSLT/Reference/str
         details: closed
         code: true
+l10n:
+  fr:
+    EXSLT: EXSLT
+    Reference: Références
+    XML: XML
+    XML Guides: Guides XML
+    XPath: XPath
+    XSLT: XSLT
