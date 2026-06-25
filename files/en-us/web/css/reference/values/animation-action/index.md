@@ -53,7 +53,7 @@ If you want to specify that no action is to occur on activation or deactivation,
 
 ### Playing the animation
 
-To play the animation, you can use the values `play`, `play-forwards`, `play-backwards`, or `play-once`.
+The `play`, `play-forwards`, `play-backwards`, and `play-once` keyword values will all cause the animation to play, but each one specifies a different precise behavior.
 
 #### `play`
 
