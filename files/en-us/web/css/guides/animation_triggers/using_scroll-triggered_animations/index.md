@@ -8,7 +8,7 @@ sidebar: cssref
 
 **CSS scroll-triggered animations** provide a declarative mechanism to trigger (for example, start, pause, or stop) {{domxref("DocumentTimeline")}}-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) when the user scrolls an element to a specified offset inside a scrollport.
 
-This article covers how to use CSS scroll-triggered animations.
+This article covers how to create CSS scroll-triggered animations.
 
 ## Scroll-triggered animation concepts
 
