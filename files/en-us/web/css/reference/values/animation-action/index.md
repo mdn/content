@@ -31,7 +31,7 @@ The `<animation-action>` enumerated type is specified using one of the the follo
 - `replay`
   - : As `play`, except that the animation is put back to the start. In WAA terms, this is equivalent to setting {{domxref("Animation.overallProgress", "overallProgress")}} to `0`.
 - `reset`
-  - : As `pause`, except that the animation is put back to the start.
+  - : The animation is put back to the start and then paused.
 
 ## Description
 
