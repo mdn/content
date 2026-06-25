@@ -252,15 +252,32 @@ l10n:
     JavaScript_interface: JavaScript interface
   fr:
     WebAssembly_concepts: Concepts WebAssembly
+    Compiling_WebAssembly: Compiler WebAssembly
+    Language_guide: Le langage WebAssembly
+    API_guide: Guide de l'API JavaScript
+    Reference: Références
+    Value_types: Types de valeurs
+    Definitions: Définitions
+    Control flow: Contrôle de flux
+    Exception handling: Gérer les exceptions
+    Memory: Mémoire
+    Numeric: Numérique
+    Arithmetic: Arithmétique
+    Bitwise: Binaire
+    Extract: Extraction
+    Load and store: Chargement et stockage
+    Table: Tableau
     Compiling_to_Wasm: Compiler du C/C++ en WebAssembly
-    Existing_C_to_Wasm: Compiling an existing C module to WebAssembly
+    Existing_C_to_Wasm: Compiler un module C existant en WebAssembly
     Compiling_Rust_to_Wasm: Compiler du Rust en WebAssembly
     JavaScript_API: Utiliser l'API JavaScript WebAssembly
     Text_format: Comprendre le format texte WebAssembly
-    Text_format_to_Wasm: Converting WebAssembly text format
+    Text_format_to_Wasm: Convertir le format texte WebAssembly en binaire
     Loading_and_running: Chargement et exécution de code WebAssembly
     Exported_functions: Fonctions WebAssembly exportées
-    JavaScript_interface: JavaScript interface
+    JavaScript_builtins: JavaScript intégrés
+    Imported_string_constants: Constantes de chaînes de caractères globales importées
+    JavaScript_interface: Interface JavaScript
   ko:
     WebAssembly_concepts: 웹어셈블리의 개념
     Compiling_to_Wasm: C/C++ 모듈을 웹어셈블리로 컴파일하기
