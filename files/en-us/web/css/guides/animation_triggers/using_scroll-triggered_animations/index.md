@@ -17,7 +17,7 @@ A very common UI pattern involves triggering animations on a web page when the u
 CSS scroll-triggered animations enable defining scroll-based triggers that start and stop regular [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). For example, you can define trigger positions inside a {{glossary("scroll container")}} so that, when a tracked element reaches those positions within the scrollport, they toggle the play state of an animation applied to that element, or a completely different one.
 
 > [!NOTE]
-> Scroll-triggered animations provide an alternative to using JavaScript features such as the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) or frameworks to create scroll triggers. CSS scroll-triggered animations are more performant and, arguably, simpler to implement.
+> Scroll-triggered animations provide an alternative to using JavaScript features — such as frameworks or the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) — to trigger animations on scroll. CSS scroll-triggered animations are more performant and, arguably, simpler to implement.
 
 ## Scroll-triggered animation basics
 
