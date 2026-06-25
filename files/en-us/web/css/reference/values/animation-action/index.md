@@ -45,7 +45,7 @@ There are some common patterns to observe:
 - `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
 - `play-once` is often used on its own, when you want an animation to play only once when it appears on-screen.
 
-The behavior of the different `<animation-action>` values is described in more detail in the following sections.
+The eight `<animation-action>` values provide different animation behaviors. It's important to understand how they behave on their own, and the effects that can be created with different values for trigger activation and deactivation.
 
 ### Specifying no action
 
