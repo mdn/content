@@ -45,7 +45,7 @@ You can see a full example of what this might look like in the [Examples](#examp
 
 ### Improving website security
 
-One common use of hidden input fields is to store Cross-Site Request Forgery (CSRF) tokens, which help protect websites against [CSRF attacks](https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF).
+One common use of hidden input fields is to store Cross-Site Request Forgery (CSRF) tokens, which help protect websites against [CSRF attacks](/en-US/docs/Web/Security/Attacks/CSRF).
 
 > [!NOTE]
 > Data placed in a hidden input is not inherently secured. Its value is still observable by the end user. You need to use well-designed secrets to actually secure your website.
