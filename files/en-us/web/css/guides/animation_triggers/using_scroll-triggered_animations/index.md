@@ -279,7 +279,7 @@ In the previous examples, the trigger is activated (fade-in starts) when the tra
 
 This is because the default activation range and active range when using a `view()` `timeline-trigger-source()` is the {{cssxref("timeline-range-name")}} `cover` value — the trigger activates as soon as the start edge of the tracked element enters the end edge of the scrollport, and deactivates when the end edge of the tracked element has exited the start edge of the scrollport.
 
-We can change the start and end offsets of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
+We can offset the start and end of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
 
 - A {{cssxref("length-percentage")}} value to specify a different point along the default range.
 - A {{cssxref("timeline-range-name")}} keyword specifying a named range.
