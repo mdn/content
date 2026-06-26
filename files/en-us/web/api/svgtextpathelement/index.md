@@ -27,7 +27,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
     Allowed values are specified by the [`TEXTPATH_METHODTYPE_*`](#textpath_methodtype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element.
-    Allowed values are defined by the [`TEXTPATH_SPACINGTYPE_*`](#textpath_spacingtype_unknown) constants defined on this interface.
+    Allowed values are specified by the [`TEXTPATH_SPACINGTYPE_*`](#textpath_spacingtype_unknown) constants defined on this interface.
 
 ## Instance methods
 
