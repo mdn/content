@@ -31,7 +31,7 @@ Computed `<length>` values in `border-width` and a few other properties are roun
 
 This rounding method first converts the `length` to a number of {{glossary("Device pixel")}}.
 If the absolute value of `length` is smaller than 1 and non-zero, `length` is rounded away from zero to 1 or -1, depending on the sign.
-Otherwise, if the absolute value of `length` is greater than 1, `length` is rounded towards zero to the nearest integer number. 
+Otherwise, if the absolute value of `length` is greater than 1, `length` is rounded towards zero to the nearest integer number.
 The resulting value of `length` is then converted back to {{glossary("CSS pixel")}}.
 
 For example, if {{domxref("Window.devicePixelRatio")}} is 3:
