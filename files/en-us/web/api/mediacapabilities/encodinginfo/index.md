@@ -26,7 +26,7 @@ encodingInfo(configuration)
         - `record`
           - : Represents a configuration for recording of media, e.g., using {{domxref("MediaRecorder")}}.
         - `webrtc`
-          - : Represents a configuration meant to be transmitted over electronic means (e.g., using {{domxref("RTCPeerConnection")}}). **Note:** Firefox uses `transmission` for this type, and `webrtc` does not work.
+          - : Represents a configuration meant to be transmitted over electronic means (e.g., using {{domxref("RTCPeerConnection")}}).
         - `transmission` {{non-standard_inline}}
           - : A synonym of `webrtc`.
 
