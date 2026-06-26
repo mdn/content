@@ -34,7 +34,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     The value `null` is common for HTML documents or when no namespace prefixes are used.
     If omitted, it defaults to `null`.
 - `resultType` {{optional_inline}}
-  - : An integer that corresponds to the type of result `XPathResult` to return.
+  - : An integer that corresponds to the type of `XPathResult` to return.
     If omitted, it defaults to `ANY_TYPE` (`0`).
     The following values are possible:
     - `ANY_TYPE` (`0`)
