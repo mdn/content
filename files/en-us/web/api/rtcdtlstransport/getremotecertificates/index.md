@@ -39,7 +39,7 @@ During signaling, each endpoint advertises the fingerprint of the DTLS certifica
 During the DTLS handshake, the user agent verifies that the certificate presented by the remote peer matches the fingerprint in the negotiated SDP.
 
 DTLS guarantees the connected peer is the one you've been negotiating with, because only that peer has the private key matching the certificate whose fingerprint was exchanged during signaling.
-However, it doesn't tell you who this remote peer is: DTLS can't help you if you initially connected to a compromised signaling server, or to some unexpected peer.
+However, WebRTC uses self-signed certificates rather than certificates issued by a certificate authority, so the certificate does not identify the person, service, or device at the other end.
 Establishing the identity of the remote peer usually requires an out-of-band mechanism such as comparing certificate fingerprints verbally over a phone call, or using a separate authenticated channel.
 
 The `getRemoteCertificates()` method allows you to get the remote certificates used by DTLS and use them for _application-layer_ authentication of the remote peer.
