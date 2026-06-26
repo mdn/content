@@ -17,7 +17,7 @@ The allowed values of its properties depend on the associated attribute.
 - {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}}
   - : An integer that is the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}} {{ReadOnlyInline}}
-  - : This is the same as [baseVal](#baseval) in SVG 2.
+  - : This is the same as [`baseVal`](#baseval) in SVG 2.
 
 ## Instance methods
 
@@ -27,7 +27,7 @@ The `SVGAnimatedEnumeration` interface does not provide any specific methods.
 
 ## Basic usage
 
-Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
+Consider this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAttr("clipPathUnits")}} is associated with a `SVGAnimatedEnumeration` object.
 
 ```html
 <svg viewBox="0 0 100 100" width="200" height="200">
@@ -40,7 +40,7 @@ Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAtt
 </svg>
 ```
 
-This snippet gets the element, and logs the `baseVal` and `animVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
+The following JavaScript gets the element, and logs the `baseVal` and `animVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
 These values should be the same.
 
 ```js

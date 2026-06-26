@@ -19,12 +19,12 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("side")}} attribute of the given element.
-    Allowed values are defined by the [`TEXTPATH_SIDETYPE_*`](#textpath_sidetype_unknown) constants defined on this interface.
+    Allowed values are specified by the [`TEXTPATH_SIDETYPE_*`](#textpath_sidetype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element.
-    Allowed values are defined by the [`TEXTPATH_METHODTYPE_*`](#textpath_methodtype_unknown) constants defined on this interface.
+    Allowed values are specified by the [`TEXTPATH_METHODTYPE_*`](#textpath_methodtype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element.
     Allowed values are defined by the [`TEXTPATH_SPACINGTYPE_*`](#textpath_spacingtype_unknown) constants defined on this interface.
