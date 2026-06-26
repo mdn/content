@@ -35,8 +35,8 @@ None
 ## Description
 
 WebRTC media and data channels are secured using DTLS (Datagram Transport Layer Security).
-The protocol automatically uses certificates to ensure that the communicating remote peer is the same entity that negotiated the connection via the signaling server.
-This is done by checking that the certificate presented during the DTLS handshake matches the `a=fingerprint` provided in the SDP.
+During signaling, each endpoint advertises the fingerprint of the DTLS certificate it will present.
+During the DTLS handshake, the user agent verifies that the certificate presented by the remote peer matches the fingerprint in the negotiated SDP.
 
 DTLS guarantees the connected peer is the one you've been negotiating with, because only that peer has the private key matching the certificate whose fingerprint was exchanged during signaling.
 However, it doesn't tell you who this remote peer is: DTLS can't help you if you initially connected to a compromised signaling server, or to some unexpected peer.
