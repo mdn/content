@@ -89,7 +89,7 @@ timeline-trigger-active-range-start:
   entry 5%;
 ```
 
-In this case, `--my-trigger` will use the `contain` range start and `--my-other-trigger` will use the `entry 5%` range start. As there are three names but only two range ends, the range ends are cycled, so the third trigger name, `--another-trigger`, will use the `contain` range start.
+In this case, `--my-trigger` will use the `contain` range start and `--my-other-trigger` will use the `entry 5%` range start. As there are three names but only two range starts, the range starts are cycled, so the third trigger name, `--another-trigger`, will use the `contain` range start.
 
 ## Formal definition
 
@@ -107,7 +107,7 @@ In this example, we inset the start of a scroll-triggered animation trigger's ac
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
+Our markup contains two {{htmlelement("div")}} elements, one to animate and one to create a trigger on, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
 
 ```html
 <div class="animated">I am animated</div>

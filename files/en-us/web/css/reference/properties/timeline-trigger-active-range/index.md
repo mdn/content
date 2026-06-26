@@ -138,7 +138,7 @@ timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;
 timeline-trigger-active-range: cover, contain;
 ```
 
-In this case, `--my-trigger` will use the `cover` range and `--my-other-trigger` will use the `contain` range. As there are three names but only two range ends, the range ends are cycled, so the third trigger name, `--another-trigger`, will use the `cover` range.
+In this case, `--my-trigger` will use the `cover` range and `--my-other-trigger` will use the `contain` range. As there are three names but only two ranges, the ranges are cycled, so the third trigger name, `--another-trigger`, will use the `cover` range.
 
 ## Formal definition
 
@@ -156,7 +156,7 @@ In this example, we demonstrate the effect of defining a `timeline-trigger-activ
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that we will use to toggle the active range on and off, and some basic text content to cause the page to scroll.
+Our markup contains two {{htmlelement("div")}} elements — one to animate and one to create a trigger on — an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that we will use to toggle the active range on and off, and some basic text content to cause the page to scroll.
 
 We have hidden the text content for brevity.
 

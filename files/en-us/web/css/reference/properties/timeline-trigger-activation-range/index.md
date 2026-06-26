@@ -125,7 +125,7 @@ timeline-trigger-activation-range:
   entry 0% exit 50%;
 ```
 
-In this case, `--my-trigger` will use the `contain` range and `--my-other-trigger` will use the `entry 0% exit 50%` range. As there are three names but only two range ends, the range ends are cycled, so the third trigger name, `--another-trigger`, will use the `contain` range end.
+In this case, `--my-trigger` will use the `contain` range and `--my-other-trigger` will use the `entry 0% exit 50%` range. As there are three names but only two ranges, the ranges are cycled, so the third trigger name, `--another-trigger`, will use the `contain` range.
 
 ## Formal definition
 
@@ -143,7 +143,7 @@ In this example, we inset a scroll-triggered animation trigger's activation rang
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
+Our markup contains two {{htmlelement("div")}} elements, one to animate and one to create a trigger on, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
 
 ```html
 <div class="animated">I am animated</div>
