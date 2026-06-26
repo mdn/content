@@ -145,15 +145,24 @@ const scrollByBtn = document.querySelector(".scrollby");
 const toolbar = document.querySelector("div");
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollBy(0, 200)` on the window to scroll its content down by 200 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we log a message to say that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
+Next, we define a function called `isInterrupted()`, designed to run in response to a scroll operation finishing, which takes a boolean `interrupted` value as a parameter. It logs a message to the console to say that scrolling is finished and indicate whether the operation was interrupted (`interrupted` is `true`) or not. In addition, if `interrupted` is `true`, it calls an `alert()` to clearly indicate the interruption.
+
+```js
+function isInterrupted(interrupted) {
+  console.log(`Scroll finished;${interrupted ? " " : " not "}interrupted`);
+  if (interrupted) {
+    alert("Scroll interrupted!");
+  }
+}
+```
+
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollBy(0, 200)` on the window to scroll its content down by 200 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollByBtn.addEventListener("click", async () => {
   toolbar.className = "fade-out";
   const result = await window.scrollBy(0, 200);
-  console.log(
-    `Scroll finished;${result.interrupted ? " " : " not "}interrupted`,
-  );
+  isInterrupted(result.interrupted);
   toolbar.className = "fade-in";
 });
 ```
@@ -162,9 +171,24 @@ The code not relevant to `scrollBy()` is not shown, for brevity.
 
 #### Result
 
-Load our [window methods demo](https://mdn.github.io/dom-examples/scroll-promises/window-methods/) ([see source code](https://github.com/mdn/dom-examples/tree/main/scroll-promises/window-methods)) in a new tab and click the buttons to see the scrolling behavior. Note how the toolbar fades out when a button is pressed, and fades in again once the smooth scrolling is finished.
+Click the buttons to see the scrolling behavior. Note how the toolbar fades out when a button is pressed, and fades in again once the smooth scrolling is finished. Also try pressing one button and then quickly pressing another button before the first scrolling operation has finished. Note how, in these cases, the scrolling is reported as interrupted.
 
-Try pressing one button and then quickly pressing another button before the first scrolling operation has finished. Open your browser's JavaScript console and note how, in these cases, the scrolling is reported as interrupted.
+{{EmbedGHLiveSample("dom-examples/scroll-promises/window-methods/", "100%", 400)}}
+
+You can also [load the demo in a separate tab](https://mdn.github.io/dom-examples/scroll-promises/window-methods/) and view the [source code](https://github.com/mdn/dom-examples/tree/main/scroll-promises/window-methods).
+
+#### Aside on feature detection
+
+If you run this example in a browser that doesn't support promise-returning scroll operations, the scroll operations are still smooth, but the toolbar doesn't fade out and then fade back in once the operation is finished. The feature detection is handled by a function called `supportsScrollPromises()`, which runs a scroll operation and tests whether its return value is a promise:
+
+```js
+function supportsScrollPromises() {
+  const test = window.scroll(0, 0);
+  return test instanceof Promise;
+}
+```
+
+Check out the [source code](https://github.com/mdn/dom-examples/blob/main/scroll-promises/window-methods/index.js) to see how the feature detection is used.
 
 ## Specifications
 
