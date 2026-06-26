@@ -63,6 +63,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 1805446](https://bugzil.la/1805446)).
 - The {{domxref("MediaCapabilities.decodingInfo()", "decodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()", "encodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface now accept the `"webrtc"` configuration type.
   This allows a site to query whether a given audio or video configuration can be decoded or encoded using WebRTC, and whether doing so will be smooth, power efficient, or both.
+  Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
   ([Firefox bug 2037610](https://bugzil.la/2037610) and [Firefox bug 2032075](https://bugzil.la/2032075)).
 
 <!-- #### Removals -->
