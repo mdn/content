@@ -365,8 +365,8 @@ function changeVideoCodec(mimeType) {
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
 
     if (kind === "video") {
-      sendCodecs = preferCodec(mimeType);
-      recvCodecs = preferCodec(mimeType);
+      sendCodecs = preferCodec(sendCodecs, mimeType);
+      recvCodecs = preferCodec(recvCodecs, mimeType);
       transceiver.setCodecPreferences([...sendCodecs, ...recvCodecs]);
     }
   });
