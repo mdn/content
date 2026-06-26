@@ -8,7 +8,9 @@ browser-compat: api.Response.status
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response, e.g., `200` for success or `404` if the resource could not be found.
+The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) of the response.
+
+For example, `200` for success or `404` if the resource could not be found.
 
 ## Value
 
