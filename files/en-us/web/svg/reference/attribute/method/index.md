@@ -41,3 +41,7 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.method")}}

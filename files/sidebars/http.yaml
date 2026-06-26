@@ -111,7 +111,7 @@ l10n:
     PermissionsPolicyDirectives: Permissions-Policy directives
   fr:
     Guides: Guides
-    Security: Sécurité HTTP
+    Security: Sécurité et confidentialité
     Reference: Références
     Headers: En-têtes HTTP
     Methods: Méthodes de requête HTTP
