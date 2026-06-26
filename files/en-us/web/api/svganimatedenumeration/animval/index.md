@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedEnumeration.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedEnumeration")}} interface interface represents the value of an SVG enumeration.
 
-In SVG 2 `animVal` reflects the non-animated value of the attribute: it is the same as {{domxref("SVGAnimatedEnumeration/baseVal", "baseVal")}} .
+In SVG 2, `animVal` reflects the non-animated value of the attribute: it is the same as {{domxref("SVGAnimatedEnumeration/baseVal", "baseVal")}} .
 
 ## Value
 
@@ -56,7 +56,7 @@ svg {
 <pre id="log"></pre>
 ```
 
-This snippet gets the element, and logs the `animValue` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
+The following JavaScript gets the element, and logs the `animValue` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
 
 ```js
 const clipPath1 = document.getElementById("clip1");

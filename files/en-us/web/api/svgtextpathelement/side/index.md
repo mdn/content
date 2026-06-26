@@ -13,13 +13,13 @@ The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} inter
 The `side.baseVal` property reflects the {{SVGAttr("side")}} content attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 While `side` is read-only, you can use `side.baseVal` to modify the value of the corresponding attribute.
 
-In SVG 2 `side.animVal` also reflects the non-animated value of the attribute.
+In SVG 2, `side.animVal` also reflects the non-animated value of the attribute.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
-These static properties indicate the values that can be returned from `side.baseVal` (and `side.animVal`):
+The following static properties indicate the values that can be returned from `side.baseVal` (and `side.animVal`):
 
 - [`SVGTextPathElement.TEXTPATH_SIDETYPE_LEFT`](/en-US/docs/Web/API/SVGTextPathElement#textpath_sidetype_unknown) (1)
   - : The text is rendered on the left side of the path (the default).
@@ -31,7 +31,7 @@ These static properties indicate the values that can be returned from `side.base
   - : The side type is unknown or invalid.
     This value cannot be set.
 
-Note that `baseVal` cannot be set to `0` (`TEXTPATH_SIDETYPE_UNKNOWN`) or any other value than those listed above.
+Note that `baseVal` cannot be set to `0` (`TEXTPATH_SIDETYPE_UNKNOWN`) or any value other than those listed above.
 `animVal` is read-only and with throw if you attempt to write to it.
 
 ## Examples

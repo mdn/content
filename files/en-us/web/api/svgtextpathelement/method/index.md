@@ -13,13 +13,13 @@ The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} int
 Note that the `method.baseVal` property reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element, as an enumerated value.
 While `method` is read-only, you can use `method.baseVal` to modify the value of the corresponding attribute.
 
-In SVG 2 `side.method` also reflects the non-animated value of the attribute.
+In SVG 2, `side.method` also reflects the non-animated value of the attribute.
 
 ## Value
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
-These static properties indicate the values that can be returned from `method.baseVal` (and `method.animVal`):
+The following static properties indicate the values that can be returned from `method.baseVal` (and `method.animVal`):
 
 - [`SVGTextPathElement.TEXTPATH_METHODTYPE_UNKNOWN`](/en-US/docs/Web/API/SVGTextPathElement#textpath_methodtype_unknown) (0)
   - : The type is not one of the predefined types.
@@ -28,7 +28,7 @@ These static properties indicate the values that can be returned from `method.ba
 - [`SVGTextPathElement.TEXTPATH_METHODTYPE_STRETCH`](/en-US/docs/Web/API/SVGTextPathElement#textpath_methodtype_stretch) (2)
   - : Corresponds to the value [`stretch`](/en-US/docs/Web/SVG/Reference/Attribute/method#stretch).
 
-Note that `baseVal` cannot be set to `0` (`TEXTPATH_METHODTYPE_UNKNOWN`) or any other value than those listed above.
+Note that `baseVal` cannot be set to `0` (`TEXTPATH_METHODTYPE_UNKNOWN`) or any value other than those listed above.
 `animVal` is read-only and with throw if you attempt to write to it.
 
 ## Examples
