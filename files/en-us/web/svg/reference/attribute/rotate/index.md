@@ -42,15 +42,12 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-The `auto` and `auto-reverse` values allow the animated element's rotation
-to change dynamically as it travels along the path. If the value of `rotate`
-is `auto`, the element turns to align its right-hand side in the current
-direction of motion. If the value is `auto-reverse`, it turns its left-hand
-side in the current direction of motion.
+The `auto` and `auto-reverse` values allow the animated element's rotation to change dynamically as it travels along the path.
+If the value of `rotate` is `auto`, the element turns to align its right-hand side in the current direction of motion.
+If the value is `auto-reverse`, it turns its left-hand side in the current direction of motion.
 
-Setting `rotate`'s value to a number specifies a constant rotation, in
-degrees, that does not change with the animation. The default value of `0`
-keeps the animated element in its original orientation.
+Setting `rotate`'s value to a number specifies a constant rotation, in degrees, that does not change with the animation.
+The default value of `0` keeps the animated element in its original orientation.
 
 ## text and tspan
 
@@ -75,10 +72,9 @@ keeps the animated element in its original orientation.
   </tbody>
 </table>
 
-A list of numbers (separated by spaces or commas), each specifying the
-rotation in degrees to apply to the corresponding glyph. If there are
-fewer numbers than glyphs, the last number is applied to all remaining
-glyphs. If there are more numbers than glyphs, the extra numbers are ignored.
+A list of numbers (separated by spaces or commas), each specifying the rotation in degrees to apply to the corresponding glyph.
+If there are fewer numbers than glyphs, the last number is applied to all remaining glyphs.
+If there are more numbers than glyphs, the extra numbers are ignored.
 
 ## Examples
 
