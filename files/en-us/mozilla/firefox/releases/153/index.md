@@ -39,10 +39,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### JavaScript
 
 - The {{jsxref("Error.stackTraceLimit")}} static data property is now supported for setting or getting the maximum size of the captured error stack.
-  Setting the value smaller than the default (128) can improve performance.
-  ([Firefox 2037856](https://bugzil.la/2037856)).
+  Setting the value smaller than the default can improve performance.
+  ([Firefox bug 2037856](https://bugzil.la/2037856)).
 
-<!-- No notable changes. -->
 
 <!-- #### Removals -->
 
