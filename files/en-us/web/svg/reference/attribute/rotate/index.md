@@ -11,10 +11,10 @@ sidebar: svgref
 
 The `rotate` attribute has two different uses depending on the element it is applied to:
 
-- On {{SVGElement("animateMotion")}}: specifies how the animated element rotates as it travels along a motion path.
-- On {{SVGElement("text")}} and {{SVGElement("tspan")}}: specifies individual rotation for each glyph in the text element.
+- On {{SVGElement("animateMotion")}} elements it specifies how the animated element rotates as it travels along a motion path.
+- On {{SVGElement("text")}} and {{SVGElement("tspan")}} elements it specifies rotation for each glyph in the text element.
 
-You can use this attribute with the following SVG elements:
+The SVG `rotate` attribute can be used with the following SVG elements:
 
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("text")}}
@@ -75,6 +75,10 @@ The default value of `0` keeps the animated element in its original orientation.
 A list of numbers (separated by spaces or commas), each specifying the rotation in degrees to apply to the corresponding glyph.
 If there are fewer numbers than glyphs, the last number is applied to all remaining glyphs.
 If there are more numbers than glyphs, the extra numbers are ignored.
+
+Rotation values apply to single rendered visual characters, and therefore do not always map one-to-one to input characters or rendered glyphs.
+Where a single visual character is composed of multiple glyphs (such as a base letter with a separate accent glyph), or where multiple input characters collapse into a single glyph (such as a ligature), the parts that belong together are rotated as a group.
+This is needed because rotating them independently would distort the appearance or meaning of the character.
 
 ## Examples
 
