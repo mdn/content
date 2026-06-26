@@ -42,7 +42,6 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Setting the value smaller than the default can improve performance.
   ([Firefox bug 2037856](https://bugzil.la/2037856)).
 
-
 <!-- #### Removals -->
 
 <!-- ### HTTP -->
