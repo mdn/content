@@ -44,7 +44,12 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### HTTP -->
+### HTTP
+
+- A same-origin fetch request for a media element (for example, using a {{htmlelement("video")}} element) will now pass through a service worker without stripping the {{httpheader("Range")}} header.
+  Previously the `Range` header was only preserved in same-origin CORS requests, made by adding the `crossorigin` attribute (`<video crossorigin>`).
+  Note that `Range` headers are still stripped from cross-origin no-cors requests passing through a service worker.
+  ([Firefox bug 1465074](https://bugzil.la/1465074)).
 
 <!-- #### Removals -->
 
