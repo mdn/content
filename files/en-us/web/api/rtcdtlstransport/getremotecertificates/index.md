@@ -8,7 +8,7 @@ browser-compat: api.RTCDtlsTransport.getRemoteCertificates
 
 {{APIRef("WebRTC")}}
 
-The **`getRemoteCertificates()`** method of the {{domxref("RTCDtlsTransport")}} interface returns the certificates of the remote peer of the DTLS connection.
+The **`getRemoteCertificates()`** method of the {{domxref("RTCDtlsTransport")}} interface returns the certificates chain of the remote peer of the DTLS connection.
 
 ## Syntax
 
@@ -22,7 +22,8 @@ None.
 
 ### Return value
 
-An array of {{jsxref("ArrayBuffer")}} objects, each containing a DER-encoded X.509 certificate of the remote peer.
+An array of {{jsxref("ArrayBuffer")}} objects that represents the remote peer's certificate chain.
+Each object contains a DER-encoded X.509 certificate.
 
 For [`new`](/en-US/docs/Web/API/RTCDtlsTransport/state#new) connections, this is an empty array.
 It is populated with the certificates from the remote peer when the state of the transport changes to [`connected`](/en-US/docs/Web/API/RTCDtlsTransport/state#connected).
@@ -43,12 +44,15 @@ Establishing the identity of the remote peer usually requires an out-of-band mec
 
 The `getRemoteCertificates()` method allows you to get the remote certificates used by DTLS and use them for _application-layer_ authentication of the remote peer.
 
-The way this works is that each peer must persist their own DTLS certificate across sessions, rather than generating a new one each time.
+For fingerprint continuity, each peer must use the same certificate across sessions, rather than generating a new one each time they connect."
 After connecting to the remote peer, you'd exchange information out-of-band to verify that it is the intended party, and use `getRemoteCertificates()` to get its certificates.
 When you subsequently connect to that remote peer, you'd only allow communication if it has exactly the same certificate fingerprints.
 There is still a window for a person-in-the-middle attack, but it only exists for the very first connection between peers.
 
-Note that `getRemoteCertificates()` returns raw DER-encoded X.509 certificates as `ArrayBuffer` objects. DER (Distinguished Encoding Rules) is the binary serialization format used for X.509 certificates in TLS and DTLS. Unlike {{domxref("RTCCertificate")}}, these buffers do not expose certificate fields (fingerprint, subject, validity period, and so on) directly. To work with them you must process the raw bytes: you can hash the buffer with {{domxref("SubtleCrypto.digest()")}} to compute a fingerprint (as shown in the example below), or pass it to an X.509 parsing library to inspect individual fields.
+Note that `getRemoteCertificates()` returns raw DER-encoded X.509 certificates as `ArrayBuffer` objects.
+DER (Distinguished Encoding Rules) is the binary serialization format used for X.509 certificates in TLS and DTLS.
+Unlike {{domxref("RTCCertificate")}}, these buffers do not expose fingerprints and expiration date directly.
+To work with them you must process the raw bytes: you can hash the buffer with {{domxref("SubtleCrypto.digest()")}} to compute a fingerprint (as shown in the example below), or pass it to an X.509 parsing library to inspect individual fields.
 
 ## Example
 
@@ -102,5 +106,6 @@ pc.addEventListener("connectionstatechange", async () => {
 
 ## See also
 
+- {{domxref("RTCPeerConnection.generateCertificate()")}}
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
