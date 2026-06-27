@@ -12,7 +12,7 @@ sidebar: http
 
 {{deprecated_header}}{{non-standard_header}}
 
-The HTTP **`Attribution-Reporting-Register-Source`** {{Glossary("response header")}} registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
+The HTTP **`Attribution-Reporting-Register-Source`** {{Glossary("response header")}} registers a page feature as an attribution source.
 This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when a user interacts with the attribution source. The information you include in this header also determines the types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
@@ -54,11 +54,11 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"aggregatable_report_window"` {{optional_inline}}
       - : A string representing a time in seconds after which trigger data will no longer be included in generated aggregatable reports (this is called a **report window**). If not set, this defaults to the `"expiry"` value.
     - `"debug_key"` {{optional_inline}}
-      - : A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
+      - : A base-10-formatted 64-bit unsigned integer representing a debug key. Set this if you want to generate a debug report alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
       - : A boolean value. If a `debug_key` is set, set this to `true` to specify that the generated debug report should be a verbose debug report.
     - `"event_level_epsilon"` {{optional_inline}}
-      - : A number equal to or greater than `0`, which controls the amount of [noise added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#adding_noise_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
+      - : A number equal to or greater than `0`, which controls the amount of noise added to reports. Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
     - `"event_report_window"` {{optional_inline}}
       - : A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports (this is called a **report window**). If not set, the event report window falls back to the `"expiry"` value.
         > [!NOTE]
@@ -72,11 +72,11 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"expiry"` {{optional_inline}}
       - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e., subsequent triggers won't be attributable to this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
     - `"filter_data"` {{optional_inline}}
-      - : An object defining custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
+      - : An object defining custom data that can be used to filter which conversions generate reports.
     - `"max_event_level_reports"` {{optional_inline}}
       - : A number between `0` and `20`, inclusive, which specifies the total number of event-level reports this source can generate. After this maximum is reached, the source is no longer capable of producing any new data. If not specified, `"max_event_level_reports"` defaults to `3` for navigation-based sources and `1` for event-based (image- or script-based) sources.
     - `"priority"` {{optional_inline}}
-      - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritize specific sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+      - : A string representing a priority value for the attribution source. By default, conversions are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to prioritize specific sources. For example, a value of `2` takes priority over the default value of `1`.
     - `"trigger_data"` {{optional_inline}}
       - : An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place. If omitted, `"trigger_data"` defaults to `[0, 1, 2, 3, 4, 5, 6, 7]` for navigation-based sources and `[0, 1]` for event-based (image- or script-based) sources.
 
