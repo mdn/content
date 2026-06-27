@@ -22,8 +22,6 @@ The HTTP **`Sec-Browsing-Topics`** {{Glossary("request header")}} sends the sele
 
 If the calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment), attempting to create or modify `Sec-Browsing-Topics` fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
 
-See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
-
 <table class="properties">
   <tbody>
     <tr>
