@@ -128,29 +128,31 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. 
 
-```html
+For this reason, you can't use `attr()` to dynamically construct URLs:
+
+```html example-bad
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
 ```
 
-```css
+```css example-bad
 span[data-icon] {
   background-image: url(attr(data-icon));
 }
 ```
 
-This restriction applies to any context where a `<url>` value could result — including functions like {{CSSxRef("image/image-set","image-set()")}} or {{CSSxRef("image/image","image()")}} that accept URLs alongside other value types. For example, the following will not work:
+This restriction also applies to any context that could potentially result in a `<url>` value.
+Values that use `attr()` get marked as _`attr()`-tainted_, and using them as or in a `<url>` makes a declaration become ["invalid at computed value time" (IACVT)](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
+
+So, for example, functions like {{CSSxRef("image/image-set","image-set()")}} that take values that resolve to `<url>` also won't work:
 
 ```css example-bad
 span[data-icon] {
-  background-image: image(attr(foo));
   background: image-set(attr(data-icon));
 }
 ```
-
-Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
