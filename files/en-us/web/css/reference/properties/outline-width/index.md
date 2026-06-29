@@ -71,7 +71,7 @@ The `outline-width` property is specified as any one of the values listed below.
 ### Values
 
 - {{cssxref("line-width")}}
-  - : Defines the width of the outline, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `hairline`, `thin`, `medium`, or `thick`. The default is `medium`.
+  - : Defines the width of the outline, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 
