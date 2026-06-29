@@ -5,3 +5,6 @@ sidebar:
     title: Web documentation
   - type: listSubPages
     path: /Web
+l10n:
+  fr:
+    Web documentation: Documentation Web

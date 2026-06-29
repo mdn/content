@@ -40,9 +40,11 @@ This implementation has been added in order to fix an issue where scrollable con
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The {{jsxref("Error.stackTraceLimit")}} static data property is supported for setting or getting the maximum number of stack frames captured in an error stack trace.
+  Setting the value smaller than the default can improve performance.
+  ([Firefox bug 2037856](https://bugzil.la/2037856)).
 
 <!-- #### Removals -->
 
@@ -63,6 +65,10 @@ This implementation has been added in order to fix an issue where scrollable con
 - The {{domxref("RTCDtlsTransport.getRemoteCertificates()")}} method gets the certificates used by the remote peer to secure the DTLS communication.
   These can be used for application-layer authentication of a remote peer.
   ([Firefox bug 1805446](https://bugzil.la/1805446)).
+- The {{domxref("MediaCapabilities.decodingInfo()", "decodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()", "encodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface now accept the `"webrtc"` configuration type.
+  This allows a site to query whether a given audio or video configuration can be decoded or encoded using WebRTC, and whether doing so will be smooth, power efficient, or both.
+  Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
+  ([Firefox bug 2037610](https://bugzil.la/2037610) and [Firefox bug 2032075](https://bugzil.la/2032075)).
 
 <!-- #### Removals -->
 
