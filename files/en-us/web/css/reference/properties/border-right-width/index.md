@@ -73,14 +73,8 @@ border-right-width: unset;
 
 ### Values
 
-- `<line-width>`
-  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-    - `thin`
-      - Same as `1px`.
-    - `medium`
-      - Same as `3px`.
-    - `thick`
-      - Same as `5px`.
+- {{cssxref("line-width")}}
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `hairline`, `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 

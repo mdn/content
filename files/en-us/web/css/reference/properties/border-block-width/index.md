@@ -52,7 +52,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-block-width: 5px;
 border-block-width: thick;
 
@@ -66,8 +66,8 @@ border-block-width: unset;
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("line-width")}}
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `hairline`, `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 
