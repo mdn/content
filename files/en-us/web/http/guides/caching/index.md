@@ -288,7 +288,9 @@ Cache-Control: no-cache
 ```
 
 > [!NOTE]
-> `no-cache` forces revalidation when using the HTTP Cache, but browsers may not always use their HTTP Cache for history navigations. The back/forward cache, or {{Glossary('bfcache')}} is used to "restore" a frozen page for performance reasons. Even without the bfcache, browsers may reuse `no-cache` pages upon back button navigations without revalidation since these are seen as history or session navigations rather than HTTP requests. This is [allowed per spec](https://httpwg.org/specs/rfc7234.html#history.lists).
+> The `no-cache` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
+> In addition, some browsers don't use the HTTP Cache for history navigations, but instead use the back/forward cache ({{Glossary('bfcache')}}) to restore a page snapshot (for performance reasons).
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 

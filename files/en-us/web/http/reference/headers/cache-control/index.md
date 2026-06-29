@@ -138,6 +138,11 @@ If you want caches to always check for content updates while reusing stored cont
 
 Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to store a response but requires them to revalidate it before reuse. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
 
+> [!NOTE]
+> The `no-cache` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
+> In addition, some browsers don't use the HTTP Cache for history navigations, but instead use the back/forward cache ({{Glossary('bfcache')}}) to restore a page snapshot (for performance reasons).
+
 #### `must-revalidate`
 
 The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
