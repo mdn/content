@@ -141,7 +141,7 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 > [!NOTE]
 > The `no-cache` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
 > This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
-> In addition, some browsers don't use the HTTP Cache for history navigations, but instead use the back/forward cache ({{Glossary('bfcache')}}) to restore a page snapshot (for performance reasons).
+> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
 
 #### `must-revalidate`
 
@@ -154,6 +154,11 @@ Cache-Control: max-age=604800, must-revalidate
 ```
 
 HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
+
+> [!NOTE]
+> An expired resource with a `must-revalidate` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
+> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
 
 #### `proxy-revalidate`
 
@@ -306,6 +311,11 @@ Cache-Control: max-age=0
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
 If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0`.
+
+> [!NOTE]
+> An expired `max-age` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
+> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
 
 #### `max-stale`
 
