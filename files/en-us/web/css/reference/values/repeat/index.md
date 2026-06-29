@@ -3,7 +3,9 @@ title: "`repeat()` CSS function"
 short-title: repeat()
 slug: Web/CSS/Reference/Values/repeat
 page-type: css-function
-browser-compat: css.properties.grid-template-columns.repeat
+browser-compat:
+  - css.properties.grid-template-columns.repeat
+  - css.properties.row-rule.repeat
 sidebar: cssref
 ---
 
@@ -95,20 +97,6 @@ CSS gap properties:
 ## Syntax
 
 ```css
-/* <repeat-line> */
-repeat(4, dashed)
-repeat(2, solid, dotted, inset)
-repeat(3, medium)
-repeat(4, red)
-repeat(3, green medium outset)
-
-/* <auto-repeat-line> */
-repeat(auto, dotted)
-repeat(auto, 10px)
-repeat(auto, currentcolor)
-repeat(auto, red, blue, green)
-repeat(auto, var(--lineColor) var(--lineSize) solid)
-
 /* <track-repeat> values */
 repeat(4, 1fr)
 repeat(4, [col-start] 250px [col-end])
@@ -137,6 +125,25 @@ repeat(4, [col-start] 60% [col-end])
 repeat(4, [col-start] minmax(100px, 1fr) [col-end])
 repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
+
+/* <name-repeat> values */
+repeat(5, [footer])
+repeat(auto-fill, [header])
+repeat(2, [header footer])
+
+/* <repeat-line> */
+repeat(4, dashed)
+repeat(2, solid, dotted, inset)
+repeat(3, medium)
+repeat(4, red)
+repeat(3, green medium outset)
+
+/* <auto-repeat-line> */
+repeat(auto, dotted)
+repeat(auto, 10px)
+repeat(auto, currentcolor)
+repeat(auto, red, blue, green)
+repeat(auto, var(--lineColor) var(--lineSize) solid)
 ```
 
 ### Values
@@ -197,34 +204,34 @@ The second argument is a comma- or space-separated list of values that are valid
 The syntax of the `repeat()` function has several forms:
 
 - `<track-repeat>` = `repeat( <integer>, [ <line-names>? <track-size> ]+ <line-names>? )`
-  - The `<integer>` sets the repeat count.
-  - The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {{cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
-  - Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
-  - An ending `<line-names>` is optional.
+  - : The `<integer>` sets the repeat count.
+  - : The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
+  - : Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+  - : An ending `<line-names>` is optional.
 
 - `<auto-repeat>` = `repeat( auto-fill | auto-fit, [ <line-names>? <fixed-size> ]+ <line-names>? )`
-  - The `auto-fill` or `auto-fit` keyword sets the repeat count
-  - The `<fixed-size>` sets the track size. A `<fixed-size>` is either a `<length-percentage>` value, or a `minmax()` function with either the `min` or the `max` being a `<length-percentage>` and the other value also being a `<length-percentage>`, or set to the keyword `min-content`, `max-content`, or `auto`.
-  - Each `<fixed-size>` is optionally preceded by a `<line-name>`.
-  - The ending `<line-names>` is optional.
+  - : The `auto-fill` or `auto-fit` keyword sets the repeat count
+  - : The `<fixed-size>` sets the track size. A `<fixed-size>` is either a `<length-percentage>` value, or a `minmax()` function with either the `min` or the `max` being a `<length-percentage>` and the other value also being a `<length-percentage>`, or set to the keyword `min-content`, `max-content`, or `auto`.
+  - : Each `<fixed-size>` is optionally preceded by a `<line-name>`.
+  - : The ending `<line-names>` is optional.
 
 - `<fixed-repeat>`= `repeat( <integer>, [ <line-names>? <fixed-size> ]+ <line-names>? )`
-  - Same as `<auto-repeat>`, except the `<integer>` sets the repeat count, so there is not auto repeating.
+  - : Same as `<auto-repeat>`, except the `<integer>` sets the repeat count, so there is not auto repeating.
 
 - `<name-repeat>` = `repeat( [ <integer> | auto-fill ], <line-names>+)`
-  - The integer or `auto-fill` keyword sets the repeat count
-  - The `<line-names>` are one or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
-  - These line names (rather than track sizes) are relevant for [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
+  - : The integer or `auto-fill` keyword sets the repeat count
+  - : The `<line-names>` are one or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+  - : These line names (rather than track sizes) are relevant for [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
     .
 - `<repeat-value-type>` = `repeat( <integer> , <value># )`
-  - The `<integer>` sets the repeat count.
-  - The `<value>` is one or more comma-separated valid values for the property on which the `repeat() function is applied.
-  - Multiple `repeat()` functions of the `<repeat-value-type>` may be used within a single value declaration.
+  - : The `<integer>` sets the repeat count.
+  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat() function is applied.
+  - : Multiple `repeat()` functions of the `<repeat-value-type>` may be used within a single value declaration.
 
 - `<auto-repeat-value-type>` = `repeat( auto , <value># )`
-  - The `auto` keyword specifies an auto repeater. An auto repeater will be used to fill in values for gaps that would not otherwise receive values from other parts of the list.
-  - The `<value>` is one or more comma-separated valid values for the property on which the `repeat() function is applied.
-  - At most one `repeat()` in a given list of values may be an auto repeater.
+  - : The `auto` keyword specifies an auto repeater. An auto repeater will be used to fill in values for gaps that would not otherwise receive values from other parts of the list.
+  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat() function is applied.
+  - : At most one `repeat()` in a given list of values may be an auto repeater.
 
 ### Auto-fit versus auto-fill
 
@@ -242,7 +249,7 @@ For the purpose of finding the number of auto-repeated tracks, the user agent fl
 
 There are some rules and restrictions when using `repeat()`:
 
-- A property value can contain multiple `repeat()` functions.
+A property value can contain multiple `repeat()` functions.
 
 ```css example-good
 .wrapper {
@@ -252,7 +259,7 @@ There are some rules and restrictions when using `repeat()`:
 }
 ```
 
-- A property value can contain, at most, one auto-repeat `repeat()` function.
+A property value can contain, at most, one auto-repeat `repeat()` function.
 
 ```css example-bad
 .wrapper {
@@ -262,7 +269,7 @@ There are some rules and restrictions when using `repeat()`:
 }
 ```
 
-- If a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. Automatic repetitions (`auto-fill` or `auto-fit`) cannot be combined with fully intrinsic or flexible sizes. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
+If a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. Automatic repetitions (`auto-fill` or `auto-fit`) cannot be combined with fully intrinsic or flexible sizes. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
 
 ```css example-bad
 .wrapper {
@@ -272,7 +279,7 @@ There are some rules and restrictions when using `repeat()`:
 }
 ```
 
-- The `repeat()` notation can not be nested within another `repeat()` function.
+The `repeat()` notation can not be nested within another `repeat()` function.
 
 ```css example-bad
 .wrapper {
