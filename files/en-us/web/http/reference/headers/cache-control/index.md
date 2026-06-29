@@ -139,11 +139,10 @@ If you want caches to always check for content updates while reusing stored cont
 Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to store a response but requires them to revalidate it before reuse. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
 
 > [!NOTE]
-> The `no-cache` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
-> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
-> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
-
-#### `must-revalidate`
+> The `no-cache` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
 
@@ -156,9 +155,10 @@ Cache-Control: max-age=604800, must-revalidate
 HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
 
 > [!NOTE]
-> An expired resource with a `must-revalidate` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
-> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
-> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
+> The `must-revalidate` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 #### `proxy-revalidate`
 
@@ -313,9 +313,10 @@ Cache-Control: max-age=0
 If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0`.
 
 > [!NOTE]
-> An expired `max-age` directive may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
-> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
-> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
+> The `max-age=0` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 #### `max-stale`
 

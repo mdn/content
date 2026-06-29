@@ -288,9 +288,10 @@ Cache-Control: no-cache
 ```
 
 > [!NOTE]
-> The `no-cache` directive (or equivalent `max-age`) may not force revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
-> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previous navigation.
-> This is even the case when the back/forward cache ({{Glossary('bfcache')}}) is not used and the page is reloaded. In both cases it may not use the caching semantics and so may not revalidate.
+> The `no-cache` directive (or equivalent `max-age=0`, `must-revalidate`) does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 
@@ -298,7 +299,7 @@ It is often stated that the combination of `max-age=0` and `must-revalidate` has
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` means that the response is immediately stale, and `must-revalidate` means that it must not be reused without revalidation once it is stale — so, in combination, the semantics seem to be the same as `no-cache` (including with above caveat about history navigations).
+`max-age=0` means that the response is immediately stale, and `must-revalidate` means that it must not be reused without revalidation once it is stale — so, in combination, the semantics seem to be the same as `no-cache`.
 
 However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
