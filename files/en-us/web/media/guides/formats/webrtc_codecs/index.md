@@ -371,6 +371,7 @@ function changeVideoCodec(mimeType) {
     }
   });
 
+  // Manually trigger a new negotiation (setCodecPreferences() does not automatically do so).
   peerConnection.onnegotiationneeded();
 }
 ```
@@ -391,10 +392,9 @@ The `preferCodec()` function called by the code above looks like this to move a 
 function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
-  let count = codecs.length;
 
   codecs.forEach((codec) => {
-    if (codec.mimeType === mimeType) {
+    if (codec.mimeType.toLowerCase() === mimeType.toLowerCase()) {
       sortedCodecs.push(codec);
     } else {
       otherCodecs.push(codec);
