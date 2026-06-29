@@ -53,7 +53,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - The {{domxref("IDBObjectStore.getAllRecords()")}} and {{domxref("IDBIndex.getAllRecords()")}} methods are now supported.
-  These retrieve all records (or some some specified subset of records) from an IDB object store and index, respectively.
+  These retrieve all records (or a specified subset of records) from an object store and index, respectively.
   ([Firefox bug 1927945](https://bugzil.la/1927945)).
 
 <!-- #### DOM -->
