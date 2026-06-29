@@ -30,9 +30,9 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 The `<line-style>` enumerated type is specified using one of the values listed below:
 
 - `none`
-  - : Displays no line. The computed value of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority. If any other conflicting border is set, it will be displayed. The `none` value is similar to `hidden`.
+  - : Displays no line. The [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority. If any other conflicting border is set, it will be displayed. The `none` value is similar to `hidden`.
 - `hidden`
-  - : Displays no line. The computed width of the line is `0` even if a width value is specified. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority. If any other conflicting border is set, it won't be displayed. The `hidden` value is similar to `none`, but `hidden` is not a valid value for outline styles.
+  - : Displays no line. The [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority. If any other conflicting border is set, it won't be displayed. The `hidden` value is similar to `none`, but `hidden` is not a valid value for outline styles.
 - `dotted`
   - : Displays a series of round dots. The radius of the dots is half the computed value of the line's width. The spacing of the dots is not defined by the specification and is implementation-specific.
 - `dashed`

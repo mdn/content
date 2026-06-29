@@ -20,7 +20,7 @@ The **`TransitionEvent`** interface represents events providing information rela
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("TransitionEvent.animation")}} {{ReadOnlyInline}}
+- {{domxref("TransitionEvent.animation")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("CSSTransition")}} read-only property containing the animation associated with the event.
 - {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
   - : A string containing the name CSS property associated with the transition.

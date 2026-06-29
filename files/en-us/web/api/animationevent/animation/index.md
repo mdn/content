@@ -3,10 +3,12 @@ title: "AnimationEvent: animation property"
 short-title: animation
 slug: Web/API/AnimationEvent/animation
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AnimationEvent.animation
 ---
 
-{{APIRef("Web Animations")}}
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 The **`animation`** read-only property of the {{domxref("AnimationEvent")}} interface represents the animation associated with the event.
 

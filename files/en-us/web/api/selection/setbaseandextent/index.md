@@ -62,16 +62,12 @@ Next, we have two form inputs that allow you to set the `anchorOffset` and `focu
 
 We also have a button that when pressed invokes a function that runs the `setBaseAndExtent()` method with the specified offsets, and copies the selection into the output paragraph at the very bottom of the HTML.
 
-```html
+```html-nolint
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one">
-    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
-  </p>
+  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
   <p>MIDDLE</p>
-  <p class="two">
-    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
-  </p>
+  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
 </div>
 
 <div>
