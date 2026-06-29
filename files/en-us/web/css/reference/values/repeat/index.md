@@ -7,30 +7,43 @@ browser-compat: css.properties.grid-template-columns.repeat
 sidebar: cssref
 ---
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list], allowing a large number of columns and rows, and their gap decorations, that exhibit a recurring pattern to be written in a more compact form.
 
 {{InteractiveExample("CSS Demo: repeat()")}}
 
 ```css interactive-example-choice
 grid-template-columns: repeat(2, 60px);
+rule-color: repeat(2, green), yellow;
 ```
 
 ```css interactive-example-choice
 grid-template-columns: 1fr repeat(2, 60px);
+rule-color: repeat(2, green), repeat(2, yellow);
 ```
 
 ```css interactive-example-choice
 grid-template-columns: repeat(2, 20px 1fr);
+rule-color: repeat(auto, green), yellow;
 ```
 
 ```css interactive-example-choice
 grid-template-columns: repeat(auto-fill, 40px);
+rule-color: yellow, repeat(auto, green);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -48,6 +61,7 @@ grid-template-columns: repeat(auto-fill, 40px);
   grid-auto-rows: 40px;
   grid-gap: 10px;
   width: 220px;
+  rule: solid 4px;
 }
 
 #example-element > div {
@@ -56,11 +70,45 @@ grid-template-columns: repeat(auto-fill, 40px);
 }
 ```
 
-This function can be used in the CSS grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
+This function can be used the following features:
+
+CSS grid properties:
+
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+
+CSS gap properties:
+
+- {{cssxref("column-rule-color")}}
+- {{cssxref("row-rule-color")}}
+- {{cssxref("rule-color")}} shorthand
+- {{cssxref("column-rule-style")}}
+- {{cssxref("row-rule-style")}}
+- {{cssxref("rule-style")}} shorthand
+- {{cssxref("column-rule-width")}}
+- {{cssxref("row-rule-width")}}
+- {{cssxref("rule-width ")}} shorthand
+- {{cssxref("column-rule")}} shorthand
+- {{cssxref("row-rule")}} shorthand
+- {{cssxref("rule")}} shorthand
 
 ## Syntax
 
 ```css
+/* <repeat-line> */
+repeat(4, dashed)
+repeat(2, solid, dotted, inset)
+repeat(3, medium)
+repeat(4, red)
+repeat(3, green medium outset)
+
+/* <auto-repeat-line> */
+repeat(auto, dotted)
+repeat(auto, 10px)
+repeat(auto, currentcolor)
+repeat(auto, red, blue, green)
+repeat(auto, var(--lineColor) var(--lineSize) solid)
+
 /* <track-repeat> values */
 repeat(4, 1fr)
 repeat(4, [col-start] 250px [col-end])
@@ -91,36 +139,25 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-The `repeat()` function takes two arguments:
-
-- **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
-- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
-
-If you use [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count, you may only specify track sizes using the [`<fixed-size>`](#fixed-size) type, not the [`<track-size>`](#track-size) type. This give us three main syntax forms for `repeat()`:
-
-- `<track-repeat>`, which uses:
-  - an integer to set the repeat count
-  - [`<track-size>`](#track-size) values to set track sizes.
-- `<auto-repeat>`, which uses
-  - [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count
-  - [`<fixed-size>`](#fixed-size) to set track sizes.
-- `<fixed-repeat>`, which uses:
-  - an integer to set the repeat count
-  - [`<fixed-size>`](#fixed-size) values to set track sizes.
-
-Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
-
-```css example-bad
-.wrapper {
-  grid-template-columns:
-    repeat(auto-fill, 10px)
-    repeat(2, minmax(min-content, max-content));
-}
-```
-
-There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) keyword and only specifies line names, not track sizes.
-
 ### Values
+
+The `repeat()` function takes two arguments: The first argument specifies **repeat count**m, and the second specifies either the tracks or rule feature to be repeated.
+
+#### Repeat count values
+
+- {{cssxref("integer")}}
+  - : An positive integer greater than or equal to `1` specifying the number of times the second parameter feature list will be repeated.
+
+- `auto-fill`
+  - : Valid with grid properties only, specifies an auto repeater that repeats to fill a space. Resolves to the largest number of repetitions that does not cause overflow of a constrained (has a maximum size) content box. Otherwise, if the content box has a minimum size, the fewest number of repetitions that meets the minimum size. If there is neither a minimum or maximum size, resolves to `1`. When used with subgrid, the second parameter must be a list of line names.
+
+- `auto-fit`
+  - : Behaves as `auto-fill`, except that after placing grid items, any empty repeated tracks are collapsed.
+
+- `auto`
+  - : Valid with gap properties only, specifies an auto repeater used to fill in values for gaps that would not otherwise receive values from other parts of the list.
+
+#### Tracks and rule features
 
 - `<fixed-size>`
   - : One of the following forms:
@@ -162,9 +199,51 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - {{cssxref("min-content")}}
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 
+## Description
+
+The `repeat()` function represents a repeated fragment within a track or rule-line list, allowing a recurring pattern to be written in a more compact form. The function is valid within CSS grid and gap properties that accept a list of values. The pattern can be repeated a specified number of times or can be auto-repeated.
+
+The first argument specifies **repeat count**: the number of times that the track list or rule feature value should be repeated. It is specified with an integer value of `1` or more, with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) for track lists, or the `auto` for rule-line features. These keyword values either repeat the set of tracks as many times as is needed to fill the grid container or repeat the line feature (width, color, or line-style) as many times as needed to style all the column or row rules.
+
+The second argument specifies either the tracks or rule feature(s) to be repeated.
+
+- **tracks**:
+  - : Specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
+- **rule feature**:
+  - : Specifies the rule feature that will be repeated. This is either a comma separated list of {cssxref("&lt;color>")}}, [`<line-width>`](/en-US/docs/Web/CSS/Reference/Properties/border-width#line-width), or {{cssxref("line-style")}} values, or a comma-separated list of gap rules.
+
+- `<track-repeat>`, which uses:
+  - an integer to set the repeat count
+  - [`<track-size>`](#track-size) values to set track sizes.
+- `<auto-repeat>`, which uses
+  - [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count
+  - [`<fixed-size>`](#fixed-size) to set track sizes.
+- `<fixed-repeat>`, which uses:
+  - an integer to set the repeat count
+  - [`<fixed-size>`](#fixed-size) values to set track sizes.
+- `<name-repeat>`, which uses: ([`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) only)
+  - an integer or [`auto-fill`](#auto-fill) to set the repeat count
+  - line names (not track sizes).
+- `<repeat-rule>`, which uses:
+  - an integer to set the repeat count
+  - [`<track-size>`](#track-size) values to set track sizes.
+- `<auto-repeat-rule>`, which uses:
+
+Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
+
+```css example-bad
+.wrapper {
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
+}
+```
+
+There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) keyword and only specifies line names, not track sizes.
+
 ## Formal syntax
 
-{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
+{{CSSSyntaxRaw(`<repeat-line> <track-repeat> <auto-repeat> <fixed-repeat> <name-repeat> <auto-repeat-line>`)}}
 
 ## Examples
 
