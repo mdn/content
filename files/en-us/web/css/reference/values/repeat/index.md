@@ -172,7 +172,7 @@ A list from one of the following track list types. Whether the components of the
   - : For add line names to subgrids, each `<list-name>` is zero or more {{cssxref("&lt;custom-ident&gt;")}} values, space-separated and enclosed in square brackets, such as `[start header-start]`.
 
 - `<track-size>`
-  - : Each `<track-size>` is a positive {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("minmax()")}} function with the first parameter being the keyword `min-content`, `max-content`, or `auto`, or a positive `<length-percentage>`, or a {{cssxref("fitcontent()")}} function.
+  - : Each `<track-size>` is a positive {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("minmax()")}} function with the first parameter being the keyword `min-content`, `max-content`, or `auto`, or a positive `<length-percentage>`, or a {{cssxref("fit-content()")}} function.
 
 - `<fixed-size>`
   - : Ech `<fixed-size>` is either a is a positive `<length-percentage>`, or a `minmax()` function with the first parameter is a positive `<length-percentage>` and the second is either a non-negative dimension with the unit `fr` specifying the track's flex factor or the keyword `min-content`, `max-content`, or `auto`, or a `minmax()` function with the first parameter is a positive `<length-percentage>` and the second parameter is also a positive `<length-percentage>` or the keyword `min-content`, `max-content`, or `auto`.
