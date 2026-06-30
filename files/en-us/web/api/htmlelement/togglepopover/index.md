@@ -43,6 +43,11 @@ A boolean (`force`) or an options object:
         - The browser places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
         - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` or `toggle` event handler).
+
 ### Return value
 
 `true` if the popup is open after the call, and `false` otherwise.
