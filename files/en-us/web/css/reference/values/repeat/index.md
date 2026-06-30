@@ -205,7 +205,7 @@ The syntax of the `repeat()` function has several forms:
 
 - `<track-repeat>` = `repeat( <integer>, [ <line-names>? <track-size> ]+ <line-names>? )`
   - : The `<integer>` sets the repeat count.
-  - : The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
+  - : The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {{cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
   - : Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
   - : An ending `<line-names>` is optional.
 
