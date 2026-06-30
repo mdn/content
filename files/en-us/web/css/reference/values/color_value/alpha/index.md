@@ -40,7 +40,7 @@ Within the alpha value argument, the component keyword `alpha` resolves to the a
 
 Unlike general [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (e.g., `oklch(from ...)`), the `alpha()` function does not expose the individual color channel keywords of the origin color space. It is solely concerned with the alpha channel, keeping the rest of the color intact.
 
-The result is always in the **color space of the origin color**. For example, if the origin color is an `oklch()` color, the result will also be resolved in OKLCh, with the same lightness, chroma, and hue.
+The return value is always in the same color space as the origin color. For example, if the origin color is an `oklch()` color, the result will also be resolved in OKLCh, with the same lightness, chroma, and hue.
 
 ## Examples
 
