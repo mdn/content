@@ -69,6 +69,9 @@ This method may raise a {{domxref("DOMException")}} of the following types:
   - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Examples
+## Examples
+
+### Basic usage
 
 ```js
 const query = IDBKeyRange.lowerBound("myKey", true);
@@ -76,7 +79,7 @@ const objectStore = transaction.objectStore("contactsList");
 
 const myRecords = (objectStore.getAllRecords({
   query,
-  count: "100",
+  count: 100,
   direction: "prev",
 }).onsuccess = (event) => {
   console.log("Records successfully retrieved");

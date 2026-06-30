@@ -30,8 +30,11 @@ _None._
 
 ## Example
 
-In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases.
-For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+### Basic usage
+
+This code snippet queries an `IDBObjectStore` for up to 100 records whose keys come after `"myKey"`, with results to be sorted in reverse order.
+The results are returned via the `onsuccess` callback in `myRecords.result`, which contains an array of `IDBRecord` instances.
+Note that because this is a query on `IDBObjectStore`, the `key` and `primaryKey` in each record have the same value.
 
 ```js
 const query = IDBKeyRange.lowerBound("myKey", true);
@@ -39,7 +42,7 @@ const objectStore = transaction.objectStore("contactsList");
 
 const myRecords = (objectStore.getAllRecords({
   query,
-  count: "100",
+  count: 100,
   direction: "prev",
 }).onsuccess = (event) => {
   console.log(myRecords.result); // Array of IDBRecord instances
