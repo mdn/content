@@ -10,16 +10,17 @@ browser-compat: api.IDBRecord
 The **`IDBRecord`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a snapshot of a single record in an {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}}.
 
 A request for records using {{domxref("IDBObjectStore.getAllRecords()")}} or {{domxref("IDBIndex.getAllRecords()")}} returns an {{domxref("IDBRequest")}} instance.
-On success the returned object's {{domxref("IDBRequest.result", "result")}} property is populated with an array of `IDBRecord` instances.
+On success, the returned object's {{domxref("IDBRequest.result", "result")}} property is populated with an array of `IDBRecord` instances.
 
 ## Instance properties
 
 - `key` {{ReadOnlyInline}}
-  - : A value representing the record's key.
-    For an object store record this will be the same as `primaryKey`.
-    For an index record it will be the record's key within the index.
+  - : A value representing the record's secondary key.
+    For an object store record, this will be the same as `primaryKey`.
+    For an index record, it will be the record's key within the index.
 - `primaryKey` {{ReadOnlyInline}}
-  - : A value representing the key of the record in the index's associated {{domxref("IDBObjectStore")}}.
+  - : A value representing the record's primary key.
+    This key is used to represent the record in the {{domxref("IDBObjectStore")}}.
 - `value` {{ReadOnlyInline}}
   - : A value representing the record's value.
 
