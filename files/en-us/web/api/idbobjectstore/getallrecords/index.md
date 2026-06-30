@@ -69,9 +69,12 @@ This method may raise a {{domxref("DOMException")}} of the following types:
   - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Examples
-## Examples
 
 ### Basic usage
+
+This code snippet queries an `IDBObjectStore` for up to 100 records whose keys come after `"myKey"`, with results to be sorted in reverse order.
+The results are returned via the `onsuccess` callback in `myRecords.result`, as an array of `IDBRecord` instances.
+Note that because this is a query on an `IDBObjectStore`, the `key` and `primaryKey` in each record have the same value.
 
 ```js
 const query = IDBKeyRange.lowerBound("myKey", true);
