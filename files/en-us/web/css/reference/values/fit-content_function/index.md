@@ -11,6 +11,9 @@ sidebar: cssref
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
+> [!NOTE]
+> This keyword is different from the {{cssxref("fit-content")}} sizing keyword. The sizing keyword represents an element size that adapts to its content while staying within the limits of its container and is not related to {{cssxref("grid-template-columns")}}.
+
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
 ```css interactive-example-choice
