@@ -5,7 +5,6 @@ import os from "node:os";
 import { eachLimit } from "async";
 import cliProgress from "cli-progress";
 import { fdir } from "fdir";
-import fse from "fs-extra";
 import { temporaryDirectory } from "tempy";
 import * as cheerio from "cheerio";
 import { fileTypeFromFile } from "file-type";
@@ -81,6 +80,19 @@ class FixableError extends Error {
  */
 function getRelativePath(filePath) {
   return path.relative(process.cwd(), filePath);
+}
+
+/**
+ * @param {string} filePath
+ * @returns {Promise<boolean>}
+ */
+async function pathExists(filePath) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -188,7 +200,7 @@ export async function checkFile(filePath, options = {}) {
   // The image has to be mentioned in the adjacent index.md document
   const parentPath = path.dirname(filePath);
   const docFilePath = path.join(parentPath, "index.md");
-  if (!(await fse.exists(docFilePath))) {
+  if (!(await pathExists(docFilePath))) {
     throw new FixableError(
       `${getRelativePath(
         filePath,
@@ -289,7 +301,7 @@ async function checkCompression(filePath, options) {
             0,
           )}% smaller.`,
         );
-        fse.copyFileSync(compressed.destinationPath, filePath);
+        await fs.copyFile(compressed.destinationPath, filePath);
       } else {
         throw new FixableError(
           `${filePath} is ${formatSize(
@@ -302,7 +314,7 @@ async function checkCompression(filePath, options) {
       }
     }
   } finally {
-    fse.removeSync(tempdir);
+    await fs.rm(tempdir, { recursive: true, force: true });
   }
 }
 
