@@ -25,7 +25,7 @@ alpha(from var(--mycolor) / calc(alpha * 0.5))
 - `from <color>`
   - : The [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax keyword `from` followed by any valid {{cssxref("&lt;color&gt;")}} value, defining the **origin color**. The color components of the origin color are carried through to the result unchanged; only the alpha channel is affected.
 
-- `/ <alpha-value>`
+- `/ <alpha-value>` {{optional_inline}}
   - : An optional {{cssxref("&lt;alpha-value&gt;")}} specifying the alpha of the output color. This can be a `<number>` between `0` and `1`, a `<percentage>` between `0%` and `100%`, or a `calc()` expression. Within this value, the keyword **`alpha`** may be used to refer to the alpha channel of the origin color as a `<number>` (where `1.0` is equivalent to `100%`). If this argument is omitted, the alpha of the origin color is used unchanged.
 
 ### Return value
