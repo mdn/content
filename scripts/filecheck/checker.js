@@ -185,16 +185,10 @@ export async function checkFile(filePath, options = {}) {
     }
   }
 
-  // The image has to be mentioned in the adjacent index.html document
+  // The image has to be mentioned in the adjacent index.md document
   const parentPath = path.dirname(filePath);
-  const htmlFilePath = path.join(parentPath, "index.html");
-  const mdFilePath = path.join(parentPath, "index.md");
-  const docFilePath = (await fse.exists(htmlFilePath))
-    ? htmlFilePath
-    : (await fse.exists(mdFilePath))
-      ? mdFilePath
-      : null;
-  if (!docFilePath) {
+  const docFilePath = path.join(parentPath, "index.md");
+  if (!(await fse.exists(docFilePath))) {
     throw new FixableError(
       `${getRelativePath(
         filePath,
@@ -204,9 +198,7 @@ export async function checkFile(filePath, options = {}) {
   }
 
   // The image must be mentioned (as a string) in the content
-  const rawContent = docFilePath
-    ? await fs.readFile(docFilePath, "utf-8")
-    : null;
+  const rawContent = await fs.readFile(docFilePath, "utf-8");
   if (!rawContent.includes(path.basename(filePath))) {
     throw new FixableError(
       `${getRelativePath(
