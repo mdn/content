@@ -30,7 +30,7 @@ alpha(from var(--mycolor) / calc(alpha * 0.5))
 
 ### Return value
 
-A color value in the same color space as the origin color, with identical color components and the specified alpha channel value.
+A color value in the same color space as the origin color, with identical color components and a modified alpha channel value as specified.
 
 ## Description
 
