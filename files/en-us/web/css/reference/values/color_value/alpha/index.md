@@ -50,7 +50,6 @@ In this example, we specify two colors. The second color is defined by passing t
 
 ```html live-sample___replace-alpha live-sample___derive-alpha
 <div class="box1">Original</div>
-  
 <div class="box2">80% alpha</div>
 ```
 
