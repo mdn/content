@@ -23,17 +23,35 @@ An element that is `:volume-locked` cannot be muted, un-muted, or have its volum
 
 ## Examples
 
+### HTML
+
+The `muted` attribute is added to the `<audio>` element so that the sound is muted, this works the same for `<video>` elements.
+
+```html
+<audio controls muted src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+```
+
 ### CSS
 
+```css hidden
+audio {
+  margin: 5px;
+}
+```
+
+If the `<audio>` element is `muted` then a red outline is drawn around it, when it is not muted then it has a green outline. Try toggling the mute icon in the controls to see the state change.
+
 ```css
-:muted {
+audio:muted {
   outline: 5px solid red;
 }
 
-video:muted {
-  outline: 5px solid blue;
+audio:not(:muted) {
+  outline: 5px solid green;
 }
 ```
+
+{{EmbedLiveSample('examples', '', '60')}}
 
 ## Specifications
 

@@ -90,8 +90,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 - `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
+
 - `muted`
-  - : A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`.
+  - : A Boolean attribute that indicates the default audio mute setting contained in the audio. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be heard when the audio is played.
+
+    To disable audio muted, muted="false" will not work; the audio will muted if the attribute is there in the `<audio>` tag at all. To remove muted, the attribute needs to be removed altogether.
+
 - `preload`
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:
     - `none`: Indicates that the audio should not be preloaded.

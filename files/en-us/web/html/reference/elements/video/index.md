@@ -94,7 +94,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
 
 - `muted`
-  - : A Boolean attribute that indicates the default audio mute setting contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be played when the video is played.
+  - : A Boolean attribute that indicates the default audio mute setting contained in the video. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be heard when the video is played.
+
+    To disable video muted, muted="false" will not work; the video will muted if the attribute is there in the `<video>` tag at all. To remove muted, the attribute needs to be removed altogether.
 
 - `playsinline`
   - : A Boolean attribute indicating that the video is to be played "inline", that is, within the element's playback area. Note that the absence of this attribute _does not_ imply that the video will always be played in fullscreen.
