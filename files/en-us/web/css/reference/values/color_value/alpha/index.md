@@ -46,9 +46,15 @@ The return value is always in the same color space as the origin color. For exam
 
 ### Replacing the alpha of a color
 
-In this example, the alpha of the origin color is replaced with a fixed value of `80%`.
+In this example, we specify two colors. The second color is defined by passing the first color into the `alpha()` function, setting its alpha channel to a fixed value of `80%` in the process. The two colors are set as the {{cssxref("background-color")}} of two {{htmlelement("div")}} elements to demonstrate the difference.
 
-```css
+```html live-sample___replace-alpha live-sample___derive-alpha
+<div class="box1">Original</div>
+  
+<div class="box2">80% alpha</div>
+```
+
+```css live-sample___replace-alpha
 :root {
   --mycolor: oklch(60% 0.25 315 / 0.3);
 
@@ -56,16 +62,39 @@ In this example, the alpha of the origin color is replaced with a fixed value of
   --mycolor-80: alpha(from var(--mycolor) / 80%);
 }
 
-.box {
+.box1 {
+  background-color: var(--mycolor);
+}
+
+.box2 {
   background-color: var(--mycolor-80);
 }
 ```
 
+```css hidden live-sample___replace-alpha live-sample___derive-alpha
+body {
+  font-family: sans-serif;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+
+div {
+  width: 40%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+{{EmbedLiveSample("replace-alpha", "100%", 120)}}
+
 ### Deriving a semi-transparent variant
 
-In this example, the alpha of the output color is computed as half of the origin color's alpha, using the `alpha` component keyword inside a `calc()` expression.
+This example is very similar to the previous one, except that this time the alpha of the second color is computed as half of the first color's alpha, using the `alpha` component keyword inside a `calc()` expression.
 
-```css
+```css live-sample___derive-alpha
 :root {
   --mycolor: oklch(60% 0.25 315 / 0.8);
 
@@ -73,20 +102,26 @@ In this example, the alpha of the output color is computed as half of the origin
   --mycolor-half-opacity: alpha(from var(--mycolor) / calc(alpha * 0.5));
 }
 
-.box {
+.box1 {
+  background-color: var(--mycolor);
+}
+
+.box2 {
   background-color: var(--mycolor-half-opacity);
 }
 ```
 
+{{EmbedLiveSample("derive-alpha", "100%", 120)}}
+
 ### Fading a color on hover
 
-In this example, an element's background fades to 40% opacity on hover, while the color itself stays the same.
+In this example, an element's background fades to `40%` opacity on {{cssxref(":hover")}}, while the color itself stays the same.
 
-```html
+```html live-sample___fade-on-hover
 <button class="card">Hover over me</button>
 ```
 
-```css
+```css live-sample___fade-on-hover
 :root {
   --brand: oklch(55% 0.22 270);
 }
@@ -107,24 +142,29 @@ In this example, an element's background fades to 40% opacity on hover, while th
 }
 ```
 
-```css hidden
+```css hidden live-sample___fade-on-hover
 body {
   padding: 2rem;
 }
+```
 
+```css hidden live-sample___replace-alpha live-sample___derive-alpha live-sample___fade-on-hover
 @supports not (color: alpha(from red / 50%)) {
   body::before {
-    content: "Your browser doesn't support the alpha() function.";
+    content: "Your browser does not support the CSS alpha() function.";
     background-color: wheat;
-    display: block;
+    padding: 1rem 0;
     text-align: center;
     padding: 1rem 0;
-    margin-bottom: 1rem;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
   }
 }
 ```
 
-{{EmbedLiveSample("Fading a color on hover", "", 120)}}
+{{EmbedLiveSample("fade-on-hover", "100%", 120)}}
 
 ## Specifications
 
