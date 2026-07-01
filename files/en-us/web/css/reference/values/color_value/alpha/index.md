@@ -180,5 +180,4 @@ body {
 - {{cssxref("&lt;alpha-value&gt;")}} data type
 - [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
-- [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color), and other color functions
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and {{cssxref("var")}}
