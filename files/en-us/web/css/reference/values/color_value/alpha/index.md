@@ -155,6 +155,7 @@ body {
 ```css hidden live-sample___replace-alpha live-sample___derive-alpha live-sample___fade-on-hover
 @supports not (color: alpha(from red / 50%)) {
   body::before {
+    font-family: sans-serif;
     content: "Your browser does not support the CSS alpha() function.";
     background-color: wheat;
     padding: 1rem 0;
@@ -163,7 +164,7 @@ body {
 
     z-index: 1;
     position: fixed;
-    inset: 40% 0 auto;
+    inset: 30% 0 auto;
   }
 }
 ```
