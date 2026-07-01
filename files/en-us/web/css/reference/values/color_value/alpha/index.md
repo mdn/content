@@ -48,9 +48,9 @@ The return value is always in the same color space as the origin color. For exam
 
 In this example, we specify two colors. The second color is defined by passing the first color into the `alpha()` function, setting its alpha channel to a fixed value of `80%` in the process. The two colors are set as the {{cssxref("background-color")}} of two {{htmlelement("div")}} elements to demonstrate the difference.
 
-```html live-sample___replace-alpha live-sample___derive-alpha
+```html live-sample___replace-alpha
 <div class="box1">Original</div>
-<div class="box2">80% alpha</div>
+<div class="box2">Fixed 80% alpha</div>
 ```
 
 ```css live-sample___replace-alpha
@@ -80,7 +80,7 @@ body {
 
 div {
   width: 40%;
-  height: 100px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,6 +92,11 @@ div {
 ### Deriving a semi-transparent variant
 
 This example is very similar to the previous one, except that this time the alpha of the second color is computed as half of the first color's alpha, using the `alpha` component keyword inside a `calc()` expression.
+
+```html live-sample___replace-alpha live-sample___derive-alpha
+<div class="box1">Original</div>
+<div class="box2">Derived 50% alpha</div>
+```
 
 ```css live-sample___derive-alpha
 :root {
