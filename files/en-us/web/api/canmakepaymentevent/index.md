@@ -2,19 +2,14 @@
 title: CanMakePaymentEvent
 slug: Web/API/CanMakePaymentEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Landing
-  - CanMakePaymentEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanMakePaymentEvent
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The **`CanMakePaymentEvent`** interface of the {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} is the event object for the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event, fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
+The **`CanMakePaymentEvent`** interface of the {{domxref("Web-based Payment Handler API", "", "", "nocode")}} is the event object for the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event, fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 
 {{InheritanceDiagram}}
 
@@ -31,12 +26,18 @@ The **`CanMakePaymentEvent`** interface of the {{domxref("Payment Handler API", 
 ## Examples
 
 ```js
-self.addEventListener("canmakepayment", e => {
-  e.respondWith(new Promise((resolve, reject) => {
-    someAppSpecificLogic()
-    .then(result => { resolve(result); })
-    .catch(error => { reject(error); });
-  }));
+self.addEventListener("canmakepayment", (e) => {
+  e.respondWith(
+    new Promise((resolve, reject) => {
+      someAppSpecificLogic()
+        .then((result) => {
+          resolve(result);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    }),
+  );
 });
 ```
 
@@ -50,9 +51,9 @@ self.addEventListener("canmakepayment", e => {
 
 ## See also
 
-- {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

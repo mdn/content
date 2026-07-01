@@ -1,19 +1,10 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - menus
-  - onHidden
+page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onHidden
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when the browser stops displaying a menu: for example because the user clicked outside it or selected an item.
 
@@ -44,12 +35,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. The function will be passed no parameters.
-
-## Browser compatibility
-
-{{Compat}}
+- `listener`
+  - : The function called when this event occurs. The function is passed no parameters.
 
 ## Examples
 
@@ -64,3 +51,7 @@ browser.menus.onHidden.addListener(hidden);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

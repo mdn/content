@@ -1,17 +1,8 @@
 ---
-title: HTMLMediaElement.duration
+title: "HTMLMediaElement: duration property"
+short-title: duration
 slug: Web/API/HTMLMediaElement/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Time
-  - Web
-  - duration
-  - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
 
@@ -26,12 +17,12 @@ media in seconds.
 A double-precision floating-point value indicating the duration of the media in
 seconds. If no media data is available, the value `NaN` is returned. If the
 element's media doesn't have a known duration—such as for live media streams—the value
-of `duration` is `+Infinity`.
+of `duration` is `Infinity`.
 
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.duration); // NaN
 ```
 

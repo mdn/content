@@ -2,25 +2,16 @@
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
 page-type: web-api-overview
-tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Fonts
-  - NeedsContent
-  - Reference
 browser-compat: api.FontFace
 ---
 
-{{DefaultAPISidebar("CSS Font Loading API")}}
+{{DefaultAPISidebar("CSS Font Loading API")}}{{AvailableInWorkers}}
 
-The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
-
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
+The **CSS Font Loading API** provides events and interfaces for dynamically loading font resources.
 
 ## Concepts and usage
 
-CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, and applying them to elements with the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
+CSS stylesheets allow authors to use custom fonts; specifying fonts to download using the {{cssxref("@font-face")}} rule, and applying them to elements with the {{cssxref("font-family")}} property.
 The point at which a font is downloaded is controlled by the user agent.
 Most agents only fetch and load fonts when they are first needed, which can result in a perceptible delay.
 
@@ -28,7 +19,7 @@ The CSS Font Loading API overcomes this problem by letting authors control and t
 Adding a font face to the document or worker font face set allows the user agent to fetch and load the associated font resource automatically if needed.
 A font face can be loaded either before or after it is added to a font face set, but it _must_ be added to the set before it can be used for drawing.
 
-Font faces are defined in {{domxref('FontFace')}} objects, which specify a binary or URL font source and other properties of font in much the same way as the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule.
+Font faces are defined in {{domxref('FontFace')}} objects, which specify a binary or URL font source and other properties of font in much the same way as the CSS {{cssxref("@font-face")}} rule.
 `FontFace` objects are added to the document or worker {{domxref('FontFaceSet')}} using {{domxref("Document.fonts")}} and {{domxref("WorkerGlobalScope.fonts")}}, respectively.
 Authors can trigger download of fonts using either `FontFace` or `FontFaceSet`, and monitor loading completion.
 `FontFaceSet` can additionally be used to determine when all fonts required by a page have loaded and the document layout is complete.
@@ -41,21 +32,22 @@ The status is set to `loaded` when the font face data has been successfully fetc
 ### Defining a font face
 
 Font faces are created using the [`FontFace` constructor](/en-US/docs/Web/API/FontFace/FontFace), which takes as parameters: the font family, the font source, and optional descriptors.
-The format and grammar of these arguments is the same as the equivalent [`@font-face`](/en-US/docs/Web/CSS/@font-face) definition.
+The format and grammar of these arguments is the same as the equivalent {{cssxref("@font-face")}} definition.
 
-The font source can either be binary data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a font resource at an URL.
+The font source can either be binary data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a font resource at a URL.
 A typical font face definition using a URL source might be as shown below.
 Note that the `url()` function is required for URL font sources.
 
 ```js
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
 });
 ```
 
-> **Note:** As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
+> [!NOTE]
+> As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
 > For example, setting the `style` to "italic" indicates that the file contains italic fonts; it is up to the author to specify a file for which this is true.
 
 Font faces with a _binary source_ are automatically loaded if the font definition is valid and the font data can be loaded — {{domxref('FontFace.status')}} is set to `loaded` on success and `failed` otherwise.
@@ -69,7 +61,7 @@ The code below shows a font face being added to the document.
 
 ```js
 // Define a FontFace
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", 'url("my-font.woff")', {
   style: "italic",
   weight: "400",
   stretch: "condensed",
@@ -88,7 +80,7 @@ The code below shows how to define a font face, add it to the document fonts, an
 
 ```js
 // Define a FontFace
-const font = new FontFace("myfont", "url(myfont.woff)");
+const font = new FontFace("my-font", 'url("my-font.woff")');
 
 // Add to the document.fonts (FontFaceSet)
 document.fonts.add(font);
@@ -148,7 +140,7 @@ We then log the font status, which should be `unloaded`.
 ```js
 const bitterFontFace = new FontFace(
   "FontFamily Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+  'url("https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
@@ -168,7 +160,7 @@ bitterFontFace.load().then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 
@@ -207,7 +199,7 @@ const ctx = canvas.getContext("2d");
 
 const oxygenFontFace = new FontFace(
   "FontFamily Oxygen",
-  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)"
+  'url("https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2")',
 );
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
@@ -228,7 +220,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 
@@ -257,7 +249,7 @@ Unlike the other mechanisms this returns when all fonts defined in the document 
 When the promise resolves we iterate the values in the document's font faces.
 
 ```js
-document.fonts.ready.then(function () {
+document.fonts.ready.then(() => {
   log.textContent += `\nFontFaces in document: ${document.fonts.size}.\n`;
 
   for (const fontFace of document.fonts.values()) {

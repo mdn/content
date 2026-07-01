@@ -1,26 +1,16 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() method"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
 
 {{APIRef("DOM")}}
 
 The **`releasePointerCapture()`** method of the
-{{domxref("Element")}} interface releases (stops) _pointer capture_ that was
+{{domxref("Element")}} interface releases (stops) [_pointer capture_](/en-US/docs/Web/API/Pointer_events#pointer_capture) that was
 previously set for a specific ({{domxref("PointerEvent")}}) _pointer_.
-
-See the {{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} method
-for a description of _pointer capture_ and how to set it for a particular
-element.
 
 ## Syntax
 
@@ -40,9 +30,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-| Exception          | Explanation                                          |
-| ------------------ | ---------------------------------------------------- |
-| `InvalidPointerId` | pointerId does not match any of the active pointers. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `pointerId` does not match any active pointer.
 
 ## Examples
 
@@ -65,13 +54,15 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fbe;
+  background: #ffbbee;
 }
 ```
 
 ### JavaScript
 
 ```js
+const slider = document.getElementById("slider");
+
 function beginSliding(e) {
   slider.onpointermove = slide;
   slider.setPointerCapture(e.pointerId);
@@ -85,8 +76,6 @@ function stopSliding(e) {
 function slide(e) {
   slider.style.transform = `translate(${e.clientX - 70}px)`;
 }
-
-const slider = document.getElementById('slider');
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;
@@ -106,5 +95,6 @@ slider.onpointerup = stopSliding;
 
 ## See also
 
+- {{ domxref("Element.hasPointerCapture","Element.hasPointerCapture()") }}
 - {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)

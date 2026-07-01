@@ -1,38 +1,23 @@
 ---
-title: RTCInboundRtpStreamStats.framesDecoded
+title: "RTCInboundRtpStreamStats: framesDecoded property"
+short-title: framesDecoded
 slug: Web/API/RTCInboundRtpStreamStats/framesDecoded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Decode
-  - Frames
-  - Media
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - decoding
-  - framesDecoded
-  - stream
-browser-compat: api.RTCInboundRtpStreamStats.framesDecoded
+browser-compat: api.RTCStatsReport.type_inbound-rtp.framesDecoded
 ---
 
 {{APIRef("WebRTC")}}
 
-The **`framesDecoded`** property of
-the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of
-frames which have been decoded successfully for this media source.
+The **`framesDecoded`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of video frames which have been decoded successfully for this media source.
+
+This represents the number of frames that would have been displayed assuming no frames were skipped.
+
+> [!NOTE]
+> The property is undefined for audio streams.
 
 ## Value
 
-An integer value indicating the total number of video frames which have been decoded
-for this stream so far. This represents the number of frames that would have been
-displayed assuming no frames were skipped.
+A positive integer.
 
 ## Specifications
 
@@ -41,3 +26,7 @@ displayed assuming no frames were skipped.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCInboundRtpStreamStats.totalDecodeTime", "totalDecodeTime")}}

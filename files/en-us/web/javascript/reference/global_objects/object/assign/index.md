@@ -1,18 +1,11 @@
 ---
 title: Object.assign()
+short-title: assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.assign
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.assign()`** static method
 copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
@@ -20,25 +13,47 @@ copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
 _source objects_ to a _target object_. It returns the modified target
 object.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Syntax
 
 ```js-nolint
-Object.assign(target, ...sources)
+Object.assign(target)
+Object.assign(target, source1)
+Object.assign(target, source1, source2)
+Object.assign(target, source1, source2, /* …, */ sourceN)
 ```
 
 ### Parameters
 
 - `target`
-  - : The target object — what to apply the sources' properties to, which is returned
-    after it is modified.
-- `sources`
+  - : The target object — what to apply the sources' properties to, which is returned after it is modified. If a primitive value is provided as the target, it will be converted to an object.
+- `source1`, …, `sourceN`
   - : The source object(s) — objects containing the properties you want to apply.
 
 ### Return value
 
 The target object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - The `target` parameter is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}.
+    - Assignment of a property on the target object fails; for example, because the property is non-writable on the target object, or because its setter throws an error.
 
 ## Description
 
@@ -64,8 +79,8 @@ In case of an error, for example if a property is non-writable, a
 {{jsxref("TypeError")}} is raised, and the `target` object is
 changed if any properties are added before the error is raised.
 
-> **Note:** `Object.assign()` does not throw on
-> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
+> [!NOTE]
+> `Object.assign()` does not throw on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
@@ -77,9 +92,9 @@ const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 ```
 
-### Warning for Deep Clone
+### Warning for deep clone
 
-For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
+For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like {{DOMxRef("Window.structuredClone", "structuredClone()")}}, because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -103,7 +118,7 @@ console.log(obj2); // { a: 2, b: { c: 3 } }
 
 // Deep Clone
 const obj3 = { a: 0, b: { c: 0 } };
-const obj4 = JSON.parse(JSON.stringify(obj3));
+const obj4 = structuredClone(obj3);
 obj3.a = 4;
 obj3.b.c = 4;
 console.log(obj4); // { a: 0, b: { c: 0 } }
@@ -118,7 +133,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
 ```
 
 ### Merging objects with same properties
@@ -139,7 +154,7 @@ the parameters order.
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -149,15 +164,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ### Properties on the prototype chain and non-enumerable properties cannot be copied
 
 ```js
-const obj = Object.create({ foo: 1 }, { // foo is on obj's prototype chain.
-  bar: {
-    value: 2  // bar is a non-enumerable property.
+const obj = Object.create(
+  // foo is on obj's prototype chain.
+  { foo: 1 },
+  {
+    bar: {
+      value: 2, // bar is a non-enumerable property.
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz is an own enumerable property.
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz is an own enumerable property.
-  }
-});
+);
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -166,34 +185,47 @@ console.log(copy); // { baz: 3 }
 ### Primitives will be wrapped to objects
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
 // Note, only string wrappers can have own enumerable properties.
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+// Primitives as the target are also wrapped to objects
+const number = Object.assign(3, { a: 1 });
+console.log(number); // Number {3, a: 1}
+console.log(typeof number); // object
+console.log(number.a); // 1
+
+// null and undefined as targets throw TypeError
+try {
+  Object.assign(null, { a: 1 });
+} catch (e) {
+  console.log(e.message); // "Cannot convert undefined or null to object"
+}
 ```
 
 ### Exceptions will interrupt the ongoing copying task
 
 ```js
-const target = Object.defineProperty({}, 'foo', {
+const target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo is a read-only property
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // The Exception is thrown when assigning target.foo
 
-console.log(target.bar);  // 2, the first source was copied successfully.
+console.log(target.bar); // 2, the first source was copied successfully.
 console.log(target.foo2); // 3, the first property of the second source was copied successfully.
-console.log(target.foo);  // 1, exception is thrown here.
+console.log(target.foo); // 1, exception is thrown here.
 console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
-console.log(target.baz);  // undefined, the third source will not be copied either.
+console.log(target.baz); // undefined, the third source will not be copied either.
 ```
 
 ### Copying accessors
@@ -203,7 +235,7 @@ const obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 let copy = Object.assign({}, obj);
@@ -247,6 +279,7 @@ console.log(copy);
 ## See also
 
 - [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.assign`](https://www.npmjs.com/package/object.assign)
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

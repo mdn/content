@@ -1,14 +1,8 @@
 ---
-title: PannerNode()
+title: "PannerNode: PannerNode() constructor"
+short-title: PannerNode()
 slug: Web/API/PannerNode/PannerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - PannerNode
-  - Reference
-  - Web Audio API
 browser-compat: api.PannerNode.PannerNode
 ---
 
@@ -28,9 +22,7 @@ new PannerNode(context, options)
 - `context`
   - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
 - `options` {{optional_inline}}
-
   - : A [`PannerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions) dictionary object defining the properties you want the `PannerNode` to have:
-
     - `panningModel`
       - : The {{domxref("PannerNode.panningModel")}} you want the {{domxref("PannerNode")}} to have (the default is `equalpower`.)
     - `distanceModel`
@@ -87,9 +79,9 @@ new PannerNode(context, options)
 const ctx = new AudioContext();
 
 const options = {
-  positionX : 1,
-  maxDistance: 5000
-}
+  positionX: 1,
+  maxDistance: 5000,
+};
 
 const myPanner = new PannerNode(ctx, options);
 ```

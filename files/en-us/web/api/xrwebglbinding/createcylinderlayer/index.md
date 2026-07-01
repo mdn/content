@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createCylinderLayer()
+title: "XRWebGLBinding: createCylinderLayer() method"
+short-title: createCylinderLayer()
 slug: Web/API/XRWebGLBinding/createCylinderLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createCylinderLayer
 ---
 
@@ -32,7 +27,7 @@ createCylinderLayer(init)
     - `centralAngle` {{optional_inline}}
       - : A number indicating the angle in radians of the visible section of the cylinder. Default value: `0.78539` (π / 4).
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -54,7 +49,7 @@ createCylinderLayer(init)
         - `All` of the formats the extension supports.
           The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`
@@ -114,14 +109,14 @@ function onXRSessionStarted(xrSession) {
     space: xrReferenceSpace,
     viewPixelWidth: 1200,
     viewPixelHeight: 600,
-    centralAngle : 60 * Math.PI / 180,
-    aspectRatio : 2,
-    radius : 2,
-    transform : new XRRigidTransform(/* … */),
+    centralAngle: (60 * Math.PI) / 180,
+    aspectRatio: 2,
+    radius: 2,
+    transform: new XRRigidTransform(/* … */),
   });
 
   xrSession.updateRenderState({
-    layers: [cylinderLayer]
+    layers: [cylinderLayer],
   });
 }
 ```

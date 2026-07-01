@@ -1,14 +1,8 @@
 ---
 title: "SVGAnimationElement: endEvent event"
+short-title: endEvent
 slug: Web/API/SVGAnimationElement/endEvent_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SMIL
-  - SVG animations
-  - SVGAnimationElement
-  - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
 
@@ -16,7 +10,8 @@ browser-compat: api.SVGAnimationElement.endEvent_event
 
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
-> **Note:** This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
+> [!NOTE]
+> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e., scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
 This event is not cancelable and does not bubble.
 
@@ -24,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('endEvent', (event) => { });
+```js-nolint
+addEventListener("endEvent", (event) => { })
 
-onend = (event) => { };
+onend = (event) => { }
 ```
 
 ## Event type
@@ -65,44 +60,44 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 ```css
 ul {
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   overflow-y: scroll;
   padding: 10px 30px;
 }
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
-let btn = document.querySelector('button');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
+let btn = document.querySelector("button");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('endEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'endEvent fired';
+animateElem.addEventListener("endEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "endEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
   if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   btn.disabled = true;
-  animateElem.setAttribute('repeatCount', '1');
-})
+  animateElem.setAttribute("repeatCount", "1");
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '300')}}
@@ -113,8 +108,8 @@ Note that you can also create an event listener for the `end` event using the `o
 
 ```js
 animateElem.onend = () => {
-  console.log('endEvent fired');
-}
+  console.log("endEvent fired");
+};
 ```
 
 ## Specifications
@@ -127,6 +122,6 @@ animateElem.onend = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
 - {{domxref("SVGAnimationElement.repeatEvent_event", "repeatEvent")}} event

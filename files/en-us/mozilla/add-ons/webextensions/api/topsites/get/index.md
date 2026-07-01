@@ -1,20 +1,10 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - topSites
+page-type: webextension-api-function
 browser-compat: webextensions.api.topSites.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets an array containing information about pages that the user has visited often and recently.
 
@@ -41,9 +31,7 @@ let gettingTopSites = browser.topSites.get(
 ### Parameters
 
 - `options`
-
   - : `object`. Options to modify the list of pages returned. This may include any of the following properties:
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Include pages that the user has removed from the "New Tab" page. Defaults to `false`.
     - `includeFavicon` {{optional_inline}}
@@ -64,10 +52,6 @@ let gettingTopSites = browser.topSites.get(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -110,7 +94,12 @@ browser.topSites
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,17 +2,6 @@
 title: WebRTC API
 slug: Web/API/WebRTC_API
 page-type: web-api-overview
-tags:
-  - API
-  - Audio
-  - Conferencing
-  - Landing
-  - Media
-  - Networking
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
 spec-urls:
   - https://w3c.github.io/webrtc-pc/
   - https://w3c.github.io/mediacapture-main/
@@ -58,7 +47,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCSessionDescription")}}
   - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description {{DOMxRef("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 - {{DOMxRef("RTCStatsReport")}}
-  - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}. Details about using WebRTC statistics can be found in [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API).
+  - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}.
 - {{DOMxRef("RTCIceCandidate")}}
   - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) server for establishing an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCIceTransport")}}
@@ -73,13 +62,6 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
   - : The interface used to represent a {{domxref("RTCPeerConnection.track_event", "track")}} event, which indicates that an {{DOMxRef("RTCRtpReceiver")}} object was added to the {{DOMxRef("RTCPeerConnection")}} object, indicating that a new incoming {{DOMxRef("MediaStreamTrack")}} was created and added to the `RTCPeerConnection`.
 - {{DOMxRef("RTCSctpTransport")}}
   - : Provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport and also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)'s data channels are sent and received.
-
-#### Dictionaries
-
-- {{DOMxRef("RTCIceServer")}}
-  - : Defines how to connect to a single {{Glossary("ICE")}} server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
-- {{DOMxRef("RTCRtpContributingSource")}}
-  - : Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.
 
 #### Events
 
@@ -104,9 +86,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : An {{domxref("RTCPeerConnectionIceErrorEvent")}} indicating that an error has occurred while gathering ICE candidates.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property—changes.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property—changes.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : A message has been received on the data channel. The event is of type {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -116,15 +98,17 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : The currently-selected pair of ICE candidates has changed for the `RTCIceTransport` on which the event is fired.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
+  - : The `track` event, of type {{domxref("RTCTrackEvent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingState", "signalingState")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
   - : The state of the `RTCDtlsTransport` has changed.
 - {{domxref("RTCIceTransport.statechange_event", "statechange")}}
   - : The state of the `RTCIceTransport` has changed.
 - {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
   - : The state of the `RTCSctpTransport` has changed.
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : An encoded video or audio frame is ready to process using a transform stream in a worker.
 
 #### Types
 
@@ -146,7 +130,7 @@ These APIs are used to manage user identity and security, in order to authentica
 
 ### Telephony
 
-These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PTSNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
+These interfaces and events are related to interactivity with Public-Switched Telephone Networks (PSTNs). They're primarily used to send tone dialing sounds—or packets representing those tones—across the network to the remote peer.
 
 #### Interfaces
 
@@ -160,8 +144,37 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
   - : Either a new {{Glossary("DTMF")}} tone has begun to play over the connection, or the last tone in the `RTCDTMFSender`'s {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} has been sent and the buffer is now empty. The event's type is {{domxref("RTCDTMFToneChangeEvent")}}.
 
+### Encoded Transforms
+
+These interfaces and events are used to process incoming and outgoing encoded video and audio frames using a transform stream running in a worker.
+
+#### Interfaces
+
+- {{DOMxRef("RTCRtpScriptTransform")}}
+  - : An interface for inserting transform stream(s) running in a worker into the RTC pipeline.
+- {{DOMxRef("RTCRtpScriptTransformer")}}
+  - : The worker-side counterpart of an `RTCRtpScriptTransform` that passes options from the main thread, along with a readable stream and writeable stream that can be used to pipe encoded frames through a {{DOMxRef("TransformStream")}}.
+- {{DOMxRef("RTCEncodedVideoFrame")}}
+  - : Represents an encoded video frame to be transformed in the RTC pipeline.
+- {{DOMxRef("RTCEncodedAudioFrame")}}
+  - : Represents an encoded audio frame to be transformed in the RTC pipeline.
+
+#### Properties
+
+- {{DOMxRef("RTCRtpReceiver.transform")}}
+  - : A property used to insert a transform stream into the receiver pipeline for incoming encoded video and audio frames.
+- {{DOMxRef("RTCRtpSender.transform")}}
+  - : A property used to insert a transform stream into the sender pipeline for outgoing encoded video and audio frames.
+
+#### Events
+
+- {{DOMxRef("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
+  - : An RTC transform is ready to run in the worker, or an encoded video or audio frame is ready to process.
+
 ## Guides
 
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+  - : The Real-time Transport Protocol (RTP), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 - [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
   - : This article introduces the protocols on top of which the WebRTC API is built.
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
@@ -172,16 +185,18 @@ These interfaces and events are related to interactivity with Public-Switched Te
   - : **Perfect negotiation** is a design pattern which is recommended for your signaling process to follow, which provides transparency in negotiation while allowing both sides to be either the offerer or the answerer, without significant coding needed to differentiate the two.
 - [Signaling and two-way video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : A tutorial and example which turns a WebSocket-based chat system created for a previous example and adds support for opening video calls among participants. The chat server's WebSocket connection is used for WebRTC signaling.
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
   - : A guide to the codecs which WebRTC requires browsers to support as well as the optional ones supported by various popular browsers. Included is a guide to help you choose the best codecs for your needs.
 - [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
   - : This guide covers how you can use a peer connection and an associated {{DOMxRef("RTCDataChannel")}} to exchange arbitrary data between two peers.
 - [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
   - : WebRTC's support for interacting with gateways that link to old-school telephone systems includes support for sending DTMF tones using the {{DOMxRef("RTCDTMFSender")}} interface. This guide shows how to do so.
+- [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms)
+  - : This guide shows how a web application can modify incoming and outgoing WebRTC encoded video and audio frames, using a {{DOMxRef("TransformStream")}} running into a worker.
 
 ## Tutorials
 
-- [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js)
+- [Improving compatibility using WebRTC adapter.js](#interoperability)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
 - [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
   - : The {{DOMxRef("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
@@ -223,4 +238,3 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
 - [Web media technologies](/en-US/docs/Web/Media)
-- [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API)

@@ -1,19 +1,10 @@
 ---
 title: devtools.inspectedWindow.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Method
-  - WebExtensions
-  - devtools.inspectedWindow
-  - reload
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Reloads the window that the devtools are attached to.
 
@@ -28,19 +19,13 @@ browser.devtools.inspectedWindow.reload(
 ### Parameters
 
 - `reloadOptions` {{optional_inline}}
-
   - : `object`. Options for the function, as follows:
-
     - `ignoreCache` {{optional_inline}}
       - : `boolean`. If true, this makes the reload ignore the browser cache (as if the user had pressed Shift+Ctrl+R).
     - `userAgent` {{optional_inline}}
-      - : `string`. Set a custom user agent for the page. The string supplied here will be sent in the browser's [User-Agent](/en-US/docs/Web/HTTP/Headers/User-Agent) header, and will be returned by calls to [`navigator.userAgent`](/en-US/docs/Web/API/Navigator/userAgent) made by scripts running in the page.
+      - : `string`. Set a custom user agent for the page. The string supplied here will be sent in the browser's [User-Agent](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent) header, and will be returned by calls to [`navigator.userAgent`](/en-US/docs/Web/API/Navigator/userAgent) made by scripts running in the page.
     - `injectedScript` {{optional_inline}}
       - : `string`. Inject the given JavaScript expression into all frames in the page, before any other scripts.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -51,15 +36,20 @@ const reloadButton = document.querySelector("#reload-button");
 
 reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
-    injectedScript:"alert(navigator.userAgent);",
-    userAgent: "Not a real UA"
+    injectedScript: "alert(navigator.userAgent);",
+    userAgent: "Not a real UA",
   });
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

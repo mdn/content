@@ -1,18 +1,10 @@
 ---
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Types
-  - WebExtensions
-  - get
+page-type: webextension-api-function
+browser-compat: webextensions.api.types.BrowserSetting.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
 
@@ -62,10 +54,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
       </tbody>
     </table>
 
-## Browser compatibility
-
-See {{WebExtAPIRef("types.BrowserSetting")}}.
-
 ## Example
 
 Log the value and level of control for the `networkPredictionEnabled` property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.
@@ -81,9 +69,12 @@ getting.then((got) => {
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

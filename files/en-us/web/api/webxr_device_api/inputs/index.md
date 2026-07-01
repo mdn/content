@@ -2,25 +2,9 @@
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
-tags:
-  - API
-  - AR
-  - Controls
-  - Graphics
-  - Guide
-  - Input
-  - Input Sources
-  - Inputs
-  - Sources
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - controllers
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 
@@ -88,8 +72,7 @@ The {{domxref("XRSpace")}} used to describe the position and orientation of the 
 You can easily obtain the target ray corresponding to the `targetRaySpace` from within the drawing handler for a given frame using {{domxref("XRFrame")}}'s {{domxref("XRFrame.getPose", "getPose()")}} method. The returned {{domxref("XRPose")}}'s {{domxref("XRPose.transform", "transform")}} is the transform corresponding to the target ray. Thus, for an input controller `primaryInput`:
 
 ```js
-let targetRayPose = frame.getPose(primaryInput.targetRaySpace,
-                       viewerRefSpace);
+let targetRayPose = frame.getPose(primaryInput.targetRaySpace, viewerRefSpace);
 let targetRayOrigin = targetRayPose.transform.position;
 let targetRayVector = targetRayPose.transform.orientation;
 ```
@@ -164,13 +147,13 @@ xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
   inputSourceList.forEach((source) => {
-    switch(source) {
+    switch (source.handedness) {
       case "left":
         leftHandSource = source;
         break;
       case "right":
-       rightHandSource = source;
-       break;
+        rightHandSource = source;
+        break;
     }
   });
 });
@@ -189,7 +172,7 @@ The `inputsourceschange` event is also fired once when the session's creation ca
 
 Each input source has a {{domxref("XRInputSource.profiles", "profiles")}} property, which contains a live list of the WebXR input profiles which apply to the input source, in order of specificity from most-specific to least.
 
-In order to do anything meaningful involving scanning of profiles beyond basic identification of features, you may need to import the JSON profile database from the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry).
+In order to do anything meaningful involving scanning of profiles beyond basic identification of features, you may need to import the JSON profile database from the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/registry).
 
 See [Input profiles](#input_profiles) for more specific details on working with input profiles.
 
@@ -197,7 +180,8 @@ See [Input profiles](#input_profiles) for more specific details on working with 
 
 In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.
 
-> **Note:** This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
+> [!NOTE]
+> This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
 
 There are a few ways you can decide upon a primary controller. We'll look at three.
 
@@ -243,30 +227,30 @@ For example, the `generic-trigger-squeeze-touchpad` profile name can be used to 
 
 ```json
 {
-    "profileId": "generic-trigger-squeeze-touchpad",
-    "fallbackProfileIds": [],
-    "layouts" : {
-        "left-right-none" : {
-            "selectComponentId": "xr-standard-trigger",
-            "components": {
-                "xr-standard-trigger": { "type": "trigger" },
-                "xr-standard-squeeze": { "type": "squeeze" },
-                "xr-standard-touchpad": { "type": "touchpad" }
-            },
-            "gamepad": {
-                "mapping": "xr-standard",
-                "buttons": [
-                    "xr-standard-trigger",
-                    "xr-standard-squeeze",
-                    "xr-standard-touchpad"
-                ],
-                "axes":[
-                    { "componentId": "xr-standard-touchpad", "axis": "x-axis"},
-                    { "componentId": "xr-standard-touchpad", "axis": "y-axis"}
-                ]
-            }
-        }
+  "profileId": "generic-trigger-squeeze-touchpad",
+  "fallbackProfileIds": [],
+  "layouts": {
+    "left-right-none": {
+      "selectComponentId": "xr-standard-trigger",
+      "components": {
+        "xr-standard-trigger": { "type": "trigger" },
+        "xr-standard-squeeze": { "type": "squeeze" },
+        "xr-standard-touchpad": { "type": "touchpad" }
+      },
+      "gamepad": {
+        "mapping": "xr-standard",
+        "buttons": [
+          "xr-standard-trigger",
+          "xr-standard-squeeze",
+          "xr-standard-touchpad"
+        ],
+        "axes": [
+          { "componentId": "xr-standard-touchpad", "axis": "x-axis" },
+          { "componentId": "xr-standard-touchpad", "axis": "y-axis" }
+        ]
+      }
     }
+  }
 }
 ```
 
@@ -295,7 +279,8 @@ These types of input actions are described in more detail below.
 
 Each input source should define a **primary action**. A primary action (which will sometimes be shortened to "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.
 
-> **Note:** If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
+> [!NOTE]
+> If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
@@ -330,7 +315,7 @@ A **primary squeeze action** is a platform-specific action which sends the {{dom
 
 The sequence of events is identical to those sent by the primary action, save for the name of each event:
 
-1. An {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
+1. A {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
 2. If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
 3. Then, a {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
 
@@ -501,7 +486,8 @@ Since the origin of the grip space is located at the center of the hand's grip, 
 
 An {{domxref("XRInputSource")}} has a {{domxref("XRInputSource.gamepad", "gamepad")}} property whose value, if not `null`, is a {{domxref("Gamepad")}} object which provides access to gamepad-style buttons, axis controllers (such as joysticks or thumbpads), and so forth. This may include the same buttons that trigger the standard {{domxref("XRInputSource")}} actions, but may include any number of additional buttons and controls.
 
-> **Note:** While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
+> [!NOTE]
+> While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
 
 If the value of `gamepad` is `null`, the input source doesn't define any controls using the `Gamepad` record, either because it doesn't support it or because it doesn't have any added controls on it.
 
@@ -536,7 +522,7 @@ The corresponding code for keyboard input might look something like this:
 
 ```js
 document.addEventListener("keydown", (event) => {
-  switch(event.key) {
+  switch (event.key) {
     case "a":
     case "A":
       avatar.posDelta.x -= ACCEL_X;
@@ -585,13 +571,16 @@ The `applyExternalInputs()` method takes the `avatar` object replaces its `refer
 ```js
 function applyExternalInputs(avatar) {
   if (!avatar.posDelta.x && !avatar.posDelta.y && !avatar.posDelta.z) {
-    return;  // Player hasn't moved with keyboard
+    return; // Player hasn't moved with keyboard
   }
 
-  let newTransform = new XRRigidTransform(
-        { x: avatar.posDelta.x, y: avatar.posDelta.y, z: avatar.posDelta.z }
-  );
-  avatar.referenceSpace = avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
+  let newTransform = new XRRigidTransform({
+    x: avatar.posDelta.x,
+    y: avatar.posDelta.y,
+    z: avatar.posDelta.z,
+  });
+  avatar.referenceSpace =
+    avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
 }
 ```
 

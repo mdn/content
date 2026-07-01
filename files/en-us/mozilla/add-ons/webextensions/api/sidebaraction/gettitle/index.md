@@ -1,19 +1,10 @@
 ---
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTitle
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets the sidebar's title.
 
@@ -32,9 +23,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Get the title for the sidebar specific to the given tab.
     - `windowId` {{optional_inline}}
@@ -49,10 +38,6 @@ let gettingTitle = browser.sidebarAction.getTitle(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the sidebar's title.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code switches the title between "this" and "that" each time the user clicks the browser action
@@ -60,9 +45,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.sidebarAction.setTitle({title: "that"});
+    browser.sidebarAction.setTitle({ title: "that" });
   } else {
-    browser.sidebarAction.setTitle({title: "this"});
+    browser.sidebarAction.setTitle({ title: "this" });
   }
 }
 
@@ -74,7 +59,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -2,21 +2,6 @@
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
 page-type: guide
-tags:
-  - API
-  - AR
-  - Getting Started
-  - Guide
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - basics
-  - memory
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

@@ -1,20 +1,14 @@
 ---
-title: AudioDestinationNode.maxChannelCount
+title: "AudioDestinationNode: maxChannelCount property"
+short-title: maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioDestinationNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxChannelCount
 browser-compat: api.AudioDestinationNode.maxChannelCount
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The `maxchannelCount` property of the {{ domxref("AudioDestinationNode") }} interface is an `unsigned long` defining the maximum amount of channels that the physical device can handle.
+The `maxChannelCount` property of the {{ domxref("AudioDestinationNode") }} interface is an `unsigned long` defining the maximum amount of channels that the physical device can handle.
 
 The {{domxref("AudioNode.channelCount")}} property can be set between 0 and this value (both included). If `maxChannelCount` is `0`, like in {{domxref("OfflineAudioContext")}}, the channel count cannot be changed.
 
@@ -24,7 +18,7 @@ An `unsigned long`.
 
 ## Examples
 
-The following would set up a simple audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
+The following would set up an audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
 
 ```js
 const audioCtx = new AudioContext();

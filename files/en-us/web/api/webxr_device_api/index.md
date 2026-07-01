@@ -2,20 +2,20 @@
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
 page-type: web-api-overview
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Navigator.xr
+spec-urls:
+  - https://immersive-web.github.io/webxr/
+  - https://immersive-web.github.io/anchors/
+  - https://immersive-web.github.io/webxr-ar-module/
+  - https://immersive-web.github.io/depth-sensing/
+  - https://immersive-web.github.io/dom-overlays/
+  - https://immersive-web.github.io/webxr-gamepads-module/
+  - https://immersive-web.github.io/webxr-hand-input/
+  - https://immersive-web.github.io/hit-test/
+  - https://immersive-web.github.io/layers/
+  - https://immersive-web.github.io/lighting-estimation/
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -48,7 +48,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{domxref("navigator.xr")}}
 - {{domxref("XRSystem")}}
 - {{domxref("XRPermissionStatus")}}
-- `Permissions-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking)
+- `Permissions-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking)
 
 ### Session
 
@@ -72,6 +72,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 
 - {{DOMxRef("XRView")}}
 - {{DOMxRef("XRViewport")}}
+- {{DOMxRef("XRVisibilityMaskChangeEvent")}}
 
 ### Geometric primitives
 
@@ -175,75 +176,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## Specifications
 
-<table>
-  <thead>
-    <tr>
-      <th>Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr/"><strong>WebXR Device API</strong></a>
-      (<a href="https://github.com/immersive-web/webxr">Source</a>,
-       <a href="https://github.com/immersive-web/webxr/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/webxr/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/anchors/"><strong>WebXR Anchors Module</strong></a>
-      (<a href="https://github.com/immersive-web/anchors">Source</a>,
-       <a href="https://github.com/immersive-web/anchors/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/anchors/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-ar-module/"><strong>WebXR Augmented Reality Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-ar-module">Source</a>,
-       <a href="https://github.com/immersive-web/webxr-ar-module/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/webxr-ar-module/blob/master/ar-module-explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
-      (<a href="https://github.com/immersive-web/depth-sensing">Source</a>,
-       <a href="https://github.com/immersive-web/depth-sensing/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
-      (<a href="https://github.com/immersive-web/dom-overlays">Source</a>,
-       <a href="https://github.com/immersive-web/dom-overlays/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-gamepads-module/"><strong>WebXR Gamepads Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-gamepads-module">Source</a>,
-       <a href="https://github.com/immersive-web/webxr-gamepads-module/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/webxr-gamepads-module/blob/master/gamepads-module-explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/webxr-hand-input/"><strong>WebXR Hand Input Module</strong></a>
-      (<a href="https://github.com/immersive-web/webxr-hand-input">Source</a>,
-       <a href="https://github.com/immersive-web/webxr-hand-input/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
-      (<a href="https://github.com/immersive-web/hit-test">Source</a>,
-       <a href="https://github.com/immersive-web/hit-test/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/layers/"><strong>WebXR Layers API</strong></a>
-      (<a href="https://github.com/immersive-web/layers">Source</a>,
-       <a href="https://github.com/immersive-web/layers/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/layers/blob/master/explainer.md">Explainer</a>)</td>
-    </tr>
-    <tr>
-      <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
-      (<a href="https://github.com/immersive-web/lighting-estimation">Source</a>,
-       <a href="https://github.com/immersive-web/lighting-estimation/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">Explainer</a>)</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -251,8 +184,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## See also
 
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)

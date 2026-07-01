@@ -1,19 +1,13 @@
 ---
-title: RTCDTMFToneChangeEvent()
+title: "RTCDTMFToneChangeEvent: RTCDTMFToneChangeEvent() constructor"
+short-title: RTCDTMFToneChangeEvent()
 slug: Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - DTMF
-  - Media
-  - RTCDTMFToneChangeEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent
 ---
 
 {{APIRef("WebRTC")}}
+
 The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 {{domxref("RTCDTMFToneChangeEvent")}} object.
 
@@ -30,9 +24,7 @@ new RTCDTMFToneChangeEvent(type, options)
   - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `tonechange`.
 - `options` {{optional_inline}}
-
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
-
     - `tone` {{optional_inline}}
       - : A string containing a single DTMF tone character which has
         just begun to play, or an empty string (`""`) to indicate that the previous

@@ -1,14 +1,8 @@
 ---
-title: NodeList.entries()
+title: "NodeList: entries() method"
+short-title: entries()
 slug: Web/API/NodeList/entries
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iteration
-  - Method
-  - Node
-  - NodeList
-  - Polyfill
 browser-compat: api.NodeList.entries
 ---
 
@@ -23,6 +17,10 @@ contained in this object. The values are {{domxref("Node")}} objects.
 ```js-nolint
 entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -54,6 +52,10 @@ Array [ 0, <p> ]
 Array [ 1, #text "hey" ]
 Array [ 2, <span> ]
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

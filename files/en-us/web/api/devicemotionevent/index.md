@@ -2,23 +2,15 @@
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Device Orientation
-  - DeviceMotionEvent
-  - Interface
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat: api.DeviceMotionEvent
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEvent`** interface provides web developers with information about the speed of changes for the device's position and orientation.
+The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides web developers with information about the speed of changes for the device's position and orientation.
 
-> **Warning:** Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
+> [!WARNING]
+> Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
 
 {{InheritanceDiagram}}
 
@@ -26,6 +18,11 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 
 - {{domxref("DeviceMotionEvent.DeviceMotionEvent", "DeviceMotionEvent()")}}
   - : Creates a new `DeviceMotionEvent`.
+
+## Static methods
+
+- {{DOMxRef("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} {{experimental_inline}}
+  - : Requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
 
 ## Instance properties
 
@@ -41,7 +38,7 @@ The **`DeviceMotionEvent`** interface provides web developers with information a
 ## Example
 
 ```js
-window.addEventListener('devicemotion', (event) => {
+window.addEventListener("devicemotion", (event) => {
   console.log(`${event.acceleration.x} m/s2`);
 });
 ```
@@ -56,10 +53,11 @@ window.addEventListener('devicemotion', (event) => {
 
 ## See also
 
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
 - {{DOMxRef("DeviceOrientationEvent")}}
-- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{DOMxRef("Window.deviceorientation_event", "deviceorientation")}} event
+- {{DOMxRef("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} event
+- {{DOMxRef("Window/devicemotion_event", "devicemotion")}} event
 - {{DOMxRef("Accelerometer")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

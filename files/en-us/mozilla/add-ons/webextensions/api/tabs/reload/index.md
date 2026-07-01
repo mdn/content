@@ -1,20 +1,10 @@
 ---
 title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - reload
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.reload
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Reload a tab, optionally bypassing the local web cache.
 
@@ -34,9 +24,7 @@ let reloading = browser.tabs.reload(
 - `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to reload. Defaults to the selected tab of the current window.
 - `reloadProperties` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `bypassCache` {{optional_inline}}
       - : `boolean`. Bypass the local web cache. Default is `false`.
 
@@ -55,7 +43,7 @@ browser.tabs.reload();
 Reload the active tab of the current window, bypassing the cache:
 
 ```js
-browser.tabs.reload({bypassCache: true});
+browser.tabs.reload({ bypassCache: true });
 ```
 
 Reload the tab whose ID is 2, bypassing the cache and calling a callback when done:
@@ -69,7 +57,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let reloading = browser.tabs.reload(2, {bypassCache: true});
+let reloading = browser.tabs.reload(2, { bypassCache: true });
 reloading.then(onReloaded, onError);
 ```
 
@@ -79,7 +67,8 @@ reloading.then(onReloaded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-reload) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-reload) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

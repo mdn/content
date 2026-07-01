@@ -1,88 +1,98 @@
 ---
 title: "HTML: HyperText Markup Language"
+short-title: HTML
 slug: Web/HTML
 page-type: landing-page
-tags:
-  - HTML
-  - Landing
-  - Web
-  - "l10n:priority"
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 **HTML** (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation ([CSS](/en-US/docs/Web/CSS)) or functionality/behavior ([JavaScript](/en-US/docs/Web/JavaScript)).
 
 "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to pages created by other people, you become an active participant in the World Wide Web.
 
-HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} and many others.
+HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} and many others.
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`". The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by `<` and `>`. The name of an element inside a tag is case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
 
 The articles below can help you learn more about HTML.
 
-## Key resources
-
-- HTML Introduction
-  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
-- HTML Tutorials
-  - : For articles about how to use HTML, as well as tutorials and complete examples, check out our [HTML Learning Area](/en-US/docs/Learn/HTML).
-- HTML Reference
-  - : In our extensive [HTML reference](/en-US/docs/Web/HTML/Reference) section, you'll find the details about every element and attribute in HTML.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Beginner's tutorials
 
-Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that teach HTML from the ground up — no previous knowledge required.
+Our [learn web development core modules](/en-US/docs/Learn_web_development/Core) contain modern, up-to-date tutorials covering HTML fundamentals.
 
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
-  - : This module sets the stage, getting you used to important concepts and syntax such as looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a web page.
-- [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding)
-  - : This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.
-- [HTML tables](/en-US/docs/Learn/HTML/Tables)
-  - : Representing tabular data on a webpage in an understandable, accessible way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.
-- [HTML forms](/en-US/docs/Learn/Forms)
-  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
-- [Use HTML to solve common problems](/en-US/docs/Learn/HTML/Howto)
-  - : Provides links to sections of content explaining how to use HTML to solve very common problems when creating a web page: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
+- [Your first website: Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : This article provides a brief tour of what HTML is and how to use it, aimed at people who are completely new to web development.
+- [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
+  - : This module covers the basics of the HTML language, before looking at key areas such as document structure, links, lists, images, forms, and more.
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
+  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g., registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 
-## Advanced topics
+## Guides
 
-- [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
-  - : The {{htmlattrxref("crossorigin", "img")}} attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
-- [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
-  - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)
-  - : The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
+The [HTML guides](/en-US/docs/Web/HTML/Guides) help you build with HTML on the web. They cover topics such as forms, CORS, content preloading, and responsive images.
+
+- [HTML cheatsheet for syntax and common tasks](/en-US/docs/Web/HTML/Guides/Cheatsheet)
+  - : Quick reference for common HTML syntax and tasks.
+- [Using HTML comments `<!-- … -->`](/en-US/docs/Web/HTML/Guides/Comments)
+  - : HTML comments are used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
+- [Using HTML form validation and the Constraint Validation API](/en-US/docs/Web/HTML/Guides/Constraint_validation)
+  - : HTML5 introduced constraint validation to ease form validation on the client side. Basic constraints can be checked without JavaScript by setting attributes on form elements.
+- [Content categories](/en-US/docs/Web/HTML/Guides/Content_categories)
+  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
+- [Using date and time formats in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
+  - : Certain HTML elements use date and/or time values. This guide describes the formats of the strings that specify these values.
+- [Using microdata in HTML](/en-US/docs/Web/HTML/Guides/Microdata)
+  - : Microdata is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata to provide a richer browsing experience.
+- [Using microformats in HTML](/en-US/docs/Web/HTML/Guides/Microformats)
+  - : Microformats are standards used to embed semantics and structured data in HTML for use by social web applications, search engines, aggregators, and other tools.
+- [Understanding quirks and standards modes](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
+  - : Historical information on quirks mode and standards mode.
+- [Using responsive images in HTML](/en-US/docs/Web/HTML/Guides/Responsive_images)
+  - : Learn about responsive images that work well on devices with widely differing screen sizes, resolutions, and other features, improving performance across different devices.
+- [Media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
+  - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
+
+## How to
+
+- [Define terms with HTML](/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML)
+  - : HTML provides several ways to convey description semantics, whether inline or as structured glossaries. This article shows how to properly mark up keywords when defining them.
+- [Use data attributes](/en-US/docs/Web/HTML/How_to/Use_data_attributes)
+  - : HTML5 is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. `data-*` attributes allow us to store extra information on standard, semantic HTML elements.
+- [Use cross-origin images in a canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/Guides/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
+- [Add a hitmap on top of an image](/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
+  - : Image maps allow hyperlinks to be associated with different parts of an image. This article shows how to create and implement them.
+- [Author fast-loading HTML pages](/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
+  - : These tips are based on common knowledge and experimentation. An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection.
+- [Add JavaScript to your web page](/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
+  - : This article explains how to add JavaScript code to an HTML file.
 
 ## Reference
 
-- [HTML reference](/en-US/docs/Web/HTML/Reference)
-  - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with **links**.
-- [HTML element reference](/en-US/docs/Web/HTML/Element)
-  - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
-  - : Elements in HTML have **attributes**. These are additional values that configure the elements or adjust their behavior in various ways.
-- [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
-  - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements) and [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
-  - : HTML elements are usually "inline" or "block-level" elements. An inline element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block".
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-  - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
-- [HTML content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
-  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
-- [Quirks mode and standards mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-  - : Historical information on quirks mode and standards mode.
+HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with **links**. Browse the complete [HTML reference](/en-US/docs/Web/HTML/Reference) documentation.
+
+- [HTML elements](/en-US/docs/Web/HTML/Reference/Elements)
+  - : Reference for all HTML {{glossary("Element", "elements")}}.
+- [HTML attributes](/en-US/docs/Web/HTML/Reference/Attributes)
+  - : Reference for all HTML attributes. Attributes are additional values that configure elements or adjust their behavior in various ways.
+- [Global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
+  - : Reference for global attributes that may be specified on all HTML elements, _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
+
+### Attributes by element
+
+- [Input types](/en-US/docs/Web/HTML/Reference/Elements/input)
+  - : Used to create interactive controls for web-based forms.
+- [Script types](/en-US/docs/Web/HTML/Reference/Elements/script/type)
+  - : Indicates the type of script represented by the element.
+- [meta name](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
+  - : Provides metadata in name-value pairs for the whole page.
+
+### Attribute values
+
+- [rel keywords](/en-US/docs/Web/HTML/Reference/Attributes/rel)
+  - : Defines the relationship between a linked resource and the current document.
 
 ## Related topics
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
-  - : This article covers most of the ways you use CSS to add color to HTML content, listing what parts of HTML documents can be colored and what CSS properties to use when doing so. Includes examples, links to palette-building tools, and more.
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)
+  - : This article covers most of the ways you use CSS to add color to HTML content, listing what parts of HTML documents can be colored and what CSS properties to use when doing so.

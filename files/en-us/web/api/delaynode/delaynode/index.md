@@ -1,15 +1,8 @@
 ---
-title: DelayNode()
+title: "DelayNode: DelayNode() constructor"
+short-title: DelayNode()
 slug: Web/API/DelayNode/DelayNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - DelayNode
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.DelayNode.DelayNode
 ---
 
@@ -33,9 +26,7 @@ new DelayNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
-
   - : An object specifying the delay node options. Can contain the following members:
-
     - `delayTime`
       - : The initial delay time for the node, in seconds. The
         default is `0`.

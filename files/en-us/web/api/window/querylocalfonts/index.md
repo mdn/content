@@ -1,21 +1,18 @@
 ---
-title: window.queryLocalFonts()
+title: "Window: queryLocalFonts() method"
+short-title: queryLocalFonts()
 slug: Web/API/Window/queryLocalFonts
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - queryLocalFonts
+status:
+  - experimental
 browser-compat: api.Window.queryLocalFonts
 ---
 
-{{APIRef("Local Font Access API")}}{{SeeCompatTable()}}
+{{APIRef("Local Font Access API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 
-To use this method, the user must grant permission to access `'local-fonts'` (permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API)). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 ## Syntax
 
@@ -27,8 +24,8 @@ queryLocalFonts(options)
 
 - `options` {{optional_inline}}
   - : Contains optional configuration parameters. Currently only one property is defined:
-    - `postscriptNames`
-      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results.
+    - `postscriptNames` {{optional_inline}}
+      - : An array of font PostScript names. If this is specified, only fonts with PostScript names matching those in the array will be included in the results; if not, all fonts will be included in the results.
 
 ### Return value
 
@@ -39,11 +36,11 @@ A {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} o
 - `NotAllowedError` {{domxref("DOMException")}}
   - : The user chose to deny permission to use this feature when presented with the browser's permission prompt after the method was first invoked.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), or it was not called via a user interaction such as a button press.
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), or it was not called via a user interaction such as a button press, or current {{glossary("origin")}} is an opaque origin.
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+For a working live demo, see our [Local Font Access API demo](https://mdn.github.io/dom-examples/local-font-access/).
 
 ### Font enumeration
 
@@ -72,8 +69,8 @@ To limit the returned font data to only a specific list of font faces, use the `
 ```js
 async function returnSpecificFonts() {
   const availableFonts = await window.queryLocalFonts({
-    postscriptNames: ['Verdana', 'Verdana-Bold', 'Verdana-Italic'],
-  })
+    postscriptNames: ["Verdana", "Verdana-Bold", "Verdana-Italic"],
+  });
 
   return availableFonts;
 }
@@ -87,7 +84,7 @@ The {{domxref("FontData.blob", "blob()")}} method provides access to low-level [
 async function computeOutlineFormat() {
   try {
     const availableFonts = await window.queryLocalFonts({
-      postscriptNames: ['ComicSansMS'],
+      postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
       // `blob()` returns a Blob containing valid and complete
@@ -95,21 +92,21 @@ async function computeOutlineFormat() {
       const sfnt = await fontData.blob();
       // Slice out only the bytes we need: the first 4 bytes are the SFNT
       // version info.
-      // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // Spec: https://learn.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
-      let outlineFormat = 'UNKNOWN';
+      let outlineFormat = "UNKNOWN";
       switch (sfntVersion) {
-        case '\x00\x01\x00\x00':
-        case 'true':
-        case 'typ1':
-          outlineFormat = 'truetype';
+        case "\x00\x01\x00\x00":
+        case "true":
+        case "typ1":
+          outlineFormat = "truetype";
           break;
-        case 'OTTO':
-          outlineFormat = 'cff';
+        case "OTTO":
+          outlineFormat = "cff";
           break;
       }
-      console.log('Outline format:', outlineFormat);
+      console.log("Outline format:", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -128,5 +125,5 @@ async function computeOutlineFormat() {
 ## See also
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

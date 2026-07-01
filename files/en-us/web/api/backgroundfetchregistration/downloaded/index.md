@@ -1,18 +1,14 @@
 ---
-title: BackgroundFetchRegistration.downloaded
+title: "BackgroundFetchRegistration: downloaded property"
+short-title: downloaded
 slug: Web/API/BackgroundFetchRegistration/downloaded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - downloaded
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.downloaded
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes that has been downloaded, initially `0`.
 
@@ -20,7 +16,7 @@ If the value of this property changes, the [progress](/en-US/docs/Web/API/Backgr
 
 ## Value
 
-A {{jsxref("number")}}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

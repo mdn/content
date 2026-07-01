@@ -1,28 +1,17 @@
 ---
-title: 'XRSystem: requestSession()'
+title: "XRSystem: requestSession() method"
+short-title: requestSession()
 slug: Web/API/XRSystem/requestSession
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - requestSession
+status:
+  - experimental
 browser-compat: api.XRSystem.requestSession
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
-**`requestSession()`** method returns a {{jsxref("promise")}}
+**`requestSession()`** method returns a {{jsxref("Promise")}}
 which resolves to an {{domxref("XRSession")}} object through which you can manage the
 requested type of WebXR session.
 
@@ -39,9 +28,7 @@ requestSession(mode, options)
 ### Parameters
 
 - `mode`
-
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
-
     - {{Experimental_Inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
       but the rendered content will be blended with the real-world environment.
       The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
@@ -56,7 +43,6 @@ requestSession(mode, options)
       available on any {{Glossary("user agent")}} offering WebXR API support.
 
 - `options` {{Optional_Inline}}
-
   - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
     - `requiredFeatures` {{Optional_Inline}}: An array of values which the returned {{domxref("XRSession")}}
       _must_ support. See [Session features](#session_features) below.
@@ -91,7 +77,7 @@ following:
 
 The following session features and reference spaces can be requested, either as `optionalFeatures` or `requiredFeatures`.
 
-- `anchor`
+- `anchors`
   - : Enable use of {{domxref("XRAnchor")}} objects.
 - `bounded-floor`
   - : Similar to the `local` type, except the user is not expected to move outside a predetermined boundary, given by the {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} in the returned object.
@@ -110,7 +96,7 @@ The following session features and reference spaces can be requested, either as 
 - `local`
   - : Enable a tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case.
 - `local-floor`
-  - : Similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).
+  - : Similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid [fingerprinting](/en-US/docs/Glossary/Fingerprinting) (likely to the nearest centimeter).
 - `secondary-views`
   - : Enable {{domxref("XRView")}} objects to be secondary views. This can be used for first-person observer views used for video capture, or "quad views" where there are two views per eye, with differing resolution and fields of view.
 - `unbounded`
@@ -120,10 +106,10 @@ The following session features and reference spaces can be requested, either as 
 
 ## Security
 
-Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Permissions-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
+Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Permissions-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
 | Session feature | User consent requirement            | Permissions policy requirement |
-| --------------- | ----------------------------------- | --------------------------     |
+| --------------- | ----------------------------------- | ------------------------------ |
 | `bounded-floor` | Always required                     | `xr-spatial-tracking`          |
 | `depth-sensing` | —                                   | `xr-spatial-tracking`          |
 | `hand-tracking` | Always required                     | —                              |
@@ -133,7 +119,7 @@ Several session features and the various reference spaces have minimum security 
 | `unbounded`     | Always required                     | `xr-spatial-tracking`          |
 | `viewer`        | Always required                     | —                              |
 
-See also [transient user activation](/en-US/docs/Web/Security/User_activation).
+See also [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Examples
 
@@ -144,16 +130,20 @@ The following example calls `requestSession()` requesting an
 session and initiates the animation loop.
 
 ```js
-navigator.xr.requestSession("immersive-vr")
-.then((xrSession) => {
-  xrSession.addEventListener('end', onXRSessionEnded);
-  // Do necessary session setup here.
-  // Begin the session's animation loop.
-  xrSession.requestAnimationFrame(onXRAnimationFrame);
-}).catch((error) => {
-  // "immersive-vr" sessions are not supported
-  console.error("'immersive-vr' isn't supported, or an error occurred activating VR!");
-});
+navigator.xr
+  .requestSession("immersive-vr")
+  .then((xrSession) => {
+    xrSession.addEventListener("end", onXRSessionEnded);
+    // Do necessary session setup here.
+    // Begin the session's animation loop.
+    xrSession.requestAnimationFrame(onXRAnimationFrame);
+  })
+  .catch((error) => {
+    // "immersive-vr" sessions are not supported
+    console.error(
+      "'immersive-vr' isn't supported, or an error occurred activating VR!",
+    );
+  });
 ```
 
 ### Verifying WebXR support and using a button to start VR mode
@@ -169,11 +159,10 @@ requires a user action. Finally, the `onButtonClicked()` method calls
 
 ```js
 if (navigator.xr) {
-  navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) => {
+  navigator.xr.isSessionSupported("immersive-vr").then((isSupported) => {
     if (isSupported) {
-      immersiveButton.addEventListener('click', onButtonClicked);
-      immersiveButton.textContent = 'Enter XR';
+      immersiveButton.addEventListener("click", onButtonClicked);
+      immersiveButton.textContent = "Enter XR";
       immersiveButton.disabled = false;
     } else {
       console.error("WebXR doesn't support immersive-vr mode!");
@@ -185,15 +174,14 @@ if (navigator.xr) {
 
 function onButtonClicked() {
   if (!xrSession) {
-    navigator.xr.requestSession('immersive-vr')
-    .then((session) => {
+    navigator.xr.requestSession("immersive-vr").then((session) => {
       xrSession = session;
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(xrSession);
     });
   } else {
     // Button is a toggle button.
-    xrSession.end().then(() => xrSession = null);
+    xrSession.end().then(() => (xrSession = null));
   }
 }
 ```
@@ -203,7 +191,9 @@ function onButtonClicked() {
 Require an unbounded experience in which the user is able to freely move around their physical environment:
 
 ```js
-navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['unbounded'] })
+navigator.xr.requestSession("immersive-vr", {
+  requiredFeatures: ["unbounded"],
+});
 ```
 
 ### Requesting a session with a DOM overlay
@@ -212,8 +202,8 @@ navigator.xr.requestSession('immersive-vr', { requiredFeatures: ['unbounded'] })
 navigator.xr.requestSession("immersive-ar", {
   optionalFeatures: ["dom-overlay"],
   domOverlay: {
-    root: document.getElementById("xr-overlay")
-  }
+    root: document.getElementById("xr-overlay"),
+  },
 });
 ```
 
@@ -226,8 +216,8 @@ navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["cpu-optimized", "gpu-optimized"],
-    formatPreference: ["luminance-alpha", "float32"]
-  }
+    dataFormatPreference: ["luminance-alpha", "float32"],
+  },
 });
 ```
 

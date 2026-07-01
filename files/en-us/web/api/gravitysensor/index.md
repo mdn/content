@@ -2,25 +2,14 @@
 title: GravitySensor
 slug: Web/API/GravitySensor
 page-type: web-api-interface
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - GravitySensor
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.GravitySensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`GravitySensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the gravity applied to the device along all three axes.
 
-To use this sensor, the user must grant permission to the `'accelerometer'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+To use this sensor, the user must grant permission to the `'accelerometer'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -46,7 +35,7 @@ _`GravitySensor` doesn't have own events. However, it inherits events from its p
 Gravity is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let gravitySensor = new GravitySensor({frequency: 60});
+let gravitySensor = new GravitySensor({ frequency: 60 });
 
 gravitySensor.addEventListener("reading", (e) => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);

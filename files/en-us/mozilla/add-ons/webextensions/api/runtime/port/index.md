@@ -1,26 +1,18 @@
 ---
 title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - port
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.Port
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A `Port` object represents one end of a connection between two specific contexts, which can be used to exchange messages.
 
 One side initiates the connection, using a `connect()` API. This returns a `Port` object. The other side listens for connection attempts using an `onConnect` listener. This is passed a corresponding `Port` object.
 
 Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
+
+A `Port` can also become disconnected in response to various events. See [Lifecycle](#lifecycle).
 
 You can use this pattern to communicate between:
 
@@ -78,7 +70,6 @@ Values of this type are objects. They contain the following properties:
 - `error`
   - : `object`. If the port was disconnected due to an error, this will be set to an object with a string property `message`, giving you more information about the error. See `onDisconnect`.
 - `onDisconnect`
-
   - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called `Port.disconnect()`. This event will only be fired once for each port. The listener function will be passed the `Port` object. If the port was disconnected due to an error, then the `Port` argument will contain an `error` property giving more information about the error:
 
     ```js
@@ -96,11 +87,21 @@ Values of this type are objects. They contain the following properties:
 - `postMessage`
   - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
 - `sender` {{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. Only present on ports passed to the {{WebExtAPIRef('runtime.onConnect')}}, {{WebExtAPIRef('runtime.onConnectExternal')}}, or {{WebExtAPIRef("runtime.onUserScriptConnect")}} listeners.
 
-## Browser compatibility
+## Lifecycle
 
-{{Compat}}
+The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/develop/concepts/messaging#port-lifetime).
+
+There is, however, one important difference between Firefox and Chrome, stemming from the fact that the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome, a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads. In other words, the disconnection condition,
+
+- All frames that received the port (via `runtime.onConnect`) have unloaded.
+
+which holds in Chrome, is replaced by
+
+- _Any_ frame that received the port (via `runtime.onConnect`) has unloaded.
+
+in Firefox (see [bug 1465514](https://bugzil.la/1465514)).
 
 ## Examples
 
@@ -115,8 +116,8 @@ This content script:
 ```js
 // content-script.js
 
-let myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+let myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
 myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
@@ -124,7 +125,7 @@ myPort.onMessage.addListener((m) => {
 });
 
 document.body.addEventListener("click", () => {
-  myPort.postMessage({greeting: "they clicked the page!"});
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -132,7 +133,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script.
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`.
   - sends the content script a message using the port.
   - starts listening to messages received on the port, and logs them.
@@ -146,9 +146,9 @@ let portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
+  portFromCS.postMessage({ greeting: "hi there content script!" });
   portFromCS.onMessage.addListener((m) => {
-    console.log("In background script, received message from content script")
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
@@ -156,7 +156,7 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
@@ -167,19 +167,19 @@ If you have multiple content scripts communicating at the same time, you might w
 ```js
 // background-script.js
 
-let ports = []
+let ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   // …
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
   ports.forEach((p) => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+    p.postMessage({ greeting: "they clicked the button!" });
+  });
 });
 ```
 
@@ -211,7 +211,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

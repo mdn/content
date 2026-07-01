@@ -1,24 +1,35 @@
 ---
 title: Math.sinh()
+short-title: sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 page-type: javascript-static-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Math.sinh
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.sinh()`** static method returns the hyperbolic sine of a number. That is,
 
-<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh}(x)} = \sinh(x) = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh}(x)} = \sinh(x) = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-sinh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+
+```js interactive-example
+console.log(Math.sinh(0));
+// Expected output: 0
+
+console.log(Math.sinh(1));
+// Expected output: 1.1752011936438014
+
+console.log(Math.sinh(-1));
+// Expected output: -1.1752011936438014
+
+console.log(Math.sinh(2));
+// Expected output: 3.626860407847019
+```
 
 ## Syntax
 

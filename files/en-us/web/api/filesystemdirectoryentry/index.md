@@ -2,16 +2,6 @@
 title: FileSystemDirectoryEntry
 slug: Web/API/FileSystemDirectoryEntry
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Interface
-  - NeedsMarkupWork
-  - Offline
-  - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
 
@@ -31,24 +21,28 @@ In the following code snippet, we create a directory called "Documents."
 
 ```js
 // Taking care of the browser-specific prefixes.
-window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+window.requestFileSystem =
+  window.requestFileSystem || window.webkitRequestFileSystem;
 window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 
 // …
 
-function onFs(fs){
-  fs.root.getDirectory('Documents', {create:true}, (directoryEntry) => {
-    //directoryEntry.isFile === false
-    //directoryEntry.isDirectory === true
-    //directoryEntry.name === 'Documents'
-    //directoryEntry.fullPath === '/Documents'
-
-    }, onError);
-
-  }
+function onFs(fs) {
+  fs.root.getDirectory(
+    "Documents",
+    { create: true },
+    (directoryEntry) => {
+      // directoryEntry.isFile === false
+      // directoryEntry.isDirectory === true
+      // directoryEntry.name === 'Documents'
+      // directoryEntry.fullPath === '/Documents'
+    },
+    onError,
+  );
+}
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
+window.requestFileSystem(TEMPORARY, 1024 * 1024 /* 1MB */, onFs, onError);
 ```
 
 ## Instance properties
@@ -62,9 +56,11 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 - {{domxref("FileSystemDirectoryEntry.createReader", "createReader()")}}
   - : Creates a {{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in this directory.
 - {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}
-  - : Returns a {{domxref("FileSystemDirectoryEntry")}} object representing a directory located at a given path, relative to the directory on which the method is called.
+  - : Returns a `FileSystemDirectoryEntry` object representing a directory located at a given path, relative to the directory on which the method is called.
 - {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}}
   - : Returns a {{domxref("FileSystemFileEntry")}} object representing a file located within the directory's hierarchy, given a path relative to the directory on which the method is called.
+- {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}} {{Deprecated_inline}} {{Non-standard_inline}}
+  - : Removes the directory as well as all of its content, hierarchically iterating over its entire subtree of descendant files and directories.
 
 ## Specifications
 
@@ -77,7 +73,6 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}

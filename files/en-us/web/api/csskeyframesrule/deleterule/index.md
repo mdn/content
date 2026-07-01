@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframesRule.deleteRule()
+title: "CSSKeyframesRule: deleteRule() method"
+short-title: deleteRule()
 slug: Web/API/CSSKeyframesRule/deleteRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
 browser-compat: api.CSSKeyframesRule.deleteRule
 ---
 
@@ -25,9 +19,7 @@ deleteRule(select)
 ### Parameters
 
 - `select`
-
-  - : A string which contains the keyframe selector of the rule to be deleted, which must be:
-
+  - : A string which contains the [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors) of the rule to be deleted, which must be:
     - a comma-separated list of percentage values between 0% and 100%;
     - or, the keywords `from` or `to`
 
@@ -45,7 +37,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 After deleting a rule with `deleteRule()` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing one rule.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }
@@ -59,7 +51,7 @@ After deleting a rule with `deleteRule()` the `cssRules` property returns a {{do
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.deleteRule('to');
+keyframes.deleteRule("to");
 console.log(keyframes.cssRules); // a CSSRuleList object with one rule
 ```
 

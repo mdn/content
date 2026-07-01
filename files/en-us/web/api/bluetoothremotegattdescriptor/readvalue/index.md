@@ -1,26 +1,19 @@
 ---
-title: BluetoothRemoteGATTDescriptor.readValue()
+title: "BluetoothRemoteGATTDescriptor: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - readValue()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTDescriptor.readValue()`**
 method returns a {{jsxref("Promise")}} that resolves to
-an {{jsxref("ArrayBuffer")}} holding a duplicate of the `value` property if
+a {{jsxref("DataView")}} holding a duplicate of the `value` property if
 it is available and supported. Otherwise it throws an error.
 
 ## Syntax
@@ -35,7 +28,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{jsxref("ArrayBuffer")}}.
+A {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}}.
 
 ## Specifications
 

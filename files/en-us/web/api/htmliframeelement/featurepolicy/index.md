@@ -1,24 +1,20 @@
 ---
-title: HTMLIFrameElement.featurePolicy
+title: "HTMLIFrameElement: featurePolicy property"
+short-title: featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - Feature Policy
-  - Permissions-Policy
-  - HTMLIFrameElement
-  - Policy
-  - Property
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`featurePolicy`** read-only
 property of the {{DOMxRef("HTMLIFrameElement")}} interface returns the
 {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting
-the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific frame.
+the [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to a specific frame.
 
 ## Value
 

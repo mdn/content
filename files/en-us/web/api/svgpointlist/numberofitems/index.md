@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.numberOfItems
+title: "SVGPointList: numberOfItems property"
+short-title: numberOfItems
 slug: Web/API/SVGPointList/numberOfItems
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - numberOfItems
-  - SVGPointList
 browser-compat: api.SVGPointList.numberOfItems
 ---
 

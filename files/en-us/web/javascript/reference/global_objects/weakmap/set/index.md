@@ -1,22 +1,30 @@
 ---
 title: WeakMap.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
 browser-compat: javascript.builtins.WeakMap.set
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`set()`** method of {{jsxref("WeakMap")}} instances adds a new entry with a specified key and value to this `WeakMap`, or updates an existing entry if the key already exists.
 
-The **`set()`** method adds a new element with a specified key
-and value to a `WeakMap` object.
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+```js interactive-example
+const weakmap = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap.set(object1, "foo");
+weakmap.set(object2, "bar");
+
+console.log(weakmap.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap.get(object2));
+// Expected output: "bar"
+```
 
 ## Syntax
 
@@ -27,19 +35,22 @@ set(key, value)
 ### Parameters
 
 - `key`
-  - : Required. Must be `object`. The key of the element to add to the
-    `WeakMap` object.
+  - : The key of the entry to add to or modify within the `WeakMap` object. Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 - `value`
-  - : Required. Any value. The value of the element to add to the `WeakMap`
-    object.
+  - : The value of the entry to add to or modify within the `WeakMap` object. Can be any value.
 
 ### Return value
 
 The `WeakMap` object.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+
 ## Examples
 
-### Using the set() method
+### Using set()
 
 ```js
 const wm = new WeakMap();
@@ -50,6 +61,11 @@ wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
 wm.set(obj, "baz");
+
+// Using a non-registered symbol as key
+const sym = Symbol("foo");
+wm.set(sym, "baz");
+wm.set(Symbol.iterator, "qux");
 ```
 
 ## Specifications
@@ -63,5 +79,6 @@ wm.set(obj, "baz");
 ## See also
 
 - {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.delete()")}}
 - {{jsxref("WeakMap.prototype.get()")}}
 - {{jsxref("WeakMap.prototype.has()")}}

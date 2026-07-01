@@ -1,13 +1,8 @@
 ---
-title: Element.hasAttribute()
+title: "Element: hasAttribute() method"
+short-title: hasAttribute()
 slug: Web/API/Element/hasAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.hasAttribute
 ---
 
@@ -37,13 +32,9 @@ A boolean.
 ```js
 const foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // do something
+  // do something
 }
 ```
-
-## Notes
-
-{{DOMAttributeMethods}}
 
 ## Specifications
 
@@ -52,3 +43,11 @@ if (foo.hasAttribute("bar")) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttributes()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

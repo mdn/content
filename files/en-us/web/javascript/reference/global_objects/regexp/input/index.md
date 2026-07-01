@@ -1,20 +1,18 @@
 ---
 title: RegExp.input ($_)
+short-title: input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 page-type: javascript-static-accessor-property
-tags:
-  - JavaScript
-  - Deprecated
-  - Property
-  - Reference
-  - RegExp
-  - Regular Expressions
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.input
+sidebar: jsref
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+> [!NOTE]
+> All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
 The **`RegExp.input`** static accessor property returns the string against which a regular expression is matched. `RegExp.$_` is an alias for this property.
 
@@ -26,7 +24,7 @@ The value of `input` updates whenever a `RegExp` (but not a `RegExp` subclass) i
 
 ## Examples
 
-### Using input and $_
+### Using input and $\_
 
 ```js
 const re = /hi/g;
@@ -48,8 +46,8 @@ RegExp.$_; // "hi world!"
 
 ## See also
 
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1, …, RegExp.$9")}}
+- [`RegExp.lastMatch` (`$&`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.lastParen` (`$+`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.rightContext` (`$'`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

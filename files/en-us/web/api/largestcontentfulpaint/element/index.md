@@ -1,18 +1,12 @@
 ---
-title: LargestContentfulPaint.element
+title: "LargestContentfulPaint: element property"
+short-title: element
 slug: Web/API/LargestContentfulPaint/element
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - element
-  - LargestContentfulPaint
-  - Experimental
 browser-compat: api.LargestContentfulPaint.element
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
 The **`element`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns an object representing the {{domxref("Element")}} that is the largest contentful paint.
 

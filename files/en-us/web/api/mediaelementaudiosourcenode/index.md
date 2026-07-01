@@ -2,14 +2,6 @@
 title: MediaElementAudioSourceNode
 slug: Web/API/MediaElementAudioSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Interface
-  - MediaElementAudioSourceNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode
 ---
 
@@ -34,7 +26,7 @@ A `MediaElementAudioSourceNode` has no inputs and exactly one output, and is cre
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaElementAudioSourceNode")}} doesn't have any input)
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and <code>MediaElementAudioSourceNode</code> doesn't have any input)
       </td>
     </tr>
   </tbody>
@@ -58,7 +50,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createMediaElementSource()`](/en-US/docs/Web/API/AudioContext/createMediaElementSource#example) for example code.
+See [`AudioContext.createMediaElementSource()`](/en-US/docs/Web/API/AudioContext/createMediaElementSource#examples) for example code.
 
 ## Specifications
 

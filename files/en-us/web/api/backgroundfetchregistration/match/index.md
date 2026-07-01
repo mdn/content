@@ -1,18 +1,14 @@
 ---
-title: BackgroundFetchRegistration.match()
+title: "BackgroundFetchRegistration: match() method"
+short-title: match()
 slug: Web/API/BackgroundFetchRegistration/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - match
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
@@ -29,23 +25,20 @@ match(request, options)
   - : The {{domxref("Request")}} for which you are attempting to find records.
     This can be a {{domxref("Request")}} object or a URL.
 - `options` {{optional_inline}}
-
   - : An object that sets options for the `match` operation. The available
     options are:
-
-    - `ignoreSearch`
+    - `ignoreSearch` {{optional_inline}}
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
-    - `ignoreMethod`
+    - `ignoreMethod` {{optional_inline}}
       - : A boolean value. When `true`,
         prevents matching operations from validating the {{domxref("Request")}} `http` method.
         If `false` (the default) only `GET` and `HEAD` are allowed.
-    - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
+    - `ignoreVary` {{optional_inline}}
+      - : A boolean value. When `true` indicates that the {{HTTPHeader("Vary")}} header should be ignored.
         It defaults to `false`.
 
 ### Return value
@@ -53,7 +46,8 @@ match(request, options)
 A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
 the request or {{jsxref("undefined")}} if no match is found.
 
-> **Note:** `BackgroundFetchRegistration.match()` is basically identical to
+> [!NOTE]
+> `BackgroundFetchRegistration.match()` is basically identical to
 > {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
 > all matching records, it resolves with the first matching record only.
 

@@ -1,22 +1,19 @@
 ---
-title: HIDDevice.open()
+title: "HIDDevice: open() method"
+short-title: open()
 slug: Web/API/HIDDevice/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.open
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating system opens the HID device.
 
-> **Note:** HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.requestDevice()")}} must be opened with this method before it is available to transfer data.
+> [!NOTE]
+> HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.requestDevice()")}} must be opened with this method before it is available to transfer data.
 
 ## Syntax
 

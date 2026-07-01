@@ -1,20 +1,12 @@
 ---
-title: CSSNumericValue.max()
+title: "CSSNumericValue: max() method"
+short-title: max()
 slug: Web/API/CSSNumericValue/max
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - max()
 browser-compat: api.CSSNumericValue.max
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`max()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the highest value from among the values

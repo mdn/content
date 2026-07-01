@@ -2,12 +2,6 @@
 title: SVGGradientElement
 slug: Web/API/SVGGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGradientElement
 ---
 
@@ -16,42 +10,6 @@ browser-compat: api.SVGGradientElement
 The **`SVGGradient`** interface is a base interface used by {{domxref("SVGLinearGradientElement")}} and {{domxref("SVGRadialGradientElement")}}.
 
 {{InheritanceDiagram}}
-
-## Constants
-
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>SVG_SPREADMETHOD_UNKNOWN</code></td>
-      <td>0</td>
-      <td>
-        The type is not one of predefined types. It is invalid to attempt to
-        define a new value of this type or to attempt to switch an existing
-        value to this type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SVG_SPREADMETHOD_PAD</code></td>
-      <td>1</td>
-      <td>Corresponds to value <em>pad</em>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_SPREADMETHOD_REFLECT</code></td>
-      <td>2</td>
-      <td>Corresponds to value <em>reflect</em>.</td>
-    </tr>
-    <tr>
-      <td><code>SVG_SPREADMETHOD_REPEAT</code></td>
-      <td>3</td>
-      <td>Corresponds to value <em>repeat</em>.</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Instance properties
 
@@ -69,6 +27,17 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 ## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
+
+## Static properties
+
+- `SVG_SPREADMETHOD_UNKNOWN` (0)
+  - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
+- `SVG_SPREADMETHOD_PAD` (1)
+  - : Corresponds to value `pad`.
+- `SVG_SPREADMETHOD_REFLECT` (2)
+  - : Corresponds to value `reflect`.
+- `SVG_SPREADMETHOD_REPEAT` (3)
+  - : Corresponds to value `repeat`.
 
 ## Specifications
 

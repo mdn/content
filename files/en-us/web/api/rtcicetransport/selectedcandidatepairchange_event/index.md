@@ -1,20 +1,8 @@
 ---
-title: 'RTCIceTransport: selectedcandidatepairchange event'
+title: "RTCIceTransport: selectedcandidatepairchange event"
+short-title: selectedcandidatepairchange
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
 page-type: web-api-event
-tags:
-  - Connectivity
-  - ICE
-  - Negotiation
-  - RTCIceCandidate
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - events
-  - onselectedcandidatepairchange
-  - selectedcandidatepairchange
 browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
 ---
 
@@ -32,10 +20,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('selectedcandidatepairchange', (event) => { });
+```js-nolint
+addEventListener("selectedcandidatepairchange", (event) => { })
 
-onselectedcandidatepairchange = (event) => { };
+onselectedcandidatepairchange = (event) => { }
 ```
 
 ## Event type
@@ -47,7 +35,7 @@ A generic {{domxref("Event")}}.
 This example creates an event handler for `selectedcandidatepairchange` that updates a display providing the user information about the progress of the ICE negotiation for an {{domxref("RTCPeerConnection")}} called `pc`.
 
 ```js
-let iceTransport = pc.getSenders[0].transport.iceTransport;
+let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
@@ -55,13 +43,13 @@ iceTransport.addEventListener("selectedcandidatepairchange", (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
-}, false)
+});
 ```
 
 This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
 
 ```js
-let iceTransport = pc.getSenders[0].transport.iceTransport;
+let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
@@ -69,7 +57,7 @@ iceTransport.onselectedcandidatepairchange = (ev) => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
-}
+};
 ```
 
 ## Specifications

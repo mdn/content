@@ -1,22 +1,15 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStartup
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onStartup
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
+Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing (incognito) profile is started, even if this extension is operating in 'split' incognito mode.
 
-Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.
+> [!NOTE]
+> When using an event page or background service worker, the extension must add a listener to `runtime.onStartup` on the event page for the event page to be executed at least once per browser session.
 
 ## Syntax
 
@@ -42,11 +35,7 @@ All events have three functions:
 The only parameter is `listener`, used for any of the above functions.
 
 - `listener`
-  - : A function that will be called when this event occurs.
-
-## Browser compatibility
-
-{{Compat}}
+  - : The function called when this event occurs.
 
 ## Examples
 
@@ -55,7 +44,7 @@ Open <https://giphy.com/explore/cat> when the browser starts up:
 ```js
 function handleStartup() {
   browser.tabs.create({
-    url: "https://giphy.com/explore/cat"
+    url: "https://giphy.com/explore/cat",
   });
 }
 
@@ -64,7 +53,12 @@ browser.runtime.onStartup.addListener(handleStartup);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onStartup) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onStartup) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

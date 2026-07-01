@@ -1,12 +1,8 @@
 ---
-title: Document.readyState
+title: "Document: readyState property"
+short-title: readyState
 slug: Web/API/Document/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.readyState
 ---
 
@@ -20,13 +16,11 @@ When the value of this property changes, a {{domxref("Document/readystatechange_
 The `readyState` of a document can be one of following:
 
 - `loading`
-  - : The {{domxref("document")}} is still loading.
+  - : The {{domxref("document")}} is still loading (that is, the HTML parser is still working).
 - `interactive`
-  - : The document has finished loading and the document has been parsed but sub-resources
-    such as scripts, images, stylesheets and frames are still loading.
+  - : The document has been parsed but sub-resources such as {{domxref("HTMLScriptElement/defer", "deferred", "", "nocode")}} and [module](/en-US/docs/Web/JavaScript/Guide/Modules) scripts, images, stylesheets, and frames are still loading. Once in this state, and the deferred and module scripts have executed, the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires.
 - `complete`
-  - : The document and all sub-resources have finished loading. The state indicates that
-    the {{domxref("Window/load_event", "load")}} event is about to fire.
+  - : The document and all sub-resources have finished loading. The state indicates that the {{domxref("Window/load_event", "load")}} event is about to fire.
 
 ## Examples
 
@@ -48,7 +42,7 @@ switch (document.readyState) {
   case "complete":
     // The page is fully loaded.
     console.log(
-      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`
+      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`,
     );
     break;
 }

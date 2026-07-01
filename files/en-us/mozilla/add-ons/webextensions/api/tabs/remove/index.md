@@ -1,24 +1,17 @@
 ---
 title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Closes one or more tabs.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+If any of the tabs are:
+
+- part of a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views), the split view is removed.
+- the last tab in a {{WebExtAPIRef("tabGroups","group")}}, the group is removed.
 
 ## Syntax
 
@@ -35,7 +28,7 @@ let removing = browser.tabs.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
@@ -75,7 +68,8 @@ removing.then(onRemoved, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

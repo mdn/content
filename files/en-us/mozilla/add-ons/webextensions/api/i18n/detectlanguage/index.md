@@ -1,20 +1,10 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
+page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.detectLanguage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 
@@ -42,17 +32,11 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `isReliable`
   - : `boolean`. Whether the language was detected reliably.
 - `languages`
-
   - : `array` of objects, each of which has two properties:
-
     - `language`
       - : {{WebExtAPIRef('i18n.LanguageCode')}}. The detected language.
     - `percentage`
       - : `integer`. The percentage of the input string that was in the detected language.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -64,7 +48,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-let text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers.";
 
 let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);
@@ -72,7 +56,12 @@ detecting.then(onLanguageDetected);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

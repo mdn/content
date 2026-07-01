@@ -1,11 +1,8 @@
 ---
-title: Flex Item
+title: Flex item
 slug: Glossary/Flex_Item
 page-type: glossary-definition
-tags:
-  - CSS
-  - flex item
-  - flexbox
+sidebar: glossarysidebar
 ---
 
 The direct children of a {{glossary("Flex Container")}} (elements with `display: flex` or `display: inline-flex` set on them) become **flex items**.
@@ -24,6 +21,6 @@ Continuous runs of text inside flex containers will also become flex items.
 
 ### Further reading
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Ordering flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)

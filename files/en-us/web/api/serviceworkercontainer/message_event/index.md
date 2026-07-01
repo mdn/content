@@ -1,16 +1,12 @@
 ---
 title: "ServiceWorkerContainer: message event"
+short-title: message
 slug: Web/API/ServiceWorkerContainer/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Service Workers
 browser-compat: api.ServiceWorkerContainer.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
 
@@ -20,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("message", (event) => {});
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => {};
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -45,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
@@ -96,5 +92,4 @@ navigator.serviceWorker.onmessage = (message) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

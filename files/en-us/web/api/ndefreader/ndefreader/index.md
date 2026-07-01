@@ -1,13 +1,10 @@
 ---
-title: NDEFReader()
+title: "NDEFReader: NDEFReader() constructor"
+short-title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
 page-type: web-api-constructor
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Constructor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.NDEFReader
 ---
 
@@ -16,7 +13,7 @@ browser-compat: api.NDEFReader.NDEFReader
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a
 new `NDEFReader` object, which is used to read NDEF messages from
-compatible NFC devices, e.g. NDEF tags, within the reader's magnetic induction
+compatible NFC devices, e.g., NDEF tags, within the reader's magnetic induction
 field.
 
 ## Syntax

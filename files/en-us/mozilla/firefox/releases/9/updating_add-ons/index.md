@@ -1,23 +1,20 @@
 ---
 title: Updating add-ons for Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-tags:
-  - Extensions
-  - Firefox 9
-  - Guide
+page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 9.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which need to be recompiled for every major Firefox release), have automatically been updated on AMO to indicate that they work in Firefox 9.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 9, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 9, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 
@@ -29,7 +26,7 @@ Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.rem
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://my-extension/content/some-script.js",
 );
 ```
 
@@ -52,7 +49,7 @@ The `geo.wifi.*` preferences no longer have default values, although they're hon
 ## DOM changes
 
 - The long-obsolete method `Navigator.taintEnabled()` has been removed. This hasn't done anything useful in a very long time, but was often used in browser detection scripts, since it was Netscape-specific. Calling this method throws an exception starting in Firefox 9.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, but [there are exceptions](/en-US/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect you, unless you are setting or accessing event handlers on DOM prototype objects. Now you can't, for example, change `Window.prototype.onload`.
 
 ## Other changes that may affect binary compatibility
 

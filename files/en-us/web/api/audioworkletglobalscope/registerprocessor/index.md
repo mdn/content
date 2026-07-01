@@ -1,15 +1,8 @@
 ---
-title: AudioWorkletGlobalScope.registerProcessor()
+title: "AudioWorkletGlobalScope: registerProcessor() method"
+short-title: registerProcessor()
 slug: Web/API/AudioWorkletGlobalScope/registerProcessor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletGlobalScope
-  - AudioWorkletProcessor
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
 
@@ -32,7 +25,8 @@ registerProcessor(name, processorCtor)
 - `processorCtor`
   - : The constructor of a class derived from {{domxref("AudioWorkletProcessor")}}.
 
-> **Note:** A key-value pair `{ name: constructor }`
+> [!NOTE]
+> A key-value pair `{ name: constructor }`
 > is saved internally in the {{domxref("AudioWorkletGlobalScope")}} once the processor
 > is registered. The _name_ is to be referred to when creating an
 > {{domxref("AudioWorkletNode")}} based on the registered processor. A new processor by
@@ -45,21 +39,15 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : Thrown under the following conditions:
-
     - The _name_ is an empty string.
     - A constructor under the given _name_ is already registered. Registering
       the same name twice is not allowed.
 
 - {{jsxref("TypeError")}}
-
   - : Thrown under the following conditions:
-
     - The _processorCtor_ is not a callable constructor.
-    - The {{domxref("AudioWorkletProcessor.parameterDescriptors",
-        "parameterDescriptors")}} property of the constructor exists and doesn't return an
-      array of {{domxref("AudioParamDescriptor")}}-based objects.
+    - The {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property of the constructor exists and doesn't return an array of {{domxref("AudioParamDescriptor")}}-based objects.
 
 ## Examples
 

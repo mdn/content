@@ -1,20 +1,10 @@
 ---
 title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - openOptionsPage
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.openOptionsPage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 
@@ -33,10 +23,6 @@ None.
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the options page has been created successfully, or rejected with an error message if the operation failed.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,7 +43,12 @@ opening.then(onOpened, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

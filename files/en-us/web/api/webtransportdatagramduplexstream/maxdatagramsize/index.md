@@ -1,23 +1,14 @@
 ---
-title: WebTransportDatagramDuplexStream.maxDatagramSize
+title: "WebTransportDatagramDuplexStream: maxDatagramSize property"
+short-title: maxDatagramSize
 slug: Web/API/WebTransportDatagramDuplexStream/maxDatagramSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - maxDatagramSize
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransportDatagramDuplexStream.maxDatagramSize
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`maxDatagramSize`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}}.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -26,7 +17,7 @@ A number.
 ## Examples
 
 ```js
-const url = 'https://example.com:4999/wt';
+const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
   // Initialize transport connection
@@ -52,7 +43,7 @@ async function initTransport(url) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

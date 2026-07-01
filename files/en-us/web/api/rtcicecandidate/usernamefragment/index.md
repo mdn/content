@@ -1,20 +1,8 @@
 ---
-title: RTCIceCandidate.usernameFragment
+title: "RTCIceCandidate: usernameFragment property"
+short-title: usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - ufrag
-  - usernameFragment
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
 
@@ -53,7 +41,8 @@ This avoids crosstalk among multiple ongoing ICE sessions, but, more importantly
 secure ICE transactions (and all of WebRTC by extension) against attacks that might try
 to inject themselves into an ICE exchange.
 
-> **Note:** There is no API to obtain the ICE password, for what should be fairly obvious security reasons.
+> [!NOTE]
+> There is no API to obtain the ICE password, for what should be fairly obvious security reasons.
 
 The `usernameFragment` and password both change every time an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs.
 
@@ -82,20 +71,19 @@ restart, we can use code like this:
 
 ```js
 const ssNewCandidate = (signalMsg) => {
-  let candidate = new RTCIceCandidate(signalMsg.candidate);
-  let receivers = pc.getReceivers();
+  const candidate = new RTCIceCandidate(signalMsg.candidate);
+  const receivers = pc.getReceivers();
 
-  receivers.forEach((receiver) => {
-    let parameters = receiver.transport.getParameters();
+  for (const receiver of receivers) {
+    const parameters = receiver.transport.iceTransport.getRemoteParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {
       return;
     }
-  });
+  }
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(window.reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

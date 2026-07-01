@@ -1,19 +1,10 @@
 ---
 title: sessions.forgetClosedWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - forgetClosedWindow
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.forgetClosedWindow
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Removes a closed window from the browser's list of recently closed windows. Note that the sites visited by that window are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 
@@ -38,10 +29,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This
 
 If an error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code forgets the single most recently-closed session, whether it's a tab or a window:
@@ -49,12 +36,15 @@ This code forgets the single most recently-closed session, whether it's a tab or
 ```js
 function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
   if (sessionInfo.tab) {
-    browser.sessions.forgetClosedTab(sessionInfo.tab.windowId, sessionInfo.tab.sessionId);
+    browser.sessions.forgetClosedTab(
+      sessionInfo.tab.windowId,
+      sessionInfo.tab.sessionId,
+    );
   } else {
     browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);
   }
@@ -64,8 +54,13 @@ function onError(error) {
   console.log(error);
 }
 
-browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);
+browser.sessions
+  .getRecentlyClosed({ maxResults: 1 })
+  .then(forgetMostRecent, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

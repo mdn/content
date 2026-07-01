@@ -1,18 +1,12 @@
 ---
-title: SubtleCrypto.unwrapKey()
+title: "SubtleCrypto: unwrapKey() method"
+short-title: unwrapKey()
 slug: Web/API/SubtleCrypto/unwrapKey
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - unwrapKey
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "unwraps" a key.
 This means that it takes as its input a key that has been exported and then encrypted (also called "wrapped").
@@ -45,7 +39,7 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
   - : The {{domxref("CryptoKey")}} to use to decrypt the wrapped key. The key must have the `unwrapKey` usage set.
 - `unwrapAlgo`
   - : An object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
-    to be used to encrypt the exported key, and any extra parameters as required:
+    to be used to decrypt the wrapped key, and any extra parameters as required:
     - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
       pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams) object.
     - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
@@ -68,18 +62,20 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       Pass the string identifying the algorithm or an object of the form `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
+    - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form `{ "name": "Ed25519" }`.
+    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): Pass an object of the form: `{name: 'X25519'}`.
 - `extractable`
   - : A boolean indicating whether it will be possible to export the key
     using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 - `keyUsages`
   - : An [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) indicating what can be done with the key. Possible values of the array are:
-    - `encrypt`: The key may be used to [`encrypt`](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
-    - `decrypt`: The key may be used to [`decrypt`](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
-    - `sign`: The key may be used to [`sign`](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
-    - `verify`: The key may be used to [`verify`](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
-    - `deriveKey`: The key may be used in [`deriving a new key`](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
-    - `deriveBits`: The key may be used in [`deriving bits`](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
-    - `wrapKey`: The key may be used to [`wrap a key`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+    - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
+    - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
+    - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
+    - `verify`: The key may be used to [verify](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
+    - `deriveKey`: The key may be used in [deriving a new key](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
+    - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+    - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
     - `unwrapKey`: The key may be used to unwrap a key.
 
 ### Return value
@@ -105,7 +101,8 @@ The `unwrapKey()` method supports the same algorithms as the [`wrapKey()`](/en-U
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on GitHub.
 
 ### Unwrapping a "raw" key
 
@@ -161,7 +158,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -186,7 +183,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -208,7 +205,7 @@ async function unwrapSecretKey(wrappedKey) {
     "AES-KW", // algorithm identifier for key encryption key
     "AES-GCM", // algorithm identifier for key to unwrap
     true, // extractability of key to unwrap
-    ["encrypt", "decrypt"] // key usages for key to unwrap
+    ["encrypt", "decrypt"], // key usages for key to unwrap
   );
 }
 ```
@@ -353,7 +350,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -378,7 +375,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -411,7 +408,7 @@ async function unwrapPrivateKey(wrappedKey) {
       hash: "SHA-256",
     },
     true, // extractability of key to unwrap
-    ["sign"] // key usages for key to unwrap
+    ["sign"], // key usages for key to unwrap
   );
 }
 ```

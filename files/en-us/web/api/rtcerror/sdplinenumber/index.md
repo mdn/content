@@ -1,37 +1,21 @@
 ---
-title: RTCError.sdpLineNumber
+title: "RTCError: sdpLineNumber property"
+short-title: sdpLineNumber
 slug: Web/API/RTCError/sdpLineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sdpLineNumber
 browser-compat: api.RTCError.sdpLineNumber
 ---
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCError")}} interface's read-only property
-**`sdpLineNumber`** specifies the line number within the
-{{Glossary("SDP")}} at which a syntax error occurred while parsing it.
+The **`sdpLineNumber`** read-only property of the {{domxref("RTCError")}} interface specifies the {{Glossary("SDP")}} message line number where a syntax error occurred.
 
 ## Value
 
-An unsigned integer value indicating the line within the SDP at which the syntax error
-described by the `RTCError` object occurred. The lines are numbed starting
-with line 1.
+An integer value indicating the SDP message line number where the syntax error described by the `RTCError` object occurred.
+The lines are numbered starting with line 1.
 
-This property is `null` unless the value of
-{{domxref("RTCError.errorDetail", "errorDetail")}} is `sdp-syntax-error`.
+This property is `null` unless the value of {{domxref("RTCError.errorDetail", "errorDetail")}} is `sdp-syntax-error`.
 
 ## Specifications
 

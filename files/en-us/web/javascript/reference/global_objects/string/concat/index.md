@@ -1,22 +1,27 @@
 ---
 title: String.prototype.concat()
+short-title: concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.concat
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`concat()`** method of {{jsxref("String")}} values concatenates
+the string arguments to this string and returns a new string.
 
-The **`concat()`** method concatenates
-the string arguments to the calling string and returns a new string.
+{{InteractiveExample("JavaScript Demo: String.prototype.concat()")}}
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## Syntax
 
@@ -28,8 +33,8 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
-  - : One or more strings to concatenate to `str`.
+- `str1`, …, `strN`
+  - : One or more strings to concatenate to `str`. Though technically permitted, calling `String.prototype.concat()` with no arguments is a useless operation, because it does not result in observable copying (like {{jsxref("Array.prototype.concat()")}}), since strings are immutable. It should only happen if you are [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) an array of strings as arguments, and that array happens to be empty.
 
 ### Return value
 
@@ -37,9 +42,7 @@ A new string containing the combined text of the strings provided.
 
 ## Description
 
-The `concat()` function concatenates the string arguments to the calling
-string and returns a new string. Changes to the original string or the returned string
-don't affect the other.
+The `concat()` function concatenates the string arguments to the calling string and returns a new string.
 
 If the arguments are not of the type string, they are converted to string values before
 concatenating.
@@ -78,4 +81,4 @@ const greetList = ["Hello", " ", "Venkat", "!"];
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

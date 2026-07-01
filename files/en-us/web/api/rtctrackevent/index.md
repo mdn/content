@@ -2,17 +2,6 @@
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - RTCTrackEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - rtc
-  - track
 browser-compat: api.RTCTrackEvent
 ---
 
@@ -22,14 +11,14 @@ The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** r
 
 The target is the `RTCPeerConnection` object to which the track is being added.
 
-This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
+This event is sent by the WebRTC layer to the website or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
 {{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}
-  - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
+  - : Creates and returns a new `RTCTrackEvent` object. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ## Instance properties
 
@@ -56,17 +45,18 @@ In addition, the {{domxref("MediaStreamTrack")}} specified by the receiver's {{d
 
 You can add a `track` event listener to be notified when the new track is available so that you can, for example, attach its media to a {{HTMLElement("video")}} element, using either {{domxref("EventTarget.addEventListener", "RTCPeerConnection.addEventListener()")}} or the `ontrack` event handler property.
 
-> **Note:** It may be helpful to keep in mind that you receive the `track` event when a new inbound track has been added to your connection, and you call {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add a track to the far end of the connection, thereby triggering a `track` event on the remote peer.
+> [!NOTE]
+> It may be helpful to keep in mind that you receive the `track` event when a new inbound track has been added to your connection, and you call {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add a track to the far end of the connection, thereby triggering a `track` event on the remote peer.
 
 ## Example
 
-This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `videobox` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
+This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `video-box` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
 
 ```js
 peerConnection.addEventListener("track", (e) => {
-  let videoElement = document.getElementById("videobox");
+  let videoElement = document.getElementById("video-box");
   videoElement.srcObject = e.streams[0];
-}, false);
+});
 ```
 
 ## Specifications

@@ -1,32 +1,24 @@
 ---
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
+page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onStateChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fires when the captive portal state changes.
 
 ## Syntax
 
 ```js-nolint
-browser.captivePortal.onStateChanged.addListener(callback)
+browser.captivePortal.onStateChanged.addListener(listener)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -37,10 +29,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that is called when this event occurs. The function is passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `details`
       - : `string` The captive portal state, being one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 
@@ -49,8 +39,8 @@ Events have three functions:
 Handle a change in captive portal status:
 
 ```js
-function handlePortalStatus(portalstatusInfo) {
-  console.log(`The portal status is now: ${portalstatusInfo.details}`);
+function handlePortalStatus(portalStatusInfo) {
+  console.log(`The portal status is now: ${portalStatusInfo.details}`);
 }
 
 browser.captivePortal.onStateChanged.addListener(handlePortalStatus);

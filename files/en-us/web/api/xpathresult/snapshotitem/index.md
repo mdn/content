@@ -1,18 +1,12 @@
 ---
-title: XPathResult.snapshotItem()
+title: "XPathResult: snapshotItem() method"
+short-title: snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`snapshotItem()`** method of the
 {{domxref("XPathResult")}} interface returns an item of the snapshot collection or
@@ -41,8 +35,8 @@ The {{domxref("Node")}} at the given index within the node set of the
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 
@@ -59,7 +53,13 @@ The following example shows the use of the `snapshotItem()` method.
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null,
+);
 let node = null;
 const tagNames = [];
 for (let i = 0; i < result.snapshotLength; i++) {

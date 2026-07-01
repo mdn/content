@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
+title: "CanvasRenderingContext2D: lineJoin property"
+short-title: lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.lineJoin`**
@@ -23,7 +18,8 @@ because no joining area will be added in this case. Degenerate segments with a l
 zero (i.e., with all endpoints and control points at the exact same position) are also
 ignored.
 
-> **Note:** Lines can be drawn with the
+> [!NOTE]
+> Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
 > {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
@@ -44,8 +40,7 @@ There are three possible values for this property: `"round"`, `"bevel"`, and `"m
 - `"miter"`
   - : Connected segments are joined by extending their outside edges to connect at a
     single point, with the effect of filling an additional lozenge-shaped area. This
-    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit",
-    "miterLimit")}} property. Default value.
+    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} property. Default value.
 
 ## Examples
 
@@ -104,8 +99,7 @@ ctx.lineWidth = 10;
 });
 ```
 
-{{EmbedLiveSample("Comparison_of_line_joins", "180", "180",
-  "canvas_linejoin.png")}}
+{{EmbedLiveSample("Comparison_of_line_joins", "", "180")}}
 
 ## Specifications
 

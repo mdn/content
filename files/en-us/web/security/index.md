@@ -1,129 +1,122 @@
 ---
-title: Web security
+title: Security
+short-title: Security
 slug: Web/Security
-tags:
-  - Landing
-  - Security
-  - Web
+page-type: landing-page
+sidebar: security
 ---
 
-{{QuickLinksWithSubpages}}
+Web security is the practice of protecting websites and their users from damage caused by malicious third parties, who are generally called _attackers_.
 
-Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
+The kind of damage done can be reputational, financial, or even physical. It can target data that should be kept private to users, or actions that should be only made available to particular users. The motivations of attackers might be financial, political, or personal.
 
-## Content security
+In this part of MDN we've written guides to help web developers understand how to protect their websites, and their users, against these attacks.
 
-- [Content security policy (CSP)](/en-US/docs/Web/HTTP/CSP)
-  - : **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("XSS")}}) and data injection attacks. These attacks are used for everything from data theft to site defacement to the distribution of malware.
+The documentation is organized into four main sections:
 
-## Connection security
+- [Attacks](/en-US/docs/Web/Security/Attacks)
+- [Defenses](/en-US/docs/Web/Security/Defenses)
+- [Threat modeling](/en-US/docs/Web/Security/Threat_modeling)
+- [Authentication](/en-US/docs/Web/Security/Authentication)
 
-- [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
-  - : The Transport Layer Security ({{Glossary("TLS")}}) protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data. This article provides an overview of TLS and the kinds of decisions you need to make when securing your content.
-- HTTPS
-  - : **HTTPS** (**_HyperText Transfer Protocol Secure_**) is an encrypted version of the {{Glossary("HTTP")}} protocol. It uses {{Glossary("SSL")}} or {{Glossary("TLS")}} to encrypt all communication between a client and a server. This secure connection allows clients to be sure that they are connected with the intended server, and to exchange sensitive data.
-- [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
-  - : The `Strict-Transport-Security:` [HTTP](/en-US/docs/Web/HTTP) header lets a website specify that it may only be accessed using HTTPS.
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
-  - : **Certificate Transparency** is an open framework designed to protect against and monitor for certificate misissuances. Newly issued certificates are 'logged' to publicly run, often independent CT logs which maintain an append-only, cryptographically assured record of issued TLS certificates.
-- [Mixed content](/en-US/docs/Web/Security/Mixed_content)
-  - : An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
-- [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-  - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well. This page explains what you should be aware of as a web developer.
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
-  - : A **secure context** is a `Window` or `Worker` for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful APIs that could further compromise the victim of an attack.
-- [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-  - : This reference lists the web platform features available only in secure contexts.
-- [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
-  - : The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("digital certificate")}} is a critical element of the security of the certificate. This article provides some information about signature algorithms known to be weak, so you can avoid them when appropriate.
-- Redirection with 301 and 302 response codes
-  - : to be written
+In this page we'll introduce each of these sections and list the guides they contain. First though, we'll list the core security practices that web developers should follow.
 
-## Data security
+## Core security practices
 
-- [Using HTTP Cookies](/en-US/docs/Web/HTTP/Cookies)
-  - : An _HTTP cookie_ (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with later requests to the same server. Typically, it's used to tell if two requests came from the same browser — keeping a user logged-in, for example.
-- [Local storage](/en-US/docs/Web/API/Window/localStorage)
-  - : The `Window` object's {{domxref("Window.localStorage")}} property is a way for servers to store data on a client that is persistent across sessions.
+Web security can be overwhelming: there are a lot of potential threats, defenses are often complex and multilayered, and the set of threats you need to consider are highly dependent on what exactly your website is doing. In this section we'll summarize what we think are the most important things you can do, that will offer protection against most of the threats you will encounter.
 
-## Information leakage
+- **Use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)** to serve all your site's pages and subresources.
 
-- [Referer header policy: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-  - : There are privacy and security risks associated with the [Referer HTTP header](/en-US/docs/Web/HTTP/Headers/Referer). This article describes them and offers advice on mitigating those risks.
-- [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless)
-  - : Iframe credentialless provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context. This context doesn't have access to the network, cookies, and storage data associated with is origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
+- **Set a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)** for your site.
+  - If possible, set a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp), but if not, at least set a policy that [disallows inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript).
+  - Set the [`frame-ancestors`](/en-US/docs/Web/HTTP/Guides/CSP#clickjacking_protection) CSP directive, to control whether pages can be embedded in nested browsing contexts.
 
-## Integrity
+  - Set the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Guides/CSP#requiring_trusted_types) CSP directive, to help ensure that content has been sanitized before it is passed to potentially dangerous APIs.
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-  - : The **same-origin policy** is a critical security mechanism that restricts how a document or script loaded from one {{Glossary("origin")}} can interact with a resource from another origin. It helps isolate potentially malicious documents, reducing possible attack vectors.
-- [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
-  - : **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a {{Glossary("CDN")}}) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
-- [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-  - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
-- [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response HTTP header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to say that the MIME types are deliberately configured.
+- **Control cross-origin requests**: consider whether and in which circumstances you want to allow other {{glossary("origin", "origins")}} to make requests to your site, and use [fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) to control this.
 
-## Clickjacking protection
+- **Limit access to any cookies your site sets**. In particular:
+  - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesite) attribute to `Strict` if possible, or `Lax` otherwise.
+  - Set the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) and [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attributes, if possible.
+  - Minimize the lifetime of cookies that are used to represent logged-in users.
 
-In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects.
+- **Handle input securely**: if your site accepts input from the user or another system, [validate it](/en-US/docs/Web/Security/Defenses/Input_validation). Before integrating any input into your site's pages, perform [output encoding](/en-US/docs/Web/Security/Attacks/XSS#output_encoding) or [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization).
 
-- [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
-- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+- **Use [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)** for any scripts that you load from external sources (such as {{glossary("CDN", "CDNs")}}).
 
-## User information security
+- **Use strong authentication methods**: if you authenticate users on your site, don't use [passwords](/en-US/docs/Web/Security/Authentication/Passwords) alone. [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys) are the most secure authentication method, but if you can't use them, then [time-based one-time passwords (TOTP)](/en-US/docs/Web/Security/Authentication/OTP#totp) are more secure than traditional passwords.
 
-- [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords)
-  - : Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
-  - : Before about 2010, the [CSS](/en-US/docs/Web/CSS) {{cssxref(":visited")}} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. To mitigate this problem, browsers have limited the amount of information that can be obtained from visited links.
+- **Follow good [operational security practices](/en-US/docs/Web/Security/Defenses/Operational_security)**: control access to your project's source code, handle secrets securely, and control your dependencies.
 
-## Security-related glossary terms
+See also the [Secure Web Application Guidelines](https://w3c-cg.github.io/swag/docs/swag.html).
 
-- {{Glossary("Block cipher mode of operation")}}
-- {{Glossary("Certificate authority")}}
-- {{Glossary("challenge", "Challenge-response authentication")}}
-- {{Glossary("Cipher")}}
-- {{Glossary("Cipher suite")}}
-- {{Glossary("Ciphertext")}}
-- {{Glossary("Clickjacking")}}
-- {{Glossary("CORS")}}
-- {{Glossary("CORS-safelisted request header")}}
-- {{Glossary("CORS-safelisted response header")}}
-- {{Glossary("Cross-site scripting")}}
-- {{Glossary("Cryptanalysis")}}
-- {{Glossary("Cryptographic hash function")}}
-- {{Glossary("Cryptography")}}
-- {{Glossary("CSP")}}
-- {{Glossary("CSRF")}}
-- {{Glossary("Decryption")}}
-- {{Glossary("Digital certificate")}}
-- {{Glossary("DTLS")}}
-- {{Glossary("Encryption")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Forbidden response header name")}}
-- {{Glossary("Hash")}}
-- {{Glossary("HMAC")}}
-- {{Glossary("HPKP")}}
-- {{Glossary("HSTS")}}
-- {{Glossary("HTTPS")}}
-- {{Glossary("Key")}}
-- {{Glossary("MitM")}}
-- {{Glossary("OWASP")}}
-- {{Glossary("Preflight request")}}
-- {{Glossary("Public-key cryptography")}}
-- {{Glossary("Reporting directive")}}
-- {{Glossary("Robots.txt")}}
-- {{Glossary("Same-origin policy")}}
-- {{Glossary("Session hijacking")}}
-- {{Glossary("SQL injection")}}
-- {{Glossary("Symmetric-key cryptography")}}
-- {{Glossary("TOFU")}}
-- {{Glossary("TLS")}}
+## Attacks
+
+The [Attacks](/en-US/docs/Web/Security/Attacks) section includes guides to common attacks on websites. An attack is a specific technique that an attacker can use to harm websites or their users.
+
+Each guide covers a specific attack (or class of related attacks), explaining how it works, the conditions under which a website becomes vulnerable, and how to defend against it.
+
+The attacks described include:
+
+- [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking)
+- [Cross-site request forgery (CSRF)](/en-US/docs/Web/Security/Attacks/CSRF)
+- [Cross-site leaks (XS-Leaks)](/en-US/docs/Web/Security/Attacks/XS-Leaks)
+- [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
+- [Insecure Direct Object Reference (IDOR)](/en-US/docs/Web/Security/Attacks/IDOR)
+- [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+- [Phishing](/en-US/docs/Web/Security/Attacks/Phishing)
+- [Prototype pollution](/en-US/docs/Web/Security/Attacks/Prototype_pollution)
+- [Server Side Request Forgery (SSRF)](/en-US/docs/Web/Security/Attacks/SSRF)
+- [Subdomain takeover](/en-US/docs/Web/Security/Attacks/Subdomain_takeover)
+- [Supply chain attacks](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks)
+
+## Defenses
+
+The [Defenses](/en-US/docs/Web/Security/Defenses) section includes guides to features or practices that you can use to protect yourself against various attacks. In general, there's a many-to-many relationship between attack and defenses. That is, a single defense can protect against multiple attacks, and defending against a single attack may require multiple defenses, so as to provide defense in depth.
+
+In this section we document the following defenses:
+
+- [Certificate transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
+- [Input validation](/en-US/docs/Web/Security/Defenses/Input_validation)
+- [Mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content)
+- [Operational security](/en-US/docs/Web/Security/Defenses/Operational_security)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
+- [Secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
+- [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)
+- [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
+- [User activation](/en-US/docs/Web/Security/Defenses/User_activation)
+
+Note that not all defenses are described in this section: some, such as [CSP](2/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
+
+## Threat modeling
+
+Not all websites are vulnerable to all attacks: which attacks a developer needs to worry about depends on the features that the site provides and how they are implemented.
+
+[Threat modeling](/en-US/docs/Web/Security/Threat_modeling) is a process that web developers can follow to develop a structured representation of the potential threats that their site faces, and the corresponding defenses that they should employ.
+
+That is, threat modeling helps you understand which attacks you need to defend against, and how to defend against them.
+
+## Authentication
+
+Authentication is the process of verifying that an entity — such as a user of a website — is who they claim to be. You'll most likely need to think about authentication if you want users to sign into your website.
+
+If users can log into your website, there are typically things logged-in users can do, or data they can access, that you don't want to make generally available. This makes user account access one of the most valuable targets for attackers.
+
+In this set of guides we'll look at the main techniques available for authenticating users on the web, and good practices for them. We describe four methods:
+
+- [Passwords](/en-US/docs/Web/Security/Authentication/Passwords)
+- [One-time passwords (OTP)](/en-US/docs/Web/Security/Authentication/OTP)
+- [Federated identity](/en-US/docs/Web/Security/Authentication/Federated_identity)
+- [Passkeys](/en-US/docs/Web/Security/Authentication/Passkeys)
+
+In this section we also outline good practices for [session management](/en-US/docs/Web/Security/Authentication/Session_management), which is how a website remembers the signed-in status of a user.
+
+## HTTP Observatory
+
+The [HTTP Observatory](/en-US/observatory) tool enables you to scan your website to check whether it's following certain good security practices. Our [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides) provide explanations of how to implement these practices, and the threats they defend against.
 
 ## See also
 
-- [Security Blog](https://blog.mozilla.org/security/)
-- [@mozsec on Twitter](https://twitter.com/mozsec)
+- [Privacy on the web](/en-US/docs/Web/Privacy)
+- [Learn: Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
+- [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)

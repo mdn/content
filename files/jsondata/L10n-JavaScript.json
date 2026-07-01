@@ -1,9 +1,11 @@
 {
   "stdlib": {
+    "de": "Globale Objekte",
     "en-US": "Standard built-in objects",
     "es": "Objetos globales",
     "fr": "Objets standards",
     "ja": "標準組み込みオブジェクト",
+    "ko": "표준 내장 객체",
     "pt-BR": "Objetos Globais",
     "ru": "Стандартные встроенные объекты",
     "zh-CN": "标准内置对象",

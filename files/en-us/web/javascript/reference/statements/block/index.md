@@ -1,20 +1,30 @@
 ---
-title: block
+title: Block statement
 slug: Web/JavaScript/Reference/Statements/block
 page-type: javascript-statement
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.block
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Statements")}}
+A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
 
-A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly brackets") and contains a list of zero or more statements and declarations.
+{{InteractiveExample("JavaScript Demo: Block statement", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
+```js interactive-example
+var x = 1;
+let y = 1;
+
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+
+console.log(x);
+// Expected output: 2
+
+console.log(y);
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -75,7 +85,7 @@ console.log(c); // 1; does not throw SyntaxError
 
 Note that the block-scoped `const c = 2` _does not_ throw a `SyntaxError: Identifier 'c' has already been declared` because it can be declared uniquely within the block.
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted to the top of the block.
 
 ```js
 "use strict";
@@ -135,6 +145,21 @@ console.log(sector);
 //   perimeter: 30.471975511965976
 // }
 console.log(typeof radius); // "undefined"
+```
+
+### `using` declarations in a block
+
+You can declare variables with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} in a block, which causes the object stored in the variable to be disposed when control exits the block. For more information, see [resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management).
+
+```js
+{
+  using reader1 = stream1.getReader();
+  using reader2 = stream2.getReader();
+
+  // do something with reader1 and reader2
+
+  // Before we exit the block, reader1 and reader2 are automatically released
+}
 ```
 
 ## Specifications

@@ -1,18 +1,10 @@
 ---
 title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - get
-  - management
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Retrieves an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object containing information about the specified add-on.
 
@@ -37,10 +29,6 @@ let gettingInfo = browser.management.get(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object, containing information about the add-on. The promise will be rejected if no extension with the given ID is installed or the extension is not allowed to be accessed by the caller.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the name of the add-on whose ID is "my-add-on":
@@ -58,7 +46,12 @@ getting.then(got);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-get) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-get) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

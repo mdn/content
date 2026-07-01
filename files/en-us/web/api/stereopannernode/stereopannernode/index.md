@@ -1,15 +1,8 @@
 ---
-title: StereoPannerNode()
+title: "StereoPannerNode: StereoPannerNode() constructor"
+short-title: StereoPannerNode()
 slug: Web/API/StereoPannerNode/StereoPannerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
 browser-compat: api.StereoPannerNode.StereoPannerNode
 ---
 
@@ -28,9 +21,7 @@ new StereoPannerNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `pan`
       - : A floating point number in the range \[-1,1] indicating the position of an {{domxref("AudioNode")}} in an output image.
         The value -1 represents full left and 1 represents full right.

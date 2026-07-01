@@ -1,14 +1,8 @@
 ---
-title: Element.children
+title: "Element: children property"
+short-title: children
 slug: Web/API/Element/children
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
 browser-compat: api.Element.children
 ---
 
@@ -33,7 +27,7 @@ If the element has no element children, then `children` is an empty list with a
 ## Examples
 
 ```js
-const myElement = document.getElementById('foo');
+const myElement = document.getElementById("foo");
 for (const child of myElement.children) {
   console.log(child.tagName);
 }

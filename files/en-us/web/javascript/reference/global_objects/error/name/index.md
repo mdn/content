@@ -1,15 +1,11 @@
 ---
 title: Error.prototype.name
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
 browser-compat: javascript.builtins.Error.name
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`name`** data property of `Error.prototype` is shared by all {{jsxref("Error")}} instances. It represents the name for the type of error. For `Error.prototype.name`, the initial value is `"Error"`. Subclasses like {{jsxref("TypeError")}} and {{jsxref("SyntaxError")}} provide their own `name` properties.
 
@@ -21,7 +17,7 @@ A string. For `Error.prototype.name`, the initial value is `"Error"`.
 
 ## Description
 
-By default, {{jsxref("Error")}} instances are given the name "Error". The `name` property, in addition to the {{jsxref("Error.prototype.message", "message")}} property, is used by the {{jsxref("Error.prototype.toString()")}} method to create a string representation of the error.
+By default, {{jsxref("Error")}} instances are given the name "Error". The `name` property, in addition to the {{jsxref("Error/message", "message")}} property, is used by the {{jsxref("Error.prototype.toString()")}} method to create a string representation of the error.
 
 ## Examples
 

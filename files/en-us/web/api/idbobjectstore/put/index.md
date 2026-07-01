@@ -1,20 +1,12 @@
 ---
-title: IDBObjectStore.put()
+title: "IDBObjectStore: put() method"
+short-title: put()
 slug: Web/API/IDBObjectStore/put
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - put
 browser-compat: api.IDBObjectStore.put
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
@@ -23,12 +15,10 @@ It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creat
 The put method is an _update or insert_ method.
 See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
 
-Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
+Bear in mind that if you have an {{domxref("IDBCursor","IDBCursor")}} to the record you
 want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
-using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
+using `IDBObjectStore.put()`. Doing so makes it clear that an existing
 record will be updated, instead of a new record being inserted.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -42,11 +32,8 @@ put(item, key)
 - `item`
   - : The item you wish to update (or insert).
 - `key` {{optional_inline}}
-  - : The primary key of the record you want to update (e.g. from
-    {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
-    an `autoIncrement` primary key, therefore the key is not in a field on the
-    record object. In such cases, calling `put(item)` will always insert a new
-    record, because it doesn't know what existing record you might want to modify.
+  - : The primary key of the record you want to update (e.g., from
+    {{domxref("IDBCursor.primaryKey")}}).
 
 ### Return value
 
@@ -64,10 +51,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if any of the following conditions apply:
-    - The object store uses in-line keys or has a key generator, and a key parameter was provided.
-    - The object store uses out-of-line keys and has no key generator, and no key parameter was provided.
-    - The object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.
-    - The key parameter was provided but does not contain a valid key.
+    - The object store uses [in-line keys](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#in-line_key) or has a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator), and a `key` parameter was provided.
+    - The object store uses out-of-line keys and has no key generator, and no `key` parameter was provided.
+    - The object store uses in-line keys but no `key` generator, and the object store's [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) does not yield a valid key.
+    - The `key` parameter was provided but does not contain a valid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 - `DataCloneError` {{domxref("DOMException")}}
@@ -92,7 +79,7 @@ const objectStore = db
   .transaction(["toDoList"], "readwrite")
   .objectStore("toDoList");
 
-// Get the to-do list object that has this title as it's title
+// Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = () => {
@@ -107,7 +94,7 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // Log the transaction that originated this request
   console.log(
-    `The transaction that originated this request is ${updateTitleRequest.transaction}`
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`,
   );
 
   // When this new request succeeds, run the displayData() function again to update the display

@@ -1,25 +1,17 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.history
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the `history` API to interact with the browser history.
 
 If you are looking for information about the browser session history, see the [History interface](/en-US/docs/Web/API/History).
 
-> **Note:** Downloads are treated as [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) objects. Therefore, events such as [`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) fire for downloads.
+> [!NOTE]
+> Downloads are treated as [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) objects. Therefore, events such as [`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) fire for downloads.
 
 Browser history is a chronological record of pages the user has visited. The history API enables you to:
 
@@ -68,13 +60,14 @@ To use this API, an extension must request the "history" [permission](/en-US/doc
 - {{WebExtAPIRef("history.onVisitRemoved")}}
   - : Fired when a URL is removed completely from the browser history.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

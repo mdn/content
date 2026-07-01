@@ -1,25 +1,9 @@
 ---
-title: MediaTrackConstraints.logicalSurface
+title: "MediaTrackConstraints: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackConstraints/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Video
-  - display
-  - logicalSurface
-  - screen
-browser-compat: api.MediaTrackConstraints.logicalSurface
+browser-compat: api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -56,7 +40,9 @@ For example, if your app needs to know if the selected display surface is a logi
 one:
 
 ```js
-let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
+let isLogicalSurface = displayStream
+  .getVideoTracks()[0]
+  .getSettings().logicalSurface;
 ```
 
 Following this code, `isLogicalSurface` is `true` if the display

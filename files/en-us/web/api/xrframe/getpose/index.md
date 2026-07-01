@@ -1,25 +1,14 @@
 ---
-title: XRFrame.getPose()
+title: "XRFrame: getPose() method"
+short-title: getPose()
 slug: Web/API/XRFrame/getPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRFrame
-  - getPose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getPose
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRFrame")}} method **`getPose()`** returns the relative position and
 orientation—the pose—of one {{domxref("XRSpace")}} to that of another space. With this, you can observe the motion of objects relative to each other and to fixed locations throughout the scene.

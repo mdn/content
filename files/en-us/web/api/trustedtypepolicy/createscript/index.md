@@ -1,19 +1,14 @@
 ---
-title: TrustedTypePolicy.createScript()
+title: "TrustedTypePolicy: createScript() method"
+short-title: createScript()
 slug: Web/API/TrustedTypePolicy/createScript
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createScript
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
+The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 

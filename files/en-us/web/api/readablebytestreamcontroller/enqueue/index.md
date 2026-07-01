@@ -1,20 +1,14 @@
 ---
-title: ReadableByteStreamController.enqueue()
+title: "ReadableByteStreamController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
-The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is copied into the stream's internal queues).
+The **`enqueue()`** method of the {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk on the associated readable byte stream (the chunk is transferred into the stream's internal queues).
 
 This should only be used to transfer data to the queue when {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} is `null`.
 
@@ -67,3 +61,4 @@ if (bytesRead === 0) {
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

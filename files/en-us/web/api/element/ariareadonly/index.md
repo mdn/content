@@ -1,23 +1,17 @@
 ---
-title: Element.ariaReadOnly
+title: "Element: ariaReadOnly property"
+short-title: ariaReadOnly
 slug: Web/API/Element/ariaReadOnly
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaReadOnly
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaReadOnly
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
+The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
 
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 
@@ -44,9 +38,9 @@ In this example the `aria-readonly` attribute on the element with an ID of `txtB
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaReadOnly); // "true"
-el.ariaReadOnly = "false"
+el.ariaReadOnly = "false";
 console.log(el.ariaReadOnly); // "false"
 ```
 
@@ -60,4 +54,4 @@ console.log(el.ariaReadOnly); // "false"
 
 ## See also
 
-- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

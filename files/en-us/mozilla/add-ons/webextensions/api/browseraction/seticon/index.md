@@ -1,20 +1,10 @@
 ---
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Sets the icon for the browser action.
 
@@ -37,35 +27,35 @@ let settingIcon = browser.browserAction.setIcon(
 ### Parameters
 
 - `details`
-
-  - : `object`. An object containing either `imageData` or `path` properties, and optionally a `tabId` property.
-
+  - : `object`. An object containing the `imageData` or `path` property and, optionally, either or both of the `tabId` and `windowId` properties.
     - `imageData` {{optional_inline}}
-
-      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
+      - : {{WebExtAPIRef('browserAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
-        {
-          16: image16,
-          32: image32
-        }
+        ```js
+        let settingIcon = browser.browserAction.setIcon({
+          imageData: {
+            16: image16,
+            32: image32,
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
     - `path` {{optional_inline}}
-
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
-        {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
-        }
+        ```js
+        let settingIcon = browser.browserAction.setIcon({
+          path: {
+            16: "path/to/image16.jpg",
+            32: "path/to/image32.jpg",
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -90,10 +80,6 @@ If each one of `imageData` and `path` is one of `undefined`, `null` or empty obj
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 The code below uses a browser action to toggle a listener for {{WebExtAPIRef("webRequest.onHeadersReceived")}}, and uses `setIcon()` to indicate whether listening is on or off:
@@ -107,7 +93,7 @@ function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
     { urls: ["<all_urls>"] },
-    ["responseHeaders"]
+    ["responseHeaders"],
   );
   browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }
@@ -159,7 +145,12 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

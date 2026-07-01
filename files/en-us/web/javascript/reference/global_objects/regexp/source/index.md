@@ -1,22 +1,29 @@
 ---
 title: RegExp.prototype.source
+short-title: source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 page-type: javascript-instance-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.source
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`source`** accessor property of {{jsxref("RegExp")}} instances returns a string containing the source text of this regular expression, without the two forward slashes on both sides or any flags.
 
-The **`source`** accessor property is a string containing the source text of the regex object, without the two forward slashes on both sides or any flags.
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
+```js interactive-example
+const regex = /fooBar/gi;
+
+console.log(regex.source);
+// Expected output: "fooBar"
+
+console.log(new RegExp().source);
+// Expected output: "(?:)"
+
+console.log(new RegExp("\n").source === "\\n");
+// Expected output: true (starting with ES5)
+// Due to escaping
+```
 
 ## Description
 

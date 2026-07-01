@@ -1,24 +1,38 @@
 ---
 title: String.prototype.normalize()
+short-title: normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
 browser-compat: javascript.builtins.String.normalize
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
+Form of this string.
 
-The **`normalize()`** method returns the Unicode Normalization
-Form of the string.
+{{InteractiveExample("JavaScript Demo: String.prototype.normalize()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/string-normalize.html", "taller")}}
+```js interactive-example
+const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
+const name2 = "\u0041\u006d\u0065\u0301\u006c\u0069\u0065";
+
+console.log(`${name1}, ${name2}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1 === name2);
+// Expected output: false
+console.log(name1.length === name2.length);
+// Expected output: false
+
+const name1NFC = name1.normalize("NFC");
+const name2NFC = name2.normalize("NFC");
+
+console.log(`${name1NFC}, ${name2NFC}`);
+// Expected output: "Amélie, Amélie"
+console.log(name1NFC === name2NFC);
+// Expected output: true
+console.log(name1NFC.length === name2NFC.length);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -30,13 +44,11 @@ normalize(form)
 ### Parameters
 
 - `form` {{optional_inline}}
-
   - : One of `"NFC"`, `"NFD"`, `"NFKC"`, or
     `"NFKD"`, specifying the Unicode Normalization Form. If omitted or
     {{jsxref("undefined")}}, `"NFC"` is used.
 
     These values have the following meanings:
-
     - `"NFC"`
       - : Canonical Decomposition, followed by Canonical Composition.
     - `"NFD"`
@@ -50,10 +62,10 @@ normalize(form)
 
 A string containing the Unicode Normalization Form of the given string.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : A {{jsxref("RangeError")}} is thrown if `form` isn't one of the values
+  - : Thrown if `form` isn't one of the values
     specified above.
 
 ## Description
@@ -243,4 +255,4 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ## See also
 
 - [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
-- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence)
+- [Unicode equivalence](https://en.wikipedia.org/wiki/Unicode_equivalence) on Wikipedia

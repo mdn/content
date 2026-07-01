@@ -1,28 +1,18 @@
 ---
-title: IDBTransaction.mode
+title: "IDBTransaction: mode property"
+short-title: mode
 slug: Web/API/IDBTransaction/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - mode
 browser-compat: api.IDBTransaction.mode
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`mode`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns the current mode for accessing the
-data in the object stores in the scope of the transaction (i.e. is the mode to be
+data in the object stores in the scope of the transaction (i.e., is the mode to be
 read-only, or do you want to write to the object stores?) The default value is
 `readonly`.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -36,10 +26,9 @@ The following values are available:
 - `readwrite`
   - : Allows reading and writing of data in existing data stores to be changed.
 - `versionchange`
-  - : Allows any operation to be performed, including ones that delete and
+  - : Allows any operation, including ones that delete and
     create object stores and indexes.
-    This mode is for updating the version number of transactions
-    that were started using {{domxref("IDBDatabase.setVersion()")}}.
+    This mode is for updating the version number of transactions if the need is detected when calling {{domxref("IDBFactory.open()")}}.
     Transactions of this mode cannot run concurrently with other transactions.
     Transactions in this mode are known as _upgrade transactions_.
 
@@ -52,7 +41,7 @@ failure. At the end, we log the mode of the current transaction using `mode`.
 For a full working example, see our [To-do Notifications app](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-const note = document.getElementById('notifications');
+const note = document.getElementById("notifications");
 
 // an instance of a db object for us to store the IDB data in
 let db;
@@ -61,7 +50,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -73,18 +63,30 @@ DBOpenRequest.onsuccess = (event) => {
 
 function addData() {
   // Create a new object ready for being inserted into the IDB
-  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed: database modification finished.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -96,12 +98,13 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '<li>Request successful.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 
   // Return the mode this transaction has been opened in (should be "readwrite" in this case)
   transaction.mode;
-};
+}
 ```
 
 ## Specifications

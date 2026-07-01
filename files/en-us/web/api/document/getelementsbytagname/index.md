@@ -1,12 +1,8 @@
 ---
-title: Document.getElementsByTagName()
+title: "Document: getElementsByTagName() method"
+short-title: getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.getElementsByTagName
 ---
 
@@ -37,10 +33,6 @@ getElementsByTagName(name)
 
 A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
-> **Note:** [The latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
-> `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
-> WebKit browsers. See {{bug(14869)}} for details.
-
 ## Examples
 
 In the following example, `getElementsByTagName()` starts from a particular
@@ -56,73 +48,77 @@ paragraph elements of a particular parent (either the document itself or one of 
 nested {{HTMLElement("div")}} elements).
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>getElementsByTagName example</title>
-    <script>
-      function getAllParaElems() {
-        const allParas = document.getElementsByTagName("p");
-        const num = allParas.length;
-        alert(`There are ${num} paragraph in this document`);
-      }
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-      function div1ParaElems() {
-        const div1 = document.getElementById("div1");
-        const div1Paras = div1.getElementsByTagName("p");
-        const num = div1Paras.length;
-        alert(`There are ${num} paragraph in #div1`);
-      }
+<div id="div1">
+  <p>Some div1 text</p>
+  <p>Some div1 text</p>
+  <p>Some div1 text</p>
 
-      function div2ParaElems() {
-        const div2 = document.getElementById("div2");
-        const div2Paras = div2.getElementsByTagName("p");
-        const num = div2Paras.length;
-        alert(`There are ${num} paragraph in #div2`);
-      }
-    </script>
-  </head>
-  <body style="border: solid green 3px">
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+  <div id="div2">
+    <p>Some div2 text</p>
+    <p>Some div2 text</p>
+  </div>
+</div>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Some div2 text</p>
-        <p>Some div2 text</p>
-      </div>
-    </div>
+<button id="btn1">Show all p elements in document</button>
+<br />
+<button id="btn2">Show all p elements in div1 element</button>
+<br />
+<button id="btn3">Show all p elements in div2 element</button>
+```
 
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+```css
+body {
+  border: solid green 3px;
+}
 
-    <button onclick="getAllParaElems();">
-      Show all p elements in document
-    </button><br />
+#div1 {
+  border: solid blue 3px;
+}
 
-    <button onclick="div1ParaElems();">
-      Show all p elements in div1 element
-    </button><br />
+#div2 {
+  border: solid red 3px;
+}
+```
 
-    <button onclick="div2ParaElems();">
-      Show all p elements in div2 element
-    </button>
-  </body>
-</html>
+```js
+function getAllParaElems() {
+  const allParas = document.getElementsByTagName("p");
+  const num = allParas.length;
+  alert(`There are ${num} paragraph in this document`);
+}
+
+function div1ParaElems() {
+  const div1 = document.getElementById("div1");
+  const div1Paras = div1.getElementsByTagName("p");
+  const num = div1Paras.length;
+  alert(`There are ${num} paragraph in #div1`);
+}
+
+function div2ParaElems() {
+  const div2 = document.getElementById("div2");
+  const div2Paras = div2.getElementsByTagName("p");
+  const num = div2Paras.length;
+  alert(`There are ${num} paragraph in #div2`);
+}
+
+document.getElementById("btn1").addEventListener("click", getAllParaElems);
+document.getElementById("btn2").addEventListener("click", div1ParaElems);
+document.getElementById("btn3").addEventListener("click", div2ParaElems);
 ```
 
 ## Notes
 
 When called on an HTML document, `getElementsByTagName()` lower-cases its
-argument before proceeding. This is undesirable when trying to match camelCase SVG
+argument before proceeding. This is undesirable when trying to match {{Glossary("camel_case", "camel case")}} SVG
 elements in a subtree in an HTML document.
 {{Domxref("document.getElementsByTagNameNS()")}} is useful in that case. See also
-{{Bug(499656)}}.
+[Firefox bug 499656](https://bugzil.la/499656).
 
 `document.getElementsByTagName()` is similar to
 {{domxref("Element.getElementsByTagName()")}}, except that its search encompasses the

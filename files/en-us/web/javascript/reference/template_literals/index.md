@@ -2,20 +2,9 @@
 title: Template literals (Template strings)
 slug: Web/JavaScript/Reference/Template_literals
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - React
-  - String
-  - Template Strings
-  - Template literals
-  - Template string
-  - strings
 browser-compat: javascript.grammar.template_literals
+sidebar: jssidebar
 ---
-
-{{JsSidebar("More")}}
 
 **Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
@@ -70,7 +59,7 @@ Any newline characters inserted in the source are part of the template literal.
 Using normal strings, you would have to use the following syntax in order to get multi-line strings:
 
 ```js
-console.log("string text line 1\n" + "string text line 2");
+console.log("string text line 1\nstring text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -84,9 +73,17 @@ string text line 2`);
 // string text line 2"
 ```
 
+Like [normal string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences), you can write a single-line string across multiple lines for source code readability, by escaping the newline with a backslash (`\`):
+
+```js
+console.log(`string text line 1 \
+string text line 2`);
+// "string text line 1 string text line 2"
+```
+
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using_) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -122,8 +119,8 @@ let classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 With a template literal but without nesting, you could do this:
@@ -161,7 +158,7 @@ function myTag(strings, personExp, ageExp) {
   const str1 = strings[1]; // " is a "
   const str2 = strings[2]; // "."
 
-  const ageStr = ageExp > 99 ? "centenarian" : "youngster";
+  const ageStr = ageExp < 100 ? "youngster" : "centenarian";
 
   // We can even return a string built using a template literal
   return `${str0}${personExp}${str1}${ageStr}${str2}`;
@@ -173,7 +170,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
+The tag does not have to be a plain identifier. You can use any expression with [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table) greater than 16, which includes [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), function call, [new expression](/en-US/docs/Web/JavaScript/Reference/Operators/new), or even another tagged template literal.
 
 ```js
 console.log`Hello`; // [ 'Hello' ]
@@ -197,14 +194,14 @@ console.log(`Hello``World`); // TypeError: "Hello" is not a function
 
 The only exception is optional chaining, which will throw a syntax error.
 
-```js example-bad
+```js-nolint example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
 console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
 Note that these two expressions are still parsable. This means they would not be subject to [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), which will only insert semicolons to fix code that's otherwise unparsable.
 
-```js example-bad
+```js-nolint example-bad
 // Still a syntax error
 const a = console?.log
 `Hello`
@@ -272,9 +269,12 @@ function tag(strings) {
 }
 
 tag`string text line 1 \n string text line 2`;
-// Logs "string text line 1 \n string text line 2" ,
+// Logs "string text line 1 \n string text line 2",
 // including the two characters '\' and 'n'
 ```
+
+> [!NOTE]
+> The template literal syntax is still processed in the same way, which means unescaped backticks and `${` have special syntactic meaning, but escaping these characters create extra backslashes in the raw string. See [raw strings containing template literal syntax](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw#raw_strings_containing_template_literal_syntax) for more information.
 
 In addition, the {{jsxref("String.raw()")}} method exists to create raw strings just like the default template function and string concatenation would create.
 
@@ -289,7 +289,7 @@ Array.from(str).join(",");
 // "H,i,\\,n,5,!"
 ```
 
-`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
+`String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e., escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
 
 ```js
 const identity = (strings, ...values) =>
@@ -304,7 +304,7 @@ This is useful for many tools which give special treatment to literals tagged by
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // Some formatters will format this literal's content as HTML
-const doc = html`<!DOCTYPE html>
+const doc = html`<!doctype html>
   <html lang="en-US">
     <head>
       <title>Hello</title>
@@ -317,40 +317,45 @@ const doc = html`<!DOCTYPE html>
 
 ### Tagged templates and escape sequences
 
-In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
+In normal template literals, [the escape sequences in string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) are all allowed. Any other non-well-formed escape sequence is a syntax error. This includes:
 
 - `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07` (which is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences))
 - `\x` followed by fewer than two hex digits (including none); for example `\xz`
 - `\u` not followed by `{` and followed by fewer than four hex digits (including none); for example `\uz`
 - `\u{}` enclosing an invalid Unicode code point — it contains a non-hex digit, or its value is greater than `10FFFF`; for example `\u{110000}` and `\u{z}`
 
-> **Note:** `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
+> [!NOTE]
+> `\` followed by other characters, while they may be useless since nothing is escaped, are not syntax errors.
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates.
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for an example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
-latex`\unicode`;
+const node = document.getElementById("formula");
+MathJax.typesetClear([node]);
 // Throws in older ECMAScript versions (ES2016 and earlier)
 // SyntaxError: malformed Unicode character escape sequence
+node.textContent = String.raw`$\underline{u}$`;
+MathJax.typesetPromise([node]);
 ```
 
 However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
 ```js
-function latex(str) {
-  return { cooked: str[0], raw: str.raw[0] };
+function log(str) {
+  console.log("Cooked:", str[0]);
+  console.log("Raw:", str.raw[0]);
 }
 
-latex`\unicode`;
-
-// { cooked: undefined, raw: "\\unicode" }
+log`\unicode`;
+// Cooked: undefined
+// Raw: \unicode
 ```
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
 
-```js example-bad
+```js-nolint example-bad
 const bad = `bad escape sequence: \unicode`;
 ```
 
@@ -364,8 +369,8 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
-- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+- [ES6 in Depth: Template strings](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/) on hacks.mozilla.org (2015)

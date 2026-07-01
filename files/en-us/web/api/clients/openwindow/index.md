@@ -1,19 +1,12 @@
 ---
-title: Clients.openWindow()
+title: "Clients: openWindow() method"
+short-title: openWindow()
 slug: Web/API/Clients/openWindow
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - openWindow
 browser-compat: api.Clients.openWindow
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`openWindow()`** method of the {{domxref("Clients")}}
 interface creates a new top level browsing context and loads a given URL. If the calling
@@ -43,33 +36,62 @@ openWindow(url)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("WindowClient")}} object if the
-URL is from the same origin as the service worker or a {{Glossary("null", "null
-  value")}} otherwise.
+URL is from the same origin as the service worker or a {{Glossary("null", "null value")}} otherwise.
+
+### Exceptions
+
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : The promise is rejected with this exception if none of the windows in the app's origin have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation).
+
+## Security requirements
+
+- At least one window in the app's origin must have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Examples
 
+### Opening a window on a notification click
+
+In this example a service worker creates and then shows a notification that contains an associated URL, which is under the service worker's scope. When the user clicks the notification:
+
+- If the page at the notification's URL is already open, the service worker focuses it.
+- Otherwise, the service worker opens the page in a new window.
+
+Note that the {{domxref("Client.url")}} property is not updated unless a new page is actually loaded. This means that it will not be updated if the user navigates within the same page using a URL fragment, or if a {{glossary("SPA", "single-page app (SPA)")}} intercepts a navigation event (for example, using the [Navigation API](/en-US/docs/Web/API/Navigation_API)) and updates the page content using client-side code. Consequently, this technique is not suitable for SPAs.
+
 ```js
-// Send notification to OS if applicable
-if (self.Notification.permission === 'granted') {
+// Create and show notification
+if (self.Notification.permission === "granted") {
   const notificationObject = {
-    body: 'Click here to view your messages.',
+    body: "Click here to view your messages.",
     data: { url: `${self.location.origin}/some/path` },
-    // data: { url: 'http://example.com' },
   };
-  self.registration.showNotification('You\'ve got messages!', notificationObject);
+  self.registration.showNotification(
+    "You've got messages!",
+    notificationObject,
+  );
 }
 
-// Notification click event listener
-self.addEventListener('notificationclick', (e) => {
+// Handle notification click
+self.addEventListener("notificationclick", (e) => {
   // Close the notification popout
   e.notification.close();
-  // Get all the Window clients
-  e.waitUntil(clients.matchAll({ type: 'window' }).then((clientsArr) => {
-    // If a Window tab matching the targeted URL already exists, focus that;
-    const hadWindowToFocus = clientsArr.some((windowClient) => windowClient.url === e.notification.data.url ? (windowClient.focus(), true) : false);
-    // Otherwise, open a new tab to the applicable URL and focus it.
-    if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then((windowClient) => windowClient ? windowClient.focus() : null);
-  }));
+  e.waitUntil(
+    // Get all the Window clients
+    clients.matchAll({ type: "window" }).then((clientsArr) => {
+      const windowToFocus = clientsArr.find(
+        (windowClient) => windowClient.url === e.notification.data.url,
+      );
+      if (windowToFocus) {
+        // If a Window tab matching the targeted URL already exists, focus that;
+        windowToFocus.focus();
+      } else {
+        // Otherwise, open a new tab to the applicable URL and focus it.
+        clients
+          .openWindow(e.notification.data.url)
+          .then((windowClient) => (windowClient ? windowClient.focus() : null));
+      }
+    }),
+  );
 });
 ```
 

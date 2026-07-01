@@ -1,18 +1,13 @@
 ---
 title: Error() constructor
+short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Error.Error
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`Error()`** constructor creates an error object.
+The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
 ## Syntax
 
@@ -30,7 +25,8 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
+> [!NOTE]
+> `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 
@@ -49,7 +45,7 @@ Error(message, fileName, lineNumber)
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{JSxRef("Operators/new", "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{jsxref("new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js
@@ -79,11 +75,11 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 JavaScript only tries to read `options.cause` if `options` is an object — this avoids ambiguity with the other non-standard `Error(message, fileName, lineNumber)` signature, which requires the second parameter to be a string. If you omit `options`, pass a primitive value as `options`, or pass an object without the `cause` property, then the created `Error` object will have no `cause` property.
 
 ```js
-// Omitting options 
+// Omitting options
 const error1 = new Error("Error message");
 console.log("cause" in error1); // false
 
-// Passing a primitive value 
+// Passing a primitive value
 const error2 = new Error("Error message", "");
 console.log("cause" in error2); // false
 
@@ -102,7 +98,8 @@ console.log("cause" in error3); // false
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
-- {{JSxRef("Statements/throw", "throw")}}
-- {{JSxRef("Statements/try...catch", "try...catch")}}
-- [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}
+- [Error causes](https://v8.dev/features/error-cause) on v8.dev (2021)

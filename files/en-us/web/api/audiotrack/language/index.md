@@ -1,21 +1,8 @@
 ---
-title: AudioTrack.language
+title: "AudioTrack: language property"
+short-title: language
 slug: Web/API/AudioTrack/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Language
-  - Localization
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Translated
-  - Translation
-  - track
 browser-compat: api.AudioTrack.language
 ---
 
@@ -31,7 +18,7 @@ should be the video's primary language.
 
 ## Value
 
-A string specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+A string specifying the {{glossary("BCP 47 language tag")}} of
 the primary language used in the audio track, or an empty string (`""`) if
 the language is not specified or known, or if the track doesn't contain speech.
 

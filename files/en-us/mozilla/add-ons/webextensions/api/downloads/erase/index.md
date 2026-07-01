@@ -1,20 +1,10 @@
 ---
 title: downloads.erase()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - erase
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.erase
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`erase()`** function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
 
@@ -22,7 +12,8 @@ To remove the files from disk, you need to use {{WebExtAPIRef("downloads.removeF
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.
+> [!NOTE]
+> If you want to remove a downloaded file from disk _and_ erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.
 
 ## Syntax
 
@@ -41,10 +32,6 @@ let erasing = browser.downloads.erase(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the promise will be fulfilled with an array of integers representing the ids of the erased {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}. If no items matching the query parameter could be found, the array will be empty. If the call failed, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Erase the most recent download:
@@ -60,7 +47,7 @@ function onError(error) {
 
 let erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 erasing.then(onErased, onError);
@@ -83,7 +70,12 @@ erasing.then(onErased, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-erase) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-erase) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

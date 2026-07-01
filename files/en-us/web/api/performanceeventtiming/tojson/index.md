@@ -1,12 +1,8 @@
 ---
-title: PerformanceEventTiming.toJSON()
+title: "PerformanceEventTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceEventTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming.toJSON
 ---
 
@@ -43,7 +39,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 This would log a JSON object like so:

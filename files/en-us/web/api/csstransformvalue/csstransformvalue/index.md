@@ -1,20 +1,12 @@
 ---
-title: CSSTransformValue()
+title: "CSSTransformValue: CSSTransformValue() constructor"
+short-title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
 browser-compat: api.CSSTransformValue.CSSTransformValue
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTransformValue()`** constructor
 creates a new {{domxref("CSSTransformValue")}} object which represents a list of

@@ -1,12 +1,8 @@
 ---
-title: NodeIterator.root
+title: "NodeIterator: root property"
+short-title: root
 slug: Web/API/NodeIterator/root
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
 browser-compat: api.NodeIterator.root
 ---
 
@@ -24,9 +20,13 @@ A {{DOMxref("Node")}}.
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
 );
 root = nodeIterator.root; // document.body in this case
 ```

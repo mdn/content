@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.drawImage()
+title: "CanvasRenderingContext2D: drawImage() method"
+short-title: drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.drawImage
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.drawImage()`** method of the
 Canvas 2D API provides different ways to draw an image onto the canvas.
@@ -51,11 +46,11 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
     destination context. If not specified, the entire rectangle from the coordinates
     specified by `sx` and `sy` to the bottom-right corner of the
     image is used. Use the 3- or 5-argument syntax to omit this argument.
-    A negative value will flip the image.
+    Negative values grow the sub-rectangle in the opposite direction, but pixels are always processed in the original direction and the image is not flipped.
 - `sHeight` {{optional_inline}}
   - : The height of the sub-rectangle of the source `image` to draw into the
     destination context. Use the 3- or 5-argument syntax to omit this argument.
-    A negative value will flip the image.
+    Negative values grow the sub-rectangle in the opposite direction, but pixels are always processed in the original direction and the image is not flipped.
 - `dx`
   - : The x-axis coordinate in the destination canvas at which to place the top-left
     corner of the source `image`.
@@ -66,10 +61,12 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
   - : The width to draw the `image` in the destination canvas. This allows
     scaling of the drawn image. If not specified, the image is not scaled in width when
     drawn. Note that this argument is not included in the 3-argument syntax.
+    Negative values grow the sub-rectangle in the opposite direction, but pixels are always processed in the original direction and the image is not flipped.
 - `dHeight`
   - : The height to draw the `image` in the destination canvas. This allows
     scaling of the drawn image. If not specified, the image is not scaled in height when
     drawn. Note that this argument is not included in the 3-argument syntax.
+    Negative values grow the sub-rectangle in the opposite direction, but pixels are always processed in the original direction and the image is not flipped.
 
 ### Return value
 
@@ -92,9 +89,19 @@ This example draws an image to the canvas using the `drawImage()` method.
 
 ```html
 <canvas id="canvas"></canvas>
-<div style="display:none;">
-  <img id="source" src="rhino.jpg" width="300" height="227" />
+<div class="hidden">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
 </div>
+```
+
+```css hidden
+.hidden {
+  display: none;
+}
 ```
 
 #### JavaScript
@@ -146,7 +153,7 @@ const image = new Image(60, 45); // Using optional size for image
 image.onload = drawImageActualSize; // Draw when image has loaded
 
 // Load an image of intrinsic size 300x227 in CSS pixels
-image.src = "rhino.jpg";
+image.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 
 function drawImageActualSize() {
   // Use the intrinsic size of image in CSS pixels for the canvas element

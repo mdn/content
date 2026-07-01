@@ -1,15 +1,8 @@
 ---
-title: Window.screenX
+title: "Window: screenX property"
+short-title: screenX
 slug: Web/API/Window/screenX
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - screenX
 browser-compat: api.Window.screenX
 ---
 
@@ -19,7 +12,8 @@ The **`Window.screenX`** read-only property returns the
 horizontal distance, in CSS pixels, of the left border of the user's browser viewport to
 the left side of the screen.
 
-> **Note:** An alias of `screenX` was implemented across modern
+> [!NOTE]
+> An alias of `screenX` was implemented across modern
 > browsers in more recent times — {{domxref("Window.screenLeft")}}. This was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
@@ -46,11 +40,18 @@ function positionElem() {
   let leftUpdate = initialLeft - newLeft;
   let topUpdate = initialTop - newTop;
 
-  ctx.fillStyle = 'rgb(0, 0, 0)';
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = 'rgb(0, 0, 255)';
+  ctx.fillStyle = "rgb(0 0 255)";
   ctx.beginPath();
-  ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
+  ctx.arc(
+    leftUpdate + width / 2,
+    topUpdate + height / 2 + 35,
+    50,
+    degToRad(0),
+    degToRad(360),
+    false,
+  );
   ctx.fill();
 
   pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;

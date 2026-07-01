@@ -1,25 +1,19 @@
 ---
-title: CanvasRenderingContext2D.createConicGradient()
+title: "CanvasRenderingContext2D: createConicGradient() method"
+short-title: createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Conic
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createConicGradient()`** method of the Canvas 2D API creates a gradient around a point with given coordinates.
 
 This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a shape, the gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-> **Note:** Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape's coordinates.
+> [!NOTE]
+> Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape's coordinates.
 
 ## Syntax
 
@@ -30,7 +24,7 @@ createConicGradient(startAngle, x, y)
 ### Parameters
 
 - `startAngle`
-  - : The angle at which to begin the gradient, in radians. Angle measurements start vertically above the center and move around clockwise.
+  - : The angle at which to begin the gradient, in radians. The angle starts from a line going horizontally right from the center, and proceeds clockwise.
 - `x`
   - : The x-axis coordinate of the center of the gradient.
 - `y`
@@ -38,8 +32,7 @@ createConicGradient(startAngle, x, y)
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A conic `CanvasGradient`.
+A conic {{domxref("CanvasGradient")}}.
 
 ## Examples
 
@@ -50,7 +43,7 @@ This example initializes a conic gradient using the `createConicGradient()` meth
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="240" height="240"></canvas>
 ```
 
 #### JavaScript
@@ -78,7 +71,7 @@ ctx.fillRect(20, 20, 200, 200);
 
 #### Rectangle result
 
-{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 700, 200) }}
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 240, 240) }}
 
 ## Specifications
 

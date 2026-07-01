@@ -1,17 +1,14 @@
 ---
-title: CaptureController.setFocusBehavior()
+title: "CaptureController: setFocusBehavior() method"
+short-title: setFocusBehavior()
 slug: Web/API/CaptureController/setFocusBehavior
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - setFocusBehavior
+status:
+  - experimental
 browser-compat: api.CaptureController.setFocusBehavior
 ---
 
-{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("CaptureController")}} interface's **`setFocusBehavior()`** method controls whether the captured tab or window will be focused when an associated {{domxref("MediaDevices.getDisplayMedia()")}} {{jsxref("Promise")}} fulfills, or whether the focus will remain with the tab containing the capturing app.
 
@@ -42,25 +39,26 @@ None (`undefined`).
 
 ## Examples
 
+### Basic `setFocusBehavior()` usage
+
 ```js
 // Create a new CaptureController instance
 const controller = new CaptureController();
 
 // Prompt the user to share a tab, window, or screen.
-const stream =
-    await navigator.mediaDevices.getDisplayMedia({ controller });
+const stream = await navigator.mediaDevices.getDisplayMedia({ controller });
 
 // Query the displaySurface value of the captured video track
 const [track] = stream.getVideoTracks();
 const displaySurface = track.getSettings().displaySurface;
 
-if (displaySurface == 'browser') {
+if (displaySurface === "browser") {
   // Focus the captured tab.
-  controller.setFocusBehavior('focus-captured-surface');
-} else if (displaySurface == 'window') {
+  controller.setFocusBehavior("focus-captured-surface");
+} else if (displaySurface === "window") {
   // Do not move focus to the captured window.
   // Keep the capturing page focused.
-  controller.setFocusBehavior('no-focus-change');
+  controller.setFocusBehavior("no-focus-change");
 }
 ```
 

@@ -1,19 +1,14 @@
 ---
-title: TransformStream.writable
+title: "TransformStream: writable property"
+short-title: writable
 slug: Web/API/TransformStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TransformStream
 browser-compat: api.TransformStream.writable
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
-The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.
+The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`. This stream accepts input data that will be transformed and emitted to the `readable` stream.
 
 ## Value
 
@@ -21,11 +16,33 @@ A {{domxref("WritableStream")}}.
 
 ## Examples
 
-The following example creates a new {{domxref("TransformStream")}} as a `textEncoderStream`, and prints the value of `writable` to the console.
+This example creates a `TransformStream` that converts all input text to uppercase letters. It writes some text to the `writable` stream, then reads the transformed text from the `readable` stream.
 
 ```js
-const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream
+const stream = new TransformStream({
+  transform(chunk, controller) {
+    controller.enqueue(chunk.toUpperCase());
+  },
+});
+
+// Write data to be transformed
+const writer = stream.writable.getWriter();
+writer.write("hello ");
+writer.write("world");
+writer.close();
+
+// Read transformed data
+const reader = stream.readable.getReader();
+let done = false;
+let output = "";
+while (!done) {
+  const result = await reader.read();
+  if (result.value) {
+    output += result.value;
+  }
+  done = result.done;
+}
+console.log(output); // HELLO WORLD
 ```
 
 ## Specifications

@@ -1,12 +1,12 @@
 ---
 title: "Document: scrollend event"
+short-title: scrollend
 slug: Web/API/Document/scrollend_event
 page-type: web-api-event
 browser-compat: api.Document.scrollend_event
 ---
 
-{{APIRef}}
-{{SeeCompatTable}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollend`** event fires when the document view has completed scrolling.
 Scrolling is considered completed when the scroll position has no more pending updates and the user has completed their gesture.
@@ -15,16 +15,16 @@ Scroll position updates include smooth or instant mouse wheel scrolling, keyboar
 User gestures like touch panning or trackpad scrolling aren't complete until pointers or keys have released.
 If the scroll position did not change, then no scrollend event fires.
 
-For detecting when scrolling inside an element is complete, see {{domxref("Element/scrollend_event", "Element: scrollend event")}}.
+For detecting when scrolling inside an element is complete, see the {{domxref("Element/scrollend_event", "scrollend")}} event of `Element`.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollend", (event) => {});
+```js-nolint
+addEventListener("scrollend", (event) => { })
 
-onscrollend = (event) => {};
+onscrollend = (event) => { }
 ```
 
 ## Event type
@@ -79,11 +79,11 @@ When the user stops scrolling, the `scrollend` event fires:
 const output = document.querySelector("p#output");
 
 document.addEventListener("scroll", (event) => {
-  output.innerHTML = `Document scroll event fired!`;
+  output.textContent = "Document scroll event fired!";
 });
 
 document.addEventListener("scrollend", (event) => {
-  output.innerHTML = `Document scrollend event fired!`;
+  output.textContent = "Document scrollend event fired!";
 });
 ```
 
@@ -133,11 +133,11 @@ This builds on the first example, but uses `document.onscrollend` instead of an 
 
 ```js
 document.onscroll = (event) => {
-  output.innerHTML = "Document scroll event fired!";
+  output.textContent = "Document scroll event fired!";
 };
 
 document.onscrollend = (event) => {
-  output.innerHTML = "Document scrollend event fired!";
+  output.textContent = "Document scrollend event fired!";
 };
 ```
 

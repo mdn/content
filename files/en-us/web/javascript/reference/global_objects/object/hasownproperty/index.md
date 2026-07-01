@@ -1,26 +1,35 @@
 ---
 title: Object.prototype.hasOwnProperty()
+short-title: hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`hasOwnProperty()`** method returns a boolean indicating whether the
+The **`hasOwnProperty()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether this
 object has the specified property as its own property (as opposed to inheriting
 it).
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
-
-> **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
+> [!NOTE]
+> {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
+
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object = {};
+object.foo = 42;
+
+console.log(object.hasOwnProperty("foo"));
+// Expected output: true
+
+console.log(object.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -53,13 +62,13 @@ example {{jsxref("Array")}} is an {{jsxref("Object")}}, so you can
 use `hasOwnProperty()` method to check whether an index exists:
 
 ```js
-const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
-fruits.hasOwnProperty(3);   // true ('Orange')
-fruits.hasOwnProperty(4);   // false - not defined
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+fruits.hasOwnProperty(3); // true ('Orange')
+fruits.hasOwnProperty(4); // false - not defined
 ```
 
 The method will not be available in objects where it is reimplemented, or on
-objects created using `Object.create(null)` (as these don't inherit from
+[`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) (as these don't inherit from
 `Object.prototype`). Examples for these cases are given below.
 
 ## Examples
@@ -70,16 +79,16 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 const example = {};
-example.hasOwnProperty('prop');   // false
+example.hasOwnProperty("prop"); // false
 
-example.prop = 'exists';
-example.hasOwnProperty('prop');   // true - 'prop' has been defined
+example.prop = "exists";
+example.hasOwnProperty("prop"); // true - 'prop' has been defined
 
 example.prop = null;
-example.hasOwnProperty('prop');   // true - own property exists with value of null
+example.hasOwnProperty("prop"); // true - own property exists with value of null
 
 example.prop = undefined;
-example.hasOwnProperty('prop');   // true - own property exists with value of undefined
+example.hasOwnProperty("prop"); // true - own property exists with value of undefined
 ```
 
 ### Direct vs. inherited properties
@@ -88,17 +97,17 @@ The following example differentiates between direct properties and properties in
 
 ```js
 const example = {};
-example.prop = 'exists';
+example.prop = "exists";
 
 // `hasOwnProperty` will only return true for direct properties:
-example.hasOwnProperty('prop');             // returns true
-example.hasOwnProperty('toString');         // returns false
-example.hasOwnProperty('hasOwnProperty');   // returns false
+example.hasOwnProperty("prop"); // true
+example.hasOwnProperty("toString"); // false
+example.hasOwnProperty("hasOwnProperty"); // false
 
 // The `in` operator will return true for direct or inherited properties:
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+"prop" in example; // true
+"toString" in example; // true
+"hasOwnProperty" in example; // true
 ```
 
 ### Iterating over the properties of an object
@@ -108,7 +117,7 @@ object without executing on inherited properties.
 
 ```js
 const buz = {
-  fog: 'stack',
+  fog: "stack",
 };
 
 for (const name in buz) {
@@ -123,8 +132,8 @@ for (const name in buz) {
 Note that the {{jsxref("Statements/for...in", "for...in")}} loop
 only iterates enumerable items: the absence of non-enumerable properties emitted
 from the loop does not imply that `hasOwnProperty` itself is confined strictly
-to enumerable items (as with
-{{jsxref("Object.getOwnPropertyNames()")}}).
+to enumerable items. You can iterate over non-enumerable properties with
+{{jsxref("Object.getOwnPropertyNames()")}}.
 
 ### Using hasOwnProperty as a property name
 
@@ -136,10 +145,10 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'Here be dragons',
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // reimplementation always returns false
+foo.hasOwnProperty("bar"); // re-implementation always returns false
 ```
 
 The recommended way to overcome this problem is to instead use
@@ -147,30 +156,29 @@ The recommended way to overcome this problem is to instead use
 alternatives include using an _external_ `hasOwnProperty`:
 
 ```js
-const foo = { bar: 'Here be dragons' };
+const foo = { bar: "Here be dragons" };
 
 // Use Object.hasOwn() method - recommended
-Object.hasOwn(foo, "bar");  // true
+Object.hasOwn(foo, "bar"); // true
 
 // Use the hasOwnProperty property from the Object prototype
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // Use another Object's hasOwnProperty
 // and call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Note that in the first two cases there are no newly created objects.
 
 ### Objects created with Object.create(null)
 
-Objects created using
-{{jsxref("Object.create()","Object.create(null)")}} do not
+[`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) do not
 inherit from `Object.prototype`, making `hasOwnProperty()` inaccessible.
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'exists';
+foo.prop = "exists";
 foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty is not a function
 ```
 
@@ -189,8 +197,8 @@ external object's `hasOwnProperty()`.
 ## See also
 
 - {{jsxref("Object.hasOwn()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

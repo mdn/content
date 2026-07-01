@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.encodedBodySize
+title: "PerformanceResourceTiming: encodedBodySize property"
+short-title: encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`encodedBodySize`** read-only property represents the size (in octets) received from the fetch (HTTP or cache) of the payload body before removing any applied content encodings (like gzip or Brotli). If the resource is retrieved from an application cache or a local resource, it must
 return the size of the payload body before removing any applied content encoding.

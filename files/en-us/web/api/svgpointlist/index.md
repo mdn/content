@@ -2,17 +2,12 @@
 title: SVGPointList
 slug: Web/API/SVGPointList
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SVGPointList
 browser-compat: api.SVGPointList
 ---
 
 {{APIRef("SVG")}}
 
-The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.
+The **`SVGPointList`** interface represents a list of {{domxref("DOMPoint")}} objects.
 
 An `SVGPointList` can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.
 
@@ -55,8 +50,8 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
-console.log(example.points); //an SVGPointList
+const example = document.getElementById("example");
+console.log(example.points); // An SVGPointList
 ```
 
 ## Specifications

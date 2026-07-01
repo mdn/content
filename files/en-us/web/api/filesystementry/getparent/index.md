@@ -1,15 +1,8 @@
 ---
-title: FileSystemEntry.getParent()
+title: "FileSystemEntry: getParent() method"
+short-title: getParent()
 slug: Web/API/FileSystemEntry/getParent
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entry API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Reference
-  - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
 
@@ -41,15 +34,15 @@ getParent(successCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
-- `FileError.INVALID_STATE_ERR`
+- `DOMException.INVALID_STATE_ERR`
   - : The operation failed because the file system's state doesn't permit it. This can
     happen, for example, if the file system's cached state differs from the actual state
     of the file system.
-- `FileError.NOT_FOUND_ERR`
+- `DOMException.NOT_FOUND_ERR`
   - : The specified path could not be found.
-- `FileError.SECURITY_ERR`
+- `DOMException.SECURITY_ERR`
   - : Security restrictions prohibit obtaining the parent directory's information.
 
 ## Examples
@@ -58,13 +51,18 @@ This example renames the file specified by the variable `fileEntry` to
 `"newname.html"`.
 
 ```js
-fileEntry.getParent((parent) => {
-  fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
-    console.log(`File ${fileEntry.name} renamed to newname.html.`);
-  });
-}, (error) => {
-  console.error(`An error occurred: Unable to rename ${fileEntry.name} to newname.html.`);
-});
+fileEntry.getParent(
+  (parent) => {
+    fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
+      console.log(`File ${fileEntry.name} renamed to newname.html.`);
+    });
+  },
+  (error) => {
+    console.error(
+      `An error occurred: Unable to rename ${fileEntry.name} to newname.html.`,
+    );
+  },
+);
 ```
 
 This is accomplished by first obtaining a {{domxref("FileSystemDirectoryEntry")}}
@@ -98,4 +96,3 @@ A similar approach can be taken elsewhere in the File and Directory Entries API.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

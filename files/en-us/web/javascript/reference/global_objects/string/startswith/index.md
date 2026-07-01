@@ -1,23 +1,25 @@
 ---
 title: String.prototype.startsWith()
+short-title: startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.startsWith
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`startsWith()`** method of {{jsxref("String")}} values determines whether this string begins with the characters of a specified string, returning `true` or `false` as appropriate.
 
-The **`startsWith()`** method determines whether a string begins with the characters of a specified string, returning `true` or `false` as appropriate.
+{{InteractiveExample("JavaScript Demo: String.prototype.startsWith()")}}
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+```js interactive-example
+const str = "Saturday night plans";
+
+console.log(str.startsWith("Sat"));
+// Expected output: true
+
+console.log(str.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -40,7 +42,7 @@ startsWith(searchString, position)
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
+  - : Thrown if `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 
@@ -69,6 +71,7 @@ console.log(str.startsWith("not to be", 10)); // true
 ## See also
 
 - [Polyfill of `String.prototype.startsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.startsWith`](https://www.npmjs.com/package/string.prototype.startswith)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

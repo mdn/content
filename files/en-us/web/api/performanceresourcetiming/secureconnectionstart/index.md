@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.secureConnectionStart
+title: "PerformanceResourceTiming: secureConnectionStart property"
+short-title: secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.secureConnectionStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`secureConnectionStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the handshake process to secure the current connection. If a secure connection is not used, the property returns zero.
 

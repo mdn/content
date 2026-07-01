@@ -1,22 +1,32 @@
 ---
 title: RegExp.prototype.multiline
+short-title: multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 page-type: javascript-instance-accessor-property
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.multiline
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
-The **`multiline`** accessor property indicates whether or not the `m` flag is used with the regular expression.
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
+```js interactive-example
+const regex1 = /^football/;
+const regex2 = /^football/m;
+
+console.log(regex1.multiline);
+// Expected output: false
+
+console.log(regex2.multiline);
+// Expected output: true
+
+console.log(regex1.test("rugby\nfootball"));
+// Expected output: false
+
+console.log(regex2.test("rugby\nfootball"));
+// Expected output: true
+```
 
 ## Description
 
@@ -29,7 +39,7 @@ The set accessor of `multiline` is `undefined`. You cannot change this property 
 ### Using multiline
 
 ```js
-const regex = /foo/m;
+const regex = /^foo/m;
 
 console.log(regex.multiline); // true
 ```
@@ -45,10 +55,10 @@ console.log(regex.multiline); // true
 ## See also
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

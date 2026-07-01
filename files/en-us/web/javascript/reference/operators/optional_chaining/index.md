@@ -2,33 +2,41 @@
 title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 page-type: javascript-operator
-tags:
-  - Chaining
-  - JavaScript
-  - Language feature
-  - Operator
-  - Optional chaining
-  - Reference
 browser-compat: javascript.operators.optional_chaining
+sidebar: jssidebar
 ---
 
-{{JSSidebar("Operators")}}
+The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
-The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it returns {{jsxref("undefined")}} instead of throwing an error.
+{{InteractiveExample("JavaScript Demo: Optional chaining (?.) operator", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Syntax
 
 ```js-nolint
-obj.val?.prop
-obj.val?.[expr]
-obj.func?.(args)
+obj?.prop
+obj?.[expr]
+func?.(args)
 ```
 
 ## Description
 
-The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{JSxRef("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
+The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
 
 This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.
 
@@ -41,11 +49,11 @@ const nestedProp = obj.first && obj.first.second;
 ```
 
 The value of `obj.first` is confirmed to be non-`null` (and
-non-`undefined`) before then accessing the value of
+non-`undefined`) before accessing the value of
 `obj.first.second`. This prevents the error that would occur if you accessed
 `obj.first.second` directly without testing `obj.first`.
 
-This is an idiomatic pattern in JavaScript, but it gets verbose when the chain is long, and it's not safe. For example, if `obj.first` is a {{glossary("Falsy")}} value that's not `null` or `undefined`, such as `0`, it would still short-circuit and make `nestedProp` become `0`, which may not be desirable.
+This is an idiomatic pattern in JavaScript, but it gets verbose when the chain is long, and it's not safe. For example, if `obj.first` is a {{Glossary("Falsy")}} value that's not `null` or `undefined`, such as `0`, it would still short-circuit and make `nestedProp` become `0`, which may not be desirable.
 
 With the optional chaining operator (`?.`), however, you don't have to
 explicitly test and short-circuit based on the state of `obj.first` before
@@ -91,10 +99,11 @@ found:
 const result = someInterface.customMethod?.();
 ```
 
-However, if there is a property with such a name which is not a function, using `?.` will still raise a {{JSxRef("TypeError")}} exception "someInterface.customMethod is not a function".
+However, if there is a property with such a name which is not a function, using `?.` will still raise a {{jsxref("TypeError")}} exception "someInterface.customMethod is not a function".
 
-> **Note:** If `someInterface` itself is `null` or
-> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> [!NOTE]
+> If `someInterface` itself is `null` or
+> `undefined`, a {{jsxref("TypeError")}} exception will still be
 > raised ("someInterface is null"). If you expect that
 > `someInterface` itself may be `null` or `undefined`,
 > you have to use `?.` at this position as
@@ -104,13 +113,14 @@ However, if there is a property with such a name which is not a function, using 
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation), which allows passing an expression as the property name:
+You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
-const nestedProp = obj?.["prop" + "Name"];
+const propName = "x";
+const nestedProp = obj?.[propName];
 ```
 
-This is particularly useful for arrays, since array indices must be accessed with brackets.
+This is particularly useful for arrays, since array indices must be accessed with square brackets.
 
 ```js
 function printMagicIndex(arr) {
@@ -118,16 +128,30 @@ function printMagicIndex(arr) {
 }
 
 printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
-printMagicIndex(); // undefined; if not using ?., this would throw
+printMagicIndex(); // undefined; if not using ?., this would throw an error: "Cannot read properties of undefined (reading '42')"
 ```
 
-### Optional chaining not valid on the left-hand side of an assignment
+### Invalid optional chaining
 
 It is invalid to try to assign to the result of an optional chaining expression:
 
-```js example-bad
+```js-nolint example-bad
 const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
+```
+
+[Template literal tags](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) cannot be an optional chain (see [SyntaxError: tagged template cannot be used with optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)):
+
+```js-nolint example-bad
+String?.raw`Hello, world!`;
+String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
+```
+
+The constructor of {{jsxref("new")}} expressions cannot be an optional chain (see [SyntaxError: new keyword cannot be used with an optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)):
+
+```js-nolint example-bad
+new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression
+new Map?.();
 ```
 
 ### Short-circuiting
@@ -184,20 +208,20 @@ Except the `temp` variable isn't created.
 ### Basic example
 
 This example looks for the value of the `name` property for the member
-`bar` in a map when there is no such member. The result is therefore
+`CSS` in a map when there is no such member. The result is therefore
 `undefined`.
 
 ```js
 const myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+myMap.set("JS", { name: "Josh", desc: "I maintain things" });
 
-const nameBar = myMap.get("bar")?.name;
+const nameBar = myMap.get("CSS")?.name;
 ```
 
 ### Dealing with optional callbacks or event handlers
 
-If you use callbacks or fetch methods from an object with
-[a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
+If you use callbacks or fetch methods from an object with a
+[destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring) pattern, you may have non-existent values that you cannot call as
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js
@@ -273,4 +297,4 @@ printCustomerCity({
 
 ## See also
 
-- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

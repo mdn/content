@@ -2,15 +2,9 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Offline
-  - Reference
-  - filesystem
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryEntrySync
 ---
 
@@ -18,7 +12,8 @@ browser-compat: api.DirectoryEntrySync
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
@@ -30,13 +25,13 @@ If you want to create subdirectories, you have to create each child directory in
 The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `logs.txt` in the root directory.
 
 ```js
-const fileEntry = fs.root.getFile('logs.txt', {create: true});
+const fileEntry = fs.root.getFile("logs.txt", { create: true });
 ```
 
 The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `project_dir` in the root directory.
 
 ```js
-const dirEntry = fs.root.getDirectory('project_dir', {create: true});
+const dirEntry = fs.root.getDirectory("project_dir", { create: true });
 ```
 
 ## Method overview
@@ -54,18 +49,17 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 #### Syntax
 
-```js
+```js-nolint
 createReader()
 ```
 
-##### Returns
+##### Parameters
 
-- [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+None.
 
-##### Parameter
+##### Return value
 
-None
+A [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync) object represents a directory in a file system.
 
 ##### Exceptions
 
@@ -82,12 +76,12 @@ Depending on how you've set the `options` parameter, the method either creates a
 
 #### Syntax
 
-```
+```js-nolint
 getFile(path)
 getFile(path, options)
 ```
 
-##### Parameter
+##### Parameters
 
 - `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
@@ -137,10 +131,9 @@ getFile(path, options)
   </tbody>
 </table>
 
-##### Returns
+##### Return value
 
-- [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)
-  - : Represents a file in a file system.
+A [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) object representing a file in a file system.
 
 ##### Exceptions
 
@@ -162,12 +155,12 @@ Creates or looks up a directory. The method is similar to `getFile()` with Direc
 
 #### Syntax
 
-```
+```js-nolint
 getDirectory(path)
 getDirectory(path, options)
 ```
 
-##### Parameter
+##### Parameters
 
 - `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
@@ -219,10 +212,9 @@ getDirectory(path, options)
   </tbody>
 </table>
 
-##### Returns
+##### Return value
 
-- [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync)
-  - : Represents a directory in a file system.
+A [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync) object representing a directory in a file system.
 
 ##### Exceptions
 
@@ -246,15 +238,15 @@ If you delete a directory that contains a file that cannot be removed or if an e
 
 #### Syntax
 
-```
+```js-nolint
 removeRecursively()
 ```
 
-##### Parameter
+##### Parameters
 
-None
+None.
 
-##### Returns
+##### Return value
 
 {{jsxref('undefined')}}
 
@@ -311,4 +303,3 @@ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

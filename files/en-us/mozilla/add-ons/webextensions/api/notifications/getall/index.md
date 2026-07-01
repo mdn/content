@@ -1,20 +1,10 @@
 ---
 title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets all currently active notifications created by the extension.
 
@@ -35,10 +25,6 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object. Each currently active notification is a property of this object: the name of the property is the ID of the notification, and the value of the property is a {{WebExtAPIRef("notifications.NotificationOptions")}} object describing that notification.
 
 Note that you can define an ID for a notification explicitly by passing it into {{WebExtAPIRef("notifications.create()")}}. If you don't do this, the browser will generate one. Explicitly-specified IDs are strings, but generated IDs are numbers.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -84,4 +70,9 @@ browser.notifications.getAll().then(logNotifications);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

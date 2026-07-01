@@ -1,20 +1,10 @@
 ---
 title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getLastFocused
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getLastFocused
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets the window that was most recently focused — typically the window 'on top'.
 
@@ -31,23 +21,18 @@ let gettingWindow = browser.windows.getLastFocused(
 ### Parameters
 
 - `getInfo` {{optional_inline}}
-
   - : `object`.
-
     - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) matching the tab's URL.
     - `windowTypes` {{optional_inline}}
       - : An `array` of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to `['normal', 'panel', 'popup']`, with `'panel'` window types limited to the extension's own windows.
 
-> **Note:** If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
+> [!NOTE]
+> If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the last focused window. If any error occurs, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -71,7 +56,12 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-getLastFocused) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-getLastFocused) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

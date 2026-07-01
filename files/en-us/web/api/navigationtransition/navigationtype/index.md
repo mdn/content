@@ -1,24 +1,12 @@
 ---
-title: NavigationTransition.navigationType
+title: "NavigationTransition: navigationType property"
+short-title: navigationType
 slug: Web/API/NavigationTransition/navigationType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - navigationType
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
 browser-compat: api.NavigationTransition.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns the type of the ongoing navigation.
@@ -52,4 +40,3 @@ console.log(navigation.transition.navigationType);
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -2,12 +2,6 @@
 title: EcKeyImportParams
 slug: Web/API/EcKeyImportParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcKeyImportParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyImportParams
 ---
 
@@ -20,9 +14,7 @@ The **`EcKeyImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/A
 - `name`
   - : A string. This should be set to `ECDSA` or `ECDH`, depending on the algorithm you want to use.
 - `namedCurve`
-
   - : A string representing the name of the elliptic curve to use. This may be any of the following names for [NIST](https://www.nist.gov/)-approved curves:
-
     - `P-256`
     - `P-384`
     - `P-521`

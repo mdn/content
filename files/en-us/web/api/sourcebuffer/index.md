@@ -2,19 +2,10 @@
 title: SourceBuffer
 slug: Web/API/SourceBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - MSE
-  - Media Source Extensions
-  - Reference
-  - SourceBuffer
-  - Video
 browser-compat: api.SourceBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.
 
@@ -37,7 +28,7 @@ The **`SourceBuffer`** interface represents a chunk of media to be passed into a
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
-  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
+  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e., whether an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation is currently in progress.
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
   - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
@@ -61,61 +52,57 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 ## Events
 
 - {{domxref("SourceBuffer.abort_event", "abort")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired when the buffer appending is aborted, because the {{domxref("SourceBuffer.abort()")}} or {{domxref("MediaSource.removeSourceBuffer()")}} method is called while the {{domxref("SourceBuffer.appendBuffer()")}} algorithm is still running. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.error_event", "error")}}
-  - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+  - : Fired when an error occurs during the processing of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} operation. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.update_event", "update")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `updateend`.
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.updateend_event", "updateend")}}
-  - : Fired after {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} ends. This event is fired after `update`.
+  - : Fired after the (not necessarily successful) completion of an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation. This event is fired after the `update`, `error`, or `abort` events.
 - {{domxref("SourceBuffer.updatestart_event", "updatestart")}}
-  - : Fired whenever the value of {{domxref("SourceBuffer.updating")}} changes from `false` to `true`.
+  - : Fired when an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}} operation begins. {{domxref("SourceBuffer.updating", "updating")}} changes from `false` to `true`.
 
 ## Examples
 
-The following simple example loads a video chunk by chunk as fast as possible, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
+### Loading a video chunk by chunk
+
+The following example loads a video chunk by chunk as fast as possible, playing it as soon as it can.
+
+You can see the complete code at <https://github.com/mdn/dom-examples/tree/main/sourcebuffer> and try the demo live at <https://mdn.github.io/dom-examples/sourcebuffer/>.
 
 ```js
 const video = document.querySelector("video");
 
 const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  const mediaSource = new MediaSource();
-  console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error(`Unsupported MIME type or codec: ${mimeCodec}`);
+function loadVideo() {
+  if (MediaSource.isTypeSupported(mimeCodec)) {
+    const mediaSource = new MediaSource();
+    console.log(mediaSource.readyState); // closed
+    video.src = URL.createObjectURL(mediaSource);
+    mediaSource.addEventListener("sourceopen", sourceOpen);
+  } else {
+    console.error("Unsupported MIME type or codec: ", mimeCodec);
+  }
 }
 
-function sourceOpen() {
+async function sourceOpen() {
   console.log(this.readyState); // open
-  const mediaSource = this;
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener("updateend", () => {
-      mediaSource.endOfStream();
-      video.play();
-      console.log(mediaSource.readyState); // ended
-    });
-    sourceBuffer.appendBuffer(buf);
+  const sourceBuffer = this.addSourceBuffer(mimeCodec);
+  const response = await fetch(assetURL);
+  const buffer = await response.arrayBuffer();
+  sourceBuffer.addEventListener("updateend", () => {
+    this.endOfStream();
+    video.play();
+    console.log(this.readyState); // ended
   });
+  sourceBuffer.appendBuffer(buffer);
 }
 
-function fetchAB(url, cb) {
-  console.log(url);
-  const xhr = new XMLHttpRequest();
-  xhr.open("get", url);
-  xhr.responseType = "arraybuffer";
-  xhr.onload = () => {
-    cb(xhr.response);
-  };
-  xhr.send();
-}
+const load = document.querySelector("#load");
+load.addEventListener("click", loadVideo);
 ```
 
 ## Specifications

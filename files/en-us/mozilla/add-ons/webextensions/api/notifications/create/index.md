@@ -1,20 +1,10 @@
 ---
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Creates and displays a notification.
 
@@ -24,7 +14,8 @@ You can optionally provide an ID for the notification. If you omit the ID, an ID
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Warning:** If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
+> [!WARNING]
+> If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
 
 ## Syntax
 
@@ -89,4 +80,5 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/#method-create) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications#method-create) API.

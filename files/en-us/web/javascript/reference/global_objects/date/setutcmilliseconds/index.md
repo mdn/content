@@ -1,22 +1,27 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
+short-title: setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setUTCMilliseconds
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`setUTCMilliseconds()`** method of {{jsxref("Date")}} instances changes the milliseconds for this date according to universal time.
 
-The **`setUTCMilliseconds()`** method sets the milliseconds for
-a specified date according to universal time.
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCMilliseconds()")}}
 
-{{EmbedInteractiveExample("pages/js/date-setutcmilliseconds.html")}}
+```js interactive-example
+const date = new Date("2018-01-24T12:38:29.069Z");
+
+console.log(date.getUTCMilliseconds());
+// Expected output: 69
+
+date.setUTCMilliseconds(420);
+
+console.log(date.getUTCMilliseconds());
+// Expected output: 420
+```
 
 ## Syntax
 
@@ -27,11 +32,11 @@ setUTCMilliseconds(millisecondsValue)
 ### Parameters
 
 - `millisecondsValue`
-  - : A number between 0 and 999, representing the milliseconds.
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `millisecondsValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 

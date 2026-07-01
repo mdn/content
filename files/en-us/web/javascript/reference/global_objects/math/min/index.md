@@ -1,35 +1,36 @@
 ---
 title: Math.min()
+short-title: min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Lowest Number
-  - Lowest Value
-  - Math
-  - Method
-  - Minimum
-  - Reference
-  - Smallest
-  - Smallest Number
-  - Smallest Value
-  - min
 browser-compat: javascript.builtins.Math.min
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.min()`** static method returns the smallest of the numbers given as input parameters, or {{jsxref("Infinity")}} if there are no parameters.
 
-{{EmbedInteractiveExample("pages/js/math-min.html")}}
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
+
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array = [2, 3, 1];
+
+console.log(Math.min(...array));
+// Expected output: 1
+```
 
 ## Syntax
 
 ```js-nolint
 Math.min()
-Math.min(value0)
-Math.min(value0, value1)
-Math.min(value0, value1, /* … ,*/ valueN)
+Math.min(value1)
+Math.min(value1, value2)
+Math.min(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters

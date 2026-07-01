@@ -1,25 +1,14 @@
 ---
-title: XRFrame.getJointPose()
+title: "XRFrame: getJointPose() method"
+short-title: getJointPose()
 slug: Web/API/XRFrame/getJointPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRFrame
-  - getJointPose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getJointPose
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getJointPose()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 

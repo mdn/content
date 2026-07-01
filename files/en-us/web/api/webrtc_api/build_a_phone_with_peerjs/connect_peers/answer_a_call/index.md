@@ -22,7 +22,8 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
    ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
 
-   > **Warning:** Since we're using a `confirm` prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.
+   > [!WARNING]
+   > Since we're using a `confirm` prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.
 
 2. Let's flesh out this event listener. Update it as follows:
 
@@ -46,7 +47,6 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
    ```
 
    Let's walk through the most important parts of this code:
-
    - `call.answer(window.localStream)`: if `answerCall` is `true`, you'll want to call peerJS's `answer()` function on the call to create an answer, passing it the local stream.
    - `showCallContent`: Similar to what you did in the call button event listener, you want to ensure the person being called sees the correct HTML content.
    - Everything in the `call.on('stream', () => { }` block is exactly the same as it is in call button's event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.

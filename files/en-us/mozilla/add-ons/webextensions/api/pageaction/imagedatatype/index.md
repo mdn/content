@@ -1,34 +1,25 @@
 ---
 title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - pageAction
+page-type: webextension-api-type
 browser-compat: webextensions.api.pageAction.ImageDataType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Pixel data for an image.
 
 ## Type
 
-An [`ImageData`](/en-US/docs/Web/API/ImageData) object, e.g. from a {{htmlelement("canvas")}} element.
+An [`ImageData`](/en-US/docs/Web/API/ImageData) object, e.g., from a {{htmlelement("canvas")}} element.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#type-ImageDataType) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#type-ImageDataType) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

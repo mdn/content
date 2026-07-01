@@ -1,19 +1,8 @@
 ---
-title: Window.innerHeight
+title: "Window: innerHeight property"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - HTML DOM
-  - NeedsInteractiveExample
-  - Property
-  - Reference
-  - View
-  - Window
-  - height
-  - innerHeight
 browser-compat: api.Window.innerHeight
 ---
 
@@ -32,15 +21,13 @@ The value of `innerHeight` is taken from the height of the window's
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
 
-To change the width of the window, call one of its resize methods, such as
-{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy",
-  "resizeBy()")}}.
+To change the height of the window, call one of its resize methods, such as
+{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy", "resizeBy()")}}.
 
 ## Usage notes
 
 To obtain the height of the window minus its horizontal scroll bar and any borders, use
-the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
-  "clientHeight")}} property instead.
+the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight", "clientHeight")}} property instead.
 
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
@@ -65,7 +52,7 @@ console.log(top.innerHeight);
 To change the size of a window, see {{domxref("window.resizeBy()")}} and
 {{domxref("window.resizeTo()")}}.
 
-To get the outer height of a window, i.e. the height of the whole browser window, see
+To get the outer height of a window, i.e., the height of the whole browser window, see
 {{domxref("window.outerHeight")}}.
 
 ### Graphical example

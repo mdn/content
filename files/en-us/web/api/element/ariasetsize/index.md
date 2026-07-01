@@ -1,21 +1,14 @@
 ---
-title: Element.ariaSetSize
+title: "Element: ariaSetSize property"
+short-title: ariaSetSize
 slug: Web/API/Element/ariaSetSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSetSize
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSetSize
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
+The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
 
 ## Value
 
@@ -37,7 +30,7 @@ In this example the `aria-setsize` attribute on the element with an ID of `tab-i
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSetSize); // 3
 el.ariaSetSize = "4";
 console.log(el.ariaSetSize); // 4
@@ -53,4 +46,4 @@ console.log(el.ariaSetSize); // 4
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)

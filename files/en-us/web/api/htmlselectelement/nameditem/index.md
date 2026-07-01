@@ -1,13 +1,8 @@
 ---
-title: HTMLSelectElement.namedItem()
+title: "HTMLSelectElement: namedItem() method"
+short-title: namedItem()
 slug: Web/API/HTMLSelectElement/namedItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.namedItem
 ---
 
@@ -28,11 +23,12 @@ namedItem(str)
 
 ### Parameters
 
-- `str` is a string.
+- `str`
+  - : A string representing the `name` or `id` of the option.
 
 ### Return value
 
-- `item` is a {{domxref("HTMLOptionElement")}}.
+An {{domxref("HTMLOptionElement")}} or `null`.
 
 ## Examples
 
@@ -50,16 +46,16 @@ namedItem(str)
 ### JavaScript
 
 ```js
-let selectElt = document.getElementById('myFormControl');
-elem1 = selectElt.namedItem('o1'); // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById("myFormControl");
+elem1 = selectElt.namedItem("o1"); // Returns the HTMLOptionElement representing #o1
 ```
 
 But, you cannot write:
 
 ```js
-let selectElt = document.getElementById('myFormControl');
+let selectElt = document.getElementById("myFormControl");
 elem1 = selectElt.o1; // Returns undefined
-elem1 = selectElt['o1']; // Returns undefined
+elem1 = selectElt["o1"]; // Returns undefined
 ```
 
 ## Specifications

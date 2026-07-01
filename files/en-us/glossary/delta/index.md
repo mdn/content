@@ -2,10 +2,7 @@
 title: Delta
 slug: Glossary/Delta
 page-type: glossary-definition
-tags:
-  - Delta
-  - difference
-  - value
+sidebar: glossarysidebar
 ---
 
 The term **delta** refers to the difference between two values or states.
@@ -28,6 +25,4 @@ More commonly, you receive the delta and use it to update a saved previous condi
 let newX = oldX + deltaX;
 ```
 
-## See also
-
-- Mouse wheel events ({{domxref("WheelEvent")}} offer the amount the wheel moved since the last event in its {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, and {{domxref("WheelEvent.deltaZ", "deltaZ")}} properties, for example.
+For example, mouse wheel events {{domxref("WheelEvent")}} offer the amount the wheel moved since the last event in its {{domxref("WheelEvent.deltaX", "deltaX")}}, {{domxref("WheelEvent.deltaY", "deltaY")}}, and {{domxref("WheelEvent.deltaZ", "deltaZ")}} properties.

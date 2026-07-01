@@ -1,85 +1,201 @@
 ---
-title: Sanitizer()
+title: "Sanitizer: Sanitizer() constructor"
+short-title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
-tags:
-  - Sanitizer
-  - Constructor
-  - HTML Sanitizer API
-  - sanitize
-  - Experimental
 browser-compat: api.Sanitizer.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("HTML Sanitizer API")}}
 
-The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to sanitize untrusted strings of HTML, or untrusted {{domxref("Document")}} or {{domxref("DocumentFragment")}} objects, making them safe for insertion into a document's DOM.
-
-The default `Sanitizer()` configuration causes sanitizer operations to strip out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
-The constructor `config` option can be used to customize the sanitizer behavior.
+The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
 
 ## Syntax
 
 ```js-nolint
 new Sanitizer()
-new Sanitizer(config)
+new Sanitizer(configuration)
 ```
 
 ### Parameters
 
-- `config` {{optional_inline}}
+- `configuration` {{optional_inline}}
+  - : A {{domxref("SanitizerConfig")}} defining a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration), or the string `"default"` to indicate the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+    The "empty configuration" (`{}`) can also be passed, and results in a [remove configuration](/en-US/docs/Web/API/HTML_Sanitizer_API#remove_configurations) with empty arrays.
 
-  - : A sanitizer configuration object with the following options (referred to as `SanitizerConfig` in the specification):
+    If omitted, the constructor returns a `Sanitizer` with the default configuration.
 
-    - `allowElements` {{optional_inline}}
-      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements that the sanitizer should not remove.
-        All elements not in the array will be dropped.
-    - `blockElements` {{optional_inline}}
-      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements that the sanitizer should remove, but keeping their child elements.
-    - `dropElements` {{optional_inline}}
-      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements (including nested elements) that the sanitizer should remove.
-    - `allowAttributes` {{optional_inline}}
-      - : An {{jsxref("Object")}} where each key is the attribute name and the value is an {{jsxref("Array")}} of allowed tag names.
-        Matching attributes will not be removed.
-        All attributes that are not in the array will be dropped.
-    - `dropAttributes` {{optional_inline}}
-      - : An {{jsxref('Object')}} where each key is the attribute name and the value is an {{jsxref("Array")}} of dropped tag names.
-        Matching attributes will be removed.
-    - `allowCustomElements` {{optional_inline}}
-      - : A {{jsxref('Boolean')}} value set to `false` (default) to remove custom elements and their children.
-        If set to `true`, custom elements will be subject to built-in and custom configuration checks (and will be retained or dropped based on those checks).
-    - `allowComments` {{optional_inline}}
-      - : A {{jsxref('Boolean')}} value set to `false` (default) to remove HTML comments.
-        Set to `true` in order to keep comments.
+### Returns
 
-> **Note:** `allowElements` creates a sanitizer that will drop any elements that are not in `allowElements`, while `blockElements` and `dropElements` create a sanitizer that will allow all elements except those in these properties.
->
-> `blockElements` and `dropElements` are processed before `allowElements`.
-> If you specify both properties, the elements in `blockElements` or `dropElements` will be discarded first, followed by any elements not in `allowElements`.
-> So while it is possible to specify both types of properties at the same time, the intent can always be more clearly captured using just one type.
->
-> The same applies to `allowAttributes` and `dropAttributes`.
+An instance of the {{domxref("Sanitizer")}} object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : The `configuration` parameter is passed one of the following:
+    - a {{domxref("SanitizerConfig")}} that isn't a valid configuration.
+      For example, a configuration that includes both "allowed" and "removed" configuration settings.
+    - a string that does not have the value `"default"`.
+
+## Description
+
+The constructor creates a new {{domxref("Sanitizer")}} object, which can be used to filter unwanted elements and attributes from HTML or documents before they are inserted/parsed into the DOM.
+
+The [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) is an [allow sanitizer](/en-US/docs/Web/API/HTML_Sanitizer_API#allow_configurations) that omits XSS-unsafe elements and attributes, along with other elements and attributes that can potentially be used in other attacks, such as clickjacking and spoofing.
+This configuration is suitable for the majority of sanitization use cases.
+It is created if `"default"` or no object is passed to the constructor.
+
+The constructor can be passed a {{domxref("SanitizerConfig")}} with a [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) to customize the sanitizer behavior.
+
+A valid configuration can specify either `elements` or `removeElements` arrays (but not both) and either the `attributes` or `removeAttributes` arrays (but not both).
+In most cases it does not matter which of these arrays you use because, for example, the {{domxref("Sanitizer/allowAttribute","allowAttribute()")}} method can implement the same behavior by adding the attribute to the `attributes` array or by removing it from the `removeAttributes` array.
+The main thing to note is that if you have a configuration with `removeElements` then you cannot have per-element attributes, as these must be defined on the `elements` array.
 
 ## Examples
 
-The examples below show a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
-This method takes as inputs a string of HTML to sanitize and the context (tag) in which it is sanitized, and returns a sanitized node object for the specified tag.
-To simplify the presentation the result that is shown is actually the _innerHTML_ of the returned object.
+### Creating the default sanitizer
 
-> **Note:** The API _only_ sanitizes HTML in strings in the context of a particular element/tag.
-> For more information see {{domxref('HTML Sanitizer API')}} (and {{domxref("Sanitizer.sanitizeFor()")}}).
+This example shows how you can create the default `Sanitizer` and logs the resulting configuration object.
 
-### Using the default sanitizer
-
-This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context).
-
-```js
-const unsanitized = "abc <script>alert(1)<" + "/script> def";
-const sanitized = new Sanitizer().sanitizeFor("div", unsanitized);
-// Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
+```html hidden
+<pre id="log"></pre>
 ```
 
-<!-- Add other examples showing use of parameter -->
+```css hidden
+#log {
+  height: 400px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+The code first tests whether the `Sanitizer` interface is supported.
+It then creates the default `Sanitizer`, passing no options, and then gets and logs the configuration.
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.textContent = text;
+}
+```
+
+```js hidden
+if ("Sanitizer" in window) {
+```
+
+```js
+// Create default sanitizer
+const sanitizer = new Sanitizer();
+
+// Get and log the (default) configuration
+const defaultConfig = sanitizer.get();
+log(JSON.stringify(defaultConfig, null, 2));
+```
+
+```js hidden
+} else {
+  log("The HTML Sanitizer API is NOT supported in this browser.");
+}
+```
+
+#### Results
+
+The output is logged below.
+Note that the default configuration is an allow configuration, having both `elements` and `attributes` arrays that contain the elements that are allowed when the sanitizer is used.
+
+{{EmbedLiveSample("Creating the default sanitizer","100","480px")}}
+
+### Creating a `Sanitizer` and using it with `setHTML()`
+
+This example shows how you might create and use a custom sanitizer in a safe HTML DOM insertion method.
+
+#### HTML
+
+Here we define two {{htmlelement("pre")}} elements in which we'll display both the sanitized and unsanitized HTML.
+
+```html
+<pre id="unmodified"></pre>
+<pre id="setHTML"></pre>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 430px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.textContent = text;
+}
+```
+
+The following code tests whether the `Sanitizer` interface is supported.
+It then defines a string of "unsafe HTML", which contains bot safe elements, such as {{htmlelement("p")}} and {{htmlelement("span")}}, and XSS-unsafe elements such as {{htmlelement("script")}}
+
+We then create a `Sanitizer` object with a {{domxref("SanitizerConfig")}} that allows the HTML elements: {{htmlelement("div")}}, {{htmlelement("p")}}, {{htmlelement("span")}}, and {{htmlelement("script")}}.
+The sanitizer is used with the unsafe string in {{domxref("Element.setHTML()")}}.
+Both the original and sanitized strings are displayed as text nodes.
+
+```js hidden
+if ("Sanitizer" in window) {
+```
+
+```js
+// Define unsafe string of HTML
+const unsafeHTMLString = `
+  <div>
+    <p>This is a paragraph. <span onclick="alert('You clicked the span!')">Click me</span></p>
+    <script src="path/to/amodule.js" type="module"
+  </div>
+`;
+
+// Set unsafe string as a text node of first element
+const unmodifiedElement = document.querySelector("#unmodified");
+unmodifiedElement.innerText = unsafeHTMLString;
+
+// Create sanitizer using a SanitizerConfig that allows script (and other elements)
+const sanitizer = new Sanitizer({ elements: ["div", "p", "span", "script"] });
+
+// Use the sanitizer to set the HTML of the second element using the safe method
+const setHTMLElement = document.querySelector("#setHTML");
+setHTMLElement.setHTML(unsafeHTMLString, { sanitizer });
+
+// Get that HTML and set it back to the element as a text node
+// (so we can see the elements)
+setHTMLElement.innerText = setHTMLElement.innerHTML;
+
+// Log the configuration
+const sanitizerConfig = sanitizer.get();
+log(JSON.stringify(sanitizerConfig, null, 2));
+```
+
+```js hidden
+} else {
+  log("The HTML Sanitizer API is NOT supported in this browser.");
+}
+```
+
+#### Results
+
+The original string and sanitized HTML that was parsed into the DOM are shown below.
+Note that even though the sanitizer allows `<script>` elements, these are stripped out of the injected HTML when using {{domxref("Element.setHTML()")}}.
+Also note that the configuration includes both the names of the elements and their namespaces.
+
+{{EmbedLiveSample("Creating the default sanitizer","100","650px")}}
 
 ## Specifications
 

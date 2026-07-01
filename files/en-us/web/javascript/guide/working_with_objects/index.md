@@ -1,22 +1,15 @@
 ---
 title: Working with objects
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 page-type: guide
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - "l10n:priority"
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
-JavaScript is designed on a simple object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
+JavaScript is designed on an object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
-Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, a material it is made of, etc. In the same way, JavaScript objects can have properties, which define their characteristics.
 
 In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, and methods, and how to create your own objects.
 
@@ -26,7 +19,7 @@ You can create an object using an [object initializer](/en-US/docs/Web/JavaScrip
 
 ### Using object initializers
 
-Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++。
+Object initializers are also called _object literals_. "Object initializer" is consistent with the terminology used by C++.
 
 The syntax for an object using an object initializer is:
 
@@ -38,7 +31,7 @@ const obj = {
 };
 ```
 
-Each property name before colons is an identifier (either a name, a number, or a string literal), and each `valueN` is an expression whose value is assigned to the property name. The property name can also be an expression; computed keys need to be wrapped in square brackets. The [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) reference contains a more detailed explanation of the syntax.
+Each property name before the colon is either an identifier, a number literal, or a string literal, and each `valueN` is an expression whose value is assigned to the property name. The property name can also be an expression; computed keys need to be wrapped in square brackets. The [object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) reference contains a more detailed explanation of the syntax.
 
 In this example, the newly created object is assigned to a variable `obj` — this is optional. If you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
@@ -63,7 +56,7 @@ const myHonda = {
 };
 ```
 
-Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#creating_a_regular_expression).
+Objects created with initializers are called _plain objects_, because they are instances of {{jsxref("Object")}}, but not any other object type. Some object types have special initializer syntaxes — for example, [array initializers](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) and [regex literals](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression).
 
 ### Using a constructor function
 
@@ -95,8 +88,8 @@ This statement creates `myCar` and assigns it the specified values for its prope
 You can create any number of `Car` objects by calls to `new`. For example,
 
 ```js
-const kenscar = new Car("Nissan", "300ZX", 1992);
-const vpgscar = new Car("Mazda", "Miata", 1990);
+const randCar = new Car("Nissan", "300ZX", 1992);
+const kenCar = new Car("Mazda", "Miata", 1990);
 ```
 
 An object can have a property that is itself another object. For example, suppose you define an object called `Person` as follows:
@@ -148,28 +141,28 @@ car1.color = "black";
 
 adds a property `color` to `car1`, and assigns it a value of `"black"`. However, this does not affect any other objects. To add the new property to all objects of the same type, you have to add the property to the definition of the `Car` object type.
 
-You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_Classes).
+You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syntax instead of the `function` syntax to define a constructor function. For more information, see the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes).
 
 ### Using the Object.create() method
 
-Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
+Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
 
 ```js
 // Animal properties and method encapsulation
-const Animal = {
+const animalProto = {
   type: "Invertebrates", // Default value of properties
   displayType() {
-    // Method which will display type of Animal
+    // Method which will display the type of animal
     console.log(this.type);
   },
 };
 
-// Create new animal type called animal1
-const animal1 = Object.create(Animal);
-animal1.displayType(); // Logs: Invertebrates
+// Create a new animal type called `animal`
+const animal = Object.create(animalProto);
+animal.displayType(); // Logs: Invertebrates
 
-// Create new animal type called fish
-const fish = Object.create(Animal);
+// Create a new animal type called fish
+const fish = Object.create(animalProto);
 fish.type = "Fishes";
 fish.displayType(); // Logs: Fishes
 ```
@@ -192,7 +185,7 @@ Like JavaScript variables, property names are case sensitive. Property names can
 
 ### Accessing properties
 
-You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
+You can access a property of an object by its property name. [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) come in two syntaxes: _dot notation_ and _bracket notation_. For example, you could access the properties of the `myCar` object as follows:
 
 ```js
 // Dot notation
@@ -206,7 +199,7 @@ myCar["model"] = "Mustang";
 myCar["year"] = 1969;
 ```
 
-An object property name can be any JavaScript string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), including an empty string. However, you cannot use dot notation to access a property whose name is not a valid JavaScript identifier. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determinable until runtime. Examples are as follows:
+An object property name can be any JavaScript string or [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), including an empty string. However, you cannot use dot notation to access a property whose name is not a valid JavaScript identifier. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e., not determinable until runtime. Examples are as follows:
 
 ```js
 const myObj = {};
@@ -261,7 +254,7 @@ myCar[propertyName] = "Mustang";
 console.log(myCar); // { make: 'Ford', model: 'Mustang' }
 ```
 
-However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 Nonexistent properties of an object have value {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
@@ -274,8 +267,8 @@ myCar.nonexistentProperty; // undefined
 There are three native ways to list/traverse object properties:
 
 - [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
+- {{jsxref("Object.keys()")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames()")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
 
@@ -295,7 +288,7 @@ function showProps(obj, objName) {
 
 The term "own property" refers to the properties of the object, but excluding those of the prototype chain. So, the function call `showProps(myCar, 'myCar')` would print the following:
 
-```
+```plain
 myCar.make = Ford
 myCar.model = Mustang
 myCar.year = 1969
@@ -313,7 +306,7 @@ function showProps(obj, objName) {
 }
 ```
 
-There is no native way to list inherited non-enumerable properties. However, this can be achieved with the following function:
+There is no native way to list all inherited properties, including non-enumerable ones. However, this can be achieved with the following function:
 
 ```js
 function listAllProperties(myObj) {
@@ -329,26 +322,24 @@ function listAllProperties(myObj) {
 }
 ```
 
-For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ### Deleting properties
 
 You can remove a non-inherited property using the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator. The following code shows how to remove a property.
 
 ```js
-// Creates a new object, myobj, with two properties, a and b.
-const myobj = new Object();
-myobj.a = 5;
-myobj.b = 12;
+// Creates a new object, myObj, with two properties, a and b.
+const myObj = { a: 5, b: 12 };
 
-// Removes the a property, leaving myobj with only the b property.
-delete myobj.a;
-console.log("a" in myobj); // false
+// Removes the a property, leaving myObj with only the b property.
+delete myObj.a;
+console.log("a" in myObj); // false
 ```
 
 ## Inheritance
 
-All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more information.
+All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) for more information.
 
 ### Defining properties for all objects of one type
 
@@ -383,7 +374,7 @@ where `objectName` is an existing object, `methodName` is the name you are assig
 You can then call the method in the context of the object as follows:
 
 ```js
-object.methodName(params);
+objectName.methodName(params);
 ```
 
 Methods are typically defined on the `prototype` object of the constructor, so that all objects of the same type share the same method. For example, you can define a function that formats and displays the properties of the previously-defined `Car` objects.
@@ -404,15 +395,15 @@ car2.displayCar();
 
 ### Using this for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager` and `Intern`. Each object has its own `name`, `age` and `job`. In the function `sayHi()`, notice the use of `this.name`. When added to the 2 objects, the same function will print the message with the name of the respective object it's attached to.
+JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `manager` and `intern`. Each object has its own `name`, `age` and `job`. In the function `sayHi()`, notice the use of `this.name`. When added to the 2 objects, the same function will print the message with the name of the respective object it's attached to.
 
 ```js
-const Manager = {
+const manager = {
   name: "Karina",
   age: 27,
   job: "Software Engineer",
 };
-const Intern = {
+const intern = {
   name: "Tyrone",
   age: 21,
   job: "Software Engineer Intern",
@@ -422,15 +413,15 @@ function sayHi() {
   console.log(`Hello, my name is ${this.name}`);
 }
 
-// add sayHi function to both objects
-Manager.sayHi = sayHi;
-Intern.sayHi = sayHi;
+// Add sayHi function to both objects
+manager.sayHi = sayHi;
+intern.sayHi = sayHi;
 
-Manager.sayHi(); // Hello, my name is Karina
-Intern.sayHi(); // Hello, my name is Tyrone
+manager.sayHi(); // Hello, my name is Karina
+intern.sayHi(); // Hello, my name is Tyrone
 ```
 
-`this` is a "hidden parameter" of a function call that's passed in by specifying the object before the function that was called. For example, in `Manager.sayHi()`, `this` is the `Manager` object, because `Manager` comes before the function `sayHi()`. If you access the same function from another object, `this` will change as well. If you use other methods to call the function, like {{jsxref("Function.prototype.call()")}} or {{jsxref("Reflect.apply()")}}, you can explicitly pass the value of `this` as an argument.
+`this` is a "hidden parameter" of a function call that's passed in by specifying the object before the function that was called. For example, in `manager.sayHi()`, `this` is the `manager` object, because `manager` comes before the function `sayHi()`. If you access the same function from another object, `this` will change as well. If you use other methods to call the function, like {{jsxref("Function.prototype.call()")}} or {{jsxref("Reflect.apply()")}}, you can explicitly pass the value of `this` as an argument.
 
 ## Defining getters and setters
 
@@ -497,30 +488,30 @@ In JavaScript, objects are a reference type. Two distinct objects are never equa
 ```js
 // Two variables, two distinct objects with the same properties
 const fruit = { name: "apple" };
-const fruitbear = { name: "apple" };
+const anotherFruit = { name: "apple" };
 
-fruit == fruitbear; // return false
-fruit === fruitbear; // return false
+fruit == anotherFruit; // return false
+fruit === anotherFruit; // return false
 ```
 
 ```js
 // Two variables, a single object
 const fruit = { name: "apple" };
-const fruitbear = fruit; // Assign fruit object reference to fruitbear
+const anotherFruit = fruit; // Assign fruit object reference to anotherFruit
 
-// Here fruit and fruitbear are pointing to same object
-fruit == fruitbear; // return true
-fruit === fruitbear; // return true
+// Here fruit and anotherFruit are pointing to same object
+fruit == anotherFruit; // return true
+fruit === anotherFruit; // return true
 
 fruit.name = "grape";
-console.log(fruitbear); // { name: "grape" }; not { name: "apple" }
+console.log(anotherFruit); // { name: "grape" }; not { name: "apple" }
 ```
 
 For more information about comparison operators, see [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators).
 
 ## See also
 
-- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

@@ -1,19 +1,12 @@
 ---
-title: Element.ariaModal
+title: "Element: ariaModal property"
+short-title: ariaModal
 slug: Web/API/Element/ariaModal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaModal
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaModal
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaModal`** property of the {{domxref("Element")}} interface reflects the value of the `aria-modal` attribute, which indicates whether an element is modal when displayed. Applying the `aria-modal` property to an element with `role="dialog"` replaces the technique of using aria-hidden on the background for informing assistive technologies that content outside a dialog is inert.
 
@@ -40,9 +33,9 @@ In this example the `aria-modal` attribute on the element with an ID of `address
 ```
 
 ```js
-let el = document.getElementById('address-modal');
+let el = document.getElementById("address-modal");
 console.log(el.ariaModal); // "true"
-el.ariaModal = "false"
+el.ariaModal = "false";
 console.log(el.ariaModal); // "false"
 ```
 
@@ -56,4 +49,4 @@ console.log(el.ariaModal); // "false"
 
 ## See also
 
-- [ARIA: dialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [ARIA: dialog role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)

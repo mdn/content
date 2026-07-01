@@ -1,13 +1,8 @@
 ---
-title: CSSRule.parentRule
+title: "CSSRule: parentRule property"
+short-title: parentRule
 slug: Web/API/CSSRule/parentRule
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Property
-  - Reference
 browser-compat: api.CSSRule.parentRule
 ---
 
@@ -24,7 +19,7 @@ A {{domxref("CSSRule")}} which is the type of the containing rules. If the curre
 ## Examples
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .box {
     width: 100px;
     height: 200px;

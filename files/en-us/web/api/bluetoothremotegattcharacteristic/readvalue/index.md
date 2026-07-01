@@ -1,20 +1,14 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.readValue()
+title: "BluetoothRemoteGATTCharacteristic: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - readValue
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTCharacteristic.readValue()`** method
 returns a {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}} holding a
@@ -33,7 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
+A {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}}.
 
 ## Specifications
 
@@ -42,5 +36,3 @@ A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

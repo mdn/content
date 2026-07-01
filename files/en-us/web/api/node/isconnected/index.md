@@ -1,24 +1,23 @@
 ---
-title: Node.isConnected
+title: "Node: isConnected property"
+short-title: isConnected
 slug: Web/API/Node/isConnected
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.isConnected
 ---
 
 {{APIRef("DOM")}}
 
-The read-only **`isConnected`** property of the {{domxref("Node")}} interface
-returns a boolean indicating whether the node is connected
-(directly or indirectly) to a {{domxref("Document")}} object.
+The read-only **`isConnected`** property of the {{domxref("Node")}} interface returns a boolean indicating whether the node is connected (directly or indirectly) to a {{domxref("Document")}} object.
 
 ## Value
 
-A boolean value that is `true` if the node is connected to its relevant context object,
-and `false` if not.
+A boolean value that is `true` if the node is connected to its relevant context object, and `false` if not.
+
+> [!NOTE]
+> An {{domxref("Attr")}} node always returns `false` for `isConnected`, even when its {{domxref("Attr.ownerElement", "ownerElement")}} is connected.
+> This is because, even though an attribute is associated with an element via `ownerElement`, it is not part of the node tree — it has no parent node, and it is its own root node.
+> Since `isConnected` is only true when a node's root is a document, an `Attr` node is never considered connected.
 
 ## Examples
 
@@ -27,7 +26,7 @@ and `false` if not.
 A standard DOM example:
 
 ```js
-let test = document.createElement('p');
+let test = document.createElement("p");
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
@@ -39,10 +38,10 @@ A shadow DOM example:
 
 ```js
 // Create a shadow root
-const shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({ mode: "open" });
 
 // Create some CSS to apply to the shadow DOM
-const style = document.createElement('style');
+const style = document.createElement("style");
 console.log(style.isConnected); // returns false
 
 style.textContent = `
@@ -80,7 +79,3 @@ console.log(style.isConnected); // Returns true
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Node.prototype.isConnected polyfill](https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f)

@@ -1,57 +1,49 @@
 ---
 title: How to write in Markdown
+short-title: Write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - meta
-  - writing-guide
+page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-This page describes how we use Markdown to write documentation on MDN Web Docs. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
+This page describes how we use Markdown to write documentation on MDN Web Docs.
+We have chosen GitHub-Flavored Markdown (GFM) as a baseline and added extensions to support the things we need on MDN.
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark (<https://spec.commonmark.org/>).
 
 ## Links
 
 The GFM specification defines two basic types of links:
 
-- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text
+- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text.
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
-On MDN we allow only inline links.
+On MDN we prefer to use inline links because they are easier to read and maintain without losing context. This is the preferred way to write links on MDN:
 
-This is the correct way to write GFM links on MDN:
-
-```md example-good
+```md
 [Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
 ```
 
-This is an incorrect way to write links on MDN:
+In certain situations, however, reference links are more appropriate for their compactness.
+For example, shrinking wide tables can make them easier to review and edit.
 
-```md example-bad
-[Macarons][macaron] are delicious but tricky to make.
+```md
+| Name                 | Features                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| [Macarons][macarons] | Delicious but tricky to make. Add more class to a tea party than almost any other confectionary. |
+| [Biscotti][biscotti] | Crisp and easier to make.                                                                        |
 
-[macaron]: https://en.wikipedia.org/wiki/Macaron
+[macarons]: https://en.wikipedia.org/wiki/Macaron
+[biscotti]: https://en.wikipedia.org/wiki/Biscotti
 ```
+
+In rare cases when it's necessary to use reference links, please make sure they immediately follow the context where they are used.
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The specification states the following:
-
-> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
-
-It's permissible for the info string to contain multiple words, like:
-
-````md
-```fee fi fo fum
-// some example code
-```
-````
-
-On MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The language of the code sample must be specified using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - Programming Languages
   - JavaScript
@@ -64,13 +56,14 @@ On MDN, writers will use code fences for example code blocks. They must specify 
     - `cpp` - C++
     - `cs` - C#
     - `java` - Java
-    - `clike` - C-like (for any C-like language not defined)
   - Other
     - `python` - Python
     - `php` - PHP
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
-    - `wasm` - WebAssembly
+    - `sql` - SeQueL commands
+    - `wat` - WebAssembly
+    - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS
   - `scss` - Sass (SCSS)
@@ -81,8 +74,9 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `xml` - XML
   - `mathml` - MathML
   - `md` - Markdown
+  - `latex` - LaTeX
 - Command Prompts
-  - `sh` - Bash/Shell
+  - `bash` - Bash/Shell
   - `batch` - Batch (Windows Shell)
   - `powershell` - PowerShell
 - Configuration/Data Files
@@ -91,11 +85,18 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `yaml` - YAML
   - `toml` - TOML
   - `sql` - SQL Database
-  - `diff` - Diff file
   - `ignore` - Gitignore file
+  - `apacheconf` - Apache configuration
+  - `nginx` - NGINX configuration
+- Templates
+  - `django` - Django templates
+  - `svelte` - Svelte templates
+  - `hbs` - Handlebars templates
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
+  - `plain` - Plain text
+  - `diff` - Diff file
   - `http` - HTTP headers
-  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
   - `regex` - Regex
   - `uri` - URIs and URLs
 
@@ -107,14 +108,17 @@ const greeting = "I will get JavaScript syntax highlighting";
 ```
 ````
 
-If the highlighting that you wish to use is not listed above you should markup the code block as `plain`.
+If the highlighting that you wish to use is not listed above, you should markup the code block as `plain`.
 Additional languages may be requested in the process [discussed on GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
+
+> [!NOTE]
+> Use the language identifier exactly as listed above. For example, `javascript` is not allowed and you must write `js`.
 
 ### Suppressing linting
 
 Writers can add a `-nolint` suffix to any of the language identifiers:
 
-````plain
+````md-nolint
 ```html-nolint
 <p>
 I will not be linted.
@@ -124,9 +128,11 @@ I will not be linted.
 
 Code blocks like this will get appropriate syntax highlighting and will be recognized by the live sample system, but will be ignored by linters or automatic formatters like Prettier. Authors should use this suffix for showing invalid code or alternative formatting that linters or formatters should not fix.
 
-### Additional words
+### Additional classes (info strings)
 
-Writers will be able to supply any one of the following additional words, which must come after the language word:
+GFM supports [info strings](https://github.github.com/gfm/#info-string), which allow authors to supply additional information about a code block. On MDN, info strings are converted into class names.
+
+Writers can supply one of the following info strings:
 
 - `example-good`: style this example as a good example (one to follow)
 - `example-bad`: style this example as a bad example (one to avoid)
@@ -141,6 +147,10 @@ const greeting = "I'm a good example";
 
 ```js example-bad
 const greeting = "I'm a bad example";
+```
+
+```js hidden
+const greeting = "I'm a secret greeting";
 ```
 ````
 
@@ -163,28 +173,30 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to a piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.
+Writers can use the [GFM alerts syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to call special attention to content. There are three types of alerts: notes, warnings, and callouts.
 
-- To add a note, create a GFM blockquote whose first paragraph starts with `**Note:**`.
-- To add a warning, create a GFM blockquote whose first paragraph starts with `**Warning:**`.
-- To add a callout, create a GFM blockquote whose first paragraph starts with `**Callout:**`.
+> [!NOTE]
+> MDN Web Docs supported alerts with its own syntax prior to support for GFM alerts, and referred to them as "noteblocks".
+> MDN does not support the following GFM alerts: `[!TIP]`, `[!CAUTION]`, `[!IMPORTANT]`.
+> GFM does not support `[!CALLOUT]`.
 
-Notes and warnings will render the **Note:** or **Warning:** text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
+- To add a note, create a blockquote whose first line is `[!NOTE]`.
+- To add a warning, create a blockquote whose first line is `[!WARNING]`.
+- To add a callout, create a blockquote whose first line is `[!CALLOUT]`.
 
-Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing `<strong>Note:</strong>` will also generate a note. However, the Markdown syntax is required as a matter of style.
+Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
 The blockquote can contain code blocks or other block elements.
-
-Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
 ### Examples
 
 #### Note
 
 ```md
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can have multiple lines.
 ```
@@ -200,14 +212,16 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can have multiple lines.
 
 #### Warnings
 
 ```md
-> **Warning:** This is how you write a warning.
+> [!WARNING]
+> This is how you write a warning.
 >
 > It can have multiple paragraphs.
 ```
@@ -223,14 +237,17 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Warning:** This is how you write a warning.
+> [!WARNING]
+> This is how you write a warning.
 >
 > It can have multiple paragraphs.
 
 #### Callouts
 
 ```md
-> **Callout:** **This is how you write a callout.**
+> [!CALLOUT]
+>
+> **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
 ```
@@ -246,40 +263,26 @@ This will produce the following HTML:
 
 This HTML will be rendered as a highlighted box:
 
-> **Callout:**
+> [!CALLOUT]
 >
 > **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
-
-#### Translated warning
-
-For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
-
-```md
-> **Warnung:** So schreibt man eine Warnung.
-```
-
-And this will produce:
-
-```html
-<div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
-</div>
-```
 
 #### Note containing a code block
 
 This example contains a code block.
 
 ````md
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can contain code blocks.
 >
 > ```js
 > const s = "I'm in a code block";
 > ```
+>
 > Like that.
 ````
 
@@ -296,7 +299,8 @@ This will produce the following HTML:
 
 This HTML will be rendered as with a code block:
 
-> **Note:** This is how you write a note.
+> [!NOTE]
+> This is how you write a note.
 >
 > It can contain code blocks.
 >
@@ -312,7 +316,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/3483>.
 
 ## Definition lists
 
-To create definition lists in MDN authors write a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this form:
+Definition lists are commonly used across MDN, but are not supported by GFM. MDN introduces a custom format for definition lists, which is a modified form of a GFM unordered list ({{HTMLElement("ul")}}). In this format:
 
 - The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
@@ -327,16 +331,15 @@ For example, this is a `<dl>`:
 
 ````md
 - term1
-    - : My description of term1
-
+  - : My description of term1
 - `term2`
-    - : My description of term2
+  - : My description of term2
 
-      It can have multiple paragraphs, and code blocks too:
+    It can have multiple paragraphs, and code blocks too:
 
-      ```js
-      const thing = 1;
-      ```
+    ```js
+    const thing = 1;
+    ```
 ````
 
 In GFM/CommonMark, this would produce the following HTML:
@@ -387,11 +390,20 @@ On MDN, this would produce the following HTML:
 
 Definition lists written using this syntax must consist of pairs of `<dt>`/`<dd>` elements. Using this syntax, it's not possible to write a list with more than one consecutive `<dt>` element or more than one consecutive `<dd>` element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.
 
+This is not permitted:
+
+```md example-bad
+- `param1`, `param2`, `param3`
+  - : My description of `param1`
+  - : My description of `param2`
+  - : My description of `param3`
+```
+
 As a workaround for cases where an author needs to associate multiple `<dt>` items with a single `<dd>`, consider providing them as a single `<dt>` that holds multiple terms, separated by commas, like this:
 
-```md
+```md example-good
 - `param1`, `param2`, `param3`
-    - : My description of params 1, 2, and 3
+  - : My description of params 1, 2, and 3
 ```
 
 The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.
@@ -402,7 +414,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4367>.
 
 ## Tables
 
-In GFM (but not CommonMark) there is a syntax for tables: <https://github.github.com/gfm/#tables-extension->. We will make use of this but:
+GFM provides a syntax for creating [tables](https://github.github.com/gfm/#tables-extension-), which we make use of in MDN. However, there are times when GFM tables do not suit our needs:
 
 - The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.
 - If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.
@@ -412,31 +424,33 @@ So the general principle is that authors should use the GFM Markdown syntax when
 
 ### GFM table syntax style
 
-In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.
+In GFM table syntax, authors can omit leading and trailing pipes for rows. However, for the sake of readability, MDN authors must include these pipes. Additionally, authors must provide trailing spaces in rows, so that all cells in a column are the same length in plain text.
 
 That is, MDN authors must use this style:
 
-```md
+```md example-good
 | Heading 1 | Heading 2 | Heading 3 |
-|-----------|-----------|-----------|
+| --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
 | cell 4    | cell 5    | cell 6    |
 ```
 
 and not this style:
 
-```md
-Heading 1 | Heading 2 | Heading 3
- --- | --- | ---
-cell 1    | cell 2    | cell 3
-cell 4    | cell 5    | cell 6
+```md-nolint example-bad
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --- |----------------------|
+| cell 1 | cell 2 | cell 3 |
+cell 4 | cell 5 | cell 6
 ```
+
+Tables are formatted by Prettier, so authors rely on tooling to format tables properly.
 
 ### When to use HTML tables
 
 There are three main circumstances in which authors should use HTML tables rather than GFM syntax:
 
-1. The table uses features that are not supported in GFM.
+1. The table uses features that are not supported in GFM (see below).
 2. The GFM table would be too wide to be readable.
 3. The writer wants a special type of table called a "properties table".
 
@@ -447,7 +461,8 @@ The main limitations of GFM table syntax are:
 - GFM tables must have a header row.
 - GFM tables may not have a header column.
 - GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
-- GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
+- GFM tables cannot have classes assigned to them.
+- GFM doesn't support any table elements beyond `<table>`, `<tr>`, `<th>`, and `<td>`.
 - GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
 If an author needs to use any of the unsupported features, they should write the table in HTML.
@@ -456,34 +471,38 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "{{Glossary("ASCII")}} art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>
-  <tr>
-    <th>A heading 1</th>
-    <th>A heading 2</th>
-    <th>A heading 3</th>
-    <th>A heading 4</th>
-    <th>A heading 5</th>
-    <th>A heading 6</th>
-  </tr>
-  <tr>
-    <td>Something shortish</td>
-    <td>
-      Something much longer that really goes into a lot of detail about
-      something, so much so that the table formatting starts to look bad in GFM
-      format.
-    </td>
-    <td>Something shortish</td>
-    <td>
-      Another cell with lots of text in it, that also really goes into a lot of
-      detail about something, so much so that the table formatting starts to
-      look bad in GFM format.
-    </td>
-    <td>Something shortish</td>
-    <td>Something shortish</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>A heading 1</th>
+      <th>A heading 2</th>
+      <th>A heading 3</th>
+      <th>A heading 4</th>
+      <th>A heading 5</th>
+      <th>A heading 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Something shortish</td>
+      <td>
+        Something much longer that really goes into a lot of detail about
+        something, so much so that the table formatting starts to look bad in
+        GFM format.
+      </td>
+      <td>Something shortish</td>
+      <td>
+        Another cell with lots of text in it, that also really goes into a lot
+        of detail about something, so much so that the table formatting starts
+        to look bad in GFM format.
+      </td>
+      <td>Something shortish</td>
+      <td>Something shortish</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -531,8 +550,8 @@ Properties tables are a specific type of table used for displaying structured pr
 These pages can't be represented in GFM because they have a header column, so writers should use HTML in this case.
 To get the special styling, writers should apply the `"properties"` class to the table:
 
-```html-nolint
-<table class="properties">
+```html
+<table class="properties"></table>
 ```
 
 ### Discussion reference
@@ -553,7 +572,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
 ## Page summary
 
-The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar or page banner macros](#kumascript).
+The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) or [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) macros.
 
 This summary is used for search engine optimization (SEO) and also automatically included alongside page listings by some macros.
 The first paragraph should therefore be both succinct and informative.
@@ -562,18 +581,14 @@ The first paragraph should therefore be both succinct and informative.
 
 This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 
-## KumaScript
+## Macros
 
-Writers will be able to include KumaScript macro calls in prose content:
+Writers use macros in prose for templating common linking patterns, or to include specific blocks of code or text:
 
 ```md
-The **`margin`** [CSS](/en-US/docs/Web/CSS) property
-sets the margin area on all four sides of an element. It is a shorthand for
-\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
-and \{{cssxref("margin-left")}}.
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-The top and bottom margins have no effect on replaced inline elements, such as
-\{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) property sets the margin area on all four sides of an element.
+It is a shorthand for \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}}, and \{{cssxref("margin-left")}}.
+…
 ```
+
+See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information.

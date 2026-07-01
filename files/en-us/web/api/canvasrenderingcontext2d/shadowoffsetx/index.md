@@ -1,24 +1,20 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetX
+title: "CanvasRenderingContext2D: shadowOffsetX property"
+short-title: shadowOffsetX
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetX
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.shadowOffsetX`**
 property of the Canvas 2D API specifies the distance that shadows will be offset
 horizontally.
 
-> **Note:** Shadows are only drawn if the
+> [!NOTE]
+> Shadows are only drawn if the
 > {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
 > a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, `shadowOffsetX`, or
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must

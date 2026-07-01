@@ -2,10 +2,7 @@
 title: Tag
 slug: Glossary/Tag
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - HTML
-  - Intro
+sidebar: glossarysidebar
 ---
 
 In {{Glossary("HTML")}}, a **tag** is used for creating an {{Glossary("element")}}.
@@ -16,4 +13,4 @@ The name of an HTML element is the name that appears at the beginning of the ele
 
 - [HTML element](https://en.wikipedia.org/wiki/HTML_element) on Wikipedia
 - [HTML elements syntax](https://html.spec.whatwg.org/multipage/syntax.html#elements-2) on {{glossary("WHATWG")}}
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
+- [Introduction to HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)

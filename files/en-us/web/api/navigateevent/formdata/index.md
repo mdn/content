@@ -1,28 +1,15 @@
 ---
-title: NavigateEvent.formData
+title: "NavigateEvent: formData property"
+short-title: formData
 slug: Web/API/NavigateEvent/formData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - formData
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
 browser-compat: api.NavigateEvent.formData
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`formData`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns the {{domxref("FormData")}} object representing the submitted data in the case of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) form submission, or `null` otherwise.
+{{domxref("NavigateEvent")}} interface returns the {{domxref("FormData")}} object representing the submitted data in the case of a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) form submission, or `null` otherwise.
 
 ## Value
 
@@ -50,7 +37,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```
@@ -67,4 +54,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

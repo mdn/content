@@ -1,18 +1,12 @@
 ---
-title: VideoDecoder.close()
+title: "VideoDecoder: close() method"
+short-title: close()
 slug: Web/API/VideoDecoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - VideoDecoder
-  - Experimental
 browser-compat: api.VideoDecoder.close
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("VideoDecoder")}} interface ends all pending work and releases system resources.
 

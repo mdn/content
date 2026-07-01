@@ -1,21 +1,30 @@
 ---
 title: Object.getOwnPropertyDescriptors()
+short-title: getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.getOwnPropertyDescriptors()`** static method returns all
 own property descriptors of a given object.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+const descriptors = Object.getOwnPropertyDescriptors(object);
+
+console.log(descriptors.foo.writable);
+// Expected output: true
+
+console.log(descriptors.foo.value);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -72,7 +81,7 @@ properties from a source object to a target object, you are able to use this met
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -89,12 +98,9 @@ superclass.prototype = {
   // Define the superclass constructor, methods, and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define the subclass constructor, methods, and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define the subclass constructor, methods, and properties here
+});
 ```
 
 ## Specifications
@@ -108,6 +114,6 @@ subclass.prototype = Object.create(
 ## See also
 
 - [Polyfill of `Object.getOwnPropertyDescriptors` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.getOwnPropertyDescriptors`](https://www.npmjs.com/package/object.getownpropertydescriptors)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)

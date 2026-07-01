@@ -1,19 +1,9 @@
 ---
-title: MediaTrackSupportedConstraints.groupId
+title: "MediaTrackSupportedConstraints: groupId property"
+short-title: groupId
 slug: Web/API/MediaTrackSupportedConstraints/groupId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - groupId
-browser-compat: api.MediaTrackSupportedConstraints.groupId
+browser-compat: api.MediaStreamTrack.applyConstraints.groupId_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -44,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

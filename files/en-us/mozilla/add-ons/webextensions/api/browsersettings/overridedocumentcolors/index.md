@@ -1,19 +1,10 @@
 ---
 title: browserSettings.overrideDocumentColors
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - overrideDocumentColors
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.overrideDocumentColors
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.
 
@@ -24,10 +15,6 @@ Its underlying value is a string that may take any one of the following values:
 - "high-contrast-only": Apply the user's choices only when a high-contrast theme is selected. This is the default.
 - "never": Never apply the user's choices.
 - "always": Always apply the user's choices.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -44,3 +31,7 @@ browser.browserSettings.overrideDocumentColors
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

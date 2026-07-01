@@ -2,14 +2,6 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 page-type: web-api-interface
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Interface
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransferItemList
 ---
 
@@ -17,7 +9,9 @@ browser-compat: api.DataTransferItemList
 
 The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
 
-The individual items can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
+The individual items can be accessed using the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation) `[]`.
+
+`DataTransferItemList` was primarily designed for the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as {{domxref("ClipboardEvent.clipboardData")}} and {{domxref("InputEvent.dataTransfer")}}. Documentation of `DataTransferItemList` will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs' documentation for usage of `DataTransferItemList` in those contexts.
 
 This interface has no constructor.
 
@@ -34,90 +28,21 @@ This interface has no constructor.
   - : Removes the drag item from the list at the given index.
 - {{domxref("DataTransferItemList.clear()")}}
   - : Removes all of the drag items from the list.
-- {{domxref("DataTransferItemList.DataTransferItem()")}}
-  - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
 
 ## Example
 
 This example shows how to use drag and drop.
 
-### JavaScript
-
-```js
-function dragstartHandler(ev) {
-  console.log("dragStart");
-
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
-
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
-}
-
-function dropHandler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-
-  // Loop through the dropped items and log their data
-  for (const item of ev.dataTransfer.items) {
-    if (item.kind === 'string' && item.type.match(/^text\/plain/)) {
-      // This item is the target node
-      item.getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
-      });
-    } else if (item.kind === 'string' && item.type.match(/^text\/html/)) {
-      // Drag data item is HTML
-      item.getAsString((s) => {
-        console.log(`… Drop: HTML = ${s}`);
-      });
-    } else if (item.kind === 'string' && item.type.match(/^text\/uri-list/)) {
-      // Drag data item is URI
-      item.getAsString((s) => {
-        console.log(`… Drop: URI = ${s}`);
-      });
-    }
-  }
-}
-
-function dragoverHandler(ev) {
-  console.log("dragOver");
-  ev.preventDefault();
-
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
-}
-
-function dragendHandler(ev) {
-  console.log("dragEnd");
-  const dataList = ev.dataTransfer.items;
-
-  // Clear any remaining drag data
-  dataList.clear();
-}
-```
-
 ### HTML
 
 ```html
 <div>
-  <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
+  <p id="source" draggable="true">
     Select this element, drag it to the Drop Zone and then release the selection
     to move the element.
   </p>
 </div>
-<div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
-  Drop Zone
-</div>
+<div id="target">Drop Zone</div>
 ```
 
 ### CSS
@@ -136,6 +61,67 @@ div {
 #target {
   border: 1px solid black;
 }
+```
+
+### JavaScript
+
+```js
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
+  console.log("dragStart");
+
+  // Add this element's id to the drag payload so the drop handler will
+  // know which element to add to its tree
+  const dataList = ev.dataTransfer.items;
+  dataList.add(ev.target.id, "text/plain");
+
+  // Add some other items to the drag payload
+  dataList.add("<p>Paragraph…</p>", "text/html");
+  dataList.add("http://www.example.org", "text/uri-list");
+});
+
+source.addEventListener("dragend", (ev) => {
+  console.log("dragEnd");
+  const dataList = ev.dataTransfer.items;
+
+  // Clear any remaining drag data
+  dataList.clear();
+});
+
+target.addEventListener("drop", (ev) => {
+  console.log("Drop");
+  ev.preventDefault();
+
+  // Loop through the dropped items and log their data
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
+      // This item is the target node
+      item.getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
+      // Drag data item is HTML
+      item.getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
+      });
+    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
+      // Drag data item is URI
+      item.getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
+      });
+    }
+  }
+});
+
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+
+  // Set the dropEffect to move
+  ev.dataTransfer.dropEffect = "move";
+});
 ```
 
 ### Result

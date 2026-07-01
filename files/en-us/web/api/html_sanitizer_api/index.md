@@ -2,140 +2,330 @@
 title: HTML Sanitizer API
 slug: Web/API/HTML_Sanitizer_API
 page-type: web-api-overview
-tags:
-  - HTML Sanitizer API
-  - Experimental
-  - Landing
-  - Web API
-  - sanitize
 browser-compat: api.Sanitizer
 ---
 
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **HTML Sanitizer API** allow developers to take untrusted strings of HTML and {{domxref('Document')}} or {{domxref('DocumentFragment')}} objects, and sanitize them for safe insertion into a document's DOM.
+The **HTML Sanitizer API** allows developers to take strings of HTML and filter out unwanted elements, attributes, and other HTML entities when they are inserted into the DOM or a shadow DOM.
 
 ## Concepts and usage
 
-Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution or for rendering user generated content, or when including data in a frame from another site.
-The Sanitizer API allows for rendering of this potentially untrusted HTML in a safe manner.
+Web applications often need to work with untrusted HTML on the client side, for example, as part of a client-side templating solution, when rendering user generated content, or if including data in a frame from another site.
 
-To access the API you would use the {{domxref('Sanitizer.Sanitizer()','Sanitizer()')}} constructor to create and configure a {{domxref('Sanitizer')}} instance.
-The configuration options parameter allows you to specify the allowed and dis-allowed elements and attributes, and to enable custom elements and comments.
+Injecting untrusted HTML can make a site vulnerable to various [types of attacks](/en-US/docs/Web/Security/Attacks).
+In particular, [cross-site scripting (XSS) attacks](/en-US/docs/Web/Security/Attacks/XSS) work by injecting untrusted HTML into the DOM that then executes JavaScript in the context of the current origin — allowing malicious code to run as though it was served from the site's origin.
+These attacks can be mitigated by removing unsafe HTML elements and attributes before they are injected into the DOM.
 
-The most common use-case - preventing XSS - is handled by the default configuration.
-Creating a {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} with a custom configuration is necessary only to handle additional, application-specific use cases.
+The HTML Sanitizer API provides a number of methods for removing unwanted HTML entities from HTML input before it is injected into the DOM.
+These come in XSS-safe versions that enforce removal of all unsafe elements and attributes, and potentially unsafe versions that give developers full control over the HTML entities that are allowed.
 
-The API has three main methods for sanitizing data:
+### Sanitization methods
 
-1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
-   This is essentially a "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
-2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM. This might be used when the target element for the string is not always ready/available for update.
-3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}. It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
+The HTML Sanitizer API provides XSS-safe and XSS-unsafe methods for injecting HTML strings into an {{domxref('Element')}} or a {{domxref('ShadowRoot')}}, and for parsing HTML into a {{domxref('Document')}}.
 
-### Parsing and sanitizing strings
+- Safe methods
+  - : {{domxref('Element.setHTML()')}}, {{domxref('ShadowRoot.setHTML()')}}, and {{domxref('Document/parseHTML_static','Document.parseHTML()')}}.
+- Unsafe methods
+  - : {{domxref('Element.setHTMLUnsafe()')}}, {{domxref('ShadowRoot.setHTMLUnsafe()')}}, and {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
-The result of parsing a string of HTML depends on the context/the element into which it is inserted.
+All the methods take the HTML to be injected and an optional {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} as arguments.
+The sanitizer objects defines the HTML entities that will be filtered out of the input before it is injected.
+The {{domxref('Element')}} methods are context aware, and will additionally drop any elements that the HTML specification does not allow in the target element.
 
-For example, an HTML string containing {{HTMLElement("td")}} elements is valid if inserted under a {{HTMLElement("table")}} elements, but will be dropped if inserted in a {{HTMLElement("div")}} element.
-Similarly, an {{HTMLElement("em")}} element is a valid node in a {{HTMLElement("div")}} but the tag will be escaped if used in a {{HTMLElement("textarea")}}:
+The safe methods always remove XSS-unsafe elements and attributes.
+If no sanitizer is passed as a parameter they will use the [default sanitizer configuration](#default_sanitizer_configuration), which removes both XSS-unsafe elements and attributes, such as {{htmlelement("script")}} elements and `onclick` event handlers, along with others that might be used in other kinds of attacks if provided as user input.
+If a custom sanitizer is used with a safe method, it is implicitly updated to remove any elements and attributes that are not XSS-safe (note that the passed sanitizer is not modified, and might still allow unsafe entities if used with an unsafe method).
 
-```html
-<!-- "<em>bla</em>" inserted into <div> -->
-<div><em>bla</em></div>
+The safe methods should be used instead of {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("ShadowRoot.innerHTML")}}, for injecting untrusted HTML content.
+For example, in most cases you can use {{domxref('Element.setHTML()')}} with the default sanitizer as a drop-in replacement for {{domxref("Element.innerHTML")}}.
+The same methods can also be used for injecting trusted HTML strings that do not need to contain any XSS-unsafe elements.
 
-<!-- "<em>bla</em>" inserted into <textarea> -->
-<textarea>&lt;em&gt;bla</textarea>
+The XSS-unsafe methods will use whatever sanitizer configuration is passed as an argument.
+If no sanitizer is passed, then all HTML elements and attributes allowed by the context will be injected.
+This is similar to using {{domxref("Element.innerHTML")}} except that the method will parse shadow roots, drop elements that aren't appropriate in the context, and allow some other input that is not allowed when using the property.
+
+The unsafe methods should only be used with untrusted HTML that needs to contain some XSS-unsafe elements or attributes.
+This is still unsafe, but allows you to reduce the risk by restricting unsafe entities to the minimal set.
+For example, if you wanted to inject unsafe HTML but for some reason you needed the input to include the `onblur` handler, you could more safely do so by amending the default `Sanitizer` and using an unsafe method as shown:
+
+```js
+const sanitizer = new Sanitizer(); // Default sanitizer
+sanitizer.allowAttribute("onblur"); // Allow onblur
+
+someElement.setHTMLUnsafe(untrustedString, { sanitizer });
 ```
 
-The target element must therefore be known when the parser is run and the resulting subtree must be inserted into that same type of element in the DOM, or the result will be incorrect.
+### Sanitizer configurations
 
-For this reason when using {{domxref('Sanitizer.sanitizeFor()')}} developers must specify the tag of the eventual target element as a parameter, and the method returns a matching HTML element with the parsed string as a child (for example, the target tag `"div"` results in a returned object that is an instance of {{domxref("HTMLDivElement")}}).
-The return type ensures that a user always has the context in which the object must be inserted into the DOM.
+A sanitizer configuration defines what HTML entities will be allowed, replaced, or removed when the sanitizer is used, including elements, attributes, `data-*` attributes, and comments.
 
-This consideration does not matter for {{domxref('Element.setHTML()')}} as it is called on a particular element and the context is therefore implicit.
+There are two mechanisms for defining a sanitizer configuration, either of which can be passed to all the sanitization methods:
 
-The parser may also perform normalization operations on the input string.
-As a result, even if the HTML is valid and the sanitizer method does nothing, the sanitized output may not precisely match the unsanitized input.
-This applies to both methods.
+- {{domxref('SanitizerConfig')}} is a dictionary object that defines arrays for the allowed/disallowed elements and attributes and boolean properties that indicate whether comments and data attributes will be allowed or omitted, and so on.
+
+  Only a subset of possible configuration options may be specified in a particular configuration in order to reduce redundancy and ambiguity.
+  The allowed subset is summarized in the [Allow and remove configurations](#allow_and_remove_configurations) section below, and described in detail in [Valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+
+- {{domxref('Sanitizer')}} is essentially a wrapper around a {{domxref('SanitizerConfig')}} that provides methods to ergonomically modify the configuration and ensure that it remains valid.
+
+  For example, you can use a method to add an allowed element, and it will also remove the element from the `replaceWithChildrenElements` array (if present).
+  The interface also provides methods to return a copy of the underlying {{domxref('SanitizerConfig')}} and also to update the sanitizer so that it is XSS-safe.
+  It may provide normalizations of the sanitizer configuration used to construct it, making it easier to understand and reuse.
+
+While you can use either interface in any of the sanitizing methods, `Sanitizer` is likely to be more efficient to share and reuse than `SanitizerConfig`.
+
+#### Allow and remove configurations
+
+You can build up a configuration in two ways:
+
+- As an _allow configuration_: specifying the set of elements and/or attributes that you will allow in the output.
+- As a _remove configuration_: specifying the set that must not be present in the output.
+
+These sets are specified as arrays in the configuration object fields: `elements` and `attributes`, and `removeElements` and `removeAttributes`.
+You may not specify both allow and remove arrays for elements or attributes in the same configuration, but other combinations of fields are allowed.
+The following table shows the permitted combinations.
+
+| Element arrays                | Attribute arrays                  | Valid? |
+| ----------------------------- | --------------------------------- | ------ |
+| `elements`                    | -                                 | ✔️     |
+| `elements`                    | `attributes`                      | ✔️     |
+| `elements`                    | `removeAttributes`                | ✔️     |
+| `removeElements`              | -                                 | ✔️     |
+| `removeElements`              | `attributes`                      | ✔️     |
+| `removeElements`              | `removeAttributes`                | ✔️     |
+| -                             | `attributes`                      | ✔️     |
+| -                             | `removeAttributes`                | ✔️     |
+| `elements` + `removeElements` | (anything)                        | ❌     |
+| (anything)                    | `attributes` + `removeAttributes` | ❌     |
+| -                             | -                                 | ✔️     |
+
+An allow configuration can optionally specify whether per-element attributes should be allowed and/or removed in its `elements` array.
+The allowed configuration for these local attributes depends on whether or not global `attributes` or `removedAttributes` is defined.
+The [valid configuration](/en-US/docs/Web/API/SanitizerConfig#valid_configuration) section outlines the restrictions.
+
+In general an "allow configuration" is safer for both the elements and attributes, because you list the elements and/or attributes that you want and know are safe, rather than all the items that are dangerous or might potentially be considered dangerous in future.
+If you specify an empty configuration object then an empty allow configuration is used.
+
+##### Allow configurations
+
+With "allow configurations" you specify the elements and attributes you wish to _allow_ (or replace with child elements) — all other elements/attributes in the input will be dropped.
+This makes it easy to understand what elements will be allowed in the DOM when the HTML is parsed.
+They are useful when you know exactly what HTML entities you want to be able to inject in a particular context.
+
+Allow configurations are created by defining a `Sanitizer` that wraps a {{domxref("SanitizerConfig")}} that includes the [`elements`](/en-US/docs/Web/API/SanitizerConfig#elements) and/or [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) arrays (and not the `removeElements` or `removeAttributes` arrays).
+
+For example, the following configuration is created by passing a {{domxref('SanitizerConfig')}} that allows {{htmlelement("p")}} and {{htmlelement("div")}} elements, and `cite` and `onclick` attributes on any allowed element.
+It will also replace {{htmlelement("b")}} elements with their child nodes.
+
+```js
+const sanitizer = new Sanitizer({
+  elements: ["p", "div"],
+  replaceWithChildrenElements: ["b"],
+  attributes: ["cite", "onclick"],
+});
+```
+
+The same configuration can also be created using {{domxref('Sanitizer')}} methods.
+Note that in the following code the `Sanitizer()` constructor takes an empty object, which results in a `Sanitizer` where the underlying configuration includes both `elements` and `attributes` arrays — in other words, an "allow configuration".
+
+```js
+// Create empty sanitizer
+const sanitizer = new Sanitizer({});
+
+// Use Sanitizer methods to update the properties.
+sanitizer.allowElement("p");
+sanitizer.allowElement("div");
+sanitizer.replaceElementWithChildren("b");
+sanitizer.allowAttribute("cite");
+sanitizer.allowAttribute("onclick");
+```
+
+##### Remove configurations
+
+In "remove configurations" you specify the HTML elements and attributes that you want to remove: any other elements and attributes are permitted by the sanitizer (but may be blocked if you use a safe sanitizer method, or if the element is not allowed in the context).
+
+Remove configurations are created using a {{domxref("SanitizerConfig")}} that includes the [`removeElements`](/en-US/docs/Web/API/SanitizerConfig#removeelements) and/or [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes) arrays (and not the `elements` or `attributes` arrays).
+
+For example, the following `Sanitizer` configuration would remove the same elements that were allowed in the previous code:
+
+```js
+const sanitizer = new Sanitizer({
+  removeElements: ["p", "div"],
+  removeAttributes: ["cite", "onclick"],
+  replaceWithChildrenElements: ["b"],
+});
+```
+
+The configuration can also be created using {{domxref('Sanitizer')}} methods.
+To make this a "remove configuration" we have to declare the `removeElements` or `removeAttributes` array when constructing the object (if only one array is specified the other will be defined as part of normalization).
+
+```js
+const sanitizer = new Sanitizer({
+  removeElements: [],
+});
+sanitizer.removeElement("p");
+sanitizer.removeElement("div");
+sanitizer.replaceElementWithChildren("b");
+sanitizer.removeAttribute("cite");
+sanitizer.removeAttribute("onclick");
+```
+
+#### Adding and removing from `Sanitizer` configurations
+
+{{domxref("Sanitizer")}} is recommended when you're using a configuration object that you might want to reuse or modify.
+Whether the sanitizer has an allow or remove configuration depends on the {{domxref("SanitizerConfig")}} passed when the object is created.
+For example, if you pass a configuration object that has the `elements` or `attributes` array (or an empty object) the sanitizer will have an allow configuration.
+
+In the examples above we created an allow configuration and then called {{domxref("Sanitizer/allowElement","allowElement()")}}, {{domxref("Sanitizer/allowAttribute","allowAttribute()")}}, and {{domxref("Sanitizer/replaceElementWithChildren","replaceElementWithChildren()")}} to allow additional elements and attributes, and similarly we created a remove configuration and called {{domxref("Sanitizer/removeElement","removeElement()")}} and {{domxref("Sanitizer/removeAttribute","removeAttribute()")}} to specify additional elements to remove.
+
+You can also call the allow methods on a remove configuration, and the remove methods on an allow configuration — but they behave differently.
+When you call the allow methods on an allow sanitizer the specified elements and attributes are added to the underlying `elements` and `attributes` array.
+However if you call those methods on a remove sanitizer there is no `elements` and `attributes` array; instead the specified element is _removed_ from the corresponding `removeElements` or `removeAttributes` array, if present.
+This works because allowing an element in an allow sanitizer is the same as "not removing" an element in a remove sanitizer.
+
+You can call all the `Sanitizer` methods on either an allow or remove sanitizer, and the method will make whatever changes it is able that result in a valid configuration.
+For example, if you add an element the method will either add it to `elements` or remove it from `removeElements` if present, depending on the type of sanitizer, and also remove the same element from the [`replaceWithChildrenElements`](/en-US/docs/Web/API/SanitizerConfig#replacewithchildrenelements) array, if present.
+
+Some operations that are possible for an allow configuration are not possible for a remove configuration.
+For example, per-element attributes are defined in the `elements` array, which is not present in a remove sanitizer.
+
+The methods return `true` or `false` to indicate whether or not they modified the underlying configuration.
+So if you call `allowElement()` on an allow configuration and the specified element is not present, it will be added to the `elements` array and the method will return `true`.
+But if the element is already present then the method would return `false`.
+Note that if you call the same method to set a per-element attribute, this will return `false` if called on a remove sanitizer, because the change cannot be made.
+
+### Built-in configurations
+
+#### XSS-safe baseline configuration
+
+The XSS-safe baseline configuration defines the items that must be removed from an input in order to make it XSS-safe:
+
+- {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
+- All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
+
+The configuration is automatically applied to {{domxref("Element.setHTML()")}} and the other [safe sanitization methods](#sanitization_methods), and ensures that XSS-unsafe items are removed from the output even if they are allowed by a passed sanitizer.
+You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe")}} on a {{domxref("Sanitizer")}} instance to apply this configuration and make it XSS-safe.
+
+#### Default sanitizer configuration
+
+The default sanitizer configuration is more restrictive than the XSS-safe baseline.
+It defines the sanitizer that is used if you call {{domxref("Element.setHTML()")}} or the other [safe sanitization methods](#sanitization_methods) without passing a sanitizer object.
+It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
+
+The configuration removes the following sorts of items:
+
+1. Those that are known to be XSS-unsafe (as specified in the [XSS-safe baseline configuration](#xss-safe_baseline_configuration)).
+2. Additional items that might be used in clickjacking, spoofing, or other attacks.
+3. Comments and `data-*` attributes.
+
+Therefore it provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
+
+For a listing of the allowed elements and attributes, see [Default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+
+### Sanitization and Trusted Types
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that inputs are passed through a user-specified transformation function before being passed to an API that might execute that input.
+This transformation function is most commonly used to sanitize the input but it doesn't have to: the purpose of the API is primarily to make it easy for developers to audit sanitization code, not to define how or if sanitization is done.
+
+The safe HTML sanitization methods don't use trusted types.
+Because they always filter all XSS-unsafe entities before input HTML is injected, there is no need to sanitize the input string, or audit the methods.
+
+However the unsafe HTML sanitization methods may inject untrusted HTML, depending on the sanitizer, and so will work with trusted types.
+The methods can take either a string or a `TrustedType` as input.
+If a sanitizer is also supplied, the transformation function will be run first, and then the sanitizer.
+
+Note that the behavior of the transformation function in this case will depend on the website policy (which might be to reject all use of the unsafe methods).
+
+### Third party sanitization libraries
+
+Prior to the Sanitizer API, developers typically filtered input strings using third-party libraries such as [DOMPurify](https://github.com/cure53/DOMPurify), perhaps called from transformation functions in trusted types.
+
+These should not be necessary when using the safe HTML sanitization methods as the API is integrated with the browser, and is more aware of the parsing context and what code is allowed to execute than external parser libraries can be.
+
+They may be useful with the unsafe HTML methods and trusted types, depending on website trusted type policies.
 
 ## Interfaces
 
-- {{domxref('Sanitizer')}} {{Experimental_Inline}}
-  - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
-- {{domxref('Element/setHTML','Element.setHTML()')}}
-  - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
+- {{domxref('Sanitizer')}}
+  - : A reusable sanitizer configuration object that defines what elements and attributes should be allowed/removed when sanitizing untrusted strings of HTML.
+    This is used in the methods that insert strings of HTML into the DOM or Document.
+- {{domxref('SanitizerConfig')}}
+  - : A dictionary that defines a sanitizer configuration.
+    This can be used in the same places as {{domxref('Sanitizer')}} but is likely to be less efficient to use and reuse.
+
+## Extensions to other interfaces
+
+### XSS-safe methods
+
+- {{domxref('Element.setHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
+    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
+    The subtree is then inserted into the DOM as a subtree of the element.
+- {{domxref('ShadowRoot.setHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes.
+    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
+    The subtree is then inserted as a subtree of the `ShadowRoot`.
+- {{domxref('Document/parseHTML_static','Document.parseHTML()')}}
+  - : Parse a string of HTML into a subtree of nodes.
+    Then drop any elements and attributes that are not allowed by the sanitizer configuration, and any that are considered XSS-unsafe (even if allowed by the configuration).
+    The subtree is then set as the root of the {{domxref("Document")}}.
+
+### XSS-unsafe methods
+
+- {{domxref('Element.setHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes, dropping any elements that are invalid in the context of the element.
+    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
+    The subtree is then inserted into the DOM as a subtree of the element.
+- {{domxref('ShadowRoot.setHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes.
+    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
+    The subtree is then inserted into as a subtree of the `ShadowRoot`.
+- {{domxref('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}
+  - : Parse a string of HTML into a subtree of nodes.
+    Then drop any elements and attributes that are not allowed by the sanitizer: if no sanitizer is specified allow all elements.
+    The subtree is then set as the root of the {{domxref("Document")}}.
 
 ## Examples
 
-The following examples show how to use the sanitizer API using the _default_ sanitizer (at time of writing configuration operations are not yet supported).
+The following examples show how to use the sanitizer API using the _default_ sanitizer.
 
-### Sanitize a string immediately
+### Using `Element.setHTML()` with the default sanitizer
 
-The code below demonstrates how {{domxref('Element/setHTML','Element.setHTML()')}} is used to sanitize a string of HTML and insert it into the `Element` with an id of `target`.
-
-The `script` element is disallowed by the default sanitizer so the alert is removed.
-
-```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-
-const sanitizer = new Sanitizer();  // Default sanitizer;
-
-// Get the Element with id "target" and set it with the sanitized string.
-const target = document.getElementById("target");
-target.setHTML(unsanitized_string, { sanitizer });
-
-console.log(target.innerHTML);
-// "abc  def"
-```
-
-### Sanitize a string for deferred use
-
-The example below shows the same sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method, with the intent of later inserting the returned element into a `<div>` element:
+In most cases calling `Element.setHTML()` without passing a sanitizer can be used as a drop-in replacement for {{domxref("Element.innerHTML")}}.
+The code below demonstrates how the method is used to sanitize the HTML input before it is injected into an element with id of `target`.
 
 ```js
-const unsanitized_string = "abc <script>alert(1)<" + "/script> def";  // Unsanitized string of HTML
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const untrustedString = "abc <script>alert(1)<" + "/script> def"; // Untrusted HTML (perhaps from user input)
+const someTargetElement = document.getElementById("target");
 
-// Sanitize the string
-const sanitizedDiv = sanitizer.sanitizeFor("div", unsanitized_string);
+// someElement.innerHTML = untrustedString;
+someElement.setHTML(untrustedString);
 
-//We can verify the returned element type, and view sanitized HTML in string form:
-console.log(sanitizedDiv instanceof HTMLDivElement);
-// true
-console.log(sanitizedDiv.innerHTML)
-// "abc  def"
-
-// At some point later…
-
-// Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element.
-document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
+console.log(target.innerHTML); // abc def
 ```
 
-> **Note:** If you really must perform a string-to-string operation you can extract the string using `innerHTML`,
-> but you must remember to use the correct context when the string is applied:
->
-> ```js
-> const unsanitized_string = "abc <script>alert(1)<" + "/script> def";
-> const sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
-> ```
+The `{{htmlelement("script")}}` element is not allowed by the default sanitizer, or by the `setHTML()` method, so the `alert()` is removed.
 
-### Sanitize a frame
-
-To sanitize data from an {{HTMLElement("iframe")}} with id `userFrame`:
+Note that using `Element.setHTMLUnsafe()` with the default sanitizer will sanitize the same HTML entities.
+The main difference is that if you use this method with Trusted Types it may still be audited:
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
-
-// Get the frame and its Document object
-const frame_element = document.getElementById("userFrame")
-const unsanitized_frame_tree = frame_element.contentWindow.document;
-
-// Sanitize the document tree and update the frame.
-const sanitized_frame_tree = sanitizer.sanitize(unsanitized_frame_tree);
-frame_element.replaceChildren(sanitized_frame_tree);
+someElement.setHTMLUnsafe(untrustedString);
 ```
+
+### Using an allow sanitizer configuration
+
+This code shows how you might use `Element.setHTMLUnsafe()` with an allow sanitizer that allows only {{htmlelement("p")}}, {{htmlelement("b")}}, and {{htmlelement("div")}} elements.
+All other elements in the input string would be removed.
+
+```js
+const sanitizer = new Sanitizer({ elements: ["p", "b", "div"] });
+someElement.setHTMLUnsafe(untrustedString, { sanitizer });
+```
+
+Note that in this case you should normally use `setHTML()`.
+You should only use `Element.setHTMLUnsafe()` if you need to allow XSS-unsafe elements or attributes.
 
 ## Specifications
 

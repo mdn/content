@@ -2,9 +2,7 @@
 title: SIMD
 slug: Glossary/SIMD
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - JavaScript
+sidebar: glossarysidebar
 ---
 
 SIMD (pronounced "sim-dee") is short for **Single Instruction/Multiple Data** which is one [classification of computer architectures](https://en.wikipedia.org/wiki/Flynn%27s_taxonomy). SIMD allows one same operation to be performed on multiple data points resulting in data level parallelism and thus performance gains — for example, for 3D graphics and video processing, physics simulations or cryptography, and other domains.
@@ -14,7 +12,5 @@ See also {{Glossary("SISD")}} for a sequential architecture with no parallelism 
 ## See also
 
 - [SIMD](https://en.wikipedia.org/wiki/SIMD) on Wikipedia
-- [Glossary](/en-US/docs/Glossary)
-
-  - {{Glossary("SIMD")}}
+- Related glossary terms:
   - {{Glossary("SISD")}}

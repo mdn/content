@@ -1,14 +1,8 @@
 ---
-title: PointerEvent.isPrimary
+title: "PointerEvent: isPrimary property"
+short-title: isPrimary
 slug: Web/API/PointerEvent/isPrimary
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
 
@@ -38,7 +32,7 @@ When two or more pointer device types are being used concurrently, multiple poin
 primary. For example, a touch contact and a mouse cursor moved simultaneously will
 produce pointers that are both considered primary. If there are multiple primary
 pointers, these pointers will all produce _compatibility mouse events_ (see
-{{domxref("Pointer_events")}} for more information about pointer, mouse and touch
+[Pointer events](/en-US/docs/Web/API/Pointer_events) for more information about pointer, mouse and touch
 interaction).
 
 ## Value
@@ -51,13 +45,13 @@ This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.
 
 ```js
-target.addEventListener('pointerdown', (event) => {
+target.addEventListener("pointerdown", (event) => {
   if (event.isPrimary) {
     process_primary_pointer(event);
   } else {
     process_secondary_pointer(event);
   }
-}, false);
+});
 ```
 
 ## Specifications

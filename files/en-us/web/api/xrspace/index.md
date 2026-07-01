@@ -2,17 +2,6 @@
 title: XRSpace
 slug: Web/API/XRSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Realty
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSpace
 browser-compat: api.XRSpace
 ---
 
@@ -22,7 +11,8 @@ The **`XRSpace`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_
 
 Numeric values such as pose positions are thus coordinates in the corresponding `XRSpace`, relative to that space's origin.
 
-> **Note:** The `XRSpace` interface is never used directly; instead, all spaces are created using one of the interfaces based on `XRSpace`. At this time, those are {{domxref("XRReferenceSpace")}}, {{domxref("XRBoundedReferenceSpace")}}, and {{domxref("XRJointSpace")}}.
+> [!NOTE]
+> The `XRSpace` interface is never used directly; instead, all spaces are created using one of the interfaces based on `XRSpace`. At this time, those are {{domxref("XRReferenceSpace")}}, {{domxref("XRBoundedReferenceSpace")}}, and {{domxref("XRJointSpace")}}.
 
 {{InheritanceDiagram}}
 

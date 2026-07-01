@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.responseEnd
+title: "PerformanceResourceTiming: responseEnd property"
+short-title: responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.responseEnd
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`responseEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 

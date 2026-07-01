@@ -1,14 +1,9 @@
 ---
-title: TextTrack.inBandMetadataTrackDispatchType
+title: "TextTrack: inBandMetadataTrackDispatchType property"
+short-title: inBandMetadataTrackDispatchType
 slug: Web/API/TextTrack/inBandMetadataTrackDispatchType
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - inBandMetadataTrackDispatchType
-  - TextTrack
-browser-compat: api.TextTrack.label
+browser-compat: api.TextTrack.inBandMetadataTrackDispatchType
 ---
 
 {{APIRef("WebVTT")}}
@@ -28,7 +23,7 @@ A string containing the `inBandMetadataTrackDispatchType`, or an empty string.
 In the following example the value of `inBandMetadataTrackDispatchType` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.inBandMetadataTrackDispatchType);

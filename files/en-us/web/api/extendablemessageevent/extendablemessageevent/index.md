@@ -1,17 +1,12 @@
 ---
-title: ExtendableMessageEvent()
+title: "ExtendableMessageEvent: ExtendableMessageEvent() constructor"
+short-title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ExtendableMessageEvent
-  - Reference
-  - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("ExtendableMessageEvent")}} object.
 
@@ -50,11 +45,13 @@ A new {{domxref("ExtendableMessageEvent")}} object.
 ## Examples
 
 ```js
-const options = { data : 'hello message',
-                  source : MessagePortReference,
-                  ports : MessagePortListReference };
+const options = {
+  data: "hello message",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-const myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## Specifications
@@ -69,5 +66,4 @@ const myEME = new ExtendableMessageEvent('message', init);
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

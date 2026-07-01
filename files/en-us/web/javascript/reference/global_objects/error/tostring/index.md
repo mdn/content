@@ -1,25 +1,23 @@
 ---
 title: Error.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Error.toString
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`toString()`** method returns a string representing the
-specified {{jsxref("Error")}} object.
+The **`toString()`** method of {{jsxref("Error")}} instances returns a string representing this error.
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -65,7 +63,7 @@ e2.name = undefined;
 console.log(e2.toString()); // "Error: fatal error"
 
 const e3 = new Error("fatal error");
-e3.name = '';
+e3.name = "";
 console.log(e3.toString()); // "fatal error"
 
 const e4 = new Error("fatal error");
@@ -89,4 +87,4 @@ console.log(e5.toString()); // "hello"
 
 ## See also
 
-- [A polyfill of `Error.prototype.toString`](https://github.com/zloirock/core-js#ecmascript-error) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)

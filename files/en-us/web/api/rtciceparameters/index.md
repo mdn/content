@@ -2,23 +2,7 @@
 title: RTCIceParameters
 slug: Web/API/RTCIceParameters
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connectivity
-  - Dictionary
-  - ICE
-  - Interface
-  - Negotiation
-  - RTCIceParameters
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - password
-  - ufrag
-  - username
-browser-compat: api.RTCIceParameters
+spec-urls: https://w3c.github.io/webrtc-pc/#rtciceparameters
 ---
 
 {{APIRef("WebRTC")}}
@@ -41,7 +25,3 @@ The username fragment and password uniquely identify the remote peer for the dur
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

@@ -2,19 +2,14 @@
 title: EventCounts
 slug: Web/API/EventCounts
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - Interface
-  - Maplike
 browser-compat: api.EventCounts
 ---
 
 {{APIRef("Performance API")}}
 
-The **`EventCounts`** interface is a read-only map where the keys are event types and the values are the number of events that have been dispatched for that event type.
+The **`EventCounts`** interface of the [Performance API](/en-US/docs/Web/API/Performance_API) provides the number of events that have been dispatched for each event type.
 
-As a read-only map, `EventCounts` is similar to a {{jsxref("Map")}}, however, it doesn't implement the `clear()`, `delete()`, and `set()` methods.
+An `EventCounts` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the name string for an event type, and the corresponding value is an integer indicating the number of events that have been dispatched for that event type.
 
 ## Constructor
 
@@ -52,7 +47,7 @@ for (entry of performance.eventCounts.entries()) {
   const count = entry[1];
 }
 
-const clickCount = performance.eventCounts.get("click"); 
+const clickCount = performance.eventCounts.get("click");
 
 const isExposed = performance.eventCounts.has("mousemove");
 const exposedEventsCount = performance.eventCounts.size;

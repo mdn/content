@@ -1,13 +1,8 @@
 ---
-title: Selection.addRange()
+title: "Selection: addRange() method"
+short-title: addRange()
 slug: Web/API/Selection/addRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.addRange
 ---
 
@@ -25,8 +20,7 @@ addRange(range)
 ### Parameters
 
 - `range`
-  - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
-    }}.
+  - : A {{ domxref("Range") }} object that will be added to the {{domxref("Selection")}}.
 
 ### Return value
 
@@ -34,8 +28,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-> **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
-> add new ranges to the selection if it already contains one.
+Note that only Firefox supports multiple selection ranges. In this example, other browsers will not add new ranges to the selection if it already contains one.
 
 ### HTML
 
@@ -50,17 +43,17 @@ None ({{jsxref("undefined")}}).
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
+let button = document.querySelector("button");
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   const selection = window.getSelection();
-  const strongs = document.getElementsByTagName('strong');
+  const strongElems = document.getElementsByTagName("strong");
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
-  for (const node of strongs) {
+  for (const node of strongElems) {
     const range = document.createRange();
     range.selectNode(node);
     selection.addRange(range);

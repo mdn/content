@@ -2,16 +2,6 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 page-type: web-api-overview
-tags:
-  - API
-  - Clipping
-  - Intersection
-  - Intersection Observer API
-  - IntersectionObserver
-  - Overview
-  - Performance
-  - Reference
-  - Web
 browser-compat: api.IntersectionObserver
 ---
 
@@ -19,29 +9,31 @@ browser-compat: api.IntersectionObserver
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
 
+## Overview
+
 Historically, detecting visibility of an element, or the relative visibility of two elements in relation to each other, has been a difficult task for which solutions have been unreliable and prone to causing the browser and the sites the user is accessing to become sluggish. As the web has matured, the need for this kind of information has grown. Intersection information is needed for many reasons, such as:
 
 - Lazy-loading of images or other content as a page is scrolled.
-- Implementing "infinite scrolling" web sites, where more and more content is loaded and rendered as you scroll, so that the user doesn't have to flip through pages.
+- Implementing "infinite scrolling" websites, where more and more content is loaded and rendered as you scroll, so that the user doesn't have to flip through pages.
 - Reporting of visibility of advertisements in order to calculate ad revenues.
 - Deciding whether or not to perform tasks or animation processes based on whether or not the user will see the result.
 
 Implementing intersection detection in the past involved event handlers and loops calling methods like {{domxref("Element.getBoundingClientRect()")}} to build up the needed information for every element affected. Since all this code runs on the main thread, even one of these can cause performance problems. When a site is loaded with these tests, things can get downright ugly.
 
-Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the web site may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the web site, and their computer.
+Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the website may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the website, and their computer.
 
-The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the {{Glossary("viewport")}}), or when the amount by which the two intersect changes by a requested amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
+The Intersection Observer API lets code register a callback function that is executed whenever a particular element enters or exits an intersection with another element (or the {{Glossary("viewport")}}), or when the intersection between two elements changes by a specified amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
 
-One thing the Intersection Observer API can't tell you: the exact number of pixels that overlap or specifically which ones they are; however, it covers the much more common use case of "If they intersect by somewhere around _N_%, I need to do something."
+One thing the Intersection Observer API can't do: trigger logic based on the exact number of pixels that overlap, or specifically on which ones they are. It only solves the common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
-## Intersection observer concepts and usage
+## Concepts and usage
 
 The Intersection Observer API allows you to configure a callback that is called when either of these circumstances occur:
 
 - A **target** element intersects either the device's viewport or a specified element. That specified element is called the **root element** or **root** for the purposes of the Intersection Observer API.
 - The first time the observer is initially asked to watch a target element.
 
-Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for `root` option. Keep reading for a more detailed explanation about intersection observer options.
+Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for the `root` option. Keep reading for a more detailed explanation about intersection observer options.
 
 Whether you're using the viewport or some other element as the root, the API works the same way, executing a callback function you provide whenever the visibility of the target element changes so that it crosses desired amounts of intersection with the root.
 
@@ -52,13 +44,14 @@ The degree of intersection between the target element and its root is the **inte
 Create the intersection observer by calling its constructor and passing it a callback function to be run whenever a threshold is crossed in one direction or the other:
 
 ```js
-let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+const options = {
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  scrollMargin: "0px",
+  threshold: 1.0,
+};
 
-let observer = new IntersectionObserver(callback, options);
+const observer = new IntersectionObserver(callback, options);
 ```
 
 A threshold of 1.0 means that when 100% of the target is visible within the element specified by the `root` option, the callback is invoked.
@@ -70,26 +63,32 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 - `root`
   - : The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if `null`.
 - `rootMargin`
-  - : Margin around the root. Can have values similar to the CSS {{cssxref("margin")}} property, e.g. "`10px 20px 30px 40px"` (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Defaults to all zeros.
+  - : Margin around the root. A string of one to four values similar to the CSS {{cssxref("margin")}} property, e.g., `"10px 20px 30px 40px"` (top, right, bottom, left). The values can only be in pixels (`px`) or percentages (`%`). This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Negative values will shrink the bounding box of the root element and positive values will expand it. The default value, if not specified, is `"0px 0px 0px 0px"`.
+- `scrollMargin`
+  - : Margin around nested {{glossary("scroll container","scroll containers")}} that takes the same values/has same default as `rootMargin`.
+    The margins are applied to nested scrollable containers before computing intersections.
+    Positive values grow the clipping rectangle of the container, allowing targets to intersect before they becomes visible, while negative values shrink the clipping rectangle.
 - `threshold`
-  - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
+  - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning the callback will be run as soon as the target element intersects or touches the boundary of the root, even if no pixels are yet visible). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
+- `delay` {{experimental_inline}}
+  - : When tracking target visibility ([trackVisibility](#trackvisibility) is `true`), this can be used to set the minimum delay in milliseconds between notifications from this observer.
+    Limiting the notification rate is desirable because the visibility calculation is computationally intensive.
+    If tracking visibility, the value will be set to 100 for any value less than 100, and you should use the largest tolerable value.
+    The value is 0 by default.
+- `trackVisibility` {{experimental_inline}}
+  - : A boolean indicating whether this `IntersectionObserver` is tracking changes in a target's visibility.
 
-#### Targeting an element to be observed
+    When `false` the browser will report intersections when the target element scrolls into the root element's viewport.
+    When `true`, the browser will additionally check that the target is actually visible, and hasn't been covered by other elements or potentially been distorted or hidden by a filter, reduced opacity, or some transform.
+    The value is `false` by default as tracking visibility is computationally intensive.
+    If this is set, a [`delay`](#delay) should also be set.
 
-Once you have created the observer, you need to give it a target element to watch:
+#### Intersection change callbacks
+
+The callback passed to the `IntersectionObserver()` constructor receives a list of {{domxref("IntersectionObserverEntry")}} objects and the observer:
 
 ```js
-let target = document.querySelector('#listItem');
-observer.observe(target);
-
-// the callback we setup for the observer will be executed now for the first time
-// it waits until we assign a target to our observer (even if the target is currently not visible)
-```
-
-Whenever the target meets a threshold specified for the `IntersectionObserver`, the callback is invoked. The callback receives a list of {{domxref("IntersectionObserverEntry")}} objects and the observer:
-
-```js
-let callback = (entries, observer) => {
+const callback = (entries, observer) => {
   entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed
     // target element:
@@ -104,9 +103,39 @@ let callback = (entries, observer) => {
 };
 ```
 
-The list of entries received by the callback includes one entry for each target which reported a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.
+The list of entries received by the callback includes one {{domxref("IntersectionObserverEntry")}} object for each threshold-crossing event — multiple entries can be received at a time, either from multiple targets or from a single target crossing multiple thresholds in a short amount of time. The entries are dispatched using a queue, so they should be ordered by the time they were generated, but you should preferably use {{domxref("IntersectionObserverEntry.time")}} to correctly order them. Each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, etc. The entry only contains information about that particular instant — if you want information that requires tracking over time, such as the scroll direction and speed, you may need to compute that yourself by memoizing previously received entries.
 
 Be aware that your callback is executed on the main thread. It should operate as quickly as possible; if anything time-consuming needs to be done, use {{domxref("Window.requestIdleCallback()")}}.
+
+The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called approximately upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
+
+```js
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      let elem = entry.target;
+
+      if (entry.intersectionRatio >= 0.75) {
+        intersectionCounter++;
+      }
+    }
+  });
+};
+```
+
+#### Targeting an element to be observed
+
+Once you have created the observer, you need to give it a target element to watch:
+
+```js
+const target = document.querySelector("#listItem");
+observer.observe(target);
+
+// the callback we set up for the observer will be executed now for the first time
+// it waits until we assign a target to our observer (even if the target is currently not visible)
+```
+
+Whenever the target meets a threshold specified for the `IntersectionObserver`, the callback is invoked.
 
 Also, note that if you specified the `root` option, the target must be a descendant of the root element.
 
@@ -126,7 +155,336 @@ The **_root intersection rectangle_** is the rectangle used to check against the
 - If the intersection root has an overflow clip, the root intersection rectangle is the root element's content area.
 - Otherwise, the root intersection rectangle is the intersection root's bounding client rectangle (as returned by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on it).
 
-The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed).
+The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed). Positive values grow the box, while negative values shrink it. Each offset value can be only expressed in pixels (px) or a percentage (%).
+
+The effect of growing the box using the root margin is to allow overflow targets to intersect with the root before they become visible.
+This can be used, for example, to start loading images just before they come into view, rather than at the point they become visible.
+
+In the example below, we have a scrollable box and an element that's initially out of view.
+You can adjust the root right margin, and see that:
+
+- If the margin is positive, the red element is considered intersecting with the root even if it's not visible, because it's intersecting with the root's margin area.
+- If the margin is negative, then even when the red element starts to become visible, it's still not considered intersecting with the root because the root's bounding box is shrunk.
+
+```html hidden
+<div class="demo">
+  <div id="container">
+    <div id="elem"></div>
+    <div id="gutter"></div>
+  </div>
+  <div id="marginIndicator"></div>
+</div>
+<div class="controls">
+  <label>
+    Set the right margin of the root:
+    <input id="margin" type="number" value="0" step="5" />px
+  </label>
+  <label>
+    You can also use this slider to scroll the container:
+    <input id="scrollAmount" type="range" min="0" max="300" value="0" />
+  </label>
+  <p>Current intersection ratio: <span id="output"></span></p>
+</div>
+```
+
+```css hidden
+.demo {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
+
+#marginIndicator {
+  position: relative;
+  height: 100px;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+#elem {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200px;
+}
+
+#gutter {
+  width: 500px;
+  height: 100px;
+}
+```
+
+```js hidden
+let observer;
+function createObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        output.textContent = entry.intersectionRatio.toFixed(2);
+      });
+    },
+    {
+      threshold: Array.from({ length: 1000 }, (_, i) => i / 1000),
+      root: container,
+      rootMargin: `0px ${margin.value}px 0px 0px`,
+    },
+  );
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+  observer.observe(elem);
+}
+createObserver();
+margin.addEventListener("input", () => {
+  createObserver();
+});
+scrollAmount.addEventListener("input", () => {
+  container.scrollLeft = scrollAmount.value;
+});
+```
+
+{{EmbedLiveSample("the intersection root and root margin", "", 200)}}
+
+#### The intersection root and scroll margin
+
+Consider the case where you have a root element that contains nested {{glossary("scroll container","scroll containers")}}, and you want to observe intersections with a target inside one of those scrollable containers.
+Intersections with the target element start being observable, by default, when the target is visible within the area defined by the root;
+in other words, when the container is scrolled into view in the root and the target is scrolled into view within the clipping rectangle of its container.
+
+You can use a scroll margin to start observing intersections before or after the target is scrolled into view within its scroll container.
+The margin is added to all nested scroll containers in the root, including the root element if it is also a scroll container, and has the effect of either growing (positive margins) or shrinking (negative margin) the clipping region used for calculating intersections.
+
+> [!NOTE]
+> You could create an intersection observer on each scroll container for which you want a scroll margin, and use the root margin property to achieve a similar effect.
+> Using a scroll margin is more ergonomic, as in most cases you can have just one intersection observer for all nested targets.
+
+In the example below, we have a scrollable box and an image carousel that is initially out of view.
+An observer on the root element observes the image element targets within the carousel.
+When an image element starts to intersect with the root element, the image is loaded, the intersection is logged, and the observer is removed.
+
+Scroll down to display the carousel.
+The visible images should immediately load.
+If you scroll the carousel, you should observe that the images are loaded as soon as the element becomes visible.
+
+After resetting the example you can use the provided control to change the scroll margin percentage.
+If you set a positive value like 20% the clip rectangle of the scroll container will be increased by 20%, and you should observe that images are detected and loaded before they come into view.
+Similarly, a negative value will mean that the intersection is detected once images are already in view.
+
+```html hidden
+<button id="reset" type="button">Reset</button>
+```
+
+```html hidden
+<div id="root-container">
+  <p>content before (scroll down to carousel)</p>
+
+  <div class="flex-container">
+    <div class="carousel">
+      <img
+        src=""
+        data-src="ballon-portrait.jpg"
+        class="lazy-carousel-img"
+        alt="Balloon portrait" />
+      <img
+        src=""
+        data-src="balloon-small.jpg"
+        class="lazy-carousel-img"
+        alt="balloon-small" />
+      <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="surfer" />
+      <img
+        src=""
+        data-src="border-diamonds.png"
+        class="lazy-carousel-img"
+        alt="border-diamonds" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="fire" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="puppy" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="moon" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="rhino" />
+    </div>
+    <div id="margin-indicator"></div>
+  </div>
+  <p>content after</p>
+</div>
+```
+
+```html hidden
+<div class="controls">
+  <label>
+    Set the right margin of the scroll root:
+    <input id="margin" type="number" value="0" step="5" />%
+  </label>
+</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#root-container {
+  height: 250px;
+  overflow-y: auto;
+  border: solid blue;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+p {
+  height: 50vh;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#margin-indicator {
+  position: relative;
+  height: 100px;
+  width: 1px;
+  background-color: red;
+  opacity: 0.5;
+  display: flex;
+}
+
+.carousel {
+  width: 300px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  border: solid;
+  /* outline: 200px solid rgba(0, 0, 0, 0.1); */
+}
+.carousel img {
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  display: block;
+  width: 195px;
+  height: 99px;
+  min-width: 195px;
+  min-height: 99px;
+  margin-right: 10px;
+  background-color: #eeeeee; /* Placeholder background */
+}
+
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+const rootContainer = document.getElementById("root-container");
+const marginIndicator = document.getElementById("margin-indicator");
+const carousel = document.querySelector(".carousel");
+const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
+let imageObserver;
+
+function createImageObserver() {
+  if (imageObserver) {
+    imageObserver.disconnect();
+  }
+
+  let observerOptions = {
+    root: rootContainer,
+    rootMargin: "0px", // No extra margin
+    scrollMargin: `${margin.valueAsNumber}%`, // No extra margin / Can be set
+    threshold: 0.01, // Trigger when 1% of the image is visible
+  };
+
+  imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        log(`intersect: ${img.dataset.src}`); // Only on first intersection
+        img.src = `https://mdn.github.io/shared-assets/images/examples/${img.dataset.src}`; // Load image by setting src
+        img.classList.remove("lazy-carousel-img"); // Remove the class
+        observer.unobserve(img); // Stop observing once loaded
+      }
+    });
+  }, observerOptions);
+
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+
+  lazyImages.forEach((image) => {
+    imageObserver.observe(image); // Start observing each image
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  createImageObserver();
+  margin.addEventListener("input", () => {
+    createImageObserver();
+  });
+} else {
+  // Fallback for browsers that don't support Intersection Observer
+  // Loads all images immediately if Intersection Observer is not supported.
+  lazyImages.forEach((img) => {
+    img.src = img.dataset.src;
+    img.classList.remove("lazy-carousel-img");
+  });
+  console.warn(
+    "Intersection Observer not supported. All carousel images loaded.",
+  );
+}
+```
+
+{{EmbedLiveSample("The intersection root and scroll margin","100%","500px")}}
 
 #### Thresholds
 
@@ -138,7 +496,7 @@ When the callback is invoked, it receives a list of `IntersectionObserverEntry` 
 
 You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
-Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
+Note that it's possible to have a zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
@@ -180,8 +538,8 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
   position: relative;
   left: 175px;
   width: 150px;
-  background-color: rgb(245, 170, 140);
-  border: 2px solid rgb(201, 126, 17);
+  background-color: rgb(245 170 140);
+  border: 2px solid rgb(201 126 17);
   padding: 4px;
   margin-bottom: 6px;
 }
@@ -203,11 +561,14 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: rgb(255 255 255 / 70%);
+  border: 1px solid rgb(0 0 0 / 70%);
   width: 3em;
   height: 18px;
   padding: 2px;
@@ -239,14 +600,15 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 let observers = [];
 
 startup = () => {
-  let wrapper = document.querySelector(".wrapper");
+  const wrapper = document.querySelector(".wrapper");
+  const template = document.querySelector("#boxTemplate");
 
   // Options for the observers
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -254,87 +616,84 @@ startup = () => {
   // since there will be so many of them (for each percentage
   // point).
 
-  let thresholdSets = [
+  const thresholdSets = [
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.01) {
+  for (let i = 0; i <= 1.0; i += 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = `box${i + 1}`;
-    template.querySelector(".sampleBox").id = boxID;
-    wrapper.appendChild(document.importNode(template, true));
+  for (let i = 0; i < 4; i++) {
+    const newBox = document.importNode(template.content, true);
+    const boxID = `box${i + 1}`;
+    newBox.querySelector(".sampleBox").id = boxID;
+    wrapper.appendChild(newBox);
 
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions,
+    );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
 
-  document.scrollingElement.scrollTop = wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
-}
+};
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
-    let box = entry.target;
-    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
+    const box = entry.target;
+    const visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
-    box.querySelector(".topLeft").innerHTML = visiblePct;
-    box.querySelector(".topRight").innerHTML = visiblePct;
-    box.querySelector(".bottomLeft").innerHTML = visiblePct;
-    box.querySelector(".bottomRight").innerHTML = visiblePct;
+    box.querySelector(".topLeft").textContent = visiblePct;
+    box.querySelector(".topRight").textContent = visiblePct;
+    box.querySelector(".bottomLeft").textContent = visiblePct;
+    box.querySelector(".bottomRight").textContent = visiblePct;
   });
-}
+};
 
 startup();
 ```
 
 {{EmbedLiveSample("Thresholds", 500, 500)}}
 
+#### Tracking visibility and delay
+
+By default the observer provides notifications when the target element is scrolled into the root element's viewport.
+While this is all that is needed in many situations, sometimes it is important that intersections are not reported when the target has been "visually compromised".
+For example, when measuring analytics or ad impressions, it is important that target elements are not hidden or distorted, in whole or in part.
+
+The `trackVisibility` setting tells the observer to only report intersections for targets that the browser does not consider to be visually compromised, such as by altering the opacity, or applying a filter or transform.
+The algorithm is conservative, and may omit elements that are technically visible, such as those with only a slight opacity reduction.
+
+The visibility calculation is computationally expensive and should only be used when necessary.
+When tracking visibility a {{domxref("IntersectionObserver/delay","delay")}} should also be set to limit the minimum reporting period.
+The recommendation is that you set the delay to the largest tolerable value (the minimum delay when tracking visibility is 100 milliseconds).
+
 #### Clipping and the intersection rectangle
 
 The browser computes the final intersection rectangle as follows; this is all done for you, but it can be helpful to understand these steps in order to better grasp exactly when intersections will occur.
 
-1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
-2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
+1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target.
+   This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
+2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle.
+   A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
 3. If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}), the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
 4. When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
-5. The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#root-intersection-rectangle).
+5. The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#the_intersection_root_and_root_margin).
 6. This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
-
-### Intersection change callbacks
-
-When the amount of a target element which is visible within the root element crosses one of the visibility thresholds, the {{domxref("IntersectionObserver")}} object's callback is executed. The callback receives as input an array of all of {{domxref("IntersectionObserverEntry")}} objects, one for each threshold which was crossed, and a reference to the `IntersectionObserver` object itself.
-
-Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry")}} object describing one threshold that was crossed; that is, each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, and the direction in which the transition occurred.
-
-The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
-
-```js
-const intersectionCallback = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let elem = entry.target;
-
-      if (entry.intersectionRatio >= 0.75) {
-        intersectionCounter++;
-      }
-    }
-  });
-}
-```
 
 ## Interfaces
 
@@ -359,13 +718,15 @@ The HTML for this example is very short, with a primary element which is the box
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 1);
-  border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  background-color: rgb(40 40 190 / 100%);
+  border: 4px solid rgb(20 20 120);
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -383,7 +744,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
   width: 350px;
   height: 350px;
   margin-top: 10px;
-  border: 4px solid rgb(20, 20, 120);
+  border: 4px solid rgb(20 20 120);
   text-align: center;
   padding: 20px;
 }
@@ -400,17 +761,12 @@ First, we need to prepare some variables and install the observer.
 ```js
 const numSteps = 20.0;
 
-let boxElement;
+const boxElement = document.querySelector("#box");
 let prevRatio = 0.0;
-let increasingColor = "rgba(40, 40, 190, ratio)";
-let decreasingColor = "rgba(190, 40, 40, ratio)";
+let increasingColor = "rgb(40 40 190 / ratio)";
+let decreasingColor = "rgb(190 40 40 / ratio)";
 
-// Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
-
-  createObserver();
-}, false);
+createObserver();
 ```
 
 The constants and variables we set up here are:
@@ -424,7 +780,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -432,15 +788,13 @@ The `createObserver()` method is called once page load is complete to handle act
 
 ```js
 function createObserver() {
-  let observer;
-
-  let options = {
+  const options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
-  observer = new IntersectionObserver(handleIntersect, options);
+  const observer = new IntersectionObserver(handleIntersect, options);
   observer.observe(boxElement);
 }
 ```
@@ -459,11 +813,11 @@ The `buildThresholdList()` function, which builds the list of thresholds, looks 
 
 ```js
 function buildThresholdList() {
-  let thresholds = [];
-  let numSteps = 20;
+  const thresholds = [];
+  const numSteps = 20;
 
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
+  for (let i = 1.0; i <= numSteps; i++) {
+    const ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -475,74 +829,80 @@ function buildThresholdList() {
 This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value `i/numSteps` onto the `thresholds` array for each integer `i` between 1 and `numSteps`. It also pushes 0 to include that value. The result, given the default value of `numSteps` (20), is the following list of thresholds:
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <th>#</th>
-      <th>Ratio</th>
-      <th>#</th>
-      <th>Ratio</th>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.05</td>
-      <th>11</th>
-      <td>0.55</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.1</td>
-      <th>12</th>
-      <td>0.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.15</td>
-      <th>13</th>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.2</td>
-      <th>14</th>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.25</td>
-      <th>15</th>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.3</td>
-      <th>16</th>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.35</td>
-      <th>17</th>
-      <td>0.85</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.4</td>
-      <th>18</th>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.45</td>
-      <th>19</th>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.5</td>
-      <th>20</th>
-      <td>1.0</td>
-    </tr>
-  </tbody>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ratio</th>
+        <th>#</th>
+        <th>Ratio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>0.05</td>
+        <th>11</th>
+        <td>0.6</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>0.1</td>
+        <th>12</th>
+        <td>0.65</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>0.15</td>
+        <th>13</th>
+        <td>0.7</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>0.2</td>
+        <th>14</th>
+        <td>0.75</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>0.25</td>
+        <th>15</th>
+        <td>0.8</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>0.3</td>
+        <th>16</th>
+        <td>0.85</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>0.35</td>
+        <th>17</th>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>0.4</td>
+        <th>18</th>
+        <td>0.95</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>0.45</td>
+        <th>19</th>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>0.5</td>
+        <th>20</th>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>0.55</td>
+      </tr>
+    </tbody>
 </table>
 
 We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.
@@ -555,9 +915,15 @@ When the browser detects that the target element (in our case, the one with the 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     }
 
     prevRatio = entry.intersectionRatio;
@@ -565,7 +931,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-For each {{domxref("IntersectionObserverEntry")}} in the list `entries`, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in `increasingColor` (remember, it's `"rgba(40, 40, 190, ratio)"`), replaces the word "ratio" with the entry's `intersectionRatio`. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.
+For each {{domxref("IntersectionObserverEntry")}} in the list `entries`, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in `increasingColor` (remember, it's `"rgb(40 40 190 / ratio)"`), replaces the word "ratio" with the entry's `intersectionRatio`. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.
 
 Similarly, if the `intersectionRatio` is going down, we use the string `decreasingColor` and replace the word "ratio" in that with the `intersectionRatio` before setting the target element's `background-color`.
 

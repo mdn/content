@@ -1,17 +1,11 @@
 ---
-title: FileSystemEntry.toURL()
+title: "FileSystemEntry: toURL() method"
+short-title: toURL()
 slug: Web/API/FileSystemEntry/toURL
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - toURL
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.toURL
 ---
 
@@ -47,19 +41,19 @@ the file system implementation doesn't support `toURL()`).
 ## Examples
 
 If you have a {{domxref("FileSystemFileEntry")}} corresponding to an image file in a
-file system available to your Web site or app, you can call `toURL()` to get
+file system available to your website or app, you can call `toURL()` to get
 its URL for use in HTML. If your site is located at
 `http://my-awesome-website.woot`, and you have a temporary file system that
-contains an image file named `awesomesauce.jpg`, the URL returned by
+contains an image file named `awesome-sauce.jpg`, the URL returned by
 `toURL()` might be (depending on the browser's implementation) something like
-`"filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg"`.
+`"filesystem:http://my-awesome-website.woot/temporary/awesome-sauce.jpg"`.
 
 Code that makes use of this might look like this:
 
 ```js
-let img = document.createElement("img");
-
+const img = document.createElement("img");
 img.src = imageFileEntry.toURL();
+img.alt = "";
 document.body.appendChild(img);
 ```
 
@@ -68,7 +62,8 @@ like this being appended to the end of the document:
 
 ```html
 <img
-  src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg" />
+  src="filesystem:http://my-awesome-website.woot/temporary/awesome-sauce.jpg"
+  alt="" />
 ```
 
 ## Browser compatibility
@@ -78,5 +73,4 @@ like this being appended to the end of the document:
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry.removeRecursively()")}}

@@ -1,30 +1,16 @@
 ---
-title: Range.surroundContents()
+title: "Range: surroundContents() method"
+short-title: surroundContents()
 slug: Web/API/Range/surroundContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.surroundContents
 ---
 
 {{ApiRef("DOM")}}
 
-The **`Range.surroundContents()`** method moves content of the
-{{ domxref("Range") }} into a new node, placing the new node at the start of the
-specified range.
+The **`surroundContents()`** method of the {{domxref("Range")}} interface surrounds the selected content by a provided node. It [extracts](/en-US/docs/Web/API/Range/extractContents) the contents of the range, replaces the children of `newParent` with the extracted contents, [inserts](/en-US/docs/Web/API/Range/insertNode) `newParent` at the location of the extracted contents, and makes the range select `newParent`.
 
-This method is nearly equivalent to
-`newNode.appendChild(range.extractContents()); range.insertNode(newNode)`.
-After surrounding, the boundary points of the `range` include
-`newNode`.
-
-An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{
-  domxref("Text") }} node with only one of its boundary points. That is, unlike the
-alternative above, if there are partially selected nodes, they will not be cloned and
-instead the operation will fail.
+An exception is thrown if the range partially contains any non-{{domxref("Text")}} node. The range must only contain text nodes and completely selected nodes.
 
 ## Syntax
 
@@ -53,9 +39,9 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const range = document.createRange();
-const newParent = document.createElement('h1');
+const newParent = document.createElement("h1");
 
-range.selectNode(document.querySelector('.header-text'));
+range.selectNode(document.querySelector(".header-text"));
 range.surroundContents(newParent);
 ```
 

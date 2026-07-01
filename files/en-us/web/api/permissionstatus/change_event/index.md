@@ -1,18 +1,12 @@
 ---
-title: 'PermissionStatus: change event'
+title: "PermissionStatus: change event"
+short-title: change
 slug: Web/API/PermissionStatus/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - PermissionStatus
-  - Permissions
-  - Reference
-  - change
 browser-compat: api.PermissionStatus.change_event
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
 The **`change`** event of the {{domxref("PermissionStatus")}} interface fires whenever the {{domxref("PermissionStatus.state")}} property changes.
 
@@ -20,10 +14,10 @@ The **`change`** event of the {{domxref("PermissionStatus")}} interface fires wh
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('change', (event) => { });
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => { };
+onchange = (event) => { }
 ```
 
 ## Event type
@@ -33,12 +27,16 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
-  console.log(`geolocation permission state is ${permissionStatus.state}`);
-  permissionStatus.onchange = () => {
-    console.log(`geolocation permission state has changed to ${permissionStatus.state}`);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission state is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission state has changed to ${permissionStatus.state}`,
+      );
+    };
+  });
 ```
 
 ## Specifications

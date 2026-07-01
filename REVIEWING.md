@@ -23,7 +23,7 @@ out-of-date. This is being handled as follows:
 
 1. Different MDN staff members and volunteers have been assigned as "topic
    review owners", meaning that when a pull request comes in related to a
-   particular topic area of the site (e.g. the CSS reference, or the learning
+   particular topic area of the site (e.g., the CSS reference, or the learning
    area), it will be assigned to that area's topic review owner(s) and they
    will receive an email notification asking for a review. This is being
    handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS)
@@ -100,7 +100,7 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or
+   change is explained. Ping our team in the [MDN Web Docs chat rooms][] to ask for help if you are still not sure, or
    if you think the content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if another
@@ -194,10 +194,6 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
   - [@sideshowbarker](https://github.com/sideshowbarker)
   - [@Elchi3](https://github.com/Elchi3)
   - [@jpmedley](https://github.com/jpmedley)
-- [SVG reference content](https://github.com/mdn/content/tree/main/files/en-us/web/svg)
-  — the [@yari-content-svg](https://github.com/orgs/mdn/teams/yari-content-svg)
-  team, which consists of:
-  - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
 ### Reviewer alumni
 
@@ -206,7 +202,15 @@ longer have the time to contribute; we want to give them our sincere thanks
 for all their help.
 
 - [@vkWeb](https://github.com/vkWeb/)
+- [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
-[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help
+<!---
+Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
+See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
+It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
+-->
+
 [mdn code example guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 [mdn writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[mdn web docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started#what_can_i_do_to_help

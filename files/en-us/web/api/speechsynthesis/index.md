@@ -2,14 +2,6 @@
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis
 ---
 
@@ -55,7 +47,7 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 ## Examples
 
-First, a simple example:
+First, an example:
 
 ```js
 let utterance = new SpeechSynthesisUtterance("Hello world!");
@@ -69,29 +61,29 @@ Inside the `inputForm.onsubmit` handler, we stop the form submitting with [preve
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('.txt');
-const voiceSelect = document.querySelector('select');
-const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('.pitch-value');
-const rate = document.querySelector('#rate');
-const rateValue = document.querySelector('.rate-value');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector(".txt");
+const voiceSelect = document.querySelector("select");
+const pitch = document.querySelector("#pitch");
+const pitchValue = document.querySelector(".pitch-value");
+const rate = document.querySelector("#rate");
+const rateValue = document.querySelector(".rate-value");
 
 let voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (let i = 0; i < voices.length ; i++) {
-    const option = document.createElement('option');
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+  for (const voice of voices) {
+    const option = document.createElement("option");
+    option.textContent = `${voice.name} (${voice.lang})`;
 
-    if (voices[i].default) {
-      option.textContent += ' — DEFAULT';
+    if (voice.default) {
+      option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -105,10 +97,11 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (const voice of voices) {
+    if (voice.name === selectedOption) {
+      utterThis.voice = voice;
     }
   }
   utterThis.pitch = pitch.value;
@@ -116,7 +109,7 @@ inputForm.onsubmit = (event) => {
   synth.speak(utterThis);
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

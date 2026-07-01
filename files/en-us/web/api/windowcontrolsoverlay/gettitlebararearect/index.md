@@ -1,14 +1,10 @@
 ---
-title: WindowControlsOverlay.getTitlebarAreaRect()
+title: "WindowControlsOverlay: getTitlebarAreaRect() method"
+short-title: getTitlebarAreaRect()
 slug: Web/API/WindowControlsOverlay/getTitlebarAreaRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WindowControlsOverlay
-  - Progressive Web Apps
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay.getTitlebarAreaRect
 ---
 

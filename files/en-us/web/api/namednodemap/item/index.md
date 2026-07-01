@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.item()
+title: "NamedNodeMap: item() method"
+short-title: item()
 slug: Web/API/NamedNodeMap/item
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.item
 ---
 
@@ -13,8 +11,9 @@ browser-compat: api.NamedNodeMap.item
 The **`item()`** method of the {{domxref("NamedNodeMap")}} interface
 returns the item in the map matching the index.
 
-> **Note:** This method is also called when you use the operator `[]` syntax.
-> So, `myMap[i]`is equivalent to `myMap.item(i)` where `i` is a number.
+> [!NOTE]
+> This method is also called when you use the operator `[]` syntax.
+> So, `myMap[i]` is equivalent to `myMap.item(i)` where `i` is a number.
 
 ## Syntax
 
@@ -36,7 +35,7 @@ the map.
 ## Example
 
 ```html
-<pre zero="test" one="test" two="test"></pre>
+<pre class="foo" id="bar" contenteditable></pre>
 ```
 
 ```js

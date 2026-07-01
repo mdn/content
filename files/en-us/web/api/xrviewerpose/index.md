@@ -2,26 +2,10 @@
 title: XRViewerPose
 slug: Web/API/XRViewerPose
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Mixed Reality
-  - Overview
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
 browser-compat: api.XRViewerPose
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The WebXR Device API interface **`XRViewerPose`** represents the pose (the position and orientation) of a viewer's point of view on the scene. Each `XRViewerPose` can have multiple views to represent, for example, the slight separation between the left and right eye.
 

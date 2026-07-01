@@ -1,18 +1,8 @@
 ---
-title: PaymentResponse.retry()
+title: "PaymentResponse: retry() method"
+short-title: retry()
 slug: Web/API/PaymentResponse/retry
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Web Payments
-  - payment
-  - retry
 browser-compat: api.PaymentResponse.retry
 ---
 
@@ -35,11 +25,10 @@ retry(errorFields)
 ### Parameters
 
 - `errorFields`
-
   - : An object, with the following properties:
     - `error` {{optional_inline}}
       - : A general description of a payment error from which the user may attempt to recover by retrying the payment, possibly after correcting mistakes in the payment information. `error` can be provided all by itself to provide only a generic error message, or in concert with the other properties to serve as an overview while other properties' values guide the user to errors in specific fields in the payment form.
-    - `paymentMethod {{optional_inline}}
+    - `paymentMethod` {{optional_inline}}
       - : Any payment-method-specific errors which may have occurred. This object's contents will vary depending on the payment method used.
 
 ### Return value
@@ -62,10 +51,8 @@ concept, in outline form, is:
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
    describes the requested payment and the options chosen by the user. Continue with the following steps:
-
    1. Validate the returned response; if there are any fields whose values are not
-      acceptable, call the response's {{domxref("PaymentResponse.complete",
-      "complete()")}} method with a value of `"fail"` to indicate failure.
+      acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of `"fail"` to indicate failure.
    2. If the response's data is valid and acceptable, call
       `complete("success")` to finalize the payment and process it.
 
@@ -113,7 +100,11 @@ async function recursiveValidate(request, response) {
   }
   if (errors.shippingAddress) {
     // "shippingaddresschange" fired at request object
-    const promise = fixField(request, "shippingaddresschange", shippingValidator);
+    const promise = fixField(
+      request,
+      "shippingaddresschange",
+      shippingValidator,
+    );
     promisesToFixThings.push(promise);
   }
   if (errors.payer) {
@@ -132,7 +123,8 @@ function fixField(requestOrResponse, event, validator) {
       const promiseToValidate = validator(requestOrResponse);
       ev.updateWith(promiseToValidate);
       const errors = await promiseToValidate;
-      if (!errors) { // yay! fixed!
+      if (!errors) {
+        // yay! fixed!
         event.removeEventListener(event, listener);
         resolve();
       }

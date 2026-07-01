@@ -2,17 +2,14 @@
 title: NDEFRecord
 slug: Web/API/NDEFRecord
 page-type: web-api-interface
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) provides data that can be read from, or written to, compatible NFC devices, e.g. NFC tags supporting NDEF.
+The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) provides data that can be read from, or written to, compatible NFC devices, e.g., NFC tags supporting NDEF.
 
 ## Constructor
 
@@ -27,7 +24,8 @@ The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
   - : Returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
 - {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the record identifier, which is an absolute or relative URL used to identify the record.
-    > **Note:** The uniqueness of the identifier is enforced only by the generator of the record.
+    > [!NOTE]
+    > The uniqueness of the identifier is enforced only by the generator of the record.
 - {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("DataView")}} containing the raw bytes of the record's payload.
 - {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}

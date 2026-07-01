@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.fetchStart
+title: "PerformanceResourceTiming: fetchStart property"
+short-title: fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.fetchStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`fetchStart`** read-only property represents a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to fetch the resource.
 

@@ -2,13 +2,6 @@
 title: SVGCircleElement
 slug: Web/API/SVGCircleElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - JavaScript
-  - SVG
-  - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
 
@@ -31,7 +24,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 
 ## Instance methods
 
-_This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
+_Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 ## Examples
 
@@ -47,21 +40,16 @@ In this example we draw a circle and randomly increase or decrease its radius wh
   viewBox="0 0 250 250"
   width="250"
   height="250">
-  <circle
-    cx="100"
-    cy="100"
-    r="50"
-    fill="gold"
-    id="circle"
-    onclick="clickCircle();" />
+  <circle cx="100" cy="100" r="50" fill="gold" id="circle" />
 </svg>
 ```
 
 #### JavaScript
 
 ```js
+const circle = document.getElementById("circle");
+
 function clickCircle() {
-  const circle = document.getElementById("circle");
   // Randomly determine if the circle radius will increase or decrease
   const change = Math.random() > 0.5 ? 10 : -10;
   // Clamp the circle radius to a minimum of 10 and a maximum of 250,
@@ -69,6 +57,8 @@ function clickCircle() {
   const newValue = Math.min(Math.max(circle.r.baseVal.value + change, 10), 250);
   circle.setAttribute("r", newValue);
 }
+
+circle.addEventListener("click", clickCircle);
 ```
 
 {{EmbedLiveSample('Resizing a circle', '', '300')}}

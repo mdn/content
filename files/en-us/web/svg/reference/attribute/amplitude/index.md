@@ -1,0 +1,43 @@
+---
+title: amplitude
+slug: Web/SVG/Reference/Attribute/amplitude
+page-type: svg-attribute
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-amplitude
+sidebar: svgref
+---
+
+The **`amplitude`** attribute controls the amplitude of the gamma function of a component transfer element when its {{SVGAttr("type")}} attribute is `gamma`.
+
+You can use this attribute with the following SVG elements:
+
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><a href="/en-US/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## Specifications
+
+{{Specifications}}
+
+## See also
+
+- {{SVGElement("feComponentTransfer")}}

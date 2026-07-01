@@ -1,15 +1,14 @@
 ---
 title: "BroadcastChannel: messageerror event"
+short-title: messageerror
 slug: Web/API/BroadcastChannel/messageerror_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.BroadcastChannel.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object when a message that can't be deserialized arrives on the channel.
+The **`messageerror`** event of the {{domxref("BroadcastChannel")}} interface fires when a message that can't be deserialized arrives on the channel.
 
 ## Syntax
 
@@ -17,6 +16,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("messageerror", (event) => { })
+
 onmessageerror = (event) => { }
 ```
 
@@ -39,11 +39,13 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
-This code uses [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to listen for messages and errors:
+### Listening for messageerror events
+
+This code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for messages and errors:
 
 ```js
 const channel = new BroadcastChannel("example-channel");
@@ -71,6 +73,28 @@ channel.onmessageerror = (event) => {
 };
 ```
 
+### Attempting to share memory
+
+A common cause of `messageerror` events is attempting to send a {{jsxref("SharedArrayBuffer")}} object, or a buffer view backed by one, across [agent clusters](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing). The following code demonstrates this.
+
+Page A runs the following code:
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.postMessage({ data: new SharedArrayBuffer(1024) });
+```
+
+Page B runs the following code:
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.addEventListener("messageerror", (event) => {
+  console.error("Message error");
+});
+```
+
+Then page B will receive a `messageerror` event when it tries to deserialize the message sent from page A.
+
 ## Specifications
 
 {{Specifications}}
@@ -81,4 +105,4 @@ channel.onmessageerror = (event) => {
 
 ## See also
 
-- Related events: [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event).
+- Related events: {{domxref("BroadcastChannel/message_event", "message")}}.

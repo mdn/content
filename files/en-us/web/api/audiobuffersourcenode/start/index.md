@@ -1,17 +1,8 @@
 ---
-title: AudioBufferSourceNode.start()
+title: "AudioBufferSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioBufferSourceNode/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - start
 browser-compat: api.AudioBufferSourceNode.start
 ---
 
@@ -49,11 +40,12 @@ start(when, offset, duration)
     current playback rate, so even if the sound is playing at twice its normal speed, the
     midway point through a 10-second audio buffer is still 5.
 - `duration` {{optional_inline}}
-  - : The duration of the sound to be played, specified in seconds. If this parameter
-    isn't specified, the sound plays until it reaches its natural conclusion or is stopped
-    using the {{domxref("AudioScheduledSourceNode.stop", "stop()")}} method. Using this
-    parameter is functionally identical to calling `start(when, offset)` and
-    then calling `stop(when+duration)`.
+  - : The duration of the audio data to be played, specified as seconds of total buffer content.
+    If this parameter isn't specified, the sound plays until it reaches its natural conclusion or
+    is stopped using the {{domxref("AudioScheduledSourceNode.stop", "stop()")}} method. The
+    value is independent of the {{domxref("AudioBufferSourceNode.playbackRate")}}, so e.g., a
+    `duration` of 2 seconds with a `playbackRate` of `2` will play 2 seconds of the source,
+    producing a 1 second audio output.
 
 ### Return value
 
@@ -84,7 +76,8 @@ worth of sound starting 3 seconds into the audio buffer.
 source.start(audioCtx.currentTime + 1, 3, 10);
 ```
 
-> **Note:** For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [run the code example live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> [!NOTE]
+> For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [try the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), and have a look at [the example source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data).
 
 ## Specifications
 

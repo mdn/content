@@ -1,15 +1,10 @@
 ---
 title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-tags:
-  - Add-ons
-  - WebExtensions
-  - browser_specific_settings
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_specific_settings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -20,24 +15,34 @@ browser-compat: webextensions.manifest.browser_specific_settings
     <tr>
       <th scope="row">Mandatory</th>
       <td>
-        Usually, no (but see also
-        <a
-          href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id"
-          >When do you need an Add-on ID?</a
-        >). Mandatory if the extension ID cannot be determined, see
-        <a href="#firefox_gecko_properties"
-          ><code>browser_specific_settings.gecko.id</code></a
-        >.
+        <ul>
+          <li>In Firefox:
+            <br/>
+            Must be provided with details specified for <a href="#data_collection_permissions"><code>browser_specific_settings.gecko.data_collection_permissions</code></a> for new extension submitted to addons.mozilla.org from November 3, 2025.
+            <br/>
+            Otherwise:
+            <ul>
+              <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li>
+              <li>Manifest V2: Not required unless an extension ID must be specified. However, setting the ID is recommended.</li>
+            </ul>
+            See <a href="#id"><code>browser_specific_settings.gecko.id</code></a> for more information.</li>
+          <li>In Safari, not required.</li>
+        </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
-    "strict_min_version": "42.0"
+    "id": "@addon-example",
+    "data_collection_permissions": {
+      "required": [
+        "none"
+      ]
+    },
+    "strict_min_version": "58.0"
   }
 }
 </pre
@@ -53,70 +58,103 @@ The `browser_specific_settings` key contains keys that are specific to a particu
 
 ### Firefox (Gecko) properties
 
-Firefox stores its browser specific settings in the `gecko` subkey, which has the following properties:
+Firefox stores browser-specific settings in these properties:
+
+- `gecko` for the desktop and (when enabled) Android versions of Firefox.
+- `gecko_android` for the Android version of Firefox.
+
+The `gecko` sub-key supports these properties:
+
+- `data_collection_permissions`
+  - : The optional and required data types that the extension collects and transmits for storage and processing outside the extension. These are represented by the properties:
+    - `required`
+      - : The data that the extension requires to be collected and transmitted for its operation. Must contain the value `none`, or one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `websiteActivity`, or `websiteContent`.
+    - `optional` {{optional_inline}}
+      - : The data that the user can opt to provide. Can contain one or more of `authenticationInfo`, `bookmarksInfo`, `browsingActivity`, `financialAndPaymentInfo`, `healthInfo`, `locationInfo`, `personalCommunications`, `personallyIdentifyingInfo`, `searchTerms`, `technicalAndInteraction`, `websiteActivity`, or `websiteContent`.
+
+    For more information, see the Extension Workshop article [Firefox built-in consent for data collection and transmission](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
 
 - `id`
-  - : The extension ID. For extensions submitted to [addons.mozilla.org](https://addons.mozilla.org/) (AMO), see [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when you need to specify the ID. When required by AMO, this property must contain 80 characters or less. For extensions not submitted to AMO, if the extension is unsigned (and not loaded using `about:debugging`) an ID is required; otherwise, ID is optional.
-- `strict_min_version`
-  - : Minimum version of Gecko to support. Versions containing a "\*" are not valid in this field. Defaults to "42a1".
-- `strict_max_version`
-  - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, then the extension will be disabled, or not permitted to be installed. Defaults to "\*", which disables checking for a maximum version.
-- `update_url`
-  - : Is a link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).
+  - : The extension ID. Optional for Manifest V2 (although setting an ID is recommended) and required for signing Manifest V3 extensions. If you don't provide a value for Manifest V2 extensions, AMO assigns a GUID to the extension when it is signed. You must create an ID for signing Manifest V3 extensions; AMO does not assign an ID. When provided, this property must be a:
+    - (recommended) string containing 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). While you can use a real email address (remembering that this may attract spam), any correctly formatted string can be used. For example, `great_app@developers.company`.
+    - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (`^\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}$`)
 
-See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
+    When signing extensions for the first time, addons.mozilla.org (AMO) checks that the ID is unique.
+
+    For example:
+
+    ```json
+      "id": "extensionname@example.org"
+    ```
+
+    ```json
+      "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+    ```
+
+    See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) for more information about setting extension IDs.
+
+- `strict_min_version`
+  - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
+    > [!NOTE]
+    > The minimum supported version capable of receiving updates is 115.0 (ESR) or, if ESR versions are not included, 128.0. This is due to the expiration of the root certificate in Firefox in March 2025. As a result, older versions of Firefox don't recognize extension signatures. See [Update Firefox to prevent add-ons issues from root certificate expiration](https://support.mozilla.org/en-US/kb/root-certificate-expiration) for more information.
+- `strict_max_version`
+  - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
+
+    > [!CALLOUT]
+    > See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
+
+- `update_url`
+  - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e., not through AMO).
+
+The `gecko_android` sub-key supports these properties:
+
+- `strict_min_version`
+  - : Minimum version of Gecko to support on Android. If the Firefox for Android version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, defaults to the version determined by `gecko.strict_min_version`. "\*" is not valid in this field.
+- `strict_max_version`
+  - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
+
+To support Firefox for Android without specifying a version range, the `gecko_android` sub-key must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
 #### Extension ID format
 
-The extension ID must be one of the following:
+The extension ID must be one of these:
 
 - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- A string formatted like an email address: `extensionname@example.org`
+- A string formatted like an email address: `extensionname@example.org`. However, use of an `@string` format is recommended.
 
 The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
 
 For example:
 
 ```json
-"id": "extensionname@example.org"
+"id": "@extension-name.developer-name"
 ```
 
 ```json
 "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
 ```
 
-### Microsoft Edge properties
-
-> **Warning:** Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
-
-Microsoft Edge stores its browser specific settings in the `edge` subkey, which has the following properties:
-
-- `browser_action_next_to_addressbar`
-
-  - : Boolean property which controls the placement of the [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions).
-
-    - `true` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `navbar`.
-    - `false` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `menupanel`.
-
 ### Safari properties
 
-> **Warning:** Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
-
-Safari stores its browser specific settings in the `safari` subkey, which has the following properties:
+Safari stores its browser-specific settings in the `safari` sub-key, which has these properties:
 
 - `strict_min_version`
   - : Minimum version of Safari to support.
 - `strict_max_version`
   - : Maximum version of Safari to support.
 
+### Chrome properties
+
+Chrome doesn't use this key and ignores it if present in an extension's `manifest.json` file.
+
 ## Examples
 
-Example with all possible keys. Note that most extensions will omit `strict_max_version` and `update_url`.
+Example with all possible keys. Note that most extensions omit `strict_max_version` and `update_url`.
 
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
+    "id": "@addon-example",
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"

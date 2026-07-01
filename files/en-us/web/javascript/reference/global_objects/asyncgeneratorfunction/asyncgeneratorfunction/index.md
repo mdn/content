@@ -1,20 +1,21 @@
 ---
 title: AsyncGeneratorFunction() constructor
+short-title: AsyncGeneratorFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - ECMAScript 2018
-  - AsyncGeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
+sidebar: jsref
 ---
 
-{{JSRef}}
+> [!WARNING]
+> The arguments passed to this constructor are dynamically parsed and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function#security_considerations) in the `Function()` constructor reference for more information.
 
-The **`AsyncGeneratorFunction()`** constructor creates a new {{jsxref("AsyncGeneratorFunction")}} object. In JavaScript, every [async generator function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) is actually an `AsyncGeneratorFunction` object.
+The **`AsyncGeneratorFunction()`** constructor creates {{jsxref("AsyncGeneratorFunction")}} objects.
 
 Note that `AsyncGeneratorFunction` is not a global object. It could be obtained by evaluating the following code.
 
@@ -28,23 +29,26 @@ The `AsyncGeneratorFunction()` constructor is not intended to be used directly, 
 
 ```js-nolint
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg0, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncGeneratorFunction(arg1, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncGeneratorFunction(functionBody)
-AsyncGeneratorFunction(arg0, functionBody)
-AsyncGeneratorFunction(arg0, arg1, functionBody)
-AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncGeneratorFunction(arg1, functionBody)
+AsyncGeneratorFunction(arg1, arg2, functionBody)
+AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **Note:** `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
+> [!NOTE]
+> `AsyncGeneratorFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncGeneratorFunction` instance.
 
 ### Parameters
 
 See {{jsxref("Function/Function", "Function()")}}.
 
 ## Examples
+
+Note that these examples omit the use of trusted types for brevity. For code showing the recommended approach, see [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()`.
 
 ### Using the constructor
 
@@ -67,8 +71,8 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 
 ## See also
 
-- [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
 - {{jsxref("Functions", "Functions", "", 1)}}

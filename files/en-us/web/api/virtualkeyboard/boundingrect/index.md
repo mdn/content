@@ -1,18 +1,14 @@
 ---
-title: VirtualKeyboard.boundingRect
+title: "VirtualKeyboard: boundingRect property"
+short-title: boundingRect
 slug: Web/API/VirtualKeyboard/boundingRect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VirtualKeyboard
-  - boundingRect
-  - Experimental
+status:
+  - experimental
 browser-compat: api.VirtualKeyboard.boundingRect
 ---
 
-{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
+{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`boundingRect`** property of the {{domxref("VirtualKeyboard")}} interface contains a {{domxref("DOMRect")}} indicating the position and size of the on-screen virtual keyboard that overlays the web page.
 

@@ -2,13 +2,6 @@
 title: MIDIMessageEvent
 slug: Web/API/MIDIMessageEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - MIDI
-  - MIDIMessageEvent
-  - Reference
-  - Web MIDI API
 browser-compat: api.MIDIMessageEvent
 ---
 
@@ -28,7 +21,7 @@ The **`MIDIMessageEvent`** interface of the [Web MIDI API](/en-US/docs/Web/API/W
 _This interface also inherits properties from {{domxref("Event")}}._
 
 - {{domxref("MIDIMessageEvent.data")}}
-  - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://www.midi.org/specifications-old/item/table-1-summary-of-midi-message) for more information on its form.
+  - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://midi.org/summary-of-midi-1-0-messages) for more information on its form.
 
 ## Instance methods
 
@@ -41,8 +34,10 @@ The following example prints all MIDI messages to the console.
 ```js
 navigator.requestMIDIAccess().then((midiAccess) => {
   Array.from(midiAccess.inputs).forEach((input) => {
-    input[1].onmidimessage = (msg) => { console.log(msg); }
-  })
+    input[1].onmidimessage = (msg) => {
+      console.log(msg);
+    };
+  });
 });
 ```
 

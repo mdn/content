@@ -1,24 +1,15 @@
 ---
 title: action.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Sets the HTML document that is opened as a popup when the user clicks on the browser action's icon. Tabs without a specific popup will inherit the global popup, which defaults to the [`default_popup`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specified in the manifest.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 ## Syntax
 
@@ -31,23 +22,19 @@ browser.action.setPopup(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.
     - `windowId` {{optional_inline}}
       - : `integer`. Sets the popup only for the specified window.
     - `popup`
-
       - : `string` or `null`. The HTML file to show in a popup, specified as a URL.
 
-        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g. `https://example.org/`).
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g., `https://example.org/`).
 
         If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("action.onClicked")}} events.
 
         If `popup` is `null`:
-
         - If `tabId` is specified, removes the tab-specific popup so that the tab inherits the global popup.
         - If `windowId` is specified, removes the window-specific popup so that the window inherits the global popup.
         - If `tabId` and `windowId` are both omitted, reverts the global popup to the default value.
@@ -78,7 +65,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: true,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.create(
@@ -89,7 +76,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
@@ -107,7 +94,8 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

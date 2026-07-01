@@ -1,32 +1,23 @@
 ---
 title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
-tags:
-  - API
-  - Add-ons
-  - DataTypeSet
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - browsingData
+page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.DataTypeSet
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`browsingData.DataTypeSet`** type describes a set of data types.
 
-It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history" and so on. All properties are optional.
+It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history", and so on. All properties are optional.
 
 This type is used:
 
-- in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove
-- in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are currently selected in the browser's "Clear History" feature.
+- in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove.
+- in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are selected in the browser's "Clear History" feature.
 
 ## Type
 
-Values of this type are objects. They contain the following properties:
+Values of this type are objects. They contain these properties:
 
 - `cache` {{optional_inline}}
   - : `boolean`. The browser's cache.
@@ -37,15 +28,15 @@ Values of this type are objects. They contain the following properties:
 - `fileSystems` {{optional_inline}}
   - : `boolean`. Website's file systems.
 - `formData` {{optional_inline}}
-  - : `boolean`. Saved form data, for autocomplete.
+  - : `boolean`. Saved form data for autocomplete.
 - `history` {{optional_inline}}
   - : `boolean`. The user's browsing history.
 - `indexedDB` {{optional_inline}}
   - : `boolean`. IndexedDB data.
 - `localStorage` {{optional_inline}}
-  - : `boolean`. Local storage data.
+  - : `boolean`. Local storage ([`localStorage`](/en-US/docs/Web/API/Window/localStorage)) and session storage ([`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage)) data.
 - `passwords` {{optional_inline}}
-  - : `boolean`. Saved passwords, for autocomplete.
+  - : `boolean`. Saved passwords for autocomplete.
 - `pluginData` {{optional_inline}}
   - : `boolean`. Stored data associated with plugins.
 - `serverBoundCertificates` {{optional_inline}}
@@ -57,7 +48,8 @@ Values of this type are objects. They contain the following properties:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

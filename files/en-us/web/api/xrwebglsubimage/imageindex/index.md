@@ -1,17 +1,10 @@
 ---
-title: XRWebGLSubImage.imageIndex
+title: "XRWebGLSubImage: imageIndex property"
+short-title: imageIndex
 slug: Web/API/XRWebGLSubImage/imageIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLSubImage.imageIndex
 ---
 
@@ -29,7 +22,9 @@ The `imageIndex` property can be passed {{domxref("WebGL2RenderingContext.frameb
 
 ```js
 const xrGlBinding = new XRWebGLBinding(xrSession, gl);
-const layer = xrGlBinding.createProjectionLayer({ textureType: "texture-array" });
+const layer = xrGlBinding.createProjectionLayer({
+  textureType: "texture-array",
+});
 const framebuffer = gl.createFramebuffer();
 
 xrSession.updateRenderState({ layers: [layer] });
@@ -44,10 +39,20 @@ function onXRFrame(time, xrFrame) {
 
   for (const view in xrViewerPose.views) {
     const subImage = xrGlBinding.getViewSubImage(layer, view);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-      subImage.colorTexture, 0, subImage.imageIndex);
-    gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
-      subImage.depthStencilTexture, 0, subImage.imageIndex);
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.COLOR_ATTACHMENT0,
+      subImage.colorTexture,
+      0,
+      subImage.imageIndex,
+    );
+    gl.framebufferTextureLayer(
+      gl.FRAMEBUFFER,
+      gl.DEPTH_ATTACHMENT,
+      subImage.depthStencilTexture,
+      0,
+      subImage.imageIndex,
+    );
 
     // Render from the viewpoint of xrView
   }

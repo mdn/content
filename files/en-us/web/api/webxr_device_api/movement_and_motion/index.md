@@ -1,23 +1,7 @@
 ---
-title: 'Movement, orientation, and motion: A WebXR example'
+title: "Movement, orientation, and motion: A WebXR example"
 slug: Web/API/WebXR_Device_API/Movement_and_motion
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Example
-  - Guide
-  - Reality
-  - Tutorial
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - rendering
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -31,7 +15,7 @@ The core of this example—the spinning, textured, lighted cube—is taken from 
 
 While reading this article and the accompanying source code, it's helpful to keep in mind that the display for a 3D headset is a single screen, divided in half. The left half of the screen is seen only by the left eye, while the right half is only seen by the right eye. Rendering the scene for immersive presentation requires multiple renders of the scene—once from the perspective of each eye.
 
-When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its {{domxref("XRWebGLLayer.viewport", "viewport")}} configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
+When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its [viewport](/en-US/docs/Web/API/XRWebGLLayer/getViewport) configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
 
 This example demonstrates this by showing the canvas on the screen, even when presenting a scene as an immersive display using an XR device.
 
@@ -51,7 +35,6 @@ const enableRotation = true;
 const allowMouseRotation = true;
 const allowKeyboardMotion = true;
 const enableForcePolyfill = false;
-//const SESSION_TYPE = "immersive-vr";
 const SESSION_TYPE = "inline";
 const MOUSE_SPEED = 0.003;
 ```
@@ -77,7 +60,8 @@ const MOUSE_SPEED = 0.003;
 - `MOVE_DISTANCE`
   - : The distance to move in response to any of the keys used to move the viewer through the scene.
 
-> **Note:** This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
+> [!NOTE]
+> This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
 
 ## Setup and utility functions
 
@@ -88,7 +72,12 @@ let polyfill = null;
 let xrSession = null;
 let xrInputSources = null;
 let xrReferenceSpace = null;
-let xrButton = null;
+const xrButton = document.querySelector("#enter-xr");
+const projectionMatrixOut = document.querySelector("#projection-matrix div");
+const modelMatrixOut = document.querySelector("#model-view-matrix div");
+const cameraMatrixOut = document.querySelector("#camera-matrix div");
+const mouseMatrixOut = document.querySelector("#mouse-matrix div");
+
 let gl = null;
 let animationFrameRequestID = 0;
 let shaderProgram = null;
@@ -141,31 +130,17 @@ Suffice it to say that the vertex shader computes the position of each vertex gi
 
 ## Starting up and shutting down WebXR
 
-Upon initially loading the script, we install a handler for the {{domxref("Window.load_event", "load")}} event, so that we can perform initialization.
-
 ```js
-window.addEventListener("load", onLoad);
+xrButton.addEventListener("click", onXRButtonClick);
 
-function onLoad() {
-  xrButton = document.querySelector("#enter-xr");
-  xrButton.addEventListener("click", onXRButtonClick);
-
-  projectionMatrixOut = document.querySelector("#projection-matrix div");
-  modelMatrixOut = document.querySelector("#model-view-matrix div");
-  cameraMatrixOut = document.querySelector("#camera-matrix div");
-  mouseMatrixOut = document.querySelector("#mouse-matrix div");
-
-  if (!navigator.xr || enableForcePolyfill) {
-    console.log("Using the polyfill");
-    polyfill = new WebXRPolyfill();
-  }
-  setupXRButton();
+if (!navigator.xr || enableForcePolyfill) {
+  console.log("Using the polyfill");
+  polyfill = new WebXRPolyfill();
 }
+setupXRButton();
 ```
 
-The `load` event handler gets a reference to the button that toggles WebXR on and off into `xrButton`, then adds a handler for {{domxref("Element.click_event", "click")}} events. Then references are obtained to the four {{HTMLElement("div")}} blocks into which we'll output the current contents of each of the key matrices for informational purposes while our scene is running.
-
-Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
+We add a handler for {{domxref("Element.click_event", "click")}} events. Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
 
 ### Handling the startup and shutdown UI
 
@@ -174,18 +149,18 @@ Then we call the `setupXRButton()` function, which handles configuring the "Ente
 ```js
 function setupXRButton() {
   if (navigator.xr.isSessionSupported) {
-    navigator.xr.isSessionSupported(SESSION_TYPE)
-    .then((supported) => {
+    navigator.xr.isSessionSupported(SESSION_TYPE).then((supported) => {
       xrButton.disabled = !supported;
     });
   } else {
-    navigator.xr.supportsSession(SESSION_TYPE)
-    .then(() => {
-      xrButton.disabled = false;
-    })
-    .catch(() => {
-      xrButton.disabled = true;
-    });
+    navigator.xr
+      .supportsSession(SESSION_TYPE)
+      .then(() => {
+        xrButton.disabled = false;
+      })
+      .catch(() => {
+        xrButton.disabled = true;
+      });
   }
 }
 ```
@@ -197,8 +172,7 @@ The WebXR session is toggled on and off by the handler for {{domxref("Element.cl
 ```js
 async function onXRButtonClick(event) {
   if (!xrSession) {
-    navigator.xr.requestSession(SESSION_TYPE)
-    .then(sessionStarted);
+    navigator.xr.requestSession(SESSION_TYPE).then(sessionStarted);
   } else {
     await xrSession.end();
 
@@ -232,7 +206,9 @@ function sessionStarted(session) {
 
   if (allowMouseRotation) {
     canvas.addEventListener("pointermove", handlePointerMove);
-    canvas.addEventListener("contextmenu", (event) => { event.preventDefault(); });
+    canvas.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
   }
 
   if (allowKeyboardMotion) {
@@ -244,23 +220,29 @@ function sessionStarted(session) {
   programInfo = {
     program: shaderProgram,
     attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-      vertexNormal: gl.getAttribLocation(shaderProgram, 'aVertexNormal'),
-      textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
+      vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+      vertexNormal: gl.getAttribLocation(shaderProgram, "aVertexNormal"),
+      textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
     },
     uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-      normalMatrix: gl.getUniformLocation(shaderProgram, 'uNormalMatrix'),
-      uSampler: gl.getUniformLocation(shaderProgram, 'uSampler')
+      projectionMatrix: gl.getUniformLocation(
+        shaderProgram,
+        "uProjectionMatrix",
+      ),
+      modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+      normalMatrix: gl.getUniformLocation(shaderProgram, "uNormalMatrix"),
+      uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
     },
   };
 
   buffers = initBuffers(gl);
-  texture = loadTexture(gl, 'https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244');
+  texture = loadTexture(
+    gl,
+    "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png",
+  );
 
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   const isImmersiveVr = SESSION_TYPE === "immersive-vr";
@@ -270,10 +252,10 @@ function sessionStarted(session) {
 
   vec3.copy(cubeOrientation, viewerStartOrientation);
 
-  xrSession.requestReferenceSpace(refSpaceType)
-  .then((refSpace) => {
+  xrSession.requestReferenceSpace(refSpaceType).then((refSpace) => {
     xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-          new XRRigidTransform(viewerStartPosition, cubeOrientation));
+      new XRRigidTransform(viewerStartPosition, cubeOrientation),
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
   });
 
@@ -285,7 +267,7 @@ After storing the newly-created {{domxref("XRSession")}} object into `xrSession`
 
 Then we get a reference to the {{HTMLElement("canvas")}} found in our HTML—as well as its WebGL rendering context—which will be used as the drawing surface for the scene. The `xrCompatible` property is requested when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the element to gain access to the WebGL rendering context for the canvas. This ensures that the context is configured for use as a source for WebXR rendering.
 
-Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "mouselook" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
+Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
 
 Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) and its preceding articles [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL) and [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL). Then our `loadTexture()` function is called to load the texture file.
 
@@ -329,7 +311,7 @@ In order to allow the user to move through the 3D world even if they don't have 
 
 ```js
 function handleKeyDown(event) {
-  switch(event.key) {
+  switch (event.key) {
     case "w":
     case "W":
       verticalDistance -= MOVE_DISTANCE;
@@ -365,47 +347,13 @@ function handleKeyDown(event) {
 
 The keys and their effects are:
 
-- The
-
-  <kbd>W</kbd>
-
-  key moves the viewer upward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>S</kbd>
-
-  key moves the viewer downward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>A</kbd>
-
-  key slides the viewer to the left by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>D</kbd>
-
-  key slides the viewer to the right by `MOVE_DISTANCE`.
-
-- The up arrow key,
-
-  <kbd>↑</kbd>
-
-  , slides the viewer forward by `MOVE_DISTANCE`.
-
-- The down arrow key,
-
-  <kbd>↓</kbd>
-
-  , slides the viewer backward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>R</kbd>
-
-  key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
+- The <kbd>W</kbd> key moves the viewer upward by `MOVE_DISTANCE`.
+- The <kbd>S</kbd> key moves the viewer downward by `MOVE_DISTANCE`.
+- The <kbd>A</kbd> key slides the viewer to the left by `MOVE_DISTANCE`.
+- The <kbd>D</kbd> key slides the viewer to the right by `MOVE_DISTANCE`.
+- The up arrow key, <kbd>↑</kbd>, slides the viewer forward by `MOVE_DISTANCE`.
+- The down arrow key, <kbd>↓</kbd>, slides the viewer backward by `MOVE_DISTANCE`.
+- The <kbd>R</kbd> key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
 
 These offsets will be applied by the renderer starting with the next frame drawn.
 
@@ -461,11 +409,11 @@ function drawFrame(time, frame) {
     LogGLError("bindFrameBuffer");
 
     gl.clearColor(0, 0, 0, 1.0);
-    gl.clearDepth(1.0);                 // Clear everything
+    gl.clearDepth(1.0); // Clear everything
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     LogGLError("glClear");
 
-    const deltaTime = (time - lastFrameTime) * 0.001;  // Convert to seconds
+    const deltaTime = (time - lastFrameTime) * 0.001; // Convert to seconds
     lastFrameTime = time;
 
     for (const view of pose.views) {
@@ -488,7 +436,8 @@ The time elapsed since the last frame was rendered (in seconds) is computed by s
 
 The `drawFrame()` function ends by iterating over every view found in the {{domxref("XRViewerPose")}}, setting up the viewport for the view, and calling `renderScene()` to render the frame. By setting the viewport for each view, we handle the typical scenario in which the views for each eye are each rendered onto half of the WebGL frame. The XR hardware then handles ensuring that each eye only sees the portion of that image that is intended for that eye.
 
-> **Note:** In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
+> [!NOTE]
+> In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
 
 ### Applying the user inputs
 
@@ -496,8 +445,13 @@ The `applyViewerControls()` function, which is called by `drawFrame()` before be
 
 ```js
 function applyViewerControls(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -505,11 +459,15 @@ function applyViewerControls(refSpace) {
   quat.rotateX(inverseOrientation, inverseOrientation, -mousePitch);
   quat.rotateY(inverseOrientation, inverseOrientation, -mouseYaw);
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   return refSpace.getOffsetReferenceSpace(newTransform);
@@ -526,33 +484,42 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 The `renderScene()` function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example ([view the code on GitHub](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample7/webgl-demo.js)). But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 
 function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
-  const xRotationForTime = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-  const yRotationForTime = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-  const zRotationForTime = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+  const xRotationForTime =
+    xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+  const yRotationForTime =
+    yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+  const zRotationForTime =
+    zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 
-  gl.enable(gl.DEPTH_TEST);           // Enable depth testing
-  gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+  gl.enable(gl.DEPTH_TEST); // Enable depth testing
+  gl.depthFunc(gl.LEQUAL); // Near things obscure far things
 
   if (enableRotation) {
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                zRotationForTime,     // amount to rotate in radians
-                [0, 0, 1]);       // axis to rotate around (Z)
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                yRotationForTime, // amount to rotate in radians
-                [0, 1, 0]);       // axis to rotate around (Y)
-    mat4.rotate(cubeMatrix,  // destination matrix
-                cubeMatrix,  // matrix to rotate
-                xRotationForTime, // amount to rotate in radians
-                [1, 0, 0]);       // axis to rotate around (X)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      zRotationForTime, // amount to rotate in radians
+      [0, 0, 1],
+    ); // axis to rotate around (Z)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      yRotationForTime, // amount to rotate in radians
+      [0, 1, 0],
+    ); // axis to rotate around (Y)
+    mat4.rotate(
+      cubeMatrix, // destination matrix
+      cubeMatrix, // matrix to rotate
+      xRotationForTime, // amount to rotate in radians
+      [1, 0, 0],
+    ); // axis to rotate around (X)
   }
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, cubeMatrix);
@@ -572,14 +539,14 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexPosition,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexPosition);
+      programInfo.attribLocations.vertexPosition,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
 
   {
@@ -590,14 +557,14 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.textureCoord,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.textureCoord);
+      programInfo.attribLocations.textureCoord,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
   }
 
   {
@@ -608,31 +575,34 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
     const offset = 0;
     gl.bindBuffer(gl.ARRAY_BUFFER, buffers.normal);
     gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexNormal,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexNormal);
+      programInfo.attribLocations.vertexNormal,
+      numComponents,
+      type,
+      normalize,
+      stride,
+      offset,
+    );
+    gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
   }
 
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
   gl.useProgram(programInfo.program);
 
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.projectionMatrix,
-      false,
-      view.projectionMatrix);
+    programInfo.uniformLocations.projectionMatrix,
+    false,
+    view.projectionMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.modelViewMatrix,
-      false,
-      modelViewMatrix);
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
   gl.uniformMatrix4fv(
-      programInfo.uniformLocations.normalMatrix,
-      false,
-      normalMatrix);
+    programInfo.uniformLocations.normalMatrix,
+    false,
+    normalMatrix,
+  );
   gl.activeTexture(gl.TEXTURE0);
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -665,12 +635,12 @@ function displayMatrix(mat, rowLength, target) {
 
   if (mat && rowLength && rowLength <= mat.length) {
     let numRows = mat.length / rowLength;
-    outHTML = "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
+    outHTML = "<math display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
 
-    for (let y=0; y<numRows; y++) {
+    for (let y = 0; y < numRows; y++) {
       outHTML += "<mtr>\n";
-      for (let x=0; x<rowLength; x++) {
-        outHTML += `<mtd><mn>${mat[(x*rowLength) + y].toFixed(2)}</mn></mtd>\n`;
+      for (let x = 0; x < rowLength; x++) {
+        outHTML += `<mtd><mn>${mat[x * rowLength + y].toFixed(2)}</mn></mtd>\n`;
       }
       outHTML += "</mtr>\n";
     }
@@ -701,7 +671,8 @@ The rest of the code is identical to that found in the earlier examples:
 
 ### Putting it all together
 
-When you take all of this code and add in the HTML and the other JavaScript code not included above, you get what you see when you [try out this example on Glitch](https://webxr-experiment.glitch.me/). Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
+When you take the code and add in HTML and some additional JavaScript, you'll have something like our [WebXR: Example with rotating object and user movement](https://mdn.github.io/dom-examples/webxr/) demo.
+Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
 
 A tip: if you don't have an XR device, you may be able to get some of the 3D effect if you bring your face very close to the screen, with your nose centered along the border between the left and right eye images in the canvas. By carefully focusing through the screen at the image, and slowly moving forward and backward, you should eventually be able to bring the 3D image into focus. It can take practice, and your nose may literally be touching the screen, depending on how sharp your eyesight is.
 
@@ -712,5 +683,5 @@ There are few limitations on what can be done if you set yourself to it.
 ## See also
 
 - [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
-- [WebGL Fundamentals](https://webglfundamentals.org)
+- [WebGL Fundamentals](https://webglfundamentals.org/)
 - [Learn OpenGL](https://learnopengl.com/)

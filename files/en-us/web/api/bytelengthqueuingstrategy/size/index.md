@@ -1,18 +1,12 @@
 ---
-title: ByteLengthQueuingStrategy.size()
+title: "ByteLengthQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/ByteLengthQueuingStrategy/size
 page-type: web-api-instance-method
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Method
-  - Reference
-  - Streams
-  - size
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`size()`** method of the
 {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's
@@ -50,10 +44,10 @@ const readableStream = new ReadableStream(
       console.log("stream error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
-const size = queueingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications
@@ -63,3 +57,7 @@ const size = queueingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

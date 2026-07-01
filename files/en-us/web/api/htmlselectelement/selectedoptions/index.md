@@ -1,18 +1,8 @@
 ---
-title: HTMLSelectElement.selectedOptions
+title: "HTMLSelectElement: selectedOptions property"
+short-title: selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
 
@@ -89,11 +79,11 @@ orderButton.addEventListener("click", () => {
     }
     output += collection[i].label;
 
-    if (i === (collection.length - 2) && (collection.length < 3)) {
-      output +=  " and ";
-    } else if (i < (collection.length - 2)) {
+    if (i === collection.length - 2 && collection.length < 3) {
+      output += " and ";
+    } else if (i < collection.length - 2) {
       output += ", ";
-    } else if (i === (collection.length - 2)) {
+    } else if (i === collection.length - 2) {
       output += ", and ";
     }
   }
@@ -102,8 +92,8 @@ orderButton.addEventListener("click", () => {
     output = "You didn't order anything!";
   }
 
-  outputBox.innerHTML = output;
-}, false);
+  outputBox.textContent = output;
+});
 ```
 
 This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
@@ -128,4 +118,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- [Drop-down controls](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls)
+- [Drop-down controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls)

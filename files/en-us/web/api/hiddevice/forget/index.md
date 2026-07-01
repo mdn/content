@@ -1,18 +1,14 @@
 ---
-title: HIDDevice.forget()
+title: "HIDDevice: forget() method"
+short-title: forget()
 slug: Web/API/HIDDevice/forget
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - forget
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.forget
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`forget()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device and forgets the device.
 
@@ -48,7 +44,7 @@ async function blink() {
   await device.open();
   // Turn off
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // Turn on
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
   await new Promise((resolve) => setTimeout(resolve, 100));

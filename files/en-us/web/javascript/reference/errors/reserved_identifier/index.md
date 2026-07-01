@@ -2,21 +2,15 @@
 title: 'SyntaxError: "x" is a reserved identifier'
 slug: Web/JavaScript/Reference/Errors/Reserved_identifier
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is a reserved identifier" occurs
 when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) are used as identifiers.
 
 ## Message
 
-```
+```plain
 SyntaxError: Unexpected reserved word (V8-based)
 SyntaxError: implements is a reserved identifier (Firefox)
 SyntaxError: Cannot use the reserved word 'implements' as a variable name. (Safari)
@@ -51,14 +45,14 @@ The following are only reserved when they are found in strict mode code:
 
 The `enum` identifier is generally reserved.
 
-```js example-bad
+```js-nolint example-bad
 const enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
 ```
 
 In strict mode code, more identifiers are reserved.
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
@@ -89,4 +83,4 @@ class DocArchiver {}
 
 ## See also
 
-- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

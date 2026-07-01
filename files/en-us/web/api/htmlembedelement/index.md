@@ -2,12 +2,6 @@
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLEmbedElement
 ---
 
@@ -15,7 +9,8 @@ browser-compat: api.HTMLEmbedElement
 
 The **`HTMLEmbedElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("embed")}} elements.
 
-> **Note:** This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
+> [!NOTE]
+> This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
 
 {{InheritanceDiagram}}
 
@@ -26,19 +21,22 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
   - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"center"`, and `"justify"`.
 - {{domxref("HTMLEmbedElement.height")}}
-  - : A string reflecting the {{htmlattrxref("height", "embed")}} HTML attribute, containing the displayed height of the resource.
+  - : A string reflecting the [`height`](/en-US/docs/Web/HTML/Reference/Elements/embed#height) HTML attribute, containing the displayed height of the resource.
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
   - : A string representing the name of the embedded object.
 - {{domxref("HTMLEmbedElement.src")}}
-  - : A string that reflects the {{htmlattrxref("src", "embed")}} HTML attribute, containing the address of the resource.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/embed#src) HTML attribute, containing the address of the resource.
 - {{domxref("HTMLEmbedElement.type")}}
-  - : A string that reflects the {{htmlattrxref("type", "embed")}} HTML attribute, containing the type of the resource.
+  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/embed#type) HTML attribute, containing the type of the resource.
 - {{domxref("HTMLEmbedElement.width")}}
-  - : A string that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Reference/Elements/embed#width) HTML attribute, containing the displayed width of the resource.
 
 ## Instance methods
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+_Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
+
+- {{domxref("HTMLEmbedElement.getSVGDocument()")}}
+  - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications
 

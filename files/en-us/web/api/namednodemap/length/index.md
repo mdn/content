@@ -1,11 +1,8 @@
 ---
-title: NamedNodeMap.length
+title: "NamedNodeMap: length property"
+short-title: length
 slug: Web/API/NamedNodeMap/length
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.NamedNodeMap.length
 ---
 
@@ -21,7 +18,7 @@ A number containing the number of objects in the map
 ## Example
 
 ```html
-<pre zero="test" one="test" two="test"></pre>
+<pre class="foo" id="bar" contenteditable></pre>
 ```
 
 ```js

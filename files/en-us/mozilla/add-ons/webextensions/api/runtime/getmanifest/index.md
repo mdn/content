@@ -1,22 +1,12 @@
 ---
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getManifest
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getManifest
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
-Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, deserialized from JSON to an object.
+Get the extension's [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file as an object. The object is created from browser-internal data structures and can differ from a representation produced by running `JSON.parse()` on the file in the extension.
 
 ## Syntax
 
@@ -32,10 +22,6 @@ None.
 
 An `object` representing the manifest.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Get the manifest and log the "name" property:
@@ -47,7 +33,16 @@ console.log(manifest.name);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- The {{WebExtAPIRef("runtime.getVersion()")}} method, which returns the value of the [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) manifest key.
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

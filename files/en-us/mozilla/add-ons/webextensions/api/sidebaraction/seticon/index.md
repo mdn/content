@@ -1,19 +1,10 @@
 ---
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setIcon
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setIcon
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Sets the icon for the sidebar.
 
@@ -46,35 +37,35 @@ let settingIcon = browser.sidebarAction.setIcon(
 ### Parameters
 
 - `details`
-
   - : `object`. An object with the following properties:
-
     - `imageData` {{optional_inline}}
-
-      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
+      - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
-        {
+        ```js
+        let settingIcon = browser.sidebarAction.setIcon({
+          imageData: {
             16: image16,
-            32: image32
-          }
+            32: image32,
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
     - `path` {{optional_inline}}
-
       - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
-        {
+        ```js
+        let settingIcon = browser.sidebarAction.setIcon({
+          path: {
             16: "path/to/image16.jpg",
-            32: "path/to/image32.jpg"
-          }
+            32: "path/to/image32.jpg",
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -101,10 +92,6 @@ let settingIcon = browser.sidebarAction.setIcon(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 The code below toggles the sidebar icon for the active tab when the user clicks a browser action:
@@ -116,13 +103,13 @@ function toggle(tab) {
   if (on) {
     browser.sidebarAction.setIcon({
       path: "off.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = false;
   } else {
     browser.sidebarAction.setIcon({
       path: "on.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = true;
   }
@@ -133,4 +120,9 @@ browser.browserAction.onClicked.addListener(toggle);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

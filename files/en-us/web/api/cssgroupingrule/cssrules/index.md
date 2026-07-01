@@ -1,13 +1,8 @@
 ---
-title: CSSGroupingRule.cssRules
+title: "CSSGroupingRule: cssRules property"
+short-title: cssRules
 slug: Web/API/CSSGroupingRule/cssRules
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - Property
-  - Reference
 browser-compat: api.CSSGroupingRule.cssRules
 ---
 

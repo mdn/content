@@ -1,10 +1,8 @@
 ---
-title: DOMTokenList.forEach()
+title: "DOMTokenList: forEach() method"
+short-title: forEach()
 slug: Web/API/DOMTokenList/forEach
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.forEach
 ---
 
@@ -24,9 +22,7 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : The function to execute for each element, eventually taking three arguments:
-
     - `currentValue`
       - : The current element being processed in the array.
     - `currentIndex`
@@ -35,7 +31,7 @@ forEach(callback, thisArg)
       - : The array that `forEach()` is being applied to.
 
 - `thisArg` {{Optional_inline}}
-  - : The value to use as {{jsxref("Operators/this", "this")}} when executing `callback`.
+  - : The value to use as {{jsxref("this")}} when executing `callback`.
 
 ### Return value
 
@@ -62,12 +58,9 @@ const pre = document.querySelector("pre");
 const classes = pre.classList;
 const iterator = classes.values();
 
-classes.forEach(
-  function (value, key, listObj) {
-    pre.textContent += `(${value} ${key})/${this}\n`;
-  },
-  "arg"
-);
+classes.forEach(function (value, key, listObj) {
+  pre.textContent += `(${value} ${key})/${this}\n`;
+}, "arg");
 ```
 
 ### Result

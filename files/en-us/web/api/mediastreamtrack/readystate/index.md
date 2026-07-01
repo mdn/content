@@ -1,21 +1,14 @@
 ---
-title: MediaStreamTrack.readyState
+title: "MediaStreamTrack: readyState property"
+short-title: readyState
 slug: Web/API/MediaStreamTrack/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MediaStreamTrack.readyState
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.readyState`** read-only property returns an enumerated value giving the status of the track.
+The **`readyState`** read-only property of the {{domxref("MediaStreamTrack")}} interface returns an enumerated value giving the status of the track.
 
 ## Value
 

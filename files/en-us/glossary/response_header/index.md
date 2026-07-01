@@ -2,8 +2,7 @@
 title: Response header
 slug: Glossary/Response_header
 page-type: glossary-definition
-tags:
-  - WebMechanics
+sidebar: glossarysidebar
 ---
 
 A **response header** is an {{glossary("HTTP header")}} that can be used in an HTTP response and that doesn't relate to the content of the message. Response headers, like {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} or {{HTTPHeader("Server")}} are used to give a more detailed context of the response.
@@ -19,11 +18,11 @@ Connection: Keep-Alive
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8
 Date: Mon, 18 Jul 2016 16:06:00 GMT
-Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
+ETag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
 Keep-Alive: timeout=5, max=997
 Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
 Server: Apache
-Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
+Set-Cookie: my-key=my value; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
 Transfer-Encoding: chunked
 Vary: Cookie, Accept-Encoding
 X-Backend-Server: developer2.webapp.scl3.mozilla.com
@@ -34,11 +33,8 @@ x-frame-options: DENY
 
 ## See also
 
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [Glossary](/en-US/docs/Glossary)
-
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
+- Related glossary terms:
   - {{Glossary("Representation header")}}
   - {{Glossary("HTTP header")}}
-  - {{Glossary("Response header")}}
-  - {{Glossary("Fetch metadata response header")}}
   - {{Glossary("Request header")}}

@@ -1,14 +1,8 @@
 ---
-title: SVGCircleElement.r
+title: "SVGCircleElement: r property"
+short-title: r
 slug: Web/API/SVGCircleElement/r
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - r
 browser-compat: api.SVGCircleElement.r
 ---
 
@@ -32,14 +26,14 @@ An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
   viewBox="0 0 100 100"
   width="200"
   height="200">
-  <circle r="50" r="50" r="50" fill="gold" id="circle" />
+  <circle r="50" fill="gold" id="circle" />
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.r);
 ```
 

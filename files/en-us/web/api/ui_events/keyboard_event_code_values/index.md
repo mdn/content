@@ -1,5 +1,5 @@
 ---
-title: 'Code values for keyboard events'
+title: Code values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_code_values
 page-type: guide
 ---
@@ -858,7 +858,7 @@ when using it.
       <td><code>"Help"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
-      <th scope="row"><code>0xE03C</code>～ <code>0xE044</code></th>
+      <th scope="row"><code>0xE03C</code> ～ <code>0xE044</code></th>
       <td><code>"Unidentified"</code></td>
       <td><code>""</code></td>
     </tr>
@@ -946,13 +946,13 @@ when using it.
     </tr>
     <tr>
       <th scope="row"><code>0xE05B</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chrome 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05C</code></th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chrome)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chrome 52) (⚠️ Not the same on Firefox)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chrome 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0xE05D</code></th>
@@ -1054,7 +1054,8 @@ when using it.
 
 ## Code values on Mac
 
-On macOS, it's hard to get scancode or something which can distinguish a physical key from a key event. Therefore, Gecko always maps `code` value from the virtual keycode.
+On macOS, it's hard to get scancode or something which can distinguish a physical key from a key event.
+Therefore, Firefox always maps `code` value from the virtual keycode.
 
 In the cells,
 
@@ -1068,7 +1069,7 @@ In the cells,
   <thead>
     <tr>
       <th scope="row">Virtual keycode</th>
-      <th scope="col">Gecko</th>
+      <th scope="col">Firefox</th>
       <th scope="col">Chromium</th>
     </tr>
   </thead>
@@ -1335,7 +1336,7 @@ In the cells,
     </tr>
     <tr>
       <th scope="row">Enter key on keypad of PowerBook (<code>0x34</code>)</th>
-      <td><code>"NumpadEnter"</code>(⚠️ Same string for <code>0x4C</code>) (⚠️ Not the same on Chromium)</td>
+      <td><code>"NumpadEnter"</code> (⚠️ Same string for <code>0x4C</code>) (⚠️ Not the same on Chromium)</td>
       <td><code>""</code> (❌ Missing)</td>
     </tr>
     <tr>
@@ -1345,13 +1346,13 @@ In the cells,
     </tr>
     <tr>
       <th scope="row">right-command key (<code>0x36</code>)</th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52) (⚠️ Not the same on Gecko)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Command (0x37)</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52) (⚠️ Not the same on Gecko)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Shift (0x38)</code></th>
@@ -1422,8 +1423,8 @@ In the cells,
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chromium
-        1) (⚠️ Not the same on Gecko)
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chromium
+        1) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
@@ -1431,7 +1432,7 @@ In the cells,
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
-        Chromium 52) (⚠️ Not the same on Gecko)
+        Chromium 52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
@@ -1439,7 +1440,7 @@ In the cells,
       <td><code>"VolumeMute"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
-        Chromium 52) (⚠️ Not the same on Gecko)
+        Chromium 52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
@@ -1625,7 +1626,7 @@ In the cells,
     <tr>
       <th scope="row"><code>kVK_Help (0x72)</code></th>
       <td><code>"Help"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"Insert"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"Insert"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>kVK_Home (0x73)</code></th>
@@ -1700,7 +1701,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
   <thead>
     <tr>
       <th scope="row">scancode (hardware_keycode)</th>
-      <th scope="col">Gecko</th>
+      <th scope="col">Firefox</th>
       <th scope="col">Chromium</th>
     </tr>
   </thead>
@@ -2128,7 +2129,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x005D</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Lang5"</code> (was <code>""</code> prior to Chromium 48) (⚠️ Not the same on Gecko)</td>
+      <td><code>"Lang5"</code> (was <code>""</code> prior to Chromium 48) (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x005E</code></th>
@@ -2153,12 +2154,12 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x0062</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Lang3"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"Lang3"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0063</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Lang4"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"Lang4"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0064</code></th>
@@ -2270,7 +2271,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <td><code>"VolumeMute"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> prior to
-        Chromium 52) (⚠️ Not the same on Gecko)
+        Chromium 52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
@@ -2278,7 +2279,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <td><code>"VolumeDown"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> prior to
-        Chromium 52) (⚠️ Not the same on Gecko)
+        Chromium 52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
@@ -2286,13 +2287,13 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
         <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chromium
-        52) (⚠️ Not the same on Gecko)
+        52) (⚠️ Not the same on Firefox)
       </td>
     </tr>
     <tr>
       <th scope="row"><code>0x007C</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Power"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"Power"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x007D</code></th>
@@ -2336,13 +2337,13 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     </tr>
     <tr>
       <th scope="row"><code>0x0085</code></th>
-      <td><code>"OSLeft"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52) (⚠️ Not the same on Gecko)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</td>
+      <td><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0086</code></th>
-      <td><code>"OSRight"</code> (⚠️ Not the same on Chromium)</td>
-      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52) (⚠️ Not the same on Gecko)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</td>
+      <td><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Chromium 52)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0087</code></th>
@@ -2422,7 +2423,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x0096</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"Sleep"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"Sleep"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x0097</code></th>
@@ -2527,12 +2528,12 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x00BB</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"NumpadParenLeft"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"NumpadParenLeft"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x00BC</code></th>
       <td><code>"Unidentified"</code> (❌ Missing)</td>
-      <td><code>"NumpadParenRight"</code> (⚠️ Not the same on Gecko)</td>
+      <td><code>"NumpadParenRight"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
       <th scope="row"><code>0x00BD</code>, <code>0x00BE</code></th>
@@ -2620,7 +2621,7 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
   <thead>
     <tr>
       <th scope="row">scancode</th>
-      <th scope="col">Gecko</th>
+      <th scope="col">Firefox</th>
     </tr>
   </thead>
   <tbody>
@@ -3135,13 +3136,13 @@ In the cells, "(❌ Missing)" means that this code value cannot be detected on t
     <tr>
       <th scope="row"><code>0x007D</code></th>
       <td>
-        <p><code>"OSLeft"</code></p>
+        <p><code>"MetaLeft"</code> (was <code>"OSLeft"</code> prior to Firefox 118)</p>
       </td>
     </tr>
     <tr>
       <th scope="row"><code>0x007E</code></th>
       <td>
-        <p><code>"OSRight"</code></p>
+        <p><code>"MetaRight"</code> (was <code>"OSRight"</code> prior to Firefox 118)</p>
       </td>
     </tr>
     <tr>

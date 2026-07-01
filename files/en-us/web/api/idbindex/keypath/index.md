@@ -1,25 +1,15 @@
 ---
-title: IDBIndex.keyPath
+title: "IDBIndex: keyPath property"
+short-title: keyPath
 slug: Web/API/IDBIndex/keyPath
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - keyPath
 browser-compat: api.IDBIndex.keyPath
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`keyPath`** property of the {{domxref("IDBIndex")}}
 interface returns the [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of the current index. If null, this index is not auto-populated.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -42,33 +32,39 @@ complete working example, see our [IndexedDB-examples demo repo](https://github.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.textContent = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   console.log(myIndex.keyPath);
 
   myIndex.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

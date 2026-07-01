@@ -1,21 +1,14 @@
 ---
-title: Element.ariaRowCount
+title: "Element: ariaRowCount property"
+short-title: ariaRowCount
 slug: Web/API/Element/ariaRowCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRowCount
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
+The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 
 ## Value
 
@@ -65,9 +58,9 @@ In this example the `aria-rowcount` attribute on the element with an ID of `sema
 ```
 
 ```js
-let el = document.getElementById('semantic-table');
+let el = document.getElementById("semantic-table");
 console.log(el.ariaRowCount); // 100
-el.ariaRowCount = "101"
+el.ariaRowCount = "101";
 console.log(el.ariaRowCount); // 101
 ```
 
@@ -79,4 +72,6 @@ console.log(el.ariaRowCount); // 101
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+## See also
+
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

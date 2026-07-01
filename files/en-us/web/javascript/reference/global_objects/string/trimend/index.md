@@ -1,22 +1,25 @@
 ---
 title: String.prototype.trimEnd()
+short-title: trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`trimEnd()`** method of {{jsxref("String")}} values removes whitespace from the end of this string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
 
-The **`trimEnd()`** method removes whitespace from the end of a string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
+{{InteractiveExample("JavaScript Demo: String.prototype.trimEnd()")}}
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## Syntax
 
@@ -25,6 +28,10 @@ trimEnd()
 
 trimRight()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -67,5 +74,6 @@ console.log(str); // '   foo'
 ## See also
 
 - [Polyfill of `String.prototype.trimEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.trimEnd`](https://www.npmjs.com/package/string.prototype.trimend)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimStart()")}}

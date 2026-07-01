@@ -1,15 +1,8 @@
 ---
-title: BaseAudioContext.createBiquadFilter()
+title: "BaseAudioContext: createBiquadFilter() method"
+short-title: createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBiquadFilter
 browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
 
@@ -19,7 +12,8 @@ The `createBiquadFilter()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("BiquadFilterNode") }}, which represents a second order
 filter configurable as several different common filter types.
 
-> **Note:** The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
+> [!NOTE]
+> The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
 > recommended way to create a {{domxref("BiquadFilterNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -45,14 +39,14 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 ```js
 const audioCtx = new AudioContext();
 
-//set up the different audio nodes we will use for the app
+// Set up the different audio nodes we will use for the app
 const analyser = audioCtx.createAnalyser();
 const distortion = audioCtx.createWaveShaper();
 const gainNode = audioCtx.createGain();
 const biquadFilter = audioCtx.createBiquadFilter();
 const convolver = audioCtx.createConvolver();
 
-// connect the nodes together
+// Connect the nodes together
 
 source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);

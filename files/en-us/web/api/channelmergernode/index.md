@@ -2,18 +2,12 @@
 title: ChannelMergerNode
 slug: Web/API/ChannelMergerNode
 page-type: web-api-interface
-tags:
-  - API
-  - ChannelMergerNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode
 ---
 
 {{APIRef("Web Audio API")}}
 
-The `ChannelMergerNode` interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
+The `ChannelMergerNode` interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channel separately, e.g., for performing channel mixing where gain must be separately controlled on each channel.
 
 ![Default channel merger node with six mono inputs combining to form a single output.](webaudiomerger.png)
 
@@ -27,7 +21,7 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
   <tbody>
     <tr>
       <th scope="row">Number of inputs</th>
-      <td>variable; default to <code>6</code>.</td>
+      <td>variable; defaults to <code>6</code>.</td>
     </tr>
     <tr>
       <th scope="row">Number of outputs</th>
@@ -39,7 +33,7 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
     </tr>
     <tr>
       <th scope="row">Channel count</th>
-      <td><code>2 </code>(not used in the default count mode)</td>
+      <td><code>2</code> (not used in the default count mode)</td>
     </tr>
     <tr>
       <th scope="row">Channel interpretation</th>
@@ -63,7 +57,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#example) for example code.
+See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#examples) for example code.
 
 ## Specifications
 

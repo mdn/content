@@ -1,18 +1,14 @@
 ---
-title: UserActivation.isActive
+title: "UserActivation: isActive property"
+short-title: isActive
 slug: Web/API/UserActivation/isActive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.UserActivation.isActive
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-The read-only **`isActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has transient user activation (see {{Glossary("transient activation")}}).
+The read-only **`isActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has {{Glossary("transient activation", "transient user activation")}}.
 
 ## Value
 
@@ -22,7 +18,7 @@ A boolean.
 
 ### Checking if a user gesture was recently performed
 
-Use the `isActive` property to check wether the user is currently interacting with the page.
+Use the `isActive` property to check whether the user is currently interacting with the page.
 
 ```js
 if (navigator.userActivation.isActive) {
@@ -42,4 +38,4 @@ if (navigator.userActivation.isActive) {
 
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.hasBeenActive")}}
-- [Features gated by user activation](/en-US/docs/Web/Security/User_activation)
+- [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation)

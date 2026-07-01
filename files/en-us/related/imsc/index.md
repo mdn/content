@@ -1,17 +1,16 @@
 ---
 title: "IMSC: subtitles and captioning for the Web"
+short-title: IMSC
 slug: Related/IMSC
-tags:
-  - IMSC
-  - captions
-  - subtitles
+page-type: guide
+sidebar: related
 ---
 
 IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.
 
 ## Concepts and usage
 
-IMSC is standardized by the W3C, and used around the world by content producers (e.g. 20th Century Fox), online services (e.g. Netflix), and traditional broadcasters (e.g. the BBC). Many platforms and players support it, e.g. iOS devices and the dashJS player.
+IMSC is standardized by the W3C, and used around the world by content producers (e.g., 20th Century Fox), online services (e.g., Netflix), and traditional broadcasters (e.g., the BBC). Many platforms and players support it, e.g., iOS devices and the dashJS player.
 
 IMSC supports a wide range of world languages and scripts, and rich styling. In addition to text-based subtitles, IMSC also supports PNG subtitles.
 
@@ -27,7 +26,7 @@ IMSC differs from HTML in a number of ways:
 
 While attributes names and syntax are similar, styling differs from CSS in a couple of ways:
 
-- Whereas CSS properties use hyphens, like `font-size`, IMSC uses camelCase, like `tts:fontSize`.
+- Whereas CSS properties use hyphens, like `font-size`, IMSC uses {{Glossary("camel_case", "camel case")}}, like `tts:fontSize`.
 - IMSC does not use external stylesheets.
 
 ### Differences between IMSC and WebVTT
@@ -113,17 +112,17 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC)
   - : Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 - [IMSC and other standards](/en-US/docs/Related/IMSC/IMSC_and_other_standards)
-  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/document/7291854/). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
+  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
 
 ## Reference
 
-- [TTML Profiles for Internet Media Subtitles and Captions](https://www.w3.org/TR/ttml-imsc/all/)
+- [TTML Profiles for Internet Media Subtitles and Captions](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
 
 ## Tools
 
 - imscJS polyfill
   - : IMSC documents can be rendered in browsers using the [imscJS](https://github.com/sandflow/imscJS) polyfill.
-- [dash.js](https://github.com/Dash-Industry-Forum/dash.js/wiki)
+- [dash.js](https://github.com/Dash-Industry-Forum/dash.js)
   - : The reference player of the DASH Industry Forum with IMSC support.
 
 ## Specifications
@@ -152,25 +151,3 @@ Team:
 - Andreas Tai
 
 If you want to get involved with documenting IMSC, please contact [Andreas Tai](mailto:tai@irt.de).
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>

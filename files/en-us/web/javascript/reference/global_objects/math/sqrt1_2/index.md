@@ -1,24 +1,32 @@
 ---
 title: Math.SQRT1_2
+short-title: SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
 browser-compat: javascript.builtins.Math.SQRT1_2
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Math.SQRT1_2`** static data property represents the square root of 1/2, which is approximately 0.707.
 
-The **`Math.SQRT1_2`** property represents the square root of 1/2, which is approximately 0.707.
+{{InteractiveExample("JavaScript Demo: Math.SQRT1_2", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}
+```js interactive-example
+function getRoot1Over2() {
+  return Math.SQRT1_2;
+}
+
+console.log(getRoot1Over2());
+// Expected output: 0.7071067811865476
+```
 
 ## Value
 
-<math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟷_𝟸</mi><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} \approx 0.707</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟷_𝟸</mi><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{Math.SQRT1_2} = \sqrt{\frac{1}{2}} \approx 0.707</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -32,14 +40,12 @@ Because `SQRT1_2` is a static property of `Math`, you always use it as `Math.SQR
 
 ### Using Math.SQRT1_2
 
-The following function returns 1 over the square root of 2:
+The following function calculates the side length of a square given its diagonal length:
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+function getSquareSideLength(diagonalLength) {
+  return diagonalLength * Math.SQRT1_2;
 }
-
-getRoot1_2(); // 0.7071067811865476
 ```
 
 ## Specifications

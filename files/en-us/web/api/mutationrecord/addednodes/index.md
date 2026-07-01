@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.addedNodes
+title: "MutationRecord: addedNodes property"
+short-title: addedNodes
 slug: Web/API/MutationRecord/addedNodes
 page-type: web-api-instance-property
-tags:
-  - addedNodes
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.addedNodes
 ---
 
@@ -73,7 +69,7 @@ function logNewNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-      totalAddedNodes = totalAddedNodes + record.addedNodes.length;
+      totalAddedNodes += record.addedNodes.length;
       // Log the number of nodes added
       counter.textContent = `Total added nodes: ${totalAddedNodes}`;
     }

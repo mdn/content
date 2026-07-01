@@ -1,7 +1,15 @@
 name: "Lock old issues and pull requests"
 on:
   schedule:
-    - cron: "49 11,23 * * *"
+    - cron: "0 9 1 * *"
+
+permissions:
+  # Lock discussions.
+  discussions: write
+  # Lock issues.
+  issues: write
+  # Lock pull requests.
+  pull-requests: write
 
 jobs:
   lock:

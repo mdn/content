@@ -1,18 +1,12 @@
 ---
-title: XPathResult.singleNodeValue
+title: "XPathResult: singleNodeValue property"
+short-title: singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.singleNodeValue
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The read-only **`singleNodeValue`** property of the
 {{domxref("XPathResult")}} interface returns a {{domxref("Node")}} value or
@@ -30,8 +24,8 @@ returned by {{domxref("Document.evaluate()")}}.
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 
@@ -51,7 +45,13 @@ The following example shows the use of the `singleNodeValue` property.
 
 ```js
 const xpath = "//*[text()='XPath example']";
-const result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.singleNodeValue.localName;
 ```
 

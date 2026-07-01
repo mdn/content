@@ -1,16 +1,12 @@
 ---
-title: IDBObjectStore.delete()
+title: "IDBObjectStore: delete() method"
+short-title: delete()
 slug: Web/API/IDBObjectStore/delete
 page-type: web-api-instance-method
-tags:
-  - API
-  - IndexedDB
-  - Method
-  - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`delete()`** method of the
 {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
@@ -20,11 +16,9 @@ Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or mul
 records to be deleted from a store. To delete all records in a store, use
 {{domxref("IDBObjectStore.clear")}}.
 
-Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
+Bear in mind that if you are using an {{domxref("IDBCursor", "IDBCursor")}}, you can use
 the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
 record — without having to explicitly look up the record's key.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -89,7 +83,8 @@ function deleteItem(event) {
   transaction.oncomplete = () => {
     // delete the parent of the button, which is the list item, so it no longer is displayed
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-    note.innerHTML += `<li>Task "${dataTask}" deleted.</li>`;
+    note.appendChild(document.createElement("li")).textContent =
+      `Task "${dataTask}" deleted.`;
   };
 }
 ```

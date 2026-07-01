@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.drawingBufferColorSpace
+title: "WebGLRenderingContext: drawingBufferColorSpace property"
+short-title: drawingBufferColorSpace
 slug: Web/API/WebGLRenderingContext/drawingBufferColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
 browser-compat: api.WebGLRenderingContext.drawingBufferColorSpace
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.drawingBufferColorSpace`** property specifies the color space of the WebGL drawing buffer. Along with the default (`srgb`), the `display-p3` color space can be used.
 
@@ -36,7 +30,7 @@ const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 gl.drawingBufferColorSpace = "display-p3";
 gl.clearColor(1, 0, 0, 1);
-gl.clear(glP3.COLOR_BUFFER_BIT);
+gl.clear(gl.COLOR_BUFFER_BIT);
 ```
 
 ## Specifications

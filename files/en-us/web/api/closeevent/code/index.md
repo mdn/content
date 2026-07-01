@@ -1,22 +1,18 @@
 ---
-title: CloseEvent.code
+title: "CloseEvent: code property"
+short-title: code
 slug: Web/API/CloseEvent/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
 browser-compat: api.CloseEvent.code
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
-The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the server gave for closing the connection.
+The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/info/rfc6455/#section-7.1.5) indicating the reason the connection was closed.
 
 ## Value
 
-An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000` - `4999`, indicating the reason the server gave for closing the connection.
+An integer [WebSocket connection close code](https://www.rfc-editor.org/info/rfc6455/#section-7.1.5) in the range `1000` - `4999`, indicating the reason the connection was closed.
 
 <table class="no-markdown">
   <thead>
@@ -74,7 +70,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1005</code></td>
-      <td>No Status Rcvd</td>
+      <td>No Status Received</td>
       <td>
         <strong>Reserved.</strong> Indicates that no status code was provided even though one was expected.
       </td>
@@ -131,22 +127,22 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
+      <td><a href="https://mailarchive.ietf.org/arch/msg/hybi/P_1vbD9uyHl63nbIIbFxKMfSwcM/">Service Restart</a></td>
       <td>
         The server is terminating the connection because it is restarting.
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
+      <td><a href="https://mailarchive.ietf.org/arch/msg/hybi/P_1vbD9uyHl63nbIIbFxKMfSwcM/">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
-        e.g. it is overloaded and is casting off some of its clients.
+        e.g., it is overloaded and is casting off some of its clients.
       </td>
     </tr>
     <tr>
       <td><code>1014</code></td>
-      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg10748.html">Bad Gateway</a></td>
+      <td><a href="https://mailarchive.ietf.org/arch/msg/hybi/VOLI2xp4tzFnIFYespe6oOtpFXA/">Bad Gateway</a></td>
       <td>
         The server was acting as a gateway or proxy and received an invalid
         response from the upstream server. This is similar to 502 HTTP Status
@@ -206,5 +202,5 @@ WebSocket.onclose = (event) => {
 
 ## See also
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [RFC 6455](https://www.rfc-editor.org/info/rfc6455/) (the WebSocket Protocol specification)
 - [WebSocket Close Code Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number) (IANA)

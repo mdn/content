@@ -1,24 +1,15 @@
 ---
 title: action.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/action/enable
-tags:
-  - API
-  - Add-ons
-  - Enable
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.enable
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 ## Syntax
 
@@ -53,7 +44,8 @@ browser.action.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-enable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-enable) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

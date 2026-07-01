@@ -1,35 +1,84 @@
 {
-  "name": "content",
+  "name": "@mdn/content",
   "version": "1.0.0",
+  "description": "Content of https://developer.mozilla.org",
   "private": true,
-  "license": "SEE LICENSE IN LICENSE.md",
-  "engines": {
-    "node": "^16.0.0 || >=18.0.0"
+  "homepage": "https://github.com/mdn/content#readme",
+  "bugs": {
+    "url": "https://github.com/mdn/content/issues"
   },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "MDN Web Docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/content.git"
+  },
+  "packageManager": "npm@11.9.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.8.0"
+    }
+  },
+  "type": "module",
   "scripts": {
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
-    "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
-    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
-    "fix:js": "prettier -w \"**/*.(m)?js\"",
-    "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
-    "fix:yml": "prettier -w \"**/*.yml\"",
+    "info:fred": "node -e \"process.stderr.write('\\n🐥 This command is using Fred: https://github.com/mdn/fred\\n🐞 Please report issues here:  https://github.com/mdn/fred/issues/new?template=bug.yml\\n\\n')\"",
+    "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is using Rari: https://github.com/mdn/rari\\n🐞 Please report issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
+    "build": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari build",
+    "content": "npm run --silent info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari content",
+    "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files node scripts/filecheck/index.js --cwd=.",
+    "fix:fm": "node scripts/front-matter_linter.js --fix",
+    "fix:js": "prettier --write --cache \"**/*.(m)?js\"",
+    "fix:json": "prettier --write --cache \"**/*.json(c)?\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier --write --cache \"**/*.md\"",
+    "fix:pre-commit": "lefthook run pre-commit",
+    "fix:yml": "prettier --write --cache \"**/*.yml\"",
+    "lint:fm": "node scripts/front-matter_linter.js",
     "lint:js": "prettier -c \"**/*.(m)?js\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
+    "lint:typos": "cspell --no-progress --gitignore --config .vscode/cspell.json \"**/*.md\"",
+    "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
+    "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky install",
-    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "start": "npm run --silent info:fred && npm run up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files NODE_ENV=production FRED_PLAYGROUND_LOCAL=true FRED_PLAYGROUND_PORT=5043 FRED_PORT=5042 FRED_WRITER_MODE=true fred-server",
+    "test": "node --test",
     "up-to-date-check": "node scripts/up-to-date-check.js"
   },
-  "dependencies": {
-    "@mdn/yari": "1.33.11",
-    "cross-env": "7.0.3",
-    "env-cmd": "10.1.0",
-    "husky": "8.0.3",
-    "lint-staged": "13.1.0",
-    "markdownlint-cli2": "0.6.0",
-    "markdownlint-rule-search-replace": "1.0.8",
-    "prettier": "2.8.3"
+  "devDependencies": {
+    "@apideck/better-ajv-errors": "^0.3.7",
+    "@mdn/fred": "2.6.5",
+    "@octokit/rest": "^22.0.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "async": "^3.2.6",
+    "cheerio": "1.2.0",
+    "cli-progress": "^3.12.0",
+    "cross-env": "10.1.0",
+    "cspell": "10.0.1",
+    "cspell-group-by-file-reporter": "^1.0.1",
+    "env-cmd": "11.0.0",
+    "fdir": "^6.5.0",
+    "file-type": "^22.0.1",
+    "fs-extra": "^11.3.6",
+    "gray-matter": "^4.0.3",
+    "imagemin": "^9.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^12.0.0",
+    "is-svg": "^6.1.0",
+    "lefthook": "^2.1.9",
+    "markdownlint-cli2": "0.23.0",
+    "markdownlint-rule-search-replace": "1.2.0",
+    "node-html-parser": "^8.0.4",
+    "parse-diff": "^0.12.0",
+    "prettier": "3.8.5",
+    "tempy": "^3.2.0",
+    "yaml": "^2.9.0",
+    "yargs": "^18.0.0"
   }
 }

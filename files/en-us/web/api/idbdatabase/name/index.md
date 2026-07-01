@@ -1,26 +1,16 @@
 ---
-title: IDBDatabase.name
+title: "IDBDatabase: name property"
+short-title: name
 slug: Web/API/IDBDatabase/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - name
 browser-compat: api.IDBDatabase.name
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`name`** read-only property of the
 `IDBDatabase` interface is a string that contains the
 name of the connected database.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -41,11 +31,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being
 // opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

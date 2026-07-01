@@ -2,19 +2,13 @@
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - CSSOM View
-  - Guide
-  - Screen Orientation
 ---
 
-{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}
 
 The term _screen orientation_ refers to whether a browser [viewport](/en-US/docs/Glossary/Viewport) is in landscape mode (that is, the width of the viewport is greater than its height), or else in portrait mode (the height of the viewport is greater than its width)
 
-CSS provides the [`orientation`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) media feature to allow adjusting layout based on screen orientation.
+CSS provides the {{cssxref("@media/orientation")}} media feature to allow adjusting layout based on screen orientation.
 
 The [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides a programmatic JavaScript API for working with screen orientation — including the ability to lock the viewport to a specific orientation.
 
@@ -44,8 +38,9 @@ CSS relies on the orientation media query to handle specific styles based on the
 ```css
 /* First let's define some common styles */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -57,17 +52,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -77,7 +72,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -108,7 +103,7 @@ Once we have some common styles we can start defining a special case for the ori
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
@@ -138,7 +133,8 @@ And here's the result
   </tbody>
 </table>
 
-> **Note:** The orientation media query actually applies based on the orientation of the browser window (or iframe) not the orientation of the device.
+> [!NOTE]
+> The orientation media query actually applies based on the orientation of the browser window (or iframe) not the orientation of the device.
 
 ## Locking the screen orientation
 
@@ -148,10 +144,10 @@ The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening to orientation changes
 
-The {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered each time the device change the orientation of the screen and the orientation itself can be read with the {{domxref("Screen.orientation")}} property.
+Each time the orientation of the screen changes, the {{domxref("ScreenOrientation.change_event", "change")}} event of the {{domxref("ScreenOrientation")}} interface is triggered:
 
 ```js
-screen.addEventListener("orientationchange", () => {
+screen.orientation.addEventListener("change", () => {
   console.log(`The orientation of the screen is: ${screen.orientation}`);
 });
 ```
@@ -163,18 +159,19 @@ Any web application can lock the screen to suits its own needs. The screen is lo
 The {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} method accepts one of the following values to define the kind of lock to apply: `any`, `natural`. `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, and `landscape`:
 
 ```js
-{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} ;
+screen.orientation.lock();
 ```
 
 It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
 
-> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
+> [!NOTE]
+> A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire a `change` event on `ScreenOrientation` because both applications will keep the orientation they had.
 >
-> However, locking the orientation can fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
+> However, locking the orientation can fire a `change` event if the orientation had to be changed to satisfy the lock requirements.
 
 ## See also
 
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
-- [The orientation media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
+- {{DOMxRef("ScreenOrientation.change_event", "change")}} event of {{domxref("ScreenOrientation")}}
+- {{cssxref("@media/orientation")}}

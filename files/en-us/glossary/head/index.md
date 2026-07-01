@@ -2,11 +2,7 @@
 title: Head
 slug: Glossary/Head
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - HTML
-  - head
-  - metadata
+sidebar: glossarysidebar
 ---
 
 The **Head** is the part of an {{glossary("HTML")}} document that contains {{glossary("metadata")}} about that document, such as author, description, and links to {{glossary("CSS")}} or {{glossary("JavaScript")}} files that should be applied to the HTML.
@@ -14,4 +10,4 @@ The **Head** is the part of an {{glossary("HTML")}} document that contains {{glo
 ## See also
 
 - {{htmlelement("head")}} element reference on MDN
-- [The HTML \<head>](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) on the MDN Learning Area
+- [What's in the head? Web page metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) on the MDN Learning Area

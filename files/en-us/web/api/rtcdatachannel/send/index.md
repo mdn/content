@@ -1,19 +1,8 @@
 ---
-title: RTCDataChannel.send()
+title: "RTCDataChannel: send() method"
+short-title: send()
 slug: Web/API/RTCDataChannel/send
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - datachannel
-  - send
 browser-compat: api.RTCDataChannel.send
 ---
 
@@ -27,7 +16,8 @@ creating the underlying transport channel. Data sent before connecting is buffer
 possible (or an error occurs if it's not possible), and is also buffered if sent while
 the connection is closing or closed.
 
-> **Note:** Different browsers have different limitations on the size of the message you can
+> [!NOTE]
+> Different browsers have different limitations on the size of the message you can
 > send. Specifications exist to define how to automatically fragment large messages, but
 > not all browsers implement them, and those that do have various additional
 > restrictions. This will get less complicated over time, but for now, if you have
@@ -55,9 +45,8 @@ None ({{jsxref("undefined")}}).
   - : Thrown when the data channel has not finished establishing its own connection (that is, its
     {{domxref("RTCDataChannel.readyState", "readyState")}} is `connecting`). The data channel
     must establish its own connection because it uses a transport channel separate from that of the media content. This error occurs without sending or buffering the `data`.
-- `NetworkError` {{domxref("DOMException")}}
-  - : Thrown when the specified `data` would need to be buffered, and there isn't room for
-    it in the buffer. In this scenario, the underlying transport is immediately closed.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown when the specified `data` would need to be buffered, and there isn't room for it in the buffer.
 - {{jsxref("TypeError")}}
   - : Thrown if the specified `data` is too large for the other peer to receive. Since
     there are multiple techniques for breaking up large data into smaller pieces for
@@ -80,9 +69,9 @@ const dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
   const obj = {
-    "message": msg,
-    "timestamp": new Date()
-  }
+    message: msg,
+    timestamp: new Date(),
+  };
   dc.send(JSON.stringify(obj));
 }
 ```

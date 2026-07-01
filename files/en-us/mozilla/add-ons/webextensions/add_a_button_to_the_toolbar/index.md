@@ -1,11 +1,9 @@
 ---
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-tags:
-  - WebExtensions
+page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Toolbar buttons are one of the main UI components available to extensions. Toolbar buttons live in the main browser toolbar and contain an icon. When the user clicks the icon, one of two things can happen:
 
@@ -55,7 +53,8 @@ Next, create the "icons" directory inside the "buttons" directory, and save the 
 
 !["32 pixel icon of a lined sheet of paper"](page-32.png)
 
-> **Note:** These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
+> [!NOTE]
+> These icons are from the "bitsies!" iconset on iconfinder.com created by Recep Kütük.
 
 We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.
 
@@ -100,7 +99,6 @@ Let's try adding a popup to the button. Replace manifest.json with this:
   "version": "1.0",
 
   "browser_action": {
-    "browser_style": true,
     "default_popup": "popup/choose_page.html",
     "default_icon": {
       "16": "icons/page-16.png",
@@ -110,16 +108,15 @@ Let's try adding a popup to the button. Replace manifest.json with this:
 }
 ```
 
-We've made three changes from the original:
+We've made two changes from the original:
 
-- We no longer reference "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
-- We've added `"browser_style": true`, which will help the styling of our popup look more like part of the browser.
-- Finally, we've added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
+- removed the reference to "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
+- added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
 
 So now we need to create that popup. Create a directory called "popup" then create a file called "choose_page.html" inside it. Give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -178,7 +175,7 @@ In our JavaScript, we listen for clicks on the popup choices. We first check to 
 
 The extension's final structure should look like this:
 
-```
+```plain
 button/
     icons/
         page-16.png
@@ -205,14 +202,12 @@ While browser actions are always shown, page actions are only shown in tabs wher
 - [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
 - [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
-
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/main/open-my-page-button)
 
 - [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
-
-  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

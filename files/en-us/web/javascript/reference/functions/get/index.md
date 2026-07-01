@@ -1,22 +1,26 @@
 ---
-title: getter
+title: get
 slug: Web/JavaScript/Reference/Functions/get
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Language feature
-  - Reference
 browser-compat: javascript.functions.get
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function that will be called when that property is looked up. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Getter declaration")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## Syntax
 
@@ -25,59 +29,45 @@ The **`get`** syntax binds an object property to a function that will be called 
 { get [expression]() { /* … */ } }
 ```
 
+There are some additional syntax restrictions:
+
+- A getter must have exactly zero parameters.
+
 ### Parameters
 
 - `prop`
-  - : The name of the property to bind to the given function.
+  - : The name of the property to bind to the given function. In the same way as other properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), it can be a string literal, a number literal, or an identifier.
 - `expression`
   - : You can also use expressions for a computed property name to bind to the given function.
 
 ## Description
 
-Sometimes it is desirable to allow access to a property that returns a dynamically
-computed value, or you may want to reflect the status of an internal variable without
-requiring the use of explicit method calls. In JavaScript, this can be accomplished with
-the use of a _getter_.
+Sometimes, it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
 
-It is not possible to simultaneously have a getter bound to a property and have that
-property actually hold a value, although it _is_ possible to use a getter and a
-setter in conjunction to create a type of pseudo-property.
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The getter syntax allows you to specify the getter function in an object initializer.
 
-Note the following when working with the `get` syntax:
+```js
+const obj = {
+  get prop() {
+    // getter, the code executed when reading obj.prop
+    return someValue;
+  },
+};
+```
 
-- It can have an identifier which is either a number or a string;
-- It must have exactly zero parameters
-  (see [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)
-  for more information);
-- It must not appear in an object literal with another `get` e.g. the following is forbidden
-
-  ```js example-bad
-  {
-    get x() { }, get x() { }
-  }
-  ```
-
-- It must not appear with a data entry for the same property e.g. the following is forbidden
-
-  ```js example-bad
-  {
-    x: /* … */, get x() { /* … */ }
-  }
-  ```
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 
 ### Defining a getter on new objects in object initializers
 
-This will create a pseudo-property `latest` for object `obj`,
-which will return the last array item in `log`.
+This will create a pseudo-property `latest` for object `obj`, which will return the last array item in `log`.
 
 ```js
 const obj = {
   log: ["example", "test"],
   get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
+    return this.log.at(-1);
   },
 };
 console.log(obj.latest); // "test"
@@ -109,12 +99,11 @@ console.log(instance.msg); // "hello cake"
 
 Getter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike getter properties in object literals, getter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Deleting a getter using the `delete` operator
 
-If you want to remove the getter, you can just {{jsxref("Operators/delete", "delete")}}
-it:
+If you want to remove the getter, you can just {{jsxref("delete")}} it:
 
 ```js
 delete obj.latest;
@@ -122,8 +111,7 @@ delete obj.latest;
 
 ### Defining a getter on existing objects using `defineProperty`
 
-To append a getter to an existing object later at any time, use
-{{jsxref("Object.defineProperty()")}}.
+To append a getter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
 const o = { a: 0 };
@@ -167,34 +155,20 @@ console.log(MyConstants.foo); // 'foo', a static getter's value cannot be change
 
 ### Smart / self-overwriting / lazy getters
 
-Getters give you a way to _define_ a property of an object, but they do not
-_calculate_ the property's value until it is accessed. A getter defers the cost
-of calculating the value until the value is needed. If it is never needed, you never pay
-the cost.
+Getters give you a way to _define_ a property of an object, but they do not _calculate_ the property's value until it is accessed. A getter defers the cost of calculating the value until the value is needed. If it is never needed, you never pay the cost.
 
-An additional optimization technique to lazify or delay the calculation of a property
-value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters.
-The value is calculated the first time the getter is called, and is then cached so
-subsequent accesses return the cached value without recalculating it. This is useful in
-the following situations:
+An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
 
-- If the calculation of a property value is expensive (takes much RAM or CPU time,
-  spawns worker threads, retrieves remote file, etc.).
-- If the value isn't needed just now. It will be used later, or in some case it's not
-  used at all.
-- If it's used, it will be accessed several times, and there is no need to
-  re-calculate that value will never be changed or shouldn't be re-calculated.
+- If the calculation of a property value is expensive (takes much RAM or CPU time, spawns worker threads, retrieves remote file, etc.).
+- If the value isn't needed just now. It will be used later, or in some cases, it's not used at all.
+- If it's used, it will be accessed several times, and there is no need to re-calculate that value will never be changed or shouldn't be re-calculated.
 
-> **Note:** This means that you shouldn't write a lazy getter for a property whose value you
-> expect to change, because if the getter is lazy then it will not recalculate the
-> value.
+> [!NOTE]
+> This means that you shouldn't write a lazy getter for a property whose value you expect to change, because if the getter is lazy, then it will not recalculate the value.
 >
-> Note that getters are not "lazy" or "memoized" by nature; you must implement this
-> technique if you desire this behavior.
+> Note that getters are not "lazy" or "memoized" by nature; you must implement this technique if you desire this behavior.
 
-In the following example, the object has a getter as its own property. On getting the
-property, the property is removed from the object and re-added, but implicitly as a data
-property this time. Finally, the value gets returned.
+In the following example, the object has a getter as its own property. On getting the property, the property is removed from the object and re-added, but implicitly as a data property this time. Finally, the value gets returned.
 
 ```js
 const obj = {
@@ -206,15 +180,27 @@ const obj = {
 };
 ```
 
+### Feature detection
+
+Many functions accept an object and retrieve individual properties from it as separate parameters (this object parameter is known as an _options bag_). You can detect whether a specific option is supported by using a getter to track if the property has been retrieved. This example checks if the `colorType` option is supported by the {{domxref("HTMLCanvasElement.getContext()")}} method.
+
+```js
+function isColorTypeSupported() {
+  let supported = false;
+  const obj = {
+    get colorType() {
+      supported = true;
+      return undefined;
+    },
+  };
+  document.createElement("canvas").getContext("2d", obj);
+  return supported;
+}
+```
+
 ### get vs. defineProperty
 
-While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
-similar results, there is a subtle difference between the two when used on
-{{jsxref("classes")}}.
-
-When using `get` the property will be defined on the instance's prototype,
-while using {{jsxref("Object.defineProperty()")}} the property will be defined on the
-instance it is applied to.
+While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have similar results, there is a subtle difference between the two when used on [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The `get` syntax defines the property on the instance's prototype, while {{jsxref("Object.defineProperty()")}} defines the property on the instance it is applied to.
 
 ```js
 class Example {
@@ -246,9 +232,12 @@ console.log(
 
 ## See also
 
-- [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)

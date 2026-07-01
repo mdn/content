@@ -1,12 +1,8 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement: labels property"
+short-title: labels
 slug: Web/API/HTMLButtonElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.HTMLButtonElement.labels
 ---
 
@@ -34,12 +30,10 @@ with the `<button>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("test");
-  for (const label of button.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const button = document.getElementById("test");
+for (const label of button.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

@@ -1,18 +1,12 @@
 ---
-title: CanvasRenderingContext2D.createLinearGradient()
+title: "CanvasRenderingContext2D: createLinearGradient() method"
+short-title: createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.createLinearGradient()`**
@@ -26,7 +20,8 @@ the gradient must first be assigned to the
 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or
 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-> **Note:** Gradient coordinates are global, i.e., relative to the current
+> [!NOTE]
+> Gradient coordinates are global, i.e., relative to the current
 > coordinate space. When applied to a shape, the coordinates are NOT relative to the
 > shape's coordinates.
 

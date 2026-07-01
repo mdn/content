@@ -1,18 +1,9 @@
 ---
-title: MediaTrackConstraints.noiseSuppression
+title: "MediaTrackConstraints: noiseSuppression property"
+short-title: noiseSuppression
 slug: Web/API/MediaTrackConstraints/noiseSuppression
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Web
-  - noiseSuppression
-browser-compat: api.MediaTrackConstraints.noiseSuppression
+browser-compat: api.MediaStreamTrack.applyConstraints.noiseSuppression_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

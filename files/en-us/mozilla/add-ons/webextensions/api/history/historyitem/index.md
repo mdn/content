@@ -1,20 +1,10 @@
 ---
 title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - HistoryItem
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.history.HistoryItem
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A `HistoryItem` object provides information about a page in the browser history.
 
@@ -35,13 +25,14 @@ This is an object with the following properties:
 - `typedCount` {{optional_inline}}
   - : `number`. The number of times the user has navigated to this page by typing in the address.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#type-HistoryItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#type-HistoryItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

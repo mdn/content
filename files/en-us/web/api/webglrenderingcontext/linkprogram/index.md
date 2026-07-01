@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.linkProgram()
+title: "WebGLRenderingContext: linkProgram() method"
+short-title: linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.linkProgram
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The {{domxref("WebGLRenderingContext")}} interface's
 **`linkProgram()`** method links a given

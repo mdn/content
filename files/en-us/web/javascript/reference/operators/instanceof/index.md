@@ -2,22 +2,28 @@
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Object
-  - Operator
-  - Prototype
-  - Relational Operators
-  - instanceof
 browser-compat: javascript.operators.instanceof
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`instanceof`** operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: instanceof operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -35,7 +41,7 @@ object instanceof constructor
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `constructor` is not an object. If `constructor` doesn't have a [`@@hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method, it must also be a function.
+  - : Thrown if `constructor` is not an object. If `constructor` doesn't have a [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method, it must also be a function.
 
 ## Description
 
@@ -103,7 +109,7 @@ const BoundBase = Base.bind(null, 1, 2);
 console.log(new Base() instanceof BoundBase); // true
 ```
 
-### instanceof and @@hasInstance
+### instanceof and Symbol.hasInstance
 
 If `constructor` has a [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method, the method will be called in priority, with `object` as its only argument and `constructor` as `this`.
 
@@ -121,6 +127,8 @@ class Forgeable {
 const obj = { [Forgeable.isInstanceFlag]: true };
 console.log(obj instanceof Forgeable); // true
 ```
+
+Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function. See the {{jsxref("Symbol.hasInstance")}} page for the exact algorithm of `instanceof`.
 
 ### instanceof and multiple realms
 
@@ -149,16 +157,16 @@ stringObject instanceof Object; // true
 stringObject instanceof Date; // false
 ```
 
-### Using instanceof with Date
+### Using instanceof with Map
 
-The following example shows the behavior of `instanceof` with `Date` objects.
+The following example shows the behavior of `instanceof` with `Map` objects.
 
 ```js
-const myDate = new Date();
+const myMap = new Map();
 
-myDate instanceof Date; // true
-myDate instanceof Object; // true
-myDate instanceof String; // false
+myMap instanceof Map; // true
+myMap instanceof Object; // true
+myMap instanceof String; // false
 ```
 
 ### Objects created using Object.create()
@@ -188,13 +196,13 @@ const nullObject = Object.create(null);
 nullObject.name = "My object";
 
 literalObject instanceof Object; // true, every object literal has Object.prototype as prototype
-({} instanceof Object); // true, same case as above
+({}) instanceof Object; // true, same case as above
 nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 
-### Demonstrating that mycar is of type Car and type Object
+### Demonstrating that myCar is of type Car and type Object
 
-The following code creates an object type `Car` and an instance of that object type, `mycar`. The `instanceof` operator demonstrates that the `mycar` object is of type `Car` and of type `Object`.
+The following code creates an object type `Car` and an instance of that object type, `myCar`. The `instanceof` operator demonstrates that the `myCar` object is of type `Car` and of type `Object`.
 
 ```js
 function Car(make, model, year) {
@@ -202,9 +210,9 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-const mycar = new Car("Honda", "Accord", 1998);
-const a = mycar instanceof Car; // returns true
-const b = mycar instanceof Object; // returns true
+const myCar = new Car("Honda", "Accord", 1998);
+const a = myCar instanceof Car; // returns true
+const b = myCar instanceof Object; // returns true
 ```
 
 ### Not an instanceof
@@ -212,25 +220,25 @@ const b = mycar instanceof Object; // returns true
 To test if an object is not an `instanceof` a specific constructor, you can do:
 
 ```js
-if (!(mycar instanceof Car)) {
+if (!(myCar instanceof Car)) {
   // Do something, like:
-  // mycar = new Car(mycar)
+  // myCar = new Car(myCar)
 }
 ```
 
 This is really different from:
 
-```js example-bad
-if (!mycar instanceof Car) {
+```js-nolint example-bad
+if (!myCar instanceof Car) {
   // unreachable code
 }
 ```
 
-This will always be `false`. (`!mycar` will be evaluated before `instanceof`, so you always try to know if a boolean is an instance of `Car`).
+This will always be `false`. (`!myCar` will be evaluated before `instanceof`, so you always try to know if a boolean is an instance of `Car`).
 
 ### Overriding the behavior of instanceof
 
-A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `C` from `x`, it would still fail:
+A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) of `C` from `x`, it would still fail:
 
 ```js
 class C {
@@ -274,7 +282,7 @@ Note that you may want to limit this behavior to the current class; otherwise, i
 
 ```js
 class D extends C {}
-console.log(new C() instanceof D); // true; because D inherits @@hasInstance from C
+console.log(new C() instanceof D); // true; because D inherits [Symbol.hasInstance] from C
 ```
 
 You could do this by checking that `this` is the current constructor:

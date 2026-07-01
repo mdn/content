@@ -2,17 +2,6 @@
 title: VideoTrackList
 slug: Web/API/VideoTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - list
 browser-compat: api.VideoTrackList
 ---
 
@@ -60,7 +49,7 @@ In addition to being able to obtain direct access to the video tracks present on
 
 ### Getting a media element's video track list
 
-To get a media element's {{domxref("VideoTrackList")}}, use its {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
+To get a media element's `VideoTrackList`, use its {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 
 ```js
 const videoTracks = document.querySelector("video").videoTracks;

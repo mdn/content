@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.stencilFunc()
+title: "WebGLRenderingContext: stencilFunc() method"
+short-title: stencilFunc()
 slug: Web/API/WebGLRenderingContext/stencilFunc
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilFunc
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and back function
 and reference value for stencil testing.
@@ -28,10 +23,8 @@ stencilFunc(func, ref, mask)
 ### Parameters
 
 - `func`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
     `gl.ALWAYS`. The possible values are:
-
     - `gl.NEVER`: Never pass.
     - `gl.LESS`: Pass if
       `(ref & mask) < (stencil & mask)`.
@@ -72,8 +65,7 @@ gl.stencilFunc(gl.LESS, 0, 0b1110011);
 ```
 
 To get the current stencil function, reference value, or other stencil information,
-query the following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+query the following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FUNC);

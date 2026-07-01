@@ -1,20 +1,10 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - resume
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.resume
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`resume()`** function of the {{WebExtAPIRef("downloads")}} API resumes a paused download. If the request was successful, the download will be unpaused and progress will resume. The `resume()` call will fail if the download is not active: for example, because it has finished downloading.
 
@@ -37,10 +27,6 @@ let resuming = browser.downloads.resume(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request was successful, the promise will be fulfilled with no arguments. If the request failed, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -60,7 +46,12 @@ resuming.then(onResumed, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-resume) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-resume) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

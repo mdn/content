@@ -1,19 +1,14 @@
 ---
-title: PaymentRequestEvent()
+title: "PaymentRequestEvent: PaymentRequestEvent() constructor"
+short-title: PaymentRequestEvent()
 slug: Web/API/PaymentRequestEvent/PaymentRequestEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - Experimental
-  - payment
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`PaymentRequestEvent`** constructor creates a new {{domxref("PaymentRequestEvent")}} object instance.
 
@@ -45,7 +40,7 @@ new PaymentRequestEvent(type, options)
     - `total`
       - : The total amount being requested for payment.
 
-## Return value
+### Return value
 
 A new {{domxref("PaymentRequestEvent")}} object.
 
@@ -54,8 +49,8 @@ A new {{domxref("PaymentRequestEvent")}} object.
 A developer would not use this constructor manually. A new `PaymentRequestEvent` object is constructed when a handler is invoked as a result of the {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event firing.
 
 ```js
-self.addEventListener("paymentrequest", e => {
-  // ...
+self.addEventListener("paymentrequest", (e) => {
+  // …
 });
 ```
 
@@ -69,8 +64,8 @@ self.addEventListener("paymentrequest", e => {
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

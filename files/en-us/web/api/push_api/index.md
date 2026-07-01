@@ -2,26 +2,19 @@
 title: Push API
 slug: Web/API/Push_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Notifications
-  - Push
-  - Reference
-  - Service Workers
 browser-compat:
   - api.PushEvent
   - api.PushMessageData
 ---
 
-{{DefaultAPISidebar("Push API")}}
+{{DefaultAPISidebar("Push API")}}{{AvailableInWorkers}}
 
 The **Push API** gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
 
 ## Push concepts and usage
 
-> **Warning:** When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:
+> [!WARNING]
+> When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:
 >
 > - [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Preventing CSRF and XSRF Attacks](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)
@@ -32,7 +25,7 @@ The resulting {{domxref("PushSubscription")}} includes all the information that 
 
 The service worker will be started as necessary to handle incoming push messages, which are delivered to the {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}} event handler. This allows apps to react to push messages being received, for example, by displaying a notification (using {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
-Each subscription is unique to a service worker. The endpoint for the subscription is a unique [capability URL](https://www.w3.org/TR/capability-urls/): knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.
+Each subscription is unique to a service worker. The endpoint for the subscription is a unique [capability URL](https://w3ctag.github.io/capability-urls/): knowledge of the endpoint is all that is necessary to send a message to your application. The endpoint URL therefore needs to be kept secret, or other applications might be able to send push messages to your application.
 
 Activating a service worker to deliver a push message can result in increased resource usage, particularly of the battery. Different browsers have different schemes for handling this, there is currently no standard mechanism. Firefox allows a limited number (quota) of push messages to be sent to an application, although Push messages that generate notifications are exempt from this limit. The limit is refreshed each time the site is visited. In Chrome there are no limits.
 
@@ -58,7 +51,7 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 - {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} event occurs; that is, whenever a server push message is received.
 - {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "onpushsubscriptionchange")}}
-  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g., when a push service sets an expiration time.)
 
 ## Examples
 
@@ -75,7 +68,5 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 ## See also
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [Push notifications overview](https://web.dev/push-notifications-overview/)
+- [Push notifications overview](https://web.dev/articles/push-notifications-overview)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-
-{{DefaultAPISidebar("Push API")}}

@@ -1,24 +1,9 @@
 ---
-title: MediaTrackSettings.cursor
+title: "MediaTrackSettings: cursor property"
+short-title: cursor
 slug: Web/API/MediaTrackSettings/cursor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Constraints
-  - Cursor
-  - Media
-  - Media Capture and Streaming
-  - Media Capture and Streaming API
-  - Property
-  - Recording
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Settings
-  - display
-  - screen
-browser-compat: api.MediaTrackSettings.cursor
+browser-compat: api.MediaStreamTrack.applyConstraints.cursor_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -2,19 +2,17 @@
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.HTMLTemplateElement
 ---
 
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.
+
+> [!NOTE]
+> An HTML parser can create either an `HTMLTemplateElement` or a {{domxref("ShadowRoot")}} when it parses a {{HTMLElement("template")}} element, depending on the `<template>` attributes.
+> If an `HTMLTemplateElement` is created the "shadow" attributes are reflected from the template.
+> However these are not useful, because an `HTMLTemplateElement` is not a shadow root and cannot subsequently be changed to a shadow root.
 
 {{InheritanceDiagram}}
 
@@ -24,6 +22,18 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
+- {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
+  - : A string that reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the associated `<template>` element.
+- {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
+  - : A boolean that reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus) attribute of the associated `<template>` element.
+- {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
+  - : A boolean that reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the associated `<template>` element.
+- {{domxref("HTMLTemplateElement.shadowRootCustomElementRegistry", "shadowRootCustomElementRegistry")}}
+  - : A string that reflects the value of the [`shadowrootcustomelementregistry`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) attribute of the associated `<template>` element, indicating that the declarative shadow root will use a scoped {{domxref("CustomElementRegistry")}}.
+- {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
+  - : A boolean that reflects the value of the [`shadowrootserializable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) attribute of the associated `<template>` element.
+- {{domxref("HTMLTemplateElement.shadowRootSlotAssignment", "shadowRootSlotAssignment")}} {{experimental_inline}}
+  - : A string that reflects the value of the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute of the associated `<template>` element.
 
 ## Instance methods
 

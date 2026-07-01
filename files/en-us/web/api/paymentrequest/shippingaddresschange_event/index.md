@@ -1,22 +1,11 @@
 ---
-title: 'PaymentRequest: shippingaddresschange event'
+title: "PaymentRequest: shippingaddresschange event"
+short-title: shippingaddresschange
 slug: Web/API/PaymentRequest/shippingaddresschange_event
 page-type: web-api-event
-tags:
-  - API
-  - Address
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Shipping
-  - Event
-  - payment
-  - shippingaddresschange
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
 
@@ -30,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('shippingaddresschange', (event) => { });
+```js-nolint
+addEventListener("shippingaddresschange", (event) => { })
 
-onshippingaddresschange = (event) => { };
+onshippingaddresschange = (event) => { }
 ```
 
 ## Event type
@@ -58,24 +47,24 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
 paymentRequest.addEventListener("shippingaddresschange", (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
-}, false);
+});
 
-const checkAddress = (theAddress) => {
-  let detailsUpdate = {};
+function checkAddress(theAddress) {
+  const detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
 
   return detailsUpdate;
-};
+}
 ```
 
 You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
 paymentRequest.onshippingaddresschange = (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };
 ```

@@ -1,22 +1,26 @@
 ---
 title: Date.prototype.getUTCHours()
+short-title: getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.getUTCHours
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`getUTCHours()`** method of {{jsxref("Date")}} instances returns the hours for this date according to universal time.
 
-The **`getUTCHours()`** method returns the hours in the
-specified date according to universal time.
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCHours()")}}
 
-{{EmbedInteractiveExample("pages/js/date-getutchours.html")}}
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCHours());
+// Expected output: 12
+
+console.log(date2.getUTCHours());
+// Expected output: 10
+```
 
 ## Syntax
 
@@ -24,20 +28,19 @@ specified date according to universal time.
 getUTCHours()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A number.
-If the `Date` object represents a valid date, an integer between 0 and 23, representing the hours in the given date according
-to Coordinated Universal Time.
-Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn't represent a valid date.
+An integer, between 0 and 23, representing the hours for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Examples
 
 ### Using getUTCHours()
 
-The following example assigns the hours portion of the current time to the variable
-`hours`.
+The following example assigns the hours portion of the current time to the variable `hours`.
 
 ```js
 const today = new Date();

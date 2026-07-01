@@ -1,20 +1,10 @@
 ---
 title: theme_experiment
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme_experiment
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -60,9 +50,11 @@ This key enables the definition of experimental [`theme`](/en-US/docs/Mozilla/Ad
 
 To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the [browser toolbox](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html).
 
-> **Note:** This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the `extensions.experiments.enabled` preference to be enabled. In Firefox 73 and earlier, the `extensions.legacy.enabled` had to be used instead.
+> [!NOTE]
+> This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the `extensions.experiments.enabled` preference to be enabled. In Firefox 73 and earlier, the `extensions.legacy.enabled` had to be used instead.
 
-> **Warning:** This feature is experimental and could be subject to change.
+> [!WARNING]
+> This feature is experimental and could be subject to change.
 
 ## Syntax
 

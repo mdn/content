@@ -1,20 +1,11 @@
 ---
-title: 'RTCPeerConnection: addstream event'
+title: "RTCPeerConnection: addstream event"
+short-title: addstream
 slug: Web/API/RTCPeerConnection/addstream_event
 page-type: web-api-event
-tags:
-  - Event
-  - Media
-  - MediaStream
-  - Deprecated
-  - RTCPeerConnection
-  - Reference
-  - Streams
-  - WebRTC
-  - WebRTC API
-  - addStream
-  - events
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
 
@@ -22,7 +13,8 @@ browser-compat: api.RTCPeerConnection.addstream_event
 
 The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.
 
-> **Warning:** This event has been removed from the WebRTC specification. You should instead watch for the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent for each media track added to the `RTCPeerConnection`.
+> [!WARNING]
+> This event has been removed from the WebRTC specification. You should instead watch for the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent for each media track added to the `RTCPeerConnection`.
 
 You can, similarly, watch for streams to be removed from the connection by monitoring the {{domxref("RTCPeerConnection.removestream_event", "removestream")}} event.
 
@@ -32,10 +24,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('addstream', (event) => { });
+```js-nolint
+addEventListener("addstream", (event) => { })
 
-onaddstream = (event) => { };
+onaddstream = (event) => { }
 ```
 
 ## Event type
@@ -59,11 +51,11 @@ This example looks to determine if the user's browser supports the {{domxref("RT
 if (pc.addTrack !== undefined) {
   pc.ontrack = (ev) => {
     ev.streams.forEach((stream) => doAddStream(stream));
-  }
+  };
 } else {
   pc.onaddstream = (ev) => {
     doAddStream(ev.stream);
-  }
+  };
 }
 ```
 

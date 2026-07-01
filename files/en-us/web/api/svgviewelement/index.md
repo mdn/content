@@ -2,12 +2,6 @@
 title: SVGViewElement
 slug: Web/API/SVGViewElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGViewElement
 ---
 
@@ -20,6 +14,11 @@ The **`SVGViewElement`** interface provides access to the properties of {{SVGEle
 ## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGViewElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("view")}} element.
+- {{domxref("SVGViewElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("view")}} element.
 
 ## Instance methods
 

@@ -1,20 +1,10 @@
 ---
 title: menus.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Removes a menu item.
 
@@ -72,7 +62,8 @@ browser.menus.onClicked.addListener((info, tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

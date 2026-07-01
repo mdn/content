@@ -2,27 +2,6 @@
 title: Rendering and the WebXR frame animation callback
 slug: Web/API/WebXR_Device_API/Rendering
 page-type: guide
-tags:
-  - API
-  - AR
-  - Animation
-  - Drawing
-  - Frames
-  - Games
-  - Guide
-  - Intermediate
-  - Reality
-  - Scene
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - display
-  - rendering
-  - requestAnimationFrame
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -45,7 +24,7 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation),
     );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
@@ -149,7 +128,7 @@ Ideally, you want this code to be fast enough that it can maintain a 60 FPS fram
 
 In this version of the WebXR rendering callback, we use a very straightforward approach that works great for relatively simple projects. This pseudocode outlines that process:
 
-```
+```plain
 for each view in the pose's views list:
   get the WebXR GL layer's viewport
   set the WebGL viewport to match
@@ -222,7 +201,7 @@ We then get the {{domxref("XRViewerPose")}} object that describes the viewer's p
 
 With the viewer's pose in hand, we can then begin to render the frame. The first step is to obtain access to the framebuffer into which the WebXR device wants the frame drawn; this is done by getting the target WebGL layer from the session's {{domxref("XRSession.renderState", "renderState")}} object's {{domxref("XRRenderState.baseLayer", "baseLayer")}} property, then getting the {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}} from that {{domxref("XRWebGLLayer")}} object. We then call [`gl.bindFrameBuffer()`](/en-US/docs/Web/API/WebGLRenderingContext/bindFramebuffer) to bind that framebuffer as the target for all upcoming drawing commands.
 
-The next step is to erase the framebuffer. While you can in theory skip this step—_if and only if your rendering code is guaranteed to write every single pixel in the framebuffer_—it's generally safest to just go ahead and clear it before you begin to draw, unless you need to eke out every ounce of performance you can and know you're touching all the pixels anyway. The background color is set to fully opaque black using [`gl.clearColor()`](/en-US/docs/Web/API/WebGLRenderingContext/clearColor); the clear depth is set to 1.0 by calling [`gl.cleardepth()`](/en-US/docs/Web/API/WebGLRenderingContext/clearDepth), in order to clear all pixels regardless of how far away the object they're part of is; and finally, the frame's pixel and depth buffers are both erased by calling [`gl.clear()`](/en-US/docs/Web/API/WebGLRenderingContext/clear), passing in a bit mask in which both `COLOR_BUFFER_BIT` and `DEPTH_BUFFER_BIT` are set.
+The next step is to erase the framebuffer. While you can in theory skip this step—_if and only if your rendering code is guaranteed to write every single pixel in the framebuffer_—it's generally safest to just go ahead and clear it before you begin to draw, unless you need to eke out every ounce of performance you can and know you're touching all the pixels anyway. The background color is set to fully opaque black using [`gl.clearColor()`](/en-US/docs/Web/API/WebGLRenderingContext/clearColor); the clear depth is set to 1.0 by calling [`gl.clearDepth()`](/en-US/docs/Web/API/WebGLRenderingContext/clearDepth), in order to clear all pixels regardless of how far away the object they're part of is; and finally, the frame's pixel and depth buffers are both erased by calling [`gl.clear()`](/en-US/docs/Web/API/WebGLRenderingContext/clear), passing in a bit mask in which both `COLOR_BUFFER_BIT` and `DEPTH_BUFFER_BIT` are set.
 
 Since WebXR uses a single framebuffer for every view, with viewports upon the view being used to separate each eye's viewpoint within the framebuffer, we only need to clear a single framebuffer rather than cleaning it for each eye (or other viewpoints, if any) individually.
 
@@ -246,7 +225,7 @@ An advantage of WebXR's approach of using a single WebGL framebuffer to contain 
 
 The resulting pseudocode looks like this:
 
-```
+```plain
 for each object in the scene
   bindProgram()
   bindUniforms()
@@ -311,9 +290,12 @@ This maintains a global (or an object property) called `lastFrameTime` which con
 With the elapsed time in hand, your rendering code has the means to compute just how much every moving object has moved in the time elapsed. For instance, if an object is rotating, you might apply the rotation like this:
 
 ```js
-const xDeltaRotation = (xRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const yDeltaRotation = (yRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
-const zDeltaRotation = (zRotationDegreesPerSecond * RADIANS_PER_DEGREE) * deltaTime;
+const xDeltaRotation =
+  xRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const yDeltaRotation =
+  yRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
+const zDeltaRotation =
+  zRotationDegreesPerSecond * RADIANS_PER_DEGREE * deltaTime;
 ```
 
 This computes the amount by which the object has rotated around each of the three axes since the last time the frame was drawn. Without this, the shape would rotate by the given amount every frame, regardless of the elapsed time. This could cause substantial stutter in many cases.

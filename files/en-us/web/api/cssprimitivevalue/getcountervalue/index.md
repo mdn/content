@@ -1,26 +1,24 @@
 ---
-title: CSSPrimitiveValue.getCounterValue()
+title: "CSSPrimitiveValue: getCounterValue() method"
+short-title: getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - getCounterValue
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`getCounterValue()`** method of the
-{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters)
 value. If this CSS value doesn't contain a counter value, a {{domxref("DOMException")}}
 is raised. Modification to the corresponding style property can be achieved using the
 {{domxref("Counter")}} interface.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -44,9 +42,9 @@ A {{domxref("Counter")}} object representing the counter value.
 
 ### Exceptions
 
-| **Type**       | **Description**                                                                                                        |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a `Counter` value (e.g. this is not `CSS_COUNTER`). |
+| **Type**       | **Description**                                                                                                         |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a `Counter` value (e.g., this is not `CSS_COUNTER`). |
 
 ## Specifications
 

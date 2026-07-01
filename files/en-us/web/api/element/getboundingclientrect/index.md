@@ -1,28 +1,8 @@
 ---
-title: Element.getBoundingClientRect()
+title: "Element: getBoundingClientRect() method"
+short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Client
-  - Containing
-  - DOM
-  - Element
-  - Enclosing
-  - Method
-  - Minimum
-  - Rectangle
-  - Reference
-  - Smallest
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
 
@@ -58,7 +38,7 @@ object returned by the method include the `padding` and
 `border-width`, not only the content width/height. In the standard box model,
 this would be equal to the `width` or `height` property of the
 element + `padding` + `border-width`. But
-if [`box-sizing: border-box`](/en-US/docs/Web/CSS/box-sizing) is
+if [`box-sizing: border-box`](/en-US/docs/Web/CSS/Reference/Properties/box-sizing) is
 set for the element this would be directly equal to its `width` or
 `height`.
 
@@ -106,11 +86,11 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (const key in rect) {
-  if (typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
     para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
@@ -159,17 +139,17 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
+  container.textContent = "";
   for (const key in rect) {
-    if (typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
       para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 
@@ -186,5 +166,3 @@ update();
 ## See also
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>), an earlier version of `DOMRect`

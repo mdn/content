@@ -1,19 +1,10 @@
 ---
 title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeWindowValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeWindowValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 
@@ -39,10 +30,6 @@ let removing = browser.sessions.removeWindowValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved no arguments if the item was successfully removed. If the call failed (for example, because the window ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code adds two context menu items: one stores a value associated with the current window, the other one removes it:
@@ -61,13 +48,13 @@ async function removeFromActiveWindow() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {
@@ -80,3 +67,7 @@ browser.menus.onClicked.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

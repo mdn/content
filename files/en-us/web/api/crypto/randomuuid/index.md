@@ -1,20 +1,12 @@
 ---
-title: Crypto.randomUUID()
+title: "Crypto: randomUUID() method"
+short-title: randomUUID()
 slug: Web/API/Crypto/randomUUID
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Method
-  - Pseudorandom
-  - Reference
-  - UUID
-  - Web Crypto API
-  - randomUUID
 browser-compat: api.Crypto.randomUUID
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`randomUUID()`** method of the {{domxref("Crypto")}} interface is used to generate a v4 {{Glossary("UUID")}} using a cryptographically secure random number generator.
 
@@ -34,8 +26,6 @@ A string containing a randomly generated, 36 character long v4 UUID.
 
 ## Examples
 
-The method is accessed through the global {{domxref("crypto_property", "crypto")}} property.
-
 ```js
 /* Assuming that self.crypto.randomUUID() is available */
 
@@ -53,6 +43,5 @@ console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 
 ## See also
 
-- {{ domxref("Web Crypto API") }}
-- {{ domxref("crypto_property", "crypto") }} to get a {{domxref("Crypto")}} object.
+- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - {{ domxref("Crypto.getRandomValues") }}, a source for arbitrary amounts of secure random bytes.

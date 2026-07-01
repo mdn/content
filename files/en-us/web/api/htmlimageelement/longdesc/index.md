@@ -1,46 +1,24 @@
 ---
-title: HTMLImageElement.longDesc
+title: "HTMLImageElement: longDesc property"
+short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Long description
-  - Property
-  - Reference
-  - description
-  - img
-  - longDesc
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The _deprecated_ property **`longDesc`** on
-the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
-which contains a long-form description of the image. This can be used to
-provide optional added details beyond the short description provided in the
-{{htmlattrxref("title")}} attribute.
+The _deprecated_ **`longDesc`** property of the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file which contains a long-form description of the image. This can be used to provide optional added details beyond the short description provided in the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute. It reflects the `<img>` element's [`longdesc`](/en-US/docs/Web/HTML/Reference/Elements/img#longdesc) content attribute.
+
+This attribute is considered obsolete in the [HTML spec](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) or [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details). You can also encapsulate the image within a link using the {{HTMLElement("a")}} element.
 
 ## Value
 
-A string which may be either an empty string (indicating that no long
-description is available) or the URL of a file containing a long form description of the
-image's contents.
+A string which may be either an empty string (indicating that no long description is available) or the URL of a file containing a long form description of the image's contents.
 
-For example, if the image is a [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) of a flowchart.
-The `longDesc` property could be used to provide an explanation of the flow
-of control represented by the chart, using only text. This can be used by readers both
-as an explanation, but also as a substitute for visually-impaired users.
-
-## Usage notes
-
-This property is _deprecated_ and should no longer be used. Instead of
-using `longDesc` to provide a link to a detailed description of an image,
-encapsulate the image within a link using the {{HTMLElement("a")}} element.
+## Examples
 
 Consider the following older HTML:
 
@@ -51,11 +29,9 @@ Consider the following older HTML:
   longdesc="image-descriptions/taco-tuesday.html" />
 ```
 
-Here, the `longDesc` is used to indicate that the user should be able to
-access a detailed description of the image `taco-tuesday.jpg` in the HTML
-file `image-descriptions/taco-tuesday.html`.
+Here, the `longDesc` is used to indicate that the user should be able to access a detailed description of the image `taco-tuesday.jpg` in the HTML file `image-descriptions/taco-tuesday.html`.
 
-This can be easily converted into modern HTML:
+This should be converted into the following HTML:
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
@@ -67,7 +43,7 @@ With that, the image is a link to the HTML file describing the image in more det
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -75,4 +51,4 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

@@ -1,20 +1,10 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.download
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`download()`** function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.
 
@@ -38,13 +28,9 @@ let downloading = browser.downloads.download(
 ### Parameters
 
 - `options`
-
   - : An `object` specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:
-
     - `allowHttpErrors` {{optional_inline}}
-
       - : A `boolean` flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value `false`. When set to:
-
         - `false`, the download is canceled when it encounters an HTTP error.
         - `true`, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.
 
@@ -53,7 +39,7 @@ let downloading = browser.downloads.download(
     - `conflictAction` {{optional_inline}}
       - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
     - `cookieStoreId` {{optional_inline}}
-      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `filename` {{optional_inline}}
       - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
     - `headers` {{optional_inline}}
@@ -63,12 +49,12 @@ let downloading = browser.downloads.download(
     - `method` {{optional_inline}}
       - : A `string` representing the HTTP method to use if the `url` uses the HTTP\[S] protocol. This may be either "GET" or "POST".
     - `saveAs` {{optional_inline}}
-
       - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
 
-        > **Note:** Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
+        > [!NOTE]
+        > Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
 
     - `url`
       - : A `string` representing the URL to download.
@@ -77,11 +63,7 @@ let downloading = browser.downloads.download(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the download started successfully, the promise will be fulfilled with the `id` of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.
 
-If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
-
-## Browser compatibility
-
-{{Compat}}
+If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL_static) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL_static)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
 
 ## Examples
 
@@ -99,9 +81,9 @@ function onFailed(error) {
 let downloadUrl = "https://example.org/image.png";
 
 let downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);
@@ -109,7 +91,12 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-download) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-download) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

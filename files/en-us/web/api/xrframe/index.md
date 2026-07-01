@@ -2,22 +2,8 @@
 title: XRFrame
 slug: Web/API/XRFrame
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Animation
-  - Augmented Reality
-  - Frame
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame
 ---
 

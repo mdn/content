@@ -1,29 +1,25 @@
 ---
-title: 'XMLHttpRequest: readystatechange event'
+title: "XMLHttpRequest: readystatechange event"
+short-title: readystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - XHR
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readystatechange_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The `readystatechange` event is fired whenever the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
 
-> **Warning:** This should not be used with synchronous requests and must
+> [!WARNING]
+> This should not be used with synchronous requests and must
 > not be used from native code.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('readystatechange', (event) => { })
+```js-nolint
+addEventListener("readystatechange", (event) => { })
 
 onreadystatechange = (event) => { }
 ```

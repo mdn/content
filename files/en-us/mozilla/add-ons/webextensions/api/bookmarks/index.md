@@ -1,21 +1,12 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.bookmarks
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
-The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) `bookmarks` API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
 
 To use this API, an extension must request the "bookmarks" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
@@ -74,13 +65,14 @@ Extensions cannot create, modify, or delete bookmarks in the root node of the bo
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
   - : Fired when a bookmark import session has finished.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

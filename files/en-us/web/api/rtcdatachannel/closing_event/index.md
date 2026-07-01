@@ -1,21 +1,8 @@
 ---
 title: "RTCDataChannel: closing event"
+short-title: closing
 slug: Web/API/RTCDataChannel/closing_event
 page-type: web-api-event
-tags:
-  - API
-  - Communications
-  - Connection
-  - Disconnecting
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - closing
-  - events
-  - Event
 browser-compat: api.RTCDataChannel.closing_event
 ---
 
@@ -29,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("closing", (event) => {});
+```js-nolint
+addEventListener("closing", (event) => { })
 
-onbufferedamountlow = (event) => {};
+onclosing = (event) => { }
 ```
 
 ## Event type
@@ -56,7 +43,7 @@ dataChannel.addEventListener("closing", (ev) => {
 });
 ```
 
-You can also set the {{domxref("RTCDataChannel.closing_event", "onclosing")}} event handler property directly:
+You can also set the `onclosing` event handler property directly:
 
 ```js
 pc.onclosing = (ev) => {

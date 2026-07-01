@@ -1,13 +1,8 @@
 ---
-title: CSSStyleSheet.insertRule()
+title: "CSSStyleSheet: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSStyleSheet
-  - Method
-  - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
 
@@ -16,7 +11,8 @@ browser-compat: api.CSSStyleSheet.insertRule
 The **`CSSStyleSheet.insertRule()`**
 method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet).
 
-> **Note:** Although `insertRule()` is exclusively a method of
+> [!NOTE]
+> Although `insertRule()` is exclusively a method of
 > {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
 > `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` — its internal
 > {{domxref("CSSRuleList")}}.
@@ -31,14 +27,12 @@ insertRule(rule, index)
 ### Parameters
 
 - `rule`
-
   - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
-
-    - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both
-      a [selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) and a
+    - **For [rule-sets](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)**, both
+      a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.
-    - **For [at-rules](/en-US/docs/Web/CSS/At-rule)**, both an
+    - **For [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)**, both an
       at-identifier and the rule content.
 
 - `index` {{optional_inline}}
@@ -56,13 +50,11 @@ The newly inserted rule's index within the stylesheet's rule-list.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}
-  - : Thrown if `rule` cannot be inserted at `index` `0` due to some CSS constraint.
+  - : Thrown if `rule` cannot be inserted at the specified index due to some CSS constraint; for instance: trying to insert an {{cssxref("@import")}} at-rule after a style rule.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if more than one rule is given in the `rule` parameter.
-- `HierarchyRequestError` {{domxref("DOMException")}}
-  - : Thrown if trying to insert an {{cssxref("@import")}} at-rule after a style rule.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if `rule` is {{cssxref("@namespace")}} and the rule-list has more than just `@import` at-rules and/or `@namespace` at-rules.
+  - : Thrown if `rule` is {{cssxref("@namespace")}} and the [rule-list](/en-US/docs/Web/CSS/Reference/Values/rule-list) contains at-rules other than `@import` and `@namespace` at-rules.
 
 ## Examples
 
@@ -71,7 +63,7 @@ The newly inserted rule's index within the stylesheet's rule-list.
 This snippet pushes a new rule onto the top of my stylesheet.
 
 ```js
-myStyle.insertRule('#blanc { color: white }', 0);
+myStyle.insertRule("#blanc { color: white }", 0);
 ```
 
 ### Function to add a stylesheet rule
@@ -96,8 +88,8 @@ addStylesheetRules([
   ]
 ]);
 */
-function addStylesheetRules (rules) {
-  const styleEl = document.createElement('style');
+function addStylesheetRules(rules) {
+  const styleEl = document.createElement("style");
 
   // Append <style> element to <head>
   document.head.appendChild(styleEl);
@@ -105,24 +97,26 @@ function addStylesheetRules (rules) {
   // Grab style element's sheet
   const styleSheet = styleEl.sheet;
 
-  for (let i = 0; i < rules.length; i++) {
-    let j = 1,
-        rule = rules[i],
-        selector = rule[0],
-        propStr = '';
+  for (let rule of rules) {
+    let i = 1,
+      selector = rule[0],
+      propStr = "";
     // If the second argument of a rule is an array of arrays, correct our variables.
     if (Array.isArray(rule[1][0])) {
       rule = rule[1];
-      j = 0;
+      i = 0;
     }
 
-    for (let pl = rule.length; j < pl; j++) {
-      const prop = rule[j];
-      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? ' !important' : ''};\n`;
+    for (; i < rule.length; i++) {
+      const prop = rule[i];
+      propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
     }
 
     // Insert CSS Rule
-    styleSheet.insertRule(`${selector}{${propStr}}`, styleSheet.cssRules.length);
+    styleSheet.insertRule(
+      `${selector}{${propStr}}`,
+      styleSheet.cssRules.length,
+    );
   }
 }
 ```
@@ -138,4 +132,4 @@ function addStylesheetRules (rules) {
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)

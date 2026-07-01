@@ -1,23 +1,14 @@
 ---
-title: PresentationConnection.terminate()
+title: "PresentationConnection: terminate() method"
+short-title: terminate()
 slug: Web/API/PresentationConnection/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMarkupWork
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Reference
-  - terminate
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PresentationConnection.terminate
 ---
 
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 When the `terminate()` method is called on a {{domxref("PresentationConnection")}}, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether `terminate()` is called in the controlling or the presenting context.
 
@@ -34,6 +25,10 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,21 +1,26 @@
 ---
 title: Date.prototype.toDateString()
+short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.toDateString
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`toDateString()`** method of {{jsxref("Date")}} instances returns a string representing the date portion of this date interpreted in the local timezone.
 
-The **`toDateString()`** method returns the date portion of a {{jsxref("Date")}} object interpreted in the local timezone in English.
+{{InteractiveExample("JavaScript Demo: Date.prototype.toDateString()")}}
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## Syntax
 
@@ -23,9 +28,13 @@ The **`toDateString()`** method returns the date portion of a {{jsxref("Date")}}
 toDateString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A string representing the date portion of the given {{jsxref("Date")}} object in human-readable form in English.
+A string representing the date portion of the given date (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
@@ -38,23 +47,21 @@ A string representing the date portion of the given {{jsxref("Date")}} object in
 
 For example: "Thu Jan 01 1970".
 
-- If you want to get the _time_ part, use [`toTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString).
-- If you want to get both the date and time, use [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString).
-- If you want to make the date interpreted as UTC instead of local timezone, use [`toUTCString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString).
-- If you want to format the date in a more user-friendly format (e.g. localization), use [`toLocaleDateString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString).
+- If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
+- If you want to get both the date and time, use {{jsxref("Date/toString", "toString()")}}.
+- If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
+- If you want to format the date in a more user-friendly format (e.g., localization), use {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}.
 
 ## Examples
 
-### A basic usage of toDateString()
+### Using toDateString()
 
 ```js
-const d = new Date(1993, 5, 28, 14, 39, 7);
+const d = new Date(0);
 
-console.log(d.toString()); // Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // Mon Jun 28 1993
+console.log(d.toString()); // "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)"
+console.log(d.toDateString()); // "Thu Jan 01 1970"
 ```
-
-> **Note:** Month are 0-indexed when used as an argument of {{jsxref("Date")}} (thus 0 corresponds to January and 11 to December).
 
 ## Specifications
 

@@ -2,14 +2,6 @@
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
 
@@ -17,13 +9,13 @@ browser-compat: api.AudioBufferSourceNode
 
 The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}.
 
-This interface is especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.
+This interface is especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. To play sounds which require accurate timing but must be streamed from the network or played from disk, use an {{domxref("AudioWorkletNode")}} to implement its playback.
 
 {{InheritanceDiagram}}
 
 An `AudioBufferSourceNode` has no inputs and exactly one output, which has the same number of channels as the `AudioBuffer` indicated by its {{domxref("AudioBufferSourceNode.buffer", "buffer")}} property. If there's no buffer set—that is, if `buffer` is `null`—the output contains a single channel of silence (every sample is 0).
 
-An `AudioBufferSourceNode` can only be played once; after each call to {{domxref("AudioScheduledSourceNode.start", "start()")}}, you have to create a new node if you want to play the same sound again. Fortunately, these nodes are very inexpensive to create, and the actual `AudioBuffer`s can be reused for multiple plays of the sound. Indeed, you can use these nodes in a "fire and forget" manner: create the node, call `start()` to begin playing the sound, and don't even bother to hold a reference to it. It will automatically be garbage-collected at an appropriate time, which won't be until sometime after the sound has finished playing.
+An `AudioBufferSourceNode` can only be played once; after each call to {{domxref("AudioBufferSourceNode.start", "start()")}}, you have to create a new node if you want to play the same sound again. Fortunately, these nodes are very inexpensive to create, and the actual `AudioBuffer`s can be reused for multiple plays of the sound. Indeed, you can use these nodes in a "fire and forget" manner: create the node, call `start()` to begin playing the sound, and don't even bother to hold a reference to it. It will automatically be garbage-collected at an appropriate time, which won't be until sometime after the sound has finished playing.
 
 Multiple calls to {{domxref("AudioScheduledSourceNode/stop", "stop()")}} are allowed. The most recent call replaces the previous one, if the `AudioBufferSourceNode` has not already reached the end of the buffer.
 
@@ -66,7 +58,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}_.
 - {{domxref("AudioBufferSourceNode.loopEnd")}} {{optional_inline}}
   - : A floating-point number indicating the time, in seconds, at which playback of the {{domxref("AudioBuffer")}} stops and loops back to the time indicated by `loopStart`, if `loop` is `true`. The default value is `0`.
 - {{domxref("AudioBufferSourceNode.playbackRate")}}
-  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
+  - : A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that defines the speed factor at which the audio asset will be played, where a value of 1.0 is the sound's natural sampling rate. Since no pitch correction is applied on the output, this can be used to change the pitch of the sample. This value is compounded with `detune` to determine the final playback rate.
 
 ## Instance methods
 
@@ -75,28 +67,25 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
   - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
 
-## Event handlers
-
-_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
-
 ## Examples
 
 In this example, we create a two-second buffer, fill it with white noise, and then play it using an `AudioBufferSourceNode`. The comments should clearly explain what is going on.
 
-> **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!NOTE]
+> You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 const myArrayBuffer = audioCtx.createBuffer(
   2,
   audioCtx.sampleRate * 3,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 // Fill the buffer with white noise;
-//just random values between -1.0 and 1.0
+// just random values between -1.0 and 1.0
 for (let channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
   // This gives us the actual ArrayBuffer that contains the data
   const nowBuffering = myArrayBuffer.getChannelData(channel);
@@ -119,7 +108,8 @@ source.connect(audioCtx.destination);
 source.start();
 ```
 
-> **Note:** For a `decodeAudioData()` example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.
+> [!NOTE]
+> For a `decodeAudioData()` example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.
 
 ## Specifications
 

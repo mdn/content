@@ -1,13 +1,8 @@
 ---
-title: Navigator.maxTouchPoints
+title: "Navigator: maxTouchPoints property"
+short-title: maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
 browser-compat: api.Navigator.maxTouchPoints
 ---
 
@@ -15,17 +10,23 @@ browser-compat: api.Navigator.maxTouchPoints
 
 The **`maxTouchPoints`** read-only property of the
 {{domxref("Navigator")}} interface returns the maximum number of simultaneous touch
-contact points are supported by the current device.
+contact points that are supported by the current device.
 
 ## Value
 
 A number.
 
-## Examples
+This value is hardware-dependent. Desktop computers without a touchscreen (Mac, Windows and Linux) return 0 while smartphones (Android and iOS) typically return 5.
+
+## Example
 
 ```js
 if (navigator.maxTouchPoints > 1) {
-  // browser supports multi-touch
+  // Device supports tracking at least 2 touch points; offer complex
+  // interaction gestures such as swiping with two/three fingers
+} else {
+  // Device only has 1 touch point or is not a touch screen.
+  // Offer basic gestures such as dragging and clicking
 }
 ```
 

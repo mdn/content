@@ -1,19 +1,13 @@
 ---
 title: ReferenceError() constructor
+short-title: ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`ReferenceError`** object represents an error when a
-non-existent variable is referenced.
+The **`ReferenceError()`** constructor creates {{jsxref("ReferenceError")}} objects.
 
 ## Syntax
 
@@ -31,7 +25,8 @@ ReferenceError(message, fileName)
 ReferenceError(message, fileName, lineNumber)
 ```
 
-> **Note:** `ReferenceError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `ReferenceError` instance.
+> [!NOTE]
+> `ReferenceError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `ReferenceError` instance.
 
 ### Parameters
 
@@ -53,15 +48,12 @@ ReferenceError(message, fileName, lineNumber)
 
 ```js
 try {
-  let a = undefinedVariable
+  let a = undefinedVariable;
 } catch (e) {
-  console.log(e instanceof ReferenceError)  // true
-  console.log(e.message)                    // "undefinedVariable is not defined"
-  console.log(e.name)                       // "ReferenceError"
-  console.log(e.fileName)                   // "Scratchpad/1"
-  console.log(e.lineNumber)                 // 2
-  console.log(e.columnNumber)               // 6
-  console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "undefinedVariable is not defined"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 
@@ -69,15 +61,12 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Hello', 'someFile.js', 10)
+  throw new ReferenceError("Hello");
 } catch (e) {
-  console.log(e instanceof ReferenceError)  // true
-  console.log(e.message)                    // "Hello"
-  console.log(e.name)                       // "ReferenceError"
-  console.log(e.fileName)                   // "someFile.js"
-  console.log(e.lineNumber)                 // 10
-  console.log(e.columnNumber)               // 0
-  console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof ReferenceError); // true
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.stack); // Stack of the error
 }
 ```
 

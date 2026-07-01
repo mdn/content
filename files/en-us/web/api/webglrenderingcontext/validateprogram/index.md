@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.validateProgram()
+title: "WebGLRenderingContext: validateProgram() method"
+short-title: validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.validateProgram
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.validateProgram()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) validates a
@@ -47,7 +42,7 @@ gl.validateProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw `Could not compile WebGL program. \n\n${info}`;
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 
 gl.useProgram(program);

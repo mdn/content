@@ -2,23 +2,14 @@
 title: XRSession
 slug: Web/API/XRSession
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR Device API
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession
 ---
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The {{domxref("WebXR Device API")}}'s **`XRSession`** interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
+The **`XRSession`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) represents an ongoing session between a web application and a user's XR device (such as a VR headset), providing methods and properties used to interact with and control the session. To open a WebXR session, use the {{domxref("XRSystem")}} interface's {{domxref("XRSystem.requestSession", "requestSession()")}} method.
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
 
@@ -34,6 +25,8 @@ _In addition to the properties listed below, `XRSession` inherits properties fro
   - : Returns the depth-sensing usage with which the session was configured.
 - {{DOMxRef("XRSession.domOverlayState", "domOverlayState")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Provides information about the DOM overlay, if the feature is enabled.
+- {{DOMxRef("XRSession.enabledFeatures", "enabledFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns an array of granted [session features](/en-US/docs/Web/API/XRSystem/requestSession#session_features).
 - {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns this session's blend mode which denotes how much of the real-world environment is visible through the XR device and how the device will blend the device imagery with it.
 - {{DOMxRef("XRSession.inputSources", "inputSources")}} {{Experimental_Inline}} {{ReadOnlyInline}}
@@ -54,7 +47,7 @@ _`XRSession` provides the following methods in addition to those inherited from 
 - {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}} {{Experimental_Inline}}
   - : Removes a callback from the animation frame painting callback from `XRSession`'s set of animation frame rendering callbacks, given the identifying handle returned by a previous call to {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 - {{DOMxRef("XRSession.end", "end()")}} {{Experimental_Inline}}
-  - : Ends the WebXR session. Returns a {{jsxref("promise")}} which resolves when the session has been shut down.
+  - : Ends the WebXR session. Returns a {{jsxref("Promise")}} which resolves when the session has been shut down.
 - {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} {{Experimental_Inline}}
   - : Schedules the specified method to be called the next time the {{glossary("user agent")}} is working on rendering an animation frame for the WebXR device. Returns an integer value which can be used to identify the request for the purposes of canceling the callback using `cancelAnimationFrame()`. This method is comparable to the {{domxref("Window.requestAnimationFrame()")}} method.
 - {{DOMxRef("XRSession.requestHitTestSource", "requestHitTestSource()")}} {{Experimental_Inline}}
@@ -77,19 +70,21 @@ _The following events are delivered to `XRSession` objects._
 - {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} {{Experimental_Inline}}
   - : An event of type {{domxref("XRInputSourcesChangeEvent")}} sent to the `XRSession` when the list of active XR input sources has changed. Also available through the `oninputsourceschange` event handler property.
 - {{domxref("XRSession.select_event", "select")}} {{Experimental_Inline}}
-  - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions). This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The `select` event is sent after the `selectstart` event is sent and immediately before the `selectend` event is sent. If `select` is _not_ sent, then the select action was aborted before being completed. Also available through the `onselect` event handler property.
+  - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action). This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The `select` event is sent after the `selectstart` event is sent and immediately before the `selectend` event is sent. If `select` is _not_ sent, then the select action was aborted before being completed. Also available through the `onselect` event handler property.
 - {{domxref("XRSession.selectend_event", "selectend")}} {{Experimental_Inline}}
   - : An event of type {{domxref("XRInputSourceEvent")}} which gets sent to the session object when one of its input devices finishes its primary action or gets disconnected while in the process of handling a primary action. For example: for button or trigger actions, this means the button has been released; for spoken commands, it means the user has finished speaking. This is the last of the three `select*` events to be sent. Also available through the `onselectend` event handler property.
 - {{domxref("XRSession.selectstart_event", "selectstart")}} {{Experimental_Inline}}
   - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session object when one of its input devices is first engaged by the user in such a way as to cause the primary action to begin. This is the first of the `session*` event to be sent. Also available through the `onselectstart` event handler property.
 - {{domxref("XRSession.squeeze_event", "squeeze")}} {{Experimental_Inline}}
-  - : An {{domxref("XRInputSourceEvent")}} sent to indicate that a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the `squeezeend` event is sent to indicate that the squeeze action is over. Also available through the `onsqueeze` event handler property.
+  - : An {{domxref("XRInputSourceEvent")}} sent to indicate that a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action) has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the `squeezeend` event is sent to indicate that the squeeze action is over. Also available through the `onsqueeze` event handler property.
 - {{domxref("XRSession.squeezeend_event", "squeezeend")}} {{Experimental_Inline}}
-  - : An {{domxref("XRInputSourceEvent")}} sent to the `XRSession` when the [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) ends, whether or not the action was successful. Also available using the `onsqueezeend` event handler property.
+  - : An {{domxref("XRInputSourceEvent")}} sent to the `XRSession` when the [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action) ends, whether or not the action was successful. Also available using the `onsqueezeend` event handler property.
 - {{domxref("XRSession.squeezestart_event", "squeezestart")}} {{Experimental_Inline}}
   - : An event of type {{domxref("XRInputSourceEvent")}} which is sent to the `XRSession` when the user initially squeezes a squeezable controller. This may be, for example, a trigger which is used to represent grabbing objects, or might represent actual squeezing when wearing a haptic glove. Also available through the `onsqueezestart` event handler property.
 - {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{Experimental_Inline}}
   - : An {{domxref("XRSessionEvent")}} which is sent to the session when its visibility state as indicated by the {{domxref("XRSession.visibilityState", "visibilityState")}} changes. Also available through the `onvisibilitychange` event handler property.
+- {{domxref("XRSession.visibilitymaskchange_event", "visibilitymaskchange")}} {{Experimental_Inline}}
+  - : An {{domxref("XRVisibilityMaskChangeEvent")}} which is sent to the session when the portion of the {{domxref("XRView")}} visible to the user changes, enabling performance improvements by allowing the browser to draw only the visible part of the updated view. Also available through the `onvisibilitymaskchange` event handler property.
 
 ## Example
 
@@ -108,8 +103,12 @@ if (XR) {
 
         for (const xrView of viewer.views) {
           const xrViewport = xrWebGLLayer.getViewport(xrView);
-          gl.viewport(xrViewport.x, xrViewport.y,
-                      xrViewport.width, xrViewport.height);
+          gl.viewport(
+            xrViewport.x,
+            xrViewport.y,
+            xrViewport.width,
+            xrViewport.height,
+          );
         }
       });
     });
@@ -126,3 +125,7 @@ if (XR) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref(":xr-overlay")}} pseudo-class

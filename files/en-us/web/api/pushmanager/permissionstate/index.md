@@ -1,25 +1,20 @@
 ---
-title: PushManager.permissionState()
+title: "PushManager: permissionState() method"
+short-title: permissionState()
 slug: Web/API/PushManager/permissionState
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
-  - permissionState
 browser-compat: api.PushManager.permissionState
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`permissionState()`** method of the
 {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
 string indicating the permission state of the push manager. Possible
 values are `'prompt'`, `'denied'`, or `'granted'`.
 
-> **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
+> [!NOTE]
+> As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
 > granted for notifications, push will also be enabled.
 
 ## Syntax
@@ -32,10 +27,8 @@ permissionState(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing optional configuration parameters. It can have the following
     properties:
-
     - `userVisibleOnly`
       - : A boolean indicating that the returned push
         subscription will only be used for messages whose effect is made visible to the

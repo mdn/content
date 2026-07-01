@@ -2,24 +2,28 @@
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 page-type: javascript-class
-tags:
-  - Class
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Collator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.Collator`** object enables language-sensitive string comparison.
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## Constructor
 
@@ -31,10 +35,19 @@ The **`Intl.Collator`** object enables language-sensitive string comparison.
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
+## Instance properties
+
+These properties are defined on `Intl.Collator.prototype` and shared by all `Intl.Collator` instances.
+
+- {{jsxref("Object/constructor", "Intl.Collator.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Collator` instances, the initial value is the {{jsxref("Intl/Collator/Collator", "Intl.Collator")}} constructor.
+- `Intl.Collator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Collator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+
 ## Instance methods
 
-- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
-  - : Getter function that compares two strings according to the sort order of this {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} object.
+- {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare()")}}
+  - : Getter function that compares two strings according to the sort order of this `Intl.Collator` object.
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 
@@ -91,3 +104,4 @@ console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"))
 ## See also
 
 - {{jsxref("Intl")}}
+- {{jsxref("String.prototype.localeCompare()")}}

@@ -1,20 +1,10 @@
 ---
 title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-tags:
-  - API
-  - API Extensions
-  - Add-ons
-  - Extensions
-  - Reference
-  - Web
-  - Web Development
-  - WebExtensions
-  - pkcs11
+page-type: webextension-api
 browser-compat: webextensions.api.pkcs11
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `pkcs11` API enables an extension to enumerate [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) security modules and to make them accessible to the browser as sources of keys and certificates.
 
@@ -33,13 +23,15 @@ Perform the following steps:
    ![Load PKCS#11 device driver](load_device_driver.png)
 6. Enter a name for the security module, such as "_My Client Database_"
 
-   > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
+   > [!WARNING]
+   > Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
 
 7. Choose **Browse…** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
 
 ## Provisioning PKCS #11 modules
 
-> **Note:** Starting with Firefox 58, extensions can use the [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
+> [!NOTE]
+> Starting with Firefox 58, extensions can use this API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
 
 There are two environmental prerequisites for using this **API**:
 
@@ -63,8 +55,8 @@ For details about the manifest file's contents and location, see [Native manifes
 - {{WebExtAPIRef("pkcs11.uninstallModule()")}}
   - : Uninstalls the named PKCS #11 module.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}

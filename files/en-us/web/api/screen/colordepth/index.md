@@ -1,16 +1,12 @@
 ---
-title: Screen.colorDepth
+title: "Screen: colorDepth property"
+short-title: colorDepth
 slug: Web/API/Screen/colorDepth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
 browser-compat: api.Screen.colorDepth
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`Screen.colorDepth`** read-only property returns the
 color depth of the screen. Per the CSSOM, some implementations return `24`

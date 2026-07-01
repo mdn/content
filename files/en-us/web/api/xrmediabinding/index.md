@@ -2,15 +2,8 @@
 title: XRMediaBinding
 slug: Web/API/XRMediaBinding
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRMediaBinding
 ---
 
@@ -18,7 +11,7 @@ browser-compat: api.XRMediaBinding
 
 The **`XRMediaBinding`** interface is used to create layers that display the content of an {{domxref("HTMLVideoElement")}}.
 
-> **Note:**
+> [!NOTE]
 > Only the video frames will be displayed in the layer. Video controls need to be implemented separately and must be drawn in another layer.
 
 ## Constructor

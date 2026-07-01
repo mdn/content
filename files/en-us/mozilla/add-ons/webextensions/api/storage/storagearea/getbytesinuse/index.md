@@ -1,29 +1,22 @@
 ---
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - getBytesInUse
+page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
+Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 
-Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.
+> [!NOTE]
+> In Firefox, this method is supported in:
+>
+> - {{WebExtAPIRef("storage.sync")}}.
+> - {{WebExtAPIRef("storage.session")}} from Firefox 131.
+> - {{WebExtAPIRef("storage.local")}} and {{WebExtAPIRef("storage.managed")}} from Firefox 144.
 
-This function only exists in browser.storage.sync
-It does not exist in browser.storage.local
-See <https://bugzilla.mozilla.org/show_bug.cgi?id=1385832>
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+> [!NOTE]
+> `storage.managed.getBytesInUse()` always returns 0, at least in Chrome and Firefox.
 
 ## Syntax
 
@@ -33,21 +26,22 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 )
 ```
 
-`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1385832).
+Where `<storageType>` is one of the storage types: {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
 
 ### Parameters
 
 - `keys`
-  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an empty array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
+  - : A key (string) or keys (an array of strings) to identify the items whose storage space you want to retrieve. If an empty array is passed in, 0 is returned. If you pass `null` or `undefined`, the function returns the space used by the entire storage area.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects that were specified in `keys`. If the operation failed, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects specified in `keys`. If the operation fails, the promise is rejected with an error message.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

@@ -1,34 +1,25 @@
 ---
 title: menus.ACTION_MENU_TOP_LEVEL_LIMIT
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ACTION_MENU_TOP_LEVEL_LIMIT
-tags:
-  - ACTION_MENU_TOP_LEVEL_LIMIT
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-property
 browser-compat: webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
-The maximum number of top level extension items that can be added to a menu item whose {{WebExtAPIRef("contextMenus.ContextType", "ContextType")}} is "browser_action" or "page_action". Any items beyond this limit will be ignored.
+The maximum number of top level extension items that can be added to a menu item whose {{WebExtAPIRef("menus.ContextType", "ContextType")}} is "browser_action" or "page_action". Any items beyond this limit will be ignored.
 
 Its value is `6` on Firefox and Chrome.
 
 For compatibility with other browsers, Firefox makes this property available via the `contextMenus` namespace as well as the `menus` namespace.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#property-ACTION_MENU_TOP_LEVEL_LIMIT) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#property-ACTION_MENU_TOP_LEVEL_LIMIT) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

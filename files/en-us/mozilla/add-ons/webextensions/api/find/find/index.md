@@ -1,18 +1,10 @@
 ---
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
+page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Searches for text in a tab.
 
@@ -30,29 +22,30 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js-nolint
 browser.find.find(
-  queryphrase,       // string
+  queryPhrase,       // string
   options            // optional object
 )
 ```
 
 ### Parameters
 
-- `queryphrase`
-  - : `string`. The text to search for.
 - `options` {{optional_inline}}
-
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
-
-    - `tabId`
-      - : `integer`. ID of the tab to search. Defaults to the active tab.
     - `caseSensitive`
-      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+      - : `boolean`. If `true` the, the search is case-sensitive. Defaults to `false`.
     - `entireWord`
       - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
     - `includeRangeData`
       - : `boolean`. Include range data in the response, which describe where in the page DOM the match was found. Defaults to `false`.
     - `includeRectData`
-      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
+      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`
+    - `matchDiacritics`
+      - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
+    - `tabId`
+      - : `integer`. ID of the tab to search. Defaults to the active tab.
+
+- `queryPhrase`
+  - : `string`. The text to search for.
 
 ### Return value
 
@@ -61,34 +54,28 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `count`
   - : `integer`. The number of results found.
 - `rangeData` {{optional_inline}}
-
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. Each `RangeData` object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.
 
     The items correspond to the items given in `rectData`, so `rangeData[i]` describes the same match as `rectData[i]`.
 
     Each `RangeData` contains the following properties:
-
-    - `framePos`
-      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
-    - `startTextNodePos`
-      - : The ordinal position of the text node in which the match started.
-    - `endTextNodePos`
-      - : The ordinal position of the text node in which the match ended.
-    - `startOffset`
-      - : The ordinal position of the start of the match within its text node.
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
+    - `endTextNodePos`
+      - : The ordinal position of the text node in which the match ended.
+    - `framePos`
+      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
+    - `startOffset`
+      - : The ordinal position of the start of the match within its text node.
+    - `startTextNodePos`
+      - : The ordinal position of the text node in which the match started.
 
 - `rectData` {{optional_inline}}
-
   - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
 
     Each `RectData` object contains rectangle data for a single match. It has two properties:
-
     - `rectsAndTexts`
-
       - : An object containing two properties, both arrays:
-
         - `rectList`: an array of objects which each have four integer properties: `top`, `left`, `bottom`, `right`. These describe a rectangle relative to the top-left of the viewport.
         - `textList`: an array of strings, corresponding to the `rectList` array. The entry at `textList[i]` contains the part of the match bounded by the rectangle at `rectList[i]`.
 
@@ -101,16 +88,11 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
         ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
 
         In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
-
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
 
     - `text`
       - : The complete text of the match, "You may" in the example above.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -188,7 +170,7 @@ function getNodes() {
     document,
     window.NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   const nodes = [];
   while ((node = walker.nextNode())) {
@@ -293,3 +275,7 @@ browser.runtime.onMessage.addListener((message) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

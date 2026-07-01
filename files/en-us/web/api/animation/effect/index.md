@@ -1,15 +1,8 @@
 ---
-title: Animation.effect
+title: "Animation: effect property"
+short-title: effect
 slug: Web/API/Animation/effect
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - effect
-  - web animations api
 browser-compat: api.Animation.effect
 ---
 
@@ -19,7 +12,7 @@ The **`Animation.effect`** property of the [Web Animations API](/en-US/docs/Web/
 
 ## Value
 
-A {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or `null` to indicate no active effect.
+An {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or `null` to indicate no active effect.
 
 ## Specifications
 

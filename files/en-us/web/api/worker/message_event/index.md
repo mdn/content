@@ -1,19 +1,14 @@
 ---
-title: 'Worker: message event'
+title: "Worker: message event"
+short-title: message
 slug: Web/API/Worker/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Worker
-  - Event
-  - Reference
-  - message
 browser-compat: api.Worker.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-The `message` event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)).
+The `message` event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e., when the worker sends a message using [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)).
 
 This event is not cancellable and does not bubble.
 
@@ -21,10 +16,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('message', (event) => { });
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => { };
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -46,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
@@ -55,8 +50,8 @@ This code creates a new worker and listens to messages from it using [`addEventL
 ```js
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+worker.addEventListener("message", (event) => {
+  console.log(`Received message from worker: ${event.data}`);
 });
 ```
 
@@ -66,7 +61,7 @@ Alternatively, it could listen using the `onmessage` event handler property:
 const worker = new Worker("static/scripts/worker.js");
 
 worker.onmessage = (event) => {
-    console.log(`Received message from worker: ${event.data}`)
+  console.log(`Received message from worker: ${event.data}`);
 };
 ```
 
@@ -75,7 +70,7 @@ The worker posts messages using [`self.postMessage()`](/en-US/docs/Web/API/Dedic
 ```js
 // static/scripts/worker.js
 
-self.postMessage('I\'m alive!');
+self.postMessage("I'm alive!");
 ```
 
 ## Specifications

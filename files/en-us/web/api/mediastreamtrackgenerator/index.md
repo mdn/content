@@ -2,19 +2,18 @@
 title: MediaStreamTrackGenerator
 slug: Web/API/MediaStreamTrackGenerator
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MediaStreamTrackGenerator
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MediaStreamTrackGenerator
 ---
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
-The **`MediaStreamTrackGenerator`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
+> [!NOTE]
+> Consider using {{domxref("VideoTrackGenerator")}} instead.
+
+The **`MediaStreamTrackGenerator`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.
 The object consumes a stream of media frames as input, which can be audio or video frames.
 
 ## Constructor
@@ -35,14 +34,14 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });
 const videoTrack = stream.getVideoTracks()[0];
 
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 const transformer = new TransformStream({
   async transform(videoFrame, controller) {
@@ -53,8 +52,14 @@ const transformer = new TransformStream({
   },
 });
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
+
+## See also
+
+- {{domxref("VideoTrackGenerator")}}
 
 ## Specifications
 

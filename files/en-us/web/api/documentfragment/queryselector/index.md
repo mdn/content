@@ -1,13 +1,8 @@
 ---
-title: DocumentFragment.querySelector()
+title: "DocumentFragment: querySelector() method"
+short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
-  - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
 
@@ -39,17 +34,17 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors), or `null` is returned if there are no matches.
 
 ## Examples
 
 ### Basic example
 
 In this basic example, the first element in the {{domxref("DocumentFragment")}} with
-the class "`myclass`" is returned:
+the class `myclass` is returned:
 
 ```js
-const el = documentfragment.querySelector('.myclass');
+const el = documentfragment.querySelector(".myclass");
 ```
 
 ### CSS syntax and the method's argument
@@ -62,13 +57,13 @@ double back slash:
 ```html
 <div id="foo\bar"></div>
 <div id="foo:bar"></div>
+```
 
-<script>
-  document.querySelector("#foo\bar"); // Does not match anything
-  document.querySelector("#foo\\\\bar"); // Match the first div
-  document.querySelector("#foo:bar"); // Does not match anything
-  document.querySelector("#foo\\:bar"); // Match the second div
-</script>
+```js
+document.querySelector("#foo\bar"); // Does not match anything
+document.querySelector("#foo\\\\bar"); // Match the first div
+document.querySelector("#foo:bar"); // Does not match anything
+document.querySelector("#foo\\:bar"); // Match the second div
 ```
 
 ## Specifications

@@ -1,25 +1,32 @@
 ---
 title: Intl.getCanonicalLocales()
+short-title: getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 page-type: javascript-static-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Intl.getCanonicalLocales
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.getCanonicalLocales()`** static method returns an array
 containing the canonical locale names. Duplicates will be omitted and elements will be
 validated as structurally valid language tags.
 
-{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.getCanonicalLocales()")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+console.log(Intl.getCanonicalLocales("EN-US"));
+// Expected output: Array ["en-US"]
+
+console.log(Intl.getCanonicalLocales(["EN-US", "Fr"]));
+// Expected output: Array ["en-US", "fr"]
+
+try {
+  Intl.getCanonicalLocales("EN_US");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output: RangeError: invalid language tag: "EN_US"
+}
+```
 
 ## Syntax
 
@@ -41,11 +48,11 @@ An array containing the canonical locale names.
 ### Using getCanonicalLocales
 
 ```js
-Intl.getCanonicalLocales('EN-US'); // ["en-US"]
-Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
+Intl.getCanonicalLocales("EN-US"); // ["en-US"]
+Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
-Intl.getCanonicalLocales('EN_US');
-// RangeError:'EN_US' is not a structurally valid language tag
+Intl.getCanonicalLocales("EN_US");
+// RangeError: invalid language tag: "EN_US"
 ```
 
 ## Specifications
@@ -58,7 +65,7 @@ Intl.getCanonicalLocales('EN_US');
 
 ## See also
 
+- [Polyfill of `Intl.getCanonicalLocales` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-getcanonicallocales/)
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
-- [A polyfill of `Intl.getCanonicalLocales` in FormatJS](https://formatjs.io/docs/polyfills/intl-getcanonicallocales/)

@@ -1,34 +1,16 @@
 ---
-title: 'XRSession: squeezeend event'
+title: "XRSession: squeezeend event"
+short-title: squeezeend
 slug: Web/API/XRSession/squeezeend_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Mixed
-  - Primary Squeeze Actions
-  - Reality
-  - Reference
-  - Squeeze Actions
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - actions
-  - augmented
-  - squeezeend
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.squeezeend_event
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The WebXR event **`squeezeend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
+The WebXR event **`squeezeend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
 
 Primary squeeze actions include things like users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
 
@@ -36,8 +18,8 @@ Primary squeeze actions include things like users pressing triggers or buttons, 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('squeezeend', (event) => { })
+```js-nolint
+addEventListener("squeezeend", (event) => { })
 
 onsqueezeend = (event) => { }
 ```

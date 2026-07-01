@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.blendFuncSeparate()
+title: "WebGLRenderingContext: blendFuncSeparate() method"
+short-title: blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.blendFuncSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used
@@ -26,18 +21,18 @@ blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ### Parameters
 
 - `srcRGB`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the red, green and blue (RGB)
     source blending factors. The default value is `gl.ONE`. For possible
     values, see below.
 - `dstRGB`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the red, green and blue (RGB)
     destination blending factors. The default value is `gl.ZERO`. For possible
     values, see below.
 - `srcAlpha`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha source blending
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the alpha source blending
     factor. The default value is `gl.ONE`. For possible values, see below.
 - `dstAlpha`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha destination blending
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the alpha destination blending
     factor. The default value is `gl.ZERO`. For possible values, see below.
 
 ### Return value

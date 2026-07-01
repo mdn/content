@@ -1,21 +1,14 @@
 ---
-title: ContentIndexEvent()
+title: "ContentIndexEvent: ContentIndexEvent() constructor"
+short-title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - content index
-  - content indexing
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`ContentIndexEvent()`** constructor creates a new {{domxref("ContentIndexEvent")}} object
 whose type and other options are configured as specified.
@@ -64,6 +57,5 @@ ciEvent.id; // should return 'unique-content-id'
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

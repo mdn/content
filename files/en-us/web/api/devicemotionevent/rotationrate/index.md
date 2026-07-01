@@ -1,26 +1,18 @@
 ---
-title: DeviceMotionEvent.rotationRate
+title: "DeviceMotionEvent: rotationRate property"
+short-title: rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Device Orientation
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEvent.rotationRate
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEvent.rotationRate`** read-only property returns the rate at which the device is rotating around each of its axes in degrees per
+The **`rotationRate`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the rate at which the device is rotating around each of its axes in degrees per
 second.
 
-> **Note:** If the hardware isn't capable of providing this
+> [!NOTE]
+> If the hardware isn't capable of providing this
 > information, this property returns `null`.
 
 ## Value
@@ -29,12 +21,12 @@ The `rotationRate` property is a read only object describing the rotation
 rates of the device around each of its axes:
 
 - `alpha`
+  - : The rate at which the device is rotating about its X axis; that is, front to back.
+- `beta`
+  - : The rate at which the device is rotating about its Y axis; that is, side to side.
+- `gamma`
   - : The rate at which the device is rotating about its Z axis; that is, being twisted
     about a line perpendicular to the screen.
-- `beta`
-  - : The rate at which the device is rotating about its X axis; that is, front to back.
-- `gamma`
-  - : The rate at which the device is rotating about its Y axis; that is, side to side.
 
 ## Specifications
 
@@ -46,9 +38,6 @@ rates of the device around each of its axes:
 
 ## See also
 
-- {{DOMxRef("DeviceMotionEvent") }}
-- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{DOMxRef("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
+- {{DOMxRef("Window/devicemotion_event", "devicemotion")}} event

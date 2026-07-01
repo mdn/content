@@ -1,14 +1,8 @@
 ---
-title: MediaStreamAudioSourceNode()
+title: "MediaStreamAudioSourceNode: MediaStreamAudioSourceNode() constructor"
+short-title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
 
@@ -18,7 +12,8 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSour
 creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
 the first audio track of a given {{domxref("MediaStream")}} as its source.
 
-> **Note:** Another way to create a
+> [!NOTE]
+> Another way to create a
 > `MediaStreamAudioSourceNode` is to call
 > the {{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
 > from which you want to obtain audio.
@@ -35,9 +30,7 @@ new MediaStreamAudioSourceNode(context, options)
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to
     be associated with.
 - `options`
-
   - : An object defining the properties you want the `MediaStreamAudioSourceNode` to have:
-
     - `mediaStream`
       - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.
 
@@ -59,28 +52,32 @@ access to the user's camera, then creates a new
 
 ```js
 // define variables
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode
 if (navigator.mediaDevices.getUserMedia) {
-   navigator.mediaDevices.getUserMedia (
+  navigator.mediaDevices
+    .getUserMedia(
       // constraints: audio and video for this app
       {
-         audio: true,
-         video: false
-      }).then((stream) => {
-        const options = {
-          mediaStream : stream
-        }
+        audio: true,
+        video: false,
+      },
+    )
+    .then((stream) => {
+      const options = {
+        mediaStream: stream,
+      };
 
-        const source = new MediaStreamAudioSourceNode(audioCtx, options);
-        source.connect(audioCtx.destination);
-      }).catch((err) => {
-       console.error(`The following gUM error occurred: ${err}`);
-      });
+      const source = new MediaStreamAudioSourceNode(audioCtx, options);
+      source.connect(audioCtx.destination);
+    })
+    .catch((err) => {
+      console.error(`The following gUM error occurred: ${err}`);
+    });
 } else {
-  console.log('new getUserMedia not supported on your browser!');
+  console.log("new getUserMedia not supported on your browser!");
 }
 ```
 

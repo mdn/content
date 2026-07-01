@@ -1,18 +1,12 @@
 ---
-title: AudioData.allocationSize()
+title: "AudioData: allocationSize() method"
+short-title: allocationSize()
 slug: Web/API/AudioData/allocationSize
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - allocationSize
-  - AudioData
-  - Experimental
 browser-compat: api.AudioData.allocationSize
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`allocationSize()`** method of the {{domxref("AudioData")}} interface returns the size in bytes required to hold the current sample as filtered by options passed into the method.
 

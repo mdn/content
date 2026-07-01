@@ -1,28 +1,12 @@
 ---
-title: XRRigidTransform.inverse
+title: "XRRigidTransform: inverse property"
+short-title: inverse
 slug: Web/API/XRRigidTransform/inverse
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - inverse
-  - transform
 browser-compat: api.XRRigidTransform.inverse
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only **`inverse`** property
 of the {{domxref("XRRigidTransform")}} interface returns another
@@ -56,8 +40,11 @@ for (const view of pose.view) {
   // …
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
-                      false, modelViewMatrix);
+  gl.uniformMatrix4fv(
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   // …
 }

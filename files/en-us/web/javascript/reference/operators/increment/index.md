@@ -2,19 +2,27 @@
 title: Increment (++)
 slug: Web/JavaScript/Reference/Operators/Increment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.increment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **increment (`++`)** operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
 
-{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
+{{InteractiveExample("JavaScript Demo: Increment (++) operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
 
 ## Syntax
 
@@ -25,13 +33,15 @@ x++
 
 ## Description
 
+The `++` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt increment if the operand becomes a BigInt; otherwise, it performs number increment.
+
 If used postfix, with operator after operand (for example, `x++`), the increment operator increments and returns the value before incrementing.
 
 If used prefix, with operator before operand (for example, `++x`), the increment operator increments and returns the value after incrementing.
 
-The increment operator can only be applied on operands that are references (variables and object properties; i.e. valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
+The increment operator can only be applied on operands that are references (variables and object properties; i.e., valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
 
-```js example-bad
+```js-nolint example-bad
 ++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
 ```
 
@@ -42,9 +52,11 @@ The increment operator can only be applied on operands that are references (vari
 ```js
 let x = 3;
 const y = x++;
+// x is 4; y is 3
 
-// x = 4
-// y = 3
+let x2 = 3n;
+const y2 = x2++;
+// x2 is 4n; y2 is 3n
 ```
 
 ### Prefix increment
@@ -52,9 +64,11 @@ const y = x++;
 ```js
 let x = 3;
 const y = ++x;
+// x is 4; y is 4
 
-// x = 4
-// y = 4
+let x2 = 3n;
+const y2 = ++x2;
+// x2 is 4n; y2 is 4n
 ```
 
 ## Specifications
@@ -67,12 +81,12 @@ const y = ++x;
 
 ## See also
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication (`*`)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

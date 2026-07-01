@@ -1,28 +1,29 @@
 ---
 title: Set.prototype.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
 browser-compat: javascript.builtins.Set.entries
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`entries()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains **an array of `[value, value]`** for each element in this set, in insertion order. For `Set` objects there is no `key` like in `Map` objects. However, to keep the API similar to the `Map` object, each _entry_ has the same value for its _key_ and _value_ here, so that an array `[value, value]` is returned.
 
-The **`entries()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object
-that contains **an array of `[value, value]`** for each element
-in the `Set` object, in insertion order. For `Set` objects there
-is no `key` like in `Map` objects. However, to keep the API
-similar to the `Map` object, each _entry_ has the same value for its
-_key_ and _value_ here, so that an array `[value, value]` is
-returned.
+{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
 
-{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
+```js interactive-example
+const set = new Set();
+set.add(42);
+set.add("forty two");
+
+const iterator = set.entries();
+
+for (const entry of iterator) {
+  console.log(entry);
+  // Expected output: Array [42, 42]
+  // Expected output: Array ["forty two", "forty two"]
+}
+```
 
 ## Syntax
 
@@ -30,10 +31,13 @@ returned.
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object that contains an array of `[value, value]` for each
-element in the given `Set`, in insertion order.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 

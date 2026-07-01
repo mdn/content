@@ -1,20 +1,10 @@
 ---
 title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getBadgeText
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets the browser action's badge text.
 
@@ -31,9 +21,7 @@ let gettingText = browser.browserAction.getBadgeText(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab from which to get the badge text.
     - `windowId` {{optional_inline}}
@@ -47,10 +35,6 @@ let gettingText = browser.browserAction.getBadgeText(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the badge text.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -67,7 +51,12 @@ gettingBadgeText.then(gotBadgeText);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

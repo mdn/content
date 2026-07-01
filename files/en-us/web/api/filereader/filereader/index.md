@@ -1,18 +1,14 @@
 ---
-title: FileReader()
+title: "FileReader: FileReader() constructor"
+short-title: FileReader()
 slug: Web/API/FileReader/FileReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - FileReader
-  - Reference
 browser-compat: api.FileReader.FileReader
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`FileReader()`** constructor creates a new FileReader.
+The **`FileReader()`** constructor creates a new `FileReader`.
 
 For details about how to use `FileReader`, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
@@ -28,7 +24,7 @@ None.
 
 ## Examples
 
-The following code snippet shows creation of a [`FileReader`](/en-US/docs/Web/API/FileReader) object using the `FileReader()` constructor and subsequent usage of the object:
+The following code snippet shows creation of a {{domxref("FileReader")}} object using the `FileReader()` constructor and subsequent usage of the object:
 
 ```js
 function printFile(file) {

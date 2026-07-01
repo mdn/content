@@ -1,20 +1,10 @@
 ---
 title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - Type
-  - VisitItem
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.history.VisitItem
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 An object describing a single visit to a page.
 
@@ -33,13 +23,14 @@ Values of this type are objects. They contain the following properties:
 - `transition`
   - : {{WebExtAPIRef('history.TransitionType')}}. Describes how the browser navigated to the page on this occasion.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#type-VisitItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#type-VisitItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

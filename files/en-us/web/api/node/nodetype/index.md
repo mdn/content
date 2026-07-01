@@ -1,19 +1,16 @@
 ---
-title: Node.nodeType
+title: "Node: nodeType property"
+short-title: nodeType
 slug: Web/API/Node/nodeType
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.nodeType
 ---
 
 {{APIRef("DOM")}}
 
 The read-only **`nodeType`** property of a {{domxref("Node")}} interface is an integer
-that identifies what the node is. It distinguishes different kind of nodes from each other,
-such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.
+that identifies what the node is. It distinguishes different kinds of nodes from each other,
+such as {{domxref("Element", "elements")}}, {{domxref("Text", "text")}}, and {{domxref("Comment", "comments")}}.
 
 ## Value
 
@@ -25,7 +22,7 @@ An integer which specifies the type of the node. Possible values are:
   - : An {{domxref("Attr", "Attribute")}} of an {{domxref("Element")}}.
 - `Node.TEXT_NODE` (`3`)
   - : The actual {{domxref("Text")}} inside an {{domxref("Element")}} or {{domxref("Attr")}}.
-- `Node.CDATA_SECTION_NODE`(`4`)
+- `Node.CDATA_SECTION_NODE` (`4`)
   - : A {{domxref("CDATASection")}}, such as `<!CDATA[[ … ]]>`
 - `Node.PROCESSING_INSTRUCTION_NODE` (`7`)
   - : A {{domxref("ProcessingInstruction")}} of an XML document, such as `<?xml-stylesheet … ?>`.
@@ -34,7 +31,7 @@ An integer which specifies the type of the node. Possible values are:
 - `Node.DOCUMENT_NODE` (`9`)
   - : A {{domxref("Document")}} node.
 - `Node.DOCUMENT_TYPE_NODE` (`10`)
-  - : A {{domxref("DocumentType")}} node, such as `<!DOCTYPE html>`.
+  - : A {{domxref("DocumentType")}} node, such as `<!doctype html>`.
 - `Node.DOCUMENT_FRAGMENT_NODE` (`11`)
   - : A {{domxref("DocumentFragment")}} node.
 

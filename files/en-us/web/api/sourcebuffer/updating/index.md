@@ -1,26 +1,16 @@
 ---
-title: SourceBuffer.updating
+title: "SourceBuffer: updating property"
+short-title: updating
 slug: Web/API/SourceBuffer/updating
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Updating
-  - Video
 browser-compat: api.SourceBuffer.updating
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is
-currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}},
-{{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
+currently being updated — i.e., whether an {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} or {{domxref("SourceBuffer.remove", "remove()")}}
 operation is currently in progress.
 
 ## Value

@@ -1,28 +1,15 @@
 ---
-title: NavigateEvent.downloadRequest
+title: "NavigateEvent: downloadRequest property"
+short-title: downloadRequest
 slug: Web/API/NavigateEvent/downloadRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - downloadRequest
-  - Experimental
-  - History
-  - Navigate
-  - NavigateEvent
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
 browser-compat: api.NavigateEvent.downloadRequest
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`downloadRequest`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns the filename of the file requested for download, in the case of a download navigation (e.g. an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
+{{domxref("NavigateEvent")}} interface returns the filename of the file requested for download, in the case of a download navigation (e.g., an {{htmlelement("a")}} or {{htmlelement("area")}} element with a `download` attribute), or `null` otherwise.
 
 ## Value
 
@@ -50,7 +37,7 @@ navigation.addEventListener("navigate", (event) => {
       } else {
         doSinglePageAppNav(event.destination, event.signal);
       }
-    }
+    },
   });
 });
 ```
@@ -67,4 +54,3 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

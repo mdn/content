@@ -2,13 +2,6 @@
 title: RTCSctpTransport
 slug: Web/API/RTCSctpTransport
 page-type: web-api-interface
-tags:
-  - Interface
-  - NeedsExample
-  - RTCSctpTransport
-  - Reference
-  - Unimplemented
-  - WebRTC
 browser-compat: api.RTCSctpTransport
 ---
 
@@ -16,9 +9,9 @@ browser-compat: api.RTCSctpTransport
 
 The **`RTCSctpTransport`** interface provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an {{DOMxRef("RTCPeerConnection")}}'s data channels are sent and received.
 
-You don't create {{DOMxRef("RTCSctpTransport")}} objects yourself; instead, you get access to the `RTCSctpTransport` for a given `RTCPeerConnection` through its **{{DOMxRef("RTCPeerConnection.sctp", "sctp")}}** property.
+You don't create `RTCSctpTransport` objects yourself; instead, you get access to the `RTCSctpTransport` for a given `RTCPeerConnection` through its **{{DOMxRef("RTCPeerConnection.sctp", "sctp")}}** property.
 
-Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTransport.maxMessageSize", "maxMessageSize")}} property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
+Possibly the most useful property on this interface is its [`maxMessageSize`](/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize) property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
 
 {{InheritanceDiagram}}
 
@@ -35,10 +28,12 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 - {{DOMxRef("RTCSctpTransport.transport")}} {{ReadOnlyInline}}
   - : An {{DOMxRef("RTCDtlsTransport")}} object representing the {{Glossary("DTLS")}} transport used for the transmission and receipt of data packets.
 
-### Event handlers
+## Events
 
-- {{DOMxRef("RTCSctpTransport.onstatechange")}}
-  - : Fired when the {{DOMxRef("RTCSctpTransport.state")}} changes.
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
+  - : Sent when the {{DOMxRef("RTCSctpTransport.state")}} changes.
 
 ## Instance methods
 

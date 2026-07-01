@@ -2,23 +2,12 @@
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
 page-type: guide
-tags:
-  - Acceleration
-  - Apps
-  - FOV
-  - Guide
-  - Orientation
-  - Position
-  - VR
-  - Virtual Reality
-  - WebVR
-  - concepts
-  - velocity
 ---
 
-{{APIRef("WebVR API")}}{{deprecated_header}}
+{{DefaultAPISidebar("WebVR API")}}
 
-> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
+> [!NOTE]
+> WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
 This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.
 
@@ -34,7 +23,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 ### VR in recent times
 
-So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/what-is/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
+So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Meta Quest](https://www.meta.com/quest/quest-3/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Google Cardboard](https://arvr.google.com/cardboard/).
 
 On the software side, Valve has created [SteamVR](https://store.steampowered.com/search/?category1=993) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
 
@@ -51,7 +40,8 @@ There are two main types of setup, mobile or computer-connected. Their minimum h
 - Mobile: A Head-mounted display (HMD) is created using a smartphone — which acts as the VR display — mounted in a VR mount such as Google Cardboard, which contains the required lenses to provide stereoscopic vision of what is projected on the mobile screen.![Mobile based VR setup](mobilebasedvrsetup.png)
 - Computer-connected: A VR setup is connected to your computer — this consists of a Head Mounted Display (HMD) containing a high resolution landscape-oriented screen onto which the visuals for both the left and right eye are displayed, which also includes a lens for each eye to promote separation of the left and right eye scene (stereoscopic vision.) The setup also includes a separate position sensor that works out the position/orientation/velocity/acceleration of your head and constantly passes that information the computer. ![Computer based VR Setup](computerbasedvrsetup.png)
 
-> **Note:** Computer-connected systems sometimes don't include a position sensor, but they usually do.
+> [!NOTE]
+> Computer-connected systems sometimes don't include a position sensor, but they usually do.
 
 Other hardware that complements the VR experience includes:
 
@@ -72,12 +62,10 @@ The output information falls into four categories:
 1. Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR, the x, y, and z coordinates are represented by the array contained in {{domxref("VRPose.position")}}.
 2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
 3. Velocity — There are two types of velocity to consider in VR:
-
    - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
    - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
 
 4. Acceleration — There are two types of acceleration to consider in VR:
-
    - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
    - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
 
@@ -98,7 +86,8 @@ The FOV is defined by the following values:
 
 The default values for these properties will differ slightly by VR hardware, although they tend to be around 53° up and down, and 47° left and right, with zNear and zFar coming in at around 0.1m and 10000m respectively.
 
-> **Note:** The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
+> [!NOTE]
+> The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
 
 ## Concepts for VR apps
 
@@ -121,8 +110,8 @@ A term commonly used in VR because it is a major handicap of using an HMD — we
 
 To minimize this unwanted effect, we need to:
 
-- Avoid focusing on different depths (e.g. avoid using a lot of particles with different depths.)
-- Avoid eye convergence (e.g. if you have an object that comes towards the camera your eyes will follow and converge on it.)
+- Avoid focusing on different depths (e.g., avoid using a lot of particles with different depths.)
+- Avoid eye convergence (e.g., if you have an object that comes towards the camera your eyes will follow and converge on it.)
 - Use darker backgrounds with more subdued colors where possible; a bright screen will make the eyes more tired.
 - Avoid rapid brightness changes.
 - Avoid presenting the user with large amounts of text to read. You should also be careful with the distance between the eyes/camera and the text to read. 0.5m is uncomfortable, whereas at more than 2m the stereo effect starts to break down, so somewhere in between is advisable.
@@ -177,7 +166,7 @@ DoF is directly related to the tracking of the user's head movement.
 
 Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.
 
-This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at [Mozilla's Mixed Reality site](https://mixedreality.mozilla.org/>) — in particular, read [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
+This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly.
 
 ### 3D Positional Audio
 

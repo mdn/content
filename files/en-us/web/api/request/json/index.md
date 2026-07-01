@@ -1,18 +1,12 @@
 ---
-title: Request.json()
+title: "Request: json() method"
+short-title: json()
 slug: Web/API/Request/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.
@@ -34,15 +28,24 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number…
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The request body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+- {{jsxref("SyntaxError")}}
+  - : The request body cannot be parsed as JSON.
+
 ## Examples
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
 request.json().then((data) => {
   // do something with the data sent in the request

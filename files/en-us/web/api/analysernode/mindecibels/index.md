@@ -1,14 +1,8 @@
 ---
-title: AnalyserNode.minDecibels
+title: "AnalyserNode: minDecibels property"
+short-title: minDecibels
 slug: Web/API/AnalyserNode/minDecibels
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - minDecibels
 browser-compat: api.AnalyserNode.minDecibels
 ---
 
@@ -22,7 +16,8 @@ A double, representing the minimum [decibel](https://en.wikipedia.org/wiki/Decib
 
 When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `minDecibels` or lower will be returned as `0`.
 
-> **Note:** If a value greater than `AnalyserNode.maxDecibels` is set, an `INDEX_SIZE_ERR` exception is thrown.
+> [!NOTE]
+> If a value greater than `AnalyserNode.maxDecibels` is set, an `INDEX_SIZE_ERR` exception is thrown.
 
 ## Examples
 
@@ -30,7 +25,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -49,7 +44,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillStyle = "rgb(0 0 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   const barWidth = (WIDTH / bufferLength) * 2.5;
@@ -59,7 +54,7 @@ function draw() {
   for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillStyle = `rgb(${barHeight + 100} 50 50)`;
     canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
     x += barWidth + 1;

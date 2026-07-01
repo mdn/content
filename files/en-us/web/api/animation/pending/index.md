@@ -1,15 +1,8 @@
 ---
-title: Animation.pending
+title: "Animation: pending property"
+short-title: pending
 slug: Web/API/Animation/pending
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Animations
-  - Property
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.Animation.pending
 ---
 

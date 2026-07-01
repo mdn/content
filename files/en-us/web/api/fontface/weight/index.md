@@ -1,20 +1,12 @@
 ---
-title: FontFace.weight
+title: "FontFace: weight property"
+short-title: weight
 slug: Web/API/FontFace/weight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - weight
 browser-compat: api.FontFace.weight
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`weight`** property of the {{domxref("FontFace")}} interface retrieves or sets the weight of the font.
 

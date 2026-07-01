@@ -1,31 +1,42 @@
 ---
 title: Intl.Locale.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Intl.Locale.toString
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`toString()`** method of {{jsxref("Intl.Locale")}} instances returns this Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
-The **`Intl.Locale.prototype.toString()`** method returns the Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+```js interactive-example
+const french = new Intl.Locale("fr-Latn-FR", {
+  calendar: "gregory",
+  hourCycle: "h12",
+});
+const korean = new Intl.Locale("ko-Kore-KR", {
+  numeric: true,
+  caseFirst: "upper",
+});
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+console.log(french.toString());
+// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+
+console.log(korean.toString());
+// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+```
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -49,11 +60,11 @@ JSON, or any other context where an exact string representation is useful.
 
 ```js
 const myLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
-console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h12"
 ```
 
 ## Specifications

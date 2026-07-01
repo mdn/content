@@ -2,9 +2,7 @@
 title: Ligature
 slug: Glossary/Ligature
 page-type: glossary-definition
-tags:
-  - CSS
-  - Design
+sidebar: glossarysidebar
 ---
 
 A **ligature** is a joining of two characters into one shape. For example, in French "œ" is a ligature of "oe".

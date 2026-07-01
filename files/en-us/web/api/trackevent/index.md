@@ -2,21 +2,12 @@
 title: TrackEvent
 slug: Web/API/TrackEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - TrackEvent
-  - Video
 browser-compat: api.TrackEvent
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
+The **`TrackEvent`** interface of the [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
 
 It's important not to confuse `TrackEvent` with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.
 
@@ -51,27 +42,27 @@ This example sets up a function, `handleTrackEvent()`, which is called for any `
 ```js
 const videoElem = document.querySelector("video");
 
-videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
-videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
+videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.audioTracks.addEventListener("removetrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("addtrack", handleTrackEvent);
+videoElem.textTracks.addEventListener("removetrack", handleTrackEvent);
 
 function handleTrackEvent(event) {
   let trackKind;
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "video";
-  } else if (event.target instanceof(AudioTrackList)) {
+  } else if (event.target instanceof AudioTrackList) {
     trackKind = "audio";
-  } else if (event.target instanceof(TextTrackList)) {
+  } else if (event.target instanceof TextTrackList) {
     trackKind = "text";
   } else {
     trackKind = "unknown";
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "addtrack":
       console.log(`Added a ${trackKind} track`);
       break;

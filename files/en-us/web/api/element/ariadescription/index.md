@@ -1,21 +1,14 @@
 ---
-title: Element.ariaDescription
+title: "Element: ariaDescription property"
+short-title: ariaDescription
 slug: Web/API/Element/ariaDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaDescription
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaDescription
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
 
 ## Value
 
@@ -35,9 +28,9 @@ In this example the `aria-description` attribute on the element with an ID of `c
 ```
 
 ```js
-let el = document.getElementById('close-button');
+let el = document.getElementById("close-button");
 console.log(el.ariaDescription); // "A longer description of the function of this element"
-el.ariaDescription = "A different description"
+el.ariaDescription = "A different description";
 console.log(el.ariaDescription); // "A different description"
 ```
 

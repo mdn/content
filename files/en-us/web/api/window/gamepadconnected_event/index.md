@@ -1,14 +1,8 @@
 ---
-title: 'Window: gamepadconnected event'
+title: "Window: gamepadconnected event"
+short-title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Gamepad API
-  - Window
-  - gamepadconnected
 browser-compat: api.Window.gamepadconnected_event
 ---
 
@@ -16,18 +10,28 @@ browser-compat: api.Window.gamepadconnected_event
 
 The `gamepadconnected` event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
 
-The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+The event will not fire if disallowed by the document's {{httpheader('Permissions-Policy/gamepad','gamepad')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener("gamepadconnected", (event) => { })
+
+ongamepadconnected = (event) => { }
+```
 
 ## Examples
 
 To be informed when a gamepad is connected, you can add a handler to the window using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-window.addEventListener('gamepadconnected', (event) => {
-    // All buttons and axes values can be accessed through
-    const gamepad = event.gamepad;
+window.addEventListener("gamepadconnected", (event) => {
+  // All buttons and axes values can be accessed through
+  const gamepad = event.gamepad;
 });
 ```
 
@@ -35,8 +39,8 @@ Alternatively, you can use the `window.ongamepadconnected` event handler propert
 
 ```js
 window.ongamepadconnected = (event) => {
-    // All buttons and axes values can be accessed through
-    const gamepad = event.gamepad;
+  // All buttons and axes values can be accessed through
+  const gamepad = event.gamepad;
 };
 ```
 

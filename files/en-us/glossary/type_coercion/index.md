@@ -2,10 +2,7 @@
 title: Type coercion
 slug: Glossary/Type_coercion
 page-type: glossary-definition
-tags:
-  - Coercion
-  - JavaScript
-  - Type coercion
+sidebar: glossarysidebar
 ---
 
 Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). _{{Glossary("Type conversion")}}_ is similar to _type coercion_ because they both convert values from one data type to another with one key difference — _type coercion_ is implicit whereas _type conversion_ can be either implicit _or_ explicit.
@@ -31,7 +28,6 @@ sum = Number(value1) + value2;
 ## See also
 
 - [Type conversion](https://en.wikipedia.org/wiki/Type_conversion) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Type")}}
   - {{Glossary("Type conversion")}}

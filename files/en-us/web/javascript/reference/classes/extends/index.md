@@ -2,19 +2,38 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 page-type: javascript-language-feature
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
 browser-compat: javascript.classes.extends
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to create a class that is a child of another class.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html")}}
+{{InteractiveExample("JavaScript Demo: Class extends", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// Expected output: "19-Aug-1975"
+```
 
 ## Syntax
 
@@ -63,11 +82,11 @@ console.log(Object.getPrototypeOf(new ParentClass()));
 
 `extends` sets the prototype for both `ChildClass` and `ChildClass.prototype`.
 
-|                         | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
-| ----------------------- | ------------------------- | ----------------------------------- |
-| `extends` clause absent | `Function.prototype`      | `Object.prototype`                  |
-| `extends null`          | `Function.prototype`      | `null`                              |
-| `extends ParentClass`   | `ParentClass`             | `ParentClass.prototype`             |
+|                                   | Prototype of `ChildClass` | Prototype of `ChildClass.prototype` |
+| --------------------------------- | ------------------------- | ----------------------------------- |
+| `extends` clause absent           | `Function.prototype`      | `Object.prototype`                  |
+| [`extends null`](#extending_null) | `Function.prototype`      | `null`                              |
+| `extends ParentClass`             | `ParentClass`             | `ParentClass.prototype`             |
 
 ```js
 class ParentClass {}
@@ -79,7 +98,7 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
 
-The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins).
+The right-hand side of `extends` does not have to be an identifier. You can use any expression that evaluates to a constructor. This is often useful to create [mixins](#mix-ins). The `this` value in the `extends` expression is the `this` surrounding the class definition, and referring to the class's name is a {{jsxref("ReferenceError")}} because the class is not initialized yet. {{jsxref("Operators/await", "await")}} and {{jsxref("Operators/yield", "yield")}} work as expected in this expression.
 
 ```js
 class SomeClass extends class {
@@ -113,6 +132,7 @@ console.log(new ParentClass()); // ParentClass {}
 
 class ChildClass extends ParentClass {
   constructor() {
+    super();
     return 1;
   }
 }
@@ -120,11 +140,12 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value for the derived class when further initializing [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields). This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) ones) to be defined on unrelated objects.
 
 ### Subclassing built-ins
 
-> **Warning:** The standard committee now holds the position that the built-in subclassing mechanism in previous spec versions is over-engineered and causes non-negligible performance and security impacts. New built-in methods consider less about subclasses, and engine implementers are [investigating whether to remove certain subclassing mechanisms](https://github.com/tc39/proposal-rm-builtin-subclassing). Consider using composition instead of inheritance when enhancing built-ins.
+> [!WARNING]
+> The standard committee now holds the position that the built-in subclassing mechanism in previous spec versions is over-engineered and causes non-negligible performance and security impacts. New built-in methods consider less about subclasses, and engine implementers are [investigating whether to remove certain subclassing mechanisms](https://github.com/tc39/proposal-rm-builtin-subclassing). Consider using composition instead of inheritance when enhancing built-ins.
 
 Here are some things you may expect when extending a class:
 
@@ -135,10 +156,46 @@ Here are some things you may expect when extending a class:
 However, the above expectations take non-trivial efforts to implement properly.
 
 - The first one requires the static method to read the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) to get the constructor for constructing the returned instance. This means `[p1, p2, p3].map(Promise.resolve)` throws an error because the `this` inside `Promise.resolve` is `undefined`. A way to fix this is to fall back to the base class if `this` is not a constructor, like {{jsxref("Array.from()")}} does, but that still means the base class is special-cased.
-- The second one requires the instance method to read [`this.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) to get the constructor function. However, `new this.constructor()` may break legacy code, because the `constructor` property is both writable and configurable and is not protected in any way. Therefore, many copying built-in methods use the constructor's [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) property instead (which by default just returns `this`, the constructor itself). However, `@@species` allows running arbitrary code and creating instances of arbitrary type, which poses a security concern and greatly complicates subclassing semantics.
+- The second one requires the instance method to read [`this.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) to get the constructor function. However, `new this.constructor()` may break legacy code, because the `constructor` property is both writable and configurable and is not protected in any way. Therefore, many copying built-in methods use the constructor's [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) property instead (which by default just returns `this`, the constructor itself). However, `[Symbol.species]` allows running arbitrary code and creating instances of arbitrary type, which poses a security concern and greatly complicates subclassing semantics.
 - The third one leads to visible invocations of custom code, which makes a lot of optimizations harder to implement. For example, if the `Map()` constructor is called with an iterable of _x_ elements, then it must visibly invoke the `set()` method _x_ times, instead of just copying the elements into the internal storage.
 
 These problems are not unique to built-in classes. For your own classes, you will likely have to make the same decisions. However, for built-in classes, optimizability and security are a much bigger concern. New built-in methods always construct the base class and call as few custom methods as possible. If you want to subclass built-ins while achieving the above expectations, you need to override all methods that have the default behavior baked into them. Any addition of new methods on the base class may also break the semantics of your subclass because they are inherited by default. Therefore, a better way to extend built-ins is to use [_composition_](#avoiding_inheritance).
+
+### Extending null
+
+`extends null` was designed to allow easy creation of [objects that do not inherit from `Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). However, due to unsettled decisions about whether `super()` should be called within the constructor, it's not possible to construct such a class in practice using any constructor implementation that doesn't return an object. [The TC39 committee is working on re-enabling this feature](https://github.com/tc39/ecma262/pull/1321).
+
+```js
+new (class extends null {})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+
+new (class extends null {
+  constructor() {}
+})();
+// ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+
+new (class extends null {
+  constructor() {
+    super();
+  }
+})();
+// TypeError: Super constructor null of anonymous class is not a constructor
+```
+
+Instead, you need to explicitly return an instance from the constructor.
+
+```js
+class NullClass extends null {
+  constructor() {
+    // Using new.target allows derived classes to
+    // have the correct prototype chain
+    return Object.create(new.target.prototype);
+  }
+}
+
+const proto = Object.getPrototypeOf;
+console.log(proto(proto(new NullClass()))); // null
+```
 
 ## Examples
 
@@ -154,7 +211,7 @@ class Square extends Polygon {
     super(length, length);
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Leaving this out will cause a reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -171,7 +228,7 @@ Classes cannot extend regular (non-constructible) objects. If you want to inheri
 const Animal = {
   speak() {
     console.log(`${this.name} makes a noise.`);
-  }
+  },
 };
 
 class Dog {
@@ -190,13 +247,47 @@ d.speak(); // Mitzie makes a noise.
 
 This example extends the built-in {{jsxref("Date")}} object. This example is extracted from this [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
 
-```js
+```js-nolint
 class MyDate extends Date {
   getFormattedDate() {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    ];
     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
   }
 }
+```
+
+### Extending `Object`
+
+All JavaScript objects inherit from `Object.prototype` by default, so writing `extends Object` at first glance seems redundant. The only difference from not writing `extends` at all is that the constructor itself inherits static methods from `Object`, such as {{jsxref("Object.keys()")}}. However, because no `Object` static method uses the `this` value, there's still no value in inheriting these static methods.
+
+The {{jsxref("Object/Object", "Object()")}} constructor special-cases the subclassing scenario. If it's implicitly called via [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super), it always initializes a new object with `new.target.prototype` as its prototype. Any value passed to `super()` is ignored.
+
+```js
+class C extends Object {
+  constructor(v) {
+    super(v);
+  }
+}
+
+console.log(new C(1) instanceof Number); // false
+console.log(C.keys({ a: 1, b: 2 })); // [ 'a', 'b' ]
+```
+
+Compare this behavior with a custom wrapper that does not special-case subclassing:
+
+```js
+function MyObject(v) {
+  return new Object(v);
+}
+class D extends MyObject {
+  constructor(v) {
+    super(v);
+  }
+}
+console.log(new D(1) instanceof Number); // true
 ```
 
 ### Species
@@ -217,7 +308,7 @@ const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 This behavior is implemented by many built-in copying methods. For caveats of this feature, see the [subclassing built-ins](#subclassing_built-ins) discussion.
@@ -229,13 +320,15 @@ Abstract subclasses or _mix-ins_ are templates for classes. A class can only hav
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins:
 
 ```js
-const calculatorMixin = (Base) => class extends Base {
-  calc() {}
-};
+const calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-const randomizerMixin = (Base) => class extends Base {
-  randomize() {}
-};
+const randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 A class that uses these mix-ins can then be written like this:
@@ -297,7 +390,7 @@ class ReadOnlyMap {
 }
 ```
 
-In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still implements most of the same methods. This means more code duplication, but it also means that the `ReadOnlyMap` class is not strongly coupled to the `Map` class, and does not easily break if the `Map` class is changed, avoiding the [semantic issues of built-in subclassing](#subclassing_built-ins). For example, if the `Map` class adds an [`emplace()`](https://github.com/tc39/proposal-upsert) method that does not call `set()`, it would cause the `ReadOnlyMap` class to no longer be read-only unless the latter is updated accordingly to override `emplace()` as well. Moreover, `ReadOnlyMap` objects do not have the `set` method at all, which is more accurate than throwing an error at runtime.
+In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still implements most of the same methods. This means more code duplication, but it also means that the `ReadOnlyMap` class is not strongly coupled to the `Map` class, and does not easily break if the `Map` class is changed, avoiding the [semantic issues of built-in subclassing](#subclassing_built-ins). For example, if the `Map` class adds a new utility method (such as [`getOrInsert()`](https://github.com/tc39/proposal-upsert)) that does not call `set()`, it would cause the `ReadOnlyMap` class to no longer be read-only unless the latter is updated accordingly to override `getOrInsert()` as well. Moreover, `ReadOnlyMap` objects do not have the `set` method at all, which is more accurate than throwing an error at runtime.
 
 ## Specifications
 
@@ -309,7 +402,8 @@ In this case, the `ReadOnlyMap` class is not a subclass of `Map`, but it still i
 
 ## See also
 
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-- [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- {{jsxref("Classes/constructor", "constructor")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Operators/super", "super")}}

@@ -1,17 +1,11 @@
 ---
-title: Document.createTouch()
+title: "Document: createTouch() method"
+short-title: createTouch()
 slug: Web/API/Document/createTouch
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Mobile
-  - Reference
-  - createTouch
-  - touch
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.createTouch
 ---
 
@@ -19,7 +13,8 @@ browser-compat: api.Document.createTouch
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
 
-> **Note:** Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
+> [!NOTE]
+> Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
 
 ## Syntax
 
@@ -29,7 +24,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 
 ### Parameters
 
-> **Note:** All parameters are optional.
+> [!NOTE]
+> All parameters are optional.
 
 - `view`
   - : The {{DOMxRef("window")}} in which the touch occurred.
@@ -46,7 +42,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 - `screenY`
   - : The value for {{DOMxRef("Touch.screenY")}}.
 
-> **Note:** Previous versions of this method included the
+> [!NOTE]
+> Previous versions of this method included the
 > following additional parameters but those parameters are not included in either of the
 > standards listed below. Consequently, these parameters should be considered deprecated
 > and not used.
@@ -66,8 +63,7 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 
 ### Return value
 
-- `touch`
-  - : A {{DOMxRef("Touch")}} object configured as described by the input parameters.
+A {{DOMxRef("Touch")}} object configured as described by the input parameters.
 
 ## Examples
 

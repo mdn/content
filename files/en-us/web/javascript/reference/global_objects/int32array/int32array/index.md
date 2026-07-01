@@ -1,24 +1,13 @@
 ---
 title: Int32Array() constructor
+short-title: Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Int32Array.Int32Array
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`Int32Array()`** typed array constructor creates an array
-of twos-complement 32-bit signed integers in the platform byte order. If control over
-byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized
-to `0`. Once established, you can reference elements in the array using the
-object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Int32Array()`** constructor creates {{jsxref("Int32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -33,7 +22,8 @@ new Int32Array(buffer, byteOffset)
 new Int32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -88,6 +78,7 @@ console.log(int32FromIterable);
 ## See also
 
 - [Polyfill of `Int32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

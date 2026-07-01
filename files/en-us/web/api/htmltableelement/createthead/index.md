@@ -1,14 +1,8 @@
 ---
-title: HTMLTableElement.createTHead()
+title: "HTMLTableElement: createTHead() method"
+short-title: createTHead()
 slug: Web/API/HTMLTableElement/createTHead
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.HTMLTableElement.createTHead
 ---
 
@@ -19,7 +13,8 @@ The **`createTHead()`** method of
 associated with a given {{HtmlElement("table")}}. If no header exists in the table, this
 method creates it, and then returns it.
 
-> **Note:** If no header exists, `createTHead()` inserts a new
+> [!NOTE]
+> If no header exists, `createTHead()` inserts a new
 > header directly into the table. The header does not need to be added separately as
 > would be the case if {{domxref("Document.createElement()")}} had been used to create
 > the new `<thead>` element.
@@ -41,8 +36,8 @@ None.
 ## Examples
 
 ```js
-let myhead = mytable.createTHead();
-// Now this should be true: myhead === mytable.tHead
+let myHead = myTable.createTHead();
+// Now this should be true: myHead === myTable.tHead
 ```
 
 ## Specifications

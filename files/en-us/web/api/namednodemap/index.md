@@ -2,9 +2,6 @@
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.NamedNodeMap
 ---
 
@@ -14,7 +11,8 @@ The **`NamedNodeMap`** interface represents a collection of {{domxref("Attr")}} 
 
 A `NamedNodeMap` object is _live_ and will thus be auto-updated if changes are made to its contents internally or elsewhere.
 
-> **Note:** Although called `NamedNodeMap`, this interface doesn't deal with {{domxref("Node")}} objects but with {{domxref("Attr")}} objects, which are a specialized class of {{domxref("Node")}} objects.
+> [!NOTE]
+> Although called `NamedNodeMap`, this interface doesn't deal with {{domxref("Node")}} objects but with {{domxref("Attr")}} objects, which are a specialized class of {{domxref("Node")}} objects.
 
 ## Instance properties
 

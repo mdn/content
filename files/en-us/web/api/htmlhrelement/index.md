@@ -2,12 +2,6 @@
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLHRElement
 ---
 
@@ -25,7 +19,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string, an enumerated attribute indicating alignment of the rule with respect to the surrounding context.
 - {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
   - : A string representing the name of the color of the rule.
-- {{domxref("HTMLHRElement.noshade")}} {{deprecated_inline}}
+- {{domxref("HTMLHRElement.noShade")}} {{deprecated_inline}}
   - : A boolean value that sets the rule to have no shading.
 - {{domxref("HTMLHRElement.size")}} {{deprecated_inline}}
   - : A string representing the height of the rule.

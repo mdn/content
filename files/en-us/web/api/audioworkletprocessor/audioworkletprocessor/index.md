@@ -1,15 +1,8 @@
 ---
-title: AudioWorkletProcessor()
+title: "AudioWorkletProcessor: AudioWorkletProcessor() constructor"
+short-title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 ---
 
@@ -20,11 +13,12 @@ constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which
 represents an underlying audio processing mechanism of an
 {{domxref("AudioWorkletNode")}}.
 
-## Syntax
-
-> **Note:** The `AudioWorkletProcessor` and classes that derive from it
+> [!NOTE]
+> The `AudioWorkletProcessor` and classes that derive from it
 > cannot be instantiated directly from a user-supplied code. Instead, they are created
-> only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.
+> only internally by the creation of an associated {{domxref("AudioWorkletNode")}}.
+
+## Syntax
 
 ```js-nolint
 new AudioWorkletProcessor(options)
@@ -33,14 +27,12 @@ new AudioWorkletProcessor(options)
 ### Parameters
 
 - `options`
-
   - : An object that is passed as _options_ parameter to the
-    {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+    {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
     passed through [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     Available properties are as follows:
 
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
-
     - `numberOfInputs` {{optional_inline}}
       - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
     - `numberOfOutputs` {{optional_inline}}
@@ -53,10 +45,7 @@ new AudioWorkletProcessor(options)
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
     Note that there are default values for the first two properties, so even if there are no
-    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
-    "AudioWorkletNode constructor")}}, the _options_ object passed by the node to
-    the `AudioWorkletProcessor` constructor will exist and at minimum have
-    `numberOfInputs` and `numberOfOutputs`.
+    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
 
 ### Return value
 
@@ -65,7 +54,7 @@ The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 ## Examples
 
 In this example we pass custom options to the
-{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
 observe how a [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
 
 First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
@@ -110,7 +99,7 @@ const testNode = new AudioWorkletNode(audioContext, "test-processor", {
 
 The console output will be as follows:
 
-```
+```plain
 > 1 // AudioWorkletNode options.numberOfInputs set to default
 > Map(2) { 1 => "one", 2 => "two" } // A cloned map under someUsefulVariable
 ```

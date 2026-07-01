@@ -1,22 +1,12 @@
 ---
-title: MediaQueryList.matches
+title: "MediaQueryList: matches property"
+short-title: matches
 slug: Web/API/MediaQueryList/matches
 page-type: web-api-instance-property
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
 browser-compat: api.MediaQueryList.matches
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`matches`** read-only property of the
 {{DOMxRef("MediaQueryList")}} interface is a boolean value that returns
@@ -35,7 +25,7 @@ currently matches the media query list; otherwise, it's `false`.
 ## Examples
 
 This example detects viewport orientation changes by creating a media query using the
-[`orientation`](/en-US/docs/Web/CSS/@media/orientation) media
+{{cssxref("@media/orientation")}} media
 feature:
 
 ```js
@@ -59,8 +49,8 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

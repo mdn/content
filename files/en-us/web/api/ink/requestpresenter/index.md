@@ -1,20 +1,16 @@
 ---
-title: Ink.requestPresenter()
+title: "Ink: requestPresenter() method"
+short-title: requestPresenter()
 slug: Web/API/Ink/requestPresenter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Method
+status:
+  - experimental
 browser-compat: api.Ink.requestPresenter
 ---
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`requestPresenter()`** method of the {{domxref("Ink")}} interface returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object to handle rendering strokes.
+The **`requestPresenter()`** method of the {{domxref("Ink")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("DelegatedInkTrailPresenter")}} object to handle rendering strokes.
 
 ## Syntax
 
@@ -25,13 +21,13 @@ requestPresenter(param)
 ### Parameters
 
 - `param` {{optional_inline}}
-  - : An `InkPresenterParam` object that contains the following property:
+  - : An object that contains the following property:
     - `presentationArea` {{optional_inline}}
       - : An {{domxref("Element")}} inside which rendering of ink strokes is confined (the element's border box, to be precise). If `param` is not included, or `presentationArea` is set to `null`, ink rendering is confined to the containing viewport by default.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{domxref("InkPresenter")}} object instance.
+A {{jsxref("Promise")}} that resolves to a {{domxref("DelegatedInkTrailPresenter")}} object instance.
 
 ### Exceptions
 
@@ -43,10 +39,9 @@ A {{jsxref("Promise")}} that resolves to an {{domxref("InkPresenter")}} object i
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
 
-  //...
-
+  // …
 }
 ```
 
@@ -57,7 +52,3 @@ async function inkInit() {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

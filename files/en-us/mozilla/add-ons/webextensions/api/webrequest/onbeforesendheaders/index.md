@@ -1,20 +1,10 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeSendHeaders
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 
@@ -56,7 +46,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -67,21 +57,17 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `details`
-      - : `object`. Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details_2) section for more information.
+      - : `object`. Details of the request. This includes request headers if you have included `"requestHeaders"` in `extraInfoSpec`. See the [details](#details) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
-
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
-
     - `"blocking"`: make the request synchronous, so you can modify request headers
     - `"requestHeaders"`: include the request headers in the `details` object passed to the listener
 
@@ -89,36 +75,45 @@ Events have three functions:
 
 ### details
 
+- `documentId` {{optional_inline}}
+  - : `string`. The UUID of the document making the request. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
+- `frameAncestors`
+  - : `array`. Contains information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is actually for the top-level document, then this array is empty.
+    - `url`
+      - : `string`. The URL that the document was loaded from.
+    - `frameId`
+      - : `integer`. The `frameId` of the document. `details.frameAncestors[0].frameId` is the same as `details.parentFrameId`.
 - `frameId`
   - : `integer`. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+- `frameType`
+  - : `string`. The type of frame the request occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, or `"sub_frame"`.
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `method`
   - : `string`. Standard HTTP method: for example, "GET" or "POST".
 - `originUrl`
-
   - : `string`. URL of the resource which triggered the request. For example, if "https\://example.com" contains a link, and the user clicks the link, then the `originUrl` for the resulting request is "https\://example.com".
 
     The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request will be the iframe's parent document, but the `originUrl` will be the URL of the document in the iframe that contained the link.
 
+- `parentDocumentId`{{optional_inline}}
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.
 - `proxyInfo`
-
   - : `object`. This property is present only if the request is being proxied. It contains the following properties:
-
     - `host`
       - : `string`. The hostname of the proxy server.
     - `port`
       - : `integer`. The port number of the proxy server.
     - `type`
-
       - : `string`. The type of proxy server. One of:
-
         - "http": HTTP proxy (or SSL CONNECT for HTTPS)
         - "https": HTTP proxying over TLS connection to proxy
         - "socks": SOCKS v5 proxy
@@ -148,26 +143,24 @@ Events have three functions:
 - `url`
   - : `string`. Target of the request.
 - `urlClassification`
-
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
-
+  - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
     - `firstParty`
-      - : `array` of `strings`. Classification flags for the request's first party.
+      - : `array` of `string`. Classification flags for the request's first party.
     - `thirdParty`
-      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+      - : `array` of `string`. Classification flags for the request or its window hierarchy's third parties.
 
     The classification flags include:
-
-    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting ("an origin found to fingerprint").
+      - `fingerprinting` indicates the domain is in the fingerprinting and tracking category. Examples of this type of domain include advertisers who want to associate a profile with the visiting user.
+      - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
-    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
-    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
-    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails.
+    - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
+    - `any_social_tracking`: a meta flag that combines all social tracking flags.
 
-## Browser compatibility
-
-{{Compat}}
+    You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
 ## Examples
 
@@ -184,7 +177,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -207,7 +201,7 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 
@@ -224,7 +218,8 @@ const targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-const ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+const ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -253,13 +248,18 @@ Make it "blocking" so we can modify the headers.
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
   { urls: [targetPage] },
-  ["blocking", "requestHeaders"]
+  ["blocking", "requestHeaders"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

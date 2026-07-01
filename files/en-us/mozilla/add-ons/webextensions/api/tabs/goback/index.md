@@ -1,19 +1,10 @@
 ---
 title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - goBack
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.goBack
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Navigate to the previous page in tab's history, if available.
 
@@ -39,10 +30,6 @@ let withGoingBack = browser.tabs.goBack(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the page navigation finishes.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Go back to the previous page in the current tab:
@@ -62,7 +49,12 @@ goingBack.then(onGoBack, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

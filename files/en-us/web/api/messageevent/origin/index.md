@@ -1,19 +1,12 @@
 ---
-title: MessageEvent.origin
+title: "MessageEvent: origin property"
+short-title: origin
 slug: Web/API/MessageEvent/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - Property
-  - Reference
-  - messaging
-  - origin
 browser-compat: api.MessageEvent.origin
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`origin`** read-only property of the
 {{domxref("MessageEvent")}} interface is a string representing the
@@ -28,7 +21,7 @@ A string representing the origin.
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.origin);
 };
 ```

@@ -1,23 +1,20 @@
 ---
 title: RegExp.prototype.compile()
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.compile
+sidebar: jsref
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-> **Note:** The `compile()` method is only specified for compatibility reasons. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations. You can use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to construct a new regular expression object instead.
+> [!NOTE]
+> The `compile()` method is only specified for compatibility reasons. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations. You can use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to construct a new regular expression object instead.
 
-The **`compile()`** method of a `RegExp` object is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
+The **`compile()`** method of {{jsxref("RegExp")}} instances is used to recompile a regular expression with new source and flags after the `RegExp` object has already been created.
 
 ## Syntax
 
@@ -32,6 +29,16 @@ compile(pattern, flags)
 - `flags`
   - : Any combination of [flag values](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#flags).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `this` value is not an instance of the current realm's `RegExp` constructor.
+    This includes a subclass of `RegExp` and the `RegExp` constructor from a different realm.
+
 ## Examples
 
 ### Using compile()
@@ -39,7 +46,7 @@ compile(pattern, flags)
 The following example shows how to recompile a regular expression with a new pattern and a new flag.
 
 ```js
-const regexObj = new RegExp("foo", "gi");
+const regexObj = /foo/gi;
 regexObj.compile("new foo", "g");
 ```
 

@@ -1,17 +1,10 @@
 ---
-title: Performance.navigation
+title: "Performance: navigation property"
+short-title: navigation
 slug: Web/API/Performance/navigation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTTP
-  - Navigation Timing
-  - Performance
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.Performance.navigation
 ---
 
@@ -25,7 +18,8 @@ redirections needed to fetch the resource.
 
 This property is not available in workers.
 
-> **Warning:** This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
+> [!WARNING]
+> This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
 > {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 ## Value
@@ -34,8 +28,7 @@ A {{domxref("PerformanceNavigation")}} object.
 
 ## Specifications
 
-This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
-Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+{{Specifications}}
 
 ## Browser compatibility
 

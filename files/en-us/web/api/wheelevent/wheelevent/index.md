@@ -1,21 +1,17 @@
 ---
-title: WheelEvent()
+title: "WheelEvent: WheelEvent() constructor"
+short-title: WheelEvent()
 slug: Web/API/WheelEvent/WheelEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent.WheelEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`WheelEvent()`** constructor returns a new {{domxref("WheelEvent")}} object.
 
-> **Note:** If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
+> [!NOTE]
+> If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
 > Only browser-generated `WheelEvent` objects are trusted and only trusted events trigger default actions.
 
 ## Syntax
@@ -43,11 +39,12 @@ new WheelEvent(type, options)
         It defaults to `0.0`.
     - `deltaMode` {{optional_inline}}
       - : An integer representing the unit of the delta values scroll amount. It defaults to `0x00`. Permitted values are:
-        | Constant | Value | Description |
+
+        | Constant          | Value  | Description                               |
         | ----------------- | ------ | ----------------------------------------- |
         | `DOM_DELTA_PIXEL` | `0x00` | The delta values are specified in pixels. |
-        | `DOM_DELTA_LINE` | `0x01` | The delta values are specified in lines. |
-        | `DOM_DELTA_PAGE` | `0x02` | The delta values are specified in pages. |
+        | `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
+        | `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
 
 ### Return value
 

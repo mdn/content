@@ -1,28 +1,15 @@
 ---
-title: MerchantValidationEvent.methodName
+title: "MerchantValidationEvent: methodName property"
+short-title: methodName
 slug: Web/API/MerchantValidationEvent/methodName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Commerce
-  - Identifier
-  - Merchant
-  - MerchantValidationEvent
-  - NeedsExample
-  - Payment Method
-  - Payment Method Identifier
-  - Payment Request
-  - Payment Request API
-  - Property
-  - Reference
-  - Validation
-  - methodName
-  - payment
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MerchantValidationEvent.methodName
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}{{non-standard_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`methodName`** is a read-only value which returns a string

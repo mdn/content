@@ -2,19 +2,8 @@
 title: XREquirectLayer
 slug: Web/API/XREquirectLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XREquirectLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer
 ---
 

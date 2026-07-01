@@ -2,15 +2,6 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - AudioWorkletProcessor
-  - Interface
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioWorkletProcessor
 ---
 
@@ -20,7 +11,8 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 
 ## Constructor
 
-> **Note:** The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from a user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s. The constructor of the deriving class is getting called with an options object, so you can perform a custom initialization procedures — see constructor page for details.
+> [!NOTE]
+> The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from a user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s. The constructor of the deriving class is getting called with an options object, so you can perform a custom initialization procedures — see constructor page for details.
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
@@ -54,7 +46,6 @@ An example algorithm of creating a custom audio processing mechanism is:
 
 1. Create a separate file;
 2. In the file:
-
    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 
@@ -92,7 +83,7 @@ const audioContext = new AudioContext();
 await audioContext.audioWorklet.addModule("white-noise-processor.js");
 const whiteNoiseNode = new AudioWorkletNode(
   audioContext,
-  "white-noise-processor"
+  "white-noise-processor",
 );
 whiteNoiseNode.connect(audioContext.destination);
 ```

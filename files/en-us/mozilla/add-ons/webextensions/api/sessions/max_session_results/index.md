@@ -1,20 +1,10 @@
 ---
 title: sessions.MAX_SESSION_RESULTS
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MAX_SESSION_RESULTS
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - sessions
+page-type: webextension-api-property
 browser-compat: webextensions.api.sessions.MAX_SESSION_RESULTS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This value represents the maximum number of sessions that will be returned by a call to {{WebExtAPIRef("sessions.getRecentlyClosed()")}}. It is read-only for WebExtension code, and is set to 25.
 
@@ -22,7 +12,8 @@ This value represents the maximum number of sessions that will be returned by a 
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

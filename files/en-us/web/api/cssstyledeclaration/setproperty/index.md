@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.setProperty()
+title: "CSSStyleDeclaration: setProperty() method"
+short-title: setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.setProperty
 ---
 
@@ -29,16 +25,15 @@ setProperty(propertyName, value, priority)
   - : A string representing the CSS property name (hyphen case) to be modified.
 - `value` {{optional_inline}}
   - : A string containing the new property value. If not specified, treated
-    as the empty string.
-    > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
+    as the empty string. A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
+    > [!NOTE]
+    > `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
+  - : A string allowing the CSS priority to be set to important. Only the values listed below are accepted:
+    - `"important"` (case-insensitive) for setting the property as `!important`;
+    - `""`, `undefined`, or `null` for removing the `!important` flag if present.
 
-  - : A string allowing the "important" CSS priority to be set. If not
-    specified, treated as the empty string. The following values are accepted:
-
-    - String value `"important"`
-    - Keyword `undefined`
-    - String empty value `""`
+    Anything else causes the method to return early and no change to happen (unless `value` is empty, in which case the property is removed regardless of the `priority` value). `false`, for example, is not a valid priority value.
 
 ### Return value
 
@@ -55,30 +50,23 @@ If `priority` can be omitted, JavaScript has a special simpler
 syntax for setting a CSS property on a style declaration object:
 
 ```js
-style.cssPropertyName = 'value';
+style.cssPropertyName = "value";
 ```
 
 ## Examples
 
-In this example we have three buttons, which can be pressed to dynamically alter our
-box paragraph's border, background color, and text color to random values (see the live
-example at the end of this section).
+### Setting the box properties
 
-We know that the rule we want to alter to do this is contained inside the second
-stylesheet applied to the page, so we grab a reference to it using
-[`document.styleSheets[1]`](/en-US/docs/Web/API/Document/styleSheets).
-We then loop through the different rules contained inside the stylesheet, which are
-contained in the array found at
-[`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules);
-for each one, we check whether its
-[`CSSStyleRule.selectorText`](/en-US/docs/Web/API/CSSStyleRule/selectorText)
-property is equal to the selector `.box p`, which indicates it is the one we
-want.
+In this example we have three buttons, which can be pressed to dynamically alter our box paragraph's border, background color, and text color to random values (see the live example at the end of this section).
 
-If so, we store a reference to this `CSSStyleRule` object in a variable. We
-then use three functions to generate random values for the properties in question, and
-update the rule with these values. In each case, this is done with the
-`setProperty()` method, for example `boxParaRule.style.setProperty('border', newBorder);`.
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
+
+We then loop through the different rules contained inside the stylesheet in the array found at [`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules).
+For each rule we check whether its [`CSSStyleRule.selectorText`](/en-US/docs/Web/API/CSSStyleRule/selectorText) is equal to the selector `.box p`, which is the one we want.
+
+If so, we store a reference to this `CSSStyleRule` object in a variable.
+We then use three functions to generate random values for the properties in question, and update the rule with these values.
+In each case, this is done with the `setProperty()` method, for example `boxParaRule.style.setProperty('border', newBorder);`.
 
 ### HTML
 
@@ -147,41 +135,45 @@ div button {
 ### JavaScript
 
 ```js
-const borderBtn = document.querySelector('.border');
-const bgColorBtn = document.querySelector('.bgcolor');
-const colorBtn = document.querySelector('.color');
-const box = document.querySelector('.box');
+const borderBtn = document.querySelector(".border");
+const bgColorBtn = document.querySelector(".bgcolor");
+const colorBtn = document.querySelector(".color");
+const box = document.querySelector(".box");
 
-function random(min,max) {
-  const num = Math.floor(Math.random()*(max-min)) + min;
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 
 function randomColor() {
-  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
-const stylesheet = document.styleSheets[1];
-const boxParaRule = [...stylesheet.cssRules].find((r) => r.selectorText === ".box p");
+// Find the inline stylesheet generated for MDN live samples
+const stylesheet = document.getElementById("css-output").sheet;
+
+const boxParaRule = [...stylesheet.cssRules].find(
+  (r) => r.selectorText === ".box p",
+);
 
 function setRandomBorder() {
   const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
-  boxParaRule.style.setProperty('border', newBorder);
+  boxParaRule.style.setProperty("border", newBorder);
 }
 
 function setRandomBgColor() {
   const newBgColor = randomColor();
-  boxParaRule.style.setProperty('background-color', newBgColor);
+  boxParaRule.style.setProperty("background-color", newBgColor);
 }
 
 function setRandomColor() {
   const newColor = randomColor();
-  boxParaRule.style.setProperty('color', newColor);
+  boxParaRule.style.setProperty("color", newColor);
 }
 
-borderBtn.addEventListener('click', setRandomBorder);
-bgColorBtn.addEventListener('click', setRandomBgColor);
-colorBtn.addEventListener('click', setRandomColor);
+borderBtn.addEventListener("click", setRandomBorder);
+bgColorBtn.addEventListener("click", setRandomBgColor);
+colorBtn.addEventListener("click", setRandomColor);
 ```
 
 ### Result

@@ -2,16 +2,8 @@
 title: XRLayerEvent
 slug: Web/API/XRLayerEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRLayerEvent
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: KeyboardEvent()
+title: "KeyboardEvent: KeyboardEvent() constructor"
+short-title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - KeyboardEvent
-  - Reference
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
 
@@ -35,7 +30,7 @@ new KeyboardEvent(type, options)
     - `code` {{optional_inline}}
       - : A string, defaulting to `""`, that sets the value of {{domxref("KeyboardEvent.code")}}.
     - `location` {{optional_inline}}
-      - : A string, defaulting to `0`, that sets the value of {{domxref("KeyboardEvent.location")}}.
+      - : A number, defaulting to `0`, that sets the value of {{domxref("KeyboardEvent.location")}}.
     - `repeat` {{optional_inline}}
       - : A boolean value, defaulting to `false`, that sets the value of {{domxref("KeyboardEvent.repeat")}}.
     - `isComposing` {{optional_inline}}

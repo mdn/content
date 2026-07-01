@@ -1,53 +1,62 @@
 ---
 title: Promise.prototype.then()
+short-title: then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
 browser-compat: javascript.builtins.Promise.then
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`then()`** method of {{jsxref("Promise")}} instances takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It stores the callbacks within the promise it is called on and immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
 
-The **`then()`** method of a {{jsxref("Promise")}} object takes up to two arguments: callback functions for the fulfilled and rejected cases of the `Promise`. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods.
+{{InteractiveExample("JavaScript Demo: Promise.prototype.then()")}}
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## Syntax
 
 ```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
-
-then(
-  (value) => { /* fulfillment handler */ },
-  (reason) => { /* rejection handler */ },
-)
 ```
 
 ### Parameters
 
-- `onFulfilled` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is fulfilled. This function has one parameter, the _fulfillment value_. If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+- `onFulfilled`
+  - : A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
+    - `value`
+      - : The value that the promise was fulfilled with.
+
+    If it is not a function, it is internally replaced with an _identity_ function (`(x) => x`) which simply passes the fulfillment value forward.
+
 - `onRejected` {{optional_inline}}
-  - : A {{jsxref("Function")}} asynchronously called if the `Promise` is rejected. This function has one parameter, the _rejection reason_. If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `then()`. The function is called with the following arguments:
+    - `reason`
+      - : The value that the promise was rejected with.
+
+    If it is not a function, it is internally replaced with a _thrower_ function (`(x) => { throw x; }`) which throws the rejection reason it received.
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}} immediately. This new promise is always pending when returned, regardless of the current promise's status.
+Returns a new {{jsxref("Promise")}} immediately. This returned promise is always pending when returned, regardless of the current promise's status.
 
-One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the returned promise (call it `p`) depends on the handler's execution result, following a specific set of rules. If the handler function:
+One of the `onFulfilled` and `onRejected` handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the promise returned by `then()` (referred to as `p` in the following list) depends on the handler's execution result, following a specific set of rules. If the handler function:
 
 - returns a value: `p` gets fulfilled with the returned value as its value.
-- doesn't return anything: `p` gets fulfilled with `undefined`.
+- doesn't return anything: `p` gets fulfilled with `undefined` as its value.
 - throws an error: `p` gets rejected with the thrown error as its value.
 - returns an already fulfilled promise: `p` gets fulfilled with that promise's value as its value.
 - returns an already rejected promise: `p` gets rejected with that promise's value as its value.
-- returns another pending promise: the fulfillment/rejection of the promise returned by `then` will be subsequent to the resolution/rejection of the promise returned by the handler. Also, the resolved value of the promise returned by `then` will be the same as the resolved value of the promise returned by the handler.
+- returns another pending promise: `p` is pending and becomes fulfilled/rejected with that promise's value as its value immediately after that promise becomes fulfilled/rejected.
 
 ## Description
 
@@ -55,11 +64,20 @@ The `then()` method schedules callback functions for the eventual completion of 
 
 For more information about the `onRejected` handler, see the {{jsxref("Promise/catch", "catch()")}} reference.
 
-`then()` returns a new promise object. If you call the `then()` method twice on the same promise object (instead of chaining), then this promise object will have two pairs of settlement handlers. All handlers attached to the same promise object are always called in the order they were added. Moreover, the two promises returned by each call of `then()` start separate chains and do not wait for each other's settlement.
+`then()` returns a new promise object but mutates the promise object it's called on, appending the handlers to an internal list. Therefore the handler is retained by the original promise and its lifetime is at least as long as the original promise's lifetime. For example, the following example will eventually run out of memory even though the returned promise is not retained:
 
-[Thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) objects that arise along the `then()` chain are always [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) — the `onFulfilled` handler never receives a thenable object, and any thenable returned by either handler are always resolved before being passed to the next handler. This is because when constructing the new promise, the `resolve` and `reject` functions passed by the `executor` are saved, and when the current promise settles, the respective function will be called with the fulfillment value or rejection reason. The resolving logic comes from the resolver function passed by the {{jsxref("Promise/Promise", "Promise()")}} constructor.
+```js
+const pendingPromise = new Promise(() => {});
+while (true) {
+  pendingPromise.then(doSomething);
+}
+```
 
-`then()` supports subclassing, which means it can be called on instances of subclasses of `Promise`, and the result will be a promise of the subclass type. You can customize the type of the return value through the [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) property.
+If you call the `then()` method twice on the same promise object (instead of chaining), then this promise object will have two pairs of settlement handlers. All handlers attached to the same promise object are always called in the order they were added. Moreover, the two promises returned by each call of `then()` start separate chains and do not wait for each other's settlement.
+
+[Thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) objects that arise along the `then()` chain are always [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) — the `onFulfilled` handler never receives a thenable object, and any thenable returned by either handler are always resolved before being passed to the next handler. This is because when constructing the new promise, the `resolve` and `reject` functions passed by the `executor` are saved, and when the current promise settles, the respective function will be called with the fulfillment value or rejection reason. The resolving logic comes from the `resolve` function passed by the {{jsxref("Promise/Promise", "Promise()")}} constructor.
+
+`then()` supports subclassing, which means it can be called on instances of subclasses of `Promise`, and the result will be a promise of the subclass type. You can customize the type of the return value through the [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) property.
 
 ## Examples
 
@@ -86,7 +104,7 @@ p1.then(
 
 ```js
 Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+Promise.reject(new Error("failed")).then(2, 2).then(console.log, console.log); // Error: failed
 ```
 
 ### Chaining
@@ -147,7 +165,7 @@ p2.then((value) => {
   console.log(value); // 1
   return value + 1;
 }).then((value) => {
-  console.log(value, " - A synchronous value works"); // 2 - A synchronous value works
+  console.log(value, "- A synchronous value works"); // 2 - A synchronous value works
 });
 
 p2.then((value) => {
@@ -192,7 +210,7 @@ Promise.resolve()
 In all other cases, the returned promise eventually fulfills. In the following example, the first `then()` returns `42` wrapped in a fulfilled Promise, even though the previous Promise in the chain was rejected.
 
 ```js
-Promise.reject()
+Promise.reject(new Error("Oh no!"))
   .then(
     () => 99,
     () => 42,
@@ -215,10 +233,8 @@ function rejectLater(resolve, reject) {
 }
 
 const p1 = Promise.resolve("foo");
-const p2 = p1.then(() => {
-  // Return promise here, that will be resolved to 10 after 1 second
-  return new Promise(resolveLater);
-});
+// Return promise here, that will be resolved to 10 after 1 second
+const p2 = p1.then(() => new Promise(resolveLater));
 p2.then(
   (v) => {
     console.log("resolved", v); // "resolved", 10
@@ -229,10 +245,8 @@ p2.then(
   },
 );
 
-const p3 = p1.then(() => {
-  // Return promise here, that will be rejected with 'Error' after 1 second
-  return new Promise(rejectLater);
-});
+// Return promise here, that will be rejected with 'Error' after 1 second
+const p3 = p1.then(() => new Promise(rejectLater));
 p3.then(
   (v) => {
     // not called

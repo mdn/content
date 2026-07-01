@@ -1,22 +1,13 @@
 ---
 title: Uint8Array() constructor
+short-title: Uint8Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - Polyfill
 browser-compat: javascript.builtins.Uint8Array.Uint8Array
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`Uint8Array()`** constructor creates a typed array of
-8-bit unsigned integers. The contents are initialized to `0`. Once
-established, you can reference elements in the array using the object's methods, or
-using standard array index syntax (that is, using bracket notation).
+The **`Uint8Array()`** constructor creates {{jsxref("Uint8Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -31,7 +22,8 @@ new Uint8Array(buffer, byteOffset)
 new Uint8Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Uint8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -86,6 +78,7 @@ console.log(uint8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

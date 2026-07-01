@@ -2,13 +2,6 @@
 title: Touch
 slug: Web/API/Touch
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.Touch
 ---
 
@@ -16,9 +9,10 @@ browser-compat: api.Touch
 
 The **`Touch`** interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
 
-The {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, and {{ domxref("Touch.rotationAngle") }} describe the area of contact between the user and the screen, the _touch area_. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip). {{experimental_inline}}
+The {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, and {{ domxref("Touch.rotationAngle") }} describe the area of contact between the user and the screen, the _touch area_. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
 
-> **Note:** Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the `force` value will always be 0. This may also be the case for `radiusX` and `radiusY`; if the hardware reports only a single point, these values will be 1.
+> [!NOTE]
+> Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the `force` value will always be 0. This may also be the case for `radiusX` and `radiusY`; if the hardware reports only a single point, these values will be 1.
 
 ## Constructor
 
@@ -44,7 +38,7 @@ _This interface has no parent, and doesn't inherit or implement other properties
 - {{domxref("Touch.pageX")}} {{ReadOnlyInline}}
   - : Returns the X coordinate of the touch point relative to the left edge of the document. Unlike `clientX`, this value includes the horizontal scroll offset, if any.
 - {{domxref("Touch.pageY")}} {{ReadOnlyInline}}
-  - : Returns the Y coordinate of the touch point relative to the top of the document. Unlike `clientY,` this value includes the vertical scroll offset, if any.
+  - : Returns the Y coordinate of the touch point relative to the top of the document. Unlike `clientY`, this value includes the vertical scroll offset, if any.
 - {{domxref("Touch.target")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Element")}} on which the touch point started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document.
 
@@ -58,6 +52,15 @@ _This interface has no parent, and doesn't inherit or implement other properties
   - : Returns the angle (in degrees) that the ellipse described by radiusX and radiusY must be rotated, clockwise, to most accurately cover the area of contact between the user and the surface.
 - {{domxref("Touch.force")}} {{ReadOnlyInline}}
   - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
+
+### Touch type and angle
+
+- {{domxref("Touch.altitudeAngle")}} {{ReadOnlyInline}}
+  - : Returns the angle (in radians) between the transducer (pointer or stylus) axis and the X-Y plane of the device, in the range `0` (parallel to the surface) to `π/2` (perpendicular to the surface). Defaults to `0` for hardware that does not report tilt or angle.
+- {{domxref("Touch.azimuthAngle")}} {{ReadOnlyInline}}
+  - : Returns the azimuth angle (in radians) of the transducer (pointer or stylus), in the range `0` to `2π`. `0` represents a transducer whose cap is pointing in the direction of increasing X values on the X-Y plane, and values increase clockwise.
+- {{domxref("Touch.touchType")}} {{ReadOnlyInline}}
+  - : Returns the type of device that triggered the touch, such as `"direct"` for a finger or `"stylus"` for a pen device.
 
 ## Instance methods
 

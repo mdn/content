@@ -1,23 +1,14 @@
 ---
-title: Accelerometer.z
+title: "Accelerometer: z property"
+short-title: z
 slug: Web/API/Accelerometer/z
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - z
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer.z
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`z`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its z-axis.
 

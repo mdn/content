@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.frequency
+title: "BiquadFilterNode: frequency property"
+short-title: frequency
 slug: Web/API/BiquadFilterNode/frequency
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequency
 browser-compat: api.BiquadFilterNode.frequency
 ---
 
@@ -22,7 +16,8 @@ Its default value is `350`, with a nominal range of `10` to the [Nyquist frequen
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 
@@ -32,14 +27,14 @@ For a complete working example, check out our [voice-change-o-matic](https://mdn
 ```js
 const audioCtx = new AudioContext();
 
-//set up the different audio nodes we will use for the app
+// Set up the different audio nodes we will use for the app
 const analyser = audioCtx.createAnalyser();
 const distortion = audioCtx.createWaveShaper();
 const gainNode = audioCtx.createGain();
 const biquadFilter = audioCtx.createBiquadFilter();
 const convolver = audioCtx.createConvolver();
 
-// connect the nodes together
+// Connect the nodes together
 
 source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);

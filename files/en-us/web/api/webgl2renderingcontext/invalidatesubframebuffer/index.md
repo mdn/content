@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.invalidateSubFramebuffer()
+title: "WebGL2RenderingContext: invalidateSubFramebuffer() method"
+short-title: invalidateSubFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateSubFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateSubFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.invalidateSubFramebuffer()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) invalidates
@@ -26,9 +21,7 @@ invalidateSubFramebuffer(target, attachments, x, y, width, height)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
@@ -38,10 +31,8 @@ invalidateSubFramebuffer(target, attachments, x, y, width, height)
       - : Used as a source for reading operations.
 
 - `attachments`
-
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment points to
     invalidate. Possible values:
-
     - `gl.COLOR_ATTACHMENT{0-15}`
       - : Invalidates one of the framebuffer's
         color buffers.
@@ -72,9 +63,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.invalidateSubFramebuffer(gl.READ_FRAMEBUFFER,
-                            [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
-                            0, 0, 256, 256);
+gl.invalidateSubFramebuffer(
+  gl.READ_FRAMEBUFFER,
+  [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
+  0,
+  0,
+  256,
+  256,
+);
 ```
 
 ## Specifications

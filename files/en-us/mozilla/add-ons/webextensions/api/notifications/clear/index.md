@@ -1,20 +1,10 @@
 ---
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - clear
+page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.clear
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Clears a notification, given its ID.
 
@@ -37,10 +27,6 @@ let clearing = browser.notifications.clear(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the notification was cleared, or `false` if it was not (for example, because the notification referenced by `id` did not exist).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:
@@ -53,10 +39,10 @@ function toggleAlarm(all) {
     browser.notifications.clear(myNotification);
   } else {
     browser.notifications.create(myNotification, {
-      "type": "basic",
-      "iconUrl": browser.runtime.getURL("icons/cake-48.png"),
-      "title": "Am imposing title",
-      "message": "Some interesting content"
+      type: "basic",
+      iconUrl: browser.runtime.getURL("icons/cake-48.png"),
+      title: "Am imposing title",
+      message: "Some interesting content",
     });
   }
 }
@@ -71,4 +57,9 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

@@ -1,18 +1,8 @@
 ---
-title: MediaSession.setActionHandler()
+title: "MediaSession: setActionHandler() method"
+short-title: setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
 browser-compat: api.MediaSession.setActionHandler
 ---
 
@@ -32,44 +22,57 @@ setActionHandler(type, callback)
 - `type`
   - : A string representing an action type to listen for. It will be one
     of the following:
+    - `enterpictureinpicture`
+      - : Open the media in a [Picture-in-picture](/en-US/docs/Web/API/Picture-in-Picture_API) or [Document Picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window.
     - `hangup`
       - : End a call.
     - `nextslide`
-      - : Moves to the next slide, when presenting a slide deck.
+      - : Move to the next slide, when presenting a slide deck.
     - `nexttrack`
-      - : Advances playback to the next track.
+      - : Advance playback to the next track.
     - `pause`
-      - : Pauses playback of the media.
+      - : Pause playback of the media.
     - `play`
-      - : Begins (or resumes) playback of the media.
+      - : Begin (or resume) playback of the media.
     - `previousslide`
-      - : Moves to the previous slide, when presenting a slide deck.
+      - : Move to the previous slide, when presenting a slide deck.
     - `previoustrack`
-      - : Moves back to the previous track.
+      - : Move back to the previous track.
     - `seekbackward`
-      - : Seeks backward through the media from the current position.
+      - : Seek backward through the media from the current position.
         The `seekOffset` property passed to the callback specifies the amount of time to seek backward.
     - `seekforward`
-      - : Seeks forward from the current position through the media.
+      - : Seek forward from the current position through the media.
         The `seekOffset` property passed to the callback specifies the amount of time to seek forward.
     - `seekto`
-      - : Moves the playback position to the specified time within the media.
-        The time to which to seek is specified in the `seekTime` property passed to the callback.
+      - : Move the playback position to the specified time within the media.
+        The time to move to is specified in the `seekTime` property passed to the callback.
         If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`.
         This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
     - `skipad`
-      - : Skips past the currently playing advertisement or commercial.
+      - : Skip past the currently playing advertisement or commercial.
         This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
     - `stop`
-      - : Halts playback entirely.
+      - : Halt playback entirely.
     - `togglecamera`
       - : Turn the user's active camera on or off.
     - `togglemicrophone`
       - : Mute or unmute the user's microphone.
+    - `togglescreenshare`
+      - : Turn the user's active screenshare on or off.
 - `callback`
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`
       - : A string representing the action type. This property allows a single callback to handle multiple action types.
+    - `enterPictureInPictureReason` {{optional_inline}}
+      - : This property will be available if the action is [`enterpictureinpicture`](#enterpictureinpicture).
+        It is an enumerated value that indicates the reason why the browser triggered this action. Possible values are:
+        - `contentoccluded`
+          - : The page displaying the media has become occluded, for example, due to tab switching or minimization.
+        - `useraction`
+          - : The user has taken an explicit action to trigger picture-in-picture mode, such as selecting a "picture-in-picture" option from a context menu or the browser chrome.
+        - `other`
+          - : The reason for entering picture-in-picture mode is something not covered by the other values.
     - `fastSeek` {{optional_inline}}
       - : A [`seekto`](#seekto) action may _optionally_ include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.
@@ -98,30 +101,81 @@ The action handler receives as input a single parameter: an object which provide
 This example creates a new media session and assigns action handlers (which don't do anything) to it.
 
 ```js
-if ('mediaSession' in navigator) {
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
-    title: 'Unforgettable',
-    artist: 'Nat King Cole',
-    album: 'The Ultimate Collection (Remastered)',
+    title: "Unforgettable",
+    artist: "Nat King Cole",
+    album: "The Ultimate Collection (Remastered)",
     artwork: [
-      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
-      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
-      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
-      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
-      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
-      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
-    ]
+      {
+        src: "https://dummyimage.com/96x96",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/128x128",
+        sizes: "128x128",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/192x192",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/256x256",
+        sizes: "256x256",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/384x384",
+        sizes: "384x384",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/512x512",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
   });
 
-  navigator.mediaSession.setActionHandler('play', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('pause', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('stop', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekbackward', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekforward', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('seekto', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('previoustrack', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('nexttrack', () => { /* Code excerpted. */ });
-  navigator.mediaSession.setActionHandler('skipad', () => { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler("play", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("pause", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("stop", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekbackward", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekforward", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("seekto", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("previoustrack", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("nexttrack", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("skipad", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglecamera", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglemicrophone", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("hangup", () => {
+    /* Code excerpted. */
+  });
 }
 ```
 
@@ -131,28 +185,28 @@ The following example sets up two functions for playing and pausing, then uses t
 const actionHandlers = [
   // play
   [
-    'play',
+    "play",
     async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
-    }
+      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
+    },
   ],
   [
-    'pause',
+    "pause",
     () => {
       // pause out audio
       audioEl.pause();
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
-    }
+      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
+    },
   ],
-]
+];
 
 for (const [action, handler] of actionHandlers) {
   try {
@@ -166,24 +220,23 @@ for (const [action, handler] of actionHandlers) {
 This example uses appropriate action handlers to allow seeking in either direction through the playing media.
 
 ```js
-let skipTime = 10; // Time to skip in seconds
-
-navigator.mediaSession.setActionHandler('seekbackward', (evt) => {
- // User clicked "Seek Backward" media notification icon.
- audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+navigator.mediaSession.setActionHandler("seekbackward", (evt) => {
+  // User clicked "Seek Backward" media notification icon.
+  let skipTime = evt.seekOffset || 10; // Time to skip in seconds
+  audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
 });
 
-navigator.mediaSession.setActionHandler('seekforward', (evt) => {
- // User clicked "Seek Forward" media notification icon.
- audio.currentTime = Math.min(audio.currentTime + skipTime,
-               audio.duration);
+navigator.mediaSession.setActionHandler("seekforward", (evt) => {
+  // User clicked "Seek Forward" media notification icon.
+  let skipTime = evt.seekOffset || 10; // Time to skip in seconds
+  audio.currentTime = Math.min(audio.currentTime + skipTime, audio.duration);
 });
 ```
 
 To remove a media action handler, assign it to null.
 
 ```js
-navigator.mediaSession.setActionHandler('nexttrack', null);
+navigator.mediaSession.setActionHandler("nexttrack", null);
 ```
 
 ### Supporting multiple actions in one handler function
@@ -197,10 +250,12 @@ navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
 
 function handleSeek(details) {
-  switch(details.action) {
+  switch (details.action) {
     case "seekforward":
-      audio.currentTime = Math.min(audio.currentTime + skipTime,
-              audio.duration);
+      audio.currentTime = Math.min(
+        audio.currentTime + skipTime,
+        audio.duration,
+      );
       break;
     case "seekbackward":
       audio.currentTime = Math.max(audio.currentTime - skipTime, 0);

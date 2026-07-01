@@ -1,18 +1,12 @@
 ---
-title: XPathResult.iterateNext()
+title: "XPathResult: iterateNext() method"
+short-title: iterateNext()
 slug: Web/API/XPathResult/iterateNext
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`iterateNext()`** method of the
 {{domxref("XPathResult")}} interface iterates over a node set result and returns the
@@ -37,13 +31,13 @@ The next {{domxref("Node")}} within the node set of the `XPathResult`.
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 #### INVALID_STATE_ERR
 
-If the document is mutated since the result was returned, an
-{{domxref("XPathException")}} of type `INVALID_STATE_ERR` is thrown.
+If the document is mutated since the result was returned, a
+{{domxref("DOMException")}} of type `INVALID_STATE_ERR` is thrown.
 
 ## Examples
 
@@ -60,10 +54,16 @@ The following example shows the use of the `iterateNext()` method.
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 let node = null;
 const tagNames = [];
-while (node = result.iterateNext()) {
+while ((node = result.iterateNext())) {
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");

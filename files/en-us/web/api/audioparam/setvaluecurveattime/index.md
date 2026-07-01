@@ -1,17 +1,8 @@
 ---
-title: AudioParam.setValueCurveAtTime()
+title: "AudioParam: setValueCurveAtTime() method"
+short-title: setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
 
@@ -71,12 +62,13 @@ When the parameter's value finishes following the curve, its value is guaranteed
 match the last value in the set of values specified in the `values`
 parameter.
 
-> **Note:** Some early implementations of the Web Audio API did not ensure
+> [!NOTE]
+> Some early implementations of the Web Audio API did not ensure
 > this to be the case, causing unexpected results.
 
 ## Examples
 
-In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
+In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
 change the gain value between the values contained in the waveArray array:
 
 ```js
@@ -92,7 +84,7 @@ const valueCurve = document.querySelector(".value-curve");
 // Feed the HTMLMediaElement into it
 const source = audioCtx.createMediaElementSource(myAudio);
 
-// Create a gain node and set it's gain value to 0.5
+// Create a gain node and set its gain value to 0.5
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
 const currGain = gainNode.gain.value;

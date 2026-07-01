@@ -2,17 +2,12 @@
 title: Proposing new content or features
 slug: MDN/Community/Issues/Content_suggestions_feature_proposals
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 We are always interested in hearing from our community about new content or feature suggestions you may have for MDN Web Docs. However, even though we are open to suggestions, we have to keep the following in mind:
 
-- MDN Web Docs is run and managed by a small internal team. We also rely heavily on our partners and community to help us keep MDN Web Docs the best resource for web developers on the web. As such, we will sometimes have to say no to new content or features because we will simply not be unable to maintain them long-term.
+- MDN Web Docs is run and managed by a small internal team. We also rely heavily on our partners and community to help us keep MDN Web Docs the best resource for web developers on the web. As such, we will sometimes have to say no to new content or features because we will simply be unable to maintain them long-term.
 - MDN Web Docs is also focused on documenting open web standards; some content might not be a good fit. This does not mean the idea or content is not good, just that MDN Web Docs is not the best place for it.
 
 Keeping that in mind, if you _do_ want to propose content or features for MDN Web Docs, please follow the below steps.
@@ -28,7 +23,7 @@ Once you have completed the form and submitted the issue, a core team member wil
 
 ## Participate in the discussion and wait for approval
 
-If we feel the proposal might be a good fit, we will [start a discussion](https://github.com/mdn/mdn-community/dicsussions) on our MDN community discussions repository. This is to get input from our partners and the wider community. We encourage you to monitor the discussion and join in as appropriate.
+If we feel the proposal might be a good fit, we will [start a discussion](https://github.com/orgs/mdn/discussions) on our MDN community discussions repository. This is to get input from our partners and the wider community. We encourage you to monitor the discussion and join in as appropriate.
 
 ## Opening an issue
 

@@ -1,20 +1,12 @@
 ---
-title: Cache.match()
+title: "Cache: match() method"
+short-title: match()
 slug: Web/API/Cache/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
 browser-compat: api.Cache.match
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
 If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined")}}.
@@ -30,17 +22,15 @@ match(request, options)
 
 - `request`
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
+    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL string.
 - `options` {{optional_inline}}
-
   - : An object that sets options for the `match` operation.
     The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod`
       - : A boolean value that, when set to
@@ -50,7 +40,7 @@ match(request, options)
     - `ignoreVary`
       - : A boolean value that when set to
         `true` tells the matching operation not to perform `VARY`
-        header matching — i.e. if the URL matches you will get a match regardless of
+        header matching — i.e., if the URL matches you will get a match regardless of
         whether the {{domxref("Response")}} object has a `VARY` header. It
         defaults to `false`.
 
@@ -59,7 +49,8 @@ match(request, options)
 A {{jsxref("Promise")}} that resolves to the first {{domxref("Response")}} that matches
 the request or to {{jsxref("undefined")}} if no match is found.
 
-> **Note:** `Cache.match()` is basically identical to
+> [!NOTE]
+> `Cache.match()` is basically identical to
 > {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
 > all matching responses, it resolves with the first matching response only (that is,
 > `response[0]`).
@@ -77,7 +68,7 @@ intercept the request. If there are any other fetch handlers registered, they wi
 chance to call `event.respondWith()`. If no fetch handlers call
 `event.respondWith()`, the request will be handled by the browser as if there
 were no service worker involvement. If `fetch()` returns a valid HTTP
-response with an response code in the 4xx or 5xx range, the `catch()` will
+response with a response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
@@ -94,7 +85,7 @@ self.addEventListener("fetch", (event) => {
         return caches
           .open(OFFLINE_CACHE)
           .then((cache) => cache.match(OFFLINE_URL));
-      })
+      }),
     );
   }
 });
@@ -112,4 +103,4 @@ self.addEventListener("fetch", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

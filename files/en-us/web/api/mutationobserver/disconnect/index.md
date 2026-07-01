@@ -1,24 +1,8 @@
 ---
-title: MutationObserver.disconnect()
+title: "MutationObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/MutationObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Changes
-  - DOM
-  - DOM Changes
-  - DOM Reference
-  - DOM Tree
-  - Disconnect
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - Observing
-  - Reference
-  - Watching
-  - mutation
-  - stop
 browser-compat: api.MutationObserver.disconnect
 ---
 
@@ -45,7 +29,8 @@ None.
 
 `undefined`.
 
-> **Note:** All notifications of mutations that have already been
+> [!NOTE]
+> All notifications of mutations that have already been
 > _detected_, but _not yet reported_ to the observer, are discarded.
 > To hold on to and handle the detected but unreported mutations, use
 > the {{domxref("MutationObserver.takeRecords()", "takeRecords()")}} method.
@@ -66,8 +51,8 @@ possible reuse.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);

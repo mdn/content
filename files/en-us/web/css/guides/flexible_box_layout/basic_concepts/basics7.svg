@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="2041.742" height="797.663" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 1531.5 598.322">
+  <defs>
+    <path id="a" d="M39.974 139.907H1459.03v279.815H39.974z" />
+  </defs>
+  <path fill="#fff" d="M0 0h1531.5v598.322H0z" />
+  <path fill="#4f79eb" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M39.974 139.907h279.814v279.815H39.974z" /><text fill="#fff" font-family="Helvetica" font-size="128" transform="translate(145.667 185.775)">
+    <tspan x="0" y="124" textLength="71.188">a</tspan>
+  </text>
+  <path fill="#4f79eb" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M319.788 139.907h279.814v279.815H319.788z" /><text fill="#fff" font-family="Helvetica" font-size="128" transform="translate(425.481 185.775)">
+    <tspan x="0" y="124" textLength="71.188">b</tspan>
+  </text>
+  <path fill="#4f79eb" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M599.602 139.907h279.815v279.815H599.602z" /><text fill="#fff" font-family="Helvetica" font-size="128" transform="translate(705.296 185.775)">
+    <tspan x="0" y="124" textLength="64">c</tspan>
+  </text>
+  <mask id="b" width="1425.06" height="285.815" x="36.974" y="136.907" maskUnits="userSpaceOnUse">
+    <path fill="#fff" d="M36.974 136.907h1425.06v285.815H36.974z" />
+    <use xlink:href="#a" fill-rule="evenodd" />
+  </mask>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="8" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="48" transform="translate(439.708 21.625)">
+    <tspan x="40.301" y="47" textLength="519">Container width = 500px</tspan>
+  </text><text font-family="Helvetica" font-size="48" transform="translate(919.391 501.307)">
+    <tspan x="110.086" y="47" textLength="379.43">Available = 200px</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="5" d="M1441.5 99.934H57.493" />
+  <path d="m61.868 99.934 13.125-17.5-35 17.5 35 17.5zM1437.12 99.934l-13.12 17.5 35-17.5-35-17.5z" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="5" d="M1441.51 459.695H896.92" />
+  <path d="m901.295 459.695 13.125-17.5-35 17.5 35 17.5zM1437.13 459.695l-13.12 17.5 35-17.5-35-17.5z" />
+</svg>

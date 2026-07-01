@@ -1,22 +1,16 @@
 ---
-title: 'TypeError: More arguments needed'
+title: "TypeError: More arguments needed"
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "more arguments needed" occurs when there is an error with how
 a function is called. More arguments need to be provided.
 
 ## Message
 
-```
+```plain
 TypeError: Object prototype may only be an Object or null: undefined (V8-based)
 TypeError: Object.create requires at least 1 argument, but only 0 were passed (Firefox)
 TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed (Firefox)
@@ -57,4 +51,4 @@ const obj2 = Object.setPrototypeOf({}, null);
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

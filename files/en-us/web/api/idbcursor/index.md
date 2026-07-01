@@ -2,19 +2,13 @@
 title: IDBCursor
 slug: Web/API/IDBCursor
 page-type: web-api-interface
-tags:
-  - API
-  - IDBCursor
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBCursor
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-> **Note:** Not to be confused with {{domxref("IDBCursorWithValue")}} which is just an **`IDBCursor`** interface with an additional **`value`** property.
+> [!NOTE]
+> Not to be confused with {{domxref("IDBCursorWithValue")}} which is just an **`IDBCursor`** interface with an additional **`value`** property.
 
 The **`IDBCursor`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for traversing or iterating over multiple records in a database.
 
@@ -22,16 +16,15 @@ The cursor has a source that indicates which index or object store it is iterati
 
 You can have an unlimited number of cursors at the same time. You always get the same `IDBCursor` object representing a given cursor. Operations are performed on the underlying index or object store.
 
-{{AvailableInWorkers}}
-
 ## Instance properties
 
-> **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is iterating. This function never returns null or throws an exception, even if the cursor is currently being iterated, has iterated past its end, or its transaction is not active.
 - {{domxref("IDBCursor.direction")}} {{ReadOnlyInline}}
-  - : Returns the direction of traversal of the cursor. See [Constants](#const_next) for possible values.
+  - : Returns the direction of traversal of the cursor.
 - {{domxref("IDBCursor.key")}} {{ReadOnlyInline}}
   - : Returns the key for the record at the cursor's position. If the cursor is outside its range, this is set to `undefined`. The cursor's key can be any data type.
 - {{domxref("IDBCursor.primaryKey")}} {{ReadOnlyInline}}
@@ -56,7 +49,8 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 {{Deprecated_Header}}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})
+> [!WARNING]
+> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
@@ -69,19 +63,19 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }
@@ -102,5 +96,4 @@ function displayData() {
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
 - Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,20 +1,8 @@
 ---
-title: AudioTrack.label
+title: "AudioTrack: label property"
+short-title: label
 slug: Web/API/AudioTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - label
-  - metadata
-  - track
 browser-compat: api.AudioTrack.label
 ---
 
@@ -67,8 +55,7 @@ function getTrackList(el) {
 
 The resulting `trackList` contains an array of audio tracks whose
 `kind` is one of those in the array `wantedKinds`, with each entry
-providing the track's {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind",
-  "kind")}}, and {{domxref("AudioTrack.label", "label")}}.
+providing the track's {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind", "kind")}}, and `label`.
 
 ## Specifications
 

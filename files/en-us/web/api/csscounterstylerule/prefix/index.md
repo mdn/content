@@ -1,23 +1,18 @@
 ---
-title: CSSCounterStyleRule.prefix
+title: "CSSCounterStyleRule: prefix property"
+short-title: prefix
 slug: Web/API/CSSCounterStyleRule/prefix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - prefix
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.prefix
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 The **`prefix`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/prefix","prefix")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
 ## Value
 
-A string
+A string.
 
 ## Examples
 

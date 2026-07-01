@@ -1,19 +1,10 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.StreamFilter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A `StreamFilter` is an object you use to monitor and modify HTTP responses.
 
@@ -33,7 +24,7 @@ You can listen to each event by assigning a listener function to its attribute:
 ```js
 filter.onstart = (event) => {
   console.log("started");
-}
+};
 ```
 
 Note that the request is blocked during the execution of any event listeners.
@@ -77,10 +68,6 @@ The filter also provides functions to {{WebEXTAPIRef("webRequest.StreamFilter.su
 - {{WebExtAPIRef("webRequest.StreamFilter.status")}}
   - : Describes the current status of the stream.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This code listens for `onstart`, `ondata`, and `onstop`. It logs those events, and the response data as an {{jsxref("ArrayBuffer")}} itself:
@@ -91,26 +78,30 @@ function listener(details) {
 
   filter.onstart = (event) => {
     console.log("started");
-  }
+  };
 
   filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
-  }
+  };
 
   filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
-  }
+  };
 
-  //return {}; // not needed
+  // return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

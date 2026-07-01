@@ -1,22 +1,27 @@
 ---
 title: String.prototype.localeCompare()
+short-title: localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.localeCompare
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`localeCompare()`** method of {{jsxref("String")}} values returns a number indicating whether this string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method delegates to `Intl.Collator`.
 
-The **`localeCompare()`** method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method simply calls `Intl.Collator`.
+When comparing large numbers of strings, such as in sorting large arrays, it is better to create an {{jsxref("Intl.Collator")}} object and use the function provided by its {{jsxref("Intl/Collator/compare", "compare()")}} method.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -35,13 +40,11 @@ In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaSc
 - `compareString`
   - : The string against which the `referenceStr` is compared. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `localeCompare()` to compare against the string `"undefined"`, which is rarely what you want.
 - `locales` {{optional_inline}}
-
-  - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored and the host's locale is usually used.
 
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored.
@@ -65,16 +68,13 @@ before, after or is equivalent to the `compareString`.
   `compareString`
 - Returns `0` if they are equivalent
 
-> **Warning:** Do not rely on exact return values of `-1` or `1`!
+> [!WARNING]
+> Do not rely on exact return values of `-1` or `1`!
 >
 > Negative and positive integer results vary between browsers (as well as between
-> browser versions) because the W3C specification only mandates negative and positive
+> browser versions) because the ECMAScript specification only mandates negative and positive
 > values. Some browsers may return `-2` or `2`, or even some other
 > negative or positive value.
-
-## Performance
-
-When comparing large numbers of strings, such as in sorting large arrays, it is better to create an [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) object and use the function provided by its [`compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) method.
 
 ## Examples
 

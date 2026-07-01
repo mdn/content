@@ -1,14 +1,8 @@
 ---
-title: KeyboardEvent.location
+title: "KeyboardEvent: location property"
+short-title: location
 slug: Web/API/KeyboardEvent/location
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.location
 ---
 

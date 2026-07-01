@@ -1,23 +1,14 @@
 ---
-title: Accelerometer.y
+title: "Accelerometer: y property"
+short-title: y
 slug: Web/API/Accelerometer/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Experimental
-  - "y"
+status:
+  - experimental
 browser-compat: api.Accelerometer.y
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its y-axis.
 

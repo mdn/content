@@ -1,20 +1,14 @@
 ---
-title: 'Element: copy event'
+title: "Element: copy event"
+short-title: copy
 slug: Web/API/Element/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Element
-  - Event
-  - Reference
-  - Web
 browser-compat: api.Element.copy_event
 ---
 
-{{APIRef}}
+{{APIRef("Clipboard API")}}
 
-The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
+The **`copy`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) fires when the user initiates a copy action through the browser's user interface.
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
@@ -22,16 +16,18 @@ A handler for this event can _modify_ the clipboard contents by calling {{domxre
 
 However, the handler cannot _read_ the clipboard data.
 
-It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `copy` event, but this will not affect the system clipboard.
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) `copy` event, but this will not affect the system clipboard.
+
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('copy', (event) => { });
+```js-nolint
+addEventListener("copy", (event) => { })
 
-oncopy = (event) => { };
+oncopy = (event) => { }
 ```
 
 ## Event type
@@ -65,12 +61,12 @@ div.target {
 #### JavaScript
 
 ```js
-const source = document.querySelector('div.source');
+const source = document.querySelector("div.source");
 
-source.addEventListener('copy', (event) => {
-    const selection = document.getSelection();
-    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
-    event.preventDefault();
+source.addEventListener("copy", (event) => {
+  const selection = document.getSelection();
+  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
+  event.preventDefault();
 });
 ```
 
@@ -88,6 +84,5 @@ source.addEventListener('copy', (event) => {
 
 ## See also
 
-- Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/copy_event", "copy")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "copy")}}
+- {{domxref("Element/cut_event", "cut")}} event
+- {{domxref("Element/paste_event", "paste")}} event

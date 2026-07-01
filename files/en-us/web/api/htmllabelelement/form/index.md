@@ -1,34 +1,20 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form property"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
 page-type: web-api-instance-property
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Property
-  - Read-only
-  - Reference
-  - form
 browser-compat: api.HTMLLabelElement.form
 ---
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`HTMLLabelElement.form`** property returns an
-{{domxref("HTMLFormElement")}} object which represents the form of which the label's
-associated control is a part, or null if there is either no associated control, or if
-that control isn't in a form.
+The **`form`** read-only property of the {{domxref("HTMLLabelElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLLabelElement.control", "control")}} associated with this {{HTMLElement("label")}}, or `null` if this label is not associated with a [labelable](/en-US/docs/Web/HTML/Guides/Content_categories#labelable) [form-associated](/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content) element ({{htmlelement("button")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}}, or [form-associated custom elements](https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element)) that is owned by a form.
 
-This property is just a shortcut for `HTMLLabelElement.control.form`.
+Unlike [form-associated elements](/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content), the `<label>` element does not have a [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute. This property does not reflect any HTML attribute, but is just a shortcut for `label.control.form`.
 
 ## Value
 
-An {{domxref("HTMLFormElement")}} which represents the form with which the label's
-{{domxref("HTMLLabelElement.control", "control")}} is associated. If
-{{domxref("HTMLLabelElement.control", "control")}} is `null` (meaning the
-label isn't associated with a control), or if the control isn't part of a form, this
-property returns `null`.
+An {{domxref("HTMLFormElement")}} or `null`.
 
 ## Specifications
 
@@ -41,6 +27,7 @@ property returns `null`.
 ## See also
 
 - {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLElement")}}
+- {{domxref("HTMLInputElement.form")}}
+- {{domxref("HTMLFormElement")}}
 - {{HTMLElement("label")}}
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

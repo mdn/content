@@ -1,33 +1,17 @@
 ---
-title: RTCIceTransport.state
+title: "RTCIceTransport: state property"
+short-title: state
 slug: Web/API/RTCIceTransport/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Enumerated Type
-  - Enumeration
-  - ICE
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Transport
-  - Type
-  - WebRTC
-  - WebRTC API
-  - state
 browser-compat: api.RTCIceTransport.state
 ---
 
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}**
-property **`state`** returns the current state of the ICE
-transport, so you can determine the state of ICE gathering in which the ICE agent
-currently is operating.
+The **`state`** read-only property of the {{domxref("RTCIceTransport")}} interface returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.
 
-This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}},
-which only indicates whether or not ICE gathering is currently underway.
+This differs from the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}}, which only indicates whether or not ICE gathering is currently underway.
+It also differs from {{domxref("RTCPeerConnection.connectionState")}}, which aggregates the states across every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection.
 
 ## Value
 
@@ -38,7 +22,6 @@ A string whose value is one of the following:
 - `"checking"`
   - : At least one remote candidate has been received, and the `RTCIceTransport` has begun examining pairings of remote and local candidates in order to attempt to identify viable pairs that could be used to establish a connection. Keep in mind that gathering of local candidates may still be underway, and, similarly, the remote device also may still be gathering candidates of its own.
 - `"connected"`
-
   - : A viable candidate pair has been found and selected, and the `RTCIceTransport` has connected the two peers together using that pair. However, there are still candidates pairings to consider, and there may still be gathering underway on one or both of the two devices.
 
     The transport may revert from the `"connected"` state to the `"checking"` state if either peer decides to cancel consent to use the selected candidate pair, and may revert to `"disconnected"` if there are no candidates left to check but one or both clients are still gathering candidates.

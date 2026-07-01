@@ -1,13 +1,8 @@
 ---
-title: SVGMarkerElement.preserveAspectRatio
+title: "SVGMarkerElement: preserveAspectRatio property"
+short-title: preserveAspectRatio
 slug: Web/API/SVGMarkerElement/preserveAspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - preserveAspectRatio
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.preserveAspectRatio
 ---
 
@@ -20,9 +15,7 @@ The **`preserveAspectRatio`** read-only property of the {{domxref("SVGMarkerElem
 An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The `baseVal` property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, with the following properties:
 
 - `align`
-
   - : One of the following numeric constants:
-
     - `0`
       - : `SVG_PRESERVEASPECTRATIO_UNKNOWN`
     - `1`
@@ -47,9 +40,7 @@ An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The `baseVal` property 
       - : `SVG_PRESERVEASPECTRATIO_XMAXYMAX`
 
 - `meetOrSlice`
-
   - : One of the following numeric constants:
-
     - `0`
       - : `SVG_MEETORSLICE_UNKNOWN`
     - `1`

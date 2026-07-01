@@ -1,19 +1,10 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - menus
-  - onShown
+page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when the browser has shown a menu.
 
@@ -21,7 +12,7 @@ An extension can use this event to update its menu items using information that'
 
 The handler can add, remove, or update menu items.
 
-For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
+For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/main/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
 
 Note that an extension should not take too much time before calling `refresh()`, or the update will be noticeable to the user.
 
@@ -38,7 +29,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
   lastMenuInstanceId = menuInstanceId;
 
   // Call an async function
-  await /* the function to call */ ;
+  await doSomethingAsync();
 
   // After completing the async operation, check whether the menu is still shown.
   if (menuInstanceId !== lastMenuInstanceId) {
@@ -56,7 +47,7 @@ Note that it is possible to call menus API functions synchronously, and in this 
 
 ```js
 browser.menus.onShown.addListener(async (info, tab) => {
-  browser.menus.update(menuId /*, …*/);
+  browser.menus.update(menuId /*, … */);
   // Note: Not waiting for returned promise.
   browser.menus.refresh();
 });
@@ -69,7 +60,7 @@ browser.menus.onShown.addListener(async (info, tab) => {
   let menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
-  await browser.menus.update(menuId /*, …*/);
+  await browser.menus.update(menuId /*, … */);
   // must now perform the check
   if (menuInstanceId !== lastMenuInstanceId) {
     return;
@@ -101,14 +92,10 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed these arguments:
     - `info`
-
       - : `Object`. This is just like the {{WebExtAPIRef('menus.OnClickData')}} object, except it contains two extra properties:
-
         - `contexts`: an array of all the {{WebExtAPIRef("menus.ContextType", "contexts")}} that are applicable to this menu.
         - `menuIds`: an array of IDs of all menu items belonging to this extension that are being shown in this menu.
 

@@ -1,20 +1,14 @@
 ---
-title: MediaQueryList.removeListener()
+title: "MediaQueryList: removeListener() method"
+short-title: removeListener()
 slug: Web/API/MediaQueryList/removeListener
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - removeListener
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM view API")}}{{Deprecated_Header}}
 
 The **`removeListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface removes a listener from the
@@ -44,18 +38,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const paragraph = document.querySelector('p');
-const mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector("p");
+const mediaQueryList = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
-    document.body.style.backgroundColor = 'pink';
+    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
+    document.body.style.backgroundColor = "pink";
   } else {
     /* the viewport is more than 600 pixels wide */
-    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'aquamarine';
+    paragraph.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "aquamarine";
   }
 }
 
@@ -75,8 +69,8 @@ mediaQueryList.removeListener(screenTest);
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

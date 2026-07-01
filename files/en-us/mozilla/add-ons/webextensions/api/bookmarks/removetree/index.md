@@ -1,24 +1,15 @@
 ---
 title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeTree
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.removeTree
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`bookmarks.removeTree()`** method recursively removes a bookmark folder and all of its contents.
 
-> **Warning:** If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.
+> [!WARNING]
+> If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -33,7 +24,7 @@ let removingTree = browser.bookmarks.removeTree(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} specifying the ID of the folder node to be deleted along with its descendants.
+  - : A {{jsxref("String")}} specifying the ID of the folder node to be deleted along with its descendants.
 
 ### Return value
 
@@ -71,7 +62,8 @@ searchingBookmarks.then(removeMDN, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-removeTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-removeTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

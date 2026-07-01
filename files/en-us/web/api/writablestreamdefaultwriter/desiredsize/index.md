@@ -1,18 +1,12 @@
 ---
-title: WritableStreamDefaultWriter.desiredSize
+title: "WritableStreamDefaultWriter: desiredSize property"
+short-title: desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - desiredSize
 browser-compat: api.WritableStreamDefaultWriter.desiredSize
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`desiredSize`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required
@@ -34,26 +28,29 @@ closed.
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      // …
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-// ...
+// …
 
 const writer = writableStream.getWriter();
 
-// ...
+// …
 
 // return stream's desired size
-let size = writer.desiredSize;
+const size = writer.desiredSize;
 ```
 
 ## Specifications

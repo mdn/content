@@ -1,13 +1,8 @@
 ---
-title: Document.scripts
+title: "Document: scripts property"
+short-title: scripts
 slug: Web/API/Document/scripts
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.scripts
 ---
 
@@ -31,7 +26,7 @@ This example looks to see if the page has any {{HTMLElement("script")}} elements
 let scripts = document.scripts;
 
 if (scripts.length) {
-  alert('This page has scripts!');
+  alert("This page has scripts!");
 }
 ```
 

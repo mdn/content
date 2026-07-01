@@ -1,19 +1,10 @@
 ---
 title: dns.resolve()
 slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
-tags:
-  - API
-  - Add-ons
-  - DNS
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - resolve
+page-type: webextension-api-function
 browser-compat: webextensions.api.dns.resolve
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Resolves the given hostname to a DNS record.
 
@@ -33,9 +24,7 @@ let resolving = browser.dns.resolve(
 - `hostname`
   - : `string`. The hostname to resolve.
 - `flags` {{optional_inline}}
-
   - : `array` of `string`. Flags to modify the way the hostname is resolved. Any omitted flags default to `false`. You can pass zero or more of the following flags:
-
     - `"allow_name_collisions"`: Allow name collision results which are normally filtered out.
     - `"bypass_cache"`: Suppresses the internal DNS lookup cache.
     - `"canonical_name"`: The canonical name of the specified host will be queried.
@@ -58,10 +47,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `isTRR`
   - : `boolean`: `true` if the record was retrieved using a Trusted Recursive Resolver (TRR).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -72,7 +57,7 @@ function resolved(record) {
 let resolving = browser.dns.resolve("example.com");
 resolving.then(resolved);
 
-// > e.g. Array [ "73.284.240.12" ]
+// > e.g. Array [ "192.0.2.172" ]
 ```
 
 Bypass the cache, and ask for the canonical name:
@@ -83,12 +68,18 @@ function resolved(record) {
   console.log(record.addresses);
 }
 
-let resolving = browser.dns.resolve("developer.mozilla.org",
-                                   ["bypass_cache", "canonical_name"]);
+let resolving = browser.dns.resolve("developer.mozilla.org", [
+  "bypass_cache",
+  "canonical_name",
+]);
 resolving.then(resolved);
 
 // > e.g. xyz.us-west-2.elb.amazonaws.com
-// > e.g. Array [ "78.18.187.134", "34.79.135.234" ]
+// > e.g. Array [ "192.0.2.172", "198.51.100.45" ]
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -2,14 +2,9 @@
 title: FileEntrySync
 slug: Web/API/FileEntrySync
 page-type: web-api-interface
-tags:
-  - API
-  - File
-  - File and Directory Entries API
-  - Interface
-  - Non-standard
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileEntrySync
 ---
 
@@ -17,7 +12,8 @@ browser-compat: api.FileEntrySync
 
 The `FileEntrySync` interface represents a file in a file system. It lets you write content to a file.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
@@ -30,14 +26,12 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   <tbody>
     <tr>
       <td>
-        <code>FileWriterSync
-          <a href="#createreader" title="#createWriter">createWriter</a> ());
-        </code>
+        <code>FileWriterSync <a href="#createwriter">createWriter</a> ();</code>
       </td>
     </tr>
     <tr>
       <td>
-        <code>File <a href="#file">file</a> ());</code>
+        <code>File <a href="#file">file</a> ();</code>
       </td>
     </tr>
   </tbody>
@@ -49,15 +43,15 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-```
-void createWriter ();
+```js-nolint
+createWriter()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `FileWriterSync` object.
 
@@ -74,15 +68,15 @@ This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with th
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-```
-void file ();
+```js-nolint
+file()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `File` object.
 
@@ -105,5 +99,4 @@ This feature is not part of any specification anymore. It is no longer on track 
 
 ## See also
 
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-- [Basic Concepts About the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)

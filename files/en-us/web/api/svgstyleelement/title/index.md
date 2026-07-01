@@ -1,26 +1,21 @@
 ---
-title: SVGStyleElement.title
+title: "SVGStyleElement: title property"
+short-title: title
 slug: Web/API/SVGStyleElement/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.title
 ---
 
 {{APIRef("SVG")}}
 
-The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given SVG style element.
-It may be used to select between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
+The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given SVG style element.
+It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
 ## Value
 
 A string with any value.
 
-The value is initialized with the string specified in the corresponding style's [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute.
+The value is initialized with the string specified in the corresponding style's [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute.
 
 ## Examples
 
@@ -28,7 +23,7 @@ This example demonstrates programmatically getting and setting the `title` prope
 
 ### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that has a `title`.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element that has a `title`.
 We also define a text area for logging the current title.
 
 ```html
@@ -50,7 +45,7 @@ We also define a text area for logging the current title.
 The code below gets the `style` element (an `SVGStyleElement`) using its tag name, logs the title, then changes and logs the title again.
 
 ```js
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 
 const svg = document.querySelector("svg");
 const style = svg.querySelector("style");
@@ -66,7 +61,7 @@ The text in the log below shows that the title initially reflects the matching a
 {{EmbedLiveSample("Examples")}}
 
 Note that alternate styles are not applied by default; they must be selected as the preferred stylesheet by the user.
-To apply the alternate stylesheets on FireFox:
+To apply the alternate stylesheets on Firefox:
 
 1. Open the Menu Bar (Press `F10` or tap the `Alt` key)
 2. Open **View > Page Style** submenu

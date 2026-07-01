@@ -1,16 +1,10 @@
 ---
-title: Window.event
+title: "Window: event property"
+short-title: event
 slug: Web/API/Window/event
 page-type: web-api-instance-property
-tags:
-  - API
-  - Event
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Read-only
-  - Window
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.event
 ---
 
@@ -20,7 +14,8 @@ The read-only {{domxref("Window")}} property **`event`** returns the {{domxref("
 
 You _should_ avoid using this property in new code, and should instead use the {{domxref("Event")}} passed into the event handler function. This property is not universally supported and even when supported introduces potential fragility to your code.
 
-> **Note:** This property can be fragile, in that there may be situations in which the returned `Event` is not the expected value. In addition, `Window.event` is not accurate for events dispatched within {{Glossary("shadow tree", "shadow trees")}}.
+> [!NOTE]
+> This property can be fragile, in that there may be situations in which the returned `Event` is not the expected value. In addition, `Window.event` is not accurate for events dispatched within {{Glossary("shadow tree", "shadow trees")}}.
 
 ## Specifications
 

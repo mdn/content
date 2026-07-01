@@ -1,21 +1,19 @@
 ---
-title: OffscreenCanvasRenderingContext2D.commit()
+title: "OffscreenCanvasRenderingContext2D: commit() method"
+short-title: commit()
 slug: Web/API/OffscreenCanvasRenderingContext2D/commit
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - OffscreenCanvasRenderingContext2D
-  - Method
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**
-method of the [Canvas 2D API](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) copies the rendering context's bitmap to the bitmap of the placeholder {{HtmlElement("canvas")}} element of the associated `OffscreenCanvas` object.
+method of the [Canvas 2D API](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) was intended to copy the rendering context's bitmap to the bitmap of the placeholder {{HtmlElement("canvas")}} element of the associated `OffscreenCanvas` object.
 The copy operation is synchronous. Calling this method is not needed for the transfer, since it happens automatically during the event-loop execution.
 
 ## Syntax
@@ -24,9 +22,17 @@ The copy operation is synchronous. Calling this method is not needed for the tra
 commit()
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
-```javascript
+```js
 const placeholder = document.createElement("canvas");
 const offscreen = placeholder.transferControlToOffscreen();
 const ctx = offscreenCanvas.getContext("2d");
@@ -41,7 +47,7 @@ ctx.commit();
 
 ## Specifications
 
-{{Specifications}}
+Not part of any specification.
 
 ## Browser compatibility
 

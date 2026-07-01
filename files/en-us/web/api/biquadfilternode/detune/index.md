@@ -1,14 +1,8 @@
 ---
-title: BiquadFilterNode.detune
+title: "BiquadFilterNode: detune property"
+short-title: detune
 slug: Web/API/BiquadFilterNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.BiquadFilterNode.detune
 ---
 
@@ -20,7 +14,8 @@ The `detune` property of the {{ domxref("BiquadFilterNode") }} interface is an [
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 
@@ -30,14 +25,14 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 ```js
 const audioCtx = new AudioContext();
 
-//set up the different audio nodes we will use for the app
+// Set up the different audio nodes we will use for the app
 const analyser = audioCtx.createAnalyser();
 const distortion = audioCtx.createWaveShaper();
 const gainNode = audioCtx.createGain();
 const biquadFilter = audioCtx.createBiquadFilter();
 const convolver = audioCtx.createConvolver();
 
-// connect the nodes together
+// Connect the nodes together
 
 source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);

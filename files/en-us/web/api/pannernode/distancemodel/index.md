@@ -1,14 +1,8 @@
 ---
-title: PannerNode.distanceModel
+title: "PannerNode: distanceModel property"
+short-title: distanceModel
 slug: Web/API/PannerNode/distanceModel
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - distanceModel
 browser-compat: api.PannerNode.distanceModel
 ---
 
@@ -33,7 +27,7 @@ An enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

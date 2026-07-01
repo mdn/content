@@ -1,11 +1,8 @@
 ---
-title: Main Axis
+title: Main axis
 slug: Glossary/Main_Axis
 page-type: glossary-definition
-tags:
-  - CSS
-  - Main axis
-  - flexbox
+sidebar: glossarysidebar
 ---
 
 The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for `flex-direction`. These are:
@@ -21,7 +18,7 @@ Should you choose `row` or `row-reverse` then your main axis will run along the 
 
 Choose `column` or `column-reverse` and your main axis will run top to bottom of the page in the block direction.
 
-![Three flex items taking up the full width of the container, displayed one below the other in code order. Flex-direction is set to column. The main axis is vertical i.e. from top to bottom](basics2.png)
+![Three flex items taking up the full width of the container, displayed one below the other in code order. Flex-direction is set to column. The main axis is vertical i.e., from top to bottom](basics2.png)
 
 On the main axis you can control the sizing of flex items by adding any available space to the items themselves, by way of `flex` properties on the items. Or, you can control the space between and around items by using the `justify-content` property.
 
@@ -38,6 +35,7 @@ On the main axis you can control the sizing of flex items by adding any availabl
 
 ### Further reading
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS flexbox guides:
+  - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+  - [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+  - [Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)

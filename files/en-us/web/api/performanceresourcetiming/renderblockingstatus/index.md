@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.renderBlockingStatus
+title: "PerformanceResourceTiming: renderBlockingStatus property"
+short-title: renderBlockingStatus
 slug: Web/API/PerformanceResourceTiming/renderBlockingStatus
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`renderBlockingStatus`** read-only property returns the render-blocking status of the resource.
 
@@ -26,7 +22,7 @@ Render-blocking resources are static files, such as fonts, CSS, and JavaScript t
 In addition to the automatic render-blocking mechanism, `blocking="render"` can be provided as an attribute and value to {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}} elements to specify explicit render-blocking. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<script blocking="render" src="important.js" defer></script>
 ```
 
 ## Value

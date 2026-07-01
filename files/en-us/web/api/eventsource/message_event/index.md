@@ -1,19 +1,14 @@
 ---
-title: 'EventSource: message event'
+title: "EventSource: message event"
+short-title: message
 slug: Web/API/EventSource/message_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - EventSource
-  - Reference
-  - message
 browser-compat: api.EventSource.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-The `message` event of the {{domxref("EventSource")}} API is fired when data is received through an event source.
+The **`message`** event of the {{domxref("EventSource")}} interface is fired when data is received through an event source.
 
 This event is not cancelable and does not bubble.
 
@@ -21,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('message', (event) => { });
+```js-nolint
+addEventListener("message", (event) => { })
 
-onmessage = (event) => { };
+onmessage = (event) => { }
 ```
 
 ## Event type
@@ -46,17 +41,17 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
 In this basic example, an `EventSource` is created to receive events from the server; a page with the name `sse.php` is responsible for generating the events.
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
-evtSource.addEventListener('message', (e) => {
+evtSource.addEventListener("message", (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;

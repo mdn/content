@@ -1,13 +1,8 @@
 ---
-title: 'Window: messageerror event'
+title: "Window: messageerror event"
+short-title: messageerror
 slug: Web/API/Window/messageerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - MessageEvent
-  - Reference
-  - Window
 browser-compat: api.Window.messageerror_event
 ---
 
@@ -21,10 +16,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('messageerror', (event) => { });
+```js-nolint
+addEventListener("messageerror", (event) => { })
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => { }
 ```
 
 ## Event type
@@ -46,15 +41,15 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
 Listen for `messageerror` using {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
 ```js
-window.addEventListener('messageerror', (event) => {
-    console.error(event);
+window.addEventListener("messageerror", (event) => {
+  console.error(event);
 });
 ```
 
@@ -62,7 +57,7 @@ The same, but using the `onmessageerror` event handler property:
 
 ```js
 window.onmessageerror = (event) => {
-    console.error(event);
+  console.error(event);
 };
 ```
 

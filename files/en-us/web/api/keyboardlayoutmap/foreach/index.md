@@ -1,18 +1,12 @@
 ---
-title: KeyboardLayoutMap.forEach()
+title: "KeyboardLayoutMap: forEach() method"
+short-title: forEach()
 slug: Web/API/KeyboardLayoutMap/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Method
-  - Reference
-  - forEach()
-  - keyboard
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.forEach
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.foreach
 ---
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
@@ -21,31 +15,19 @@ The **`forEach()`** method of the
 {{domxref('KeyboardLayoutMap')}} interface executes a provided function once for
 each element of the map.
 
+The method is otherwise the same as {{jsxref("Map.prototype.forEach()")}}.
+
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((currentValue) => { /* … */ } )
-forEach((currentValue, index) => { /* … */ } )
-forEach((currentValue, index, array) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function(currentValue) { /* … */ })
-forEach(function(currentValue, index) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ })
-forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
   - : The function to execute for each element, taking three arguments:
-
     - `currentValue`
       - : The value of the current element being processed.
     - `index` {{optional_inline}}
@@ -61,6 +43,18 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 
 None ({{jsxref("undefined")}}).
 
+## Examples
+
+The following example iterates every location- or layout-specific string and its associated keyboard code on an English QWERTY keyboard.
+
+```js
+navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  keyboardLayoutMap.forEach((key, code) => {
+    console.log(`${code} keyboard code represents ${key} key`);
+  });
+});
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -68,3 +62,7 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Map.prototype.forEach()")}}

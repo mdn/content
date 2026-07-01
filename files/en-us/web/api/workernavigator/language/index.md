@@ -1,18 +1,12 @@
 ---
-title: WorkerNavigator.language
+title: "WorkerNavigator: language property"
+short-title: language
 slug: Web/API/WorkerNavigator/language
 page-type: web-api-instance-property
-tags:
-  - API
-  - Language
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.WorkerNavigator.language
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator.language`** read-only property returns
 a string representing the preferred language of the user, usually the language of the
@@ -21,8 +15,7 @@ browser UI.
 ## Value
 
 A string representing the
-language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language
-codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+language version as a {{glossary("BCP 47 language tag")}}, for example `en`, `en-US`, `fr`, `fr-FR`, `es-ES`, etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
 "en-us", "fr-fr" etc.

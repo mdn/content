@@ -1,15 +1,8 @@
 ---
-title: HTMLInputElement.setRangeText()
+title: "HTMLInputElement: setRangeText() method"
+short-title: setRangeText()
 slug: Web/API/HTMLInputElement/setRangeText
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Method
-  - NeedsCompatTable
-  - Reference
-  - Text Field Selection API
 browser-compat: api.HTMLInputElement.setRangeText
 ---
 
@@ -40,12 +33,10 @@ setRangeText(replacement, start, end, selectMode)
     Defaults to the current `selectionEnd` value (the end of the user's current
     selection).
 - `selectMode` {{optional_inline}}
-
   - : A string defining how the selection should be set after the text has been replaced.
     Possible values:
-
     - `"select"` selects the newly inserted text.
-    - `"start"`moves the selection to just before the inserted text.
+    - `"start"` moves the selection to just before the inserted text.
     - `"end"` moves the selection to just after the inserted text.
     - `"preserve"` attempts to preserve the selection. This is the default.
 
@@ -66,17 +57,19 @@ inserted text will be highlighted (selected) afterwards.
   id="text-box"
   size="30"
   value="This text has NOT been updated." />
-<button onclick="selectText()">Update text</button>
+<button>Update text</button>
 ```
 
 ### JavaScript
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
-  input.setRangeText('ALREADY', 14, 17, 'select');
+  input.setRangeText("ALREADY", 14, 17, "select");
 }
+
+document.querySelector("button").addEventListener("click", selectText);
 ```
 
 ### Result

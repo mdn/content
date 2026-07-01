@@ -1,18 +1,12 @@
 ---
-title: Headers.get()
+title: "Headers: get() method"
+short-title: get()
 slug: Web/API/Headers/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - Headers
-  - Method
-  - Reference
-  - get
 browser-compat: api.Headers.get
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
 returns a byte string of all the values of a header within a `Headers` object
@@ -20,7 +14,7 @@ with a given name. If the requested header doesn't exist in the `Headers`
 object, it returns `null`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax
@@ -33,8 +27,10 @@ get(name)
 
 - `name`
   - : The name of the HTTP header whose values you want to retrieve from the
-    `Headers` object. If the given name is not the name of an HTTP header, this
-    method throws a {{jsxref("TypeError")}}. The name is case-insensitive.
+    `Headers` object. If the given name doesn't match the
+    [field-name](https://httpwg.org/specs/rfc9110.html#fields.names)
+    production in the HTTP specification, this method throws a {{jsxref("TypeError")}}.
+    The name is case-insensitive.
 
 ### Return value
 
@@ -47,25 +43,28 @@ Creating an empty `Headers` object is simple:
 
 ```js
 const myHeaders = new Headers(); // Currently empty
-myHeaders.get('Not-Set'); // Returns null
+myHeaders.get("Not-Set"); // Returns null
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then retrieve it
 using `get()`:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns "image/jpeg"
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns "image/jpeg"
 ```
 
 If the header has multiple values associated with it, the byte string will contain all
 the values, in the order they were added to the Headers object:
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
-myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns "deflate, gzip"
+myHeaders
+  .get("Accept-Encoding")
+  .split(",")
+  .map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
 ## Specifications
@@ -79,5 +78,5 @@ myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Return
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

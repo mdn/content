@@ -1,20 +1,16 @@
 ---
-title: PerformanceResourceTiming.domainLookupEnd
+title: "PerformanceResourceTiming: domainLookupEnd property"
+short-title: domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.domainLookupEnd
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`domainLookupEnd`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser finishes the domain-name lookup for the resource.
 
-If the user agent has the domain information in cache, {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} represent the times when the user agent starts and ends the domain data retrieval from the cache.
+If the user agent has the domain information in cache, {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and `domainLookupEnd` represent the times when the user agent starts and ends the domain data retrieval from the cache.
 
 ## Value
 

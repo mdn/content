@@ -1,22 +1,12 @@
 ---
-title: MediaSource.setLiveSeekableRange()
+title: "MediaSource: setLiveSeekableRange() method"
+short-title: setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Extensions
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Method
-  - Reference
-  - Video
-  - setLiveSeekableRange()
 browser-compat: api.MediaSource.setLiveSeekableRange
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`setLiveSeekableRange()`** method of the
 {{domxref("MediaSource")}} interface sets the range that the user can seek to in the

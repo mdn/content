@@ -1,13 +1,8 @@
 ---
-title: Document.body
+title: "Document: body property"
+short-title: body
 slug: Web/API/Document/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.body
 ---
 
@@ -21,8 +16,8 @@ The **`Document.body`** property represents the
 
 One of the following:
 
-- {{HTMLElement("body")}}
-- {{HTMLElement("frameset")}}
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
 - `null`
 
 ## Examples
@@ -31,10 +26,10 @@ One of the following:
 // Given this HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
-const aNewBodyElement = document.createElement("body");
+const newBodyElement = document.createElement("body");
 
-aNewBodyElement.id = "newBodyElement";
-document.body = aNewBodyElement;
+newBodyElement.id = "newBodyElement";
+document.body = newBodyElement;
 alert(document.body.id); // "newBodyElement"
 ```
 

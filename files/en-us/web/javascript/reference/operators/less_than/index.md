@@ -2,19 +2,28 @@
 title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.less_than
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample("JavaScript Demo: Less than (<) operator")}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log("aa" < "ab");
+// Expected output: true
+```
 
 ## Syntax
 
@@ -26,8 +35,8 @@ x < y
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[@@toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
-- If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
+- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[Symbol.toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
+- If both values are strings, they are compared as strings, based on the values of the UTF-16 code units (not Unicode code points) they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.
   - `null` is converted to 0.
@@ -50,64 +59,67 @@ x > y === y < x;
 x >= y === y <= x;
 ```
 
-> **Note:** One observable difference between `<` and `>` is the order of coercion, especially if the coercion to primitive has side effects. All comparison operators coerce the left operand before the right operand.
+> [!NOTE]
+> One observable difference between `<` and `>` is the order of coercion, especially if the coercion to primitive has side effects. All comparison operators coerce the left operand before the right operand.
 
 ## Examples
 
 ### String to string comparison
 
 ```js
-console.log("a" < "b");        // true
-console.log("a" < "a");        // false
-console.log("a" < "3");        // false
+"a" < "b"; // true
+"a" < "a"; // false
+"a" < "3"; // false
+
+"\uD855\uDE51" < "\uFF3A"; // true
 ```
 
 ### String to number comparison
 
 ```js
-console.log("5" < 3);          // false
-console.log("3" < 3);          // false
-console.log("3" < 5);          // true
+"5" < 3; // false
+"3" < 3; // false
+"3" < 5; // true
 
-console.log("hello" < 5);      // false
-console.log(5 < "hello");      // false
+"hello" < 5; // false
+5 < "hello"; // false
 
-console.log("5" < 3n);         // false
-console.log("3" < 5n);         // true
+"5" < 3n; // false
+"3" < 5n; // true
 ```
 
 ### Number to Number comparison
 
 ```js
-console.log(5 < 3);            // false
-console.log(3 < 3);            // false
-console.log(3 < 5);            // true
+5 < 3; // false
+3 < 3; // false
+3 < 5; // true
 ```
 
 ### Number to BigInt comparison
 
 ```js
-console.log(5n < 3);           // false
-console.log(3 < 5n);           // true
+5n < 3; // false
+3 < 5n; // true
 ```
 
 ### Comparing Boolean, null, undefined, NaN
 
 ```js
-console.log(true < false);     // false
-console.log(false < true);     // true
+true < false; // false
+false < true; // true
 
-console.log(0 < true);         // true
-console.log(true < 1);         // false
+0 < true; // true
+true < 1; // false
 
-console.log(null < 0);         // false
-console.log(null < 1);         // true
+null < 0; // false
+null < 1; // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+undefined < 3; // false
+3 < undefined; // false
 
-console.log(3 < NaN);          // false
-console.log(NaN < 3);          // false
+3 < NaN; // false
+NaN < 3; // false
 ```
 
 ### Comparison with side effects
@@ -131,7 +143,8 @@ console.log(l < r && r < l);
 // true
 ```
 
-> **Warning:** This can be a source of confusion. If your objects provide custom primitive conversion logic, make sure it is _idempotent_: multiple coercions should return the same value.
+> [!WARNING]
+> This can be a source of confusion. If your objects provide custom primitive conversion logic, make sure it is _idempotent_: multiple coercions should return the same value.
 
 ## Specifications
 
@@ -143,6 +156,6 @@ console.log(l < r && r < l);
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than (`>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal (`>=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than or equal (`<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

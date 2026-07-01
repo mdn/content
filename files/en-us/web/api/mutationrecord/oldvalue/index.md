@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.oldValue
+title: "MutationRecord: oldValue property"
+short-title: oldValue
 slug: Web/API/MutationRecord/oldValue
 page-type: web-api-instance-property
-tags:
-  - oldValue
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.oldValue
 ---
 
@@ -41,7 +37,7 @@ The `logOldValue()` function is passed the `mutationRecords` array, which contai
 #### HTML
 
 ```html
-<h1 id="h1" style="color:rgb(0, 0, 0);">Hi, Mom!</h1>
+<h1 id="h1">Hi, Mom!</h1>
 <button id="changeColorButton">Change color</button>
 <p id="log"></p>
 ```

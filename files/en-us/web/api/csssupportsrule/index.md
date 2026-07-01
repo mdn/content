@@ -2,17 +2,12 @@
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSSupportsRule
 ---
 
 {{APIRef("CSSOM")}}
 
-The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
@@ -26,8 +21,8 @@ _Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref(
 
 ## Examples
 
-The CSS includes a CSS feature query using the {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule), containing one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` therefore returns a {{domxref("CSSSupportsRule")}} object.
+The CSS includes a CSS feature query using the {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules), containing one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` therefore returns a `CSSSupportsRule` object.
 
 ```css
 @supports (display: grid) {

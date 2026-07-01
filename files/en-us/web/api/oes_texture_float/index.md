@@ -1,12 +1,8 @@
 ---
-title: OES_texture_float
+title: OES_texture_float extension
+short-title: OES_texture_float
 slug: Web/API/OES_texture_float
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_texture_float
 ---
 
@@ -16,7 +12,8 @@ The **`OES_texture_float`** extension is part of the [WebGL API](/en-US/docs/Web
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.
+> [!NOTE]
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.
 
 ## Extended methods
 
@@ -38,7 +35,7 @@ This extension implicitly enables the {{domxref("WEBGL_color_buffer_float")}} ex
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_texture_float');
+const ext = gl.getExtension("OES_texture_float");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);

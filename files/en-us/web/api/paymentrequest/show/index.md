@@ -1,18 +1,8 @@
 ---
-title: PaymentRequest.show()
+title: "PaymentRequest: show() method"
+short-title: show()
 slug: Web/API/PaymentRequest/show
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Payments
-  - Reference
-  - Secure context
-  - show
 browser-compat: api.PaymentRequest.show
 ---
 
@@ -30,7 +20,8 @@ called, any other call to `show()` will by rejected with an
 fulfilled with a {{domxref("PaymentResponse")}} indicating the results of the payment
 request, or by being rejected with an error.
 
-> **Note:** In reality, despite the fact that the specification says this
+> [!NOTE]
+> In reality, despite the fact that the specification says this
 > can't be done, some browsers, including Firefox, support multiple active payment
 > requests at a time.
 
@@ -52,22 +43,17 @@ to wait asynchronously while results are validated and so forth.
 
 ```js-nolint
 show()
-show(detailsPromise)
+show(details)
 ```
 
 ### Parameters
 
-- `detailsPromise` {{optional_inline}}
-
-  - : An optional {{jsxref("Promise")}} that you can provide if your architecture requires
+- `details` {{optional_inline}}
+  - : Either an object or a {{jsxref("Promise")}} that resolves to an object. Provide this if your architecture requires
     that the payment request's details need to be updated between instantiating the
-    payment interface and the user beginning to interact with it. The promise should
-    resolve with an object containing the updated information:
-
+    payment interface and the user beginning to interact with it. The object should contain the updated information:
     - `displayItems` {{optional_inline}}
-
       - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
-
         - `amount`
           - : An object describing the monetary value of the item. This object includes the following fields:
             - `currency`
@@ -79,14 +65,26 @@ show(detailsPromise)
         - `pending`
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
-    - `error` {{optional_inline}} {{deprecated_inline}}
-      - : A string specifying an error message to present to the user*.* When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
+    - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : A string specifying an error message to present to the user. When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address-field specific errors, use the `shippingAddressErrors` field.
+
     - `modifiers` {{optional_inline}}
-      - : An array of {{domxref("PaymentDetailsModifier")}} objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
-    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
-      - : An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.
-    - `shippingOptions` {{optional_inline}}
-      - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
+      - : An array of objects, each describing a modifier for particular payment method identifiers, each with the following properties:
+        - `supportedMethods`
+          - : A string that represents the payment method identifier. The payment method identifier only applies if the user selects this payment method.
+        - `total` {{optional_inline}}
+          - : An object that overrides the `total` property of the `detailsPromise` parameter if this payment method is selected by the user. The property takes the same input with the `total` property of the `detailsPromise` parameter.
+        - `additionalDisplayItems` {{optional_inline}}
+          - : An {{jsxref("Array")}} of objects provide additional display items that are appended to the `displayItems` property of the `detailsPromise` parameter if this payment method is selected by the user. This property is commonly used to add a discount or surcharge line item indicating the reason for the different total amount for the selected payment method that the user agent may display. The property takes the same input with the `displayItems` property of the `detailsPromise` parameter.
+        - `data` {{optional_inline}}
+          - : A serializable object that provides optional information that might be needed by the supported payment methods.
+
+        For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
+
+    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : An object which includes an error message for each property of the shipping address that could not be validated.
+    - `shippingOptions` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : An array of objects, each describing one available shipping option from which the user may choose.
     - `total` {{optional_inline}}
       - : An object with the same properties as the objects in `displayItems` providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
 
@@ -101,7 +99,6 @@ The promise is resolved when the user accepts the payment request (such as by cl
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
 - `AbortError` {{domxref("DOMException")}}
-
   - : Returned if the
     {{Glossary("user agent")}} is already showing a payment panel. Only one payment
     panel may be visible at a time _across all documents loaded by the user
@@ -128,7 +125,7 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -147,8 +144,10 @@ async function processPayment() {
   try {
     const payRequest = new PaymentRequest(methodData, details, options);
 
-    payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-    payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+    payRequest.onshippingaddresschange = (ev) =>
+      ev.updateWith(checkAddress(payRequest));
+    payRequest.onshippingoptionchange = (ev) =>
+      ev.updateWith(checkShipping(payRequest));
 
     const response = await payRequest.show();
     await validateResponse(response);
@@ -211,10 +210,13 @@ functions on the promise returned by `show()`:
 function processPayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
-  payRequest.onshippingaddresschange = (ev) => ev.updateWith(checkAddress(payRequest));
-  payRequest.onshippingoptionchange = (ev) => ev.updateWith(checkShipping(payRequest));
+  payRequest.onshippingaddresschange = (ev) =>
+    ev.updateWith(checkAddress(payRequest));
+  payRequest.onshippingoptionchange = (ev) =>
+    ev.updateWith(checkShipping(payRequest));
 
-  payRequest.show()
+  payRequest
+    .show()
     .then((response) => validateResponse(response))
     .catch((err) => handleError(err));
 }
@@ -260,7 +262,7 @@ call to {{domxref("paymentResponse.complete()")}} can indicate the success or fa
 the payment.
 
 ```js
-button.onclick = async function handlePurchase() {
+button.onclick = async () => {
   // Initialization of PaymentRequest arguments are excerpted for the sake of
   // brevity.
   const payment = new PaymentRequest(methods, details, options);
@@ -274,7 +276,7 @@ button.onclick = async function handlePurchase() {
   } catch (err) {
     console.error("Uh oh, something bad happened", err.message);
   }
-}
+};
 ```
 
 The following example shows how to update the payment sheet as it's being presented to
@@ -291,7 +293,7 @@ async function requestPayment() {
   };
   const request = new PaymentRequest(methods, initialDetails, options);
   // Check if the user supports the `methods`
-  if (!await request.canMakePayment()) {
+  if (!(await request.canMakePayment())) {
     return; // no, so use a web form instead.
   }
   // Let's update the total as the sheet is shown
@@ -321,6 +323,6 @@ document.getElementById("buyButton").onclick = requestPayment;
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref('PaymentRequest.abort()')}}
-- {{domxref("PaymentRequest.retry()")}}
-- {{domxref("PaymentRequest.complete()")}}
 - {{domxref("PaymentResponse")}}
+- {{domxref("PaymentResponse.retry()")}}
+- {{domxref("PaymentResponse.complete()")}}

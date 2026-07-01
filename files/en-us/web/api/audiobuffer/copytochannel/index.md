@@ -1,15 +1,8 @@
 ---
-title: AudioBuffer.copyToChannel()
+title: "AudioBuffer: copyToChannel() method"
+short-title: copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBuffer
-  - Method
-  - Reference
-  - Web Audio API
-  - copyToChannel
 browser-compat: api.AudioBuffer.copyToChannel
 ---
 

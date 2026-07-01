@@ -1,35 +1,31 @@
 ---
 title: storage.StorageArea.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.storage.StorageArea.onChanged
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
+Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, or `sync`.
 
-Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
+> [!NOTE]
+> In Firefox, the listener receives all the keys from a storage area where {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes. The listener may also be invoked when there is no change to the data. To find details of the changed items, examine each key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+
+> [!NOTE]
+> Firefox does not fire this event for changes to `storage.managed` because managed storage is only read on browser startup (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)).
 
 ## Syntax
 
 ```js-nolint
 // local can also be sync, managed, or session
-browser.storage.local.onChanged.addListener(callback)
+browser.storage.local.onChanged.addListener(listener)
 browser.storage.local.onChanged.removeListener(listener)
 browser.storage.local.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stops listening to this event. The `listener` argument is the listener to remove.
@@ -40,12 +36,10 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : The function called when this event occurs. The function is passed these arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `changes`
-      - : `object`. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+      - : `object`. Object describing the change. This contains one property for each key that changed. The property name is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
 
 ## Examples
 
@@ -55,7 +49,6 @@ Log the old value and its new value of
 changes in the local storage.
 */
 function logStorageChange(changes) {
-
   const changedItems = Object.keys(changes);
 
   for (const item of changedItems) {
@@ -74,7 +67,8 @@ browser.storage.local.onChanged.addListener(logStorageChange);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-StorageArea-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#event-StorageArea-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

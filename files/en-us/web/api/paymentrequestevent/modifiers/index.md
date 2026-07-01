@@ -1,28 +1,24 @@
 ---
-title: PaymentRequestEvent.modifiers
+title: "PaymentRequestEvent: modifiers property"
+short-title: modifiers
 slug: Web/API/PaymentRequestEvent/modifiers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.modifiers
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Web-Based Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`modifiers`** read-only property of the
-{{domxref("PaymentRequestEvent")}} interface returns an array of `PaymentDetailsModifier` objects containing modifiers for payment details.
+{{domxref("PaymentRequestEvent")}} interface returns an {{jsxref("Array")}} of `PaymentDetailsModifier` objects containing modifiers for payment details.
 
 ## Value
 
-An array of `PaymentDetailsModifier` objects containing modifiers for payment details. These objects contain the following properties:
+An array of objects containing modifiers for payment details. These objects contain the following properties:
 
 - `supportedMethods`
-  - : A payment method identifier. The members of the `PaymentDetailsModifier` object only apply to the payment if the user selects this payment method.
+  - : A payment method identifier. The members of the object only apply to the payment if the user selects this payment method.
 - `total`
   - : A `PaymentItem` object containing the following properties:
     - `label`
@@ -39,7 +35,7 @@ An array of `PaymentDetailsModifier` objects containing modifiers for payment de
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.modifiers);
 });
 ```
@@ -54,8 +50,8 @@ self.addEventListener('paymentrequest', e => {
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

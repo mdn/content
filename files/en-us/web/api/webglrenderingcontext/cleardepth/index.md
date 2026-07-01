@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.clearDepth()
+title: "WebGLRenderingContext: clearDepth() method"
+short-title: clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearDepth
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.clearDepth()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
 depth buffer.

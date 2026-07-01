@@ -1,14 +1,8 @@
 ---
-title: HTMLElement.enterKeyHint
+title: "HTMLElement: enterKeyHint property"
+short-title: enterKeyHint
 slug: Web/API/HTMLElement/enterKeyHint
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - Keyboard
 browser-compat: api.HTMLElement.enterKeyHint
 ---
 
@@ -16,7 +10,7 @@ browser-compat: api.HTMLElement.enterKeyHint
 
 The **`enterKeyHint`** property is an enumerated property defining
 what action label (or icon) to present for the enter key on virtual keyboards.
-It reflects the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
+It reflects the [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint)
 HTML global attribute and is an enumerated property, only accepting the following values
 as a string:
 
@@ -35,11 +29,11 @@ If no `enterKeyHint` value has been specified or if it was set to a different va
 Give a virtual keyboard a hint how to label the enter key (might render as <kbd>Send</kbd> and <kbd>Search</kbd>, depending on the OS or the user's language).
 
 ```js
-const send = document.getElementById('sendInput');
-const search = document.getElementById('searchInput');
+const send = document.getElementById("sendInput");
+const search = document.getElementById("searchInput");
 
-send.enterKeyHint = 'send';
-search.enterKeyHint = 'search';
+send.enterKeyHint = "send";
+search.enterKeyHint = "search";
 ```
 
 ## Specifications
@@ -52,4 +46,4 @@ search.enterKeyHint = 'search';
 
 ## See also
 
-- [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) HTML global attribute
+- [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) HTML global attribute

@@ -2,27 +2,37 @@
 title: Right shift assignment (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
 page-type: javascript-operator
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 browser-compat: javascript.operators.right_shift_assignment
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Operators")}}
+The **right shift assignment (`>>=`)** operator performs [right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift) on the two operands and assigns the result to the left operand.
 
-The **right shift assignment (`>>=`)** operator moves the specified amount
-of bits to the right and assigns the result to the variable.
+{{InteractiveExample("JavaScript Demo: Right shift assignment (>>=) operator")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}
+```js interactive-example
+let a = 5; //  00000000000000000000000000000101
+
+a >>= 2; //  00000000000000000000000000000001
+console.log(a);
+// Expected output: 1
+
+let b = -5; //  11111111111111111111111111111011
+
+b >>= 2; //  11111111111111111111111111111110
+console.log(b);
+// Expected output: -2
+```
 
 ## Syntax
 
 ```js-nolint
-x >>= y // x = x >> y
+x >>= y
 ```
+
+## Description
+
+`x >>= y` is equivalent to `x = x >> y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -34,6 +44,9 @@ a >>= 2; //   1 (00000000000000000000000000000001)
 
 let b = -5; //  (-00000000000000000000000000000101)
 b >>= 2; //  -2 (-00000000000000000000000000000010)
+
+let c = 5n;
+c >>= 2n; // 1n
 ```
 
 ## Specifications
@@ -46,5 +59,5 @@ b >>= 2; //  -2 (-00000000000000000000000000000010)
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
-- [Right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Right shift (`>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

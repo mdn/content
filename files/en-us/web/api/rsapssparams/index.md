@@ -2,12 +2,6 @@
 title: RsaPssParams
 slug: Web/API/RsaPssParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaPssParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaPssParams
 ---
 
@@ -20,7 +14,6 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
 - `name`
   - : A string. This should be set to `RSA-PSS`.
 - `saltLength`
-
   - : A `long` integer representing the length of the random salt to use, in bytes.
 
     [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) says that "Typical salt lengths" are either 0 or the length of the output of the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms) that was selected when this key was [generated](/en-US/docs/Web/API/SubtleCrypto/generateKey). For example, if you use [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) as the digest algorithm, this could be 32.
@@ -28,7 +21,7 @@ The **`RsaPssParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/We
     The maximum size of `saltLength` is given by:
 
     ```js
-    Math.ceil((keySizeInBits - 1)/8) - digestSizeInBytes - 2
+    Math.ceil((keySizeInBits - 1) / 8) - digestSizeInBytes - 2;
     ```
 
     So for a key length of 2048 bits and a digest output size of 32 bytes, the maximum size would be 222.

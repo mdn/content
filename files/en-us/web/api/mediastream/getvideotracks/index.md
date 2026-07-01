@@ -1,19 +1,8 @@
 ---
-title: MediaStream.getVideoTracks()
+title: "MediaStream: getVideoTracks() method"
+short-title: getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - Method
-  - Reference
-  - Video
-  - getVideoTracks
-  - stream
-  - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
 
@@ -40,28 +29,27 @@ in the media stream. Video tracks are those tracks whose
 {{domxref("MediaStreamTrack.kind", "kind")}} property is `video`. The array
 is empty if the stream contains no video tracks.
 
-> **Note:** The order of the tracks is not defined by the specification,
+> [!NOTE]
+> The order of the tracks is not defined by the specification,
 > and may not be the same from one call to `getVideoTracks()` to another.
 
 ## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses `getVideoTracks()` to
-retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture",
-  "ImageCapture()")}} constructor.
+retrieve a track for passing to the {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} constructor.
 
 ```js
 let imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then((mediaStream) => {
-  document.querySelector('video').srcObject = mediaStream;
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+  document.querySelector("video").srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
   imageCapture = new ImageCapture(track);
 
   return imageCapture.getPhotoCapabilities();
-})
+});
 ```
 
 ## Specifications

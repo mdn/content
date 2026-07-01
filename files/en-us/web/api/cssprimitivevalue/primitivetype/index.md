@@ -1,24 +1,21 @@
 ---
-title: CSSPrimitiveValue.primitiveType
+title: "CSSPrimitiveValue: primitiveType property"
+short-title: primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Property
-  - Read-only
-  - Reference
-  - Deprecated
-  - primitiveValue
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -57,7 +54,7 @@ An `unsigned short` representing the type of the value. Possible values are:
       <td><code>CSS_COUNTER</code></td>
       <td>
         The value is a
-        <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters"
+        <a href="/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters"
           >counter or counters</a
         >
         function. The value can be obtained by using the
@@ -226,7 +223,7 @@ An `unsigned short` representing the type of the value. Possible values are:
     <tr>
       <td><code>CSS_URI</code></td>
       <td>
-        The value is a {{cssxref("url", "url()")}}. The value can be obtained
+        The value is a {{cssxref("url_value", "&lt;url&gt;")}}. The value can be obtained
         by using the <code>getStringValue()</code> method.
       </td>
     </tr>

@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.getNamedItemNS()
+title: "NamedNodeMap: getNamedItemNS() method"
+short-title: getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.getNamedItemNS
 ---
 
@@ -22,7 +20,8 @@ getNamedItemNS(namespace, localName)
 
 - `namespace`
   - : A string with the namespace URI of the desired attribute.
-    > **Warning:** `namespace` is the URI of the namespace, not the prefix.
+    > [!WARNING]
+    > `namespace` is the URI of the namespace, not the prefix.
 - `localName`
   - : A string with the localName of the desired attribute.
 
@@ -47,7 +46,7 @@ const warning = doc.querySelector("warning");
 
 const value = warning.attributes.getNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 ).value;
 
 pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
@@ -55,7 +54,7 @@ pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

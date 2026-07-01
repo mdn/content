@@ -1,18 +1,12 @@
 ---
 title: "ServiceWorkerGlobalScope: install event"
+short-title: install
 slug: Web/API/ServiceWorkerGlobalScope/install_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Service worker API
-  - ServiceWorkerGlobalScope
-  - install
 browser-compat: api.ServiceWorkerGlobalScope.install_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`install`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 
@@ -22,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("install", (event) => {});
+```js-nolint
+addEventListener("install", (event) => { })
 
-oninstall = (event) => {};
+oninstall = (event) => { }
 ```
 
 ## Event type
@@ -43,7 +37,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
 ```js
-this.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
       .open("v1")
@@ -59,8 +53,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -68,8 +62,8 @@ this.addEventListener("install", (event) => {
 You can also set up the event handler using the `oninstall` property:
 
 ```js
-globalScope.oninstall = (event) => {
-  // ...
+self.oninstall = (event) => {
+  // …
 };
 ```
 

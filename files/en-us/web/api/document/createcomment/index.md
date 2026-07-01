@@ -1,12 +1,8 @@
 ---
-title: Document.createComment()
+title: "Document: createComment() method"
+short-title: createComment()
 slug: Web/API/Document/createComment
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createComment
 ---
 
@@ -33,14 +29,14 @@ A new {{domxref("Comment")}} object.
 ## Examples
 
 ```js
-const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-const comment = docu.createComment(
-  "This is a not-so-secret comment in your document"
+const doc = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const comment = doc.createComment(
+  "This is a not-so-secret comment in your document",
 );
 
-docu.querySelector("xml").appendChild(comment);
+doc.querySelector("xml").appendChild(comment);
 
-console.log(new XMLSerializer().serializeToString(docu));
+console.log(new XMLSerializer().serializeToString(doc));
 // Displays: <xml><!--This is a not-so-secret comment in your document--></xml>
 ```
 

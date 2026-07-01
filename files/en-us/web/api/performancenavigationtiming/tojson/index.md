@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.toJSON()
+title: "PerformanceNavigationTiming: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceNavigationTiming/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.toJSON
 ---
 
@@ -92,7 +88,11 @@ This would log a JSON object like so:
   "loadEventEnd": 227.60000002384186,
   "type": "navigate",
   "redirectCount": 1,
-  "activationStart": 0
+  "activationStart": 0,
+  "confidence": {
+    "randomizedTriggerRate": 0.4994798,
+    "value": "high"
+  }
 }
 ```
 

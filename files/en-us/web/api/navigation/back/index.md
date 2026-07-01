@@ -1,24 +1,12 @@
 ---
-title: Navigation.back()
+title: "Navigation: back() method"
+short-title: back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - back
-  - History
-  - Method
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - transition
-  - Traversal
 browser-compat: api.Navigation.back
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`back()`** method of the
 {{domxref("Navigation")}} interface navigates backwards by one entry in the navigation history.
@@ -33,7 +21,7 @@ back(options)
 
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
-    - `info`
+    - `info` {{optional_inline}}
       - : Developer-defined information to be passed along to the {{domxref("Navigation/navigate_event", "navigate")}} event, made available in {{domxref("NavigateEvent.info")}}. This can be any data type. You might, for example, wish to display newly-navigated content with a different animation depending on how it was navigated to (swipe left, swipe right, or go home). A string indicating which animation to use could be passed in as `info`.
 
 ### Return value
@@ -50,7 +38,7 @@ Either one of these promises rejects if the navigation has failed for some reaso
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e. either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible.
+  - : Thrown if the {{domxref("Navigation.currentEntry")}}'s {{domxref("NavigationHistoryEntry.index")}} value is -1 or 0, i.e., either the current {{domxref("Document")}} is not yet active, or the current history entry is the first one in the history, meaning that backwards navigation is not possible, or if the current {{domxref("Document")}} is unloading.
 
 ## Examples
 
@@ -61,7 +49,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -71,7 +59,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```
@@ -88,4 +76,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

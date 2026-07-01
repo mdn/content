@@ -2,16 +2,10 @@
 title: Lock
 slug: Web/API/Lock
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web Locks API
-  - lock
 browser-compat: api.Lock
 ---
 
-{{APIRef("Web Locks")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`Lock`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides the name and mode of a lock.
 This may be a newly requested lock that is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}, or a record of an active or queued lock returned by {{domxref('LockManager.query()')}}.
@@ -27,13 +21,13 @@ This may be a newly requested lock that is received in the callback to {{domxref
 ## Examples
 
 The following examples show how the mode and name properties are passed in the call to {{domxref('LockManager.request()')}}.
-`LockManager` is the object returned by {{domxref('navigator.locks')}}.
+{{domxref('LockManager')}} is the object returned by {{domxref('navigator.locks')}}.
 
 ```js
-navigator.locks.request("net_db_sync", show_lock_properties);
-navigator.locks.request("another_lock", {mode: "shared"}, show_lock_properties);
+navigator.locks.request("net_db_sync", showLockProperties);
+navigator.locks.request("another_lock", { mode: "shared" }, showLockProperties);
 
-function show_lock_properties(lock) {
+function showLockProperties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }

@@ -2,15 +2,8 @@
 title: XRWebGLDepthInformation
 slug: Web/API/XRWebGLDepthInformation
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLDepthInformation
 ---
 
@@ -34,8 +27,6 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
   - : A {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
   - : Contains the width of the depth buffer (number of columns).
-
-## Examples
 
 ## Specifications
 

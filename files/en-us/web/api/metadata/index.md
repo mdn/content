@@ -2,16 +2,9 @@
 title: Metadata
 slug: Web/API/Metadata
 page-type: web-api-interface
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Interface
-  - Non-standard
-  - Offline
-  - Reference
-  - metadata
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Metadata
 ---
 
@@ -19,7 +12,8 @@ browser-compat: api.Metadata
 
 The **`Metadata`** interface contains information about a file system entry. This metadata includes the file's size and modification date and time.
 
-> **Note:** This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
+> [!NOTE]
+> This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
 
 ## Instance properties
 
@@ -39,6 +33,5 @@ This feature has been removed from all specification and is not in the process o
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}}

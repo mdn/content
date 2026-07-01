@@ -1,17 +1,8 @@
 ---
-title: SpeechRecognitionResult.item()
+title: "SpeechRecognitionResult: item() method"
+short-title: item()
 slug: Web/API/SpeechRecognitionResult/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Getter
-  - Method
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - item
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.item
 ---
 
@@ -43,19 +34,10 @@ This code is excerpted from our [Speech color changer](https://github.com/mdn/do
 
 ```js
 recognition.onresult = (event) => {
-  // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-  // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
-  // It has a getter so it can be accessed like an array
-  // The first [0] returns the SpeechRecognitionResult at position 0.
-  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects
-  // that contain individual results.
-  // These also have getters so they can be accessed like arrays.
-  // The second [0] returns the SpeechRecognitionAlternative at position 0.
-  // We then return the transcript property of the SpeechRecognitionAlternative object
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

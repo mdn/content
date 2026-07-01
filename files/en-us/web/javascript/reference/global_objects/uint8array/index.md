@@ -2,48 +2,65 @@
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 page-type: javascript-class
-tags:
-  - Class
-  - Uint8Array
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint8Array
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
-The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+`Uint8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
+
+## Description
+
+`Uint8Array` is currently the only `TypedArray` subclass that has additional methods compared to other typed arrays. Because of its nature as a generic byte array, it is the most suitable for working with arbitrary binary data. It supports two sets of methods for the creation, serialization, and modification of `Uint8Array` data to/from hex strings and base64 strings.
+
+- {{jsxref("Uint8Array.fromBase64()")}}, {{jsxref("Uint8Array.prototype.toBase64()")}}, and {{jsxref("Uint8Array.prototype.setFromBase64()")}} for working with [base64](/en-US/docs/Glossary/Base64) strings, where 3 bytes are encoded by 4 characters that are either 0–9, A–Z, a–z, "+", and "/" (or "-" and "\_", if using URL-safe base64).
+- {{jsxref("Uint8Array.fromHex()")}}, {{jsxref("Uint8Array.prototype.toHex()")}}, and {{jsxref("Uint8Array.prototype.setFromHex()")}} for working with hex strings, where every byte is encoded by two characters, each one being either 0–9 or A–F (case-insensitive).
 
 ## Constructor
 
-- {{jsxref("Global_Objects/Uint8Array/Uint8Array", "Uint8Array()")}}
+- {{jsxref("Uint8Array/Uint8Array", "Uint8Array()")}}
   - : Creates a new `Uint8Array` object.
 
 ## Static properties
 
 _Also inherits static properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of `Uint8Array`.
-- {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : Returns the string value of the constructor name. `"Uint8Array"` in the case of `Uint8Array`.
 
 ## Static methods
 
 _Inherits static methods from its parent {{jsxref("TypedArray")}}_.
 
+- {{jsxref("Uint8Array.fromBase64()")}}
+  - : Creates a new `Uint8Array` object from a base64-encoded string.
+- {{jsxref("Uint8Array.fromHex()")}}
+  - : Creates a new `Uint8Array` object from a hex-encoded string.
+
 ## Instance properties
 
 _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
+These properties are defined on `Uint8Array.prototype` and shared by all `Uint8Array` instances.
+
+- {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Uint8Array.prototype.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of a `Uint8Array`.
+- {{jsxref("Object/constructor", "Uint8Array.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Uint8Array` instances, the initial value is the {{jsxref("Uint8Array/Uint8Array", "Uint8Array")}} constructor.
 
 ## Instance methods
 
 _Inherits instance methods from its parent {{jsxref("TypedArray")}}_.
+
+- {{jsxref("Uint8Array.prototype.setFromBase64()")}}
+  - : Populates this `Uint8Array` object with bytes from a base64-encoded string, returning an object indicating how many bytes were read and written.
+- {{jsxref("Uint8Array.prototype.setFromHex()")}}
+  - : Populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object indicating how many bytes were read and written.
+- {{jsxref("Uint8Array.prototype.toBase64()")}}
+  - : Returns a base64-encoded string based on the data in this `Uint8Array` object.
+- {{jsxref("Uint8Array.prototype.toHex()")}}
+  - : Returns a hex-encoded string based on the data in this `Uint8Array` object.
 
 ## Examples
 
@@ -90,6 +107,7 @@ console.log(uint8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

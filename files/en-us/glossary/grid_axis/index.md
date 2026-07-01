@@ -2,27 +2,25 @@
 title: Grid Axis
 slug: Glossary/Grid_Axis
 page-type: glossary-definition
-tags:
-  - CSS
-  - CSS Grids
+sidebar: glossarysidebar
 ---
 
-CSS Grid Layout is a two-dimensional layout method enabling the laying out of content in _rows_ and _columns_. Therefore in any grid we have two axes. The _block or column axis_, and the _inline or row axis_.
+CSS grid layout is a two-dimensional layout method enabling the laying out of content in _rows_ and _columns_. Therefore in any grid we have two axes. The _block or column axis_, and the _inline or row axis_.
 
-It is along these axes that items can be aligned and justified using the properties defined in the [Box Alignment specification](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout).
+It is along these axes that items can be aligned and justified using the properties defined in the [Box Alignment specification](/en-US/docs/Web/CSS/Guides/Box_alignment).
 
-In CSS the _block or column axis_ is the axis used when laying out blocks of text. If you have two paragraphs and are working in a right to left, top to bottom language they lay out one below the other, on the block axis.
+The _inline axis_ (also called row axis, or main axis) is the direction along which regular text flows. The _block axis_ (also called column axis, or cross axis) is the axis used when laying out blocks of text. The physical direction of these axes can change according to the [writing mode](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes) of the document.
 
-![Diagram showing the block axis in CSS Grid Layout.](7_block_axis.png)
+For example, if you are writing left to right, top to bottom (like typical English prose), then the individual characters are placed along the inline axis, which runs from left to right.
 
-The _inline or row axis_ runs across the Block Axis and is the direction along which regular text flows. These are our rows in CSS Grid Layout.
+![Diagram showing the inline axis in CSS grid layout.](7_inline_axis.png)
 
-![Diagram showing the inline axis in CSS Grid Layout.](7_inline_axis.png)
+And, if the text contains multiple lines, these lines are placed along the block axis, which runs from top to bottom.
 
-The physical direction of these axes can change according to the [writing mode](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes) of the document.
+![Diagram showing the block axis in CSS grid layout.](7_block_axis.png)
 
 ## See also
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Box alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- CSS Grid Layout Guide: _[Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [Grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)

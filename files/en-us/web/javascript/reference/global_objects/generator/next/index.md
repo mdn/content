@@ -1,20 +1,13 @@
 ---
 title: Generator.prototype.next()
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Generator.next
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`next()`** method returns an
+The **`next()`** method of {{jsxref("Generator")}} instances returns an
 object with two properties `done` and `value`. You can also
 provide a parameter to the `next` method to send a value to the
 generator.
@@ -22,13 +15,13 @@ generator.
 ## Syntax
 
 ```js-nolint
-generatorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters
 
-- `value`
-
+- `value` {{optional_inline}}
   - : The value to send to the generator.
 
     The value will be assigned as a result of a `yield` expression. For
@@ -47,11 +40,16 @@ An {{jsxref("Object")}} with two properties:
 - `value`
   - : Any JavaScript value yielded or returned by the generator.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
 ## Examples
 
 ### Using next()
 
-The following example shows a simple generator and the object that the
+The following example shows a generator and the object that the
 `next` method returns:
 
 ```js
@@ -61,11 +59,11 @@ function* gen() {
   yield 3;
 }
 
-const g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+const g = gen(); // Generator { }
+g.next(); // { value: 1, done: false }
+g.next(); // { value: 2, done: false }
+g.next(); // { value: 3, done: false }
+g.next(); // { value: undefined, done: true }
 ```
 
 ### Using next() with a list
@@ -79,20 +77,21 @@ function* getPage(list, pageSize = 1) {
   }
 }
 
-const list = [1, 2, 3, 4, 5, 6, 7, 8]
-const page = getPage(list, 3);            // Generator { }
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = getPage(list, 3); // Generator { }
 
-page.next();                              // { value: [1, 2, 3], done: false }
-page.next();                              // { value: [4, 5, 6], done: false }
-page.next();                              // { value: [7, 8], done: false }
-page.next();                              // { value: undefined, done: true }
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator
 
 In this example, `next` is called with a value.
 
-> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+> [!NOTE]
+> The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 function* gen() {
@@ -120,4 +119,4 @@ g.next(2); // Returns { value: undefined, done: false }
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

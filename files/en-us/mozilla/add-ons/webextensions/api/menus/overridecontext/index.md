@@ -1,18 +1,10 @@
 ---
 title: menus.overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.overrideContext
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Hide all default Firefox menu items in favor of providing a custom context menu UI.
 
@@ -31,9 +23,7 @@ browser.menus.overrideContext(
 ### Parameters
 
 - `contextOptions`
-
   - : `object`. Options for how the context menus will be overridden.
-
     - `showDefaults` {{optional_inline}}
       - : `boolean`. Whether to also include default menu items in the menu.
     - `context` {{optional_inline}}
@@ -57,11 +47,11 @@ document.addEventListener(
       // set the context to "opening a tab context menu".
       browser.menus.overrideContext({
         context: "tab",
-        tabId: parseInt(foo.dataset.tabId),
+        tabId: parseInt(foo.dataset.tabId, 10),
       });
     }
   },
-  { capture: true }
+  { capture: true },
 );
 ```
 

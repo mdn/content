@@ -1,18 +1,10 @@
 ---
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsByManifest
-  - management
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
@@ -39,21 +31,17 @@ let gettingWarnings = browser.management.getPermissionWarningsByManifest(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of strings, each of which contains the text of a permission warning.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the permission warnings for the given manifest file:
 
 ```js
 let manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 let manifestString = JSON.stringify(manifest);
 
@@ -65,13 +53,19 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-getPermissionWarningsByManifest) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-getPermissionWarningsByManifest) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

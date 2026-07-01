@@ -1,20 +1,10 @@
 ---
 title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - filter
-  - sessions
+page-type: webextension-api-type
 browser-compat: webextensions.api.sessions.Filter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The `Filter` object enables you to restrict the number of {{WebExtAPIRef("sessions.Session", "Session")}} objects returned by a call to {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
@@ -25,15 +15,16 @@ Values of this type are objects. They contain the following properties:
 - `maxResults` {{optional_inline}}
   - : `number`. The maximum number of results to return.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

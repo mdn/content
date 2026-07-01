@@ -1,22 +1,21 @@
 ---
-title: PushManager.unregister()
+title: "PushManager: unregister() method"
+short-title: unregister()
 slug: Web/API/PushManager/unregister
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PushManager.unregister
 ---
 
-{{deprecated_header}}{{ ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`unregister()`** method was used to ask the system to
 unregister and delete the specified endpoint.
 
-> **Note:** In the updated API, a subscription can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.
+> [!NOTE]
+> In the updated API, a subscription can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.
 
 ## Syntax
 
@@ -54,11 +53,11 @@ const req = navigator.push.unregister(pushEndpoint);
 req.onsuccess = (e) => {
   const endpoint = req.result;
   console.log(`Unregistered endpoint: ${endpoint}`);
-}
+};
 
 req.onerror = (e) => {
   console.error(`Error unregistering the endpoint: ${e.error}`);
-}
+};
 ```
 
 ## Specifications

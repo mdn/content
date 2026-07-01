@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.redirectStart
+title: "PerformanceResourceTiming: redirectStart property"
+short-title: redirectStart
 slug: Web/API/PerformanceResourceTiming/redirectStart
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.redirectStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`redirectStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch which that initiates the redirect.
 

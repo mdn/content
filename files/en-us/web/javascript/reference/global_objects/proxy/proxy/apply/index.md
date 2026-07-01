@@ -1,20 +1,37 @@
 ---
 title: handler.apply()
+short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`handler.apply()`** method is a trap for the `[[Call]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as function calls.
 
-The **`handler.apply()`** method is a trap for a function call.
+{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply(target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy(1, 2));
+// Expected output: 30
+```
 
 ## Syntax
 
@@ -22,7 +39,7 @@ The **`handler.apply()`** method is a trap for a function call.
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }
-});
+})
 ```
 
 ### Parameters
@@ -34,15 +51,13 @@ The following parameters are passed to the `apply()` method. `this` is bound to 
 - `thisArg`
   - : The `this` argument for the call.
 - `argumentsList`
-  - : The list of arguments for the call.
+  - : An {{jsxref("Array")}} containing the arguments passed to the function.
 
 ### Return value
 
-The `apply()` method can return any value.
+The `apply()` method can return any value, representing the return value of the function call.
 
 ## Description
-
-The **`handler.apply()`** method is a trap for a function call.
 
 ### Interceptions
 
@@ -56,7 +71,7 @@ Or any other operation that invokes the `[[Call]]` [internal method](/en-US/docs
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Call]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
 - The `target` must be a callable itself. That is, it must be a function object.
 
@@ -71,11 +86,11 @@ const p = new Proxy(function () {}, {
   apply(target, thisArg, argumentsList) {
     console.log(`called: ${argumentsList}`);
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1,2,3"
-                         // 6
+// 6
 ```
 
 ## Specifications

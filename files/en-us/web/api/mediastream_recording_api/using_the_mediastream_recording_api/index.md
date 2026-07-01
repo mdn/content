@@ -2,14 +2,6 @@
 title: Using the MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
-tags:
-  - API
-  - Example
-  - Guide
-  - MediaRecorder
-  - MediaStream Recording API
-  - NeedsUpdate
-  - Tutorial
 browser-compat: api.MediaRecorder
 ---
 
@@ -52,14 +44,12 @@ However, we wanted to make the third area (which contains the recorded samples y
 
 ```css
 .sound-clips {
-  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 4px rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0 / 10%);
   height: calc(100% - 240px - 0.7rem);
   overflow: scroll;
 }
 ```
-
-> **Note:** `calc()` has good support across modern browsers too, even going back to Internet Explorer 9.
 
 ### Checkbox hack for showing/hiding
 
@@ -67,7 +57,7 @@ This is fairly well documented already, but we thought we'd give a mention to th
 
 ```css
 label {
-  font-family: "NotoColorEmoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
   position: absolute;
   top: 2px;
@@ -98,11 +88,11 @@ aside {
   height: 100%;
   transform: translateX(100%);
   transition: 0.6s all;
-  background-color: #999;
+  background-color: #999999;
   background-image: linear-gradient(
     to top right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.5)
+    transparent,
+    rgb(0 0 0 / 50%)
   );
 }
 ```
@@ -137,7 +127,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       // constraints - only audio needed for this app
       {
         audio: true,
-      }
+      },
     )
 
     // Success callback
@@ -158,7 +148,8 @@ The whole thing is wrapped in a test that checks whether `getUserMedia` is suppo
 - **The success callback**: This code is run once the `getUserMedia` call has been completed successfully.
 - **The error/failure callback**: The code is run if the `getUserMedia` call fails for whatever reason.
 
-> **Note:** All of the code below is placed inside the `getUserMedia` success callback.
+> [!NOTE]
+> All of the code below is placed inside the `getUserMedia` success callback.
 
 ## Capturing the media stream
 
@@ -192,7 +183,8 @@ mediaRecorder.ondataavailable = (e) => {
 };
 ```
 
-> **Note:** The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
+> [!NOTE]
+> The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
 
 Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.
 
@@ -206,7 +198,7 @@ stop.onclick = () => {
 };
 ```
 
-Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
+Note that the recording may also stop naturally if the media stream ends (e.g., if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
 
 ## Grabbing and using the blob
 
@@ -225,8 +217,8 @@ mediaRecorder.onstop = (e) => {
 
   clipContainer.classList.add("clip");
   audio.setAttribute("controls", "");
-  deleteButton.innerHTML = "Delete";
-  clipLabel.innerHTML = clipName;
+  deleteButton.textContent = "Delete";
+  clipLabel.textContent = clipName;
 
   clipContainer.appendChild(audio);
   clipContainer.appendChild(clipLabel);
@@ -259,7 +251,7 @@ Next, we create an HTML structure like the following, inserting it into our clip
 </article>
 ```
 
-After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's {{htmlattrxref("src", "audio")}} attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
+After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
 
 Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 
@@ -273,6 +265,5 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## See also
 
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
-- {{domxref("Navigator.getUserMedia()")}}
-- [MediaRecorder API now supported by 65% of your website users](https://blog.addpipe.com/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) landing page
+- {{domxref("MediaDevices.getUserMedia()")}}

@@ -1,20 +1,9 @@
 ---
-title: MediaTrackSettings.sampleRate
+title: "MediaTrackSettings: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackSettings/sampleRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - sampleRate
-browser-compat: api.MediaTrackSettings.sampleRate
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleRate_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

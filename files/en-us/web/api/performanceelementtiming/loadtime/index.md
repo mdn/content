@@ -1,14 +1,10 @@
 ---
-title: PerformanceElementTiming.loadTime
+title: "PerformanceElementTiming: loadTime property"
+short-title: loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - loadTime
-  - PerformanceElementTimingnull
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PerformanceElementTiming.loadTime
 ---
 
@@ -24,7 +20,7 @@ A {{domxref("DOMHighResTimeStamp")}} with the `loadTime` of the element. Always 
 
 ### Logging `loadTime`
 
-In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"`. The `buffered` flag is used to access data from before the observer was created. Calling `entry.loadTime` returns the loadTime of the image element.
+In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"`. The `buffered` flag is used to access data from before the observer was created. Calling `entry.loadTime` returns the loadTime of the image element.
 
 ```html
 <img

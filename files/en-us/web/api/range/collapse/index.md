@@ -1,23 +1,19 @@
 ---
-title: Range.collapse()
+title: "Range: collapse() method"
+short-title: collapse()
 slug: Web/API/Range/collapse
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.collapse
 ---
 
 {{APIRef("DOM")}}
 
-The **`Range.collapse()`** method collapses the
+The **`collapse()`** method of the {{domxref("Range")}} interface collapses the
 {{domxref("Range")}} to one of its boundary points.
 
 A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
 single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed,
-see the {{domxref("Range.collapsed")}} property.
+see the {{domxref("AbstractRange.collapsed")}} property.
 
 ## Syntax
 
@@ -31,7 +27,7 @@ collapse(toStart)
 - `toStart` {{optional_inline}}
   - : A boolean value: `true` collapses the {{domxref("Range")}}
     to its start, `false` to its end. If omitted, it defaults to
-    `false` {{experimental_inline}}.
+    `false`.
 
 ### Return value
 

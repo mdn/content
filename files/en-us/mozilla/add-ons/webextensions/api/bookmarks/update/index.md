@@ -1,24 +1,15 @@
 ---
 title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
 
-> **Warning:** If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.
+> [!WARNING]
+> If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -34,15 +25,13 @@ let updating = browser.bookmarks.update(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} specifying the ID of the bookmark or bookmark folder to update.
+  - : A {{jsxref("String")}} specifying the ID of the bookmark or bookmark folder to update.
 - `changes`
-
-  - : An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:
-
+  - : An {{jsxref("Object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:
     - `title` {{optional_inline}}
-      - : A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if `id` refers to a folder.
+      - : A {{jsxref("String")}} containing the new title of the bookmark, or the new name of the folder if `id` refers to a folder.
     - `url` {{optional_inline}}
-      - : A {{jsxref("string")}} providing a new URL for the bookmark.
+      - : A {{jsxref("String")}} providing a new URL for the bookmark.
 
 ### Return value
 
@@ -83,7 +72,8 @@ browser.bookmarks.search({ title: "MDN" }).then(updateFolders, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

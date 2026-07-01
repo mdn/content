@@ -2,21 +2,6 @@
 title: Guide to the Fullscreen API
 slug: Web/API/Fullscreen_API/Guide
 page-type: guide
-tags:
-  - API
-  - Drawing
-  - Full
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - display
-  - full screen
-  - fullscreen
-  - screen
-browser-compat:
-  - api.Document.fullscreen
-  - api.Document.fullscreenEnabled
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -30,16 +15,16 @@ Given an element that you'd like to present in fullscreen mode (such as a {{HTML
 Let's consider this {{HTMLElement("video")}} element:
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 We can put that video into fullscreen mode as follows:
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -47,18 +32,9 @@ if (elem.requestFullscreen) {
 
 This code checks for the existence of the `requestFullscreen()` method before calling it.
 
-### Presentation differences
+Once an element is in fullscreen mode, it is matched by {{cssxref(":fullscreen")}}, which gives it some default styles like taking up the entire screen. It is also placed in the {{glossary("top layer")}}.
 
-It's worth noting a key difference here between the Gecko and WebKit implementations at this time: Gecko automatically adds CSS rules to the element to stretch it to fill the screen: "`width: 100%; height: 100%`". WebKit doesn't do this; instead, it centers the fullscreen element at the same size in a screen that's otherwise black. To get the same fullscreen behavior in WebKit, you need to add your own "`width: 100%; height: 100%;`" CSS rules to the element yourself:
-
-```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
-}
-```
-
-On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you need to place the element you want to present inside another element, which you'll make fullscreen instead, and use CSS rules to adjust the inner element to match the appearance you want.
+If multiple elements are requested to be displayed in fullscreen mode, they all get matched by {{cssxref(":fullscreen")}} and are all in the top layer. They stack on top each other, with more recently requested elements on top of older ones. The most recently requested element gets displayed and is returned by {{domxref("Document.fullscreenElement")}}.
 
 ### Notification
 
@@ -66,13 +42,16 @@ When fullscreen mode is successfully engaged, the document which contains the el
 
 ### When a fullscreen request fails
 
-It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `mozfullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
+It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `fullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
 
-> **Note:** Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
+> [!NOTE]
+> Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
 
 ## Getting out of full screen mode
 
 The user always has the ability to exit fullscreen mode of their own accord; see [Things your users want to know](#things_your_users_want_to_know). You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+
+If there are multiple elements in fullscreen mode, calling `exitFullscreen()` only exits the topmost element, revealing the next element below it. Pressing <kbd>Esc</kbd> or <kbd>F11</kbd> exits all fullscreen elements.
 
 ## Other information
 
@@ -95,94 +74,9 @@ In addition, navigating to another page, changing tabs, or switching to another 
 
 ## Example
 
-In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.
+The [mdn/dom-examples GitHub repo](https://github.com/mdn/) has a complete example of the Fullscreen API.
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
-
-### Watching for the Enter key
-
-When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
-
-```js
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
-```
-
-### Toggling fullscreen mode
-
-This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
-
-```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
-```
-
-This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("element.requestFullscreen()")}}.
-
-If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
-
-## Prefixing
-
-For the moment not all browsers are implementing the unprefixed version of the API (for vendor agnostic access to the Fullscreen API you can use [Fscreen](https://github.com/rafgraph/fscreen)). Here is the table summarizing the prefixes and name differences between them:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">Standard</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
-      <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-      </th>
-      <td><code>webkitIsFullScreen</code></td>
-      <td><code>mozFullScreen</code></td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenEnabled")}}
-      </th>
-      <td><code>webkitFullscreenEnabled</code></td>
-      <td><code>mozFullScreenEnabled</code></td>
-      <td><code>msFullscreenEnabled</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Document.fullscreenElement")}}
-      </th>
-      <td><code>webkitFullscreenElement</code></td>
-      <td><code>mozFullScreenElement</code></td>
-      <td><code>msFullscreenElement</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{DOMxRef("Document.exitFullscreen()")}}</th>
-      <td><code>webkitExitFullscreen()</code></td>
-      <td><code>mozCancelFullScreen()</code></td>
-      <td><code>msExitFullscreen()</code></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{DOMxRef("Element.requestFullscreen()")}}
-      </th>
-      <td><code>webkitRequestFullscreen()</code></td>
-      <td><code>mozRequestFullScreen()</code></td>
-      <td><code>msRequestFullscreen()</code></td>
-    </tr>
-  </tbody>
-</table>
+[Run the example](https://mdn.github.io/dom-examples/fullscreen-api/index.html) and [browse the source code](https://github.com/mdn/dom-examples/tree/main/fullscreen-api).
 
 ## Specifications
 
@@ -200,4 +94,4 @@ For the moment not all browsers are implementing the unprefixed version of the A
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

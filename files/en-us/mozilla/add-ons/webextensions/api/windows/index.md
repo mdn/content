@@ -1,19 +1,10 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
+page-type: webextension-api
 browser-compat: webextensions.api.windows
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.
 
@@ -54,6 +45,8 @@ Interact with browser windows. You can use this API to get information about ope
 
 ## Events
 
+- {{WebExtAPIRef("windows.onBoundsChanged")}}
+  - : Fired when a window is resized or moved.
 - {{WebExtAPIRef("windows.onCreated")}}
   - : Fired when a window is created.
 - {{WebExtAPIRef("windows.onRemoved")}}
@@ -61,13 +54,14 @@ Interact with browser windows. You can use this API to get information about ope
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Fired when the currently focused window changes.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

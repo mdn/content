@@ -1,19 +1,12 @@
 ---
-title: Notification.icon
+title: "Notification: icon property"
+short-title: icon
 slug: Web/API/Notification/icon
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - icon
 browser-compat: api.Notification.icon
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`icon`** read-only property of the
 {{domxref("Notification")}} interface contains the URL of an icon to be displayed as
@@ -31,9 +24,9 @@ constructor to fire a notification, passing it arguments to specify the body, ic
 title we want.
 
 ```js
-const notification = new Notification('To do list', {
+const notification = new Notification("To do list", {
   body: text,
-  icon: img
+  icon: img,
 });
 ```
 

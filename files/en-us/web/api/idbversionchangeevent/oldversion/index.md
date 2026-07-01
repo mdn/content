@@ -1,28 +1,18 @@
 ---
-title: IDBVersionChangeEvent.oldVersion
+title: "IDBVersionChangeEvent: oldVersion property"
+short-title: oldVersion
 slug: Web/API/IDBVersionChangeEvent/oldVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBVersionChangeEvent
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - oldVersion
 browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`oldVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
 database.
 
 When the opened database doesn't exist yet, the value of `oldVersion` is 0.
-
-{{AvailableInWorkers}}
 
 ## Value
 

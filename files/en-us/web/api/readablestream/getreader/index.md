@@ -1,18 +1,12 @@
 ---
-title: ReadableStream.getReader()
+title: "ReadableStream: getReader() method"
+short-title: getReader()
 slug: Web/API/ReadableStream/getReader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - getReader
 browser-compat: api.ReadableStream.getReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`getReader()`** method of the {{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
 While the stream is locked, no other reader can be acquired until this one is released.
@@ -27,14 +21,10 @@ getReader(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing the following properties:
-
     - `mode` {{optional_inline}}
-
-      - : An property that specifies the type of reader to create.
+      - : A property that specifies the type of reader to create.
         Values can be:
-
         - `"byob"`, which results in a {{domxref("ReadableStreamBYOBReader")}} being created that can read readable byte streams (streams that support zero-copy transfer from an underlying byte source to the reader when internal stream buffers are empty).
         - `undefined` (or not specified at all — this is the default), which results in a {{domxref("ReadableStreamDefaultReader")}} being created that can read individual chunks from a stream.
 
@@ -69,14 +59,14 @@ function fetchStream() {
     // value - some data. Always undefined when done is true.
     if (done) {
       console.log("Stream complete");
-      para.textContent = value;
+      para.textContent = result;
       return;
     }
 
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -95,3 +85,11 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

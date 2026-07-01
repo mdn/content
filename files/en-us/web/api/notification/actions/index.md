@@ -1,30 +1,19 @@
 ---
-title: Notification.actions
+title: "Notification: actions property"
+short-title: actions
 slug: Web/API/Notification/actions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - actions
-  - Experimental
 browser-compat: api.Notification.actions
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`actions`** read-only property of the {{domxref("Notification")}} interface provides the actions available for users to choose from for interacting with the notification.
-
-The actions are set using the `actions` option of the second argument for the [`showNotification()`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification) method and [`Notification()`](/en-US/docs/Web/API/Notification/Notification) constructor.
-
-> **Note:** Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxRef("Notification.maxActions")}} property to determine the limit.
+The **`actions`** read-only property of the {{domxref("Notification")}} interface provides the actions available for users to select when interacting with the notification.
 
 ## Value
 
-A read-only array of actions. Each element in the array is an object with the following members:
+A read-only array of actions.
+Each element in the array is an object with the following members:
 
 - `action`
   - : A string identifying a user action to be displayed on the notification.
@@ -32,6 +21,43 @@ A read-only array of actions. Each element in the array is an object with the fo
   - : A string containing action text to be shown to the user.
 - `icon`
   - : A string containing the URL of an icon to display with the action.
+- `navigate` {{optional_inline}} {{experimental_inline}}
+  - : A string containing a URL to navigate to when the user activates this action.
+    When set, the user agent navigates to this URL instead of firing the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
+    See {{domxref("Notification.navigate")}} for more information.
+
+## Description
+
+Notification actions are buttons or controls that appear within [persistent notifications](/en-US/docs/Web/API/Notifications_API#persistent_and_non-persistent_notifications).
+They are set using the [`actions`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#actions) option of the second argument of the {{domxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method.
+Note that actions are not available for non-persistent notifications.
+If you pass an `options` object with an `actions` property that is anything other than `null` to the {{domxref("Notification/Notification", "Notification()")}} constructor, a `TypeError` is thrown.
+
+Clicking the button associated with an action navigates to the URL set in the [`navigate`](#navigate) option if one is specified.
+Otherwise, it fires a [`notificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) event on the service worker that includes the action that was selected (and the associated `Notification` instance), so the worker can handle it without the user ever switching to your page.
+
+> [!NOTE]
+> Browsers typically limit the maximum number of actions they will display for a particular notification.
+> Check the static {{domxref("Notification.maxActions_static", "Notification.maxActions")}} property to determine the limit.
+
+## Examples
+
+### Basic usage
+
+The following code shows how a service worker might listen for the `notificationclick` event and use it to retrieve both the clicked action and an array of all actions.
+
+```js
+// sw.js
+self.addEventListener("notificationclick", (event) => {
+  const clickedAction = event.action; // e.g. "reply" or "" if body was clicked
+
+  // Read all defined actions
+  const notification = event.notification; // the Notification object
+  console.log(notification.actions); // full array of action objects
+
+  notification.close();
+});
+```
 
 ## Specifications
 
@@ -44,4 +70,4 @@ A read-only array of actions. Each element in the array is an object with the fo
 ## See also
 
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{DOMxRef("Notification.maxActions")}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}}

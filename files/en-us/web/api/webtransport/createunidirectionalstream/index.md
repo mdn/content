@@ -1,39 +1,45 @@
 ---
-title: WebTransport.createUnidirectionalStream()
+title: "WebTransport: createUnidirectionalStream() method"
+short-title: createUnidirectionalStream()
 slug: Web/API/WebTransport/createUnidirectionalStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - createUnidirectionalStream
-  - Experimental
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface opens a unidirectional stream; it returns a {{domxref("WritableStream")}} object that can be used to reliably write data to the server.
+The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
+
+The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
+
+<!-- Note, returns a `WebTransportSendStream` according to spec, but not yet implemented -->
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
-{{AvailableInWorkers}}
+The relative order in which queued bytes are emptied from created streams can be specified using the `sendOrder` option.
+If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
+If the order number is not set then the order in which bytes are sent is implementation dependent.
+Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
 
 ## Syntax
 
-```js
+```js-nolint
 createUnidirectionalStream()
+createUnidirectionalStream(options)
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+  - : An object that may have the following properties:
+    - `sendOrder` {{optional_inline}}
+      - : An integer value specifying the send priority of this stream relative to other streams for which the value has been set.
+        Queued bytes are sent first for streams that have a higher value.
+        If not set, the send order depends on the implementation.
 
 ### Return value
 
-A {{domxref("WritableStream")}} object.
+A {{jsxref("Promise")}} that resolves to a `WebTransportSendStream` object (this is a {{domxref("WritableStream")}}).
 
 ### Exceptions
 
@@ -48,8 +54,10 @@ Use the {{domxref("WritableStreamDefaultWriter.close", "close()")}} method of th
 
 ```js
 async function writeData() {
-  const stream = await transport.createUnidirectionalStream();
-  const writer = stream.writable.getWriter();
+  const stream = await transport.createUnidirectionalStream({
+    sendOrder: "596996858",
+  });
+  const writer = stream.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
   writer.write(data1);
@@ -57,7 +65,7 @@ async function writeData() {
 
   try {
     await writer.close();
-    console.log('All data has been sent.');
+    console.log("All data has been sent.");
   } catch (error) {
     console.error(`An error occurred: ${error}`);
   }
@@ -67,15 +75,15 @@ async function writeData() {
 You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly terminate the stream. When using `abort()`, the browser may discard any pending data that hasn't yet been sent.
 
 ```js
-// ...
+// …
 
 const stream = await transport.createUnidirectionalStream();
-const writer = ws.getWriter();
+const writer = stream.getWriter();
 
-// ...
+// …
 
-writer.write(...);
-writer.write(...);
+writer.write(data1);
+writer.write(data2);
 await writer.abort();
 // Not all the data may have been written.
 ```
@@ -90,7 +98,8 @@ await writer.abort();
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("WebTransport.createBidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

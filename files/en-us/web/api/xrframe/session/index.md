@@ -1,25 +1,14 @@
 ---
-title: XRFrame.session
+title: "XRFrame: session property"
+short-title: session
 slug: Web/API/XRFrame/session
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Property
-  - Reference
-  - Session
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.session
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 An `XRFrame` object's _read-only_ **`session`** property returns the {{domxref("XRSession")}} object that generated the frame.
 

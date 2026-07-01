@@ -1,28 +1,33 @@
 ---
 title: Symbol() constructor
+short-title: Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Symbol
-  - Polyfill
 browser-compat: javascript.builtins.Symbol.Symbol
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Symbol()`** function returns primitive values of type Symbol.
 
-The `Symbol()` constructor returns a value of type **symbol**,
-but is incomplete as a constructor because it does not support the syntax
-"`new Symbol()`" and it is not intended to be subclassed. It may be used as
-the value of an
-[`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-clause of a `class` definition but a
-[`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-call to it will cause an exception.
+{{InteractiveExample("JavaScript Demo: Symbol() constructor", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -31,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **Note:** `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -61,10 +67,10 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
+The following syntax with the {{jsxref("new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
-```js
+```js example-bad
 const sym = new Symbol(); // TypeError
 ```
 

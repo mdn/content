@@ -1,21 +1,8 @@
 ---
-title: 'RTCPeerConnection: icegatheringstatechange event'
+title: "RTCPeerConnection: icegatheringstatechange event"
+short-title: icegatheringstatechange
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - icegatheringstatechange
-  - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 
@@ -26,7 +13,8 @@ This signifies that the value of the connection's {{domxref("RTCPeerConnection.i
 
 When ICE first starts to gather connection candidates, the value changes from `new` to `gathering` to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to `complete`, all of the transports that make up the `RTCPeerConnection` have finished gathering ICE candidates.
 
-> **Note:** While you can determine that ICE candidate gathering is complete by watching for `icegatheringstatechange` events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become `complete`, you can also have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null`. This also indicates that collection of candidates is finished.
+> [!NOTE]
+> While you can determine that ICE candidate gathering is complete by watching for `icegatheringstatechange` events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become `complete`, you can also have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null`. This also indicates that collection of candidates is finished.
 
 This event is not cancelable and does not bubble.
 
@@ -34,10 +22,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('iceconnectionstatechange', (event) => { });
+```js-nolint
+addEventListener("icegatheringstatechange", (event) => { })
 
-oniceconnectionstatechange = (event) => { };
+onicegatheringstatechange = (event) => { }
 ```
 
 ## Event type
@@ -52,7 +40,7 @@ This example creates a handler for `icegatheringstatechange` events.
 pc.onicegatheringstatechange = (ev) => {
   let connection = ev.target;
 
-  switch(connection.iceGatheringState) {
+  switch (connection.iceGatheringState) {
     case "gathering":
       /* collection of candidates has begun */
       break;
@@ -60,7 +48,7 @@ pc.onicegatheringstatechange = (ev) => {
       /* collection of candidates is finished */
       break;
   }
-}
+};
 ```
 
 Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for `icegatheringstatechange` events:
@@ -69,15 +57,15 @@ Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListene
 pc.addEventListener("icegatheringstatechange", (ev) => {
   let connection = ev.target;
 
-  switch(connection.iceGatheringState) {
+  switch (connection.iceGatheringState) {
     case "gathering":
-      /* collection of candidates has begun */
+      // collection of candidates has begun
       break;
     case "complete":
-      /* collection of candidates is finished */
+      // collection of candidates is finished
       break;
   }
-}, false);
+});
 ```
 
 ## Specifications

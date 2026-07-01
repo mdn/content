@@ -1,24 +1,13 @@
 ---
 title: Uint32Array() constructor
+short-title: Uint32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`Uint32Array()`** typed array constructor creates an
-array of 32-bit unsigned integers in the platform byte order. If control over byte order
-is needed, use {{jsxref("DataView")}} instead. The contents are initialized to
-`0`. Once established, you can reference elements in the array using the
-object's methods, or using standard array index syntax (that is, using bracket
-notation).
+The **`Uint32Array()`** constructor creates {{jsxref("Uint32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -33,7 +22,8 @@ new Uint32Array(buffer, byteOffset)
 new Uint32Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -88,6 +78,7 @@ console.log(uint32FromIterable);
 ## See also
 
 - [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

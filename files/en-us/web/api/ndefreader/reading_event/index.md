@@ -1,28 +1,25 @@
 ---
 title: "NDEFReader: reading event"
+short-title: reading
 slug: Web/API/NDEFReader/reading_event
 page-type: web-api-event
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Event
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.reading_event
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever a new reading is available from compatible NFC devices (e.g. NFC tags supporting NDEF) when these devices are within the reader's magnetic induction field.
+The `reading` event of the {{DOMxRef("NDEFReader")}} interface is fired whenever a new reading is available from compatible NFC devices (e.g., NFC tags supporting NDEF) when these devices are within the reader's magnetic induction field.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("reading", (event) => {});
+```js-nolint
+addEventListener("reading", (event) => { })
 
-onreading = (event) => {};
+onreading = (event) => { }
 ```
 
 ## Event type
@@ -41,7 +38,7 @@ ndef
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
       console.log(
-        "Error! Cannot read data from the NFC tag. Try a different one?"
+        "Error! Cannot read data from the NFC tag. Try a different one?",
       );
     };
     ndef.onreading = (event) => {
@@ -63,4 +60,4 @@ ndef
 
 ## See also
 
-- {{DOMxRef("NDEFReader.readingerror_event")}}
+- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} event

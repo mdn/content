@@ -1,20 +1,10 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`onChanged()`** event of the {{WebExtAPIRef("downloads")}} API is fired when any of a {{WebExtAPIRef('downloads.DownloadItem')}}'s properties changes (except for `bytesReceived`).
 
@@ -30,7 +20,7 @@ browser.downloads.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,10 +31,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. This function will be passed this argument:
     - `downloadDelta`
       - : An `object` representing the {{WebExtAPIRef('downloads.DownloadItem')}} object that changed, and the status of all the properties that changed in it. See the [downloadDelta](#downloaddelta_2) section for more details.
 
@@ -83,10 +71,6 @@ The `downloadDelta` object has the following properties available:
 - `exists` {{optional_inline}}
   - : A {{WebExtAPIRef('downloads.BooleanDelta')}} object describing a change in a {{WebExtAPIRef('downloads.DownloadItem')}}'s `exists` status.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log a message when downloads complete:
@@ -103,7 +87,12 @@ browser.downloads.onChanged.addListener(handleChanged);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onChanged) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

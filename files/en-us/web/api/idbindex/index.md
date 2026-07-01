@@ -2,18 +2,10 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 `IDBIndex` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides asynchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
 
@@ -23,13 +15,11 @@ The index is a persistent key-value storage where the value part of its records 
 
 You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.
 
-{{AvailableInWorkers}}
-
 ## Instance properties
 
-- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
+- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ non-standard_inline }} {{deprecated_inline}}
   - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
-- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
+- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ non-standard_inline }} {{deprecated_inline}}
   - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
 - {{domxref("IDBIndex.name")}}
   - : The name of this index.
@@ -47,19 +37,21 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBIndex.count()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, returns the number of records within a key range.
 - {{domxref("IDBIndex.get()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getKey()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAll()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.getAllKeys()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.getAllRecords()")}} {{experimental_inline}}
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, finds all matching records in the referenced object store (including index keys, primary keys, and values) that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
 - {{domxref("IDBIndex.openCursor()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
 - {{domxref("IDBIndex.openKeyCursor()")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 
 ## Example
 
@@ -69,31 +61,37 @@ Finally, we iterate through each record, and insert the data into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.textContent = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
   myIndex.openCursor().onsuccess = (event) => {
-   const cursor = event.target.result;
+    const cursor = event.target.result;
     if (cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+      const tableRow = document.createElement("tr");
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

@@ -2,21 +2,15 @@
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 page-type: javascript-error
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Errors")}}
-
 The JavaScript exception "can't redefine non-configurable property" occurs when it was
-attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Message
 
-```
+```plain
 TypeError: Cannot redefine property: "x" (V8-based)
 TypeError: can't redefine non-configurable property "x" (Firefox)
 TypeError: Attempting to change value of a readonly property. (Safari)
@@ -28,7 +22,7 @@ TypeError: Attempting to change value of a readonly property. (Safari)
 
 ## What went wrong?
 
-It was attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties). The
+It was attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties). The
 `configurable` attribute controls whether the property can be deleted from
 the object and whether its attributes (other than `writable`) can be changed.
 Usually, properties in an object created by an
@@ -44,9 +38,9 @@ haven't specified them as configurable.
 
 ```js example-bad
 const obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: can't redefine non-configurable property "foo"
 ```
 
@@ -55,11 +49,11 @@ later in the code.
 
 ```js example-good
 const obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## See also
 
-- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
+- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties)
 - {{jsxref("Object.defineProperty()")}}

@@ -1,21 +1,14 @@
 ---
-title: ScreenOrientation.lock()
+title: "ScreenOrientation: lock() method"
+short-title: lock()
 slug: Web/API/ScreenOrientation/lock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Orientation
-  - Method
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - lock
 browser-compat: api.ScreenOrientation.lock
 ---
 
 {{APIRef("Screen Orientation")}}
 
-The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
+The **`lock()`** method of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
 
 Typically orientation locking is only enabled on mobile devices, and when the browser context is full screen.
 If locking is supported, then it must work for all the parameter values listed below.
@@ -29,9 +22,7 @@ lock(orientation)
 ### Parameters
 
 - `orientation`
-
   - : An orientation lock type. One of the following:
-
     - `"any"`
       - : Any of `portrait-primary`, `portrait-secondary`, `landscape-primary` or `landscape-secondary`.
     - `"natural"`
@@ -67,18 +58,17 @@ A {{jsxref("Promise")}} that resolves after locking succeeds.
 
 The promise may be rejected with the following exceptions:
 
-- `NotSupportedError` {{domxref("DOMException")}}
-
-  - : The user agent does not support locking the screen orientation.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
 
 - `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the document's visibility state is hidden or if the document is forbidden to use the feature (for example, by omitting the keyword `allow-orientation-lock` of the `sandbox` attribute of the `iframe` element).
 
-  - : The user-agent's pre-lock conditions are not met.
-    For example, a browser may require that the top-level browsing context's `Document` is full screen.
-    The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the user agent does not support locking the screen orientation of the specific orientation.
 
-- {{jsxref("TypeError")}}
-  - : The `orientation` argument was not supplied.
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if there is any other `lock()` method invoking or if {{domxref("ScreenOrientation/unlock","unlock()")}} is called while the lock promise is pending.
 
 ## Examples
 
@@ -98,37 +88,39 @@ Note that this example will only work on mobile devices and other devices that s
 const log = document.getElementById("log");
 
 // Lock button: Lock the screen to the other orientation (rotated by 90 degrees)
-const rotate_btn = document.querySelector('#lock_button');
-rotate_btn.addEventListener('click', () => {
-  log.textContent+=`Lock pressed \n`;
+const rotateBtn = document.querySelector("#lock_button");
+rotateBtn.addEventListener("click", () => {
+  log.textContent += `Lock pressed \n`;
 
-  const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
-  screen.orientation.lock(oppositeOrientation)
+  const oppositeOrientation = screen.orientation.type.startsWith("portrait")
+    ? "landscape"
+    : "portrait";
+  screen.orientation
+    .lock(oppositeOrientation)
     .then(() => {
-      log.textContent = `Locked to ${oppositeOrientation}\n`
-      }
-    )
+      log.textContent = `Locked to ${oppositeOrientation}\n`;
+    })
     .catch((error) => {
       log.textContent += `${error}\n`;
     });
 });
 
 // Unlock button: Unlock the screen orientation (if locked)
-const unlock_btn = document.querySelector('#unlock_button');
-unlock_btn.addEventListener('click', () => {
-  log.textContent+='Unlock pressed \n';
+const unlockBtn = document.querySelector("#unlock_button");
+unlockBtn.addEventListener("click", () => {
+  log.textContent += "Unlock pressed \n";
   screen.orientation.unlock();
-} );
+});
 
 // Full screen button: Set the example to fullscreen.
-const fullscreen_btn = document.querySelector('#fullscreen_button');
-fullscreen_btn.addEventListener('click', () => {
-  log.textContent+='Fullscreen pressed \n';
+const fullscreenBtn = document.querySelector("#fullscreen_button");
+fullscreenBtn.addEventListener("click", () => {
+  log.textContent += "Fullscreen pressed \n";
   const container = document.querySelector("#example_container");
   container.requestFullscreen().catch((error) => {
-      log.textContent += `${error}\n`
+    log.textContent += `${error}\n`;
   });
-} );
+});
 ```
 
 To test the example, first press the Fullscreen button.

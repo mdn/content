@@ -2,39 +2,20 @@
 title: URL
 slug: Web/API/URL
 page-type: web-api-interface
-tags:
-  - API
-  - Address
-  - Domain
-  - Interface
-  - Location
-  - Networking
-  - Reference
-  - URI
-  - URL
-  - URL API
-  - Web
-  - hostname
-  - href
-  - origin
-  - Polyfill
 browser-compat: api.URL
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URL`** interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.
 
 You normally create a new `URL` object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.
 
-If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.
-
-{{AvailableInWorkers}}
-
 ## Constructor
 
 - {{domxref("URL.URL", "URL()")}}
-  - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
+  - : Creates and returns a `URL` object from a URL string and optional base URL string.
+    Throws if the passed arguments don't define a valid URL.
 
 ## Instance properties
 
@@ -65,10 +46,14 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 ## Static methods
 
-- {{domxref("URL.createObjectURL", "createObjectURL()")}}
+- {{domxref("URL.canParse_static", "canParse()")}}
+  - : Returns a boolean indicating whether or not a URL defined from a URL string and optional base URL string is parsable and valid.
+- {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
-- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
-  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.parse_static", "parse()")}}
+  - : Creates and returns a `URL` object from a URL string and optional base URL string, or returns `null` if the passed parameters define an invalid `URL`.
+- {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Instance methods
 
@@ -79,25 +64,40 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 ## Usage notes
 
-The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL:
+The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL.
+
+Note that in the case below "dogs" is the filename segment (because it has no trailing slash), and the relative URL "cats" is interpreted relative to the _directory_ part of the base URL, which is `http://www.example.com/animals/`. See [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) for more information.
 
 ```js
-const url = new URL('../cats', 'http://www.example.com/dogs');
+const url = new URL("cats", "http://www.example.com/animals/dogs");
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"
+console.log(url.pathname); // "/animals/cats"
+```
+
+The constructor will raise an exception if the URL cannot be parsed to a valid URL.
+You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the {{domxref("URL.canParse_static", "canParse()")}} static method to first check the URL is valid:
+
+```js
+if (URL.canParse("cats", "http://www.example.com/animals/dogs")) {
+  const url = new URL("cats", "http://www.example.com/animals/dogs");
+  console.log(url.hostname); // "www.example.com"
+  console.log(url.pathname); // "/animals/cats"
+} else {
+  console.log("Invalid URL");
+}
 ```
 
 URL properties can be set to construct the URL:
 
 ```js
-url.hash = 'tabby';
-console.log(url.href); // "http://www.example.com/cats#tabby"
+url.hash = "tabby";
+console.log(url.href); // "http://www.example.com/animals/cats#tabby"
 ```
 
 URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:
 
 ```js
-url.pathname = 'démonstration.html';
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -114,7 +114,9 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 The {{domxref("URL.toString", "toString()")}} method of `URL` just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html"),
+);
 ```
 
 ## Specifications
@@ -129,6 +131,5 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
-- Property to obtain a `URL` object: {{domxref("URL")}}.
+- [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{domxref("URLSearchParams")}}.

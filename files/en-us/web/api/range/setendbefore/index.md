@@ -1,12 +1,8 @@
 ---
-title: Range.setEndBefore()
+title: "Range: setEndBefore() method"
+short-title: setEndBefore()
 slug: Web/API/Range/setEndBefore
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.setEndBefore
 ---
 

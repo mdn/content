@@ -1,11 +1,8 @@
 ---
-title: 'SpeechRecognition: end event'
+title: "SpeechRecognition: end event"
+short-title: end
 slug: Web/API/SpeechRecognition/end_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Web Speech API
 browser-compat: api.SpeechRecognition.end_event
 ---
 
@@ -17,8 +14,8 @@ The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('end', (event) => { })
+```js-nolint
+addEventListener("end", (event) => { })
 
 onend = (event) => { }
 ```
@@ -32,10 +29,10 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
-recognition.addEventListener('end', () => {
-  console.log('Speech recognition service disconnected');
+recognition.addEventListener("end", () => {
+  console.log("Speech recognition service disconnected");
 });
 ```
 
@@ -43,8 +40,8 @@ Or use the `onend` event handler property:
 
 ```js
 recognition.onend = () => {
-  console.log('Speech recognition service disconnected');
-}
+  console.log("Speech recognition service disconnected");
+};
 ```
 
 ## Specifications

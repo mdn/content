@@ -4,8 +4,14 @@ Content:CSS:
   - '\/docs\/Web\/CSS'
 Content:Events:
   - '\/docs\/Web\/Events'
+Content:Firefox:
+  - '\/docs\/Mozilla/Firefox'
+Content:Games:
+  - '\/docs\/Games'
 Content:Glossary:
   - '\/docs\/Glossary'
+Content:Guide:
+  - '\/docs\/Web/Guide'
 Content:HTML:
   - '\/docs\/Web\/HTML'
 Content:HTTP:
@@ -13,29 +19,41 @@ Content:HTTP:
 Content:JS:
   - '\/docs\/Web\/JavaScript'
 Content:Learn:
-  - '\/docs\/Learn\/(Common|Front|Getting|Learning|Performance)'
-Content:Learn:Accessibility:
-  - '\/docs\/Learn\/Accessibility'
-Content:Learn:Client-side:
-  - '\/docs\/Learn\/Tools_and_testing\/(Client-side|Understanding_client-side)'
-Content:Learn:Cross-Browser-Testing:
-  - '\/docs\/Learn\/Tools_and_testing\/Cross_browser_testing'
-Content:Learn:CSS:
-  - '\/docs\/Learn\/CSS'
-Content:Learn:Django:
-  - '\/docs\/Learn\/Server-side\/Django'
-Content:Learn:Forms:
-  - '\/docs\/Learn\/Forms'
-Content:Learn:GitHub:
-  - '\/docs\/Learn\/Tools_and_testing\/GitHub'
-Content:Learn:HTML:
-  - '\/docs\/Learn\/HTML'
-Content:Learn:JavaScript:
-  - '\/docs\/Learn\/JavaScript'
+  - '\/docs\/Learn_web_development\/'
+# Mapping for old directories, see https://github.com/mdn/content/pull/36967
+#
+# Content:Learn:Accessibility:
+#   - '\/docs\/Learn\/Accessibility'
+# Content:Learn:Client-side:
+#   - '\/docs\/Learn\/Tools_and_testing\/(Client-side|Understanding_client-side)'
+# Content:Learn:Cross-Browser-Testing:
+#   - '\/docs\/Learn\/Tools_and_testing\/Cross_browser_testing'
+# Content:Learn:CSS:
+#   - '\/docs\/Learn\/CSS'
+# Content:Learn:Django:
+#   - '\/docs\/Learn\/Server-side\/Django'
+# Content:Learn:Express:
+#   - '\/docs\/Learn\/Server-side\/Express_Nodejs'
+# Content:Learn:Forms:
+#   - '\/docs\/Learn\/Forms'
+# Content:Learn:GitHub:
+#   - '\/docs\/Learn\/Tools_and_testing\/GitHub'
+# Content:Learn:HTML:
+#   - '\/docs\/Learn\/HTML'
+# Content:Learn:JavaScript:
+#   - '\/docs\/Learn\/JavaScript'
 Content:Manifest:
   - '\/docs\/Web\/Manifest'
+Content:MathML:
+  - '\/docs\/Web\/MathML'
+Content:Media:
+  - '\/docs\/Web\/Media'
+Content:Meta:
+  - '\/docs\/MDN'
 Content:Performance:
   - '\/docs\/Web\/Performance'
+Content:PWA:
+  - '\/docs\/Web\/Progressive_web_apps'
 Content:Security:
   - '\/docs\/Web\/Security'
 Content:SVG:

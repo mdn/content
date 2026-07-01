@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
+This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of an app with offline functionality.
 
 ## The premise of service workers
 
@@ -82,31 +82,37 @@ registerServiceWorker();
 
 1. The `if`-block performs a feature detection test to make sure service workers are supported before trying to register one.
 2. Next, we use the [`ServiceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register) function to register the service worker for this site. The service worker code is in a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
-3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+3. The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified `'/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
 
 This registers a service worker, which runs in a worker context, and therefore has no DOM access.
 
 A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn't get its own unique worker.
 
-> **Note:** One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
+> [!NOTE]
+> One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
 
 #### Why is my service worker failing to register?
 
-This could be for the following reasons:
+A service worker fails to register for one of the following reasons:
 
-- You are not running your application through HTTPS.
-- The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-- It is also not allowed to point to a service worker of a different origin than that of your app.
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the [`Service-Worker-Allowed`](/en-US/docs/Web/HTTP/Header/Service-Worker-Allowed) header.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzilla.mozilla.org/show_bug.cgi?id=1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
-- In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (over HTTPS).
+- The path of the service worker file is incorrect.
+  The path must be relative to the origin, not an app's root directory.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
+- The path to your service worker points to a service worker of a different origin to your app.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
 After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-The `install` event is fired when an installation is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
+The `install` event is the first event that is fired on service worker installation or update.
+It is emitted just once, immediately after registration is successfully completed, and is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
 
 Here's how our service worker handles the `install` event:
 
@@ -128,19 +134,21 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 ```
 
-1. Here we add an `install` event listener to the service worker (hence `self`), and then chain a [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
+1. Here we add an `install` event listener to the service worker (hence `self`), and then chain an [`ExtendableEvent.waitUntil()`](/en-US/docs/Web/API/ExtendableEvent/waitUntil) method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
 2. Inside `addResourcesToCache()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. Then we call a function `addAll()` on the created cache, which for its parameter takes an array of URLs to all the resources you want to cache. The URLs are relative to the worker's {{domxref("WorkerGlobalScope.location", "location", "", 1)}}.
 3. If the promise is rejected, the installation fails, and the worker won't do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4. After a successful installation, the service worker activates. This doesn't have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the [Updating your service worker](#updating_your_service_worker) section later on.)
 
-> **Note:** [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
+> [!NOTE]
+> [The Web Storage API (`localStorage`)](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
-> **Note:** [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
+> [!NOTE]
+> [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
 
 ### Custom responses to requests
 
@@ -198,18 +206,18 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async (request) => {
+const cacheFirst = async (request, event) => {
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
   return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+  event.respondWith(cacheFirst(event.request, event));
 });
 ```
 
@@ -217,7 +225,7 @@ If the request URL is not available in the cache, we request the resource from t
 
 Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
-What might look a bit weird is that the promise returned by `putInCache()` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
+What might look a bit weird is that the promise returned by `putInCache()` is not awaited. The reason is that we don't want to wait until the response clone has been added to the cache before returning a response. However, we do need to call `event.waitUntil()` on the promise, to make sure the service worker doesn't terminate before the cache is populated.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
@@ -227,7 +235,7 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({ request, fallbackUrl, event }) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -240,7 +248,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -262,7 +270,8 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+      event,
+    }),
   );
 });
 ```
@@ -302,10 +311,17 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({
+  request,
+  preloadResponsePromise,
+  fallbackUrl,
+  event,
+}) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
+    // Keep the navigation preload request alive even if we do not use its response.
+    event.waitUntil(preloadResponsePromise.catch(() => undefined));
     return responseFromCache;
   }
 
@@ -313,7 +329,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
+    event.waitUntil(putInCache(request, preloadResponse.clone()));
     return preloadResponse;
   }
 
@@ -323,7 +339,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -363,7 +379,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 
@@ -373,7 +389,8 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+      event,
+    }),
   );
 });
 ```
@@ -384,7 +401,8 @@ Note that in this example we download and cache the same data for the resource w
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
-> **Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+> [!NOTE]
+> It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
@@ -406,7 +424,7 @@ self.addEventListener("install", (event) => {
       // …
 
       // include other new resources for the new version…
-    ])
+    ]),
   );
 });
 ```
@@ -443,9 +461,10 @@ self.addEventListener("activate", (event) => {
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
   - The "Forget about this site" button, available in [Firefox's toolbar customization options](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars), can be used to clear service workers and their caches.
-- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
+- [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools/progressive-web-apps/#service-workers)
 
 ## See also
 
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

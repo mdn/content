@@ -1,20 +1,14 @@
 ---
-title: WebGLRenderingContext.texParameter[fi]()
+title: "WebGLRenderingContext: texParameter[fi]() method"
+short-title: texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat:
   - api.WebGLRenderingContext.texParameterf
   - api.WebGLRenderingContext.texParameteri
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.texParameter[fi]()`** methods of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
@@ -29,19 +23,15 @@ texParameteri(target, pname, param)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `param`
-
   - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
     {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
 
@@ -81,7 +71,7 @@ texParameteri(target, pname, param)
       <td><code>gl.TEXTURE_WRAP_S</code></td>
       <td>Wrapping function for texture coordinate <code>s</code></td>
       <td>
-        <code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
+        <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
         <code>gl.MIRRORED_REPEAT</code>.
       </td>
     </tr>
@@ -89,7 +79,7 @@ texParameteri(target, pname, param)
       <td><code>gl.TEXTURE_WRAP_T</code></td>
       <td>Wrapping function for texture coordinate <code>t</code></td>
       <td>
-        <code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
+        <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
         <code>gl.MIRRORED_REPEAT</code>.
       </td>
     </tr>
@@ -166,7 +156,7 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(
   gl.TEXTURE_2D,
   gl.TEXTURE_MIN_FILTER,
-  gl.LINEAR_MIPMAP_NEAREST
+  gl.LINEAR_MIPMAP_NEAREST,
 );
 ```
 

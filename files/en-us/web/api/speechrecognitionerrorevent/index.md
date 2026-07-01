@@ -5,11 +5,16 @@ page-type: web-api-interface
 browser-compat: api.SpeechRecognitionErrorEvent
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents error messages from the recognition service.
 
 {{InheritanceDiagram}}
+
+## Constructor
+
+- {{domxref("SpeechRecognitionErrorEvent.SpeechRecognitionErrorEvent", "SpeechRecognitionErrorEvent()")}}
+  - : Creates a new `SpeechRecognitionErrorEvent` object.
 
 ## Instance properties
 
@@ -28,7 +33,7 @@ const recognition = new SpeechRecognition();
 recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
-}
+};
 ```
 
 ## Specifications

@@ -1,13 +1,8 @@
 ---
-title: HTMLInputElement.labels
+title: "HTMLInputElement: labels property"
+short-title: labels
 slug: Web/API/HTMLInputElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - Reference
 browser-compat: api.HTMLInputElement.labels
 ---
 
@@ -36,12 +31,10 @@ with the `<input>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("test");
-  for (const label of input.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const input = document.getElementById("test");
+for (const label of input.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

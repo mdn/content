@@ -1,23 +1,19 @@
 ---
-title: ReadableStreamDefaultReader()
+title: "ReadableStreamDefaultReader: ReadableStreamDefaultReader() constructor"
+short-title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamDefaultReader()`**
 constructor creates and returns a `ReadableStreamDefaultReader` object
 instance.
 
-> **Note:** You generally wouldn't use this constructor manually; instead,
+> [!NOTE]
+> You generally wouldn't use this constructor manually; instead,
 > you'd use the {{domxref("ReadableStream.getReader()")}} method.
 
 ## Syntax
@@ -69,7 +65,7 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -88,3 +84,10 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableStreamDefaultController")}}

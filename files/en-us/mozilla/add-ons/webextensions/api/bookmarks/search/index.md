@@ -1,20 +1,10 @@
 ---
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.search
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
 
@@ -33,23 +23,20 @@ let searching = browser.bookmarks.search(
 ### Parameters
 
 - `query`
-
-  - : A {{jsxref("string")}} or {{jsxref("object")}} describing the query to perform.
+  - : A {{jsxref("String")}} or {{jsxref("Object")}} describing the query to perform.
 
     If `query` is a **string**, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.
 
     If `query` is an **object**, it consists of zero or more of 3 properties: `query`, `title`, and `url`, which are described below. For a bookmark to match the query, all the properties' terms must be matched.
-
     - `query` {{optional_inline}}
-      - : A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the `query` parameter. If this isn't a string, an exception is thrown.
+      - : A {{jsxref("String")}} specifying one or more terms to match against; the format is identical to the string form of the `query` parameter. If this isn't a string, an exception is thrown.
     - `url` {{optional_inline}}
-
-      - : A {{jsxref("string")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.
+      - : A {{jsxref("String")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.
 
         If you pass an invalid URL, the function will throw an exception.
 
     - `title` {{optional_inline}}
-      - : A {{jsxref("string")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.
+      - : A {{jsxref("String")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.
 
 ### Return value
 
@@ -103,7 +90,8 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

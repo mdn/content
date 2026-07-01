@@ -1,23 +1,14 @@
 ---
-title: ReportingObserver.observe()
+title: "ReportingObserver: observe() method"
+short-title: observe()
 slug: Web/API/ReportingObserver/observe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Reporting API
-  - ReportingObserver
-  - observe
 browser-compat: api.ReportingObserver.observe
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`observe()`** method of the
-{{domxref("ReportingObserver")}} interface instructs a reporting observer to start
-collecting reports in its report queue.
+The **`observe()`** method of the {{domxref("ReportingObserver")}} interface instructs a reporting observer to start collecting reports in its report queue.
 
 ## Syntax
 
@@ -35,17 +26,19 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Basic usage
+
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
-observer.observe()
+observer.observe();
 ```
 
 ## Specifications

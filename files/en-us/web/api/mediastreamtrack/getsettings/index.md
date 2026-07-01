@@ -1,14 +1,8 @@
 ---
-title: MediaStreamTrack.getSettings()
+title: "MediaStreamTrack: getSettings() method"
+short-title: getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constraints
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Method
-  - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
 
@@ -36,7 +30,8 @@ None.
 A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
 track's constrainable properties.
 
-> **Note:** The returned object identifies the current values of every
+> [!NOTE]
+> The returned object identifies the current values of every
 > constrainable property, including those which are platform defaults rather than having
 > been expressly set by the site's code. To instead fetch the most-recently established
 > constraints for the track's properties, as specified by the site's code, use

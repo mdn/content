@@ -1,18 +1,12 @@
 ---
-title: CustomStateSet.keys()
+title: "CustomStateSet: keys() method"
+short-title: keys()
 slug: Web/API/CustomStateSet/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - keys
-  - CustomStateSet
-  - Experimental
 browser-compat: api.CustomStateSet.keys
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an alias for {{domxref("CustomStateSet.values")}}.
 

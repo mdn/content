@@ -2,12 +2,8 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
 This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
@@ -20,7 +16,13 @@ There are three broad categories of page types on MDN, though some page types fa
 
 ## Creating a new page
 
-To create new pages on MDN, you need to use GitHub — have a look at our [content repo README](https://github.com/mdn/content#adding-a-new-document) for more instructions.
+Adding a new document is relatively straightforward, especially if you can start by copying an `index.md` file from a similar topic.
+There are a few things to keep in mind:
+
+- Documents are written in Markdown in an `index.md` file.
+- For example, if you're creating a new document for a HTTP header called `foo`, create a new folder at `files/en-us/web/http/reference/headers/foo` and put the Markdown file in this folder (`files/en-us/web/http/reference/headers/foo/index.md`).
+- A document's `index.md` file must start with front-matter that defines the `title`, `slug`, and, most of the time, `page-type`.
+  You might find it helpful to refer to the front-matter within a similar document's `index.md`.
 
 ## How to use the templates
 
@@ -28,7 +30,7 @@ When creating a new page you can ensure that you've used the right page structur
 You can find the exact source code of each template (if you want to copy it) by following the "Source on **GitHub**" link at the bottom of each one.
 These page templates don't make much sense as published pages, but if you view their source code you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.
 
-At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article).
+At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g., information that doesn't actually appear in the body of the article).
 You need to delete this section after you've followed the instructions in it, before the page can be considered finished.
 
 ## Old-style page layouts
@@ -46,7 +48,7 @@ If the work is more significant, then you should consider a few factors when pri
 - How low quality is the information?
 - How popular is the feature? How sought after is the information?
 
-If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ## The page-type front matter key
 
@@ -54,148 +56,233 @@ We have defined a front matter key `page-type` to clearly identify the type of M
 
 For the complete list of page types see [The page-type front matter key](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key).
 
-## API landing page
+## Page templates
+
+Below are examples of the various pages you'll find on MDN along with templates that can be used to create new content based on the type of content you will be presenting, including the following pages:
+
+- [API landing page](#api_landing_page)
+- [API reference page](#api_reference_page)
+- [API reference subpage](#api_reference_subpage)
+- [HTML element reference page](#html_element_reference_page)
+- [HTML attribute reference page](#html_attribute_reference_page)
+- [SVG element reference page](#svg_element_reference_page)
+- [CSS module page](#css_module_page)
+- [CSS feature reference page](#css_feature_reference_page)
+- [HTTP header reference page](#http_header_reference_page)
+- [ARIA reference page](#aria_reference_page)
+- [Conceptual page](#conceptual_page)
+- [Glossary page](#glossary_page)
+- [Landing page](#landing_page)
+- [Learn web development pages](#learn_web_development_pages)
+
+Each section includes links to live example pages for that page type.
+
+### API landing page
 
 An **{{Glossary("API")}} landing page** provides an overview of what a particular API does, as well as links to the documentation for each of the interfaces, globals, functions, etc. offered by the API.
 It does not link directly to specific methods or properties within the API's classes, except in the context of the overview text.
 It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
 
 There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
-For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc.
+For example, the [Generic Sensor API](https://w3c.github.io/sensors/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
 In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
-### Example
+#### Example
 
 - [WebVR API](/en-US/docs/Web/API/WebVR_API)
 
-### Templates
+#### Templates
 
 - [API landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template)
 
-## API reference page
+### API reference page
 
-> **Note:** Also known as an _Interface landing page_.
+> [!NOTE]
+> Also known as an _Interface landing page_.
 
 An **API reference page** lists all the methods, properties, events, and so forth that are members of a particular interface or class.
 It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members.
 It is more granular than an API landing page, which typically links to multiple API reference pages.
 
-### Example
+#### Example
 
 - [Request interface](/en-US/docs/Web/API/Request) of the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-### Templates
+#### Templates
 
 - [API reference page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
-## API reference subpage
+### API reference subpage
 
 An **API reference subpage** is a child of an API reference page.
 It documents a single interface member in detail.
 
-### Examples
+#### Examples
 
 - [`count()` method](/en-US/docs/Web/API/IDBIndex/count) of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface (part of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API))
 - [capabilities property](/en-US/docs/Web/API/VRDisplay/capabilities) of the [VRDisplay](/en-US/docs/Web/API/VRDisplay) interface (part of the [WebVR API](/en-US/docs/Web/API/WebVR_API))
 - [Request() constructor](/en-US/docs/Web/API/Request/Request) of the [Request](/en-US/docs/Web/API/Request) interface (part of the [Fetch API](/en-US/docs/Web/API/Fetch_API))
 - [vrdisplaypresentchange event](/en-US/docs/Web/API/Window/vrdisplaypresentchange_event) (part of the [WebVR API](/en-US/docs/Web/API/WebVR_API), hangs off the [Window](/en-US/docs/Web/API/Window)) interface
 
-### Templates
+#### Templates
 
 - [API method subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
 - [API property subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
 - [API constructor subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
 - [API event subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
-## HTML element reference page
+### HTML element reference page
 
 An **HTML reference page** lists all the attributes that are available on an HTML element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.
 
-### Example
+#### Example
 
-- [`<video>` element](/en-US/docs/Web/HTML/Element/video)
+- [`<video>` element](/en-US/docs/Web/HTML/Reference/Elements/video)
 
-### Templates
+#### Templates
 
 - [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
 
-## SVG element reference page
+### HTML attribute reference page
+
+An HTML attribute page lists all the values that exist on an HTML attribute, explains the attribute's purpose and use cases, providing examples, browser compatibility information, and other important data.
+
+> [!NOTE]
+> Element-specific attributes (e.g., `placeholder` for `<input>`) don't require a separate page if the attributes can be sufficiently covered within the parent element's reference page (e.g., the `placeholder` attribute should be covered on the `<input>` element's page, not as a standalone page).
+
+#### Example
+
+- [`class` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
+
+#### Templates
+
+- [HTML attribute page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_attribute_page_template)
+
+### SVG element reference page
 
 An **SVG reference page** lists all the attributes that are available on an SVG element, explains the element's purpose and usage, and provides examples, browser compatibility information, and other important data.
 
-### Example
+#### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
-### Templates
+#### Templates
 
 - [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
-## CSS feature reference page
+### CSS module page
+
+Every **[CSS](/en-US/docs/Web/CSS) module** represents a CSS specification that provides support for certain features and implementations in CSS. For example, the [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module represents the [specification](/en-US/docs/Web/CSS/Guides/Box_model#specifications) that describes the margin and padding properties that let you create spacing in and around a CSS box.
+
+A **CSS module page** provides an overview of the features that the module provides and lists all the properties, data types, CSS functions, and so on offered by the module. When possible, the CSS module page provides a quick demonstration of what can be achieved using the properties of the module through an interactive example.
+The module page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
+
+Some related properties and features that belong in other modules, but that are closely related to the functionality offered by the module you are documenting, can also be covered in a _Related concepts_ section.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/Guides/Animations#related_concepts) section of the CSS animations module page.
+
+#### Examples
+
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
+- [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface)
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
+
+#### Templates
+
+- [CSS module page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template)
+
+### CSS feature reference page
 
 A **CSS reference page** lists all the available syntax for a CSS feature such as a selector or property, and explains the feature's purpose and usage. It also provides examples, browser compatibility information, and other important data.
 
-### Examples
+#### Examples
 
-- [background-color property](/en-US/docs/Web/CSS/background-color)
-- [:hover pseudo-class](/en-US/docs/Web/CSS/:hover)
-- [@media at-rule](/en-US/docs/Web/CSS/@media)
+- {{cssxref("background-color")}} property
+- {{cssxref(":hover")}} pseudo-class
+- {{cssxref("@media")}} at-rule
 
-### Templates
+#### Templates
 
 - [CSS property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
 - [CSS selector page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
+- [CSS function page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template)
 
-## HTTP header reference page
+### HTTP header reference page
 
 An **HTTP header reference page** lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage.
 It also provides examples, browser compatibility information, and other important explanations.
 
-### Example
+#### Example
 
-- [Cache-Control header](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
-### Templates
+#### Templates
 
 - [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
 
-## Conceptual page
+### ARIA reference page
+
+An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that defines ways to make web content and web applications more accessible to people with disabilities.
+
+#### Examples
+
+- [`aria-busy` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+
+#### Templates
+
+- [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
+
+### Conceptual page
 
 A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
-An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) and [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macros.
 
-### Examples
+#### Examples
 
 - [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Cascade and inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
-## Glossary page
+### Glossary page
 
 A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
-This can be followed by links to further information in the **Learn more** section.
+This can be followed by links to further information in the **See also** section.
 If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) for more details.
 
-### Examples
+#### Examples
 
 - [DOM](/en-US/docs/Glossary/DOM)
 - [Exception](/en-US/docs/Glossary/Exception)
 - [Hyperlink](/en-US/docs/Glossary/Hyperlink)
 
-### Templates
+#### Templates
 
 - [Glossary page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template)
 
-## Landing page
+### Landing page
 
 A **landing page** serves as a menu, of sorts, for its subpages, and is therefore primarily a _navigation_ page.
 A landing page layout is typically used for the root page of a tree of pages about a particular topic.
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the templates [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), and [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs). However, in more complex cases, the list may need to be created (and maintained!) by hand.
+The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
+
+### Learn web development pages
+
+The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. You can find more guidelines at [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content).
+
+There are only a few types of page inside Learn web development:
+
+- **Module group landing page**, for example [Core learning modules](/en-US/docs/Learn_web_development/Core)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module group, and a list of the modules, followed by an optional list of "See also" links.
+- **Module landing page**, for example [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module, and a list of the contained tutorials, followed by an optional list of "Additional tutorials" that are related but not part of the central learning pathway, and an optional list of "See also" links.
+- **Tutorial page**, for example [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+  - : The structure of a Learn tutorial is not strict, but it must provide a hands-on learning experience (see [Learn web development writing guidelines > Approach](/en-US/docs/MDN/Writing_guidelines/Learning_content#approach)), it must have a set of "Prerequisites" and "Learning outcomes" listed at the top, and the content must teach the stated learning outcomes.
 
 ### Examples
 
@@ -203,5 +290,10 @@ The list of subpages can be generated automatically using the templates [`Subpag
 - [CSS](/en-US/docs/Web/CSS)
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
-- [Learning area](/en-US/docs/Learn)
-- [Contributing to MDN](/en-US/docs/MDN/Contribute)
+- [Learn web development](/en-US/docs/Learn_web_development)
+- [Community resources](/en-US/docs/MDN/Community)
+
+## See also
+
+- [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)

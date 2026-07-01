@@ -1,18 +1,14 @@
 ---
-title: MutationRecord.target
+title: "MutationRecord: target property"
+short-title: target
 slug: Web/API/MutationRecord/target
 page-type: web-api-instance-property
-tags:
-  - target
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.target
 ---
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} read-only property **`target`** is the target (i.e. the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
+The {{domxref("MutationRecord")}} read-only property **`target`** is the target (i.e., the mutated/changed node) of a mutation observed with a {{domxref("MutationObserver")}}.
 
 ## Value
 

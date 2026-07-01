@@ -1,20 +1,10 @@
 ---
 title: action.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/action/ColorArray
-tags:
-  - API
-  - Add-ons
-  - ColorArray
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - action
+page-type: webextension-api-type
 browser-compat: webextensions.api.action.ColorArray
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 ## Type
 
@@ -33,7 +23,8 @@ For example, opaque red is `[255, 0, 0, 255]`.
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#type-ColorArray) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#type-ColorArray) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

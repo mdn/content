@@ -2,15 +2,11 @@
 title: Multi-touch interaction
 slug: Web/API/Pointer_events/Multi-touch_interaction
 page-type: guide
-tags:
-  - Guide
-  - Pointer Events
-  - touch
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
 
-Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites, applications and provide a good user experience regardless of the user's hardware.
+Pointer events extend DOM input events to support various pointing input devices such as pen/stylus and touch screens as well as mouse. The _pointer_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites, applications and provide a good user experience regardless of the user's hardware.
 
 Pointer events have many similarities to mouse events but they support multiple simultaneous pointers such as multiple fingers on a touch screen. This additional feature can be used to provide richer user interaction models but at the cost of additional complexity in the multi-touch interaction handling. This document demonstrates via example code, using pointer events with different multi-touch interactions.
 
@@ -24,25 +20,23 @@ This example demonstrates using pointer events' various event types ({{domxref("
 
 The application uses {{HTMLElement("div")}} to define three different touch target areas.
 
-```html
-<style>
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #target1 {
-    background: white;
-    border: 1px solid black;
-  }
-  #target2 {
-    background: white;
-    border: 1px solid black;
-  }
-  #target3 {
-    background: white;
-    border: 1px solid black;
-  }
-</style>
+```css
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#target1 {
+  background: white;
+  border: 1px solid black;
+}
+#target2 {
+  background: white;
+  border: 1px solid black;
+}
+#target3 {
+  background: white;
+  border: 1px solid black;
+}
 ```
 
 ### Global state
@@ -78,11 +72,9 @@ function setHandlers(name) {
   el.onpointerleave = pointerupHandler;
 }
 
-function init() {
-  setHandlers("target1");
-  setHandlers("target2");
-  setHandlers("target3");
-}
+setHandlers("target1");
+setHandlers("target2");
+setHandlers("target3");
 ```
 
 ### Pointer down
@@ -113,7 +105,7 @@ In this application, a pointer move is represented by the target's border being 
 ```js
 function pointermoveHandler(ev) {
   // Note: if the user makes more than one "simultaneous" touch, most browsers
-  // fire at least one pointermove event and some will fire several pointermoves.
+  // fire at least one pointermove event and some will fire several pointermove events.
   //
   // This function sets the target element's border to "dashed" to visually
   // indicate the target received a move event.
@@ -151,17 +143,21 @@ The application uses {{HTMLElement("div")}} elements for the touch areas and pro
 To prevent the browser's default touch behavior from overriding this application's pointer handling, the {{cssxref("touch-action")}} property is applied to the {{HTMLElement("body")}} element.
 
 ```html
-<body onload="init();" style="touch-action:none">
-  <div id="target1">Tap, Hold or Swipe me 1</div>
-  <div id="target2">Tap, Hold or Swipe me 2</div>
-  <div id="target3">Tap, Hold or Swipe me 3</div>
+<div id="target1">Tap, Hold or Swipe me 1</div>
+<div id="target2">Tap, Hold or Swipe me 2</div>
+<div id="target3">Tap, Hold or Swipe me 3</div>
 
-  <!-- UI for logging/debugging -->
-  <button id="log" onclick="enableLog(event);">Start/Stop event logging</button>
-  <button id="clearlog" onclick="clearLog(event);">Clear the log</button>
-  <p></p>
-  <output></output>
-</body>
+<!-- UI for logging/debugging -->
+<button id="log">Start/Stop event logging</button>
+<button id="clear-log">Clear the log</button>
+<p></p>
+<output></output>
+```
+
+```css
+body {
+  touch-action: none; /* Prevent default touch behavior */
+}
 ```
 
 ### Miscellaneous functions
@@ -176,10 +172,14 @@ These functions manage the global event caches `evCache1`, `evCache2` and `evCac
 function getCache(ev) {
   // Return the cache for this event's target element
   switch (ev.target.id) {
-    case "target1": return evCache1;
-    case "target2": return evCache2;
-    case "target3": return evCache3;
-    default: log("Error with cache handling", ev);
+    case "target1":
+      return evCache1;
+    case "target2":
+      return evCache2;
+    case "target3":
+      return evCache3;
+    default:
+      log("Error with cache handling", ev);
   }
 }
 
@@ -192,7 +192,9 @@ function pushEvent(ev) {
 function removeEvent(ev) {
   // Remove this event from the target's cache
   const evCache = getCache(ev);
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -232,27 +234,30 @@ function updateBackground(ev) {
 
 #### Event logging
 
-These functions are used send to event activity to the application window (to support debugging and learning about the event flow).
+These functions are used to send event activity to the application window (to support debugging and learning about the event flow).
 
 ```js
 // Log events flag
 let logEvents = false;
+
+document.getElementById("log").addEventListener("click", enableLog);
+document.getElementById("clear-log").addEventListener("click", clearLog);
 
 function enableLog(ev) {
   logEvents = !logEvents;
 }
 
 function log(name, ev) {
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
-  o.innerHTML += `${s}<br>`;
+  const o = document.getElementsByTagName("output")[0];
+  o.innerText += `${name}:
+  pointerID   = ${ev.pointerId}
+  pointerType = ${ev.pointerType}
+  isPrimary   = ${ev.isPrimary}
+`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
-  o.innerHTML = "";
+  const o = document.getElementsByTagName("output")[0];
+  o.textContent = "";
 }
 ```

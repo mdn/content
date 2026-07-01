@@ -1,10 +1,8 @@
 ---
-title: DOMTokenList.toggle()
+title: "DOMTokenList: toggle() method"
+short-title: toggle()
 slug: Web/API/DOMTokenList/toggle
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.toggle
 ---
 
@@ -56,10 +54,12 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', () => {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
-  span.textContent = `'c' ${result ? "added" : "removed"}; classList is now "${classes}".`;
-})
+  span.textContent = `'c' ${
+    result ? "added" : "removed"
+  }; classList is now "${classes}".`;
+});
 ```
 
 The output looks like this and it will change each time you click on the text:

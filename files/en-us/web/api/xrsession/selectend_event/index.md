@@ -1,33 +1,16 @@
 ---
-title: 'XRSession: selectend event'
+title: "XRSession: selectend event"
+short-title: selectend
 slug: Web/API/XRSession/selectend_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - selectend
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.selectend_event
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
+The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
 
 The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired before this event and can prevent this event from being raised.
 
@@ -35,8 +18,8 @@ The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired befor
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('selectend', (event) => { })
+```js-nolint
+addEventListener("selectend", (event) => { })
 
 onselectend = (event) => { }
 ```

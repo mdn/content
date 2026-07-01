@@ -1,20 +1,10 @@
 ---
 title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - cancel
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.cancel
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`cancel()`** function of the {{WebExtAPIRef("downloads")}} API cancels a download. The call will fail if the download is not active: for example, because it has completed downloading.
 
@@ -37,10 +27,6 @@ let canceling = browser.downloads.cancel(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request was successful, the promise will be fulfilled with no arguments. If the request failed, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -60,7 +46,12 @@ canceling.then(onCanceled, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-cancel) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-cancel) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

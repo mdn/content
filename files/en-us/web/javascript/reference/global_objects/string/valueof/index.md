@@ -1,28 +1,35 @@
 ---
 title: String.prototype.valueOf()
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.valueOf
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`valueOf()`** method of {{jsxref("String")}} values returns this string value.
 
-The **`valueOf()`** method returns the primitive value of a
-{{jsxref("String")}} object.
+{{InteractiveExample("JavaScript Demo: String.prototype.valueOf()")}}
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// Expected output: "foo"
+```
 
 ## Syntax
 
 ```js-nolint
 valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

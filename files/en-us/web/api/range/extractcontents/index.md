@@ -1,28 +1,14 @@
 ---
-title: Range.extractContents()
+title: "Range: extractContents() method"
+short-title: extractContents()
 slug: Web/API/Range/extractContents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.extractContents
 ---
 
 {{ApiRef("DOM")}}
 
-The **`Range.extractContents()`** method moves contents of the
-{{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.
-
-Event listeners added using DOM Events are not retained during extraction. HTML
-attribute events are retained or duplicated as they are for the
-{{domxref("Node.cloneNode()")}} method. HTML `id` attributes are also cloned,
-which can lead to an invalid document if a partially-selected node is extracted and
-appended to the document.
-
-Partially selected nodes are cloned to include the parent tags necessary to make the
-document fragment valid.
+The **`extractContents()`** method of the {{domxref("Range")}} interface is similar to a combination of {{domxref("Range.cloneContents()")}} and {{domxref("Range.deleteContents()")}}. It removes the child {{domxref("Node")}}s of the range from the document, clones them, and returns them as a new {{domxref("DocumentFragment")}} object. For partially selected nodes, only the selected text is deleted, but all containing parent nodes up to the common ancestor are cloned as well, resulting in two copies of these nodes, one in the original document and one in the extracted fragment.
 
 ## Syntax
 
@@ -85,22 +71,26 @@ button {
 #### JavaScript
 
 ```js
-const list1 = document.getElementById('list1');
-const list2 = document.getElementById('list2');
-const button = document.getElementById('swap');
+const list1 = document.getElementById("list1");
+const list2 = document.getElementById("list2");
+const button = document.getElementById("swap");
 
-button.addEventListener('click', (e) => {
-  selection = window.getSelection();
+button.addEventListener("click", (e) => {
+  const selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {
     const range = selection.getRangeAt(i);
 
-    if (range.commonAncestorContainer === list1 ||
-        range.commonAncestorContainer.parentNode === list1) {
+    if (
+      range.commonAncestorContainer === list1 ||
+      range.commonAncestorContainer.parentNode === list1
+    ) {
       const documentFragment = range.extractContents();
       list2.appendChild(documentFragment);
-    } else if (range.commonAncestorContainer === list2 ||
-        range.commonAncestorContainer.parentNode === list2) {
+    } else if (
+      range.commonAncestorContainer === list2 ||
+      range.commonAncestorContainer.parentNode === list2
+    ) {
       const documentFragment = range.extractContents();
       list1.appendChild(documentFragment);
     }

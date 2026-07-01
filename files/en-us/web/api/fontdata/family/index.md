@@ -1,13 +1,10 @@
 ---
-title: FontData.family
+title: "FontData: family property"
+short-title: family
 slug: Web/API/FontData/family
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - family
-  - Experimental
+status:
+  - experimental
 browser-compat: api.FontData.family
 ---
 
@@ -57,5 +54,7 @@ async function logFontData() {
 
 {{Compat}}
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+## See also
+
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

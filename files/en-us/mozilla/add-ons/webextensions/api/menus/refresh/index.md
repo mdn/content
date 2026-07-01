@@ -1,19 +1,10 @@
 ---
 title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - menus
-  - refresh
+page-type: webextension-api-function
 browser-compat: webextensions.api.menus.refresh
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Refreshes a menu that's being shown.
 
@@ -39,10 +30,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
@@ -66,3 +53,7 @@ browser.menus.onShown.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

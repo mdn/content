@@ -1,15 +1,10 @@
 ---
-title: Navigator.ink
+title: "Navigator: ink property"
+short-title: ink
 slug: Web/API/Navigator/ink
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Ink
-  - Inking
-  - Latency
-  - Navigator
-  - Property
+status:
+  - experimental
 browser-compat: api.Navigator.ink
 ---
 
@@ -26,10 +21,9 @@ An {{domxref('Ink')}} object.
 ```js
 async function inkInit() {
   const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({presentationArea: canvas});
+  let presenter = await ink.requestPresenter({ presentationArea: canvas });
 
-  //...
-
+  // …
 }
 ```
 
@@ -40,7 +34,3 @@ async function inkInit() {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Enhancing Inking on the Web](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

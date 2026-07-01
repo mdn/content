@@ -1,33 +1,43 @@
 ---
 title: Symbol.replace
+short-title: replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 page-type: javascript-static-data-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-  - Polyfill
 browser-compat: javascript.builtins.Symbol.replace
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Symbol.replace`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.replace`. The {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} methods look up this symbol on their first argument for the method that replaces substrings matched by the current object.
 
-The **`Symbol.replace`** well-known symbol specifies the method that replaces matched substrings of a string. This function is called by the {{jsxref("String.prototype.replace()")}} method.
+For more information, see [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), {{jsxref("String.prototype.replace()")}}, and {{jsxref("String.prototype.replaceAll()")}}.
 
-For more information, see {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} and {{jsxref("String.prototype.replace()")}}.
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
 
 ## Value
 
-The well-known symbol `@@replace`.
+The well-known symbol `Symbol.replace`.
 
 {{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
 ### Using Symbol.replace
+
+<!-- cSpell:ignore tball -->
 
 ```js
 class CustomReplacer {
@@ -54,6 +64,9 @@ console.log("football".replace(new CustomReplacer("foo"))); // "#!@?tball"
 
 - [Polyfill of `Symbol.replace` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
+- [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

@@ -1,11 +1,9 @@
 ---
 title: Sidebars
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
+page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
 
@@ -28,13 +26,13 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 });
 ```
 
-This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 Sidebar documents get access to the same set of privileged JavaScript APIs that the extension's background and popup scripts get. They can get direct access to the background page (unless the sidebar belongs to an incognito mode window) using {{WebExtAPIRef("runtime.getBackgroundPage()")}}, and can interact with content scripts or native applications using messaging APIs like {{WebExtAPIRef("tabs.sendMessage()")}} and {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
 
 Sidebar documents are unloaded when their browser window is closed or when the user closes the sidebar. This means that unlike background pages, sidebar documents don't stay loaded all the time, but unlike browser action popups, they stay loaded while the user interacts with web pages.
 
-When an extension that defines a sidebar is first installed, its sidebar will be opened automatically. This is intended to help the user understand that the extension includes a sidebar. Note that it's not possible for an extension to open sidebars programmatically: sidebars can only be opened by the user.
+When an extension that defines a sidebar is first installed, its sidebar will be opened automatically. This is intended to help the user understand that the extension includes a sidebar.
 
 ## Specifying sidebars
 
@@ -54,8 +52,8 @@ Title and icon are shown to the user in any UI provided by the browser to list s
 
 ## Sidebar design
 
-For details on how to design a sidebar's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to design a sidebar's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Example
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) example which implements a sidebar.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) example which implements a sidebar.

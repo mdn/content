@@ -1,19 +1,12 @@
 ---
-title: 'Element: focusin event'
+title: "Element: focusin event"
+short-title: focusin
 slug: Web/API/Element/focusin_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - FocusEvent
-  - Reference
-  - focusin
 browser-compat: api.Element.focusin_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focusin`** event fires when an element has received focus, after the {{domxref("Element/focus_event", "focus")}} event. The two events differ in that `focusin` bubbles, while `focus` does not.
 
@@ -23,15 +16,17 @@ The `focusin` event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('focusin', (event) => {});
+```js-nolint
+addEventListener("focusin", (event) => { })
+
+onfocusin = (event) => { }
 ```
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 
@@ -50,10 +45,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <label>Some text:
+  <label>
+    Some text:
     <input type="text" placeholder="text input" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" placeholder="password" />
   </label>
 </form>
@@ -62,14 +59,14 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 #### JavaScript
 
 ```js
-const form = document.getElementById('form');
+const form = document.getElementById("form");
 
-form.addEventListener('focusin', (event) => {
-  event.target.style.background = 'pink';
+form.addEventListener("focusin", (event) => {
+  event.target.style.background = "pink";
 });
 
-form.addEventListener('focusout', (event) => {
-  event.target.style.background = '';
+form.addEventListener("focusout", (event) => {
+  event.target.style.background = "";
 });
 ```
 
@@ -81,7 +78,8 @@ form.addEventListener('focusout', (event) => {
 
 {{Specifications}}
 
-**Note:** The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
+> [!NOTE]
+> The _UI Events_ specification describes an [order of focus events](/en-US/docs/Web/API/FocusEvent#order_of_events) that's different from what current browsers implement.
 
 ## Browser compatibility
 

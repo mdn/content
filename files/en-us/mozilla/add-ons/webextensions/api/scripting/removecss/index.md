@@ -1,23 +1,15 @@
 ---
 title: scripting.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/removeCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeCSS
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.removeCSS
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.
 
-> **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
+> [!NOTE]
+> This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
 To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
@@ -34,9 +26,7 @@ await browser.scripting.removeCSS(
 ### Parameters
 
 - `details`
-
   - : An object describing the CSS to remove and where to remove it from. It contains the following properties:
-
     - `css` {{optional_inline}}
       - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified and must match the stylesheet inserted through {{WebExtAPIRef("scripting.insertCSS()")}}.
     - `files` {{optional_inline}}
@@ -85,4 +75,5 @@ browser.action.onClicked.addListener(async (tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-removeCSS) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#method-removeCSS) API.

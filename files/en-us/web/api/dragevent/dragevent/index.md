@@ -1,13 +1,8 @@
 ---
-title: DragEvent()
+title: "DragEvent: DragEvent() constructor"
+short-title: DragEvent()
 slug: Web/API/DragEvent/DragEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Reference
-  - drag and drop
 browser-compat: api.DragEvent.DragEvent
 ---
 
@@ -33,18 +28,12 @@ new DragEvent(type, dragEventInit)
 ### Parameters
 
 - `type`
-
   - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
-- `dragEventInit` {{optional_inline}}
-
-  - : A `DragEventInit` dictionary, having the following fields:
-
-    - `"dataTransfer"`, optional and defaults to `"null"`. The
-      type is {{domxref("DataTransfer")}}.
-
-The `DragEventInit` dictionary inherits from the
-{{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
+- `eventInitDict` {{optional_inline}}
+  - : An object containing the following properties:
+    - `dataTransfer` {{optional_inline}}
+      - : A {{domxref("DataTransfer")}}. Defaults to `null`.
 
 ## Specifications
 

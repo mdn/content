@@ -1,41 +1,39 @@
 ---
-title: 'SerialPort: disconnect event'
+title: "SerialPort: disconnect event"
+short-title: disconnect
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SerialPort
-  - Experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port has disconnected from the device. This event is only fired for ports associated with removable devices such as those connected via USB.
-
-This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.
+The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port disconnects from the device.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('disconnect', (event) => { });
+```js-nolint
+addEventListener("disconnect", (event) => { })
 
-ondisconnect = (event) => { };
+ondisconnect = (event) => { }
 ```
 
 ## Event type
 
 A generic {{domxref("Event")}}.
 
-## Bubbling
+## Description
 
-This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
+The `disconnect` event fires when a port that was previously [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) to the device is no longer connected.
 
-For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling).
+### Bubbling
+
+This event bubbles up to the {{domxref("Serial")}} instance that returned this interface.
+The `event.target` property refers to the {{domxref("SerialPort")}} object that bubbles up.
+
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Examples
 
@@ -44,7 +42,7 @@ For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building
 Here the event listener is installed on a specific {{domxref("SerialPort")}} object.
 
 ```js
-port.addEventListener('disconnect', (event) => {
+port.addEventListener("disconnect", (event) => {
   // notify that the port has become unavailable
 });
 ```
@@ -54,7 +52,7 @@ port.addEventListener('disconnect', (event) => {
 The `disconnect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any ports that become unavailable.
 
 ```js
-navigator.serial.addEventListener('disconnect', (event) => {
+navigator.serial.addEventListener("disconnect", (event) => {
   // notify that a port has become unavailable
   // use `event.target` to refer to the unavailable port
 });

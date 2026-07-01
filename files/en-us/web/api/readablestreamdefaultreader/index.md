@@ -2,17 +2,10 @@
 title: ReadableStreamDefaultReader
 slug: Web/API/ReadableStreamDefaultReader
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamDefaultReader`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a default reader that can be used to read stream data supplied from a network (such as a fetch request).
 
@@ -67,10 +60,10 @@ fetch("https://www.example.org/").then((response) => {
           controller.enqueue(value);
           push();
         });
-      };
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
@@ -84,3 +77,10 @@ fetch("https://www.example.org/").then((response) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill)

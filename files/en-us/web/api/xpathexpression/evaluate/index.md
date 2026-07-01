@@ -1,21 +1,15 @@
 ---
-title: XPathExpression.evaluate()
+title: "XPathExpression: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathExpression/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathExpression
 browser-compat: api.XPathExpression.evaluate
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`evaluate()`** method of the
-{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XPath) expression on the given node or document and
+{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XML/XPath) expression on the given node or document and
 returns an {{domxref("XPathResult")}}.
 
 ## Syntax
@@ -48,18 +42,18 @@ expression.
 #### INVALID_EXPRESSION_ERR
 
 If the expression is not legal according to the rules of the
-{{domxref("XPathEvaluator")}}, an {{domxref("XPathException")}} of type
+{{domxref("XPathEvaluator")}}, a {{domxref("DOMException")}} of type
 `INVALID_EXPRESSION_ERR` is raised.
 
 #### TYPE_ERR
 
-In case result cannot be converted to the specified type, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is raised.
+In case result cannot be converted to the specified type, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is raised.
 
 #### NAMESPACE_ERR
 
 If the expression contains namespace prefixes which cannot be resolved by the specified
-{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`XPathNSResolver`, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
 #### WRONG_DOCUMENT_ERR
@@ -91,7 +85,10 @@ The following example shows the use of the `evaluate()` method.
 const xpath = "//div";
 const evaluator = new XPathEvaluator();
 const expression = evaluator.createExpression("//div");
-const result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

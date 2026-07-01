@@ -1,20 +1,10 @@
 ---
 title: tabs.highlight()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - highlight
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.highlight
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 
@@ -31,16 +21,14 @@ let highlighting = browser.tabs.highlight(
 ### Parameters
 
 - `highlightInfo`
-
   - : `object`.
-
     - `windowId` {{optional_inline}}
       - : `integer`. ID of the window that contains the tabs.
     - `populate` {{optional_inline}}
-
       - : `boolean`. Defaults to `true`. If set to `false`, the {{WebExtAPIRef('windows.Window')}} object won't have a `tabs` property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.
 
-        > **Note:** Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set `populate` to `false` if you don't need tab details.
+        > [!NOTE]
+        > Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set `populate` to `false` if you don't need tab details.
 
     - `tabs`
       - : `array` of integer values specifying one or more tab indices to highlight. Previously highlighted tabs not included in `tabs` will stop being highlighted. The first tab in `tabs` will become active.
@@ -49,13 +37,14 @@ let highlighting = browser.tabs.highlight(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-highlight) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-highlight) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

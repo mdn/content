@@ -2,12 +2,6 @@
 title: SVGPolylineElement
 slug: Web/API/SVGPolylineElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGPolylineElement
 ---
 
@@ -22,9 +16,9 @@ The **`SVGPolylineElement`** interface provides access to the properties of {{SV
 _This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
 - {{domxref("SVGPolylineElement.animatedPoints")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the `points` property.
+  - : An {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the `points` property.
 - {{domxref("SVGPolylineElement.points")}}
-  - : A {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
+  - : An {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
 
 ## Instance methods
 

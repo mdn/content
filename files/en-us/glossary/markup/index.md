@@ -2,10 +2,7 @@
 title: Markup
 slug: Glossary/Markup
 page-type: glossary-definition
-tags:
-  - Intro
-  - Markup
-  - NeedsContent
+sidebar: glossarysidebar
 ---
 
 A markup language is one that is designed for defining and presenting text. {{glossary("HTML")}} (HyperText Markup Language), is an example of a markup language.
@@ -23,8 +20,7 @@ Within a text file such as an HTML file, elements are _marked up_ using {{glossa
 
 ## See also
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("HTML")}}
   - {{Glossary("XHTML")}}
   - {{Glossary("XML")}}

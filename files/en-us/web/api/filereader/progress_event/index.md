@@ -1,21 +1,14 @@
 ---
-title: 'FileReader: progress event'
+title: "FileReader: progress event"
+short-title: progress
 slug: Web/API/FileReader/progress_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - FileReader
-  - ProgressEvent
-  - Reference
-  - Web
-  - progress
 browser-compat: api.FileReader.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `progress` event is fired periodically as the `FileReader` reads data.
+The **`progress`** event of the {{domxref("FileReader")}} interface is fired periodically as the `FileReader` reads data.
 
 This event is not cancelable and does not bubble.
 
@@ -23,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('progress', (event) => { });
+```js-nolint
+addEventListener("progress", (event) => { })
 
-onprogress = (event) => { };
+onprogress = (event) => { }
 ```
 
 ## Event type
@@ -42,7 +35,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
   - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
 - {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing the value of this property by `total`. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
   - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
@@ -114,37 +107,37 @@ img.preview {
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector('img.preview');
-const eventLog = document.querySelector('.event-log-contents');
+const preview = document.querySelector("img.preview");
+const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
+  eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
-    if (event.type === "load") {
-        preview.src = reader.result;
-    }
+  if (event.type === "load") {
+    preview.src = reader.result;
+  }
 }
 
 function addListeners(reader) {
-    reader.addEventListener('loadstart', handleEvent);
-    reader.addEventListener('load', handleEvent);
-    reader.addEventListener('loadend', handleEvent);
-    reader.addEventListener('progress', handleEvent);
-    reader.addEventListener('error', handleEvent);
-    reader.addEventListener('abort', handleEvent);
+  reader.addEventListener("loadstart", handleEvent);
+  reader.addEventListener("load", handleEvent);
+  reader.addEventListener("loadend", handleEvent);
+  reader.addEventListener("progress", handleEvent);
+  reader.addEventListener("error", handleEvent);
+  reader.addEventListener("abort", handleEvent);
 }
 
 function handleSelected(e) {
-    eventLog.textContent = '';
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
-        addListeners(reader);
-        reader.readAsDataURL(selectedFile);
-    }
+  eventLog.textContent = "";
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    addListeners(reader);
+    reader.readAsDataURL(selectedFile);
+  }
 }
 
-fileInput.addEventListener('change', handleSelected);
+fileInput.addEventListener("change", handleSelected);
 ```
 
 #### Result

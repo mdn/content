@@ -1,15 +1,8 @@
 ---
-title: PublicKeyCredential.id
+title: "PublicKeyCredential: id property"
+short-title: id
 slug: Web/API/PublicKeyCredential/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - Property
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 browser-compat: api.PublicKeyCredential.id
 ---
 
@@ -22,7 +15,8 @@ from {{domxref("Credential")}}, which represents the identifier of the current
 
 This property is a [base64url encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
 
-> **Note:** This property may only be used in top-level contexts and will
+> [!NOTE]
+> This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Value
@@ -36,22 +30,23 @@ const publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
-    id: new Uint8Array(26), /* To be changed for each user */
+    id: new Uint8Array(26) /* To be changed for each user */,
     name: "canand@example.com",
     displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then((newCredentialInfo) => {
     const id = newCredentialInfo.id;
     // Do something with the id
@@ -59,8 +54,9 @@ navigator.credentials.create({ publicKey })
     // send attestation response and client extensions
     // to the server to proceed with the registration
     // of the credential
-  }).catch((err) => {
-     console.error(err);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 ```
 

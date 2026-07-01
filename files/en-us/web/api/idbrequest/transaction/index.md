@@ -1,20 +1,12 @@
 ---
-title: IDBRequest.transaction
+title: "IDBRequest: transaction property"
+short-title: transaction
 slug: Web/API/IDBRequest/transaction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - transaction
 browser-compat: api.IDBRequest.transaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`transaction`** read-only property of the IDBRequest
 interface returns the transaction for the request, that is, the transaction the
@@ -30,8 +22,6 @@ version upgrade is needed when opening a database then during the
 to `"versionchange"`, and can be used to access existing object stores and
 indexes, or abort the upgrade. Following the upgrade, the
 **`transaction`** property will again be `null`.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -52,9 +42,11 @@ our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-no
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
-// Get the to-do list object that has this title as it's title
+// Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = () => {
@@ -69,7 +61,9 @@ objectStoreTitleRequest.onsuccess = () => {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
+  console.log(
+    `The transaction that originated this request is ${updateTitleRequest.transaction}`,
+  );
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
@@ -83,7 +77,7 @@ This example shows how a the **`transaction`** property can be
 used during a version upgrade to access existing object stores:
 
 ```js
-const openRequest = indexedDB.open('db', 2);
+const openRequest = indexedDB.open("db", 2);
 console.log(openRequest.transaction); // Will log "null".
 
 openRequest.onupgradeneeded = (event) => {
@@ -91,12 +85,12 @@ openRequest.onupgradeneeded = (event) => {
   const db = openRequest.result;
   if (event.oldVersion < 1) {
     // New database, create "books" object store.
-    db.createObjectStore('books');
+    db.createObjectStore("books");
   }
   if (event.oldVersion < 2) {
     // Upgrading from v1 database: add index on "title" to "books" store.
-    const bookStore = openRequest.transaction.objectStore('books');
-    bookStore.createIndex('by_title', 'title');
+    const bookStore = openRequest.transaction.objectStore("books");
+    bookStore.createIndex("by_title", "title");
   }
 };
 

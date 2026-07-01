@@ -1,23 +1,10 @@
 ---
-title: XRInputSourceArray.entries()
+title: "XRInputSourceArray: entries() method"
+short-title: entries()
 slug: Web/API/XRInputSourceArray/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Entries
-  - Input Sources
-  - Inputs
-  - Iterator
-  - Method
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.entries
 ---
 

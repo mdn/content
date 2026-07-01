@@ -1,15 +1,8 @@
 ---
-title: AudioContext.baseLatency
+title: "AudioContext: baseLatency property"
+short-title: baseLatency
 slug: Web/API/AudioContext/baseLatency
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Media
-  - Property
-  - Web Audio API
-  - baseLatency
 browser-compat: api.AudioContext.baseLatency
 ---
 
@@ -18,10 +11,11 @@ browser-compat: api.AudioContext.baseLatency
 The **`baseLatency`** read-only property of the
 {{domxref("AudioContext")}} interface returns a double that represents the number of
 seconds of processing latency incurred by the `AudioContext` passing an audio
-buffer from the {{domxref("AudioDestinationNode")}} — i.e. the end of the audio graph —
+buffer from the {{domxref("AudioDestinationNode")}} — i.e., the end of the audio graph —
 into the host system's audio subsystem ready for playing.
 
-> **Note:** You can request a certain latency during
+> [!NOTE]
+> You can request a certain latency during
 > {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the
 > `latencyHint` option, but the browser may ignore the option.
 

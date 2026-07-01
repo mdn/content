@@ -1,18 +1,14 @@
 ---
-title: BackgroundFetchRecord.request
+title: "BackgroundFetchRecord: request property"
+short-title: request
 slug: Web/API/BackgroundFetchRecord/request
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - request
-  - BackgroundFetchRecord
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRecord.request
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`request`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns the details of the resource to be fetched.
 

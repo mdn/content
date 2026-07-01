@@ -1,26 +1,37 @@
 ---
 title: Intl.ListFormat() constructor
+short-title: Intl.ListFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Intl.ListFormat()`** constructor creates {{jsxref("Intl.ListFormat")}} objects.
 
-The **`Intl.ListFormat()`** constructor creates
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} objects that enable language-sensitive list
-formatting.
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat() constructor", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Syntax
 
@@ -30,37 +41,38 @@ new Intl.ListFormat(locales)
 new Intl.ListFormat(locales, options)
 ```
 
-> **Note:** `Intl.ListFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Intl.ListFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a {{glossary("BCP 47 language tag")}} or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-
-  - : An object with some or all of the following properties:
-
+  - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
-
-      - : The locale-matching algorithm to use. Possible values:
-
-        - `"best fit"` (default)
-        - `"lookup"`
-
-        For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}}
-        page.
-
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `type`
-      - : Indicates the type of grouping. Possible values:
-        - `"conjunction"`, for "and"-based grouping of the list items: "A, B, and C" (default)
-        - `"disjunction"`, for "or"-based grouping of the list items: "A, B, or C"
-        - `"unit"`, for grouping the list items as a unit (neither "and"-based nor "or"-based): "A, B, C"
+      - : Indicates the type of grouping. Possible values are:
+        - `"conjunction"` (default)
+          - : For "and"-based grouping of the list items: "A, B, and C"
+        - `"disjunction"`
+          - : For "or"-based grouping of the list items: "A, B, or C"
+        - `"unit"`
+          - : For grouping the list items as a compound unit (neither "and"-based nor "or"-based): "A, B, C"
     - `style`
-      - : Indicates the grouping style (for example, whether list separators and conjunctions are included). Possible values:
-        - `"long"`: "A, B, and C" (default)
-        - `"short"`: "A, B, C"
-        - `"narrow"`: "A B C"
+      - : The grouping style (for example, whether list separators and conjunctions are included). Possible values are:
+        - `"long"` (default)
+          - : The typical list format. For example, "A, B, and C"
+        - `"short"`
+          - : The spacing, the length or presence of a conjunction, and the separators may change. Usually, you would want the input elements to be abbreviated too. For example, "A, B, & C"
+        - `"narrow"`
+          - : Where possible, the list format is further abbreviated, so that the output is as short as possible. For example, "A, B, C"
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -71,96 +83,113 @@ The following example shows how to create a List formatter using the English lan
 ```js
 const list = ["Motorcycle", "Bus", "Car"];
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
-    list
-  )
-);
+console.log(new Intl.ListFormat("en-GB", { type: "conjunction" }).format(list));
 // Motorcycle, Bus and Car
 
-console.log(new Intl.ListFormat("en-GB", { style: "long" }).format(list));
+console.log(new Intl.ListFormat("en-GB", { type: "disjunction" }).format(list));
+// Motorcycle, Bus or Car
+```
+
+### Oxford comma
+
+[Oxford comma](https://en.wikipedia.org/wiki/Serial_comma) is a comma placed immediately before the coordinating conjunction (usually "and" or "or") in a list of three or more terms. Somewhat controversially, the `en-US` locale uses the Oxford comma, while the `en-GB` locale does not.
+
+```js
+const list = ["Motorcycle", "Bus", "Car"];
+
+console.log(new Intl.ListFormat("en-GB", { type: "conjunction" }).format(list));
 // Motorcycle, Bus and Car
 
-console.log(new Intl.ListFormat("en-US", { style: "long" }).format(list));
+console.log(new Intl.ListFormat("en-US", { type: "conjunction" }).format(list));
 // Motorcycle, Bus, and Car
+```
+
+### Unit formatting
+
+Use `style: "unit"` to format the list items as a compound unit. In fact, {{jsxref("Intl.DurationFormat")}} uses unit-style list formatting under the hood to format durations.
+
+```js
+const marathon = [
+  [42, "kilometer"],
+  [195, "meter"],
+];
 
 console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "conjunction" }).format(
-    list
-  )
+  new Intl.ListFormat("en-US", { type: "unit" }).format(
+    marathon.map((component) =>
+      component[0].toLocaleString("en-US", {
+        style: "unit",
+        unit: component[1],
+        unitDisplay: "long",
+      }),
+    ),
+  ),
 );
-// Motorcycle, Bus and Car
+// 42 kilometers, 195 meters
+```
 
-console.log(
-  new Intl.ListFormat("en-US", { style: "short", type: "conjunction" }).format(
-    list
-  )
-);
+### Short and narrow style
+
+The `"short"` and `"narrow"` styles are useful for compact representations of lists.
+
+```js
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(new Intl.ListFormat("en-US", { style: "short" }).format(list));
 // Motorcycle, Bus, & Car
-
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "conjunction" }).format(
-    list
-  )
-);
-// Motorcycle, Bus, Car
-
-console.log(
-  new Intl.ListFormat("en-GB", { style: "long", type: "disjunction" }).format(
-    list
-  )
-);
-// Motorcycle, Bus or Car
-
-console.log(
-  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
-    list
-  )
-);
-// Motorcycle, Bus or Car
-
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "disjunction" }).format(
-    list
-  )
-);
-// Motorcycle, Bus or Car
 
 console.log(new Intl.ListFormat("en-US", { style: "narrow" }).format(list));
 // Motorcycle, Bus, Car
 
-console.log(
-  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list)
-);
-// Motorcycle Bus Car
+console.log(new Intl.ListFormat("en-GB", { style: "short" }).format(list));
+// Motorcycle, Bus and Car
 
-console.log(
-  new Intl.ListFormat("en-US", { style: "long" }).format([
-    "30 degrees",
-    "15 minutes",
-    "50 seconds",
-  ])
-);
-// 30 degrees, 15 minutes, and 50 seconds
-
-console.log(
-  new Intl.ListFormat("en-US", { style: "narrow" }).format([
-    "30 degrees",
-    "15 minutes",
-    "50 seconds",
-  ])
-);
-// 30 degrees, 15 minutes, 50 seconds
-
-console.log(
-  new Intl.ListFormat("en-US", { style: "narrow", type: "unit" }).format([
-    "30°",
-    "15′",
-    "50″",
-  ])
-);
-// 30° 15′ 50″
+console.log(new Intl.ListFormat("en-GB", { style: "narrow" }).format(list));
+// Motorcycle, Bus, Car
 ```
+
+The input elements are not transformed, but you will often want to abbreviate them too.
+
+```js
+const marathon = [
+  [42, "kilometer"],
+  [195, "meter"],
+];
+
+function formatDistance(locale, distance, style) {
+  return new Intl.ListFormat(locale, { type: "unit", style }).format(
+    marathon.map((component) =>
+      component[0].toLocaleString(locale, {
+        style: "unit",
+        unit: component[1],
+        unitDisplay: style,
+      }),
+    ),
+  );
+}
+
+console.log(formatDistance("en-US", marathon, "long"));
+// 42 kilometers, 195 meters
+console.log(formatDistance("en-US", marathon, "short"));
+// 42 km, 195 m
+console.log(formatDistance("en-US", marathon, "narrow"));
+// 42km 195m
+```
+
+### Selection of conjunction
+
+The conjunction word used may depend on the list items' string values. For example, in Spanish, the conjunction is `"y"` for most words, but `"e"` for words starting with the vowel `"i"`.
+
+```js
+const words = ["fuerte", "indomable"];
+const formatter = new Intl.ListFormat("es-ES", { type: "conjunction" });
+
+console.log(formatter.format(words));
+// fuerte e indomable
+console.log(formatter.format(words.toReversed()));
+// indomable y fuerte
+```
+
+The algorithm used to determine the conjunction is not perfect (for example, it can't always tell a word's pronunciation from its spelling), but it should work in the general case.
 
 ## Specifications
 
@@ -173,4 +202,4 @@ console.log(
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

@@ -1,23 +1,15 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlightChanged
-  - tabs
+page-type: webextension-api-event
+status:
+  - deprecated
 browser-compat: webextensions.api.tabs.onHighlightChanged
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
-> **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
+> [!WARNING]
+> This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
 
 Fired when the highlighted or selected tabs in a window changes.
 
@@ -31,7 +23,7 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,10 +34,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `selectInfo`
       - : `object`. See the [selectInfo](#selectinfo_2) section for more details.
 
@@ -62,7 +52,8 @@ Events have three functions:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onHighlightChanged) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onHighlightChanged) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

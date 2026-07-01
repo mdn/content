@@ -1,21 +1,11 @@
 ---
-title: 'PaymentRequest: shippingoptionchange event'
+title: "PaymentRequest: shippingoptionchange event"
+short-title: shippingoptionchange
 slug: Web/API/PaymentRequest/shippingoptionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Shipping
-  - Event
-  - onshippingoptionchange
-  - payment
-  - shippingoptionchange
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingoptionchange_event
 ---
 
@@ -31,10 +21,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('shippingoptionchange', (event) => { });
+```js-nolint
+addEventListener("shippingoptionchange", (event) => { })
 
-onshippingoptionchange = (event) => { };
+onshippingoptionchange = (event) => { }
 ```
 
 ## Event type
@@ -60,7 +50,7 @@ paymentRequest.addEventListener("shippingoptionchange", (event) => {
     value,
   };
   event.updateWith({ total });
-}, false);
+});
 ```
 
 After calling a custom function, `calculateNewTotal()`, to compute the updated total based on the newly-selected shipping option as specified by the {{domxref("PaymentRequest.shippingOption", "shippingOption")}}. The revised total is submitted back to the payment request by calling the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method.

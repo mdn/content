@@ -1,13 +1,8 @@
 ---
-title: AudioBuffer.getChannelData()
+title: "AudioBuffer: getChannelData() method"
+short-title: getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioBuffer
-  - Method
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioBuffer.getChannelData
 ---
 
@@ -35,12 +30,12 @@ A {{jsxref("Float32Array")}}.
 In the following example we create a two second buffer, fill it with white noise, and then play it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain what is going on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const button = document.querySelector("button");
 const pre = document.querySelector("pre");
 const myScript = document.querySelector("script");
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 
 // Stereo
 const channels = 2;
@@ -52,7 +47,7 @@ const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = () => {
   // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
+  // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
     // This gives us the actual ArrayBuffer that contains the data
     const nowBuffering = myArrayBuffer.getChannelData(channel);

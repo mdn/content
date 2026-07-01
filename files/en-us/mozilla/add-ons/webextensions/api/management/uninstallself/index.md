@@ -1,18 +1,10 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstallSelf
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Uninstalls the calling add-on.
 
@@ -31,9 +23,7 @@ let uninstallingSelf = browser.management.uninstallSelf(
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : `object`. Object which may two properties, both optional:
-
     - `showConfirmDialog` {{optional_inline}}
       - : Boolean. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled. Defaults to `false`.
     - `dialogMessage` {{optional_inline}}
@@ -42,10 +32,6 @@ let uninstallingSelf = browser.management.uninstallSelf(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -59,7 +45,7 @@ function onCanceled(error) {
 }
 
 let uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -74,7 +60,7 @@ function onCanceled(error) {
 
 let uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);
@@ -82,9 +68,12 @@ uninstalling.then(null, onCanceled);
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

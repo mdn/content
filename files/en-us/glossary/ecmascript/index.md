@@ -2,13 +2,12 @@
 title: ECMAScript
 slug: Glossary/ECMAScript
 page-type: glossary-definition
-tags:
-  - WebMechanics
+sidebar: glossarysidebar
 ---
 
-**ECMAScript** is a scripting language specification on which {{glossary("JavaScript")}} is based. [Ecma International](https://www.ecma-international.org) is in charge of standardizing ECMAScript.
+**ECMAScript** is a scripting language specification on which {{glossary("JavaScript")}} is based. [Ecma International](https://ecma-international.org/) is in charge of standardizing ECMAScript.
 
 ## See also
 
 - [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) on Wikipedia
-- [ECMAScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [ECMAScript](https://ecma-international.org/publications-and-standards/standards/ecma-262/)

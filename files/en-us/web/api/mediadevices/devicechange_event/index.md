@@ -1,23 +1,14 @@
 ---
 title: "MediaDevices: devicechange event"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Video
-  - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+The **`devicechange`** event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
 This event is not cancelable and does not bubble.
 
@@ -25,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('devicechange', (event) => {});
+```js-nolint
+addEventListener("devicechange", (event) => { })
 
-ondevicechange = (event) => {};
+ondevicechange = (event) => { }
 ```
 
 ## Event type
@@ -64,7 +55,10 @@ media device is attached to or removed from the device running the sample.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -115,36 +109,33 @@ const logElement = document.querySelector("output");
 const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
-startButton.addEventListener(
-  "click",
-  () => {
-    const constraints = {
-      video: {
-        width: 160,
-        height: 120,
-        frameRate: 30
-      },
-      audio: {
-        sampleRate: 44100,
-        sampleSize: 16,
-        volume: 0.25
-      }
-    };
+startButton.addEventListener("click", () => {
+  const constraints = {
+    video: {
+      width: 160,
+      height: 120,
+      frameRate: 30,
+    },
+    audio: {
+      sampleRate: 44100,
+      sampleSize: 16,
+      volume: 0.25,
+    },
+  };
 
-    navigator.mediaDevices.getUserMedia(constraints)
-      .then((stream) => {
-        videoElement.srcObject = stream;
-        updateDeviceList();
-      })
-      .catch((err) => {
-        log(`${err.name}: ${err.message}`);
-      });
-  },
-  false
-);
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+      videoElement.srcObject = stream;
+      updateDeviceList();
+    })
+    .catch((err) => {
+      log(`${err.name}: ${err.message}`);
+    });
+});
 ```
 
 We set up global variables that contain references to the {{HTMLElement("ul")}}
@@ -163,23 +154,22 @@ displayed lists of audio and video devices using that information.
 
 ```js
 function updateDeviceList() {
-  navigator.mediaDevices.enumerateDevices()
-    .then((devices) => {
-      audioList.innerHTML = "";
-      videoList.innerHTML = "";
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
+    audioList.textContent = "";
+    videoList.textContent = "";
 
-      devices.forEach((device) => {
-        const elem = document.createElement("li");
-        const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+    devices.forEach((device) => {
+      const elem = document.createElement("li");
+      const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-        elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
-        if (type === "audio") {
-          audioList.appendChild(elem);
-        } else if (type === "video") {
-          videoList.appendChild(elem);
-        }
-      });
+      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
+      if (type === "audio") {
+        audioList.appendChild(elem);
+      } else if (type === "video") {
+        videoList.appendChild(elem);
+      }
     });
+  });
 }
 ```
 
@@ -187,7 +177,7 @@ function updateDeviceList() {
 {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} on the
 {{domxref("MediaDevices")}} object referenced in the
 {{domxref("navigator.mediaDevices")}} property, as well as the code that's run when the
-{{jsxref("promise")}} returned by `enumerateDevices()` is fulfilled. The
+{{jsxref("Promise")}} returned by `enumerateDevices()` is fulfilled. The
 fulfillment handler is called when the device list is ready. The list is passed into the
 fulfillment handler as an array of {{domxref("MediaDeviceInfo")}} objects, each
 describing one media input or output device.
@@ -198,7 +188,7 @@ display it to the user.
 
 The line
 `let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);`
-deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign the values of the first three items in the array returned by
+deserves special notice. This uses [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign the values of the first three items in the array returned by
 {{jsxref("String.match()")}} to the variables `kind`, `type`, and
 `direction`. We do this because the value of
 {{domxref("MediaDeviceInfo.kind")}} is a single string that includes both the media type

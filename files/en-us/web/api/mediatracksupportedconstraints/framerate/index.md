@@ -1,20 +1,9 @@
 ---
-title: MediaTrackSupportedConstraints.frameRate
+title: "MediaTrackSupportedConstraints: frameRate property"
+short-title: frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - frameRate
-browser-compat: api.MediaTrackSupportedConstraints.frameRate
+browser-compat: api.MediaStreamTrack.applyConstraints.frameRate_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -32,7 +21,8 @@ Checking the value of this property lets you determine if the user agent allows 
 This property is present in the dictionary if the user agent supports the `frameRate` constraint.
 If the property isn't present, the user agent doesn't allow specifying limits on the frame rate for video tracks.
 
-> **Note:** If this property is present, its value is always `true`.
+> [!NOTE]
+> If this property is present, its value is always `true`.
 
 ## Examples
 
@@ -56,7 +46,9 @@ result.textContent = supported ? "Supported!" : "Not supported!";
 
 ```css
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

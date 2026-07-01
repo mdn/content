@@ -1,28 +1,19 @@
 ---
-title: IDBFactory.cmp()
+title: "IDBFactory: cmp() method"
+short-title: cmp()
 slug: Web/API/IDBFactory/cmp
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - cmp
 browser-compat: api.IDBFactory.cmp
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`cmp()`** method of the {{domxref("IDBFactory")}}
 interface compares two values as keys to determine equality and ordering for IndexedDB
 operations, such as storing and iterating.
 
-{{AvailableInWorkers}}
-
-> **Note:** Do not use this method for comparing arbitrary JavaScript
+> [!NOTE]
+> Do not use this method for comparing arbitrary JavaScript
 > values, because many JavaScript values are either not valid IndexedDB keys (booleans
 > and objects, for example) or are treated as equivalent IndexedDB keys (for example,
 > since IndexedDB ignores arrays with non-numeric properties and treats them as empty

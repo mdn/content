@@ -1,20 +1,10 @@
 ---
 title: windows.get()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - get
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets details about a window, given its ID. The details are passed into a callback.
 
@@ -34,29 +24,25 @@ let getting = browser.windows.get(
 - `windowId`
   - : `integer`. The ID of the window object you want returned.
 - `getInfo` {{optional_inline}}
-
   - : `object`. Contains options to filter the type of window.
-
     - `populate` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or a matching [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
     - `windowTypes` {{optional_inline}}
       - : `array` of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to `['normal', 'panel', 'popup']`, with `'panel'` window types limited to the extension's own windows.
 
-> **Note:** If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
+> [!NOTE]
+> If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the window. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example gets the current window and logs the URLs of the tabs it contains. Note that you'll need the "tabs" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to access tab URLs.
 
-> **Note:** This example is a bit unrealistic: in this situation you would more probably use {{WebExtAPIRef("windows.getCurrent()")}}.
+> [!NOTE]
+> This example is a bit unrealistic: in this situation you would more probably use {{WebExtAPIRef("windows.getCurrent()")}}.
 
 ```js
 function logTabs(windowInfo) {
@@ -76,7 +62,12 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-get) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-get) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

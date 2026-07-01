@@ -1,23 +1,14 @@
 ---
-title: WebTransportError()
+title: "WebTransportError: WebTransportError() constructor"
+short-title: WebTransportError()
 slug: Web/API/WebTransportError/WebTransportError
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - WebTransportError
-  - WebTransport API
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`WebTransportError()`** constructor creates a new
-{{domxref("WebTransportError")}} object instance.
-
-{{AvailableInWorkers}}
+The **`WebTransportError()`** constructor creates a new {{domxref("WebTransportError")}} object instance.
 
 ## Syntax
 
@@ -39,10 +30,9 @@ new WebTransportError(init)
 A developer would not use this constructor manually. A new `WebTransportError` object is constructed when an error related to WebTransport occurs, for example a server error or network connection problem.
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
-
   try {
     // Initialize transport connection
     const transport = new WebTransport(url);
@@ -50,12 +40,12 @@ async function initTransport(url) {
     // The connection can be used once ready fulfills
     await transport.ready;
 
-    // ...
-  } catch(error) {
+    // …
+  } catch (error) {
     const msg = `Transport initialization failed.
                  Reason: ${error.message}.
                  Source: ${error.source}.
-                 Error code: ${error.streamErrorCode}.`
+                 Error code: ${error.streamErrorCode}.`;
     console.log(msg);
   }
 }
@@ -71,7 +61,7 @@ async function initTransport(url) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

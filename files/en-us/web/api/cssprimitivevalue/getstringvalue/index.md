@@ -1,23 +1,22 @@
 ---
-title: CSSPrimitiveValue.getStringValue()
+title: "CSSPrimitiveValue: getStringValue() method"
+short-title: getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getStringValue
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`getStringValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a string value. If this CSS
 value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

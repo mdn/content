@@ -1,40 +1,39 @@
 ---
-title: MessagePort.postMessage()
+title: "MessagePort: postMessage() method"
+short-title: postMessage()
 slug: Web/API/MessagePort/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`postMessage()`** method of the
 {{domxref("MessagePort")}} interface sends a message from the port, and optionally,
 transfers ownership of objects to other browsing contexts.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
 ```js-nolint
-postMessage(message, transferList)
+postMessage(message)
+postMessage(message, transfer)
+postMessage(message, options)
 ```
 
 ### Parameters
 
 - `message`
-  - : The message you want to send through the channel. This can be of any basic data
-    type. Multiple data items can be sent as an array.
-- `transferList` {{optional_inline}}
-  - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
-    ownership transferred to the receiving browsing context, so are no longer usable by
-    the sending browsing context.
+  - : The message you want to send through the channel. This can be of any basic data type. Multiple data items can be sent as an array.
+
+    > [!NOTE]
+    > Execution contexts that can message each other may not be in the same [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing), and therefore cannot share memory. {{jsxref("SharedArrayBuffer")}} objects, or buffer views backed by one, cannot be posted across agent clusters. Trying to do so will generate a {{domxref("BroadcastChannel/messageerror_event", "messageerror")}} event containing a `DataCloneError` {{domxref("DOMException")}} on the receiving end.
+
+- `transfer` {{optional_inline}}
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects are not automatically sent; they must either be contained in the message or be accessible to the recipient via other means, such as {{domxref("MessagePort")}} via {{domxref("MessageEvent.ports")}}.
+- `options` {{optional_inline}}
+  - : An optional object containing the following properties:
+    - `transfer` {{optional_inline}}
+      - : Has the same meaning as the `transfer` parameter.
 
 ### Return value
 
@@ -53,15 +52,15 @@ The `handleMessage` handler then responds to a message being sent back from the 
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifr.addEventListener("load", iframeLoaded);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Transferring message port', '*', [channel.port2]);
+  otherWindow.postMessage("Transferring message port", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -71,7 +70,7 @@ function handleMessage(e) {
 
 // in the iframe…
 
-window.addEventListener('message', (event) => {
+window.addEventListener("message", (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });

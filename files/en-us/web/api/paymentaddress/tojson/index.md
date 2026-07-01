@@ -1,28 +1,29 @@
 ---
-title: PaymentAddress.toJSON()
+title: "PaymentAddress: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PaymentAddress/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - paymentAddress
-  - toJSON
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.toJSON
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`toJSON()`** property of the
-{{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON
-representation of the PaymentAddress object's properties.
+The **`toJSON()`** method of the {{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON representation of the PaymentAddress object's properties.
 
-## Value
+## Syntax
+
+```js-nolint
+toJSON()
+```
+
+### Parameters
+
+None.
+
+### Return value
 
 A JSON object.
 

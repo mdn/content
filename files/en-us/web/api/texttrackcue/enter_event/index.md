@@ -1,13 +1,8 @@
 ---
-title: 'TextTrackCue: enter event'
+title: "TextTrackCue: enter event"
+short-title: enter
 slug: Web/API/TextTrackCue/enter_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - onenter
-  - TextTrackCue
 browser-compat: api.TextTrackCue.enter_event
 ---
 
@@ -19,8 +14,8 @@ The **`enter`** event fires when a cue becomes active. In the case of subtitles 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('enter', (event) => { })
+```js-nolint
+addEventListener("enter", (event) => { })
 
 onenter = (event) => { }
 ```
@@ -31,11 +26,11 @@ A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Example
 
-In the following example, `cue1` prints to the console when it is the active cue.
+In the following example, `cue` prints to the console when it is the active cue.
 
 ```js
-cue1.addEventListener('enter', (event) => {
-  console.log('Cue 1 has displayed');
+cue.addEventListener("enter", (event) => {
+  console.log("Cue 1 has displayed");
 });
 ```
 

@@ -1,22 +1,16 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()
+title: "BluetoothRemoteGATTCharacteristic: writeValueWithoutResponse() method"
+short-title: writeValueWithoutResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValueWithoutResponse
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object's `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"never"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object's `value` property to the bytes contained in a given {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}, [writes the characteristic value without response](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
 
 ## Syntax
 
@@ -27,7 +21,7 @@ writeValueWithoutResponse(value)
 ### Parameters
 
 - `value`
-  - : An {{jsxref("ArrayBuffer")}}.
+  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}}.
 
 ### Return value
 
@@ -40,5 +34,3 @@ A {{jsxref("Promise")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

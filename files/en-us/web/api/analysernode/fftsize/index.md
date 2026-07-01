@@ -1,14 +1,8 @@
 ---
-title: AnalyserNode.fftSize
+title: "AnalyserNode: fftSize property"
+short-title: fftSize
 slug: Web/API/AnalyserNode/fftSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
 
@@ -18,7 +12,7 @@ The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an un
 
 ## Value
 
-An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
+An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the amplitude domain.
 
 Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, and `32768`. Defaults to `2048`.
 
@@ -33,7 +27,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 
 // …
@@ -50,11 +44,11 @@ function draw() {
 
   analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillStyle = "rgb(200 200 200)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  canvasCtx.strokeStyle = "rgb(0 0 0)";
 
   canvasCtx.beginPath();
 

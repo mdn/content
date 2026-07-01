@@ -1,18 +1,10 @@
 ---
 title: management.onInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onInstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onInstalled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when an add-on is installed.
 
@@ -28,7 +20,7 @@ browser.management.onInstalled.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -39,16 +31,10 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
-
-  - : Callback function that will be called when this event occurs. The function will be passed the following argument:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was installed.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,7 +48,12 @@ browser.management.onInstalled.addListener((info) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onInstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#event-onInstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

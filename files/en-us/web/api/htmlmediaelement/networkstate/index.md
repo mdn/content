@@ -1,13 +1,8 @@
 ---
-title: HTMLMediaElement.networkState
+title: "HTMLMediaElement: networkState property"
+short-title: networkState
 slug: Web/API/HTMLMediaElement/networkState
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
 
@@ -40,14 +35,12 @@ still loading data.
 ```
 
 ```js
-const obj = document.getElementById('example');
+const obj = document.getElementById("example");
 
-obj.addEventListener('playing', () => {
-
+obj.addEventListener("playing", () => {
   if (obj.networkState === 2) {
     // Still loading…
   }
-
 });
 ```
 
@@ -61,4 +54,4 @@ obj.addEventListener('playing', () => {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.networkState` property

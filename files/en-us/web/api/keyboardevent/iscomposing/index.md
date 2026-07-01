@@ -1,14 +1,8 @@
 ---
-title: KeyboardEvent.isComposing
+title: "KeyboardEvent: isComposing property"
+short-title: isComposing
 slug: Web/API/KeyboardEvent/isComposing
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
 
@@ -16,7 +10,7 @@ browser-compat: api.KeyboardEvent.isComposing
 
 The **`KeyboardEvent.isComposing`** read-only property returns
 a boolean value indicating if the event is fired within a composition
-session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
+session, i.e., after {{domxref("Element/compositionstart_event", "compositionstart")}}
 and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Value

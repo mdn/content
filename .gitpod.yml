@@ -1,6 +1,6 @@
 tasks:
-  - init: yarn install
-    command: yarn run start
+  - init: npm install
+    command: npm start
 
 ports:
   - port: 5042

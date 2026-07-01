@@ -1,21 +1,10 @@
 ---
 title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.remove
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Removes one or more items from the storage area.
 
@@ -29,7 +18,7 @@ let removingItem = browser.storage.<storageType>.remove(
 )
 ```
 
-`<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
+Where `<storageType>` is one of the writable storage types: {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 
@@ -39,10 +28,6 @@ let removingItem = browser.storage.<storageType>.remove(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments if the operation succeeded. If the operation failed, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -63,4 +48,9 @@ removeKitten.then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

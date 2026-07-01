@@ -2,28 +2,20 @@
 title: LayoutShiftAttribution
 slug: Web/API/LayoutShiftAttribution
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Layout Instability API
-  - LayoutShiftAttribution
-  - NeedsExample
-  - Performance
-  - Reference
-  - Web Performance
-  - Experimental
+status:
+  - experimental
 browser-compat: api.LayoutShiftAttribution
 ---
 
-{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.
+The `LayoutShiftAttribution` interface provides debugging information about elements which have shifted.
 
 Instances of `LayoutShiftAttribution` are returned in an array by calling {{domxref("LayoutShift.sources")}}.
 
 ## Instance properties
 
-- {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.node")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the element that has shifted (null if it has been removed).
 - {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
@@ -37,21 +29,22 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example finds the element that is causing the largest layout shift, and prints that `node` to the console. For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
+The following example observes layout shifts and identifies the most impactful element. The `sources` array is sorted by impact area, in descending order — so the first element (`sources[0]`) represents the element that contributed most to the layout shift. For more detail on that, see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
 
 ```js
-function getCLSDebugTarget(entries) {
-  const largestEntry = entries.reduce((a, b) => a && a.value > b.value ? a : b);
-  if (largestEntry?.sources?.length) {
-    const largestSource = largestEntry.sources.reduce((a, b) => {
-      const area = (el) => el.previousRect.width * el.previousRect.height;
-      return a.node && area(a) > area(b) ? a : b;
-    });
-    if (largestSource) {
-      return largestSource.node;
-    }
+const observer = new PerformanceObserver((list) => {
+  for (const entry of list.getEntries()) {
+    if (!entry.sources || entry.sources.length === 0) continue;
+
+    const mostImpactfulSource = entry.sources[0];
+    console.log("Layout shift score:", entry.value);
+    console.log("Most impactful element:", largestShiftSource.node);
+    console.log("Previous position:", largestShiftSource.previousRect);
+    console.log("Current position:", largestShiftSource.currentRect);
   }
-}
+});
+
+observer.observe({ type: "layout-shift", buffered: true });
 ```
 
 ## Specifications
@@ -64,5 +57,5 @@ function getCLSDebugTarget(entries) {
 
 ## See also
 
-- [Debug layout shifts](https://web.dev/debug-layout-shifts/)
-- [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/)
+- [Debug layout shifts](https://web.dev/articles/debug-layout-shifts)
+- [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field)

@@ -2,19 +2,14 @@
 title: FontData
 slug: Web/API/FontData
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.FontData
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}
 
 The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} represents a single local font face.
-
-{{InheritanceDiagram}}
 
 ## Instance properties
 
@@ -29,12 +24,12 @@ The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Fo
 
 ## Instance methods
 
-- {{domxref('FontData.blob()')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('FontData.blob()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Blob")}} containing the raw bytes of the underlying font file.
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+For a live example, see our [Local Font Access API demo](https://mdn.github.io/dom-examples/local-font-access/).
 
 ### Font enumeration
 
@@ -64,7 +59,7 @@ The {{domxref("FontData.blob", "blob()")}} method provides access to low-level [
 async function computeOutlineFormat() {
   try {
     const availableFonts = await window.queryLocalFonts({
-      postscriptNames: ['ComicSansMS'],
+      postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
       // `blob()` returns a Blob containing valid and complete
@@ -72,21 +67,21 @@ async function computeOutlineFormat() {
       const sfnt = await fontData.blob();
       // Slice out only the bytes we need: the first 4 bytes are the SFNT
       // version info.
-      // Spec: https://docs.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // Spec: https://learn.microsoft.com/en-us/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
-      let outlineFormat = 'UNKNOWN';
+      let outlineFormat = "UNKNOWN";
       switch (sfntVersion) {
-        case '\x00\x01\x00\x00':
-        case 'true':
-        case 'typ1':
-          outlineFormat = 'truetype';
+        case "\x00\x01\x00\x00":
+        case "true":
+        case "typ1":
+          outlineFormat = "truetype";
           break;
-        case 'OTTO':
-          outlineFormat = 'cff';
+        case "OTTO":
+          outlineFormat = "cff";
           break;
       }
-      console.log('Outline format:', outlineFormat);
+      console.log("Outline format:", outlineFormat);
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -102,5 +97,7 @@ async function computeOutlineFormat() {
 
 {{Compat}}
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+## See also
+
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

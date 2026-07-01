@@ -1,11 +1,8 @@
 ---
 title: "Animation: finish event"
+short-title: finish
 slug: Web/API/Animation/finish_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.Animation.finish_event
 ---
 
@@ -15,7 +12,8 @@ The **`finish`** event of the {{domxref("Animation")}} interface is fired when t
 when the {{domxref("Animation.finish()")}} method is called to immediately cause the
 animation to finish up.
 
-> **Note:** The `"paused"` play state supersedes the `"finished"` play
+> [!NOTE]
+> The `"paused"` play state supersedes the `"finished"` play
 > state; if the animation is both paused and finished, the `"paused"` state
 > is the one that will be reported. You can force the animation into the
 > `"finished"` state by setting its {{domxref("Animation.startTime", "startTime")}} to
@@ -27,6 +25,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("finish", (event) => { })
+
 onfinish = (event) => { }
 ```
 

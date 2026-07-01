@@ -1,18 +1,14 @@
 ---
-title: BackgroundFetchUpdateUIEvent.updateUI()
+title: "BackgroundFetchUpdateUIEvent: updateUI() method"
+short-title: updateUI()
 slug: Web/API/BackgroundFetchUpdateUIEvent/updateUI
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - updateUI
-  - BackgroundFetchUpdateUIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`updateUI()`** method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.
 
@@ -21,23 +17,20 @@ This method may only be run once, to notify the user on a failed or a successful
 ## Syntax
 
 ```js-nolint
+updateUI()
 updateUI(options)
 ```
 
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing any of the following:
-
     - `icons` {{optional_inline}}
-
       - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
-
         - `src`
           - : A string which is a URL of an image.
         - `sizes` {{optional_inline}}
-          - : A string which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+          - : A string which is equivalent to the `sizes` attribute of the {{HTMLElement("link")}} element.
         - `type` {{optional_inline}}
           - : A string containing an image MIME type.
         - `label` {{optional_inline}}
@@ -53,7 +46,7 @@ A {{jsxref("Promise")}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if any of the following are true:
+  - : Thrown if any of the following are true:
     - The {{domxref("Event.isTrusted","isTrusted")}} property is `false`.
     - The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the `updateUI()` method has already been called.
     - The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.

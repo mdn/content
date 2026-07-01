@@ -1,13 +1,8 @@
 ---
-title: Selection.type
+title: "Selection: type property"
+short-title: type
 slug: Web/API/Selection/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Selection
-  - Type
 browser-compat: api.Selection.type
 ---
 
@@ -25,7 +20,7 @@ values are:
 - `None`
   - : No selection has currently been made.
 - `Caret`
-  - : The selection is collapsed (i.e. the caret is placed on some
+  - : The selection is collapsed (i.e., the caret is placed on some
     text, but no range has been selected).
 - `Range`
   - : A range has been selected.
@@ -41,7 +36,7 @@ text, or a range has been selected.
 let selection;
 
 document.onselectionchange = () => {
-  console.log('New selection made');
+  console.log("New selection made");
   selection = document.getSelection();
   console.log(selection.type);
 };

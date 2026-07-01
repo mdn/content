@@ -2,22 +2,12 @@
 title: MediaKeySession
 slug: Web/API/MediaKeySession
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Interface
-  - Media
-  - MediaKeySession
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaKeySession
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a context for message exchange with a content decryption module (CDM).
+The **`MediaKeySession`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a context for message exchange with a content decryption module (CDM).
 
 {{InheritanceDiagram}}
 
@@ -44,7 +34,7 @@ The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US
 - {{domxref("MediaKeySession.close()")}}
   - : Returns a {{jsxref("Promise")}} after notifying the current media session is no longer needed and that the CDM should release any resources associated with this object and close it.
 - {{domxref("MediaKeySession.generateRequest()")}}
-  - : Returns a {{jsxref("Promise")}} after generating a media request based on initialization data.
+  - : Returns a {{jsxref("Promise")}} after generating a license request based on initialization data.
 - {{domxref("MediaKeySession.load()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to a boolean value after loading data for a specified session object.
 - {{domxref("MediaKeySession.remove()")}}

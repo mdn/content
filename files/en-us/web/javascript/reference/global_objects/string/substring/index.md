@@ -1,21 +1,25 @@
 ---
 title: String.prototype.substring()
+short-title: substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.substring
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
-The **`substring()`** method returns the part of the `string` from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+{{InteractiveExample("JavaScript Demo: String.prototype.substring()")}}
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+```
 
 ## Syntax
 
@@ -39,7 +43,7 @@ A new string containing the specified part of the given string.
 
 `substring()` extracts characters from `indexStart` up to _but not including_ `indexEnd`. In particular:
 
-- If `indexEnd` is omitted, `substring()` extracts characters to the end of the string.
+- If `indexEnd` is omitted or `undefined`, `substring()` extracts characters to the end of the string.
 - If `indexStart` is equal to `indexEnd`, `substring()` returns an empty string.
 - If `indexStart` is greater than `indexEnd`, then the effect of `substring()` is as if the two arguments were swapped; see example below.
 
@@ -52,22 +56,24 @@ Any argument value that is {{jsxref("NaN")}} is treated as if it were `0`.
 ### Using substring()
 
 The following example uses `substring()` to display characters from the
-string `'Mozilla'`:
+string `"Mozilla"`:
+
+<!-- cSpell:ignore Mozill -->
 
 ```js
 const anyString = "Mozilla";
 
-console.log(anyString.substring(0, 1)); // 'M'
-console.log(anyString.substring(1, 0)); // 'M'
+console.log(anyString.substring(0, 1)); // "M"
+console.log(anyString.substring(1, 0)); // "M"
 
-console.log(anyString.substring(0, 6)); // 'Mozill'
+console.log(anyString.substring(0, 6)); // "Mozill"
 
-console.log(anyString.substring(4)); // 'lla'
-console.log(anyString.substring(4, 7)); // 'lla'
-console.log(anyString.substring(7, 4)); // 'lla'
+console.log(anyString.substring(4)); // "lla"
+console.log(anyString.substring(4, 7)); // "lla"
+console.log(anyString.substring(7, 4)); // "lla"
 
-console.log(anyString.substring(0, 7)); // 'Mozilla'
-console.log(anyString.substring(0, 10)); // 'Mozilla'
+console.log(anyString.substring(0, 7)); // "Mozilla"
+console.log(anyString.substring(0, 10)); // "Mozilla"
 ```
 
 ### Using substring() with length property
@@ -76,6 +82,8 @@ The following example uses the `substring()` method and
 {{jsxref("String/length", "length")}} property to extract the last characters of a
 particular string. This method may be easier to remember, given that you don't need to
 know the starting and ending indices as you would in the above examples.
+
+<!-- cSpell:ignore illa zilla -->
 
 ```js
 const text = "Mozilla";
@@ -144,9 +152,7 @@ numbers.
 
 ### Replacing a substring within a string
 
-The following example replaces a substring within a string. It will replace both
-individual characters and substrings. The function call at the end of the example
-changes the string `Brave New World` to `Brave New Web`.
+The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example creates a string `Brave New Web` from the original string `Brave New World`.
 
 ```js
 // Replaces oldS with newS in the string fullS
@@ -167,7 +173,7 @@ replaceString("World", "Web", "Brave New World");
 
 Note that this can result in an infinite loop if `oldS` is itself a
 substring of `newS` — for example, if you attempted to replace
-'`World`' with '`OtherWorld`' here.
+`"World"` with `"OtherWorld"` here.
 
 A better method for replacing strings is as follows:
 

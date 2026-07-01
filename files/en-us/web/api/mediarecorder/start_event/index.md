@@ -1,22 +1,14 @@
 ---
 title: "MediaRecorder: start event"
+short-title: start
 slug: Web/API/MediaRecorder/start_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media Capture
-  - MediaRecorder
-  - Event
-  - Reference
-  - Video
-  - start
 browser-compat: api.MediaRecorder.start_event
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-The `start` event is fired when
+The **`start`** event of the {{domxref("MediaRecorder")}} interface is fired when
 {{domxref("MediaRecorder.start()")}} is called. At this point, the data
 starts being gathered into a {{domxref("Blob")}}.
 
@@ -24,10 +16,10 @@ starts being gathered into a {{domxref("Blob")}}.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("start", (event) => {});
+```js-nolint
+addEventListener("start", (event) => { })
 
-onstart = (event) => {};
+onstart = (event) => { }
 ```
 
 ## Event type
@@ -48,10 +40,6 @@ mediaRecorder.onstart = () => {
 };
 ```
 
-## Instance properties
-
-None.
-
 ## Specifications
 
 {{Specifications}}
@@ -64,6 +52,6 @@ None.
 
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("Navigator.getUserMedia")}}

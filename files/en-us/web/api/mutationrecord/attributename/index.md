@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.attributeName
+title: "MutationRecord: attributeName property"
+short-title: attributeName
 slug: Web/API/MutationRecord/attributeName
 page-type: web-api-instance-property
-tags:
-  - attributeName
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.attributeName
 ---
 
@@ -29,7 +25,7 @@ In the following example, there are four buttons: two change the `style` attribu
 #### HTML
 
 ```html
-<h1 class="blue" style="color:black;" id="hiMom">Hi, Mom!</h1>
+<h1 class="blue" id="hiMom">Hi, Mom!</h1>
 
 <button id="redButton">Set class to "red"</button>
 <button id="blueButton">Set class to "blue"</button>

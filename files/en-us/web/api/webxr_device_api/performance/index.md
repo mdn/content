@@ -2,24 +2,6 @@
 title: WebXR performance guide
 slug: Web/API/WebXR_Device_API/Performance
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Performance
-  - Quality
-  - Scale
-  - Scaling
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - detail
-  - effects
-  - frame rate
-  - frameRate
-  - rendering
-  - resolution
-  - size
-  - speed
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -50,13 +32,15 @@ When using libraries that perform things such as matrix mathematics, you typical
 
 While an individual vector or matrix doesn't occupy an inordinate amount of memory, the sheer number of vectors and matrices and other structures that are used to build each frame of a 3D scene means the memory management becomes a problem eventually if you keep allocating and de-allocating memory objects.
 
-Consider the following
+Consider the following:
 
 ```js
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
   for (const object in scene) {
-    const vertexList = [/* … */];
+    const vertexList = [
+      /* … */
+    ];
     const normalMatrix = mat4.create();
     const modelViewMatrix = mat4.create();
     const objectMatrix = mat4.create();
@@ -73,7 +57,9 @@ This renders a scene. But it's inefficient, because it allocates as local variab
 A simple change can optimize this significantly:
 
 ```js
-const vertexList = [/* … */];
+const vertexList = [
+  /* … */
+];
 const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 

@@ -1,18 +1,12 @@
 ---
-title: MediaQueryListEvent()
+title: "MediaQueryListEvent: MediaQueryListEvent() constructor"
+short-title: MediaQueryListEvent()
 slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - CSSOM View
-  - Constructor
-  - Media Queries
-  - MediaQueryListEvent
-  - Reference
 browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`MediaQueryListEvent()`** constructor creates a new {{domxref("MediaQueryListEvent")}} object.
 
@@ -42,10 +36,13 @@ A new {{domxref("MediaQueryListEvent")}} object.
 ## Examples
 
 ```js
-const media = '(max-width: 600px)';
+const media = "(width <= 600px)";
 const matches = true;
 
-const myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
+const myMediaQueryListEvent = new MediaQueryListEvent("change", {
+  media,
+  matches,
+});
 ```
 
 ## Specifications
@@ -58,8 +55,8 @@ const myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches}
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -1,19 +1,10 @@
 ---
 title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTabValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getTabValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.
 
@@ -41,10 +32,6 @@ let retrieving = browser.sessions.getTabValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with the value if it exists, or `undefined` if it does not exist. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the value of "my-key" for all newly created tabs (this will include any tabs that have been restored):
@@ -59,8 +46,14 @@ function onGetRejected(e) {
 }
 
 browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getTabValue(tab.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

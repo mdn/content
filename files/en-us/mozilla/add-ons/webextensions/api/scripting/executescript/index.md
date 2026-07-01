@@ -1,31 +1,23 @@
 ---
 title: scripting.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/executeScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - executeScript
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.executeScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.
 
-> **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
+> [!NOTE]
+> This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Safari and Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the target's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
 
-In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening, see ([Issue 1325114](https://bugs.chromium.org/p/chromium/issues/detail?id=1325114))).
+In Firefox and Safari, partial lack of host permissions can result in a successful execution (with the partial results in the resolved promise). In Chrome, any missing permission prevents any execution from happening (see [Issue 1325114](https://crbug.com/1325114)).
 
 The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
 ## Syntax
 
@@ -38,28 +30,30 @@ let results = await browser.scripting.executeScript(
 ### Parameters
 
 - `details`
-
   - : An object describing the script to inject. It contains these properties:
-
-    - `args`
+    - `args` {{optional_inline}}
       - : An array of arguments to carry into the function. This is only valid if the `func` parameter is specified. The arguments must be JSON-serializable.
-    - `files`
+    - `files` {{optional_inline}}
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
-    - `func`
+    - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
       - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the script into.
+    - `world` {{optional_inline}}
+      - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
+A {{JSxRef("Promise")}} that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
 
 The promise is rejected if the injection fails, such as when the injection target is invalid. When script execution has started, its result is included in the result, whether successful (as `result`) or unsuccessfully (as `error`).
 
 Each `InjectionResult` object has these properties:
 
+- `documentId`
+  - : `string`. The document associated with the injection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `frameId`
   - : `number`. The frame ID associated with the injection.
 - `result` {{optional_inline}}
@@ -67,15 +61,18 @@ Each `InjectionResult` object has these properties:
 - `error` {{optional_inline}}
   - : `any`. If an error occurs, contains the value the script threw or rejected with. Typically this is an error object with a message property but it could be any value (including primitives and undefined).
 
-The result of the script is the last evaluated statement, which is similar to the results seen if you executed the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (not any `console.log()` output). For example, consider a script like this:
+    Chrome does not support the `error` property yet (see [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)). As an alternative, runtime errors can be caught by wrapping the code to execute in a try-catch statement. Uncaught errors are also reported to the console of the target tab.
+
+The result of a script is the value produced by the last evaluated statement. If the last statement produces a Promise, the result is the settled value of that Promise. This is similar to the results seen if you execute the script in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (excluding any `console.log()` output). For example, consider a script like this:
 
 ```js
-let foo='my result'; foo;
+let foo = "my result";
+foo;
 ```
 
-Here the results array contains the string "`my result`" as an element.
+Here the results array contains the string `"my result"` as an element.
 
-The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+The script result must be a [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) value in Firefox or a [JSON-serializable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) value in Chrome. The [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities) article discusses this difference in more detail in the [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm) section.
 
 ## Examples
 
@@ -122,4 +119,5 @@ browser.action.onClicked.addListener(async (tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-executeScript) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#method-executeScript) API.

@@ -2,17 +2,6 @@
 title: AudioTrackList
 slug: Web/API/AudioTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - list
 browser-compat: api.AudioTrackList
 ---
 
@@ -55,7 +44,7 @@ In addition to being able to obtain direct access to the audio tracks present on
 
 ### Getting a media element's audio track list
 
-To get a media element's {{domxref("AudioTrackList")}}, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
+To get a media element's `AudioTrackList`, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
 
 ```js
 const audioTracks = document.querySelector("video").audioTracks;

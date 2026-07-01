@@ -1,22 +1,12 @@
 ---
-title: StorageManager.estimate()
+title: "StorageManager: estimate() method"
+short-title: estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
 browser-compat: api.StorageManager.estimate
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}} {{AvailableInWorkers}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
@@ -43,7 +33,8 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
 - `usageDetails` {{Non-standard_Inline}}
   - : An object containing a breakdown of `usage` by storage system. All included properties will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the object.
 
-> **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
+> [!NOTE]
+> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
 You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 
@@ -51,25 +42,32 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
 
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
+
 ## Examples
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-### HTML content
+### HTML
 
 ```html
-<label>
-  You're currently using about <output id="percent"> </output>% of your
-  available storage.
-</label>
+You're currently using about <span id="percent"></span>% of your estimated
+storage quota (<span id="quota"></span>).
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 navigator.storage.estimate().then((estimate) => {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+  document.getElementById("percent").textContent = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
+  document.getElementById("quota").textContent =
+    `${(estimate.quota / 1024 / 1024).toFixed(2)}MB`;
 });
 ```
 
@@ -87,7 +85,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

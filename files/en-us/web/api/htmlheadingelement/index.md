@@ -2,18 +2,12 @@
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLHeadingElement
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLHeadingElement`** interface represents the different heading elements, [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements). It inherits methods and properties from the {{domxref("HTMLElement")}} interface.
+The **`HTMLHeadingElement`** interface represents the different heading elements, [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements). It inherits methods and properties from the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
@@ -38,4 +32,4 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.
+- The {{HTMLElement("Heading_Elements", "HTML heading elements")}}, `<h1>` to `<h6>`, which correspond to this interface.

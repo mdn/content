@@ -2,17 +2,12 @@
 title: DeviceMotionEventRotationRate
 slug: Web/API/DeviceMotionEventRotationRate
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Reference
 browser-compat: api.DeviceMotionEventRotationRate
 ---
 
-{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-A `DeviceMotionEventRotationRate` object provides information about the rate at which the device is rotating around all three axes.
+A **`DeviceMotionEventRotationRate`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides information about the rate at which the device is rotating around all three axes.
 
 ## Instance properties
 

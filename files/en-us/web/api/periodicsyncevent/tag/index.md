@@ -1,20 +1,14 @@
 ---
-title: PeriodicSyncEvent.tag
+title: "PeriodicSyncEvent: tag property"
+short-title: tag
 slug: Web/API/PeriodicSyncEvent/tag
 page-type: web-api-instance-property
-tags:
-  - Offline
-  - PWA
-  - PeriodicSyncEvent
-  - Property
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent.tag
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
@@ -33,7 +27,7 @@ The following example demonstrates listening for a periodic sync event in the se
 worker, and accessing the `tag` property.
 
 ```js
-self.addEventListener('periodicsync', (event) => {
+self.addEventListener("periodicsync", (event) => {
   console.log(event.tag); // logs the events tag
 });
 ```
@@ -48,5 +42,4 @@ self.addEventListener('periodicsync', (event) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)

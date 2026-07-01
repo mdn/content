@@ -1,14 +1,8 @@
 ---
-title: HTMLSelectElement.options
+title: "HTMLSelectElement: options property"
+short-title: options
 slug: Web/API/HTMLSelectElement/options
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Web
 browser-compat: api.HTMLSelectElement.options
 ---
 
@@ -38,12 +32,10 @@ elements contained by the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("test");
-  for (const option of select.options) {
-    console.log(option.label); // "Option 1" and "Option 2"
-  }
-});
+const select = document.getElementById("test");
+for (const option of select.options) {
+  console.log(option.label); // "Option 1" and "Option 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

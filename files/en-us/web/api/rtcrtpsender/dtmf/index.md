@@ -1,17 +1,8 @@
 ---
-title: RTCRtpSender.dtmf
+title: "RTCRtpSender: dtmf property"
+short-title: dtmf
 slug: Web/API/RTCRtpSender/dtmf
 page-type: web-api-instance-property
-tags:
-  - DTMF
-  - Media
-  - NeedsExample
-  - Property
-  - RTCRtpSender
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCRtpSender.dtmf
 ---
 
@@ -29,7 +20,8 @@ An {{domxref("RTCDTMFSender")}} which can be used to send DTMF over the RTP sess
 `null` if the track being carried by the RTP session or the
 {{domxref("RTCPeerConnection")}} as a whole doesn't support DTMF.
 
-> **Note:** Only audio tracks can support DTMF, and typically only one audio track per
+> [!NOTE]
+> Only audio tracks can support DTMF, and typically only one audio track per
 > `RTCPeerConnection` will have an associated {{domxref("RTCDTMFSender")}}
 
 ## Example

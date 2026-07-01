@@ -1,15 +1,8 @@
 ---
-title: UIEvent.view
+title: "UIEvent: view property"
+short-title: view
 slug: Web/API/UIEvent/view
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsLiveExample
-  - Property
-  - Read-only
-  - Reference
-  - UIEvent
 browser-compat: api.UIEvent.view
 ---
 

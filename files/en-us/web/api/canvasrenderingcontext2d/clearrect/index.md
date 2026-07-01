@@ -1,24 +1,20 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
+title: "CanvasRenderingContext2D: clearRect() method"
+short-title: clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.clearRect
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.clearRect()`**
 method of the Canvas 2D API erases the pixels in a rectangular area by setting them to
 transparent black.
 
-> **Note:** Be aware that `clearRect()` may cause unintended
+> [!NOTE]
+> Be aware that `clearRect()` may cause unintended
 > side effects if you're not [using paths properly](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Make sure to call
 > {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to
 > draw new items after calling `clearRect()`.
@@ -30,7 +26,7 @@ clearRect(x, y, width, height)
 ```
 
 The `clearRect()` method sets the pixels in a rectangular area to
-transparent black (`rgba(0,0,0,0)`). The rectangle's top-left corner is at
+transparent. The rectangle's top-left corner is at
 `(x, y)`, and its size is specified by `width` and
 `height`.
 
@@ -86,7 +82,7 @@ const ctx = canvas.getContext("2d");
 
 // Draw yellow background
 ctx.beginPath();
-ctx.fillStyle = "#ff6";
+ctx.fillStyle = "#ffff66";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // Draw blue triangle

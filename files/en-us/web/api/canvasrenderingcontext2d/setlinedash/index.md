@@ -1,28 +1,20 @@
 ---
-title: CanvasRenderingContext2D.setLineDash()
+title: "CanvasRenderingContext2D: setLineDash() method"
+short-title: setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Dashes
-  - LInes
-  - Method
-  - Reference
-  - patterns
-  - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
 {{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
 stroking lines. It uses an array of values that specify alternating lengths of lines
 and gaps which describe the pattern.
 
-> **Note:** To return to using solid lines, set the line dash list to an
+> [!NOTE]
+> To return to using solid lines, set the line dash list to an
 > empty array.
 
 ## Syntax
@@ -99,6 +91,10 @@ The `drawDashedLine()` function created below makes the drawing of multiple
 dashed lines simple. It receives a pattern array as its only parameter.
 
 ```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let y = 15;
+
 function drawDashedLine(pattern) {
   ctx.beginPath();
   ctx.setLineDash(pattern);
@@ -107,10 +103,6 @@ function drawDashedLine(pattern) {
   ctx.stroke();
   y += 20;
 }
-
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-let y = 15;
 
 drawDashedLine([]);
 drawDashedLine([1, 1]);

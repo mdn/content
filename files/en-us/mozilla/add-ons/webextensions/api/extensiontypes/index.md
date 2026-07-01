@@ -1,19 +1,10 @@
 ---
 title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - extensionTypes
+page-type: webextension-api
 browser-compat: webextensions.api.extensionTypes
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Some common types used in other WebExtension APIs.
 
@@ -30,13 +21,14 @@ Some common types used in other WebExtension APIs.
 - `extensionTypes.CSSOrigin`
   - : Indicates whether a CSS stylesheet injected by [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) should be treated as an "author" or "user" stylesheet.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

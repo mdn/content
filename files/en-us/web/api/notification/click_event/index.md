@@ -1,19 +1,12 @@
 ---
-title: 'Notification: click event'
+title: "Notification: click event"
+short-title: click
 slug: Web/API/Notification/click_event
 page-type: web-api-event
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Event
-  - Reference
-  - click
 browser-compat: api.Notification.click_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`click`** event of the {{domxref("Notification")}}
 interface fires when the user clicks on displayed {{domxref("Notification")}}.
@@ -26,10 +19,10 @@ If you don't want that behavior, call {{domxref("Event/preventDefault", "prevent
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('click', (event) => { });
+```js-nolint
+addEventListener("click", (event) => { })
 
-onclick = (event) => { };
+onclick = (event) => { }
 ```
 
 ## Event type
@@ -45,8 +38,8 @@ is clicked:
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("https://www.mozilla.org", "_blank");
+};
 ```
 
 ## Specifications
@@ -59,5 +52,4 @@ notification.onclick = (event) => {
 
 ## See also
 
-- {{domxref("Notification")}}
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

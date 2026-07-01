@@ -1,34 +1,37 @@
 ---
 title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformNaclArch
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformNaclArch
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
+> [!NOTE]
+> **This type is deprecated** in favor of {{WebExtAPIRef("runtime.PlatformArch")}}. `PlatformArch` is also available in {{WebExtAPIRef("runtime.PlatformInfo")}}, which you obtain using {{WebExtAPIRef("runtime.getPlatformInfo()")}}.
 
-The native client architecture. This may be different from arch on some platforms.
+The enumerated value representing the CPU instruction set architecture of Google Native Client used by the browser. This enum is deprecated, following the removal of Google Native Client from Google Chrome. As of 2026, Chromium intends to remove this enum.
 
 ## Type
 
-Values of this type are strings. Possible values are: `"arm"`, `"x86-32"`, `"x86-64"`.
+- `ARM`
+  - : The string literal `"arm"`. Represents all versions of the ARM ISA, including all 32-bit and 64-bit variants. Equivalent to [`PlatformArch.arm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#arm) (32-bit variant) and `PlatformArch.arm64` combined into one value.
+- `X86_32`
+  - : The string literal `"x86-32"`. Represents the 32-bit variant of the x86 architecture. Equivalent to [`PlatformArch.x86_32`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#x86-32).
+- `X86_64`
+  - : The string literal `"x86-64"`. Represents the 64-bit variant of the x86 architecture. Equivalent to [`PlatformArch.X86_64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#x86-64).
+- `MIPS`
+  - : The string literal `"mips"`. Represents the 32-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to `PlatformArch.mips`.
+- `MIPS64`
+  - : The string literal `"mips64"`. Represents the 64-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to `PlatformArch.mips64`.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-PlatformNaclArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformNaclArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

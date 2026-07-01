@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.domInteractive
+title: "PerformanceNavigationTiming: domInteractive property"
+short-title: domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domInteractive
 ---
 
@@ -14,7 +10,8 @@ browser-compat: api.PerformanceNavigationTiming.domInteractive
 
 The **`domInteractive`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"interactive"`.
 
-> **Note:** This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
+> [!NOTE]
+> This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
 
 Measuring DOM processing time may not be consequential unless your site has a very large HTML source to a construct a Document Object Model from.
 
@@ -36,7 +33,7 @@ Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navig
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     console.log(
-      `${entry.name}: domInteractive time: ${entry.domInteractive}ms`
+      `${entry.name}: domInteractive time: ${entry.domInteractive}ms`,
     );
   });
 });

@@ -1,20 +1,10 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - ResourceType
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.ResourceType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.
 
@@ -33,13 +23,14 @@ Values of this type are strings. Possible values are:
 - `image`
   - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
-  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's {{htmlattrxref("srcset", "img")}} attribute.
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute.
+- `json`
+  - : JSON modules loaded through an [import statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
   - : Resources loaded by a {{HTMLElement("video")}} or {{HTMLElement("audio")}} element.
 - `object`
-
   - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.
 
     Browsers that don't have a dedicated `object_subrequest` type (see browser compatibility below), also label subsequent requests sent by the plugin as `object`.
@@ -47,8 +38,7 @@ Values of this type are strings. Possible values are:
 - `object_subrequest`
   - : Requests sent by plugins.
 - `ping`
-
-  - : Requests sent to the URL given in a hyperlink's {{htmlattrxref("ping", "a")}} attribute, when the hyperlink is followed.
+  - : Requests sent to the URL given in a hyperlink's [`ping`](/en-US/docs/Web/HTML/Reference/Elements/a#ping) attribute, when the hyperlink is followed.
 
     Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
@@ -61,27 +51,26 @@ Values of this type are strings. Possible values are:
 - `sub_frame`
   - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
 - `web_manifest`
-  - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+  - : [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) loaded for websites that can be installed to the homescreen.
 - `websocket`
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
-- `xbl`
-  - : [XBL](/en-US/docs/Mozilla/Tech/XBL) bindings loaded to extend the behavior of elements in a document.
 - `xml_dtd`
   - : [DTDs](/en-US/docs/Glossary/Doctype) loaded for an XML document.
 - `xmlhttprequest`
   - : Requests sent by an {{domxref("XMLHttpRequest")}} object or through the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - `xslt`
-  - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
+  - : [XSLT](/en-US/docs/Web/XML/XSLT) stylesheets loaded for transforming an XML document.
 - `other`
   - : Resources that aren't covered by any other available type.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,19 +1,10 @@
 ---
 title: browserAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setTitle
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.setTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the given tab or the given window. Tabs or windows without a specific title will inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
 
@@ -28,17 +19,13 @@ browser.browserAction.setTitle(
 ### Parameters
 
 - `details`
-
   - : `object`. The new title and optionally the ID of the tab or window to target.
-
     - `title`
-
       - : `string` or `null`. The string the browser action should display when moused over.
 
         If `title` is an empty string, the used title will be the extension name, but {{WebExtAPIRef("browserAction.getTitle")}} will still provide the empty string.
 
         If `title` is `null`:
-
         - If `tabId` is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window to which it belongs.
         - if `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
         - Otherwise, the global title will be reset to the manifest title.
@@ -52,10 +39,6 @@ browser.browserAction.setTitle(
 
 - If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
 - If `windowId` and `tabId` are both omitted, the global title is set.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -78,7 +61,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-setTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

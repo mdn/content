@@ -2,9 +2,7 @@
 title: DMZ
 slug: Glossary/DMZ
 page-type: glossary-definition
-tags:
-  - Networking
-  - Security
+sidebar: glossarysidebar
 ---
 
 A **DMZ** (DeMilitarized Zone) is a way to provide an insulated secure interface between an internal network (corporate or private) and the outside untrusted world — usually the Internet.

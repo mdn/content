@@ -1,10 +1,8 @@
 ---
-title: DOMTokenList.entries()
+title: "DOMTokenList: entries() method"
+short-title: entries()
 slug: Web/API/DOMTokenList/entries
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.entries
 ---
 
@@ -20,6 +18,10 @@ to go through all key/value pairs contained in this object. The values are
 ```js-nolint
 entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

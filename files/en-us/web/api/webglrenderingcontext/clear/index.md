@@ -1,26 +1,18 @@
 ---
-title: WebGLRenderingContext.clear()
+title: "WebGLRenderingContext: clear() method"
+short-title: clear()
 slug: Web/API/WebGLRenderingContext/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clear
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.clear()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) clears buffers to preset values.
 
-The preset values can be set by {{domxref("WebGLRenderingContext.clearColor",
-  "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} or
-{{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
+The preset values can be set by {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} or {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
 
-The scissor box, dithering, and buffer writemasks can affect the `clear()`
-method.
+The scissor box, dithering, and buffer writemasks can affect the `clear()` method. For example, if buffer writing is disabled via {{domxref("WebGLRenderingContext.colorMask", "colorMask()")}}, {{domxref("WebGLRenderingContext.depthMask", "depthMask()")}}, or {{domxref("WebGLRenderingContext.stencilMask", "stencilMask()")}}, `clear()` has no effect on the corresponding buffer.
 
 ## Syntax
 
@@ -31,10 +23,8 @@ clear(mask)
 ### Parameters
 
 - `mask`
-
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} bitwise OR mask that indicates the buffers to be
     cleared. Possible values are:
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

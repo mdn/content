@@ -1,19 +1,14 @@
 ---
-title: 'XRSession: end event'
+title: "XRSession: end event"
+short-title: end
 slug: Web/API/XRSession/end_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - WebXR
-  - XR
-  - XRSession
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.end_event
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
 
@@ -21,8 +16,8 @@ An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR ses
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('end', (event) => { })
+```js-nolint
+addEventListener("end", (event) => { })
 
 onend = (event) => { }
 ```
@@ -50,7 +45,7 @@ This event is not cancelable and does not bubble.
 
 ### Use cases
 
-You can use this event to react to the ending of an WebXR session. You may want to display a UI element informing about the termination of the session, for example.
+You can use this event to react to the ending of a WebXR session. You may want to display a UI element informing about the termination of the session, for example.
 
 ## Examples
 
@@ -66,8 +61,8 @@ Alternatively, you can use the `XRSession.onend` event handler property to estab
 
 ```js
 XRSession.onend = (event) => {
- /* the session has shut down */
-}
+  /* the session has shut down */
+};
 ```
 
 ## Specifications

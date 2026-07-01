@@ -1,0 +1,63 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Accessibility
+  - type: section
+    link: /Web/Accessibility/Guides
+  - /Web/Accessibility/Guides/Information_for_Web_authors
+  - /Web/Accessibility/Guides/Browsing_safely
+  - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
+  - /Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
+  - /Web/Accessibility/Guides/Mobile_accessibility_checklist
+  - /Web/Accessibility/Guides/Cognitive_accessibility
+  - /Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns
+  - /Web/Accessibility/Guides/Colors_and_Luminance
+  - /Web/Accessibility/Guides/Seizure_disorders
+  - type: listSubPages
+    path: /Web/Accessibility/Guides/Understanding_WCAG
+    link: /Web/Accessibility/Guides/Understanding_WCAG
+    title: Understanding WCAG
+    details: closed
+  - type: section
+    link: /Web/Accessibility/ARIA
+    title: ARIA
+  - link: /Web/Accessibility/ARIA/Guides
+    title: ARIA_guides
+    details: closed
+    children:
+      - /Web/Accessibility/ARIA/Guides/Live_regions
+      - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
+      - /Web/Accessibility/ARIA/Guides/Techniques
+      - /Web/Accessibility/ARIA/Guides/Multipart_labels
+  - type: section
+    link: /Web/Accessibility/ARIA/Reference
+    title: ARIA reference
+  - type: listSubPages
+    path: /Web/Accessibility/ARIA/Reference/Attributes
+    link: /Web/Accessibility/ARIA/Reference/Attributes
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/Accessibility/ARIA/Reference/Roles
+    link: /Web/Accessibility/ARIA/Reference/Roles
+    details: closed
+    code: true
+l10n:
+  de:
+    ARIA: ARIA
+    ARIA_guides: ARIA-Anleitungen
+  en-US:
+    ARIA: ARIA
+    ARIA_guides: ARIA guides
+  fr:
+    ARIA: ARIA
+    ARIA_guides: Guides ARIA
+    ARIA reference: Références ARIA
+    Understanding WCAG: Comprendre les WCAG
+  ja:
+    ARIA: ARIA
+    ARIA_guides: ARIA ガイド
+  zh-CN:
+    ARIA: ARIA
+    ARIA_guides: ARIA 指南

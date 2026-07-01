@@ -2,11 +2,10 @@
 title: Immutable
 slug: Glossary/Immutable
 page-type: glossary-definition
-tags:
-  - CodingScripting
+sidebar: glossarysidebar
 ---
 
-An immutable value is one whose content cannot be changed without creating an entirely new value.
+An **immutable** value is one whose content cannot be changed without creating an entirely new value, in comparison with {{Glossary("mutable", "mutable values")}}.
 
 In {{glossary("JavaScript")}}, {{Glossary("primitive", "primitive values")}} are immutable — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned another value.
 By contrast, {{Glossary("Object","objects")}} and {{Glossary("Array","arrays")}} are mutable by default — their properties and elements can be changed without reassigning a new value.
@@ -22,5 +21,6 @@ Note that you can easily prove mutability: an object is mutable as long as it of
 
 ## See also
 
-- [Immutable](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia
-- {{glossary("Mutable")}}
+- [Immutable object](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia
+- Related glossary terms:
+  - {{glossary("Mutable")}}

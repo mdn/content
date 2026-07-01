@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.bindBufferRange()
+title: "WebGL2RenderingContext: bindBufferRange() method"
+short-title: bindBufferRange()
 slug: Web/API/WebGL2RenderingContext/bindBufferRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindBufferRange
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.bindBufferRange()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a range of a given
@@ -27,10 +22,8 @@ bindBufferRange(target, index, buffer, offset, size)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for the bind operation. Possible
     values:
-
     - `gl.TRANSFORM_FEEDBACK_BUFFER`
     - `gl.UNIFORM_BUFFER`
 

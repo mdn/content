@@ -2,13 +2,10 @@
 title: Cross Axis
 slug: Glossary/Cross_Axis
 page-type: glossary-definition
-tags:
-  - CSS
-  - cross axis
-  - flexbox
+sidebar: glossarysidebar
 ---
 
-The cross axis in {{glossary("flexbox")}} runs perpendicular to the {{glossary("main axis")}}, therefore if your {{cssxref("flex-direction")}} is either `row` or `row-reverse` then the cross axis runs down the columns.
+The **cross axis** in {{glossary("flexbox")}} runs perpendicular to the {{glossary("main axis")}}, therefore if your {{cssxref("flex-direction")}} is either `row` or `row-reverse` then the cross axis runs down the columns.
 
 ![The cross axis runs down the column](basics3.png)
 
@@ -37,11 +34,12 @@ Alignment of items on the cross axis is achieved with the `align-items` property
 
 ### Further reading
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- [Glossary](/en-US/docs/Glossary)
+CSS flexbox guides:
 
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- Related glossary terms:
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container")}}
   - {{Glossary("Flex Item")}}

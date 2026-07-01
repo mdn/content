@@ -2,21 +2,24 @@
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 page-type: javascript-language-feature
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Language feature
-  - Object
-  - Syntax
 browser-compat: javascript.functions.method_definitions
+sidebar: jssidebar
 ---
-
-{{JsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Method definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## Syntax
 
@@ -65,6 +68,8 @@ const obj = {
 };
 ```
 
+Properties defined using this syntax are own properties of the created object, and they are configurable, enumerable, and writable, just like normal properties.
+
 [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), and [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) properties all have their respective method syntaxes; see examples below.
 
 However, note that the method syntax is not equivalent to a normal property with a function as its value — there are semantic differences. This makes methods defined in object literals more consistent with methods in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
@@ -84,12 +89,12 @@ new obj.method(); // TypeError: obj.method is not a constructor
 
 Only functions defined as methods have access to the [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword. `super.prop` looks up the property on the prototype of the object that the method was initialized on.
 
-```js example-bad
+```js-nolint example-bad
 const obj = {
   __proto__: {
     prop: "foo",
   },
-  method: function () {
+  notAMethod: function () {
     console.log(super.prop); // SyntaxError: 'super' keyword unexpected here
   },
 };
@@ -117,6 +122,9 @@ You can use the exact same syntax to define public instance methods that are ava
 class ClassWithPublicInstanceMethod {
   publicMethod() {
     return "hello world";
+  }
+  secondPublicMethod() {
+    return "goodbye world";
   }
 }
 
@@ -146,7 +154,7 @@ const instance = new SubClass();
 console.log(instance.subPublicMethod()); // "hello world"
 ```
 
-Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static methods and private methods use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Computed property names
 
@@ -160,14 +168,14 @@ const bar = {
   foo1() {
     return 1;
   },
-  ["foo" + 2]() {
+  ["foo".toUpperCase()]() {
     return 2;
   },
 };
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+console.log(bar.FOO()); // 2
 ```
 
 ### Generator methods
@@ -176,7 +184,7 @@ Note that the asterisk (`*`) in the generator method syntax must be _before_ the
 
 ```js
 // Using a named property
-const obj2 = {
+const obj = {
   g: function* () {
     let index = 0;
     while (true) {
@@ -204,14 +212,14 @@ console.log(it.next().value); // 1
 
 ```js
 // Using a named property
-const obj3 = {
+const obj = {
   f: async function () {
     await somePromise;
   },
 };
 
 // The same object using shorthand syntax
-const obj3 = {
+const obj2 = {
   async f() {
     await somePromise;
   },
@@ -221,7 +229,8 @@ const obj3 = {
 ### Async generator methods
 
 ```js
-const obj4 = {
+// Using a named property
+const obj = {
   f: async function* () {
     yield 1;
     yield 2;
@@ -230,7 +239,7 @@ const obj4 = {
 };
 
 // The same object using shorthand syntax
-const obj4 = {
+const obj2 = {
   async *f() {
     yield 1;
     yield 2;
@@ -249,6 +258,9 @@ const obj4 = {
 
 ## See also
 
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- {{jsxref("Statements/class", "class")}}

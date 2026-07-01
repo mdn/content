@@ -1,39 +1,31 @@
 ---
-title: 'XRSystem: devicechange event'
+title: "XRSystem: devicechange event"
+short-title: devicechange
 slug: Web/API/XRSystem/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Reference
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRSystem
-  - devicechange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSystem.devicechange_event
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
-> **Note:** Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
+> [!NOTE]
+> Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('devicechange', (event) => { })
+```js-nolint
+addEventListener("devicechange", (event) => { })
 
 ondevicechange = (event) => { }
 ```
 
-If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), `devicechange` events will not fire.
+If the use of WebXR has been blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), `devicechange` events will not fire.
 
 ## Event type
 
@@ -56,8 +48,7 @@ The example shown here handles the `devicechange` event by toggling the availabi
 ```js
 if (navigator.xr) {
   navigator.xr.addEventListener("devicechange", (event) => {
-    navigator.xr.isSessionSupported("immersive-vr")
-    .then((immersiveOK) => {
+    navigator.xr.isSessionSupported("immersive-vr").then((immersiveOK) => {
       enableXRButton.disabled = !immersiveOK;
     });
   });

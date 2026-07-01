@@ -1,20 +1,11 @@
 ---
 title: Game monetization
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - Games
-  - HTML
-  - JavaScript
-  - Monetization
-  - advertisements
-  - branding
-  - iap
-  - licensing
+page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavour on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
+When you've spent your time building a game, [distributing](/en-US/docs/Games/Publishing_games/Game_distribution) it and [promoting](/en-US/docs/Games/Publishing_games/Game_promotion) it you should consider earning some money out of it. If your work is a serious endeavor on the path to becoming an independent game developer able to make a living, read on and see what your options are. The technology is mature enough; now it's just about choosing the right approach.
 
 ## Paid games
 
@@ -52,7 +43,7 @@ Finding publishers might be hard at first — try to look for them at the [HTML5
 
 ### Exclusive licenses
 
-The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights — that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, it's genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
+The exclusive license is a type of license for one publisher — you've built a game and you're selling all the rights to it to a single entity along with the rights to redistribute it — [Softgames](https://www.softgames.com/) are an example of such a publisher. You can't sell it again in any form while that publisher has the rights — that's why exclusive deals are worth quite a lot of money. How much exactly? It depends on the quality of the game, its genre, its publisher, and many others, but usually it will be something between 2000 and 5000 USD. Once you've sold an exclusive license you can forget about promoting that particular game as you won't earn more, so go into such a deal only if you're sure it's profitable enough.
 
 ### Non-exclusive licenses
 
@@ -84,7 +75,7 @@ If you're a graphic designer, you can sell the assets from the games you've crea
 
 ### Writing articles and tutorials
 
-It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/) or similar websites for writing opportunities.
+It is possible to write articles about your games and even get paid for them. Game [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and monetization at the same time is a win-win, and if you don't abuse it with too much advertising the readers will enjoy reading them and as well as learning a thing or two. If you focus on sharing the knowledge first and use your games just as the examples it should be OK. Check out [Tuts+ Game Development](https://code.tutsplus.com/c/game-development) or similar websites for writing opportunities.
 
 ### Merchandise
 

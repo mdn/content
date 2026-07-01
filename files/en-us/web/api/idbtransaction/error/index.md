@@ -1,25 +1,15 @@
 ---
-title: IDBTransaction.error
+title: "IDBTransaction: error property"
+short-title: error
 slug: Web/API/IDBTransaction/error
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - Error
-  - IDBTransaction
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
 browser-compat: api.IDBTransaction.error
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
 returns the type of error when there is an unsuccessful transaction.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -41,7 +31,7 @@ use of `transaction.error` to help in reporting what went wrong when the
 transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
-const note = document.getElementById('notifications');
+const note = document.getElementById("notifications");
 
 // an instance of a db object for us to store the IDB data in
 let db;
@@ -50,7 +40,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -62,18 +53,30 @@ DBOpenRequest.onsuccess = (event) => {
 
 function addData() {
   // Create a new object ready for being inserted into the IDB
-  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed: database modification finished.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
+    note.appendChild(document.createElement("li")).textContent =
+      `Transaction not opened due to error: ${transaction.error}`;
   };
 
   // create an object store on the transaction
@@ -85,9 +88,10 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '<li>Request successful.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
-};
+}
 ```
 
 ## Specifications

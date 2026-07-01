@@ -1,21 +1,16 @@
 ---
-title: CanvasRenderingContext2D.roundRect()
+title: "CanvasRenderingContext2D: roundRect() method"
+short-title: roundRect()
 slug: Web/API/CanvasRenderingContext2D/roundRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.roundRect
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.roundRect()`** method of the Canvas 2D API adds a rounded rectangle to the current path.
 
-The radii of the corners can be specified in much the same way as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) property.
+The radii of the corners can be specified in much the same way as the CSS {{cssxref("border-radius")}} property.
 
 Like other methods that modify the current path, this method does not directly render anything.
 To draw the rounded rectangle onto a canvas, you can use the {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
@@ -37,10 +32,8 @@ roundRect(x, y, width, height, radii)
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
 - `radii`
-
   - : A number or list specifying the radii of the circular arc to be used for the corners of the rectangle.
-    The number and order of the radii function in the same way as the [`border-radius`](/en-US/docs/Web/CSS/border-radius) CSS property when `width` and `height` are _positive_:
-
+    The number and order of the radii function in the same way as the {{cssxref("border-radius")}} CSS property when `width` and `height` are _positive_:
     - `all-corners`
     - `[all-corners]`
     - `[top-left-and-bottom-right, top-right-and-bottom-left]`
@@ -80,8 +73,8 @@ The paths are then rendered using the `stroke()` method.
 First we create a context for drawing our rounded rectangles.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ```
 
 The code below draws two rectangles, both starting from the point (10, 20) and with a width of 150 and a height of 100.
@@ -90,13 +83,13 @@ The second is drawn in blue, and specifies a 40px radius as a single element in 
 
 ```js
 // Rounded rectangle with zero radius (specified as a number)
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.beginPath();
 ctx.roundRect(10, 20, 150, 100, 0);
 ctx.stroke();
 
 // Rounded rectangle with 40px radius (single element list)
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.beginPath();
 ctx.roundRect(10, 20, 150, 100, [40]);
 ctx.stroke();
@@ -106,7 +99,7 @@ Below the previous rectangle we draw another in orange that specifies the values
 
 ```js
 // Rounded rectangle with 2 different radii
-ctx.strokeStyle = 'orange';
+ctx.strokeStyle = "orange";
 ctx.beginPath();
 ctx.roundRect(10, 150, 150, 100, [10, 40]);
 ctx.stroke();
@@ -117,13 +110,13 @@ The difference here is that the second is drawn with a negative width.
 
 ```js
 // Rounded rectangle with four different radii
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.beginPath();
 ctx.roundRect(400, 20, 200, 100, [0, 30, 50, 60]);
 ctx.stroke();
 
 // Same rectangle drawn backwards
-ctx.strokeStyle = 'magenta';
+ctx.strokeStyle = "magenta";
 ctx.beginPath();
 ctx.roundRect(400, 150, -200, 100, [0, 30, 50, 60]);
 ctx.stroke();

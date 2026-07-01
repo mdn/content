@@ -1,28 +1,19 @@
 ---
-title: DOMPoint()
+title: "DOMPoint: DOMPoint() constructor"
+short-title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Reference
 browser-compat: api.DOMPoint.DOMPoint
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPoint()`** constructor
 creates and returns a new {{domxref("DOMPoint")}} object, given the values for some or
 all of its properties.
 
 You can also create a `DOMPoint` by calling the
-{{domxref("DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
+{{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
 {{domxref("DOMPointReadOnly")}}.
 
 ## Syntax

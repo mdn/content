@@ -1,19 +1,11 @@
 ---
-title: 'Element: DOMMouseScroll event'
+title: "Element: DOMMouseScroll event"
+short-title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - DOMMouseScroll
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Non-standard
-  - Reference
-  - mouse
-  - scrolling
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.DOMMouseScroll_event
 ---
 
@@ -31,17 +23,17 @@ Use the standardized {{domxref("Element/wheel_event","wheel")}} event if availab
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('DOMMouseScroll', (event) => {});
+```js-nolint
+addEventListener("DOMMouseScroll", (event) => { })
 
-onDOMMouseScroll = (event) => { };
+onDOMMouseScroll = (event) => { }
 ```
 
 ## Event type
 
-A {{domxref("MouseWheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
-{{InheritanceDiagram("MouseWheelEvent")}}
+{{InheritanceDiagram("WheelEvent")}}
 
 ## Event properties
 
@@ -53,11 +45,13 @@ The `detail` property describes the scroll more precisely, with positive values 
 
 If the event represents scrolling up by a page, the value of `detail` is -32768. If the event indicates scrolling down by a page, the value is +32768. Any other value represents the number of lines to scroll, with the direction indicated by the value's sign.
 
-> **Note:** Trusted events are never sent with a value of 0 for `detail`.
+> [!NOTE]
+> Trusted events are never sent with a value of 0 for `detail`.
 
 Trusted events are never fired with 0.
 
-> **Note:** If the platform's native mouse wheel events only provide scroll distance by pixels, or if the speed can be customized by the user, the value is computed using the line height of the nearest scrollable ancestor element of the event's target. If that element's font size is smaller than `mousewheel.min_line_scroll_amount`, that preference's value is used as the line height.
+> [!NOTE]
+> If the platform's native mouse wheel events only provide scroll distance by pixels, or if the speed can be customized by the user, the value is computed using the line height of the nearest scrollable ancestor element of the event's target. If that element's font size is smaller than `mousewheel.min_line_scroll_amount`, that preference's value is used as the line height.
 
 ## Browser compatibility
 

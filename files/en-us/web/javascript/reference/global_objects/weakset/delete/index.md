@@ -1,43 +1,49 @@
 ---
 title: WeakSet.prototype.delete()
+short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
 browser-compat: javascript.builtins.WeakSet.delete
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`delete()`** method of {{jsxref("WeakSet")}} instances removes the specified value from this set, if it is in the set.
 
-The **`delete()`** method removes the specified element from a
-`WeakSet` object.
+{{InteractiveExample("JavaScript Demo: WeakSet.prototype.delete()")}}
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
+```js interactive-example
+const weakset = new WeakSet();
+const object = {};
+
+weakset.add(object);
+
+console.log(weakset.has(object));
+// Expected output: true
+
+weakset.delete(object);
+
+console.log(weakset.has(object));
+// Expected output: false
+```
 
 ## Syntax
 
 ```js-nolint
-delete(value)
+weakSetInstance.delete(value)
 ```
 
 ### Parameters
 
 - `value`
-  - : Required. The object remove from the `WeakSet` object.
+  - : The value to remove from the `WeakSet` object. Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-`true` if an element in the `WeakSet` object has been removed
-successfully. `false` if the `value` is not found in
-the `WeakSet` or if the `value` is not an object.
+`true` if a value in the `WeakSet` object has been removed successfully. `false` if the value is not found in the `WeakSet`. Always returns `false` if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
-### Using the delete() method
+### Using delete()
 
 ```js
 const ws = new WeakSet();

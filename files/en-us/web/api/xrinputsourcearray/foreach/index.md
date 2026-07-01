@@ -1,26 +1,10 @@
 ---
-title: XRInputSourceArray.forEach()
+title: "XRInputSourceArray: forEach() method"
+short-title: forEach()
 slug: Web/API/XRInputSourceArray/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - forEach
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.forEach
 ---
 
@@ -41,10 +25,8 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : A function to execute once for each entry in the
     array `xrInputSourceArray`. The callback accepts up to three parameters:
-
     - `currentValue`
       - : A {{domxref("XRInputSource")}} object which is the value of the item from within
         the `xrInputSourceArray` which is currently being processed.

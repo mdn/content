@@ -1,33 +1,21 @@
 ---
-title: Navigation.canGoForward
+title: "Navigation: canGoForward property"
+short-title: canGoForward
 slug: Web/API/Navigation/canGoForward
 page-type: web-api-instance-property
-tags:
-  - API
-  - canGoForward
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Property
-  - Read-only
-  - Reference
-  - Scroll
-  - Traversal
 browser-compat: api.Navigation.canGoForward
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`canGoForward`** read-only property of the
 {{domxref("Navigation")}} interface returns `true` if it is possible to navigate forwards in the navigation history
-(i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
+(i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
 and `false` if it is not.
 
 ## Value
 
-A boolean value:`true` if it is possible to navigate forwards in the navigation history, `false`otherwise.
+A boolean value: `true` if it is possible to navigate forwards in the navigation history, `false` otherwise.
 
 ## Examples
 
@@ -38,7 +26,7 @@ async function backHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the first page');
+    displayBanner("You are on the first page");
   }
 }
 
@@ -48,7 +36,7 @@ async function forwardHandler() {
     // Handle any required clean-up after
     // navigation has finished
   } else {
-    displayBanner('You are on the last page');
+    displayBanner("You are on the last page");
   }
 }
 ```
@@ -65,4 +53,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

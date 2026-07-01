@@ -1,20 +1,12 @@
 ---
-title: KeyframeEffect.setKeyframes()
+title: "KeyframeEffect: setKeyframes() method"
+short-title: setKeyframes()
 slug: Web/API/KeyframeEffect/setKeyframes
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animations
-  - KeyframeEffect
-  - Method
-  - Reference
-  - setKeyframes
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.setKeyframes
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected `KeyframeEffect` with a new set of keyframes.
 
@@ -27,7 +19,6 @@ setKeyframes(keyframes)
 ### Parameters
 
 - `keyframes`
-
   - : A keyframe object or `null`. If set to `null`, the keyframes are replaced with a sequence of empty keyframes.
 
     More information about a keyframe object's [format](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#syntax).
@@ -59,33 +50,28 @@ None ({{jsxref("undefined")}}).
   </tbody>
 </table>
 
-> **Note:** If the keyframes cannot be processed or are malformed, the `KeyframeEffect`'s keyframes are not modified.
+> [!NOTE]
+> If the keyframes cannot be processed or are malformed, the `KeyframeEffect`'s keyframes are not modified.
 
 ## Examples
 
 ```js
 // passing an array of keyframe objects
-existingKeyframeEffect.setKeyframes(
-[
-  { color: 'blue' },
-    { color: 'green', left: '10px' }
-  ]
-);
+existingKeyframeEffect.setKeyframes([
+  { color: "blue" },
+  { color: "green", left: "10px" },
+]);
 
 // passing an object with arrays for values
-existingKeyframeEffect.setKeyframes(
-  {
-    color: ['blue', 'green'],
-    left: [ '0', '10px']
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: ["blue", "green"],
+  left: ["0", "10px"],
+});
 
 // passing a single-member object
-existingKeyframeEffect.setKeyframes(
-  {
-    color: 'blue'
-  }
-);
+existingKeyframeEffect.setKeyframes({
+  color: "blue",
+});
 ```
 
 ## Specifications

@@ -1,12 +1,8 @@
 ---
 title: "Window: error event"
+short-title: error
 slug: Web/API/Window/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - UI Events
-  - Window
 browser-compat: api.Window.error_event
 ---
 
@@ -14,32 +10,61 @@ browser-compat: api.Window.error_event
 
 The `error` event is fired on a {{domxref("Window")}} object when a resource failed to load or couldn't be used — for example if a script has an execution error.
 
+This event is only generated for script errors thrown synchronously, such as during initial loading or within event handlers. If a promise was rejected (including an uncaught `throw` within an `async function`) and no rejection handlers were attached, an {{domxref("Window/unhandledrejection_event", "unhandledrejection")}} event is fired instead.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => { }
 ```
 
-> **Note:** Due to historical reasons, `onerror` on `window` is the only event handler property that receives more than one argument.
+> [!NOTE]
+> For historical reasons, `onerror` on `Window` and {{domxref("WorkerGlobalScope")}} objects is the only event handler property that receives more than one argument.
 
 ## Event type
 
-The event object is a {{domxref("UIEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
+The event object is an {{domxref("ErrorEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
 
-{{InheritanceDiagram("UIEvent")}}
+{{InheritanceDiagram("ErrorEvent")}}
 
-## Usage notes
+## Description
 
-Unlike other events, the `error` event is canceled by returning `true` from the handler instead of returning `false`. When canceled, the error won't appear in the console, but the current script will still stop executing.
+### Event handler property
 
-The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `addEventLister` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
+For historical reasons, the `onerror` event handler property, on `Window` and {{domxref("WorkerGlobalScope")}} objects only, has different behavior from other event handler properties.
 
-- `event`
+Note that this only applies to handlers assigned to `onerror`, not to handlers added using `addEventListener()`.
+
+#### Cancellation
+
+Most event handlers assigned to event handler properties can cancel the event's default behavior by returning `false` from the handler:
+
+```js
+textarea.onkeydown = () => false;
+```
+
+However, for an event handler property to cancel the default behavior of the `error` event of `Window`, it must instead return `true`:
+
+```js
+window.onerror = () => true;
+```
+
+When canceled, the error won't appear in the console, but the current script will still stop executing.
+
+#### Arguments
+
+The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
+
+- `message`
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
+
+    > [!NOTE]
+    > In HTML, the [content event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) `onerror` on the {{HTMLElement("body")}} element attaches `error` event listeners to `window` (_not_ the `<body>` element). For this event handler, the first parameter is called `event`, not `message`, although it still contains a string; that is, you would use `<body onerror="console.error(event)">` to log the error message.
+
 - `source`
   - : A string containing the URL of the script that generated the error.
 - `lineno`
@@ -49,9 +74,22 @@ The event handler's signature is asymmetric between `addEventListener()` and `on
 - `error`
   - : The error being thrown. Usually an {{jsxref("Error")}} object.
 
-> **Note:** These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
+```js
+window.onerror = (a, b, c, d, e) => {
+  console.log(`message: ${a}`);
+  console.log(`source: ${b}`);
+  console.log(`lineno: ${c}`);
+  console.log(`colno: ${d}`);
+  console.log(`error: ${e}`);
 
-This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/Element/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
+  return true;
+};
+```
+
+> [!NOTE]
+> These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
+
+This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/HTMLElement/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
 
 ## Examples
 
@@ -62,7 +100,7 @@ This special behavior only happens for the `onerror` event handler on `window`. 
 ```html
 <div class="controls">
   <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+  <img src="bad-image.jpg" class="bad-img" alt="I don't exist" />
 </div>
 
 <div class="event-log">
@@ -125,8 +163,7 @@ window.addEventListener("error", (event) => {
 
 const scriptError = document.querySelector("#script-error");
 scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+  throw new Error("This is a script error");
 });
 ```
 
@@ -144,4 +181,5 @@ scriptError.addEventListener("click", () => {
 
 ## See also
 
-- This event on `Element` targets: {{domxref("Element/error_event", "error")}} event
+- This event on `Element` targets: {{domxref("HTMLElement/error_event", "error")}} event
+- [`Window`: `unhandledrejection` event](/en-US/docs/Web/API/Window/unhandledrejection_event)

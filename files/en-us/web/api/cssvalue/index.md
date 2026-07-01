@@ -2,22 +2,18 @@
 title: CSSValue
 slug: Web/API/CSSValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSValue
-  - Interface
-  - NeedsExample
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSValue
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.
 
-> **Note:** This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -27,10 +23,9 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 
 ## Instance properties
 
-- {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : A string representing the current value.
-- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-
+- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : An `unsigned short` representing a code defining the type of the value. Possible values are:
 
     | Constant              | Description                                                                                                                                                                                              |

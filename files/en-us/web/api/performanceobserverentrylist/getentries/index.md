@@ -1,17 +1,12 @@
 ---
-title: PerformanceObserverEntryList.getEntries()
+title: "PerformanceObserverEntryList: getEntries() method"
+short-title: getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PerformanceObserverEntryList
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntries()`** method of the {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly observed {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
 
@@ -20,6 +15,10 @@ The **`getEntries()`** method of the {{domxref("PerformanceObserverEntryList")}}
 ```js-nolint
 getEntries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -36,25 +35,25 @@ const observer = new PerformanceObserver((list, obs) => {
   // Log all entries
   let perfEntries = list.getEntries();
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s duration: ${entry.duration}`)
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   });
 
   // Log entries named "debugging" with type "measure"
   perfEntries = list.getEntriesByName("debugging", "measure");
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s duration: ${entry.duration}`)
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
   });
 
   // Log entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
   perfEntries.forEach((entry) => {
-    console.log(`${entry.name}'s startTime: ${entry.startTime}`)
+    console.log(`${entry.name}'s startTime: ${entry.startTime}`);
   });
 });
 
 // Subscribe to various performance event types
 observer.observe({
-  entryTypes: ['mark', 'measure', 'navigation', 'resource']
+  entryTypes: ["mark", "measure", "navigation", "resource"],
 });
 ```
 

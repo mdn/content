@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.03 661.07">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        font-size: 8px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: #231f20;
+      }
+
+      .cls-2, .cls-5, .cls-10 {
+        font-family: Menlo-Regular, Menlo;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12, .cls-4, .cls-6, .cls-7, .cls-8 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-12, .cls-6, .cls-9 {
+        font-size: 12px;
+      }
+
+      .cls-13 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        font-size: 10px;
+      }
+
+      .cls-5, .cls-10 {
+        font-size: 9px;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-16 {
+        fill: #fff;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-17 {
+        fill: #cab739;
+      }
+
+      .cls-18 {
+        fill: #39cac4;
+      }
+
+      .cls-19 {
+        fill: #3eca39;
+      }
+
+      .cls-20 {
+        fill: #3ef939;
+      }
+
+      .cls-7 {
+        font-size: 14px;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-21, .cls-22, .cls-23 {
+        fill: none;
+      }
+
+      .cls-8 {
+        font-size: 18px;
+      }
+
+      .cls-22 {
+        stroke-dasharray: 0 0 5 5;
+      }
+
+      .cls-9 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .cls-23 {
+        stroke-dasharray: 0 0 1 1;
+        stroke-width: .5px;
+      }
+
+      .cls-25 {
+        letter-spacing: .01em;
+      }
+    </style>
+  </defs>
+  <text class="cls-7" transform="translate(32.76 40.55)"><tspan x="0" y="0">HTM</tspan><tspan class="cls-15" x="30.32" y="0">L</tspan><tspan x="37.59" y="0" xml:space="preserve"> page</tspan></text>
+  <text class="cls-7" transform="translate(30.3 370.45)"><tspan class="cls-1" x="0" y="0">W</tspan><tspan x="12.96" y="0">orker</tspan></text>
+  <text class="cls-8" transform="translate(.03 15.45)"><tspan x="0" y="0">Agent cluster</tspan></text>
+  <rect class="cls-16" x="24.67" y="46.73" width="542.86" height="283.71"/>
+  <rect class="cls-16" x="415.25" y="60.5" width="137.44" height="250.65"/>
+  <rect class="cls-18" x="425.24" y="255.12" width="117.46" height="46.62"/>
+  <text class="cls-6" transform="translate(437.92 272.77)"><tspan x="0" y="0">Execution context</tspan></text>
+  <text class="cls-5" transform="translate(438.84 290.02)"><tspan x="0" y="0">a = {...}</tspan></text>
+  <text class="cls-5" transform="translate(499.32 290.78)"><tspan x="0" y="0">b = 2</tspan></text>
+  <rect class="cls-16" x="154.22" y="248.19" width="242.15" height="63.07"/>
+  <rect class="cls-16" x="154.22" y="60.5" width="242.15" height="172"/>
+  <rect class="cls-18" x="322.66" y="255.49" width="55.57" height="47.45"/>
+  <rect class="cls-17" x="258.42" y="256" width="55.57" height="47.45"/>
+  <text class="cls-2" transform="translate(324.98 290.02)"><tspan x="0" y="0">() =&gt; {...}</tspan></text>
+  <text class="cls-2" transform="translate(261.04 290.02)"><tspan x="0" y="0">() =&gt; {...}</tspan></text>
+  <text class="cls-6" transform="translate(277.29 274.01)"><tspan x="0" y="0">Job</tspan></text>
+  <text class="cls-6" transform="translate(342.48 274.14)"><tspan x="0" y="0">Job</tspan></text>
+  <rect class="cls-18" x="425.24" y="199.13" width="117.46" height="46.62"/>
+  <text class="cls-6" transform="translate(437.92 216.77)"><tspan x="0" y="0">Execution context</tspan></text>
+  <text class="cls-5" transform="translate(439.42 235.17)"><tspan x="0" y="0">a = {...}</tspan></text>
+  <text class="cls-5" transform="translate(498.47 235.17)"><tspan x="0" y="0">b = 4</tspan></text>
+  <rect class="cls-17" x="425.24" y="143.13" width="117.46" height="46.62"/>
+  <text class="cls-6" transform="translate(437.92 160.78)"><tspan x="0" y="0">Execution context</tspan></text>
+  <text class="cls-5" transform="translate(443.71 179.18)"><tspan x="0" y="0">c = null</tspan></text>
+  <text class="cls-5" transform="translate(492.51 179.18)"><tspan x="0" y="0">d = 0</tspan></text>
+  <text class="cls-6" transform="translate(162.61 265.49)"><tspan x="0" y="0">Queue</tspan></text>
+  <text class="cls-6" transform="translate(425.24 77.79)"><tspan x="0" y="0">Stack</tspan></text>
+  <text class="cls-6" transform="translate(163.05 76.81)"><tspan x="0" y="0">Heap</tspan></text>
+  <g>
+    <line class="cls-23" x1="470.32" y1="286.75" x2="371.54" y2="192.2"/>
+    <polygon class="cls-3" points="368.99 189.76 373.99 191.73 371.73 192.38 371.18 194.67 368.99 189.76"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="470.67" y1="230.96" x2="370.58" y2="133.9"/>
+    <polygon class="cls-3" points="368.05 131.44 373.04 133.44 370.77 134.08 370.21 136.36 368.05 131.44"/>
+  </g>
+  <rect class="cls-18" x="39.86" y="91.45" width="100" height="75" rx="12" ry="12"/>
+  <rect class="cls-17" x="38.89" y="179.04" width="100" height="75" rx="12" ry="12"/>
+  <text class="cls-6" transform="translate(48.51 107.08)"><tspan x="0" y="0">Window realm</tspan></text>
+  <text class="cls-6" transform="translate(47.72 195.63)"><tspan x="0" y="0">&lt;iframe&gt; realm</tspan></text>
+  <g>
+    <line class="cls-21" x1="378.23" y1="279.73" x2="409.21" y2="279.73"/>
+    <path class="cls-3" d="m415.25,279.73c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+  </g>
+  <text class="cls-5" transform="translate(50.59 123.2)"><tspan x="0" y="0">Array</tspan></text>
+  <text class="cls-5" transform="translate(50.89 137.99)"><tspan x="0" y="0">Array.prototype</tspan></text>
+  <text class="cls-5" transform="translate(50.75 152.86)"><tspan x="0" y="0">HTMLElement</tspan></text>
+  <text class="cls-5" transform="translate(50.9 211.03)"><tspan x="0" y="0">Array</tspan></text>
+  <text class="cls-5" transform="translate(51.2 225.82)"><tspan x="0" y="0">Array.prototype</tspan></text>
+  <text class="cls-5" transform="translate(51.06 240.69)"><tspan x="0" y="0">HTMLElement</tspan></text>
+  <circle class="cls-19" cx="186.26" cy="146.5" r="17.88"/>
+  <circle class="cls-19" cx="248.42" cy="212.29" r="17.88"/>
+  <circle class="cls-20" cx="354.48" cy="118.28" r="17.88"/>
+  <circle class="cls-20" cx="354.48" cy="179.32" r="17.88"/>
+  <circle class="cls-19" cx="192.92" cy="206.11" r="17.88"/>
+  <circle class="cls-19" cx="228.68" cy="174.62" r="17.88"/>
+  <circle class="cls-19" cx="258.42" cy="133.07" r="17.88"/>
+  <circle class="cls-19" cx="220.35" cy="100.39" r="17.88"/>
+  <g>
+    <line class="cls-23" x1="133.89" y1="137.25" x2="164.97" y2="145.58"/>
+    <polygon class="cls-3" points="168.38 146.5 163.05 147.17 164.71 145.51 164.1 143.24 168.38 146.5"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="112.73" y1="150.95" x2="207.37" y2="173.79"/>
+    <polygon class="cls-3" points="210.8 174.62 205.49 175.43 207.11 173.73 206.44 171.48 210.8 174.62"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="81.78" y1="118.28" x2="198.98" y2="100.91"/>
+    <polygon class="cls-3" points="202.47 100.39 197.85 103.13 198.71 100.95 197.25 99.11 202.47 100.39"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="80.8" y1="208.67" x2="237.3" y2="141.26"/>
+    <polygon class="cls-3" points="240.54 139.87 236.78 143.7 237.06 141.37 235.17 139.97 240.54 139.87"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="136.09" y1="224.61" x2="172.99" y2="213.89"/>
+    <polygon class="cls-3" points="176.38 212.9 172.17 216.24 172.74 213.96 171.03 212.34 176.38 212.9"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="113.53" y1="236.76" x2="230.19" y2="222.86"/>
+    <polygon class="cls-3" points="233.7 222.44 229 225.05 229.93 222.89 228.52 221.01 233.7 222.44"/>
+  </g>
+  <circle class="cls-20" cx="307.3" cy="181.2" r="17.88"/>
+  <text class="cls-10" transform="translate(261.2 158.61)"><tspan x="0" y="0">A SharedArrayBuffer</tspan></text>
+  <rect class="cls-16" x="24.67" y="376.85" width="542.86" height="283.71"/>
+  <rect class="cls-16" x="415.25" y="390.62" width="137.44" height="250.65"/>
+  <rect class="cls-18" x="425.24" y="585.24" width="117.46" height="46.62"/>
+  <text class="cls-6" transform="translate(437.92 602.89)"><tspan x="0" y="0">Execution context</tspan></text>
+  <text class="cls-5" transform="translate(438.84 620.15)"><tspan x="0" y="0">a = {...}</tspan></text>
+  <text class="cls-5" transform="translate(499.32 620.9)"><tspan x="0" y="0">c = 0</tspan></text>
+  <rect class="cls-16" x="154.22" y="578.32" width="242.15" height="63.07"/>
+  <rect class="cls-16" x="154.22" y="390.62" width="242.15" height="172"/>
+  <rect class="cls-18" x="322.66" y="585.62" width="55.57" height="47.45"/>
+  <rect class="cls-18" x="258.42" y="586.13" width="55.57" height="47.45"/>
+  <text class="cls-2" transform="translate(324.98 620.15)"><tspan x="0" y="0">() =&gt; {...}</tspan></text>
+  <text class="cls-2" transform="translate(261.04 620.15)"><tspan x="0" y="0">() =&gt; {...}</tspan></text>
+  <text class="cls-6" transform="translate(277.29 604.13)"><tspan x="0" y="0">Job</tspan></text>
+  <text class="cls-6" transform="translate(342.48 604.26)"><tspan x="0" y="0">Job</tspan></text>
+  <rect class="cls-18" x="425.24" y="529.25" width="117.46" height="46.62"/>
+  <text class="cls-9" transform="translate(437.92 546.9)"><tspan x="0" y="0">E</tspan><tspan class="cls-13" x="5.9" y="0">x</tspan><tspan x="11.28" y="0">ecution </tspan><tspan class="cls-14" x="51.85" y="0">c</tspan><tspan x="57.16" y="0">o</tspan><tspan class="cls-24" x="63.74" y="0">n</tspan><tspan class="cls-14" x="70.36" y="0">t</tspan><tspan class="cls-11" x="74.25" y="0">e</tspan><tspan class="cls-25" x="80.23" y="0">x</tspan><tspan x="85.94" y="0">t</tspan></text>
+  <text class="cls-5" transform="translate(439.42 565.29)"><tspan x="0" y="0">a = {...}</tspan></text>
+  <text class="cls-5" transform="translate(498.47 565.29)"><tspan x="0" y="0">c = 0</tspan></text>
+  <text class="cls-6" transform="translate(162.61 595.61)"><tspan x="0" y="0">Queue</tspan></text>
+  <text class="cls-6" transform="translate(425.24 407.91)"><tspan x="0" y="0">Stack</tspan></text>
+  <text class="cls-6" transform="translate(163.05 406.93)"><tspan x="0" y="0">Heap</tspan></text>
+  <g>
+    <line class="cls-23" x1="470.32" y1="616.87" x2="371.54" y2="522.32"/>
+    <polygon class="cls-3" points="368.99 519.88 373.99 521.85 371.73 522.51 371.18 524.79 368.99 519.88"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="470.67" y1="561.09" x2="370.58" y2="464.02"/>
+    <polygon class="cls-3" points="368.05 461.56 373.04 463.57 370.77 464.2 370.21 466.48 368.05 461.56"/>
+  </g>
+  <rect class="cls-18" x="39.86" y="421.57" width="100" height="75" rx="12" ry="12"/>
+  <text class="cls-4" transform="translate(48.51 437.2)"><tspan class="cls-1" x="0" y="0">W</tspan><tspan x="9.26" y="0">orkerGlobalScope</tspan><tspan x="0" y="12">realm</tspan></text>
+  <g>
+    <line class="cls-21" x1="378.23" y1="609.85" x2="409.21" y2="609.85"/>
+    <path class="cls-3" d="m415.25,609.85c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+  </g>
+  <text class="cls-5" transform="translate(50.59 466.28)"><tspan x="0" y="0">Array</tspan></text>
+  <text class="cls-5" transform="translate(50.59 482.81)"><tspan x="0" y="0">Array.prototype</tspan></text>
+  <circle class="cls-19" cx="186.26" cy="476.62" r="17.88"/>
+  <circle class="cls-20" cx="354.48" cy="448.4" r="17.88"/>
+  <circle class="cls-20" cx="354.48" cy="509.45" r="17.88"/>
+  <circle class="cls-19" cx="220.35" cy="430.52" r="17.88"/>
+  <g>
+    <line class="cls-23" x1="135.64" y1="477.88" x2="164.85" y2="476.76"/>
+    <polygon class="cls-3" points="168.38 476.62 163.48 478.84 164.59 476.77 163.33 474.78 168.38 476.62"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="81.45" y1="461.36" x2="199.05" y2="431.39"/>
+    <polygon class="cls-3" points="202.47 430.52 198.15 433.72 198.79 431.45 197.15 429.78 202.47 430.52"/>
+  </g>
+  <circle class="cls-20" cx="300.8" cy="430.52" r="17.88"/>
+  <text class="cls-10" transform="translate(234.45 461.36)"><tspan x="0" y="0">A SharedArrayBuffer</tspan></text>
+  <g>
+    <line class="cls-22" x1="303.94" y1="206.19" x2="300.9" y2="405.58"/>
+    <polygon class="cls-3" points="304.05 199.13 299.83 209.01 303.93 206.71 307.96 209.14 304.05 199.13"/>
+    <polygon class="cls-3" points="300.8 412.64 296.88 402.63 300.91 405.05 305.01 402.75 300.8 412.64"/>
+  </g>
+  <text class="cls-12" transform="translate(307.81 359.56)"><tspan x="0" y="0">Share memory</tspan></text>
+  <text class="cls-12" transform="translate(380.97 291.91)"><tspan x="0" y="0">Execute</tspan></text>
+  <text class="cls-12" transform="translate(379.14 622.03)"><tspan x="0" y="0">Execute</tspan></text>
+</svg>

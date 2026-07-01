@@ -1,21 +1,12 @@
 ---
-title: SourceBuffer.appendWindowEnd
+title: "SourceBuffer: appendWindowEnd property"
+short-title: appendWindowEnd
 slug: Web/API/SourceBuffer/appendWindowEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBuffer
-  - Video
-  - appendWindowEnd
 browser-compat: api.SourceBuffer.appendWindowEnd
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`appendWindowEnd`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the end of the [append window](https://w3c.github.io/media-source/#append-window), a
@@ -37,7 +28,7 @@ The following exceptions may be thrown when setting a new value for this propert
   - : Thrown if an attempt was made to set the value to less than or equal to
     {{domxref("SourceBuffer.appendWindowStart")}} or `NaN`.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if this {{domxref("SourceBuffer")}} object is being updated (i.e.
+  - : Thrown if this {{domxref("SourceBuffer")}} object is being updated (i.e.,
     its {{domxref("SourceBuffer.updating")}} property is
     currently `true`), or this `SourceBuffer` has been
     removed from the {{domxref("MediaSource")}}.

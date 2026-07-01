@@ -1,24 +1,20 @@
 ---
-title: CanvasRenderingContext2D.globalAlpha
+title: "CanvasRenderingContext2D: globalAlpha property"
+short-title: globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.globalAlpha
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.globalAlpha`**
 property of the Canvas 2D API specifies the alpha (transparency) value that is applied
 to shapes and images before they are drawn onto the canvas.
 
-> **Note:** See also the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> See also the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
@@ -40,15 +36,15 @@ rectangles.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.globalAlpha = 0.5;
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.fillRect(50, 50, 100, 100);
 ```
 
@@ -73,19 +69,19 @@ background would eventually disappear completely from the center of the image.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw background
-ctx.fillStyle = '#FD0';
+ctx.fillStyle = "#ffdd00";
 ctx.fillRect(0, 0, 75, 75);
-ctx.fillStyle = '#6C0';
+ctx.fillStyle = "#66cc00";
 ctx.fillRect(75, 0, 75, 75);
-ctx.fillStyle = '#09F';
+ctx.fillStyle = "#0099ff";
 ctx.fillRect(0, 75, 75, 75);
-ctx.fillStyle = '#F30';
+ctx.fillStyle = "#ff3300";
 ctx.fillRect(75, 75, 75, 75);
-ctx.fillStyle = '#FFF';
+ctx.fillStyle = "white";
 
 // Set transparency value
 ctx.globalAlpha = 0.2;
@@ -98,8 +94,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180",
-  "canvas_globalalpha.png")}}
+{{EmbedLiveSample("Overlaying_transparent_shapes", "", "180")}}
 
 ## Specifications
 

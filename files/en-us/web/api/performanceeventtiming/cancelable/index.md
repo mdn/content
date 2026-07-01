@@ -1,12 +1,8 @@
 ---
-title: PerformanceEventTiming.cancelable
+title: "PerformanceEventTiming: cancelable property"
+short-title: cancelable
 slug: Web/API/PerformanceEventTiming/cancelable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming.cancelable
 ---
 
@@ -35,7 +31,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 ## Specifications

@@ -1,24 +1,21 @@
 ---
 title: "AbortSignal: abort event"
+short-title: abort
 slug: Web/API/AbortSignal/abort_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.AbortSignal.abort_event
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
+The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e., using {{domxref("AbortController.abort()")}}.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener('abort', (event) => { })
+addEventListener("abort", (event) => { })
 
 onabort = (event) => { }
 ```

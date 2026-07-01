@@ -1,29 +1,21 @@
 ---
-title: CacheStorage.open()
+title: "CacheStorage: open() method"
+short-title: open()
 slug: Web/API/CacheStorage/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - open
 browser-compat: api.CacheStorage.open
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`open()`** method of the
 {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
 the {{domxref("Cache")}} object matching the `cacheName`.
 
-You can access `CacheStorage` through the global
-{{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
-> **Note:** If the specified {{domxref("Cache")}} does not exist, a new
+> [!NOTE]
+> If the specified {{domxref("Cache")}} does not exist, a new
 > cache is created with that `cacheName` and a {{jsxref("Promise")}} that
 > resolves to this new {{domxref("Cache")}} object is returned.
 
@@ -66,8 +58,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -84,4 +76,4 @@ self.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

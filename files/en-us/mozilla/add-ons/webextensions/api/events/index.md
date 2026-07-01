@@ -1,19 +1,10 @@
 ---
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - events
+page-type: webextension-api
 browser-compat: webextensions.api.events
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Common types used by APIs that dispatch events.
 
@@ -26,13 +17,14 @@ Common types used by APIs that dispatch events.
 - {{WebExtAPIRef("events.UrlFilter")}}
   - : Filters URLs for various criteria. If any of the given criteria match, then the whole filter matches.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

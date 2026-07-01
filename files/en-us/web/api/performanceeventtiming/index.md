@@ -2,14 +2,6 @@
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Event Timing API
-  - Interface
-  - Performance
-  - PerformanceEventTiming
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
 
@@ -21,7 +13,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides insights
 
 This API enables visibility into slow events by providing event timestamps and duration for certain event types ([see below](#events_exposed)). For example, you can monitor the time between a user action and the start of its event handler, or the time an event handler takes to run.
 
-This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
+This API is particularly useful for measuring the {{Glossary("Interaction to Next Paint")}} (INP): the longest time (minus some outliers) from the point when a user interacts with your app to the point until the browser was actually able to respond to that interaction.
 
 You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
 
@@ -69,8 +61,8 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Input events</th>
       <td>
-        {{domxref("HTMLElement/beforeinput_event", "beforeinput")}},
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/beforeinput_event", "beforeinput")}},
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -95,15 +87,15 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Pointer events</th>
       <td>
-        {{domxref("HTMLElement/pointerover_event", "pointerover")}},
-        {{domxref("HTMLElement/pointerenter_event", "pointerenter")}},
-        {{domxref("HTMLElement/pointerdown_event", "pointerdown")}},
-        {{domxref("HTMLElement/pointerup_event", "pointerup")}},
-        {{domxref("HTMLElement/pointercancel_event", "pointercancel")}},
-        {{domxref("HTMLElement/pointerout_event", "pointerout")}},
-        {{domxref("HTMLElement/pointerleave_event", "pointerleave")}},
-        {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}},
-        {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+        {{domxref("Element/pointerover_event", "pointerover")}},
+        {{domxref("Element/pointerenter_event", "pointerenter")}},
+        {{domxref("Element/pointerdown_event", "pointerdown")}},
+        {{domxref("Element/pointerup_event", "pointerup")}},
+        {{domxref("Element/pointercancel_event", "pointercancel")}},
+        {{domxref("Element/pointerout_event", "pointerout")}},
+        {{domxref("Element/pointerleave_event", "pointerleave")}},
+        {{domxref("Element/gotpointercapture_event", "gotpointercapture")}},
+        {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
       </td>
     </tr>
     <tr>
@@ -118,7 +110,7 @@ The following event types are exposed by the Event Timing API:
 </table>
 
 Note that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
-{{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
+{{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
 
@@ -141,13 +133,13 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the associated event's type.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
 
 This interface also supports the following properties:
 
 - {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
   - : Returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property.
-- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
   - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.
@@ -176,80 +168,23 @@ const observer = new PerformanceObserver((list) => {
     // Input delay (before processing event)
     const delay = entry.processingStart - entry.startTime;
 
-    // Synchronous event processing time 
+    // Synchronous event processing time
     // (between start and end dispatch)
     const eventHandlerTime = entry.processingEnd - entry.processingStart;
-  console.log(`Total duration: ${duration}`);
-  console.log(`Event delay: ${delay}`);
-  console.log(`Event handler duration: ${time}`);
+    console.log(`Total duration: ${duration}`);
+    console.log(`Event delay: ${delay}`);
+    console.log(`Event handler duration: ${eventHandlerTime}`);
   });
 });
 
 // Register the observer for events
-observer.observe({type: "event", buffered: true});
+observer.observe({ type: "event", buffered: true });
 ```
 
 You can also set a different [`durationThreshold`](/en-US/docs/Web/API/PerformanceObserver/observe#durationthreshold). The default is 104ms and the minimum possible duration threshold is 16ms.
 
 ```js
-observer.observe({type: "event", durationThreshold: 16, buffered: true});
-```
-
-### Reporting the First Input Delay (FID)
-
-The {{Glossary("first input delay")}} or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
-
-```js
-// Keep track of whether (and when) the page was first hidden, see:
-// https://github.com/w3c/page-visibility/issues/29
-// NOTE: ideally this check would be performed in the document <head>
-// to avoid cases where the visibility state changes before this code runs.
-let firstHiddenTime = document.visibilityState === 'hidden' ? 0 : Infinity;
-document.addEventListener('visibilitychange', (event) => {
-  firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-}, {once: true});
-
-// Sends the passed data to an analytics endpoint. This code
-// uses `/analytics`; you can replace it with your own URL.
-function sendToAnalytics(data) {
-  const body = JSON.stringify(data);
-  // Use `navigator.sendBeacon()` if available, 
-  // falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-      fetch('/analytics', {body, method: 'POST', keepalive: true});
-}
-
-// Use a try/catch instead of feature detecting `first-input`
-// support, since some browsers throw when using the new `type` option.
-// https://bugs.webkit.org/show_bug.cgi?id=209216
-try {
-  function onFirstInputEntry(entry) {
-    // Only report FID if the page wasn't hidden prior to
-    // the entry being dispatched. This typically happens when a
-    // page is loaded in a background tab.
-    if (entry.startTime < firstHiddenTime) {
-      const fid = entry.processingStart - entry.startTime;
-
-      // Report the FID value to an analytics endpoint.
-      sendToAnalytics({fid});
-    }
-  }
-
-  // Create a PerformanceObserver that calls
-  // `onFirstInputEntry` for each entry.
-  const po = new PerformanceObserver((entryList) => {
-    entryList.getEntries().forEach(onFirstInputEntry);
-  });
-
-  // Observe entries of type `first-input`, including buffered entries,
-  // i.e. entries that occurred before calling `observe()` below.
-  po.observe({
-    type: 'first-input',
-    buffered: true,
-  });
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+observer.observe({ type: "event", durationThreshold: 16, buffered: true });
 ```
 
 ## Specifications
@@ -259,3 +194,8 @@ try {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

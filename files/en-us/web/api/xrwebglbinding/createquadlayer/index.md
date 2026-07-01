@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createQuadLayer()
+title: "XRWebGLBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRWebGLBinding/createQuadLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createQuadLayer
 ---
 
@@ -28,7 +23,7 @@ createQuadLayer(options)
 - `options`
   - : An object to configure the {{domxref("XRQuadLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA`
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -50,7 +45,7 @@ createQuadLayer(options)
         - All of the formats the extension supports.
           The default value is `gl.RGBA`.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
         Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT`
         - `gl.DEPTH_STENCIL`
@@ -114,10 +109,10 @@ function onXRSessionStarted(xrSession) {
     space: xrReferenceSpace,
     viewPixelHeight: 512,
     viewPixelWidth: 512,
-    transform: new XRRigidTransform({z: -2})
+    transform: new XRRigidTransform({ z: -2 }),
   });
   xrSession.updateRenderState({
-    layers: [quadLayer]
+    layers: [quadLayer],
   });
 }
 ```

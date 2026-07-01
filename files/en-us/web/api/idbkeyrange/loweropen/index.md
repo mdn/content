@@ -1,26 +1,16 @@
 ---
-title: IDBKeyRange.lowerOpen
+title: "IDBKeyRange: lowerOpen property"
+short-title: lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - lowerOpen
 browser-compat: api.IDBKeyRange.lowerOpen
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`lowerOpen`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
 lower-bound value is included in the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -45,8 +35,9 @@ After declaring the key range, we log its `lowerOpen` property value to the
 console, which should appear as "true": the lower bound is open, so won't be included in
 the range.
 
-> **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
+> [!NOTE]
+> For a more complete example allowing you to experiment with
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

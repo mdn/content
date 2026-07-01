@@ -2,14 +2,6 @@
 title: StyleSheet
 slug: Web/API/StyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - DOM
-  - Interface
-  - Reference
-  - StyleSheet
 browser-compat: api.StyleSheet
 ---
 
@@ -28,7 +20,7 @@ An object implementing the `StyleSheet` interface represents a single style shee
 - {{domxref("StyleSheet.ownerNode")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Node")}} associating this style sheet with the current document.
 - {{domxref("StyleSheet.parentStyleSheet")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("StyleSheet")}} including this one, if any; returns `null` if there aren't any.
+  - : Returns a `StyleSheet` including this one, if any; returns `null` if there aren't any.
 - {{domxref("StyleSheet.title")}} {{ReadOnlyInline}}
   - : Returns a string representing the advisory title of the current style sheet.
 - {{domxref("StyleSheet.type")}} {{ReadOnlyInline}}

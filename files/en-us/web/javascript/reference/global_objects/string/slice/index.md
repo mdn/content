@@ -1,22 +1,32 @@
 ---
 title: String.prototype.slice()
+short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.slice
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`slice()`** method extracts a section of a string and
+The **`slice()`** method of {{jsxref("String")}} values extracts a section of this string and
 returns it as a new string, without modifying the original string.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Syntax
 
@@ -38,16 +48,28 @@ A new string containing the extracted section of the string.
 
 ## Description
 
-`slice()` extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.
+`slice()` extracts the text from one string and returns a new string.
 
-`slice()` extracts up to but not including `indexEnd`. For example, `str.slice(1, 4)` extracts the second character through the fourth character (characters indexed `1`, `2`, and `3`).
+`slice()` extracts up to but not including `indexEnd`. For example, `str.slice(4, 8)` extracts the fifth character through the eighth character (characters indexed `4`, `5`, `6`, and `7`):
+
+```plain
+              indexStart        indexEnd
+                  ↓               ↓
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| T | h | e |   | m | i | r | r | o | r |
+
+                  m   i   r   r
+                 _______________
+                      ↑
+                    Result
+```
 
 - If `indexStart >= str.length`, an empty string is returned.
 - If `indexStart < 0`, the index is counted from the end of the string. More formally, in this case, the substring starts at `max(indexStart + str.length, 0)`.
-- If `indexStart` is omitted, undefined, or cannot be converted to a number (using {{jsxref('Number', 'Number(indexStart)')}}), it's treated as `0`.
-- If `indexEnd` is omitted, undefined, or cannot be converted to a number (using {{jsxref('Number', 'Number(indexEnd)')}}), or if `indexEnd >= str.length`, `slice()` extracts to the end of the string.
+- If `indexStart` is omitted, `undefined`, or cannot be [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), it's treated as `0`.
+- If `indexEnd` is omitted or `undefined`, or if `indexEnd >= str.length`, `slice()` extracts to the end of the string.
 - If `indexEnd < 0`, the index is counted from the end of the string. More formally, in this case, the substring ends at `max(indexEnd + str.length, 0)`.
-- If `indexEnd <= indexStart` after normalizing negative values (i.e. `indexEnd` represents a character that's before `indexStart`), an empty string is returned.
+- If `indexEnd <= indexStart` after normalizing negative values (i.e., `indexEnd` represents a character that's before `indexStart`), an empty string is returned.
 
 ## Examples
 

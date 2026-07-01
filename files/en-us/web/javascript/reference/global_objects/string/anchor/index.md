@@ -1,24 +1,20 @@
 ---
 title: String.prototype.anchor()
+short-title: anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 page-type: javascript-instance-method
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.anchor
+sidebar: jsref
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-The **`anchor()`** method creates a string that embeds a string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
+The **`anchor()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 >
 > The HTML specification no longer allows the {{HTMLElement("a")}} element to have a `name` attribute, so this method doesn't even create valid markup.
 
@@ -41,16 +37,30 @@ A string beginning with an `<a name="name">` start tag (double quotes in `name` 
 
 ### Using anchor()
 
-```js
-const myString = "Table of Contents";
+The code below creates an HTML string and then replaces the document's body with it:
 
-document.body.innerHTML = myString.anchor("contents_anchor");
+```js
+const contentString = "Hello, world";
+
+document.body.innerHTML = contentString.anchor("hello");
 ```
 
-will output the following HTML:
+This will create the following HTML:
 
 ```html
-<a name="contents_anchor">Table of Contents</a>
+<a name="hello">Hello, world</a>
+```
+
+> [!WARNING]
+> This markup is invalid, because `name` is no longer a valid attribute of the {{HTMLElement("a")}} element.
+
+Instead of using `anchor()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement). For example:
+
+```js
+const contentString = "Hello, world";
+const elem = document.createElement("a");
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## Specifications
@@ -64,4 +74,6 @@ will output the following HTML:
 ## See also
 
 - [Polyfill of `String.prototype.anchor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.link()")}}
+- [es-shims polyfill of `String.prototype.anchor`](https://www.npmjs.com/package/es-string-html-methods)
+- [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- {{HTMLElement("a")}}

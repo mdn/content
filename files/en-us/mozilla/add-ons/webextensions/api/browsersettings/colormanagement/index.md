@@ -1,19 +1,10 @@
 ---
 title: browserSettings.colorManagement
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/colorManagement
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - colorManagement
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.colorManagement
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to query and set the browser's color management features.
 
@@ -27,10 +18,6 @@ The object has these properties:
   - : A boolean representing whether or not built-in sRGB color management is used.
 - `useWebRenderCompositor`
   - : A boolean representing whether or not the WebRender compositor is used.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,3 +44,7 @@ browser.browserSettings.colorManagement.useNativeSRGB.get({}).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

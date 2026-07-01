@@ -1,18 +1,11 @@
 ---
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - Canvas
-  - Device Orientation API
-  - Game Development
-  - HTML
-  - Phaser
-  - Vibration API
+page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
+In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/API/Device_orientation_events) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
 ## Example game
 
@@ -22,11 +15,11 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Phaser framework
 
-[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/photonstorm/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://phaser.io/examples). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
+[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/phaserjs/phaser) where it's open sourced, read the [online documentation](https://docs.phaser.io/) and go through the big collection of [examples](https://labs.phaser.io/). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
 
 ## Starting with the project
 
-You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up an {{htmlelement("canvas")}} to render the game on.
+You can see [Cyber Orb source code](https://github.com/EnclaveGames/Cyber-Orb) on GitHub. The folder structure is quite straightforward: the starting point is the `index.html` file where we initialize the framework and set up a {{htmlelement("canvas")}} to render the game on.
 
 ![Screenshot of the GitHub repository with the Cyber Orb game code, listing the folders and the files in the main structure.](cyber-orb-github.png)
 
@@ -34,14 +27,14 @@ You can open the index file in your favorite browser to launch the game and try 
 
 - `img`: All the images that we will use in the game.
 - `src`: The JavaScript files with all the source code of the game defined inside.
-- `audio:` The sound files used in the game.
+- `audio`: The sound files used in the game.
 
 ## Setting up the Canvas
 
 We will be rendering our game on Canvas, but we won't do it manually — this will be taken care of by the framework. Let's set it up: our starting point is the `index.html` file with the following content. You can create this yourself if you want to follow along:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -49,7 +42,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
     <style>
       body {
         margin: 0;
-        background: #333;
+        background: #333333;
       }
     </style>
     <script src="src/phaser-arcade-physics.2.2.2.min.js"></script>
@@ -89,7 +82,8 @@ The line above will initialize the Phaser instance — the arguments are the wid
 
 The important thing to remember is that the framework is setting up helpful methods to speed up a lot of things like image manipulation or assets management, which would be a lot harder to do manually.
 
-> **Note:** You can read the [Building Monster Wants Candy](https://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) article for the in-depth introduction to the basic Phaser-specific functions and methods.
+> [!NOTE]
+> You can read the [Building Monster Wants Candy](https://webdesign.tutsplus.com/getting-started-with-phaser-building-monster-wants-candy--cms-21723t) article for the in-depth introduction to the basic Phaser-specific functions and methods.
 
 Back to game states: the line below is adding a new state called `Boot` to the game:
 
@@ -141,12 +135,12 @@ Ball.Preloader.prototype = {
     this.preloadBg = this.add.sprite(
       (Ball._WIDTH - 297) * 0.5,
       (Ball._HEIGHT - 145) * 0.5,
-      "preloaderBg"
+      "preloaderBg",
     );
     this.preloadBar = this.add.sprite(
       (Ball._WIDTH - 158) * 0.5,
       (Ball._HEIGHT - 50) * 0.5,
-      "preloaderBar"
+      "preloaderBar",
     );
     this.load.setPreloadSprite(this.preloadBar);
 
@@ -187,7 +181,7 @@ Ball.MainMenu.prototype = {
       this,
       2,
       0,
-      1
+      1,
     );
     this.startButton.anchor.set(0.5, 0);
     this.startButton.input.useHandCursor = true;
@@ -224,7 +218,7 @@ Ball.Howto.prototype = {
       0,
       "screen-howtoplay",
       this.startGame,
-      this
+      this,
     );
   },
   startGame() {
@@ -312,25 +306,27 @@ That way we can check which key is pressed at the given frame and apply the defi
 Probably the most interesting part of the game is its usage of the **Device Orientation API** for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here's the code from the `create()` function responsible for this:
 
 ```js
-window.addEventListener("deviceorientation", this.handleOrientation, true);
+window.addEventListener("deviceorientation", this.handleOrientation);
 ```
 
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
 
 ```js
-handleOrientation(e) {
-  const x = e.gamma;
-  const y = e.beta;
-  Ball._player.body.velocity.x += x;
-  Ball._player.body.velocity.y += y;
-},
+Ball.Game.prototype = {
+  // …
+  handleOrientation(e) {
+    const x = e.gamma;
+    const y = e.beta;
+    Ball._player.body.velocity.x += x;
+    Ball._player.body.velocity.y += y;
+  },
+  // …
+};
 ```
 
 The more you tilt the device, the more force is applied to the ball, therefore the faster it moves (the velocity is higher).
 
 ![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
-
-> **Note:** To find out more about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
 
 #### Adding the hole
 
@@ -370,8 +366,7 @@ for (let i = 0; i < this.maxLevels; i++) {
   const newLevel = this.add.group();
   newLevel.enableBody = true;
   newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-  for (let e = 0; e < this.levelData[i].length; e++) {
-    const item = this.levelData[i][e];
+  for (const item of this.levelData[i]) {
     newLevel.create(item.x, item.y, `element-${item.t}`);
   }
   newLevel.setAll("body.immovable", true);
@@ -385,13 +380,17 @@ First, `add.group()` is used to create a new group of items. Then the `ARCADE` b
 The objects are stored in the `this.levels` array, which is by default invisible. To load specific levels, we make sure the previous levels are hidden, and show the current one:
 
 ```js
-showLevel(level) {
-  const lvl = level | this.level;
-  if (this.levels[lvl - 2]) {
-    this.levels[lvl - 2].visible = false;
-  }
-  this.levels[lvl - 1].visible = true;
-}
+Ball.Game.prototype = {
+  // …
+  showLevel(level) {
+    const lvl = level | this.level;
+    if (this.levels[lvl - 2]) {
+      this.levels[lvl - 2].visible = false;
+    }
+    this.levels[lvl - 1].visible = true;
+  },
+  // …
+};
 ```
 
 Thanks to that the game gives the player a challenge - now they have to roll the ball across the play area and guide it through the labyrinth built from the blocks. It's just an example of loading the levels, and there are only 5 of them just to showcase the idea, but you can work on expanding that on your own.
@@ -406,14 +405,14 @@ this.physics.arcade.collide(
   this.borderGroup,
   this.wallCollision,
   null,
-  this
+  this,
 );
 this.physics.arcade.collide(
   this.ball,
   this.levels[this.level - 1],
   this.wallCollision,
   null,
-  this
+  this,
 );
 ```
 
@@ -435,7 +434,7 @@ if (this.audioStatus) {
 }
 ```
 
-That's all — loading and playing the sounds is easy with Phaser.
+That's all — loading and playing the sounds is achieved with Phaser.
 
 #### Implementing the Vibration API
 
@@ -469,13 +468,13 @@ this.timerText = this.game.add.text(
   15,
   15,
   `Time: ${this.timer}`,
-  this.fontBig
+  this.fontBig,
 );
 this.totalTimeText = this.game.add.text(
   120,
   30,
   `Total time: ${this.totalTimer}`,
-  this.fontSmall
+  this.fontSmall,
 );
 ```
 
@@ -488,11 +487,15 @@ this.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);
 This loop, also in the `create` function, will execute the `updateCounter` function every single second from the beginning of the game, so we can apply the changes accordingly. This is how the complete `updateCounter` function looks:
 
 ```js
-updateCounter() {
-  this.timer++;
-  this.timerText.setText(`Time: ${this.timer}`);
-  this.totalTimeText.setText(`Total time: ${this.totalTimer+this.timer}`);
-},
+Ball.Game.prototype = {
+  // …
+  updateCounter() {
+    this.timer++;
+    this.timerText.setText(`Time: ${this.timer}`);
+    this.totalTimeText.setText(`Total time: ${this.totalTimer + this.timer}`);
+  },
+  // …
+};
 ```
 
 As you can see we're incrementing the `this.timer` variable and updating the content of the text objects with the current values on each iteration, so the player sees the elapsed time.
@@ -508,26 +511,32 @@ this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);
 This works similarly to the `collide` method explained earlier. When the ball overlaps with the hole (instead of colliding), the `finishLevel` function is executed:
 
 ```js
-finishLevel() {
-  if (this.level >= this.maxLevels) {
-    this.totalTimer += this.timer;
-    alert(`Congratulations, game completed!\nTotal time of play: ${this.totalTimer} seconds!`);
-    this.game.state.start('MainMenu');
-  } else {
-    alert(`Congratulations, level ${this.level} completed!`);
-    this.totalTimer += this.timer;
-    this.timer = 0;
-    this.level++;
-    this.timerText.setText(`Time: ${this.timer}`);
-    this.totalTimeText.setText(`Total time: ${this.totalTimer}`);
-    this.levelText.setText(`Level: ${this.level} / ${this.maxLevels}`);
-    this.ball.body.x = this.ballStartPos.x;
-    this.ball.body.y = this.ballStartPos.y;
-    this.ball.body.velocity.x = 0;
-    this.ball.body.velocity.y = 0;
-    this.showLevel();
-  }
-},
+Ball.Game.prototype = {
+  // …
+  finishLevel() {
+    if (this.level >= this.maxLevels) {
+      this.totalTimer += this.timer;
+      alert(
+        `Congratulations, game completed!\nTotal time of play: ${this.totalTimer} seconds!`,
+      );
+      this.game.state.start("MainMenu");
+    } else {
+      alert(`Congratulations, level ${this.level} completed!`);
+      this.totalTimer += this.timer;
+      this.timer = 0;
+      this.level++;
+      this.timerText.setText(`Time: ${this.timer}`);
+      this.totalTimeText.setText(`Total time: ${this.totalTimer}`);
+      this.levelText.setText(`Level: ${this.level} / ${this.maxLevels}`);
+      this.ball.body.x = this.ballStartPos.x;
+      this.ball.body.y = this.ballStartPos.y;
+      this.ball.body.velocity.x = 0;
+      this.ball.body.velocity.y = 0;
+      this.showLevel();
+    }
+  },
+  // …
+};
 ```
 
 If the current level is equal to the maximum number of levels (in this case 5), then the game is finished — you'll get a congratulations message along with the number of seconds elapsed through the whole game, and a button to press that takes you to the main menu.

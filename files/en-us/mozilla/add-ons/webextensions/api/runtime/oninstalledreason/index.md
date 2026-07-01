@@ -1,20 +1,10 @@
 ---
 title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnInstalledReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
+page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnInstalledReason
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
 
@@ -31,13 +21,14 @@ Values of this type are strings. Possible values are:
 - `"shared_module_update"`
   - : Another extension, which contains a module used by this extension, was updated.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-OnInstalledReason) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-OnInstalledReason) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

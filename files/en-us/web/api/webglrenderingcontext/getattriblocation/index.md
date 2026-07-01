@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
+title: "WebGLRenderingContext: getAttribLocation() method"
+short-title: getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttribLocation
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getAttribLocation()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the location of an
@@ -39,7 +34,7 @@ Returns -1 otherwise.
 ## Examples
 
 ```js
-gl.getAttribLocation(program, 'vColor');
+gl.getAttribLocation(program, "vColor");
 ```
 
 ## Specifications

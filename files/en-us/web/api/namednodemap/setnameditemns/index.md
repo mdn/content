@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.setNamedItemNS()
+title: "NamedNodeMap: setNamedItemNS() method"
+short-title: setNamedItemNS()
 slug: Web/API/NamedNodeMap/setNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.setNamedItemNS
 ---
 
@@ -15,7 +13,8 @@ puts the {{domxref("Attr")}} identified by its name in the map.
 If there was already an {{domxref("Attr")}} with the same name in the map,
 it is _replaced_.
 
-> **Note:** This method is an alias of `setNamedItem()` you can use them
+> [!NOTE]
+> This method is an alias of `setNamedItem()` you can use them
 > interchangeably.
 
 ## Syntax
@@ -62,7 +61,7 @@ let result = `The '<span>' element initially contains ${attrMap.length} attribut
 result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
 const one = warning.attributes.removeNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 );
 attrMap.setNamedItemNS(one);
 result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;
@@ -78,7 +77,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 200)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

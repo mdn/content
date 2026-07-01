@@ -2,13 +2,6 @@
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Reference
 browser-compat: api.IntersectionObserverEntry
 ---
 
@@ -17,6 +10,11 @@ browser-compat: api.IntersectionObserverEntry
 The **`IntersectionObserverEntry`** interface of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) describes the intersection between the target element and its root container at a specific moment of transition.
 
 Instances of `IntersectionObserverEntry` are delivered to an {{domxref("IntersectionObserver")}} callback in its `entries` parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.
+
+## Constructor
+
+- {{domxref("IntersectionObserverEntry.IntersectionObserverEntry", "IntersectionObserverEntry()")}} {{experimental_inline}}
+  - : Creates a new `IntersectionObserverEntry` object.
 
 ## Instance properties
 
@@ -33,7 +31,7 @@ Instances of `IntersectionObserverEntry` are delivered to an {{domxref("Intersec
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} whose intersection with the root changed.
 - {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
 ## Instance methods
 

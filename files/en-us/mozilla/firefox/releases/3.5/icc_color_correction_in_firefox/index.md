@@ -1,13 +1,9 @@
 ---
 title: ICC color correction in Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
-tags:
-  - Firefox
-  - Firefox 3
-  - Firefox 3.5
+page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it. Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
 
@@ -112,11 +108,12 @@ The following table lists the possible values.
   </tbody>
 </table>
 
-> **Note:** In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
+> [!NOTE]
+> In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
 
 ### Caveats
 
-The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
+The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzil.la/488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
 
 ## See also
 

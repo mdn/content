@@ -1,24 +1,13 @@
 ---
 title: BigUint64Array() constructor
+short-title: BigUint64Array()
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
 page-type: javascript-constructor
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`BigUint64Array()`** typed array constructor creates a
-new {{jsxref("BigUint64Array")}} object, which is, an array of 64-bit unsigned integers
-in the platform byte order. If control over byte order is needed, use
-{{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once
-established, you can reference elements in the array using the object's methods, or by
-using standard array index syntax (that is, using bracket notation).
+The **`BigUint64Array()`** constructor creates {{jsxref("BigUint64Array")}} objects. The contents are initialized to `0n` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -33,7 +22,8 @@ new BigUint64Array(buffer, byteOffset)
 new BigUint64Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `BigUint64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `BigUint64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -69,7 +59,9 @@ const z = new BigUint64Array(buffer, 8, 4);
 console.log(z.byteOffset); // 8
 
 // From an iterable
-const iterable = function*() { yield* [1n, 2n, 3n]; }();
+const iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 const biguint64FromIterable = new BigUint64Array(iterable);
 console.log(biguint64FromIterable);
 // BigUint64Array [1n, 2n, 3n]
@@ -85,6 +77,7 @@ console.log(biguint64FromIterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-- {{jsxref("BigInt64Array")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

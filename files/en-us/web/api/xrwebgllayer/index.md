@@ -2,19 +2,8 @@
 title: XRWebGLLayer
 slug: Web/API/XRWebGLLayer
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer
 ---
 
@@ -28,7 +17,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ## Constructor
 
-- {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}} {{Experimental_Inline}}
+- {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}} {{Experimental_Inline}}
   - : Creates and returns a new `XRWebGLLayer` object for use by the specified {{domxref("XRSession")}}, using a particular {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}} as the destination context.
 
 ## Instance properties
@@ -48,7 +37,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ## Static methods
 
-- {{domxref('XRWebGLLayer.getNativeFramebufferScaleFactor()', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}}
+- {{domxref('XRWebGLLayer/getNativeFramebufferScaleFactor_static', "getNativeFramebufferScaleFactor()")}} {{Experimental_Inline}}
   - : Returns the scaling factor that can be used to scale the resolution of the recommended WebGL framebuffer resolution to the rendering device's native resolution.
 
 ## Instance methods
@@ -78,7 +67,7 @@ let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
   const glLayer = xrSession.renderState.baseLayer;
-  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
+  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
   for (const view of pose.views) {
     const viewport = glLayer.getViewport(view);

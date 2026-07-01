@@ -2,12 +2,6 @@
 title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Gamepad API
-  - Games
-  - Guide
 browser-compat: api.Gamepad
 ---
 
@@ -21,15 +15,20 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the 
 
 When a new gamepad is connected to the computer, the focused page first receives a {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event. If a gamepad is already connected when the page loaded, the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event is dispatched to the focused page when the user presses a button or moves an axis.
 
-> **Note:** In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads being used for fingerprinting the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
+> [!NOTE]
+> In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads from being used for [fingerprinting](/en-US/docs/Glossary/Fingerprinting) the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.
 
 You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} like this:
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 
@@ -37,12 +36,15 @@ Each gamepad has a unique ID associated with it, which is available on the event
 
 ## Disconnecting a gamepad
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g., {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log(
+    "Gamepad disconnected from index %d: %s",
+    e.gamepad.index,
+    e.gamepad.id,
+  );
 });
 ```
 
@@ -51,38 +53,46 @@ The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-
 ```js
 const gamepads = {};
 
-function gamepadHandler(event, connecting) {
+function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
-  // Note:
-  // gamepad === navigator.getGamepads()[gamepad.index]
+  // Note: Use gamepad.index as the stable key, then read the latest
+  // state from navigator.getGamepads() inside your update loop.
 
-  if (connecting) {
+  if (connected) {
     gamepads[gamepad.index] = gamepad;
   } else {
     delete gamepads[gamepad.index];
   }
 }
 
-window.addEventListener("gamepadconnected", (e) => { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false); }, false);
+window.addEventListener("gamepadconnected", (e) => {
+  gamepadHandler(e, true);
+});
+window.addEventListener("gamepaddisconnected", (e) => {
+  gamepadHandler(e, false);
+});
 ```
 
-This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
+This previous example shows how to keep track of which devices are connected by `index`. For current button and axis state, call {{domxref("Navigator.getGamepads()")}} each frame and read the latest object for that `index`.
 
 ## Querying the Gamepad object
 
-As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.
+As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. To read the current button and axis state, use the gamepad's `index` and fetch the latest object from {{ domxref("Navigator.getGamepads()") }} in your animation loop.
 
 Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.
 
-The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above you be rewritten as shown below:
+The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above could be rewritten as shown below:
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id,
-    gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 
@@ -93,18 +103,18 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 - `mapping`: A string indicating whether the browser has remapped the controls on the device to a known layout. Currently there is only one supported known layout — the [standard gamepad](https://w3c.github.io/gamepad/gamepad.html#remapping). If the browser is able to map controls on the device to that layout the `mapping` property will be set to the string `standard`.
 - `connected`: A boolean indicating whether the gamepad is still connected to the system. If this is so the value is `True`; if not, it is `False`.
 - `buttons`: An array of {{ domxref("GamepadButton") }} objects representing the buttons present on the device. Each {{ domxref("GamepadButton") }} has a `pressed` and a `value` property:
-
   - The `pressed` property is a boolean indicating whether the button is currently pressed (`true`) or unpressed (`false`).
   - The `value` property is a floating point value used to enable representing analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0..1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
 
-- `axes`: An array representing the controls with axes present on the device (e.g. analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
+- `axes`: An array representing the controls with axes present on the device (e.g., analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
 - `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
 
-> **Note:** The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.
+> [!NOTE]
+> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. You can also access gamepads through {{domxref("Navigator.getGamepads()")}}. In practice, you should poll {{domxref("Navigator.getGamepads()")}} and read the current object for a known `index` each frame, rather than relying on a long-lived reference from an earlier event.
 
 ### Using button information
 
-Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
+Let's look at an example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
 
 To start with, we declare some variables: The `gamepadInfo` paragraph that the connection info is written into, the `ball` that we want to move, the `start` variable that acts as the ID for `requestAnimation Frame`, the `a` and `b` variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.
 
@@ -116,7 +126,7 @@ let a = 0;
 let b = 0;
 ```
 
-Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()") }}`[0]`, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
+Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()", "navigator.getGamepads()[0]") }}, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
@@ -133,28 +143,8 @@ Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnecte
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
-```
-
-Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the {{ domxref("Gamepad") }} object in code when it is available. We have done this below using {{ domxref("setInterval()") }}; once the object is available the gamepad info is outputted, the game loop is started, and the interval is cleared using {{ domxref("clearInterval") }}.
-
-```js
-let interval;
-
-if (!('ongamepadconnected' in window)) {
-  // No gamepad events available, poll instead.
-  interval = setInterval(pollGamepads, 500);
-}
-
-function pollGamepads() {
-  const gamepads = navigator.getGamepads();
-  for (const gp of gamepads) {
-    gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}. It has ${gp.buttons.length} buttons and ${gp.axes.length} axes.`;
-    gameLoop();
-    clearInterval(interval);
-  }
-}
 ```
 
 Now on to the main game loop. In each execution of the loop we check if one of four buttons is being pressed; if so, we update the values of the `a` and `b` movement variables appropriately, then update the {{ cssxref("left") }} and {{ cssxref("top") }} properties, changing their values to the current values of `a` and `b` respectively. This has the effect of moving the ball around the screen.
@@ -162,13 +152,6 @@ Now on to the main game loop. In each execution of the loop we check if one of f
 After all this is done, we use our `requestAnimationFrame()` to request the next animation frame, running `gameLoop()` again.
 
 ```js
-function buttonPressed(b) {
-  if (typeof b === "object") {
-    return b.pressed;
-  }
-  return b === 1.0;
-}
-
 function gameLoop() {
   const gamepads = navigator.getGamepads();
   if (!gamepads) {
@@ -176,14 +159,16 @@ function gameLoop() {
   }
 
   const gp = gamepads[0];
-  if (buttonPressed(gp.buttons[0])) {
+  if (gp.buttons[0].pressed) {
     b--;
-  } else if (buttonPressed(gp.buttons[2])) {
+  }
+  if (gp.buttons[2].pressed) {
     b++;
   }
-  if (buttonPressed(gp.buttons[1])) {
+  if (gp.buttons[1].pressed) {
     a++;
-  } else if (buttonPressed(gp.buttons[3])) {
+  }
+  if (gp.buttons[3].pressed) {
     a--;
   }
 
@@ -196,36 +181,36 @@ function gameLoop() {
 
 ## Complete example: Displaying gamepad state
 
-This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](https://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on GitHub.
+This example shows how to use the {{domxref("Gamepad")}} object, as well as the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events to display the state of all gamepads connected to the system. The example is based on a [Gamepad demo](https://luser.github.io/gamepadtest/), which has the [source code available on GitHub](https://github.com/luser/gamepadtest).
 
 ```js
-const haveEvents = 'ongamepadconnected' in window;
-const controllers = {};
+let loopStarted = false;
 
-function connecthandler(e) {
-  addgamepad(e.gamepad);
-}
+window.addEventListener("gamepadconnected", (evt) => {
+  addGamepad(evt.gamepad);
+});
+window.addEventListener("gamepaddisconnected", (evt) => {
+  removeGamepad(evt.gamepad);
+});
 
-function addgamepad(gamepad) {
-  controllers[gamepad.index] = gamepad;
-
+function addGamepad(gamepad) {
   const d = document.createElement("div");
   d.setAttribute("id", `controller${gamepad.index}`);
 
   const t = document.createElement("h1");
   t.textContent = `gamepad: ${gamepad.id}`;
-  d.appendChild(t);
+  d.append(t);
 
-  const b = document.createElement("div");
+  const b = document.createElement("ul");
   b.className = "buttons";
   gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("span");
+    const e = document.createElement("li");
     e.className = "button";
-    e.textContent = i;
-    b.appendChild(e);
+    e.textContent = `Button ${i}`;
+    b.append(e);
   });
 
-  d.appendChild(b);
+  d.append(b);
 
   const a = document.createElement("div");
   a.className = "axes";
@@ -236,84 +221,60 @@ function addgamepad(gamepad) {
     p.setAttribute("max", "2");
     p.setAttribute("value", "1");
     p.textContent = i;
-    a.appendChild(p);
+    a.append(p);
   });
 
   d.appendChild(a);
 
   // See https://github.com/luser/gamepadtest/blob/master/index.html
-  const start = document.getElementById("start");
+  const start = document.querySelector("#start");
   if (start) {
     start.style.display = "none";
   }
 
-  document.body.appendChild(d);
-  requestAnimationFrame(updateStatus);
+  document.body.append(d);
+  if (!loopStarted) {
+    requestAnimationFrame(updateStatus);
+    loopStarted = true;
+  }
 }
 
-function disconnecthandler(e) {
-  removegamepad(e.gamepad);
-}
-
-function removegamepad(gamepad) {
-  const d = document.getElementById(`controller${gamepad.index}`);
-  document.body.removeChild(d);
-  delete controllers[gamepad.index];
+function removeGamepad(gamepad) {
+  document.querySelector(`#controller${gamepad.index}`).remove();
 }
 
 function updateStatus() {
-  if (!haveEvents) {
-    scangamepads();
-  }
+  for (const gamepad of navigator.getGamepads()) {
+    if (!gamepad) continue;
 
-  controllers.forEach((controller, i) => {
-    const d = document.getElementById(`controller${i}`);
-    const buttons = d.getElementsByClassName("button");
+    const d = document.getElementById(`controller${gamepad.index}`);
+    const buttonElements = d.getElementsByClassName("button");
 
-    controller.buttons.forEach((button, i) => {
-      const b = buttons[i];
-      let pressed = button === 1.0;
-      let val = button;
+    for (const [i, button] of gamepad.buttons.entries()) {
+      const el = buttonElements[i];
 
-      if (typeof button === "object") {
-        pressed = val.pressed;
-        val = val.value;
-      }
-
-      const pct = `${Math.round(val * 100)}%`;
-      b.style.backgroundSize = `${pct} ${pct}`;
-      b.className = pressed ? "button pressed" : "button";
-    });
-
-    const axes = d.getElementsByClassName("axis");
-    controller.axes.forEach((axis, i) => {
-      const a = axes[i];
-      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
-      a.setAttribute("value", controller.axis + 1);
-    });
-  });
-
-  requestAnimationFrame(updateStatus);
-}
-
-function scangamepads() {
-  const gamepads = navigator.getGamepads();
-  for (const gamepad of gamepads) {
-    if (gamepad) { // Can be null if disconnected during the session
-      if (gamepad.index in controllers) {
-        controllers[gamepad.index] = gamepad;
+      const pct = `${Math.round(button.value * 100)}%`;
+      el.style.backgroundSize = `${pct} ${pct}`;
+      if (button.pressed) {
+        el.textContent = `Button ${i} [PRESSED]`;
+        el.style.color = "#42f593";
+        el.className = "button pressed";
       } else {
-        addgamepad(gamepad);
+        el.textContent = `Button ${i}`;
+        el.style.color = "#2e2d33";
+        el.className = "button";
       }
     }
+
+    const axisElements = d.getElementsByClassName("axis");
+    for (const [i, axis] of gamepad.axes.entries()) {
+      const el = axisElements[i];
+      el.textContent = `${i}: ${axis.toFixed(4)}`;
+      el.setAttribute("value", axis + 1);
+    }
   }
-}
 
-window.addEventListener("gamepadconnected", connecthandler);
-window.addEventListener("gamepaddisconnected", disconnecthandler);
-
-if (!haveEvents) {
- setInterval(scangamepads, 500);
+  requestAnimationFrame(updateStatus);
 }
 ```
 

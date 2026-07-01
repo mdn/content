@@ -1,26 +1,14 @@
 ---
-title: History.pushState()
+title: "History: pushState() method"
+short-title: pushState()
 slug: Web/API/History/pushState
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Location
-  - Method
-  - Reference
-  - Session
-  - URL
-  - Web
-  - pushState
 browser-compat: api.History.pushState
 ---
 
 {{APIRef("History API")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the
-**`history.pushState()`** method adds an entry to the browser's
+The **`pushState()`** method of the {{domxref("History")}} interface adds an entry to the browser's
 session history stack.
 
 ## Syntax
@@ -33,24 +21,18 @@ pushState(state, unused, url)
 ### Parameters
 
 - `state`
-
   - : The `state` object is a JavaScript object which is associated with the
     new history entry created by `pushState()`. Whenever the user navigates to
     the new `state`, a {{domxref("Window/popstate_event", "popstate")}} event is fired, and
     the `state` property of the event contains a copy of the history entry's
     `state` object.
 
-    The `state` object can be anything that can be serialized. Because
-    Firefox saves `state` objects to the user's disk so they can be restored
-    after the user restarts the browser, we impose a size limit of 16 MiB on the
-    serialized representation of a `state` object. If you pass a
-    `state` object whose serialized representation is larger than this
-    to `pushState()`, the method will throw an exception. If you need more
-    space than this, you're encouraged to use {{domxref("Window.sessionStorage",
-    "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+    The `state` object can be anything that can be serialized.
+
+    > [!NOTE]
+    > Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
-
   - : This parameter exists for historical reasons, and cannot be omitted; passing an empty string is safe against future changes to the method.
 
 - `url` {{optional_inline}}
@@ -65,6 +47,13 @@ pushState(state, unused, url)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL, or if the method is called too frequently.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the provided `state` parameter is not serializable.
 
 ## Description
 
@@ -92,18 +81,18 @@ This creates a new browser history entry setting the _state_ and _url_.
 ### JavaScript
 
 ```js
-const state = { 'page_id': 1, 'user_id': 5 }
-const url = 'hello-world.html'
+const state = { page_id: 1, user_id: 5 };
+const url = "hello-world.html";
 
-history.pushState(state, '', url)
+history.pushState(state, "", url);
 ```
 
 ### Change a query parameter
 
 ```js
-const url = new URL(window.location);
-url.searchParams.set('foo', 'bar');
-window.history.pushState({}, '', url);
+const url = new URL(location);
+url.searchParams.set("foo", "bar");
+history.pushState({}, "", url);
 ```
 
 ## Specifications

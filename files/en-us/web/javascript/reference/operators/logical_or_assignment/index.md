@@ -2,34 +2,35 @@
 title: Logical OR assignment (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 page-type: javascript-operator
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
 browser-compat: javascript.operators.logical_or_assignment
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Operators")}}
+The **logical OR assignment (`||=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("falsy")}}.
 
-The **logical OR assignment (`x ||= y`)** operator only assigns if `x` is {{Glossary("falsy")}}.
+{{InteractiveExample("JavaScript Demo: Logical OR assignment (||=) operator")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
+```js interactive-example
+const a = { duration: 50, title: "" };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= "title is empty.";
+console.log(a.title);
+// Expected output: "title is empty."
+```
 
 ## Syntax
 
 ```js-nolint
-expr1 ||= expr2
+x ||= y
 ```
 
 ## Description
 
-Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#short-circuiting), meaning that `x ||= y` is equivalent to:
-
-```js
-x || (x = y);
-```
+Logical OR assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ||= y` is equivalent to `x || (x = y)`, except that the expression `x` is only evaluated once.
 
 No assignment is performed if the left-hand side is not falsy, due to short-circuiting of the [logical OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) operator. For example, the following does not throw an error, despite `x` being `const`:
 
@@ -53,7 +54,7 @@ const x = {
 x.value ||= 2;
 ```
 
-In fact, if `x` is truthy, `y` is not evaluated at all.
+In fact, if `x` is not falsy, `y` is not evaluated at all.
 
 ```js
 const x = 1;
@@ -86,8 +87,8 @@ Note: Pay attention to the value returned by the API you're checking against. If
 
 ## See also
 
-- [Logical OR (||)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Logical OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Bitwise OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

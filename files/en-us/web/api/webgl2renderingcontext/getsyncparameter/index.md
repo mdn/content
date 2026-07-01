@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.getSyncParameter()
+title: "WebGL2RenderingContext: getSyncParameter() method"
+short-title: getSyncParameter()
 slug: Web/API/WebGL2RenderingContext/getSyncParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSyncParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getSyncParameter()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns parameter
@@ -28,9 +23,7 @@ getSyncParameter(sync, pname)
 - `sync`
   - : A {{domxref("WebGLSync")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
-
     - `gl.OBJECT_TYPE`
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the type
         of the sync object (always `gl.SYNC_FENCE`).

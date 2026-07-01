@@ -1,17 +1,12 @@
 ---
-title: MIDIPort.state
+title: "MIDIPort: state property"
+short-title: state
 slug: Web/API/MIDIPort/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - MIDIPort
 browser-compat: api.MIDIPort.state
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
 

@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.isShader()
+title: "WebGLRenderingContext: isShader() method"
+short-title: isShader()
 slug: Web/API/WebGLRenderingContext/isShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isShader
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
 passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
@@ -36,8 +31,8 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the shad
 ### Checking a shader
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const shader = gl.createShader(gl.VERTEX_SHADER);
 
 // …

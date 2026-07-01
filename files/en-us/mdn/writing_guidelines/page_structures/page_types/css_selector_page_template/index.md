@@ -2,15 +2,11 @@
 title: CSS selector page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
-browser-compat: css.selectors.NameOfTheSelector
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -21,74 +17,70 @@ browser-compat: css.selectors.NameOfTheSelector
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
+> title: :name-of-the-selector
+> slug: Web/CSS/Reference/Selectors/:name-of-the-selector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
-> tags:
->   - CSS
->   - Reference
->   - Selector
->   - NameOfTheSelector
->   - Experimental
->   - Deprecated
-> browser-compat: css.selectors.NameOfTheSelector
+> status:
+>   - deprecated
+>   - experimental
+>   - non-standard
+> browser-compat: css.selectors.name-of-the-selector
+> sidebar: cssref
 > ---
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page. Format as _:NameOfTheSelector_.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
+>   - : Title heading displayed at the top of the page. Format as _:NameOfTheSelector_.
+>     For example, the {{cssxref(":hover")}} selector has a title of _:hover_.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/Reference/Selectors/:name-of-the-selector`.
+>     For example, the {{cssxref(":hover")}} selector slug is `Web/CSS/Reference/Selectors/:hover`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_Selectors#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors).
-> - **tags**
->
->   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
->
->     Include the following tags as appropriate:
->
->     - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
->     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)).
->     - Any other tags that represent terms people might search for related to the technology.
->
+>   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector).
+> - **status**
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
 >
 >     Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+> - **sidebar**
+>   - : This is `cssref` for all CSS guide and reference pages.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+>
 > ---
 >
 > **Top-of-page macros**
 >
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
+> A number of macros appear at the top of the content section immediately after the page front matter.
+> These macros are automatically added by tooling, so avoid adding or removing them:
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the technology you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete).
->   If it isn't, then you can remove the macro call.
-> - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
+>
+> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > ---
 >
 > **Syntax section (`\{{CSSSyntax}}`)**
 >
 > The content of the Syntax section is generated using the `\{{CSSSyntax}}` macro.
-> For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
+> For these to populate, you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) data file.
 > See [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) for more information.
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the selector and saying what it does. This should ideally be 1 or 2 short sentences.
+The summary paragraph — start by naming the selector and saying what it does. This should ideally be one or two short sentences.
 
 ```css
 /* Insert code block showing common use cases */
@@ -96,7 +88,13 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Syntax
 
-{{CSSSyntax}}
+`\{{CSSSyntax}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
+
+## Accessibility
+
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
 
 ## Examples
 
@@ -108,7 +106,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes, you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -133,25 +132,24 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns that exist with using this selector, and how to work around them.
-Remove this section if there are none to list.
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-- Include list of
-- other links related to
-- this Element that might
-- be useful
+Include links to reference pages and guides related to the current selector. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+
+- link1
+- link2

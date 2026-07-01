@@ -1,19 +1,10 @@
 ---
 title: tabs.PageSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - PageSettings
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
+page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.PageSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The type **`tabs.PageSettings`** is used to control how a tab is rendered as a PDF by the {{WebExtAPIRef("tabs.saveAsPDF()")}} method.
 
@@ -78,8 +69,8 @@ Values of this type are objects. They contain the following properties:
 - `toFileName` {{optional_inline}}
   - : `string`. The name of the file the PDF is saved in, with or without the `.pdf` extension.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}

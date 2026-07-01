@@ -2,10 +2,6 @@
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
@@ -94,10 +90,16 @@ ball.draw();
 Without any boundary collision testing our ball runs out of the canvas quickly. We need to check if the `x` and `y` position of the ball is out of the canvas dimensions and invert the direction of the velocity vectors. To do so, we add the following checks to the `draw` method:
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+if (
+  ball.y + ball.vy > canvas.height - ball.radius ||
+  ball.y + ball.vy < ball.radius
+) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+if (
+  ball.x + ball.vx > canvas.width - ball.radius ||
+  ball.x + ball.vx < ball.radius
+) {
   ball.vx = -ball.vx;
 }
 ```
@@ -109,7 +111,13 @@ Let's see how it looks in action so far.
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -141,10 +149,16 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
@@ -184,7 +198,13 @@ This slows down the vertical velocity each frame, so that the ball will just bou
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -218,10 +238,16 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
@@ -248,7 +274,7 @@ ball.draw();
 Until now we have made use of the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} method when clearing prior frames. If you replace this method with a semi-transparent {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, you can easily create a trailing effect.
 
 ```js
-ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+ctx.fillStyle = "rgb(255 255 255 / 30%)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -257,7 +283,13 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -284,7 +316,7 @@ const ball = {
 };
 
 function draw() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
@@ -292,10 +324,16 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
@@ -326,7 +364,13 @@ To get some control over the ball, we can make it follow our mouse using the [`m
 #### HTML
 
 ```html
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+<canvas id="canvas" width="600" height="300"></canvas>
+```
+
+```css hidden
+#canvas {
+  border: 1px solid black;
+}
 ```
 
 #### JavaScript
@@ -354,7 +398,7 @@ const ball = {
 };
 
 function clear() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -364,10 +408,16 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 

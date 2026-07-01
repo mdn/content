@@ -1,26 +1,16 @@
 ---
-title: IDBObjectStore.transaction
+title: "IDBObjectStore: transaction property"
+short-title: transaction
 slug: Web/API/IDBObjectStore/transaction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBObjectStorage
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - transaction
 browser-compat: api.IDBObjectStore.transaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`transaction`** read-only property of the
 {{domxref("IDBObjectStore")}} interface returns the transaction object to which this
 object store belongs.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -39,7 +29,8 @@ the console. For a full working example, see our [To-do Notifications](https://g
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -51,18 +42,30 @@ DBOpenRequest.onsuccess = (event) => {
 
 function addData() {
   // Create a new object ready to insert into the IDB
-  const newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  const newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -74,9 +77,10 @@ function addData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
-};
+}
 ```
 
 ## Specifications

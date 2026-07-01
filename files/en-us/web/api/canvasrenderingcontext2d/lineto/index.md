@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.lineTo()
+title: "CanvasRenderingContext2D: lineTo() method"
+short-title: lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
 **`lineTo()`**, part of the Canvas 2D API, adds a straight line

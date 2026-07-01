@@ -1,21 +1,14 @@
 ---
-title: DeviceMotionEvent.accelerationIncludingGravity
+title: "DeviceMotionEvent: accelerationIncludingGravity property"
+short-title: accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation
-  - Mobile
-  - Motion
-  - Orientation
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEvent.accelerationIncludingGravity
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`accelerationIncludingGravity`** property returns the
+The **`accelerationIncludingGravity`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the
 amount of acceleration recorded by the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared). Unlike {{DOMxRef("DeviceMotionEvent.acceleration")}}
 which compensates for the influence of gravity, its value is the sum of the acceleration
 of the device as induced by the user and an acceleration equal and opposite to that
@@ -27,7 +20,8 @@ This value is not typically as useful as {{DOMxRef("DeviceMotionEvent.accelerati
 but may be the only value available on devices that aren't able to remove gravity from
 the acceleration data, such as on devices that don't have a gyroscope.
 
-> **Note:** `accelerationIncludingGravity`'s name can be misleading. This property represents acceleration including _the effects of_ gravity. For example, if a device is lying flat on a horizontal surface with the screen pointing up, gravity would be -9.8 along the Z axis, while `acceleration.z` would be 0 and `accelerationIncludingGravity.z` would be 9.8. Similarly, if a device is in free fall with its screen horizontal and pointing up, gravity would be -9.8 along the Z axis, while `acceleration.z` would be -9.8 and `accelerationIncludingGravity.z` would be 0.
+> [!NOTE]
+> `accelerationIncludingGravity`'s name can be misleading. This property represents acceleration including _the effects of_ gravity. For example, if a device is lying flat on a horizontal surface with the screen pointing up, gravity would be -9.8 along the Z axis, while `acceleration.z` would be 0 and `accelerationIncludingGravity.z` would be 9.8. Similarly, if a device is in free fall with its screen horizontal and pointing up, gravity would be -9.8 along the Z axis, while `acceleration.z` would be -9.8 and `accelerationIncludingGravity.z` would be 0.
 
 ## Value
 
@@ -52,10 +46,6 @@ property:
 
 ## See also
 
-- {{DOMxRef("DeviceMotionEvent.acceleration")}}
-- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{DOMxRef("DeviceOrientationEvent")}}
-- {{DOMxRef("Accelerometer")}}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
+- {{DOMxRef("Window/devicemotion_event", "devicemotion")}} event

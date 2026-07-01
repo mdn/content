@@ -1,22 +1,17 @@
 ---
 title: Atomics.waitAsync()
+short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 page-type: javascript-static-method
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
 browser-compat: javascript.builtins.Atomics.waitAsync
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning an object with the `value` property containing the string `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero. Otherwise the method returns an object where the `value` property is a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
-The **`Atomics.waitAsync()`** static method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
+`Atomics.waitAsync()` and {{jsxref("Atomics.notify()")}} are used together to enable thread synchronization based on a value in shared memory. A thread can proceed immediately if the synchronization value has changed, or it can wait for notification from another thread when it reaches the synchronization point.
 
-Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
-
-> **Note:** This operation only works with a shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+This method only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}. It is non-blocking and, unlike {{jsxref("Atomics.wait()")}}, can be used on the main thread. Because it does not block the whole thread, you still need to be careful not to access the shared memory before the promise settles.
 
 ## Syntax
 
@@ -28,13 +23,13 @@ Atomics.waitAsync(typedArray, index, value, timeout)
 ### Parameters
 
 - `typedArray`
-  - : A shared {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}}.
+  - : An {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 - `index`
   - : The position in the `typedArray` to wait on.
 - `value`
   - : The expected value to test.
 - `timeout` {{optional_inline}}
-  - : Time to wait in milliseconds. {{jsxref("Infinity")}}, if no time is provided.
+  - : Time to wait in milliseconds. {{jsxref("NaN")}} (and values that get converted to `NaN`, such as `undefined`) becomes {{jsxref("Infinity")}}. Negative values become `0`.
 
 ### Return value
 
@@ -45,13 +40,23 @@ An {{jsxref("Object")}} with the following properties:
 - `value`
   - : If `async` is `false`, it will be a string which is either `"not-equal"` or `"timed-out"` (only when the `timeout` parameter is `0`). If `async` is `true`, it will be a {{jsxref("Promise")}} which is fulfilled with a string value, either `"ok"` or `"timed-out"`. The promise is never rejected.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
+
 ## Examples
 
-### Using waitAsync()
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-Given a shared `Int32Array`.
+### Using Atomics.waitAsync()
+
+Given a shared `Int32Array`:
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```

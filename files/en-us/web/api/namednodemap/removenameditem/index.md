@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.removeNamedItem()
+title: "NamedNodeMap: removeNamedItem() method"
+short-title: removeNamedItem()
 slug: Web/API/NamedNodeMap/removeNamedItem
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.removeNamedItem
 ---
 
@@ -57,7 +55,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 120)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

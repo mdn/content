@@ -1,20 +1,10 @@
 ---
 title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChildrenReordered
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.
 
@@ -28,7 +18,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -39,10 +29,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed these arguments:
     - `id`
       - : `string`. ID of the folder whose children were reordered.
     - `reorderInfo`
@@ -54,10 +42,6 @@ Events have three functions:
 
 - `childIds`
   - : `array` of `string`. Array containing the IDs of all the bookmark items in this folder, in the order they now appear in the UI.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -76,7 +60,12 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

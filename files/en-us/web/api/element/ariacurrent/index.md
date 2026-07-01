@@ -1,21 +1,14 @@
 ---
-title: Element.ariaCurrent
+title: "Element: ariaCurrent property"
+short-title: ariaCurrent
 slug: Web/API/Element/ariaCurrent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaCurrent
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaCurrent
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
+The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
 
 ## Value
 
@@ -51,9 +44,9 @@ In this example a set of links are used for site navigation. The `aria-current` 
 ```
 
 ```js
-let el = document.getElementById('link-home');
+let el = document.getElementById("link-home");
 console.log(el.ariaCurrent); // "page"
-el.ariaCurrent = "tab"
+el.ariaCurrent = "tab";
 console.log(el.ariaCurrent); // "tab"
 ```
 

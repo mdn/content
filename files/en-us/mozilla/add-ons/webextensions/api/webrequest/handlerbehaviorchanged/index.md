@@ -1,20 +1,10 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.handlerBehaviorChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
 
@@ -49,10 +39,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, when the operation has completed.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`, and report this action by logging an appropriate message to the console.
@@ -72,7 +58,12 @@ flushingCache.then(onFlushed, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

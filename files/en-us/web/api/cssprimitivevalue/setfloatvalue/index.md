@@ -1,25 +1,23 @@
 ---
-title: CSSPrimitiveValue.setFloatValue()
+title: "CSSPrimitiveValue: setFloatValue() method"
+short-title: setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setFloatValue
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`setFloatValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property
 attached to this value can't accept the specified unit or the float value, the value
 will be unchanged and a {{domxref("DOMException")}} will be raised.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -36,7 +34,6 @@ setFloatValue(unitType, floatValue)
 ### Parameters
 
 - `unitType`
-
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
 
@@ -83,7 +80,7 @@ None ({{jsxref("undefined")}}).
       <td>
         An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't
         contain a float value or if the string value can't be converted into the
-        specified unit.<br />An NO_MODIFICATION_ALLOWED_ERR is raised if this
+        specified unit.<br />A NO_MODIFICATION_ALLOWED_ERR is raised if this
         property is read-only.
       </td>
     </tr>

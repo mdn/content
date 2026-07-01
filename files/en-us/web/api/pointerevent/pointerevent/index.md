@@ -1,12 +1,8 @@
 ---
-title: PointerEvent()
+title: "PointerEvent: PointerEvent() constructor"
+short-title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - PointerEvent
-  - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
 
@@ -32,17 +28,21 @@ new PointerEvent(type, options)
     - `pointerId`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
     - `width`
-      - : A number,, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.width")}}.
+      - : A number, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.width")}}.
     - `height`
-      - : A number,, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.height")}}.
+      - : A number, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.height")}}.
     - `pressure`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.pressure")}}.
     - `tangentialPressure`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.tangentialPressure")}}.
+    - `altitudeAngle`
+      - : A number that sets the value of the instance's {{domxref("PointerEvent.altitudeAngle")}}.
+    - `azimuthAngle`
+      - : A number that sets the value of the instance's {{domxref("PointerEvent.azimuthAngle")}}.
     - `tiltX`
-      - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.tiltX")}}.
+      - : A number that sets the value of the instance's {{domxref("PointerEvent.tiltX")}}.
     - `tiltY`
-      - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.tiltY")}}.
+      - : A number that sets the value of the instance's {{domxref("PointerEvent.tiltY")}}.
     - `twist`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.twist")}}.
     - `pointerType`
@@ -59,15 +59,15 @@ A new {{domxref("PointerEvent")}} object.
 ```js
 const moveEvent = new PointerEvent("pointermove");
 
-const downEvent = new PointerEvent("pointerdown",
-   {pointerId: 1,
-    bubbles: true,
-    cancelable: true,
-    pointerType: "touch",
-    width: 100,
-    height: 100,
-    isPrimary: true
-   });
+const downEvent = new PointerEvent("pointerdown", {
+  pointerId: 1,
+  bubbles: true,
+  cancelable: true,
+  pointerType: "touch",
+  width: 100,
+  height: 100,
+  isPrimary: true,
+});
 ```
 
 ## Specifications

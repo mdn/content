@@ -1,27 +1,12 @@
 ---
-title: XRRigidTransform.position
+title: "XRRigidTransform: position property"
+short-title: position
 slug: Web/API/XRRigidTransform/position
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Coordinates
-  - Location
-  - Point
-  - Position
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - XR
-  - XRRigidTransform
-  - transform
 browser-compat: api.XRRigidTransform.position
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRRigidTransform")}} property
 **`position`** is a {{domxref("DOMPointReadOnly")}} object which
@@ -33,7 +18,8 @@ transform.
 A read-only {{domxref("DOMPointReadOnly")}} indicating the 3D position component of the
 transform matrix. The units are meters.
 
-> **Note:** The `w` component of the point is always 1.0.
+> [!NOTE]
+> The `w` component of the point is always 1.0.
 
 ## Examples
 
@@ -50,11 +36,14 @@ function onSessionStarted(xrSession) {
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
-    xrSession.requestReferenceSpace("bounded-floor").then((refSpace) => {
-      refSpaceCreated(refSpace);
-    }).catch(() => {
-      session.requestReferenceSpace("local-floor").then(refSpaceCreated);
-    });
+    xrSession
+      .requestReferenceSpace("bounded-floor")
+      .then((refSpace) => {
+        refSpaceCreated(refSpace);
+      })
+      .catch(() => {
+        session.requestReferenceSpace("local-floor").then(refSpaceCreated);
+      });
   } else {
     session.requestReferenceSpace("viewer").then(refSpaceCreated);
   }

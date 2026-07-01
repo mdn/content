@@ -1,11 +1,8 @@
 ---
-title: CharacterData.nextElementSibling
+title: "CharacterData: nextElementSibling property"
+short-title: nextElementSibling
 slug: Web/API/CharacterData/nextElementSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CharacterData.nextElementSibling
 ---
 
@@ -17,7 +14,7 @@ children list, or `null` if the specified element is the last one in the list.
 
 ## Value
 
-A {{domxref("Element")}} object, or `null` if no sibling has been found.
+An {{domxref("Element")}} object, or `null` if no sibling has been found.
 
 ## Example
 

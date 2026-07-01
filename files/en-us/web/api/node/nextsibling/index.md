@@ -1,11 +1,8 @@
 ---
-title: Node.nextSibling
+title: "Node: nextSibling property"
+short-title: nextSibling
 slug: Web/API/Node/nextSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.nextSibling
 ---
 
@@ -16,13 +13,14 @@ returns the node immediately following the specified one in their
 parent's {{domxref("Node.childNodes","childNodes")}}, or returns `null`
 if the specified node is the last child in the parent element.
 
-> **Note:** Browsers insert {{domxref("Text")}} nodes into a document to represent whitespace in the source markup.
+> [!NOTE]
+> Browsers insert {{domxref("Text")}} nodes into a document to represent whitespace in the source markup.
 > Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild)
 > or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling)
 > may refer to a whitespace text node rather than the actual element the author
 > intended to get.
 >
-> The article [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+> The section [Working with whitespace in the DOM](/en-US/docs/Web/CSS/Guides/Text/Whitespace#working_with_whitespace_in_the_dom)
 > contains more information about this behavior.
 >
 > You can use {{domxref("Element.nextElementSibling")}} to obtain the next element
@@ -48,16 +46,16 @@ or `null` if there are none.
 let el = document.getElementById("div-1").nextSibling;
 let i = 1;
 
-let result = "Siblings of div-1:<br/>";
+let result = "Siblings of div-1:\n";
 
 while (el) {
-  result += `${i}. ${el.nodeName}<br/>`;
+  result += `${i}. ${el.nodeName}\n`;
   el = el.nextSibling;
   i++;
 }
 
 const output = document.querySelector("output");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", 500)}}

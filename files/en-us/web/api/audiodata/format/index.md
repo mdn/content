@@ -1,18 +1,12 @@
 ---
-title: AudioData.format
+title: "AudioData: format property"
+short-title: format
 slug: Web/API/AudioData/format
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - format
-  - AudioData
-  - Experimental
 browser-compat: api.AudioData.format
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`format`** read-only property of the {{domxref("AudioData")}} interface returns the sample format of the `AudioData` object.
 

@@ -1,11 +1,9 @@
 ---
 title: Updating extensions for Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
-tags:
-  - Extensions
+page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.5.
 
@@ -51,11 +49,11 @@ Once you've done that, try using your extension again, this time with your regul
 
 Finally, it's time to release your updated extension. If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there. Otherwise, you'll need to upload a new version to AMO.
 
-See [Submitting an add-on to AMO](/en-US/docs/Submitting_an_add-on_to_AMO) for additional information.
+See [Submitting an add-on to AMO](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for additional information.
 
 ## Accessing the Places database
 
-Prior to Firefox 3.5, accessing the Places database directly using the [Storage API](/en-US/docs/Storage) required a little bit of trickery:
+Prior to Firefox 3.5, accessing the Places database directly using the [Storage API](https://web.archive.org/web/20210401045303/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Storage) required a little bit of trickery:
 
 ```js
 var places = Components.classes["@mozilla.org/file/directory_service;1"]
@@ -79,7 +77,7 @@ var db = Components.classes[
 
 ## Search textboxes
 
-The [`textbox`](/en-US/docs/XUL/textbox) type `timed` is deprecated; instead, you should use `search`.
+The [`textbox`](https://web.archive.org/web/20201205234810/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/textbox) type `timed` is deprecated; instead, you should use `search`.
 
 In Firefox 3, you might have used:
 
@@ -95,7 +93,7 @@ In Firefox 3.5, you should change this to:
 
 ## JSON
 
-The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support. For details, see [Using JSON in Firefox](/en-US/Using_native_JSON) and the article on [JSON](/en-US/docs/Glossary/JSON) for a more general overview of JSON and how to use it in various versions of Firefox.
+The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support. For details, see the article on [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) for a more general overview of JSON and how to use it in various versions of Firefox.
 
 To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:
 
@@ -117,13 +115,13 @@ In order to support the new audio and video features added in Gecko 1.9.1, the `
 
 ## Changes to chrome registration
 
-Firefox 3.5 closes a security hole that made it possible to use remote chrome. This will affect any add-on that includes a resource in their `chrome.manifest` file that references a web site, data or resource URLs. See [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5) for details.
+Firefox 3.5 closes a security hole that made it possible to use remote chrome. This will affect any add-on that includes a resource in their `chrome.manifest` file that references a website, data or resource URLs. See [Security changes in Firefox 3.5](/en-US/docs/Mozilla/Firefox/Releases/3.5/Security_changes) for details.
 
 ## Getting a load context from a request
 
-Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzilla.mozilla.org/show_bug.cgi?id=457153#c16)).
+Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzil.la/457153#c16)).
 
-This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl) on mxr).
+This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](https://searchfox.org/firefox-main/source/docshell/base/nsILoadContext.idl)).
 
 From JavaScript, you do it like this:
 
@@ -136,7 +134,7 @@ try {
 } catch (ex) {
   try {
     loadContext = aRequest.loadGroup.notificationCallbacks.getInterface(
-      Components.interfaces.nsILoadContext
+      Components.interfaces.nsILoadContext,
     );
   } catch (ex) {
     loadContext = null;
@@ -155,14 +153,14 @@ function getWindowForRequest(request) {
     try {
       if (request.notificationCallbacks) {
         return request.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
     try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks) {
         return request.loadGroup.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
@@ -181,7 +179,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in {{ Bug(407725) }} and {{ Bug(467045) }}.
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Firefox bug 407725](https://bugzil.la/407725) and [WebKit bug 467045](https://bugzil.la/467045).
 
 ## XPCNativeWrapper
 
@@ -195,9 +193,9 @@ If your extension is using `xpcnativewrappers=no` (which it shouldn't be doing i
 
 ### Listening to events on all tabs
 
-Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs. See [Listening to events on all tabs](/en-US/Listening_to_events_on_all_tabs) for details.
+Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs. See [Listening to events on all tabs](https://web.archive.org/web/20210412023656/https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Listening_to_events_on_all_tabs) for details.
 
 ## For Theme developers
 
-- Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
-- Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).
+- Check [Theme changes in Firefox 3.5](https://web.archive.org/web/20191004004454/https://developer.mozilla.org/en-US/docs/Archive/Themes/Theme_changes_in_Firefox_3.5).
+- Go to the MozillaZine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

@@ -1,16 +1,12 @@
 ---
-title: 'VideoTrackList: addtrack event'
+title: "VideoTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/VideoTrackList/addtrack_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - events
-  - Event
 browser-compat: api.VideoTrackList.addtrack_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `addtrack` event is fired when a video track is added to a [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList).
 
@@ -18,8 +14,8 @@ The `addtrack` event is fired when a video track is added to a [`VideoTrackList`
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('addtrack', (event) => { })
+```js-nolint
+addEventListener("addtrack", (event) => { })
 
 onaddtrack = (event) => { }
 ```
@@ -42,9 +38,9 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.videoTracks.addEventListener('addtrack', (event) => {
+videoElement.videoTracks.addEventListener("addtrack", (event) => {
   console.log(`Video track: ${event.track.label} added`);
 });
 ```
@@ -52,7 +48,7 @@ videoElement.videoTracks.addEventListener('addtrack', (event) => {
 Using the `onaddtrack` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.videoTracks.onaddtrack = (event) => {
   console.log(`Video track: ${event.track.label} added`);

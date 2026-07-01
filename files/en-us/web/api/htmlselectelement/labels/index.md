@@ -1,13 +1,8 @@
 ---
-title: HTMLSelectElement.labels
+title: "HTMLSelectElement: labels property"
+short-title: labels
 slug: Web/API/HTMLSelectElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Property
-  - Reference
 browser-compat: api.HTMLSelectElement.labels
 ---
 
@@ -38,12 +33,10 @@ with the `<select>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("test");
-  for (const label of select.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const select = document.getElementById("test");
+for (const label of select.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

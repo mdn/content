@@ -2,9 +2,6 @@
 title: Getting started with WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 page-type: guide
-tags:
-  - Tutorial
-  - WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
@@ -29,16 +26,16 @@ First, create two new files:
 The "index.html" file should contain the following:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <script src="webgl-demo.js" type="module" defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -56,14 +53,14 @@ main();
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glcanvas");
+  const canvas = document.querySelector("#gl-canvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
   // Only continue if WebGL is available and working
   if (gl === null) {
     alert(
-      "Unable to initialize WebGL. Your browser or machine may not support it."
+      "Unable to initialize WebGL. Your browser or machine may not support it.",
     );
     return;
   }
@@ -91,7 +88,6 @@ At this point, you have enough code that the WebGL context should successfully i
 
 ## See also
 
-- [An introduction to WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/): Written by Luz Caballero, published at dev.opera.com. This article addresses what WebGL is, explains how WebGL works (including the rendering pipeline concept), and introduces some WebGL libraries.
 - [WebGL Fundamentals](https://webglfundamentals.org/)
 - [An intro to modern OpenGL:](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-table-of-contents) A series of nice articles about OpenGL written by Joe Groff, providing a clear introduction to OpenGL from its history to the important graphics pipeline concept, and also includes some examples to demonstrate how OpenGL works. If you have no idea what OpenGL is, this is a good place to start.
 

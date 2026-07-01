@@ -1,13 +1,8 @@
 ---
-title: Element.getElementsByTagName()
+title: "Element: getElementsByTagName() method"
+short-title: getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
 
@@ -25,8 +20,8 @@ the same element and arguments repeatedly if the DOM changes in between calls.
 
 When called on an HTML element in an HTML document, `getElementsByTagName`
 lower-cases the argument before searching for it. This is undesirable when trying to
-match camel-cased SVG elements (such as
-[`<linearGradient>`](/en-US/docs/Web/SVG/Element/linearGradient))
+match {{Glossary("camel_case", "camel-cased")}} SVG elements (such as
+[`<linearGradient>`](/en-US/docs/Web/SVG/Reference/Element/linearGradient))
 in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }},
 which preserves the capitalization of the tag name.
 
@@ -42,9 +37,10 @@ getElementsByTagName(tagName)
 
 ### Parameters
 
-- `tagName` is the qualified name to look for. The special string
-  `"*"` represents all elements. For compatibility with XHTML, lower-case
-  should be used.
+- `tagName`
+  - : The qualified name to look for. The special string
+    `"*"` represents all elements. For compatibility with XHTML, lower-case
+    should be used.
 
 ### Return value
 
@@ -54,12 +50,12 @@ A _live_ {{domxref("HTMLCollection")}} of elements with a matching tag name, in 
 
 ```js
 // Check the status of each data cell in a table
-const table = document.getElementById('forecast-table');
-const cells = table.getElementsByTagName('td');
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagName("td");
 
 for (const cell of cells) {
-  const status = cell.getAttribute('data-status');
-  if (status === 'open') {
+  const status = cell.getAttribute("data-status");
+  if (status === "open") {
     // Grab the data
   }
 }

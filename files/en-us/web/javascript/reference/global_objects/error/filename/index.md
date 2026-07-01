@@ -1,16 +1,15 @@
 ---
-title: Error.prototype.fileName
+title: "Error: fileName"
+short-title: fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 page-type: javascript-instance-data-property
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
+status:
+  - non-standard
 browser-compat: javascript.builtins.Error.fileName
+sidebar: jsref
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
 The **`fileName`** data property of an {{jsxref("Error")}} instance contains the path to the file that raised this error.
 

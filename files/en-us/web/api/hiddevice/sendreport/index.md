@@ -1,18 +1,14 @@
 ---
-title: HIDDevice.sendReport()
+title: "HIDDevice: sendReport() method"
+short-title: sendReport()
 slug: Web/API/HIDDevice/sendReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - sendReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.sendReport
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.
 
@@ -42,7 +38,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ## Examples
 
-The example below shows how to make a Joy-Con device rumble using output reports. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The example below shows how to make a Joy-Con device rumble using output reports. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 // First, send a command to enable vibration.
@@ -52,7 +48,9 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // Then, send a command to make the Joy-Con device rumble.
 // Actual bytes are available in the sample.
-const rumbleData = [ /* … */ ];
+const rumbleData = [
+  /* … */
+];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```
 

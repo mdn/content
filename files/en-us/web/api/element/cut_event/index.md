@@ -1,21 +1,14 @@
 ---
-title: 'Element: cut event'
+title: "Element: cut event"
+short-title: cut
 slug: Web/API/Element/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Cut
-  - Element
-  - Event
-  - Reference
-  - Web
 browser-compat: api.Element.cut_event
 ---
 
-{{APIRef}}
+{{APIRef("Clipboard API")}}
 
-The **`cut`** event is fired when the user has initiated a "cut" action through the browser's user interface.
+The **`cut`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "cut" action through the browser's user interface.
 
 If the user attempts a cut action on uneditable content, the `cut` event still fires but the event object contains no data.
 
@@ -27,16 +20,18 @@ Note though that cancelling the default action will also prevent the document fr
 
 The handler cannot _read_ the clipboard data.
 
-It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `cut` event, but this will not affect the system clipboard or the document's contents.
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) `cut` event, but this will not affect the system clipboard or the document's contents.
+
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('cut', (event) => { });
+```js-nolint
+addEventListener("cut", (event) => { })
 
-oncut = (event) => { };
+oncut = (event) => { }
 ```
 
 ## Event type
@@ -70,13 +65,13 @@ div.target {
 #### JavaScript
 
 ```js
-const source = document.querySelector('div.source');
+const source = document.querySelector("div.source");
 
-source.addEventListener('cut', (event) => {
-    const selection = document.getSelection();
-    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
-    selection.deleteFromDocument();
-    event.preventDefault();
+source.addEventListener("cut", (event) => {
+  const selection = document.getSelection();
+  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
+  selection.deleteFromDocument();
+  event.preventDefault();
 });
 ```
 
@@ -94,6 +89,5 @@ source.addEventListener('cut', (event) => {
 
 ## See also
 
-- Related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}
-- This event on {{domxref("Window")}} targets: {{domxref("Window/cut_event", "cut")}}
+- {{domxref("Element/copy_event", "copy")}} event
+- {{domxref("Element/paste_event", "paste")}} event

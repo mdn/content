@@ -1,21 +1,37 @@
 ---
 title: handler.ownKeys()
+short-title: ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`handler.ownKeys()`** method is a trap for the `[[OwnPropertyKeys]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.keys()")}}, {{jsxref("Reflect.ownKeys()")}}, etc.
 
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
+{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
+```js interactive-example
+const monster = {
+  _age: 111,
+  [Symbol("secret")]: "I am scared!",
+  eyeCount: 4,
+};
+
+const handler = {
+  ownKeys(target) {
+    return Reflect.ownKeys(target);
+  },
+};
+
+const proxy = new Proxy(monster, handler);
+
+for (const key of Object.keys(proxy)) {
+  console.log(key);
+  // Expected output: "_age"
+  // Expected output: "eyeCount"
+}
+```
 
 ## Syntax
 
@@ -23,25 +39,21 @@ The **`handler.ownKeys()`** method is a trap for
 new Proxy(target, {
   ownKeys(target) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameter is passed to the `ownKeys()` method.
-`this` is bound to the handler.
+The following parameter is passed to the `ownKeys()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 
 ### Return value
 
-The `ownKeys()` method must return an enumerable object.
+The `ownKeys()` method must return an [array-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array-like_objects) where each element is either a {{jsxref("String")}} or a {{jsxref("Symbol")}} containing no duplicate items.
 
 ## Description
-
-The **`handler.ownKeys()`** method is a trap for
-{{jsxref("Reflect.ownKeys()")}}.
 
 ### Interceptions
 
@@ -56,15 +68,13 @@ Or any other operation that invokes the `[[OwnPropertyKeys]]` [internal method](
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[OwnPropertyKeys]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- The result of `ownKeys()` must be an array.
-- The type of each array element is either a {{jsxref("String")}} or a
-  {{jsxref("Symbol")}}.
-- The result List must contain the keys of all non-configurable own properties of the
-  target object.
-- If the target object is not extensible, then the result List must contain all the
-  keys of the own properties of the target object and no other values.
+- The result is an {{jsxref("Object")}}.
+- The list of keys contains no duplicate values.
+- The type of each key is either a {{jsxref("String")}} or a {{jsxref("Symbol")}}.
+- The result list must contain the keys of all non-configurable own properties of the target object. That is, for all keys returned by {{jsxref("Reflect.ownKeys()")}} on the target object, if the key reports `configurable: false` by {{jsxref("Reflect.getOwnPropertyDescriptor()")}}, then the key must be included in the result List.
+- If the target object is not extensible, then the result list must contain all the keys of the own properties of the target object and no other values. That is, if {{jsxref("Reflect.isExtensible()")}} returns `false` on `target`, then the result list must contain the same values as the result of {{jsxref("Reflect.ownKeys()")}} on `target`.
 
 ## Examples
 
@@ -80,7 +90,7 @@ const p = new Proxy(
       console.log("called");
       return ["a", "b", "c"];
     },
-  }
+  },
 );
 
 console.log(Object.getOwnPropertyNames(p));

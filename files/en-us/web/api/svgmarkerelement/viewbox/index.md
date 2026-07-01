@@ -1,13 +1,8 @@
 ---
-title: SVGMarkerElement.viewBox
+title: "SVGMarkerElement: viewBox property"
+short-title: viewBox
 slug: Web/API/SVGMarkerElement/viewBox
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - viewBox
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.viewBox
 ---
 
@@ -31,7 +26,7 @@ This example demonstrates how to return the value of the `width` set for the {{S
       viewBox="0 0 10 10"
       refX="5"
       refY="5"
-      viewBox="xMidYMid meet"
+      preserveAspectRatio="xMidYMid meet"
       markerWidth="6"
       markerHeight="6"
       orient="auto-start-reverse">
@@ -42,8 +37,8 @@ This example demonstrates how to return the value of the `width` set for the {{S
 ```
 
 ```js
-let marker = document.getElementById("arrow");
-console.log(marker.viewBox.baseVal.width); //10
+const marker = document.getElementById("arrow");
+console.log(marker.viewBox.baseVal.width); // 10
 ```
 
 ## Specifications

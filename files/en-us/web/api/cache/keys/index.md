@@ -1,19 +1,12 @@
 ---
-title: Cache.keys()
+title: "Cache: keys() method"
+short-title: keys()
 slug: Web/API/Cache/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - keys
 browser-compat: api.Cache.keys
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
 {{jsxref("Promise")}} that resolves to an array of {{domxref("Request")}} objects
@@ -21,7 +14,8 @@ representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
 
-> **Note:** Requests with duplicate URLs but different headers can be
+> [!NOTE]
+> Requests with duplicate URLs but different headers can be
 > returned if their responses have the `VARY` header set on them.
 
 ## Syntax
@@ -38,15 +32,13 @@ keys(request, options)
   - : The {{domxref("Request")}} want to return, if a specific key is desired. This can be
     a `Request` object or a URL.
 - `options` {{optional_inline}}
-
   - : An object whose properties control how matching is done in the `keys`
     operation. The available options are:
-
     - `ignoreSearch`
       - : A boolean value that specifies whether the
         matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod`
       - : A boolean value that, when set to
@@ -55,7 +47,7 @@ keys(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.
@@ -72,13 +64,14 @@ objects.
 ## Examples
 
 ```js
-caches.open("v1").then((cache) => {
-  cache.keys().then((keys) => {
+caches
+  .open("v1")
+  .then((cache) => cache.keys())
+  .then((keys) => {
     keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-});
 ```
 
 ## Specifications
@@ -93,4 +86,4 @@ caches.open("v1").then((cache) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

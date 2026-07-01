@@ -1,27 +1,23 @@
 ---
-title: CSSValueList.length
+title: "CSSValueList: length property"
+short-title: length
 slug: Web/API/CSSValueList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSValueList
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
-  - length
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSValueList.length
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`length`** read-only property of the
 {{domxref("CSSValueList")}} interface represents the number of {{domxref("CSSValue")}}s
 in the list. The range of valid values of the indices is `0` to
 `length-1` inclusive.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

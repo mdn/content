@@ -1,28 +1,17 @@
 ---
 title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeDownloads
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Clears the browser's download history. Note that this does not delete the downloaded objects themselves, only records of downloads in the browser's history.
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear records of items downloaded after a given time
-- control whether to clear only records of items downloaded from normal web pages or to clear records from hosted apps and extensions as well.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- clear records of items downloaded after a given time.
+- control whether to clear records of items downloaded from web pages or web pages and extensions.
 
 ## Syntax
 
@@ -35,11 +24,11 @@ let removing = browser.browsingData.removeDownloads(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only records created after a given time, and whether to clear only records of items downloaded from normal web pages or to clear records from hosted apps and extensions as well.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only records created after a given time, and control whether to clear records of items downloaded from web pages or web pages and extensions.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the removal has finished. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
@@ -79,13 +68,14 @@ function onError(error) {
 browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

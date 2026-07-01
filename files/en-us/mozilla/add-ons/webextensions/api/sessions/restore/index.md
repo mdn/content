@@ -1,19 +1,10 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - WebExtensions
-  - restore
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.restore
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.
 
@@ -36,10 +27,6 @@ let restoringSession = browser.sessions.restore(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with a {{WebExtAPIRef("sessions.Session", "Session")}} object representing the session that was restored.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This restores the single most recently-closed session, whether it's a window or tab:
@@ -47,7 +34,7 @@ This restores the single most recently-closed session, whether it's a window or 
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -64,7 +51,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
@@ -72,7 +59,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
@@ -106,4 +98,4 @@ browser.browserAction.onClicked.addListener(() => {
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzil.la/1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

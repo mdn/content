@@ -1,15 +1,8 @@
 ---
-title: AudioBufferSourceNode.detune
+title: "AudioBufferSourceNode: detune property"
+short-title: detune
 slug: Web/API/AudioBufferSourceNode/detune
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - detune
 browser-compat: api.AudioBufferSourceNode.detune
 ---
 
@@ -27,7 +20,8 @@ while +1200 and -1200 detune it up or down by one octave.
 A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-> **Note:** Though the `AudioParam` returned is read-only, the
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the
 > value it represents is not.
 
 ## Examples
@@ -41,7 +35,7 @@ const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 const myArrayBuffer = audioCtx.createBuffer(
   channelCount,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 for (let channel = 0; channel < channelCount; channel++) {

@@ -2,23 +2,18 @@
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
 page-type: web-api-interface
-tags:
-  - DOM
-  - Interface
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`PerformanceResourceTiming`** interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
+
+{{InheritanceDiagram}}
 
 ## Description
 
 The interface's properties create a resource loading timeline with high-resolution timestamps for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, and more. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the type of resource that initiated the fetch.
-
-{{InheritanceDiagram}}
 
 ### Typical resource timing metrics
 
@@ -27,7 +22,9 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring TCP handshake time (`connectEnd` - `connectStart`)
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `finalResponseHeadersStart`)
 - Measuring request time (`responseStart` - `requestStart`)
+- Measuring document request time (`finalResponseHeadersStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
 - Measuring ServiceWorker processing time (`fetchStart` - `workerStart`)
@@ -35,6 +32,22 @@ The properties of this interface allow you to calculate certain resource timing 
 - Checking if local caches were hit (`transferSize` should be `0`)
 - Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
 - Checking if the correct resources are render-blocking (`renderBlockingStatus`)
+
+### Managing resource buffer sizes
+
+By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) of the Resource Timing guide.
+
+### Cross-origin timing information
+
+Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+
+For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
+```
 
 ## Instance properties
 
@@ -55,7 +68,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/resource-timing/timestamp-diagram.svg)
 
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.
@@ -77,8 +90,12 @@ The interface supports the following timestamp properties which you can see in t
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
+- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (for example, 100 Continue or 103 Early Hints).
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server (which may be an interim response).
+- {{domxref('PerformanceResourceTiming.finalResponseHeadersStart')}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the final headers response time (for example, 200 Success), after any interim response time.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 
@@ -86,8 +103,12 @@ The interface supports the following timestamp properties which you can see in t
 
 Additionally, this interface exposes the following properties containing more information about a resource:
 
+- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}}
+  - : A string representing a minimized and standardized version of the MIME-type of the fetched resource.
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{ReadOnlyInline}}
+  - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
@@ -95,8 +116,8 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.nextHopProtocol')}} {{ReadOnlyInline}}
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
-  - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
-- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : A string representing the render-blocking status. Either `"blocking"` or `"non-blocking"`.
+- {{domxref('PerformanceResourceTiming.responseStatus')}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
@@ -133,18 +154,6 @@ resources.forEach((entry) => {
 });
 ```
 
-## Security requirements
-
-### Cross-origin timing information
-
-Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
-
-```http
-Timing-Allow-Origin: https://developer.mozilla.org
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -155,5 +164,4 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
-- [Resource Timing (Overview)](/en-US/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource timing (Overview)](/en-US/docs/Web/API/Performance_API/Resource_timing)

@@ -1,13 +1,10 @@
 ---
-title: KeyboardEvent.initKeyboardEvent()
+title: "KeyboardEvent: initKeyboardEvent() method"
+short-title: initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
 
@@ -16,7 +13,7 @@ browser-compat: api.KeyboardEvent.initKeyboardEvent
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
 the attributes of a keyboard event object. This method was introduced in draft of DOM
 Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since
-implementing this method as experimental broke existing web apps (see {{bug(999645)}}).
+implementing this method as experimental broke existing web apps (see [Firefox bug 999645](https://bugzil.la/999645)).
 Web applications should use constructor instead of this if it's available.
 
 ## Syntax
@@ -59,7 +56,7 @@ None ({{jsxref("undefined")}}).
 
 {{Specifications}}
 
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, `KeyboardEvent.initKeyEvent()` by Gecko browsers and the early DOM Events Level 3 version, `KeyboardEvent.initKeyboardEvent()` by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 
 ## Browser compatibility
 

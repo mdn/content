@@ -1,18 +1,10 @@
 ---
 title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - setEnabled
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.setEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Enables or disables the given add-on.
 
@@ -44,10 +36,6 @@ let settingEnabled = browser.management.setEnabled(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the add-on has been disabled or enabled.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Toggle enable/disable for the add-on whose ID is "my-add-on":
@@ -67,7 +55,12 @@ toggleEnabled(id);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-setEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-setEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

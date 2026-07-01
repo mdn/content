@@ -1,24 +1,15 @@
 ---
-title: SourceBuffer.removeAsync()
+title: "SourceBuffer: removeAsync() method"
+short-title: removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - SourceBuffer
-  - Video
-  - removeAsync
-  - Experimental
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SourceBuffer.removeAsync
 ---
 
-{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`removeAsync()`** method of the
 {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
@@ -27,8 +18,7 @@ range. A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
 in the specified time range have been removed.
 
 This method can only be called when {{domxref("SourceBuffer.updating", "updating")}} is
-`false`. If that's not the case, call {{domxref("SourceBuffer.abort",
-  "abort()")}} instead.
+`false`. If that's not the case, call {{domxref("SourceBuffer.abort", "abort()")}} instead.
 
 ## Syntax
 

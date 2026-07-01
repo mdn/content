@@ -1,27 +1,7 @@
 ---
-title: 'Spaces and reference spaces: Spatial tracking in WebXR'
+title: "Spaces and reference spaces: Spatial tracking in WebXR"
 slug: Web/API/WebXR_Device_API/Spatial_tracking
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Guide
-  - Motion
-  - NeedsContent
-  - NeedsExample
-  - Orientation
-  - Poses
-  - Position
-  - Spaces
-  - Spatial tracking
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - movement
-  - tracking
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -32,7 +12,8 @@ The location and movement of the user's headset represent their head's position 
 
 In this guide, we'll explore how WebXR uses **spaces** and, more specifically, **reference spaces**, to track the positions, orientations, and movements of objects and of the user's body in the virtual world.
 
-> **Note:** This article presumes that you are familiar with the concepts introduced in [Geometry and reference spaces in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Geometry): that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.
+> [!NOTE]
+> This article presumes that you are familiar with the concepts introduced in [Geometry and reference spaces in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Geometry): that is, the basics of 3D coordinate systems, as well as WebXR spaces, reference spaces, and how reference spaces are used to create local coordinate systems for individual objects or movable components within a scene.
 
 ## Representing a position using a reference space
 
@@ -108,7 +89,10 @@ The simplest case for using `getOffsetReferenceSpace()` is to transform a point 
 
 ```js
 let halfMeterTransform = new XRRigidTransform({
-        x: 0.5, y: 0.5, z: 0.5, w: 1.0
+  x: 0.5,
+  y: 0.5,
+  z: 0.5,
+  w: 1.0,
 });
 aRefSpace = aRefSpace.getOffsetReferenceSpace(halfMeterTransform);
 ```
@@ -123,8 +107,9 @@ Since most users would prefer that you maintain the same viewer position and fac
 
 ```js
 let viewerPose = frame.getViewerPose(worldReferenceSpace);
-let newSession = navigator.xr.requestSession("immersive-vr",
-      { requiredFeatures: "unbounded" });
+let newSession = navigator.xr.requestSession("immersive-vr", {
+  requiredFeatures: "unbounded",
+});
 worldReferenceSpace = await newSession.requestReferenceSpace("unbounded");
 viewerPose = worldReferenceSpace.getOffsetReferenceSpace(viewerPose.transform);
 ```
@@ -151,13 +136,13 @@ function myDrawFrame(currentFrameTime, frame) {
   animationFrameRequestID = session.requestAnimationFrame(myDrawFrame);
 
   if (viewerPose) {
-    if (!previousViewerPose) {
-      previousViewerPose = viewerPose;
-    }
-
+    previousViewerPose ??= viewerPose;
     let offsetMatrix = mat4.create();
-    mat4.sub(offsetMatrix, previousViewerPose.transform.matrix,
-             viewerPose.transform.matrix);
+    mat4.sub(
+      offsetMatrix,
+      previousViewerPose.transform.matrix,
+      viewerPose.transform.matrix,
+    );
 
     previousViewerPose = viewerPose;
   }
@@ -185,8 +170,6 @@ On the other hand, if your app involves the user physically moving in real space
 You can do this by creating a new reference space that incorporates into its effective origin the distance the viewer's position jumped since the previous frame, using the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
 ### The reset event
-
-**_<<<--- this section probably has problems still; corrections are appreciated --->>>_**
 
 When a discontinuity or break in the native or effective origin of a reference space occurs, the {{Glossary("user agent")}} will send the {{domxref("XRReferenceSpace")}} a {{domxref("XRReferenceSpace.reset_event", "reset")}} event. This event indicates that a significant change to the origin's position has taken place relative to the user's environment.
 

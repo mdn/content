@@ -1,26 +1,16 @@
 ---
-title: IDBIndex.count()
+title: "IDBIndex: count() method"
+short-title: count()
 slug: Web/API/IDBIndex/count
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - count
 browser-compat: api.IDBIndex.count
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`count()`** method of the {{domxref("IDBIndex")}}
 interface returns an {{domxref("IDBRequest")}} object, and in a separate thread,
 returns the number of records within a key range.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -36,7 +26,7 @@ count(key)
 
 ### Return value
 
-A {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the number of records that match the given key or key range.
 
@@ -69,7 +59,7 @@ complete working example, see our [IndexedDB-examples demo repo](https://github.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+  tableEntry.textContent = "";
   const transaction = db.transaction(["contactsList"], "readonly");
   const objectStore = transaction.objectStore("contactsList");
 
@@ -83,15 +73,20 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if (cursor) {
       const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.value.id}</td>` +
-        `<td>${cursor.value.lName}</td>` +
-        `<td>${cursor.value.fName}</td>` +
-        `<td>${cursor.value.jTitle}</td>` +
-        `<td>${cursor.value.company}</td>` +
-        `<td>${cursor.value.eMail}</td>` +
-        `<td>${cursor.value.phone}</td>` +
-        `<td>${cursor.value.age}</td>`;
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

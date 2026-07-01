@@ -39,7 +39,7 @@ A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}
+- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "MediaStreamTrackAudioSourceNode()")}}
   - : Creates a new `MediaStreamTrackAudioSourceNode` object instance with the specified options.
 
 ## Instance properties
@@ -52,7 +52,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example) for example code that uses this object.
+See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#examples) for example code that uses this object.
 
 ## Specifications
 

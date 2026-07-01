@@ -2,20 +2,12 @@
 title: UIEvent
 slug: Web/API/UIEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - UIEvent
-  - events
 browser-compat: api.UIEvent
 ---
 
 {{APIRef("UI Events")}}
 
-The **`UIEvent`** interface represents simple user interface events.
+The **`UIEvent`** interface represents simple user interface events. It is part of the [UI Events](/en-US/docs/Web/API/UI_Events) API, which includes various event types and interfaces related to user interactions.
 
 `UIEvent` derives from {{domxref("Event")}}. Although the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, you should create a `UIEvent` object using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.
 
@@ -58,5 +50,6 @@ _This interface also inherits methods of its parent, {{domxref("Event")}}._
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [UI Events API](/en-US/docs/Web/API/UI_Events)
+- [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

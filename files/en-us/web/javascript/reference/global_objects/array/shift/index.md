@@ -1,23 +1,29 @@
 ---
 title: Array.prototype.shift()
+short-title: shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Array.shift
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`shift()`** method removes the **first**
+The **`shift()`** method of {{jsxref("Array")}} instances removes the **first**
 element from an array and returns that removed element. This method changes the length
 of the array.
 
-{{EmbedInteractiveExample("pages/js/array-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.shift()")}}
+
+```js interactive-example
+const array = [1, 2, 3];
+
+const firstElement = array.shift();
+
+console.log(array);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -25,19 +31,21 @@ of the array.
 shift()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The removed element from the array; {{jsxref("undefined")}} if the array is empty.
 
 ## Description
 
-The `shift()` method removes the element at the zeroth index and shifts the
-values at consecutive indexes down, then returns the removed value. If the
-{{jsxref("Array/length", "length")}} property is 0, {{jsxref("undefined")}} is returned.
+The `shift()` method shifts all values to the left by 1 and decrements the length by 1, resulting in the first element being removed. If the {{jsxref("Array/length", "length")}} property is 0, {{jsxref("undefined")}} is returned.
 
 The {{jsxref("Array/pop", "pop()")}} method has similar behavior to `shift()`, but applied to the last element in an array.
 
-The `shift()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with the first element removed, you can use [`arr.slice(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) instead.
+The `shift()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with the first element removed, you can use [`arr.slice(1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) instead.
 
 The `shift()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
@@ -51,7 +59,7 @@ first element. It also displays the removed element:
 ```js
 const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log("myFish before:", JSON.stringify(myFish));
+console.log("myFish before:", myFish);
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();
@@ -79,7 +87,7 @@ while (typeof (i = names.shift()) !== "undefined") {
 
 ### Calling shift() on non-array objects
 
-The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The `length` property is decremented by one.
+The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The property at `length - 1` is [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete), and the `length` property is decremented by one.
 
 ```js
 const arrayLike = {
@@ -109,7 +117,10 @@ console.log(plainObj);
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.unshift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

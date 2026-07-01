@@ -1,26 +1,14 @@
 ---
-title: XRFrame.getViewerPose()
+title: "XRFrame: getViewerPose() method"
+short-title: getViewerPose()
 slug: Web/API/XRFrame/getViewerPose
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - getViewerPose
-  - pose
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getViewerPose
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getViewerPose()`** method, a member of the {{domxref("XRFrame")}} interface, returns a {{domxref("XRViewerPose")}} object which describes the viewer's pose (position and orientation) relative to the specified reference space.
 
@@ -48,15 +36,11 @@ to the specified reference space.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if `getViewerPose()` was not
     called within the context of a callback to a
-    session's {{domxref("XRSession.requestAnimationFrame",
-    "XRSession.requestAnimationFrame()")}}.
+    session's {{domxref("XRSession.requestAnimationFrame", "XRSession.requestAnimationFrame()")}}.
 
 ## Examples
 
-In this callback function for {{domxref("XRSession.requestAnimationFrame",
-  "requestAnimationFrame()")}}, the {{domxref("XRViewerPose")}} describing the viewer's
-viewpoint on the world is obtained by calling `getViewerPose()` on the
-{{domxref("XRFrame")}} passed into the callback.
+In this callback function for {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}, the {{domxref("XRViewerPose")}} describing the viewer's viewpoint on the world is obtained by calling `getViewerPose()` on the {{domxref("XRFrame")}} passed into the callback.
 
 ```js
 viewerPose = xrFrame.getViewerPose(xrReferenceSpace);

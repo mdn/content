@@ -2,10 +2,6 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - StyleSheetList
 browser-compat: api.StyleSheetList
 ---
 
@@ -15,7 +11,10 @@ The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}}
 
 It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods. However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
 
-> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
+> [!NOTE]
+> Typically list interfaces like `StyleSheetList` wrap around {{jsxref("Array")}} types, so you can use `Array` methods on them.
+> This is not the case here for [historical reasons](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156).
+> However, you can convert `StyleSheetList` to an `Array` in order to use those methods (see the example below).
 
 ## Instance properties
 
@@ -32,11 +31,8 @@ It is an array-like object but can't be iterated over using {{jsxref("Array")}} 
 ### Get CSSStyleSheet objects with for loop
 
 ```js
-const styleSheet = [];
-const styleSheets = document.styleSheets;
-
-for (let i = 0; i < styleSheets.length; i++) {
-  styleSheet.push(styleSheets[i]);
+for (const styleSheet of document.styleSheets) {
+  console.log(styleSheet); // A CSSStyleSheet object
 }
 ```
 
@@ -46,15 +42,17 @@ for (let i = 0; i < styleSheets.length; i++) {
 const allCSS = [...document.styleSheets]
   .map((styleSheet) => {
     try {
-      return [...styleSheet.cssRules]
-        .map((rule) => rule.cssText)
-        .join('');
+      return [...styleSheet.cssRules].map((rule) => rule.cssText).join("");
     } catch (e) {
-      console.log('Access to stylesheet %s is denied. Ignoring…', styleSheet.href);
+      console.log(
+        "Access to stylesheet %s is denied. Ignoring…",
+        styleSheet.href,
+      );
+      return undefined;
     }
   })
   .filter(Boolean)
-  .join('\n');
+  .join("\n");
 ```
 
 ## Specifications

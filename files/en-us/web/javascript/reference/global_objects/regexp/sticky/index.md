@@ -1,24 +1,31 @@
 ---
 title: RegExp.prototype.sticky
+short-title: sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 page-type: javascript-instance-accessor-property
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `y` flag is used with this regular expression.
 
-The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
+```js interactive-example
+const str = "table football";
+const regex = /foo/y;
+
+regex.lastIndex = 6;
+
+console.log(regex.sticky);
+// Expected output: true
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(regex.test(str));
+// Expected output: false
+```
 
 ## Description
 
@@ -39,20 +46,20 @@ However, for the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method, a regex that's both sticky and global behaves the same as a sticky and non-global regex. Because [`test()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) is a simple wrapper around `exec()`, `test()` would ignore the global flag and perform sticky matches as well. However, due to many other methods special-casing the behavior of global regexes, the global flag is, in general, orthogonal to the sticky flag.
 
-- [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) (which calls [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)): `y`, `g` and `gy` are all different.
-  - For `y` regexes: `matchAll()` throws; `[@@matchAll]()` yields the `exec()` result exactly once, without updating the regex's `lastIndex`.
+- [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) (which calls [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)): `y`, `g` and `gy` are all different.
+  - For `y` regexes: `matchAll()` throws; `[Symbol.matchAll]()` yields the `exec()` result exactly once, without updating the regex's `lastIndex`.
   - For `g` or `gy` regexes: returns an iterator that yields a sequence of `exec()` results.
-- [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) (which calls [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)): `y`, `g` and `gy` are all different.
+- [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) (which calls [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)): `y`, `g` and `gy` are all different.
   - For `y` regexes: returns the `exec()` result and updates the regex's `lastIndex`.
   - For `g` or `gy` regexes: returns an array of all `exec()` results.
-- [`String.prototype.search()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) (which calls [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)): the `g` flag is always irrelevant.
+- [`String.prototype.search()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) (which calls [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)): the `g` flag is always irrelevant.
   - For `y` or `gy` regexes: always returns `0` (if the very beginning of the string matches) or `-1` (if the beginning doesn't match), without updating the regex's `lastIndex` when it exits.
   - For `g` regexes: returns the index of the first match in the string, or `-1` if no match is found.
-- [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) (which calls [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)): `y`, `g`, and `gy` all have the same behavior.
-- [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+- [`String.prototype.split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) (which calls [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)): `y`, `g`, and `gy` all have the same behavior.
+- [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: replaces once at the current `lastIndex` and updates `lastIndex`.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
-- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) (which calls [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: `replaceAll()` throws.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
 
@@ -73,16 +80,16 @@ regex.lastIndex; // 0 (reset after match failure)
 
 ### Anchored sticky flag
 
-For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the specification [specifically calls out](https://tc39.es/ecma262/#sec-compileassertion) the fact that:
+For several versions, Firefox's SpiderMonkey engine had [a bug](https://bugzil.la/773687) with regard to the `^` assertion and the sticky flag which allowed expressions starting with the `^` assertion and using the sticky flag to match when they shouldn't. The bug was introduced some time after Firefox 3.6 (which had the sticky flag but not the bug) and fixed in 2015. Perhaps because of the bug, the specification [specifically calls out](https://tc39.es/ecma262/multipage/text-processing.html#sec-compileassertion) the fact that:
 
 > Even when the `y` flag is used with a pattern, `^` always matches only at the beginning of _Input_, or (if _rer_.[[Multiline]] is `true`) at the beginning of a line.
 
 Examples of correct behavior:
 
 ```js
-const regex = /^foo/y;
-regex.lastIndex = 2;
-regex.test("..foo"); // false - index 2 is not the beginning of the string
+const regex1 = /^foo/y;
+regex1.lastIndex = 2;
+regex1.test("..foo"); // false - index 2 is not the beginning of the string
 
 const regex2 = /^foo/my;
 regex2.lastIndex = 2;
@@ -103,10 +110,10 @@ regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 
 - [Polyfill of the `sticky` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.unicode")}}

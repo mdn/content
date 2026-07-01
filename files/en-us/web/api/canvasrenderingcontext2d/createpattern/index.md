@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.createPattern()
+title: "CanvasRenderingContext2D: createPattern() method"
+short-title: createPattern()
 slug: Web/API/CanvasRenderingContext2D/createPattern
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createPattern()`** method of the Canvas 2D API creates a pattern using the specified image and repetition.
 This method returns a {{domxref("CanvasPattern")}}.
@@ -28,10 +23,8 @@ createPattern(image, repetition)
 ### Parameters
 
 - `image`
-
   - : An image to be used as the pattern's image.
     It can be any of the following:
-
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
     - {{domxref("SVGImageElement")}} ({{SVGElement("image")}})
     - {{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}, by using the capture of the video)
@@ -41,21 +34,18 @@ createPattern(image, repetition)
     - {{domxref("VideoFrame")}}
 
 - `repetition`
-
   - : A string indicating how to repeat the pattern's image.
     Possible values are:
-
     - `"repeat"` (both directions)
     - `"repeat-x"` (horizontal only)
     - `"repeat-y"` (vertical only)
     - `"no-repeat"` (neither direction)
 
-    If `repetition` is specified as an empty string (`""`) or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"` will be used.
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`): both are synonyms of `"repeat"`.
 
 ### Return value
 
-- {{domxref("CanvasPattern")}}
-  - : An opaque object describing a pattern.
+An opaque {{domxref("CanvasPattern")}} describing a pattern.
 
 If the `image` is not fully loaded ({{domxref("HTMLImageElement.complete")}} is `false`), then [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
 
@@ -68,7 +58,7 @@ Once created, the pattern is assigned to the canvas context's fill style and app
 
 The original image looks like this:
 
-![A flowery pattern](canvas_createpattern.png)
+![A flowery pattern](canvas_create_pattern.png)
 
 #### HTML
 
@@ -83,8 +73,9 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "canvas_createpattern.png";
-img.onload = () => { // Only use the image after it's loaded
+img.src = "canvas_create_pattern.png";
+// Only use the image after it's loaded
+img.onload = () => {
   const pattern = ctx.createPattern(img, "repeat");
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
@@ -110,7 +101,7 @@ patternCanvas.width = 50;
 patternCanvas.height = 50;
 
 // Give the pattern a background color and draw an arc
-patternContext.fillStyle = "#fec";
+patternContext.fillStyle = "#ffeecc";
 patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
 patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
 patternContext.stroke();

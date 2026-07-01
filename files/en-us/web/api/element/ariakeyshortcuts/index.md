@@ -1,19 +1,12 @@
 ---
-title: Element.ariaKeyShortcuts
+title: "Element: ariaKeyShortcuts property"
+short-title: ariaKeyShortcuts
 slug: Web/API/Element/ariaKeyShortcuts
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaKeyShortcuts
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaKeyShortcuts
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface reflects the value of the `aria-keyshortcuts` attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
@@ -32,9 +25,9 @@ In this example the `aria-keyshortcuts` attribute on the element with an ID of `
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
-el.ariaKeyShortcuts = "Alt+Shift+M"
+el.ariaKeyShortcuts = "Alt+Shift+M";
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
 ```
 

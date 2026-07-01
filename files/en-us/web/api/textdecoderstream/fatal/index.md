@@ -1,19 +1,14 @@
 ---
-title: TextDecoderStream.fatal
+title: "TextDecoderStream: fatal property"
+short-title: fatal
 slug: Web/API/TextDecoderStream/fatal
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - fatal
-  - TextDecoderStream
 browser-compat: api.TextDecoderStream.fatal
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`fatal`** read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("boolean")}} indicating if the error mode of the `TextDecoderStream` object is set to `fatal`.
+The **`fatal`** read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("Boolean")}} indicating if the error mode of the `TextDecoderStream` object is set to `fatal`.
 
 If the property is `true` then a decoder will throw a {{jsxref("TypeError")}} if it encounters malformed data while decoding.
 If `false` the decoder will substitute the invalid data with the replacement character `U+FFFD` (�).
@@ -21,7 +16,7 @@ The value of the property is set in the [`TextDecoderStream()` constructor](/en-
 
 ## Value
 
-A {{jsxref("boolean")}} which will return `true` if the error mode is set to "fatal".
+A {{jsxref("Boolean")}} which will return `true` if the error mode is set to "fatal".
 Otherwise it returns `false`, indicating that the error mode is "replacement".
 
 ## Examples

@@ -2,12 +2,6 @@
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - Intermediate
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
@@ -37,18 +31,19 @@ That means we need a way to execute our drawing functions over a period of time.
 
 ### Scheduled updates
 
-First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("window.requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
+First there's the {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}}, and {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
 
-- {{domxref("setInterval()")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : Starts repeatedly executing the function specified by `function` every `delay` milliseconds.
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : Executes the function specified by `function` in `delay` milliseconds.
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
-If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
+If you don't want any user interaction you can use the `setInterval()` function, which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting listeners using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, we catch any user interaction and execute our animation functions.
 
-> **Note:** In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
+> [!NOTE]
+> In the examples below, we'll use the {{domxref("Window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
 
 ## An animated solar system
 
@@ -66,6 +61,8 @@ This example animates a small model of our solar system.
 const sun = new Image();
 const moon = new Image();
 const earth = new Image();
+const ctx = document.getElementById("canvas").getContext("2d");
+
 function init() {
   sun.src = "canvas_sun.png";
   moon.src = "canvas_moon.png";
@@ -74,13 +71,11 @@ function init() {
 }
 
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
-
   ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
+  ctx.fillStyle = "rgb(0 0 0 / 40%)";
+  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
   ctx.save();
   ctx.translate(150, 150);
 
@@ -88,7 +83,7 @@ function draw() {
   const time = new Date();
   ctx.rotate(
     ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds()
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
   );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
@@ -98,7 +93,7 @@ function draw() {
   ctx.save();
   ctx.rotate(
     ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds()
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
   );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
@@ -175,6 +170,8 @@ function clock() {
   ctx.restore();
 
   const sec = now.getSeconds();
+  // To display a clock with a sweeping second hand, use:
+  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
   const min = now.getMinutes();
   const hr = now.getHours() % 12;
 
@@ -186,7 +183,7 @@ function clock() {
   // Write Hours
   ctx.save();
   ctx.rotate(
-    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
   );
   ctx.lineWidth = 14;
   ctx.beginPath();
@@ -221,7 +218,7 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0, 0, 0, 0)";
+  ctx.fillStyle = "transparent";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
@@ -241,6 +238,10 @@ window.requestAnimationFrame(clock);
 ```
 
 ### Result
+
+> [!NOTE]
+> Although the clock updates only once every second, the animated image is updated at 60 frames per second (or at the display refresh rate of your web browser).
+> To display the clock with a sweeping second hand, replace the definition of `const sec` above with the version that has been commented out.
 
 {{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
@@ -367,7 +368,7 @@ function draw() {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 ```
 
@@ -401,7 +402,7 @@ addEventListener(
     cursor.x = e.touches[0].clientX;
     cursor.y = e.touches[0].clientY;
   },
-  { passive: false }
+  { passive: false },
 );
 
 addEventListener("resize", () => setSize());
@@ -413,7 +414,7 @@ function generateParticles(amount) {
       innerHeight / 2,
       4,
       generateColor(),
-      0.02
+      0.02,
     );
   }
 }
@@ -461,7 +462,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgba(0,0,0,0.05)";
+  context.fillStyle = "rgb(0 0 0 / 5%)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());

@@ -1,15 +1,8 @@
 ---
-title: NodeList.prototype.forEach()
+title: "NodeList: forEach() method"
+short-title: forEach()
 slug: Web/API/NodeList/forEach
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterable
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.forEach
 ---
 
@@ -29,10 +22,8 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : A function to execute on each element of `someNodeList`. It
     accepts 3 parameters:
-
     - `currentValue`
       - : The current element being processed in `someNodeList`.
     - `currentIndex` {{Optional_inline}}
@@ -65,12 +56,9 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-list.forEach(
-  function (currentValue, currentIndex, listObj) {
-    console.log(`${currentValue}, ${currentIndex}, ${this}`);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(`${currentValue}, ${currentIndex}, ${this}`);
+}, "myThisArg");
 ```
 
 The above code results in the following:

@@ -2,11 +2,6 @@
 title: SVGAnimateMotionElement
 slug: Web/API/SVGAnimateMotionElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimateMotionElement
 ---
 

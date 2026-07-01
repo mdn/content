@@ -1,20 +1,14 @@
 ---
-title: PeriodicSyncManager.register()
+title: "PeriodicSyncManager: register() method"
+short-title: register()
 slug: Web/API/PeriodicSyncManager/register
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`register()`** method of the
 {{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the
@@ -30,18 +24,16 @@ register(tag, options)
 ### Parameters
 
 - `tag`
-  - : A unique {{jsxref('String')}} identifier
+  - : A unique {{jsxref('String')}} identifier.
 - `options` {{optional_inline}}
-
   - : An {{jsxref('Object')}} containing the following optional data:
-
     - `minInterval`
       - : The minimum interval time, in milliseconds, at which
         the periodic sync should occur.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 
@@ -61,11 +53,11 @@ interval of one day from a browsing context:
 async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.periodicSync.register('fetch-news', {
+    await registration.periodicSync.register("fetch-news", {
       minInterval: 24 * 60 * 60 * 1000,
     });
   } catch {
-    console.log('Periodic Sync could not be registered!');
+    console.log("Periodic Sync could not be registered!");
   }
 }
 ```
@@ -80,5 +72,4 @@ async function registerPeriodicNewsCheck() {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)

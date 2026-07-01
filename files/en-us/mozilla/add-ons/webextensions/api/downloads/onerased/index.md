@@ -1,20 +1,10 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onErased
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onErased
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 
@@ -30,7 +20,7 @@ browser.downloads.onErased.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,16 +31,10 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. This function is passed this argument:
     - `downloadId`
       - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -65,13 +49,18 @@ browser.downloads.onErased.addListener(handleErased);
 
 let erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onErased) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onErased) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

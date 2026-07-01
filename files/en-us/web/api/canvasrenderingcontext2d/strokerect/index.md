@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
+title: "CanvasRenderingContext2D: strokeRect() method"
+short-title: strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.strokeRect()`**
@@ -93,11 +88,11 @@ This example draws a rectangle with a drop shadow and thick, beveled outlines.
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.shadowColor = "#d53";
+ctx.shadowColor = "#dd5533";
 ctx.shadowBlur = 20;
 ctx.lineJoin = "bevel";
 ctx.lineWidth = 15;
-ctx.strokeStyle = "#38f";
+ctx.strokeStyle = "#3388ff";
 ctx.strokeRect(30, 30, 160, 90);
 ```
 

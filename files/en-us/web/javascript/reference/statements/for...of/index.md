@@ -2,21 +2,25 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
 browser-compat: javascript.statements.for_of
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for...of`** statement executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: for...of statement")}}
+
+```js interactive-example
+const array = ["a", "b", "c"];
+
+for (const element of array) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntax
 
@@ -26,7 +30,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property).
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using), [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g., a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for...of` loop is in.
 - `iterable`
   - : An iterable object. The source of the sequence of values on which the loop operates.
 - `statement`
@@ -36,11 +40,14 @@ for (variable of iterable)
 
 A `for...of` loop operates on the values sourced from an iterable one by one in sequential order. Each operation of the loop on a value is called an _iteration_, and the loop is said to _iterate over the iterable_. Each iteration executes statements that may refer to the current sequence value.
 
-When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
+When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
 
-A `for...of` loop exits when the iterator has completed (the iterator's `next()` method returns an object containing `done: true`). You may also use control flow statements to change the normal control flow. [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) exits the loop and goes to the first statement after the loop body, while [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) skips the rest of the statements of the current iteration and proceeds to the next iteration.
+A `for...of` loop exits when the iterator has completed (the `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
 
-If the `for...of` loop exited early (e.g. a `break` statement is encountered or an error is thrown), the [`return()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method of the iterator is called to perform any cleanup.
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
+
+If the `for...of` loop exited early (e.g., a `break` statement is encountered or an error is thrown), the [`return()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method of the iterator is called to perform any cleanup.
 
 The `variable` part of `for...of` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}.
 
@@ -56,18 +63,38 @@ for (let value of iterable) {
 // 31
 ```
 
-> **Note:** Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
+> [!NOTE]
+> Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
 
-You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or an object property like `for (x.y of iterable)` as well.
+Variables declared using the {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration are disposed every time a loop iteration is done (and `await using` causes an implicit `await` at the end of the iteration). However, if the loop early-exits, any values left in the iterator that haven't been visited are not disposed (although the current value is).
+
+```js
+const resources = [dbConnection1, dbConnection2, dbConnection3];
+
+for (using dbConnection of resources) {
+  dbConnection.query("...");
+  // dbConnection is disposed here
+}
+```
+
+You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 
-```js example-bad
+```js-nolint example-bad
 let async;
 for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
 ```
 
 This is to avoid syntax ambiguity with the valid code `for (async of => {};;)`, which is a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop.
+
+Similarly, if you use the `using` declaration, then the variable cannot be called `of`:
+
+```js-nolint example-bad
+for (using of of []); // SyntaxError
+```
+
+This is to avoid syntax ambiguity with the valid code `for (using of [])`, before `using` was introduced.
 
 ## Examples
 
@@ -86,7 +113,7 @@ for (const value of iterable) {
 
 ### Iterating over a string
 
-Strings are [iterated by Unicode code points](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator).
+Strings are [iterated by Unicode code points](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator).
 
 ```js
 const iterable = "boo";
@@ -167,7 +194,7 @@ foo(1, 2, 3);
 
 ### Iterating over a NodeList
 
-The following example adds a `read` class to paragraphs that are direct descendants of the [`<article>`](/en-US/docs/Web/HTML/Element/article) element by iterating over a [`NodeList`](/en-US/docs/Web/API/NodeList) DOM collection.
+The following example adds a `read` class to paragraphs that are direct descendants of the [`<article>`](/en-US/docs/Web/HTML/Reference/Elements/article) element by iterating over a [`NodeList`](/en-US/docs/Web/API/NodeList) DOM collection.
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");
@@ -178,7 +205,7 @@ for (const paragraph of articleParagraphs) {
 
 ### Iterating over a user-defined iterable
 
-Iterating over an object with an `@@iterator` method that returns a custom iterator:
+Iterating over an object with a `[Symbol.iterator]()` method that returns a custom iterator:
 
 ```js
 const iterable = {
@@ -203,7 +230,7 @@ for (const value of iterable) {
 // 3
 ```
 
-Iterating over an object with an `@@iterator` generator method:
+Iterating over an object with a `[Symbol.iterator]()` generator method:
 
 ```js
 const iterable = {
@@ -222,7 +249,7 @@ for (const value of iterable) {
 // 3
 ```
 
-_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
+_Iterable iterators_ (iterators with a `[Symbol.iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
 
 ```js
 let i = 1;
@@ -332,7 +359,7 @@ for (const value of generator) {
 
 Both `for...in` and `for...of` statements iterate over something. The main difference between them is in what they iterate over.
 
-The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object, while the `for...of` statement iterates over values that the [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) defines to be iterated over.
+The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object, while the `for...of` statement iterates over values that the [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) defines to be iterated over.
 
 The following example shows the difference between a `for...of` loop and a `for...in` loop when used with an {{jsxref("Array")}}.
 
@@ -361,13 +388,13 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log array _elements_ `3`, `5`, `7` or `"hello"` because those are not _properties_ — they are _values_. It logs array _indexes_ as well as `arrCustom` and `objCustom`, which are actual properties. If you're not sure why these properties are iterated over, there's a more thorough explanation of how [array iteration and `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in) work.
+The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log array _elements_ `3`, `5`, `7` or `"hello"` because those are not _properties_ — they are _values_. It logs array _indexes_ as well as `arrCustom` and `objCustom`, which are actual properties. If you're not sure why these properties are iterated over, there's a more thorough explanation of how [array iteration and `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in) work.
 
-The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e. not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
+The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e., not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
 
-The `for...of` loop iterates and logs _values_ that `iterable`, as an array (which is [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)), defines to be iterated over. The object's _elements_ `3`, `5`, `7` are shown, but none of the object's _properties_ are.
+The `for...of` loop iterates and logs _values_ that `iterable`, as an array (which is [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), defines to be iterated over. The object's _elements_ `3`, `5`, `7` are shown, but none of the object's _properties_ are.
 
 ## Specifications
 
@@ -381,4 +408,4 @@ The `for...of` loop iterates and logs _values_ that `iterable`, as an array (whi
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Object.entries()")}} – Useful when using `for...of` over an object.
+- {{jsxref("Object.entries()")}}

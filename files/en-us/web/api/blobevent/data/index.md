@@ -1,21 +1,14 @@
 ---
-title: BlobEvent.data
+title: "BlobEvent: data property"
+short-title: data
 slug: Web/API/BlobEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - BlobEvent
-  - DOM
-  - DOM Reference
-  - Media Recorder API
-  - Property
-  - Reference
 browser-compat: api.BlobEvent.data
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-The **`BlobEvent.data`** read-only property represents a {{domxref("Blob")}} associated with the event.
+The **`data`** read-only property of the {{domxref("BlobEvent")}} interface represents a {{domxref("Blob")}} associated with the event.
 
 ## Value
 

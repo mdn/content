@@ -1,24 +1,14 @@
 ---
-title: XRSession.visibilityState
+title: "XRSession: visibilityState property"
+short-title: visibilityState
 slug: Web/API/XRSession/visibilityState
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - visibilityState
+status:
+  - experimental
 browser-compat: api.XRSession.visibilityState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`visibilityState`** property of the
 {{DOMxRef("XRSession")}} interface is a string indicating whether the WebXR content is
@@ -58,8 +48,8 @@ It's important to keep in mind that because an immersive WebXR session is potent
 being shown using a different display than the HTML document in which it's running (such
 as when being shown on a headset), the value of a
 session's `visibilityState` may not necessarily be the same as the owning
-_{{domxref("document")}}'s_ {{domxref("Document.visibilityState",
-  "visibilityState")}}. For instance, if the viewer is using a headset tethered to a
+_{{domxref("document")}}'s_ {{domxref("Document.visibilityState", "visibilityState")}}.
+For instance, if the viewer is using a headset tethered to a
 computer and the immersive scene is obscured by a configuration UI, the user could peek
 out from behind the headset and still be able to see the document itself on their
 computer's monitor.
@@ -74,5 +64,4 @@ computer's monitor.
 
 ## See also
 
-- {{DOMxRef("XRSession.onvisibilitychange")}}
 - {{DOMxRef("XRSession.visibilitychange_event","visibilitychange")}} event

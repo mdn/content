@@ -1,21 +1,14 @@
 ---
-title: Element.closest()
+title: "Element: closest() method"
+short-title: closest()
 slug: Web/API/Element/closest
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selector
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - Selector
 browser-compat: api.Element.closest
 ---
 
-{{APIRef('DOM')}}
+{{APIRef("DOM")}}
 
-The **`closest()`** method of the {{domxref("Element")}} interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+The **`closest()`** method of the {{domxref("Element")}} interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified [CSS selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Syntax
 
@@ -26,11 +19,11 @@ closest(selectors)
 ### Parameters
 
 - `selectors`
-  - : A string of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to match the {{domxref("Element")}} and its ancestors against.
+  - : A string of valid [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to match the {{domxref("Element")}} and its ancestors against.
 
 ### Return value
 
-The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there are no such element, `null`.
+The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there is no such element, `null` is returned.
 
 ### Exceptions
 
@@ -56,13 +49,13 @@ The closest ancestor {{domxref("Element")}} or itself, which matches the `select
 ### JavaScript
 
 ```js
-const el = document.getElementById('div-03');
+const el = document.getElementById("div-03");
 
 // the closest ancestor with the id of "div-02"
-console.log(el.closest('#div-02')); // <div id="div-02">
+console.log(el.closest("#div-02")); // <div id="div-02">
 
 // the closest ancestor which is a div in a div
-console.log(el.closest('div div')); // <div id="div-03">
+console.log(el.closest("div div")); // <div id="div-03">
 
 // the closest ancestor which is a div and has a parent article
 console.log(el.closest("article > div")); // <div id="div-01">
@@ -88,5 +81,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## See also
 
-- [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("Element.matches()")}}.

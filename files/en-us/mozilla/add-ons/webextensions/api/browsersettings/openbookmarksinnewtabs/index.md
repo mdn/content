@@ -1,27 +1,14 @@
 ---
 title: browserSettings.openBookmarksInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - openBookmarksInNewTabs
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.openBookmarksInNewTabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
 If set to `true`, then when the user selects a bookmark, it will be opened in a new tab. If set to `false` (the default) bookmarks are opened in the current tab.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -38,3 +25,7 @@ browser.browserSettings.openBookmarksInNewTabs
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

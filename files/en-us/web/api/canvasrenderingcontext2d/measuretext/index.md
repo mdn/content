@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.measureText()
+title: "CanvasRenderingContext2D: measureText() method"
+short-title: measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.measureText
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 `CanvasRenderingContext2D.measureText()`

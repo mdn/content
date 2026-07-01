@@ -1,23 +1,12 @@
 ---
-title: XMLHttpRequest.send()
+title: "XMLHttpRequest: send() method"
+short-title: send()
 slug: Web/API/XMLHttpRequest/send
 page-type: web-api-instance-method
-tags:
-  - AJAX
-  - API
-  - HTTP request
-  - Method
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - send
 browser-compat: api.XMLHttpRequest.send
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`send()`** sends the request to the server.
@@ -46,16 +35,14 @@ send(body)
 ### Parameters
 
 - `body` {{optional_inline}}
-
   - : A body of data to be sent in the XHR request. This can be:
-
     - A {{domxref("Document")}}, in which case it is serialized before being sent.
-    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, or a string literal or object.
+    - An `XMLHttpRequestBodyInit`, which [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) can be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, or a string.
     - `null`
 
     If no value is specified for the body, a default value of `null` is used.
 
-The best way to send binary content (e.g. in file uploads) is by using
+The best way to send binary content (e.g., in file uploads) is by using
 a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}} or a {{domxref("Blob")}} object
 in conjunction with the `send()` method.
 
@@ -74,7 +61,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = () => {
   // Request finished. Do processing here.
@@ -91,16 +78,17 @@ xhr.send(null);
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
-//Send the proper header information along with the request
+// Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = () => { // Call a function when the state changes.
+xhr.onreadystatechange = () => {
+  // Call a function when the state changes.
   if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     // Request finished. Do processing here.
   }
-}
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);
@@ -116,5 +104,5 @@ xhr.send("foo=bar&lorem=ipsum");
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

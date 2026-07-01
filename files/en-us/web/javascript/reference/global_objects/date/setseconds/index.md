@@ -1,22 +1,28 @@
 ---
 title: Date.prototype.setSeconds()
+short-title: setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 page-type: javascript-instance-method
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Date.setSeconds
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`setSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to local time.
 
-The **`setSeconds()`** method sets the seconds for a specified
-date according to local time.
+{{InteractiveExample("JavaScript Demo: Date.prototype.setSeconds()")}}
 
-{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setSeconds(42);
+
+console.log(event.getSeconds());
+// Expected output: 42
+
+console.log(event);
+// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
+// Note: your timezone may vary
+```
 
 ## Syntax
 
@@ -28,18 +34,18 @@ setSeconds(secondsValue, msValue)
 ### Parameters
 
 - `secondsValue`
-  - : An integer between 0 and 59, representing the seconds.
-- `msValue` {{Optional_inline}}
-  - : Optional. A number between 0 and 999, representing the milliseconds.
+  - : An integer between 0 and 59 representing the seconds.
+- `msValue` {{optional_inline}}
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
 If you do not specify the `msValue` parameter, the value returned
-from the {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}} method is
+from the {{jsxref("Date/getMilliseconds", "getMilliseconds()")}} method is
 used.
 
 If a parameter you specify is outside of the expected range, `setSeconds()`
@@ -47,6 +53,10 @@ attempts to update the date information in the {{jsxref("Date")}} object accordi
 For example, if you use 100 for `secondsValue`, the minutes stored
 in the {{jsxref("Date")}} object will be incremented by 1, and 40 will be used for
 seconds.
+
+Because `setSeconds()` operates on the local time, crossing a Daylight Saving Time (DST) boundary may result in a different elapsed time than expected. For example, if setting the seconds crosses a spring-forward transition (losing an hour), the difference in timestamps between the new and old date is one hour less than the nominal time difference. Conversely, crossing a fall-back transition (gaining an hour) result in an extra hour. If you need to adjust the date by a fixed amount of time, consider using {{jsxref("Date/setUTCSeconds", "setUTCSeconds()")}} or {{jsxref("Date/setTime", "setTime()")}}.
+
+If the new local time falls within an offset transition, the exact time is derived using the same behavior as `Temporal`'s [`disambiguation: "compatible"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time) option. That is, if the local time corresponds to two instants, the earlier one is chosen; if the local time does not exist (there is a gap), we go forward by the gap duration.
 
 ## Examples
 

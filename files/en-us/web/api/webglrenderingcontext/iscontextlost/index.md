@@ -1,20 +1,12 @@
 ---
-title: WebGLRenderingContext.isContextLost()
+title: "WebGLRenderingContext: isContextLost() method"
+short-title: isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
 page-type: web-api-instance-method
-tags:
-  - API
-  - Context
-  - Lost
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The
 **`WebGLRenderingContext.isContextLost()`** method returns a
@@ -79,4 +71,4 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 ## See also
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.
-- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Handling lost context in WebGL](https://wikis.khronos.org/webgl/HandlingContextLost): Khronos WebGL wiki

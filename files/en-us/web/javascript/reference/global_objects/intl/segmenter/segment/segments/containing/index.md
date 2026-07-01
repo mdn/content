@@ -1,22 +1,26 @@
 ---
 title: Segments.prototype.containing()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+short-title: containing()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 
-The **`containing()`** method of a `Segments` object returns an object describing the segment in the string that includes the code unit at the specified index.
+{{InteractiveExample("JavaScript Demo: Segments.prototype.containing()")}}
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string = "Que ma joie demeure";
+
+const segments = segmenterFr.segment(string);
+
+console.log(segments.containing(5));
+// Expected output:
+// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+```
 
 ## Syntax
 
@@ -26,10 +30,10 @@ containing(codeUnitIndex)
 
 ### Parameters
 
-- `codeUnitIndex` {{ optional_inline }}
+- `codeUnitIndex` {{optional_inline}}
   - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
 
-### Return Value
+### Return value
 
 An object describing the segment of the original string with the following properties, or `undefined` if the supplied index value is out of bounds.
 
@@ -49,7 +53,7 @@ An object describing the segment of the original string with the following prope
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
 const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 
 let current = segments.containing();

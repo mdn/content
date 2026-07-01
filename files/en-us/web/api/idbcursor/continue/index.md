@@ -1,27 +1,17 @@
 ---
-title: IDBCursor.continue()
+title: "IDBCursor: continue() method"
+short-title: continue()
 slug: Web/API/IDBCursor/continue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - continue
 browser-compat: api.IDBCursor.continue
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}
 interface advances the cursor to the next position along its direction, to the item
 whose key matches the optional key parameter. If no key is specified, the cursor
 advances to the immediate next position, based on its direction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -44,7 +34,7 @@ None ({{jsxref("undefined")}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if this IDBCursor's transaction is inactive.
+  - : Thrown if this `IDBCursor`'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key parameter has any of the following conditions:
     - The key is not a valid key.
@@ -64,22 +54,22 @@ our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

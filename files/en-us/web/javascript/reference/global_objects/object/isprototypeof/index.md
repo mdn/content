@@ -1,24 +1,32 @@
 ---
 title: Object.prototype.isPrototypeOf()
+short-title: isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
 browser-compat: javascript.builtins.Object.isPrototypeOf
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`isPrototypeOf()`** method of {{jsxref("Object")}} instances checks if this object exists in another object's prototype chain.
 
-The **`isPrototypeOf()`** method checks if an object exists in another object's prototype chain.
+> [!NOTE]
+> `isPrototypeOf()` differs from the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator. In the expression `object instanceof AFunction`, `object`'s prototype chain is checked against `AFunction.prototype`, not against `AFunction` itself.
 
-> **Note:** `isPrototypeOf()` differs from the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator. In the expression `object instanceof AFunction`, `object`'s prototype chain is checked against `AFunction.prototype`, not against `AFunction` itself.
+{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
 
-{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// Expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// Expected output: true
+```
 
 ## Syntax
 
@@ -33,16 +41,16 @@ isPrototypeOf(object)
 
 ### Return value
 
-A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e. a primitive).
+A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e., a primitive).
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `this` is `null` or `undefined` (because it can't be [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)).
 
 ## Description
 
-All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `isPrototypeOf()` method. This method allows you to check whether or not the object exists within another object's prototype chain. If the `object` passed as the parameter is not an object (i.e. a primitive), the method directly returns `false`. Otherwise, the `this` value is [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion), and the prototype chain of `object` is searched for the `this` value, until the end of the chain is reached or the `this` value is found.
+All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `isPrototypeOf()` method. This method allows you to check whether or not the object exists within another object's prototype chain. If the `object` passed as the parameter is not an object (i.e., a primitive), the method directly returns `false`. Otherwise, the `this` value is [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion), and the prototype chain of `object` is searched for the `this` value, until the end of the chain is reached or the `this` value is found.
 
 ## Examples
 
@@ -63,17 +71,17 @@ const baz = new Baz();
 // foo: Foo --> Object
 // bar: Bar --> Foo --> Object
 // baz: Baz --> Bar --> Foo --> Object
-console.log(Baz.prototype.isPrototypeOf(baz));    // true
-console.log(Baz.prototype.isPrototypeOf(bar));    // false
-console.log(Baz.prototype.isPrototypeOf(foo));    // false
-console.log(Bar.prototype.isPrototypeOf(baz));    // true
-console.log(Bar.prototype.isPrototypeOf(foo));    // false
-console.log(Foo.prototype.isPrototypeOf(baz));    // true
-console.log(Foo.prototype.isPrototypeOf(bar));    // true
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-The `isPrototypeOf()` method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.
+The `isPrototypeOf()` method — along with the {{jsxref("instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.
 
 For example, to execute some code that's only safe to run if a `baz` object has `Foo.prototype` in its prototype chain, you can do this:
 
@@ -83,7 +91,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `Foo` from `baz`, it would still fail:
+However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) of `Foo` from `baz`, it would still fail:
 
 ```js
 class Foo {
@@ -131,7 +139,7 @@ if (Foo.isFoo(baz)) {
 
 ## See also
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

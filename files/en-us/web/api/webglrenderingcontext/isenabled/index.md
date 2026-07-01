@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.isEnabled()
+title: "WebGLRenderingContext: isEnabled() method"
+short-title: isEnabled()
 slug: Web/API/WebGLRenderingContext/isEnabled
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isEnabled
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isEnabled()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) tests whether a specific WebGL
 capability is enabled or not for this context.
@@ -28,7 +23,6 @@ isEnabled(cap)
 ### Parameters
 
 - `cap`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to test. Possible values:
 
     | Constant                      | Description                                                                                                                         |

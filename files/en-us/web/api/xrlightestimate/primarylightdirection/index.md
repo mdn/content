@@ -1,21 +1,14 @@
 ---
-title: XRLightEstimate.primaryLightDirection
+title: "XRLightEstimate: primaryLightDirection property"
+short-title: primaryLightDirection
 slug: Web/API/XRLightEstimate/primaryLightDirection
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRLightEstimate.primaryLightDirection
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`primaryLightDirection`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the direction to the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 

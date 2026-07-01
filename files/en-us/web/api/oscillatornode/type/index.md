@@ -1,21 +1,14 @@
 ---
-title: OscillatorNode.type
+title: "OscillatorNode: type property"
+short-title: type
 slug: Web/API/OscillatorNode/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - OscillatorNode
-  - Property
-  - Reference
-  - Type
-  - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The **`type`** property of the {{ domxref("OscillatorNode")
-    }} interface specifies what shape of [waveform](https://en.wikipedia.org/wiki/Waveform) the
+The **`type`** property of the {{domxref("OscillatorNode")}} interface specifies what shape of [waveform](https://en.wikipedia.org/wiki/Waveform) the
 oscillator will output. There are several common waveforms available, as well as an
 option to specify a custom waveform shape. The shape of the waveform will affect the
 tone that is produced.
@@ -39,6 +32,8 @@ available values are:
     method to provide the data representing the waveform. Doing so automatically sets the
     `type` to `custom`.
 
+Also see [different oscillator node types](/en-US/docs/Web/API/OscillatorNode#different_oscillator_node_types) for a visualization of the different waveform shapes.
+
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -49,16 +44,16 @@ available values are:
 ## Examples
 
 The following example shows basic usage of an {{ domxref("AudioContext") }} to create
-an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code).
+an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/main/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.start();
 ```

@@ -1,15 +1,12 @@
 ---
-title: Event.eventPhase
+title: "Event: eventPhase property"
+short-title: eventPhase
 slug: Web/API/Event/eventPhase
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.eventPhase
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`eventPhase`** read-only property of the
 {{domxref("Event")}} interface indicates which phase of the event flow is currently
@@ -20,28 +17,27 @@ being evaluated.
 Returns an integer value which specifies the current evaluation phase of the event
 flow. Possible values are:
 
-- `Event.NONE (0)`
+- `Event.NONE` (0)
   - : The event is not being processed at this time.
-- `Event.CAPTURING_PHASE (1)`
+- `Event.CAPTURING_PHASE` (1)
   - : The event is being propagated through the target's ancestor objects.
     This process starts with the {{domxref("Window")}}, then {{domxref("Document")}},
     then the {{domxref("HTMLHtmlElement")}}, and so on through the elements
     until the target's parent is reached.
-    {{domxref("EventListener", "Event listeners", "", 1)}}
+    {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}}
     registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was
     called are triggered during this phase.
-- `Event.AT_TARGET (2)`
+- `Event.AT_TARGET` (2)
   - : The event has arrived at
-    {{domxref("EventTarget", "the event's target", "",
-        1)}}.
+    {{domxref("EventTarget", "the event's target", "", 1)}}.
     Event listeners registered for this phase are called at this time. If
     {{domxref("Event.bubbles")}} is `false`, processing
     the event is finished after this phase is complete.
-- `Event.BUBBLING_PHASE (3)`
+- `Event.BUBBLING_PHASE` (3)
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.
     This is known as _bubbling_, and occurs only if {{domxref("Event.bubbles")}} is
-    `true`. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
+    `true`. {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
 
 ## Example
 
@@ -92,40 +88,37 @@ div {
 
 ```js
 let clear = false;
-let divInfo = null;
-let divs = null;
-let chCapture = null;
+const divInfo = document.getElementById("divInfo");
+const divs = document.getElementsByTagName("div");
+const chCapture = document.getElementById("chCapture");
 
-window.onload = () => {
-  divInfo = document.getElementById('divInfo');
-  divs = document.getElementsByTagName('div');
-  chCapture = document.getElementById('chCapture');
-  chCapture.onclick = () => {
-    removeListeners();
-    addListeners();
-    clearDivs();
-  };
-  clearDivs();
+chCapture.addEventListener("click", () => {
+  removeListeners();
   addListeners();
-}
+  clearDivs();
+});
+clearDivs();
+addListeners();
 
 function removeListeners() {
   for (const div of divs) {
-    if (div.id !== 'divInfo') {
-      div.removeEventListener('click', onDivClick, true);
-      div.removeEventListener('click', onDivClick, false);
+    if (div.id !== "divInfo") {
+      div.removeEventListener("click", onDivClick, true);
+      div.removeEventListener("click", onDivClick, false);
     }
   }
 }
 
 function addListeners() {
   for (const div of divs) {
-    if (div.id !== 'divInfo') {
+    if (div.id !== "divInfo") {
       if (chCapture.checked) {
-        div.addEventListener('click', onDivClick, true);
+        div.addEventListener("click", onDivClick, true);
       } else {
-        div.addEventListener('click', onDivClick, false);
-        div.onmousemove = () => { clear = true };
+        div.addEventListener("click", onDivClick, false);
+        div.onmousemove = () => {
+          clear = true;
+        };
       }
     }
   }
@@ -137,21 +130,22 @@ function onDivClick(e) {
     clear = false;
   }
   if (e.eventPhase === 2) {
-    e.currentTarget.style.backgroundColor = 'red';
+    e.currentTarget.style.backgroundColor = "red";
   }
-  const level = ['none', 'capturing', 'target', 'bubbling'][e.eventPhase] ?? 'error';
-  const para = document.createElement('p');
+  const level =
+    ["none", "capturing", "target", "bubbling"][e.eventPhase] ?? "error";
+  const para = document.createElement("p");
   para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
   divInfo.appendChild(para);
 }
 
 function clearDivs() {
   for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id !== 'divInfo') {
-      divs[i].style.backgroundColor = i % 2 !== 0 ? '#f6eedb' : '#cceeff';
+    if (divs[i].id !== "divInfo") {
+      divs[i].style.backgroundColor = i % 2 !== 0 ? "#f6eedb" : "#cceeff";
     }
   }
-  divInfo.textContent = '';
+  divInfo.textContent = "";
 }
 ```
 

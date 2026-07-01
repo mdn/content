@@ -1,17 +1,8 @@
 ---
-title: HTMLElement.focus()
+title: "HTMLElement: focus() method"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
-tags:
-  - API
-  - Focus
-  - HTML DOM
-  - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
-  - activate
 browser-compat: api.HTMLElement.focus
 ---
 
@@ -33,17 +24,15 @@ focus(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object for controlling aspects of the focusing process.
     This object may contain the following properties:
-
     - `preventScroll` {{optional_inline}}
       - : A boolean value indicating whether or not the browser should scroll the document to bring the newly-focused element into view.
         A value of `false` for `preventScroll` (the default) means that the browser will scroll the element into view after focusing it.
         If `preventScroll` is set to `true`, no scrolling will occur.
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value that should be set to `true` to force visible indication that the element is focused.
-        By default, or if the property is not `true`, a browser may still provide visible indication if it determines that this would improve accessibility for users.
+      - : A boolean value that should be set to `true` to force, or `false` to prevent visible indication that the element is focused.
+        If the property is not specified, a browser will provide visible indication if it determines that this would improve accessibility for users.
 
 ### Return value
 
@@ -87,7 +76,7 @@ This example demonstrates how you can set the focus on a button element.
 
 First we define three buttons.
 Both the middle and right button will set focus on the left-most button.
-The right right-most button will also specify `focusVisible`.
+The right-most button will also specify `focusVisible`.
 
 ```html
 <button id="myButton">Button</button>
@@ -106,9 +95,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -135,8 +126,14 @@ The HTML defines two buttons that will be used to set the focus of a third butto
 </button>
 
 <div id="container">
-  <button id="myButton" style="margin-top: 500px;">Button</button>
+  <button id="myButton">Button</button>
 </div>
+```
+
+```css hidden
+#myButton {
+  margin-top: 500px; /* Push the button off-screen */
+}
 ```
 
 #### JavaScript
@@ -146,12 +143,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 
@@ -169,7 +165,7 @@ Selecting the second button set's the focus, but scrolling is disabled.
 ## Notes
 
 - If you call `HTMLElement.focus()` from a mousedown event handler, you must call `event.preventDefault()` to keep the focus from leaving the `HTMLElement`
-- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
+- Behavior of the focus in relation to different HTML features like [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) or {{Glossary("shadow tree", "shadow dom")}}, which previously remained under-specified, were updated in October 2019.
   See the [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) for more information.
 
 ## Browser compatibility

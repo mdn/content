@@ -1,13 +1,8 @@
 ---
-title: Range.toString()
+title: "Range: toString() method"
+short-title: toString()
 slug: Web/API/Range/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Stringifier
 browser-compat: api.Range.toString
 ---
 
@@ -15,10 +10,6 @@ browser-compat: api.Range.toString
 
 The **`Range.toString()`** method is a {{Glossary("stringifier")}} returning
 the text of the {{domxref("Range")}}.
-
-Alerting the contents of a {{domxref("Range")}} makes an implicit
-`toString()` call, so comparing range and text through an alert dialog is
-ineffective.
 
 ## Syntax
 
@@ -51,9 +42,9 @@ A string.
 ```js
 const range = document.createRange();
 
-range.setStartBefore(document.getElementsByTagName('em').item(0), 0);
-range.setEndAfter(document.getElementsByTagName('em').item(1), 0);
-document.getElementById('log').textContent = range.toString();
+range.setStartBefore(document.getElementsByTagName("em").item(0), 0);
+range.setEndAfter(document.getElementsByTagName("em").item(1), 0);
+document.getElementById("log").textContent = range.toString();
 ```
 
 ### Result

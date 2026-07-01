@@ -2,26 +2,18 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-tags:
-  - Experimental
-  - Gamepad API
-  - Guide
-  - VR
-  - Virtual Reality
-  - WebGL
-  - WebVR
-  - controllers
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{DefaultAPISidebar("WebVR API")}}
 
 Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/en-US/docs/Web/API/GamepadPose), [haptic actuators](/en-US/docs/Web/API/GamepadHapticActuator), and more. This article explains the basics.
 
-> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
+> [!NOTE]
+> WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
 ## The WebVR API
 
-The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g. orientation and position) that can be used to update the display on each frame of the animation loop, and more.
+The [WebVR API](/en-US/docs/Web/API/WebVR_API) is a nascent, but very interesting new feature of the web platform that allows developers to create web-based virtual reality experiences. It does this by providing access to VR headsets connected to your computer as {{domxref("VRDisplay")}} objects, which can be manipulated to start and stop presentation to the display, queried for movement data (e.g., orientation and position) that can be used to update the display on each frame of the animation loop, and more.
 
 Before you read this article, you should really be familiar with the basics of the WebVR API already — go and read [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) first, if you haven't already done so, which also details browser support and required hardware setup.
 
@@ -31,7 +23,7 @@ The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is a fairly well-supported AP
 
 You can find more about basic Gamepad API usage in [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API), and [Implementing controls using the Gamepad API](/en-US/docs/Games/Techniques/Controls_Gamepad_API).
 
-However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g. vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
+However, in this article we will mainly be concentrating on some of the new features provided by the [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html) API, which allows access to advanced controller information such as position and orientation data, control over haptic actuators (e.g., vibration hardware), and more. This API is very new, and currently is only supported and enabled by default in Firefox 55+ Beta/Nightly channels.
 
 ## Types of controller
 
@@ -44,7 +36,7 @@ There are two types of controller you'll encounter with VR hardware:
 
 Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
+We've written up an example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
 
 ### Getting the display information
 
@@ -54,10 +46,11 @@ The first notable code is as follows:
 let initialRun = true;
 
 if (navigator.getVRDisplays && navigator.getGamepads) {
-  info.textContent = 'WebVR API and Gamepad API supported.'
+  info.textContent = "WebVR API and Gamepad API supported.";
   reportDisplays();
 } else {
-  info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
+  info.textContent =
+    "WebVR API and/or Gamepad API not supported by this browser.";
 }
 ```
 
@@ -70,15 +63,19 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
-        `VR Display ID: ${display.displayId}<br>` +
-        `VR Display Name: ${display.displayName}<br>` +
-        `Display can present content: ${cap.canPresent}<br>` +
-        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
-        `Display can return position info: ${cap.hasPosition}<br>` +
-        `Display can return orientation info: ${cap.hasOrientation}<br>` +
-        `Display max layers: ${cap.maxLayers}`;
+      const listItem = document.createElement("li");
+      listItem.innerText = `
+VR Display ID: ${display.displayId}
+VR Display Name: ${display.displayName}
+Display can present content: ${cap.canPresent}
+Display is separate from the computer's main display: ${cap.hasExternalDisplay}
+Display can return position info: ${cap.hasPosition}
+Display can return orientation info: ${cap.hasOrientation}
+Display max layers: ${cap.maxLayers}`;
+      listItem.insertBefore(
+        document.createElement("strong"),
+        listItem.firstChild,
+      ).textContent = `Display ${i + 1}`;
       list.appendChild(listItem);
     });
 
@@ -88,9 +85,9 @@ function reportDisplays() {
 }
 ```
 
-This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
+This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRDisplayCapabilities")}} object. The most useful of these are {{domxref("VRDisplayCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRDisplayCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
 
-The last line contained in this function is a {{domxref("setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
+The last line contained in this function is a {{domxref("Window.setTimeout", "setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
 
 ### Getting the Gamepad information
 
@@ -98,20 +95,24 @@ The `reportGamepads()` function looks like this:
 
 ```js
 function reportGamepads() {
-    const gamepads = navigator.getGamepads();
-    console.log(`${gamepads.length} controllers`);
-    for (const gp of gamepads) {
-        const listItem = document.createElement('li');
-        listItem.classList = 'gamepad';
-        listItem.innerHTML = `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-          `Associated with VR Display ID: ${gp.displayId}<br>` +
-          `Gamepad associated with which hand: ${gp.hand}<br>` +
-          `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-          `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-          `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
-        list.appendChild(listItem);
-    }
-    initialRun = false;
+  const gamepads = navigator.getGamepads();
+  console.log(`${gamepads.length} controllers`);
+  for (const gp of gamepads) {
+    const listItem = document.createElement("li");
+    listItem.classList = "gamepad";
+    listItem.innerText = `
+Associated with VR Display ID: ${gp.displayId}
+Gamepad associated with which hand: ${gp.hand}
+Available haptic actuators: ${gp.hapticActuators.length}
+Gamepad can return position info: ${gp.pose.hasPosition}
+Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    listItem.insertBefore(
+      document.createElement("strong"),
+      listItem.firstChild,
+    ).textContent = `Gamepad ${gp.index}`;
+    list.appendChild(listItem);
+  }
+  initialRun = false;
 }
 ```
 
@@ -135,9 +136,9 @@ At the end of our example we first include the `removeGamepads()` function:
 
 ```js
 function removeGamepads() {
-  const gpLi = document.querySelectorAll('.gamepad');
-  for (let i = 0; i < gpLi.length; i++) {
-    list.removeChild(gpLi[i]);
+  const gpLi = document.querySelectorAll(".gamepad");
+  for (const li of gpLi) {
+    list.removeChild(li);
   }
   reportGamepads();
 }
@@ -148,14 +149,14 @@ This function grabs references to all list items with a class name of `gamepad`,
 `removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
 ```js
-window.addEventListener('gamepadconnected', (e) => {
+window.addEventListener("gamepadconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} connected.`;
   if (!initialRun) {
     setTimeout(removeGamepads, 1000);
   }
 });
 
-window.addEventListener('gamepaddisconnected', (e) => {
+window.addEventListener("gamepaddisconnected", (e) => {
   info.textContent = `Gamepad ${e.gamepad.index} disconnected.`;
   setTimeout(removeGamepads, 1000);
 });
@@ -200,22 +201,14 @@ Slightly later in the code, you can find this block:
 ```js
 if (gp && gpPose.hasPosition) {
   mvTranslate([
-    0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
-    0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
-    -15.0 + (curPos[2] * 25)
+    0.0 + curPos[0] * 15 - curOrient[1] * 15,
+    0.0 + curPos[1] * 15 + curOrient[0] * 15,
+    -15.0 + curPos[2] * 25,
   ]);
 } else if (gp) {
-  mvTranslate([
-    0.0 + (curOrient[1] * 15),
-    0.0 + (curOrient[0] * 15),
-    -15.0
-  ]);
+  mvTranslate([0.0 + curOrient[1] * 15, 0.0 + curOrient[0] * 15, -15.0]);
 } else {
-  mvTranslate([
-    0.0,
-    0.0,
-    -15.0
-  ]);
+  mvTranslate([0.0, 0.0, -15.0]);
 }
 ```
 
@@ -231,26 +224,31 @@ In the `displayPoseStats()` function, we grab all of the data we want to display
 function displayPoseStats(pose) {
   const pos = pose.position;
 
-  const formatCoords = ([x, y, z]) => `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
+  const formatCoords = ([x, y, z]) =>
+    `x ${x.toFixed(3)}, y ${y.toFixed(3)}, z ${z.toFixed(3)}`;
 
   posStats.textContent = pose.hasPosition
     ? `Position: ${formatCoords(pose.position)}`
-    : 'Position not reported';
+    : "Position not reported";
 
   orientStats.textContent = pose.hasOrientation
     ? `Orientation: ${formatCoords(pose.orientation)}`
-    : 'Orientation not reported';
+    : "Orientation not reported";
 
-  linVelStats.textContent = `Linear velocity: ${formatCoords(pose.linearVelocity)}`;
-  angVelStats.textContent = `Angular velocity: ${formatCoords(pose.angularVelocity)}`;
+  linVelStats.textContent = `Linear velocity: ${formatCoords(
+    pose.linearVelocity,
+  )}`;
+  angVelStats.textContent = `Angular velocity: ${formatCoords(
+    pose.angularVelocity,
+  )}`;
 
   linAccStats.textContent = pose.linearAcceleration
     ? `Linear acceleration: ${formatCoords(pose.linearAcceleration)}`
-    : 'Linear acceleration not reported';
+    : "Linear acceleration not reported";
 
   angAccStats.textContent = pose.angularAcceleration
     ? `Angular acceleration: ${formatCoords(pose.angularAcceleration)}`
-    : 'Angular acceleration not reported';
+    : "Angular acceleration not reported";
 }
 ```
 

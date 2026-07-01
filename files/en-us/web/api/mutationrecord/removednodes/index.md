@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.removedNodes
+title: "MutationRecord: removedNodes property"
+short-title: removedNodes
 slug: Web/API/MutationRecord/removedNodes
 page-type: web-api-instance-property
-tags:
-  - removedNodes
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.removedNodes
 ---
 
@@ -73,7 +69,7 @@ function logRemovedNodes(records) {
   for (const record of records) {
     // Check if the childlist of the target node has been mutated
     if (record.type === "childList") {
-      totalRemovedNodes = totalRemovedNodes + record.removedNodes.length;
+      totalRemovedNodes += record.removedNodes.length;
       // Log the number of nodes added
       counter.textContent = `Total removed nodes: ${totalRemovedNodes}`;
     }

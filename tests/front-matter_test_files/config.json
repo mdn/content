@@ -1,0 +1,83 @@
+{
+  "lineWidth": 80,
+  "schema": {
+    "title": "Front matter schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "slug"],
+    "properties": {
+      "title": {
+        "title": "Title",
+        "description": "Rendered page title and for SEO",
+        "type": "string",
+        "maxLength": 120
+      },
+      "short-title": {
+        "title": "Short Title",
+        "description": "To be used in sidebars",
+        "type": "string",
+        "maxLength": 60
+      },
+      "slug": {
+        "title": "slug",
+        "description": "URL path of the page",
+        "type": "string"
+      },
+      "page-type": {
+        "title": "Page Type",
+        "description": "Type of the page",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "description": "Browser compatibility status",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "enum": ["deprecated", "experimental", "non-standard"]
+        }
+      },
+      "browser-compat": {
+        "title": "Browser Compatibility",
+        "description": "Browser compatibility location",
+        "type": ["array", "string"]
+      },
+      "spec-urls": {
+        "title": "Specification URLs",
+        "description": "Specification locations",
+        "type": ["array", "string"],
+        "format": "uri",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/api/method" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["landing-page", "guide", "web-api-method"]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "attribute-order": [
+    "title",
+    "short-title",
+    "slug",
+    "page-type",
+    "status",
+    "browser-compat",
+    "spec-urls"
+  ]
+}

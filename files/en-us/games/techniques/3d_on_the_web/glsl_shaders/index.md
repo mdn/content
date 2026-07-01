@@ -1,19 +1,11 @@
 ---
-title: GLSL Shaders
+title: GLSL shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - Beginner
-  - GLSL
-  - OpenGL
-  - Shader
-  - texture shader
-  - three.js
-  - vertex shader
+page-type: guide
+sidebar: games
 ---
 
-{{GamesSidebar}}
-
-Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://www.khronos.org/opengl/wiki/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
+Shaders use GLSL (OpenGL Shading Language), a special OpenGL Shading Language with syntax similar to C. GLSL is executed directly by the graphics pipeline. There are [several kinds of shaders](https://wikis.khronos.org/opengl/Shader), but two are commonly used to create graphics on the web: Vertex Shaders and Fragment (Pixel) Shaders. Vertex Shaders transform shape positions into 3D drawing coordinates. Fragment Shaders compute the renderings of a shape's colors and other attributes.
 
 GLSL is not as intuitive as JavaScript. GLSL is strongly typed and there is a lot of math involving vectors and matrices. It can get very complicated — very quickly. In this article we will make a simple code example that renders a cube. To speed up the background code we will be using the Three.js API.
 
@@ -39,35 +31,32 @@ The calculations result in a variable containing the information about the RGBA 
 
 Let's build a simple demo to explain those shaders in action. Be sure to read [Three.js tutorial](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) first to grasp the concept of the scene, its objects, and materials.
 
-> **Note:** Remember that you don't have to use Three.js or any other library to write your shaders — pure [WebGL](/en-US/docs/Web/API/WebGL_API) (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.
+> [!NOTE]
+> Remember that you don't have to use Three.js or any other library to write your shaders — pure [WebGL](/en-US/docs/Web/API/WebGL_API) (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.
 
 ### Environment setup
 
-To start with the WebGL shaders you don't need much. You should:
-
-- Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Create a directory to store your experiments in.
-- Save a copy of the [latest minimized Three.js library](https://threejs.org/build/three.min.js) inside your directory.
+To get started with the WebGL shaders, follow the environment setup steps described in the [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) so that you have Three.js working as expected.
 
 ### HTML structure
 
 Here's the HTML structure we will use.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>MDN Games: Shaders demo</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-        font-size: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
     <script src="three.min.js"></script>
@@ -112,7 +101,8 @@ void main() {
 
 The resulting `gl_Position` is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.
 
-> **Note:** You can learn more about _model_, _view_, and _projection transformations_ from the [vertex processing paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing), and you can also check out the links at the end of this article to learn more about it.
+> [!NOTE]
+> You can learn more about _model_, _view_, and _projection transformations_ from the [vertex processing paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing), and you can also check out the links at the end of this article to learn more about it.
 
 Both `projectionMatrix` and `modelViewMatrix` are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the `x` axis and 5 units along the `z` axis, translated via a shader. We can ignore the fourth parameter and leave it with the default `1.0` value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.
 

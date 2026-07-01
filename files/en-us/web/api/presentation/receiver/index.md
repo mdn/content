@@ -1,20 +1,14 @@
 ---
-title: Presentation.receiver
+title: "Presentation: receiver property"
+short-title: receiver
 slug: Web/API/Presentation/receiver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Presentation
-  - Presentation API
-  - Property
-  - Read-only
-  - Reference
-  - receiver
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Presentation.receiver
 ---
 
-{{APIRef("Presentation")}}{{SeeCompatTable}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **read-only** {{domxref("Presentation")}} attribute
 `receiver`, which is only available in browser contexts which are
@@ -38,12 +32,14 @@ If the current context is not receiving a presentation, `receiver` is
 ### Determining whether or not the context is receiving a presentation
 
 You can easily determine whether or not the context is the receiver for a presentation
-by checking the value of `navigator.receiver`. If it's a non-null value, then
+by checking the value of `navigator.presentation.receiver`. If it's a non-null value, then
 the context is indeed receiving a presentation. If it's `null`, there's no
 incoming presentation.
 
 ```js
-footer.textContent = navigator.receiver ? "Receiving presentation" : "(idle)";
+footer.textContent = navigator.presentation.receiver
+  ? "Receiving presentation"
+  : "(idle)";
 ```
 
 ### Accessing the connection list
@@ -52,17 +48,18 @@ This example uses `receiver` to access the list of incoming connections and
 to build and display a list of those connections' ID strings.
 
 ```js
-let listElem = document.getElementById("connectionview");
+const listElem = document.getElementById("connection-view");
 
 navigator.presentation.receiver.connectionList.then((connections) => {
-  connections.forEach((aConnection) => {
-    listElem.innerHTML += `<li>${aConnection.id}</li>`;
+  connections.forEach((connection) => {
+    listElem.appendChild(document.createElement("li")).textContent =
+      connection.id;
   });
 });
 ```
 
 After getting access to the output list element in the variable
-`connectionView`, {{domxref("navigator.receiver")}} is used to get a
+`connectionView`, `navigator.presentation.receiver` is used to get a
 reference to the {{domxref("PresentationReceiver")}} object for this context, and its
 {{domxref("PresentationReceiver.connectionList", "connectionList")}} is used to get a
 {{jsxref("Promise")}} which will be called when the list is available.

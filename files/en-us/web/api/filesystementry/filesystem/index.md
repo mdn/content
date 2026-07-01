@@ -1,16 +1,8 @@
 ---
-title: FileSystemEntry.filesystem
+title: "FileSystemEntry: filesystem property"
+short-title: filesystem
 slug: Web/API/FileSystemEntry/filesystem
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - filesystem
 browser-compat: api.FileSystemEntry.filesystem
 ---
 
@@ -46,6 +38,5 @@ let rootDirEntry = fileEntry.filesystem.root;
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystem")}}

@@ -1,17 +1,12 @@
 ---
-title: PerformanceResourceTiming.nextHopProtocol
+title: "PerformanceResourceTiming: nextHopProtocol property"
+short-title: nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resource Timing API
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`nextHopProtocol`** read-only property is a string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids).
 

@@ -1,26 +1,12 @@
 ---
-title: XRInputSource.hand
+title: "XRInputSource: hand property"
+short-title: hand
 slug: Web/API/XRInputSource/hand
 page-type: web-api-instance-property
-tags:
-  - API
-  - Controller
-  - Hand
-  - Input
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-
 browser-compat: api.XRInputSource.hand
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only **`hand`** property of the {{domxref("XRInputSource")}} interface is a {{domxref("XRHand")}} object providing access to a hand-tracking device.
 

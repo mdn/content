@@ -1,13 +1,8 @@
 ---
-title: MIDIMessageEvent.data
+title: "MIDIMessageEvent: data property"
+short-title: data
 slug: Web/API/MIDIMessageEvent/data
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - data
-  - MIDIMessageEvent
 browser-compat: api.MIDIMessageEvent.data
 ---
 
@@ -27,8 +22,8 @@ In the following example {{domxref("MIDIInput.midimessage_event", "midimessage")
 inputs.forEach((input) => {
   input.onmidimessage = (message) => {
     console.log(message.data);
-  }
-})
+  };
+});
 ```
 
 ## Specifications

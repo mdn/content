@@ -1,17 +1,12 @@
 ---
-title: AudioWorkletNode()
+title: "AudioWorkletNode: AudioWorkletNode() constructor"
+short-title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
 page-type: web-api-constructor
-tags:
-  - API
-  - AudioWorkletNode
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The **`AudioWorkletNode()`**
 constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an
@@ -34,15 +29,14 @@ new AudioWorkletNode(context, name, options)
     node will be based on. A processor with the provided name must first be registered
     using the {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method.
 - `options` {{optional_inline}}
-
   - : An object containing zero or more of the following optional properties to configure the new node:
 
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
 
-    > **Note:** The result of [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+    > [!NOTE]
+    > The result of [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
     > applied to the object is also internally passed into the associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} constructor
     > — this allows custom initialization of an underlying user-defined {{domxref("AudioWorkletProcessor")}}.
-
     - `numberOfInputs` {{optional_inline}}
       - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
     - `numberOfOutputs` {{optional_inline}}
@@ -57,7 +51,6 @@ new AudioWorkletNode(context, name, options)
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : The specified `options.outputChannelCount` is `0` or larger
     than the current implementation supports.
 

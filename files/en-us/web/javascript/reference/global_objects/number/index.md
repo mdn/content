@@ -2,16 +2,9 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 page-type: javascript-class
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Number
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Number`** values represent floating-point numbers like `37` or `-9.25`.
 
@@ -19,12 +12,15 @@ The `Number` constructor contains constants and methods for working with numbers
 
 ## Description
 
-Numbers are most commonly expressed in literal forms like `0b101`, `0o13`, `0x0A`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
+Numbers are most commonly expressed in literal forms like `255` or `3.14159`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
 
 ```js
-123; // one-hundred twenty-three
-123.0; // same
-123 === 123.0; // true
+255; // two-hundred and fifty-five
+255.0; // same number
+255 === 255.0; // true
+255 === 0xff; // true (hexadecimal notation)
+255 === 0b11111111; // true (binary notation)
+255 === 0.255e3; // true (decimal exponential notation)
 ```
 
 A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)
@@ -49,19 +45,23 @@ The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 75
 
 The mantissa (also called _significand_) is the part of the number representing the actual value (significant digits). The exponent is the power of 2 that the mantissa should be multiplied by. Thinking about it as scientific notation:
 
-<math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
 
-The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
+The largest value a number can hold is 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
 
 Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the mantissa can only hold 53 bits (including the leading 1).
 
-More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type).
+More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type).
 
 ### Number coercion
 
-Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/#sec-tonumber) can be summarized as follows:
+Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber) can be summarized as follows:
 
 - Numbers are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
@@ -76,7 +76,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
   - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are not allowed.
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling their [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
 
 There are two ways to achieve nearly the same effect in JavaScript.
 
@@ -97,21 +97,25 @@ JavaScript has some lower-level functions that deal with the binary encoding of 
 
 ```js
 new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
-new Int8Array([257, -257]); // Int8Array(1) [ 1, -1 ]
-// 257 = 0001 0000 0001 = 0000 0001 (mod 2^8) = 1
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = -1 (as signed integer)
-new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
-// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = 255 (as unsigned integer)
+
+new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
+// 257 = 0001 0000 0001
+//     =      0000 0001 (mod 2^8)
+//     = 1
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8)
+//      = -1 (as signed integer)
+
+new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
+// -257 = 1110 1111 1111
+//      =      1111 1111 (mod 2^8)
+//      = 255 (as unsigned integer)
 ```
 
 ## Constructor
 
-- [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
-  - : Creates a new `Number` value.
-
-When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Number")}} object, which is **not** a primitive. For example, `typeof new Number(42) === "object"`, and `new Number(42) !== 42` (although `new Number(42) == 42`).
-
-> **Warning:** You should rarely find yourself using `Number` as a constructor.
+- {{jsxref("Number/Number", "Number()")}}
+  - : Creates `Number` objects. When called as a function, it returns primitive values of type Number.
 
 ## Static properties
 
@@ -131,23 +135,28 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
   - : Special value representing negative infinity. Returned on overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Special value representing infinity. Returned on overflow.
-- {{jsxref("Number", "Number.prototype")}}
-  - : Allows the addition of properties to the `Number` object.
 
 ## Static methods
 
-- {{jsxref("Number.isNaN()")}}
-  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isFinite()")}}
   - : Determine whether the passed value is a finite number.
 - {{jsxref("Number.isInteger()")}}
   - : Determine whether the passed value is an integer.
+- {{jsxref("Number.isNaN()")}}
+  - : Determine whether the passed value is `NaN`.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}
-  - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
+  - : This is the same as the global {{jsxref("parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
-  - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+  - : This is the same as the global {{jsxref("parseInt()")}} function.
+
+## Instance properties
+
+These properties are defined on `Number.prototype` and shared by all `Number` instances.
+
+- {{jsxref("Object/constructor", "Number.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Number` instances, the initial value is the {{jsxref("Number/Number", "Number")}} constructor.
 
 ## Instance methods
 
@@ -198,7 +207,7 @@ Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-const d = new Date("December 17, 1995 03:24:00");
+const d = new Date("1995-12-17T03:24:00");
 console.log(Number(d));
 ```
 
@@ -235,5 +244,5 @@ Number("-Infinity"); // -Infinity
 - [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
-- The {{jsxref("Math")}} global object
-- Integers with arbitrary precision: {{jsxref("BigInt")}}
+- {{jsxref("Math")}}
+- {{jsxref("BigInt")}}

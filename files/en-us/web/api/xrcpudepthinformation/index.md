@@ -2,15 +2,8 @@
 title: XRCPUDepthInformation
 slug: Web/API/XRCPUDepthInformation
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCPUDepthInformation
 ---
 
@@ -39,8 +32,6 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
 
 - {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} {{Experimental_Inline}}
   - : Returns the depth in meters at (x, y) in normalized view coordinates.
-
-## Examples
 
 ## Specifications
 

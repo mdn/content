@@ -2,9 +2,6 @@
 title: AbstractRange
 slug: Web/API/AbstractRange
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.AbstractRange
 ---
 
@@ -12,7 +9,8 @@ browser-compat: api.AbstractRange
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
 
-> **Note:** As an abstract interface, you will not directly instantiate an object of type `AbstractRange`. Instead, you will use the {{domxref("Range")}} or {{domxref("StaticRange")}} interfaces. To understand the difference between those two interfaces, and how to choose which is appropriate for your needs.
+> [!NOTE]
+> As an abstract interface, you will not directly instantiate an object of type `AbstractRange`. Instead, you will use the {{domxref("Range")}} or {{domxref("StaticRange")}} interfaces. To understand the difference between those two interfaces, and how to choose which is appropriate for your needs, consult each interface's documentation.
 
 {{InheritanceDiagram}}
 
@@ -23,15 +21,15 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 - {{domxref("AbstractRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
   - : The {{domxref("Node")}} object in which the end of the range, as specified by the `endOffset` property, is located.
 - {{domxref("AbstractRange.endOffset", "endOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the beginning of the range represented by the range object. This value must be less than the length of the `endContainer` node.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the range represented by the range object. This value must be less than the length of the `endContainer` node.
 - {{domxref("AbstractRange.startContainer", "startContainer")}} {{ReadOnlyInline}}
   - : The DOM {{domxref("Node")}} in which the beginning of the range, as specified by the `startOffset` property, is located.
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the first character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
 ## Instance methods
 
-_The `AbstractRange` interface does provide any methods._
+_The `AbstractRange` interface doesn't provide any methods._
 
 ## Usage notes
 
@@ -60,7 +58,7 @@ const contents = range.cloneContents();
 document.body.appendChild(contents);
 ```
 
-This example creates a new range, `range`, and sets its starting point to the third child node of the first element whose class is `elementclass`. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
+This example creates a new range, `range`, and sets its starting point to the third child node of the first element. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
 
 ### Ranges and the hierarchy of the DOM
 
@@ -77,7 +75,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo" />
+    <img src="..." alt="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
@@ -96,7 +94,7 @@ To illustrate this, consider the HTML below:
 
 After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:
 
-[![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
+![Diagram of the DOM for a simple web page](simpledom.svg)
 
 In this diagram, the nodes representing HTML elements are shown in green. Each row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 

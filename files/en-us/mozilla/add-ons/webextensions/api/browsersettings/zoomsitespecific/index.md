@@ -1,18 +1,10 @@
 ---
 title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - WebExtensions
-  - browserSettings
-  - zoomSiteSpecific
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.zoomSiteSpecific
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
@@ -30,11 +22,7 @@ If `browser.zoom.siteSpecific` is set false, zoom operations apply to the active
 
 When Firefox is installed, `browser.zoom.siteSpecific` is true.
 
-If [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` is true, this setting has no effect and zoom is set on a per-tab basis.
-
-## Browser compatibility
-
-{{Compat}}
+If [`privacy.websites.resistFingerprinting`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#resistfingerprinting) is true, this setting has no effect and zoom is set on a per-tab basis.
 
 ## Examples
 
@@ -49,3 +37,7 @@ browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

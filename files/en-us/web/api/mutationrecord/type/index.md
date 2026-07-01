@@ -1,12 +1,8 @@
 ---
-title: MutationRecord.type
+title: "MutationRecord: type property"
+short-title: type
 slug: Web/API/MutationRecord/type
 page-type: web-api-instance-property
-tags:
-  - type
-  - MutationRecord
-  - Property
-  - Reference
 browser-compat: api.MutationRecord.type
 ---
 
@@ -22,7 +18,7 @@ The property is set to the type of the mutation as a string. The value can be on
 
 - `characterData` if it was a mutation to a {{domxref("CharacterData")}} node.
 
-- `childList` if the mutation a mutation to the tree of nodes.
+- `childList` if the mutation was a mutation to the tree of nodes.
 
 ## Examples
 

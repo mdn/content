@@ -1,35 +1,21 @@
 ---
-title: Element.clientLeft
+title: "Element: clientLeft property"
+short-title: clientLeft
 slug: Web/API/Element/clientLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientLeft
 ---
 
 {{ APIRef("DOM") }}
 
-The width of the left border of an element in pixels. It includes the width of the
-vertical scrollbar if the text direction of the element is right-to-left and if there
-is an overflow causing a left vertical scrollbar to be rendered.
-`clientLeft` does not include the left margin or the left padding.
-`clientLeft` is read-only.
+The **`clientLeft`** read-only property of the {{domxref("Element")}} interface returns the width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right-to-left and if there is an overflow causing a left vertical scrollbar to be rendered. `clientLeft` does not include the left margin or the left padding.
 
-> **Note:** This property will round the value to an integer. If you
-> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
-
-> **Note:** When an element has
-> `display: inline`, `clientLeft` returns `0`
-> regardless of the element's border.
+> [!NOTE]
+> When an element has `display: inline`, `clientLeft` returns `0` regardless of the element's border.
 
 ## Value
 
-A number.
+An integer.
 
 ## Examples
 
@@ -55,7 +41,7 @@ In the following example, the client area has a white background and a 24px blac
 ```css
 #container {
   margin: 3rem;
-  background-color: rgb(255, 255, 204);
+  background-color: rgb(255 255 204);
   border: 4px dashed black;
 }
 
@@ -79,3 +65,13 @@ In the following example, the client area has a white background and a 24px blac
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxref("HTMLElement.offsetLeft")}}
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.clientTop")}}
+- {{domxref("Element.getBoundingClientRect()")}}

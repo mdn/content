@@ -1,24 +1,15 @@
 ---
-title: Sharing objects with page scripts
+title: Share objects with page scripts
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-tags:
-  - Add-ons
-  - Content script
-  - Extensions
-  - Firefox
-  - Guide
-  - Mozilla
-  - Non-standard
-  - WebExtensions
-  - XPCOM
-  - page scripts
+page-type: guide
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
+> [!NOTE]
+> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards. {{domxref("structuredClone")}} provides a cross-browser API that creates structured clones.
 
-> **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
-
-> **Warning:** As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
+> [!WARNING]
+> As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
 >
 > The isolation between content scripts and scripts loaded by web pages is intended to make it more difficult for hostile web pages to do this.
 >
@@ -28,8 +19,8 @@ As the [content scripts guide notes](/en-US/docs/Mozilla/Add-ons/WebExtensions/C
 
 However, Firefox provides some APIs that enable content scripts to:
 
-- access JavaScript objects created by page scripts
-- expose their own JavaScript objects to page scripts.
+- access JavaScript objects created by page scripts.
+- expose their JavaScript objects to page scripts.
 
 ## Xray vision in Firefox
 
@@ -37,16 +28,16 @@ In Firefox, part of the isolation between content scripts and page scripts is im
 
 The purpose of this feature is to make it harder for the less-privileged script to confuse the more-privileged script by redefining the native properties of objects.
 
-So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
+So, for example, when a content script accesses the page's [window](/en-US/docs/Web/API/Window) from a [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment), it won't see any properties the page script added to the window, and if the page script has redefined any existing properties of the window, the content script will see the original version.
 
 ## Accessing page script objects from content scripts
 
 In Firefox, DOM objects in content scripts get an extra property `wrappedJSObject`. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.
 
-Let's take a simple example. Suppose a web page loads a script:
+Let's take an example. Suppose a web page loads a script:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -97,11 +88,12 @@ Firefox also provides APIs enabling content scripts to make objects available to
 
 - [`exportFunction()`](#exportfunction): export a function to page scripts.
 - [`cloneInto()`](#cloneinto): export an object to page scripts.
-- constructors from the page context
+- `window.structuredClone()`: an alternative to `cloneInto` in some cases, see [`structuredClone` in content scripts](#structuredclone).
+- [constructors from the page context](#constructors_from_the_page_context).
 
 ### exportFunction
 
-Given a function defined in the content script, `exportFunction()` exports it to the page script's scope, so the page script can call it.
+Given a function defined in the content script, [`exportFunction()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) exports it to the page script's scope, so the page script can call it.
 
 For example, let's consider an extension which has a background script like this:
 
@@ -111,7 +103,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -129,7 +121,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -161,7 +153,7 @@ window.notify("Message from the page script!");
 
 ### cloneInto
 
-Given an object defined in the content script, this creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
+Given an object defined in the content script, [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
 
 For example, here's a content script that defines an object that contains a function, then clones it into the page script's scope:
 
@@ -178,21 +170,46 @@ the `cloneFunctions` option.
 let messenger = {
   notify(message) {
     browser.runtime.sendMessage({
-      content: `Object method call: ${message}`
+      content: `Object method call: ${message}`,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 Now page scripts see a new property on the window, `messenger`, which has a function `notify()`:
 
 ```js
 window.messenger.notify("Message from the page script!");
+```
+
+### structuredClone
+
+Content scripts can also use {{domxref("structuredClone")}} to create structured clones. Use `window.structuredClone(value)` to clone values in the page's scope. A direct call to `structuredClone(value)` or `globalThis.structuredClone(value)` clones into the content script's scope.
+
+The choice of method affects how the return value can be used. A value cloned into the content script can be used in the content script like any other regular value, but when shared with the web page, the web page is denied access to its properties. Conversely, a value cloned into the web page can be used by the web page like any other value, but content scripts may have [Xray vision](#xray_vision_in_firefox). One consequence of Xray vision is the inability to assign functions from the content script to objects in the page's scope.
+
+Firefox is the only browser that has these differences in behavior due to differences in [the content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment).
+
+> [!NOTE]
+> In Firefox 148 and earlier, `window.structuredClone(value)` creates values in the scope of the caller instead of the window's scope. Use [`cloneInto()`](#cloneinto) if you want to support Firefox 148 and earlier.
+
+For example, here is a content script that attempts to share a value through the page's global scope:
+
+```js
+let value = { test: "hello" };
+
+// Wrong usage: page access to sharedBad's properties will be denied
+window.wrappedJSObject.sharedBad = structuredClone(value);
+
+// Good usage, works in Firefox 149+:
+window.wrappedJSObject.sharedGood = window.structuredClone(value);
+
+// Alternative with same effect:
+window.wrappedJSObject.sharedGood2 = cloneInto(value, window);
 ```
 
 ### Constructors from the page context
@@ -208,26 +225,35 @@ const objA = new Object();
 const objB = new window.Object();
 
 console.log(
-  objA instanceof Object,                        // true
-  objB instanceof Object,                        // false
-  objA instanceof window.Object,                 // false
-  objB instanceof window.Object,                 // true
-  'wrappedJSObject' in objB                      // true; xrayed
+  objA instanceof Object, // true
+  objB instanceof Object, // false
+  objA instanceof window.Object, // false
+  objB instanceof window.Object, // true
+  "wrappedJSObject" in objB, // true; xrayed
 );
 
 objA.foo = "foo";
-objB.foo = "foo";                                // xray wrappers for plain JavaScript objects pass through property assignments
-objB.wrappedJSObject.bar = "bar";                // unwrapping before assignment does not rely on this special behavior
+objB.foo = "foo"; // xray wrappers for plain JavaScript objects pass through property assignments
+objB.wrappedJSObject.bar = "bar"; // unwrapping before assignment does not rely on this special behavior
 
 window.wrappedJSObject.objA = objA;
-window.wrappedJSObject.objB = objB;              // automatically unwraps when passed to page context
+window.wrappedJSObject.objB = objB; // automatically unwraps when passed to page context
 
 window.eval(`
   console.log(objA instanceof Object);           // false
   console.log(objB instanceof Object);           // true
 
-  console.log(objA.foo);                         // undefined
-  objA.baz = "baz";                              // Error: permission denied
+  try {
+    console.log(objA.foo);
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
+ 
+  try {
+    objA.baz = "baz";
+  } catch (error) {
+    console.log(error);                       // Error: permission denied
+  }
 
   console.log(objB.foo, objB.bar);               // "foo", "bar"
   objB.baz = "baz";
@@ -238,20 +264,22 @@ window.eval(`
 const ev = new Event("click");
 
 console.log(
-  ev instanceof Event,                           // true
-  ev instanceof window.Event,                    // true; Event constructor is actually inherited from the xrayed window
-  'wrappedJSObject' in ev                        // true; is an xrayed object
+  ev instanceof Event, // true
+  ev instanceof window.Event, // true; Event constructor is actually inherited from the xrayed window
+  "wrappedJSObject" in ev, // true; is an xrayed object
 );
 
-ev.propA = "propA"                                // xray wrappers for native objects do not pass through assignments
-ev.propB = "wrapper";                             // define property on xray wrapper
-ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
-Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
-  'propC', {
-     get: exportFunction(() => {                  // getters must be exported like regular functions
-       return 'propC';
-     })
-  }
+ev.propA = "propA"; // xray wrappers for native objects do not pass through assignments
+ev.propB = "wrapper"; // define property on xray wrapper
+ev.wrappedJSObject.propB = "unwrapped"; // define same property on page object
+Reflect.defineProperty(
+  // privileged reflection can operate on less privileged objects
+  ev.wrappedJSObject,
+  "propC",
+  {
+    // getters must be exported like regular functions
+    get: exportFunction(() => "propC", window),
+  },
 );
 
 window.eval(`

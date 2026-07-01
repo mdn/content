@@ -1,26 +1,19 @@
 ---
-title: Notification.lang
+title: "Notification: lang property"
+short-title: lang
 slug: Web/API/Notification/lang
 page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.lang
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`lang`** read-only property of the
 {{domxref("Notification")}} interface indicates the language used in the notification,
 as specified in the `lang` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-The language itself is specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
-See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference.
+The language itself is specified using a string representing a {{glossary("BCP 47 language tag")}}.
 
 ## Value
 
@@ -34,13 +27,13 @@ constructor.
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  lang: 'en-US'
-}
+  body: "Your code submission has received 3 new review comments.",
+  lang: "en-US",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.lang) // should return 'en-US'
+console.log(n.lang); // "en-US"
 ```
 
 ## Specifications

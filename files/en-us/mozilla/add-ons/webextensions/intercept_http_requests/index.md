@@ -1,14 +1,9 @@
 ---
 title: Intercept HTTP requests
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Add-ons
-  - Extensions
-  - How-to
-  - WebExtensions
+page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 To intercept HTTP requests, use the {{WebExtAPIRef("webRequest")}} API.
 This API enables you to add listeners for various stages of making an HTTP request.
@@ -36,10 +31,7 @@ In that directory, create a file called "manifest.json" and add:
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -54,10 +46,9 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 You use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the `logURL()` function just before starting the request. The `logURL()` function grabs the URL of the request from the event object and logs it to the browser console.
@@ -86,7 +77,6 @@ Now use `webRequest` to redirect HTTP requests. First, replace "manifest.json" w
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -101,7 +91,6 @@ Now use `webRequest` to redirect HTTP requests. First, replace "manifest.json" w
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -115,7 +104,8 @@ Next, replace "background.js" with this:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl =
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
@@ -123,14 +113,14 @@ function redirect(requestDetails) {
     return;
   }
   return {
-    redirectUrl: targetUrl
+    redirectUrl: targetUrl,
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -151,9 +141,9 @@ To test it out, open a page on MDN that contains images (for example, [the page 
 ## Modifying request headers
 
 Finally, use `webRequest` to modify request headers.
-In this example, you change the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under "http\://useragentstring.com/".
+In this example, you change the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under "https\://useragentstring.com/".
 
-Update the "manifest.json" to include `http://useragentstring.com/` like this:
+Update the "manifest.json" to include `https://useragentstring.com/` like this:
 
 ```json
 {
@@ -165,7 +155,7 @@ Update the "manifest.json" to include `http://useragentstring.com/` like this:
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "http://useragentstring.com/"
+    "https://useragentstring.com/"
   ],
 
   "background": {
@@ -177,9 +167,10 @@ Update the "manifest.json" to include `http://useragentstring.com/` like this:
 Replace "background.js" with code like this:
 
 ```js
-let targetPage = "http://useragentstring.com/*";
+let targetPage = "https://useragentstring.com/*";
 
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach((header) => {
@@ -187,13 +178,13 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 
@@ -206,8 +197,8 @@ See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on t
 The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array.
 This modified array is sent to the server.
 
-To test it out, open [useragentstring.com](http://useragentstring.com/) and check that it identifies the browser as Firefox.
-Then reload the extension, reload [useragentstring.com](http://useragentstring.com/), and see that Firefox is now identified as Opera.
+To test it out, open [useragentstring.com](https://useragentstring.com/) and check that it identifies the browser as Firefox.
+Then reload the extension, reload [useragentstring.com](https://useragentstring.com/), and see that Firefox is now identified as Opera.
 
 ![useragentstring.com showing details of the modified user agent string](modified_request_header.png)
 

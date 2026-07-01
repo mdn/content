@@ -2,15 +2,9 @@
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Learn
-  - Tutorial
-  - WebGL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Basic_scissoring","Web/API/WebGL_API/By_example/Boilerplate_1")}}
 
 This WebGL example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
 
@@ -48,25 +42,19 @@ canvas {
 ```
 
 ```js
-window.addEventListener("load", () => {
-  const [ firstCanvas , secondCanvas ] = document.getElementsByTagName("canvas");
-  firstCanvas.width = firstCanvas.clientWidth;
-  firstCanvas.height = firstCanvas.clientHeight;
-  [firstCanvas, secondCanvas].forEach((canvas) => {
-    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-    if (!gl) {
-      document.querySelector("p").textContent = "Failed. Your browser or device may not support WebGL.";
-      return;
-    }
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-    gl.enable(gl.SCISSOR_TEST);
-    gl.scissor(30, 10, 60, 60);
-    gl.clearColor(1.0, 1.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-  });
-}, false);
+const [firstCanvas, secondCanvas] = document.getElementsByTagName("canvas");
+firstCanvas.width = firstCanvas.clientWidth;
+firstCanvas.height = firstCanvas.clientHeight;
+[firstCanvas, secondCanvas].forEach((canvas) => {
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.enable(gl.SCISSOR_TEST);
+  gl.scissor(30, 10, 60, 60);
+  gl.clearColor(1.0, 1.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+});
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
 
-{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Basic_scissoring","Web/API/WebGL_API/By_example/Boilerplate_1")}}

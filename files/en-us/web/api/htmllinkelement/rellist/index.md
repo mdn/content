@@ -1,38 +1,28 @@
 ---
-title: HTMLLinkElement.relList
+title: "HTMLLinkElement: relList property"
+short-title: relList
 slug: Web/API/HTMLLinkElement/relList
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLLinkElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLLinkElement.relList
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLLinkElement.relList`** read-only property reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
-
-The property itself is read-only, meaning you can not substitute the
-{{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
-changed.
+The read-only **`relList`** property of the {{domxref("HTMLLinkElement")}} returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document. It reflects the {{HTMLElement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) content attribute.
 
 ## Value
 
-A live {{domxref("DOMTokenList")}} of strings.
+A live {{domxref("DOMTokenList")}} object.
+
+Although the `relList` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `relList` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 
 ```js
 const links = document.getElementsByTagName("link");
-const length = links.length;
 for (const link of links) {
-  const listLength = list.length;
   console.log("New link found.");
-  relList.forEach((relEntry) => {
+  link.relList.forEach((relEntry) => {
     console.log(relEntry);
   });
 }

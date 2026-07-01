@@ -1,23 +1,10 @@
 ---
-title: VideoPlaybackQuality.corruptedVideoFrames
+title: "VideoPlaybackQuality: corruptedVideoFrames property"
+short-title: corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Corruption
-  - Data Loss
-  - Frames
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - corruptedVideoFrames
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
 
@@ -49,7 +36,7 @@ would be implemented to switch to a different video that might tax the network l
 const videoElem = document.getElementById("my_vid");
 const quality = videoElem.getVideoPlaybackQuality();
 
-if (quality.corruptedVideoFrames/quality.totalVideoFrames > 0.05) {
+if (quality.corruptedVideoFrames / quality.totalVideoFrames > 0.05) {
   downgradeVideo(videoElem);
 }
 ```

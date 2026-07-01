@@ -1,17 +1,18 @@
 ---
-title: 'Element: beforescriptexecute event'
+title: "Element: beforescriptexecute event"
+short-title: beforescriptexecute
 slug: Web/API/Element/beforescriptexecute_event
 page-type: web-api-event
-tags:
-  - DOM
-  - Non-standard
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.beforescriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{deprecated_header}}
 
-> **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.
+> [!WARNING]
+> This event was a proposal in an early version of the specification. Do not rely on it.
 
 The **`beforescriptexecute`** event is fired when a script is about to be executed. Cancelling the event prevents the script from executing.
 
@@ -21,10 +22,10 @@ It is a proprietary event specific to Gecko (Firefox).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('NameOfTheEvent', (event) => {});
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
 
-onNameOfTheEvent = (event) => { };
+onbeforescriptexecute = (event) => { }
 ```
 
 ## Event type

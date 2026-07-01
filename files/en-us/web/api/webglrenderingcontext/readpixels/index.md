@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.readPixels()
+title: "WebGLRenderingContext: readPixels() method"
+short-title: readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.readPixels
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
 specified rectangle of the current color framebuffer into a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
@@ -41,9 +36,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
 - `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the rectangle.
 - `format`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the pixel data. Possible values:
-
     - `gl.ALPHA`
       - : Discards the red, green and blue components and reads the
         alpha component.
@@ -55,7 +48,6 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
         color buffer.
 
     WebGL2 adds
-
     - `gl.RED`
     - `gl.RG`
     - `gl.RED_INTEGER`
@@ -64,9 +56,7 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.RGBA_INTEGER`
 
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the pixel data. Possible values:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT_5_6_5`
     - `gl.UNSIGNED_SHORT_4_4_4_4`
@@ -74,7 +64,6 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.FLOAT`
 
     WebGL2 adds
-
     - `gl.BYTE`
     - `gl.UNSIGNED_INT_2_10_10_10_REV`
     - `gl.HALF_FLOAT`
@@ -86,10 +75,8 @@ readPixels(x, y, width, height, format, type, pixels, dstOffset)
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
 
 - `pixels`
-
   - : An object to read data into. The array type must
     match the type of the `type` parameter:
-
     - {{jsxref("Uint8Array")}} for `gl.UNSIGNED_BYTE`.
     - {{jsxref("Uint16Array")}} for `gl.UNSIGNED_SHORT_5_6_5`,
       `gl.UNSIGNED_SHORT_4_4_4_4`, or `gl.UNSIGNED_SHORT_5_5_5_1`.
@@ -107,7 +94,6 @@ None ({{jsxref("undefined")}}).
 - A `gl.INVALID_ENUM` error is thrown if `format` or
   `type` is not an accepted value.
 - A `gl.INVALID_OPERATION` error is thrown if
-
   - `type` is `gl.UNSIGNED_SHORT_5_6_5` and
     `format` is not `gl.RGB`.
   - `type` is `gl.UNSIGNED_SHORT_4_4_4_4` and
@@ -120,10 +106,20 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
-const pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
-gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const pixels = new Uint8Array(
+  gl.drawingBufferWidth * gl.drawingBufferHeight * 4,
+);
+gl.readPixels(
+  0,
+  0,
+  gl.drawingBufferWidth,
+  gl.drawingBufferHeight,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  pixels,
+);
 console.log(pixels); // Uint8Array
 ```
 
@@ -137,4 +133,4 @@ console.log(pixels); // Uint8Array
 
 ## See also
 
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

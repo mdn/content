@@ -1,32 +1,26 @@
 ---
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
-tags:
-  - Controls
-  - Desktop
-  - Games
-  - JavaScript
-  - keyboard
-  - mouse
+page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
 
 Now, when we have our mobile controls in place and the game is playable on touch-enabled devices, it would be good to add mouse and keyboard support so the game can be playable on desktop also. That way we can broaden the list of supported platforms. We'll look at this below.
 
-It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
+It's also more straightforward to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
-> **Note:** the [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
+> [!NOTE]
+> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for faster development, but it's totally up to you which approach you chose.
 
 ## Pure JavaScript approach
 
 Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler);
+document.addEventListener("keyup", keyUpHandler);
 ```
 
 Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:
@@ -38,24 +32,24 @@ let upPressed = false;
 let downPressed = false;
 ```
 
-Then we will listen for the `keydown` and `keyup` events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or [look them up](/en-US/docs/Web/API/KeyboardEvent/keyCode#value_of_keycode)); `37` is the left arrow:
+Then we will listen for the `keydown` and `keyup` events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property of the event object, see which key it is, and then set the proper variable. The codes are all readable string names, but you can [look them up](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) to be sure; `"ArrowLeft"` is the left arrow:
 
 ```js
 function keyDownHandler(event) {
-  if (event.keyCode === 39) {
+  if (event.code === "ArrowRight") {
     rightPressed = true;
-  } else if (event.keyCode === 37) {
+  } else if (event.code === "ArrowLeft") {
     leftPressed = true;
   }
-  if (event.keyCode === 40) {
+  if (event.code === "ArrowDown") {
     downPressed = true;
-  } else if (event.keyCode === 38) {
+  } else if (event.code === "ArrowUp") {
     upPressed = true;
   }
 }
 ```
 
-The `keyUpHandler` looks almost exactly the same as the `keyDownHandler` above, but instead of setting the pressed variables to `true`, we would set them to `false`. If the left arrow is pressed (<kbd>⬅︎</kbd>; key code 37), we can set the `leftPressed` variable to `true` and in the `draw` function perform the action assigned to it — move the ship left:
+The `keyUpHandler` looks almost exactly the same as the `keyDownHandler` above, but instead of setting the pressed variables to `true`, we would set them to `false`. If the left arrow is pressed (<kbd>⬅︎</kbd>; `"ArrowLeft"`), we can set the `leftPressed` variable to `true` and in the `draw` function perform the action assigned to it — move the ship left:
 
 ```js
 function draw() {
@@ -77,21 +71,7 @@ function draw() {
 }
 ```
 
-The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame).
-
-We could write our own `KeyCode` object containing the key codes. For example:
-
-```js
-const KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };
-```
-
-That way instead of using the codes to compare the input in the handler functions, we could do something like this, which is arguably easier to remember:
-
-```js
-leftPressed = event.keyCode === KeyboardHelper.left;
-```
-
-> **Note:** You can also find a list of the different keycodes and what keys they relate to in the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) reference page.
+The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame).
 
 ![Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse.](controls-purejsgame.png)
 
@@ -99,7 +79,7 @@ You can see this example in action online at [end3r.github.io/JavaScript-Game-Co
 
 ## Phaser approach
 
-As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These will make your life easier and development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
+As I mentioned before, you can write everything on your own, but you can also take advantage of built-in functions in frameworks like Phaser. These should make development a lot faster. All the edge cases--differences between browser implementations, etc.--are handled by the framework, so you can focus on the actual task you want to do.
 
 ### Mouse
 
@@ -111,7 +91,7 @@ const buttonEnclave = this.add.button(
   10,
   "logo-enclave",
   this.clickEnclave,
-  this
+  this,
 );
 ```
 
@@ -123,7 +103,7 @@ this.buttonShoot = this.add.button(
   0,
   "button-alpha",
   null,
-  this
+  this,
 );
 this.buttonShoot.onInputDown.add(this.shootingPressed, this);
 this.buttonShoot.onInputUp.add(this.shootingReleased, this);

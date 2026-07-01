@@ -1,14 +1,8 @@
 ---
-title: KeyboardEvent.ctrlKey
+title: "KeyboardEvent: ctrlKey property"
+short-title: ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.ctrlKey
 ---
 
@@ -25,23 +19,26 @@ A boolean value.
 ## Examples
 
 ```html
-<html lang="en">
-  <head>
-    <title>ctrlKey example</title>
-    <script>
-      function showChar(e) {
-        alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
-      }
-    </script>
-  </head>
-  <body onkeypress="showChar(event);">
-    <p>
-      Press any character key, with or without holding down the CTRL key.<br />
-      You can also use the SHIFT key together with the CTRL key.
-    </p>
-  </body>
-</html>
+<p>
+  Press any character key, with or without holding down the CTRL key.<br />
+  You can also use the SHIFT key together with the CTRL key.
+</p>
+<pre id="output"></pre>
 ```
+
+```js
+const output = document.getElementById("output");
+
+function showChar(e) {
+  output.textContent = `Key KeyDown: "${e.key}"
+CTRL key KeyDown: ${e.ctrlKey}
+`;
+}
+
+document.addEventListener("keydown", showChar);
+```
+
+{{EmbedLiveSample("examples", "", "400")}}
 
 ## Specifications
 

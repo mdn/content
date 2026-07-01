@@ -1,15 +1,14 @@
 ---
-title: Firefox 31 for developers
+title: Firefox 31 release notes for developers
+short-title: Firefox 31
 slug: Mozilla/Firefox/Releases/31
-tags:
-  - Firefox
-  - Firefox 31
-  - Firefox for Developers
+page-type: firefox-release-notes
+sidebar: firefox
 ---
 
-{{FirefoxSidebar}}
+Firefox 31 was released on July 22, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -29,47 +28,47 @@ Highlights:
 
 ### CSS
 
-- Changed `var-` prefix of CSS Variables to `--` to reflect the final spec change ({{Bug(985838)}}).
-- The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).
-- Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).
-- CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
+- Changed `var-` prefix of CSS Variables to `--` to reflect the final spec change ([Firefox bug 985838](https://bugzil.la/985838)).
+- The {{cssxref("hyphens")}} property now support Polish hyphenation rules ([Firefox bug 987668](https://bugzil.la/987668)).
+- Removed an unwanted white space for multiple of 10,000 in Korean counter styles ([Firefox bug 985186](https://bugzil.la/985186)).
+- CSS opacity transition broken with parent pseudo :before and overflow auto ([Firefox bug 990340](https://bugzil.la/990340)).
+- The `::-moz-math-stretchy` pseudo-element has been removed ([Firefox bug 1000879](https://bugzil.la/1000879)).
 
 ### HTML
 
-- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
+- {{HTMLElement("track")}} has been implemented ([Firefox bug 629350](https://bugzil.la/629350)).
 
 ### JavaScript
 
 New ECMAScript 2015 features implemented:
 
-- New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
-- New `Math` function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
-- New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).
+- New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ([Firefox bug 911147](https://bugzil.la/911147))
+- New `Math` function: {{jsxref("Math.clz32()")}} ([Firefox bug 925123](https://bugzil.la/925123))
+- New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ([Firefox bug 918987](https://bugzil.la/918987)).
 - New `Object` method {{jsxref("Object.setPrototypeOf()")}}.
 - New `Number` constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
-- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ([Firefox bug 978235](https://bugzil.la/978235)).
 
 ### Interfaces/APIs/DOM
 
-- Constructor of `KeyboardEvent` has been implemented ({{Bug(930893)}}).
-- The Resource Timing API has been implemented (see {{ Bug("822480") }}).
-- `KeyboardEvent.isComposing` attribute has been implemented ({{Bug(993234)}}).
-- `InputEvent` interface has been implemented ({{Bug(993253)}}).
-- `InputEvent.isComposing` attribute has been implemented ({{Bug(993253)}}).
-- {{domxref("CSS.escape", "CSS.escape()")}} has been implemented ({{Bug(955860)}}).
-- {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ({{Bug(704423)}}). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
+- Constructor of `KeyboardEvent` has been implemented ([Firefox bug 930893](https://bugzil.la/930893)).
+- The Resource Timing API has been implemented (see [Firefox bug 822480](https://bugzil.la/822480)).
+- `KeyboardEvent.isComposing` attribute has been implemented ([Firefox bug 993234](https://bugzil.la/993234)).
+- `InputEvent` interface has been implemented ([Firefox bug 993253](https://bugzil.la/993253)).
+- `InputEvent.isComposing` attribute has been implemented ([Firefox bug 993253](https://bugzil.la/993253)).
+- {{domxref("CSS.escape_static", "CSS.escape()")}} has been implemented ([Firefox bug 955860](https://bugzil.la/955860)).
+- {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ([Firefox bug 704423](https://bugzil.la/704423)). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
 - The {{domxref("Path2D")}} interface has been implemented.
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
-- The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
+- The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ([Firefox bug 960426](https://bugzil.la/960426)).
 - The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{domxref("Window/unload_event", "unload")}} or {{domxref("Window.beforeunload_event", "beforeunload")}} handler.
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
-- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
-- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
+- Partial implementation of the [OpenType MATH table](https://learn.microsoft.com/en-us/typography/opentype/spec/math), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](https://web.archive.org/web/20210605072117/https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
+- The `::-moz-math-stretchy` pseudo-element has been removed ([Firefox bug 1000879](https://bugzil.la/1000879)).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ([Firefox bug 930504](https://bugzil.la/930504)).
 
 ### SVG
 
@@ -85,7 +84,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+- The `align` attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to `center` since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
   ```css
   #urlbar-wrapper {
@@ -93,21 +92,17 @@ _No change._
   }
   ```
 
-- `nsIDOMWindowUtils.sendQueryContentEvent()` and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
+- `nsIDOMWindowUtils.sendQueryContentEvent()` and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](https://web.archive.org/web/20210518041413/https://developer.mozilla.org/en-US/docs/mozilla/tech/xpcom/reference/interface/nsidomwindowutils#constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
 ### Add-on SDK
 
 Highlights:
 
-- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
-- Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
+- [Add-on Debugger](https://extensionworkshop.com/documentation/develop/debugging/)
+- Added the ability to convert [between high-level BrowserWindow objects and DOM windows](https://web.archive.org/web/20201201230444/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](https://web.archive.org/web/20210117200824/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
 - Updated the default theme used for panels on Mac OS X.
-- Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
+- Added [contentStyle and contentStyleFile](https://web.archive.org/web/20201201022417/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
 
 [GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers('30')}}

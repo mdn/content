@@ -1,13 +1,8 @@
 ---
-title: Document.currentScript
+title: "Document: currentScript property"
+short-title: currentScript
 slug: Web/API/Document/currentScript
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
 browser-compat: api.Document.currentScript
 ---
 
@@ -35,7 +30,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Specifications
 
@@ -49,5 +44,5 @@ if (document.currentScript.async) {
 
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.afterscriptexecute_event")}}
-- {{DOMxRef("document.beforescriptexecute_event")}}
+- {{DOMxRef("document.afterscriptexecute_event", "afterscriptexecute")}} event of `Document`
+- {{DOMxRef("document.beforescriptexecute_event", "beforescriptexecute")}} event of `Document`

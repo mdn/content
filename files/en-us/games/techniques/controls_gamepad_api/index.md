@@ -1,26 +1,16 @@
 ---
 title: Implementing controls using the Gamepad API
+short-title: Using the Gamepad API
 slug: Games/Techniques/Controls_Gamepad_API
-tags:
-  - Controls
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
+page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by [Enclave Games](https://enclavegames.com/).
 
 ## Controls for web games
 
 Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now we have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
-
-## API status and browser support
-
-The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft stage in the W3C process, which means its implementation might still change, but saying that the [browser support](https://caniuse.com/gamepad) is already quite good. Firefox 29+ and Chrome 35+ support it out of the box. Opera supports the API in version 22+ (not surprising given that they now use Chrome's Blink engine.) And Microsoft implemented support for the API in Edge recently, which means four main browsers now supporting the Gamepad API.
 
 ## Which gamepads are best?
 
@@ -30,7 +20,7 @@ There's also a number of other devices with various different button layouts tha
 
 ## Case Study: Hungry Fridge
 
-The [GitHub Game Off II](https://github.blog/2013-10-30-github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
+The [GitHub Game Off II](https://github.blog/open-source/gaming/github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
 
 The second, hidden "change" implementation is the ability to transform the static Fridge into a full-blown moving, shooting and eating machine. When you connect the controller, the game significantly changes (Hungry Fridge turns into the Super Turbo Hungry Fridge) and you're able to control the armored fridge using the Gamepad API. You have to shoot down the food, but once again you also have to find the type of food the Fridge wants to eat at each point, or else you'll lose energy.
 
@@ -42,7 +32,8 @@ The full version of the Hungry Fridge game was built first, and then to showcase
 
 The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
 
-> **Note:** Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
+> [!NOTE]
+> Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
 
 ## Implementation
 
@@ -65,12 +56,16 @@ const gamepadAPI = {
 
 The `buttons` array contains the Xbox 360 button layout:
 
-```js
-buttons: [
-  'DPad-Up','DPad-Down','DPad-Left','DPad-Right',
-  'Start','Back','Axis-Left','Axis-Right',
-  'LB','RB','Power','A','B','X','Y',
-],
+```js-nolint
+const gamepadAPI = {
+  // …
+  buttons: [
+    "DPad-Up", "DPad-Down", "DPad-Left", "DPad-Right",
+    "Start", "Back", "Axis-Left", "Axis-Right",
+    "LB", "RB", "Power", "A", "B", "X", "Y",
+  ],
+  // …
+};
 ```
 
 This can be different for other types of gamepads like the PS3 controller (or a no-name, generic one), so you have to be careful and not just assume the button you're expecting will be the same button you'll actually get. Next, we set up two event listeners to get the data:
@@ -85,21 +80,27 @@ Due to security policy, you have to interact with the controller first while the
 Both functions are fairly simple:
 
 ```js
-connect(evt) {
-  gamepadAPI.controller = evt.gamepad;
-  gamepadAPI.turbo = true;
-  console.log('Gamepad connected.');
-},
+const gamepadAPI = {
+  // …
+  connect(evt) {
+    gamepadAPI.controller = evt.gamepad;
+    gamepadAPI.turbo = true;
+    console.log("Gamepad connected.");
+  },
+};
 ```
 
 The `connect()` function takes the event as a parameter and assigns the `gamepad` object to the `gamepadAPI.controller` variable. We are using only one gamepad for this game, so it's a single object instead of an array of gamepads. We then set the `turbo` property to `true`. (We could use the `gamepad.connected` boolean for this purpose, but we wanted to have a separate variable for turning on Turbo mode without needing to have a gamepad connected, for reasons explained above.)
 
 ```js
-disconnect(evt) {
-  gamepadAPI.turbo = false;
-  delete gamepadAPI.controller;
-  console.log('Gamepad disconnected.');
-},
+const gamepadAPI = {
+  // …
+  disconnect(evt) {
+    gamepadAPI.turbo = false;
+    delete gamepadAPI.controller;
+    console.log("Gamepad disconnected.");
+  },
+};
 ```
 
 The `disconnect` function sets the `gamepad.turbo property` to `false` and removes the variable containing the gamepad object.
@@ -122,46 +123,49 @@ The `index` variable is useful if we're connecting more than one controller and 
 Beside `connect()` and `disconnect()`, there are two more methods in the `gamepadAPI` object: `update()` and `buttonPressed()`. `update()` is executed on every frame inside the game loop, to update the actual status of the gamepad object regularly:
 
 ```js
-update() {
-  // Clear the buttons cache
-  gamepadAPI.buttonsCache = [];
+const gamepadAPI = {
+  // …
+  update() {
+    // Clear the buttons cache
+    gamepadAPI.buttonsCache = [];
 
-  // Move the buttons status from the previous frame to the cache
-  for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
-    gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
-  }
+    // Move the buttons status from the previous frame to the cache
+    for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
+      gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
+    }
 
-  // Clear the buttons status
-  gamepadAPI.buttonsStatus = [];
+    // Clear the buttons status
+    gamepadAPI.buttonsStatus = [];
 
-  // Get the gamepad object
-  const c = gamepadAPI.controller || {};
+    // Get the gamepad object
+    const c = gamepadAPI.controller || {};
 
-  // Loop through buttons and push the pressed ones to the array
-  const pressed = [];
-  if (c.buttons) {
-    for (let b = 0; b < c.buttons.length; b++) {
-      if (c.buttons[b].pressed) {
-        pressed.push(gamepadAPI.buttons[b]);
+    // Loop through buttons and push the pressed ones to the array
+    const pressed = [];
+    if (c.buttons) {
+      for (let b = 0; b < c.buttons.length; b++) {
+        if (c.buttons[b].pressed) {
+          pressed.push(gamepadAPI.buttons[b]);
+        }
       }
     }
-  }
 
-  // Loop through axes and push their values to the array
-  const axes = [];
-  if (c.axes) {
-    for (let a = 0; a < c.axes.length; a++) {
-      axes.push(c.axes[a].toFixed(2));
+    // Loop through axes and push their values to the array
+    const axes = [];
+    if (c.axes) {
+      for (const ax of c.axes) {
+        axes.push(ax.toFixed(2));
+      }
     }
-  }
 
-  // Assign received values
-  gamepadAPI.axesStatus = axes;
-  gamepadAPI.buttonsStatus = pressed;
+    // Assign received values
+    gamepadAPI.axesStatus = axes;
+    gamepadAPI.buttonsStatus = pressed;
 
-  // Return buttons for debugging purposes
-  return pressed;
-},
+    // Return buttons for debugging purposes
+    return pressed;
+  },
+};
 ```
 
 On every frame, `update()` saves buttons pressed during the previous frame to the `buttonsCache` array and takes fresh ones from the `gamepadAPI.controller` object. Then it loops through buttons and axes to get their actual states and values.
@@ -171,31 +175,22 @@ On every frame, `update()` saves buttons pressed during the previous frame to th
 The `buttonPressed()` method is also placed in the main game loop to listen for button presses. It takes two parameters — the button we want to listen to and the (optional) way to tell the game that holding the button is accepted. Without it you'd have to release the button and press it again to have the desired effect.
 
 ```js
-buttonPressed(button, hold) {
-  let newPress = false;
-
-  // Loop through pressed buttons
-  for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
-    // If we found the button we're looking for
-    if (gamepadAPI.buttonsStatus[i] === button) {
-      // Set the boolean variable to true
+const gamepadAPI = {
+  // …
+  buttonPressed(button, hold) {
+    let newPress = false;
+    if (GamepadAPI.buttons.status.includes(button)) {
       newPress = true;
-
-      // If we want to check the single press
-      if (!hold) {
-        // Loop through the cached states from the previous frame
-        for (let j = 0; j < gamepadAPI.buttonsCache.length; j++) {
-          // If the button was already pressed, ignore new press
-          newPress = (gamepadAPI.buttonsCache[j] !== button);
-        }
-      }
     }
-  }
-  return newPress;
-},
+    if (!hold && GamepadAPI.buttons.cache.includes(button)) {
+      newPress = false;
+    }
+    return newPress;
+  },
+};
 ```
 
-There are two types of action to consider for a button: a single press and a hold. The `newPress` boolean variable will indicate whether there's a new press of a button or not. Next, we loop through the array of pressed buttons — if the given button is the same as the one we're looking for, the `newPress` variable is set to `true`. To check if the press is a new one, so the player is not holding the key, we loop through the cached states of the buttons from the previous frame of the game loop. If we find it there it means that the button is being held, so there's no new press. In the end the `newPress` variable is returned. The `buttonPressed` function is used in the update loop of the game like this:
+There are two types of action to consider for a button: a single press and a hold. The `newPress` boolean variable will indicate whether there's a new press of a button or not. Next, we check the array of pressed buttons — if the given button is in here, the `newPress` variable is set to `true`. To check if the press is a new one, so the player is not holding the key, we check the cached states of the buttons from the previous frame of the game loop. If we find it there it means that the button is being held, so there's no new press. In the end the `newPress` variable is returned. The `buttonPressed` function is used in the update loop of the game like this:
 
 ```js
 if (gamepadAPI.turbo) {
@@ -237,7 +232,7 @@ The {{domxref("Navigator.getGamepads()")}} method has been updated with [a longe
 
 The mapping type is now an enumerable object instead of a string:
 
-```ts
+```webidl
 enum GamepadMappingType {
   "",
   "standard",
@@ -252,4 +247,4 @@ There were more events available in the spec than just `gamepadconnected` and `g
 
 ## Summary
 
-The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser. Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).
+The Gamepad API enables delivering a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser. Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).

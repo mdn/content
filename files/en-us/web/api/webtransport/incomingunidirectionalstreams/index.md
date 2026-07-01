@@ -1,25 +1,16 @@
 ---
-title: WebTransport.incomingUnidirectionalStreams
+title: "WebTransport: incomingUnidirectionalStreams property"
+short-title: incomingUnidirectionalStreams
 slug: Web/API/WebTransport/incomingUnidirectionalStreams
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - incomingUnidirectionalStreams
-  - Property
-  - Reference
-  - WebTransport
-  - WebTransport API
 browser-compat: api.WebTransport.incomingUnidirectionalStreams
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`incomingUnidirectionalStreams`** read-only property of the {{domxref("WebTransport")}} interface represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to reliably read data from the server.
 
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -34,7 +25,7 @@ async function receiveUnidirectional() {
   const uds = transport.incomingUnidirectionalStreams;
   const reader = uds.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -46,7 +37,7 @@ async function receiveUnidirectional() {
 async function readData(receiveStream) {
   const reader = receiveStream.getReader();
   while (true) {
-    const {done, value} = await reader.read();
+    const { done, value } = await reader.read();
     if (done) {
       break;
     }
@@ -66,7 +57,7 @@ async function readData(receiveStream) {
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

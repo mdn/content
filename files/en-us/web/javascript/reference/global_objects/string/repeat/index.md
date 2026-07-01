@@ -1,25 +1,23 @@
 ---
 title: String.prototype.repeat()
+short-title: repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.repeat
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
+which contains the specified number of copies of this string, concatenated together.
 
-The **`repeat()`** method constructs and returns a new string
-which contains the specified number of copies of the string on which it was called,
-concatenated together.
+{{InteractiveExample("JavaScript Demo: String.prototype.repeat()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
+```js interactive-example
+const mood = "Happy! ";
+
+console.log(`I feel ${mood.repeat(3)}`);
+// Expected output: "I feel Happy! Happy! Happy! "
+```
 
 ## Syntax
 
@@ -30,9 +28,7 @@ repeat(count)
 ### Parameters
 
 - `count`
-  - : An integer between `0` and
-    {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicating the
-    number of times to repeat the string.
+  - : An integer between `0` and {{jsxref("Number/POSITIVE_INFINITY", "Infinity")}}, indicating the number of times to repeat the string.
 
 ### Return value
 
@@ -40,10 +36,8 @@ A new string containing the specified number of copies of the given string.
 
 ### Exceptions
 
-- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: repeat count must be
-  non-negative.
-- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: repeat count must be
-  less than infinity and not overflow maximum string size.
+- {{jsxref("RangeError")}}
+  - : Thrown if `count` is negative or if `count` overflows maximum string length.
 
 ## Examples
 
@@ -55,9 +49,9 @@ A new string containing the specified number of copies of the given string.
 "abc".repeat(1); // 'abc'
 "abc".repeat(2); // 'abcabc'
 "abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
-'abc'.repeat(1 / 0); // RangeError
+"abc".repeat(1 / 0); // RangeError
 
-({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() is a generic method)
 ```
 
@@ -72,4 +66,5 @@ A new string containing the specified number of copies of the given string.
 ## See also
 
 - [Polyfill of `String.prototype.repeat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.repeat`](https://www.npmjs.com/package/string.prototype.repeat)
 - {{jsxref("String.prototype.concat()")}}

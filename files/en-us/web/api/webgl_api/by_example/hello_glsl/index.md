@@ -2,22 +2,14 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - GLSL
-  - Graphics
-  - Learn
-  - Shaders
-  - Tutorial
-  - WebGL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
 
-> **Note:** This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.
+> [!NOTE]
+> This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.
 
 ## Hello World program in GLSL
 
@@ -72,53 +64,53 @@ button {
 </script>
 ```
 
-```js hidden
-;(() => {
-  "use strict";
-```
-
 ```js
-window.addEventListener("load", setupWebGL, false);
-let gl;
-let program;
+const canvas = document.querySelector("canvas");
 
-function setupWebGL (evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+const gl = getRenderingContext();
+let source = document.querySelector("#vertex-shader").innerHTML;
+const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+gl.shaderSource(vertexShader, source);
+gl.compileShader(vertexShader);
 
-  let source = document.querySelector("#vertex-shader").innerHTML;
-  const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader,source);
-  gl.compileShader(vertexShader);
-
-  source = document.querySelector("#fragment-shader").innerHTML;
-  const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader,source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    const linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
-    return;
-  }
-
-  initializeAttributes();
-
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
-
+source = document.querySelector("#fragment-shader").innerHTML;
+const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+gl.shaderSource(fragmentShader, source);
+gl.compileShader(fragmentShader);
+const program = gl.createProgram();
+gl.attachShader(program, vertexShader);
+gl.attachShader(program, fragmentShader);
+gl.linkProgram(program);
+gl.detachShader(program, vertexShader);
+gl.detachShader(program, fragmentShader);
+gl.deleteShader(vertexShader);
+gl.deleteShader(fragmentShader);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const linkErrLog = gl.getProgramInfoLog(program);
   cleanup();
+  document.querySelector("p").textContent =
+    `Shader program did not link successfully. Error log: ${linkErrLog}`;
+  throw new Error("Program failed to link");
 }
 
 let buffer;
+initializeAttributes();
+
+gl.useProgram(program);
+gl.drawArrays(gl.POINTS, 0, 1);
+
+cleanup();
+
+function getRenderingContext() {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+  const gl = canvas.getContext("webgl");
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+  gl.clearColor(0.0, 0.0, 0.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+  return gl;
+}
+
 function initializeAttributes() {
   gl.enableVertexAttribArray(0);
   buffer = gl.createBuffer();
@@ -137,28 +129,6 @@ function cleanup() {
 }
 ```
 
-```js hidden
-function getRenderingContext() {
-  const canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
-    return null;
-  }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
-}
-```
-
-```js hidden
-})();
-```
-
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl).
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}

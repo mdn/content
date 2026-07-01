@@ -1,14 +1,8 @@
 ---
-title: DOMImplementation.createHTMLDocument()
+title: "DOMImplementation: createHTMLDocument() method"
+short-title: createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
 
@@ -36,29 +30,23 @@ A new HTML {{domxref("Document")}} object.
 
 ## Examples
 
-This example creates a new HTML document and inserts it into an {{
-  HTMLElement("iframe") }} in the current document.
+This example creates a new HTML document and inserts it into an {{HTMLElement("iframe")}} in the current document.
 
 Here's the HTML for this example:
 
-```html
-<body>
-  <p>
-    Click <a href="javascript:makeDocument()">here</a> to create a new document
-    and insert it below.
-  </p>
-  <iframe id="theFrame" src="about:blank" />
-</body>
+```html live-sample___new-doc
+<button id="create-doc">Create new document</button>
+<iframe id="theFrame" src="about:blank"></iframe>
 ```
 
 The JavaScript implementation of `makeDocument()` follows:
 
-```js
+```js live-sample___new-doc
 function makeDocument() {
-  let frame = document.getElementById("theFrame");
+  const frame = document.getElementById("theFrame");
 
-  let doc = document.implementation.createHTMLDocument("New Document");
-  let p = doc.createElement("p");
+  const doc = document.implementation.createHTMLDocument("New Document");
+  const p = doc.createElement("p");
   p.textContent = "This is a new paragraph.";
 
   try {
@@ -69,31 +57,33 @@ function makeDocument() {
 
   // Copy the new HTML document into the frame
 
-  let destDocument = frame.contentDocument;
-  let srcNode = doc.documentElement;
-  let newNode = destDocument.importNode(srcNode, true);
+  const destDocument = frame.contentDocument;
+  const srcNode = doc.documentElement;
+  const newNode = destDocument.importNode(srcNode, true);
 
   destDocument.replaceChild(newNode, destDocument.documentElement);
 }
+
+document.getElementById("create-doc").addEventListener("click", makeDocument);
 ```
 
-The code in lines 4–12 handle creating the new HTML document and inserting some content
-into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
-whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
-new paragraph element with some simple content, and then lines 8–12 handle inserting the
-new paragraph into the new document.
+The code handles creating the new HTML document and inserting some content
+into it. `createHTMLDocument()` constructs a new HTML document
+whose {{ HTMLElement("title") }} is `"New Document"`. Then we create a
+new paragraph element with some simple content, and then the new paragraph gets inserted
+into the new document.
 
-Line 16 pulls the `contentDocument` of the frame; this is the document into
+`destDocument` stores the `contentDocument` of the frame; this is the document into
 which we'll be injecting the new content. The next two lines handle importing the
-contents of our new document into the new document's context. Finally, line 20 actually
+contents of our new document into the new document's context. Finally, `destDocument.replaceChild` actually
 replaces the contents of the frame with the new document's contents.
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
+{{EmbedLiveSample("new-doc", "", 200)}}
 
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

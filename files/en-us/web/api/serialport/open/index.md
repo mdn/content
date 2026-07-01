@@ -1,18 +1,12 @@
 ---
-title: SerialPort.open()
+title: "SerialPort: open() method"
+short-title: open()
 slug: Web/API/SerialPort/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - SerialPort
-  - Experimental
 browser-compat: api.SerialPort.open
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The `baudRate` parameter is required.
 
@@ -25,9 +19,7 @@ open(options)
 ### Parameters
 
 - `options`
-
   - : An object with any of the following values:
-
     - `baudRate`
       - : A positive, non-zero value indicating the baud rate at which serial communication should be established.
     - `bufferSize` {{Optional_Inline}}
@@ -47,10 +39,12 @@ A {{jsxref("Promise")}}.
 
 ### Exceptions
 
+The returned `Promise` rejects with one of the following exceptions:
+
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the port is already open.
+  - : If `open()` is called when the port is already open.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Returned if the attempt to open the port failed.
+  - : If the attempt to open the port failed.
 
 ## Examples
 

@@ -1,19 +1,10 @@
 ---
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - topSites
+page-type: webextension-api
 browser-compat: webextensions.api.topSites
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the topSites API to get an array containing pages that the user has visited frequently.
 
@@ -31,13 +22,14 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 - {{WebExtAPIRef("topSites.get()")}}
   - : Gets an array containing all the sites listed in the browser's "New Tab" page. Note that the number of sites returned here is browser-specific, and the particular sites returned will probably be specific to the user, based on their browsing history.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

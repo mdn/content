@@ -2,10 +2,7 @@
 title: Loop
 slug: Glossary/Loop
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - control flow
-  - programming
+sidebar: glossarysidebar
 ---
 
 A **loop** is a sequence of instructions that is repeated until a certain condition is met. An example would be the process of getting an item of data and changing it, and then making sure some {{Glossary("conditional", "condition")}} is checked — such as if a counter has reached a prescribed number.

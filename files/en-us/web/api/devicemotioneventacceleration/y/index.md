@@ -1,19 +1,14 @@
 ---
-title: 'DeviceMotionEventAcceleration: y'
+title: "DeviceMotionEventAcceleration: y property"
+short-title: y
 slug: Web/API/DeviceMotionEventAcceleration/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - DeviceAcceleration
-  - NeedsExample
-  - Property
-  - Reference
 browser-compat: api.DeviceMotionEventAcceleration.y
 ---
 
-{{ APIRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEventAcceleration.x`** read-only property indicates the amount of acceleration that occurred along the Y
+The **`y`** read-only property of the {{domxref("DeviceMotionEventAcceleration")}} interface indicates the amount of acceleration that occurred along the Y
 axis in a [`DeviceMotionEventAcceleration`](/en-US/docs/Web/API/DeviceMotionEventAcceleration)
 object.
 
@@ -29,8 +24,3 @@ See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_even
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`DeviceMotionEventAcceleration.x`](/en-US/docs/Web/API/DeviceMotionEventAcceleration/x)
-- [`DeviceMotionEventAcceleration.z`](/en-US/docs/Web/API/DeviceMotionEventAcceleration/z)

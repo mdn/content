@@ -1,10 +1,8 @@
 ---
-title: Text()
+title: "Text: Text() constructor"
+short-title: Text()
 slug: Web/API/Text/Text
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.Text.Text
 ---
 
@@ -23,6 +21,7 @@ new Text(string)
 ### Parameters
 
 - `string` {{optional_inline}}
+  - : A string representing the textual content of the text node.
 
 ### Return value
 

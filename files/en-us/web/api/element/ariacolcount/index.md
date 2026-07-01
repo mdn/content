@@ -1,21 +1,14 @@
 ---
-title: Element.ariaColCount
+title: "Element: ariaColCount property"
+short-title: ariaColCount
 slug: Web/API/Element/ariaColCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColCount
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaColCount
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
+The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 
 ## Value
 
@@ -66,9 +59,9 @@ In this example the `aria-colcount` attribute on the element with an ID of `sema
 ```
 
 ```js
-let el = document.getElementById('semantic-table');
+let el = document.getElementById("semantic-table");
 console.log(el.ariaColCount); // 2
-el.ariaColCount = "3"
+el.ariaColCount = "3";
 console.log(el.ariaColCount); // 3
 ```
 
@@ -80,4 +73,6 @@ console.log(el.ariaColCount); // 3
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+## See also
+
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

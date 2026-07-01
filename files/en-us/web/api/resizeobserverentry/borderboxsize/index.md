@@ -1,14 +1,8 @@
 ---
-title: ResizeObserverEntry.borderBoxSize
+title: "ResizeObserverEntry: borderBoxSize property"
+short-title: borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - borderBoxSize
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
 
@@ -33,8 +27,9 @@ multi-column scenarios. Each object in the array contains two properties:
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> For more explanation of writing modes and block and inline
+> dimensions, read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Examples
 
@@ -47,12 +42,12 @@ const resizeObserver = new ResizeObserver((entries) => {
     if (entry.borderBoxSize?.length > 0) {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize
+        entry.borderBoxSize[0].blockSize,
       );
     } else {
       entry.target.style.borderRadius = calcBorderRadius(
         entry.contentRect.width,
-        entry.contentRect.height
+        entry.contentRect.height,
       );
     }
   }

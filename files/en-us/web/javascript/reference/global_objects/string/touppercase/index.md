@@ -1,22 +1,22 @@
 ---
 title: String.prototype.toUpperCase()
+short-title: toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.toUpperCase
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 
-The **`toUpperCase()`** method returns the calling string value
-converted to uppercase (the value will be converted to a string if it isn't one).
+{{InteractiveExample("JavaScript Demo: String.prototype.toUpperCase()", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toUpperCase());
+// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+```
 
 ## Syntax
 
@@ -24,15 +24,13 @@ converted to uppercase (the value will be converted to a string if it isn't one)
 toUpperCase()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new string representing the calling string converted to upper case.
-
-### Exceptions
-
-- {{jsxref("TypeError")}}
-  - : When called on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, for example,
-    `String.prototype.toUpperCase.call(undefined)`.
 
 ## Description
 

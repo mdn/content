@@ -1,21 +1,30 @@
 ---
 title: Object.entries()
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Object.entries
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.entries()`** static method returns an array of a given object's own enumerable string-keyed property key-value pairs.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object = {
+  a: "some string",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: some string"
+// "b: 42"
+```
 
 ## Syntax
 
@@ -46,13 +55,11 @@ If you only need the property keys, use {{jsxref("Object.keys()")}} instead. If 
 const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
-// Array-like object
-const obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+const arrayLike = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.entries(arrayLike)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
-// Array-like object with random key ordering
-const anObj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+const randomKeyOrder = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.entries(randomKeyOrder)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is a non-enumerable property
 const myObj = Object.create(
@@ -71,13 +78,13 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 ### Using Object.entries() on primitives
 
-Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). Only strings may have own enumerable properties, while all other primitives return an empty array.
+Non-object arguments are [coerced to objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) cannot be coerced to objects and throw a {{jsxref("TypeError")}} upfront. Only strings may have own enumerable properties, while all other primitives return an empty array.
 
 ```js
 // Strings have indices as enumerable own properties
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-// Other primitives have no own properties
+// Other primitives except undefined and null have no own properties
 console.log(Object.entries(100)); // []
 ```
 
@@ -93,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an Object
 
-Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring), you can iterate through objects easily.
 
 ```js
 // Using for...of loop
@@ -119,7 +126,8 @@ Object.entries(obj).forEach(([key, value]) => {
 ## See also
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims polyfill of `Object.entries`](https://www.npmjs.com/package/object.entries)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

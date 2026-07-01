@@ -1,19 +1,14 @@
 ---
-title: HTMLMetaElement.name
+title: "HTMLMetaElement: name property"
+short-title: name
 slug: Web/API/HTMLMetaElement/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMetaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLMetaElement.name
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMetaElement.name`** is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
+The **`HTMLMetaElement.name`** property is used in combination with {{domxref("HTMLMetaElement.content")}} to define the name-value pairs for the metadata of a document.
 The `name` attribute defines the metadata name and the `content` attribute defines the value.
 
 ## Value
@@ -25,18 +20,18 @@ A string.
 ### Reading the metadata name of a meta element
 
 The following example queries the first `<meta>` element in a document.
-The `name` value is logged to the console, showing that [keywords](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) have been specified for the document:
+The `name` value is logged to the console, showing that [keywords](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification) have been specified for the document:
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
-let meta = document.querySelector("meta");
+const meta = document.querySelector("meta");
 console.log(meta.name);
 // "keywords"
 ```
 
 ### Creating a meta element with `author` metadata
 
-The following example creates a new `<meta>` element with a `name` attribute set to [`author`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The following example creates a new `<meta>` element with a `name` attribute set to [`author`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification).
 The `content` attribute sets the author of the document and the element is appended to the document `<head>`:
 
 ```js
@@ -57,4 +52,4 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
-- [Possible values for the name attribute](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)
+- [Possible values for the name attribute](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification)

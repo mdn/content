@@ -1,22 +1,14 @@
 ---
 title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - atlas
-  - scrolling
-  - spritesheet
-  - tilemap
-  - tiles
+page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps) — you should read that too if you've not done so already.
+> [!NOTE]
+> When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps) — you should read that too if you've not done so already.
 
 ## The camera
 
@@ -26,15 +18,13 @@ Regardless of the type of camera, we would always need information regarding its
 
 - `x` and `y`: The current position of the camera. In this implementation, we are assuming that `(x,y)` points to the top left corner of visible portion of the map.
 - `width` and `height`: The size of the camera's viewport.
-- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be (0,0), and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
+- `maxX` and `maxY`: The limit for the camera's position — The lower limit will nearly always be `(0,0)`, and in this case the upper limit is equal to the size of the world minus the size of the camera's viewport.
 
 ## Rendering the map
 
 There are two main differences between rendering scrolling maps vs. static maps:
 
 - **Partial tiles might be shown**. In static maps, usually the rendering starts in the top left corner of a tile situated in the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
-
-TODO: show a diagram here explaining this.
 
 - **Only a section of the map will be rendered**. If the map is bigger than the viewport, we can obviously only display a part of it at a time, whereas non-scrolling maps are usually rendered wholly.
 
@@ -73,7 +63,7 @@ for (let c = startCol; c <= endCol; c++) {
         Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

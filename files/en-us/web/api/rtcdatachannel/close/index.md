@@ -1,18 +1,8 @@
 ---
-title: RTCDataChannel.close()
+title: "RTCDataChannel: close() method"
+short-title: close()
 slug: Web/API/RTCDataChannel/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Method
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - close
 browser-compat: api.RTCDataChannel.close
 ---
 
@@ -55,10 +45,6 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
-
-## Return value
-
-`undefined`.
 
 ## Examples
 

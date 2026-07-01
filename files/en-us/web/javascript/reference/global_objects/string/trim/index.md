@@ -1,31 +1,37 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+short-title: trim()
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
 browser-compat: javascript.builtins.String.trim
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`trim()`** method of {{jsxref("String")}} values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 
-The **`trim()`** method removes whitespace from both ends of a string and returns a new string, without modifying the original string.
+To return a new string with whitespace trimmed from just one end, use {{jsxref("String/trimStart", "trimStart()")}} or {{jsxref("String/trimEnd", "trimEnd()")}}.
 
-To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.
+{{InteractiveExample("JavaScript Demo: String.prototype.trim()")}}
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## Syntax
 
 ```js-nolint
 trim()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

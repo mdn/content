@@ -1,17 +1,14 @@
 ---
 title: IMSC basics
 slug: Related/IMSC/Basics
-tags:
-  - Guide
-  - IMSC
-  - basics
-  - captions
-  - subtitles
+page-type: guide
+sidebar: related
 ---
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
 
-> **Note:** IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
+> [!NOTE]
+> IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
 
 ## So what is IMSC?
 
@@ -19,16 +16,18 @@ IMSC is a markup language you can use to define timed text for adding subtitles 
 
 If you are not already familiar with XML or HTML, read up on them first and then come back here:
 
-- [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
-- [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [XML Introduction](/en-US/docs/Web/XML/Guides/XML_introduction)
+- [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
-> **Note:** If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
+> [!NOTE]
+> If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
 
 ## Minimal IMSC document
 
 IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC XML document.
+> [!NOTE]
+> IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC XML document.
 
 Let's look at a minimal IMSC document and how it is rendered:
 
@@ -57,7 +56,8 @@ This includes the following new attributes:
 
 Play around with the second values in the code sample and push the reload button when you are ready.
 
-> **Note:** The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.
+> [!NOTE]
+> The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.
 
 You can also use the `dur` attribute for timing:
 
@@ -85,10 +85,11 @@ Try setting some other colors for the text and background colors:
 
 - Try other named colors like `lime` or `aqua`.
 - Use hexadecimal values like `#00ff00` or `#00ffff`.
-- You can use other color schemes like `rgb(0,255,255)`.
-- Finally, try semi-transparent variations, like `rgba(0,0,0, 80)`.
+- You can use other color schemes like `rgb(0 255 255)`.
+- Finally, try semi-transparent variations, like `rgb(0 0 0 / .8)`.
 
-> **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
+> [!NOTE]
+> Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
 As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
 
@@ -175,16 +176,16 @@ The more expanded example below gives you an idea what you can do with IMSC afte
       <style xml:id="alignStart" tts:textAlign="start"/>
       <style xml:id="alignCenter" tts:textAlign="center"/>
       <style xml:id="alignEnd" tts:textAlign="end"/>
-      <style xml:id="textWhite" tts:color="#FFFFFF"/>
+      <style xml:id="textWhite" tts:color="white"/>
       <style xml:id="titleHeading" tts:fontSize="300%"/>
-      <style xml:id="spanDefaultStyle" tts:backgroundColor="#000000" tts:color="#FFFFFF"/>
+      <style xml:id="spanDefaultStyle" tts:backgroundColor="black" tts:color="white"/>
       <style xml:id="monoFont" tts:fontFamily="Lucida Console, Monaco, monospace"/>
       <style xml:id="sansserifFont" tts:fontFamily="Impact, Charcoal, sans-serif"/>
       <style xml:id="comicFont" tts:fontFamily="Comic Sans MS, cursive, sans-serif"/>
-      <style xml:id="blueText" tts:color="#00FFFF" tts:backgroundColor="#000000"/>
-      <style xml:id="limeText" tts:color="#00FF00" tts:backgroundColor="#000000"/>
-      <style xml:id="fuchsiaText" tts:color="#FF00FF" tts:backgroundColor="#000000"/>
-      <style xml:id="yellowText" tts:color="#FFFF00" tts:backgroundColor="#000000"/>
+      <style xml:id="blueText" tts:color="cyan" tts:backgroundColor="black"/>
+      <style xml:id="limeText" tts:color="lime" tts:backgroundColor="black"/>
+      <style xml:id="fuchsiaText" tts:color="magenta" tts:backgroundColor="black"/>
+      <style xml:id="yellowText" tts:color="yellow" tts:backgroundColor="black"/>
     </styling>
     <layout>
       <region xml:id="rTop" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before"/>
@@ -236,25 +237,3 @@ The more expanded example below gives you an idea what you can do with IMSC afte
 ## Summary
 
 That's it for your crash course in IMSC code basics! We've only really scratched the surface here, and you'll go much deeper into the above topics in subsequent articles.
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>

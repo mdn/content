@@ -1,23 +1,25 @@
 ---
 title: String.prototype.toLocaleUpperCase()
+short-title: toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 page-type: javascript-instance-method
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
 browser-compat: javascript.builtins.String.toLocaleUpperCase
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`toLocaleUpperCase()`** method of {{jsxref("String")}} values returns this string converted to upper case, according to any locale-specific case mappings.
 
-The **`toLocaleUpperCase()`** method returns the calling string
-value converted to upper case, according to any locale-specific case mappings.
+{{InteractiveExample("JavaScript Demo: String.prototype.toLocaleUpperCase()")}}
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## Syntax
 
@@ -29,33 +31,27 @@ toLocaleUpperCase(locales)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Indicates the locale to be used to convert to upper case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a {{glossary("BCP 47 language tag")}}, or an array of such strings. Indicates the locale to be used to convert to upper case according to any locale-specific case mappings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+
+    Unlike other methods that use the `locales` argument, `toLocaleUpperCase()` does not allow locale matching. Therefore, after checking the validity of the `locales` argument, `toLocaleUpperCase()` always uses the first locale in the list (or the default locale if the list is empty), even if this locale is not supported by the implementation.
 
 ### Return value
 
 A new string representing the calling string converted to upper case, according to any
 locale-specific case mappings.
 
-### Exceptions
-
-- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a
-  `locale` argument isn't a valid language tag.
-- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an
-  array element isn't of type string.
-
 ## Description
 
 The `toLocaleUpperCase()` method returns the value of the string converted
 to upper case according to any locale-specific case mappings.
 `toLocaleUpperCase()` does not affect the value of the string itself. In most
-cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()",
-  "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
+cases, this will produce the same result as {{jsxref("String/toUpperCase", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not
 follow the default case mappings in Unicode, there may be a different result.
 
 Also notice that conversion is not necessarily a 1:1 character mapping, as some
 characters might result in two (or even more) characters when transformed to upper-case.
 Therefore the length of the result string can differ from the input length. This also
-implies that the conversion is not stable, so i.E. the following can return
+implies that the conversion is not stable, so for example the following can return
 `false`:
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 

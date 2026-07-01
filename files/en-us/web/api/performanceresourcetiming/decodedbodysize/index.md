@@ -1,16 +1,12 @@
 ---
-title: PerformanceResourceTiming.decodedBodySize
+title: "PerformanceResourceTiming: decodedBodySize property"
+short-title: decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceResourceTiming.decodedBodySize
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`decodedBodySize`** read-only property returns the size (in octets) received from the fetch (HTTP or cache) of the message body after removing any applied content encoding (like gzip or Brotli). If the resource is retrieved from an application cache or local resources, it returns the size of the payload after removing any applied content encoding.
 

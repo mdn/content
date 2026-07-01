@@ -1,0 +1,76 @@
+name: Create an issue to report typos
+
+on:
+  schedule:
+    - cron: "0 0 * * mon"
+  workflow_dispatch:
+
+permissions:
+  # Create issue.
+  issues: write
+
+jobs:
+  sync:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: ".nvmrc"
+          package-manager-cache: false
+
+      - name: Install
+        run: npm ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run scripts
+        id: check
+        run: |
+          echo Running spelling check...
+          output=$(npm run --silent lint:typos-group-by-file || exit 0)
+          if [ -n "${output}" ]; then
+            output=$(node scripts/linkify-logs.js "${output}")
+            output=$(echo "$output" | sed 's/^/- /')
+            echo "Log size is ${#output} characters"
+            echo "$output"
+
+            # Trim output to avoid GraphQL 'Body is too long (maximum is 65536 characters)' error
+            maxLength=64000
+            if [ ${#output} -gt ${maxLength} ]; then
+              output=$(echo "$output" | head -c $maxLength)
+              output+=$'\n...\n\n> [!WARNING]\n> The report is too long to be posted in full. Check the complete report in the [workflow logs](https://github.com/mdn/content/actions/runs/'"${GITHUB_RUN_ID}"$').'
+            fi
+
+            echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$output" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          else
+            echo "No typos found! 🎉"
+          fi
+
+      - name: Report spellcheck errors
+        if: steps.check.outputs.OUTPUT != ''
+        run: |
+          issue=$(gh issue create --title "$TITLE" --label "$LABELS" --body "$BODY")
+          echo Issue URL ${issue}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: Weekly spelling check
+          LABELS: reported by automation
+          BODY: |
+            Typos and unknown words:
+
+            ${{ steps.check.outputs.OUTPUT }}
+
+            > [!TIP]
+            > If the word is actually valid or it is required to be ignored, consider adding it to one of the dictionaries under [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries).

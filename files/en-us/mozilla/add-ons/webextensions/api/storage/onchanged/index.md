@@ -1,36 +1,33 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.storage.onChanged
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
+Fires when one or more items in any of the [storage areas](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea) changes.
+If you only need to listen for changes in one storage area, use {{WebExtAPIRef('storage.StorageArea.onChanged')}} instead.
 
-Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
+Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against any of the [storage areas](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea).
 
-When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. The extension can determine the changes that occurred by examining the content of the `changes` argument received by the `onChanged` listeners.
+> [!NOTE]
+> In Firefox, the listener receives all the keys from a storage area where {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} executes. The listener may be invoked when there is no change to the data. To find details of the changed items, examine each key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+
+> [!NOTE]
+> Firefox does not fire this event for changes to `storage.managed` because managed storage is only read on browser startup (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)).
 
 ## Syntax
 
 ```js-nolint
-browser.storage.onChanged.addListener(callback)
+browser.storage.onChanged.addListener(listener)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)
 ```
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,18 +38,12 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
+- `listener`
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `changes`
-      - : `object`. Object describing the change. This object contains properties for all the keys in the storage area included in the {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} call, even if key values are unchanged. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+      - : `object`. Object describing the change. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
-      - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
-
-## Browser compatibility
-
-{{Compat}}
+      - : `string`. The name of the storage area (`"local"`, `"managed"`, `"session"`, or `"sync"`) to which the changes were made.
 
 ## Examples
 
@@ -79,7 +70,12 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

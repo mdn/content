@@ -1,14 +1,8 @@
 ---
-title: 'SpeechRecognition: audiostart event'
+title: "SpeechRecognition: audiostart event"
+short-title: audiostart
 slug: Web/API/SpeechRecognition/audiostart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - audiostart
-  - onaudiostart
 browser-compat: api.SpeechRecognition.audiostart_event
 ---
 
@@ -20,8 +14,8 @@ The **`audiostart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speec
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('audiostart', (event) => { })
+```js-nolint
+addEventListener("audiostart", (event) => { })
 
 onaudiostart = (event) => { }
 ```
@@ -35,10 +29,10 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `audiostart` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new (SpeechRecognition || webkitSpeechRecognition)();
 
-recognition.addEventListener('audiostart', () => {
-  console.log('Audio capturing started');
+recognition.addEventListener("audiostart", () => {
+  console.log("Audio capturing started");
 });
 ```
 
@@ -46,8 +40,8 @@ Or use the `onaudiostart` event handler property:
 
 ```js
 recognition.onaudiostart = () => {
-  console.log('Audio capturing started');
-}
+  console.log("Audio capturing started");
+};
 ```
 
 ## Specifications

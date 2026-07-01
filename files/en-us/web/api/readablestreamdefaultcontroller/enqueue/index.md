@@ -1,22 +1,15 @@
 ---
-title: ReadableStreamDefaultController.enqueue()
+title: "ReadableStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - enqueue
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`enqueue()`** method of the
-{{domxref("ReadableStreamDefaultController")}} interface enqueues a given chunk in the
-associated stream.
+{{domxref("ReadableStreamDefaultController")}} interface enqueues a given [chunk](/en-US/docs/Web/API/Streams_API/Concepts#chunks) in the associated stream.
 
 ## Syntax
 
@@ -36,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
+  - : Thrown if `enqueue()` is called when the stream is not readable — because it is already closed, cancelled, or errored — or because it has been requested to close by the underlying source but it has not yet done so because there are still enqueued chunks to read.
 
 ## Examples
 
@@ -52,6 +45,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -61,16 +55,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -79,7 +73,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -90,3 +84,8 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

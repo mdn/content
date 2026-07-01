@@ -1,14 +1,8 @@
 ---
-title: OfflineAudioCompletionEvent()
+title: "OfflineAudioCompletionEvent: OfflineAudioCompletionEvent() constructor"
+short-title: OfflineAudioCompletionEvent()
 slug: Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - OfflineAudioCompletionEvent
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent
 ---
 
@@ -17,7 +11,8 @@ browser-compat: api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent
 The **`OfflineAudioCompletionEvent()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
 {{domxref("OfflineAudioCompletionEvent")}} object.
 
-> **Note:** You wouldn't generally use the constructor manually.
+> [!NOTE]
+> You wouldn't generally use the constructor manually.
 > `OfflineAudioCompletionEvent` events are dispatched to
 > {{domxref("OfflineAudioContext")}} instances for legacy reasons.
 

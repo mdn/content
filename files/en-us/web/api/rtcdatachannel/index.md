@@ -2,17 +2,6 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
 
@@ -22,7 +11,7 @@ The **`RTCDataChannel`** interface represents a network channel which can be use
 
 To create a data channel and ask a remote peer to join you, call the {{DOMxRef("RTCPeerConnection")}}'s {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method. The peer being invited to exchange data receives a {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event (which has type {{DOMxRef("RTCDataChannelEvent")}}) to let it know the data channel has been added to the connection.
 
-`RTCDataChannel` is a {{glossary("Transferable objects","transferable object")}}.
+`RTCDataChannel` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
 
@@ -36,7 +25,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     Values are the same as allowed on the {{DOMxRef("WebSocket.binaryType")}} property:
     `blob` if {{DOMxRef("Blob")}} objects are being used,
     or `arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used.
-    The default is `blob`.
+    The default is `arraybuffer`.
 - {{DOMxRef("RTCDataChannel.bufferedAmount", "bufferedAmount")}} {{ReadOnlyInline}}
   - : Returns the number of bytes of data
     currently queued to be sent over the data channel.
@@ -69,6 +58,10 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.ordered", "ordered")}} {{ReadOnlyInline}}
   - : Indicates whether or not the data channel guarantees in-order delivery of messages;
     the default is `true`, which indicates that the data channel is indeed ordered.
+- {{DOMxRef("RTCDataChannel.priority", "priority")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a string indicating the priority of the data channel,
+    as set when the data channel was created, or as assigned by the user agent.
+    Possible values are `"very-low"`, `"low"`, `"medium"`, or `"high"`.
 - {{DOMxRef("RTCDataChannel.protocol", "protocol")}} {{ReadOnlyInline}}
   - : Returns a string containing the name of the subprotocol in use.
     If no protocol was specified
@@ -90,7 +83,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the {{domxref("RTCDataChannel")}}.
+  - : Closes the `RTCDataChannel`.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}

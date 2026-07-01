@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.getProgramParameter()
+title: "WebGLRenderingContext: getProgramParameter() method"
+short-title: getProgramParameter()
 slug: Web/API/WebGLRenderingContext/getProgramParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getProgramParameter()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
@@ -29,9 +23,7 @@ getProgramParameter(program, pname)
 - `program`
   - : A {{domxref("WebGLProgram")}} to get parameter information from.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-
     - `gl.DELETE_STATUS`
       - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
         whether or not the program is flagged for deletion.
@@ -48,13 +40,11 @@ getProgramParameter(program, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active attribute variables to a program.
     - `gl.ACTIVE_UNIFORMS`
-
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the
         number of active uniform variables to a program.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.TRANSFORM_FEEDBACK_BUFFER_MODE`
       - : Returns a
         {{domxref("WebGL_API/Types", "GLenum")}} indicating the buffer mode when transform feedback is

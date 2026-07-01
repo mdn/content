@@ -2,15 +2,10 @@
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
 page-type: web-api-interface
-tags:
-  - API
-  - Canvas
-  - Interface
-  - Reference
 browser-compat: api.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 When using the {{HtmlElement("canvas")}} element or the [Canvas API](/en-US/docs/Web/API/Canvas_API), rendering, animation, and user interaction usually happen on the main execution thread of a web application.
 The computation relating to canvas animations and rendering can have a significant impact on application performance.
@@ -18,9 +13,7 @@ The computation relating to canvas animations and rendering can have a significa
 The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen, decoupling the DOM and the Canvas API so that the {{HtmlElement("canvas")}} element is no longer entirely dependent on the DOM.
 Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_Workers_API) context, allowing you to run some tasks in a separate thread and avoid heavy work on the main thread.
 
-`OffscreenCanvas` is a {{glossary("Transferable objects","transferable object")}}.
-
-{{AvailableInWorkers}}
+`OffscreenCanvas` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
 
@@ -39,11 +32,22 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 ## Instance methods
 
 - {{domxref("OffscreenCanvas.getContext()")}}
-  - : Returns a rendering context for the offscreen canvas.
+  - : Returns a drawing context for the offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported, or the offscreen canvas has already been set to a different context mode.
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
-  - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
+  - : Creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`. See its reference for important notes on managing this {{domxref("ImageBitmap")}}.
+
+## Events
+
+_Inherits events from its parent, {{domxref("EventTarget")}}._
+
+Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)
+  - : Fired if the browser detects that an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context is lost.
+- [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event)
+  - : Fired if the browser successfully restores an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context.
 
 ## Examples
 
@@ -51,7 +55,7 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 
 One way to use the `OffscreenCanvas` API is to use a rendering context that has been obtained from an `OffscreenCanvas` object to generate new frames. Once a new frame has finished rendering in this context, the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.
 
-To display the `ImageBitmap`, you can use a {{domxref("ImageBitmapRenderingContext")}} context, which can be created by calling `canvas.getContext("bitmaprenderer")` on a (visible) canvas element. This context only provides functionality to replace the canvas's contents with the given `ImageBitmap`. A call to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} with the previously rendered and saved `ImageBitmap` from the OffscreenCanvas, will display the `ImageBitmap` on the canvas and transfer its ownership to the canvas. A single `OffscreenCanvas` may transfer frames into an arbitrary number of other `ImageBitmapRenderingContext` objects.
+To display the `ImageBitmap`, you can use an {{domxref("ImageBitmapRenderingContext")}} context, which can be created by calling `canvas.getContext("bitmaprenderer")` on a (visible) canvas element. This context only provides functionality to replace the canvas's contents with the given `ImageBitmap`. A call to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} with the previously rendered and saved `ImageBitmap` from the OffscreenCanvas, will display the `ImageBitmap` on the canvas and transfer its ownership to the canvas. A single `OffscreenCanvas` may transfer frames into an arbitrary number of other `ImageBitmapRenderingContext` objects.
 
 Given these two {{HTMLElement("canvas")}} elements
 
@@ -81,28 +85,27 @@ two.transferFromImageBitmap(bitmapTwo);
 
 Another way to use the `OffscreenCanvas` API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a [worker](/en-US/docs/Web/API/Web_Workers_API) or the main thread, which will return an `OffscreenCanvas` object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a rendering context from that `OffscreenCanvas`.
 
-main.js (main thread code):
+The `main.js` script (main thread) may look like this:
 
 ```js
 const htmlCanvas = document.getElementById("canvas");
 const offscreen = htmlCanvas.transferControlToOffscreen();
 
-const worker = new Worker("offscreencanvas.js");
+const worker = new Worker("offscreen-canvas.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
-offscreencanvas.js (worker code):
+While the `offscreen-canvas.js` script (worker thread) can look like this:
 
 ```js
 onmessage = (evt) => {
   const canvas = evt.data.canvas;
   const gl = canvas.getContext("webgl");
-
   // Perform some drawing using the gl context
 };
 ```
 
-You can also use requestAnimationFrame in workers
+It's also possible to use {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} in workers:
 
 ```js
 onmessage = (evt) => {
@@ -117,7 +120,7 @@ onmessage = (evt) => {
 };
 ```
 
-For a full example, see our [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) ([run OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)).
+For a full example, see the [OffscreenCanvas example source](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) on GitHub or run the [OffscreenCanvas example live](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/).
 
 ## Specifications
 
@@ -129,10 +132,10 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 
 ## See also
 
-- [WebGL Off the Main Thread – Mozilla Hacks](https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/)
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("OffscreenCanvasRenderingContext2D")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageBitmapRenderingContext")}}
 - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
-- {{domxref("WebGLRenderingContext.commit()")}}
+- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}
+- [WebGL Off the Main Thread – Mozilla Hacks](https://hacks.mozilla.org/2016/01/webgl-off-the-main-thread/) (2016)

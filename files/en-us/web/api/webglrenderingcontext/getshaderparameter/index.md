@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getShaderParameter()
+title: "WebGLRenderingContext: getShaderParameter() method"
+short-title: getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getShaderParameter()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
@@ -28,9 +23,7 @@ getShaderParameter(shader, pname)
 - `shader`
   - : A {{domxref("WebGLShader")}} to get parameter information from.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-
     - `gl.DELETE_STATUS`
       - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
         whether or not the shader is flagged for deletion.

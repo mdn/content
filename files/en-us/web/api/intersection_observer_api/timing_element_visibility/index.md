@@ -2,13 +2,6 @@
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 page-type: guide
-tags:
-  - API
-  - Example
-  - Intermediate
-  - Intersection Observer
-  - Intersection Observer API
-  - Tutorial
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -25,7 +18,7 @@ Let's get started!
 
 ### Site structure: The HTML
 
-The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) to style and lay out the site, so we can be pretty straightforward here:
+The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/docs/Web/CSS/Guides/Grid_layout) to style and lay out the site, so we can be pretty straightforward here:
 
 ```html
 <div class="wrapper">
@@ -62,7 +55,7 @@ We provide styles for the {{HTMLElement("body")}} and {{HTMLElement("main")}} el
 
 ```css
 body {
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   background-color: aliceblue;
 }
 
@@ -170,7 +163,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
 .ad {
   height: 96px;
   padding: 6px;
-  border-color: #555;
+  border-color: #555555;
   border-style: solid;
   border-width: 1px;
 }
@@ -192,7 +185,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
   font-size: 14px;
   bottom: 30px;
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 ```
 
@@ -203,14 +196,11 @@ There's nothing magic in here. It's fairly basic CSS.
 That brings us to the JavaScript code which makes everything work. Let's start with the global variables:
 
 ```js
-let contentBox;
+const contentBox = document.querySelector("main");
 
 let nextArticleID = 1;
-const visibleAds = new Set();
+let visibleAds = new Set();
 let previouslyVisibleAds = null;
-
-let adObserver;
-let refreshIntervalID = 0;
 ```
 
 These are used as follows:
@@ -223,42 +213,44 @@ These are used as follows:
   - : A {{jsxref("Set")}} which we'll use to track the ads currently visible on the screen.
 - `previouslyVisibleAds`
   - : Used to temporarily store the list of visible ads while the document is not visible (for example, if the user has tabbed to another page).
-- `adObserver`
-  - : Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the `<main>` element's bounds.
-- `refreshIntervalID`
-  - : Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
 #### Setting up
 
-To set things up, we run the `startup()` function below when the page loads:
+To set things up, we run the following code when the page loads:
 
 ```js
-window.addEventListener("load", startup, false);
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
-function startup() {
-  contentBox = document.querySelector("main");
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [0.0, 0.75],
+};
+const adObserver = new IntersectionObserver(
+  intersectionCallback,
+  observerOptions,
+);
+const refreshIntervalID = setInterval(handleRefreshInterval, 1000);
 
-  document.addEventListener("visibilitychange", handleVisibilityChange, false);
+const loremIpsum =
+  "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
+  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
+  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
+  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
+  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
+  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
+  " cursus nunc.</p>";
 
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: [0.0, 0.75]
-  };
-
-  adObserver = new IntersectionObserver(intersectionCallback,
-                    observerOptions);
-
-  buildContents();
-  refreshIntervalID = setInterval(handleRefreshInterval, 1000);
-}
+buildContents();
 ```
 
-First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
+First, we set up an event listener for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
 
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
 The observer, `adObserver`, is created by calling `IntersectionObserver`'s constructor, passing in the callback function, `intersectionCallback`, and our options.
+
+The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 We then call a function `buildContents()`, which we'll define later to actually generate and insert into the document the articles and ads we want to present.
 
@@ -273,7 +265,7 @@ function handleVisibilityChange() {
   if (document.hidden) {
     if (!previouslyVisibleAds) {
       previouslyVisibleAds = visibleAds;
-      visibleAds = [];
+      visibleAds = new Set();
       previouslyVisibleAds.forEach((adBox) => {
         updateAdTimer(adBox);
         adBox.dataset.lastViewStarted = 0;
@@ -311,7 +303,10 @@ function intersectionCallback(entries) {
       }
     } else {
       visibleAds.delete(adBox);
-      if ((entry.intersectionRatio === 0.0) && (adBox.dataset.totalViewTime >= 60000)) {
+      if (
+        entry.intersectionRatio === 0.0 &&
+        adBox.dataset.totalViewTime >= 60000
+      ) {
         replaceAd(adBox);
       }
     }
@@ -321,11 +316,11 @@ function intersectionCallback(entries) {
 
 As previously mentioned, the {{domxref("IntersectionObserver")}} callback receives as input an array of all of the observer's targeted elements which have become either more or less visible than one of the intersection observer ratios. We iterate over each of those entries—which are of type {{domxref("IntersectionObserverEntry")}}. If the target element is intersecting with the root, we know it has just transitioned from the obscured state to the visible state. If it's become at least 75% visible, then we consider the ad visible and we start the timer by setting the ad's `dataset.lastViewStarted` attribute to the transition time in {{domxref("IntersectionObserverEntry.time", "entry.time")}}, then add the ad to the set `visibleAds` so we know to process it as time goes by.
 
-If the ad has transitioned to the not-intersecting state, we remove the ad from the set of visible ads. Then we have one special behavior: we look to see if {{domxref("IntersectionObserverEntry.intersectionRatio", "entry.ratio")}} is 0.0; if it is, that means the element has become totally obscured. If that's the case, and the ad has been visible for at least a minute total, we call a function we'll create called `replaceAd()` to replace the existing ad with a new one. This way, the user sees a variety of ads over time, but the ads are only replaced while they can't be seen, resulting in a smooth experience.
+If the ad has transitioned to the not-intersecting state, we remove the ad from the set of visible ads. Then we have one special behavior: we look to see if {{domxref("IntersectionObserverEntry.intersectionRatio", "entry.intersectionRatio")}} is 0.0; if it is, that means the element has become totally obscured. If that's the case, and the ad has been visible for at least a minute total, we call a function we'll create called `replaceAd()` to replace the existing ad with a new one. This way, the user sees a variety of ads over time, but the ads are only replaced while they can't be seen, resulting in a smooth experience.
 
 #### Handling periodic actions
 
-Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
+Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("Window.setInterval", "setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
 ```js
 function handleRefreshInterval() {
@@ -368,14 +363,15 @@ function updateAdTimer(adBox) {
   if (lastStarted) {
     const diff = currentTime - lastStarted;
 
-    adBox.dataset.totalViewTime = parseFloat(adBox.dataset.totalViewTime) + diff;
+    adBox.dataset.totalViewTime =
+      parseFloat(adBox.dataset.totalViewTime) + diff;
   }
 
   adBox.dataset.lastViewStarted = currentTime;
 }
 ```
 
-To track an element's visible time, we use two custom data attributes (see {{htmlattrxref("data-*")}}) on every ad:
+To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)) on every ad:
 
 - `lastViewStarted`
   - : The time in milliseconds, relative to the time at which the document was created, at which the ad's visibility count was last updated, or the ad last became visible. 0 if the ad was not visible as of the last time it was checked.
@@ -412,16 +408,8 @@ This code finds the ad's timer using its ID, `"timer"`, and computes the number 
 The `buildContents()` function is called by the [startup code](#setting_up) to select and insert into the document the articles and ads to be presented:
 
 ```js
-const loremIpsum = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing" +
-  " elit. Cras at sem diam. Vestibulum venenatis massa in tincidunt" +
-  " egestas. Morbi eu lorem vel est sodales auctor hendrerit placerat" +
-  " risus. Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorper" +
-  " eu. Donec nec imperdiet nibh, nec vehicula libero. Phasellus vel" +
-  " malesuada nulla. Aliquam sed magna aliquam, vestibulum nisi at," +
-  " cursus nunc.</p>";
-
 function buildContents() {
-  for (let i=0; i<5; i++) {
+  for (let i = 0; i < 5; i++) {
     contentBox.appendChild(createArticle(loremIpsum));
 
     if (!(i % 2)) {
@@ -430,8 +418,6 @@ function buildContents() {
   }
 }
 ```
-
-The variable `loremIpsum` contains the text we'll use for the body of all of our articles. Obviously in the real world, you'd have some code to pull articles from a database or the like, but this does the job for our purposes. Every article uses the same text; you could of course change that easily enough.
 
 `buildContents()` creates a page with five articles. Following every odd-numbered article, an ad is "loaded" and inserted into the page. Articles are inserted into the content box (that is, the {{HTMLElement("main")}} element that contains all the site content) after being created using a method called `createArticle()`, which we'll look at next.
 
@@ -451,13 +437,13 @@ function createArticle(contents) {
   articleElem.appendChild(titleElem);
 
   articleElem.innerHTML += contents;
-  nextArticleID +=1 ;
+  nextArticleID += 1;
 
   return articleElem;
 }
 ```
 
-First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
+First, the `<article>` element is created and its ID is set to the unique value `nextArticleID` (which starts at 1 and goes up for each article). Then we create and append an {{HTMLElement("Heading_Elements", "h2")}} element for the article title and then we append the HTML from `contents` to that. Finally, `nextArticleID` is incremented (so that the next element gets a new unique ID) and we return the new `<article>` element to the caller.
 
 #### Creating an ad
 
@@ -467,25 +453,25 @@ The `loadRandomAd()` function simulates loading an ad and adding it to the page.
 function loadRandomAd(replaceBox) {
   const ads = [
     {
-      bgcolor: "#cec",
-      title: 'Eat Green Beans',
-      body: "Make your mother proud—they're good for you!"
+      bgcolor: "#cceecc",
+      title: "Eat Green Beans",
+      body: "Make your mother proud—they're good for you!",
     },
     {
       bgcolor: "aquamarine",
-      title: 'MillionsOfFreeBooks.whatever',
-      body: "Read classic literature online free!"
+      title: "MillionsOfFreeBooks.whatever",
+      body: "Read classic literature online free!",
     },
     {
       bgcolor: "lightgrey",
-      title: '3.14 Shades of Gray: A novel',
-      body: "Love really does make the world go round…"
+      title: "3.14 Shades of Gray: A novel",
+      body: "Love really does make the world go round…",
     },
     {
-      bgcolor: "#fee",
-      title: 'Flexbox Florist',
-      body: "When life's layout gets complicated, send flowers."
-    }
+      bgcolor: "#ffeeee",
+      title: "Flexbox Florist",
+      body: "When life's layout gets complicated, send flowers.",
+    },
   ];
   let adBox, title, body, timerElem;
 
@@ -518,7 +504,7 @@ function loadRandomAd(replaceBox) {
   adBox.dataset.totalViewTime = 0;
   adBox.dataset.lastViewStarted = 0;
 
-  timerElem.className="timer";
+  timerElem.className = "timer";
   timerElem.innerText = "0:00";
 
   if (!replaceBox) {
@@ -536,7 +522,7 @@ Then we define several variables:
 - `adBox`
   - : This will be set to the element that represents the ad. For new ads being appended to the page, this is created using {{domxref("Document.createElement()")}}. When replacing an existing ad, this is set to the specified ad element (`replaceBox`).
 - `title`
-  - : Will hold the {{HTMLElement("h2")}} element representing the ad's title.
+  - : Will hold the {{HTMLElement("Heading_Elements", "h2")}} element representing the ad's title.
 - `body`
   - : Will hold the {{HTMLElement("p")}} representing the ad's body text.
 - `timerElem`
@@ -546,7 +532,7 @@ A random ad is selected by computing `Math.floor(Math.random() * ads.length)`; t
 
 If a value is specified for `replaceBox`, we use that as the ad element. To do so, we begin by ending observation of the element by calling {{domxref("IntersectionObserver.unobserve()")}}. Then the local variables for each of the elements that comprise an ad: the ad box itself, the title, the body, and the timer box, are all set to the corresponding elements in the existing ad.
 
-If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
+If no value is specified for replaceBox, we create a new ad element. The ad's new {{HTMLElement("div")}} element is created and its properties established by setting its class name to `"ad"`. Next, the ad title element is created, along with the body and the visibility timer; these are an {{HTMLElement("Heading_Elements", "h2")}}, a {{HTMLElement("p")}}, and a {{HTMLElement("div")}} element, respectively. These elements are appended to the `adBox` element.
 
 After that, the code paths converge once again. The ad's background color is set to the value specified in the new ad's record, and elements' classes and contents are set appropriately as well.
 
@@ -565,7 +551,11 @@ function replaceAd(adBox) {
   updateAdTimer(adBox);
 
   const visibleTime = adBox.dataset.totalViewTime;
-  console.log(`Replacing ad: ${adBox.querySelector("h2").innerText} - visible for ${visibleTime}`);
+  console.log(
+    `Replacing ad: ${
+      adBox.querySelector("h2").innerText
+    } - visible for ${visibleTime}`,
+  );
 
   loadRandomAd(adBox);
 }

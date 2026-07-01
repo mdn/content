@@ -1,20 +1,12 @@
 ---
-title: IDBFactory.open()
+title: "IDBFactory: open() method"
+short-title: open()
 slug: Web/API/IDBFactory/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - open
 browser-compat: api.IDBFactory.open
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`open()`** method of the {{domxref("IDBFactory")}} interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
 
@@ -22,8 +14,6 @@ The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and pe
 If the operation is successful, a `success` event is fired on the request object that is returned from this method, with its `result` attribute set to the new {{domxref("IDBDatabase")}} object for the connection.
 
 May trigger `upgradeneeded`, `blocked` or `versionchange` events.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -42,9 +32,9 @@ open(name, version)
 
 ### Return value
 
-A {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this request are fired.
+An {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this request are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is a {{domxref("IDBDatabase")}} object representing the connection to the database.
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{domxref("IDBDatabase")}} object representing the connection to the database.
 
 ### Exceptions
 
@@ -71,11 +61,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being opened
 // successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on, for opening
@@ -95,7 +87,7 @@ DBOpenRequest.onsuccess = (event) => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Browser storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+- [Browser storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

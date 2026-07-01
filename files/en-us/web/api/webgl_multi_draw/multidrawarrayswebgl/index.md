@@ -1,12 +1,8 @@
 ---
-title: WEBGL_multi_draw.multiDrawArraysWEBGL()
+title: "WEBGL_multi_draw: multiDrawArraysWEBGL() method"
+short-title: multiDrawArraysWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysWEBGL
 ---
 
@@ -25,16 +21,14 @@ method.
 multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters
 
 - `mode`
-
   - : A [`GLenum`](/en-US/docs/Web/API/WebGL_API/Types)
     specifying the type primitive to render. Possible values are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and

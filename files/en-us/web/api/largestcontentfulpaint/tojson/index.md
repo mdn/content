@@ -1,18 +1,12 @@
 ---
-title: LargestContentfulPaint.toJSON()
+title: "LargestContentfulPaint: toJSON() method"
+short-title: toJSON()
 slug: Web/API/LargestContentfulPaint/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - LargestContentfulPaint
-  - Experimental
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
 The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("LargestContentfulPaint")}} object.
 
@@ -45,7 +39,7 @@ const observer = new PerformanceObserver((list) => {
   });
 });
 
-observer.observe({type: 'largest-contentful-paint', buffered: true});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```
 
 This would log a JSON object like so:

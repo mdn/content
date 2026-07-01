@@ -1,19 +1,10 @@
 ---
 title: scripting.ContentScriptFilter
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/ContentScriptFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ContentScriptFilter
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ContentScriptFilter
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This object contains a list of IDs of scripts to retrieve with {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} or to unregister with {{WebExtAPIRef("scripting.unregisterContentScripts()")}}.
 
@@ -24,10 +15,11 @@ Values of this type are objects. They contain these properties:
 - `ids`
   - : `array` of `string`. Array of scripts IDs.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-ContentScriptFilter) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-ContentScriptFilter) API.

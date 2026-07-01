@@ -1,18 +1,13 @@
 ---
 title: RangeError() constructor
+short-title: RangeError()
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`RangeError()`** constructor creates an error
-when a value is not in the set or range of allowed values.
+The **`RangeError()`** constructor creates {{jsxref("RangeError")}} objects.
 
 ## Syntax
 
@@ -30,7 +25,8 @@ RangeError(message, fileName)
 RangeError(message, fileName, lineNumber)
 ```
 
-> **Note:** `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
+> [!NOTE]
+> `RangeError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `RangeError` instance.
 
 ### Parameters
 
@@ -72,7 +68,7 @@ try {
 function check(value) {
   if (!["apple", "banana", "carrot"].includes(value)) {
     throw new RangeError(
-      'The argument must be an "apple", "banana", or "carrot".'
+      'The argument must be an "apple", "banana", or "carrot".',
     );
   }
 }

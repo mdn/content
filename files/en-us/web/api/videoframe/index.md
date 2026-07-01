@@ -2,20 +2,14 @@
 title: VideoFrame
 slug: Web/API/VideoFrame
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoFrame
-  - Experimental
 browser-compat: api.VideoFrame
 ---
 
-{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
-`VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
+`VideoFrame` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Description
 
@@ -27,7 +21,7 @@ an {{domxref("HTMLVideoElement")}},
 an {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
-or another {{domxref("VideoFrame")}}).
+or another `VideoFrame`).
 This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
@@ -36,70 +30,75 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
   - : Creates a new `VideoFrame` object.
 
 ## Instance properties
 
-- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}}
   - : Returns the pixel format of the `VideoFrame`.
-- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}}
   - : Returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} with the width and height matching `codedWidth` and `codedHeight`.
-- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
-- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}}
+  - : Returns the width of the `VideoFrame` when displayed after applying {{glossary("aspect ratio")}} adjustments.
+- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the duration of the video in microseconds.
-- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}}
   - : Returns an integer indicating the timestamp of the video in microseconds.
-- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
+- {{domxref("VideoFrame.flip")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns whether the `VideoFrame` is horizontally mirrored.
+- {{domxref("VideoFrame.rotation")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns the rotation (0, 90, 180, or 270) in degrees clockwise applied to the `VideoFrame`. Arbitrary numbers (including negatives) are rounded to the next quarter turn.
 
 ## Instance methods
 
-- {{domxref("VideoFrame.allocationSize()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.allocationSize()")}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
-- {{domxref("VideoFrame.copyTo()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.copyTo()")}}
   - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
-- {{domxref("VideoFrame.clone()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.clone()")}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
-- {{domxref("VideoFrame.close()")}} {{Experimental_Inline}}
+- {{domxref("VideoFrame.close()")}}
   - : Clears all states and releases the reference to the media resource.
+- {{domxref("VideoFrame.metadata()")}} {{experimental_inline}}
+  - : Returns the metadata associated with the `VideoFrame`.
 
 ## Examples
 
-In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://web.dev/webcodecs/).
+In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
 
 ```js
-let frame_counter = 0;
+let frameCounter = 0;
 
 const track = stream.getVideoTracks()[0];
-const media_processor = new MediaStreamTrackProcessor(track);
+const mediaProcessor = new MediaStreamTrackProcessor(track);
 
-const reader = media_processor.readable.getReader();
+const reader = mediaProcessor.readable.getReader();
 while (true) {
-    const result = await reader.read();
-    if (result.done)
-      break;
+  const result = await reader.read();
+  if (result.done) break;
 
-    let frame = result.value;
-    if (encoder.encodeQueueSize > 2) {
-      // Too many frames in flight, encoder is overwhelmed
-      // let's drop this frame.
-      frame.close();
-    } else {
-      frame_counter++;
-      const insert_keyframe = frame_counter % 150 === 0;
-      encoder.encode(frame, { keyFrame: insert_keyframe });
-      frame.close();
-    }
+  let frame = result.value;
+  if (encoder.encodeQueueSize > 2) {
+    // Too many frames in flight, encoder is overwhelmed
+    // let's drop this frame.
+    frame.close();
+  } else {
+    frameCounter++;
+    const insertKeyframe = frameCounter % 150 === 0;
+    encoder.encode(frame, { keyFrame: insertKeyframe });
+    frame.close();
+  }
 }
 ```
 
@@ -113,5 +112,5 @@ while (true) {
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)

@@ -1,12 +1,10 @@
 ---
-title: NDEFRecord.data
+title: "NDEFRecord: data property"
+short-title: data
 slug: Web/API/NDEFRecord/data
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.data
 ---
 
@@ -16,13 +14,7 @@ The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a
 {{jsxref("DataView")}} containing the raw bytes of the record's payload.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.data
-```
-
-### Value
+## Value
 
 A {{jsxref("DataView")}} that contains encoded payload data of the record.
 
@@ -30,8 +22,7 @@ A {{jsxref("DataView")}} that contains encoded payload data of the record.
 
 The following example loops over the records in an {{domxref("NDEFMessage")}}
 object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. After
-selecting a record based on its {{domxref("NDEFRecord.mediaType",
-"mediaType")}}, it then decodes what's stored in the `data` property.
+selecting a record based on its {{domxref("NDEFRecord.mediaType", "mediaType")}}, it then decodes what's stored in the `data` property.
 
 ```js
 const ndef = new NDEFReader();

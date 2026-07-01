@@ -1,18 +1,12 @@
 ---
-title: MessageEvent()
+title: "MessageEvent: MessageEvent() constructor"
+short-title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MessageEvent
-  - Reference
-  - messaging
 browser-compat: api.MessageEvent.MessageEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`MessageEvent()`** constructor creates a new {{domxref("MessageEvent")}} object.
 
@@ -44,20 +38,18 @@ new MessageEvent(type, options)
         or a {{domxref("ServiceWorker")}} object) representing the message emitter.
         This defaults to `null` if not set.
     - `ports` {{optional_inline}}
-      - : An array of {{domxref("MessagePort")}} objects representing
-        the ports associated with the channel the message is being sent through where appropriate
-        (E.g. in channel messaging or when sending a message to a shared worker).
+      - : An array of {{domxref("MessagePort")}} objects containing all {{domxref("MessagePort")}} objects sent with the message, in order.
         This defaults to an empty array (`[]`) if not specified.
 
-## Return value
+### Return value
 
 A new {{domxref("MessageEvent")}} object.
 
 ## Examples
 
 ```js
-const myMessage = new MessageEvent('message', {
-  data : 'hello'
+const myMessage = new MessageEvent("message", {
+  data: "hello",
 });
 ```
 

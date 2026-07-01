@@ -1,20 +1,9 @@
 ---
-title: MediaTrackSupportedConstraints.deviceId
+title: "MediaTrackSupportedConstraints: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSupportedConstraints/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Stream API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - deviceId
-browser-compat: api.MediaTrackSupportedConstraints.deviceId
+browser-compat: api.MediaStreamTrack.applyConstraints.deviceId_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -45,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

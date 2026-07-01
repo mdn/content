@@ -1,15 +1,14 @@
 ---
-title: 'MessagePort: messageerror event'
+title: "MessagePort: messageerror event"
+short-title: messageerror
 slug: Web/API/MessagePort/messageerror_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.MessagePort.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-The `messageerror` event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.
+The **`messageerror`** event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.
 
 This event is not cancellable and does not bubble.
 
@@ -17,10 +16,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('messageerror', (event) => { });
+```js-nolint
+addEventListener("messageerror", (event) => { })
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => { }
 ```
 
 ## Event type
@@ -42,62 +41,40 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array containing all {{domxref("MessagePort")}} objects sent with the message, in order.
 
 ## Examples
 
-Suppose a script creates a [`MessageChannel`](/en-US/docs/Web/API/MessageChannel) and sends one of the ports to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), using code like this:
+### Attempting to share memory
+
+A common cause of `messageerror` events is attempting to send a {{jsxref("SharedArrayBuffer")}} object, or a buffer view backed by one, across [agent clusters](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing). For example, a window is not in the same agent cluster as a shared worker it created, so suppose the page runs the following code:
 
 ```js
-const channel = new MessageChannel();
-const myPort = channel.port1;
-const targetFrame = window.top.frames[1];
-const targetOrigin = 'https://example.org';
-
-const messageControl = document.querySelector('#message');
-const channelMessageButton = document.querySelector('#channel-message');
-
-channelMessageButton.addEventListener('click', () => {
-    myPort.postMessage(messageControl.value);
-})
-
-targetFrame.postMessage('init', targetOrigin, [channel.port2]);
-```
-
-The target can receive the port and start listening for messages and message errors on it using code like this:
-
-```js
-window.addEventListener('message', (event) => {
-    const myPort = event.ports[0];
-
-    myPort.addEventListener('message', (event) => {
-        received.textContent = event.data;
-    });
-
-    myPort.addEventListener('messageerror', (event) => {
-        console.error(event.data);
-    });
-
-    myPort.start();
+const worker = new SharedWorker("worker.js");
+worker.port.start();
+worker.port.addEventListener("message", (event) => {
+  worker.port.postMessage(new SharedArrayBuffer(1024));
 });
 ```
 
-Note that the listener must call [`MessagePort.start()`](/en-US/docs/Web/API/MessagePort/start) before any messages will be delivered to this port. This is only needed when using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method: if the receiver uses `onmessage` instead, `start()` is called implicitly:
+And `worker.js` contains the following code:
 
 ```js
-window.addEventListener('message', (event) => {
-    const myPort = event.ports[0];
-
-    myPort.onmessage = (event) => {
-        received.textContent = event.data;
-    };
-
-    myPort.onmessageerror = (event) => {
-        console.error(event.data);
-    };
-
+self.addEventListener("connect", (event) => {
+  console.log("Hello");
+  const port = event.ports[0];
+  port.start();
+  port.postMessage("Port connected");
+  port.addEventListener("messageerror", (event) => {
+    console.log("Message error");
+  });
 });
 ```
+
+Then the shared worker will receive a `messageerror` event when it tries to deserialize the message sent from the window.
+
+> [!NOTE]
+> You can use browser devtools to debug your SharedWorker, by entering a URL in your browser address bar to access the devtools workers inspector; for example, in Chrome, the URL `chrome://inspect/#workers`, and in Firefox, the URL `about:debugging#workers`.
 
 ## Specifications
 

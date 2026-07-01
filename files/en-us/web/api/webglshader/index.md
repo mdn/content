@@ -2,14 +2,10 @@
 title: WebGLShader
 slug: Web/API/WebGLShader
 page-type: web-api-interface
-tags:
-  - Reference
-  - WebGL
-  - WebGLShader
 browser-compat: api.WebGLShader
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and can either be a vertex or a fragment shader. A {{domxref("WebGLProgram")}} requires both types of shaders.
 
@@ -28,7 +24,7 @@ function createShader(gl, sourceCode, type) {
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     const info = gl.getShaderInfoLog(shader);
-    throw `Could not compile WebGL program. \n\n${info}`;
+    throw new Error(`Could not compile WebGL program. \n\n${info}`);
   }
   return shader;
 }
@@ -44,25 +40,29 @@ Note that there are many other strategies for writing and accessing shader sourc
 
 ```js
 const vertexShaderSource =
-  'attribute vec4 position;\n' +
-  'void main() {\n' +
-  '  gl_Position = position;\n' +
-  '}\n';
+  "attribute vec4 position;\n" +
+  "void main() {\n" +
+  "  gl_Position = position;\n" +
+  "}\n";
 
-//Use the createShader function from the example above
-const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
+// Use the createShader function from the example above
+const vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
 ```
 
 ### Creating a fragment shader
 
 ```js
-const fragmentShaderSource =
-  'void main() {\n' +
-  '  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n' +
-  '}\n';
+const fragmentShaderSource = `void main() {
+  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+}
+`;
 
-//Use the createShader function from the example above
-const fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
+// Use the createShader function from the example above
+const fragmentShader = createShader(
+  gl,
+  fragmentShaderSource,
+  gl.FRAGMENT_SHADER,
+);
 ```
 
 ## Specifications

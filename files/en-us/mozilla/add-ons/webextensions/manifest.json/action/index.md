@@ -1,14 +1,10 @@
 ---
 title: action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.action
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -29,7 +25,6 @@ browser-compat: webextensions.manifest.action
       <td>
         <pre class="brush: json">
 "action": {
-  "browser_style": true,
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -56,275 +51,89 @@ An action is a button that your extension adds to the browser's toolbar. The but
 
 This key replaces [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
+You must specify this key to include a browser toolbar button in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("action")}} API.
 
-You can also create and manipulate actions programmatically using the {{WebExtAPIRef("action")}} .
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
 
 ## Syntax
 
 The `action` key is an object that may have any of these properties, all optional:
 
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
-      </td>
-      <td><code>Boolean</code></td>
-      <td>
-        <p>Optional, defaulting to <code>false</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that will make its look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> in order to make your popups consistent with the
-          look of the rest of the browser user interface.
-        </p>
-        <p>
-          In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
-          chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet currently sets
-          <code>box-sizing: border-box</code> (see
-          <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
-        </p>
-        <p>
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >Browser styles</a
-          > describes the classes you can apply to elements in the popup in
-          order to get particular styles.
-        </p>
-        <p>
-          The
-          <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
-            >latest-download</a
-          >
-          example extension uses <code>browser_style</code> in its popup.
-        </p>
-        <div class="notecard note">
-          <p>
-            <strong>Note:</strong> Setting <code>browser_style</code> to
-            <code>true</code> prevents users from selecting text in an
-            extension's popup or sidebar content. This is normal behavior. You
-            can't select parts of the UI in the browser. However, You can work
-            around this limitation to allow your users to select text in two
-            ways:
-          </p>
-          <ol>
-            <li>Set <code>browser_style</code> to <code>false</code></li>
-            <li>
-              Use CSS styling on the body of your sidebar or popup's HTML to
-              allow text selection by adding the rule
-              <code>-moz-user-select</code> with a value of <code>all</code> or
-              <code>text</code>.
-            </li>
-          </ol>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>default_area</code></td>
-      <td><code>String</code></td>
-      <td>
-        <p>
-          Defines the part of the browser in which the button is initially
-          placed. This is a string that may take one of four values:
-        </p>
-        <ul>
-          <li>
-            "navbar": the button is placed in the main browser toolbar,
-            alongside the URL bar.
-          </li>
-          <li>"menupanel": the button is placed in a popup panel.</li>
-          <li>
-            "tabstrip": the button is placed in the toolbar that contains
-            browser tabs.
-          </li>
-          <li>
-            "personaltoolbar": the button is placed in the bookmarks toolbar.
-          </li>
-        </ul>
-        <p>This property is only supported in Firefox.</p>
-        <p>This property is optional, and defaults to "navbar".</p>
-        <p>
-          Firefox remembers the <code>default_area</code> setting for an
-          extension, even if that extension is uninstalled and subsequently
-          reinstalled. To force the browser to acknowledge a new value for
-          <code>default_area</code>, the id of the extension must be changed.
-        </p>
-        <p>
-          An extension can't change the location of the button after it has been
-          installed, but the user may be able to move the button using the
-          browser's built-in UI customization mechanism.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Object</code> or <code>String</code></td>
-      <td>
-        <p>
-          Use this to specify one or more icons for the action. The icon
-          is shown in the browser toolbar by default.
-        </p>
-        <p>
-          Icons are specified as URLs relative to the manifest.json file itself.
-        </p>
-        <p>You can specify a single icon file by supplying a string here:</p>
-        <pre class="brush: json">"default_icon": "path/to/geo.svg"</pre>
-        <p>
-          To specify multiple icons in different sizes, specify an object here.
-          The name of each property is the icon's height in pixels, and must be
-          convertible to an integer. The value is the URL. For example:
-        </p>
-        <pre class="brush: json">
+- [`browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) {{optional_inline}} {{deprecated_inline}}
+  - : `Boolean`. Optional, defaulting to `false`.
+    > [!WARNING]
+    > Do not set `browser_style` to true: its support in Manifest V3 was removed in Firefox 118. See [Manifest V3 migration for `browser_style`](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration).
+- `default_area` {{optional_inline}}
+  - : `String`. Defines the part of the browser in which the button is initially placed. This is a string that may take one of four values:
+    - `"navbar"`: the button is placed in the main browser toolbar, alongside the URL bar.
+    - `"menupanel"`: the button is placed in a popup panel.
+    - `"tabstrip"`: the button is placed in the toolbar that contains browser tabs.
+    - `"personaltoolbar"`: the button is placed in the bookmarks toolbar.
+
+    This property is only supported in Firefox. This property is optional, and defaults to `"menupanel"`. Firefox remembers the `default_area` setting for an extension, even if that extension is uninstalled and subsequently reinstalled. To force the browser to acknowledge a new value for `default_area`, the id of the extension must be changed. An extension can't change the location of the button after it has been installed, but the user may be able to move the button using the browser's built-in UI customization mechanism.
+
+- `default_icon` {{optional_inline}}
+  - : `Object` or `String`. Use this to specify one or more icons for the action. The icon is shown in the browser toolbar by default. Icons are specified as URLs relative to the manifest.json file itself.
+
+    You can specify a single icon file by supplying a string here:
+
+    ```json
+    "default_icon": "path/to/geo.svg"
+    ```
+
+    To specify multiple icons in different sizes, specify an object here. The name of each property is the icon's height in pixels, and must be convertible to an integer. The value is the URL. For example:
+
+    ```json
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
-    }</pre
-        >
-        <p>
-          You cannot specify multiple icons of the same sizes.<br /><br />See
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes"
-            >Choosing icon sizes</a
-          >
-          for more guidance on this.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>default_popup</code></td>
-      <td><code>String</code></td>
-      <td>
-        <p>
-          The path to an HTML file containing the specification of the popup.
-        </p>
-        <p>
-          The HTML file may include CSS and JavaScript files using
-          <code
-            ><a href="/en-US/docs/Web/HTML/Element/link">&#x3C;link></a></code
-          >
-          and
-          <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
-              >&#x3C;script></a
-            ></code
-          >
-          elements, just like a normal web page. However,
-          <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
-              >&#x3C;script>
-            </a></code
-          >must have
-          <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code>
-          attribute to load a file. Don't use
-          <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
-              >&#x3C;script></a
-            ></code
-          >
-          with embedded code, because you'll get a confusing Content Violation
-          Policy error.
-        </p>
-        <p>
-          Unlike a normal web page, JavaScript running in the popup can access
-          all the
-          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API"
-            >WebExtension APIs</a
-          >
-          (subject, of course, to the extension having the appropriate
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
-            >permissions</a
-          >).
-        </p>
-        <p>
-          This is a
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json"
-            >localizable property</a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td><code>String</code></td>
-      <td>
-        <p>
-          Tooltip for the button, displayed when the user moves their mouse over
-          it. If the button is added to the browser's menu panel, this is also
-          shown under the app icon.
-        </p>
-        <p>
-          This is a
-          <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json"
-            >localizable property</a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>theme_icons</code></td>
-      <td><code>Array</code></td>
-      <td>
-        <p>
-          This property enables you to specify different icons for themes
-          depending on whether Firefox detects that the theme uses dark or light
-          text.
-        </p>
-        <p>
-          If this property is present, it's an array containing at least one
-          <code>ThemeIcons</code> object. A <code>ThemeIcons</code> object
-          contains three mandatory properties:
-        </p>
-        <dl>
-          <dt><code>"dark"</code></dt>
-          <dd>
-            A URL pointing to an icon. This icon displays when a theme using
-            dark text is active (such as the Firefox Light theme, and the
-            Default theme if no default_icon is specified).
-          </dd>
-          <dt><code>"light"</code></dt>
-          <dd>
-            A URL pointing to an icon. This icon displays when a theme using
-            light text is active (such as the Firefox Dark theme).
-          </dd>
-          <dt><code>"size"</code></dt>
-          <dd>The size of the two icons in pixels.</dd>
-        </dl>
-        <p>Icons are specified as URLs relative to the manifest.json file.</p>
-        <p>
-          You should supply 16x16 and 32x32 (for retina display)
-          <code>ThemeIcons</code>.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    }
+    ```
+
+    You cannot specify multiple icons of the same sizes. See [Choosing icon sizes](#choosing_icon_sizes) for more guidance on this.
+
+- `default_popup` {{optional_inline}}
+  - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page. However, `<script>` must have a `src` attribute to load a file. Don't use `<script>` with embedded code, because you'll get a confusing Content Violation Policy error. Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject, of course, to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+- `default_title` {{optional_inline}}
+  - : `String`. Tooltip for the button, displayed when the user moves their mouse over it. If the button is added to the browser's menu panel, this is also shown under the app icon. This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+- `theme_icons` {{optional_inline}}
+  - : `Array`. This property enables you to specify different icons for themes depending on whether Firefox detects that the theme uses dark or light text. If this property is present, it's an array containing at least one `ThemeIcons` object. A `ThemeIcons` object contains three mandatory properties:
+    - `"dark"`
+      - : A URL pointing to an icon. This icon displays when a theme using dark text is active (such as the Firefox Light theme and, if no `default_icon` is specified, the Default theme).
+    - `"light"`
+      - : A URL pointing to an icon. This icon displays when a theme using light text is active (such as the Firefox Dark theme).
+    - `"size"`
+      - : The size of the two icons in pixels.
+
+    Icons are specified as URLs relative to the manifest.json file. You should supply 16x16 and 32x32 (for retina display) `ThemeIcons`.
+
+    > [!NOTE]
+    > Alternatively, you can specify an SVG icon in `default_icon` and use a media query on `prefers-color-scheme` to update the icon for light and dark themes. For example:
+    >
+    > ```css
+    > #outside {
+    >   fill: black;
+    > }
+    > #inside {
+    >   fill: red;
+    > }
+    > @media (prefers-color-scheme: dark) {
+    >   #outside {
+    >     fill: white;
+    >   }
+    >   #inside {
+    >     fill: black;
+    >   }
+    > }
+    > ```
+    >
+    > For more information, see the [themed-icons](https://github.com/mdn/webextensions-examples/tree/main/themed-icons) example.
 
 ## Choosing icon sizes
 
 The action's icon may need to be displayed in different sizes in different contexts:
 
-- The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox the icon in the menu panel was larger than the icon in the toolbar.
+- The icon is displayed in the browser toolbar. Older versions of Firefox supported the option of placing the icon in the browser's menu panel (the panel that opens when the user clicks the "hamburger" icon). In those versions of Firefox, the menu panel icon was larger than the toolbar icon.
 - On a high-density display like a Retina screen, icons needs to be twice as big.
 
 If the browser can't find an icon of the right size in a given situation, it will pick the best match and scale it. Scaling may make the icon appear blurry, so it's important to choose icon sizes carefully.
@@ -368,7 +177,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 An action with just an icon, specified in 2 sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.Action.onClicked.addListener(handleClick);
+browser.action.onClicked.addListener(handleClick);
 ```
 
 ```json

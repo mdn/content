@@ -1,14 +1,9 @@
 ---
-title: Pull request submission and review guidelines
+title: Pull request submission and reviews
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
-tags:
-  - meta
-  - community-guidelines
-  - governance
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This document describes how contributors make changes to MDN Web Docs and how the changes are reviewed and land on the site.
 Content changes to MDN Web Docs include:
@@ -23,9 +18,9 @@ Regardless of how content changes are done, they are submitted as pull requests 
 The content changes go through the following stages before they are published on MDN Web Docs:
 
 1. **Submitting changes:** As a pull request author, you submit changes via opening a pull request.
-   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and (After you open a pull request)(#after-you-open-a-pull-request) to learn more about our processes.
-2. **Reviewing changes:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process).
-   See the section [Pull request review process](#pull-request-review-process) for more details.
+   See the sections [Before you start](#before_you_start), [Open a pull request](#open_a_pull_request), and [After you open a pull request](#after_you_open_a_pull_request) to learn more about our processes.
+2. **Reviewing changes:** Your changes are reviewed by MDN members and volunteers.
+   See the section [Pull request review process](#pull_request_review_process) for more details.
 3. **Viewing published changes:** Content updated on `mdn/content` goes live within a day of merging via a site rebuild once every 24 hours.
 
 ## Submitting changes
@@ -33,9 +28,9 @@ The content changes go through the following stages before they are published on
 ### Values and participation
 
 We want MDN Web Docs to be a welcoming, friendly community that we can all be proud of.
-All participants must follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+All participants must follow our [Community Participation Guidelines](/en-US/docs/MDN/Community/Community_Participation_Guidelines) which are derived from [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 Be polite and constructive when opening pull requests, writing review comments, interacting with the pull request author or other community members.
-If anyone has engaged in behavior that is potentially illegal or makes you or someone else feel unsafe, unwelcome, or uncomfortable, you are encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
+If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](/en-US/docs/MDN/Community/Community_Participation_Guidelines#reporting_process).
 
 ### Before you start
 
@@ -52,13 +47,11 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you have found a problem on MDN**, you should open an issue first.
   **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.
-  More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?assignees=schalkneethling&labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
+  More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
 
-- **If want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
+- **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
 
-<!-- TODO: when we have Discord:
-If you're not sure where to start, reach out to us on [Discord]() and ask for feedback.
--->
+If you're not sure where to start, reach out to us on [the Discord server](/discord) and ask for feedback.
 
 ### Open a pull request
 
@@ -68,7 +61,7 @@ When you're ready to open a pull request, follow these guidelines:
   If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
 - **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
 - **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
-  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
 - **Accompany code example changes with content changes:** This is important to ensure that updated examples are served correctly.
   If you're making content changes that affect how examples are used, the related code examples should also be updated.
@@ -76,7 +69,6 @@ When you're ready to open a pull request, follow these guidelines:
 - **Don't make grammar-only changes:**
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
-- **Don't enable auto-merge.**
 
 ### After you open a pull request
 
@@ -123,7 +115,7 @@ Do leave the door open to the author to ask for help, especially new contributor
 
 ### Reviewing a pull request
 
-When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 When you are reviewing a pull request, you should:
 
@@ -137,6 +129,11 @@ When you are reviewing a pull request, you should:
 - **Request load balancing** if your plate is full and you don't have bandwidth for the review.
   Tag the `@core-yari-content` team and ask if someone else can step in.
 - **Don't merge unless 'depends on'** pull requests are merged first.
+- **Don't merge pull requests that have failing tests.**
+  It is good [open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette) to keep the `main` branch stable to avoid disruption for contributors, maintainers, and for automated processes.
+  An unstable `main` branch blocks all other pull requests and makes it difficult for others to review and merge contributions.
+  In addition, contributors who watch repositories receive high volumes of notifications and unnecessary noise caused by failing tests can be frustrating.
+  If you are not sure how to fix the failing tests, [ask for help](/en-US/docs/MDN/Community/Communication_channels) or assign the pull request to someone else.
 
 If a pull request looks good apart from small typos or other minor issues, you may want to fix the problem directly.
 You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
@@ -201,5 +198,5 @@ Once the reviewer mentioned in the description has approved the changes, they wi
 Reviewers are encouraged to read the following articles for help with common tasks:
 
 - [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
-- [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
 - [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
+- [How to do a code review](https://google.github.io/eng-practices/review/reviewer/) on google.github.io/eng-practices

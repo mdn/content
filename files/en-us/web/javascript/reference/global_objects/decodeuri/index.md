@@ -2,24 +2,28 @@
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 page-type: javascript-function
-tags:
-  - Decode
-  - JavaScript
-  - Method
-  - String
-  - Text
-  - URI
-  - URL
-  - decodeURI
-  - decoding
 browser-compat: javascript.builtins.decodeURI
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`decodeURI()`** function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("encodeURI()")}} or a similar routine.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: decodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Syntax
 
@@ -45,11 +49,11 @@ A new string representing the unencoded version of the given encoded Uniform Res
 
 `decodeURI()` is a function property of the global object.
 
-The `decodeURI()` function decodes the URI by treating each escape sequence in the form `%XX` as one UTF-8 code unit (one byte). In UTF-8, the number of leading 1 bits in the first byte, which may be 0 (for 1-byte ASCII characters), 2, 3, or 4, indicates the number of bytes in the character. So by reading the first escape sequence, `decodeURI()` can determine how many more escape sequences to consume. If `decodeURI()` fails to find the expected number of sequences, or if the escape sequences don't encode a valid UTF-8 character, a {{jsxref("URIError")}} is thrown.
+The `decodeURI()` function decodes the URI by treating each escape sequence in the form `%XX` as one UTF-8 code unit (one byte). In UTF-8, the number of leading 1 bits in the first byte, which may be 0 (for 1-byte {{Glossary("ASCII")}} characters), 2, 3, or 4, indicates the number of bytes in the character. So by reading the first escape sequence, `decodeURI()` can determine how many more escape sequences to consume. If `decodeURI()` fails to find the expected number of sequences, or if the escape sequences don't encode a valid UTF-8 character, a {{jsxref("URIError")}} is thrown.
 
 `decodeURI()` decodes all escape sequences, but if the escape sequence encodes one of the following characters, the escape sequence is preserved in the output string (because they are part of the URI syntax):
 
-```
+```plain
 ; / ? : @ & = + $ , #
 ```
 
@@ -102,6 +106,6 @@ try {
 
 ## See also
 
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

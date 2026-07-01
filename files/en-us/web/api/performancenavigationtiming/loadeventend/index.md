@@ -1,12 +1,8 @@
 ---
-title: PerformanceNavigationTiming.loadEventEnd
+title: "PerformanceNavigationTiming: loadEventEnd property"
+short-title: loadEventEnd
 slug: Web/API/PerformanceNavigationTiming/loadEventEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 ---
 
@@ -22,7 +18,7 @@ A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the
 
 ### Measuring `load` event handler time
 
-The `loadEventEnd` property can be used to measure how long it takes process the[`load`](/en-US/docs/Web/API/Window/load_event) event handler.
+The `loadEventEnd` property can be used to measure how long it takes to process the [`load`](/en-US/docs/Web/API/Window/load_event) event handler.
 
 This is useful to measure the time of long running [`load`](/en-US/docs/Web/API/Window/load_event) event handlers.
 

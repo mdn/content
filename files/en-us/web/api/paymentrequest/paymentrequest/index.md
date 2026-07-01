@@ -1,16 +1,8 @@
 ---
-title: PaymentRequest()
+title: "PaymentRequest: PaymentRequest() constructor"
+short-title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
 
@@ -30,29 +22,21 @@ new PaymentRequest(methodData, details, options)
 ### Parameters
 
 - `methodData`
-
-  - : Contains an array of identifiers for the payment methods the merchant web site
+  - : Contains an array of identifiers for the payment methods the merchant website
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
-
     - `supportedMethods`
-      - : For early implementations of the spec, this was a sequence of identifiers for
-        payment methods that the merchant website accepts. Starting with more recent
-        browsers, this parameter is more generic than credit cards, it is a single
-        string, and the meaning of the `data` parameter
-        changes with the `supportedMethods`. For example, the Example Pay payment method
-        is selected by specifying the string `https://example.com/pay` here.
+      - : A string containing a [payment method identifier](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers). This is either a URL or one of the [standardized payment method identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#standardized_payment_method_identifiers). The value and structure of the `data` field will vary depending on the value of the `supportedMethods` field.
+
     - `data`
       - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
         by the payment handler indicated by `supportedMethods`. Developers need to consult
-        whomever controls the payment methods for the expected shape of the data object.
+        whomever controls the payment methods for the expected shape of the data object. If `supportedMethods` is `secure-payment-confirmation`, then `data` needs to conform to the {{domxref("SecurePaymentConfirmationRequest")}} dictionary.
 
 - `details`
-
   - : Provides information about the requested transaction. This parameter contains the
     following fields:
-
     - `total`
       - : The total amount of the payment request.
     - `id` {{optional_inline}}
@@ -66,10 +50,8 @@ new PaymentRequest(methodData, details, options)
         indicates the merchant cannot ship to the current shipping address. The default
         shipping option may be indicated in this sequence.
     - `modifiers`
-
       - : Modifiers for specific payment methods; for example, adjusting the total amount
         based on the payment method. This parameter contains the following fields:
-
         - `additionalDisplayItems`
           - : An array of items to be appended to the `details.displayItems`
             property. This property is commonly used to add a discount or surcharge line
@@ -84,10 +66,8 @@ new PaymentRequest(methodData, details, options)
             to the request.
 
 - `options` {{optional_inline}}
-
   - : Lets you set options that control the behavior of the user agent. This parameter
     contains the following fields:
-
     - `requestPayerName`
       - : A Boolean indicating whether the user agent should collect the payer's name and
         submit it with the payment request. The default is `false`.
@@ -117,7 +97,7 @@ input parameters.
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Examples
 
@@ -125,40 +105,44 @@ The following example shows minimal functionality and focuses instead on showing
 complete context of instantiating a `PaymentRequest` object.
 
 ```js
-const supportedInstruments = [{
- supportedMethods: 'https://example.com/pay'
-}];
+const supportedInstruments = [
+  {
+    supportedMethods: "https://example.com/pay",
+  },
+];
 
 const details = {
-  total: {label: 'Donation', amount: {currency: 'USD', value: '65.00'}},
+  total: { label: "Donation", amount: { currency: "USD", value: "65.00" } },
   displayItems: [
     {
-      label: 'Original donation amount',
-      amount: {currency: 'USD', value: '65.00'}
-    }
+      label: "Original donation amount",
+      amount: { currency: "USD", value: "65.00" },
+    },
   ],
   shippingOptions: [
     {
-      id: 'standard',
-      label: 'Standard shipping',
-      amount: {currency: 'USD', value: '0.00'},
-      selected: true
-    }
-  ]
+      id: "standard",
+      label: "Standard shipping",
+      amount: { currency: "USD", value: "0.00" },
+      selected: true,
+    },
+  ],
 };
 
-const options = {requestShipping: true};
+const options = { requestShipping: true };
 
 try {
   const request = new PaymentRequest(supportedInstruments, details, options);
   // Add event listeners here.
   // Call show() to trigger the browser's payment flow.
-  request.show().then((instrumentResponse) => {
-    // Do something with the response from the UI.
-  })
-  .catch((err) => {
-    // Do something with the error from request.show().
-  });
+  request
+    .show()
+    .then((instrumentResponse) => {
+      // Do something with the response from the UI.
+    })
+    .catch((err) => {
+      // Do something with the error from request.show().
+    });
 } catch (e) {
   // Catch any other errors.
 }

@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
+title: "CanvasRenderingContext2D: textBaseline property"
+short-title: textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.textBaseline
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.textBaseline`**
@@ -30,7 +25,7 @@ Possible values:
 - `"middle"`
   - : The text baseline is the middle of the em square.
 - `"alphabetic"`
-  - : The text baseline is the normal alphabetic baseline. Default value.
+  - : The text baseline is the normal {{glossary("Baseline/Typography", "alphabetic baseline")}}. Default value.
 - `"ideographic"`
   - : The text baseline is the ideographic baseline; this is the bottom of the body of the
     characters, if the main body of characters protrudes beneath the alphabetic baseline.
@@ -56,12 +51,19 @@ This example demonstrates the various `textBaseline` property values.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "36px serif";
+ctx.strokeStyle = "red";
 
 baselines.forEach((baseline, index) => {
   ctx.textBaseline = baseline;
@@ -91,12 +93,19 @@ As with the previous example, this example demonstrates the various `textBaselin
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '20px serif';
-ctx.strokeStyle = 'red';
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "20px serif";
+ctx.strokeStyle = "red";
 
 ctx.beginPath();
 ctx.moveTo(0, 100);
@@ -108,7 +117,7 @@ baselines.forEach((baseline, index) => {
   ctx.save();
   ctx.textBaseline = baseline;
   let x = index * 120 + 10;
-  ctx.fillText('Abcdefghijk', x, 100);
+  ctx.fillText("Abcdefghijk", x, 100);
   ctx.restore();
   ctx.fillText(baseline, x + 5, 50);
 });

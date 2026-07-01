@@ -1,18 +1,12 @@
 ---
-title: WebGLRenderingContext.unpackColorSpace
+title: "WebGLRenderingContext: unpackColorSpace property"
+short-title: unpackColorSpace
 slug: Web/API/WebGLRenderingContext/unpackColorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - Experimental
 browser-compat: api.WebGLRenderingContext.unpackColorSpace
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.unpackColorSpace`** property specifies the color space to convert to when importing textures. Along with the default (`srgb`), the `display-p3` color space can be used.
 
@@ -56,7 +50,17 @@ const imageData = new ImageData(data, 32, 32);
 
 const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+gl.texImage2D(
+  gl.TEXTURE_2D,
+  0,
+  gl.RGBA,
+  width,
+  height,
+  0,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  imageData,
+);
 ```
 
 ## Specifications

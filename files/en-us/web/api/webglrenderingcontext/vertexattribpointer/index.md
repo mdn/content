@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.vertexAttribPointer()
+title: "WebGLRenderingContext: vertexAttribPointer() method"
+short-title: vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.vertexAttribPointer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The
 **`WebGLRenderingContext.vertexAttribPointer()`** method of the
@@ -34,10 +29,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of components per vertex attribute.
     Must be 1, 2, 3, or 4.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of each component in the array.
     Possible values:
-
     - `gl.BYTE`: signed 8-bit integer, with values in \[-128, 127]
     - `gl.SHORT`: signed 16-bit integer, with values in \[-32768, 32767]
     - `gl.UNSIGNED_BYTE`: unsigned 8-bit integer, with values in \[0, 255]
@@ -53,10 +46,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_INT_2_10_10_10_REV`: 32-bit unsigned integer with values in \[0, 1023]
 
 - `normalized`
-
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether integer data values should be
     normalized into a certain range when being cast to a float.
-
     - For types `gl.BYTE` and `gl.SHORT`, normalizes the values
       to \[-1, 1] if true.
     - For types `gl.UNSIGNED_BYTE` and `gl.UNSIGNED_SHORT`,
@@ -66,7 +57,7 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
 
 - `stride`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the offset in bytes between the beginning of
-    consecutive vertex attributes. Cannot be larger than 255. If stride is 0, the
+    consecutive vertex attributes. Cannot be negative or larger than 255. If stride is 0, the
     attribute is assumed to be tightly packed, that is, the attributes are not interleaved
     but each attribute is in a separate block, and the next vertex' attribute follows
     immediately after the current vertex.
@@ -81,14 +72,14 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- A `gl.INVALID_VALUE` error is thrown if `offset` is negative.
+- A `gl.INVALID_VALUE` error is thrown if `stride` or `offset` are negative.
 - A `gl.INVALID_OPERATION` error is thrown if `stride` and
   `offset` are not multiples of the size of the data type.
 - A `gl.INVALID_OPERATION` error is thrown if no WebGLBuffer is bound to
   the ARRAY_BUFFER target.
 - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, a
   `gl.INVALID_OPERATION` error is thrown if this vertex attribute is defined
-  as an integer in the vertex shader (e.g. `uvec4` or `ivec4`,
+  as an integer in the vertex shader (e.g., `uvec4` or `ivec4`,
   instead of `vec4`).
 
 ## Description
@@ -101,8 +92,7 @@ and will be supplied to the Vertex Buffer Object (VBO). First, we need to bind t
 this method, `gl.vertexAttribPointer()`, we specify in what order the
 attributes are stored, and what data type they are in. In addition, we need to include
 the stride, which is the total byte length of all attributes for one vertex. Also, we
-have to call {{domxref("WebGLRenderingContext/enableVertexAttribArray",
-  "gl.enableVertexAttribArray()")}} to tell WebGL that this attribute should be filled
+have to call {{domxref("WebGLRenderingContext/enableVertexAttribArray", "gl.enableVertexAttribArray()")}} to tell WebGL that this attribute should be filled
 with data from our array buffer.
 
 Usually, your 3D geometry is already in a certain binary format, so you need to read
@@ -125,13 +115,11 @@ they are stored in the array buffer. You have two options:
 - Either you specify the index yourself. In this case, you call
   {{domxref("WebGLRenderingContext.bindAttribLocation()", "gl.bindAttribLocation()")}}
   to connect a named attribute from the vertex shader to the index you want to use. This
-  must be done before calling {{domxref("WebGLRenderingContext.linkProgram()",
-    "gl.linkProgram()")}}. You can then provide this same index to
+  must be done before calling {{domxref("WebGLRenderingContext.linkProgram()", "gl.linkProgram()")}}. You can then provide this same index to
   `gl.vertexAttribPointer()`.
 - Alternatively, you use the index that is assigned by the graphics card when
   compiling the vertex shader. Depending on the graphics card, the index will vary, so
-  you must call {{domxref("WebGLRenderingContext.getAttribLocation()",
-    "gl.getAttribLocation()")}} to find out the index, and then provide this index to
+  you must call {{domxref("WebGLRenderingContext.getAttribLocation()", "gl.getAttribLocation()")}} to find out the index, and then provide this index to
   `gl.vertexAttribPointer()`.
   If you are using WebGL 2, you can specify the index yourself in the vertex shader code
   and override the default used by the graphics card, e.g.
@@ -143,9 +131,8 @@ they are stored in the array buffer. You have two options:
 While the `ArrayBuffer` can be filled with both integers and floats, the
 attributes will always be converted to a float when they are sent to the vertex shader.
 If you need to use integers in your vertex shader code, you can either cast the float
-back to an integer in the vertex shader (e.g. `(int) floatNumber`), or use
-{{domxref("WebGL2RenderingContext.vertexAttribIPointer()",
-  "gl.vertexAttribIPointer()")}} from WebGL2.
+back to an integer in the vertex shader (e.g., `(int) floatNumber`), or use
+{{domxref("WebGL2RenderingContext.vertexAttribIPointer()", "gl.vertexAttribIPointer()")}} from WebGL2.
 
 ### Default attribute values
 
@@ -154,11 +141,10 @@ the values for each attribute. Instead, we can supply a default value that will 
 identical for all vertices. We can call
 {{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}
 to tell WebGL to use the default value, while calling
-{{domxref("WebGLRenderingContext.enableVertexAttribArray()",
-  "gl.enableVertexAttribArray()")}} will read the values from the array buffer as
-specified with `gl.vertexAttribPointer()`.
+{{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}}
+will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
 
-Similarly, if our vertex shader expects e.g. a 4-component attribute with
+Similarly, if our vertex shader expects e.g., a 4-component attribute with
 `vec4` but in our `gl.vertexAttribPointer()` call we set the
 `size` to `2`, then WebGL will set the first two components based
 on the array buffer, while the third and fourth components are taken from the default
@@ -176,9 +162,9 @@ color.
 
 ### Querying current settings
 
-You can call {{domxref("WebGLRenderingContext.getVertexAttrib()",
-  "gl.getVertexAttrib()")}} and {{domxref("WebGLRenderingContext.getVertexAttribOffset()",
-  "gl.getVertexAttribOffset()")}} to get the current parameters for an attribute, e.g. the
+You can call {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} and
+{{domxref("WebGLRenderingContext.getVertexAttribOffset()", "gl.getVertexAttribOffset()")}} to
+get the current parameters for an attribute, e.g., the
 data type or whether the attribute should be normalized. Keep in mind that these WebGL
 functions have a slow performance and it is better to store the state inside your
 JavaScript application. However, these functions are great for debugging a WebGL context
@@ -244,7 +230,7 @@ vertices.forEach((vertex, i) => {
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on
-the server-side, e.g. with Node.js. Then we could load the binary file and interpret it
+the server-side, e.g., with Node.js. Then we could load the binary file and interpret it
 as an array buffer:
 
 ```js
@@ -257,7 +243,7 @@ const buffer = await response.arrayBuffer();
 First, we create a new Vertex Buffer Object (VBO) and supply it with our array buffer:
 
 ```js
-//Bind array buffer to a Vertex Buffer Object
+// Bind array buffer to a Vertex Buffer Object
 const vbo = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
 gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
@@ -267,23 +253,23 @@ Then, we specify the memory layout of the array buffer, either by setting the in
 ourselves:
 
 ```js
-//Describe the layout of the buffer:
-//1. position, not normalized
+// Describe the layout of the buffer:
+// 1. position, not normalized
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
-//2. normal vector, normalized to [-1, 1]
+// 2. normal vector, normalized to [-1, 1]
 gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(1);
-//3. texture coordinates, normalized to [0, 1]
+// 3. texture coordinates, normalized to [0, 1]
 gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
-//Set the attributes in the vertex shader to the same indices
+// Set the attributes in the vertex shader to the same indices
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "normal");
 gl.bindAttribLocation(shaderProgram, 2, "texUV");
-//Since the attribute indices have changed, we must re-link the shader
-//Note that this will reset all uniforms that were previously set.
+// Since the attribute indices have changed, we must re-link the shader
+// Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
 ```
 
@@ -314,5 +300,5 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## See also
 
-- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) on the OpenGL wiki
+- [Vertex Specification](https://wikis.khronos.org/opengl/Vertex_Specification) on the OpenGL wiki
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}

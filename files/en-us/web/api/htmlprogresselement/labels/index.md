@@ -1,13 +1,8 @@
 ---
-title: HTMLProgressElement.labels
+title: "HTMLProgressElement: labels property"
+short-title: labels
 slug: Web/API/HTMLProgressElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLProgressElement
-  - Property
-  - Reference
 browser-compat: api.HTMLProgressElement.labels
 ---
 
@@ -35,12 +30,10 @@ with the `<progress>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const progress = document.getElementById("test");
-  for (const label of progress.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const progress = document.getElementById("test");
+for (const label of progress.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

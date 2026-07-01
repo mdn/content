@@ -2,21 +2,14 @@
 title: Response
 slug: Web/API/Response
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Response
 browser-compat: api.Response
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
+You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("Window/fetch", "fetch()")}}.
 
 ## Constructor
 
@@ -39,8 +32,6 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : The status code of the response. (This will be `200` for a success).
 - {{domxref("Response.statusText")}} {{ReadOnlyInline}}
   - : The status message corresponding to the status code. (e.g., `OK` for `200`).
-- {{domxref("Response.trailers")}}
-  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
 - {{domxref("Response.type")}} {{ReadOnlyInline}}
   - : The type of the response (e.g., `basic`, `cors`).
 - {{domxref("Response.url")}} {{ReadOnlyInline}}
@@ -48,10 +39,12 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 
 ## Static methods
 
-- {{domxref("Response.error()")}}
+- {{domxref("Response.error_static","Response.error()")}}
   - : Returns a new `Response` object associated with a network error.
-- {{domxref("Response.redirect()")}}
-  - : Creates a new response with a different URL.
+- {{domxref("Response.redirect_static", "Response.redirect()")}}
+  - : Returns a new response with a different URL.
+- {{domxref("Response.json_static", "Response.json()")}}
+  - : Returns a new `Response` object for returning the provided JSON encoded data.
 
 ## Instance methods
 
@@ -59,6 +52,8 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
 - {{domxref("Response.blob()")}}
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
+- {{domxref("Response.bytes()")}}
+  - : Returns a promise that resolves with a {{jsxref("Uint8Array")}} representation of the response body.
 - {{domxref("Response.clone()")}}
   - : Creates a clone of a `Response` object.
 - {{domxref("Response.formData()")}}
@@ -80,10 +75,18 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector(".my-image");
 fetch("flowers.jpg")
-  .then((response) => response.blob())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
   .then((blob) => {
     const objectURL = URL.createObjectURL(blob);
     image.src = objectURL;
+  })
+  .catch((error) => {
+    console.error("Error fetching the image:", error);
   });
 ```
 
@@ -93,24 +96,26 @@ You can also use the {{domxref("Response.Response", "Response()")}} constructor 
 const response = new Response();
 ```
 
-### An Ajax Call
+### A PHP Call
 
-Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.
+Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value.
 
 ```js
-// Function to do an Ajax call
-const doAjax = async () => {
-  const response = await fetch("Ajax.php"); // Generate the Response object
+// Function to fetch JSON using PHP
+const getJSON = async () => {
+  // Generate the Response object
+  const response = await fetch("getJSON.php");
   if (response.ok) {
-    const jsonValue = await response.json(); // Get JSON value from the response body
-    return Promise.resolve(jsonValue);
-  } else {
-    return Promise.reject("*** PHP file not found");
+    // Get JSON value from the response body
+    return response.json();
   }
+  throw new Error("*** PHP file not found");
 };
 
 // Call the function and output value or error message to console
-doAjax().then(console.log).catch(console.log);
+getJSON()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications
@@ -124,5 +129,5 @@ doAjax().then(console.log).catch(console.log);
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

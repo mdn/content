@@ -1,20 +1,10 @@
 ---
 title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getPopup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets the HTML document set as the popup for this browser action.
 
@@ -31,9 +21,7 @@ let gettingPopup = browser.browserAction.getPopup(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. The tab whose popup to get.
     - `windowId` {{optional_inline}}
@@ -47,10 +35,6 @@ let gettingPopup = browser.browserAction.getPopup(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the popup's document. This will be a fully qualified URL, such as `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -67,7 +51,12 @@ gettingPopup.then(gotPopup);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

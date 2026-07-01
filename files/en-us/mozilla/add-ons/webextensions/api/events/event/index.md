@@ -1,20 +1,10 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - events
+page-type: webextension-api-type
 browser-compat: webextensions.api.events.Event
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 An object which allows the addition and removal of listeners for a browser event.
 
@@ -25,9 +15,9 @@ Values of this type are objects.
 ## Methods
 
 - {{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}
-  - : Registers an event listener callback to an event.
+  - : Registers an event listener to an event.
 - {{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}
-  - : Deregisters an event listener callback from an event.
+  - : Deregisters an event listener from an event.
 - {{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}
   - : Tests registration status of a listener.
 - {{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}
@@ -39,13 +29,14 @@ Values of this type are objects.
 - {{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}
   - : Unregisters currently registered rules.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/events/#type-Event) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events#type-Event) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

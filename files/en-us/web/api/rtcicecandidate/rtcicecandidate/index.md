@@ -1,19 +1,8 @@
 ---
-title: RTCIceCandidate()
+title: "RTCIceCandidate: RTCIceCandidate() constructor"
+short-title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Candidate
-  - Constructor
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
 
@@ -34,14 +23,11 @@ new RTCIceCandidate(candidateInfo)
 ### Parameters
 
 - `candidateInfo` {{optional_inline}}
-
   - : An optional object that can be provided to configure the candidate.
     The object has the following properties:
 
     <!-- The spec calls this object an RTCIceCandidateInit -->
-
     - `candidate` {{optional_inline}}
-
       - : A string describing the properties of the candidate, taken directly from the [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) attribute `"candidate"`.
         The candidate string specifies the network connectivity information for the candidate.
         If the `candidate` is an empty string (`""`), the end of the candidate list has been reached; this candidate is known as the "end-of-candidates" marker.
@@ -49,43 +35,40 @@ new RTCIceCandidate(candidateInfo)
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-        ```
-        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```plain
+        a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
         ```
 
         the corresponding `candidate` string's value will be
-        `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
+        `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`.
 
         The {{Glossary("user agent")}} always prefers candidates with the highest {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal.
         In the example above, the priority is `2043278322`. The attributes are all separated by a single space character, and are in a specific order.
         The complete list of attributes for this example candidate is:
-
         - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
         - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
         - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
         - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
         - {{domxref("RTCIceCandidate.port", "port")}} = 44323
         - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
         Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
 
-        > **Note:** For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
+        > [!NOTE]
+        > For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
 
     - `sdpMid` {{optional_inline}}
-
       - : A string containing the identification tag of the media stream with which the candidate is associated, or `null` if there is no associated media stream. The default is `null`.
 
         Additional information can be found in {{domxref("RTCIceCandidate.sdpMid")}}.
 
     - `sdpMLineIndex` {{optional_inline}}
-
       - : A number property containing the zero-based index of the m-line with which the candidate is associated, within the [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) of the media description, or `null` if no such associated exists. The default is `null`.
 
         Additional information can be found in {{domxref("RTCIceCandidate.sdpMLineIndex")}}.
 
     - `usernameFragment` {{optional_inline}}
-
       - : A string containing the username fragment (usually referred to in shorthand as "ufrag" or "ice-ufrag").
         This fragment, along with the ICE password ("ice-pwd"), uniquely identifies a single ongoing ICE interaction (including for any communication with the {{Glossary("STUN")}} server).
 
@@ -113,7 +96,8 @@ If `candidateInfo` is provided, the new `RTCIceCandidate` is initialized as foll
   {{domxref("RTCIceCandidate.port", "port")}}, {{domxref("RTCIceCandidate.type", "type")}}, {{domxref("RTCIceCandidate.tcpType", "tcpType")}},
   {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}, and {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}.
 
-> **Note:** Parsing of the `candidate` string is performed using the [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) from the WebRTC Specification.
+> [!NOTE]
+> Parsing of the `candidate` string is performed using the [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) from the WebRTC Specification.
 
 ### Exceptions
 

@@ -1,26 +1,20 @@
 ---
-title: CanvasRenderingContext2D.wordSpacing
+title: "CanvasRenderingContext2D: wordSpacing property"
+short-title: wordSpacing
 slug: Web/API/CanvasRenderingContext2D/wordSpacing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.wordSpacing
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.wordSpacing`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies the spacing between words when drawing text.
 
-This corresponds to the CSS [`word-spacing`](/en-US/docs/Web/CSS/word-spacing) property.
+This corresponds to the CSS {{cssxref("word-spacing")}} property.
 
 ## Value
 
-The word spacing as a string in the [CSS length](/en-US/docs/Web/CSS/length) data format.
+The word spacing as a string in the CSS {{cssxref("length")}} data format.
 The default is `0px`.
 
 The property can be used to get or set the spacing.

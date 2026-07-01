@@ -1,18 +1,14 @@
 ---
-title: CSSStyleSheet()
+title: "CSSStyleSheet: CSSStyleSheet() constructor"
+short-title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
+The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Style_sheet).
 
 After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}}, {{domxref("CSSStyleSheet.insertRule()")}}, and {{domxref("CSSStyleSheet.deleteRule()")}} methods can be used to modify the rules of the new stylesheet.
 
@@ -29,9 +25,7 @@ new CSSStyleSheet(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing the following:
-
     - `baseURL` {{optional_inline}}
       - : A string containing the `baseURL` used to resolve relative URLs in the stylesheet.
     - `media` {{optional_inline}}
@@ -57,17 +51,17 @@ The code below shows the sheet being constructed and then {{domxref("CSSStyleShe
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 ```
 
 We then create a {{domxref("ShadowRoot")}} and pass the sheet object to the {{domxref("ShadowRoot.adoptedStyleSheets")}} property inside an array.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the sheet into the shadow DOM
+// Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 
@@ -92,6 +86,7 @@ For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 
 ## See also
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- {{domxref("Document.adoptedStyleSheets")}}
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

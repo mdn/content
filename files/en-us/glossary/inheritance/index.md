@@ -2,10 +2,7 @@
 title: Inheritance
 slug: Glossary/Inheritance
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - Inheritance
-  - Programming Language
+sidebar: glossarysidebar
 ---
 
 Inheritance is a major feature of {{glossary("OOP","object-oriented programming")}}. Data abstraction can be carried up several levels, that is, {{glossary("class","classes")}} can have superclasses and subclasses.
@@ -14,4 +11,4 @@ As an app developer, you can choose which of the superclass's {{glossary("attrib
 
 ## See also
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -1,11 +1,12 @@
 ---
-title: DOMStringList.item()
+title: "DOMStringList: item() method"
+short-title: item()
 slug: Web/API/DOMStringList/item
 page-type: web-api-instance-method
 browser-compat: api.DOMStringList.item
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`item()`** method returns a string from a [`DOMStringList`](/en-US/docs/Web/API/DOMStringList) by index.
 

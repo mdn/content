@@ -2,17 +2,10 @@
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`WritableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a `WritableStream`, the underlying sink is given a corresponding `WritableStreamDefaultController` instance to manipulate.
 
@@ -22,7 +15,8 @@ None. `WritableStreamDefaultController` instances are created automatically duri
 
 ## Instance properties
 
-None.
+- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the controller.
 
 ## Instance methods
 
@@ -37,17 +31,17 @@ const writableStream = new WritableStream({
     // do stuff with controller
 
     // error stream if necessary
-    controller.error('My stream is broken');
+    controller.error("My stream is broken");
   },
   write(chunk, controller) {
-    // ...
+    // …
   },
   close(controller) {
-    // ...
+    // …
   },
   abort(err) {
-    // ...
-  }
+    // …
+  },
 });
 ```
 

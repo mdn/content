@@ -2,12 +2,6 @@
 title: Location
 slug: Web/API/Location
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Location
-  - Reference
 browser-compat: api.Location
 ---
 
@@ -47,12 +41,11 @@ body {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  font-family: Georgia;
-  font-size: 175%;
+  font-family: "Georgia";
+  font-size: 200%;
   line-height: 1em;
   white-space: nowrap;
 }
-
 
 [title] {
   position: relative;
@@ -71,7 +64,7 @@ body {
   width: 100%;
   left: 50%;
   margin-left: -50%;
-  font-size: 60%;
+  font-size: 50%;
   line-height: 1.5;
   background: black;
 }
@@ -98,7 +91,7 @@ body {
 :target {
   position: relative;
   z-index: 1;
-  outline: 50em solid rgba(255, 255, 255, 0.8);
+  outline: 50em solid rgb(255 255 255 / 80%);
 }
 ```
 
@@ -116,7 +109,7 @@ document.body.addEventListener("click", (event) => {
 
 ## Instance properties
 
-- {{domxref("Location.ancestorOrigins")}}
+- {{domxref("Location.ancestorOrigins")}} {{ReadOnlyInline}}
   - : A static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
 - {{domxref("Location.href")}}
   - : A {{Glossary("stringifier")}} that returns a string containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
@@ -131,7 +124,7 @@ document.body.addEventListener("click", (event) => {
 - {{domxref("Location.pathname")}}
   - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("Location.search")}}
-  - : A string containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#example) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#example) to make it easy to parse out the parameters from the querystring.
+  - : A string containing a `'?'` followed by the parameters or "query string" of the URL. Modern browsers provide [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get) and [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams) to make it easy to parse out the parameters from the query string.
 - {{domxref("Location.hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
 - {{domxref("Location.origin")}} {{ReadOnlyInline}}

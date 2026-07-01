@@ -1,81 +1,59 @@
 ---
 title: Array.prototype.findLastIndex()
+short-title: findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 page-type: javascript-instance-method
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
 browser-compat: javascript.builtins.Array.findLastIndex
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`findLastIndex()`** method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
+The **`findLastIndex()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
-
 See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
+
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findLastIndex((element) => { /* … */ })
-findLastIndex((element, index) => { /* … */ })
-findLastIndex((element, index, array) => { /* … */ })
-
-// Callback function
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
-
-// Inline callback function
-findLastIndex(function (element) { /* … */ })
-findLastIndex(function (element, index) { /* … */ })
-findLastIndex(function (element, index, array) { /* … */ })
-findLastIndex(function (element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `findLastIndex()` was called upon.
-
 - `thisArg` {{optional_inline}}
   - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
 The index of the last (highest-index) element in the array that passes the test.
-Otherwise -1 if no matching element is found.
+Otherwise `-1` if no matching element is found.
 
 ## Description
 
-The `findLastIndex()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLastIndex()` then returns the index of that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
+The `findLastIndex()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLastIndex()` then returns the index of that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
-
-`findLastIndex()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `findLastIndex()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
-
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `findLastIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -86,12 +64,15 @@ The `findLastIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/G
 The following example returns the index of the last element in the array that is a prime number, or `-1` if there is no prime number.
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -100,6 +81,27 @@ function isPrime(element) {
 
 console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
+```
+
+> [!NOTE]
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `findLastIndex()` to find the last element that is less than its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const lastTrough = numbers
+  .filter((num) => num > 0)
+  .findLastIndex((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(lastTrough); // 6
 ```
 
 ### Using findLastIndex() on sparse arrays
@@ -112,7 +114,7 @@ console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 
 ### Calling findLastIndex() on non-array objects
 
-The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -120,6 +122,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // ignored by findLastIndex() since length is 3
 };
 console.log(
   Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
@@ -136,7 +139,13 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLast()")}}
+- [Polyfill of `Array.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [es-shims polyfill of `Array.prototype.findLastIndex`](https://www.npmjs.com/package/array.prototype.findlastindex)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findLastIndex()")}}

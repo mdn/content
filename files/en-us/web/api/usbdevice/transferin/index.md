@@ -1,24 +1,17 @@
 ---
-title: USBDevice.transferIn()
+title: "USBDevice: transferIn() method"
+short-title: transferIn()
 slug: Web/API/USBDevice/transferIn
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - transferIn
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.transferIn
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`transferIn()`** method of the {{domxref("USBDevice")}}
-interface returns a {{jsxref("promise")}} that resolves with a
+interface returns a {{jsxref("Promise")}} that resolves with a
 {{domxref("USBInTransferResult")}} when bulk or interrupt data is received from the USB
 device.
 
@@ -38,7 +31,7 @@ transferIn(endpointNumber, length)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBInTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBInTransferResult")}}.
 
 ## Specifications
 

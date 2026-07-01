@@ -1,14 +1,8 @@
 ---
-title: Document.createProcessingInstruction()
+title: "Document: createProcessingInstruction() method"
+short-title: createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
 
@@ -26,9 +20,12 @@ createProcessingInstruction(target, data)
 
 ### Parameters
 
-- `piNode` is the resulting {{ domxref("ProcessingInstruction") }} node.
-- `target` is a string containing the first part of the processing instruction (i.e., `<?target … ?>`)
-- `data` is a string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
+- `piNode`
+  - : The resulting {{ domxref("ProcessingInstruction") }} node.
+- `target`
+  - : A string containing the first part of the processing instruction (i.e., `<?target … ?>`)
+- `data`
+  - : A string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 
 ### Return value
 
@@ -37,17 +34,18 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-
   - : Thrown if either of the following are true:
-
-    - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
+    - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
     - The _closing processing instruction sequence_ (`?>`) is part of the [`data`](#data) value.
 
 ## Examples
 
 ```js
-const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css"');
+const doc = new DOMParser().parseFromString("<foo />", "application/xml");
+const pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css"',
+);
 
 doc.insertBefore(pi, doc.firstChild);
 

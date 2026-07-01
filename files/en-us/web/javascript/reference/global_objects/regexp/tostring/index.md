@@ -1,28 +1,42 @@
 ---
 title: RegExp.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 page-type: javascript-instance-method
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
 browser-compat: javascript.builtins.RegExp.toString
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`toString()`** method of {{jsxref("RegExp")}} instances returns a string representing this regular expression.
 
-The **`toString()`** method returns a string representing the regular expression.
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-tostring.html", "taller")}}
+```js interactive-example
+console.log(new RegExp("a+b+c"));
+// Expected output: /a+b+c/
+
+console.log(new RegExp("a+b+c").toString());
+// Expected output: "/a+b+c/"
+
+console.log(new RegExp("bar", "g").toString());
+// Expected output: "/bar/g"
+
+console.log(new RegExp("\n", "g").toString());
+// Expected output: "/\n/g"
+
+console.log(new RegExp("\\n", "g").toString());
+// Expected output: "/\n/g"
+```
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

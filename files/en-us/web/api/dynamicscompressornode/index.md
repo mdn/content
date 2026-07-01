@@ -2,20 +2,14 @@
 title: DynamicsCompressorNode
 slug: Web/API/DynamicsCompressorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DynamicsCompressorNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode
 ---
 
 {{ APIRef("Web Audio API") }}
 
-The `DynamicsCompressorNode` interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. `DynamicsCompressorNode` is an {{domxref("AudioNode")}} that has exactly one input and one output.
+The `DynamicsCompressorNode` interface provides a compression effect, which lowers the volume of the loudest parts of a signal.
+Compression can help prevent clipping and distortion when multiple sounds are combined, and it is also used in music production and game audio for dynamic control, tone shaping, and creative effects.
+`DynamicsCompressorNode` is an {{domxref("AudioNode")}} that has exactly one input and one output.
 
 {{InheritanceDiagram}}
 
@@ -47,7 +41,7 @@ The `DynamicsCompressorNode` interface provides a compression effect, which lowe
 ## Constructor
 
 - {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
-  - : Creates a new instance of an `DynamicsCompressorNode` object.
+  - : Creates a new instance of a `DynamicsCompressorNode` object.
 
 ## Instance properties
 
@@ -72,7 +66,7 @@ _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}
 
 ## Example
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) example code.
 
 ## Specifications
 

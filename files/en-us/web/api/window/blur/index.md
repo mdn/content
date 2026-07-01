@@ -1,18 +1,21 @@
 ---
-title: Window.blur()
+title: "Window: blur() method"
+short-title: blur()
 slug: Web/API/Window/blur
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Method
+status:
+  - deprecated
 browser-compat: api.Window.blur
 ---
 
-{{APIRef}}
+{{APIRef}}{{deprecated_header}}
 
-Shifts focus away from the window.
+The **`Window.blur()`** method does nothing.
+
+> [!NOTE]
+> Historically, this method was the programmatic equivalent of the user shifting focus away
+> from the current window. This behavior was removed due to hostile sites abusing this functionality.
+> In Firefox, you can enable the old behavior with the `dom.disable_window_flip` preference.
 
 ## Syntax
 
@@ -33,11 +36,6 @@ None ({{jsxref("undefined")}}).
 ```js
 window.blur();
 ```
-
-## Notes
-
-The window\.blur() method is the programmatic equivalent of the user shifting focus away
-from the current window.
 
 ## Specifications
 

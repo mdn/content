@@ -2,19 +2,10 @@
 title: GamepadHapticActuator
 slug: Web/API/GamepadHapticActuator
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad
-  - GamepadHapticActuator
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
 
-{{APIRef("Gamepad API")}}{{securecontext_header}}
+{{APIRef("Gamepad API")}}
 
 The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 
@@ -22,17 +13,19 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
 ## Instance properties
 
-- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
-  - : Returns an enum representing the type of the haptic hardware.
+- {{domxref("GamepadHapticActuator.effects")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns an array of enumerated values representing the different haptic effects that the actuator supports.
+- {{domxref("GamepadHapticActuator.type")}} {{deprecated_inline}} {{ReadOnlyInline}} {{non-standard_inline}}
+  - : Returns an enumerated value representing the type of the haptic hardware. This property is deprecated: use `GamepadHapticActuator.effects` to detect effect support.
 
 ## Instance methods
 
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}}
+  - : Causes the hardware to play a specific vibration effect.
 - {{domxref("GamepadHapticActuator.pulse()")}} {{ReadOnlyInline}}
-
   - : Makes the hardware pulse at a certain intensity for a specified duration.
-
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : Makes the hardware play a specific vibration pattern.
+- {{domxref("GamepadHapticActuator.reset()")}} {{ReadOnlyInline}}
+  - : Stops the hardware from playing an active vibration effect.
 
 ## Examples
 
@@ -41,7 +34,7 @@ const gamepad = navigator.getGamepads()[0];
 
 gamepad.hapticActuators[0].pulse(1.0, 200);
 
-gamepad.vibrationActuator.playEffect('dual-rumble', {
+gamepad.vibrationActuator.playEffect("dual-rumble", {
   startDelay: 0,
   duration: 200,
   weakMagnitude: 1.0,

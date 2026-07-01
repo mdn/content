@@ -1,22 +1,16 @@
 ---
-title: CanvasRenderingContext2D.canvas
+title: "CanvasRenderingContext2D: canvas property"
+short-title: canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.canvas
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.canvas`** property, part of the
 [Canvas API](/en-US/docs/Web/API/Canvas_API), is a read-only reference to the
-{{domxref("HTMLCanvasElement")}} object that is associated with a given context. It
-might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if there is no associated {{HTMLElement("canvas")}} element.
+{{domxref("HTMLCanvasElement")}} object that is associated with a given context.
 
 ## Value
 

@@ -1,33 +1,23 @@
 ---
-title: HTMLTableElement.insertRow()
+title: "HTMLTableElement: insertRow() method"
+short-title: insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsMobileBrowserCompatibility
-  - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.insertRow()`** method inserts a new row
+The **`insertRow()`** method of the {{domxref("HTMLTableElement")}} interface inserts a new row
 ({{HtmlElement("tr")}}) in a given {{HtmlElement("table")}}, and returns a reference to
 the new row.
 
 If a table has multiple {{HtmlElement("tbody")}} elements, by default, the new row is
-inserted into the last `<tbody>`. To insert the row into a specific
-`<tbody>`:
+inserted into the last `<tbody>`.
+To insert the row into a specific section, use {{domxref("HTMLTableSectionElement.insertRow()")}}
 
-```js
-let specific_tbody = document.getElementById(tbody_id);
-let row = specific_tbody.insertRow(index)
-```
-
-> **Note:** `insertRow()` inserts the row directly into the
+> [!NOTE]
+> `insertRow()` inserts the row directly into the
 > table. The row does not need to be appended separately as would be the case if
 > {{domxref("Document.createElement()")}} had been used to create the new
 > `<tr>` element.
@@ -72,15 +62,17 @@ new row. (To be valid HTML, a `<tr>` must have at least one
 
 ```html
 <table id="my-table">
-  <tr>
-    <td>Row 1</td>
-  </tr>
-  <tr>
-    <td>Row 2</td>
-  </tr>
-  <tr>
-    <td>Row 3</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Row 1</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+    </tr>
+    <tr>
+      <td>Row 3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -98,12 +90,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Append a text node to the cell
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Result
@@ -121,4 +113,4 @@ addRow('my-table');
 ## See also
 
 - {{domxref("HTMLTableRowElement.insertCell()")}}
-- The HTML element representing rows: {{domxref("HTMLTableRowElement")}}
+- {{domxref("HTMLTableSectionElement.insertRow()")}}

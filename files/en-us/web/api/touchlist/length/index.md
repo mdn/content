@@ -1,16 +1,8 @@
 ---
-title: TouchList.length
+title: "TouchList: length property"
+short-title: length
 slug: Web/API/TouchList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Reference
-  - TouchList
-  - touch
 browser-compat: api.TouchList.length
 ---
 
@@ -27,7 +19,7 @@ The number of touch points in `touchList`.
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
 {{domxref("TouchList.item()","item")}} method and the
-{{domxref("TouchList.length","length")}} property.
+`length` property.
 
 ```js
 const target = document.getElementById("target");
@@ -40,7 +32,7 @@ target.addEventListener("touchstart", (ev) => {
     ev.targetTouches.length >= 1
       ? ev.targetTouches.item(0)
       : ev.touches.item(0);
-}, false);
+});
 ```
 
 ## Specifications

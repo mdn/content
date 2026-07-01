@@ -1,13 +1,8 @@
 ---
-title: HTMLSelectElement.add()
+title: "HTMLSelectElement: add() method"
+short-title: add()
 slug: Web/API/HTMLSelectElement/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.add
 ---
 

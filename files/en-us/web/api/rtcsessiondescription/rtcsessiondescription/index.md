@@ -1,15 +1,10 @@
 ---
-title: RTCSessionDescription()
+title: "RTCSessionDescription: RTCSessionDescription() constructor"
+short-title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Deprecated
-  - Media
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
+status:
+  - deprecated
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
 
@@ -19,10 +14,10 @@ The **`RTCSessionDescription()`** constructor creates a new
 {{domxref("RTCSessionDescription")}} with its properties initialized as described in the
 specified object.
 
-> **Note:** This constructor has been deprecated because
+> [!NOTE]
+> This constructor has been deprecated because
 > {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-> SDP as input now directly accept an object conforming to the
-> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> SDP as input now directly accept an object containing the {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}} properties, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
 
 ## Syntax
@@ -33,15 +28,11 @@ new RTCSessionDescription(options)
 
 ### Values
 
-- `options` {{optional_inline}}
-
-  - : An object providing the default values for the session description; the object
-    conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
-    the following properties:
-
+- `options`
+  - : An object providing the default values for the session description. It should contain the following properties:
     - `type`
-      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object.
-    - `sdp`
+      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object. Must be one of the valid {{domxref("RTCSessionDescription.type")}} values.
+    - `sdp` {{optional_inline}}
       - : A string containing a {{Glossary("SDP")}} message describing the session. This value is an empty string (`""`) by default and may not be `null`.
 
 ## Example
@@ -49,10 +40,10 @@ new RTCSessionDescription(options)
 This example uses the constructor to convert an SDP offer into an
 `RTCSessionDescription` object.
 
-> **Note:** This is no longer necessary, however;
+> [!NOTE]
+> This is no longer necessary, however;
 > {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-> SDP as input now directly accept an object conforming to the
-> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> SDP as input now directly accept plain objects, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
 
 ```js
@@ -62,16 +53,20 @@ navigator.getUserMedia({ video: true }, (stream) => {
   pc.addStream(stream);
 
   pc.createOffer((offer) => {
-    pc.setLocalDescription(new RTCSessionDescription(offer), () => {
-      // send the offer to a server to be forwarded to the friend you're calling.
-    }, error);
+    pc.setLocalDescription(
+      new RTCSessionDescription(offer),
+      () => {
+        // send the offer to a server to be forwarded to the friend you're calling.
+      },
+      error,
+    );
   }, error);
 });
 ```
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

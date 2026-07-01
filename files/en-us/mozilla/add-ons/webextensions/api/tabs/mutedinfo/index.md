@@ -1,20 +1,10 @@
 ---
 title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MutedInfo
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
+page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.MutedInfo
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 
@@ -29,13 +19,14 @@ Values of this type are objects. They contain the following properties:
 - `reason` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfoReason')}}. The reason the tab was muted or unmuted. Not set if the tab's muted state has never been changed.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfo) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

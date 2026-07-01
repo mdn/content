@@ -2,15 +2,6 @@
 title: A basic 2D WebGL animation example
 slug: Web/API/WebGL_API/Basic_2D_animation_example
 page-type: guide
-tags:
-  - 2D Animation
-  - 2D Graphics
-  - Animation
-  - Drawing
-  - Example
-  - Graphics
-  - WebGL
-  - WebGL API
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -45,7 +36,7 @@ First, let's take a look at the vertex shader. Its job, as always, is to convert
 </script>
 ```
 
-The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.
+The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's {{glossary("aspect ratio")}}. We'll see that computation shortly.
 
 We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
 
@@ -78,7 +69,7 @@ This starts by specifying the precision of the `float` type, as required. Then w
 The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
 ```html
-<canvas id="glcanvas" width="600" height="460">
+<canvas id="gl-canvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
@@ -88,78 +79,49 @@ The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a We
 First, the global variables. We won't discuss these here; instead, we'll talk about them as they're used in the code to come.
 
 ```js
-let gl = null;
-let glCanvas = null;
+const glCanvas = document.getElementById("gl-canvas");
+const gl = glCanvas.getContext("webgl");
 
-// Aspect ratio and coordinate system
-// details
+const shaderSet = [
+  {
+    type: gl.VERTEX_SHADER,
+    id: "vertex-shader",
+  },
+  {
+    type: gl.FRAGMENT_SHADER,
+    id: "fragment-shader",
+  },
+];
 
-let aspectRatio;
-let currentRotation = [0, 1];
-let currentScale = [1.0, 1.0];
+const shaderProgram = buildShaderProgram(shaderSet);
+
+// Aspect ratio and coordinate system details
+const aspectRatio = glCanvas.width / glCanvas.height;
+const currentRotation = [0, 1];
+const currentScale = [1.0, aspectRatio];
 
 // Vertex information
+const vertexArray = new Float32Array([
+  -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
+]);
+const vertexBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
+const vertexNumComponents = 2;
+const vertexCount = vertexArray.length / vertexNumComponents;
 
-let vertexArray;
-let vertexBuffer;
-let vertexNumComponents;
-let vertexCount;
-
-// Rendering data shared with the
-// scalers.
-
+// Rendering data shared with the scalers.
 let uScalingFactor;
 let uGlobalColor;
 let uRotationVector;
 let aVertexPosition;
 
 // Animation timing
-
 let previousTime = 0.0;
-let degreesPerSecond = 90.0;
-```
+const degreesPerSecond = 90.0;
+let currentAngle = 0.0;
 
-Initializing the program is handled through a {{domxref("Window/load_event", "load")}} event handler called `startup()`:
-
-```js
-window.addEventListener("load", startup, false);
-
-function startup() {
-  glCanvas = document.getElementById("glcanvas");
-  gl = glCanvas.getContext("webgl");
-
-  const shaderSet = [
-    {
-      type: gl.VERTEX_SHADER,
-      id: "vertex-shader",
-    },
-    {
-      type: gl.FRAGMENT_SHADER,
-      id: "fragment-shader",
-    },
-  ];
-
-  shaderProgram = buildShaderProgram(shaderSet);
-
-  aspectRatio = glCanvas.width / glCanvas.height;
-  currentRotation = [0, 1];
-  currentScale = [1.0, aspectRatio];
-
-  vertexArray = new Float32Array([
-    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
-  ]);
-
-  vertexBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
-
-  vertexNumComponents = 2;
-  vertexCount = vertexArray.length / vertexNumComponents;
-
-  currentAngle = 0.0;
-
-  animateScene();
-}
+animateScene();
 ```
 
 After getting the WebGL context, `gl`, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array `shaderSet` contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).
@@ -211,7 +173,8 @@ First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} 
 
 Then, for each shader in the specified list of shaders, we call a `compileShader()` function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the `<script>` element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.
 
-> **Note:** We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
+> [!NOTE]
+> We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
 
 Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.
 
@@ -235,7 +198,7 @@ function compileShader(id, type) {
     console.log(
       `Error compiling ${
         type === gl.VERTEX_SHADER ? "vertex" : "fragment"
-      } shader:`
+      } shader:`,
     );
     console.log(gl.getShaderInfoLog(shader));
   }
@@ -286,7 +249,7 @@ function animateScene() {
     gl.FLOAT,
     false,
     0,
-    0
+    0,
   );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

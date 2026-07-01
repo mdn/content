@@ -1,21 +1,14 @@
 ---
-title: Element.ariaOrientation
+title: "Element: ariaOrientation property"
+short-title: ariaOrientation
 slug: Web/API/Element/ariaOrientation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaOrientation
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaOrientation
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaOrientation`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
+The **`ariaOrientation`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
 ## Value
 
@@ -30,7 +23,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute on the element with an ID of `handle_zoomSlider` is set to "`vertical`". Using `ariaOrientation` we update the value to "`horizontal`".
+In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) attribute on the element with an ID of `handle_zoomSlider` is set to `"vertical"`. Using `ariaOrientation` we update the value to `"horizontal"`.
 
 ```html
 <div
@@ -46,9 +39,9 @@ In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attr
 ```
 
 ```js
-let el = document.getElementById('handle_zoomSlider');
+let el = document.getElementById("handle_zoomSlider");
 console.log(el.ariaOrientation); // "vertical"
-el.ariaOrientation = "horizontal"
+el.ariaOrientation = "horizontal";
 console.log(el.ariaOrientation); // "horizontal"
 ```
 

@@ -1,19 +1,12 @@
 ---
-title: 'MediaQueryList: change event'
+title: "MediaQueryList: change event"
+short-title: change
 slug: Web/API/MediaQueryList/change_event
 page-type: web-api-event
-tags:
-  - API
-  - CSSOM View
-  - Event Handler
-  - MediaQueryList
-  - Event
-  - Reference
-  - onchange
 browser-compat: api.MediaQueryList.change_event
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.
 
@@ -21,10 +14,10 @@ The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('change', (event) => { });
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = (event) => { };
+onchange = (event) => { }
 ```
 
 ## Event type
@@ -45,17 +38,17 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 ## Example
 
 ```js
-const mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.onchange = (e) => {
-    if (e.matches) {
+  if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    console.log('This is a narrow screen — less than 600px wide.')
+    console.log("This is a narrow screen — less than 600px wide.");
   } else {
     /* the viewport is more than 600 pixels wide */
-    console.log('This is a wide screen — more than 600px wide.')
+    console.log("This is a wide screen — more than 600px wide.");
   }
-}
+};
 ```
 
 ## Specifications
@@ -68,8 +61,8 @@ mql.onchange = (e) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

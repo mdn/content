@@ -2,11 +2,7 @@
 title: STUN
 slug: Glossary/STUN
 page-type: glossary-definition
-tags:
-  - Infrastructure
-  - STUN
-  - WebMechanics
-  - WebRTC
+sidebar: glossarysidebar
 ---
 
 **STUN** (Session Traversal Utilities for NAT) is an auxiliary protocol for transmitting data around a {{glossary("NAT")}} (Network Address Translator). STUN returns the {{glossary("IP address")}}, {{glossary("port")}}, and connectivity status of a networked computer behind a NAT.

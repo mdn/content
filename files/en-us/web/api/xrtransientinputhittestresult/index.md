@@ -2,15 +2,8 @@
 title: XRTransientInputHitTestResult
 slug: Web/API/XRTransientInputHitTestResult
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRTransientInputHitTestResult
 ---
 
@@ -40,7 +33,9 @@ Two arrays are used to access transient input hit test results. First, you get a
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource,
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     resultsPerInputSource.results.forEach((hitTest) => {
@@ -48,7 +43,7 @@ function onXRFrame(time, xrFrame) {
       hitTest.getPose(referenceSpace);
     });
   });
- }
+}
 ```
 
 ### Filtering input sources
@@ -58,14 +53,16 @@ The {{domxref("XRTransientInputHitTestResult.inputSource", "inputSource")}} prop
 ```js
 // frame loop
 function onXRFrame(time, xrFrame) {
-  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(transientHitTestSource);
+  let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
+    transientHitTestSource,
+  );
 
   hitTestResults.forEach((resultsPerInputSource) => {
     if (resultsPerInputSource.inputSource === myPreferredInputSource) {
       // act on hit test results from the preferred input source
     }
   });
- }
+}
 ```
 
 ## Specifications

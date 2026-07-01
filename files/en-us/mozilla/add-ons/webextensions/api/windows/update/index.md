@@ -1,20 +1,10 @@
 ---
 title: windows.update()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - Windows
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
 
@@ -34,9 +24,7 @@ let updating = browser.windows.update(
 - `windowId`
   - : `integer`. ID of the window to update.
 - `updateInfo`
-
   - : `object`. Object containing the properties to update.
-
     - `drawAttention` {{optional_inline}}
       - : `boolean`. If `true`, causes the window to be displayed in a manner that draws the user's attention to the window, without changing the focused window. The effect lasts until the user changes focus to the window. This option has no effect if the window already has focus. Set to `false` to cancel a previous `drawAttention` request.
     - `focused` {{optional_inline}}
@@ -58,10 +46,6 @@ let updating = browser.windows.update(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the updated window. If any error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 When the user clicks a browser action's icon, move the window to the top left corner:
@@ -76,19 +60,22 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-
   let updating = browser.windows.update(tab.windowId, {
     left: 0,
-    top: 0
+    top: 0,
   });
   updating.then(onUpdated, onError);
-
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-update) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-update) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

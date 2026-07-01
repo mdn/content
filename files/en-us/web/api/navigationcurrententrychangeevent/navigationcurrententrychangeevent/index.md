@@ -1,25 +1,14 @@
 ---
-title: NavigationCurrentEntryChangeEvent()
+title: "NavigationCurrentEntryChangeEvent: NavigationCurrentEntryChangeEvent() constructor"
+short-title: NavigationCurrentEntryChangeEvent()
 slug: Web/API/NavigationCurrentEntryChangeEvent/NavigationCurrentEntryChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - History
-  - Navigate
-  - Navigation
-  - Navigation API
-  - Reference
-  - Scroll
-  - Traversal
 browser-compat: api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
-The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new
-{{domxref("NavigationCurrentEntryChangeEvent")}} object.
+The **`NavigationCurrentEntryChangeEvent()`** constructor creates a new {{domxref("NavigationCurrentEntryChangeEvent")}} object.
 
 ## Syntax
 
@@ -30,13 +19,17 @@ new NavigationCurrentEntryChangeEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `NavigationCurrentEntryChangeEvent` this is always `event`.
+  - : A string representing the type of event.
 - `init`
-  - : An object containing the following properties:
-    - `destination`
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `from`
       - : A {{domxref("NavigationHistoryEntry")}} object representing the location being navigated to.
-    - `navigationType`
-      - : The type of the navigation that resulted in the change. Possible values — `push`, `reload`, `replace`, and `traverse`.
+    - `navigationType` {{optional_inline}}
+      - : The type of the navigation that resulted in the change. Possible values are `push`, `reload`, `replace`, and `traverse`. Defaults to `null`.
+
+### Return value
+
+A new {{domxref("NavigationCurrentEntryChangeEvent")}} object.
 
 ## Examples
 
@@ -60,4 +53,3 @@ navigation.addEventListener("currententrychange", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

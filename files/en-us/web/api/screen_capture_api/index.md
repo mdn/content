@@ -2,17 +2,15 @@
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
 page-type: web-api-overview
-tags:
-  - API
-  - MediaDevices
-  - MediaStream
-  - Overview
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Screen Sharing
-  - getDisplayMedia
-browser-compat: api.MediaDevices.getDisplayMedia
+browser-compat:
+  - api.MediaDevices.getDisplayMedia
+  - api.CropTarget
+  - api.RestrictionTarget
+spec-urls:
+  - https://w3c.github.io/mediacapture-screen-share/
+  - https://screen-share.github.io/element-capture/
+  - https://w3c.github.io/mediacapture-region/
+  - https://w3c.github.io/mediacapture-surface-control/
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
@@ -21,22 +19,46 @@ The Screen Capture API introduces additions to the existing Media Capture and St
 
 ## Screen Capture API concepts and usage
 
-The Screen Capture API is relatively simple to use. Its sole method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
+The Screen Capture API is relatively simple to use. Its main method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
 
 To start capturing video from the screen, you call `getDisplayMedia()` on `navigator.mediaDevices`:
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
-The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
+The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured display surface.
 
 See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for a more in-depth look at how to use the API to capture screen contents as a stream.
 
+### Screen capture extensions
+
+The Screen Capture API has additional features that extend its capabilities:
+
+#### Limiting the screen area captured in the stream
+
+- The **Element Capture API** restricts the captured region to a specified rendered DOM element and its descendants.
+- The **Region Capture API** crops the captured region to the area of the screen in which a specified DOM element is rendered.
+
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) to learn more.
+
+#### Controlling the captured screen area
+
+The **Captured Surface Control API** allows the capturing application to provide limited control over the captured display surface, for example zooming and scrolling its contents.
+
+See [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) to learn more.
+
 ## Interfaces
 
+- {{domxref("BrowserCaptureMediaStreamTrack")}}
+  - : Represents a single video track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of a self-capture stream (for example, a user's screen or window) that is captured.
 - {{domxref("CaptureController")}}
-  - : Provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}. A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
+  - : Provides methods that can be used to further manipulate a captured display surface (captured via {{domxref("MediaDevices.getDisplayMedia()")}}). A `CaptureController` object is associated with a captured display surface by passing it into a `getDisplayMedia()` call as the value of the options object's `controller` property.
+- {{domxref("CropTarget")}}
+  - : Provides a static method, {{domxref("CropTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop a captured video track to the area in which a specified element is rendered.
+- {{domxref("RestrictionTarget")}}
+  - : Provides a static method, {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element.
 
 ## Additions to the MediaDevices interface
 
@@ -49,8 +71,6 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ### MediaTrackConstraints
 
-- {{domxref("MediaTrackConstraints.cursor")}}
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.
 - {{domxref("MediaTrackConstraints.displaySurface")}}
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) indicating what type of display surface is to be captured. The value is one of `browser`, `monitor`, or `window`.
 - {{domxref("MediaTrackConstraints.logicalSurface")}}
@@ -68,11 +88,11 @@ The Screen Capture API adds properties to the following dictionaries defined by 
   - : A boolean value, which is `true` if the video being captured doesn't directly correspond to a single onscreen display area.
 - {{domxref("MediaTrackSettings.suppressLocalAudioPlayback")}}
   - : A boolean value, which is `true` if the audio being captured is not played out of the user's local speakers.
+- {{domxref("MediaTrackSettings.screenPixelRatio")}}
+  - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
 ### MediaTrackSupportedConstraints
 
-- {{domxref("MediaTrackSupportedConstraints.cursor")}}
-  - : A boolean, which is `true` if the user agent and device support the {{domxref("MediaTrackConstraints.cursor")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
   - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
@@ -80,15 +100,21 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
-## Permissions Policy validation
+## Security considerations
 
-{{Glossary("User agent", "User agents")}} that support [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the directive `display-capture`:
+Websites that support [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) (either using the HTTP {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow)) can specify a desire to use the Screen Capture API using the directive {{HTTPHeader("Permissions-Policy/display-capture", "display-capture")}}:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
-The default allowlist is `self`, which lets any content within the same origin use Screen Capture.
+A site can also specify a desire to use the [Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control) via the {{HTTPHeader("Permissions-Policy/captured-surface-control", "captured-surface-control")}} directive. Specifically, the {{domxref("CaptureController.forwardWheel", "forwardWheel()")}}, {{domxref("CaptureController.increaseZoomLevel", "increaseZoomLevel()")}}, {{domxref("CaptureController.decreaseZoomLevel", "decreaseZoomLevel()")}}, and {{domxref("CaptureController.resetZoomLevel", "resetZoomLevel()")}} methods are controlled by this directive.
+
+The default allowlist for both directives is `self`, which permits any content within the same origin use Screen Capture.
+
+These methods are considered _powerful features_, which means that even if permission is allowed via a `Permissions-Policy`, the user will still be prompted for permission to use them. The [Permissions API](/en-US/docs/Web/API/Permissions_API) can be used to query the aggregate permission (from both the website and the user) for using the listed features.
+
+In addition, the specification requires that a user has recently interacted with the page to use these features — this means that [transient activation](/en-US/docs/Glossary/Transient_activation) is required. See the individual method pages for more details.
 
 ## Specifications
 
@@ -101,4 +127,6 @@ The default allowlist is `self`, which lets any content within the same origin u
 ## See also
 
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)
+- [Using the Captured Surface Control API](/en-US/docs/Web/API/Screen_Capture_API/Captured_Surface_Control)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

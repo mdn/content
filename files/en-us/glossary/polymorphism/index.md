@@ -2,8 +2,7 @@
 title: Polymorphism
 slug: Glossary/Polymorphism
 page-type: glossary-definition
-tags:
-  - CodingScripting
+sidebar: glossarysidebar
 ---
 
 Polymorphism is the presentation of one interface for multiple data types.

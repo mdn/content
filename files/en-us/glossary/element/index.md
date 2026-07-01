@@ -2,9 +2,7 @@
 title: Element
 slug: Glossary/Element
 page-type: glossary-definition
-tags:
-  - CodingScripting
-  - HTML
+sidebar: glossarysidebar
 ---
 
 An **element** is a part of a webpage. In {{glossary("XML")}} and {{glossary("HTML")}}, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some {{glossary("attribute", "attributes")}}, enclosed text content, and a closing tag.
@@ -15,6 +13,6 @@ Elements and {{glossary("tag", "tags")}} are _not_ the same things. Tags begin o
 
 ## See also
 
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Defining custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements)
+- [Basic HTML Syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+- [Defining custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - The {{domxref("Element")}} interface, representing an element in the DOM.

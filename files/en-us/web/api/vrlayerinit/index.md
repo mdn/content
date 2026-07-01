@@ -2,23 +2,18 @@
 title: VRLayerInit
 slug: Web/API/VRLayerInit
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Deprecated
-  - Interface
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
+browser-compat: api.VRDisplay.getLayers
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.
 
-> **Note:** This dictionary was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This dictionary was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}}, and present them using the {{domxref("VRDisplay.requestPresent()")}} method.
 
@@ -38,17 +33,17 @@ You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}
 let layers = vrDisplay.getLayers();
 
 if (navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
     if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         vrDisplay.requestPresent([{ source: canvas }]).then(() => {
-          console.log('Presenting to WebVR display');
+          console.log("Presenting to WebVR display");
 
           // Here it returns an array of VRLayerInit objects
           layers = vrDisplay.getLayers();
@@ -61,25 +56,33 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-{{domxref("VRLayerInit")}} objects look something like this:
+`VRLayerInit` objects look something like this:
 
-```
-{
-  leftBounds : [ /* … */ ],
-  rightBounds: [ /* … */ ],
-  source: canvasReference
-}
+```js
+const init = {
+  leftBounds: [
+    /* … */
+  ],
+  rightBounds: [
+    /* … */
+  ],
+  source: canvasReference,
+};
 ```
 
-> **Note:** The `canvasReference` refers to the {{htmlelement("canvas")}} element itself, not the WebGL context associated with the canvas. The other two members are arrays
+> [!NOTE]
+> The `canvasReference` refers to the {{htmlelement("canvas")}} element itself, not the WebGL context associated with the canvas. The other two members are arrays
 
 ## Specifications
 
 This dictionary was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers. Read [Meta's Porting from WebVR to WebXR](https://developers.meta.com/horizon/documentation/web/port-vr-xr/) guide for more information.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

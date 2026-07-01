@@ -1,42 +1,32 @@
 ---
-title: IDBCursor.primaryKey
+title: "IDBCursor: primaryKey property"
+short-title: primaryKey
 slug: Web/API/IDBCursor/primaryKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - primaryKey
 browser-compat: api.IDBCursor.primaryKey
 ---
 
-{{APIRef("IDBCursor")}}
+{{APIRef("IDBCursor")}} {{AvailableInWorkers}}
 
 The **`primaryKey`** read-only property of the
 {{domxref("IDBCursor")}} interface returns the cursor's current effective key. If the
 cursor is currently being iterated or has iterated outside its range, this is set to
 undefined. The cursor's primary key can be any data type.
 
-{{AvailableInWorkers}}
-
 ## Value
 
 A value of any data type.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is advancing or has finished.
 
 ## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
-log the primary key of the cursor to the console, something like this (its the album
-title in each case, which is our primarykey):
-
-```
-Hemispheres
-```
+log the primary key of the cursor to the console.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
@@ -44,23 +34,23 @@ you can grab data from the current record under the cursor object using `cursor.
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       console.log(cursor.primaryKey);
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

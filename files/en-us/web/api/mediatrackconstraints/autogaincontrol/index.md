@@ -1,18 +1,9 @@
 ---
-title: MediaTrackConstraints.autoGainControl
+title: "MediaTrackConstraints: autoGainControl property"
+short-title: autoGainControl
 slug: Web/API/MediaTrackConstraints/autoGainControl
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Web
-  - autoGainControl
-browser-compat: api.MediaTrackConstraints.autoGainControl
+browser-compat: api.MediaStreamTrack.applyConstraints.autoGainControl_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

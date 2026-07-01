@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.getItem()
+title: "SVGPointList: getItem() method"
+short-title: getItem()
 slug: Web/API/SVGPointList/getItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getItem
-  - SVGPointList
 browser-compat: api.SVGPointList.getItem
 ---
 
@@ -28,7 +23,7 @@ getItem(index)
 
 ### Return value
 
-An {{domxref("SVGPoint")}} object.
+A {{domxref("DOMPoint")}} object.
 
 ### Exceptions
 
@@ -37,7 +32,7 @@ An {{domxref("SVGPoint")}} object.
 
 ## Examples
 
-The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The {{domxref("SVGPoint")}} at index `0`.
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The {{domxref("DOMPoint")}} at index `0`.
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +45,7 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 ```
 
 ```js
-let example = document.getElementById("example");
+const example = document.getElementById("example");
 console.log(example.points.getItem(0));
 ```
 

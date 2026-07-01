@@ -1,22 +1,30 @@
 ---
 title: Object.seal()
+short-title: seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 page-type: javascript-static-method
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
 browser-compat: javascript.builtins.Object.seal
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.seal()`** static method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+
+```js interactive-example
+const object = {
+  foo: 42,
+};
+
+Object.seal(object);
+object.foo = 33;
+console.log(object.foo);
+// Expected output: 33
+
+delete object.foo; // Cannot delete when sealed
+console.log(object.foo);
+// Expected output: 33
+```
 
 ## Syntax
 
@@ -43,6 +51,8 @@ to accessor or vice versa, will fail, either silently or by throwing a
 {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
 {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
 
+[Private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) are not properties and do not have the concept of property descriptors. Private elements cannot be added or removed from the object, whether the object is sealed or not.
+
 The prototype chain remains untouched. However, due to the effect of [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), the `[[Prototype]]` cannot be reassigned.
 
 Unlike {{jsxref("Object.freeze()")}}, objects sealed with `Object.seal()` may have their existing
@@ -55,13 +65,13 @@ properties changed, as long as they are writable.
 ```js
 const obj = {
   prop() {},
-  foo: 'bar'
+  foo: "bar",
 };
 
 // New properties may be added, existing properties
 // may be changed or removed.
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 const o = Object.seal(obj);
@@ -71,37 +81,39 @@ Object.isSealed(obj); // true
 
 // Changing property values on a sealed object
 // still works.
-obj.foo = 'quux';
+obj.foo = "quux";
 
 // But you can't convert data properties to accessors,
 // or vice versa.
-Object.defineProperty(obj, 'foo', {
-  get() { return 'g'; }
+Object.defineProperty(obj, "foo", {
+  get() {
+    return "g";
+  },
 }); // throws a TypeError
 
 // Now any changes, other than to property values,
 // will fail.
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 // silently doesn't add the property
 delete obj.foo;
 // silently doesn't delete the property
 
-// ...and in strict mode such attempts
+// … and in strict mode such attempts
 // will throw TypeErrors.
 function fail() {
-  'use strict';
+  "use strict";
   delete obj.foo; // throws a TypeError
-  obj.sparky = 'arf'; // throws a TypeError
+  obj.sparky = "arf"; // throws a TypeError
 }
 fail();
 
 // Attempted additions through
 // Object.defineProperty will also throw.
-Object.defineProperty(obj, 'ohai', {
-  value: 17
+Object.defineProperty(obj, "ohai", {
+  value: 17,
 }); // throws a TypeError
-Object.defineProperty(obj, 'foo', {
-  value: 'eit'
+Object.defineProperty(obj, "foo", {
+  value: "eit",
 }); // changes existing property value
 ```
 

@@ -1,13 +1,8 @@
 ---
-title: RTCSessionDescription.sdp
+title: "RTCSessionDescription: sdp property"
+short-title: sdp
 slug: Web/API/RTCSessionDescription/sdp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCSessionDescription
-  - Reference
-  - SDP
-  - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
 
@@ -16,18 +11,11 @@ browser-compat: api.RTCSessionDescription.sdp
 The property **`RTCSessionDescription.sdp`** is a read-only
 string containing the {{Glossary("SDP")}} which describes the session.
 
-## Syntax
-
-```js-nolint
-const value = sessionDescription.sdp
-sessionDescription.sdp = value
-```
-
-### Value
+## Value
 
 The value is a string containing an SDP message like this one:
 
-```
+```plain
 v=0
 o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
 s=

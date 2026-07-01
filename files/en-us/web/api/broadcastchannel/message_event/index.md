@@ -1,16 +1,14 @@
 ---
 title: "BroadcastChannel: message event"
+short-title: message
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
+The **`message`** event of the {{domxref("BroadcastChannel")}} interface fires when a message arrives on that channel.
 
 ## Syntax
 
@@ -18,6 +16,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js-nolint
 addEventListener("message", (event) => { })
+
 onmessage = (event) => { }
 ```
 
@@ -40,11 +39,11 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
   - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
-In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that broadcasts the contents of a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a [`<div>`](/en-US/docs/Web/HTML/Element/div) element.
+In this example there's a "sender" {{HTMLElement("iframe")}} that broadcasts the contents of a {{HTMLElement("textarea")}} when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a {{HTMLElement("div")}} element.
 
 ### Sender
 
@@ -57,28 +56,31 @@ In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/ifr
 
 ```css hidden
 body {
-     border: 1px solid black;
-     padding: .5rem;
-     height: 150px;
-     font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 150px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 
 textarea {
-    padding: .2rem;
+  padding: 0.2rem;
 }
 
-label, br {
-    margin: .5rem 0;
+label,
+br {
+  margin: 0.5rem 0;
 }
 
 button {
-    vertical-align: top;
-    height: 1.5rem;
+  vertical-align: top;
+  height: 1.5rem;
 }
 ```
 
@@ -101,15 +103,17 @@ broadcastMessageButton.addEventListener("click", () => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans",
-    sans-serif; margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
@@ -129,15 +133,17 @@ channel.addEventListener("message", (event) => {
 
 ```css hidden
 body {
-    border: 1px solid black;
-    padding: .5rem;
-    height: 100px;
-    font-family: "Fira Sans", sans-serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  height: 100px;
+  font-family: "Fira Sans", sans-serif;
 }
 
 h1 {
-    font: 1.6em "Fira Sans", sans-serif;
-    margin-bottom: 1rem;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
+  margin-bottom: 1rem;
 }
 ```
 
@@ -166,4 +172,4 @@ channel.addEventListener("message", (event) => {
 
 ## See also
 
-- Related events: [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event).
+- Related events: {{domxref("BroadcastChannel/messageerror_event", "messageerror")}}.

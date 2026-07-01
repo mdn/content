@@ -1,20 +1,10 @@
 ---
 title: alarms.Alarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - alarm
-  - alarms
+page-type: webextension-api-type
 browser-compat: webextensions.api.alarms.Alarm
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.
 
@@ -29,10 +19,11 @@ Values of this type are objects. They contain the following properties:
 - `periodInMinutes` {{optional_inline}}
   - : `double`. If this is not `null`, then the alarm is periodic, and this represents its period in minutes.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

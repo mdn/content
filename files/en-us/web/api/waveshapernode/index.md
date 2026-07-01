@@ -2,12 +2,6 @@
 title: WaveShaperNode
 slug: Web/API/WaveShaperNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WaveShaperNode
-  - Web Audio API
 browser-compat: api.WaveShaperNode
 ---
 
@@ -49,7 +43,7 @@ A `WaveShaperNode` always has exactly one input and one output.
 ## Constructor
 
 - {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
-  - : Creates a new instance of an `WaveShaperNode` object.
+  - : Creates a new instance of a `WaveShaperNode` object.
 
 ## Instance properties
 
@@ -66,7 +60,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 ## Example
 
-See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#examples) for example code.
 
 ## Specifications
 

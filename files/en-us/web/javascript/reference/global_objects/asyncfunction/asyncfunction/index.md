@@ -1,17 +1,21 @@
 ---
 title: AsyncFunction() constructor
+short-title: AsyncFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
 page-type: javascript-constructor
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
 browser-compat: javascript.builtins.AsyncFunction.AsyncFunction
+sidebar: jsref
 ---
 
-{{JSRef}}
+> [!WARNING]
+> The arguments passed to this constructor are dynamically parsed and executed as JavaScript.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+>
+> You can mitigate this risk by always passing {{domxref("TrustedScript")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+>
+> See [Security considerations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function#security_considerations) in the `Function()` constructor reference for more information.
 
-The **`AsyncFunction()`** constructor creates a new {{jsxref("AsyncFunction")}} object. In JavaScript, every [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) is actually an `AsyncFunction` object.
+The **`AsyncFunction()`** constructor creates {{jsxref("AsyncFunction")}} objects.
 
 Note that `AsyncFunction` is _not_ a global object. It can be obtained with the following code:
 
@@ -25,23 +29,26 @@ The `AsyncFunction()` constructor is not intended to be used directly, and all c
 
 ```js-nolint
 new AsyncFunction(functionBody)
-new AsyncFunction(arg0, functionBody)
-new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncFunction(arg1, functionBody)
+new AsyncFunction(arg1, arg2, functionBody)
+new AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncFunction(functionBody)
-AsyncFunction(arg0, functionBody)
-AsyncFunction(arg0, arg1, functionBody)
-AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncFunction(arg1, functionBody)
+AsyncFunction(arg1, arg2, functionBody)
+AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
+> [!NOTE]
+> `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
 
 ### Parameters
 
 See {{jsxref("Function/Function", "Function()")}}.
 
 ## Examples
+
+Note that these examples omit the use of trusted types for brevity. For code showing the recommended approach, see [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()`.
 
 ### Creating an async function from an AsyncFunction() constructor
 
@@ -77,6 +84,6 @@ fn(10, 20).then((v) => {
 
 ## See also
 
-- [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)

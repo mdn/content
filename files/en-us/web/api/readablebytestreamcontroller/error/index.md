@@ -1,18 +1,12 @@
 ---
-title: ReadableByteStreamController.error()
+title: "ReadableByteStreamController: error() method"
+short-title: error()
 slug: Web/API/ReadableByteStreamController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the {{domxref("ReadableByteStreamController")}} interface causes any future interactions with the associated stream to error with the specified reason.
 

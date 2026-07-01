@@ -2,10 +2,7 @@
 title: Beacon
 slug: Glossary/Beacon
 page-type: glossary-definition
-tags:
-  - Beacon
-  - Reference
-  - Web Performance
+sidebar: glossarysidebar
 ---
 
 A web **beacon** is a small object, such as a 1 pixel gif, embedded in markup, used to communicate information back to the web server or to 3rd party servers. Beacons are generally included to provide information about the user for statistical purposes. Beacons are often included within third party scripts for collecting user data, performance metrics and error reporting.
@@ -14,4 +11,5 @@ There is a [W3C Draft Beacon Specification](https://w3c.github.io/beacon/) to st
 
 ## See also
 
-- [Real User Monitoring (RUM)](/en-US/docs/Glossary/Real_User_Monitoring)
+- Related glossary terms:
+  - {{glossary("Real User Monitoring")}} (RUM)

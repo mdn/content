@@ -1,33 +1,25 @@
 ---
-title: 'HTMLElement: dragover event'
+title: "HTMLElement: dragover event"
+short-title: dragover
 slug: Web/API/HTMLElement/dragover_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
 browser-compat: api.HTMLElement.dragover_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
 
-The event is fired on the drop target(s).
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('dragover', (event) => {});
+```js-nolint
+addEventListener("dragover", (event) => { })
 
-ondragover = (event) => { };
+ondragover = (event) => { }
 ```
 
 ## Event type
@@ -41,13 +33,13 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
+  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
-### A minimal drag and drop example
+### A minimal drag-and-drop example
 
-In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and then releasing it.
+In this example, we have a draggable element inside a container. Try grabbing the element, dragging it over the other container, and releasing it.
 
 We use three event handlers here:
 
@@ -55,7 +47,7 @@ We use three event handlers here:
 - in the `dragover` event handler for the target container, we call `event.preventDefault()`, which enables it to receive `drop` events.
 - in the `drop` event handler for the drop zone, we handle moving the draggable element from the original container to the drop zone.
 
-For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
+For a complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
 
 #### HTML
 
@@ -63,14 +55,14 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 <div class="dropzone">
   <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
@@ -99,7 +91,7 @@ source.addEventListener("dragstart", (event) => {
   dragged = event.target;
 });
 
-const target = document.getElementById("droptarget");
+const target = document.getElementById("drop-target");
 target.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();
@@ -131,16 +123,9 @@ target.addEventListener("drop", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} event

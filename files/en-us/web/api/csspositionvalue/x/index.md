@@ -1,17 +1,11 @@
 ---
-title: CSSPositionValue.x
+title: "CSSPositionValue: x property"
+short-title: x
 slug: Web/API/CSSPositionValue/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPositionValue
-  - Houdini
-  - Property
-  - Reference
-  - Deprecated
-  - x
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPositionValue.x
 ---
 
@@ -31,10 +25,10 @@ The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js
-let someDiv = document.getElementById('container');
+let someDiv = document.getElementById("container");
 let position = new CSSPositionValue(CSS.px(5), CSS.px(10));
 
-someDiv.attributeStyleMap.set('object-position', position);
+someDiv.attributeStyleMap.set("object-position", position);
 console.log(position.x.value, position.y.value);
 ```
 

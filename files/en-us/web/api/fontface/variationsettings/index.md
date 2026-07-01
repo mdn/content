@@ -1,21 +1,12 @@
 ---
-title: FontFace.variationSettings
+title: "FontFace: variationSettings property"
+short-title: variationSettings
 slug: Web/API/FontFace/variationSettings
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - variationSettings
-  - Experimental
 browser-compat: api.FontFace.variationSettings
 ---
 
-{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`variationSettings`** property of the {{domxref("FontFace")}} interface retrieves or sets low-level OpenType or TrueType font variations.
 

@@ -1,19 +1,9 @@
 ---
-title: MediaTrackConstraints.sampleSize
+title: "MediaTrackConstraints: sampleSize property"
+short-title: sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - sampleSize
-browser-compat: api.MediaTrackConstraints.sampleSize
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleSize_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -38,7 +28,8 @@ an exact match to the required sample size (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-> **Note:** Since this property can only represent linear sample sizes, this constraint can only
+> [!NOTE]
+> Since this property can only represent linear sample sizes, this constraint can only
 > be met by devices that can produce audio with linear samples.
 
 ## Examples

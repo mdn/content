@@ -1,26 +1,17 @@
 ---
 title: downloads.setShelfEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - setShelfEnabled
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.setShelfEnabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`setShelfEnabled()`** function of the {{WebExtAPIRef("downloads")}} API enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.
 
 If you try to enable the shelf when at least one other extension has already disabled it, the call will fail and {{WebExtAPIRef("runtime.lastError")}} will be set with an appropriate error message.
 
-> **Note:** To use this function in your extension you must ask for the `"downloads.shelf"` [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), as well as the `"downloads"` permission.
+> [!NOTE]
+> To use this function in your extension you must ask for the `"downloads.shelf"` [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), as well as the `"downloads"` permission.
 
 ## Syntax
 
@@ -35,13 +26,14 @@ This API is also available as `browser.downloads.setShelfEnabled()`.
 - `enabled`
   - : A `boolean` representing the state that you want to set `setShelfEnabled()` to — `true` for enable, and `false` for disable.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-setShelfEnabled) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-setShelfEnabled) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

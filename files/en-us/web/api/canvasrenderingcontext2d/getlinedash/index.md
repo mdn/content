@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.getLineDash()
+title: "CanvasRenderingContext2D: getLineDash() method"
+short-title: getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.getLineDash
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`getLineDash()`** method of the Canvas 2D API's
 {{domxref("CanvasRenderingContext2D")}} interface gets the current line dash pattern.

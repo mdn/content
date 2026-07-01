@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.createVertexArray()
+title: "WebGL2RenderingContext: createVertexArray() method"
+short-title: createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createVertexArray
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.createVertexArray()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates and initializes a

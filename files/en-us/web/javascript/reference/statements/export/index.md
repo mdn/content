@@ -2,18 +2,9 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - export
 browser-compat: javascript.statements.export
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`export`** declaration is used to export values from a JavaScript module. Exported values can then be imported into other programs with the {{jsxref("Statements/import", "import")}} declaration or [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import). The value of an imported binding is subject to change in the module that exports it — when a module updates the value of a binding that it exports, the update will be visible in its imported value.
 
@@ -52,6 +43,7 @@ export * as name1 from "module-name";
 export { name1, /* …, */ nameN } from "module-name";
 export { import1 as name1, import2 as name2, /* …, */ nameN } from "module-name";
 export { default, /* …, */ } from "module-name";
+export { default as name1 } from "module-name";
 ```
 
 - `nameN`
@@ -70,10 +62,22 @@ export { myFunction2, myVariable2 };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { /* ... */ };
+export function myFunction() {
+  // …
+}
 ```
 
 After the `export` keyword, you can use `let`, `const`, and `var` declarations, as well as function or class declarations. You can also use the `export { name1, name2 }` syntax to export a list of names declared elsewhere. Note that `export {}` does not export an empty object — it's a no-op declaration that exports nothing (an empty name list).
+
+You cannot use `export` on a {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} declaration. You can, however, export a variable that was declared elsewhere using `using` or `await using`. Doing so is still strongly discouraged, because the variable is disposed as soon as the module finishes executing, causing all importers to receive a value that's already disposed.
+
+```js-nolint example-bad
+export using resource1 = getResource(); // SyntaxError
+
+// Allowed by syntax but discouraged
+using resource2 = getResource();
+export { resource2 };
+```
 
 Export declarations are not subject to [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) rules. You can declare that the module exports `X` before the name `X` itself is declared.
 
@@ -97,7 +101,8 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
-> **Note:** Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
+> [!NOTE]
+> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
 
 The `export default` syntax allows any expression.
 
@@ -133,17 +138,15 @@ export default k;
 
 ```js
 // some other file
-import m from './test'; // note that we have the freedom to use import m instead of import k, because k was default export
-console.log(m);        // will log 12
+import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+
+console.log(m); // 12
 ```
 
 You can also rename named exports to avoid naming conflicts:
 
 ```js
-export {
-  myFunction as function1,
-  myVariable as variable,
-};
+export { myFunction as function1, myVariable as variable };
 ```
 
 You can rename a name to something that's not a valid identifier by using a string literal. For example:
@@ -159,16 +162,14 @@ A module can also "relay" values exported from other modules without the hassle 
 This can be achieved with the "export from" syntax:
 
 ```js
-export {
-  default as function1,
-  function2,
-} from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 Which is comparable to a combination of import and export, except that `function1` and `function2` do not become available inside the current module:
 
 ```js
-import { default as function1, function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
+
 export { function1, function2 };
 ```
 
@@ -195,6 +196,7 @@ export * from "./mod2.js";
 
 // -- main.js --
 import * as ns from "./barrel.js";
+
 console.log(ns.a); // undefined
 ```
 
@@ -207,20 +209,26 @@ import { a } from "./barrel.js";
 
 The following is syntactically invalid despite its import equivalent:
 
-```js example-bad
-export DefaultExport from 'bar.js'; // Invalid
+```js-nolint example-bad
+export DefaultExport from "bar.js"; // Invalid
 ```
 
 The correct way of doing this is to rename the export:
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 The "export from" syntax allows the `as` token to be omitted, which makes the default export still re-exported as default export.
 
 ```js
-export { default, function2 } from 'bar.js';
+export { default, function2 } from "bar.js";
+```
+
+`export from` supports all features that `import` supports — for example, [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with):
+
+```js
+export { default } from "./data.json" with { type: "json" };
 ```
 
 ## Examples
@@ -239,12 +247,12 @@ const foo = Math.PI + Math.SQRT2;
 
 const graph = {
   options: {
-    color: 'white',
-    thickness: '2px',
+    color: "white",
+    thickness: "2px",
   },
   draw() {
-    console.log('From graph draw function');
-  }
+    console.log("From graph draw function");
+  },
 };
 
 export { cube, foo, graph };
@@ -253,29 +261,29 @@ export { cube, foo, graph };
 Then in the top-level module included in your HTML page, we could have:
 
 ```js
-import { cube, foo, graph } from './my-module.js';
+import { cube, foo, graph } from "./my-module.js";
 
 graph.options = {
-  color: 'blue',
-  thickness: '3px',
+  color: "blue",
+  thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // Logs "From graph draw function"
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 It is important to note the following:
 
-- You need to include this script in your HTML with a {{htmlelement("script")}} element of `type="module"`, so that it gets recognized as a module and dealt with appropriately.
-- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/CORS) errors. You need to run it via an HTTP server.
+- You need to include this script in your HTML with a {{HTMLElement("script")}} element of `type="module"`, so that it gets recognized as a module and dealt with appropriately.
+- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/Guides/CORS) errors. You need to run it via an HTTP server.
 
 ### Using the default export
 
-If we want to export a single value or to have a fallback value for your module, you could use a default export:
+If we want to export a single value representing an entire module, we could use a default export:
 
 ```js
-// module "my-module.js"
+// module "cube.js"
 
 export default function cube(x) {
   return x * x * x;
@@ -285,7 +293,8 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from './my-module.js';
+import cube from "./cube.js";
+
 console.log(cube(3)); // 27
 ```
 
@@ -324,15 +333,15 @@ export { MyClass };
 // In parentModule.js
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
-export { myFunction, myVariable } from 'childModule1.js';
-export { MyClass } from 'childModule2.js';
+export { myFunction, myVariable } from "childModule1.js";
+export { MyClass } from "childModule2.js";
 ```
 
 ```js
 // In top-level module
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, MyClass } from 'parentModule.js'
+import { myFunction, myVariable, MyClass } from "parentModule.js";
 ```
 
 ## Specifications
@@ -347,6 +356,5 @@ import { myFunction, myVariable, MyClass } from 'parentModule.js'
 
 - {{jsxref("Statements/import", "import")}}
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)

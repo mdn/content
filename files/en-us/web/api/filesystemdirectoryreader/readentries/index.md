@@ -1,16 +1,8 @@
 ---
-title: FileSystemDirectoryReader.readEntries()
+title: "FileSystemDirectoryReader: readEntries() method"
+short-title: readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryReader
-  - Files
-  - Interface
-  - Method
-  - Reference
-  - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
 
@@ -50,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
+See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#examples) for example code that uses this method.
 
 ## Specifications
 
@@ -60,12 +52,11 @@ See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem
 
 {{Compat}}
 
-On Chrome 77, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
+In Chromium-based browsers, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
 instances, `readEntries()` must be called multiple times.
 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

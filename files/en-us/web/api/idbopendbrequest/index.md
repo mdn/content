@@ -2,23 +2,12 @@
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
 page-type: web-api-interface
-tags:
-  - API
-  - DOM Reference
-  - Database
-  - IDBOpenDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -55,11 +44,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -79,11 +70,14 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 

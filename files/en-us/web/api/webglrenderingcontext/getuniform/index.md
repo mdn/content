@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getUniform()
+title: "WebGLRenderingContext: getUniform() method"
+short-title: getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getUniform
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getUniform()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the value of a uniform
 variable at a given location.
@@ -178,7 +173,7 @@ The returned type depends on the uniform type:
 ## Examples
 
 ```js
-const loc = gl.getUniformLocation(program, 'u_foobar');
+const loc = gl.getUniformLocation(program, "u_foobar");
 gl.getUniform(program, loc);
 ```
 

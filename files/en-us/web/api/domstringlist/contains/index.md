@@ -1,11 +1,12 @@
 ---
-title: DOMStringList.contains()
+title: "DOMStringList: contains() method"
+short-title: contains()
 slug: Web/API/DOMStringList/contains
 page-type: web-api-instance-method
 browser-compat: api.DOMStringList.contains
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`contains()`** method returns a boolean indicating whether the given string is in the list.
 

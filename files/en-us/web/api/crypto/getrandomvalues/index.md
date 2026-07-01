@@ -1,25 +1,12 @@
 ---
-title: Crypto.getRandomValues()
+title: "Crypto: getRandomValues() method"
+short-title: getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encryption
-  - Integers
-  - Method
-  - Numbers
-  - Pseudorandom
-  - Pseudorandom Numbers
-  - Random Numbers
-  - Reference
-  - Web Crypto API
-  - getRandomValues
 browser-compat: api.Crypto.getRandomValues
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto.getRandomValues()`** method lets you get cryptographically strong random values.
 The array given as the parameter is filled with random numbers (random in its cryptographic meaning).
@@ -41,7 +28,7 @@ getRandomValues(typedArray)
   - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
     {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
     {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}},
-    {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
+    {{jsxref("BigUint64Array")}} (but **not** `Float16Array`, `Float32Array` nor `Float64Array`).
     All elements in the array will be overwritten with random numbers.
 
 ### Return value
@@ -51,14 +38,12 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ### Exceptions
 
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the {{jsxref("TypedArray.byteLength", "byteLength")}} of `typedArray` exceeds 65,536.
 
 ## Usage notes
 
-Don't use `getRandomValues()` to generate encryption keys.
-Instead, use the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method.
-There are a few reasons for this; for example, `getRandomValues()` is not guaranteed to be running in a secure context.
+Prefer the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method for key generation, which is guaranteed to be running in a secure context.
 
 There is no minimum degree of entropy mandated by the Web Cryptography specification.
 User agents are instead urged to provide the best entropy they can when generating random numbers,
@@ -89,5 +74,4 @@ for (const num of array) {
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- {{domxref("crypto_property", "crypto")}} to get a {{domxref("Crypto")}} object.
 - {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

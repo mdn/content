@@ -1,17 +1,10 @@
 ---
-title: BluetoothCharacteristicProperties.write
+title: "BluetoothCharacteristicProperties: write property"
+short-title: write
 slug: Web/API/BluetoothCharacteristicProperties/write
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - write
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.write
 ---
 
@@ -33,5 +26,3 @@ A boolean value.
 ## Browser compatibility
 
 {{Compat}}
-
-null

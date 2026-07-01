@@ -1,19 +1,12 @@
 ---
-title: MediaQueryListEvent.media
+title: "MediaQueryListEvent: media property"
+short-title: media
 slug: Web/API/MediaQueryListEvent/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryListEvent
-  - Property
-  - Reference
 browser-compat: api.MediaQueryListEvent.media
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`media`** read-only property of the
 {{DOMxRef("MediaQueryListEvent")}} interface is a string representing
@@ -27,20 +20,20 @@ A string representing a serialized media query.
 
 ```js
 const para = document.querySelector("p"); // This is the UI element where to display the text
-const mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.addEventListener("change", (event) => {
   if (event.matches) {
     // The viewport is 600 pixels wide or less
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     // The viewport is more than 600 pixels wide
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 
-  console.log(e.media);
+  console.log(event.media);
 });
 ```
 
@@ -54,8 +47,8 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -1,32 +1,12 @@
 ---
-title: WebGLRenderingContext.makeXRCompatible()
+title: "WebGLRenderingContext: makeXRCompatible() method"
+short-title: makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
 page-type: web-api-instance-method
-tags:
-  - 3D
-  - API
-  - AR
-  - Context
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebGL API
-  - WebGLRenderingContext
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - makeXRCompatible
-  - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The {{domxref("WebGLRenderingContext")}} method
 **`makeXRCompatible()`** ensures that the rendering context
@@ -116,12 +96,10 @@ let currentScene = "scene1";
 let glStartButton;
 let xrStartButton;
 
-window.addEventListener("load", (event) => {
-  loadSceneResources(currentScene);
+loadSceneResources(currentScene);
 
-  glStartButton.addEventListener("click", handleStartButtonClick);
-  xrStartButton.addEventListener("click", handleStartButtonClick);
-});
+glStartButton.addEventListener("click", handleStartButtonClick);
+xrStartButton.addEventListener("click", handleStartButtonClick);
 
 outputCanvas.addEventListener("webglcontextlost", (event) => {
   /* The context has been lost but can be restored */
@@ -138,12 +116,18 @@ async function onStartedXRSession(xrSession) {
   try {
     await gl.makeXRCompatible();
   } catch (err) {
-    switch(err) {
+    switch (err) {
       case AbortError:
-        showSimpleMessageBox("Unable to transfer the game to your XR headset.", "Cancel");
+        showSimpleMessageBox(
+          "Unable to transfer the game to your XR headset.",
+          "Cancel",
+        );
         break;
       case InvalidStateError:
-        showSimpleMessageBox("You don't appear to have a compatible XR headset available.", "Cancel");
+        showSimpleMessageBox(
+          "You don't appear to have a compatible XR headset available.",
+          "Cancel",
+        );
         break;
       default:
         handleFatalError(err);

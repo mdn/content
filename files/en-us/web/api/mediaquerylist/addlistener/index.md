@@ -1,20 +1,14 @@
 ---
-title: MediaQueryList.addListener()
+title: "MediaQueryList: addListener() method"
+short-title: addListener()
 slug: Web/API/MediaQueryList/addListener
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Media Queries
-  - MediaQueryList
-  - Method
-  - Reference
-  - addListener
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.MediaQueryList.addListener
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_Header}}
+{{APIRef("CSSOM view API")}}{{Deprecated_Header}}
 
 The deprecated **`addListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface adds a listener to the
@@ -45,18 +39,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const paragraph = document.querySelector('p');
-const mediaQueryList = window.matchMedia('(max-width: 600px)');
+const paragraph = document.querySelector("p");
+const mediaQueryList = window.matchMedia("(width <= 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    paragraph.textContent = 'This is a narrow screen — 600px wide or less.';
-    document.body.style.backgroundColor = 'pink';
+    paragraph.textContent = "This is a narrow screen — 600px wide or less.";
+    document.body.style.backgroundColor = "pink";
   } else {
     /* the viewport is more than 600 pixels wide */
-    paragraph.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'aquamarine';
+    paragraph.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "aquamarine";
   }
 }
 
@@ -73,8 +67,8 @@ mediaQueryList.addListener(screenTest);
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

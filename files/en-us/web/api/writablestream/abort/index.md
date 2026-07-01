@@ -1,18 +1,12 @@
 ---
-title: WritableStream.abort()
+title: "WritableStream: abort() method"
+short-title: abort()
 slug: Web/API/WritableStream/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Streams
-  - WritableStream
-  - abort
 browser-compat: api.WritableStream.abort
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`abort()`** method of the {{domxref("WritableStream")}} interface aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.
 
@@ -29,7 +23,7 @@ abort(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
+A {{jsxref("Promise")}}, which fulfills with `undefined`.
 
 ### Exceptions
 
@@ -39,19 +33,22 @@ A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` par
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      // …
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-// ...
+// …
 
 // abort the stream later on, when required
 writableStream.abort();

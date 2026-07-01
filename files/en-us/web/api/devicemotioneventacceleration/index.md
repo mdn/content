@@ -2,17 +2,12 @@
 title: DeviceMotionEventAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
 page-type: web-api-interface
-tags:
-  - API
-  - DeviceAcceleration
-  - Interface
-  - Reference
 browser-compat: api.DeviceMotionEventAcceleration
 ---
 
-{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
+The **`DeviceMotionEventAcceleration`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides information about the amount of acceleration the device is experiencing along all three axes.
 
 ## Instance properties
 

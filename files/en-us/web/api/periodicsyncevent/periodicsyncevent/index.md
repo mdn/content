@@ -1,20 +1,14 @@
 ---
-title: PeriodicSyncEvent()
+title: "PeriodicSyncEvent: PeriodicSyncEvent() constructor"
+short-title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Offline
-  - PWA
-  - PeriodicSyncEvent
-  - Experimental
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+status:
+  - experimental
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`PeriodicSyncEvent()`** constructor
 creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically
@@ -47,7 +41,7 @@ This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
 associated tag.
 
 ```js
-const psEvent = new ExtendableEvent('periodicsync', {tag : 'unique-tag'});
+const psEvent = new ExtendableEvent("periodicsync", { tag: "unique-tag" });
 ```
 
 ## Specifications
@@ -60,5 +54,4 @@ const psEvent = new ExtendableEvent('periodicsync', {tag : 'unique-tag'});
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)

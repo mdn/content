@@ -2,12 +2,6 @@
 title: XMLDocument
 slug: Web/API/XMLDocument
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - XMLDocument
 browser-compat: api.XMLDocument
 ---
 
@@ -17,7 +11,7 @@ The **XMLDocument** interface represents an XML document. It inherits from the g
 
 {{InheritanceDiagram}}
 
-## Property
+## Instance properties
 
 _Also inherits properties from: {{DOMxRef("Document")}}_.
 

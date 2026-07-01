@@ -1,18 +1,12 @@
 ---
-title: Response.arrayBuffer()
+title: "Response: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - ArrayBuffer
-  - Fetch
-  - Method
-  - Reference
-  - Response
 browser-compat: api.Response.arrayBuffer
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
 takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
@@ -31,6 +25,17 @@ None.
 ### Return value
 
 A promise that resolves with an {{jsxref("ArrayBuffer")}}.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+- {{jsxref("RangeError")}}
+  - : Thrown if there is a problem creating the associated `ArrayBuffer` (for example, if the data size is too large).
 
 ## Examples
 
@@ -62,7 +67,7 @@ when it is already playing (this would cause an error.)
 function getData() {
   const audioCtx = new AudioContext();
 
-  return fetch('viper.ogg')
+  return fetch("viper.ogg")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error, status = ${response.status}`);
@@ -71,21 +76,21 @@ function getData() {
     })
     .then((buffer) => audioCtx.decodeAudioData(buffer))
     .then((decodedData) => {
-      const source = new AudioBufferSourceNode();
+      const source = new AudioBufferSourceNode(audioCtx);
       source.buffer = decodedData;
       source.connect(audioCtx.destination);
       return source;
     });
-};
+}
 
 // wire up buttons to stop and play audio
 
 play.onclick = () => {
   getData().then((source) => {
     source.start(0);
-    play.setAttribute('disabled', 'disabled');
+    play.setAttribute("disabled", "disabled");
   });
-}
+};
 ```
 
 ### Reading files
@@ -94,14 +99,21 @@ The {{domxref("Response.Response","Response()")}} constructor accepts
 {{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
 {{domxref("File")}} into other formats.
 
+```html
+<input type="file" />
+```
+
 ```js
 function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-```
 
-```html
-<input type="file" onchange="readFile(this.files[0])" />
+document
+  .querySelector("input[type=file]")
+  .addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    const buffer = readFile(file);
+  });
 ```
 
 ## Specifications
@@ -115,5 +127,5 @@ function readFile(file) {
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

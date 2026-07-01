@@ -1,22 +1,8 @@
 ---
-title: XRPose.transform
+title: "XRPose: transform property"
+short-title: transform
 slug: Web/API/XRPose/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - transform
 browser-compat: api.XRPose.transform
 ---
 
@@ -37,8 +23,7 @@ An {{domxref("XRRigidTransform")}} which provides the position and orientation o
 
 ## Examples
 
-This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event",
-  "select")}} handles events for tracked pointers. It determines the targeted object by
+This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event", "select")}} handles events for tracked pointers. It determines the targeted object by
 passing the event frame's pose into a function called `findTargetUsingRay()`,
 then dispatches the event differently depending on the user's handedness; this is done
 by comparing the value of the {{domxref("XRInputSource")}} property

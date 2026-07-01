@@ -1,20 +1,12 @@
 ---
-title: 'HTMLVideoElement: leavepictureinpicture event'
+title: "HTMLVideoElement: leavepictureinpicture event"
+short-title: leavepictureinpicture
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
 
-{{APIRef("HTMLVideoElement")}}
+{{APIRef("Picture-in-Picture API")}}
 
 The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
 
@@ -24,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('leavepictureinpicture', (event) => { });
+```js-nolint
+addEventListener("leavepictureinpicture", (event) => { })
 
-onleavepictureinpicture = (event) => { };
+onleavepictureinpicture = (event) => { }
 ```
 
 ## Event type
@@ -47,27 +39,27 @@ These examples add an event listener for the HTMLVideoElement's `leavepictureinp
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+video.addEventListener("leavepictureinpicture", onExitPip);
 
 button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}
+};
 ```
 
 Using the `onleavepictureinpicture` event handler property:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
@@ -79,7 +71,7 @@ button.onclick = () => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}
+};
 ```
 
 ## Specifications
@@ -93,4 +85,4 @@ button.onclick = () => {
 ## See also
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API", "Picture-in-Picture API")}}
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

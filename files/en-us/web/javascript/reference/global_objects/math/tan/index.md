@@ -1,20 +1,30 @@
 ---
 title: Math.tan()
+short-title: tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 page-type: javascript-static-method
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
 browser-compat: javascript.builtins.Math.tan
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.tan()`** static method returns the tangent of a number in radians.
 
-{{EmbedInteractiveExample("pages/js/math-tan.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+
+```js interactive-example
+function getTanFromDegrees(degrees) {
+  return Math.tan((degrees * Math.PI) / 180);
+}
+
+console.log(getTanFromDegrees(0));
+// Expected output: 0
+
+console.log(getTanFromDegrees(45));
+// Expected output: 0.9999999999999999
+
+console.log(getTanFromDegrees(90));
+// Expected output: 16331239353195370
+```
 
 ## Syntax
 
@@ -31,7 +41,8 @@ Math.tan(x)
 
 The tangent of `x`. If `x` is {{jsxref("Infinity")}}, `-Infinity`, or {{jsxref("NaN")}}, returns {{jsxref("NaN")}}.
 
-> **Note:** Due to floating point precision, it's not possible to obtain the exact value π/2, so the result is always finite if not `NaN`.
+> [!NOTE]
+> Due to floating point precision, it's not possible to obtain the exact value π/2, so the result is always finite if not `NaN`.
 
 ## Description
 
@@ -86,3 +97,4 @@ function getTanDeg(deg) {
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
+- CSS {{cssxref("tan()")}} function

@@ -1,17 +1,10 @@
 ---
-title: GamepadPose.angularAcceleration
+title: "GamepadPose: angularAcceleration property"
+short-title: angularAcceleration
 slug: Web/API/GamepadPose/angularAcceleration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
-  - angularAcceleration
+status:
+  - experimental
 browser-compat: api.GamepadPose.angularAcceleration
 ---
 

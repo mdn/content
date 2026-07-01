@@ -2,8 +2,7 @@
 title: Global variable
 slug: Glossary/Global_variable
 page-type: glossary-definition
-tags:
-  - CodingScripting
+sidebar: glossarysidebar
 ---
 
 A global variable is a {{glossary("variable")}} that is declared in the {{glossary("global scope")}} in other words, a variable that is visible from all other scopes.

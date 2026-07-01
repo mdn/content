@@ -2,21 +2,17 @@
 title: PluginArray
 slug: Web/API/PluginArray
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PluginArray
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available [plugins](/en-US/docs/Mozilla/Add-ons/Plugins); it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
+The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects; it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
-> **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
+> [!NOTE]
+> Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
 ## Instance properties
 
@@ -39,12 +35,13 @@ The following example function returns the version of the Shockwave Flash plugin
 ```js
 const pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
-  + `<table id="pluginTable"><thead>`
-  + `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>`
-  + `</thead><tbody></tbody></table>`;
+document.body.innerHTML =
+  `${pluginsLength} Plugin(s)<br>` +
+  `<table id="pluginTable"><thead>` +
+  `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
+  `</thead><tbody></tbody></table>`;
 
-const table = document.getElementById('pluginTable');
+const table = document.getElementById("pluginTable");
 
 for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
@@ -62,12 +59,12 @@ const pluginsLength = navigator.plugins.length;
 
 document.write(
   `${pluginsLength.toString()} Plugin(s)<br>` +
-  `Name | Filename | description<br>`
+    `Name | Filename | description<br>`,
 );
 
 for (let i = 0; i < pluginsLength; i++) {
   document.write(
-    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
+    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`,
   );
 }
 ```

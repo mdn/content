@@ -1,28 +1,15 @@
 ---
-title: Navigator.mediaSession
+title: "Navigator: mediaSession property"
+short-title: mediaSession
 slug: Web/API/Navigator/mediaSession
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Device
-  - Media
-  - Media Session API
-  - MediaSession
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - UX
-  - Video
-  - metadata
 browser-compat: api.Navigator.mediaSession
 ---
 
-{{APIRef}}
+{{APIRef("Media Session API")}}
 
-The read-only {{domxref("Navigator")}} property
-**`mediaSession`** returns a {{domxref("MediaSession")}}
+The **`mediaSession`** read-only property of the {{domxref("Navigator")}}
+interface returns a {{domxref("MediaSession")}}
 object that can be used to share with the browser metadata and other information about
 the current playback state of media being handled by a document.
 
@@ -49,16 +36,16 @@ and so forth.
 ## Examples
 
 In this example, metadata is submitted to the `mediaSession` object. Note
-that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property
+that the code begins by ensuring that the `navigator.mediaSession` property
 is available before attempting to use it.
 
 ```js
-if ("mediaSession" in navigator){
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: "Podcast Episode Title",
     artist: "Podcast Host",
     album: "Podcast Name",
-    artwork: [{src: "podcast.jpg"}]
+    artwork: [{ src: "podcast.jpg" }],
   });
 }
 ```

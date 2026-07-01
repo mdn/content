@@ -2,17 +2,16 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 page-type: javascript-statement
-tags:
-  - Deprecated
-  - JavaScript
-  - Language feature
-  - Statement
+status:
+  - deprecated
 browser-compat: javascript.statements.with
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Statements")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
-> **Note:** Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues, makes optimization impossible, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
+> [!NOTE]
+> Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues, makes optimization impossible, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
 
 The **`with`** statement extends the scope chain for a statement.
 
@@ -52,7 +51,7 @@ One exception to this is the [global object](/en-US/docs/Glossary/Global_object)
 console.log(globalThis.Math === Math); // true
 ```
 
-The `with` statement adds the given object to the head of this scope chain during the evaluation of its statement body. Every unqualified name would first be searched within the object (through a [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check) before searching in the upper scope chain.
+The `with` statement adds the given object to the head of this scope chain during the evaluation of its statement body. Every unqualified name would first be searched within the object (through an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check) before searching in the upper scope chain.
 
 Note that if the unqualified reference refers to a method of the object, the method is called with the object as its `this` value.
 
@@ -62,7 +61,7 @@ with ([1, 2, 3]) {
 }
 ```
 
-The object may have an [`@@unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
+The object may have a [`[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
 
 The reasons to use a `with` statement include saving one temporary variable and reducing file size by avoiding repeating a lengthy object reference. However, there are far more reasons why `with` statements are not desirable:
 
@@ -91,13 +90,13 @@ The reasons to use a `with` statement include saving one temporary variable and 
 
   If you call `f([1, 2, 3], obj)` in an ECMAScript 5 environment, the `values` reference inside the `with` statement will resolve to `obj`. However, ECMAScript 2015 introduces a [`values`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) property on `Array.prototype` (so it will be available on every array). So, after upgrading the environment, the `values` reference inside the `with` statement resolves to `[1, 2, 3].values` instead, and is likely to cause bugs.
 
-  In this particular example, `values` is defined as unscopable through [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables), so it still correctly resolves to the `values` parameter. If it were not defined as unscopable, one can see how this would be a difficult issue to debug.
+  In this particular example, `values` is defined as unscopable through [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables), so it still correctly resolves to the `values` parameter. If it were not defined as unscopable, one can see how this would be a difficult issue to debug.
 
 ## Examples
 
 ### Using the with statement
 
-The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math.PI", "PI")}} property and the {{jsxref("Math.cos", "cos")}} and {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
+The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math/PI", "PI")}} property and the {{jsxref("Math/cos", "cos")}} and {{jsxref("Math/sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
 
 ```js
 let a, x, y;
@@ -112,7 +111,7 @@ with (Math) {
 
 ### Avoiding the with statement by destructuring properties into the current scope
 
-You can usually avoid using `with` through [property destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Here we create an extra block to mimic the behavior of `with` creating an extra scope — but in actual usage, this block can usually be omitted.
+You can usually avoid using `with` through [property destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring). Here we create an extra block to mimic the behavior of `with` creating an extra scope — but in actual usage, this block can usually be omitted.
 
 ```js
 let a, x, y;
@@ -123,6 +122,18 @@ const r = 10;
   a = PI * r * r;
   x = r * cos(PI);
   y = r * sin(PI / 2);
+}
+```
+
+### Avoiding the with statement by using an IIFE
+
+If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you can wrap the expression in an [IIFE](/en-US/docs/Glossary/IIFE) and provide the long name as an argument.
+
+```js
+const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
+
+if (((o) => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+  // This branch runs.
 }
 ```
 
@@ -145,7 +156,7 @@ const namespace = new Proxy(
     get(target, key) {
       return key;
     },
-  }
+  },
 );
 
 with (namespace) {
@@ -166,4 +177,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)

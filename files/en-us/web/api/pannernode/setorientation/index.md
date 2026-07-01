@@ -1,21 +1,17 @@
 ---
-title: PannerNode.setOrientation()
+title: "PannerNode: setOrientation() method"
+short-title: setOrientation()
 slug: Web/API/PannerNode/setOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setOrientation
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PannerNode.setOrientation
 ---
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-> **Note:** The suggested replacement for this deprecated method is to instead set the [`orientationX`](/en-US/docs/Web/API/PannerNode/orientationX), [`orientationY`](/en-US/docs/Web/API/PannerNode/orientationY), and [`orientationZ`](/en-US/docs/Web/API/PannerNode/orientationZ) attributes directly.
+> [!NOTE]
+> The suggested replacement for this deprecated method is to instead set the [`orientationX`](/en-US/docs/Web/API/PannerNode/orientationX), [`orientationY`](/en-US/docs/Web/API/PannerNode/orientationY), and [`orientationZ`](/en-US/docs/Web/API/PannerNode/orientationZ) attributes directly.
 
 The `setOrientation()` method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.
 
@@ -44,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,20 +1,8 @@
 ---
-title: 'RTCIceTransport: statechange event'
+title: "RTCIceTransport: statechange event"
+short-title: statechange
 slug: Web/API/RTCIceTransport/statechange_event
 page-type: web-api-event
-tags:
-  - ICE
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - SDP
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - events
-  - rtc
-  - state
-  - statechange
 browser-compat: api.RTCIceTransport.statechange_event
 ---
 
@@ -28,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('statechange', (event) => { });
+```js-nolint
+addEventListener("statechange", (event) => { })
 
-onstatechange = (event) => { };
+onstatechange = (event) => { }
 ```
 
 ## Event type
@@ -49,7 +37,7 @@ iceTransport.addEventListener("statechange", (ev) => {
   if (iceTransport.state === "failed") {
     handleFailure(pc);
   }
-}, false);
+});
 ```
 
 The same code, using the `onstatechange` event handler property, looks like this:

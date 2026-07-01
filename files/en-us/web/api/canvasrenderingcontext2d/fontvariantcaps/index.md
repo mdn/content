@@ -1,22 +1,16 @@
 ---
-title: CanvasRenderingContext2D.fontVariantCaps
+title: "CanvasRenderingContext2D: fontVariantCaps property"
+short-title: fontVariantCaps
 slug: Web/API/CanvasRenderingContext2D/fontVariantCaps
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.fontVariantCaps
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.fontVariantCaps`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies an alternative capitalization of the rendered text.
 
-This corresponds to the CSS [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps) property.
+This corresponds to the CSS {{cssxref("font-variant-caps")}} property.
 
 ## Value
 
@@ -43,7 +37,7 @@ The font alternative capitalization value, which is one of:
 
 The property can be used to get or set the font capitalization value.
 
-Note that there are accessibility concerns with some of these, which are outlined in the corresponding [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps#accessibility_concerns) topic.
+Note that there are accessibility concerns with some of these, which are outlined in the corresponding [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps#accessibility) topic.
 
 ## Examples
 
@@ -59,35 +53,35 @@ The value is also displayed for each case by reading the property.
 ### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.font = '20px serif';
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.font = "20px serif";
 
 // Default (normal)
 ctx.fillText(`Hello world (default: ${ctx.fontVariantCaps})`, 5, 20);
 
 // Capitalization: small-caps
-ctx.fontVariantCaps = 'small-caps';
+ctx.fontVariantCaps = "small-caps";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 50);
 
 // Capitalization: all-small-caps
-ctx.fontVariantCaps = 'all-small-caps';
+ctx.fontVariantCaps = "all-small-caps";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 80);
 
 // Capitalization: petite-caps
-ctx.fontVariantCaps = 'petite-caps';
+ctx.fontVariantCaps = "petite-caps";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 110);
 
 // Capitalization: all-petite-caps
-ctx.fontVariantCaps = 'all-petite-caps';
+ctx.fontVariantCaps = "all-petite-caps";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 140);
 
 // Capitalization: unicase
-ctx.fontVariantCaps = 'unicase';
+ctx.fontVariantCaps = "unicase";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 170);
 
 // Capitalization: titling-caps
-ctx.fontVariantCaps = 'titling-caps';
+ctx.fontVariantCaps = "titling-caps";
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 200);
 ```
 

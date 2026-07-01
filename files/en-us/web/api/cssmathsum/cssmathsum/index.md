@@ -1,16 +1,10 @@
 ---
-title: CSSMathSum()
+title: "CSSMathSum: CSSMathSum() constructor"
+short-title: CSSMathSum()
 slug: Web/API/CSSMathSum/CSSMathSum
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+status:
+  - experimental
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
 
@@ -31,7 +25,7 @@ new CSSMathSum(values)
 ### Parameters
 
 - `values`
-  - : One or more double integers or {{domxref('CSSNumericValue')}} objects.
+  - : One or more numbers (which are wrapped into {{domxref("CSSUnitValue")}}s of `unit: "number"`) or {{domxref("CSSNumericValue")}} objects.
 
 ## Specifications
 

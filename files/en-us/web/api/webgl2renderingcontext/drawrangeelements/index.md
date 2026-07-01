@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.drawRangeElements()
+title: "WebGL2RenderingContext: drawRangeElements() method"
+short-title: drawRangeElements()
 slug: Web/API/WebGL2RenderingContext/drawRangeElements
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawRangeElements
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.drawRangeElements()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array
@@ -26,10 +21,8 @@ drawRangeElements(mode, start, end, count, type, offset)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
@@ -48,10 +41,8 @@ drawRangeElements(mode, start, end, count, type, offset)
 - `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT`

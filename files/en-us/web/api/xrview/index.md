@@ -2,23 +2,8 @@
 title: XRView
 slug: Web/API/XRView
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Eye
-  - Interface
-  - Orientation
-  - Position
-  - Reference
-  - VR
-  - View
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - camera
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView
 ---
 
@@ -32,6 +17,8 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
   - : Which of the two eyes (`left`) or (`right`) for which this `XRView` represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be `none` if the `XRView` is presenting monoscopic data (such as a 2D image, a fullscreen view of text, or a close-up view of something that doesn't need to appear in 3D).
 - {{domxref("XRView.isFirstPersonObserver", "isFirstPersonObserver")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating if the `XRView` is a first-person observer view.
+- {{domxref("XRView.index", "index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a number specifying the index of the current `XRView` in the {{domxref("XRViewerPose.views")}} array.
 - {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by `eye`. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.
 - {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -106,8 +93,13 @@ To programmatically move and/or rotate (often referred to as **teleporting**) an
 
 ```js
 function applyMouseMovement(refSpace) {
-  if (!mouseYaw && !mousePitch && !axialDistance &&
-      !transverseDistance && !verticalDistance) {
+  if (
+    !mouseYaw &&
+    !mousePitch &&
+    !axialDistance &&
+    !transverseDistance &&
+    !verticalDistance
+  ) {
     return refSpace;
   }
 
@@ -128,11 +120,15 @@ function applyMouseMovement(refSpace) {
   // later; otherwise we probably wouldn't need to save mouseMatrix
   // at all.
 
-  let newTransform = new XRRigidTransform({x: transverseDistance,
-                                           y: verticalDistance,
-                                           z: axialDistance},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: transverseDistance, y: verticalDistance, z: axialDistance },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
   // Create a new reference space that transforms the object to the new

@@ -1,20 +1,10 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 
@@ -37,10 +27,6 @@ let showing = browser.downloads.show(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request succeeds, the promise will be fulfilled with a boolean about whether the request was successful. If the request fails, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 This example shows the most recently downloaded item:
@@ -55,16 +41,16 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let showing = browser.downloads.show(latestDownloadId);
-      showing.then(onShowing, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let showing = browser.downloads.show(latestDownloadId);
+    showing.then(onShowing, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);
@@ -72,7 +58,12 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-show) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-show) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

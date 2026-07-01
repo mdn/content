@@ -1,19 +1,12 @@
 ---
-title: FontFace()
+title: "FontFace: FontFace() constructor"
+short-title: FontFace()
 slug: Web/API/FontFace/FontFace
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - Constructor
-  - FontFace
-  - Fonts
-  - Reference
 browser-compat: api.FontFace.FontFace
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFace()`** constructor creates a new {{domxref("FontFace")}} object.
 
@@ -27,25 +20,20 @@ new FontFace(family, source, descriptors)
 ### Parameters
 
 - `family`
-
   - : Specifies a font family name that can be used to match against this font face when styling elements.
 
     Takes the same type of values as the {{cssxref("@font-face/font-family", "font-family")}} descriptor of {{cssxref("@font-face")}}.
     This value may also be read and set using the [`FontFace.family`](/en-US/docs/Web/API/FontFace/family) property.
 
 - `source`
-
   - : The font source.
     This can be either:
-
     - A URL to a font face file.
-    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or {{domxref("ArrayBufferView")}}).
+    - Binary font face data in an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
 - `descriptors` {{optional_inline}}
-
   - : A set of optional descriptors passed as an object.
     It can contain any of the descriptors available for `@font-face`:
-
     - `ascentOverride`
       - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
     - `descentOverride`
@@ -77,7 +65,7 @@ new FontFace(family, source, descriptors)
 
 ```js
 async function loadFonts() {
-  const font = new FontFace("myfont", "url(myfont.woff)", {
+  const font = new FontFace("my-font", 'url("my-font.woff")', {
     style: "normal",
     weight: "400",
     stretch: "condensed",

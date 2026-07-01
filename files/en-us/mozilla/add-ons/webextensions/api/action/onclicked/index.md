@@ -1,24 +1,15 @@
 ---
 title: action.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/action/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - onClicked
+page-type: webextension-api-event
 browser-compat: webextensions.api.action.onClicked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) API with the "browser_action" [context type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 
@@ -43,16 +34,12 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed these arguments:
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the icon was clicked.
     - `OnClickData`
-
       - : An object containing information about the click.
-
         - `modifiers`
           - : An `array`. The keyboard modifiers active at the time of the click, being one or more of `Shift`, `Alt`, `Command`, `Ctrl`, or `MacCtrl`.
         - `button`
@@ -77,7 +64,8 @@ browser.action.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#event-onClicked) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#event-onClicked) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

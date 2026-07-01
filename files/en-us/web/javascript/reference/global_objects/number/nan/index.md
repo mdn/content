@@ -1,19 +1,30 @@
 ---
 title: Number.NaN
+short-title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Number
-  - Property
 browser-compat: javascript.builtins.Number.NaN
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Number.NaN`** static data property represents Not-A-Number, which is equivalent to {{jsxref("NaN")}}. For more information about the behaviors of `NaN`, see the [description for the global property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
 
-The **`Number.NaN`** property represents Not-A-Number, which is equivalent to {{jsxref("NaN")}}. For more information about the behaviors of `NaN`, see the [description for the global property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
+{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
 
-{{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
+```js interactive-example
+function clean(x) {
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
 
 ## Value
 

@@ -1,15 +1,8 @@
 ---
-title: FileSystemDirectoryEntry.getDirectory()
+title: "FileSystemDirectoryEntry: getDirectory() method"
+short-title: getDirectory()
 slug: Web/API/FileSystemDirectoryEntry/getDirectory
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - getDirectory
 browser-compat: api.FileSystemDirectoryEntry.getDirectory
 ---
 
@@ -70,7 +63,7 @@ The table below describes the result of each possible combination of these flags
 | `false`         | _Ignored_          | Path exists but is a file      | The `errorCallback` is called with an appropriate error code (if the callback was provided).                                                        |
 | `true`          | `false`            | Path exists                    | The existing directory is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemDirectoryEntry")}}. |
 | `true`          | `false`            | Path doesn't exist             | The directory is created, then a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`.                                        |
-| `true`          | `true`             | Path exists                    | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.                                                       |
+| `true`          | `true`             | Path exists                    | The `errorCallback` is called with an appropriate error, such as `DOMException.PATH_EXISTS_ERR`.                                                    |
 | `true`          | `true`             | Path doesn't exist             | The directory is created, then a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`.                                        |
 
 ### Return value
@@ -139,5 +132,4 @@ the contents of the file. When that is loaded successfully (as indicated by the
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}

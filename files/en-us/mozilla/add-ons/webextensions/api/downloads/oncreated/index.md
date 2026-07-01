@@ -1,22 +1,12 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onCreated
+page-type: webextension-api-event
 browser-compat: webextensions.api.downloads.onCreated
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
-The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e. when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
+The **`onCreated()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download begins, i.e., when {{WebExtAPIRef("downloads.download()")}} is successfully invoked.
 
 The listener is passed the {{WebExtAPIRef('downloads.DownloadItem')}} object in question as a parameter.
 
@@ -30,7 +20,7 @@ browser.downloads.onCreated.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,15 +32,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
-  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
-
+  - : The function called when this event occurs. This function is passed this argument:
     - `downloadItem`
       - : The {{WebExtAPIRef('downloads.DownloadItem')}} object in question.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -66,7 +50,12 @@ browser.downloads.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onCreated) API.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onCreated) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

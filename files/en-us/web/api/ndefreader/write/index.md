@@ -1,13 +1,10 @@
 ---
-title: NDEFReader.write()
+title: "NDEFReader: write() method"
+short-title: write()
 slug: Web/API/NDEFReader/write
 page-type: web-api-instance-method
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Method
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader.write
 ---
 
@@ -25,31 +22,27 @@ write(message, options)
 ### Parameters
 
 - `message`
-
-  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+  - : The message to be written, either a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
     a {{jsxref("DataView")}}, or an array of records. A record has the following members:
-
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+      - : Contains the data to be transmitted, a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
         a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}
       - : A developer-defined identifier for the record.
     - `lang` {{optional_inline}}
-      - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      - : A valid {{glossary("BCP 47 language tag")}}.
     - `mediaType` {{optional_inline}}
-      - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
     - `recordType`
-
       - : A string indicating the type of data stored in `data`. It must be one of the following values:
-
         - `"absolute-url"`
           - : An absolute URL to the data.
         - `"empty"`
           - : An empty {{domxref("NDEFRecord")}}.
         - `"mime"`
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
         - `"smart-poster"`
           - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
         - `"text"`
@@ -60,9 +53,7 @@ write(message, options)
           - : A URL as defined by the [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) specification.
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `overwrite`
       - : A boolean value specifying whether or not existing records should be overwritten, if such exists.
     - `signal` {{optional_inline}}
@@ -72,7 +63,7 @@ write(message, options)
 
 A {{JSxRef("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered.
 
-## Exceptions
+### Exceptions
 
 This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the
@@ -136,16 +127,17 @@ ndef.onreading = (event) => console.log("We read a tag!");
 
 function write(data, { timeout } = {}) {
   return new Promise((resolve, reject) => {
-    const ctlr = new AbortController();
-    ctlr.signal.onabort = () => reject("Time is up, bailing out!");
-    setTimeout(() => ctlr.abort(), timeout);
+    const controller = new AbortController();
+    controller.signal.onabort = () =>
+      reject(new Error("Time is up, bailing out!"));
+    setTimeout(() => controller.abort(), timeout);
 
     ndef.addEventListener(
       "reading",
       (event) => {
-        ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
+        ndef.write(data, { signal: controller.signal }).then(resolve, reject);
       },
-      { once: true }
+      { once: true },
     );
   });
 }

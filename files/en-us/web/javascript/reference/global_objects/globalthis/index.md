@@ -2,22 +2,22 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 page-type: javascript-global-property
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - global
-  - globalThis
-  - this
-  - Polyfill
 browser-compat: javascript.builtins.globalThis
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Objects")}}
+The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
-The global **`globalThis`** property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
+{{InteractiveExample("JavaScript Demo: globalThis", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Value
 
@@ -25,7 +25,8 @@ The global `this` object.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
+> [!NOTE]
+> The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
 
 ## Description
 
@@ -33,7 +34,8 @@ Historically, accessing the global object has required different syntax in diffe
 
 The `globalThis` property provides a standard way of accessing the global `this` value (and hence the global object itself) across environments. Unlike similar properties such as `window` and `self`, it's guaranteed to work in window and non-window contexts. In this way, you can access the global object in a consistent manner without having to know which environment the code is being run in. To help you remember the name, just remember that in global scope the `this` value is `globalThis`.
 
-> **Note:** `globalThis` is generally the same concept as the global object (i.e. adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
+> [!NOTE]
+> `globalThis` is generally the same concept as the global object (i.e., adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
 
 ### HTML and the WindowProxy
 
@@ -57,7 +59,7 @@ console.log(window.Math === Math); // true
 
 However, one case where one needs to explicitly access the global object is when _writing_ to it, usually for the purpose of [polyfills](/en-US/docs/Glossary/Polyfill).
 
-Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/CSP) violations in some settings, so authors would use a piecewise definition like this (slightly adapted from the [original core-js source](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)):
+Prior to `globalThis`, the only reliable cross-platform way to get the global object for an environment was `Function('return this')()`. However, this causes [CSP](/en-US/docs/Web/HTTP/Guides/CSP) violations in some settings, so authors would use a piecewise definition like this (slightly adapted from the [original core-js source](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global-this.js)):
 
 ```js
 function check(it) {
@@ -66,20 +68,22 @@ function check(it) {
 }
 
 const globalObject =
-  check(typeof window === 'object' && window) ||
-  check(typeof self === 'object' && self) ||
-  check(typeof global === 'object' && global) ||
+  check(typeof window === "object" && window) ||
+  check(typeof self === "object" && self) ||
+  check(typeof global === "object" && global) ||
   // This returns undefined when running in strict mode
-  (function () { return this; })() ||
-  Function('return this')();
+  (function () {
+    return this;
+  })() ||
+  Function("return this")();
 ```
 
 After obtaining the global object, we can define new globals on it. For example, adding an implementation for [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl):
 
 ```js
-if (typeof globalObject.Intl === 'undefined') {
+if (typeof globalObject.Intl === "undefined") {
   // No Intl in this environment; define our own on the global scope
-  Object.defineProperty(globalObject, 'Intl', {
+  Object.defineProperty(globalObject, "Intl", {
     value: {
       // Our Intl implementation
     },
@@ -93,8 +97,8 @@ if (typeof globalObject.Intl === 'undefined') {
 With `globalThis` available, the additional search for the global across environments is not necessary anymore:
 
 ```js
-if (typeof globalThis.Intl === 'undefined') {
-  Object.defineProperty(globalThis, 'Intl', {
+if (typeof globalThis.Intl === "undefined") {
+  Object.defineProperty(globalThis, "Intl", {
     value: {
       // Our Intl implementation
     },
@@ -116,4 +120,5 @@ if (typeof globalThis.Intl === 'undefined') {
 ## See also
 
 - [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
-- {{jsxref("Operators/this", "this")}}
+- [es-shims polyfill of `globalThis`](https://www.npmjs.com/package/globalthis)
+- {{jsxref("this")}}

@@ -1,24 +1,12 @@
 ---
-title: XMLSerializer.serializeToString()
+title: "XMLSerializer: serializeToString() method"
+short-title: serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - DOM to HTML
-  - DOM to XML
-  - Parsing
-  - Reference
-  - Serialize
-  - Serializing DOM
-  - XML
-  - XMLSerializer
-  - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
 
-{{APIRef("DOM Parsing")}}
+{{APIRef("HTML DOM")}}
 
 The {{domxref("XMLSerializer")}} method
 **`serializeToString()`** constructs a string representing the
@@ -99,7 +87,7 @@ There are some things worth noting about the XML output by
 
 ## See also
 
-- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - Serializing to HTML: {{domxref("Element.innerHTML")}} and
   {{domxref("Element.outerHTML")}}
 - Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}

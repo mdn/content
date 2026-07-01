@@ -1,12 +1,8 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsWEBGL() method"
+short-title: multiDrawElementsWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL
 ---
 
@@ -27,16 +23,14 @@ multiDrawElementsWEBGL(mode,
     countsList, countsOffset,
     type,
     firstsList, firstsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters
 
 - `mode`
-
   - : A [`GLenum`](/en-US/docs/Web/API/WebGL_API/Types)
     specifying the type primitive to render. Possible values are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
@@ -56,15 +50,12 @@ multiDrawElementsWEBGL(mode,
   - : A [`GLUint`](/en-US/docs/Web/API/WebGL_API/Types)
     defining the starting point into the `countsList` array.
 - type
-
   - : A [`GLenum`](/en-US/docs/Web/API/WebGL_API/Types) specifying
     the type of the values in the element array buffer. Possible values are:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - When using the [`OES_element_index_uint`](/en-US/docs/Web/API/OES_element_index_uint)
       extension:
-
       - `gl.UNSIGNED_INT`
 
 - `offsetsList`
@@ -96,7 +87,15 @@ None.
 ```js
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
-ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
+ext.multiDrawElementsWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  counts.length,
+);
 ```
 
 ## Specifications

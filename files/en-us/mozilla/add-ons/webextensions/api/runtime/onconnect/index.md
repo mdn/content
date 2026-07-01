@@ -1,20 +1,10 @@
 ---
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onconnect
-  - runtime
+page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnect
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Fired when a connection is made with either an extension process or a content script.
 
@@ -28,7 +18,7 @@ browser.runtime.onConnect.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -40,15 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `function`
-
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
-
+  - : The function called when this event occurs. The function is passed this argument:
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -61,8 +45,8 @@ This content script:
 ```js
 // content-script.js
 
-let myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+let myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
 myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
@@ -70,7 +54,7 @@ myPort.onMessage.addListener((m) => {
 });
 
 document.body.addEventListener("click", () => {
-  myPort.postMessage({greeting: "they clicked the page!"});
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -78,7 +62,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`
   - sends the content script a message using the port
   - starts listening to messages received on the port, and logs them
@@ -92,9 +75,9 @@ let portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
+  portFromCS.postMessage({ greeting: "hi there content script!" });
   portFromCS.onMessage.addListener((m) => {
-    console.log("In background script, received message from content script")
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
@@ -102,13 +85,18 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(() => {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onConnect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

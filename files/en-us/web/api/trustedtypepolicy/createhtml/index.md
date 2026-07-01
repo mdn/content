@@ -1,19 +1,14 @@
 ---
-title: TrustedTypePolicy.createHTML()
+title: "TrustedTypePolicy: createHTML() method"
+short-title: createHTML()
 slug: Web/API/TrustedTypePolicy/createHTML
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createHTML
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createHTML
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
+The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 

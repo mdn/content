@@ -1,83 +1,75 @@
-# ----------------------------------------------------------------------------
-# MDN Content CODEOWNERS
-# ----------------------------------------------------------------------------
-# Order is important. The last matching pattern takes precedence. For more
-# detailed information, see:
+# Order is important: The last matching pattern takes precedence.
+# For more detailed information, see:
 # https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
-# ----------------------------------------------------------------------------
 
-# ----------------------------------------------------------------------------
-# DEFAULT OWNERS
-# ----------------------------------------------------------------------------
-*    @mdn/core-yari-content
+# Default owners
+* @mdn/content-team
 
-# ----------------------------------------------------------------------------
-# DEFAULT ENGLISH CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/    @mdn/yari-content-mdn
+# Default content owners
+/files/en-us/ @mdn/web
 
-# ----------------------------------------------------------------------------
-# ENGLISH WEB ACCESSIBILITY CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/accessibility/    @mdn/yari-content-accessibility
-/files/en-us/learn/accessibility/    @mdn/yari-content-accessibility
+# Learn
+/files/en-us/learn_web_development @mdn/learn
 
-# ----------------------------------------------------------------------------
-# ENGLISH CSS CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/css/    @mdn/yari-content-css
-/files/en-us/learn/css/    @mdn/yari-content-css
+# MDN Firefox release notes
+/files/en-us/mozilla/ @mdn/content-team
 
-# ----------------------------------------------------------------------------
-# ENGLISH HTML CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/html/    @mdn/yari-content-html
-/files/en-us/learn/html/    @mdn/yari-content-html
+# Mozilla Add-ons
+/files/en-us/mozilla/add-ons/ @mdn/add-ons
 
-# ----------------------------------------------------------------------------
-# ENGLISH JAVASCRIPT CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/javascript/    @mdn/yari-content-javascript
-/files/en-us/learn/javascript/    @mdn/yari-content-javascript
+# Accessibility
+/files/en-us/web/accessibility/ @mdn/accessibility
 
-# ----------------------------------------------------------------------------
-# ENGLISH HTTP CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/http/    @mdn/yari-content-http
-/files/en-us/learn/server-side/    @mdn/yari-content-http
+# Web API
+/files/en-us/web/api/ @mdn/web-api
 
-# ----------------------------------------------------------------------------
-# ENGLISH WEB API CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/api/    @mdn/yari-content-web-api
+# CSS
+/files/en-us/web/css/ @mdn/css
 
-# ----------------------------------------------------------------------------
-# ENGLISH SVG CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/svg/    @mdn/yari-content-svg
+# Web
+files/en-us/web/ @mdn/web
 
-# ----------------------------------------------------------------------------
-# ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
+# HTML
+/files/en-us/web/html/ @mdn/html
 
-# ----------------------------------------------------------------------------
-# ENGLISH MATHML CONTENT OWNER(S)
-# ----------------------------------------------------------------------------
-/files/en-us/web/mathml/    @mdn/content-mathml
+# HTTP
+/files/en-us/web/http/ @mdn/http
 
+# JavaScript
+/files/en-us/web/javascript/ @mdn/javascript
 
-# ----------------------------------------------------------------------------
-# CONTROL FILES OWNER(S)
-# ----------------------------------------------------------------------------
-# These should be the last matches in this file, since any pull request that
-# tries to change any one or more of these files should be escalated to the
-# owners specified here.
-# ----------------------------------------------------------------------------
-/.github/     @mdn/core-dev
-/*            @mdn/core-dev
-/*.md         @mdn/core-yari-content
-# These are @schalkneethling because the auto-merge GHA workflow uses my PAT and will assign me.
-# If we add another reviewer, the auto-merge will cease to be automatic.
-/package.json @schalkneethling
-/yarn.lock    @schalkneethling
+# MathML
+/files/en-us/web/mathml/ @mdn/mathml
+
+# L10n for Macros (rari)
+/files/jsondata/L10n-Template.json @mdn/engineering
+/files/jsondata/L10n-CSSFormalDefinitions.json @mdn/engineering
+
+# ============================= CONTROL FILES ============================= #
+# The CODEOWNERS file must end with these matches: Any pull request changing
+# one or more of these files should be escalated to the owners specified here.
+
+# mdn/content GitHub configuration
+/.github/ @mdn/engineering
+# Issue templates in .github
+/.github/ISSUE_TEMPLATE/ff-project-issue.md @mdn/content-team
+
+# VSCode configuration
+/.vscode/              @mdn/engineering
+/.vscode/dictionaries/ @mdn/content-team
+/.vscode/cspell.json   @mdn/content-team
+
+# Root directory
+/* @mdn/engineering
+# Markdown files in root directory
+/*.md @mdn/content-team
+/SECURITY.md @mdn/engineering
+# Scripts and Tests
+/scripts @mdn/engineering
+/scripts/content @mdn/content-team
+/tests   @mdn/engineering
+
+# Dependencies
+/package.json      @mdn/engineering @mdn-bot
+/package-lock.json @mdn/engineering @mdn-bot
+/yarn.lock         @mdn/engineering @mdn-bot

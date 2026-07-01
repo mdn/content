@@ -1,15 +1,8 @@
 ---
-title: Element.assignedSlot
+title: "Element: assignedSlot property"
+short-title: assignedSlot
 slug: Web/API/Element/assignedSlot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Slottable
-  - Web Components
-  - assignedSlot
-  - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
 
@@ -35,7 +28,7 @@ using the contents of a template that contains a slot named `my-text`.
 
 When `<my-paragraph>` is used in the document, the slot is populated
 by a slottable element by including it inside the element with a
-[`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+[`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
 with the value `my-text`. Here is one such example:
 
 ```html
@@ -49,7 +42,7 @@ then log a reference to the original `<slot>` element the
 `<span>` was inserted in.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.assignedSlot); // logs '<slot name="my-text">'
 ```
 

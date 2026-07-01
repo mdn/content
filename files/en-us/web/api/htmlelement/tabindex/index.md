@@ -1,14 +1,8 @@
 ---
-title: HTMLElement.tabIndex
+title: "HTMLElement: tabIndex property"
+short-title: tabIndex
 slug: Web/API/HTMLElement/tabIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Property
-  - Reference
-  - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
 
@@ -37,7 +31,7 @@ An integer.
 ## Examples
 
 ```js
-const b1 = document.getElementById('button1');
+const b1 = document.getElementById("button1");
 
 b1.tabIndex = 1;
 ```
@@ -52,7 +46,7 @@ b1.tabIndex = 1;
 
 ## See also
 
-- [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
 - The HTML
-  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+  [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)
   global attribute.

@@ -1,17 +1,12 @@
 ---
-title: WebGL2RenderingContext.samplerParameter[if]()
+title: "WebGL2RenderingContext: samplerParameter[if]() method"
+short-title: samplerParameter[if]()
 slug: Web/API/WebGL2RenderingContext/samplerParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.samplerParameteri
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.samplerParameter[if]()`** methods
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
@@ -29,9 +24,7 @@ samplerParameterf(sampler, pname, param)
 - `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. Possible values:
-
     - `gl.TEXTURE_COMPARE_FUNC`
       - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
         texture comparison function.
@@ -76,6 +69,10 @@ gl.samplerParameteri(sampler, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
 ```
 
 ## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
 
 {{Compat}}
 

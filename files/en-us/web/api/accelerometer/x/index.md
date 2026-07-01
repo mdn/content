@@ -1,23 +1,14 @@
 ---
-title: Accelerometer.x
+title: "Accelerometer: x property"
+short-title: x
 slug: Web/API/Accelerometer/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - Accelerometer
-  - Accelerometer API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - x
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Accelerometer.x
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`x`** read-only property of the {{domxref("Accelerometer")}} interface returns a number specifying the acceleration of the device along its x-axis.
 

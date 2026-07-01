@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.isConnected
+title: "VRDisplay: isConnected property"
+short-title: isConnected
 slug: Web/API/VRDisplay/isConnected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isConnected
 ---
 
@@ -20,7 +13,8 @@ browser-compat: api.VRDisplay.isConnected
 
 The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 
@@ -35,14 +29,14 @@ navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
 
     // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       // Only request presentation if the display is still connected.
       if (vrDisplay.isConnected) {
         vrDisplay.requestPresent([{ source: canvas }]).then(() => {
           // start rendering the app, etc.
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }
@@ -53,7 +47,7 @@ navigator.getVRDisplays().then((displays) => {
 
 This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers. Read [Meta's Porting from WebVR to WebXR](https://developers.meta.com/horizon/documentation/web/port-vr-xr/) guide for more information.
 
 ## Browser compatibility
 
@@ -61,5 +55,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

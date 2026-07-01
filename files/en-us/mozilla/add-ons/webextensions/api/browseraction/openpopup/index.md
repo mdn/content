@@ -1,42 +1,31 @@
 ---
 title: browserAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - openPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.openPopup
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
 Open the browser action's popup.
-
-You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
 ## Syntax
 
 ```js-nolint
-browser.browserAction.openPopup()
+browser.browserAction.openPopup(
+  options // optional object
+)
 ```
 
 ### Parameters
 
-None.
+- `details` {{optional_inline}}
+  - : An object with these properties:
+    - `windowId` {{optional_inline}}
+      - : `integer`. Window to open the popup in. Defaults to the focused (active) window. In Chrome and from Firefox 149, if the window ID is for an unfocused window, the API call is rejected. A window can be focused by calling {{WebExtAPIRef("windows.update")}} with `focused: true`.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
-
-## Browser compatibility
-
-{{Compat}}
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with no arguments. If the popup isn't opened, rejects with an error message.
 
 ## Examples
 
@@ -55,3 +44,7 @@ browser.menus.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

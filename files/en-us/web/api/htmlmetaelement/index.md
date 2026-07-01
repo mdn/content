@@ -2,17 +2,12 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 browser-compat: api.HTMLMetaElement
 ---
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLMetaElement`** interface contains descriptive metadata about a document provided in HTML as [`<meta>`](/en-US/docs/Web/HTML/Element/meta) elements.
+The **`HTMLMetaElement`** interface contains descriptive metadata about a document provided in HTML as [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) elements.
 This interface inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
@@ -21,7 +16,7 @@ This interface inherits all of the properties and methods described in the {{dom
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLMetaElement.charset")}}
+- {{HTMLElement("meta#charset")}}
   - : The character encoding for a HTML document.
 - {{domxref("HTMLMetaElement.content")}}
   - : The 'value' part of the name-value pairs of the document metadata.
@@ -46,11 +41,11 @@ For specific examples, see the pages for the individual properties as described 
 
 ### Setting the page description metadata
 
-The following example creates a new `<meta>` element with a `name` attribute set to [`description`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The following example creates a new `<meta>` element with a `name` attribute set to [`description`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification).
 The `content` attribute sets a description of the document and is appended to the document `<head>`:
 
 ```js
-let meta = document.createElement("meta");
+const meta = document.createElement("meta");
 meta.name = "description";
 meta.content =
   "The <meta> element can be used to provide document metadata in terms of name-value pairs, with the name attribute giving the metadata name, and the content attribute giving the value.";
@@ -59,17 +54,17 @@ document.head.appendChild(meta);
 
 ### Setting the viewport metadata
 
-The following example shows how to create a new `<meta>` element with a `name` attribute set to [`viewport`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_other_specifications).
+The following example shows how to create a new `<meta>` element with a `name` attribute set to [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport).
 The `content` attribute sets the viewport size and is appended to the document `<head>`:
 
 ```js
-var meta = document.createElement("meta");
+const meta = document.createElement("meta");
 meta.name = "viewport";
 meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);
 ```
 
-For more information on setting the viewport, see [Viewport basics](/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics).
+For more information on setting the viewport, see [`<meta name="viewport">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport).
 
 ## Specifications
 

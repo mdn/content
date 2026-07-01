@@ -1,15 +1,8 @@
 ---
-title: AnalyserNode()
+title: "AnalyserNode: AnalyserNode() constructor"
+short-title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 page-type: web-api-constructor
-tags:
-  - API
-  - AnalyserNode
-  - Audio
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.AnalyserNode.AnalyserNode
 ---
 
@@ -29,9 +22,7 @@ new AnalyserNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
-
   - : An object with the following properties, all optional:
-
     - `fftSize`
       - : The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
         The default is `2048`.

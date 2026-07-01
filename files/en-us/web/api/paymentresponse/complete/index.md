@@ -1,16 +1,8 @@
 ---
-title: PaymentResponse.complete()
+title: "PaymentResponse: complete() method"
+short-title: complete()
 slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Secure context
-  - complete
 browser-compat: api.PaymentResponse.complete
 ---
 
@@ -35,10 +27,8 @@ complete(result)
 ### Parameters
 
 - `result` {{optional_inline}}
-
   - : A string indicating the state of the payment operation upon
     completion. It must be one of the following:
-
     - `success`
       - : The payment was successfully processed. The user agent may or may not present
         some form of "payment successful" indication to the user.
@@ -50,7 +40,8 @@ complete(result)
         the user agent should not present any notification, even if it normally would.
         _This is the default value._
 
-    > **Note:** In older versions of the specification, an empty string,
+    > [!NOTE]
+    > In older versions of the specification, an empty string,
     > `""`, was used instead of `unknown` to indicate a completion
     > without a known result state. See the [Browser compatibility](#browser_compatibility) section
     > below for details.
@@ -81,25 +72,30 @@ calls `complete()` with an answer appropriate to the status in the response.
 //   sake of brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.show().then((paymentResponse) => {
-  const fetchOptions = {
-    method: 'POST',
-    credentials: include,
-    body: JSON.stringify(paymentResponse)
-  };
-  const serverPaymentRequest = new Request('secure/payment/endpoint');
-  fetch(serverPaymentRequest, fetchOptions).then((response) => {
-    if (response.status < 400) {
-      paymentResponse.complete("success");
-    } else {
-      paymentResponse.complete("fail");
+payment
+  .show()
+  .then((paymentResponse) => {
+    const fetchOptions = {
+      method: "POST",
+      credentials: include,
+      body: JSON.stringify(paymentResponse),
     };
-  }).catch((reason) => {
-    paymentResponse.complete("fail");
+    const serverPaymentRequest = new Request("secure/payment/endpoint");
+    fetch(serverPaymentRequest, fetchOptions)
+      .then((response) => {
+        if (response.status < 400) {
+          paymentResponse.complete("success");
+        } else {
+          paymentResponse.complete("fail");
+        }
+      })
+      .catch((reason) => {
+        paymentResponse.complete("fail");
+      });
+  })
+  .catch((err) => {
+    console.error("Uh oh, something bad happened", err.message);
   });
-}).catch((err) => {
-  console.error("Uh oh, something bad happened", err.message);
-});
 ```
 
 ## Specifications

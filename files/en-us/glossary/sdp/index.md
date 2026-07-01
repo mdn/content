@@ -2,12 +2,7 @@
 title: SDP
 slug: Glossary/SDP
 page-type: glossary-definition
-tags:
-  - Advanced
-  - Collaborating
-  - Infrastructure
-  - Protocol
-  - WebRTC
+sidebar: glossarysidebar
 ---
 
 **SDP** (Session Description {{glossary("Protocol")}}) is the standard describing a {{Glossary("P2P","peer-to-peer")}} connection. SDP contains the {{Glossary("codec")}}, source address, and timing information of audio and video.

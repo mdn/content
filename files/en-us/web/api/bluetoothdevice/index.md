@@ -2,18 +2,12 @@
 title: BluetoothDevice
 slug: Web/API/BluetoothDevice
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothDevice
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothDevice
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The BluetoothDevice interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
 environment.
@@ -36,6 +30,13 @@ environment.
     an error if advertisements can't be shown for any reason.
 - {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}}
   - : Provides a way for the page to revoke access to a device the user has granted access to.
+
+## Events
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{DOMxRef("BluetoothDevice/gattserverdisconnected_event", "gattserverdisconnected")}} {{experimental_inline}}
+  - : Fired on a device when an active GATT connection is lost.
 
 ## Specifications
 

@@ -1,14 +1,10 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() method"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
+status:
+  - deprecated
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
 
@@ -18,7 +14,8 @@ The **`initCompositionEvent()`**
 method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
 `CompositionEvent` object instance.
 
-> **Note:** The correct way of creating a {{domxref("CompositionEvent")}} is to use
+> [!NOTE]
+> The correct way of creating a {{domxref("CompositionEvent")}} is to use
 > the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.
 
 ## Syntax
@@ -52,7 +49,7 @@ None ({{jsxref("undefined")}}).
 
 ## Specifications
 
-This method is no longer on a standardization track. It is kept for compatibility purposes. Use the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.
+{{Specifications}}
 
 ## Browser compatibility
 

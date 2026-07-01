@@ -1,16 +1,8 @@
 ---
-title: AudioNode.connect()
+title: "AudioNode: connect() method"
+short-title: connect()
 slug: Web/API/AudioNode/connect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - connect
 browser-compat: api.AudioNode.connect
 ---
 
@@ -105,7 +97,7 @@ an _LFO_-controlled parameter.
 ```js
 const audioCtx = new AudioContext();
 
-// create an normal oscillator to make sound
+// create a normal oscillator to make sound
 const oscillator = audioCtx.createOscillator();
 
 // create a second oscillator that will be used as an LFO (Low-frequency
@@ -137,9 +129,8 @@ lfo.start();
 
 #### AudioParam notes
 
-It is possible to connect an `AudioNode` output to more than one {{
-  domxref("AudioParam") }}, and more than one AudioNode output to a single {{
-  domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
+It is possible to connect an `AudioNode` output to more than one {{domxref("AudioParam")}}, and more than one AudioNode output to a single {{domxref("AudioParam")}}, with multiple calls to `connect()`.
+[Fan-in and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
 
 An {{ domxref("AudioParam") }} will take the rendered audio data from any
 `AudioNode` output connected to it and convert it to mono by [down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)

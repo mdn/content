@@ -1,13 +1,8 @@
 ---
-title: RTCDataChannel.bufferedAmountLowThreshold
+title: "RTCDataChannel: bufferedAmountLowThreshold property"
+short-title: bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - bufferedAmountLowThreshold
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 ---
 
@@ -28,7 +23,8 @@ The user agent may implement the process of actually sending data in any way it
 chooses; this may be done periodically during the event loop or truly asynchronously. As
 messages are actually sent, this value is reduced accordingly.
 
-> **Note:** `bufferedamountlow` events are not fired after the data channel is closed.
+> [!NOTE]
+> `bufferedamountlow` events are not fired after the data channel is closed.
 
 ## Value
 

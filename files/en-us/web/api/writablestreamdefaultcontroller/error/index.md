@@ -1,18 +1,12 @@
 ---
-title: WritableStreamDefaultController.error()
+title: "WritableStreamDefaultController: error() method"
+short-title: error()
 slug: Web/API/WritableStreamDefaultController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the
 {{domxref("WritableStreamDefaultController")}} interface causes any future interactions
@@ -52,17 +46,17 @@ const writableStream = new WritableStream({
     // do stuff with controller
 
     // error stream if necessary
-    controller.error('My error is broken');
+    controller.error("My error is broken");
   },
   write(chunk, controller) {
-    // ...
+    // …
   },
   close(controller) {
-    // ...
+    // …
   },
   abort(err) {
-    // ...
-  }
+    // …
+  },
 });
 ```
 

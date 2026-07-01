@@ -1,16 +1,10 @@
 ---
-title: Window.releaseEvents()
+title: "Window: releaseEvents() method"
+short-title: releaseEvents()
 slug: Web/API/Window/releaseEvents
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Method
-  - Reference
-  - Window
-  - releaseEvents
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.releaseEvents
 ---
 
@@ -27,7 +21,6 @@ releaseEvents(eventType)
 ### Parameters
 
 - `eventType`
-
   - : `eventType` is a combination of the following values:
     `Event.ABORT`, `Event.BLUR`, `Event.CLICK`,
     `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`,
@@ -45,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-window.releaseEvents(Event.KEYPRESS)
+window.releaseEvents(Event.KEYPRESS);
 ```
 
 ## Notes
@@ -58,7 +51,7 @@ See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
 
 ## Specifications
 
-This is not part of any specification.
+{{Specifications}}
 
 ## Browser compatibility
 

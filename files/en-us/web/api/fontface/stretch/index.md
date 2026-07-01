@@ -1,20 +1,12 @@
 ---
-title: FontFace.stretch
+title: "FontFace: stretch property"
+short-title: stretch
 slug: Web/API/FontFace/stretch
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - stretch
 browser-compat: api.FontFace.stretch
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`stretch`** property of the {{domxref("FontFace")}} interface retrieves or sets how the font stretches.
 

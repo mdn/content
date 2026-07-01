@@ -1,24 +1,14 @@
 ---
-title: XRSession.requestAnimationFrame()
+title: "XRSession: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/XRSession/requestAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRSession
-  - requestAnimationFrame()
+status:
+  - experimental
 browser-compat: api.XRSession.requestAnimationFrame
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRSession")}}
 method **`requestAnimationFrame()`**, much like the
@@ -36,7 +26,8 @@ any animation updates needed.
 You can cancel a previously scheduled animation by calling
 {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.
 
-> **Note:** Despite the obvious similarities between these methods and the
+> [!NOTE]
+> Despite the obvious similarities between these methods and the
 > global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
 > provided by the `Window` interface, you _must not_ treat these as
 > interchangeable. There is _no_ guarantee that the latter will work at all while
@@ -51,11 +42,9 @@ requestAnimationFrame(animationFrameCallback)
 ### Parameters
 
 - `animationFrameCallback`
-
   - : A function which is called before the next repaint in order to allow you to update
     and render the XR scene based on elapsed time, animation, user input changes, and so
     forth. The callback receives as input two parameters:
-
     - `time`
       - : A {{domxref("DOMHighResTimeStamp")}} indicating the time offset at which the
         updated viewer state was received from the WebXR device.
@@ -76,28 +65,34 @@ remove the pending animation frame request.
 The following example requests `XRSession` with "inline" mode so that it can
 be displayed in an HTML element (without the need for a separate AR or VR device).
 
-> **Note:** A real application should check that the device and the User
+> [!NOTE]
+> A real application should check that the device and the User
 > Agent support WebXR API at all and then that they both support the desired session
 > type via {{DOMxRef("XRSystem.isSessionSupported()")}}.
 
 ```js
 // Obtain XR object
-const XR = navigator.xr
+const XR = navigator.xr;
 
 // Request a new XRSession
 XR.requestSession("inline").then((xrSession) => {
   xrSession.requestAnimationFrame((time, xrFrame) => {
-    const viewer = xrFrame.getViewerPose(xrReferenceSpace)
+    const viewer = xrFrame.getViewerPose(xrReferenceSpace);
 
-    gl.bindFramebuffer(xrWebGLLayer.framebuffer)
+    gl.bindFramebuffer(xrWebGLLayer.framebuffer);
     for (const xrView of viewer.views) {
-      const xrViewport = xrWebGLLayer.getViewport(xrView)
-      gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height)
+      const xrViewport = xrWebGLLayer.getViewport(xrView);
+      gl.viewport(
+        xrViewport.x,
+        xrViewport.y,
+        xrViewport.width,
+        xrViewport.height,
+      );
 
-    // WebGL draw calls will now be rendered into the appropriate viewport.
+      // WebGL draw calls will now be rendered into the appropriate viewport.
     }
-  })
-})
+  });
+});
 ```
 
 The following example was taken directly from the spec draft. This example demonstrates
@@ -105,25 +100,25 @@ a design pattern that ensures seamless transition between non-immersive animatio
 created via {{DOMxRef("Window.requestAnimationFrame")}} and immersive XR animations.
 
 ```js
-let xrSession = null
+let xrSession = null;
 
 function onWindowAnimationFrame(time) {
-  window.requestAnimationFrame(onWindowAnimationFrame)
+  window.requestAnimationFrame(onWindowAnimationFrame);
 
   // This may be called while an immersive session is running on some devices,
   // such as a desktop with a tethered headset. To prevent two loops from
   // rendering in parallel, skip drawing in this one until the session ends.
   if (!xrSession) {
-    renderFrame(time, null)
+    renderFrame(time, null);
   }
 }
 
 // The window animation loop can be started immediately upon the page loading.
-window.requestAnimationFrame(onWindowAnimationFrame)
+window.requestAnimationFrame(onWindowAnimationFrame);
 
 function onXRAnimationFrame(time, xrFrame) {
-  xrSession.requestAnimationFrame(onXRAnimationFrame)
-  renderFrame(time, xrFrame)
+  xrSession.requestAnimationFrame(onXRAnimationFrame);
+  renderFrame(time, xrFrame);
 }
 
 function renderFrame(time, xrFrame) {
@@ -132,17 +127,17 @@ function renderFrame(time, xrFrame) {
 
 // Assumed to be called by a user gesture event elsewhere in code.
 function startXRSession() {
-  navigator.xr.requestSession('immersive-vr').then((session) => {
-    xrSession = session
-    xrSession.addEventListener('end', onXRSessionEnded)
+  navigator.xr.requestSession("immersive-vr").then((session) => {
+    xrSession = session;
+    xrSession.addEventListener("end", onXRSessionEnded);
     // Do necessary session setup here.
     // Begin the session's animation loop.
-    xrSession.requestAnimationFrame(onXRAnimationFrame)
-  })
+    xrSession.requestAnimationFrame(onXRAnimationFrame);
+  });
 }
 
 function onXRSessionEnded() {
-  xrSession = null
+  xrSession = null;
 }
 ```
 

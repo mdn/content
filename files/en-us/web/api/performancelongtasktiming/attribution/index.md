@@ -1,13 +1,16 @@
 ---
-title: PerformanceLongTaskTiming.attribution
+title: "PerformanceLongTaskTiming: attribution property"
+short-title: attribution
 slug: Web/API/PerformanceLongTaskTiming/attribution
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceLongTaskTiming.attribution
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`attribution`** readonly property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
+The **`attribution`** read-only property of the {{domxref("PerformanceLongTaskTiming")}} interface returns an array of {{domxref('TaskAttributionTiming')}} objects.
 
 ## Value
 

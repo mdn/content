@@ -1,18 +1,8 @@
 ---
-title: Animation.updatePlaybackRate()
+title: "Animation: updatePlaybackRate() method"
+short-title: updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - playbackRate
-  - updatePlaybackRate
-  - waapi
-  - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
 
@@ -32,9 +22,8 @@ currently running.
 `updatePlaybackRate()` is an asynchronous method that sets the speed of an
 animation after synchronizing with its current playback position, ensuring that the
 resulting change in speed does not produce a sharp jump. After calling
-`updatePlaybackRate()` the animation's {{domxref("Animation.playbackRate",
-    "playbackRate")}} is _not_ immediately updated. It will be updated once the
-animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
+`updatePlaybackRate()` the animation's {{domxref("Animation.playbackRate", "playbackRate")}} is _not_ immediately updated.
+It will be updated once the animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 
 ## Syntax
 

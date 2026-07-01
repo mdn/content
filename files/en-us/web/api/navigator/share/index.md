@@ -1,44 +1,44 @@
 ---
-title: Navigator.share()
+title: "Navigator: share() method"
+short-title: share()
 slug: Web/API/Navigator/share
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Navigator
-  - Reference
-  - Share
-  - Web
 browser-compat: api.Navigator.share
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
+The **`share()`** method of the {{domxref("Navigator")}} interface invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
 
 The method resolves a {{jsxref("Promise")}} with `undefined`.
 On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
 
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy.
+The `share()` method will throw exceptions if the permission is supported but has not been granted.
+
 ## Syntax
 
 ```js-nolint
-navigator.share(data)
+share(data)
 ```
 
 ### Parameters
 
-- `data`
-
+- `data` {{optional_inline}}
   - : An object containing data to share.
 
     Properties that are unknown to the user agent are ignored; share data is only assessed on properties understood by the user agent.
     All properties are optional but at least one known data property must be specified.
 
     Possible values are:
-
-    - `url`: A string representing a URL to be shared.
-    - `text`: A string representing text to be shared.
-    - `title`: A string representing a title to be shared. May be ignored by the target.
-    - `files`: An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
+    - `url` {{optional_inline}}
+      - : A string representing a URL to be shared.
+    - `text` {{optional_inline}}
+      - : A string representing text to be shared.
+    - `title` {{optional_inline}}
+      - : A string representing a title to be shared. May be ignored by the target.
+    - `files` {{optional_inline}}
+      - : An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
 
 ### Return value
 
@@ -48,12 +48,12 @@ A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of 
 
 The {{jsxref("Promise")}} may be rejected with one of the following `DOMException` values:
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : The document is not fully active, or other sharing operations are in progress.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
+  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
-
   - : The specified share data cannot be validated. Possible reasons include:
-
     - The `data` parameter was omitted completely or only contains properties with unknown values. Note that any properties that are not recognized by the user agent are ignored.
     - A URL is badly formatted.
     - Files are specified but the implementation does not support file sharing.
@@ -117,7 +117,7 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Security
 
-This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
+This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 ## Examples
 
@@ -139,19 +139,19 @@ The HTML just creates a button to trigger the share, and a paragraph in which to
 
 ```js
 const shareData = {
-  title: 'MDN',
-  text: 'Learn web development on MDN!',
-  url: 'https://developer.mozilla.org'
-}
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: "https://developer.mozilla.org",
+};
 
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
+const btn = document.querySelector("button");
+const resultPara = document.querySelector(".result");
 
 // Share must be triggered by "user activation"
-btn.addEventListener('click', async () => {
+btn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
-    resultPara.textContent = 'MDN shared successfully';
+    resultPara.textContent = "MDN shared successfully";
   } catch (err) {
     resultPara.textContent = `Error: ${err}`;
   }
@@ -162,7 +162,7 @@ btn.addEventListener('click', async () => {
 
 Click the button to launch the share dialog on your platform. Text will appear below the button to indicate whether the share was successful or provide an error code.
 
-{{EmbedLiveSample('Sharing a URL')}}
+{{EmbedLiveSample('Sharing a URL','','','','','','web-share')}}
 
 ### Sharing files
 
@@ -184,44 +184,44 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 Note that the data object passed to the `navigator.canShare()` only includes the `files` property, as the `title` and `text` shouldn't matter.
 
 ```js
-const input = document.getElementById('files')
-const output = document.getElementById('output')
+const input = document.getElementById("files");
+const output = document.getElementById("output");
 
-document.getElementById('share').addEventListener('click', async () => {
-  const files = input.files
+document.getElementById("share").addEventListener("click", async () => {
+  const files = input.files;
 
   if (files.length === 0) {
-    output.textContent = 'No files selected.'
-    return
+    output.textContent = "No files selected.";
+    return;
   }
 
   // feature detecting navigator.canShare() also implies
   // the same for the navigator.share()
   if (!navigator.canShare) {
-    output.textContent = `Your browser doesn't support the Web Share API.`
-    return
+    output.textContent = `Your browser doesn't support the Web Share API.`;
+    return;
   }
 
   if (navigator.canShare({ files })) {
     try {
       await navigator.share({
         files,
-        title: 'Images',
-        text: 'Beautiful images'
-      })
-      output.textContent = 'Shared!'
+        title: "Images",
+        text: "Beautiful images",
+      });
+      output.textContent = "Shared!";
     } catch (error) {
-      output.textContent = `Error: ${error.message}`
+      output.textContent = `Error: ${error.message}`;
     }
   } else {
-    output.textContent = `Your system doesn't support sharing these files.`
+    output.textContent = `Your system doesn't support sharing these files.`;
   }
-})
+});
 ```
 
 #### Result
 
-{{EmbedLiveSample('Sharing files')}}
+{{EmbedLiveSample('Sharing files','','','','','','web-share')}}
 
 ## Specifications
 

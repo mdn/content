@@ -1,23 +1,15 @@
 ---
 title: action.getBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getBadgeTextColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - action
-  - getBadgeTextColor
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.getBadgeTextColor
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Gets the text color for the browser action's badge.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 In Firefox, unless the badge text color is explicitly set using {{WebExtAPIRef("action.setBadgeTextColor()")}}, the badge text color is automatically set to black or white so as to maximize contrast with the specified badge background color. For example, if you set the badge background color to white, the default badge text color is set to black, and vice versa.
 
@@ -36,9 +28,7 @@ browser.action.getBadgeTextColor(
 ### Parameters
 
 - `details`
-
   - : `object`.
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specifies the tab to get the badge text color from.
     - `windowId` {{optional_inline}}
@@ -51,7 +41,7 @@ browser.action.getBadgeTextColor(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as a {{WebExtAPIRef('action.ColorArray')}}.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as an {{WebExtAPIRef('action.ColorArray')}}.
 
 ## Examples
 
@@ -75,7 +65,8 @@ browser.action.getBadgeTextColor({}).then(onGot, onFailure);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-getBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

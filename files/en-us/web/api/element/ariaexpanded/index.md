@@ -1,21 +1,14 @@
 ---
-title: Element.ariaExpanded
+title: "Element: ariaExpanded property"
+short-title: ariaExpanded
 slug: Web/API/Element/ariaExpanded
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaExpanded
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaExpanded
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 
 ## Value
 
@@ -51,7 +44,7 @@ In this example the `aria-expanded` attribute on the element with an ID of `anim
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaExpanded); // false
 el.ariaExpanded = "true";
 console.log(el.ariaExpanded); // true

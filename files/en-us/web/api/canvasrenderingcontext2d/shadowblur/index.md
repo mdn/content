@@ -1,24 +1,20 @@
 ---
-title: CanvasRenderingContext2D.shadowBlur
+title: "CanvasRenderingContext2D: shadowBlur property"
+short-title: shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowBlur
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.shadowBlur`**
 property of the Canvas 2D API specifies the amount of blur applied to shadows. The
 default is `0` (no blur).
 
-> **Note:** Shadows are only drawn if the
+> [!NOTE]
+> Shadows are only drawn if the
 > {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
 > a non-transparent value. One of the `shadowBlur`,
 > {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or

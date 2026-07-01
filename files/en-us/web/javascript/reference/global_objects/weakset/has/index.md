@@ -1,22 +1,29 @@
 ---
 title: WeakSet.prototype.has()
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
 browser-compat: javascript.builtins.WeakSet.has
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether the specified value exists in this `WeakSet` or not.
 
-The **`has()`** method returns a boolean indicating whether an
-object exists in a `WeakSet` or not.
+{{InteractiveExample("JavaScript Demo: WeakSet.prototype.has()")}}
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+```js interactive-example
+const weakset = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset.add(object1);
+
+console.log(weakset.has(object1));
+// Expected output: true
+
+console.log(weakset.has(object2));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -27,17 +34,15 @@ has(value)
 ### Parameters
 
 - `value`
-  - : Required. The object to test for presence in the `WeakSet`.
+  - : The value to test for presence in the `WeakSet` object. Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified value exists in the
-    `WeakSet` object; otherwise `false`.
+Returns `true` if the specified value exists in the `WeakSet` object; otherwise `false`. Always returns `false` if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
-### Using the `has()` method
+### Using has()
 
 ```js
 const ws = new WeakSet();
@@ -46,6 +51,11 @@ ws.add(window);
 
 ws.has(window); // returns true
 ws.has(obj); // returns false
+
+// Storing a non-registered symbol
+const sym = Symbol("foo");
+ws.add(sym);
+ws.add(Symbol.iterator);
 ```
 
 ## Specifications

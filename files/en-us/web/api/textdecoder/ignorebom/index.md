@@ -1,23 +1,18 @@
 ---
-title: TextDecoder.ignoreBOM
+title: "TextDecoder: ignoreBOM property"
+short-title: ignoreBOM
 slug: Web/API/TextDecoder/ignoreBOM
 page-type: web-api-instance-property
-tags:
-  - API
-  - TextDecoder
-  - ignoreBOM
-  - Property
-  - Reference
 browser-compat: api.TextDecoder.ignoreBOM
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-The **`ignoreBOM`** read-only property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
+The **`ignoreBOM`** read-only property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the output or skipped over. The value of the property is set in the [`ignoreBOM`](/en-US/docs/Web/API/TextDecoder/TextDecoder#ignorebom) argument to the decoder's constructor.
 
 ## Value
 
-`true` if the byte order mark is ignored; `false` otherwise.
+`true` if the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the decoded text; `false` if it will be skipped over when decoding and omitted.
 
 ## Specifications
 

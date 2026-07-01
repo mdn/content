@@ -2,14 +2,6 @@
 title: SpeechSynthesisVoice
 slug: Web/API/SpeechSynthesisVoice
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisVoice
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
 
@@ -23,7 +15,7 @@ Every `SpeechSynthesisVoice` has its own relative speech service including infor
 - {{domxref("SpeechSynthesisVoice.default")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
 - {{domxref("SpeechSynthesisVoice.lang")}} {{ReadOnlyInline}}
-  - : Returns a BCP 47 language tag indicating the language of the voice.
+  - : Returns a {{glossary("BCP 47 language tag")}} indicating the language of the voice.
 - {{domxref("SpeechSynthesisVoice.localService")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the voice is supplied by a local speech synthesizer service (`true`), or a remote speech synthesizer service (`false`.)
 - {{domxref("SpeechSynthesisVoice.name")}} {{ReadOnlyInline}}
@@ -40,16 +32,16 @@ const synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for (let i = 0; i < voices.length ; i++) {
-    const option = document.createElement('option');
-    option.textContent = `${voices[i].name} (${voices[i].lang})`;
+  for (const voice of voices) {
+    const option = document.createElement("option");
+    option.textContent = `${voice.name} (${voice.lang})`;
 
-    if (voices[i].default) {
-      option.textContent += ' — DEFAULT';
+    if (voice.default) {
+      option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -63,10 +55,11 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (const voice of voices) {
+    if (voice.name === selectedOption) {
+      utterThis.voice = voice;
     }
   }
   utterThis.pitch = pitch.value;
@@ -75,11 +68,13 @@ inputForm.onsubmit = (event) => {
 
   utterThis.onpause = (event) => {
     const char = event.utterance.text.charAt(event.charIndex);
-    console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-  }
+    console.log(
+      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+    );
+  };
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

@@ -1,18 +1,12 @@
 ---
-title: ReadableStreamDefaultReader.releaseLock()
+title: "ReadableStreamDefaultReader: releaseLock() method"
+short-title: releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`releaseLock()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the stream.
 
@@ -46,11 +40,11 @@ None ({{jsxref("undefined")}}).
 function fetchStream() {
   const reader = stream.getReader();
 
-  // ...
+  // …
 
-  reader.releaseLock()
+  reader.releaseLock();
 
-  // ...
+  // …
 }
 ```
 
@@ -61,3 +55,8 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

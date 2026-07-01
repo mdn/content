@@ -1,24 +1,19 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingQuality
+title: "CanvasRenderingContext2D: imageSmoothingQuality property"
+short-title: imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - imageSmoothingQuality
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`imageSmoothingQuality`** property of the
 {{domxref("CanvasRenderingContext2D")}} interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), lets you set the quality of
 image smoothing.
 
-> **Note:** For this property to have an effect,
+> [!NOTE]
+> For this property to have an effect,
 > {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
 > must be `true`.
 
@@ -32,6 +27,8 @@ One of the following:
   - : Medium quality.
 - `"high"`
   - : High quality.
+
+The default value is `"low"`.
 
 ## Examples
 
@@ -52,7 +49,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let img = new Image();
-img.src = "canvas_createpattern.png";
+img.src = "canvas_create_pattern.png";
 img.onload = () => {
   ctx.imageSmoothingQuality = "low";
   ctx.drawImage(img, 0, 0, 300, 150);

@@ -1,20 +1,10 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendNativeMessage
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendNativeMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 Sends a single message from an extension to a native application.
 
@@ -46,10 +36,6 @@ let sending = browser.runtime.sendNativeMessage(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the sender sent a response, this will be fulfilled with the response as a JSON object. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the native application, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Here's a background script that sends a "ping" message to the "ping_pong" app and logs the response, whenever the user clicks the browser action:
@@ -75,7 +61,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendNativeMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendNativeMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

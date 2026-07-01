@@ -1,13 +1,8 @@
 ---
-title: VTTCue.positionAlign
+title: "VTTCue: positionAlign property"
+short-title: positionAlign
 slug: Web/API/VTTCue/positionAlign
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - positionAlign
-  - VTTCue
 browser-compat: api.VTTCue.positionAlign
 ---
 
@@ -26,9 +21,7 @@ A string containing one of the following values:
 - `"line-right"`
   - : Line-right alignment.
 - `"auto"`
-
   - : Automatic alignment, which depends on the text alignment of the cue, interpreted as follows:
-
     - **line-left:** if the text alignment is left, the cue is using a LTR language and the text alignment is start, or the cue is using a RTL language and the text alignment is end.
     - **line-right:** if the text alignment is right, the cue is using a RTL language and the text alignment is start, or the cue is using a LTR language and the text-alignment is end.
     - **center:** if there is no text alignment position set.
@@ -38,15 +31,15 @@ A string containing one of the following values:
 In the following example a new {{domxref("VTTCue")}} is created, then the value of `positionAlign` is set to `"line-right"`. The value is then printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, 'Hildy!');
-cue1.positionAlign = 'line-right';
-console.log(cue1.positionAlign);
+let cue = new VTTCue(0, 0.9, "Hildy!");
+cue.positionAlign = "line-right";
+console.log(cue.positionAlign);
 
-track.addCue(cue1);
+track.addCue(cue);
 ```
 
 ## Specifications

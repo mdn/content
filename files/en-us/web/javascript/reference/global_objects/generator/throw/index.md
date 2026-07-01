@@ -1,27 +1,20 @@
 ---
 title: Generator.prototype.throw()
+short-title: throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 page-type: javascript-instance-method
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
 browser-compat: javascript.builtins.Generator.throw
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`throw()`** method of a generator acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
+The **`throw()`** method of {{jsxref("Generator")}} instances acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
 ## Syntax
 
-<!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+<!-- We don't usually add the "generatorInstance" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
 
-```js
-generatorObject.throw(exception)
+```js-nolint
+generatorInstance.throw(exception)
 ```
 
 ### Parameters
@@ -31,7 +24,7 @@ generatorObject.throw(exception)
 
 ### Return value
 
-If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return an {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:
@@ -42,7 +35,10 @@ If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScrip
 
 ### Exceptions
 
-If the thrown exception is not caught by a `try...catch`, the `exception` passed to `throw()` will be thrown out from the generator function.
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
+If the `exception` is not caught by a `try...catch` within the generator function, it is also thrown to the caller of `throw()`.
 
 ## Description
 
@@ -52,7 +48,7 @@ The `throw()` method, when called, can be seen as if a `throw exception;` statem
 
 ### Using throw()
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
+The following example shows a generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
 
 ```js
 function* gen() {
@@ -60,7 +56,7 @@ function* gen() {
     try {
       yield 42;
     } catch (e) {
-      console.log('Error caught!');
+      console.log("Error caught!");
     }
   }
 }
@@ -68,7 +64,7 @@ function* gen() {
 const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```

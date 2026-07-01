@@ -2,19 +2,14 @@
 title: SVGAnimateColorElement
 slug: Web/API/SVGAnimateColorElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGAnimateColorElement
 ---
 
 {{APIRef("SVG")}}{{deprecated_header}}
 
-The **`SVGAnimateColorElement`** interface corresponds to the {{SVGElement("animateColor")}} element.
+The **`SVGAnimateColorElement`** interface corresponds to the `<animateColor>` element.
 
 {{InheritanceDiagram}}
 

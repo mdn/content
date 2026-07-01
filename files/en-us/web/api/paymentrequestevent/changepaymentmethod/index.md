@@ -1,20 +1,14 @@
 ---
-title: PaymentRequestEvent.changePaymentMethod()
+title: "PaymentRequestEvent: changePaymentMethod() method"
+short-title: changePaymentMethod()
 slug: Web/API/PaymentRequestEvent/changePaymentMethod
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Payment Request API
-  - PaymentRequestEvent
-  - Reference
-  - changePaymentMethod()
-  - payment
-  - Experimental
+status:
+  - experimental
 browser-compat: api.PaymentRequestEvent.changePaymentMethod
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`changePaymentMethod()`** method of the {{domxref("PaymentRequestEvent")}} interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
 
@@ -43,7 +37,8 @@ A {{jsxref("Promise")}} that resolves with a `PaymentRequestDetailsUpdate` objec
 - `total`
   - : An updated total based on the changed payment method. The total can change, for example, because the billing address of the payment method selected by the user changes the applicable sales tax.
 - `modifiers`
-  - : An array of [`PaymentDetailsModifier`](https://www.w3.org/TR/payment-request/#paymentdetailsmodifier-dictionary) objects.
+  - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in {{domxref("PaymentRequestEvent.modifiers")}}.
+
 - `paymentMethodErrors`
   - : An object containing validation errors for the payment method, if any.
 
@@ -53,11 +48,13 @@ The following shows a trivial code snippet that could be used in a service worke
 
 ```js
 function notifyPaymentMethodChanged(e) {
-  e.changePaymentMethod('someMethod').then((paymentMethodChangeResponse) => {
-    paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
-  }).catch((error) => {
-    sendMessage({error: error.message});
-  });
+  e.changePaymentMethod("someMethod")
+    .then((paymentMethodChangeResponse) => {
+      paymentHandlerWindow.postMessage(paymentMethodChangeResponse);
+    })
+    .catch((error) => {
+      sendMessage({ error: error.message });
+    });
 }
 ```
 
@@ -71,8 +68,8 @@ function notifyPaymentMethodChanged(e) {
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

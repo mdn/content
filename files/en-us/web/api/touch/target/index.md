@@ -1,14 +1,8 @@
 ---
-title: Touch.target
+title: "Touch: target property"
+short-title: target
 slug: Web/API/Touch/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - EventTarget
-  - Mobile
-  - Property
-  - touch
 browser-compat: api.Touch.target
 ---
 
@@ -22,21 +16,21 @@ The {{domxref("EventTarget")}} the {{domxref("Touch")}} object applies to.
 
 ## Examples
 
-This example illustrates how to access the {{domxref("Touch")}} object's {{domxref("Touch.target")}} property. The {{domxref("Touch.target")}} property is an {{domxref("Element")}} ({{domxref("EventTarget")}}) on which a touch point is started when contact is first placed on the surface.
+This example illustrates how to access the {{domxref("Touch")}} object's `Touch.target` property. The `Touch.target` property is an {{domxref("Element")}} ({{domxref("EventTarget")}}) on which a touch point is started when contact is first placed on the surface.
 
-In following simple code snippet, we assume the user initiates one or more touch contacts on the `source` element. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler for this element is invoked, each touch point's {{domxref("Touch.target")}} property is accessed via the event's {{domxref("TouchEvent.targetTouches")}} list.
+In following simple code snippet, we assume the user initiates one or more touch contacts on the `source` element. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler for this element is invoked, each touch point's `Touch.target` property is accessed via the event's {{domxref("TouchEvent.targetTouches")}} list.
 
 ```js
 // Register a touchmove listener for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchstart', (e) => {
+src.addEventListener("touchstart", (e) => {
   // Iterate through the touch points that were activated
   // for this element.
   for (let i = 0; i < e.targetTouches.length; i++) {
     console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
   }
-}, false);
+});
 ```
 
 ## Specifications

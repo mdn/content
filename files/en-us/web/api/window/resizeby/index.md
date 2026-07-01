@@ -1,14 +1,8 @@
 ---
-title: Window.resizeBy()
+title: "Window: resizeBy() method"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
-  - Window
 browser-compat: api.Window.resizeBy
 ---
 
@@ -25,8 +19,10 @@ resizeBy(xDelta, yDelta)
 
 ### Parameters
 
-- `xDelta` is the number of pixels to grow the window horizontally.
-- `yDelta` is the number of pixels to grow the window vertically.
+- `xDelta`
+  - : The number of pixels to grow the window horizontally.
+- `yDelta`
+  - : The number of pixels to grow the window vertically.
 
 ### Return value
 
@@ -57,7 +53,11 @@ default.** To make the window resizable, you must open it with the
 
 ```js
 // Create resizable window
-myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+myExternalWindow = window.open(
+  "https://example.com",
+  "myWindowName",
+  "resizable",
+);
 
 // Resize window to 500x500
 myExternalWindow.resizeTo(500, 500);
@@ -77,3 +77,9 @@ any information on, that window/tab.
 ## Browser compatibility
 
 {{Compat}}
+
+> [!NOTE]
+> This function might not resize the window synchronously.
+> In some environments (like mobile) it might not resize the window at all. You
+> can listen to the {{domxref("Window/resize_event", "resize")}} event to see
+> if/when the window got resized.

@@ -1,20 +1,19 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclick event'
+title: "ServiceWorkerGlobalScope: notificationclick event"
+short-title: notificationclick
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 page-type: web-api-event
-tags:
-  - Event
-  - Notifications
-  - Service Worker
-  - ServiceWorkerGlobalScope
-  - events
-  - notificationclick
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
+The **`notificationclick`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
+
+Notifications created on the main thread or in workers which aren't service workers
+using the {{domxref("Notification.Notification","Notification()")}} constructor will
+instead receive a {{domxref("Notification/click_event", "click")}} event on the {{domxref("Notification")}} object
+itself.
 
 This event is not cancelable and does not bubble.
 
@@ -22,21 +21,21 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('notificationclick', (event) => { });
+```js-nolint
+addEventListener("notificationclick", (event) => { })
 
-onnotificationclick = (event) => { };
+onnotificationclick = (event) => { }
 ```
 
 ## Event type
 
-A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 
 ## Event properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its ancestors, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
@@ -48,22 +47,24 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 You can use the `notificationclick` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-self.addEventListener('notificationclick', (event) => {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", (event) => {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 
@@ -71,56 +72,56 @@ Or use the `onnotificationclick` event handler property:
 
 ```js
 self.onnotificationclick = (event) => {
-  console.log('On notification click: ', event.notification.tag);
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 };
 ```
 
-You can handle event actions using `event.action` within a {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event handler:
+You can handle event actions using `event.action` within a `notificationclick` event handler:
 
 ```js
-navigator.serviceWorker.register('sw.js');
-Notification.requestPermission((result) => {
-  if (result === 'granted') {
+navigator.serviceWorker.register("sw.js");
+Notification.requestPermission().then((result) => {
+  if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       // Show a notification that includes an action titled Archive.
-      registration.showNotification('New mail from Alice',
-        {
-          actions: [
-            {
-              action: 'archive',
-              title: 'Archive'
-            }
-          ]
-        }
-      )
+      registration.showNotification("New mail from Alice", {
+        actions: [
+          {
+            action: "archive",
+            title: "Archive",
+          },
+        ],
+      });
     });
   }
 });
 
-self.addEventListener('notificationclick', (event) => {
+self.addEventListener("notificationclick", (event) => {
   event.notification.close();
-  if (event.action === 'archive') {
+  if (event.action === "archive") {
     // User selected the Archive action.
     archiveEmail();
   } else {
     // User selected (e.g., clicked in) the main body of notification.
-    clients.openWindow('/inbox');
+    clients.openWindow("/inbox");
   }
-}, false);
+});
 ```
 
 ## Specifications

@@ -1,12 +1,8 @@
 ---
-title: EXT_blend_minmax
+title: EXT_blend_minmax extension
+short-title: EXT_blend_minmax
 slug: Web/API/EXT_blend_minmax
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_blend_minmax
 ---
 
@@ -16,7 +12,8 @@ The **`EXT_blend_minmax`** extension is part of the [WebGL API](/en-US/docs/Web/
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are `gl.MIN` and `gl.MAX`.
+> [!NOTE]
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are `gl.MIN` and `gl.MAX`.
 
 ## Constants
 
@@ -30,7 +27,7 @@ This extension adds two new constants, which can be used in {{domxref("WebGLRend
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_blend_minmax');
+const ext = gl.getExtension("EXT_blend_minmax");
 
 gl.blendEquation(ext.MIN_EXT);
 gl.blendEquation(ext.MAX_EXT);

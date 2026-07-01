@@ -2,12 +2,6 @@
 title: AudioNode
 slug: Web/API/AudioNode
 page-type: web-api-interface
-tags:
-  - API
-  - AudioNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioNode
 ---
 
@@ -17,14 +11,15 @@ The **`AudioNode`** interface is a generic interface for representing an audio p
 
 Examples include:
 
-- an audio source (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, an {{domxref("OscillatorNode")}}, etc.),
+- an audio source (e.g., an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, an {{domxref("OscillatorNode")}}, etc.),
 - the audio destination,
-- intermediate processing module (e.g. a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or
+- intermediate processing module (e.g., a filter like {{domxref("BiquadFilterNode")}} or {{domxref("ConvolverNode")}}), or
 - volume control (like {{domxref("GainNode")}})
 
 {{InheritanceDiagram}}
 
-> **Note:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Instance properties
 
@@ -100,7 +95,7 @@ _Brief history:_ The first version of the Web Audio spec only defined the factor
 
 ## Example
 
-This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
+This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 
 ```js
 const audioCtx = new AudioContext();

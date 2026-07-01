@@ -1,20 +1,23 @@
 ---
 title: TypedArray.BYTES_PER_ELEMENT
+short-title: BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 page-type: javascript-static-data-property
-tags:
-  - JavaScript
-  - Property
-  - TypedArray
-  - TypedArrays
 browser-compat: javascript.builtins.TypedArray.BYTES_PER_ELEMENT
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`TypedArray.BYTES_PER_ELEMENT`** static data property represents the size in bytes of each element in a typed array.
 
-The **`TypedArray.BYTES_PER_ELEMENT`** property represents the size in bytes of each element in a typed array.
+{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytes-per-element.html","shorter")}}
+```js interactive-example
+console.log(Float64Array.BYTES_PER_ELEMENT);
+// Expected output: 8
+
+console.log(Int8Array.BYTES_PER_ELEMENT);
+// Expected output: 1
+```
 
 ## Value
 
@@ -46,6 +49,7 @@ Uint8Array.BYTES_PER_ELEMENT; // 1
 Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
 Int16Array.BYTES_PER_ELEMENT; // 2
 Uint16Array.BYTES_PER_ELEMENT; // 2
+Float16Array.BYTES_PER_ELEMENT; // 2
 Int32Array.BYTES_PER_ELEMENT; // 4
 Uint32Array.BYTES_PER_ELEMENT; // 4
 Float32Array.BYTES_PER_ELEMENT; // 4
@@ -62,6 +66,7 @@ new Uint8Array([]).BYTES_PER_ELEMENT; // 1
 new Uint8ClampedArray([]).BYTES_PER_ELEMENT; // 1
 new Int16Array([]).BYTES_PER_ELEMENT; // 2
 new Uint16Array([]).BYTES_PER_ELEMENT; // 2
+new Float16Array([]).BYTES_PER_ELEMENT; // 2
 new Int32Array([]).BYTES_PER_ELEMENT; // 4
 new Uint32Array([]).BYTES_PER_ELEMENT; // 4
 new Float32Array([]).BYTES_PER_ELEMENT; // 4
@@ -80,5 +85,5 @@ new BigUint64Array([]).BYTES_PER_ELEMENT; // 8
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

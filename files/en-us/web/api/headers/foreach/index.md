@@ -1,31 +1,20 @@
 ---
-title: Headers.forEach()
+title: "Headers: forEach() method"
+short-title: forEach()
 slug: Web/API/Headers/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch API
-  - Headers
-  - Method
-  - Reference
 browser-compat: api.Headers.forEach
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-forEach((value, key) => { /* … */ })
-forEach((value, key, object) => { /* … */ })
-
-// Inline callback function
-forEach(function (value, key) { /* … */ })
-forEach(function (value, key, object) { /* … */ })
-forEach(function (value, key) { /* … */ }, thisArg)
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### Parameters
@@ -65,24 +54,28 @@ myHeaders.append("compression", "gzip");
 // Display the key/value pairs
 myHeaders.forEach((value, key) => {
   console.log(`${key} ==> ${value}`);
-})
+});
 ```
 
 The result is:
 
-```
+```plain
 compression ==> gzip
 content-type ==> application/json
 cookie ==> This is a demo cookie
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
-{{compat}}
+{{Compat}}
 
 ## See also
 
 - [`Map.prototype.forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

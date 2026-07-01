@@ -1,17 +1,12 @@
 ---
-title: TransformStreamDefaultController.enqueue()
+title: "TransformStreamDefaultController: enqueue() method"
+short-title: enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - enqueue
-  - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.enqueue
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`enqueue()`** method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.
 

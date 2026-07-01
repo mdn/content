@@ -2,17 +2,10 @@
 title: MediaQueryListEvent
 slug: Web/API/MediaQueryListEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Interface
-  - Media Queries
-  - MediaQueryListEvent
-  - Reference
 browser-compat: api.MediaQueryListEvent
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.change_event", "change")}} event.
 
@@ -40,17 +33,17 @@ _The `MediaQueryListEvent` interface inherits methods from its parent interface,
 
 ```js
 const para = document.querySelector("p"); // This is the UI element where to display the text
-const mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.addEventListener("change", (event) => {
   if (event.matches) {
     // The viewport is 600 pixels wide or less
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     // The viewport is more than 600 pixels wide
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 });
 ```
@@ -65,7 +58,7 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}

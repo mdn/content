@@ -1,21 +1,14 @@
 ---
-title: Element.ariaSelected
+title: "Element: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/Element/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSelected
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
+The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 
 ## Value
 
@@ -26,7 +19,7 @@ A string with one of the following values:
 - `"false"`
   - : The item is not selected.
 - `"undefined"`
-  - : The item is not
+  - : The item is not selectable.
 
 ## Examples
 
@@ -39,7 +32,7 @@ In this example the `aria-selected` attribute on the element with an ID of `tab-
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
 console.log(el.ariaSelected); // false
@@ -55,4 +48,4 @@ console.log(el.ariaSelected); // false
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)

@@ -1,22 +1,12 @@
 ---
 title: webNavigation.onHistoryStateUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHistoryStateUpdated
-  - webNavigation
+page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar()}}
-
-Fired when the page used the [>history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
+Fired when the page used the [history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
 
 ## Syntax
 
@@ -31,7 +21,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,15 +32,13 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
+- `listener`
+  - : The function called when this event occurs. The function is passed this argument:
     - `details`
-      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
+      - : `object`. Details about the navigation event. See the [details](#details) section for more information.
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
 
 ## Additional objects
 
@@ -60,20 +48,26 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
   - : `string`. The URL to which the given frame will navigate.
-- `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered.
 - `frameId`
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
-- `timeStamp`
-  - : `number`. The time that the URL was changed by the history API, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `frameType`
+  - : `string`. The type of frame the navigation occurred in. Returns the values `"outermost_frame"`, `"fenced_frame"`, and `"sub_frame"`.
+- `parentFrameId`
+  - : `integer`. ID of this frame's parent. Set to `-1` if this is a top-level frame.
+- `documentId`
+  - : `string`. A UUID of the document loaded. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+- `parentDocumentId`
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
+- `documentLifecycle`
+  - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, and `"pending_deletion"`.
 - `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`. The reason for the navigation: for example, `"link"` if the user clicked a link.
+  - : {{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}. The reason for the navigation: for example, `"link"` if the user clicked a link.
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
-
-## Browser compatibility
-
-{{Compat}}
+- `timeStamp`
+  - : `number`. The time that the URL was changed by the history API, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 
 ## Examples
 
@@ -81,12 +75,8 @@ Logs the target URLs and extra transition information for `onHistoryStateUpdated
 
 ```js
 const filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnHistoryStateUpdated(details) {
   console.log(`onHistoryStateUpdated: ${details.url}`);
@@ -94,12 +84,20 @@ function logOnHistoryStateUpdated(details) {
   console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
 }
 
-browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+browser.webNavigation.onHistoryStateUpdated.addListener(
+  logOnHistoryStateUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,17 +1,12 @@
 ---
-title: TrustedTypePolicyFactory.emptyScript
+title: "TrustedTypePolicyFactory: emptyScript property"
+short-title: emptyScript
 slug: Web/API/TrustedTypePolicyFactory/emptyScript
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - emptyScript
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyScript
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`emptyScript`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedScript")}} object containing an empty string.
 

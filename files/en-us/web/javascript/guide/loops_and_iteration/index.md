@@ -2,17 +2,10 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
-tags:
-  - Guide
-  - JavaScript
-  - Loop
-  - Syntax
-  - "l10n:priority"
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
-{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Loops offer a quick and easy way to do something repeatedly. This
 chapter of the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
@@ -25,7 +18,7 @@ the idea "Go five steps to the east" could be expressed this way as a loop:
 ```js
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -50,36 +43,38 @@ The statements for loops provided in JavaScript are:
 
 ## for statement
 
-A {{jsxref("statements/for","for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
+A {{jsxref("Statements/for", "for")}} loop repeats until a specified condition evaluates to false. The JavaScript `for` loop is similar to the Java and C `for` loop.
 
 A `for` statement looks as follows:
 
-```js
-for ([initialExpression]; [conditionExpression]; [incrementExpression])
+```js-nolint
+for (initialization; condition; afterthought)
   statement
 ```
 
 When a `for` loop executes, the following occurs:
 
-1. The initializing expression `initialExpression`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
-2. The `conditionExpression` expression is evaluated. If the value of `conditionExpression` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `conditionExpression` expression is omitted entirely, the condition is assumed to be true.)
+1. The initializing expression `initialization`, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+2. The `condition` expression is evaluated. If the value of `condition` is true, the loop statements execute. Otherwise, the `for` loop terminates. (If the `condition` expression is omitted entirely, the condition is assumed to be true.)
 3. The `statement` executes. To execute multiple statements, use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) (`{ }`) to group those statements.
-4. If present, the update expression `incrementExpression` is executed.
+4. If present, the update expression `afterthought` is executed.
 5. Control returns to Step 2.
 
 ### Example
 
 In the example below, the function contains a `for` statement that counts
-the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Reference/Elements/select)
 element that allows multiple selections).
 
 #### HTML
 
 ```html
 <form name="selectForm">
-  <label for="musicTypes">Choose some music types, then click the button below:</label>
+  <label for="musicTypes"
+    >Choose some music types, then click the button below:</label
+  >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>
@@ -105,9 +100,9 @@ function countSelected(selectObject) {
   return numberSelected;
 }
 
-const btn = document.getElementById('btn');
+const btn = document.getElementById("btn");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const musicTypes = document.selectForm.musicTypes;
   console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
 });
@@ -115,12 +110,12 @@ btn.addEventListener('click', () => {
 
 ## do...while statement
 
-The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
+The {{jsxref("Statements/do...while", "do...while")}} statement repeats until a
 specified condition evaluates to false.
 
 A `do...while` statement looks as follows:
 
-```js
+```js-nolint
 do
   statement
 while (condition);
@@ -150,11 +145,11 @@ do {
 
 ## while statement
 
-A {{jsxref("statements/while","while")}} statement executes its statements as long as a
+A {{jsxref("Statements/while", "while")}} statement executes its statements as long as a
 specified condition evaluates to `true`. A `while` statement looks
 as follows:
 
-```js
+```js-nolint
 while (condition)
   statement
 ```
@@ -210,42 +205,31 @@ following `while` loop execute forever because the condition never becomes
 ```js example-bad
 // Infinite loops are bad!
 while (true) {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
 ## labeled statement
 
-A {{jsxref("statements/label","label")}} provides a statement with an identifier that
+A {{jsxref("Statements/label", "label")}} provides a statement with an identifier that
 lets you refer to it elsewhere in your program. For example, you can use a label to
 identify a loop, and then use the `break` or `continue` statements
 to indicate whether a program should interrupt the loop or continue its execution.
 
 The syntax of the labeled statement looks like the following:
 
-```js
+```js-nolint
 label:
   statement
 ```
 
 The value of `label` may be any JavaScript identifier that is not a
 reserved word. The `statement` that you identify with a label may be
-any statement.
-
-### Example
-
-In this example, the label `markLoop` identifies a `while` loop.
-
-```js
-markLoop:
-while (theMark) {
-  doSomething();
-}
-```
+any statement. For examples of using labeled statements, see the examples of `break` and `continue` below.
 
 ## break statement
 
-Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
+Use the {{jsxref("Statements/break", "break")}} statement to terminate a loop,
 `switch`, or in conjunction with a labeled statement.
 
 - When you use `break` without a label, it terminates the innermost
@@ -256,7 +240,7 @@ Use the {{jsxref("statements/break","break")}} statement to terminate a loop,
 
 The syntax of the `break` statement looks like this:
 
-```js
+```js-nolint
 break;
 break label;
 ```
@@ -283,11 +267,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('Outer loops: ', x);
+  console.log("Outer loops:", x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('Inner loops: ', z);
+    console.log("Inner loops:", z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -300,7 +284,7 @@ labelCancelLoops: while (true) {
 
 ## continue statement
 
-The {{jsxref("statements/continue","continue")}} statement can be used to restart a
+The {{jsxref("Statements/continue", "continue")}} statement can be used to restart a
 `while`, `do-while`, `for`, or `label`
 statement.
 
@@ -316,7 +300,7 @@ statement.
 
 The syntax of the `continue` statement looks like the following:
 
-```js
+```js-nolint
 continue;
 continue label;
 ```
@@ -339,53 +323,54 @@ while (i < 5) {
   n += i;
   console.log(n);
 }
-//1,3,7,12
+// Logs:
+// 1 3 7 12
 ```
 
 If you comment out the `continue;`, the loop would run till the end and you would see `1,3,6,10,15`.
 
 ### Example 2
 
-A statement labeled `checkiandj` contains a statement labeled
-`checkj`. If `continue` is encountered, the program
-terminates the current iteration of `checkj` and begins the next
-iteration. Each time `continue` is encountered, `checkj`
+A statement labeled `checkIandJ` contains a statement labeled
+`checkJ`. If `continue` is encountered, the program
+terminates the current iteration of `checkJ` and begins the next
+iteration. Each time `continue` is encountered, `checkJ`
 reiterates until its condition returns `false`. When `false` is
-returned, the remainder of the `checkiandj` statement is completed,
-and `checkiandj` reiterates until its condition returns
+returned, the remainder of the `checkIandJ` statement is completed,
+and `checkIandJ` reiterates until its condition returns
 `false`. When `false` is returned, the program continues at the
-statement following `checkiandj`.
+statement following `checkIandJ`.
 
-If `continue` had a label of `checkiandj`, the program
-would continue at the top of the `checkiandj` statement.
+If `continue` had a label of `checkIandJ`, the program
+would continue at the top of the `checkIandJ` statement.
 
 ```js
 let i = 0;
 let j = 10;
-checkiandj: while (i < 4) {
+checkIandJ: while (i < 4) {
   console.log(i);
   i += 1;
-  checkj: while (j > 4) {
+  checkJ: while (j > 4) {
     console.log(j);
     j -= 1;
-    if ((j % 2) === 0) {
-      continue checkj;
+    if (j % 2 === 0) {
+      continue;
     }
-    console.log(j, ' is odd.');
+    console.log(j, "is odd.");
   }
-  console.log('i = ', i);
-  console.log('j = ', j);
+  console.log("i =", i);
+  console.log("j =", j);
 }
 ```
 
 ## for...in statement
 
-The {{jsxref("statements/for...in","for...in")}} statement iterates a specified
+The {{jsxref("Statements/for...in", "for...in")}} statement iterates a specified
 variable over all the enumerable properties of an object. For each distinct property,
 JavaScript executes the specified statements. A `for...in` statement looks as
 follows:
 
-```js
+```js-nolint
 for (variable in object)
   statement
 ```
@@ -398,18 +383,18 @@ names and their values.
 
 ```js
 function dumpProps(obj, objName) {
-  let result = '';
+  let result = "";
   for (const i in obj) {
     result += `${objName}.${i} = ${obj[i]}<br>`;
   }
-  result += '<hr>';
+  result += "<hr>";
   return result;
 }
 ```
 
 For an object `car` with properties `make` and `model`, `result` would be:
 
-```
+```plain
 car.make = Ford
 car.model = Mustang
 ```
@@ -420,31 +405,31 @@ Although it may be tempting to use this as a way to iterate over {{jsxref("Array
 elements, the `for...in` statement will return the name of your user-defined
 properties in addition to the numeric indexes.
 
-Therefore, it is better to use a traditional {{jsxref("statements/for","for")}} loop
+Therefore, it is better to use a traditional {{jsxref("Statements/for", "for")}} loop
 with a numeric index when iterating over arrays, because the `for...in`
 statement iterates over user-defined properties in addition to the array elements, if
 you modify the Array object (such as adding custom properties or methods).
 
 ## for...of statement
 
-The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
+The {{jsxref("Statements/for...of", "for...of")}} statement creates a loop Iterating
 over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (including
 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}},
-{{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
+{{jsxref("Functions/arguments", "arguments")}} object and so on), invoking a custom
 iteration hook with statements to be executed for the value of each distinct property.
 
-```js
-for (variable of object)
+```js-nolint
+for (variable of iterable)
   statement
 ```
 
 The following example shows the difference between a `for...of` loop and a
-{{jsxref("statements/for...in","for...in")}} loop. While `for...in` iterates
+{{jsxref("Statements/for...in", "for...in")}} loop. While `for...in` iterates
 over property names, `for...of` iterates over property values:
 
 ```js
 const arr = [3, 5, 7];
-arr.foo = 'hello';
+arr.foo = "hello";
 
 for (const i in arr) {
   console.log(i);
@@ -457,7 +442,7 @@ for (const i of arr) {
 // Logs: 3 5 7
 ```
 
-The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
+The `for...of` and `for...in` statements can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring). For example, you can simultaneously loop over the keys and values of an object using {{jsxref("Object.entries()")}}.
 
 ```js
 const obj = { foo: 1, bar: 2 };
@@ -469,5 +454,4 @@ for (const [key, val] of Object.entries(obj)) {
 // "bar" 2
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
-  "Web/JavaScript/Guide/Functions")}}
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

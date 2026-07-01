@@ -2,17 +2,12 @@
 title: VirtualKeyboard API
 slug: Web/API/VirtualKeyboard_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - VirtualKeyboard API
-  - Overview
-  - Reference
-browser-compat:
-  - api.VirtualKeyboard
+status:
+  - experimental
+browser-compat: api.VirtualKeyboard
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}
+{{SeeCompatTable}}{{DefaultAPISidebar("VirtualKeyboard API")}}{{securecontext_header}}
 
 The VirtualKeyboard API provides developers control over the layout of their applications when the on-screen virtual keyboard appears and disappears on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 
@@ -36,7 +31,7 @@ The VirtualKeyboard API consists of three parts:
 
 - The {{domxref("VirtualKeyboard")}} interface, accessed through {{domxref('navigator.virtualKeyboard')}}, is used to opt out of the automatic virtual keyboard behavior, show or hide the virtual keyboard programmatically, as well as get the current position and size of the virtual keyboard.
 - The `keyboard-inset-*` CSS environment variables provide information about the virtual keyboard's position and size.
-- The {{htmlattrxref("virtualkeyboardpolicy")}} attribute specifies whether the virtual keyboard should appear on `contenteditable` elements.
+- The [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) attribute specifies whether the virtual keyboard should appear on `contenteditable` elements.
 
 ### Opt out of the automatic virtual keyboard behavior
 
@@ -54,7 +49,7 @@ The code snippet below uses the `geometrychange` event to detect when the virtua
 if ("virtualKeyboard" in navigator) {
   navigator.virtualKeyboard.overlaysContent = true;
 
-  navigator.virtualKeyboard.addEventListener("geometrychange", event => {
+  navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;
   });
 }
@@ -62,59 +57,69 @@ if ("virtualKeyboard" in navigator) {
 
 ### Detect the virtual keyboard geometry using CSS environment variables
 
-The VirtualKeyboard API also exposes the following {{cssxref("env", "CSS environment variables", "", "nocode")}}: `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
+The VirtualKeyboard API also exposes the following [CSS environment variables](/en-US/docs/Web/CSS/Reference/Values/env): `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
 
 The `keyboard-inset-*` CSS environment variables are useful to adapt your layout to the virtual keyboard appearance using CSS. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport. The `width` and `height` variables are also available if needed.
 
 The code snippet below uses the `keyboard-inset-height` CSS variable to reserve space for the virtual keyboard to appear below the list of messages and input field in a chat-like application. When the virtual keyboard is hidden, the `env()` function returns `0px` and the `keyboard` grid area is hidden. The messages and input elements can occupy the full height of the viewport. When the virtual keyboard appears, the `keyboard` grid area gets the height of the virtual keyboard.
 
 ```html
-<style>
-  body {
-    display: grid;
-    margin: 0;
-    height: 100vh;
-    grid-template:
-      "messages"  1fr
-      "input"     auto
-      "keyboard"  env(keyboard-inset-height, 0px);
-  }
-</style>
 <ul id="messages"></ul>
-<input type="text">
-<script>
-  if ("virtualKeyboard" in navigator) {
-    navigator.virtualKeyboard.overlaysContent = true;
-  }
-</script>
+<input type="text" />
+```
+
+```css
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template:
+    "messages" 1fr
+    "input" auto
+    "keyboard" env(keyboard-inset-height, 0px);
+}
+```
+
+```js
+if ("virtualKeyboard" in navigator) {
+  navigator.virtualKeyboard.overlaysContent = true;
+}
 ```
 
 ### Control the virtual keyboard on `contenteditable` elements
 
-By default, elements using the {{htmlattrxref("contenteditable")}} attribute also trigger the virtual keyboard when tapped or clicked. In certain situations, it may be desirable to prevent this behavior and instead show the virtual keyboard after a different event.
+By default, elements using the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute also trigger the virtual keyboard when tapped or clicked. In certain situations, it may be desirable to prevent this behavior and instead show the virtual keyboard after a different event.
 
-Set the {{htmlattrxref("virtualkeyboardpolicy")}} attribute to `manual` to prevent the default handling of the virtual keyboard in the browser, and instead handle it yourself by using the {{domxref("VirtualKeyboard")}} interface's `show()` and `hide()` methods.
+Set the [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) attribute to `manual` to prevent the default handling of the virtual keyboard in the browser, and instead handle it yourself by using the {{domxref("VirtualKeyboard")}} interface's `show()` and `hide()` methods.
 
 The code snippet below shows how to use the `virtualkeyboardpolicy` attribute and the `navigator.virtualKeyboard.show()` method to show the virtual keyboard on double-click instead:
 
 ```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
-<script>
-  if ("virtualKeyboard" in navigator) {
-    navigator.virtualKeyboard.overlaysContent = true;
+```
 
-    const editor = document.getElementById("editor");
-    editor.addEventListener("dblclick", () => {
-      navigator.virtualKeyboard.show();
-    });
-  }
-</script>
+```js
+if ("virtualKeyboard" in navigator) {
+  navigator.virtualKeyboard.overlaysContent = true;
+
+  const editor = document.getElementById("editor");
+  editor.addEventListener("dblclick", () => {
+    navigator.virtualKeyboard.show();
+  });
+}
 ```
 
 ## Interfaces
 
 - {{domxref('VirtualKeyboard')}} {{experimental_inline}}
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
+
+## Extensions to other interfaces
+
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to the {{DOMxRef("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
+- {{domxref("HTMLElement.virtualkeyboardpolicy")}} {{experimental_inline}}
+  - : A string indicating whether to use the browser's default policy for showing the virtual keyboard when the element is focused, or to handle showing the virtual keyboard manually.
 
 ## Specifications
 

@@ -2,26 +2,30 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 page-type: javascript-statement
-tags:
-  - ECMAScript 2015
-  - Function
-  - Iterator
-  - JavaScript
-  - Language feature
-  - Statement
 browser-compat: javascript.statements.generator_function
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Statements")}}
+The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
-The **`function*`** declaration (`function` keyword
-followed by an asterisk) defines a _generator function_, which returns a
-{{jsxref("Global_Objects/Generator","Generator")}} object.
+You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: function* declaration")}}
 
-You can also define generator functions using the {{jsxref("GeneratorFunction")}}
-constructor, or the function expression syntax.
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## Syntax
 
@@ -32,61 +36,48 @@ function* name(param0) {
 function* name(param0, param1) {
   statements
 }
-function* name(param0, param1, /* … ,*/ paramN) {
+function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
 
-> **Note:** Generator functions do not have arrow function counterparts.
+> [!NOTE]
+> Generator functions do not have arrow function counterparts.
+
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
 
 ### Parameters
 
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of a formal parameter for the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function.
 
 ## Description
 
-Generators are functions that can be exited and later re-entered. Their context
-(variable bindings) will be saved across re-entrances.
+A `function*` declaration creates a {{jsxref("GeneratorFunction")}} object. Each time a generator function is called, it returns a new {{jsxref("Generator")}} object, which conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). The generator function's execution is _suspended_ at some place, which is initially at the very beginning of the function body. The generator function can be called multiple times to create multiple generators simultaneously; every generator maintains its own [execution context](/en-US/docs/Web/JavaScript/Reference/Execution_model#stack_and_execution_contexts) of the generator function and can be stepped independently.
 
-Generators in JavaScript — especially when combined with Promises — are a very
-powerful tool for asynchronous programming as they mitigate — if not entirely eliminate
-\-- the problems with callbacks, such as [Callback Hell](http://callbackhell.com/) and
-[Inversion of Control](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
-However, an even simpler solution to these problems can be achieved
-with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
+The generator allows bidirectional control flow: control flow can transfer between the generator function (callee) and its caller as many times as both parties wish to. Control flow can go from the caller to the callee by calling the generator's methods: [`next()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next), [`throw()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw), and [`return()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return). Control flow can go from the callee to the caller by exiting the function as normal using `return` or `throw` or execution all statements, or by using the `yield` and `yield*` expressions.
 
-Calling a generator function does not execute its body immediately; a [generator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-object for the function is returned instead. When the iterator's `next()`
-method is called, the generator function's body is executed until the first
-{{jsxref("Operators/yield", "yield")}} expression, which specifies the value to be
-returned from the iterator or, with {{jsxref("Operators/yield*", "yield*")}}, delegates
-to another generator function. The `next()` method returns an object with a
-`value` property containing the yielded value and a `done`
-property which indicates whether the generator has yielded its last value, as a boolean.
-Calling the `next()` method with an argument will resume the generator
-function execution, replacing the `yield` expression where an execution was
-paused with the argument from `next()`.
+When the generator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) method is called, the generator function's body is executed until one of the following:
 
-A `return` statement in a generator, when executed, will make the generator
-finish (i.e. the `done` property of the object returned by it will be set to
-`true`). If a value is returned, it will be set as the `value`
-property of the object returned by the generator.
-Much like a `return` statement, an error thrown inside the generator will
-make the generator finished — unless caught within the generator's body.
-When a generator is finished, subsequent `next()` calls will not execute any
-of that generator's code, they will just return an object of this form:
-`{value: undefined, done: true}`.
+- A {{jsxref("Operators/yield", "yield")}} expression. In this case, the `next()` method returns an object with a `value` property containing the yielded value and a `done` property that is always `false`. The next time `next()` is called, the `yield` expression evaluates to the value passed to `next()`.
+- A {{jsxref("Operators/yield*", "yield*")}}, delegating to another iterator. In this case, this call and any future calls to `next()` on the generator is the same as calling `next()` on the delegated iterator, until the delegated iterator is finished.
+- A {{jsxref("Statements/return", "return")}} statement (that is not intercepted by a {{jsxref("Statements/try...catch", "try...catch...finally")}}), or the end of the control flow which implicitly means `return undefined`. In this case, the generator is finished, and the `next()` method returns an object with a `value` property containing the returned value and a `done` property that is always `true`. Any further `next()` calls have no effect and always return `{ value: undefined, done: true }`.
+- An error thrown inside the function, either via a {{jsxref("Statements/throw", "throw")}} statement or an unhandled exception. The `next()` method throws that error, and the generator is finished. Any further `next()` calls have no effect and always return `{ value: undefined, done: true }`.
 
-`function*` declarations are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope.
+When the generator's [`throw()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw) method is called, it acts as if a `throw` statement is inserted in the generator's body at the current suspended position. Similarly, when the generator's [`return()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) method is called, it acts as if a `return` statement is inserted in the generator's body at the current suspended position. Both methods usually finish the generator, unless the generator function catches the completion via {{jsxref("Statements/try...catch", "try...catch...finally")}}.
+
+Generators used to be a paradigm for asynchronous programming, avoiding [Callback Hell](https://medium.com/@raihan_tazdid/callback-hell-in-javascript-all-you-need-to-know-296f7f5d3c1) by achieving [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control). Nowadays, this use case is solved with the simpler [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) model and the {{jsxref("Promise")}} object. However, generators are still useful for many other tasks, such as defining [iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) in a straightforward way.
+
+`function*` declarations behave similar to {{jsxref("Statements/function", "function")}} declarations — they are [hoisted](/en-US/docs/Glossary/Hoisting) to the top of their scope and can be called anywhere in their scope, and they can be redeclared only in certain contexts.
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```js
 function* idMaker() {
@@ -229,30 +220,18 @@ function* f() {}
 const obj = new f(); // throws "TypeError: f is not a constructor
 ```
 
-### Generator defined in an expression
-
-```js
-const foo = function* () {
-  yield 10;
-  yield 20;
-};
-
-const bar = foo();
-console.log(bar.next()); // {value: 10, done: false}
-```
-
 ### Generator example
 
 ```js
 function* powers(n) {
-  //endless loop to generate
+  // Endless loop to generate
   for (let current = n; ; current *= n) {
     yield current;
   }
 }
 
 for (const power of powers(2)) {
-  // controlling generator
+  // Controlling generator
   if (power > 32) {
     break;
   }
@@ -275,18 +254,19 @@ for (const power of powers(2)) {
 
 ## See also
 
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("GeneratorFunction")}} object
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("GeneratorFunction")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} declaration
-- {{jsxref("Operators/function", "function")}} expression
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
-- Other web resources:
-
-  - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+- {{jsxref("Generator")}}
+- [Regenerator](https://github.com/facebook/regenerator) on GitHub
+- [Promises and Generators: control flow utopia](https://youtu.be/qbKWsbJ76-s) presentation by Forbes Lindesay at JSConf (2013)
+- [Task.js](https://github.com/mozilla/task.js) on GitHub
+- [You Don't Know JS: Async & Performance, Ch.4: Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md) by Kyle Simpson

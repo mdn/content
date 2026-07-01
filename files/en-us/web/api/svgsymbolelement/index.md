@@ -2,14 +2,6 @@
 title: SVGSymbolElement
 slug: Web/API/SVGSymbolElement
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGSymbolElement
 browser-compat: api.SVGSymbolElement
 ---
 
@@ -21,11 +13,16 @@ The **`SVGSymbolElement`** interface corresponds to the {{SVGElement("symbol")}}
 
 ## Instance properties
 
-_This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("SVGFitToViewBox")}}._
+_This interface also inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
+
+- {{domxref("SVGSymbolElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("symbol")}} element.
+- {{domxref("SVGSymbolElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("symbol")}} element.
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}, and implements methods from {{domxref("SVGFitToViewBox")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
 ## Specifications
 

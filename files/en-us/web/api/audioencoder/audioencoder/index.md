@@ -1,17 +1,12 @@
 ---
-title: AudioEncoder.AudioEncoder()
+title: "AudioEncoder: AudioEncoder() constructor"
+short-title: AudioEncoder()
 slug: Web/API/AudioEncoder/AudioEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - AudioEncoder
-  - Experimental
 browser-compat: api.AudioEncoder.AudioEncoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioEncoder()`** constructor creates a new {{domxref("AudioEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("AudioEncoder.state")}} set to `"unconfigured"`.
 
@@ -26,9 +21,9 @@ new AudioEncoder(init)
 - `init`
   - : An object containing two required callbacks.
     - `output`
-      - : A callback which takes a {{domxref("EncodedAudioChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has one member, `decoderConfig` which has an object as its value containing:
+      - : A callback which takes an {{domxref("EncodedAudioChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has one member, `decoderConfig` which has an object as its value containing:
         - `codec`
-          - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+          - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry).
         - `sampleRate`
           - : An integer representing the number of frame samples per second.
         - `numberOfChannels`

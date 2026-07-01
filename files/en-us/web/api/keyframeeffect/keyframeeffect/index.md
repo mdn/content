@@ -1,19 +1,12 @@
 ---
-title: KeyframeEffect()
+title: "KeyframeEffect: KeyframeEffect() constructor"
+short-title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
 page-type: web-api-constructor
-tags:
-  - API
-  - Animation
-  - Constructor
-  - KeyframeEffect
-  - Reference
-  - waapi
-  - web animations api
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
@@ -34,9 +27,7 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
 - `keyframes`
   - : A [keyframes object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) or `null`.
 - `options` {{optional_inline}}
-
   - : Either an integer representing the animation's duration (in milliseconds), or an object containing one or more of the following:
-
     - `delay` {{optional_inline}}
       - : The number of milliseconds to delay the start of the animation. Defaults to 0.
     - `direction` {{optional_inline}}
@@ -54,11 +45,9 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
     - `iterations` {{optional_inline}}
       - : The number of times the animation should repeat. Defaults to `1`, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.
     - `composite` {{optional_inline}}
-
       - : Determines how values are combined between this animation and other, separate
         animations that do not specify their own specific composite operation. Defaults to
         `replace`.
-
         - `add` dictates an additive effect, where each successive iteration
           builds on the last. For instance with `transform`, a
           `translateX(-200px)` would not override an earlier
@@ -73,6 +62,8 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : Determines how values build from iteration to iteration in this animation. Can be
         set to `accumulate` or `replace` (see above). Defaults
         to `replace`.
+    - `pseudoElement` {{optional_inline}}
+      - : A `string` containing a {{cssxref("pseudo-elements","pseudo-element")}} selector, such as `"::before"`. If present, the effect is applied to the selected pseudo-element of `target`, rather than to `target` itself.
 
 The single argument constructor (see above) creates a clone of an existing {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 
@@ -81,25 +72,49 @@ The single argument constructor (see above) creates a clone of an existing {{dom
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `KeyframeEffect` constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
+In the following example, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the emoji should roll on the floor:
 
 ```js
-const whiteRabbit = document.getElementById('rabbit');
+const emoji = document.querySelector("div"); // element to animate
 
-const rabbitDownKeyframes = new KeyframeEffect(
-    whiteRabbit, // element to animate
-    [
-      { transform: 'translateY(0%)' }, // keyframe
-      { transform: 'translateY(100%)' } // keyframe
-    ],
-    { duration: 3000, fill: 'forwards' } // keyframe options
-  );
+const rollingKeyframes = new KeyframeEffect(
+  emoji,
+  [
+    { transform: "translateX(0) rotate(0)" }, // keyframe
+    { transform: "translateX(200px) rotate(1.3turn)" }, // keyframe
+  ],
+  {
+    // keyframe options
+    duration: 2000,
+    direction: "alternate",
+    easing: "ease-in-out",
+    iterations: "Infinity",
+  },
+);
 
-const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-
-// Play rabbit animation
-rabbitDownAnimation.play();
+const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
+rollingAnimation.play();
 ```
+
+```html
+<div>🤣</div>
+```
+
+```css hidden
+body {
+  box-shadow: 0 5px 5px pink;
+}
+
+div {
+  width: fit-content;
+  margin-left: calc(50% - 132px);
+  font-size: 64px;
+  user-select: none;
+  margin-top: 1rem;
+}
+```
+
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

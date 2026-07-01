@@ -1,17 +1,14 @@
 ---
-title: IdleDetector()
+title: "IdleDetector: IdleDetector() constructor"
+short-title: IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.IdleDetector
 ---
 
-{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`IdleDetector()`** constructor creates a new {{domxref("IdleDetector")}}
 object which provides events indicating when the user is no longer interacting

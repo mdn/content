@@ -1,28 +1,18 @@
 ---
-title: IDBCursor.direction
+title: "IDBCursor: direction property"
+short-title: direction
 slug: Web/API/IDBCursor/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - direction
 browser-compat: api.IDBCursor.direction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`direction`** read-only property of the
 {{domxref("IDBCursor")}} interface is a string that returns the
 direction of traversal of the cursor (set using
-{{domxref("IDBObjectStore.openCursor")}} for example). See the [Values](#values)
+{{domxref("IDBObjectStore.openCursor")}} for example). See the [Value](#value)
 section below for possible values.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -30,27 +20,24 @@ A string indicating the direction in which the cursor is traversing the data.
 Possible values are:
 
 - `next`
-  - : This direction causes the cursor to be opened at the start of the source.
+  - : The cursor is opened at the start of the source.
 - `nextunique`
-  - : This direction causes the cursor to be opened at the start of the source.
-    For every key with duplicate values, only the first record is yielded.
+  - : The cursor is opened at the start of the source.
+    For every key with duplicate values, only the record closest to the start is yielded.
 - `prev`
-  - : This direction causes the cursor to be opened at the end of the source.
+  - : The cursor is opened at the end of the source.
 - `prevunique`
-  - : This direction causes the cursor to be opened at the end of the source.
-    For every key with duplicate values, only the first record is yielded.
+  - : The cursor is opened at the end of the source.
+    For every key with duplicate values, only the record closest to the start is yielded.
 
 ## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
-log the direction of the cursor, something like this:
+log the direction of the cursor.
 
-```
-prev
-```
-
-> **Note:** we can't change the direction of travel of the cursor using
+> [!NOTE]
+> We can't change the direction of travel of the cursor using
 > the `direction` property, as it is read-only. We specify the direction of
 > travel using the 2nd argument of {{domxref("IDBObjectStore.openCursor")}}.
 
@@ -61,24 +48,24 @@ working example, see our [IDBCursor example](https://github.com/mdn/dom-examples
 
 ```js
 function backwards() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readonly');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor(null,'prev').onsuccess = (event) => {
+  objectStore.openCursor(null, "prev").onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
+      list.appendChild(listItem);
 
-        console.log(cursor.direction);
-        cursor.continue();
-      } else {
-        console.log('Entries displayed backwards.');
-      }
+      console.log(cursor.direction);
+      cursor.continue();
+    } else {
+      console.log("Entries displayed backwards.");
+    }
   };
-};
+}
 ```
 
 ## Specifications

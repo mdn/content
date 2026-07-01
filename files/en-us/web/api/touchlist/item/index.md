@@ -1,16 +1,8 @@
 ---
-title: TouchList.item()
+title: "TouchList: item() method"
+short-title: item()
 slug: Web/API/TouchList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Mobile
-  - Reference
-  - TouchList
-  - touch
 browser-compat: api.TouchList.item
 ---
 
@@ -33,14 +25,12 @@ item(index)
 
 ### Return value
 
-- `touchPoint`
-  - : The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
-    Returns `null` if the index is not less than the length of the list.
+The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}. Returns `null` if the index is not less than the length of the list.
 
 ## Examples
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
-{{domxref("TouchList.item()","item")}} method and the
+`item` method and the
 {{domxref("TouchList.length","length")}} property.
 
 ```js
@@ -54,7 +44,7 @@ target.addEventListener("touchstart", (ev) => {
     ev.targetTouches.length >= 1
       ? ev.targetTouches.item(0)
       : ev.touches.item(0);
-}, false);
+});
 ```
 
 ## Specifications

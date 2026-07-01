@@ -1,23 +1,18 @@
 ---
-title: CSSCounterStyleRule.name
+title: "CSSCounterStyleRule: name property"
+short-title: name
 slug: Web/API/CSSCounterStyleRule/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - name
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.name
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the `name` for the associated rule.
 
 ## Value
 
-A string
+A string.
 
 ## Examples
 

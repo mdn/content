@@ -1,22 +1,12 @@
 ---
-title: 'ServiceWorkerGlobalScope: push event'
+title: "ServiceWorkerGlobalScope: push event"
+short-title: push
 slug: Web/API/ServiceWorkerGlobalScope/push_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Notifications
-  - Push
-  - Push API
-  - PushEvent
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`push`** event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.
 
@@ -26,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('push', (event) => { });
+```js-nolint
+addEventListener("push", (event) => { })
 
-onpush = (event) => { };
+onpush = (event) => { }
 ```
 
 ## Event type
@@ -53,7 +43,7 @@ This example sets up a handler for `push` events that takes {{Glossary("JSON")}}
 self.addEventListener("push", (event) => {
   let message = event.data.json();
 
-  switch(message.type) {
+  switch (message.type) {
     case "init":
       doInit();
       break;
@@ -61,7 +51,7 @@ self.addEventListener("push", (event) => {
       doShutdown();
       break;
   }
-}, false);
+});
 ```
 
 ## Specifications

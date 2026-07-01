@@ -1,16 +1,12 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() constructor"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStream
-  - Reference
 browser-compat: api.ReadableStream.ReadableStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStream()`** constructor creates and returns a readable stream object from the given handlers.
 
@@ -27,10 +23,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
 ### Parameters
 
 - `underlyingSource` {{optional_inline}}
-
   - : An object containing methods and properties that define how the constructed stream instance will behave.
     `underlyingSource` can contain the following:
-
     - `start` (controller) {{optional_inline}}
       - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
@@ -50,10 +44,13 @@ new ReadableStream(underlyingSource, queuingStrategy)
         {{domxref("ReadableStreamDefaultController")}} or a
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
         `type` property. This can be used by the developer to control the
-        stream as more chunks are fetched.
+        stream as more chunks are fetched. This function will not be called until `start()`
+        successfully completes. Additionally, it will only be called repeatedly if it
+        enqueues at least one chunk or fulfills a BYOB request; a no-op `pull()`
+        implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
-        that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
+        that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
         success or failure. The `reason` parameter contains a
@@ -65,7 +62,6 @@ new ReadableStream(underlyingSource, queuingStrategy)
         (bring your own buffer)/byte stream. If it is not included, the passed controller
         will be a {{domxref("ReadableStreamDefaultController")}}.
     - `autoAllocateChunkSize` {{optional_inline}}
-
       - : For byte streams, the developer can set the `autoAllocateChunkSize` with a positive integer value to turn on the stream's auto-allocation feature.
         With this is set, the stream implementation will automatically allocate a view buffer of the specified size in {{domxref("ReadableByteStreamController.byobRequest")}} when required.
 
@@ -73,18 +69,17 @@ new ReadableStream(underlyingSource, queuingStrategy)
         If not set, a default reader will still stream data, but {{domxref("ReadableByteStreamController.byobRequest")}} will always be `null` and transfers to the consumer must be via the stream's internal queues.
 
 - `queuingStrategy` {{optional_inline}}
-
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-
     - `highWaterMark`
-      - : A non-negative integer — this defines the total number of chunks that can be
+      - : A non-negative integer — this defines the total size of all chunks that can be
         contained in the internal queue before backpressure is applied.
     - `size(chunk)`
       - : A method containing a parameter `chunk` — this indicates the size to
         use for each chunk, in bytes.
 
-    > **Note:** You could define your own custom
+    > [!NOTE]
+    > You could define your own custom
     > `queuingStrategy`, or use an instance of
     > {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
     > for this object value. If no `queuingStrategy` is supplied, the default
@@ -113,6 +108,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -122,16 +118,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -140,7 +136,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -151,3 +147,10 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableByteStreamController")}}
+- {{domxref("ReadableStreamDefaultController")}}
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

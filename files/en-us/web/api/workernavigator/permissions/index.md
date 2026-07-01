@@ -1,22 +1,14 @@
 ---
-title: WorkerNavigator.permissions
+title: "WorkerNavigator: permissions property"
+short-title: permissions
 slug: Web/API/WorkerNavigator/permissions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Permissions
-  - Property
-  - Reference
-  - Web Workers
-  - WorkerNavigator
-  - Workers
 browser-compat: api.WorkerNavigator.permissions
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers("worker")}}
 
-The **`WorkerNavigator.permissions`** read-only property
+The **`permissions`** read-only property of the {{domxref("WorkerNavigator")}} interface
 returns a {{domxref("Permissions")}} object that can be used to query and update
 permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
@@ -27,11 +19,11 @@ A {{domxref("Permissions")}} object.
 ## Examples
 
 ```js
-navigator.permissions.query({name:'notifications'}).then((result) => {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "notifications" }).then((result) => {
+  if (result.state === "granted") {
     showNotification();
-  } else if (result.state === 'prompt') {
-    requestNotificationPermission()
+  } else if (result.state === "prompt") {
+    requestNotificationPermission();
   }
 });
 ```
@@ -40,7 +32,7 @@ navigator.permissions.query({name:'notifications'}).then((result) => {
 
 {{Specifications}}
 
-## Browser Support
+## Browser compatibility
 
 {{Compat}}
 

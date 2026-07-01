@@ -1,45 +1,36 @@
 ---
 title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - CreateDetails
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
+page-type: webextension-api-type
 browser-compat: webextensions.api.bookmarks.CreateDetails
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar()}}
 
 The `CreateDetails` type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.
 
 ## Type
 
-An {{jsxref("object")}} containing some combination of the following fields:
+An {{jsxref("Object")}} containing some combination of the following fields:
 
 - `index` {{optional_inline}}
   - : An integer {{jsxref("Number")}} which specifies the position at which to place the new bookmark under its parent. A value of 0 will put it at the top of the list.
 - `parentId` {{optional_inline}}
-  - : A {{jsxref("string")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.
+  - : A {{jsxref("String")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.
 - `title` {{optional_inline}}
-  - : A {{jsxref("string")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is `""`.
+  - : A {{jsxref("String")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is `""`.
 - `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `url` {{optional_inline}}
-  - : `string`. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.
+  - : `string`. A {{jsxref("String")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-CreateDetails) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-CreateDetails) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

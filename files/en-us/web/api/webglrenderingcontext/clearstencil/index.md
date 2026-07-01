@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.clearStencil()
+title: "WebGLRenderingContext: clearStencil() method"
+short-title: clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearStencil
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.clearStencil()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
 stencil buffer.

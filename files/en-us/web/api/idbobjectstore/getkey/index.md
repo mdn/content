@@ -1,18 +1,12 @@
 ---
-title: IDBObjectStore.getKey()
+title: "IDBObjectStore: getKey() method"
+short-title: getKey()
 slug: Web/API/IDBObjectStore/getKey
 page-type: web-api-instance-method
-tags:
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Web API
 browser-compat: api.IDBObjectStore.getKey
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`getKey()`** method of the
 {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
@@ -21,8 +15,6 @@ for retrieving specific records from an object store.
 
 If a key is successfully found, then a structured clone of it is created and set as the
 result of the request object.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -35,7 +27,7 @@ getKey(key)
 - `key`
   - : The key or key range that identifies the record to be retrieved.
 
-### Return Value
+### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
@@ -58,7 +50,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 let openRequest = indexedDB.open("telemetry");
 openRequest.onsuccess = (event) => {
   let db = event.target.result;
-  let store = db.transaction("netlogs").objectStore("netlogs");
+  let store = db.transaction("net-logs").objectStore("net-logs");
 
   let today = new Date();
   let yesterday = new Date(today);

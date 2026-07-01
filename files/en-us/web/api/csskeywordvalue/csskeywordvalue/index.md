@@ -1,19 +1,12 @@
 ---
-title: CSSKeywordValue()
+title: "CSSKeywordValue: CSSKeywordValue() constructor"
+short-title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSKeywordValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSKeywordValue()`** constructor
 creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and
@@ -39,7 +32,7 @@ new CSSKeywordValue(val)
 
 The following example resets the CSS {{cssxref('display')}} property to its defaults,
 setting the inline
-[`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
+[`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute
 to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden
@@ -56,11 +49,11 @@ to `style="display: initial"` if viewed in the [developer tools inspector](https
 ```
 
 ```js
-const keyword = new CSSKeywordValue('initial');
-const myElement = document.getElementById('myElement').attributeStyleMap;
-myElement.set('display', keyword);
+const keyword = new CSSKeywordValue("initial");
+const myElement = document.getElementById("myElement").attributeStyleMap;
+myElement.set("display", keyword);
 
-console.log(myElement.get('display').value);  // 'initial'
+console.log(myElement.get("display").value); // 'initial'
 console.dir(keyword);
 ```
 

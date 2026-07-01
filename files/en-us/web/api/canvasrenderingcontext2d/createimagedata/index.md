@@ -1,17 +1,12 @@
 ---
-title: CanvasRenderingContext2D.createImageData()
+title: "CanvasRenderingContext2D: createImageData() method"
+short-title: createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.createImageData()`** method of
 the Canvas 2D API creates a new, blank {{domxref("ImageData")}} object with the
@@ -35,7 +30,12 @@ createImageData(imagedata)
     rectangle around the horizontal axis.
 - `settings` {{optional_inline}}
   - : An object with the following properties:
-    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `colorSpace`
+      - : Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `pixelFormat`
+      - : Specifies the pixel format. Possible values:
+        - `"rgba-unorm8"`, for RGBA with 8 bit per component unsigned normalized format, using a {{jsxref("Uint8ClampedArray")}}.
+        - `"rgba-float16"`, for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
 - `imagedata`
   - : An existing `ImageData` object from which to copy the width and height.
     The image itself is **not** copied.
@@ -67,8 +67,8 @@ object's {{domxref("ImageData.data", "data")}} property has a length of 4 × 5,0
 20,000.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const imageData = ctx.createImageData(100, 50);
 console.log(imageData);
@@ -88,17 +88,17 @@ multiples of four. The array values associated with each pixel are R (red), G (g
 (blue), and A (alpha), in that order.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 const imageData = ctx.createImageData(100, 100);
 
 // Iterate through every pixel
 for (let i = 0; i < imageData.data.length; i += 4) {
   // Modify pixel data
-  imageData.data[i + 0] = 190;  // R value
-  imageData.data[i + 1] = 0;    // G value
-  imageData.data[i + 2] = 210;  // B value
-  imageData.data[i + 3] = 255;  // A value
+  imageData.data[i + 0] = 190; // R value
+  imageData.data[i + 1] = 0; // G value
+  imageData.data[i + 2] = 210; // B value
+  imageData.data[i + 3] = 255; // A value
 }
 
 // Draw image data to the canvas

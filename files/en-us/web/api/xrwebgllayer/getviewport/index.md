@@ -1,30 +1,14 @@
 ---
-title: XRWebGLLayer.getViewport()
+title: "XRWebGLLayer: getViewport() method"
+short-title: getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Layer
-  - Method
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - getViewport
-  - viewport
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
@@ -72,9 +56,6 @@ one half for each eye, setting the WebGL viewport to match the WebXR layer's vie
 will ensure that when rendering the scene for the current eye's pose, it is rendered
 into the correct half of the framebuffer.
 
-**<<<--- add link to appropriate section in the Cameras and views
-article --->>>**
-
 ```js
 function drawFrame(time, frame) {
   const session = frame.session;
@@ -110,4 +91,3 @@ function drawFrame(time, frame) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

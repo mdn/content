@@ -1,19 +1,12 @@
 ---
-title: 'Sensor: error event'
+title: "Sensor: error event"
+short-title: error
 slug: Web/API/Sensor/error_event
 page-type: web-api-event
-tags:
-  - API
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - Event
 browser-compat: api.Sensor.error_event
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`error`** event is fired when an exception occurs on a sensor.
 
@@ -26,8 +19,8 @@ After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('error', (event) => { })
+```js-nolint
+addEventListener("error", (event) => { })
 
 onerror = (event) => { }
 ```
@@ -52,8 +45,8 @@ _In addition to the properties listed below, properties from the parent interfac
 This example adds an event listener to log errors occurred on an {{domxref("Accelerometer")}}.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
-acl.addEventListener('error', (error) => console.log(`Error: ${error.name}`));
+const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener("error", (error) => console.log(`Error: ${error.name}`));
 acl.start();
 ```
 

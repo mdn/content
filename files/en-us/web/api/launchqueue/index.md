@@ -2,18 +2,14 @@
 title: LaunchQueue
 slug: Web/API/LaunchQueue
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - LaunchQueue
-  - Reference
+status:
+  - experimental
 browser-compat: api.LaunchQueue
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
-The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQueue")}} property. When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value set, {{domxref("LaunchQueue")}} provides access to functionality that allows custom launch navigation handling to be implemented in the PWA. This functionality is controlled by the properties of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "setConsumer()")}} callback function.
+The **`LaunchQueue`** interface of the {{domxref("Launch Handler API", "Launch Handler API", "", "nocode")}} is available via the {{domxref("Window.launchQueue")}} property. When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, `LaunchQueue` provides access to functionality that allows custom launch navigation handling to be implemented in the PWA. This functionality is controlled by the properties of the {{domxref("LaunchParams")}} object passed into the {{domxref("LaunchQueue.setConsumer", "setConsumer()")}} callback function.
 
 {{InheritanceDiagram}}
 
@@ -25,16 +21,16 @@ The **`LaunchQueue`** interface is available via the {{domxref("Window.launchQue
 ## Examples
 
 ```js
-if ('launchQueue' in window) {
-  window.launchQueue.setConsumer(launchParams => {
+if ("launchQueue" in window) {
+  window.launchQueue.setConsumer((launchParams) => {
     if (launchParams.targetURL) {
       const params = new URL(launchParams.targetURL).searchParams;
 
       // Assuming a music player app that gets a track passed to it to be played
-      const track = params.get('track');
+      const track = params.get("track");
       if (track) {
         audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
+        title.textContent = new URL(track).pathname.slice(1);
         audio.play();
       }
     }
@@ -54,4 +50,4 @@ if ('launchQueue' in window) {
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
 - {{domxref("Window.launchQueue")}}
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app
+- [Musicr 2.0](https://mdn.github.io/dom-examples/launch-handler/) demo app

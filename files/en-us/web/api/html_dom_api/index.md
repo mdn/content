@@ -1,20 +1,7 @@
 ---
-title: The HTML DOM API
+title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
 
@@ -30,7 +17,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/Web_Components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## HTML DOM concepts and usage
 
@@ -54,9 +41,9 @@ Among the things added to `Document` by the HTML standard are:
 
 - Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the {{DOMxRef("Document/location", "location", "", "1")}} from which the document was loaded, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}}, and so forth.
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
-- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+- Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 - Event handlers for document events defined by the HTML standard to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
-- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
+- Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("Element/copy_event", "copy")}}, {{DOMxRef("Element/cut_event", "cut")}}, and {{DOMxRef("Element/paste_event", "paste")}} actions.
 
 ### HTML element interfaces
 
@@ -72,13 +59,13 @@ The overall inheritance for HTML element classes looks like this:
 
 ![Hierarchy of interfaces for HTML elements](html-dom-hierarchy.svg)
 
-As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
+As such, an element inherits the properties and methods of all of its ancestors. For example, consider an {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.
 
 Each level defines a key aspect of the utility of the element. From `Node`, the element inherits concepts surrounding the ability for the element to be contained by another element, and to contain other elements itself. Of special importance is what is gained by inheriting from `EventTarget`: the ability to receive and handle events such as mouse clicks, play and pause events, and so forth.
 
 There are elements that share commonalities and thus have an additional intermediary type. For example, the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements both present audiovisual media. The corresponding types, {{domxref("HTMLAudioElement")}} and {{domxref("HTMLVideoElement")}}, are both based upon the common type {{domxref("HTMLMediaElement")}}, which in turn is based upon {{domxref("HTMLElement")}} and so forth. `HTMLMediaElement` defines the methods and properties held in common between audio and video elements.
 
-These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. To learn more about the actual structure of the {{DOMxRef("Document_Object_Model", "DOM", "", "1")}}, see {{DOMxRef("Document_Object_Model/Introduction", "Introduction to the DOM", "", "1")}}.
+These element-specific interfaces make up the majority of the HTML DOM API, and are the focus of this article. The [DOM](/en-US/docs/Web/API/Document_Object_Model) article provides a general introduction to the DOM and its concepts.
 
 ## HTML DOM target audience
 
@@ -169,8 +156,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web app and browser integration interfaces
 
@@ -180,13 +165,8 @@ These interfaces offer access to the browser window and document that contain th
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
 
-#### Deprecated web app and browser integration interfaces
-
-- {{DOMxRef("External")}} {{deprecated_inline}}
-
 #### Obsolete web app and browser integration interfaces
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
@@ -248,12 +228,14 @@ The History API interfaces let you access information about the browser's histor
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/en-US/docs/Web/Web_Components) to create and manage the available [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/en-US/docs/Web/API/Web_components) to create and manage the available [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 - {{DOMxRef("CustomElementRegistry")}}
 
@@ -311,7 +293,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
 ### JavaScript
 
@@ -321,7 +303,7 @@ const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
-//nameField.focus();
+// nameField.focus();
 
 nameField.addEventListener("input", (event) => {
   const elem = event.target;
@@ -355,7 +337,7 @@ The HTML for the form looks like this:
     <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">Email:</label>
+    <label for="userEmail">Email:</label>
     <input type="email" id="userEmail" />
   </p>
   <input type="submit" value="Send" id="sendButton" />
@@ -378,10 +360,10 @@ The HTML for the form looks like this:
 
 ### References
 
-- [HTML elements reference](/en-US/docs/Web/HTML/Element)
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML elements reference](/en-US/docs/Web/HTML/Reference/Elements)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
 
 ### Guides
 
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
