@@ -23,7 +23,7 @@ CSS scroll-triggered animations enable defining scroll-based triggers that start
 
 Scroll-triggered animations are similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different:
 
-- Scroll-triggered animations are regular time-based animations that play when a trigger becomes active; they always complete iterations in the amount of time defined by the {{cssxref("animation-duration")}}), regardless of how fast the user scrolls.
+- Scroll-triggered animations are regular time-based animations that play when a trigger becomes active; they always complete iterations in the amount of time defined by the {{cssxref("animation-duration")}}, regardless of how fast the user scrolls. They also observe {{cssxref("animation-delay")}} settings.
 - With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content, with a faster scrolling speed resulting in a faster animation. Scroll-driven animations ignore the `animation-duration` and `animation-delay` properties.
 
 ## Scroll-triggered animation basics
@@ -56,7 +56,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
 ...
 ```
 
-```html hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___play-once
+```html hidden live-sample___basic-scroll-triggered live-sample___same-element-trigger live-sample___adjust-range live-sample___play-once
 <h1>Information about Cairns</h1>
 
 <p>
@@ -135,7 +135,7 @@ The HTML features several paragraphs of content with a {{htmlelement("figure")}}
 
 We'll start by defining {{cssxref("@keyframes")}} for the `fade-in` animation we'll apply to our `<figcaption>`.
 
-```css live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
+```css live-sample___basic-scroll-triggered live-sample___same-element-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -147,7 +147,7 @@ We'll start by defining {{cssxref("@keyframes")}} for the `fade-in` animation we
 }
 ```
 
-```css hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
+```css hidden live-sample___basic-scroll-triggered live-sample___same-element-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once
 body {
   width: 80%;
   margin: 0 auto;
@@ -226,11 +226,11 @@ Note how the caption starts to fade in as soon as any part of the image becomes 
 
 We can define the trigger to be created on the animated element itself. Let's modify the previous example to create the trigger on our animated {{htmlelement("figcaption")}} element rather than the {{htmlelement("img")}} element.
 
-The HTML is identical to the previous example. The CSS differs only in where the scroll-triggered animation `timeline-trigger-*` properties are set.
+The HTML is identical to the previous example. The CSS differs only in where the `timeline-trigger-*` properties are set.
 
 This time, the {{cssxref("animation")}}, {{cssxref("animation-trigger")}}, {{cssxref("timeline-trigger-name")}}, and {{cssxref("timeline-trigger-source")}} properties are all set on the `<figcaption>` element — it will animate when it appears in the scrollport. In the previous example, the `<figcaption>` was the animated element and the `<img>` was the tracked element. Now the caption plays both roles.
 
-```css live-sample___different-trigger
+```css live-sample___same-element-trigger
 figcaption {
   animation: fade-in 1s ease-in both;
   animation-trigger: --t play-forwards play-backwards;
@@ -241,9 +241,9 @@ figcaption {
 
 The updated rendering looks like this:
 
-{{embedlivesample("different-trigger", "100%", 500)}}
+{{embedlivesample("same-element-trigger", "100%", 500)}}
 
-In this case, the `<figcaption>` fades into view when it starts to appear in the scrollport.
+In this case, the `<figcaption>` fades into view when it starts to enter the scrollport.
 
 ## Adjusting the trigger activation range
 
@@ -287,7 +287,7 @@ The **active range** is the range within which a trigger will remain activated o
 
 It is possible to set an active range that is different to the activation range using the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand to set both values in a single declaration.
 
-You might want to do this to extend the time an animation has to complete. For example, if you have an animation that activates only within a small range, but once activated, you want the finished state of the animation to stay applied over a larger range. Only when the tracked element moves out of the active range does the trigger become inactive; after that, you can activate it again by moving the subject back into the activation range.
+You might want to do this to extend the time an animation has to complete — for example, if you have an animation that activates only within a small range, but once activated, you want it to stay active over a larger range. Only when the tracked element moves out of the active range does the trigger become inactive; after that, you can activate it again by moving the subject back into the activation range.
 
 Let's build on our previous examples to demonstrate the effect of the active range. The HTML is the same, except we've included two identical `<figure>` elements with classes of `.one` and `.two`, placed next to one another using flexbox. In each case, the `<img>` will be the tracked element for its sibling animated `<figcaption>`.
 
@@ -803,7 +803,7 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
 }
 ```
 
-```css hidden live-sample___basic-scroll-triggered live-sample___different-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once live-sample___trigger-scope live-sample___multiple-triggers
+```css hidden live-sample___basic-scroll-triggered live-sample___same-element-trigger live-sample___adjust-range live-sample___set-active-range live-sample___play-once live-sample___trigger-scope live-sample___multiple-triggers
 @supports not (timeline-trigger-name: --t) {
   body::before {
     content: "Your browser does not support scroll-triggered animations.";
