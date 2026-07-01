@@ -76,11 +76,12 @@ body {
   display: flex;
   gap: 10%;
   justify-content: center;
+  align-items: center;
 }
 
 div {
   width: 40%;
-  height: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +94,7 @@ div {
 
 This example is very similar to the previous one, except that this time the alpha of the second color is computed as half of the first color's alpha, using the `alpha` component keyword inside a `calc()` expression.
 
-```html live-sample___replace-alpha live-sample___derive-alpha
+```html live-sample___derive-alpha
 <div class="box1">Original</div>
 <div class="box2">Derived 50% alpha</div>
 ```
