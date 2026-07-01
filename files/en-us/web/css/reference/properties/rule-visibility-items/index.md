@@ -130,7 +130,7 @@ We include a list of dynamic sports duos:
 
 We define the ordered list ({{htmlelement("ol")}}) to be a grid container, creating 4 columns and 4 rows by setting both the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} to `repeat(4, 1fr)`, and move the last item to the 16th grid area using {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns to fit our `5px` dashed rule. We set the column rules to `dashed` and the row rules to `solid`.
 
-Finally, we set `rule-visibility-items` to `between`, so only if both grid area adjacent to a column rule segment contains a grid item with the column rule be painted.
+Finally, we set `rule-visibility-items` to `around`, so every gap area that is adjacent to a grid item will contain a painted gap rule segment.
 
 ```css
 ol {
@@ -142,7 +142,7 @@ ol {
   column-rule: dashed 5px blue;
   row-rule: solid 5px red;
 
-  rule-visibility-items: between;
+  rule-visibility-items: around;
 }
 li:last-child {
   grid-row: 4;
