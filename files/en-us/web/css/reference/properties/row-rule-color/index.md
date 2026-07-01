@@ -129,7 +129,7 @@ row-rule-color:
 
 This creates a list of five colors. If the number of colors in the `row-rule-color` value's color list exceeds the number of gaps between rows, the excess color values are ignored. If the container has three rows, the rule in the first gutter will be blue and the second yellow.
 
-If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of colors will repeated one, two, three or four time, respectively, with the last rule being red. If the container has any other number of rows, up to 25, the last row rule will not be red.
+If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of colors will be repeated one, two, three or four times, respectively, with the last rule being red. If the container has any other number of rows, up to 25, the last row rule will not be red.
 
 ### Auto-repeating line colors
 
@@ -155,11 +155,11 @@ The `auto` keyword within the `repeat()` function creates an auto repeater that 
 
 ### Basic example
 
-In this example, we define a single color for the lines drawn between flex items
+In this example, we define a single color for the lines drawn between flex items.
 
 #### HTML
 
-We include an list of dynamic sports duos:
+We include a list of dynamic sports duos:
 
 ```html live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 <ul>
