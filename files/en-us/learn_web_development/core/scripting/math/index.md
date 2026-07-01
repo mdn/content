@@ -309,8 +309,8 @@ equals 53.25"_.
 This is because of **operator precedence** — some operators are applied before
 others when calculating the result of a calculation (referred to as an
 _expression_, in programming). Operator precedence in JavaScript is the same as
-is taught in math classes in school — exponentiate first, then multiply and 
-divide next, and finally add and subtract (the calculation is always evaluated 
+is taught in math classes in school — exponentiate first, then multiply and
+divide next, and finally add and subtract (the calculation is always evaluated
 from left to right). This is commonly remembered using the order of operations (PEMDAS/BODMAS).
 
 If you want to override operator precedence, you can put parentheses around the
