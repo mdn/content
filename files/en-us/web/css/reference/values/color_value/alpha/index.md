@@ -76,7 +76,6 @@ body {
   display: flex;
   gap: 10%;
   justify-content: center;
-  align-items: center;
 }
 
 div {
@@ -88,7 +87,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("replace-alpha", "100%", 120)}}
+{{EmbedLiveSample("replace-alpha", "100%", 100)}}
 
 ### Deriving a semi-transparent variant
 
@@ -116,7 +115,7 @@ This example is very similar to the previous one, except that this time the alph
 }
 ```
 
-{{EmbedLiveSample("derive-alpha", "100%", 120)}}
+{{EmbedLiveSample("derive-alpha", "100%", 100)}}
 
 ### Fading a color on hover
 
