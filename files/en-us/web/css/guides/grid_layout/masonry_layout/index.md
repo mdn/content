@@ -5,8 +5,8 @@ page-type: guide
 status:
   - experimental
 browser-compat:
-  - css.properties.grid-template-columns.masonry
-  - css.properties.grid-template-rows.masonry
+  - css.properties.display.grid-lanes
+  - css.properties.display.inline-grid-lanes
 sidebar: cssref
 ---
 
