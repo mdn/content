@@ -7,15 +7,7 @@ browser-compat: api.IDBRequest
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.
-
-The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the `IDBRequest` instance.
-
-All asynchronous operations immediately return an `IDBRequest` instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
-
-In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `error` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
-
-The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
+The **`IDBRequest`** interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes.
 
 {{InheritanceDiagram}}
 
@@ -47,7 +39,22 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - [`success`](/en-US/docs/Web/API/IDBRequest/success_event)
   - : Fired when an `IDBRequest` succeeds.
 
+## Description
+
+The results of all database read and write operations are reported using a request object of this type.
+
+The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the `IDBRequest` instance.
+
+All asynchronous operations immediately return an `IDBRequest` instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
+
+In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `error` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
+The data in `result` depends on the operation that was called.
+
+The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
+
 ## Example
+
+### Basic usage
 
 In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 

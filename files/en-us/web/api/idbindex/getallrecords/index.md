@@ -45,12 +45,12 @@ An options object whose properties can include:
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of objects representing all the records that match the given query, up to the number specified by `count` (if provided).
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of {{domxref("IDBRecord")}} instances representing all the records that match the given query, up to the number specified by `count` (if provided).
 
-Each object contains the following properties:
+Each {{domxref("IDBRecord")}} instance contains the following properties:
 
 - `key`
-  - : A value representing the record's key.
+  - : A value representing the record's key in the index.
 - `primaryKey`
   - : A value representing the key of the record in the index's associated {{domxref("IDBObjectStore")}}.
 - `value`
