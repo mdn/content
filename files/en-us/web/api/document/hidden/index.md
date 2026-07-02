@@ -8,10 +8,8 @@ browser-compat: api.Document.hidden
 
 {{ ApiRef("DOM") }}
 
-The **`Document.hidden`** read-only property returns a Boolean
-value indicating if the page is considered hidden or not (not the same as
-visually hiding with styling). For example, the page is considered hidden if
-the user is in a different browser tab.
+The **`Document.hidden`** read-only property returns a Boolean value indicating if the page is considered hidden or not.
+This can be used to check whether the document is in the background or in a minimized window, or is otherwise not visible to the user.
 
 The {{domxref("Document.visibilityState")}} property provides an alternative way to determine whether the page is hidden.
 
@@ -26,12 +24,6 @@ document.addEventListener("visibilitychange", () => {
   console.log(document.hidden);
   // Modify behavior…
 });
-```
-
-```js
-setInterval(() => {
-  console.log(document.hidden);
-}, 1000);
 ```
 
 ## Specifications
