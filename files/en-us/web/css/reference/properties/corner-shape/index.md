@@ -131,6 +131,12 @@ The following properties all follow the shape of the corner when set on the cont
 
 See [Demonstration of properties that follow the `corner-shape`](#demonstration_of_properties_that_follow_the_corner-shape) for some examples.
 
+### Interaction with `border-shape`
+
+The {{cssxref("border-shape")}} property is incompatible with `border-radius` and `corner-shape`. When a `border-shape` is set on an element, any set `border-radius` is ignored, therefore `corner-shape` will also have no effect. The `border-shape` and `border-radius`/`corner-shape` properties have different effects, and are used separately.
+
+If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -629,6 +635,7 @@ The rendered result looks like this:
 ## See also
 
 - {{Cssxref("border-radius")}}
+- {{cssxref("border-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

@@ -1,0 +1,902 @@
+---
+title: "`border-shape` CSS property"
+short-title: border-shape
+slug: Web/CSS/Reference/Properties/border-shape
+page-type: css-property
+status:
+  - experimental
+browser-compat: css.properties.border-shape
+sidebar: cssref
+---
+
+{{SeeCompatTable}}
+
+The **`border-shape`** [CSS](/en-US/docs/Web/CSS) property enables using {{cssxref("basic-shape")}} values to define a container's border shape.
+
+## Syntax
+
+```css
+/* Keyword */
+border-shape: none;
+
+/* Single <basic-shape> value */
+border-shape: circle(50%);
+border-shape: rect(10px 460px 130px 20px round 20px);
+border-shape: shape(
+      from 0% 0%,
+      hline to 33%,
+      arc by 33% 0% of 16% 20% small cw,
+      hline to 100%,
+      line to 100% 33%,
+      arc by 0% 33% of 20% 16% small cw,
+      line to 100% 100%,
+      hline to 66%,
+      arc by -33% 0% of 16% 20% small ccw,
+      hline to 0%,
+      line to 0% 66%,
+      arc by 0% -33% of 20% 16% small ccw,
+      close
+    )
+
+/* Two <basic-shape> values */
+border-shape: circle(50%) ellipse(40% 30%);
+border-shape:
+    polygon(0% 0%, 0% 100%, 100% 0%)
+    polygon(10% 10%, 10% 70%, 70% 10%);
+}
+
+/* <basic-shape> and <geometry-box> values */
+border-shape: path(
+      "M 35,95 C 35,50 60,15 100,20 C 120,5 160,5 180,22 C 200,5 250,5 270,22 C 295,5 340,5 360,22 C 395,10 440,35 440,75 C 455,90 450,120 430,128 C 400,145 360,145 330,130 C 300,145 260,145 230,130 C 200,145 160,145 130,130 C 80,142 35,120 35,95 Z"
+    )
+    view-box;
+border-shape: circle(50%) border-box ellipse(40% 30%) view-box;
+border-shape: rect(5px 198px 189px 0px round 20px) view-box circle(50%);
+
+/* Global values */
+border-shape: inherit;
+border-shape: initial;
+border-shape: revert;
+border-shape: revert-layer;
+border-shape: unset;
+```
+
+The `border-shape` property may be specified using the keyword `none`, or one or two space-separated shape definitions, each consisting of a `<basic-shape>` value or a `<basic-shape>` value and a `<geometry-box>` value.
+
+### Values
+
+- `none`
+  - : The initial value. Specifies that no border shape is defined.
+- {{cssxref("basic-shape")}}
+  - : A function defining the shape of the border.
+- [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) {{optional_inline}}
+  - : A keyword defining the reference box for the border shape to be drawn relative to. If not included, the shape's reference geometry box defaults to:
+    - `half-border-box` if a single basic shape is specified, which means that any defined border is drawn on top of the shape path, with the path going down its center.
+    - `border-box` for the first (outer) shape and `padding-box` for the second (inner) shape, if two basic shapes are specified. The border then occupies the area between the two shapes.
+
+## Description
+
+The `border-shape` property enables you to set the border shape of any element (including inline and pseudo-elements) to any shape creatable by functions defined in the {{cssxref("basic-shape")}} value. This includes:
+
+- {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}: Provide different ways to define basic rectangle shapes.
+- {{cssxref("basic-shape/circle","circle()")}}: Defines circle shapes.
+- {{cssxref("basic-shape/ellipse","ellipse()")}}: Defines ellipse shapes.
+- {{cssxref("basic-shape/path","path()")}}: Defines any kind of shape using [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string syntax. SVG path syntax has limitations — it can only use pixel values and it has to be defined as a single string, so custom properties can't be included via {{cssxref("var()")}}. It is advised to use `shape()` instead.
+- {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon shape via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
+- {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()`, and solves its shortcomings.
+
+When a `border-shape` is applied to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element will follow the shape of the border.
+
+This allows precise creation of speech bubbles and abstract tooltip shapes without resorting to hacks. For example,
+
+```html hidden live-sample___speech-bubble-demo
+<img src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg" />
+<p>I am a leopard</p>
+```
+
+```css hidden live-sample___speech-bubble-demo
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  width: 300px;
+  anchor-name: --leopard;
+  position: relative;
+  top: 45px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  padding: 15px 0;
+  margin: 0 0 -30px -110px;
+  background-color: chartreuse;
+  border: 7px solid rgb(50 50 50);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+
+  width: 250px;
+  height: 100px;
+  border-shape: shape(
+      from 50.08% 0%,
+      curve to 97.71% 25.55% with 72.95% 0%/93.9% 8.76%,
+      curve to 97.71% 62.04% with 100.76% 37.96%/100.76% 49.64%,
+      curve to 50.08% 83.94% with 93.9% 75.18%/72.95% 83.94%,
+      curve to 23.41% 82.48% with 36.75% 83.94%/27.22% 83.21%,
+      curve to 17.7% 100% with 21.51% 87.59%/19.22% 94.16%,
+      curve to 11.98% 82.48% with 16.17% 94.16%/13.89% 87.59%,
+      curve to 1.31% 62.04% with 13.5% 81.75%/3.98% 76.64%,
+      curve to 2.45% 25.55% with -0.59% 49.64%/-0.59% 37.96%,
+      curve to 50.08% 0% with 6.26% 8.76%/27.22% 0%,
+      close
+    )
+    content-box;
+
+  text-align: center;
+  line-height: 4;
+
+  position: absolute;
+  position-anchor: --leopard;
+  bottom: anchor(top);
+  left: anchor(right);
+}
+```
+
+{{EmbedLiveSample("speech-bubble-demo", "100%", "240")}}
+
+The `border-shape` property has two different modes:
+
+- If a single basic shape is provided in the value, that shape defines the border shape of the element, with defined border styles drawn as a stroke around the shape. This is known as **stroke mode**.
+- If two basic shapes are provided in the value, the first shape defines the outer boundary of the border, the second shape defines in inner boundary of the border, and any defined border color fills the area between the two. This is known as **fill mode**.
+
+> [!NOTE]
+> It doesn't make sense to define a bigger shape for the inner boundary than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered, or one shape rendered behind the other.
+
+Optionally, you can include a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value, to specify the reference box the shapes should be drawn relative to.
+
+The `border-shape` creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
+
+The content and background of the element is clipped by the `border-shape` (inner shape, in fill mode). When the shape you are specifying is the same size or smaller than the content/background, you don't tend to need to adjust the reference box, unless you want to create some kind of offset effect. However, when the shape you are specifying is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to employ a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
+
+### Limitations on border styles applied to border shapes
+
+There are several limitations on the styles that will be applied to borders with a `border-shape` property set:
+
+- {{cssxref("border-image")}}: Not applied.
+- {{cssxref("border-style")}}: Not applied. All borders are rendered with a `solid` style.
+- {{cssxref("border-color")}}: Border color is applied, however when different colors are applied to different edges of the element, the browser chooses the first edge it finds that has a border color applied, in the following order:
+  - Block start edge
+  - Inline start edge
+  - Block end edge
+  - Inline end edge
+
+  It then applies that edge's border color to the entire rendered border.
+
+- {{cssxref("border-width")}}: In stroke mode, border width is applied directly to the rendered border. When different widths are applied to different edges of the element, the browser selects a width to apply to the entire rendered border using the same process as described for `border-color`.
+
+  In fill mode, the border area is defined by the difference in area between the outer and inner shapes, therefore `border-width` doesn't have any direct effect on the rendered border width. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` keywords to `content-box` or `padding-box`), therefore you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
+
+As an example, if an element has the following declarations applied:
+
+```css
+border-shape: rect(5px 198px 189px 0px round 20px);
+border-bottom: 30px dashed blue;
+border-left: 40px dotted hotpink;
+border-right: 50px double yellow;
+```
+
+The rendered box will have a rectangular border with rounded corners. The border style will be `solid`, as other styles are ignored. The border width and color will be `40px` and `hotpink`, because the `border-left` property applies styles to the inline start edge (assuming that the page has a horizontal {{cssxref("writing-mode")}}) and that is the first edge with border styles applied in the browser's priority list described earlier.
+
+### Interaction with `border-radius` and `corner-shape`
+
+The {{cssxref("border-radius")}} and {{cssxref("corner-shape")}} properties are incompatible with `border-shape`. When a `border-shape` is set on an element, any set `border-radius` is ignored, therefore `corner-shape` will also have no effect. The `border-shape` and `border-radius`/`corner-shape` properties have different effects, and are used separately.
+
+If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
+
+### Comparison between `border-shape` and `clip-path`
+
+The {{cssxref("clip-path")}} property takes similar values to `border-shape`, and produces similar effects — both properties can be used to change the shape of an element and therefore the element's hit area, altering the boundary of where `:hover` effects and pointer-related events will activate.
+
+However, there is a fundamental difference in how the two properties work:
+
+- `clip-path` hides the area of the element that sits outside the region defined by the provided shape.
+- `border-shape` changes the visual rendering of the element so that it sits inside the region defined by the provided shape.
+
+This means that, whereas `border-shape` clips the element's content, allowing its display to be controlled by the {{cssxref("overflow")}} property, `clip-path` hides it altogether, meanng that overflow control is not possible.
+
+More significantly, properties such as `box-shadow` and `outline` will not follow the shape created by `clip-path` — it chops off the outside of the element, meaning that such effects are truncated in an ugly fashion, or removed altogether. The `border-shape` property on the other hand creates a differently-shaped border that is neatly followed by such effects.
+
+### Handling backgrounds inside larger border-shapes
+
+As mentioned earlier, one issue with `border-shape` is that when you define a shape that is larger than the element's content/background, you can end up with a gap between the background and the border.
+
+The recommended approach to fixing this is to set the reference `<geometry-box>` to `content-box`. and then use {{cssxref("padding")}} to fill in the gaps between the content and the border. For example:
+
+```css
+border-shape: shape(
+    from 0% 0%,
+    hline to 33%,
+    arc by 33% 0% of 16% 20% small cw,
+    hline to 100%,
+    line to 100% 33%,
+    arc by 0% 33% of 20% 16% small cw,
+    line to 100% 100%,
+    hline to 66%,
+    arc by -33% 0% of 16% 20% small ccw,
+    hline to 0%,
+    line to 0% 66%,
+    arc by 0% -33% of 20% 16% small ccw,
+    close
+  )
+  content-box;
+padding: 24px;
+```
+
+This way, the `padding` will be set outside the shape, causing it to get smaller, and forcing the background to fill up the parts of the shape extending outside the content area. You can see this technique in action in our [Jigsaw navigation menu](#jigsaw_navigation_menu) example.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### Basic `border-shape` stroke usage
+
+This example shows how to use `border-shape` in stroke mode.
+
+#### HTML
+
+The markup for this example contains a single {{htmlelement("p")}} element.
+
+```html live-sample___basic-border-shape live-sample___basic-border-shape-fill
+<p>Circle</p>
+```
+
+#### CSS
+
+```css hidden live-sample___basic-border-shape live-sample___basic-border-shape-fill live-sample___border-shape-select live-sample___animate-border-shape
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  padding: 30px 50px;
+  background-color: chartreuse;
+  display: flex;
+  align-items: center;
+}
+```
+
+We give the box a {{cssxref("width")}} of `fit-content` and an {{cssxref("aspect-ratio")}} of `1/1` to neatly fit the content inside a square. We also set a thick black {{cssxref("border")}} and a {{cssxref("box-shadow")}}, before setting a {{cssxref("border-shape")}} of `circle(50%)` to create a circular border that neatly fits the content and background.
+
+```css live-sample___basic-border-shape
+p {
+  width: fit-content;
+  aspect-ratio: 1/1;
+  border: 15px solid black;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+  border-shape: circle(50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("basic-border-shape", "100%", "240")}}
+
+Note how the `border` and `box-shadow` neatly follow the defined shape.
+
+### Basic `border-shape` fill usage
+
+This example builds on the previous one, showing how to use `border-shape` in fill mode to create an irregular filled border.
+
+The HTML is the same as in the previous example.
+
+#### CSS
+
+The CSS is the same in the previous example, except that this time we color the border `hotpink`, and we include two `<basic-shape>` definitions inside the `border-shape` value. There's an outer rectangle that covers the whole area of the content, and an inner circle that is the same as in the previous example.
+
+```css live-sample___basic-border-shape-fill
+p {
+  width: fit-content;
+  aspect-ratio: 1/1;
+  border: 15px solid hotpink;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+  border-shape: rect(0% 100% 100% 0% round 20px) circle(50%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("basic-border-shape-fill", "100%", "240")}}
+
+Note how this time, the border covers the area between the rectangle and the circle, and it adopts the color set in the `border` declaration.
+
+### Comparison between different shape values
+
+In this example, we allow you to set different `border-shape` values on an element, to allow you to compare and contrast them.
+
+#### HTML
+
+The HTML is similar the previous example, except that this time we include a bit more text in the `<p>` element, and we also include a {{htmlelement("select")}} element allowing you to choose different classes to apply to the `<p>` via JavaScript (we've hidden both the `<select>` and the JavaScript for brevity).
+
+```html live-sample___border-shape-select
+<p>Fashion is something so ugly it has to be changed every 15 minutes.</p>
+```
+
+```html hidden live-sample___border-shape-select
+<form>
+  <label for="shape-select">Select border-shape type:</label>
+  <br />
+  <select id="shape-select">
+    <option>circle</option>
+    <option selected>ellipse</option>
+    <option>inset</option>
+    <option>path</option>
+    <option>polygon</option>
+    <option>rect</option>
+    <option>shape</option>
+    <option>two-polygons</option>
+    <option>xywh</option>
+  </select>
+</form>
+```
+
+The classes set different `border-shape` values on the `<p>` element. A `class` of `ellipse` is set on it to begin with, so that initially, it has an `ellipse()` `border-shape` applied to it.
+
+```js hidden live-sample___border-shape-select
+const box = document.querySelector("p");
+const select = document.querySelector("select");
+
+select.addEventListener("change", selectClass);
+
+function selectClass() {
+  box.className = select.value;
+}
+
+selectClass();
+```
+
+#### CSS
+
+In the CSS, we give the box a {{cssxref("width")}} of `550px`, a thick black {{cssxref("border")}}, and a {{cssxref("box-shadow")}}.
+
+```css live-sample___border-shape-select
+p {
+  width: 550px;
+  border: 15px solid black;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+}
+```
+
+Next, we define the rules for each of the classes that will be applied when you select the different options in the `<select>` element:
+
+```css live-sample___border-shape-select
+.circle {
+  border-shape: circle(60%);
+}
+
+.ellipse {
+  border-shape: ellipse(50% 40%);
+}
+
+.inset {
+  border-shape: inset(10px 20px 10px 20px round 20px);
+}
+
+.path {
+  border-shape: path(
+      "M 35,95 C 35,50 60,15 100,20 C 120,5 160,5 180,22 C 200,5 250,5 270,22 C 295,5 340,5 360,22 C 460,10 477,35 496,75 C 515,157 450,120 430,128 C 400,145 360,145 330,130 C 300,145 260,145 230,130 C 200,145 160,145 130,130 C 80,142 35,120 35,95 Z"
+    )
+    view-box;
+}
+
+.polygon {
+  border-shape: polygon(
+      0% 60%,
+      0% 85%,
+      8% 100%,
+      18% 88%,
+      30% 100%,
+      42% 88%,
+      55% 100%,
+      68% 88%,
+      80% 100%,
+      86% 88%,
+      90% 75%,
+      100% 60%,
+      90% 30%,
+      85% 5%,
+      75% 18%,
+      65% 3%,
+      52% 16%,
+      40% 3%,
+      27% 16%,
+      15% 3%,
+      5% 18%
+    )
+    view-box;
+}
+
+.rect {
+  border-shape: rect(10px 500px 130px 20px round 20px);
+}
+
+.shape {
+  border-shape: shape(
+    from 0% 64.5%,
+    curve to 15.71% 8.26% with 0% 30.76%/6.04% 4.51%,
+    curve to 35.05% 9.76% with 20.55% -2.99%/30.21% -2.99%,
+    curve to 56.8% 9.76% with 39.88% -2.99%/51.97% -2.99%,
+    curve to 78.56% 9.76% with 62.84% -2.99%/73.72% -2.99%,
+    curve to 97.89% 49.5% with 87.02% 0.76%/97.89% 19.51%,
+    curve to 95.47% 89.25% with 101.52% 60.75%/100.31% 83.25%,
+    curve to 71.3% 90.75% with 88.22% 102%/78.56% 102%,
+    curve to 47.13% 90.75% with 64.05% 102%/54.38% 102%,
+    curve to 22.96% 90.75% with 39.88% 102%/30.21% 102%,
+    curve to 0% 64.5% with 10.88% 99.75%/0% 83.25%,
+    close
+  );
+}
+
+.two-polygons {
+  border-shape: polygon(
+      0% 60%,
+      0% 85%,
+      8% 100%,
+      18% 88%,
+      30% 100%,
+      42% 88%,
+      55% 100%,
+      68% 88%,
+      80% 105%,
+      86% 88%,
+      91% 75%,
+      101% 60%,
+      93% 30%,
+      86% 5%,
+      75% 18%,
+      65% 3%,
+      52% 16%,
+      40% 3%,
+      27% 16%,
+      15% 3%,
+      5% 18%
+    )
+    polygon(
+      0% 55%,
+      0% 90%,
+      6% 104%,
+      17% 93%,
+      30% 100%,
+      43% 93%,
+      56% 102%,
+      69% 93%,
+      81% 102%,
+      88% 93%,
+      94% 78%,
+      100% 58%,
+      94% 24%,
+      88% -2%,
+      76% 13%,
+      64% -4%,
+      51% 11%,
+      39% -4%,
+      26% 11%,
+      13% -4%,
+      3% 13%
+    );
+}
+
+.xywh {
+  border-shape: xywh(5% 5% 90% 90% round 20px);
+}
+```
+
+```css hidden live-sample___border-shape-select
+form {
+  position: absolute;
+  border: 2px solid black;
+  background: white;
+  padding: 5px;
+  bottom: 0;
+  right: 0;
+}
+
+form select {
+  width: 100%;
+  padding: 2px 5px;
+  margin-top: 10px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("border-shape-select", "100%", "350")}}
+
+Use your developer tools to inspect the `border-shape` values applied to the `<p>` element at any point, and edit them to get an idea of how the values work.
+
+### Animating a `border-shape`
+
+This example demonstrates how it is possible to animate the `border-shape` property.
+
+#### HTML
+
+The same HTML `<p>` is used as in the previous example, except that this time, we've included a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute so it can be focused via the keyboard.
+
+```html live-sample___animate-border-shape
+<p tabindex="0">
+  Fashion is something so ugly it has to be changed every 15 minutes.
+</p>
+```
+
+#### CSS
+
+This time, we apply a `polygon()` `border-shape` to the `<p>`.
+
+```css live-sample___animate-border-shape
+p {
+  width: 550px;
+  border: 15px solid black;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
+  border-shape: polygon(
+      0% 60%,
+      0% 85%,
+      8% 100%,
+      18% 88%,
+      30% 100%,
+      42% 88%,
+      55% 100%,
+      68% 88%,
+      80% 100%,
+      86% 88%,
+      90% 75%,
+      100% 60%,
+      90% 30%,
+      85% 5%,
+      75% 18%,
+      65% 3%,
+      52% 16%,
+      40% 3%,
+      27% 16%,
+      15% 3%,
+      5% 18%
+    )
+    view-box;
+}
+```
+
+We also set an {{cssxref("animation")}} on the `<p>` element's {{cssxref(":hover")}} and {{cssxref(":focus")}} states so that, when it is hovered or focused, it smoothy animates between two polygon border shapes for infinite iterations.
+
+```css live-sample___animate-border-shape
+p:hover,
+p:focus {
+  animation: morph 1s ease-in-out infinite alternate;
+}
+
+@keyframes morph {
+  from {
+    border-shape: polygon(
+        0% 60%,
+        0% 85%,
+        8% 100%,
+        18% 88%,
+        30% 100%,
+        42% 88%,
+        55% 100%,
+        68% 88%,
+        80% 100%,
+        86% 88%,
+        90% 75%,
+        100% 60%,
+        90% 30%,
+        85% 5%,
+        75% 18%,
+        65% 3%,
+        52% 16%,
+        40% 3%,
+        27% 16%,
+        15% 3%,
+        5% 18%
+      )
+      view-box;
+  }
+  to {
+    border-shape: polygon(
+        0% 55%,
+        0% 90%,
+        6% 104%,
+        17% 93%,
+        30% 100%,
+        43% 93%,
+        56% 102%,
+        69% 93%,
+        81% 102%,
+        88% 93%,
+        94% 78%,
+        100% 58%,
+        94% 24%,
+        88% -2%,
+        76% 13%,
+        64% -4%,
+        51% 11%,
+        39% -4%,
+        26% 11%,
+        13% -4%,
+        3% 13%
+      )
+      view-box;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("animate-border-shape", "100%", "240")}}
+
+Hover or focus the paragraph to see the animation.
+
+### A jigsaw piece navigation menu
+
+In this example, we show how to use `border-shape` to create an irregular navigation menu example with each nav item shaped like a jigsaw piece.
+
+#### HTML
+
+Our HTML is a fairly typical navigation menu — a list of links.
+
+```html live-sample___jigsaw-example
+<ul>
+  <li><a href="#">One</a></li>
+  <li><a href="#">Two</a></li>
+  <li><a href="#">Three</a></li>
+  <li><a href="#">Four</a></li>
+</ul>
+```
+
+#### CSS
+
+There is a fair bit of CSS in this example; we have hidden some of the basic page setup code completely (as with previous examples), then we have split the remaining CSS into two sections. If you want to ignore most of the styling and just read about the code that is most relevant to the `border-shape` styles, jump to [Handling the border shape](#handling_the_border_shape).
+
+```css hidden live-sample___jigsaw-example
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  margin: 0;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+##### Implementing the general nav styles
+
+First of all, we style our {{htmlelement("ul")}}, removing the default {{cssxref("list-style-type")}} and {{cssxref("padding")}}, and setting a {{cssxref("display")}} value of `flex` to lay out the contained {{htmlelement("li")}} elements in a row. We then set a {{cssxref("gap")}} value of `0` and apply a {{cssxref("transition")}} so that, when the `<ul>` state changes, a change in the `gap` value will smoothly animate.
+
+```css live-sample___jigsaw-example
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 0px;
+  transition: gap 0.6s;
+}
+```
+
+Next, we style the `<li>` elements. We want each nav item to be square, so we set an equal {{cssxref("width")}} and {{cssxref("height")}}.
+
+```css live-sample___jigsaw-example
+li {
+  width: 160px;
+  height: 160px;
+}
+```
+
+Now we'll go on to style the {{htmlelement("a")}} elements inside the list items. We start off by removing the default {{cssxref("text-decoration")}} and setting the {{cssxref("color")}} to `black`. We then set a `width` and `height` of `100%` to make the `<a>` elements fill the full area of the `<li>` elements, then use [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to center their text horizontally and vertically.
+
+We then set {{cssxref("box-shadow")}} and {{cssxref("text-shadow")}} properties on the links, plus a `transition` so that any property value changes on state changes are animated smoothly.
+
+```css live-sample___jigsaw-example
+a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    2px 0px 2px rgb(0 0 0 / 0.5),
+    inset 3px 3px 3px rgb(255 255 255 / 0.5);
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 0.5);
+  transition: all 0.6s;
+}
+```
+
+We then give each jigsaw piece a different color:
+
+```css live-sample___jigsaw-example
+li:nth-child(1) a {
+  background-color: #2de1fc;
+}
+
+li:nth-child(2) a {
+  background-color: #2afc98;
+}
+
+li:nth-child(3) a {
+  background-color: #09e85e;
+}
+
+li:nth-child(4) a {
+  background-color: #16c172;
+}
+```
+
+##### Handling the border shape
+
+We set a downwards-pointing jigsaw piece `border-shape` on each odd-numbered `<a>` element, and an upwards-pointing jigsaw piece `border-shape` on each even-numbered `<a>` element, for some variety:
+
+```css live-sample___jigsaw-example
+li:nth-child(even) a {
+  border-shape: shape(
+      from 0% 0%,
+      hline to 33%,
+      arc by 33% 0% of 16% 20% small cw,
+      hline to 100%,
+      line to 100% 33%,
+      arc by 0% 33% of 20% 16% small cw,
+      line to 100% 100%,
+      hline to 66%,
+      arc by -33% 0% of 16% 20% small ccw,
+      hline to 0%,
+      line to 0% 66%,
+      arc by 0% -33% of 20% 16% small ccw,
+      close
+    )
+    content-box;
+}
+
+li:nth-child(odd) a {
+  border-shape: shape(
+      from 0% 0%,
+      hline to 33%,
+      arc by 33% 0% of 16% 20% small ccw,
+      hline to 100%,
+      line to 100% 33%,
+      arc by 0% 33% of 20% 16% small cw,
+      line to 100% 100%,
+      hline to 66%,
+      arc by -33% 0% of 16% 20% small cw,
+      hline to 0%,
+      line to 0% 66%,
+      arc by 0% -33% of 20% 16% small ccw,
+      close
+    )
+    content-box;
+}
+```
+
+This immediately creates an issue — the notches on the jigsaw pieces that extend out from the original `<a>` area aren't filled by their background colors.
+
+There is a solution to this problem. We've deliberately included the `content-box` `<geometry-box>` value after each `shape()` function in the previous two rules. This means the shapes will be drawn relative to the elements' content boxes, and any applied `padding` won't be set inside the shape. Instead, the padding will be placed outside the shape, causing it to get smaller and forcing the background color to fill up the notches.
+
+The required `padding` is set like so:
+
+```css live-sample___jigsaw-example
+a {
+  padding: 24px;
+}
+```
+
+> [!NOTE]
+> You can see what the background problem looks like by inspecting the [live example](#result_5) later on in your DevTools and disabling the `padding` applied to the `<a>` elements.
+
+The set `padding` causes the jigsaw piece shapes to get smaller, so there are gaps between them. We want them to touch initially, so we set a large negative {{cssxref("margin-right")}} value on each list item to bring them together again:
+
+```css live-sample___jigsaw-example
+li {
+  margin-right: -47px;
+}
+```
+
+A side-effect of the `margin-right` is that all of the `<li>` items are moved to the right, so the nav menu is no longer centered. To fix this, we use [relative positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#relative_positioning) to move the `<ul>` back to the left:
+
+```css live-sample___jigsaw-example
+ul {
+  position: relative;
+  right: 23.5px;
+}
+```
+
+Finally, we apply some style updates on `:hover` and `:focus` that, when combined with the `transition` properties set earlier, produce some animated effects when the nav items are interacted with. We increase the `gap` set on the `<ul>` flexbox layout when it is hovered or focused. To handle the focus state, we use the {{cssxref(":has")}} pseudo-class to select the entire `<ul>` when any `<a>` inside it is focused.
+
+```css live-sample___jigsaw-example
+ul:hover,
+ul:has(a:focus) {
+  gap: 30px;
+}
+```
+
+We then set an increased `brightness` {{cssxref("filter")}}, {{cssxref("scale")}} factor, and outer `box-shadow` on the `<a>` elements themselves when they are hovered or focused, making them appear brighter and raised up when interacted with.
+
+```css live-sample___jigsaw-example
+a:hover,
+a:focus {
+  filter: brightness(1.2);
+  scale: 1.1;
+  box-shadow:
+    5px 0px 10px rgb(0 0 0 / 0.5),
+    inset 3px 3px 3px rgb(255 255 255 / 0.5);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("jigsaw-example", "100%", "240")}}
+
+Hover or focus the nav items to see the animated effects. Note how naturally the different applied effects work with the applied `border-shape` values.
+
+```css hidden live-sample___basic-border-shape live-sample___basic-border-shape-fill live-sample___border-shape-select live-sample___animate-border-shape live-sample___jigsaw-example
+@supports not (border-shape: circle(50%)) {
+  body::before {
+    content: "Your browser does not support the 'border-shape' property.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref("border")}}
+- {{cssxref("corner-shape")}}
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
+- [border-shape: the future of the non-rectangular web](https://una.im/border-shape) by Una Kravets (2026)
