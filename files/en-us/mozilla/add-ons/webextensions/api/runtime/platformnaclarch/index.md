@@ -14,15 +14,15 @@ The enumerated value representing the CPU instruction set architecture of Google
 ## Type
 
 - `ARM`
-  - : The string literal `"arm"`. Represents all versions of the ARM ISA, including all 32-bit and 64-bit variants. Equivalent to [`PlatformArch.arm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#arm) (32-bit variant) and `PlatformArch.arm64` combined into one value.
+  - : The string literal `"arm"`. Represents all versions of the ARM ISA, including all 32-bit and 64-bit variants. Equivalent to [`PlatformArch.arm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#arm) (32-bit variant) and [`PlatformArch.arm64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#arm64) combined into one value.
 - `X86_32`
   - : The string literal `"x86-32"`. Represents the 32-bit variant of the x86 architecture. Equivalent to [`PlatformArch.x86_32`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#x86-32).
 - `X86_64`
   - : The string literal `"x86-64"`. Represents the 64-bit variant of the x86 architecture. Equivalent to [`PlatformArch.X86_64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#x86-64).
 - `MIPS`
-  - : The string literal `"mips"`. Represents the 32-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to `PlatformArch.mips`.
+  - : The string literal `"mips"`. Represents the 32-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to [`PlatformArch.mips`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#mips).
 - `MIPS64`
-  - : The string literal `"mips64"`. Represents the 64-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to `PlatformArch.mips64`.
+  - : The string literal `"mips64"`. Represents the 64-bit variant of the MIPS ISA, which was never supported by official releases. Equivalent to [`PlatformArch.mips64`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch#xmips64).
 
 {{WebExtExamples}}
 
