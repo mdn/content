@@ -287,6 +287,12 @@ Cache-Control: no-cache
 …
 ```
 
+> [!NOTE]
+> The `no-cache` directive (or equivalent `max-age=0`, `must-revalidate`) does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
+
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 
 ```http
