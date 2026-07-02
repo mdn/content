@@ -20,7 +20,7 @@ At this point in the course, we discuss math in JavaScript — how we can use {{
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Basic number operations in JavaScript — add, subtract, multiply, and divide.</li>
+          <li>Basic number operations in JavaScript — add, subtract, multiply, divide, exponentiate and use parentheses <code>()</code>.</li>
           <li>numbers are not numbers if they are defined as strings, and can cause calculations to go wrong.</li>
           <li>Converting strings to numbers with <code>Number()</code>.</li>
           <li>Operator precedence.</li>
@@ -90,9 +90,9 @@ For example, to round your number to a fixed number of decimal places, use the [
 
 ```js
 const lotsOfDecimal = 1.7665849587;
-lotsOfDecimal;
+lotsOfDecimal; // 1.7665849587
 const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
-twoDecimalPlaces;
+twoDecimalPlaces; // 1.77
 ```
 
 ### Converting to number data types
@@ -239,7 +239,7 @@ As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2
 
 But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
 
-This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).
+This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — anything inside parentheses first, then exponentiate, then multiplie and divide, and finally add and subtract. This order is commonly remembered using PEMDAS or BODMAS.
 
 If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
@@ -353,6 +353,26 @@ But there are some more complex types, which provide useful shortcuts to keep yo
       <td><code>x /= 5;</code></td>
       <td><code>x = x / 5;</code></td>
     </tr>
+    <tr>
+  <td><code>%=</code></td>
+  <td>Remainder assignment</td>
+  <td>
+    Divides the variable value on the left by the value on the right, and
+    assigns the remainder to the variable.
+  </td>
+  <td><code>x %= 5;</code></td>
+  <td><code>x = x % 5;</code></td>
+</tr>
+<tr>
+  <td><code>**=</code></td>
+  <td>Exponentiation assignment</td>
+  <td>
+    Raises the variable value on the left to the power of the value on the
+    right, and assigns the result to the variable.
+  </td>
+  <td><code>x **= 2;</code></td>
+  <td><code>x = x ** 2;</code></td>
+</tr>
   </tbody>
 </table>
 
