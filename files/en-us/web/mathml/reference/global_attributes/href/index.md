@@ -13,6 +13,9 @@ sidebar: mathmlref
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
 
+> [!WARNING]
+> Setting `href` on MathML elements other than {{MathMLElement("a")}} is deprecated. Use the {{MathMLElement("a")}} element to create hyperlinks within MathML content instead, as defined in the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element).
+
 ## Example
 
 The first equation links to the Wikipedia article about the [mass-energy equivalence](https://en.wikipedia.org/wiki/Mass-energy_equivalence). The square root part of the second equation is a link to the [SageMath](https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO) calculation.
