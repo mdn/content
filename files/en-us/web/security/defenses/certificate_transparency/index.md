@@ -33,7 +33,7 @@ With the latter methods, servers will need to be updated to send the required da
 
 ## Browser Requirements
 
-When a website's TLS certificate is validated in modern versions of Chrome, it is evaluated for compliance against the [Chrome CT Policy](https://googlechrome.github.io/CertificateTransparency/ct_policy.html). All publicly-trusted TLS certificates are required to be accompanied by SCTs that satisfy that policy to successfully validate.
+Chrome validates a website's TLS certificates for compliance against the [Chrome CT Policy](https://googlechrome.github.io/CertificateTransparency/ct_policy.html). Publicly-trusted certificates must be accompanied by SCTs satisfying the policy and successfully validate."
 
 Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
