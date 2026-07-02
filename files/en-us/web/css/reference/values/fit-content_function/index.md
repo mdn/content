@@ -11,6 +11,8 @@ sidebar: cssref
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
+This function is different from the {{cssxref("fit-content")}} sizing keyword.
+
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
 ```css interactive-example-choice
