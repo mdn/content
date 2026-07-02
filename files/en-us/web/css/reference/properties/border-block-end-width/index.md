@@ -54,7 +54,7 @@ writing-mode: vertical-lr;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-block-end-width: 5px;
 border-block-end-width: thick;
 
@@ -70,8 +70,8 @@ Related properties are {{cssxref("border-block-start-width")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("line-width")}}
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 

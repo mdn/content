@@ -76,11 +76,11 @@ column-rule: unset;
 The `column-rule` property is specified as one, two, or three of the values listed below, in any order.
 
 - `<'column-rule-width'>`
-  - : Is a {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. See {{cssxref("border-width")}} for details.
+  - : A {{cssxref("line-width")}}, being either a {{cssxref("&lt;length&gt;")}} or one of the keywords, `hairline`, `thin`, `medium`, or `thick`. See {{cssxref("column-rule-width")}}.
 - `<'column-rule-style'>`
-  - : See {{cssxref("border-style")}} for possible values and details.
+  - : A {{cssxref("line-style")}} keyword value. See {{cssxref("border-style")}}..
 - `<'column-rule-color'>`
-  - : Is a {{cssxref("&lt;color&gt;")}} value.
+  - : A {{cssxref("&lt;color&gt;")}} value. See {{cssxref("column-rule-color")}}.
 
 ## Formal definition
 

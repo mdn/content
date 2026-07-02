@@ -269,6 +269,7 @@ Notice that the almost-black color of `#000001` may be different from the actual
 
 ## See also
 
+- {{cssxref("line-width")}} data type
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
