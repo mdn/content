@@ -1413,6 +1413,14 @@
       "properties": ["HTMLIFrameElement.privateToken"],
       "events": []
     },
+    "Prompt API": {
+      "overview": ["Prompt API"],
+      "guides": [],
+      "interfaces": ["LanguageModel"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Push API": {
       "overview": ["Push API"],
       "guides": ["/docs/Web/API/Push_API/Best_Practices"],

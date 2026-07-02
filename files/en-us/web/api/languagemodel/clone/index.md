@@ -1,0 +1,119 @@
+---
+title: "LanguageModel: clone() method"
+short-title: clone()
+slug: Web/API/LanguageModel/clone
+page-type: web-api-instance-method
+spec-urls: https://webmachinelearning.github.io/prompt-api/
+---
+
+{{APIRef("Prompt API")}}{{SecureContext_Header}}
+
+The **`clone()`** method of the {{domxref("LanguageModel")}} interface creates a copy of the current session, including its full context window state. The cloned session can be used independently without affecting the original.
+
+Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+
+For example, you might build a shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
+
+## Syntax
+
+```js-nolint
+clone()
+clone(options)
+```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : Represents the options that can be passed. If this argument is absent, the `options` from the original session, such as its abort signal, are used.
+    Options include:
+    - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves with a cloned {{domxref("LanguageModel")}} instance.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the operation was cancelled via the `signal` option.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if cloning fails for any other reason not listed in the other exception types.
+
+## Examples
+
+### Exploring multiple response paths
+
+The following example shows how to explore different response paths. First, it creates a single session with the start of a story. Then it clones the original session twice before prompting for different endings. This approach preserves the original session in case more exploration is wanted.
+
+```js
+const session = await LanguageModel.create({
+  initialPrompts: [
+    { role: "system", content: "You are a creative writing assistant." },
+  ],
+});
+
+await session.append(
+  "The story begins in a small coastal town during a storm.",
+);
+
+const [clone1, clone2] = await Promise.all([session.clone(), session.clone()]);
+
+const [ending1, ending2] = await Promise.all([
+  clone1.prompt("Write a happy ending."),
+  clone2.prompt("Write a mysterious ending."),
+]);
+
+console.log("Happy ending:", ending1);
+console.log("Mysterious ending:", ending2);
+```
+
+### Cloning to retry after a context overflow
+
+This example uses a checkpoint and rolloback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` ensures that the app has a way to restore a safe state before attempting something risky.
+
+```js
+let session = await LanguageModel.create();
+const checkpoint = await session.clone();
+
+try {
+  await session.append(veryLargeDocument);
+} catch (err) {
+  if (err.name === "QuotaExceededError") {
+    console.warn("Document too large.");
+    session = checkpoint;
+  }
+}
+```
+
+### Cloning a session with an abort signal
+
+The following example creates a timeout to abort the clone operation if it takes more than three seconds.
+
+```js
+const controller = new AbortController();
+setTimeout(() => controller.abort(), 3000);
+
+try {
+  const clonedSession = await session.clone({
+    signal: controller.signal,
+  });
+  console.log("Session cloned successfully.");
+} catch (err) {
+  if (err.name === "AbortError") {
+    console.log("Clone operation was aborted.");
+  }
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("LanguageModel.append()")}}
+- [Prompt API](/en-US/docs/Web/API/Prompt_API)
