@@ -12,7 +12,7 @@ sidebar: http
 
 {{deprecated_header}}{{non-standard_header}}
 
-The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
+The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an attribution trigger. This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -53,11 +53,11 @@ Attribution-Reporting-Register-Trigger: <json-string>
     - `"aggregatable_values"`
       - : An object containing properties representing a value for each data point defined in `"aggregatable_trigger_data"`. In each case, the property name is equal to the name defined in `"source_keys"`, and the property value is whatever arbitrary value you require.
     - `"debug_key"` {{optional_inline}}
-      - : A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
+      - : A number representing a debug key. Set this if you want to generate a debug report alongside the associated attribution report.
     - `"debug_reporting"` {{optional_inline}}
       - : A boolean value. If a `debug_key` is set, set this to `true` to specify that the generated debug report should be a verbose debug report.
     - `"filters"` {{optional_inline}}
-      - : An object containing custom data that can be used to filter which triggers generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
+      - : An object containing custom data that can be used to filter which triggers generate reports.
     - `"event_trigger_data"`
       - : An object representing data about the trigger. Available sub-fields are as follows:
         - `"trigger_data"`
@@ -67,11 +67,11 @@ Attribution-Reporting-Register-Trigger: <json-string>
             > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
 
         - `"priority"` {{optional_inline}}
-          - : A string representing a priority value for the attribution trigger. By default, triggers are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the trigger match older sources. For example, a value of `2` takes priority over the default value of `1`. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
+          - : A string representing a priority value for the attribution trigger. By default, triggers are attributed to the most recent matching source. For both event-level and summary reports you set a higher priority number to make the trigger match older sources. For example, a value of `2` takes priority over the default value of `1`.
         - `"deduplication_key"` {{optional_inline}}
           - : A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/prevent-duplication) for more information.
         - `"filters"` {{optional_inline}}
-          - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{HTTPHeader("Attribution-Reporting-Register-Source")}} header. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more information.
+          - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{HTTPHeader("Attribution-Reporting-Register-Source")}} header.
 
 ## Examples
 

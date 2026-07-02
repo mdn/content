@@ -7937,6 +7937,9 @@
 /en-US/docs/Web/API/Apps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Apps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/ArrayBufferView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports	/en-US/docs/Web/API/Attribution_Reporting_API
+/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources	/en-US/docs/Web/API/Attribution_Reporting_API
+/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers	/en-US/docs/Web/API/Attribution_Reporting_API
 /en-US/docs/Web/API/AudioBuffer.copyFromChannel	/en-US/docs/Web/API/AudioBuffer/copyFromChannel
 /en-US/docs/Web/API/AudioBuffer.copyToChannel	/en-US/docs/Web/API/AudioBuffer/copyToChannel
 /en-US/docs/Web/API/AudioBuffer.duration	/en-US/docs/Web/API/AudioBuffer/duration
