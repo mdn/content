@@ -23,7 +23,7 @@ alpha(from var(--mycolor) / calc(alpha * 0.5))
 ### Parameters
 
 - `from <color>`
-  - : The [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax keyword `from` followed by any valid {{cssxref("&lt;color&gt;")}} value, defining the **origin color**. The color components of the origin color are carried through to the result unchanged; only the alpha channel is affected.
+  - : The [relative color](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) syntax keyword `from` followed by any valid {{cssxref("&lt;color&gt;")}} value, defining the **origin color**. The color components of the origin color are carried through to the result unchanged; only the alpha channel is affected.
 
 - `/ <alpha-value>` {{optional_inline}}
   - : An {{cssxref("&lt;alpha-value&gt;")}} specifying the alpha of the output color. This can be a `<number>` between `0` and `1`, a `<percentage>` between `0%` and `100%`, or a {{cssxref("calc()")}} expression. Within this value, the keyword **`alpha`** may be used to refer to the alpha channel of the origin color as a `<number>` (where `1.0` is equivalent to `100%`). If this argument is omitted, the alpha of the origin color is used unchanged.
@@ -34,11 +34,11 @@ A color value in the same color space as the origin color, with identical color 
 
 ## Description
 
-The `alpha()` function is a [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) function that lets you adjust the transparency of any color without rewriting its other components. This is particularly useful when you need a semi-transparent variant of a design token or custom property color, and you want to derive it automatically from the original rather than maintaining a separate value.
+The `alpha()` function is a [relative color](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) function that lets you adjust the transparency of any color without rewriting its other components. This is particularly useful when you need a semi-transparent variant of a design token or custom property color, and you want to derive it automatically from the original rather than maintaining a separate value.
 
 Within the alpha value argument, the component keyword `alpha` resolves to the alpha channel of the origin color as a {{cssxref("&lt;number&gt;")}} in the range `[0, 1]`. This allows you to express the output alpha relative to the input, for example halving it with `calc(alpha * 0.5)`, or clamping it with `clamp(0.2, alpha, 0.8)`.
 
-Unlike general [relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (e.g., `oklch(from ...)`), the `alpha()` function does not expose the individual color channel keywords of the origin color space. It is solely concerned with the alpha channel, keeping the rest of the color intact.
+Unlike general [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) (e.g., `oklch(from ...)`), the `alpha()` function does not expose the individual color channel keywords of the origin color space. It is solely concerned with the alpha channel, keeping the rest of the color intact.
 
 The return value is always in the same color space as the origin color. For example, if the origin color is an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color, the result will also be resolved in OKLCh, with the same lightness, chroma, and hue.
 
@@ -183,6 +183,6 @@ body {
 
 - {{cssxref("&lt;color&gt;")}} data type
 - {{cssxref("&lt;alpha-value&gt;")}} data type
-- [Relative color syntax](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
 - [CSS custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and {{cssxref("var")}}
