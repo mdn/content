@@ -27,7 +27,7 @@ The **`table`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) crea
     (i32.const 100)
   )
 
-  ;; initialize table slots
+  ;; initialize table slots actively
   (elem (i32.const 0) $f1 $f2)
 
   (func (export "accessTable") (param $index i32) (result i32)
@@ -47,27 +47,35 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 ## Syntax
 
 ```plain
-table name initial_size max_size type
+table name index_type initial_size max_size type
 ```
 
 - `table`
   - : The `table` definition type. Must always be included first.
 - `name` {{optional_inline}}
   - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm script, `1` for the second, etc.
+
+- `index_type` {{optional_inline}}
+  - : An integer value type that indicates what index type the table will have. Possible values are:
+    - [`i32`](/en-US/docs/WebAssembly/Reference/Value_types/i32)
+      - : References will be stored at 32-bit indexes. Pointers used to identify table indexes (for example when using [`init`](/en-US/docs/WebAssembly/Reference/Table/init)) will be `i32` values.
+    - [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64)
+      - : References will be stored at 64-bit indexes. Pointers used to identify table indexes (for example when using `init`) will be `i64` values.
+
+    If omitted, `index_type` defaults to `i32`.
+
 - `initial_size`
   - : An integer representing the initial size of the table.
 - `max_size` {{optional_inline}}
   - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
 - `type`
-  - : The name of the function type to store. Possible values are:
-    - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
-      - : Stores references to functions defined inside Wasm.
-    - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
-      - : Store references to external values defined inside JavaScript.
+  - : The name of the function type to store. See [`elem` > `value_type`](/en-US/docs/WebAssembly/Reference/Definitions/elem#value_type).
 
 ## Description
 
-WebAssembly tables allow storage of reference values separate from byte-oriented WebAssembly memories. The primary use-case is for storing function references that can be used with `call_indirect` to support indirect function calls for languages that have them. The `table` definition creates a new table.
+WebAssembly tables allow storage of reference values separate from byte-oriented WebAssembly memories. The primary use-case is for storing function references that can be used with `call_indirect` to support indirect function calls for languages that have them, although just about any kind of reference can be stored.
+
+The `table` definition creates a new table.
 
 A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
 

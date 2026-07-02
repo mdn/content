@@ -14,12 +14,16 @@ This set of pages details the table instructions available in Wasm to create and
 
 ## Instructions
 
+- [`table.copy`](/en-US/docs/WebAssembly/Reference/Table/copy)
+  - : Copies references from one [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) location to another.
 - [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)
   - : Sets a range of table elements to the same value.
 - [`table.get`](/en-US/docs/WebAssembly/Reference/Table/get)
   - : Retrieves the reference stored at a particular table index.
 - [`table.grow`](/en-US/docs/WebAssembly/Reference/Table/grow)
   - : Increases the size of the table by a specified number of elements.
+- [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init)
+  - : Manually copies the references from a passive [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a `table`.
 - [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set)
   - : Changes the value stored in a particular table element.
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
