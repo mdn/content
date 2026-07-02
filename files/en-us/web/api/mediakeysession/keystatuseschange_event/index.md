@@ -26,10 +26,6 @@ An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ExtendableEvent")}}
 
-## Event properties
-
-_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
-
 ## Specifications
 
 {{Specifications}}

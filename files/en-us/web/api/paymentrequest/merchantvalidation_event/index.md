@@ -33,13 +33,6 @@ A {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MerchantValidationEvent")}}
 
-## Event properties
-
-- {{domxref("MerchantValidationEvent.methodName")}}
-  - : A string providing a unique payment method identifier for the payment handler that's requiring validation. This may be either one of the standard payment method identifier strings or a URL that both identifies and handles requests for the payment handler, such as `https://apple.com/apple-pay`.
-- {{domxref("MerchantValidationEvent.validationURL")}}
-  - : A string specifying a URL from which the site or app can fetch payment handler specific validation information. Once this data is retrieved, the data (or a promise resolving to the validation data) should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}} to validate that the payment request is coming from an authorized merchant.
-
 ## Examples
 
 In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("Window/fetch", "fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.

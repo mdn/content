@@ -28,13 +28,6 @@ An {{domxref("RTCErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCErrorEvent")}}
 
-## Event properties
-
-_In addition to the standard properties available on the {{domxref("Event")}} interface, `RTCErrorEvent` also includes the following:_
-
-- {{domxref("RTCErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : An {{domxref("RTCError")}} object specifying the error which occurred; this object includes the type of error that occurred, information about where the error occurred (such as which line number in the {{Glossary("SDP")}} or what {{Glossary("SCTP")}} cause code was at issue).
-
 ## Description
 
 Transport-level errors will have one of the following values for the specified error's {{domxref("RTCError")}} property {{domxref("RTCError.errorDetail", "errorDetail")}}:

@@ -30,19 +30,6 @@ An {{domxref("RTCTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCTrackEvent")}}
 
-## Event properties
-
-_Since `RTCTrackEvent` is based on {{domxref("Event")}}, its properties are also available._
-
-- {{domxref("RTCTrackEvent.receiver", "receiver")}} {{ReadOnlyInline}}
-  - : The {{domxref("RTCRtpReceiver")}} used by the track that's been added to the `RTCPeerConnection`.
-- {{domxref("RTCTrackEvent.streams", "streams")}} {{ReadOnlyInline}} {{optional_inline}}
-  - : An array of {{domxref("MediaStream")}} objects, each representing one of the media streams to which the added {{domxref("RTCTrackEvent.track", "track")}} belongs. By default, the array is empty, indicating a streamless track.
-- {{domxref("RTCTrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The {{domxref("MediaStreamTrack")}} which has been added to the connection.
-- {{domxref("RTCTrackEvent.transceiver", "transceiver")}} {{ReadOnlyInline}}
-  - : The {{domxref("RTCRtpTransceiver")}} being used by the new track.
-
 ## Examples
 
 This example shows code that creates a new {{domxref("RTCPeerConnection")}}, then adds a new `track` event handler.
