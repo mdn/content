@@ -350,16 +350,8 @@ When the column rule is larger than the column gap, the decorative line appears 
 
 - {{cssxref("column-gap")}}
 - {{cssxref("column-rule")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-visibility-items")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("row-rule-visibility-items")}}
-- {{cssxref("rule-visibility-items")}}
-<!-- Will be uncommented when issue https://github.com/mdn/content/issues/44435 is resolved.
 - {{cssxref("column-rule-break")}}
+- {{cssxref("column-rule-color")}}
 - {{cssxref("column-rule-inset")}}
 - {{cssxref("column-rule-inset-cap")}}
 - {{cssxref("column-rule-inset-cap-end")}}
@@ -369,6 +361,11 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("column-rule-inset-junction-end")}}
 - {{cssxref("column-rule-inset-junction-start")}}
 - {{cssxref("column-rule-inset-start")}}
+- {{cssxref("column-rule-style")}}
+- {{cssxref("column-rule-visibility-items")}}
+- {{cssxref("column-rule-width")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 - {{cssxref("row-rule")}}
 - {{cssxref("row-rule-break")}}
 - {{cssxref("row-rule-color")}}
@@ -382,6 +379,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("row-rule-inset-junction-start")}}
 - {{cssxref("row-rule-inset-start")}}
 - {{cssxref("row-rule-style")}}
+- {{cssxref("row-rule-visibility-items")}}
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule")}}
 - {{cssxref("rule-break")}}
@@ -393,7 +391,8 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("rule-inset-start")}}
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-style")}}
-- {{cssxref("rule-width")}} -->
+- {{cssxref("rule-visibility-items")}}
+- {{cssxref("rule-width")}}
 
 ### Terms and glossary definitions
 
