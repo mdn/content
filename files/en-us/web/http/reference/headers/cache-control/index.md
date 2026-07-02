@@ -313,7 +313,7 @@ Cache-Control: max-age=0
 If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0`.
 
 > [!NOTE]
-> The `max-age=0` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> The `max-age` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
 > If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
 > Even when bfcache is not used, the browser may still serve the cached response without revalidating.
 > This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
