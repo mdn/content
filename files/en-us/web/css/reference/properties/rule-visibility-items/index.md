@@ -7,7 +7,7 @@ browser-compat: css.properties.rule-visibility-items
 sidebar: cssref
 ---
 
-The **`rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) shorthand property defines whether a rule segment is painted in portions of gaps adjacent to empty areas, setting both the {{cssxref("column-rule-visibility-items")}} and {{cssxref("row-rule-visibility-items")}} to the same value.
+The **`rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) shorthand property defines whether rule segments are painted in both row and column gaps adjacent to empty areas.
 
 ## Constituent properties
 
@@ -63,7 +63,7 @@ cite {
 ## Syntax
 
 ```css
-/* keywords */
+/* Keywords */
 rule-visibility-items: all;
 rule-visibility-items: around;
 rule-visibility-items: between;
@@ -93,7 +93,7 @@ rule-visibility-items: unset;
 
 ## Description
 
-The `rule-visibility-items` property defines whether rule segments are painted in portions of gaps adjacent to empty areas in the gaps between rows and columns in [multi-row](/en-US/docs/Web/CSS/Guides/Multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row or column.
+The `rule-visibility-items` property defines whether rule segments are painted in gaps adjacent to empty areas in the gaps between rows and columns in [multi-row](/en-US/docs/Web/CSS/Guides/Multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row or column.
 
 The value is a single keyword that sets the same value to both the {{cssxref("column-rule-visibility-items")}} and {{cssxref("row-rule-visibility-items")}} properties.
 
@@ -128,9 +128,9 @@ We include a list of dynamic sports duos:
 
 #### CSS
 
-We define the ordered list ({{htmlelement("ol")}}) to be a grid container, creating 4 columns and 4 rows by setting both the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} to `repeat(4, 1fr)`, and move the last item to the 16th grid area using {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns to fit our `5px` dashed rule. We set the column rules to `dashed` and the row rules to `solid`.
+We define the ordered list ({{htmlelement("ol")}}) to be a grid container, creating 4 columns and 4 rows by setting both the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties to `repeat(4, 1fr)`, and move the last item to the bottom-right grid area using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns to fit our `5px` rules. We set the column rules to `dashed` and the row rules to `solid`.
 
-Finally, we set `rule-visibility-items` to `around`, so every gap area that is adjacent to a grid item will contain a painted gap rule segment.
+Finally, we set `rule-visibility-items` to `between`, so that row- and column-rules are painted only if both grid areas adjacent to them contain a grid item.
 
 ```css
 ol {
@@ -151,6 +151,9 @@ li:last-child {
 ```
 
 ```css hidden
+li {
+  margin-left: 1em;
+}
 @layer no-support {
   @supports not (rule-visibility-items: around) {
     body::before {
