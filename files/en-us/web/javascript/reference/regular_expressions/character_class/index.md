@@ -155,22 +155,19 @@ nonASCIINumbers("𐆊0零1𝟜𑜹a"); // [ '𝟜', '𑜹' ]
 
 ### Matching strings
 
-The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF).
+The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF), treating `\r\n` as a single match.
 
 ```js
-function getLineTerminators(str) {
+function getLineTerminatorSequences(str) {
   return str.match(/[\r\n\u2028\u2029\q{\r\n}]/gv);
 }
 
-getLineTerminators(`
-A poem\r
-Is split\r\n
-Into many
-Stanzas
-`); // [ '\r', '\r\n', '\n' ]
+getLineTerminatorSequences("CR \r LF \n CRLF \r\n"); // [ '\r', '\n', '\r\n' ]
 ```
 
-This example is exactly equivalent to `/(?:\r|\n|\u2028|\u2029|\r\n)/gu` or `/(?:[\r\n\u2028\u2029]|\r\n)/gu`, except shorter.
+This expression is equivalent to `/(?:\r\n|\r|\n|\u2028|\u2029)/gu` or `/(?:\r\n|[\r\n\u2028\u2029])/gu`, with `\r\n` listed as the first alternative. The order matters here: disjunction (`|`) is not commutative, since a regex engine tries alternatives from left to right and stops at the first one that matches. Putting `\r\n` after `\r` (e.g., `\r|\r\n`) would mean the lone `\r` always matches first, so the two-character sequence would never be produced.
+
+Despite this, `\q{\r\n}` can appear at the _end_ of the character class above, after `\r` and `\n`, and still correctly match the two-character sequence as a whole. This is because, within a character class, string operands (and the class as a whole) are matched greedily: the engine tries to match the longest possible alternative at each position, regardless of where that alternative appears in the class. Since `\r\n` is longer than `\r` alone, it's preferred whenever both could match.
 
 The most useful case of `\q{}` is when doing subtraction and intersection. Previously, this was possible with [multiple lookaheads](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection). The following function matches flags that are not one of the American, Chinese, Russian, British, and French flags.
 
