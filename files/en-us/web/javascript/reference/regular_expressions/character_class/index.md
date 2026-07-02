@@ -86,6 +86,8 @@ With the `v` flag, intersection is expressed with `&&`, and subtraction with `--
 
 In `v` mode, the [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) `\p` can match finite-length strings, such as emojis. For symmetry, regular character classes can also match more than one character. To write a "string literal" in a character class, you wrap the string in `\q{...}`. The only regex syntax supported here is [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) — apart from this, `\q` must completely enclose literals (including escaped characters). This ensures that character classes can only match finite-length strings with finitely many possibilities.
 
+When a character class contains both single-character and string literal operands, the engine tries longer operands first. For example, `[a\q{ab}]` will match the string `"ab"` as `\q{ab}` rather than matching only the first `"a"`. This greedy string-matching behavior is why `\q{\r\n}` can safely appear at the end of a class containing `\r`.
+
 Because the character class syntax is now more sophisticated, more characters are reserved and forbidden from appearing literally.
 
 - In addition to `]` and `\`, the following characters must be escaped in character classes if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. This list is somewhat similar to the list of [syntax characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character), except that `^`, `$`, `*`, `+`, and `?` are not reserved inside character classes, while `/` and `-` are not reserved outside character classes (although `/` may delimit a regex literal and therefore still needs to be escaped). All these characters may also be optionally escaped in `u`-mode character classes.
@@ -155,22 +157,17 @@ nonASCIINumbers("𐆊0零1𝟜𑜹a"); // [ '𝟜', '𑜹' ]
 
 ### Matching strings
 
-The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF).
+The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF). In `v` mode, character classes attempt longer string alternatives first, so `\q{\r\n}` can appear at the end of the class and still be matched as a single sequence.
 
 ```js
-function getLineTerminators(str) {
+function getLineTerminatorSequences(str) {
   return str.match(/[\r\n\u2028\u2029\q{\r\n}]/gv);
 }
 
-getLineTerminators(`
-A poem\r
-Is split\r\n
-Into many
-Stanzas
-`); // [ '\r', '\r\n', '\n' ]
+getLineTerminatorSequences("CR \r LF \n CRLF \r\n"); // [ '\r', '\n', '\r\n' ]
 ```
 
-This example is exactly equivalent to `/(?:\r|\n|\u2028|\u2029|\r\n)/gu` or `/(?:[\r\n\u2028\u2029]|\r\n)/gu`, except shorter.
+This expression is functionally equivalent to `/\r\n|\r|\n|\u2028|\u2029/gu` or `/\r\n|[\r\n\u2028\u2029]/gu`, with the `\r\n` alternative attempted before `\r` alone. It is not equivalent to `/[\r\n\u2028\u2029]|\r\n/gu`, because disjunction order matters when one alternative is a prefix of another.
 
 The most useful case of `\q{}` is when doing subtraction and intersection. Previously, this was possible with [multiple lookaheads](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection). The following function matches flags that are not one of the American, Chinese, Russian, British, and French flags.
 
