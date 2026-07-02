@@ -47,9 +47,6 @@ Use the `theme` key to define a static theme to apply to Firefox. When provided 
 > [!NOTE]
 > Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
-> [!NOTE]
-> A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
-
 ## Image formats
 
 The following image formats are supported in all theme image properties:
@@ -90,7 +87,7 @@ The theme key is an object that takes the following properties:
       <td><code>colors</code></td>
       <td><code>Object</code></td>
       <td>
-        <p>Mandatory.</p>
+        <p>Mandatory</p>
         <p>
           A JSON object whose properties represent the colors of various parts
           of the browser. See <code><a href="#colors">colors</a></code> for
@@ -105,7 +102,7 @@ The theme key is an object that takes the following properties:
         <p>Optional</p>
         <p>
           This object has properties that affect how the
-          <code>"additional_backgrounds"</code> images are displayed and color schemes are applied. See
+          <code>"additional_backgrounds"</code> items are displayed and color schemes are applied. See
           <code><a href="#properties">properties</a></code> for details on the properties that this object can contain.
         </p>
       </td>
@@ -133,7 +130,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
       <td><code>String</code> or <code>Object</code></td>
       <td>
         <p>
-          A foreground image or <a href="#css_gradient_syntax">CSS gradient</a>
+          A foreground image (defined by the path to an image asset packaged in the extension) or <a href="#css_gradient_syntax">CSS gradient</a>
           to be added to the header area and anchored to the upper right corner
           of the header area. CSS gradients are supported from Firefox 153.
         </p>
@@ -145,7 +142,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          Optional in desktop Firefox 60 onwards. Required in Firefox for Android.
+          Optional in desktop Firefox 60 onwards.
         </p>
       </td>
     </tr>
@@ -158,17 +155,17 @@ Images should be 200 pixels high to ensure they always fill the header space ver
             <strong>Warning:</strong> The
             <code>additional_backgrounds</code> property is experimental. It's
             accepted in release versions of Firefox, but its behavior
-            is subject to change. It's not supported in Firefox for Android.
+            is subject to change.
           </p>
         </div>
         <p>
-          An array of additional background items, image URLs or <a href="#css_gradient_syntax">CSS gradient</a>, to be added to
+          An array of additional background items, each being either the path to an image asset packaged in the extension or <a href="#css_gradient_syntax">CSS gradient</a>, to be added to
           the header area and displayed behind the
-          <code>"theme_frame":</code> image. These items layer the first item in
+          <code>"theme_frame":</code> items. These items layer the first item in
           the array on top and the last item at the bottom. CSS gradients are
           supported from Firefox 153.
         </p>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
           By default, all items are anchored to the upper right corner of the
           header area, but their alignment, repeat, and size behavior can be
@@ -218,13 +215,6 @@ All these properties can be specified as either a string containing any valid [C
 
 > [!NOTE]
 > [In Chrome, colors may only be specified as RGB arrays](#chrome_compatibility).
->
-> In Firefox for Android colors can be specified using:
->
-> - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/Reference/Values/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
->
-> Colors for Firefox for Android themes cannot be specified using color names.
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -378,7 +368,7 @@ All these properties can be specified as either a string containing any valid [C
       <td>
         <p>
           The color of the header area background, displayed in the part of the
-          header not covered or visible through the images specified in
+          header not covered or visible through the items specified in
           <code>"theme_frame"</code> and <code>"additional_backgrounds"</code>.
         </p>
         <details open>
@@ -401,7 +391,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>
           The color of the header area background when the browser window is
           inactive, displayed in the part of the header not covered or visible
-          through the images specified in <code>"theme_frame"</code> and
+          through the items specified in <code>"theme_frame"</code> and
           <code>"additional_backgrounds"</code>.
         </p>
         <details open>
@@ -1420,7 +1410,7 @@ A basic theme must define an image to add to the header, the accent color to use
  }
 ```
 
-Multiple images can be used to fill the header. Before Firefox version 60, use a blank or transparent header image to gain control over the placement of each additional image:
+Multiple items can be used to fill the header. Before Firefox version 60, use a blank or transparent header image to gain control over the placement of each additional item:
 
 ```json
  "theme": {
@@ -1492,7 +1482,7 @@ This example (Firefox 153+) mixes image backgrounds with a CSS linear gradient:
     "additional_backgrounds": [
       "background-image1.svg",
       "background-image2.svg",
-      { "linear-gradient": "to bottom, #FF6BBA -18.096%, #FFC999 50%" }
+      { "linear-gradient": "to bottom, #FF6BBA -20%, #FFC999 50%" }
     ]
   },
   "properties": {
@@ -1517,7 +1507,7 @@ This results in:
 
 In Chrome:
 
-- `colors/toolbar_text` is not used, use `colors/bookmark_text` instead.
+- `colors/toolbar_text` isn't used, use `colors/bookmark_text` instead.
 - `images/theme_frame` anchors the image to the top left of the header and if the image doesn't fill the header area tile the image.
 - all colors must be specified as an array of RGB values, like this:
 
