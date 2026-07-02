@@ -150,6 +150,19 @@ function a() {}
 console.log(a); // 1
 ```
 
+A `var` declaration without an initializer does not overwrite the function's value.
+
+```js
+function foo() {
+  console.log(typeof a); // "function"
+  var a;
+  function a() {}
+  console.log(typeof a); // "function"
+}
+
+foo();
+```
+
 `var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, or {{jsxref("Statements/import", "import")}} declaration.
 
 ```js-nolint example-bad
