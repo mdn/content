@@ -11,6 +11,8 @@ The HTTP **`Sec-Fetch-User`** [fetch metadata request header](/en-US/docs/Web/HT
 
 A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.
 
+The header is only included in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls).
+
 <table class="properties">
   <tbody>
     <tr>
