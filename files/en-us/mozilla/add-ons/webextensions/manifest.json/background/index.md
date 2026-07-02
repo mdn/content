@@ -223,6 +223,8 @@ With this `background` configuration, this happens:
 - in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
 - in Safari, the `scripts` property is used by default, and an event page starts.
 
+The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example also provides a demonstration of this pattern.
+
 ## Examples
 
 ```json
