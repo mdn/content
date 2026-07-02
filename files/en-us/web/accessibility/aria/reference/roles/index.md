@@ -18,7 +18,7 @@ The [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/At
 
 ## ARIA role types
 
-There are 6 categories of ARIA roles:
+There are 7 categories of ARIA roles:
 
 ### 1. Document structure roles
 
@@ -141,6 +141,14 @@ Avoid using [`command`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comma
 
 > [!WARNING]
 > "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
+
+### 7. Graphics roles
+
+Graphics roles are used to define the structure and semantical meaning of graphical content:
+
+- [graphics-document](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [graphics-object](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
+- [graphics-symbol](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
 
 ## Roles defined on MDN
 
