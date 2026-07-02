@@ -26,6 +26,35 @@ The `<length>` units can be relative or absolute. Relative lengths represent a m
 > [!NOTE]
 > Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
 
+### Length snapped as a line width
+
+Computed `<length>` values in `border-width` and a few other properties are rounded as a "line width" to ensure reasonable visual display.
+
+This rounding method first converts the `length` to a number of {{glossary("Device pixel")}}.
+If the absolute value of `length` is smaller than 1 and non-zero, `length` is rounded away from zero to 1 or -1, depending on the sign.
+Otherwise, if the absolute value of `length` is greater than 1, `length` is rounded towards zero to the nearest integer number.
+The resulting value of `length` is then converted back to {{glossary("CSS pixel")}}.
+
+For example, if {{domxref("Window.devicePixelRatio")}} is 3:
+
+```css
+border-width: 1.5px;
+/*
+1.5px corresponds to 1.5*3 = 4.5 device pixels,
+which is rounded to 4 device pixels,
+that corresponds to 4px/3,
+so the computed value is approximately 1.33333px.
+*/
+
+outline-width: 0.2px;
+/*
+0.2px corresponds to 0.2*3 = 0.6 device pixels,
+which is rounded to 1 device pixel,
+that corresponds to 1px/3,
+so the computed value is approximately 0.33333px.
+*/
+```
+
 ## Relative length units
 
 CSS relative length units are based on font, container, or viewport sizes.
