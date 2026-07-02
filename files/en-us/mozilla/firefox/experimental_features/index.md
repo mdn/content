@@ -406,6 +406,20 @@ The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
+### Tree counting CSS functions
+
+The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`. ([Firefox bug 2042063](https://bugzil.la/2042063)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.tree-counting-functions.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
