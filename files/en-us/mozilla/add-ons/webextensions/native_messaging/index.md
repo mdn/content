@@ -127,7 +127,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 #### Registry
 
-The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
+The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#native_messaging_manifest_locations).
 
 Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)), one of the two registry entries should be created for the messaging to work:
 
@@ -395,8 +395,8 @@ If you haven't managed to run the application, you should see an error message g
 
 - Check that the name passed to `runtime.connectNative()` matches the name in the app manifest
 - macOS/Linux: check that name of the app manifest is `<name>.json`.
-- macOS/Linux: check the native application's manifest file location as mentioned [in the native manifests reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
-- Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
+- macOS/Linux: check the native application's manifest file location. For details see [Managed storage manifest locations, macOS/Linux](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#macos).
+- Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest. For details see [Managed storage manifest locations, Windows](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#windows).
 - Windows: check that the path given in the registry key points to the app manifest.
 
   ```plain
