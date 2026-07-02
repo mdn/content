@@ -19,6 +19,8 @@ The **`IdentityProvider`** interface of the [Federated Credential Management (Fe
   - : Provides a manual signal to the browser that an IdP sign-in flow is finished. This is needed to, for example, close the IdP sign-in dialog when sign-in is completely finished and the IdP has finished collecting data from the user.
 - {{domxref("IdentityProvider.getUserInfo_static", "getUserInfo()")}} {{experimental_inline}}
   - : Returns information about a previously-signed in user on their return to an IdP, which can be used to provide a personalized welcome message and sign-in button.
+- {{domxref("IdentityProvider.resolve_static", "resolve()")}} {{experimental_inline}}
+  - : Finishes a multi-step sign-in flow and returns a token back to the {{glossary("Relying party", "RP")}}.
 
 ## Examples
 
