@@ -156,8 +156,6 @@ Putting these three together, you can programmatically set up a popover and its 
 const popover = document.getElementById("mypopover");
 const toggleBtn = document.getElementById("toggleBtn");
 
-const keyboardHelpPara = document.getElementById("keyboard-help-para");
-
 const popoverSupported = supportsPopover();
 
 if (popoverSupported) {
