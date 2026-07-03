@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**SDP** (Session Description {{glossary("Protocol")}}) is a standard for describing multimedia sessions. It contains information such as media types, transport addresses, timing, and {{Glossary("codec")}}s.
+**SDP** (Session Description {{glossary("Protocol")}}) is a standard for describing multimedia sessions. It contains information such as media types, transport addresses, timing, and {{Glossary("codec","codecs")}}.
 
 Here is a typical SDP message:
 
@@ -27,6 +27,7 @@ SDP is used together with protocols such as {{Glossary("RTP")}} and {{Glossary("
 
 ## See also
 
+- {{domxref("RTCSessionDescription")}}
 - {{RFC(8866, "Session Description Protocol")}}
 - [WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
 - [Session Description Protocol](https://en.wikipedia.org/wiki/Session_Description_Protocol) on Wikipedia
