@@ -429,6 +429,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{CSSxRef("grid")}}
 - {{CSSxRef("grid-column")}}
 - {{CSSxRef("grid-row")}}
+- {{cssxref("repeat()")}}
 
 [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
 
