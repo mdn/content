@@ -114,7 +114,7 @@ The French (`fr`) `short_name` translation shows typical usage of the object val
 
 ## Localizing the `icon` member
 
-The `icon` localization is covered in a separate section because localized images are handled somewhat differently to localized text. The properties of each `*_localized` member (`icon_localized`, in this case) are equal to an array of objects containing the same properties as the non-localized original (`icon`); each one provides details for a localized image.
+Localized images are handled somewhat differently to localized text. The properties of each `*_localized` member (`icon_localized`, in this case) are equal to an array of objects containing the same properties as the non-localized original (`icon`); each one provides details for a localized image.
 
 Let's see what this looks like:
 
