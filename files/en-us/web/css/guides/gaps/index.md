@@ -355,6 +355,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("column-rule-width")}}
 - {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
+
 <!-- Will be uncommented when issue https://github.com/mdn/content/issues/44435 is resolved.
 - {{cssxref("column-rule-break")}}
 - {{cssxref("column-rule-inset")}}

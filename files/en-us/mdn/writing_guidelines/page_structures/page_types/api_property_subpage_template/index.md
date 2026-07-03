@@ -40,7 +40,6 @@ sidebar: mdnsidebar
 >     This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
 >     If the property is static, then the slug must have a `_static` suffix, like: `Web/API/NameOfTheParentInterface/NameOfTheProperty_static`. This enables us to support instance and static properties which have the same name.
->
 > - **page-type**
 >   - : The `page-type` key for Web/API properties is either `web-api-instance-property` (for instance properties) or `web-api-static-property` (for static properties).
 > - **status**
