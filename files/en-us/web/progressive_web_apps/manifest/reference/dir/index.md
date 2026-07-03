@@ -22,7 +22,7 @@ If not specifies, the default direction is inferred from the default language, a
 A string representing the app's text direction. Valid values of `dir` are:
 
 - `auto`
-  - : The default. Specifies that the text direction is unknown. The browser will use heuristics to estimate the display direction of the text.
+  - : The default. Specifies that the text direction is unknown. The browser will use heuristics to infer the display direction of the text.
 - `ltr`
   - : Specifies a left-to-right text direction.
 - `rtl`
