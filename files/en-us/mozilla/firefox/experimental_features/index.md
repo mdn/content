@@ -495,6 +495,22 @@ These give developers more flexibility when structuring and loading JavaScript m
 
 ## APIs
 
+### Crash Reporting
+
+Crash reports can now be sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API) to the `default` endpoint.
+Note that Firefox does not support providing {{domxref("CrashReportContext")}} in the report body.
+([Firefox bug 2036160](https://bugzil.la/2036160)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `dom.reporting.crash.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
+
 ### Scoped custom element registries
 
 Support for [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) is being implemented.
