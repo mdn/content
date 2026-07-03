@@ -5,7 +5,7 @@ page-type: how-to
 sidebar: pwasidebar
 ---
 
-[Progressive Web App (PWA)](/en-US/docs/Web/Progressive_web_apps) manifests can be localized using a combination of the [`*_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized) manifest member suffix, the [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) member, and the [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) member.
+[Progressive Web App (PWA)](/en-US/docs/Web/Progressive_web_apps) manifests can be localized using a combination of localizable members, which have the suffix [`_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized), and the [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) and [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) members.
 
 Manifest localization allows the browser to choose between different text strings (for app names and descriptions, for example) and icons when loading the app to best suit the user's language preferences.
 
