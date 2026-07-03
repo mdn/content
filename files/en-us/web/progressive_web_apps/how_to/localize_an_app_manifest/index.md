@@ -9,7 +9,11 @@ sidebar: pwasidebar
 
 Manifest localization allows the browser to choose between different text strings (for app names and descriptions, for example) and icons when loading the app to best suit the user's language preferences.
 
-This guide shows how to localize a PWA manifest, using the following example as a starting point:
+This guide shows how to localize a PWA manifest.
+
+## Example non-localised PWA
+
+The rest of this guide develops a multilingual PWA manifest using the following example as a starting point.
 
 ```json
 {
