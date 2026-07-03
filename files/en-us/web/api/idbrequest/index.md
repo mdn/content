@@ -56,7 +56,8 @@ The interface {{domxref("IDBOpenDBRequest")}} is derived from `IDBRequest`.
 
 ### Basic usage
 
-In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously and make a request; event listeners for `error` and `success` are included to handle the success and error cases.
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 
 ```js
 let db;
@@ -64,20 +65,20 @@ let db;
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// these two event handlers act on the database being
-// opened successfully, or not
-DBOpenRequest.onerror = (event) => {
+// Handle the case where there is an error opening the database
+DBOpenRequest.addEventListener("error", (event) => {
   note.appendChild(document.createElement("li")).textContent =
     "Error loading database.";
-};
+});
 
-DBOpenRequest.onsuccess = (event) => {
+// Handle the case where the database opens successfully
+DBOpenRequest.addEventListener("success", (event) => {
   note.appendChild(document.createElement("li")).textContent =
     "Database initialized.";
 
   // store the result of opening the database.
   db = DBOpenRequest.result;
-};
+});
 ```
 
 ## Specifications

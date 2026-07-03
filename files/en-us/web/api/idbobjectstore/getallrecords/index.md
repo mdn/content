@@ -72,20 +72,35 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 
 ### Basic usage
 
-This code snippet queries an `IDBObjectStore` for up to 100 records whose keys come after `"myKey"`, with results to be sorted in reverse order.
-The results are returned via the `onsuccess` callback in `myRecords.result`, as an array of `IDBRecord` instances.
+This example queries an {{domxref("IDBObjectStore")}} for up to 100 records whose keys come after `"myKey"`, with results sorted in reverse order.
+
+The code first creates a transaction on an {{domxref("IDBDatabase")}} named `db` (omitting the code to open the database), and then uses it to get an `IDBObjectStore` containing a contacts list.
+It then calls `getAllRecords()` on the object store, returning a {{domxref("IDBRequest")}} instance.
+Event listeners are added to this request for the `success` and `error` events.
+On success, the result `event.target.result` is logged (this also available as `request.result`).
+This result contains an array of `IDBRecord` instances.
 Note that because this is a query on an `IDBObjectStore`, the `key` and `primaryKey` in each record have the same value.
 
 ```js
-const query = IDBKeyRange.lowerBound("myKey", true);
+// Create a transaction on the database and use it to get the contained store
+const transaction = db.transaction(["contactsList"], "readonly");
 const objectStore = transaction.objectStore("contactsList");
 
-const myRecords = (objectStore.getAllRecords({
+const query = IDBKeyRange.lowerBound("myKey", true);
+
+const request = objectStore.getAllRecords({
   query,
   count: 100,
   direction: "prev",
-}).onsuccess = (event) => {
-  console.log("Records successfully retrieved");
+});
+
+request.addEventListener("success", (event) => {
+  const myRecords = event.target.result; // Array of IDBRecord instances
+  console.log(myRecords);
+});
+
+request.addEventListener("error", (event) => {
+  console.error("Error retrieving records:", event.target.error);
 });
 ```
 
