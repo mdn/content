@@ -291,7 +291,7 @@ There is a third type of popover you can create — **hint popovers**, designate
 They can be light dismissed and will respond to close requests.
 
 `hint` popovers do not close `auto` popovers when they are displayed, but will close other `hint` popovers that are not its ancestors in the [hint stack](#popover_openclose_interaction_rules).
-The reverse is also true: closing an `auto` popover — whether by showing another `auto`, pressing <kbd>Esc</kbd>, or light-dismiss — does not affect `hint` popovers unless they are descendants of the closed auto popover.
+The reverse is also true: closing an `auto` popover by pressing <kbd>Esc</kbd> or light-dismiss does not affect `hint` popovers unless they are descendants of the closed auto popover.
 
 This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered without closing the UI popovers.
 
@@ -372,7 +372,7 @@ A few specific rules for how popovers interact that derive from this specificati
 
 - Showing a `hint` popover does not close `auto` popovers.
 - Showing a `hint` popover closes other `hint` popovers, except those that are its ancestors in the hint stack.
-- Clicking outside a popover light-dismisses all open `auto` and `hint` popovers. <!-- TODO: What happens if you click outside a hint, but inside the parent? -->
+- Clicking outside a popover light-dismisses all open `auto` and `hint` popovers that are not its ancestor.
 - Hiding an `auto` popover does not close `hint` popovers that are not its descendants.
 - Showing an `auto` popover as a child of a `hint` popover downgrades the `auto` popover to `hint`.
 - Showing a popover while another is in the process of being shown or hidden is not permitted.
