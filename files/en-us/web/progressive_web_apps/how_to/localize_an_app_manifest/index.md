@@ -86,7 +86,7 @@ Let's see what this could look like for our example:
 }
 ```
 
-In this case, we've used the string form for all the languages, except for Urdu, which uses the object form. This is because Urdu is an RTL language — we have specified a `dir` value of `rtl` for it, so that browsers will display it correctly.
+In this case, we've used the string form for all the languages, except for Urdu, which uses the object form. We've done it this way because Urdu is an RTL language, and we need to specify a `dir` value of `rtl` for it so that browsers will display it correctly.
 
 ## Localizing the other text-based members
 
