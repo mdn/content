@@ -72,7 +72,7 @@ The `column-rule-width` property is specified as a single `<'line-width'>` value
 ### Values
 
 - {{cssxref("line-width")}}
-  - : An explicit nonnegative {{cssxref("&lt;length&gt;")}} or the keyword `thin`, `medium`, or `thick`, describing the width of the rule. The default is `medium`.
+  - : An explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords `thin`, `medium`, or `thick`, describing the width of the rule. The default is `medium`.
 
 ## Formal definition
 

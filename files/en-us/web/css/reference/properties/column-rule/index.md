@@ -78,7 +78,7 @@ The `column-rule` property is specified as one, two, or three of the values list
 - `<'column-rule-width'>`
   - : A {{cssxref("line-width")}}, being either a {{cssxref("&lt;length&gt;")}} or one of the keywords, `hairline`, `thin`, `medium`, or `thick`. See {{cssxref("column-rule-width")}}.
 - `<'column-rule-style'>`
-  - : A {{cssxref("line-style")}} keyword value. See {{cssxref("border-style")}}..
+  - : A {{cssxref("line-style")}} keyword value. See {{cssxref("border-style")}}.
 - `<'column-rule-color'>`
   - : A {{cssxref("&lt;color&gt;")}} value. See {{cssxref("column-rule-color")}}.
 
