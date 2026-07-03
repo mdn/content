@@ -3,12 +3,10 @@ title: "IDBObjectStore: getAllRecords() method"
 short-title: getAllRecords()
 slug: Web/API/IDBObjectStore/getAllRecords
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.IDBObjectStore.getAllRecords
 ---
 
-{{ APIRef("IndexedDB") }}{{SeeCompatTable}}
+{{ APIRef("IndexedDB") }}
 
 The **`getAllRecords()`** method of the {{domxref("IDBObjectStore")}}
 interface retrieves all records (including primary keys and values) from the object store.
