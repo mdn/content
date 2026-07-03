@@ -20,7 +20,7 @@ At this point in the course, we discuss math in JavaScript — how we can use {{
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Basic number operations in JavaScript — add, subtract, multiply and divide.<code>()</code>.</li>
+          <li>Basic number operations in JavaScript — add, subtract, multiply and divide.</li>
           <li>numbers are not numbers if they are defined as strings, and can cause calculations to go wrong.</li>
           <li>Converting strings to numbers with <code>Number()</code>.</li>
           <li>Operator precedence.</li>
