@@ -28,7 +28,7 @@ On success, the returned object's {{domxref("IDBRequest.result", "result")}} pro
 
 _None._
 
-## Example
+## Examples
 
 ### Basic usage
 
