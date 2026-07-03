@@ -275,7 +275,7 @@ This example demonstrates the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElem
 
 This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. If the "Confirm" button is activated to close the dialog, an event listener sets `returnValue` to the current value of the select box instead of the button's value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
 
-When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated, but the `close` event still occurs, so the text in the {{HTMLElement("output")}} is "updated" with the (unchanged) `returnValue`.
+When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated, a `cancel` event gets triggered, and finally a `close` event occurs, so the text in the {{HTMLElement("output")}} is "updated" with the (unchanged) `returnValue`.
 
 #### HTML
 
@@ -327,8 +327,9 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"],
-// "Esc" was pressed, or `favDialog.close()` was called, triggering a close event.
+// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"]
+// or `favDialog.close()` was called, triggering a close event.
+// Or "Esc" was pressed, followed by a cancel event, which is also followed by a close event.
 favDialog.addEventListener("close", (e) => {
   outputBox.value =
     favDialog.returnValue === ""
