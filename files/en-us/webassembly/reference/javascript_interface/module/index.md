@@ -8,6 +8,8 @@ sidebar: webassemblysidebar
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 
+`WebAssembly.Module` is a subclass of the hidden {{jsxref("AbstractModuleSource")}} class, in environments that support `AbstractModuleSource`.
+
 > [!NOTE]
 > The `WebAssembly.Module` object is unrelated to the [`Module`](https://emscripten.org/docs/api_reference/module.html) object used in Emscripten.
 
@@ -60,6 +62,16 @@ onmessage = (e) => {
     instance.exports.exported_func();
   });
 };
+```
+
+### Obtaining the module using `import source`
+
+In environments that support source phase imports, you can obtain a `WebAssembly.Module` object using the [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) statement or the [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source) operator, which avoids the need to call `fetch()` or `WebAssembly.compileStreaming()`, instead relying on the default module loader machinery.
+
+```js
+import source modSource from "./simple.wasm";
+
+worker.postMessage(modSource);
 ```
 
 ## Specifications
