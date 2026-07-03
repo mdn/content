@@ -24,7 +24,8 @@ a {{glossary("BCP 47 language tag")}} representing the app's default language.
 
 ### Basic usage
 
-in this example, the app's default `lang` is `en-US`, and its default `dir` is `ltr`. Its default `name` is "Color picker", but we've also specified localized variants in the `name_localized` member. Users that have their primary language preference set to German (`de`), French (`fr`), or Arabic (`ar`) will see the app's name displayed in a more suitable language for them.
+In this example, the app's default `lang` is `en-US` and default `dir` is `ltr`.
+The default `name` is "Color picker", but we have also defined localized variants in the `name_localized` member. Users that have their primary language preference set to German (`de`), French (`fr`), or Arabic (`ar`) will see the app's name displayed in their selected language.
 
 The French variant is specified as French Canadian (`fr-CA`) in its `lang` property, with a direction (`dir`) of `ltr`, while the Arabic variant has its `dir` specified as `rtl`. The German variant doesn't need its `lang` or `dir` specified, so its value is a string containing the localized text.
 
