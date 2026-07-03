@@ -129,7 +129,7 @@ popover.addEventListener("toggle", (e) => {
 });
 ```
 
-Note that calling {{domxref("HTMLElement.showPopover()", "showPopover()")}}, {{domxref("HTMLElement.hidePopover()", "hidePopover()")}}, or {{domxref("HTMLElement.togglePopover()", "togglePopover()")}} from within a `beforetoggle` or `toggle` event handler while another popover is already being shown or hidden is not permitted, and will throw an `InvalidStateError` `DOMException`.
+Note that calling {{domxref("HTMLElement.showPopover()", "showPopover()")}}, {{domxref("HTMLElement.hidePopover()", "hidePopover()")}}, or {{domxref("HTMLElement.togglePopover()", "togglePopover()")}} from within a `beforetoggle` event listener while another popover is already being shown or hidden is not permitted, and will throw an `InvalidStateError` `DOMException`.
 
 See the previous reference links for more information and examples.
 

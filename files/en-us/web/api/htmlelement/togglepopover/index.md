@@ -46,7 +46,7 @@ A boolean (`force`) or an options object:
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` or `toggle` event handler).
+  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
 
 ### Return value
 

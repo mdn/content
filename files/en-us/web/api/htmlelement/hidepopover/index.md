@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the popover is already hidden, or if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` or `toggle` event handler).
+  - : Thrown if the popover is already hidden, or if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
 
 ## Examples
 
