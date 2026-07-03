@@ -35,7 +35,7 @@ The `<line-width>` type is specified using either `<length>` or a keyword:
 - `<length>`
   - : A non-negative {{cssxref("&lt;length&gt;")}}
 - `hairline`
-  - : Represents a "just visible" that is less than or equal to `1px` that is an integer number of device pixels at the default page zoom. While it can be as large as 1px, depending on the device, it will generally be `0.3px` to `0.5px`.
+  - : Represents a "just visible" line that is less than or equal to `1px`. At the default page zoom it is an integer number of device pixels. While it can be as large as 1px, depending on the device, it will generally be `0.3px` to `0.5px`.
 - `thin`
   - : Same as `1px`.
 - `medium`
