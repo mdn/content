@@ -58,7 +58,11 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   These retrieve all records (or a specified subset of records) from an object store and index, respectively.
   ([Firefox bug 1927945](https://bugzil.la/1927945)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The [Popover API](/en-US/docs/Web/API/Popover_API) now has more consistent behavior when [`hint` and `auto` popovers are opened and closed](/en-US/docs/Web/API/Popover_API/Using#popover_openclose_interaction_rules).
+  This match the specification update in [whatwg/html#12345](https://github.com/whatwg/html/pull/12345).
+  ([Firefox bug 2029974](https://bugzil.la/2029974)).
 
 #### Media, WebRTC, and Web Audio
 
