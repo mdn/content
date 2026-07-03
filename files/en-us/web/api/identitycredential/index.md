@@ -45,9 +45,7 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          params: {
-            /* IdP-specific parameters */
-          },
+          params: {/* IdP-specific parameters */},
         },
       ],
     },
