@@ -20,7 +20,7 @@ At this point in the course, we discuss math in JavaScript — how we can use {{
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Basic number operations in JavaScript — add, subtract, multiply, divide, exponentiate and use parentheses <code>()</code>.</li>
+          <li>Basic number operations in JavaScript — add, subtract, multiply and divide.<code>()</code>.</li>
           <li>numbers are not numbers if they are defined as strings, and can cause calculations to go wrong.</li>
           <li>Converting strings to numbers with <code>Number()</code>.</li>
           <li>Operator precedence.</li>
@@ -90,9 +90,9 @@ For example, to round your number to a fixed number of decimal places, use the [
 
 ```js
 const lotsOfDecimal = 1.7665849587;
-lotsOfDecimal; // 1.7665849587
+lotsOfDecimal;
 const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
-twoDecimalPlaces; // 1.77
+twoDecimalPlaces;
 ```
 
 ### Converting to number data types
@@ -239,7 +239,7 @@ As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2
 
 But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
 
-This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — anything inside parentheses first, then exponentiate, then multiplie and divide, and finally add and subtract. This order is commonly remembered using PEMDAS or BODMAS.
+This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — anything inside parentheses first, then exponentiate, then multiply and divide, and finally add and subtract (the calculation is always evaluated from left to right).
 
 If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
@@ -248,6 +248,23 @@ If you want to override operator precedence, you can put parentheses around the 
 ```
 
 Try entering the previous line into the console to test this out.
+
+If an expression includes the exponentiation operator (`**`), it is evaluated after parentheses and before the other [arithmetic operators](#arithmetic_operators). For example:
+
+```js
+2 + 3 ** 2;
+```
+
+The browser does _"3 to the power of 2 equals 9"_, then _"2 plus 9 equals 11"_.
+
+Try entering the following expressions into the console and compare the results:
+
+```js
+4 + 2 ** 3;
+(4 + 2) ** 3;
+```
+
+This might seem surprising at first, but once you understand how operators are evaluated in an expression, the result becomes much easier to predict.
 
 > [!NOTE]
 > A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
@@ -353,26 +370,6 @@ But there are some more complex types, which provide useful shortcuts to keep yo
       <td><code>x /= 5;</code></td>
       <td><code>x = x / 5;</code></td>
     </tr>
-    <tr>
-  <td><code>%=</code></td>
-  <td>Remainder assignment</td>
-  <td>
-    Divides the variable value on the left by the value on the right, and
-    assigns the remainder to the variable.
-  </td>
-  <td><code>x %= 5;</code></td>
-  <td><code>x = x % 5;</code></td>
-</tr>
-<tr>
-  <td><code>**=</code></td>
-  <td>Exponentiation assignment</td>
-  <td>
-    Raises the variable value on the left to the power of the value on the
-    right, and assigns the result to the variable.
-  </td>
-  <td><code>x **= 2;</code></td>
-  <td><code>x = x ** 2;</code></td>
-</tr>
   </tbody>
 </table>
 
