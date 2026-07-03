@@ -6,7 +6,8 @@ browser-compat: manifests.webapp.dir
 sidebar: pwasidebar
 ---
 
-The `dir` manifest member is used to specify a default language direction for your web application, which will be used unless overriden by a different `dir` value found in a [`*_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized) member.
+The `dir` manifest member is used to specify a default language directionality for your web application, which will be used unless overriden by a different `dir` value found in a [`*_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized) member.
+If not specifies, the default direction is inferred from the default language, as specfiied using [`lang`].
 
 ## Syntax
 
