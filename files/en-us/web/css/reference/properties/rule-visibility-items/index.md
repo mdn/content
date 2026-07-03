@@ -95,7 +95,7 @@ rule-visibility-items: unset;
 
 The `rule-visibility-items` property defines whether rule segments are painted in gaps adjacent to empty areas in the gaps between rows and columns in [multi-row](/en-US/docs/Web/CSS/Guides/Multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row or column.
 
-The value is a single keyword that sets the same value to both the {{cssxref("column-rule-visibility-items")}} and {{cssxref("row-rule-visibility-items")}} properties.
+The value is a single keyword that sets the same value for both the {{cssxref("column-rule-visibility-items")}} and {{cssxref("row-rule-visibility-items")}} properties.
 
 ## Formal definition
 
