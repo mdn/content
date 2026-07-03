@@ -129,6 +129,8 @@ popover.addEventListener("toggle", (e) => {
 });
 ```
 
+Note that calling {{domxref("HTMLElement.showPopover()", "showPopover()")}}, {{domxref("HTMLElement.hidePopover()", "hidePopover()")}}, or {{domxref("HTMLElement.togglePopover()", "togglePopover()")}} from within a `beforetoggle` event listener while another popover is already being shown or hidden is not permitted, and will throw an `InvalidStateError` `DOMException`.
+
 See the previous reference links for more information and examples.
 
 ## Showing popovers via JavaScript
@@ -241,27 +243,11 @@ There are three different ways to create nested popovers:
    <div popover anchor="foo">Child</div>
    ```
 
+> [!NOTE]
+> An `auto` popover cannot have a `hint` popover as its parent in the `auto` [popover stack](#popover_openclose_interaction_rules) (though it can nest `auto` popovers or `hint` popovers).
+> If an `auto` popover is structurally nested within a `hint` popover — for example, the `auto` is a DOM descendant of the hint, or its invoker sits inside the hint — the browser automatically downgrades the `auto` popover's effective type to `hint`, and it is treated as such.
+
 See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content, either in an SPA or multi-page website, some or all of these may not be necessary, but they have been included in this demo for illustrative purposes.
-
-## Using "hint" popover state
-
-There is a third type of popover you can create — **hint popovers**, designated by setting `popover="hint"` on your popover element. `hint` popovers do not close `auto` popovers when they are displayed, but will close other `hint` popovers. They can be light dismissed and will respond to close requests.
-
-This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered, without closing the UI popovers.
-
-`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
-
-See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show `auto` popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips (`hint` popovers) to give the user an idea of what each button does, which do not hide a currently-showing sub-menu.
-
-In the below sections, we'll walk through all the important parts of the code.
-
-> [!NOTE]
-> You _can_ use `hint` popovers alongside `manual` popovers, although there is not really much of a reason to. They are designed to circumvent some of the limitations of `auto` popovers, enabling use cases like the one detailed in this section.
->
-> Note also that `popover="hint"` falls back to `popover="manual"` in unsupporting browsers.
-
-> [!NOTE]
-> There is a related feature — **interest invokers** — that can be used to create hover/focus popover functionality conveniently and consistently, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) to learn more.
 
 ### Creating the sub-menus with `popover="auto"`
 
@@ -298,6 +284,31 @@ Now, the popovers themselves:
   <button>Option A</button><br /><button>Option B</button>
 </div>
 ```
+
+## Using "hint" popover state
+
+There is a third type of popover you can create — **hint popovers**, designated by setting `popover="hint"` on your popover element.
+They can be light dismissed and will respond to close requests.
+
+`hint` popovers do not close `auto` popovers when they are displayed, but will close other `hint` popovers that are not its ancestors in the [hint stack](#popover_openclose_interaction_rules).
+The reverse is also true: closing an `auto` popover by pressing <kbd>Esc</kbd> or light-dismiss does not affect `hint` popovers unless they are descendants of the closed auto popover.
+
+This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered without closing the UI popovers.
+
+`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event).
+Note that you might also click a button to open a `hint` popover, but the click will light-dismiss any `auto` popovers that the button is outside of (which is not likely to be your intent).
+
+See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show `auto` popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips (`hint` popovers) to give the user an idea of what each button does, which do not hide a currently-showing sub-menu.
+
+In the below sections, we'll walk through all the important parts of the code.
+
+> [!NOTE]
+> You _can_ use `hint` popovers alongside `manual` popovers, although there is not really much of a reason to. They are designed to circumvent some of the limitations of `auto` popovers, enabling use cases like the one detailed in this section.
+>
+> Note also that `popover="hint"` falls back to `popover="manual"` in unsupporting browsers.
+
+> [!NOTE]
+> There is a related feature — **interest invokers** — that can be used to create hover/focus popover functionality conveniently and consistently, without requiring JavaScript. Check out [Using interest invokers](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) to learn more.
 
 ### Creating the tooltips with `popover="hint"`
 
@@ -350,6 +361,23 @@ for (let i = 0; i < btns.length; i++) {
   addEventListeners(i);
 }
 ```
+
+## Popover open/close interaction rules
+
+The browser maintains two independent stacks of open popovers: an **auto stack** for `auto` popovers, and a **hint stack** for `hint` popovers.
+When a popover is shown it is pushed onto the appropriate stack; when it is hidden, the browser walks back down that stack, closing any descendant popovers on that stack first.
+Because the two stacks are separate, operations on one do not automatically affect the other.
+
+A few specific rules for how popovers interact that derive from this specification are:
+
+- Showing a `hint` popover does not close `auto` popovers.
+- Showing a `hint` popover closes other `hint` popovers, except those that are its ancestors in the hint stack.
+- Clicking outside a popover light-dismisses all open `auto` and `hint` popovers that are not its ancestor.
+- Hiding an `auto` popover does not close `hint` popovers that are not its descendants.
+- Showing an `auto` popover as a child of a `hint` popover downgrades the `auto` popover to `hint`.
+- Showing a popover while another is in the process of being shown or hidden is not permitted.
+
+Note that `manual` popovers do not participate in either stack — they are shown and hidden independently and do not affect auto or hint popovers.
 
 ## Styling popovers
 
