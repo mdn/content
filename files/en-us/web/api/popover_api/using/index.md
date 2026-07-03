@@ -377,7 +377,7 @@ A few specific rules for how popovers interact that derive from this specificati
 - Showing an `auto` popover as a child of a `hint` popover downgrades the `auto` popover to `hint`.
 - Showing a popover while another is in the process of being shown or hidden is not permitted.
 
-Note that `manual` popovers do not participate in either stack — they are shown and hidden independently and have no effect on the auto or hint stack.
+Note that `manual` popovers do not participate in either stack — they are shown and hidden independently and do not affect auto or hint popovers.
 
 ## Styling popovers
 
