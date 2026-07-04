@@ -3,10 +3,12 @@ title: "Request: isReloadNavigation property"
 short-title: isReloadNavigation
 slug: Web/API/Request/isReloadNavigation
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Request.isReloadNavigation
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`isReloadNavigation`** read-only property of the {{domxref("Request")}} interface is a boolean indicating whether the request is a user-triggered reload.
 

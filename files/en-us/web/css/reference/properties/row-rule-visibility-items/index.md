@@ -3,9 +3,13 @@ title: "`row-rule-visibility-items` CSS property"
 short-title: row-rule-visibility-items
 slug: Web/CSS/Reference/Properties/row-rule-visibility-items
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-visibility-items
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) property defines whether a row-rule segment is painted in gaps adjacent to empty areas.
 

@@ -3,12 +3,10 @@ title: "IDBIndex: getAllRecords() method"
 short-title: getAllRecords()
 slug: Web/API/IDBIndex/getAllRecords
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.IDBIndex.getAllRecords
 ---
 
-{{ APIRef("IndexedDB") }}{{SeeCompatTable}}
+{{ APIRef("IndexedDB") }}
 
 The **`getAllRecords()`** method of the {{domxref("IDBIndex")}}
 interface retrieves all records (including index keys, primary keys, and values) from the index.
