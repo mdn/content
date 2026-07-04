@@ -205,6 +205,37 @@ This essentially enables a website to provide a unified autofill, including both
 > [!NOTE]
 > Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
+### Automatic passkey creation
+
+Automatic passkey creation, also known as _conditional create_, lets an RP ask the browser to create a passkey after the user has already signed in with a password.
+This can reduce passkey adoption friction: the user signs in as usual, and the browser can create a passkey when the user agent and passkey provider determine that the request is appropriate.
+
+Use {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} to check for the `conditionalCreate` capability before offering this flow.
+If it is supported, call {{domxref("CredentialsContainer.create()")}} with:
+
+- The usual [`publicKey`](/en-US/docs/Web/API/CredentialsContainer/create#publickey) creation options from the RP server.
+- [`mediation: "conditional"`](/en-US/docs/Web/API/CredentialsContainer/create#mediation).
+
+```js
+if (window.PublicKeyCredential?.getClientCapabilities) {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+
+  if (capabilities.conditionalCreate) {
+    const credential = await navigator.credentials.create({
+      publicKey: optionsFromServer,
+      mediation: "conditional",
+    });
+
+    // Send the credential to the server to complete registration.
+  }
+}
+```
+
+Call this flow soon after a successful password-based sign-in, while the user is still signed in.
+Conditional creation may fail if the required conditions are not met, so handle failures without showing errors to the user.
+
+If the page also started a conditional {{domxref("CredentialsContainer.get()")}} request for [autofill UI](#autofill_ui), abort the `get()` request before calling `create()`.
+
 ### Discoverable credential synchronization methods
 
 It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.

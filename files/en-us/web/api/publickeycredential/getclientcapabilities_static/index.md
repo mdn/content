@@ -29,7 +29,7 @@ A {{jsxref("Promise")}} that resolves to an object where the property names are 
 The WebAuthn client capability strings are:
 
 - `"conditionalCreate"`
-  - : The client is capable of creating [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials).
+  - : The client is capable of [automatic passkey creation](/en-US/docs/Web/API/Web_Authentication_API#automatic_passkey_creation) using {{domxref("CredentialsContainer.create()")}} with `mediation: "conditional"`.
 - `"conditionalGet"`
   - : The client is capable of [conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui).
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
@@ -75,6 +75,7 @@ For example, support for the `userVerifyingPlatformAuthenticator` capability ind
 A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
 If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
 Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which means the browser can provide auto-filled discoverable credentials in a login form (for example an autocompleting text field or a drop-down list), along with a sign-in button.
+The `conditionalCreate` capability indicates support for conditional creation, which means a website can request passkey creation after a successful password sign-in by calling {{domxref("CredentialsContainer.create()")}} with `mediation: "conditional"`.
 
 If the value of a given capability is present in the returned object, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However, if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
