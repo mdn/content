@@ -122,7 +122,7 @@ if (status === "available") {
 
 ### Checking availability for multimodal input
 
-[Multimodal input](/en-US/docs/Web/API/Prompt_API#multimodal_input) describes sessions that can use more than one type of input, such as text and images.
+[Multimodal input](/en-US/docs/Web/API/Prompt_API/Multimodal) describes sessions that can use more than one type of input, such as text and images.
 Since the availability of input types varies by language model, your code should check the availability of desired modes before creating a session.
 An example is shown here.
 

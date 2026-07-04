@@ -169,6 +169,9 @@ You can specify:
 - {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
   - : Controls access to the language detection functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
+- {{httpheader("Permissions-Policy/language-model", "language-model")}} {{Experimental_Inline}}
+  - : Controls access to the [Prompt API](/en-US/docs/Web/API/Prompt_API).
+
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
 

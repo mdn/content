@@ -1415,8 +1415,12 @@
     },
     "Prompt API": {
       "overview": ["Prompt API"],
-      "guides": [],
-      "interfaces": ["LanguageModel"],
+      "guides": [
+        "/docs/Web/API/Prompt_API/Using",
+        "/docs/Web/API/Prompt_API/Adding_context",
+        "/docs/Web/API/Prompt_API/Multimodal"
+      ],
+      "interfaces": ["CreateMonitor", "LanguageModel"],
       "methods": [],
       "properties": [],
       "events": []
