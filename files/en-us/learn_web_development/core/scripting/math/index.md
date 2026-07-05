@@ -255,9 +255,9 @@ If an expression includes the exponentiation operator (`**`), it is evaluated af
 2 + 3 ** 2;
 ```
 
-The browser does _"3 to the power of 2 equals 9"_, then _"2 plus 9 equals 11"_.
+When entering this into the console, the browser does _"3 to the power of 2 equals 9"_, then _"2 plus 9 equals 11"_.
 
-Try entering the following expressions into the console and compare the results:
+Try entering the following expressions into the console to demonstrate how expressions in parentheses are evaluated before exponentiation:
 
 ```js
 4 + 2 ** 3;
