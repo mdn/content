@@ -44,7 +44,7 @@ This article discusses only the basic parts that you need to know now.
 In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:
 
 - **Integers** are numbers without a fractional part. They can either be positive or negative, e.g., 10, 400, or -5.
-- **Floating point numbers** (floats) have decimal points and decimal places, for example 12.5, and 56.7786543.
+- **Floating point numbers** (floats) have decimal points and decimal places, for example 12.5 and 56.7786543.
 
 We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each digit), but we also have things like:
 
@@ -52,12 +52,12 @@ We even have different types of number systems! Decimal is base 10 (meaning it u
 - **Octal** — Base 8, uses 0–7 in each digit.
 - **Hexadecimal** — Base 16, uses 0–9 and then a–f in each digit. You may have encountered these numbers before when setting [colors in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#hexadecimal_rgb_values).
 
-**Before you start to get worried about your brain melting, stop right there!** For a start, we are just going to stick to decimal numbers throughout this course; you'll rarely come across a need to start thinking about other types, if ever.
+**Before you start to worry about your brain melting, stop right there!** For a start, we are just going to stick to decimal numbers throughout this course; you'll rarely need to start thinking about other types, if ever.
 
-The second bit of good news is that unlike some other programming languages, JavaScript only has one data type for numbers, both integers and decimals — you guessed it, {{jsxref("Number")}}. This means that whatever type of numbers you are dealing with in JavaScript, you handle them in exactly the same way.
+The second bit of good news is that, unlike some other programming languages, JavaScript has only one data type to represent basic numbers — both integers and decimals. You guessed it, {{jsxref("Number")}}. This means that whatever type of numbers you are dealing with in JavaScript, you handle them in the same way.
 
 > [!NOTE]
-> Actually, JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But for the purposes of this course, we'll just worry about `Number` values.
+> JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But in this course, we'll only worry about `Number` values.
 
 ### It's all numbers to me
 
@@ -73,18 +73,18 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
    ```
 
 2. Number values are typed in without quote marks — try declaring and initializing a couple more variables containing numbers before you move on.
-3. Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
+3. Now let's check that both our original variables are of the same data type. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the two lines below as shown:
 
    ```js
    typeof myInt;
    typeof myFloat;
    ```
 
-   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types and we had to deal with them differently. Phew!
 
 ### Useful Number methods
 
-The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object, an instance of which represents all standard numbers you'll use in your JavaScript, has a number of useful methods available on it for you to manipulate numbers. We don't cover these in detail in this article because we wanted to keep it as an introduction and only cover the real basic essentials for now; however, once you've read through this module a couple of times it is worth going to the object reference pages and learning more about what's available.
+The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object, an instance of which represents all standard numbers you'll use in your JavaScript, provides several methods to manipulate numbers. We don't cover these in detail here because we wanted to cover only the essentials for now; however, once you've read through this module a couple of times, it is worth going to the object reference pages to learn what's available.
 
 For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
@@ -97,7 +97,7 @@ twoDecimalPlaces;
 
 ### Converting to number data types
 
-Sometimes you might end up with a number that is stored as a string type, which makes it difficult to perform calculations with it. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input, and the [input type is text](/en-US/docs/Web/HTML/Reference/Elements/input/text). There is a way to solve this problem — passing the string value into the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
+Sometimes you might end up with a number stored as a string type, which is difficult to use in calculations. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input and the [input type is text](/en-US/docs/Web/HTML/Reference/Elements/input/text). There is a way to solve this problem — passing the string value in to the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
 
 For example, try typing these lines into your console:
 
@@ -165,7 +165,7 @@ Arithmetic operators are used for performing mathematical calculations in JavaSc
       <td>
         <p>
           Returns the remainder left over after you've divided the left number
-          into a number of integer portions equal to the right number.
+          into multiple integer portions equal to the right number.
         </p>
       </td>
       <td>
@@ -197,9 +197,9 @@ Arithmetic operators are used for performing mathematical calculations in JavaSc
 > [!NOTE]
 > You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
-We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) to familiarize yourself with the syntax.
+We probably don't need to teach you basic math, but we would like to test your understanding of how it is represented in JavaScript. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) to familiarize yourself with the syntax.
 
-1. First try entering some simple examples of your own, such as
+1. First, try entering some simple examples of your own, such as
 
    ```js
    10 + 7;
@@ -207,7 +207,7 @@ We probably don't need to teach you how to do basic math, but we would like to t
    60 % 3;
    ```
 
-2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
+2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the sum. For example:
 
    ```js
    const num1 = 10;
@@ -225,7 +225,7 @@ We probably don't need to teach you how to do basic math, but we would like to t
    num2 + num1 / 8 + 2;
    ```
 
-Parts of this last set of calculations might not give you quite the result you were expecting; the section below might well give the answer as to why.
+Parts of this last set of calculations might not give you the result you expected; the section below covers why.
 
 ### Operator precedence
 
@@ -239,17 +239,17 @@ As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2
 
 But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
 
-This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — anything inside parentheses first, then exponentiate, then multiply and divide, and finally add and subtract (the calculation is always evaluated from left to right).
+This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as in basic math — in this case, multiply and divide first, then add and subtract, with the calculation evaluated from left to right.
 
-If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
+If you want to override operator precedence, you can put parentheses around the parts that should be dealt with first. So to get a result of 6, we could do this:
 
 ```js
 (num2 + num1) / (8 + 2);
 ```
 
-Try entering the previous line into the console to test this out.
+Try entering the previous line into the console to test this.
 
-If an expression includes the exponentiation operator (`**`), it is evaluated after parentheses and before the other [arithmetic operators](#arithmetic_operators). For example:
+If an expression includes the exponentiation operator (`**`), it is evaluated after expressions in parentheses but before the other [arithmetic operators](#arithmetic_operators). For example:
 
 ```js
 2 + 3 ** 2;
@@ -264,14 +264,14 @@ Try entering the following expressions into the console and compare the results:
 (4 + 2) ** 3;
 ```
 
-This might seem surprising at first, but once you understand how operators are evaluated in an expression, the result becomes much easier to predict.
+In the first case, the browser does _"2 to the power of 3 equals 8"_, then _"8 add 4"_. In the second case, it does _"4 add 2 equals 6"_, then _"6 to the power of 3"_.
 
 > [!NOTE]
 > A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Increment and decrement operators
 
-Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement (`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly increase or decrease a numeric variable value by one. This can be conveniently done using the increment (`++`) and decrement (`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;
@@ -296,7 +296,7 @@ Okay, strangeness number 2! When you do this, you'll see a value of 4 returned �
 num1;
 ```
 
-The same is true of `--` : try the following
+The same is true of `--`: try the following
 
 ```js
 let num2 = 6;
@@ -317,7 +317,7 @@ let y = 4; // y contains the value 4
 x = y; // x now contains the same value y contains, 4
 ```
 
-But there are some more complex types, which provide useful shortcuts to keep your code neater and more efficient. The most common are listed below:
+But there are more complex types, which provide useful shortcuts to keep your code neater and more efficient. The most common are listed below:
 
 <table class="standard-table no-markdown">
   <thead>
@@ -373,7 +373,7 @@ But there are some more complex types, which provide useful shortcuts to keep yo
   </tbody>
 </table>
 
-Try typing some of the above examples into your console, to get an idea of how they work. In each case, see if you can guess what the value is before you type in the second line.
+Try typing some of the above examples into your console to get an idea of how they work. In each case, see if you can guess the result before you type in the second line.
 
 Note that you can quite happily use other variables on the right-hand side of each expression, for example:
 
@@ -423,7 +423,7 @@ Don't worry if you mess the code up. You can always press the Reset button and s
 
 ## Comparison operators
 
-Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use **comparison operators**.
+Sometimes we want to run true/false tests and then act accordingly depending on the result — to do this, we use **comparison operators**.
 
 | Operator | Name                     | Purpose                                                                      | Example       |
 | -------- | ------------------------ | ---------------------------------------------------------------------------- | ------------- |
@@ -435,14 +435,14 @@ Sometimes we will want to run true/false tests, then act accordingly depending o
 | `>=`     | Greater than or equal to | Tests whether the left value is greater than or equal to the right one.      | `5 >= 4`      |
 
 > [!NOTE]
-> You may see some people using `==` and `!=` in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from `===`/`!==`. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.
+> You may see some people using `==` and `!=` in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from `===`/`!==`. The former versions test whether the values are the same but not their data types. The latter, strict versions test the equality of both the values and their data types. The strict versions tend to result in fewer errors, so we recommend you use them.
 
-If you try entering some of these values in a console, you'll see that they all return `true`/`false` values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice of some kind. For example, booleans can be used to:
+If you try entering some of these values in a console, you'll see that they all return `true`/`false` values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice. For example, booleans can be used to:
 
-- Display the correct text label on a button depending on whether a feature is turned on or off
-- Display a game over message if a game is over or a victory message if the game has been won
-- Display the correct seasonal greeting depending on what holiday season it is
-- Zoom a map in or out depending on what zoom level is selected
+- Display the correct text label on a button depending on whether a feature is turned on or off.
+- Display a game over message if a game is over or a victory message if the game has been won.
+- Display the correct seasonal greeting depending on what holiday season it is.
+- Zoom a map in or out depending on what zoom level is selected.
 
 We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:
 
@@ -470,16 +470,16 @@ function updateBtn() {
 
 {{EmbedLiveSample("conditional", '100%', 100)}}
 
-You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathematical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
+You can see the equality operator being used inside the `updateBtn()` function. In this case, we are not testing if two mathematical expressions have the same value — we are testing whether a button's text content contains a certain string — but this still uses the same principle. If the button's text content is "Start machine" when pressed, we change its label to "Stop machine" and update the label as appropriate. If the button's text content is "Stop machine" when pressed, we swap the display back again.
 
 > [!NOTE]
-> Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
+> Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between two states — light on and light off, walk and run, etc.
 
 ## Summary
 
-In this article, we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
+In this article, we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers all the time throughout your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people who doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
 
-In the next article, we'll give you some tests that you can use to check how well you've understood and retained this information.
+In the next article, we'll give you some tests to check how well you've understood and retained this information.
 
 ## See also
 
