@@ -78,6 +78,8 @@ row-rule-color: unset;
 
 ### Values
 
+The `row-rule-color` property accepts a comma-separated list of values, including:
+
 - `<line-color>`
   - : A {{cssxref("&lt;color&gt;")}} representing the color of the line.
 
@@ -85,7 +87,7 @@ row-rule-color: unset;
   - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a {{cssxref("&lt;color&gt;")}} value, should be repeated.
 
 - `<auto-repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and a `<color>` as the second, representing the color to be repeated as many times as needed to fill in values for any row-rules that would not otherwise receive values from other parts of the property value.
+  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and a `<color>` as the second, representing one or more comma-separated `<color>` values to be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
 
 ## Description
 
@@ -103,7 +105,7 @@ A line-color can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value
 row-rule-color: blue;
 ```
 
-When more than one `<line-color>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-color> values, the list of line colors is repeated until every row rule has a color. If we declare the following, for example, every odd rule will be blue, and every even rule will be yellow.
+When more than one `<line-color>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-color>` values, the list of line colors is repeated until every row rule has a color. If we declare the following, for example, every odd rule will be blue, and every even rule will be yellow.
 
 ```css
 row-rule-color: blue, yellow;
@@ -118,7 +120,7 @@ row-rule-color: blue, yellow, yellow, yellow, red;
 row-rule-color: blue, repeat(3, yellow), red;
 ```
 
-With all the CSS color features, color spaces, custom properties, etc., using `repeat()` can make values much easier to read. It enables a recurring pattern to be written in a more compact form, no matter how large the number of rows. If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
+Because you can use any valid color value, with all the CSS color features, color spaces, custom properties, etc., using `repeat()` can make values easier to write. It enables a recurring pattern, to be written in a more compact form, no matter how large the number of rows. If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
 
 ```css
 row-rule-color:
@@ -133,13 +135,13 @@ If there are more gutters than colors, as there are no `repeat()` functions that
 
 ### Auto-repeating line colors
 
-The `repeat()` function also accepts `auto` as the first argument, instead of a positive integer. With `auto` as the first argument, the `<color>` passed as the second will be repeated as many times as needed to fill in values for any row-rules that would not otherwise receive values from other parts of the property value, which may be none.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<color>` passed as the second will be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value, if any.
 
 ```css
 row-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-In this case, the first row rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first will always be blue, as long as there are at least three rows, the last will always be red. All the other row rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow row rules.
+In this case, the first row rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first will always be blue and, as long as there are at least two row-rules, the last will always be red. All the other row rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow row rules.
 
 The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <color>)` can be present in a `row-rule-color` value.
 
@@ -205,11 +207,11 @@ ul {
 
 {{EmbedLiveSample("Repeat", "", "180")}}
 
-### Repeat() function
+### Using the `repeat()` function
 
 This example demonstrates using the `repeat()` function within the `row-rule-color` property value, and how this function can help make complex values not become unwieldy.
 
-We use the same HTML and CSS as in the previous examples. To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in three {{cssxref("color-mix()")}} color function declarations. The second declaration is within a `repeat()` function, set to repeat 3 times.
+We use the same HTML and CSS as in the previous examples. To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in three {{cssxref("color-mix()")}} color function declarations (to create the same blue, red, and yellow colors as in the previous example). The second declaration is within a `repeat()` function, set to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -234,7 +236,7 @@ Using `repeat(auto, <color>)` we set all the row rules to be almost transparent 
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0001), black;
+  row-rule-color: black, repeat(auto, #0002), black;
 }
 ```
 
@@ -264,7 +266,10 @@ ul {
 
 ## See also
 
-- {{cssxref("row-rule")}} shorthand
+- {{cssxref("row-rule-width")}}
+- {{cssxref("row-rule-style")}}
 - {{cssxref("column-rule-color")}}
+- {{cssxref("row-rule")}} shorthand
+- {{cssxref("rule-color")}} shorthand
 - {{cssxref("rule")}} shorthand
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
