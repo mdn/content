@@ -43,12 +43,12 @@ An options object whose properties can include:
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of objects representing all the records that match the given query, up to the number specified by `count` (if provided).
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array", "array")}} of {{domxref("IDBRecord")}} instances representing all the records that match the given query, up to the number specified by `count` (if provided).
 
-Each object contains the following properties:
+Each {{domxref("IDBRecord")}} instance contains the following properties:
 
 - `key`
-  - : A value representing the record's key.
+  - : A value representing the record's key in the index.
 - `primaryKey`
   - : A value representing the key of the record in the index's associated {{domxref("IDBObjectStore")}}.
 - `value`
@@ -67,17 +67,38 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 
 ## Examples
 
+### Basic usage
+
+This example queries an {{domxref("IDBIndex")}} for up to 100 records whose `lastName` values come after `"Smith"`, with results sorted in reverse order.
+
+The code first creates a transaction on an {{domxref("IDBDatabase")}} named `db` (omitting the code to open the database), and then uses it to get an {{domxref("IDBObjectStore")}} containing a contacts list, and from that an `IDBIndex` on the `lastName` property.
+It then calls `getAllRecords()` on the index, returning a {{domxref("IDBRequest")}} instance.
+Event listeners are added to this request for the `success` and `error` events.
+On success, the result `event.target.result` is logged (this is also available as `request.result`).
+This result contains an array of `IDBRecord` instances.
+Note that because this is a query on an `IDBIndex`, the `key` and `primaryKey` in each record may have different values: the `key` is the index key (here, the `lastName`), while the `primaryKey` is the record's key in the object store.
+
 ```js
-const query = IDBKeyRange.lowerBound("myKey", true);
+// Create a transaction on the database and use it to get the contained store
+const transaction = db.transaction(["contactsList"], "readonly");
 const objectStore = transaction.objectStore("contactsList");
 const myIndex = objectStore.index("lastName");
 
-const myRecords = (myIndex.getAllRecords({
+const query = IDBKeyRange.lowerBound("Smith", true);
+
+const request = myIndex.getAllRecords({
   query,
-  count: "100",
+  count: 100,
   direction: "prev",
-}).onsuccess = (event) => {
-  console.log("Records successfully retrieved");
+});
+
+request.addEventListener("success", (event) => {
+  const myRecords = event.target.result; // Array of IDBRecord instances
+  console.log(myRecords);
+});
+
+request.addEventListener("error", (event) => {
+  console.error("Error retrieving records:", event.target.error);
 });
 ```
 
