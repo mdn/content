@@ -7,7 +7,7 @@ browser-compat: css.properties.row-rule-color
 sidebar: cssref
 ---
 
-The **`row-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between rows in multi-row layouts.
+The **`row-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between rows in multi-row grid, flex, and multi-col layouts.
 
 {{InteractiveExample("CSS Demo: row-rule-color")}}
 
@@ -56,14 +56,14 @@ row-rule-color: currentColor;
 ## Syntax
 
 ```css
-/* single value */
+/* Single value */
 row-rule-color: red;
 row-rule-color: rgb(192 56 78);
 row-rule-color: transparent;
 row-rule-color: hsl(0 100% 50% / 60%);
 row-rule-color: var(--primaryColor);
 
-/* multiple values */
+/* Multiple values */
 row-rule-color: red, transparent;
 row-rule-color: repeat(3, red), repeat(3, transparent);
 row-rule-color: red, repeat(auto, transparent), red;
@@ -91,7 +91,7 @@ row-rule-color: unset;
 
 The `row-rule-color` property defines the colors of any row rule lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
-The value is a comma-separated list of `<line-color>`, `<repeated-line-color>`, and optionally an `<auto-repeat-line-color>`.
+The value is a comma-separated list of components, each of which can be a `<line-color>`, `<repeated-line-color>`, or `<auto-repeat-line-color>`.
 
 The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
@@ -103,7 +103,7 @@ A line-color can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value
 row-rule-color: blue;
 ```
 
-When declaring more than one `<line-color>`, separate them with a comma. If there are more row-rules than line-colors, the list of line colors is repeated until every row rule has a color. If we declare the following, every odd rule will be blue and every even rule will be yellow.
+When more than one `<line-color>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-color> values, the list of line colors is repeated until every row rule has a color. If we declare the following, for example, every odd rule will be blue, and every even rule will be yellow.
 
 ```css
 row-rule-color: blue, yellow;
@@ -111,14 +111,14 @@ row-rule-color: blue, yellow;
 
 ### Repeated line colors
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat the valid CSS {{cssxref("&lt;color&gt;")}} passed as the second argument the specified number of times. This allows the same color to be repeated a set number of times without repeating the color, multiple times. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid CSS {{cssxref("&lt;color&gt;")}} passed as the second argument the specified number of times. This allows the same color to be repeated a set number of times without repeating the same `<line-color>` multiple times. The following declarations are equivalent:
 
 ```css
 row-rule-color: blue, yellow, yellow, yellow, red;
 row-rule-color: blue, repeat(3, yellow), red;
 ```
 
-With all the CSS color features, color spaces, custom properties, etc., using `repeat()` can make the value much easier to read. The repeating nature of the property value enables a recurring pattern to be written in a more compact form providing a repeating pattern, no matter how great the number of rows. If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
+With all the CSS color features, color spaces, custom properties, etc., using `repeat()` can make values much easier to read. It enables a recurring pattern to be written in a more compact form, no matter how large the number of rows. If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
 
 ```css
 row-rule-color:
