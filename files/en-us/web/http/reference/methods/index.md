@@ -15,8 +15,8 @@ Each request method has its own semantics, but some characteristics are shared a
   - : The `GET` method requests a representation of the specified resource.
     Requests using `GET` should only retrieve data and should not contain a request {{Glossary("HTTP Content", "content")}}.
 - {{HTTPMethod("QUERY")}}
-  - : The `QUERY` method requests that the target resource process the request {{Glossary("HTTP Content", "content")}} in a safe and idempotent manner and respond with the result.
-    It is similar to `GET`, but allows request content to be sent, for example when query parameters are too large or complex to fit comfortably in the URI.
+  - : The `QUERY` method requests that the target resource process the request content in a safe and idempotent manner, returning the result in the response.
+   It is similar to GET, but allows request body content with defined semantics.
 - {{HTTPMethod("HEAD")}}
   - : The `HEAD` method asks for a response identical to a `GET` request, but without a response body.
 - {{HTTPMethod("POST")}}
