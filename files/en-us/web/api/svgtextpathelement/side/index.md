@@ -3,10 +3,13 @@ title: "SVGTextPathElement: side property"
 short-title: side
 slug: Web/API/SVGTextPathElement/side
 page-type: web-api-instance-property
+status:
+  - experimental
+  - non-standard
 browser-compat: api.SVGTextPathElement.side
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`side`** read-only property of the {{domxref("SVGTextPathElement")}} interface represents the side of the path that the text is placed on (relative to the path direction).
 

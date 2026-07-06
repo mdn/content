@@ -350,14 +350,8 @@ When the column rule is larger than the column gap, the decorative line appears 
 
 - {{cssxref("column-gap")}}
 - {{cssxref("column-rule")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
-
-<!-- Will be uncommented when issue https://github.com/mdn/content/issues/44435 is resolved.
 - {{cssxref("column-rule-break")}}
+- {{cssxref("column-rule-color")}}
 - {{cssxref("column-rule-inset")}}
 - {{cssxref("column-rule-inset-cap")}}
 - {{cssxref("column-rule-inset-cap-end")}}
@@ -367,7 +361,11 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("column-rule-inset-junction-end")}}
 - {{cssxref("column-rule-inset-junction-start")}}
 - {{cssxref("column-rule-inset-start")}}
+- {{cssxref("column-rule-style")}}
 - {{cssxref("column-rule-visibility-items")}}
+- {{cssxref("column-rule-width")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 - {{cssxref("row-rule")}}
 - {{cssxref("row-rule-break")}}
 - {{cssxref("row-rule-color")}}
@@ -394,7 +392,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-style")}}
 - {{cssxref("rule-visibility-items")}}
-- {{cssxref("rule-width")}} -->
+- {{cssxref("rule-width")}}
 
 ### Terms and glossary definitions
 
@@ -431,6 +429,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{CSSxRef("grid")}}
 - {{CSSxRef("grid-column")}}
 - {{CSSxRef("grid-row")}}
+- {{cssxref("repeat()")}}
 
 [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
 
