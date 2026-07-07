@@ -83,19 +83,6 @@ function getRelativePath(filePath) {
 }
 
 /**
- * @param {string} filePath
- * @returns {Promise<boolean>}
- */
-async function pathExists(filePath) {
-  try {
-    await fs.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-/**
  * Check a single file for naming, type, reference, and compression rules.
  * @param {string} filePath
  * @param {CheckerOptions} [options={}]
@@ -200,7 +187,10 @@ export async function checkFile(filePath, options = {}) {
   // The image has to be mentioned in the adjacent index.md document
   const parentPath = path.dirname(filePath);
   const docFilePath = path.join(parentPath, "index.md");
-  if (!(await pathExists(docFilePath))) {
+  let rawContent;
+  try {
+    rawContent = await fs.readFile(docFilePath, "utf-8");
+  } catch {
     throw new FixableError(
       `${getRelativePath(
         filePath,
@@ -210,7 +200,6 @@ export async function checkFile(filePath, options = {}) {
   }
 
   // The image must be mentioned (as a string) in the content
-  const rawContent = await fs.readFile(docFilePath, "utf-8");
   if (!rawContent.includes(path.basename(filePath))) {
     throw new FixableError(
       `${getRelativePath(
