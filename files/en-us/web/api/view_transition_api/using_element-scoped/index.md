@@ -196,7 +196,7 @@ function handleClick(e) {
 
 {{embedlivesample("basic-element-scoped", "100%", "520")}}
 
-Click/activate the links to see the view tranasition on each one.
+Click/activate the links to see the view transition on each one.
 
 Each `<a>` element has its own view transition, scoped just to that element. The rest of the page stays interactive while a view transition is ongoing, so you can run multiple view transitions at the same time. In addition, the transitioning elements stay below the overlapping generated content positioned above them.
 
