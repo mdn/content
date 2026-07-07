@@ -140,7 +140,7 @@ myFunction();
 Some functions require **parameters** to be specified when you invoke them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
 
 > [!NOTE]
-> Parameters are sometimes called arguments, properties, or even attributes.
+> The terms _parameters_ and _arguments_ are sometimes used interchangeably in informal discussions, but they have different meanings. **Parameters** are the variables listed in a function definition, while **arguments** are the values passed to the function when it is called.
 
 As an example, the browser's built-in [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
 
