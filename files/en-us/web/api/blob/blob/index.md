@@ -27,7 +27,7 @@ new Blob(blobParts, options)
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
     Strings should be well-formed Unicode, and lone surrogates are sanitized using the same algorithm as {{jsxref("String.prototype.toWellFormed()")}}.
-    Strings will be converted from UTF-16 to UTF-8 in accordance with the [W3C File API](https://www.w3.org/TR/FileAPI/#:~:text=Append%20the%20result%20of%20UTF%2D8%20encoding%20s%20to%20bytes%2E).
+    The resulting string is encoded as UTF-8.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:
