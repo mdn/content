@@ -3,6 +3,8 @@ name: Check URL issues
 on:
   pull_request:
     paths:
+      - .github/workflows/pr-check_url-issues.yml
+      - .nvmrc
       - "files/**/*.md"
 
 # No GITHUB_TOKEN permissions, as we don't use it.

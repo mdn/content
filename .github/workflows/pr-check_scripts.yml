@@ -3,10 +3,10 @@ name: Check scripts
 on:
   pull_request:
     paths:
+      - .github/workflows/pr-check_scripts.yml
       - .nvmrc
       - package.json
       - package-lock.json
-      - .github/workflows/pr-check_scripts.yml
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
