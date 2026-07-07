@@ -19,7 +19,7 @@ should have already been created and initialized using an {{domxref("Event/Event
 > [!NOTE]
 > When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
 
-Unlike calling `dispatchEvent()` manually, which triggers event handlers to run synchronously in the same stack frame, "native" events (dispatched by the browser) triggers each event handler to run on a separate stack execution frame; any queued microtasks run after each event handler. However, other asynchronous browser operations, such as rendering, run only after all event handlers have finished running.
+Unlike "native" events, which the browser fires by queuing a task on the [event loop](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events), `dispatchEvent()` invokes all applicable event handlers synchronously before returning. [Event](/en-US/docs/Web/API/Event) objects for native events have the read-only [`isTrusted`](/en-US/docs/Web/API/Event/isTrusted) property set to `true`, while events dispatched with `dispatchEvent()` have it set to `false`.
 
 ## Syntax
 
