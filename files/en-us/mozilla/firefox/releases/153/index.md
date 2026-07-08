@@ -72,6 +72,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This allows a site to query whether a given audio or video configuration can be decoded or encoded using WebRTC, and whether doing so will be smooth, power efficient, or both.
   Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
   ([Firefox bug 2037610](https://bugzil.la/2037610) and [Firefox bug 2032075](https://bugzil.la/2032075)).
+- All mandatory and some optional WebRTC "transport" statistics can now be reported in a {{domxref("RTCStatsReport")}}.
+  The returned object is a {{domxref("RTCTransportStats")}} with the following properties: {{domxref("RTCTransportStats.dtlsCipher","dtlsCipher")}}, {{domxref("RTCTransportStats.dtlsRole","dtlsRole")}}, {{domxref("RTCTransportStats.dtlsState","dtlsState")}}, {{domxref("RTCTransportStats.iceLocalUsernameFragment","iceLocalUsernameFragment")}}, {{domxref("RTCTransportStats.iceRole","iceRole")}}, {{domxref("RTCTransportStats.iceState","iceState")}}, {{domxref("RTCTransportStats.id","id")}}, {{domxref("RTCTransportStats.selectedCandidatePairId","selectedCandidatePairId")}}, {{domxref("RTCTransportStats.srtpCipher","srtpCipher")}}, {{domxref("RTCTransportStats.timestamp","timestamp")}}, {{domxref("RTCTransportStats.tlsVersion","tlsVersion")}}, and {{domxref("RTCTransportStats.type","type")}}.
+  In addition the `transportId` property is now available on {{domxref("RTCOutboundRtpStreamStats.transportId","RTCOutboundRtpStreamStats")}}, {{domxref("RTCRemoteOutboundRtpStreamStats.transportId","RTCRemoteOutboundRtpStreamStats")}}, {{domxref("RTCRemoteInboundRtpStreamStats.transportId","RTCRemoteInboundRtpStreamStats")}} and {{domxref("RTCInboundRtpStreamStats.transportId","RTCInboundRtpStreamStats")}}.
+  ([Firefox bug 1225723](https://bugzil.la/1225723) and [Firefox bug 2019389](https://bugzil.la/2019389)).
 
 <!-- #### Removals -->
 
