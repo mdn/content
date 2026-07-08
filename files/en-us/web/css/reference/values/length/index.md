@@ -29,7 +29,6 @@ For some properties, such as `border-width`, `outline-width`, `column-rule-width
 
 For example, on a screen with a {{domxref("Window.devicePixelRatio", "devicePixelRatio")}} of 3, `border-width: 1.5px` computes to approximately `1.33px` (rounded down from 4.5 to 4 device pixels), and `outline-width: 0.2px` computes to approximately `0.33px` (rounded up from 0.6 to 1 device pixel).
 
-
 ### Relative vs. absolute lengths
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/Reference/Properties/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
