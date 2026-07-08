@@ -19,7 +19,9 @@ When the associated `PerformanceNavigationTiming` object represents a history na
 When the `PerformanceNavigationTiming` object does not represent a history navigation, `notRestoredReasons` will return `null`. This is useful for determining whether bfcache is not relevant to a particular navigation (as opposed to `notRestoredReasons` not being supported, in which case it would return `undefined`).
 
 > [!NOTE]
-> `notRestoredReasons` may return `null` despite the navigation type being reported as a back/forward navigation. These circumstances include duplicating a back/forward navigation in a new tab and restoring a back/forward navigation tab after a browser restart. In such cases, some browsers copy the navigation type from the original tab, but as these are not actually back/forward navigations, `notRestoredReasons` returns `null`.
+> `notRestoredReasons` may return `null` despite the navigation type being reported as a back/forward navigation. These circumstances include
+> - Duplicating a back/forward navigation in a new tab. In such cases, some browsers copy the navigation type from the original tab, but as these are not actually back/forward navigations, `notRestoredReasons` returns `null`.
+> - Restoring a back/forward navigation tab after a browser restart. Since the bfcache stores fully-loaded pages including DOM and JavaScript heap, there's nothing developers can do to make bfcache survive a full restart, so `notRestoredReasons` returns `null` because there was no bfcache entry to block restoration of in the first place.
 
 ## Examples
 
