@@ -3,12 +3,12 @@ title: "LanguageModel: create() static method"
 short-title: create()
 slug: Web/API/LanguageModel/create_static
 page-type: web-api-static-method
-spec-urls: https://webmachinelearning.github.io/prompt-api/
+browser-compat: api.LanguageModel.create_static
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`create()`** static method of the {{domxref("LanguageModel")}} interface constructs a new {{domxref("LanguageModel")}} instance, automatically downloading the corresponding model if it is not already available.
+The **`create()`** static method of the {{domxref("LanguageModel")}} interface constructs a new {{domxref("LanguageModel")}} instance, automatically downloading the corresponding model data if it is not already available.
 
 ## Syntax
 
@@ -20,12 +20,12 @@ LanguageModel.create(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : Represents the options for creating a {{domxref("LanguageModel")}} session. Options include:
+  - : An object representing the options for creating a {{domxref("LanguageModel")}} session. Properties include:
     - `expectedInputs`
-      - : An array representing the required input modalities and languages.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing the required input modalities and languages.
+        Each object can include the following properties:
         - `type`
-          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - : An enumerated value indicating the content type. Must be one of:
             - `"text"`
               - : Plain text content.
             - `"image"`
@@ -39,10 +39,10 @@ LanguageModel.create(options)
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
-      - : An array representing the required output modalities and languages.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing the required output modalities and languages.
+        Each object can include the following properties:
         - `type`
-          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - : An enumerated value indicating the content type. Must be one of:
             - `"text"`
               - : Plain text content.
             - `"image"`
@@ -56,22 +56,55 @@ LanguageModel.create(options)
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `initialPrompts`
-      - : An array of messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Options include:
+      - : An array of objects representing messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Each object can include the following properties:
         - `role`
           - : A string indicating who sent the message. Must be one of:
             - `"system"`
-              - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, and {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+              - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
             - `"user"`
               - : A message from the user.
             - `"assistant"`
               - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+        - `content`
+          - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
+            - `type`
+              - : An enumerated value representing the type of content. This can be one of:
+                - `audio`
+                  - : Audio content.
+                - `image`
+                  - : Image content.
+                - `text`
+                  - : Textual content.
+                - `"tool-call"`
+                  - : A tool invocation issued by the model.
+                - `"tool-response"`
+                  - : The result of a tool invocation.
+            - `value`
+              - : The content of the message. If the `type` is `text`, this is always a string. If the `type` is `audio` or `image`, the `value` can be one of several different object types; see [What data types are accepted?](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+        - `prefix` {{optional_inline}}
+          - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
     - `monitor`
       - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
+    - `samplingMode` {{optional_inline}}
+      - : An enumerated value indicating whether the internal sampling methods used to infer the model response are biased towards more predictable or more creative results. Possible values are as follows:
+        - `most-predictable`
+          - : Responses are heavily biased towards the most predictable, or most likely, sequence of words to respond to prompts.
+        - `predictable`
+          - : Responses are biased towards the most predictable, or most likely, sequence of words to respond to prompts.
+        - `balanced`
+          - : Responses are balanced between predictable and creative sequences of words to respond to prompts.
+        - `creative`
+          - : Responses are biased towards less predictable, or more creative, sequences of words to respond to prompts.
+        - `most-creative`
+          - : Responses are heavily biased towards less predictable, or more creative, sequences of words to respond to prompts.
+
+        If omitted, `samplingMode` defaults to `balanced`.
+
     - `signal`
       - : An {{domxref("AbortSignal")}} to cancel session creation.
     - `tools`
-      - : An array representing tools available to the AI.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing tools available to the AI.
+        Each object can include the following properties:
         - `name`
           - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
         - `description`
@@ -90,14 +123,15 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was aborted via the `signal` option.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown in the following situations:
-    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+  - : Thrown if:
+    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
     - The input or output text is in a language the user agent doesn't support for prompting.
-    - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+    - A message's type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+    - A message's role is `system` but it was not the first message passed to the context.
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if creation fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if the content provided in `initialPrompts` exceeds the model's context window size.
+  - : Thrown if the content provided in `initialPrompts` exceeds the model's {{domxref("LanguageModel.contextWindow")}}.
 
 ## Description
 
@@ -112,13 +146,13 @@ Once a session is created, use its instance methods — {{domxref("LanguageModel
 
 ### Creating a basic session
 
-This example creates the default session and then prompts it for the result of summing `2` and `2`.
+This example creates a default session and then prompts it for the result of summing `2` and `2`.
 Note that text is supported by default, so the downloaded model should be suitable for this case.
 
 ```js
 const session = await LanguageModel.create();
 const answer = await session.prompt("What is 2 + 2?");
-console.log(answer); // "4"
+console.log(answer);
 ```
 
 ### Creating a session with a system prompt
@@ -156,7 +190,7 @@ const session = await LanguageModel.create({
 
 ### Providing few-shot examples
 
-A few-shot example is a set of user role (input) and assistant role (output) pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
+A few-shot example is a set of `user` role and `assistant` role input pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
 
 ```js
 const session = await LanguageModel.create({
@@ -229,9 +263,6 @@ const session = await LanguageModel.create({
     },
   ],
 });
-
-const response = await session.prompt("Tell me about the web platform.");
-console.log(response);
 ```
 
 ## Specifications

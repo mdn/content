@@ -3,7 +3,7 @@ title: "LanguageModel: availability() static method"
 short-title: availability()
 slug: Web/API/LanguageModel/availability_static
 page-type: web-api-static-method
-spec-urls: https://webmachinelearning.github.io/prompt-api/
+browser-compat: api.LanguageModel.availability_static
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
@@ -23,12 +23,12 @@ LanguageModel.availability(options)
 
 - `options` {{optional_inline}}
   - : An object that represents the base set of options used when checking language model availability or creating a session.
-    This has the following properties:
+    Properties include:
     - `expectedInputs` {{optional_inline}}
-      - : An array representing the required input modalities and languages.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing the required input modalities and languages.
+        Each object can include the following properties:
         - `type`
-          - : A string indicating the content type. Must be one of:
+          - : An enumerated value indicating the content type. Must be one of:
             - `"text"`
               - : Plain text content.
             - `"image"`
@@ -42,12 +42,12 @@ LanguageModel.availability(options)
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
-      - : An array representing the required output modalities and languages.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing the required output modalities and languages.
+        Each object can include the following properties:
         - `type`
-          - : A string from the `LanguageModelMessageType` enumeration indicating the content type. Must be one of:
+          - : An enumerated value indicating the content type. Must be one of:
             - `"text"`
-              - : Plain text content.
+              - : Textual content.
             - `"image"`
               - : Image content.
             - `"audio"`
@@ -58,9 +58,24 @@ LanguageModel.availability(options)
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
           - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+    - `samplingMode` {{optional_inline}}
+      - : An enumerated value indicating whether the internal sampling methods used to infer the model response are biased towards more predictable or more creative results. Possible values are as follows:
+        - `most-predictable`
+          - : Responses are heavily biased towards the most predictable, or most likely, sequence of words to respond to prompts.
+        - `predictable`
+          - : Responses are biased towards the most predictable, or most likely, sequence of words to respond to prompts.
+        - `balanced`
+          - : Responses are balanced between predictable and creative sequences of words to respond to prompts.
+        - `creative`
+          - : Responses are biased towards less predictable, or more creative, sequences of words to respond to prompts.
+        - `most-creative`
+          - : Responses are heavily biased towards less predictable, or more creative, sequences of words to respond to prompts.
+
+        If omitted, `samplingMode` defaults to `balanced`.
+
     - `tools`
-      - : An array representing tools available to the AI.
-        Each entry is an object that may define the following options:
+      - : An array of objects representing tools available to the AI.
+        Each object can include the following properties:
         - `name`
           - : A string giving the tool a unique name the model uses to refer to it when issuing a tool call.
         - `description`
@@ -70,13 +85,12 @@ LanguageModel.availability(options)
           - : An object containing a [JSON Schema](https://json-schema.org/) that describes the tool's input parameters.
             The model uses this schema to construct the arguments it passes to the tool's `execute` function.
         - `execute`
-          - : A {{domxref("LanguageModelToolFunction")}} callback that the user agent invokes when the model calls this tool.
-            It receives the arguments the model provides and must return a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
+          - : A callback function that the user agent invokes when the model calls this tool.
+            It can receive any arguments provided by the model as appropriate and returns a {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} representing the tool's result.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with one of the values listed below.
-If you request multiple input types and any are unavailable, then the promise resolves with `"unavailable"`.
 
 - `"available"`
   - : The model is ready to use with the given options.
@@ -85,8 +99,7 @@ If you request multiple input types and any are unavailable, then the promise re
 - `"downloading"`
   - : The model can support the given options and a download is currently in progress.
 - `"unavailable"`
-  - : The model cannot support the given options, or the user agent cannot determine availability (for example, due to a transient error).
-    This value may sometimes indicate a transient error. In that case, the caller should retry or fall back to an alternative implementation.
+  - : The model cannot support the given options, or the user agent cannot determine availability, for example, due to a [transient activation](/en-US/docs/Glossary/Transient_activation) error. In that case, the caller should retry or fall back to an alternative implementation.
 
 ## Examples
 
@@ -142,22 +155,6 @@ if (availability === "unavailable") {
 }
 ```
 
-### Gating UI on availability
-
-The following example enables or disables a translation button based on the availability of a model.
-It gives the user the option to download the model if it is not available.
-
-```js
-const translateButton = document.querySelector("#translate");
-
-const status = await LanguageModel.availability();
-translateButton.disabled = status !== "unavailable";
-
-if (status === "downloadable" || status === "downloading") {
-  translateButton.textContent = "Download model to enable translation";
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -169,5 +166,4 @@ if (status === "downloadable" || status === "downloading") {
 ## See also
 
 - {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
-- {{domxref("LanguageModelToolFunction")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)

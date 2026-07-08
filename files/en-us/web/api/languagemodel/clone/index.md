@@ -3,14 +3,14 @@ title: "LanguageModel: clone() method"
 short-title: clone()
 slug: Web/API/LanguageModel/clone
 page-type: web-api-instance-method
-spec-urls: https://webmachinelearning.github.io/prompt-api/
+browser-compat: api.LanguageModel.clone
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`clone()`** method of the {{domxref("LanguageModel")}} interface creates a copy of the current session, including its full context window state. The cloned session can be used independently without affecting the original.
+The **`clone()`** method of the {{domxref("LanguageModel")}} interface creates a copy of the `LanguageModel` it is called on, including its full context window state. The cloned session can be used independently without affecting the original.
 
-Because both the original and the clone share the same context history up to the point of cloning, you can explore multiple response paths or test variations without starting from scratch.
+The original and the clone share the same context history up to the point of cloning, enabling you to explore multiple response paths or test variations without starting from scratch.
 
 For example, you might build a shared context using {{domxref("LanguageModel.append()", "append()")}} or early {{domxref("LanguageModel.prompt()", "prompt()")}} `prompt()` calls, clone the session, and then send different follow-up prompts to each clone in parallel.
 
@@ -24,9 +24,10 @@ clone(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : Represents the options that can be passed. If this argument is absent, the `options` from the original session, such as its abort signal, are used.
-    Options include:
-    - `signal` — An {{domxref("AbortSignal")}} to cancel the clone operation.
+  - : An object representing the options that can be passed. If this argument is absent, the `options` from the original session, such as its abort signal, are used.
+    Properties include:
+    - `signal`
+      — : An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value
 
@@ -69,9 +70,10 @@ console.log("Mysterious ending:", ending2);
 
 ### Cloning to retry after a context overflow
 
-This example uses a checkpoint and rolloback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` ensures that the app has a way to restore a safe state before attempting something risky.
+This example uses a checkpoint and rollback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` ensures that the app has a way to restore to a safe state before attempting something risky.
 
 ```js
+const veryLargeDocument = "This is my very long story...";
 let session = await LanguageModel.create();
 const checkpoint = await session.clone();
 

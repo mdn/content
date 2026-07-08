@@ -3,14 +3,14 @@ title: "LanguageModel: promptStreaming() method"
 short-title: promptStreaming()
 slug: Web/API/LanguageModel/promptStreaming
 page-type: web-api-instance-method
-spec-urls: https://webmachinelearning.github.io/prompt-api/
+browser-compat: api.LanguageModel.promptStreaming
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
 The **`promptStreaming()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{domxref("ReadableStream")}} that delivers the model's response incrementally as it is generated.
 
-This is useful for displaying responses to users in real time, for long outputs, or for any scenario where low perceived latency matters. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
+This is useful for displaying responses to users in real time, for long outputs, or for any scenario where perceived latency should be minimized. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
 
 ## Syntax
 
@@ -22,53 +22,79 @@ promptStreaming(input, options)
 ### Parameters
 
 - `input`
-  - : The prompt to send to the model. One of the following:
-    - A string — Shorthand for a single user message. For example: `[{ role: "user", content: [{ type: "text", value: input }] }]`.
-    - An array representing a single message in a conversation with a language model. Options include:
+  - : The content to prompt the model with. This is either:
+    - A string — Shorthand for a single textual message.
+    - An array of objects, each representing a single message in a conversation with a language model.
+      Objects may have the following properties:
       - `role`
         - : A string indicating who sent the message. Must be one of:
           - `"system"`
-            - : A system-level instruction that guides the model's overall behavior. Note that {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, and {{domxref("LanguageModel.append()", "append()")}} throw a `"NotSupportedError"` `DOMException` if a message with `role: "system"` is passed to them; system messages are only allowed in `initialPrompts`.
+            - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
           - `"user"`
             - : A message from the user.
           - `"assistant"`
             - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+      - `content`
+        - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
+          - `type`
+            - : An enumerated value representing the type of content. This can be one of:
+              - `audio`
+                - : Audio content.
+              - `image`
+                - : Image content.
+              - `text`
+                - : Textual content.
+              - `"tool-call"`
+                - : A tool invocation issued by the model.
+              - `"tool-response"`
+                - : The result of a tool invocation.
+          - `value`
+            - : The content of the message. If the `type` is `text`, this is always a string. If the `type` is `audio` or `image`, the `value` can be one of several different object types; see [What data types are accepted?](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+      - `prefix` {{optional_inline}}
+        - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
 - `options` {{optional_inline}}
-  - : Options for streaming a prompt. Options include:
+  - : Options for creating a prompt. Properties include:
     - `responseConstraint`
-      - : An implementation-defined object that constrains the format of the model's output. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
+      - : An object following the structure defined by [JSON Schema](https://json-schema.org/) defining the precise format the model's output should be delivered in. When provided and `omitResponseConstraintInput` is `false`, any implementation-defined constraint-description message is included in the measurement.
     - `omitResponseConstraintInput`
-      - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement. Throws a `"TypeError"` if `true` is passed without a `responseConstraint`.
+      - : A boolean; when `true`, the automatic constraint-description message is excluded from the measurement.
     - `signal`
       - : An {{domxref("AbortSignal")}} to cancel the operation.
 
 ### Return value
 
-A {{domxref("ReadableStream")}} of {{jsxref("String")}} chunks. Each chunk is a piece of the model's response as it is generated. The stream closes when generation completes.
+A {{domxref("ReadableStream")}} of {{jsxref("String")}} chunks. Each chunk represents a piece of the model's response as it is generated. The stream closes when generation completes.
 
 ### Exceptions
 
 Errors are surfaced as stream errors rather than as rejected promises. Consumers should handle errors using a stream's standard error-handling mechanisms.
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Surfaced if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was cancelled via the `signal` option.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown in the following situations:
-    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+  - : Thrown if:
+    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
     - The input or output text is in a language the user agent doesn't support for prompting.
-    - The content type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+    - A message's type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+    - A message's role is `system` but it was not the first message passed to the context.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if `promptStreaming()` fails for any other reason not listed in the other exception types.
+  - : Thrown if the prompt fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if the prompt would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
+  - : Thrown if the prompt would cause the session's context usage to exceed the model's {{domxref("LanguageModel.contextWindow")}}.
 
-Like `prompt()`, each call to `promptStreaming()` adds to the session's running context.
+## Description
+
+The `promptStreaming()` method adds the provided input to the context window and generates a response. The entire response is receives incrementally as a {{domxref("ReadableStream")}}.
+
+To receive the response as one complete string, use {{domxref("LanguageModel.prompt()")}} instead. To add content to the context window without generating a response, use {{domxref("LanguageModel.append()")}}.
+
+Each call to `promptStreaming()` adds to the session's context. To branch from a given state without affecting the original session, call {{domxref("LanguageModel.clone()")}}.
 
 ## Examples
 
 ### Streaming a response to the page
 
-This exaxmple writes out chunks from an instance of {{domxref("ReadableStream")}} as they arrive.
+This exaxmple writes out chunks from a `promptStreaming()` call's {{domxref("ReadableStream")}} as they arrive.
 
 ```js
 const session = await LanguageModel.create();
@@ -83,7 +109,7 @@ for await (const chunk of stream) {
 
 ### Streaming with an abort signal
 
-This example shows how to use an {{domxref("AbortController")}} with prompt streaming.
+This example shows how to use an {{domxref("AbortController")}} with `promptStreaming()`.
 
 ```js
 const controller = new AbortController();
@@ -108,7 +134,7 @@ try {
 
 ### Collecting streamed chunks into a single string
 
-In this example, chucks from a {{domxref("ReadableStream")}} are collected before the whole stream is written out.
+In this example, chunks from a {{domxref("ReadableStream")}} are collected before the whole stream is written out.
 
 ```js
 const session = await LanguageModel.create();

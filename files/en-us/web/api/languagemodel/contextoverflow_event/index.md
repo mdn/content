@@ -4,7 +4,6 @@ short-title: contextoverflow
 slug: Web/API/LanguageModel/contextoverflow_event
 page-type: web-api-event
 browser-compat: api.LanguageModel.contextoverflow_event
-spec-urls: https://webmachinelearning.github.io/prompt-api/
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}

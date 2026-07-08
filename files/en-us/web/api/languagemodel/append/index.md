@@ -3,14 +3,14 @@ title: "LanguageModel: append() method"
 short-title: append()
 slug: Web/API/LanguageModel/append
 page-type: web-api-instance-method
-spec-urls: https://webmachinelearning.github.io/prompt-api/
+browser-compat: api.LanguageModel.append
 ---
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
 The **`append()`** method of the {{domxref("LanguageModel")}} interface adds content to the session's context window without generating a model response. It returns a {{jsxref("Promise")}} that resolves when the content has been successfully loaded into context. Use this method to preload a context before asking the model a question.
 
-A context may be a document, conversation, history, or background information. Because it does not trigger generation, it is more efficient than calling `prompt()` to set the context. You can call the `append()` method at any point during the session's lifetime.
+A context may be a document, conversation, history, or background information. You can call the `append()` method at any point during the session's lifetime.
 
 ## Syntax
 
@@ -23,45 +23,58 @@ append(input, options)
 
 - `input`
   - : The content to append to the context window. This is either:
-    - A string — Shorthand for a single message. Sending only a string is equivalent to sending the following with a `"user"` role in the next option: `[{ type: "text", value: "Some string" }]`.
+    - A string — Shorthand for a single textual message.
     - An array of objects, each representing a single message in a conversation with a language model.
       Objects may have the following properties:
       - `role`
         - : A string indicating who sent the message. Must be one of:
-        - `"user"`
-          - : A message from the user.
-        - `"assistant"`
-          - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
-      - `content` — An object containing the text to add to the context.
-        - `type`
-          - : One of `"text"`, `"image"`, `"audio"`, `"tool-call"`, or `"tool-response"`.
-        - `value`
-          - : The actual text of the content to append.
+          - `"system"`
+            - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
+          - `"user"`
+            - : A message from the user.
+          - `"assistant"`
+            - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+      - `content`
+        - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
+          - `type`
+            - : An enumerated value representing the type of content. This can be one of:
+              - `audio`
+                - : Audio content.
+              - `image`
+                - : Image content.
+              - `text`
+                - : Textual content.
+              - `"tool-call"`
+                - : A tool invocation issued by the model.
+              - `"tool-response"`
+                - : The result of a tool invocation.
+          - `value`
+            - : The content of the message. If the `type` is `text`, this is always a string. If the `type` is `audio` or `image`, the `value` can be one of several different object types; see [What data types are accepted?](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+      - `prefix` {{optional_inline}}
+        - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
 - `options` {{optional_inline}}
-  - : Represents the options that can be passed. Options include:
+  - : An object representing the options that can be passed. Properties include:
     - `signal`
-      - : An {{domxref("AbortSignal")}} to cancel the operation. Reasons to cancel an append operation include:
-        - The user cancelled the request or navigated away.
-        - A newer request superseded the old one.
-        - A timeout.
-        - A dependent resource was destroyed.
+      - : An {{domxref("AbortSignal")}} to cancel the append operation.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined` when the content has been prefilled into the context window, or rejects with one of the exception values on failure.
+A {{jsxref("Promise")}} that resolves with `undefined` when the content has been prefilled into the context window, or rejects with one of the following exception values on failure.
 
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown in the following situations:
-    - The `role` is `"assistant"` and `type` is anything other than `"text"`.
+  - : Thrown if:
+    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
     - The input or output text is in a language the user agent doesn't support for prompting.
+    - A message's type is `"image"` or `"audio"` but the type was not listed in `expectedInputs`.
+    - A message's role is `system` but it was not the first message passed to the context.
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if prefilling fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
-  - : Thrown if appending `input` would cause the session's context usage to exceed {{domxref("LanguageModel.contextWindow")}}.
+  - : Thrown if appending `input` would cause the session's context usage to exceed the model's {{domxref("LanguageModel.contextWindow")}}.
 
 ## Examples
 
@@ -71,9 +84,10 @@ This example shows how to append to a context for the user role before calling `
 Note that we can just specify text input (`documentText`) in this case, because `user` is the default role.
 
 ```js
+const documentText = "This is my important essay...";
 const session = await LanguageModel.create();
 
-// Pre-load the document text into context
+// Preload the document text into context
 await session.append(documentText);
 
 // Now ask questions about the document
@@ -81,25 +95,6 @@ const summary = await session.prompt(
   "Summarize the key points of this document.",
 );
 console.log(summary);
-```
-
-### Providing few-shot examples
-
-A few-shot example is a set of user role (input) and assistant role (output) pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
-
-```js
-const session = await LanguageModel.create({
-  initialPrompts: [
-    { role: "system", content: "Translate the user's input to French." },
-    { role: "user", content: "Hello" },
-    { role: "assistant", content: "Bonjour" },
-    { role: "user", content: "Goodbye" },
-    { role: "assistant", content: "Au revoir" },
-  ],
-});
-
-const result = await session.prompt("Good morning");
-console.log(result); // "Bonjour matin" or "Bonjour"
 ```
 
 ### Appending context with an abort signal
@@ -127,9 +122,10 @@ try {
 
 ### Checking context usage after appending
 
-The code below shows how to log the percentage of tokens used after appending a large amount of context.
+The code below shows how to log the number of tokens used after appending a large amount of context.
 
 ```js
+const largeDocument = "This is my large body of text...";
 const session = await LanguageModel.create();
 await session.append(largeDocument);
 

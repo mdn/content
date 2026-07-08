@@ -17,7 +17,7 @@ When {{domxref("LanguageModel.prompt()")}} is called, it takes an `input` parame
 const response = await session.prompt(inputElem.value);
 ```
 
-The previous `prompt()` call only receives a single string as a parameter. This is a shorthand form, available for the common situation where you only want to pass the model a single user text prompt. You can expand this to explicitly declare the `role` of the `input` object:
+The previous `prompt()` call only receives a single string as a parameter. This is a shorthand form, available for the common situation where you only want to pass the model a single user text prompt (note that this form cannot be used in the [`initialPrompts`](/en-US/docs/Web/API/LanguageModel/create_static#initialprompts) option of a `create()` call). You can expand this to explicitly declare the `role` of the `input` object:
 
 ```js
 const response = await session.prompt([
