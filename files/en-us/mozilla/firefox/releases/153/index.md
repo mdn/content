@@ -60,6 +60,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("IDBObjectStore.getAllRecords()")}} and {{domxref("IDBIndex.getAllRecords()")}} methods are now supported.
   These retrieve all records (or a specified subset of records) from an object store and index, respectively.
   ([Firefox bug 1927945](https://bugzil.la/1927945)).
+- The [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API) is now supported on desktop platforms.
+  This provides a convenient mechanism for websites to toggle display of a {{htmlelement("video")}} element between a page and a floating always-on-top video window, allowing users to continue watching while they interact with other sites or applications.
+  ([Firefox bug 1463402](https://bugzil.la/1463402)).
 
 <!-- #### DOM -->
 
