@@ -114,3 +114,8 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 153 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Tree counting CSS functions**: `layout.css.tree-counting-functions.enabled`
+
+  The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`.
+  ([Firefox bug 2042063](https://bugzil.la/2042063)).
