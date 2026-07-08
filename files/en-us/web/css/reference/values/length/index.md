@@ -23,11 +23,12 @@ The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by
 The [specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
 
 For some properties, such as `border-width`, `outline-width`, `column-rule-width`, and `outline-offset`, the computed `<length>` values are rounded to an integer number of {{glossary("device pixel", "device pixels")}} to ensure reasonable visual display:
-- A non-zero value less than 1 device pixel is rounded up.
 
+- A non-zero value less than 1 device pixel is rounded up.
 - A value greater than 1 device pixel is rounded down to the nearest whole device pixel.
 
 For example, on a screen with a {{domxref("Window.devicePixelRatio", "devicePixelRatio")}} of 3, `border-width: 1.5px` computes to approximately `1.33px` (rounded down from 4.5 to 4 device pixels), and `outline-width: 0.2px` computes to approximately `0.33px` (rounded up from 0.6 to 1 device pixel).
+
 
 ### Relative vs. absolute lengths
 
