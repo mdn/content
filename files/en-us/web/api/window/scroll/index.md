@@ -74,8 +74,8 @@ Our HTML includes several paragraphs of content and a {{htmlelement("div")}} ele
 ```html
 <div>
   <button class="scroll">scroll() to 1000</button>
-  <button class="scrollto">scrollTo() top</button>
-  <button class="scrollby">scrollBy() 200</button>
+  <button class="scroll-to">scrollTo() top</button>
+  <button class="scroll-by">scrollBy() 200</button>
 </div>
 
 <p>...</p>
@@ -149,7 +149,7 @@ function isInterrupted(interrupted) {
 }
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the window to scroll its content down 1000 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scroll(0, 1000)` on the window to scroll its content down 1000 pixels, awaiting its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollBtn.addEventListener("click", async () => {
