@@ -22,17 +22,11 @@ scrollIntoView(options)
 
 - `alignToTop` {{optional_inline}}
   - : A boolean value:
-    - If `true`, the top of the element will be aligned to the top of the
-      visible area of the scrollable ancestor. Corresponds to
-      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is
-      the default value.
-    - If `false`, the bottom of the element will be aligned to the bottom
-      of the visible area of the scrollable ancestor. Corresponds to
-- If `true`, the top of the element will be aligned to the top of the visible area of the scrollable ancestor.
-  Corresponds to `scrollIntoViewOptions: {block: "start", inline: "nearest"}`.
-  This is the default value.
-- If `false`, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor.
-  Corresponds to `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
+    - If `true`, the top of the element will be aligned to the top of the visible area of the scrollable ancestor.
+      Corresponds to `scrollIntoViewOptions: {block: "start", inline: "nearest"}`.
+      This is the default value.
+    - If `false`, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor.
+      Corresponds to `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 
 - `options` {{optional_inline}}
   - : An object with the following properties:
