@@ -35,17 +35,13 @@ If the navigation is not a reload navigation, we try retrieving the page from th
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate" && event.request.isReloadNavigation) {
     event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          return response;
-        })
-        .catch(() => caches.match(event.request)),
+      fetch(event.request).catch(() => caches.match(event.request)),
     );
   } else {
     event.respondWith(
-      caches.match(event.request).then((cached) => {
-        return cached || fetch(event.request);
-      }),
+      caches
+        .match(event.request)
+        .then((cached) => cached || fetch(event.request)),
     );
   }
 });

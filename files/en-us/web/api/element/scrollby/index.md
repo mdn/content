@@ -152,7 +152,7 @@ function isInterrupted(interrupted) {
 }
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollBy(0, 200)` on the `<section>` to scroll its content down by 200 pixels, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollBy(0, 200)` on the `<section>` to scroll its content down by 200 pixels, awaiting its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollByBtn.addEventListener("click", async () => {

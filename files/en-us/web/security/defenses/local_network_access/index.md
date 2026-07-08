@@ -138,8 +138,9 @@ However, the `local-network-access` permission continues to be supported for bac
 When querying the permission status of `local-network-access`, for example:
 
 ```js
-navigator.permissions.query({ name: "local-network-access" })
-.then((result) => { ... });
+navigator.permissions.query({ name: "local-network-access" }).then((result) => {
+  // ...
+});
 ```
 
 The returned result is a combination of the state of the two more recent permissions. If only one of `local-network` or `loopback-network` has a non-`prompt` state, that value will be returned. If either permission was previously `denied`, then the `local-network-access` permission will also return `denied`. The following table summarizes all possible permission results:

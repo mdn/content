@@ -290,7 +290,7 @@ As the URL in our HTML link is not good practice, we include a script that preve
 
 ```js
 const aElem = document.querySelector("a");
-aElem.addEventListener("click", function (e) {
+aElem.addEventListener("click", (e) => {
   e.preventDefault();
   return false;
 });

@@ -38,7 +38,7 @@ column-rule-visibility-items: normal;
     <p>Two fish</p>
     <p>Red fish</p>
     <p>Blue fish</p>
-    <cite>-- Dr. Seuss<cite>
+    <cite>-- Dr. Seuss</cite>
   </section>
 </section>
 ```
