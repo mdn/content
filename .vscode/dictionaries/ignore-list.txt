@@ -341,9 +341,3 @@ YWxhZGRpbjpvcGVuc2VzYW1l
 Za'taak
 Zorp
 ZRWB
-scrollby
-scrollintoview
-scrollto
-onvisibilitymaskchange
-visibilitymaskchange
-SIDETYPE

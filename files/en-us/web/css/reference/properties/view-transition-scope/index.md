@@ -162,7 +162,7 @@ function handleClick(e) {
 Click the "Update DOM" button to see the view transition. Now try the following:
 
 1. Inspect one of the `<div>` elements.
-2. In the Styles panel in your browser's developer tools, uncheck the `view-transition-scope: all;` declaration to unapply it.
+2. In the Styles panel in your browser's developer tools, uncheck the `view-transition-scope: all;` declaration to disable it.
 3. Now switch to the JavaScript Console.
 4. Click the "Update DOM" button again.
 

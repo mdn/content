@@ -25,7 +25,7 @@ Local network access mitigates these risks, controlling local network access via
 
 ## Address spaces
 
-Local network access defines three different **address spaces**, which all network addresses are categorised under:
+Local network access defines three different **address spaces**, which all network addresses are categorized under:
 
 - Local
   - : A local address is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
@@ -34,7 +34,7 @@ Local network access defines three different **address spaces**, which all netwo
 - Public
   - : A public address is available from anywhere on the internet; its target is the same for all devices globally. For example, `104.18.27.120` (the IP address of `example.com`).
 
-Depending on which address space a request URL is categorised in, the browser will handle its permissions differently.
+Depending on which address space a request URL is categorized in, the browser will handle its permissions differently.
 
 ## What request types are affected?
 

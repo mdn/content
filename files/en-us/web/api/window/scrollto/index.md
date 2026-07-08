@@ -73,8 +73,8 @@ Our HTML includes several paragraphs of content and a {{htmlelement("div")}} ele
 ```html
 <div>
   <button class="scroll">scroll() to 1000</button>
-  <button class="scrollto">scrollTo() top</button>
-  <button class="scrollby">scrollBy() 200</button>
+  <button class="scroll-to">scrollTo() top</button>
+  <button class="scroll-by">scrollBy() 200</button>
 </div>
 
 <p>...</p>
@@ -133,7 +133,7 @@ The rest of the CSS is not shown, for brevity.
 We start by grabbing references to the `<button>` that runs the `scrollTo()` operation and the toolbar `<div>`:
 
 ```js
-const scrollToBtn = document.querySelector(".scrollto");
+const scrollToBtn = document.querySelector(".scroll-to");
 const toolbar = document.querySelector("div");
 ```
 

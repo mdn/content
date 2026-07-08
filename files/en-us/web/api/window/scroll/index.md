@@ -74,8 +74,8 @@ Our HTML includes several paragraphs of content and a {{htmlelement("div")}} ele
 ```html
 <div>
   <button class="scroll">scroll() to 1000</button>
-  <button class="scrollto">scrollTo() top</button>
-  <button class="scrollby">scrollBy() 200</button>
+  <button class="scroll-to">scrollTo() top</button>
+  <button class="scroll-by">scrollBy() 200</button>
 </div>
 
 <p>...</p>
