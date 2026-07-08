@@ -113,7 +113,7 @@ All values, except `visible` and `clip`, create a new [block formatting context]
 
 ### What creates overflow
 
-Overflow occurs when a block-level element has content that overflows its constrained space. The allotted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size ({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size ({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
+Overflow occurs when a block-level element has content that overflows its constrained space. The allotted space may be constrained by a height ({{cssxref("height")}} or {{cssxref("max-height")}}) for vertical overflow, a width ({{cssxref("width")}} or {{cssxref("max-width")}}) for horizontal overflow, a block-size ({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) for block direction overflow, or an inline-size ({{cssxref("inline-size")}}, {{cssxref("max-inline-size")}}, or {{cssxref("white-space")}} set to `nowrap`) for inline direction overflow.
 
 The following CSS limits the size of the container, defining [box model](/en-US/docs/Web/CSS/Guides/Box_model) property values that limit the container's size.
 A background color, clipped to the `content-box`, is also added to help demonstrate how overflowing content overflows the content box in the explanations that follow.
