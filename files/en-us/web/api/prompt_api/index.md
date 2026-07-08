@@ -8,6 +8,9 @@ spec-urls: https://webmachinelearning.github.io/prompt-api/
 
 {{DefaultAPISidebar("Prompt API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
+> [!WARNING]
+> This feature is currently opposed by two browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
+
 The **Prompt API** allows web pages to directly prompt a language model provided by the user agent via a JavaScript interface, without needing to manage implementation-specific details of the AI model being used.
 
 ## Concepts and usage
@@ -59,6 +62,14 @@ Also see the Chrome dev rel team's demos:
 ## Specifications
 
 {{Specifications}}
+
+### Standards positions
+
+Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standards) this specification.
+Known standards positions are as follows:
+
+- Mozilla (Firefox): [Negative](https://github.com/mozilla/standards-positions/issues/1213)
+- Apple (WebKit): [Negative](https://github.com/WebKit/standards-positions/issues/495)
 
 ## Browser compatibility
 
