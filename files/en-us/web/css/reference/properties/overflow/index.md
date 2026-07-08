@@ -103,7 +103,7 @@ Some non-standard values are also supported in some browsers:
 
 ## Description
 
-By default, block level elements grow to fit their content. If the size of a container is constrained, the content will overflow. The `overflow` property determines how a container handles content that overflows its edges.
+By default, block-level elements grow to fit their content. If the size of a container is constrained, the content will overflow. The `overflow` property determines how a container handles content that overflows its edges.
 
 The `overflow` property is shorthand for the horizontal {{cssxref("overflow-x")}} and vertical {{cssxref("overflow-y")}} properties. If only one keyword is specified, both `overflow-x` and `overflow-y` are set to the same value. If two keywords are specified, the first value applies to `overflow-x` in the horizontal direction and the second one applies to `overflow-y` in the vertical direction.
 
@@ -309,7 +309,7 @@ div {
 </fieldset>
 ```
 
-The second example's overflowing content is clipped. Tabbing to the {{htmlelement("input")}} in the hidden content gives the element focus, but does not scroll it into view, creating inaccessible, bad user experience.
+The second example's overflowing content is clipped. Tabbing to the {{htmlelement("input")}} in the hidden content gives the element focus, but does not scroll it into view, making that content inaccessible to keyboard users.
 
 When using the two value syntax, if one value is set to `clip`, that `clip` overflow direction will behave as `hidden` if the other value is not set to `visible` or `clip`.
 
