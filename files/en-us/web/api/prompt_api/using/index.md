@@ -12,7 +12,7 @@ This article explains how to use the core fundamentals of the Prompt API.
 
 ## Creating a session
 
-All of the AI prompting functionality is accessed through the {{domxref("LanguageModel")}} interface.
+All of the AI prompting functionality is contained within the {{domxref("LanguageModel")}} interface.
 
 The first step in prompting the AI model is to create a `LanguageModel` object instance. This is done using the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} static method, which takes an options object as an argument:
 
@@ -25,10 +25,13 @@ const session = await LanguageModel.create({
 
 The browser will automatically download the corresponding model data to handle the requested language model if it is not already available, and if the browser is able to do so.
 
+> [!NOTE]
+> The `create()` method (and other methods contained within the Prompt API) require [transient activation](/en-US/docs/Glossary/Transient_activation) to invoke, as a precaution to stop apps from using language model resources without user interaction.
+
 A `LanguageModel` object instance and the activity that occurs as a result of using its methods and properties is called a **session**. The browser stores all the prompts and responses sent to and received from the Prompt API as part of a single session, allowing the API to tailor its responses based on previous interactions and hold a conversation.
 
 > [!NOTE]
-> The browser doesn't store session information across browser restarts by default. To restore session context after a browser restart, you will have to implement a mechanism to save the conversation and restore it across restarts, using a server-side solution or a client-side mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API). Such an example is covered in [Adding context with initial and ongoing prompt inputs](/en-US/docs/Web/API/Prompt_API/Adding_context).
+> The browser doesn't store session information across browser reloads by default. To restore session context after a reload or browser restart, you will have to implement a mechanism to save the conversation and restore it using a server-side solution or a client-side mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API). Such an example is covered in [Preserving sessions across reloads](/en-US/docs/Web/API/Prompt_API/Preserving_sessions).
 
 The [`expectedInputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedinputs) and [`expectedOutputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedOutputs) parameters specify the types of input and output and the input/output languages you are expecting to provide to and receive from the AI prompt.
 
@@ -46,24 +49,13 @@ const response = await session.prompt(textarea.value);
 
 This method returns a {{jsxref("Promise")}} that fulfills with a string containing the AI response to your prompt.
 
-Note that the above `prompt()` call only receives a single string as a parameter. This is a shorthand parameter, available for the common situation where you only want to pass the model a single user prompt. The full longhand equivalent is as follows:
+You can pass multiple inputs into the API with different roles — for example, standard `user` prompts and instructions from the `assistant` to further shape how it responds to the `user` prompts. To get the AI to respond to your input in the style of a villanous mastermind, you might use this `prompt()` call:
 
 ```js
 const response = await session.prompt([
   {
-    role: "user",
-    content: textarea.value,
-  },
-]);
-```
-
-You can pass multiple prompts into the API, with different roles: standard `user` prompts, instructions from the `assistant` to further shape how it responds to the `user` prompts, and global `system` prompts to give the model instructions on how to respond. For example, to get the AI to respond to your prompts in the style of a villanous mastermind:
-
-```js
-const response = await session.prompt([
-  {
-    role: "system",
-    content: "You speak like a James Bond villain",
+    role: "assistant",
+    content: "I'm going to answer this user query like a James Bond villain",
   },
   {
     role: "user",
@@ -95,7 +87,7 @@ This method's return promise fulfills with an enumerated value indicating whethe
 - `available` means that the implementation supports the requested options without requiring any new downloads.
 - `unavailable` means that the implementation doesn't support the requested options.
 
-If a download is required, it will be started automatically by the browser once a `LanguageModel` instance is created using the `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress).
+If a download is required, it will be started automatically by the browser once a `LanguageModel` instance is created using the `create()` method. You can track download progress automatically using a monitor, which we'll cover in the next section.
 
 > [!NOTE]
 > Even though you can ask for a language model session that expects multimedia outputs, this will fail — the availability will be `unavailable`. The API currently only supports text outputs.
@@ -136,17 +128,25 @@ When a method call such as {{domxref("LanguageModel.prompt()", "prompt()")}} or 
 
 To check how many tokens a prompt operation would consume without actually sending it, use {{domxref("LanguageModel.measureContextUsage()", "measureContextUsage()")}}.
 
+## Cloning a session
+
+One way to get around the problem of running out of tokens is to copy your existing session using the {{domxref("LanguageModel.clone()")}} function. This creates a replica of the `LanguageModel` object instance in which the conversation up to that point and initial prompt are preserved, but the token count (`contextUsage`) is reset. You can think of the session clone as being a fork of the original conversation, with its own token allowance.
+
+```js
+const clonedSession = await session.clone();
+
+clonedSession.prompt("Let's talk about the weather.");
+```
+
 ## Cancelling operations and destroying instances
 
-You can cancel a pending prompt or other operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `LanguageModel.prompt()` operation via a button press could look like this:
+You can cancel pending `prompt()`, `clone()` and other operations using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `LanguageModel.prompt()` operation via a button press could look like this:
 
 ```js
 const controller = new AbortController();
 
 abortBtn.addEventListener("click", () => {
   controller.abort("Query aborted by user.");
-  submitBtn.disabled = false;
-  abortBtn.disabled = true;
 });
 
 const response = await session.prompt(textarea.value, {
@@ -168,14 +168,13 @@ Let's look at a complete basic example that demonstrates the Prompt API in actio
 
 ### HTML
 
-In our markup, we first define an input {{htmlelement("form")}} that allows the user to type in a prompt. We also include two {{htmlelement("button")}} elements — one to submit the prompt/query, and another to abort an ongoing query.
+In our markup, we define an input {{htmlelement("textarea")}} that allows the user to type in a prompt. We also include two {{htmlelement("button")}} elements — one to submit the prompt/query, and another to abort an ongoing query.
 
 ```html live-sample___prompt-example
 <h1>Prompt API demo</h1>
 <p>Released in Chrome 148, but trialled since version 137.</p>
 
 <h2>Input</h2>
-
 <form>
   <div>
     <label for="prompt-text">Enter prompt text:</label>
@@ -190,7 +189,6 @@ Next, we include a {{htmlelement("p")}} element to display the model's response 
 
 ```html live-sample___prompt-example
 <h2>Output</h2>
-
 <p class="prompt-output"></p>
 ```
 
@@ -240,7 +238,7 @@ Note that we won't show the CSS for this example, as none of it is relevant to u
 
 ### JavaScript
 
-In our script, we start off by grabbing references to the `<form>`, `<textarea>`, submit `<button>`, abort `<button>`, and output `<p>`. We initially disable the abort `<button>`, as we don't want it to be pressed when there is no ongoing prompt operation.
+In our script, we start off by grabbing references to the `<form>`, `<textarea>`, submit `<button>`, abort `<button>`, and output `<p>`. We initially disable the submit and abort buttons, as we don't want them to be pressed before the related functionality is available.
 
 ```js live-sample___prompt-example
 const form = document.querySelector("form");
@@ -248,7 +246,25 @@ const textarea = document.querySelector("textarea");
 const submitBtn = document.querySelector("#submit");
 const abortBtn = document.querySelector("#abort");
 abortBtn.disabled = true;
+submitBtn.disabled = true;
 const promptOutput = document.querySelector(".prompt-output");
+```
+
+Next, we create a global `session` variable to hold our session. Because using the API requires transient activation, we populate `session` inside a `focus` event handler on the `<textarea>`. When the user focuses the `<textarea>`, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function, which we will define later on. Provided that is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
+
+```js live-sample___prompt-example
+let session;
+textarea.addEventListener("focus", () => {
+  if (!session) {
+    init();
+  }
+});
+
+async function init() {
+  session = await getSession();
+  promptOutput.textContent = `Session created.`;
+  submitBtn.disabled = false;
+}
 ```
 
 Next, we add a `submit` event listener to the `<form>` element; when the form is submitted, the `handleSubmission()` function is called.
@@ -259,11 +275,11 @@ form.addEventListener("submit", handleSubmission);
 
 Next, we define the `handleSubmission()` function. This first stops the form from submitting using {{domxref("Event.preventDefault()")}}, then checks whether the input `<textarea>` was empty on submission. If it was, we write an error into the output `<p>` and return out of the function. We don't want to waste our time trying to prompt the AI with an empty string.
 
-Next, inside a `try` block, we start by generating a `session` `LanguageModel` instance using the custom `getSession()` function, which we will define later on. Provided that is successful, we:
+Next, inside a `try` block, we:
 
 - Insert a message in the output `<p>` to say that a response is being generated, and flip the `disabled` status of the two buttons. At this point, we want to allow users to abort the prompt operation that is about to start, but we don't want them trying to start another prompt until that one is finished.
-- Create a new {{domxref("AbortController")}} and add a `click` event listener to the abort `<button>` so that when it is clicked, {{domxref("AbortController.abort()")}} is fired on the controller to abort the prompt operation and the `<button>` disabled states are reset.
-- Invoke `prompt()` on the session to start the prompt, passing it the contents of the `<textarea>` as its prompt query, and an options object containing a `signal` property equal to the {{domxref("AbortController.signal", "signal")}} of the controller. This is what allows us to abort the `prompt()` operation by pressing the abort `<button>`.
+- Create a new {{domxref("AbortController")}} and add a `click` event listener to the abort `<button>` so that when it is clicked, {{domxref("AbortController.abort", "abort()")}} is fired on the controller to abort the prompt operation and the `<button>` disabled states are reset.
+- Invoke `prompt()` on the `session` to start the prompt, passing it the contents of the `<textarea>` as its prompt query, and an options object containing a `signal` property equal to the {{domxref("AbortController.signal", "signal")}} of the controller. This is what allows us to abort the `prompt()` operation by pressing the abort `<button>`.
 - Set the output `<p>`'s `textContent` to the API's `response` when it is returned, so the user can read it.
 - Reset the `disabled` state of the buttons.
 - Log the remaining tokens available to the console, as `contextUsage`/`contextWindow`.
@@ -280,8 +296,6 @@ async function handleSubmission(e) {
   }
 
   try {
-    const session = await getSession();
-
     promptOutput.textContent = "...generating response...";
     submitBtn.disabled = true;
     abortBtn.disabled = false;
@@ -308,7 +322,7 @@ async function handleSubmission(e) {
 }
 ```
 
-Now we define the `getSession()` function. Inside, we run our desired model requirements through the `availability()` method to see if it is available:
+Now we define the `getSession()` function used to return our session `LanguageModel`. The function starts by running our desired model requirements through the `availability()` method to see if it is available:
 
 - If it returns `unavailable`, we print an appropriate error message to the output `<p>`.
 - If it returns `available`, we create a session using the `create()` method, passing it the desired options, and return it. The required AI model is available, so we can use it immediately.
@@ -344,8 +358,10 @@ async function getSession() {
 
 ### Result
 
-The rendered example looks like this:
-
 {{EmbedLiveSample("prompt-example", , "600px", , , , "language-model", "allow-forms")}}
 
 Try typing a question or statement into the `<textarea>`, then press the submit button to prompt the AI model and generate a response.
+
+## See also
+
+- [Prompt API Playground](https://chrome.dev/web-ai-demos/prompt-api-playground/) on chrome.dev (2026)
