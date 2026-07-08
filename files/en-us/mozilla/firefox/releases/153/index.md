@@ -36,9 +36,14 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+  This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "getTimeZones()")}}, and {{jsxref("Intl/Locale/getWeekInfo", "getWeekInfo()")}}.
+  ([Firefox bug 2037069](https://bugzil.la/2037069)).
+- The {{jsxref("Error.stackTraceLimit")}} static data property is supported for setting or getting the maximum number of stack frames captured in an error stack trace.
+  Setting the value smaller than the default can improve performance.
+  ([Firefox bug 2037856](https://bugzil.la/2037856)).
 
 <!-- #### Removals -->
 
@@ -52,6 +57,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The {{domxref("IDBObjectStore.getAllRecords()")}} and {{domxref("IDBIndex.getAllRecords()")}} methods are now supported.
+  These retrieve all records (or a specified subset of records) from an object store and index, respectively.
+  ([Firefox bug 1927945](https://bugzil.la/1927945)).
+
 <!-- #### DOM -->
 
 #### Media, WebRTC, and Web Audio
@@ -59,6 +68,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("RTCDtlsTransport.getRemoteCertificates()")}} method gets the certificates used by the remote peer to secure the DTLS communication.
   These can be used for application-layer authentication of a remote peer.
   ([Firefox bug 1805446](https://bugzil.la/1805446)).
+- The {{domxref("MediaCapabilities.decodingInfo()", "decodingInfo()")}} and {{domxref("MediaCapabilities.encodingInfo()", "encodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface now accept the `"webrtc"` configuration type.
+  This allows a site to query whether a given audio or video configuration can be decoded or encoded using WebRTC, and whether doing so will be smooth, power efficient, or both.
+  Support for the non-standard [`transmission`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo#transmission) type, which was used as an alias for `webrtc`, is removed.
+  ([Firefox bug 2037610](https://bugzil.la/2037610) and [Firefox bug 2032075](https://bugzil.la/2032075)).
 - All mandatory and some optional WebRTC "transport" statistics can now be reported in a {{domxref("RTCStatsReport")}}.
   The returned object is a {{domxref("RTCTransportStats")}} with the following properties: {{domxref("RTCTransportStats.dtlsCipher","dtlsCipher")}}, {{domxref("RTCTransportStats.dtlsRole","dtlsRole")}}, {{domxref("RTCTransportStats.dtlsState","dtlsState")}}, {{domxref("RTCTransportStats.iceLocalUsernameFragment","iceLocalUsernameFragment")}}, {{domxref("RTCTransportStats.iceRole","iceRole")}}, {{domxref("RTCTransportStats.iceState","iceState")}}, {{domxref("RTCTransportStats.id","id")}}, {{domxref("RTCTransportStats.selectedCandidatePairId","selectedCandidatePairId")}}, {{domxref("RTCTransportStats.srtpCipher","srtpCipher")}}, {{domxref("RTCTransportStats.timestamp","timestamp")}}, {{domxref("RTCTransportStats.tlsVersion","tlsVersion")}}, and {{domxref("RTCTransportStats.type","type")}}.
   In addition the `transportId` property is now available on {{domxref("RTCOutboundRtpStreamStats.transportId","RTCOutboundRtpStreamStats")}}, {{domxref("RTCRemoteOutboundRtpStreamStats.transportId","RTCRemoteOutboundRtpStreamStats")}}, {{domxref("RTCRemoteInboundRtpStreamStats.transportId","RTCRemoteInboundRtpStreamStats")}} and {{domxref("RTCInboundRtpStreamStats.transportId","RTCInboundRtpStreamStats")}}.

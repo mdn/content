@@ -988,6 +988,7 @@
         "IDBKeyRange",
         "IDBObjectStore",
         "IDBOpenDBRequest",
+        "IDBRecord",
         "IDBRequest",
         "IDBTransaction",
         "IDBVersionChangeEvent"
@@ -1775,7 +1776,7 @@
     },
     "Topics API": {
       "overview": ["Topics API"],
-      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "guides": [],
       "interfaces": [],
       "methods": ["Document.browsingTopics()", "Window.fetch()"],
       "properties": ["HTMLIFrameElement.browsingTopics"],

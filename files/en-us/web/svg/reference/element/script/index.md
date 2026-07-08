@@ -17,9 +17,15 @@ The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to a
 
 ## Attributes
 
+- `async` {{non-standard_inline}} {{experimental_inline}}
+  - : If the `async` attribute is present, then the external script will be fetched in parallel to parsing and evaluated as soon as it is available. Equivalent to the [`async`](/en-US/docs/Web/HTML/Reference/Elements/script#async) attribute on the HTML {{HTMLElement('script')}} element.
+    _Value type_: **boolean**; _Default value_: _none_; _Animatable_: **no**
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin)
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
     _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/Reference/Values/string); _Default value_: `?`; _Animatable_: **yes**
+- `defer` {{experimental_inline}}
+  - : If the `defer` attribute is present, then the external script will be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}. Equivalent to the [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute on the HTML {{HTMLElement('script')}} element.
+    _Value type_: **boolean**; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("fetchpriority")}} {{experimental_inline}} {{non-standard_inline}}
   - : Provides a hint of the relative priority to use when fetching an external script.
     Allowed values:
