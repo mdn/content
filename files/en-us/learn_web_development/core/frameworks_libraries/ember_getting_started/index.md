@@ -150,7 +150,7 @@ This generates a production-ready application development environment that inclu
 
 ## Getting ready to build our Ember project
 
-You'll need a code editor before continuing to interact with your brand new project. If you don't have one configured already, [The Ember Atlas](https://www.notion.so/Editors-Tooling-5da96f0b2baf4ce1bf3fd58e3b60c7f6) has some guides on how to set up various editors.
+You'll need a code editor before continuing to interact with your brand new project. If you don't have one configured already, [The Ember Atlas](https://app.notion.com/p/Editors-Tooling-5da96f0b2baf4ce1bf3fd58e3b60c7f6) has some guides on how to set up various editors.
 
 ### Installing the shared assets for TodoMVC projects
 

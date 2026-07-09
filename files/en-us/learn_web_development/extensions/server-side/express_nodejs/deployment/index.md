@@ -103,7 +103,7 @@ At the bare minimum, you will want to modify the database configuration so that 
 In the following subsections, we outline the most important changes that you should make to your app.
 
 > [!NOTE]
-> There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+> There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security/).
 
 ### Database configuration
 
@@ -184,7 +184,7 @@ export DEBUG="author,book"
 > [!NOTE]
 > Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
-If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
+If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/).
 
 ### Use gzip/deflate compression for responses
 
@@ -223,7 +223,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### Use Helmet to protect against well known vulnerabilities
 
-[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/) for more information on what headers it sets and vulnerabilities it protects against).
+[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmet.js.org/) for more information on what headers it sets and vulnerabilities it protects against).
 
 Install this at the root of your project by running the following command:
 
@@ -633,8 +633,8 @@ That's the end of this tutorial on setting up Express apps in production, and al
 
 ## See also
 
-- [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
-- [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
+- [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/) (Express docs)
+- [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security/) (Express docs)
 - Railway Docs
   - [CLI](https://docs.railway.com/cli)
 

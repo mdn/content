@@ -17,7 +17,7 @@ The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to a
 
 ## Attributes
 
-- `async` {{non-standard_inline}}
+- `async` {{non-standard_inline}} {{experimental_inline}}
   - : If the `async` attribute is present, then the external script will be fetched in parallel to parsing and evaluated as soon as it is available. Equivalent to the [`async`](/en-US/docs/Web/HTML/Reference/Elements/script#async) attribute on the HTML {{HTMLElement('script')}} element.
     _Value type_: **boolean**; _Default value_: _none_; _Animatable_: **no**
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin)
