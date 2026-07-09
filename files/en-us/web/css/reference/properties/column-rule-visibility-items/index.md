@@ -80,7 +80,7 @@ column-rule-visibility-items: unset;
   - : The column rule should be painted in all gap segments, regardless of whether adjacent areas contain an item.
 
 - `around`
-  - : The column rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by a item.
+  - : The column rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by an item.
 
 - `between`
   - : The column rule should be painted in a gap segment if both adjacent areas are occupied by items.
