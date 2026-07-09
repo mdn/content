@@ -40,9 +40,8 @@ border-shape: shape(
 
 /* Two <basic-shape> values */
 border-shape: circle(50%) ellipse(40% 30%);
-border-shape:
-    polygon(0% 0%, 0% 100%, 100% 0%)
-    polygon(10% 10%, 10% 70%, 70% 10%);
+border-shape: polygon(0% 0%, 0% 100%, 100% 0%)
+  polygon(10% 10%, 10% 70%, 70% 10%);
 
 /* <basic-shape> and <geometry-box> values */
 border-shape: path(
