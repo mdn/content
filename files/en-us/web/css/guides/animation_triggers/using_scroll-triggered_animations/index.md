@@ -13,10 +13,8 @@ This article covers how to create CSS scroll-triggered animations.
 ## Scroll-triggered animation concepts
 
 A common UI pattern involves triggering animations on a web page when the user scrolls to a certain place in the content, for example, to pull in additional UI elements or draw the user's attention to certain details.
-A common UI pattern involves triggering animations on a web page when the user scrolls to a certain place in the content, for example, to pull in additional UI elements or draw the user's attention to certain details.
 
-CSS scroll-triggered animations enable defining scroll-based triggers that start and stop regular time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). You can define trigger positions inside a {{glossary("scroll container")}} so that, when a tracked element reaches those positions within the scrollport, they toggle the play state of an animation applied to that element, or a completely different one.
-CSS scroll-triggered animations enable defining scroll-based triggers that start and stop regular time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). You can define trigger positions inside a {{glossary("scroll container")}} so that, when a tracked element reaches those positions within the scrollport, they toggle the play state of an animation applied to that element, or a completely different one.
+CSS scroll-triggered animations enable defining scroll-based triggers that start and stop regular time-based [CSS animations](/en-US/docs/Web/CSS/Guides/Animations). You can define trigger positions inside a {{glossary("scroll container")}} so that, when a tracked element reaches those positions within the scrollport, they toggle the play state of an animation applied to that element, or of a completely different element.
 
 > [!NOTE]
 > Scroll-triggered animations provide an alternative to using JavaScript features — such as frameworks or the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) — to trigger animations on scroll. CSS scroll-triggered animations are more performant and, arguably, simpler to implement.
@@ -25,8 +23,8 @@ CSS scroll-triggered animations enable defining scroll-based triggers that start
 
 Scroll-triggered animations are similar to [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), but they are different:
 
-- Scroll-triggered animations are regular time-based animations that play when a trigger becomes active; they observe the {{cssxref("animation-delay")}} each time the animation starts, and always complete iterations in the amount of time defined by the {{cssxref("animation-duration")}}, regardless of how fast the user scrolls.
-- With scroll-driven animations, the normal time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content, with a faster scrolling speed resulting in a faster animation. Scroll-driven animations ignore the `animation-duration` and `animation-delay` properties.
+- Scroll-triggered animations are regular time-based animations that play when a trigger becomes active; they observe the {{cssxref("animation-delay")}} each time the animation starts, and always complete each iteration in the amount of time defined by the {{cssxref("animation-duration")}}, regardless of how fast the user scrolls.
+- With scroll-driven animations, the normal, time-based animation timeline is replaced by a scroll-based timeline, meaning that the animation progresses forwards and backwards as you scroll towards the start and end of the content, respectively, with faster scrolling resulting in a faster animation. Scroll-driven animations ignore the `animation-duration` and `animation-delay` properties.
 
 ## Scroll-triggered animation basics
 
@@ -37,7 +35,7 @@ Let's walk through a basic example wherein an image's caption will fade in and o
 - The _animation triggers_ are defined on the `<img>` element. The activation is triggered when the `<img>` starts entering the scrollport and the deactivation occurs when the `<img>` fully exits the viewport, meaning the full viewport is the _timeline range_, the `<img>` is the _tracked element_, and the `<figcaption>` is the _trigger-using element_.
 - We'll set an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) as the _trigger source_ by using the [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) function on the {{htmlelement("img")}} element.
 
-As the content is scrolled up and down, the caption's animation will start as soon as the `<img>` begins to appear inside the scrollport, with the animation reversing when the `<img>` exits the scrollport. This basic example doesn't create the effect we want, but we'll start here and improve it as we learn about more features.
+As the content is scrolled up and down, the caption's animation will start as soon as the `<img>` begins to appear inside the scrollport, with the animation reversing when the `<img>` exits the scrollport. This basic example doesn't create the effect we want, but it's a good start that we can improve on as we learn about more features.
 
 The HTML features several paragraphs of content with a {{htmlelement("figure")}} element included in the middle of them, which contains the `<img>` and `<figcaption>`. For the sake of brevity, we are not showing the full source.
 
@@ -188,10 +186,10 @@ figcaption {
 }
 ```
 
-The first ruleset applies the animation and an animation trigger, along with the animation actions to the {{htmlelement("figcaption")}} element:
+The first declaration block applies the animation and an animation trigger, along with the animation actions to the {{htmlelement("figcaption")}} element:
 
 1. We use the {{cssxref("animation")}} shorthand to apply the `fade-in` animation to `<figcaption>`. By itself, without triggers, this would cause the `<figcaption>` to fade into view as soon as the page loads.
-2. We use the {{cssxref("animation-trigger")}} property to define which element will provide the triggers, and what those trigger's actions will be. This results in the start of the animation being delayed until the {{htmlelement("img")}} element is scrolled into view. The `animation-trigger` property value components include:
+2. We use the {{cssxref("animation-trigger")}} property to delay the start of the animation until the {{htmlelement("img")}} element is scrolled into view by identifying which element will provide the triggers, and what those trigger's actions will be. The `animation-trigger` property value components include:
    - A {{cssxref("dashed-ident")}}, `--t`, which is the identifier set as the value of the {{cssxref("timeline-trigger-name")}} property on the triggering element.
    - Two {{cssxref("&lt;animation-action>")}} values, which specify how the animation should behave when the trigger is activated and deactivated. When the trigger is activated, we set the `<figcaption>` element's animation to play forwards. When the trigger is deactivated, we set the `<figcaption>` element's animation to play backwards.
 
@@ -202,10 +200,10 @@ figcaption {
 }
 ```
 
-The second ruleset creates the animation trigger:
+The second declaration block creates the animation trigger:
 
 1. We use the `timeline-trigger-name` property to give the `<img>` element an identifying name for triggers created on it. This is the same dashed identifier as the trigger name referenced in the `<figcaption>` element's `animation-trigger` property value.
-2. We use the {{cssxref("timeline-trigger-source")}} property to create the animation trigger type. Specifying the [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) function means our trigger type is an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function), which has a default [activation range](#adjusting_the_trigger_activation_range) of `cover` and a [timeline range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) also equating to `cover`.
+2. We use the {{cssxref("timeline-trigger-source")}} property to create the animation trigger type. Specifying the [`view()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) function means our trigger type is an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function), with a default [activation range](#adjusting_the_trigger_activation_range) of and [timeline range](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets) of `cover`.
 
 ```css live-sample___basic-scroll-triggered
 img {
@@ -215,10 +213,8 @@ img {
 ```
 
 The {{domxref("ViewTimeline")}} created by the `view()` function tracks the position of the `<img>` element across the block-axis of the nearest parent scroller. The element that is tracked, in this case the `<img>`, is the **subject** or the **tracked element**.
-The {{domxref("ViewTimeline")}} created by the `view()` function tracks the position of the `<img>` element across the block-axis of the nearest parent scroller. The element that is tracked, in this case the `<img>`, is the **subject** or the **tracked element**.
 
-The triggers are activated and deactivated when the tracked element is scrolled to the start and end of the timeline range respectively, in the block direction, causing the `<figcaption>` animation to play forwards and play backwards. This is the **activation range**. By default, the activation range is from the point when the tracked element starts to enter the scrollport to the point when the tracked element completely exits the scrollport.
-The triggers are activated and deactivated when the tracked element is scrolled to the start and end of the timeline range respectively, in the block direction, causing the `<figcaption>` animation to play forwards and play backwards. This is the **activation range**. By default, the activation range is from the point when the tracked element starts to enter the scrollport to the point when the tracked element completely exits the scrollport.
+The triggers are activated and deactivated when the tracked element is scrolled to the start and end of the timeline range respectively, in the block direction, causing the `<figcaption>` animation to play forwards and play backwards. This is the **activation range**. By default, the `cover` activation range is from the point when the tracked element's start border edge starts to enter the scrollport to the point when the tracked element's end border edge completely exits the scrollport.
 
 The example renders like so:
 
@@ -228,7 +224,7 @@ Note how the caption starts to fade in as soon as any part of the image becomes 
 
 ## Creating the trigger on the trigger-using element
 
-It is possible for the tracked element to also be the trigger-using element by defining the trigger to be created on the trigger-using element itself. Let's modify the previous example to create the trigger on our trigger-using {{htmlelement("figcaption")}} element rather than the {{htmlelement("img")}} element.
+It is possible for the tracked element to also be the trigger-using element by defining the trigger to be created on the trigger-using element itself. Let's modify the previous example to create the trigger on our animated {{htmlelement("figcaption")}} element rather than the {{htmlelement("img")}} element.
 
 The HTML is identical to the previous example. The CSS differs only in where the scroll-triggered animation `timeline-trigger-*` properties are set.
 
@@ -249,70 +245,22 @@ The updated rendering looks like this:
 
 In this case, the `<figcaption>` fades into view when it, rather than the image, first enters into the scrollport.
 
-## Adjusting the animation's action
-
-In the previous examples, the animations played forward when it was activated and backwards when it was deactivated. This behavior was defined by the second and third space-separated values of the `animation-trigger` property declaration:
-
-```css
-animation-trigger: --t play-forwards play-backwards;
-```
-
-The {{cssxref("animation-action")}} values `play-forwards` specifies that the animation plays forwards. The `play-backwards` specifies that the animation plays backwards. The first `<animation-action>` in the property value is the action that occurs on trigger activation. The second value, `play-backwards`, is the action that is applied when the trigger deactivates.
-
-We set `animation: fade-in 1s ease-in both`. We didn't specify an {{cssxref("animation-iteration-count")}} in our `animation` shorthand, therefore the default value, `1`. This is why the animation only iterated once when the trigger was activated, and one iteration, in reverse, when it was deactivated. With these values, every time the trigger is activated or deactivated, the animation plays through all of their iterations in the same direction or opposite direction, respectively, as set by the {{cssxref("animation-direction")}} property.
-
-There are other `animation-action` values that can be set to produce different effects. For example:
-
-- `play-once`
-  - : Te animation plays only once. Once finished, it won't play again on subsequent activations/deactivations.
-- `play`
-  - : The animation plays, in whatever direction it was previously playing in. This is different from `play-forwards` and `play-backwards`, which specify that the animation plays in the same direction or opposition direction as set by the {{cssxref("animation-direction")}} property.
-- `pause`
-  - The animation, if not complete, pauses. For example, if an animation's iteration count is `infinite` and `animation-trigger: --t play pause` is set, once the trigger is activated, the animation will play infinitely, pausing when the trigger is deactivate, and resuming where it left off when re-activated.
-- `reset`
-  - This has the same effect as `pause`, except that it also sets the animation progress to `0`.
-
-Some of these values are designed to be used together. For example, `play-forwards play-backwards` is very common when you want a UI element to "animate in" when it appears on-screen and then "animate out" when it goes off-screen, whereas `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
-
-Let's look at a brief example — we'll take our first example and change it so that our `<figure>` fades in once when has completely entered the scrollport, and doesn't animate again until the page is reloaded.
-
-We set the `animation-trigger` property's `animation-action` to `play-once` so that the animation only plays once when the `<figure>` first enters the activation range. We've also set the `timeline-trigger-activation-range` to `contain` so that the animation only plays when the `<figure>` is completely on-screen — it only plays once, so we don't want you to miss it.
-
-```css live-sample___play-once
-figure {
-  animation: fade-in 1s ease-in both;
-  animation-trigger: --t play-once;
-  timeline-trigger-name: --t;
-  timeline-trigger-source: view();
-}
-```
-
-This example renders like so:
-
-{{embedlivesample("play-once", "100%", 500)}}
-
-When you first scroll the `<figure>` on-screen, it will fade in. However, from that point on, it will stay at `100%` opacity regardless of how many times you scroll it up and down the scrollport. You can only get it to fade in again after refreshing the page (or reloading the embedded example's `<iframe>`).
-
 ## Adjusting the trigger activation range
 
-In the previous examples, the trigger activates (`fade-in` starts) as soon as the start edge of the tracked element enters the end edge of the scrollport, and deactivates (fade-out starts, playing `fade-in` backwards) when the end edge of the tracked element has exited the start edge of the scrollport. As a result, the fade-out is never visible.
+Because we used `view()` as the `timeline-trigger-source`, the default activation range {{cssxref("timeline-range-name")}} is `cover`. That is why, in the previous examples, the trigger activates (`fade-in` starts) as soon as the tracked element starts entering the scrollport, and deactivates (fade-out starts: `fade-in` is played backwards) when the tracked element fully exits the scrollport. As a result, the fade out is never visible.
 
-This is because the default activation range {{cssxref("timeline-range-name")}} when using a `view()` as the `timeline-trigger-source()` is `cover`.
-This is because the default activation range {{cssxref("timeline-range-name")}} when using a `view()` as the `timeline-trigger-source()` is `cover`.
+To make the fade out animation visible, we can offset the start and end of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each of these properties can take as a value:
 
-We can change the active range and even offset the start and end of the selected activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each these properties can take as values:
-
-- A {{cssxref("length-percentage")}} value to specify a specific point from the start the default range.
+- A {{cssxref("length-percentage")}} value to specify a point along the default range.
 - A {{cssxref("timeline-range-name")}} keyword specifying a named range.
-- Both a `timeline-range-name` and a `<length-percentage>` to set a specific point from the start a specified range.
+- A `timeline-range-name` and a `<length-percentage>` to specify a point along the named range.
 
 Percentages are relative to the length of the `<timeline-range-name>`, which resolves to `cover` for our [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines). Had we set [`scroll()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) as our {{cssxref("timeline-trigger-source")}}, the default `<timeline-range-name>` would have resolved to `scroll`. See [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) to learn about the `<timeline-range-name>` values.
-Percentages are relative to the length of the `<timeline-range-name>`, which resolves to `cover` for our [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines). Had we set [`scroll()`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) as our {{cssxref("timeline-trigger-source")}}, the default `<timeline-range-name>` would have resolved to `scroll`. See [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) to learn about the `<timeline-range-name>` values.
 
-The following example will cause the trigger to activate near the end of the `entry` range, just before the tracked element's end edge crosses the scrollport's end edge, when `90%` of the subject has entered the scrollport and `10%` is still out of view, and at the start of the `exit` range, when `10%` of the subject's end edge crosses the scrollport's start edge.
+The following example will cause the trigger to activate `50%` of the way through the `entry` range (when `50%` of the tracked element has crossed the scrollport's end edge) and deactivate `0%` of the way through the `exit` range (when the tracked element's start edge starts to cross the scrollport's start edge).
 
 ```css
-timeline-trigger-activation-range: entry 90% exit 10%;
+timeline-trigger-activation-range: entry 50% exit 0%;
 ```
 
 Let's apply this to our first example so you can see what the effect is. Our `img` ruleset is updated to the following:
@@ -321,7 +269,7 @@ Let's apply this to our first example so you can see what the effect is. Our `im
 img {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
-  timeline-trigger-activation-range: entry 90% exit 10%;
+  timeline-trigger-activation-range: entry 50% exit 0%;
 }
 ```
 
@@ -329,17 +277,17 @@ The updated rendering looks like this:
 
 {{embedlivesample("adjust-range", "100%", 500)}}
 
-The animation of the `<figcaption>` is now a bit more useful; only starts to fade into view when the `<img>` has mostly entered the scrollport at its end edge, and it starts to fade out when `10%` of the `<img>` has exited the scrollport at its start edge.
+The animation of the `<figcaption>` is now a bit more useful — it only starts to fade into view when a significant portion of the `<img>` has entered the scrollport at its end edge, and it starts to fade out when the `<img>` has started to exit the scrollport at its start edge. If you scroll it back into view, the fade in is only activated at `exit 0%`, when the image is fully in view.
 
 ## Setting a custom active range
 
-The **active range** is the range within which a trigger will remain activated once activation has occurred. By default, the active range is the same as the activation range, with deactivation occurring when the tracked element leaves the activation range.
+Thus far with our examples, activation has been triggered when the triggering element has entered the activation range in either block direction and has been deactivated when the trigger has left the activation range in either direction. The **active range** is the range within which a trigger will remain activated once activation has occurred. By default, the active range is the same as the activation range, therefore deactivation will occur once the tracked element leaves the activation range.
 
-It is possible to set an active range that is different from the activation range with the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand to set both values in a single declaration.
+It is possible to set an active range that is different to the activation range using the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand to set both values in a single declaration.
 
-You might want to do this to extend the time an animation has to complete. For example, if you have an animation that activates only within a small range, but once activated, you want the finished state of the animation to stay applied over a larger range. Only when the tracked element moves out of the active range does the trigger become inactive; after that, you can activate it again by moving the subject back into the activation range.
+You might want to do this to extend the time an animation has to complete — for example, if you have an animation trigger that activates only within a small range, but once activated, you want it to stay active over a larger range. Only when the tracked element moves out of the active range does the trigger become inactive; after that, you can activate it again by moving the subject back into the activation range.
 
-Let's expand our previous examples to demonstrate the effect of the active range. The HTML is this same, except we've included two sibling `<figure>` elements placed next to one another using flexbox. In each case, the `<img>` will be the tracked element for its sibling trigger-using `<figcaption>`.
+Let's build on our previous examples to demonstrate the effect of the active range. The HTML is the same, except we've included two identical `<figure>` elements with classes of `.one` and `.two`, placed next to one another using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts). In each case, the `<img>` will be the tracked element for its sibling animated `<figcaption>`.
 
 ```html
 <div class="figure-wrapper">
@@ -348,7 +296,7 @@ Let's expand our previous examples to demonstrate the effect of the active range
       src="https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg"
       alt="A butterfly with red, white, and gold wing sections, sitting in a leaf" />
     <figcaption>
-      1. A beautiful butterfly seen in the Jungle near Cairns
+      A beautiful butterfly seen in the Jungle near Cairns
     </figcaption>
   </figure>
 
@@ -357,7 +305,7 @@ Let's expand our previous examples to demonstrate the effect of the active range
       src="https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg"
       alt="A butterfly with red, white, and gold wing sections, sitting in a leaf" />
     <figcaption>
-      2. A beautiful butterfly seen in the Jungle near Cairns
+      A beautiful butterfly seen in the Jungle near Cairns
     </figcaption>
   </figure>
 </div>
@@ -411,7 +359,7 @@ Let's expand our previous examples to demonstrate the effect of the active range
       src="https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg"
       alt="A butterfly with red, white, and gold wing sections, sitting in a leaf" />
     <figcaption>
-      1. A beautiful butterfly seen in the Jungle near Cairns
+      A beautiful butterfly seen in the Jungle near Cairns
     </figcaption>
   </figure>
 
@@ -420,7 +368,7 @@ Let's expand our previous examples to demonstrate the effect of the active range
       src="https://mdn.github.io/shared-assets/images/examples/learn/gallery/pic5.jpg"
       alt="A butterfly with red, white, and gold wing sections, sitting in a leaf" />
     <figcaption>
-      2. A beautiful butterfly seen in the Jungle near Cairns
+      A beautiful butterfly seen in the Jungle near Cairns
     </figcaption>
   </figure>
 </div>
@@ -454,7 +402,6 @@ Let's expand our previous examples to demonstrate the effect of the active range
 ```
 
 We apply the same `animation` to both `<figcaption>` elements as in previous examples, but their `animation-trigger` property values reference two different `timeline-trigger-name` values.
-We apply the same `animation` to both `<figcaption>` elements as in previous examples, but their `animation-trigger` property values reference two different `timeline-trigger-name` values.
 
 ```css live-sample___set-active-range
 figcaption {
@@ -463,7 +410,6 @@ figcaption {
 
 .one figcaption {
   animation-trigger: --t1 play-forwards play-backwards;
-  animation-trigger: --t1 play-forwards play-backwards;
 }
 
 .two figcaption {
@@ -471,10 +417,9 @@ figcaption {
 }
 ```
 
-Next, we set the same `timeline-trigger-source` and `timeline-trigger-activation-range` on both `<img>` elements. We then set a `timeline-trigger-name` on each `<img>` element; these are the names referenced in the previous code block, which means that each `<img>`'s created trigger acts as the trigger for the animation on its own sibling `<figcaption>`.
-Next, we set the same `timeline-trigger-source` and `timeline-trigger-activation-range` on both `<img>` elements. We then set a `timeline-trigger-name` on each `<img>` element; these are the names referenced in the previous code block, which means that each `<img>`'s created trigger acts as the trigger for the animation on its own sibling `<figcaption>`.
+Next, we set the same `timeline-trigger-source` and `timeline-trigger-activation-range` on both `<img>` elements. We then set a `timeline-trigger-name` on each `<img>` element; these are the names referenced in the previous code block, which means the trigger created on each `<img>`'s acts as the trigger for the animation on its own sibling `<figcaption>`.
 
-The `timeline-trigger-activation-range: contain 40% contain 60%` declaration means that the trigger activates—and thus the animation starts playing—when the tracked element reaches a narrow range, the middle 20% of the scrollport, and deactivates when the subject exits that narrow range. We also set a `timeline-trigger-active-range` range of `entry 50% exit 100%` on the second `<img>`. This means that, once faded in, the second `<figcaption>` will only fade out again when the second `<img>` has completely left the scrollport.
+The `timeline-trigger-activation-range: contain 40% contain 60%` declaration means that the trigger activates — and thus the animation starts playing — when the tracked element reaches a narrow range, the middle 20% of the scrollport, and deactivates when the subject exits that narrow range. We also set a `timeline-trigger-active-range` range of `entry 50% exit 100%` on the second `<img>`. This means that, once faded in, the second `<figcaption>` will only fade out again when the second `<img>` scrolls to `exit 100%`, which is when it has completely left the scrollport.
 
 ```css live-sample___set-active-range
 img {
@@ -484,7 +429,6 @@ img {
 
 .one img {
   timeline-trigger-name: --t1;
-  timeline-trigger-name: --t1;
 }
 
 .two img {
@@ -493,7 +437,8 @@ img {
 }
 ```
 
-Because of the way the active range works, the `timeline-trigger-active-range` should always be set to a larger range than the `timeline-trigger-activation-range`. If set to a smaller range, it will have no effect.
+> [!WARNING]
+> Because of the way the active range works, the `timeline-trigger-active-range` should always be set to a larger range than the `timeline-trigger-activation-range`. If set to a smaller range, it will have no effect.
 
 ```css hidden live-sample___set-active-range
 .figure-wrapper {
@@ -511,12 +456,11 @@ This example renders like so:
 
 {{embedlivesample("set-active-range", "100%", 500)}}
 
-Scroll the images into view, and then scroll them carefully up and down. Note how both captions fade into view at a point roughly one third up the embedded page. The first caption fades out again slightly further up, whereas the second one doesn't fade out until it has been moved completely out of the scrollport. This is because both `<img>` triggers have the same activation range, but the second `<img>` has a much larger active range applied to it.
+Scroll the images into view, and then scroll them carefully up and down. Note how both captions fade into view at the same time, at a point roughly one third up the embedded page. The first caption fades out again slightly further up, whereas the second caption doesn't fade out until it has been moved completely out of the scrollport. This is because both `<img>` triggers have the same _activation_ range, but only the second one has a much larger _active_ range applied to it.
 
 ## The timeline-trigger shorthand
 
-So far, we've written all our scroll-triggered animation CSS out as a mixture of shorthand and longhand properties in order to best explain each of the properties and their values. However, this is cumbersome and wordy. Now you've understood the concepts, we can use the {{cssxref("timeline-trigger")}} shorthand to create the shortest possible equivalent. You'll likely opt for this shorthand in your future projects.
-So far, we've written all our scroll-triggered animation CSS out as a mixture of shorthand and longhand properties in order to best explain each of the properties and their values. However, this is cumbersome and wordy. Now you've understood the concepts, we can use the {{cssxref("timeline-trigger")}} shorthand to create the shortest possible equivalent. You'll likely opt for this shorthand in your future projects.
+So far, we've written all the CSS for our scroll-triggered animation as a mixture of shorthand and longhand properties in order to best explain each of the properties and their values. However, this is cumbersome and wordy. Now that you've understood the concepts, we can use the {{cssxref("timeline-trigger")}} shorthand to create the shortest possible equivalent. You'll likely opt for this shorthand in your future projects.
 
 Taking these declarations as an example:
 
@@ -529,7 +473,7 @@ img {
 }
 ```
 
-We can rewrite these using the following shorthand:
+We can rewrite the previous four lines in a single line of CSS using the `timeline-trigger` shorthand:
 
 ```css
 img {
@@ -537,33 +481,71 @@ img {
 }
 ```
 
-The order is important! Always include a forward slash between the activation-range and the active range. Like all shorthand properties, all omitted components get reset to their initial default values.
+## Adjusting the animation's action
+
+All the examples in this guide have triggered the `fade-in` animation, causing the caption to fade in and also to fade out. The forwards and backwards play has been controlled by the `animation-trigger` declaration set on the animating element:
+
+```css
+animation-trigger: --t play-forwards play-backwards;
+```
+
+The {{cssxref("animation-action")}} values `play-forwards` and `play-backwards` specify that the animation plays forwards when the trigger activates, and backwards when the trigger deactivates. If we set the following `animation` declaration on the same element:
+
+```css
+animation: fade-in 1s ease-in both;
+```
+
+The animation only happens once when the trigger is activated, and once in reverse when it is deactivated: we didn't specify an {{cssxref("animation-iteration-count")}} in our `animation` shorthand, therefore the default value, `1`, is used.
+
+There are other `animation-action` values that can be set to produce different effects. For example:
+
+- `play-once` causes the animation to play only once. Once finished, it won't play again on subsequent activations/deactivations.
+- `play` causes the animation to play, in whatever direction it was previously playing in. In contrast, `play-forwards` and `play-backwards` ensure that the animation plays forwards or backwards, respectively, adjusting the animation's direction of play if required.
+- `pause` causes the animation to pause. For example, you could set an animation's iteration count to `infinite`, and set the corresponding `animation-trigger` to `--t play pause`: This would cause the animation to play when the trigger is activated, and pause when it deactivates.
+- `reset` has the same effect as `pause`, except that additionally it sets the animation progress back to `0`.
+
+Some of these values are designed to be used together. For example, `play-forwards play-backwards` is very common when you want a UI element to "animate in" when it appears on-screen and then "animate out" again when it goes off-screen, whereas `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
+
+Let's look at a brief example — we'll take our first example and change it so that our `<figure>` fades in once when has completely entered the scrollport, and doesn't animate again until the page is reloaded.
+
+We set the `animation-trigger` property's `animation-action` to `play-once` so that the animation only plays once when the `<figure>` first enters the activation range. We've also set the `timeline-trigger-activation-range` to `contain` so that the animation only plays when the `<figure>` is completely on-screen — it only plays once, so we don't want you to miss it.
+
+```css live-sample___play-once
+figure {
+  animation: fade-in 1s ease-in both;
+  animation-trigger: --t play-once;
+
+  timeline-trigger: --t view() contain;
+}
+```
+
+This example renders like so:
+
+{{embedlivesample("play-once", "100%", 500)}}
+
+When you first scroll the `<figure>` on-screen, it will fade in. However, from that point on, it will stay at `100%` opacity regardless of how many times you scroll it up and down the scrollport. You can only get it to fade in again after refreshing the page (or reloading the embedded example's `<iframe>`).
 
 ## Trigger scope
 
-Having multiple triggers with the same `timeline-trigger-name` can be problematic.
+If multiple triggers use the same `timeline-trigger-name`, because of how [triggers are determined by the browser](/en-US/docs/Web/CSS/Reference/Properties/trigger-scope#description) by default, the triggers will be associated with the last element in the HTML source order that has that `timeline-trigger-name` value. This is likely not the desired behavior.
 
-For example, if a document contains multiple repeated components, each containing a scroll-triggered animation where the animated element and tracked element are different elements, all of the animated elements will have their animations controlled by the last component's trigger, due to how their [triggers are determined by the browser](/en-US/docs/Web/CSS/Reference/Properties/trigger-scope#description). This is likely not the desired behavior. You could fix this by using a different `timeline-trigger-name` in each component, but this is inconvenient.
+For example, if a document contains multiple repeated components, each containing a scroll-triggered animation where the animated element and tracked element are different elements, all of the animated elements will have their animations controlled by the last component's trigger, unless you use a different `timeline-trigger-name` in each component, or scope the name by subtree.
 
-The {{cssxref("trigger-scope")}} property can fix this problem by limiting the visibility, or "scope", of a `timeline-trigger-name` value to a specific subtree. The result is that each animated element can only have its animation triggered by a trigger created within the same scoped subtree. See the `trigger-scope` reference page for details of how this works and an example.
+The {{cssxref("trigger-scope")}} property limits the visibility, or "scope", of a `timeline-trigger-name` value to a specific subtree. The result is that each animated element can only have its animation triggered by a trigger created within the same scoped subtree. See the `trigger-scope` reference page for details of how this works and a [`trigger-scope` example](/en-US/docs/Web/CSS/Reference/Properties/trigger-scope#examples).
 
 ## Multiple scroll-triggered animations
 
-The {{cssxref("animation-trigger")}} property works in exactly the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regards to setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values). If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations. If two `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. And so on.
+All of the `animation-*` and `timeline-trigger-*` properties discussed in this guide accept a comma separated list of values to enable triggering multiple animations from multiple triggers. The {{cssxref("animation-trigger")}} property works in exactly the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regards to [setting multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values). If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations. If two `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. And so on.
 
-Let's look at an example that shows how you can use multiple animation triggers to progressively animate an element — applying further animations when new triggers are activated as the page scrolls.
+Let's look at an example that shows how you can use multiple animation triggers to progressively animate an element — applying further animations when new triggers are activated as the page scrolls. We will trigger three separate animations on the one element: when the user scrolls, an element will slide in from off-screen, further scrolling will trigger the element to get larger and display its contents, finally, when the user scrolls to the end of the scrollport, the element will move down while its background color changes.
 
 The HTML for this example is similar to the HTML for previous examples except that we have included a {{htmlelement("section")}} element at the top containing some further content, and some empty {{htmlelement("div")}} elements interspersed throughout our main content that will have triggers created on them to trigger our animations.
 
 ```html
 <section>
-  <h2>Hello! This is my content!</h2>
+  <h2>Hello! This is animated!</h2>
 
-  <p>
-    The countryside surrounding Cairns, located in eastern Australia, is a
-    breathtakingly beautiful region characterized by diverse landscapes, lush
-    greenery, and unique natural wonders.
-  </p>
+  <p>Visit eastern Australia ...</p>
 </section>
 
 <h1>Information about Cairns</h1>
@@ -585,12 +567,12 @@ The HTML for this example is similar to the HTML for previous examples except th
 
 ```html hidden live-sample___multiple-triggers
 <section>
-  <h2>Hello! This is my content!</h2>
+  <h2>Hello! This is animated!</h2>
 
   <p>
-    The countryside surrounding Cairns, located in eastern Australia, is a
-    breathtakingly beautiful region characterized by diverse landscapes, lush
-    greenery, and unique natural wonders.
+    Visit eastern Australia. The Cairns countryside in eastern Australia is
+    breathtakingly beautiful, with diverse landscapes, lush greenery, and unique
+    natural wonders.
   </p>
 </section>
 
@@ -694,9 +676,9 @@ The HTML for this example is similar to the HTML for previous examples except th
 </p>
 ```
 
-In our CSS, we start by styling our `<section>` element, giving it a {{cssxref("position")}} of `fixed` and positioning it near the top-left of the scrollport. We then set three {{cssxref("animation")}} values, which will make the `<section>` slide in from the right of the screen, then reveal its contents, then slide down the screen and change its dimensions. Finally, we set an `animation-trigger` for each one of the animations so that they will be triggered by different triggers being activated.
+In our CSS, we start by styling our `<section>` element, giving it a {{cssxref("position")}} of `fixed` and positioning it near the top-left of the scrollport. We also define the initial styles that we will be animating from and returning to. We then set three {{cssxref("animation")}} values, which will make the `<section>` element `slide-from-right`, then `reveal` its contents, then `slide-down` the screen and change its dimensions and background color. We also set an `animation-trigger` for each one of the animations so that they will be triggered by different triggers being activated.
 
-We want the finished state of each animation to apply throughout, after it is reached, therefore it is important to set appropriate {{cssxref("animation-fill-mode")}} values and `<animation-action>` values on the animation triggers to achieve this. We had to set an `animation-fill-mode` of `forwards` rather than `both` on the last animation to avoid its keyframes being applied before the animation activates. Otherwise, its {{cssxref("@keyframes")}} styles would be applied on page load, which is not what we want.
+We want the finished state of each animation to be maintained after each animation ends, therefore it is important to set appropriate {{cssxref("animation-fill-mode")}} values. We want the animation to play forwards as the user scrolls down and reverse as they scroll up, which is achieved with our `<animation-action>` values . We set the `animation-fill-mode` to `forwards` rather than `both` on the last animation to avoid the `0%` keyframe from being applied before the animation activates. Otherwise, the styles from the `from` or `0%` {{cssxref("@keyframes")}} would be applied on page load, which is not what we want.
 
 ```css hidden live-sample___multiple-triggers
 body {
@@ -721,12 +703,9 @@ p {
 }
 
 section {
-  background: red;
-  color: #fff0;
   border: 10px solid black;
   padding: 10px;
   width: 400px;
-  height: 50px;
 }
 
 section p {
@@ -739,6 +718,11 @@ section {
   position: fixed;
   left: 1em;
   top: 1em;
+  background: red;
+  color: #fff0;
+  height: 50px;
+  scale: 0.2;
+
   animation:
     slide-from-right 1s both,
     reveal 1s both,
@@ -750,7 +734,7 @@ section {
 }
 ```
 
-Next, we create triggers on the `<div>` elements, setting their {{cssxref("timeline-trigger-name")}} equal to the identifiers specified in the `<section>` elements' `animation-trigger` property values. This means that as the user scrolls, when each tracked `<div>` enters the scrollport, a different animation will be activated. In this case, our tracked elements are invisible — they don't contain any useful content and are only here to create the triggers.
+Next, we create triggers on the `<div>` elements, setting their {{cssxref("timeline-trigger-name")}} equal to the identifiers specified in the `<section>` elements' `animation-trigger` property values. This means that as the user scrolls, when each tracked `<div>` enters the scrollport, a different animation is activated. In this case, our tracked elements are invisible — they don't contain any useful content and are only here to create the triggers.
 
 ```css live-sample___multiple-triggers
 #one {
@@ -766,51 +750,31 @@ Next, we create triggers on the `<div>` elements, setting their {{cssxref("timel
 }
 ```
 
-At this point, we give the first and second `<div>` elements a `position` value of `sticky`. This is so that they are always kept on-screen when they scroll to the top of the scrollport, and therefore, the animations they have triggered are never deactivated. Depending on your use case, you might not need to do this — you can achieve a similar effect by instead setting `<animation-action>` values of `play-forwards pause` on your animation triggers, so that the animations pause at their end states when the tracked elements scroll off-screen at the top of the scrollport. However, the animations then behave oddly when you scroll backwards through the sequence.
-
-```css live-sample___multiple-triggers
-#one,
-#two {
-  position: sticky;
-  top: 10px;
-}
-```
-
 Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<section>` element's `animation` property earlier on.
 
 ```css live-sample___multiple-triggers
 @keyframes slide-from-right {
-  from {
-    translate: 400%;
-  }
   to {
-    translate: 1em;
+    translate: 400%;
   }
 }
 
 @keyframes reveal {
   from {
     color: #fff0;
-    height: 50px;
+    scale: 0.2;
   }
   to {
     color: #ffff;
-    height: 240px;
+    scale: 1;
   }
 }
 
 @keyframes slide-down {
-  from {
-    top: 1em;
-    background: red;
-    width: 400px;
-    height: 240px;
-  }
   to {
     top: 48%;
     background: blue;
-    width: 600px;
-    height: 200px;
+    aspect-ratio: 1;
   }
 }
 ```
