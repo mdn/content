@@ -59,7 +59,7 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static)
   - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.promising()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/promising_static)
-  - : Wraps an exported Wasm function that relies on an asychronous operation (that is, an imported suspending function created via the [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending) constructor), turning it into a {{jsxref("Promise")}}.
+  - : Wraps an exported Wasm function that relies on an asynchronous operation (that is, an imported suspending function created via the [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending) constructor), turning it into a {{jsxref("Promise")}}.
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (`true`) or not (`false`).
 
