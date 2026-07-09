@@ -117,7 +117,7 @@ div {
 }
 ```
 
-### Properties that follow the corner shape
+### Properties that follow `corner-shape`
 
 The following properties all follow the shape of the corner when set on the container:
 
