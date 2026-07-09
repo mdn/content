@@ -45,7 +45,7 @@ details to the console:
 try {
   throw new WebAssembly.SuspendError("Hello", "someFile", 10);
 } catch (e) {
-  console.log(e instanceof SuspendError); // true
+  console.log(e instanceof WebAssembly.SuspendError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "SuspendError"
   console.log(e.fileName); // "someFile"
