@@ -37,7 +37,7 @@ A new `Suspending` object instance.
 
 ```js
 function someAsyncFunction() {
-  fetch("https://example.com").then((result) => {
+  return fetch("https://example.com").then((result) => {
     // ...
   });
 }
