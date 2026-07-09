@@ -876,7 +876,6 @@ Hover or focus the nav items to see the animated effects. Note how naturally the
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
-    padding: 1rem 0;
 
     z-index: 1;
     position: fixed;
