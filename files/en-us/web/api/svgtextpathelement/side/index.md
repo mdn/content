@@ -178,5 +178,4 @@ Toggle the button to move the text from one side to the other.
 
 ## See also
 
-- {{domxref("SVGTextPathElement.side")}}
 - [`SVGTextPathElement` method types](/en-US/docs/Web/API/SVGTextPathElement#static_properties)

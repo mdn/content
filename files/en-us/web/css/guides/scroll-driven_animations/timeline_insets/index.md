@@ -585,6 +585,7 @@ line {
 ```
 
 ```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
+<main>
   <article>
     <p>&nbsp;</p>
     <p>&nbsp;</p>

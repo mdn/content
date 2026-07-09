@@ -14,10 +14,10 @@ The **`alpha()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refe
 ```css
 /* Replace alpha with a fixed value */
 alpha(from red / 50%)
-alpha(from var(--mycolor) / 80%)
+alpha(from var(--my-color) / 80%)
 
 /* Derive alpha relative to the origin color's alpha */
-alpha(from var(--mycolor) / calc(alpha * 0.5))
+alpha(from var(--my-color) / calc(alpha * 0.5))
 ```
 
 ### Parameters
@@ -55,18 +55,18 @@ In this example, we specify two colors. The second color is defined by passing t
 
 ```css live-sample___replace-alpha
 :root {
-  --mycolor: oklch(60% 0.25 315 / 0.3);
+  --my-color: oklch(60% 0.25 315 / 0.3);
 
   /* Same color, but with alpha set to 80% */
-  --mycolor-80: alpha(from var(--mycolor) / 80%);
+  --my-color-80: alpha(from var(--my-color) / 80%);
 }
 
 .box1 {
-  background-color: var(--mycolor);
+  background-color: var(--my-color);
 }
 
 .box2 {
-  background-color: var(--mycolor-80);
+  background-color: var(--my-color-80);
 }
 ```
 
@@ -100,18 +100,18 @@ This example is very similar to the previous one, except that this time the alph
 
 ```css live-sample___derive-alpha
 :root {
-  --mycolor: oklch(60% 0.25 315 / 0.8);
+  --my-color: oklch(60% 0.25 315 / 0.8);
 
-  /* Half the opacity of --mycolor */
-  --mycolor-half-opacity: alpha(from var(--mycolor) / calc(alpha * 0.5));
+  /* Half the opacity of --my-color */
+  --my-color-half-opacity: alpha(from var(--my-color) / calc(alpha * 0.5));
 }
 
 .box1 {
-  background-color: var(--mycolor);
+  background-color: var(--my-color);
 }
 
 .box2 {
-  background-color: var(--mycolor-half-opacity);
+  background-color: var(--my-color-half-opacity);
 }
 ```
 
