@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`border-shape`** [CSS](/en-US/docs/Web/CSS) property enables using {{cssxref("basic-shape")}} values to define a container's border shape.
+The **`border-shape`** [CSS](/en-US/docs/Web/CSS) property defines an element's border shape using {{cssxref("basic-shape")}} values.
 
 ## Syntax
 
