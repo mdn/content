@@ -456,6 +456,7 @@ The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézi
 
 ## See also
 
+- {{cssxref("border-shape")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module

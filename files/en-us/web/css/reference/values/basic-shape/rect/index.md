@@ -14,6 +14,7 @@ The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the 
 ```css
 offset-path: rect(0 1% auto 3% round 0 1px);
 clip-path: rect(50px 70px 80% 20%);
+border-shape: rect(10px 500px 130px 20px round 20px);
 ```
 
 ### Values

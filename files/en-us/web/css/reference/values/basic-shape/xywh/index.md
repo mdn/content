@@ -14,6 +14,7 @@ The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle using t
 ```css
 offset-path: xywh(0 1% 2px 3% round 0 1px 2% 3px);
 clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
+border-shape: xywh(5% 5% 90% 90% round 20px);
 ```
 
 ### Values

@@ -49,6 +49,7 @@ clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
 
 ```css
 shape-outside: inset(20px 50px 10px 0 round 50px);
+border-shape: inset(10px 20px 10px 20px round 20px);
 ```
 
 ### Values

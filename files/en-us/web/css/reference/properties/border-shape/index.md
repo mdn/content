@@ -64,7 +64,7 @@ The `border-shape` property may be specified using the keyword `none`, or one or
 ### Values
 
 - `none`
-  - : The initial value. Specifies that no border shape is defined.
+  - : Specifies that no border shape is defined. The initial value.
 - {{cssxref("basic-shape")}}
   - : A function defining the shape of the border.
 - [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) {{optional_inline}}

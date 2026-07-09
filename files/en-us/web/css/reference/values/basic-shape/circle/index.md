@@ -54,6 +54,7 @@ clip-path: circle(farthest-side);
 ```css
 shape-outside: circle(50%);
 clip-path: circle(6rem at 12rem 8rem);
+border-shape: circle(60%);
 ```
 
 ### Values
