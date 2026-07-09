@@ -24,7 +24,7 @@ To use this functionality, you first need to wrap `Promise`-based functions insi
 
 ```js
 function someAsyncFunction() {
-  fetch("https://example.com").then((result) => {
+  return fetch("https://example.com").then((result) => {
     // ...
   });
 }
