@@ -136,6 +136,7 @@ See [Demonstration of properties that follow the `corner-shape`](#demonstration_
 The `corner-shape` property has no effect when the {{cssxref("border-shape")}} property is set on an element. This is because `border-shape` is incompatible with `border-radius`: when `border-shape` is set, any specified `border-radius` is ignored; `corner-shape` depends on `border-radius` and therefore has no effect either.
 
 If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
+
 ## Formal definition
 
 {{cssinfo}}
