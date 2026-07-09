@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.xywh
 sidebar: cssref
 ---
 
-The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle using the specified distances from the left (`x`) and top (`y`) edges of the containing block and the specified width (`w`) and height (`h`) of the rectangle. It is a basic shape function of the {{cssxref("basic-shape")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `xywh()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves, {{cssxref("clip-path")}} to define the shape of the clipping region, and {{cssxref("border-shape")}} to define the shape of an element's border.
+The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle using the specified distances from the left (`x`) and top (`y`) edges of the containing block and the specified width (`w`) and height (`h`) of the rectangle. It is a basic shape function of the {{cssxref("basic-shape")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `xywh()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves, in {{cssxref("clip-path")}} to define the shape of the clipping region, and in {{cssxref("border-shape")}} to define the shape of an element's border.
 
 ## Syntax
 
