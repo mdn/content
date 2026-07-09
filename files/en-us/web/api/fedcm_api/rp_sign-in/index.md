@@ -14,7 +14,7 @@ RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 
 If the user has never signed into an IdP or is logged out, `CredentialsContainer.get()` rejects with an error and the RP can direct the user to an IdP page to sign in or create an account.
 
-Otherwise, if the user identity is successfully validated by the chosen IdP, `CredentialsContainer.get()` returns a promise that fulfills with an {{domxref("IdentityCredential")}} object .
+Otherwise, if the user identity is successfully validated by the chosen IdP, `CredentialsContainer.get()` returns a promise that fulfills with an {{domxref("IdentityCredential")}} object.
 
 ### The `IdentityCredential.token` object
 
