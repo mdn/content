@@ -634,7 +634,7 @@ The rendered result looks like this:
 
 ## See also
 
-- {{Cssxref("border-radius")}}
+- {{cssxref("border-radius")}}
 - {{cssxref("border-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
