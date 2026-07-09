@@ -23,20 +23,20 @@ border-shape: none;
 border-shape: circle(50%);
 border-shape: rect(10px 460px 130px 20px round 20px);
 border-shape: shape(
-      from 0% 0%,
-      hline to 33%,
-      arc by 33% 0% of 16% 20% small cw,
-      hline to 100%,
-      line to 100% 33%,
-      arc by 0% 33% of 20% 16% small cw,
-      line to 100% 100%,
-      hline to 66%,
-      arc by -33% 0% of 16% 20% small ccw,
-      hline to 0%,
-      line to 0% 66%,
-      arc by 0% -33% of 20% 16% small ccw,
-      close
-    );
+  from 0% 0%,
+  hline to 33%,
+  arc by 33% 0% of 16% 20% small cw,
+  hline to 100%,
+  line to 100% 33%,
+  arc by 0% 33% of 20% 16% small cw,
+  line to 100% 100%,
+  hline to 66%,
+  arc by -33% 0% of 16% 20% small ccw,
+  hline to 0%,
+  line to 0% 66%,
+  arc by 0% -33% of 20% 16% small ccw,
+  close
+);
 
 /* Two <basic-shape> values */
 border-shape: circle(50%) ellipse(40% 30%);
