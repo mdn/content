@@ -6,7 +6,7 @@ browser-compat: webassembly.api.promising_static
 sidebar: webassemblysidebar
 ---
 
-The **`WebAssembly.promising()`** static method is used to wrap an exported Wasm function that relies on an asychronous operation (that is, an imported suspending function created via the [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending) constructor), turning it into a {{jsxref("Promise")}}.
+The **`WebAssembly.promising()`** static method is used to wrap an exported Wasm function that relies on an asynchronous operation (that is, an imported suspending function created via the [`WebAssembly.Suspending()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending/Suspending) constructor), turning it into a {{jsxref("Promise")}}.
 
 See [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending) for an explanation of how this functionality works.
 
