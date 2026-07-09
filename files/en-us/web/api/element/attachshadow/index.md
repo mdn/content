@@ -225,7 +225,7 @@ class MyArticle extends HTMLElement {
   constructor() {
     super();
     // Attach the shadow root
-    this.attachShadow({ mode: "open" /*, slotAssignment: "named"*/ });
+    this.attachShadow({ mode: "open" /* , slotAssignment: "named" */ });
   }
 
   connectedCallback() {

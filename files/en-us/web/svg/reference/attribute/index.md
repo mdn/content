@@ -412,7 +412,7 @@ Most presentation attributes inherit when used as CSS properties (for example, {
 #### Geometry properties
 
 Geometry properties describe the position and dimensions of SVG shapes.
-In [SVG 2](https://www.w3.org/TR/SVG2/#GeometryProperties), they are a defined subset of presentation attributes whose CSS counterparts do not inherit.
+In [SVG 2](https://svgwg.org/svg2-draft/geometry.html), they are a defined subset of presentation attributes whose CSS counterparts do not inherit.
 
 Each geometry property applies as a presentation attribute only on certain elements.
 For example, {{SVGAttr("r")}} defines the radius of a {{SVGElement("circle")}}, but has no effect on elements such as {{SVGElement("rect")}}.
