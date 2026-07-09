@@ -82,7 +82,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebAssembly -->
+### WebAssembly
+
+- JavaScript Promise Integration (JS-PI) is now enabled, allowing [WebAssembly](/en-US/docs/WebAssembly) modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles. See [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending) for an explanation and working example. ([Firefox bug 2044809](https://bugzil.la/2044809)).
 
 <!-- #### Removals -->
 

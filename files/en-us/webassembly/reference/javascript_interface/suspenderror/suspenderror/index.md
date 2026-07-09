@@ -1,24 +1,23 @@
 ---
-title: WebAssembly.LinkError() constructor
-slug: WebAssembly/Reference/JavaScript_interface/LinkError/LinkError
+title: WebAssembly.SuspendError() constructor
+slug: WebAssembly/Reference/JavaScript_interface/SuspendError/SuspendError
 page-type: webassembly-constructor
-browser-compat: webassembly.api.LinkError.LinkError
+browser-compat: webassembly.api.SuspendError.SuspendError
 sidebar: webassemblysidebar
 ---
 
-The **`WebAssembly.LinkError()`** constructor creates a new
-WebAssembly `LinkError` object, which indicates an error during module
-instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap)
-from the start function).
+The **`WebAssembly.SuspendError()`** constructor creates a new
+WebAssembly `SuspendError` object, which indicates an error during
+WebAssembly [function suspension](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending).
 
 ## Syntax
 
 ```js-nolint
-new WebAssembly.LinkError()
-new WebAssembly.LinkError(message)
-new WebAssembly.LinkError(message, options)
-new WebAssembly.LinkError(message, fileName)
-new WebAssembly.LinkError(message, fileName, lineNumber)
+new WebAssembly.SuspendError()
+new WebAssembly.SuspendError(message)
+new WebAssembly.SuspendError(message, options)
+new WebAssembly.SuspendError(message, fileName)
+new WebAssembly.SuspendError(message, fileName, lineNumber)
 ```
 
 ### Parameters
@@ -37,22 +36,22 @@ new WebAssembly.LinkError(message, fileName, lineNumber)
 
 ## Examples
 
-### Creating a new LinkError instance
+### Creating a new SuspendError instance
 
-The following snippet creates a new `LinkError` instance, and logs its
+The following snippet creates a new `SuspendError` instance, and logs its
 details to the console:
 
 ```js
 try {
-  throw new WebAssembly.LinkError("Hello", "someFile", 10);
+  throw new WebAssembly.SuspendError("Hello", "someFile", 10);
 } catch (e) {
-  console.log(e instanceof WebAssembly.LinkError); // true
+  console.log(e instanceof WebAssembly.SuspendError); // true
   console.log(e.message); // "Hello"
-  console.log(e.name); // "LinkError"
+  console.log(e.name); // "SuspendError"
   console.log(e.fileName); // "someFile"
   console.log(e.lineNumber); // 10
   console.log(e.columnNumber); // 0
-  console.log(e.stack); // returns the location where the code was run
+  console.log(e.stack); // The location where the code was run
 }
 ```
 
@@ -66,6 +65,6 @@ try {
 
 ## See also
 
+- [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending)
 - [WebAssembly](/en-US/docs/WebAssembly) overview
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
