@@ -36,7 +36,7 @@ border-shape: shape(
       line to 0% 66%,
       arc by 0% -33% of 20% 16% small ccw,
       close
-    )
+    );
 
 /* Two <basic-shape> values */
 border-shape: circle(50%) ellipse(40% 30%);
