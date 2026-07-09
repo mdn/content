@@ -37,9 +37,9 @@ Another essential concept in coding is **functions**, which allow you to store a
 
 ## Where do I find functions?
 
-In JavaScript, you'll find functions everywhere. In fact, we've been using functions throughout the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly and exploring their syntax.
+In JavaScript, you'll find functions everywhere. In fact, we've been using functions throughout the course so far; we've just not talked about them very much. Now is the time, however, for us to start talking about functions explicitly and exploring their syntax.
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#while_and_do...while), or [if...else statement](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_statements), you are making use of a function.
+Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common language structure like a [for loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn_web_development/Core/Scripting/Loops#while_and_do...while), or [if...else statement](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
@@ -86,7 +86,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 ## Functions versus methods
 
-**Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about method versus function — you are likely to meet both terms as you look at related resources across the Web.
+**Functions** that are part of objects are called **methods**; you'll learn about objects later in the module. For now, we just wanted to clear up any possible confusion about methods versus functions — you are likely to meet both terms as you look at related resources across the Web.
 
 The built-in code we've used so far comes in both forms: **functions** and **methods.** You can check the full list of built-in functions, as well as built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
@@ -138,17 +138,17 @@ myFunction();
 
 ## Function arguments and parameters
 
-Some functions require **arguments** to be specified when you invoke them — these are values that need to be included inside the function parentheses when it is called for the function to do its job properly.
+Some functions require **arguments** when you invoke them — values that need to be included inside the function parentheses for the function to do its job properly.
 
-You'll also hear the term **parameters** used, often interchangeably with _arguments_. This is often OK in informal discussions, but they have different meanings. Parameters are the variables listed in a function definition, while arguments are the values passed to the function when it is called.
+You'll also hear the term **parameters** used, often interchangeably with _arguments_. This is often OK in informal discussions, but they have different meanings. Parameters are the variables listed in a function definition, while arguments are the values passed to the function to represent the parameters when the function is called.
 
-Let's look at some examples. The browser's built-in [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any arguments. When called, it always returns a random number between 0 and 1:
+Let's look at some examples. The [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any arguments. When called, it always returns a random number between 0 and 1:
 
 ```js
 const myNumber = Math.random();
 ```
 
-The browser's built-in string [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function, however, needs two arguments — the substring to find in the main string, and the substring to replace that string with:
+The string [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function, however, needs two arguments — the substring to find in the main string, and the substring to replace that string with:
 
 ```js
 const myText = "I am a string";
@@ -158,9 +158,9 @@ const newString = myText.replace("string", "sausage");
 > [!NOTE]
 > When you need to specify multiple parameters or arguments, you separate them with commas.
 
-### Optional arguments
+### Optional parameters
 
-Sometimes arguments are optional — you don't have to specify them. If you don't, the function generally uses a default value. As an example, the array [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's argument is optional:
+Sometimes parameters are defined as optional — you don't have to specify the equivalent arguments when calling the function. If you don't, the function generally uses a default value. As an example, the array [`join()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
 ```js
 const myArray = ["I", "love", "chocolate", "frogs"];
@@ -177,7 +177,7 @@ If no argument is included to specify a joining/delimiting character, a comma is
 
 ### Default parameters
 
-If you're writing a function and want to support optional arguments, you can specify default parameter values by adding `=` after the name of the parameter, followed by the default value:
+If you're writing a function and want to define optional parameters, you can specify default values by adding `=` after the name of the parameter, followed by the default value:
 
 ```js
 function hello(name = "Chris") {
@@ -206,14 +206,14 @@ But you can also create a function that doesn't have a name:
 });
 ```
 
-This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as an argument. In this case, the argument is often passed as an anonymous function.
+This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as an argument. In this case, an anonymous function is often passed as the argument.
 
 > [!NOTE]
 > This form of creating a function is also known as _function expression_. Unlike function declarations, function expressions are not hoisted.
 
 ### Anonymous function example
 
-For example, let's say you want to run some code when the user types into a text box. To do this, you can call the {{domxref("EventTarget.addEventListener", "addEventListener()")}} function of the text box. This function expects you to include at least two arguments:
+For example, let's say you want to run some code when the user types into a text box. To do this, you can call the {{domxref("EventTarget.addEventListener", "addEventListener()")}} function of the text box. This function expects at least two arguments:
 
 - The name of the event to listen for, which in this case is {{domxref("Element.keydown_event", "keydown")}}
 - A function to run when the event happens.
@@ -254,7 +254,7 @@ textBox.addEventListener("keydown", event => {
 });
 ```
 
-Finally, if your function only contains a single line that's a `return` statement, you can omit the braces and the `return` keyword, and implicitly return the expression. In the following example, we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
+Finally, if your function contains only a single line that's a `return` statement, you can omit the braces and the `return` keyword, and implicitly return the expression. In the following example, we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
 
 ```js-nolint
 const originals = [1, 2, 3];
