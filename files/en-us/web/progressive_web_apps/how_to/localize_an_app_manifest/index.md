@@ -5,15 +5,16 @@ page-type: how-to
 sidebar: pwasidebar
 ---
 
-[Progressive Web App (PWA)](/en-US/docs/Web/Progressive_web_apps) manifests can be localized using a combination of localizable members, which have the suffix [`_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized), and the [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) and [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) members.
-
-Manifest localization allows the browser to choose between different text strings (for app names and descriptions, for example) and icons when loading the app to best suit the user's language preferences.
+[Progressive Web App (PWA)](/en-US/docs/Web/Progressive_web_apps) manifest localization allows the browser to choose between different text strings (for app names and descriptions, for example) and icons when loading the app to best suit the user's language preferences. Manifests can be localized using localizable members, which have the suffix [`_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized).
 
 This guide shows how to localize a PWA manifest.
 
+> [!NOTE]
+> The [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) and [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) manifest members have no effect on manifest localization. The language is chosen based on the user's browser language settings.
+
 ## Example non-localised PWA
 
-The rest of this guide develops a multilingual PWA manifest using the following example as a starting point.
+This guide develops a multilingual PWA manifest using the following example as a starting point.
 
 ```json
 {
@@ -37,17 +38,6 @@ The rest of this guide develops a multilingual PWA manifest using the following 
     }
   ]
 }
-```
-
-## Set a default language and direction
-
-The [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) and [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) members define a default language and language direction for the app. These will be assumed by the browser if no language and direction more suitable for the user's preferences are found in the [`*_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized) variants. In such cases, the non-prefixed members are used (for example, `name`).
-
-Set a suitable default language and direction like so:
-
-```json
-"lang": "en-US",
-"dir": "ltr"
 ```
 
 ## Choose the manifest members you want to localize
@@ -88,6 +78,8 @@ Let's see what this could look like for our example:
 
 In this case, we've used the string form for all the languages, except for Urdu, which uses the object form. We've done it this way because Urdu is an RTL language, and we need to specify a `dir` value of `rtl` for it so that browsers will display it correctly.
 
+If the user has their browser language set to `fr`, `de`, `ur`, or `ja`, the browser will use the appropriate name found in the `name_localized` member for that language as the app's `name`. If not, the browser will use the name found in the `name` member.
+
 ## Localizing the other text-based members
 
 We can follow the same pattern as we did for the `name` member to localize the `short_name` and `description` members:
@@ -110,7 +102,7 @@ We can follow the same pattern as we did for the `name` member to localize the `
 },
 ```
 
-The French (`fr`) `short_name` translation shows typical usage of the object value form being used to specify a `lang` property. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronounciation).
+The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronounciation).
 
 ## Localizing the `icon` member
 
@@ -196,8 +188,6 @@ Putting this all together, the complete manifest looks like this:
       "type": "image/png"
     }
   ],
-  "lang": "en-US",
-  "dir": "ltr",
   "name_localized": {
     "fr": "L'application de saucisse SuperSausage",
     "de": "Die SuperWurst-App",
@@ -277,7 +267,5 @@ Putting this all together, the complete manifest looks like this:
 
 ## See also
 
-- [`dir`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/dir) manifest member
-- [`lang`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/lang) manifest member
 - [`*_localized`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/*_localized) manifest members
 - [Localization support for web app manifests](https://developer.chrome.com/blog/manifest-localization) on developer.chrome.com (2026)
