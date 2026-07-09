@@ -102,7 +102,7 @@ We can follow the same pattern as we did for the `name` member to localize the `
 },
 ```
 
-The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronounciation).
+The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation).
 
 ## Localizing the `icon` member
 

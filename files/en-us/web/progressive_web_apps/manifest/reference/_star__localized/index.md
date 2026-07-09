@@ -129,7 +129,7 @@ Sometimes you will want to specify a different `lang` value inside a localized v
 }
 ```
 
-In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronounciation). This is done by specifying a `lang` value of `en-US` inside the variant.
+In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation). This is done by specifying a `lang` value of `en-US` inside the variant.
 
 ### Localized icons
 
