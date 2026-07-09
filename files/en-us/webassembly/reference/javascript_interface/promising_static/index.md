@@ -2,7 +2,7 @@
 title: WebAssembly.promising()
 slug: WebAssembly/Reference/JavaScript_interface/promising_static
 page-type: webassembly-function
-browser-compat: webassembly.api.promsing_static
+browser-compat: webassembly.api.promising_static
 sidebar: webassemblysidebar
 ---
 
