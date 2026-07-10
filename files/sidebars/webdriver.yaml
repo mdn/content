@@ -47,6 +47,21 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/create
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextCreated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
@@ -124,3 +139,8 @@ sidebar:
     link: /Web/WebDriver/Reference/Errors
     details: closed
     code: true
+l10n:
+  fr:
+    Commands: Commandes
+    Events: Évènements
+    Shared: Partagé

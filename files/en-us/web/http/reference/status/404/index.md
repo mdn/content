@@ -2,7 +2,7 @@
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.404
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.404
 sidebar: http
 ---
 

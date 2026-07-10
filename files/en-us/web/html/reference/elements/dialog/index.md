@@ -308,7 +308,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
 
 #### JavaScript
 
-The dialog is opened using using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
+The dialog is opened using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
 
 The dialog is closed when the "Cancel" button is clicked, because the `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
 When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).

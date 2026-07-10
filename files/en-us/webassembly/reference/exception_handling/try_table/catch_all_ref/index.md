@@ -61,7 +61,7 @@ const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
 // Import the tag and the log function into the module
 const env = {
   my_error: myErrorTag,
-  log: () => {
+  log() {
     console.log("An error was caught!");
   },
 };
@@ -120,7 +120,7 @@ The `catch_all_ref` clause can be included inside a [`try_table`](/en-US/docs/We
 
 The exception can then be rethrown using a [`throw_ref`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw_ref) instruction.
 
-`catch_all_ref` is useful when you want to report that some kind of exception has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that an error ocurred.
+`catch_all_ref` is useful when you want to report that some kind of exception has been thrown, but you also want to rethrow the exception. You might for example want to perform an action such as cleanup or logging but then still let users know that an error occurred.
 
 The referenced block must declare a result type that matches the pushed `exnref`. In the example shown earlier, the block branched to when the exception is caught specifies an `exnref` type in its `result`:
 

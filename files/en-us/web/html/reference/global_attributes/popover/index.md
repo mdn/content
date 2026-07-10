@@ -20,7 +20,7 @@ The `popover` attribute can take one of the following values:
     > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
 
 - `"hint"`
-  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
+  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers that are not its ancestors in the [hint stack](/en-US/docs/Web/API/Popover_API/Using#popover_openclose_interaction_rules).
     They can be light dismissed and will respond to close requests.
 
 - `"manual"`
@@ -40,7 +40,7 @@ They can also be controlled using JavaScript, for example the {{domxref("HTMLEle
 
 By contrast, [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers must be manually shown and hidden — they don't automatically close other popovers when they are displayed and they can't be light dismissed. This allows for use cases where you want to show multiple popovers at the same time.
 
-[`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers. They can be light dismissed and will respond to close requests.
+[`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers that are not its ancestors in the hint stack. They can be light dismissed and will respond to close requests.
 
 Usually `hint` popovers are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 

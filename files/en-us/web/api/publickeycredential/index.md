@@ -104,9 +104,7 @@ Here, we fetch an existing credential from an authenticator, using {{domxref("Cr
 ```js
 const requestCredentialOptions = {
   publicKey: {
-    challenge: new Uint8Array([
-      /* bytes sent from the server */
-    ]),
+    challenge: new Uint8Array([/* bytes sent from the server */]),
   },
 };
 

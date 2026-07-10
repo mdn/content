@@ -3,13 +3,9 @@ title: "`<selectedcontent>` HTML selected option display element"
 short-title: <selectedcontent>
 slug: Web/HTML/Reference/Elements/selectedcontent
 page-type: html-element
-status:
-  - experimental
 browser-compat: html.elements.selectedcontent
 sidebar: htmlsidebar
 ---
-
-{{SeeCompatTable}}
 
 The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) is used inside a {{htmlelement("select")}} element to display the contents of its currently selected {{htmlelement("option")}} within its first child {{htmlelement("button")}}. This enables you to style all parts of a `<select>` element, referred to as "[customizable selects](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)".
 
