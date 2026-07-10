@@ -17,7 +17,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 - {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
-- {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("side")}} attribute of the given element.
     Allowed values are specified by the [`TEXTPATH_SIDETYPE_*`](#textpath_sidetype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
