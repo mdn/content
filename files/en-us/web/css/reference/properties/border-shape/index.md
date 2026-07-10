@@ -66,11 +66,11 @@ The `border-shape` property may be specified using the keyword `none`, or one or
 - `none`
   - : Specifies that no border shape is defined. This is the initial value.
 - {{cssxref("basic-shape")}}
-  - : A function defining the shape of the border.
+  - : Defines the shape of the border using one of the `<basic-shape>` functions.
 - [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) {{optional_inline}}
-  - : A keyword defining the reference box for the border shape to be drawn relative to. If not included, the shape's reference geometry box defaults to:
+  - : Defines the reference box relative to which the border shape is drawn. If not included, the shape's reference geometry box defaults to:
     - `half-border-box` if a single basic shape is specified, which means that any defined border is drawn on top of the shape path, with the path going down its center.
-    - `border-box` for the first (outer) shape and `padding-box` for the second (inner) shape, if two basic shapes are specified. The border then occupies the area between the two shapes.
+    - `border-box` for the first (outer) shape and `padding-box` for the second (inner) shape if two basic shapes are specified. The border then occupies the area between the two shapes.
 
 ## Description
 
