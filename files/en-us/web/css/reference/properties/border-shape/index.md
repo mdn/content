@@ -74,7 +74,7 @@ The `border-shape` property may be specified using the keyword `none`, or one or
 
 ## Description
 
-The `border-shape` property enables you to set the border shape of any element (including inline and pseudo-elements) to any shape creatable by functions defined in the {{cssxref("basic-shape")}} value. This includes:
+The `border-shape` property enables you to define the shape of any element's border (including those of inline and pseudo-elements) using one of the {{cssxref("basic-shape")}} functions. These functions include:
 
 - {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}: Provide different ways to define basic rectangle shapes.
 - {{cssxref("basic-shape/circle","circle()")}}: Defines circle shapes.
