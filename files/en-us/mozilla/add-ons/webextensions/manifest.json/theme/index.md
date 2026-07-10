@@ -161,7 +161,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         <p>
           An array of additional background items, each being either the path to an image asset packaged in the extension or <a href="#css_gradient_syntax">CSS gradient</a>, to be added to
           the header area and displayed behind the
-          <code>"theme_frame":</code> items. These items layer the first item in
+          <code>"theme_frame":</code> item. These additional background items layer the first item in
           the array on top and the last item at the bottom. CSS gradients are
           supported from Firefox 153.
         </p>
@@ -170,6 +170,9 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           By default, all items are anchored to the upper right corner of the
           header area, but their alignment, repeat, and size behavior can be
           controlled by <a href="#properties"><code>"properties":</code></a>.
+        </p>
+        <p>
+          As additional background items display behind the <code>theme_frame</code>item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
         </p>
       </td>
     </tr>
