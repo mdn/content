@@ -79,9 +79,9 @@ The `border-shape` property enables you to define the shape of any element's bor
 - {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}: Provide different ways to define basic rectangle shapes.
 - {{cssxref("basic-shape/circle","circle()")}}: Defines circle shapes.
 - {{cssxref("basic-shape/ellipse","ellipse()")}}: Defines ellipse shapes.
-- {{cssxref("basic-shape/path","path()")}}: Defines any kind of shape using [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string syntax. SVG path syntax has limitations — it can only use pixel values and it has to be defined as a single string, so custom properties can't be included via {{cssxref("var()")}}. It is advised to use `shape()` instead.
-- {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon shape via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
-- {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()`, and solves its shortcomings.
+- {{cssxref("basic-shape/path","path()")}}: Defines any kind of shape using [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string syntax. SVG path syntax has limitations — it can use only pixel values and the path has to be defined as a single string, so custom properties can't be included via {{cssxref("var()")}}. You are advised to use `shape()` instead.
+- {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
+- {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()` and solves its shortcomings.
 
 When you apply the `border-shape` property to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element follow the shape of the border.
 
