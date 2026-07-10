@@ -83,7 +83,7 @@ The `border-shape` property enables you to define the shape of any element's bor
 - {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon shape via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
 - {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()`, and solves its shortcomings.
 
-When a `border-shape` is applied to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element will follow the shape of the border.
+When you apply the `border-shape` property to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element follow the shape of the border.
 
 This allows precise creation of speech bubbles and abstract tooltip shapes without resorting to hacks. For example,
 
