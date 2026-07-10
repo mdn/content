@@ -53,6 +53,9 @@ The `<box-edge>` keywords are defined as follows:
 - `border-box`
   - : Refers to the outer edge of the border of the box. If there is no border on a side, then the value is the same as `padding-box`. In SVG, `border-box` is treated as `stroke-box`. The border area surrounds the padding area, starting at the outer edge of the padding box.
 
+- `half-border-box`
+  - : Refers to a box shape that traverses the center of the border region; the inner half of the border region is inside the shape, and the outer half of the border region is outside the shape.
+
 - `margin-box`
   - : Refers to the outer edge of the margin of the box. If there is no margin on a side, then the value is the same as `border-box`. In SVG, `margin-box` is treated as `stroke-box`.
 

@@ -23,19 +23,8 @@ border-shape: none;
 border-shape: circle(50%);
 border-shape: rect(10px 460px 130px 20px round 20px);
 border-shape: shape(
-  from 0% 0%,
-  hline to 33%,
-  arc by 33% 0% of 16% 20% small cw,
-  hline to 100%,
-  line to 100% 33%,
-  arc by 0% 33% of 20% 16% small cw,
-  line to 100% 100%,
-  hline to 66%,
-  arc by -33% 0% of 16% 20% small ccw,
-  hline to 0%,
-  line to 0% 66%,
-  arc by 0% -33% of 20% 16% small ccw,
-  close
+  from 5% 0.5rem,
+  arc to 80px 1pt of 10% ccw large rotate 25deg
 );
 
 /* Two <basic-shape> values */
@@ -44,12 +33,12 @@ border-shape: polygon(0% 0%, 0% 100%, 100% 0%)
   polygon(10% 10%, 10% 70%, 70% 10%);
 
 /* <basic-shape> and <geometry-box> values */
+border-shape: circle(50%) border-box ellipse(40% 30%) view-box;
+border-shape: rect(5px 198px 189px 0px round 20px) view-box circle(50%);
 border-shape: path(
     "M 35,95 C 35,50 60,15 100,20 C 120,5 160,5 180,22 C 200,5 250,5 270,22 C 295,5 340,5 360,22 C 395,10 440,35 440,75 C 455,90 450,120 430,128 C 400,145 360,145 330,130 C 300,145 260,145 230,130 C 200,145 160,145 130,130 C 80,142 35,120 35,95 Z"
   )
   view-box;
-border-shape: circle(50%) border-box ellipse(40% 30%) view-box;
-border-shape: rect(5px 198px 189px 0px round 20px) view-box circle(50%);
 
 /* Global values */
 border-shape: inherit;
