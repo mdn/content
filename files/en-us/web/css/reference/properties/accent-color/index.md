@@ -94,6 +94,9 @@ contrast. That accent color is not used by every user-interface control nor in
 every state of the control. The `accent-color` is only applied to user-interface
 controls that use an accent color in the states where it is applicable.
 
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, `accent-color: auto` is only set in installed web apps, on a user's initial profile.
+
 ## Formal definition
 
 {{cssinfo}}

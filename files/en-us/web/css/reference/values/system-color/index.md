@@ -130,6 +130,9 @@ Depending on your settings, the sample colors displayed in the table may change.
   </tbody>
 </table>
 
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, the `AccentColor` and `AccentColorText` colors are only set in installed web apps, on a user's initial profile.
+
 ### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
