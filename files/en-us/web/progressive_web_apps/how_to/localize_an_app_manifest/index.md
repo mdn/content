@@ -33,6 +33,22 @@ This guide develops a multilingual PWA manifest using the following example as a
       "sizes": "256x256",
       "type": "image/png"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open menu",
+      "short_name": "Menu",
+      "description": "Go to the menu.",
+      "url": "./menu",
+      "icons": [
+        {
+          "src": "./icons/menu-128.png",
+          "sizes": "128x128",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
   ]
 }
 ```
@@ -47,7 +63,7 @@ The following members support localized variants:
 - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 - [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
 
-Our sample manifest has all of these except for `shortcuts`; we'll show how to localize each one.
+Our sample manifest has all of these; we'll show how to localize each one.
 
 ## Choose the languages you want to support
 
@@ -101,9 +117,9 @@ We can follow the same pattern as we did for the `name` member to localize the `
 
 The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation).
 
-## Localizing the `icon` member
+## Localizing the `icons` member
 
-Localized images are handled somewhat differently to localized text. The properties of each `*_localized` member (`icon_localized`, in this case) are equal to an array of objects containing the same properties as the non-localized original (`icon`); each one provides details for a localized image.
+Localized icons are handled somewhat differently to localized text. The properties of each `icons_localized` member are equal to an array of objects containing the same properties as the non-localized `icons` member; each one provides details for a localized icon.
 
 Let's see what this looks like:
 
@@ -158,6 +174,58 @@ Let's see what this looks like:
     }
   ],
 }
+```
+
+## Localizing the `shortcuts` member
+
+In the case of the `shortcuts` member, you don't specify the localizations inside a `shortcuts_localized` member. Instead, you provide `*_localized` versions of the `name`, `short_name`, `description`, and `icons` members nested inside the `shortcut` member.
+
+For our example, this looks like so:
+
+```json
+"shortcuts": [
+  {
+    "name": "Open menu",
+    "name_localized": {
+      "fr": "Menu ouvert",
+      "de": "Menü öffnen",
+      "ur": { "value": "اوپن مینو", "dir": "rtl" },
+      "ja": "メニューを開く"
+    },
+    "short_name": "Menu",
+    "short_name_localized": {
+      "fr": "Menu",
+      "de": "Speisekarte",
+      "ur": { "value": "مینو", "dir": "rtl" },
+      "ja": "メニュー"
+    },
+    "description": "Go to the menu.",
+    "description_localized": {
+      "fr": "Allez au menu.",
+      "de": "Geh zur Speisekarte.",
+      "ur": { "value": "مینو پر جائیں۔", "dir": "rtl" },
+      "ja": "メニューに行け。"
+    },
+    "url": "./menu",
+    "icons": [
+      { "src": "./icons/menu-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+    ],
+    "icons_localized": {
+      "fr": [
+        { "src": "./icons/l10n/fr/menu-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ],
+      "de": [
+        { "src": "./icons/l10n/de/menu-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ],
+      "ur": [
+        { "src": "./icons/l10n/ur/menu-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ],
+      "ja": [
+        { "src": "./icons/l10n/ja/menu-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ]
+    }
+  }
+]
 ```
 
 ## Finished manifest
@@ -258,7 +326,75 @@ Putting this all together, the complete manifest looks like this:
         "type": "image/png"
       }
     ]
-  }
+  },
+  "shortcuts": [
+    {
+      "name": "Open menu",
+      "name_localized": {
+        "fr": "Menu ouvert",
+        "de": "Menü öffnen",
+        "ur": { "value": "اوپن مینو", "dir": "rtl" },
+        "ja": "メニューを開く"
+      },
+      "short_name": "Menu",
+      "short_name_localized": {
+        "fr": "Menu",
+        "de": "Speisekarte",
+        "ur": { "value": "مینو", "dir": "rtl" },
+        "ja": "メニュー"
+      },
+      "description": "Go to the menu.",
+      "description_localized": {
+        "fr": "Allez au menu.",
+        "de": "Geh zur Speisekarte.",
+        "ur": { "value": "مینو پر جائیں۔", "dir": "rtl" },
+        "ja": "メニューに行け。"
+      },
+      "url": "./menu",
+      "icons": [
+        {
+          "src": "./icons/menu-128.png",
+          "sizes": "128x128",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+      "icons_localized": {
+        "fr": [
+          {
+            "src": "./icons/l10n/fr/menu-128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ],
+        "de": [
+          {
+            "src": "./icons/l10n/de/menu-128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ],
+        "ur": [
+          {
+            "src": "./icons/l10n/ur/menu-128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ],
+        "ja": [
+          {
+            "src": "./icons/l10n/ja/menu-128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any"
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 

@@ -2,7 +2,7 @@
 title: "*_localized"
 slug: Web/Progressive_web_apps/Manifest/Reference/*_localized
 page-type: web-manifest-member
-browser-compat: manifests.webapp.localizable_members
+browser-compat: manifests.webapp.localized_members
 sidebar: pwasidebar
 ---
 
@@ -11,18 +11,18 @@ The `_localized` suffix is added to manifest members to create localized variant
 ## Syntax
 
 ```json-nolint
-/* Localized text value */
+/* Localized text values */
 "member_localized": {
   "lang1": text_l10n,
   "lang2": text_l10n,
   "langN": text_l10n,
 }
 
-/* Localized image resource */
+/* Localized icon resources */
 "member_localized": {
-  "lang1": image_l10n,
-  "lang2": image_l10n,
-  "langN": image_l10n,
+  "lang1": icon_l10n,
+  "lang2": icon_l10n,
+  "langN": icon_l10n,
 }
 ```
 
@@ -34,8 +34,8 @@ The `_localized` suffix is added to manifest members to create localized variant
       - : Each object contains one or more properties with keys equal to a {{glossary("BCP 47 language tag")}} representing a language to provide a variant for. The property values can be one of two types:
         - `text_l10n`
           - : An object or a string containing a text localization; see [text localization](#text_localization).
-        - `image_l10n`
-          - : An array of objects containing references to localized image resources; see [icon localization](#icon_localization).
+        - `icon_l10n`
+          - : An array of objects containing references to localized icon resources; see [icon localization](#icon_localization).
 
 #### Text localization
 
@@ -56,16 +56,17 @@ The object representation can have the following properties:
 - `lang` {{optional_inline}}
   - : A string containing a BCP 47 language tag, used in cases where localized text needs to be presented in a different language from the user's locale.
 
-In cases where the `dir` and `lang` properties do not need to be specified, the shorthand string representation can be used. This consists of a string containing the localized text `value`.
+In cases where the `dir` and `lang` properties do not need to be specified, a shorthand string representation can be used, which contains the localized text `value`.
 
 #### Icon localization
 
-When the localized variant provides localized icon details, the property values are arrays containing one or more objects representing icon choices.
+The `icons_localized` member object property values are arrays containing one or more objects representing localized icon choices.
 
-The exact properties contained within each object will be the same as the properties contained within the non-localized versions of the members:
+Each object contains the same properties as the non-localized [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) member: `src`, `sizes`, `type`, and `purpose`.
 
-- For `icons_localized`, the objects can have the same properties as the [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) member: `src`, `sizes`, `type`, and `purpose`.
-- For `shortcuts_localized`, the objects can have the same properties as the [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member: `name`, `short_name`, `description`, `url`, and [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons).
+#### Shortcut localization
+
+The [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member can be localized, but this is not done by specifying a `shortcuts_localized` member. Instead, you provide `*_localized` versions of the `name`, `short_name`, `description`, and [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) members nested inside the `shortcut` member.
 
 ## Description
 
@@ -75,13 +76,12 @@ You can add the `_localized` suffix to a supporting manifest member to create lo
 
 If one of the keys matches the user's browser language setting, that variant will be used. If not, the non-prefixed manifest member value will be used.
 
-Members for which localized variants are supported:
+Members for which localized variants are supported (both at the manifest top level, and inside the [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member):
 
 - [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name)
 - [`short_name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/short_name)
 - [`description`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/description)
 - [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
-- [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts)
 
 ### Localized text
 
@@ -133,7 +133,7 @@ In this case, our French audience knows our app by its English brand name — "S
 
 ### Localized icons
 
-A localized icon set consists of an object containing multiple arrays, each one containing objects representing the icon choices for a different locale:
+A localized `icons` set consists of an object containing multiple arrays, each one containing objects representing the icon choices for a different locale:
 
 ```json
 {
@@ -172,9 +172,55 @@ A localized icon set consists of an object containing multiple arrays, each one 
 
 If the user has their browser language set to `de`, `ar`, or `fr`, an appropriate entry from the `icons_localized` member will be used. If not, the icon referenced in the `icons` member will be used.
 
+### Localized shortcuts
+
+Localized shortcut sub-members are provided inside the `shortcuts` member.
+
+For example:
+
+```json
+"shortcuts": [
+  {
+    "name": "Open dashboard",
+    "name_localized": {
+      "en": { "value": "Open dashboard", "lang": "en", "dir": "ltr" },
+      "de": { "value": "Dashboard öffnen", "lang": "de", "dir": "ltr" },
+      "ar": { "value": "فتح لوحة المعلومات", "lang": "ar", "dir": "rtl" }
+    },
+    "short_name": "Dashboard",
+    "short_name_localized": {
+      "en": { "value": "Dashboard", "lang": "en", "dir": "ltr" },
+      "de": { "value": "Dashboard", "lang": "de", "dir": "ltr" },
+      "ar": { "value": "لوحة", "lang": "ar", "dir": "rtl" }
+    },
+    "description": "Go to your dashboard.",
+    "description_localized": {
+      "en": { "value": "Go to your dashboard.", "lang": "en", "dir": "ltr" },
+      "de": { "value": "Zum Dashboard wechseln.", "lang": "de", "dir": "ltr" },
+      "ar": { "value": "انتقل إلى لوحتك.", "lang": "ar", "dir": "rtl" }
+    },
+    "url": "./dashboard",
+    "icons": [
+      { "src": "./icons/shortcut-dashboard.png", "sizes": "96x96", "type": "image/png", "purpose": "any" }
+    ],
+    "icons_localized": {
+      "en": [
+        { "src": "./icons/icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ],
+      "de": [
+        { "src": "./icons/localized_icons/de/Iconka-Meow-Cat-purr.128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ],
+      "ar": [
+        { "src": "./icons/localized_icons/ar/black_cat-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" }
+      ]
+    }
+  }
+],
+```
+
 ## Examples
 
-For complete demos, check out;
+For examples, check out;
 
 - The [PWA manifest localization demo](https://microsoftedge.github.io/Demos/pwa-manifest-localization/) app ([see source code](https://github.com/MicrosoftEdge/Demos/tree/main/pwa-manifest-localization/)).
 - Our [Localize an app manifest](/en-US/docs/Web/Progressive_web_apps/How_to/Localize_an_app_manifest) How to guide.
