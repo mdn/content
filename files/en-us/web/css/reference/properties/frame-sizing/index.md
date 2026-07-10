@@ -108,7 +108,7 @@ iframe {
 
 #### Result
 
-{{EmbedGHLiveSample("responsive-iframe-sizing/basic/", "100%", 300)}}
+{{EmbedGHLiveSample("dom-examples/responsive-iframe-sizing/basic/", "100%", 300)}}
 
 Even though no explicit `height` has been set on the `<iframe>`, it is sized to the right height to exactly contain its embedded document, with no scroll bars.
 

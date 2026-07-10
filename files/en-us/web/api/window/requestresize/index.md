@@ -93,12 +93,12 @@ iframe {
 
 #### JavaScript
 
-The script inside `frame.html` starts by grabbing a reference to the `<div>` element. It then sets `click` and `keypress` event listeners on the `<div>`, both of which run a custom function called `addParagraph()` when the event fires.
+The script inside `frame.html` starts by grabbing a reference to the `<div>` element. It then sets `click` and `keydown` event listeners on the `<div>`, both of which run a custom function called `addParagraph()` when the event fires.
 
 ```js
 const divElem = document.querySelector("div");
 divElem.addEventListener("click", addParagraph);
-window.addEventListener("keypress", addParagraph);
+window.addEventListener("keydown", addParagraph);
 ```
 
 The `addParagraph()` function generates a new paragraph element and appends it to the end of the `<div>` as a child, increasing its height. It then calls `requestResize()` so that the new height is reported to the parent document.
@@ -114,7 +114,7 @@ function addParagraph() {
 
 #### Result
 
-{{EmbedGHLiveSample("responsive-iframe-sizing/js-request-resize/", "100%", 300)}}
+{{EmbedGHLiveSample("dom-examples/responsive-iframe-sizing/js-request-resize/", "100%", 300)}}
 
 Even though no explicit `height` has been set on the `<iframe>`, it is sized to the right height to exactly contain its embedded document, with no scroll bars. Try clicking on the `<div>` or focusing it and pressing a key on the keyboard. As a new paragraph is added to the `<div>`, the `<div>` grows in height, but the `<iframe>` also grows in height to match it.
 
@@ -130,6 +130,6 @@ You can also [load the demo in a separate tab](https://mdn.github.io/dom-example
 
 ## See also
 
-- {{domxref("frame-sizing")}} CSS property
+- {{cssxref("frame-sizing")}} CSS property
 - [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing)
