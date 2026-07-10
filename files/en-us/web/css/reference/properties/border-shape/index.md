@@ -333,7 +333,7 @@ p {
 
 Note how this time, the border covers the area between the rectangle and the circle, and it adopts the color set in the `border` declaration.
 
-### Comparison between different shape values
+### Comparing `border-shape` values
 
 In this example, we allow you to set different `border-shape` values on an element, to allow you to compare and contrast them.
 
