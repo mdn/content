@@ -22,8 +22,7 @@ The HTML for this example features a {{htmlelement("textarea")}} element to ente
 <h1>Prompt API demo</h1>
 <p>
   This demo stores your previous session prompt history using the Web Storage
-  API, and provides an option to delete it. Released in Chrome 148, but trialled
-  since version 137.
+  API, and provides an option to delete it. First released in Chrome 148.
 </p>
 
 <h2>Input</h2>
@@ -122,13 +121,18 @@ if (localStorage.promptHistory) {
 
 ## Adding the prompt history to the session
 
-Next, we create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `focus` event handler on the `<textarea>`. When the user focuses the `<textarea>`, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function. We pass `getSession()` the `promptHistory` variable from earlier to add the saved history to the session on creation.
+Next, we create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `focus` event handler on the `<textarea>`. When the user focuses the `<textarea>`, we first check whether the API is supported; if not, we print a non-support message and `return` early. Next, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function. We pass `getSession()` the `promptHistory` variable from earlier to add the saved history to the session on creation.
 
-Provided that is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
+Provided generation is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
 
 ```js live-sample___preserve-history
 let session;
 textarea.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }

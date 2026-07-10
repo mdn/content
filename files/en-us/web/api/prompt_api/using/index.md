@@ -172,7 +172,7 @@ In our markup, we define an input {{htmlelement("textarea")}} that allows the us
 
 ```html live-sample___prompt-example
 <h1>Prompt API demo</h1>
-<p>Released in Chrome 148, but trialled since version 137.</p>
+<p>First released in Chrome 148.</p>
 
 <h2>Input</h2>
 <form>
@@ -250,11 +250,18 @@ submitBtn.disabled = true;
 const promptOutput = document.querySelector(".prompt-output");
 ```
 
-Next, we create a global `session` variable to hold our session. Because using the API requires transient activation, we populate `session` inside a `focus` event handler on the `<textarea>`. When the user focuses the `<textarea>`, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function, which we will define later on. Provided that is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
+Next, we create a global `session` variable to hold our session. Because using the API requires transient activation, we populate `session` inside a `focus` event handler on the `<textarea>`. When the user focuses the `<textarea>`, we first check whether the API is supported; if not, we print a non-support message and `return` early. Next, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function defined later on.
+
+Provided generation is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
 
 ```js live-sample___prompt-example
 let session;
 textarea.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }

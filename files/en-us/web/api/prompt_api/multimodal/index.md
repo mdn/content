@@ -76,7 +76,7 @@ The file to describe can be chosen using an [`<input type="file">`](/en-US/docs/
 <h1>Prompt API demo</h1>
 <p>
   This demo loads an image from your local filesystem, and then uses the Prompt
-  API to describe it. Released in Chrome 148, but trialled since version 137.
+  API to describe it. First released in Chrome 148.
 </p>
 
 <h2>Input</h2>
@@ -158,9 +158,9 @@ button {
 
 ### JavaScript
 
-We create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `focus` event handler on the `<input>` element. When the user focuses the `<input>`, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function.
+We create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `focus` event handler on the `<input>` element. When the user focuses the `<input>`, we first check whether the API is supported; if not, we print a non-support message and `return` early. Next, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function.
 
-Provided that is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
+Provided generation is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
 
 ```js hidden live-sample___multimodal
 const form = document.querySelector("form");
@@ -176,6 +176,11 @@ const imgElem = document.querySelector("img");
 ```js live-sample___multimodal
 let session;
 inputElem.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }

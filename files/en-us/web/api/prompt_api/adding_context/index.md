@@ -144,8 +144,7 @@ Technically, this is very similar to the [complete example](/en-US/docs/Web/API/
 <h1>Prompt API rate my name!</h1>
 <p>
   Enter your name (or someone else's name) into the input field and press the
-  rate button to have AI review your name. Released in Chrome 148, but trialled
-  since version 137.
+  rate button to have AI review your name. First released in Chrome 148.
 </p>
 
 <h2>Input</h2>
@@ -218,6 +217,11 @@ const promptOutput = document.querySelector(".prompt-output");
 
 let session;
 inputElem.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }
@@ -431,8 +435,7 @@ Let's look at a real implementation of the excerpt example mentioned previously.
 <p>
   Enter a passage of text (such as a book excerpt) into the textarea, then enter
   a question about the text into the single-line input. Press the submit button
-  to ask your question to the API. Released in Chrome 148, but trialled since
-  version 137.
+  to ask your question to the API. First released in Chrome 148.
 </p>
 
 <h2>Input</h2>
@@ -467,6 +470,11 @@ const promptOutput = document.querySelector(".prompt-output");
 
 let session;
 textareaElem.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }
