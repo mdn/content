@@ -6,7 +6,7 @@ browser-compat: http.mixed-content
 sidebar: security
 ---
 
-When a web page is loaded from a secure origin, over a secure channel such as {{Glossary("HTTPS")}}, the connection with the web server is encrypted, and is therefore protected from eavesdropping and modification by man-in-the-middle attacks.
+When a web page is loaded from a secure origin, over a secure channel such as {{Glossary("HTTPS")}}, the connection with the web server is encrypted, and is therefore protected from eavesdropping and modification by [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacks.
 If the securely loaded web page only includes images, scripts, and other resources that are also hosted on secure origins, users can be confident that the whole page is safe from these kinds of attacks.
 
 "Mixed content" refers to securely loaded web pages that use resources to be fetched via HTTP or another insecure protocol.
