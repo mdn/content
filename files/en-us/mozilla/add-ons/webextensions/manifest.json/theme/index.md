@@ -1309,6 +1309,9 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"right center"</code></li>
           <li><code>"right top"</code>.</li>
         </ul>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_alignment</code> contains <code>["left", "top"]</code>, the third background item is aligned using <code>"left"</code>, the fourth using <code>"top"</code>, and the fifth <code>"left"</code>.
+        </p>
         <p>If not specified, defaults to <code>"right top"</code>.</p>
       </td>
     </tr>
@@ -1330,6 +1333,9 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"repeat-x"</code></li>
           <li><code>"repeat-y"</code></li>
         </ul>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_tiling</code> contains <code>["no-repeat", "repeat-x"]</code>, the third background item is tiled using <code>"no-repeat"</code>, the fourth using <code>"repeat-x"</code>, and the fifth <code>"no-repeat"</code>.
+        </p>
         <p>If not specified, defaults to <code>"no-repeat"</code>.</p>
       </td>
     </tr>
@@ -1348,6 +1354,9 @@ Additionally, this key accepts various properties that are aliases for one of th
           property, such as <code>"auto"</code>, <code>"cover"</code>,
           <code>"contain"</code>, or explicit width and height values (for
           example, <code>"100px 200px"</code>).
+        </p>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_size</code> contains <code>["auto", "100px 100px"]</code>, the third background item is sized using <code>"auto"</code>, the fourth using <code>"100px 100px"</code>, and the fifth <code>"auto"</code>.
         </p>
         <p>If not specified, defaults to <code>"auto"</code>.</p>
       </td>
