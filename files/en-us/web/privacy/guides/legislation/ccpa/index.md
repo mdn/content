@@ -53,7 +53,7 @@ CCPA defines consumer rights over their personal data, including:
 
 CCPA also explicitly prevents discrimination. Data controllers cannot retaliate against data subjects for exercising their privacy rights.
 
-### Requirements
+### Conformity requirements
 
 CCPA compliance is ultimately an engineering problem as much as a legal one. To comply with CCPA, you should [design for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy) and build privacy into your application's architecture, data flows, and UI features. Ensure you collect the minimum data needed, store it securely and transparently, make it retrievable and deletable, and provide your users with control over their privacy choices.
 
@@ -126,7 +126,7 @@ Your work is not limited to the code you control. If you include any third party
 
 Even if these regulations didn't exist, if you collect data, you should automate data retention and deletion. It is good practice, and now the law, to define retention periods for the data you collect, automatically delete expired data, ensure that when data is deleted, the data is deleted from your back ups, with your backup databases following the same deletion rules. Because of regulations and associated audits, you do need to document retention logic.
 
-## Logs and audits
+### Logs and audits
 
 To ensure your privacy audits proceed smoothly, you should log:
 
@@ -145,6 +145,28 @@ Test and monitor privacy features
 - Add automated tests for deletion, export, and opt‑out flows
 - Run privacy regression tests before releases
 - Monitor for unexpected data collection, such as by rogue SDKs
+
+## CCPA in practice
+
+Developers are responsible for implementing all the required features of CCPA, but it takes a team to meet the spirit of the law. For example, the developer must ensuring user's can physically opt-out, but it is important to also have good UX designers who ensure that the options to opt out is evident and easy to use, and technical writers who write clear explanations and understandable calls to action, clearly conveying to the user the purpose of the data collection, what the user's options are, and stating that there will be no discrimination if the user opts out.
+
+Here is an example of an opt out message for email tracking:
+
+> Our emails contain a feature that lets us know **whether they are opened and read**. This is useful to:
+>
+> - **Send you messages that genuinely interest you:** offers, tips, new features and mobility news;
+> - **Write to you at the right time** and the right pace;
+> - **​Measure the quality of our communications** in order to improve them.
+>
+> This indicator tells us about the opening of an email, the time it was read and the type of device used.
+>
+> Nothing to do on your end: this tracking is already active. But you remain free to opt out at any time, from your account or by clicking here:
+>
+> <kbd> I decline tracking </kbd>
+>
+> **Good to know:** Declining tracking does not unsubscribe you from our emails. You'll continue to receive our news and good deals, simply without personalization based on this indicator.
+>
+> To understand everything, see our [privacy policy](https://www.mozilla.org/en-US/privacy/websites/).
 
 ## See also
 
