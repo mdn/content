@@ -15,7 +15,7 @@ GDPR applies to any organization, no matter how small, that processes the [perso
 
 There are no size‑based exemptions, though if a company has fewer than 250 employees, they may be exempt from keeping formal "records of processing activities" (ROPA) — but only if their data processing is occasional, low‑risk, **and** does not involve sensitive data. If a site collects any personal data, either directly or through a third party, and is accessible in the EU, it must comply with all of GDPR.
 
-While the law applies universally, requirements under the law are proportionate to scale and risk.
+While the law applies universally, requirements under the law are proportionate to scale and risk. While the law applies to everyone collecting personal data, a sole proprieter with a small client list will not be expected to maintain a Records of Processing Activities (ROPA). Documenting what data is held, why, and for how long may be enough to demonstrate accountability. The law requires that everyone considers and documents GDPR compliance, but your blog's mailing list doesn't require the same compliance efforts of a multinational corporation.
 
 ### Enforcers
 
@@ -128,3 +128,7 @@ GDPR uses the following terms:
   - : Third parties; any third party that processes personal data on your behalf, such as cloud servers, analytics, and email service providers.
 
 ## See also
+
+- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Guides/CCPA)
+- [Designing for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy)
+- [Privacy](/en-US/docs/Web/Privacy)
