@@ -26,7 +26,7 @@ You could achieve this by just opening a regular new browser window, but this ha
 1. You have to handle sharing of state information between the two windows.
 2. The additional app window doesn't always stay on top, and can therefore get hidden by other windows.
 
-One way to solve these problems is to use [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which manages most of the complexity of placing a single {{htmlelement("video")}} element into a separate window.
+The Picture-in-Picture API for `<video>` solves these problems, managing most of the complexity of placing a single {{htmlelement("video")}} element into a separate always-on-top window.
 
 ### Adding controls
 
