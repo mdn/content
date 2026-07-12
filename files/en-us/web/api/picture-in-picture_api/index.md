@@ -18,7 +18,7 @@ This allows users to continue consuming media while they interact with other sit
 > [!NOTE]
 > The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
-## Concepts
+## Concepts and usage
 
 It is often helpful to play video in a separate window to the rest of your website, allowing you to continue to watch while keeping associated app content in view, or even to view some other website.
 You could achieve this by just opening a regular new browser window, but this has two major issues:
@@ -28,7 +28,7 @@ You could achieve this by just opening a regular new browser window, but this ha
 
 One way to solve these problems is to use [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which manages most of the complexity of placing a single {{htmlelement("video")}} element into a separate window.
 
-### Adding Controls
+### Adding controls
 
 If media action handlers have been set via the [Media Session API](/en-US/docs/Web/API/Media_Session_API), then appropriate controls for those actions will be added by the browser to the picture-in-picture overlay. For example, if a `"nexttrack"` action has been set, then a skip button might be displayed in the picture-in-picture view. There is no support for adding custom HTML buttons or controls.
 
