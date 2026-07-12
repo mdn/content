@@ -87,13 +87,14 @@ With the `v` flag, intersection is expressed with `&&`, and subtraction with `--
 In `v` mode, the [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) `\p` can match finite-length strings, such as emojis. For symmetry, regular character classes can also match more than one character. To write a "string literal" in a character class, you wrap the string in `\q{...}`. The only regex syntax supported here is [disjunction](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction) — apart from this, `\q` must completely enclose literals (including escaped characters). This ensures that character classes can only match finite-length strings with finitely many possibilities.
 
 When a character class contains both single-character and string literal operands, the engine tries longer operands first. For example, `[a\q{ab}]` will match the string `"ab"` as `\q{ab}` rather than matching only the first `"a"`. This greedy string-matching behavior is why `\q{\r\n}` can safely appear at the end of a class containing `\r`.
+Unlike regular disjunction, the order of alternatives within `\q` does not matter, neither does the order of the `\q` escape with the rest of the operands being unioned. During matching, all alternatives specified in a character class are always attempted in descending order of length, so the match is greedy. For example, `[\q{a|ab}]`, `[\q{ab|a}]`, `[\q{ab}a]`, and `[a\q{ab}]` applied to `"ab"` will all match `"ab"`.
+
+Complement character classes `[^...]` cannot possibly be able to match strings longer than one character. For example, `[\q{ab|c}]` is valid and matches the string `"ab"`, but `[^\q{ab|c}]` is invalid because it's unclear how many characters should be consumed. The check is done by checking if all `\q` contain single characters and all `\p` specify character properties — for unions, all operands must be purely characters; for intersections, at least one operand must be purely characters; for subtraction, the leftmost operand must be purely characters. The check is syntactic without looking at the actual character set being specified, which means although `/[^\q{ab|c}--\q{ab}]/v` is equivalent to `/[^c]/v`, it's still rejected.
 
 Because the character class syntax is now more sophisticated, more characters are reserved and forbidden from appearing literally.
 
 - In addition to `]` and `\`, the following characters must be escaped in character classes if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. This list is somewhat similar to the list of [syntax characters](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character), except that `^`, `$`, `*`, `+`, and `?` are not reserved inside character classes, while `/` and `-` are not reserved outside character classes (although `/` may delimit a regex literal and therefore still needs to be escaped). All these characters may also be optionally escaped in `u`-mode character classes.
 - The following "double punctuator" sequences must be escaped as well (but they don't make much sense without the `v` flag anyway): `&&`, `!!`, `##`, `$$`, `%%`, `**`, `++`, `,,`, `..`, `::`, `;;`, `<<`, `==`, `>>`, `??`, `@@`, `^^`, ` `` `, `~~`. In `u` mode, some of these characters can only appear literally within character classes and cause a syntax error when escaped. In `v` mode, they must be escaped when appearing in pairs, but can be optionally escaped when appearing alone. For example, `/[\!]/u` is invalid because it's an [identity escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape), but both `/[\!]/v` and `/[!]/v` are valid, while `/[!!]/v` is invalid. The [literal character](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) reference has a detailed table of which characters can appear escaped or unescaped.
-
-Complement character classes `[^...]` cannot possibly be able to match strings longer than one character. For example, `[\q{ab|c}]` is valid and matches the string `"ab"`, but `[^\q{ab|c}]` is invalid because it's unclear how many characters should be consumed. The check is done by checking if all `\q` contain single characters and all `\p` specify character properties — for unions, all operands must be purely characters; for intersections, at least one operand must be purely characters; for subtraction, the leftmost operand must be purely characters. The check is syntactic without looking at the actual character set being specified, which means although `/[^\q{ab|c}--\q{ab}]/v` is equivalent to `/[^c]/v`, it's still rejected.
 
 ### Complement classes and case-insensitive matching
 
@@ -157,17 +158,21 @@ nonASCIINumbers("𐆊0零1𝟜𑜹a"); // [ '𝟜', '𑜹' ]
 
 ### Matching strings
 
-The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF). In `v` mode, character classes attempt longer string alternatives first, so `\q{\r\n}` can appear at the end of the class and still be matched as a single sequence.
+The following function matches all line terminator sequences, including the [line terminator characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators) and the sequence `\r\n` (CRLF). The order in which the alternatives are specified does not matter, because the longest alternative, `\r\n`, is always preferred.
 
 ```js
 function getLineTerminatorSequences(str) {
   return str.match(/[\r\n\u2028\u2029\q{\r\n}]/gv);
 }
 
-getLineTerminatorSequences("CR \r LF \n CRLF \r\n"); // [ '\r', '\n', '\r\n' ]
+getLineTerminatorSequences(`
+A poem\r
+Is split\rInto many
+Stanzas
+`); // ['\n', '\r\n', '\r', '\n', '\n']
 ```
 
-This expression is functionally equivalent to `/\r\n|\r|\n|\u2028|\u2029/gu` or `/\r\n|[\r\n\u2028\u2029]/gu`, with the `\r\n` alternative attempted before `\r` alone. It is not equivalent to `/[\r\n\u2028\u2029]|\r\n/gu`, because disjunction order matters when one alternative is a prefix of another.
+This regular expression is exactly equivalent to `/(?:\r\n|\r|\n|\u2028|\u2029)/gu` or `/(?:\r\n|[\r\n\u2028\u2029])/gu`. However, in regular disjunction, the order of alternatives matters, so `\r\n` must be specified first in order for it to be preferred. Using a character class not only is shorter but also avoids this pitfall.
 
 The most useful case of `\q{}` is when doing subtraction and intersection. Previously, this was possible with [multiple lookaheads](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection). The following function matches flags that are not one of the American, Chinese, Russian, British, and French flags.
 

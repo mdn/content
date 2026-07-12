@@ -221,7 +221,7 @@ document.getElementById("share").addEventListener("click", async () => {
 
 #### Result
 
-{{EmbedLiveSample('Sharing files')}}
+{{EmbedLiveSample('Sharing files','','','','','','web-share')}}
 
 ## Specifications
 

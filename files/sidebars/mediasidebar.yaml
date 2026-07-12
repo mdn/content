@@ -27,3 +27,8 @@ sidebar:
     link: /Web/Media/Guides/Formats
     title: Media formats
     details: closed
+l10n:
+  fr:
+    Audio and video delivery: Diffusion audio et vidéo
+    Media: Médias
+    Media formats: Formats de médias

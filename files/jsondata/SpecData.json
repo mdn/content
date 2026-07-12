@@ -1006,8 +1006,8 @@
   },
   "HTML Sanitizer API": {
     "name": "HTML Sanitizer API",
-    "url": "https://wicg.github.io/sanitizer-api/",
-    "status": "WD"
+    "url": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#html-sanitization",
+    "status": "Living"
   },
   "HTML WHATWG": {
     "name": "HTML Living Standard",

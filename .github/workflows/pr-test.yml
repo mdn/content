@@ -27,7 +27,7 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
 
@@ -134,12 +134,12 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          npx fred-ssr
+          npx --package=@mdn/fred fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
