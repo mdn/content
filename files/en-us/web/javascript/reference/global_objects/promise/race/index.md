@@ -48,6 +48,8 @@ The `Promise.race()` method is one of the [promise concurrency](/en-US/docs/Web/
 
 If the iterable contains one or more non-promise values and/or an already settled promise, then `Promise.race()` will settle to the first of these values found in the iterable.
 
+Like other promise combinators, `Promise.race()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first settlement will be ignored, and will not trigger any `unhandledrejection` events.
+
 ## Examples
 
 ### Using Promise.race()
@@ -188,28 +190,7 @@ const data = Promise.race([
 
 If the `data` promise fulfills, it will contain the data fetched from `/api`; otherwise, it will reject if `fetch` remains pending for 5 seconds and loses the race with the `setTimeout` timer.
 
-> [!NOTE]
-> Capturing and clearing the timeout handle from `setTimeout` is _not_ required. `Promise.race` will capture and discard any errors thrown by any of the losing promises, and they will not bubble up and become `unhandledRejection`s. In other words, this is not necessary:
-
-```js
-let rejectTimeoutHandle;
-const data = Promise.race([
-  fetch("/api"),
-  new Promise((resolve, reject) => {
-    // Reject after 5 seconds
-    rejectTimeoutHandle = setTimeout(() => reject(new Error("Request timed out")), 5000);
-  }),
-])
-  .then((res) => {
-    clearTimeout(rejectTimeoutHandle);
-    return res.json();
-  })
-  .catch((err) => {
-    // Clear the timeout in case the error was thrown by fetch
-    clearTimeout(rejectTimeoutHandle);
-    displayError(err);
-  });
-```
+Note that there's no need to explicitly clean up the timeout rejection (such as clearing the timeout) in case the `fetch` promise finishes first. `Promise.race` will capture and discard the settlement results of the losing promises, so the `"Request timed out"` rejection will not bubble up as unhandled.
 
 ### Using Promise.race() to detect the status of a promise
 
