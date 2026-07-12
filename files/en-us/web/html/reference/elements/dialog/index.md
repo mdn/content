@@ -287,7 +287,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
       <label>
         Favorite animal:
         <select>
-          <option value="">Choose…</option>
+          <option value="nothing">Choose…</option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
@@ -296,6 +296,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
     </p>
     <div>
       <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="requestCloseBtn">Cancel with requestClose</button>
       <button id="confirmBtn">Confirm</button>
     </div>
   </form>
@@ -320,6 +321,7 @@ const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
 const outputBox = document.querySelector("output");
 const selectEl = favDialog.querySelector("select");
+const requestCloseBtn = favDialog.querySelector("#requestCloseBtn");
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 
 // "Show the dialog" button opens the <dialog> modally
@@ -327,14 +329,20 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"]
-// or `favDialog.close()` was called, triggering a close event.
-// Or "Esc" was pressed, followed by a cancel event, which is also followed by a close event.
+// e.g.: Escape pressed
+favDialog.addEventListener("cancel", (e) => {
+  favDialog.returnValue = "cancelEvent"; // pressing Escape leaves returnValue untouched
+  // requestClose also triggers this but for the following close event it sets returnValue to its argument
+});
+
+// e.g.: "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
 favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === ""
-      ? "No return value." // returnValue had its default "" starting value, or the select box's "Choose…" option's "" value
-      : `ReturnValue: ${favDialog.returnValue}.`;
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+});
+
+requestCloseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  favDialog.requestClose("requestClose");
 });
 
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
