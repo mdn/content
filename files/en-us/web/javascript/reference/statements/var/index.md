@@ -146,8 +146,8 @@ console.log(a); // 2; not undefined
 
 ```js
 console.log(typeof a); // "function"
-var a;
 function a() {}
+var a;
 console.log(typeof a); // "function"
 ```
 
