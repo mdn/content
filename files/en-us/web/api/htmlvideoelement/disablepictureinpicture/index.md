@@ -17,7 +17,7 @@ User configuration may change the eventual behavior—for example, Firefox users
 
 A boolean value that is `true` if the picture-in-picture feature is disabled for this element.
 
-When true, the user agent will not suggest picture-in-picture to users, or request it automatically.
+When `true`, the user agent will not suggest picture-in-picture to users, or request it automatically.
 
 ## Specifications
 

@@ -24,7 +24,8 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has finished exiting picture-in-picture mode. If an error occurs while attempting to exit fullscreen mode, the `catch()` handler for the promise is called.
+A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has finished exiting picture-in-picture mode.
+If an error occurs while attempting to exit picture-in-picture mode, the `catch()` handler for the promise is called.
 
 ### Exceptions
 
