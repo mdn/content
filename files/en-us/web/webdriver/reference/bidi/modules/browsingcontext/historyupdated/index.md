@@ -23,7 +23,7 @@ The `params` field in the event notification is a history update object with the
 - `context`
   - : A string that contains the ID of the context in which the history update is occurring.
 - `timestamp`
-  - : A non-negative integer that represents the time in UTC when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+  - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the updated URL.
 
