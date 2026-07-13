@@ -42,7 +42,7 @@ This element implements the {{domxref("SVGUseElement")}} interface.
 
 ## Example
 
-The following example shows how to use the `<use>` element to draw a circle with a different fill and stroke color.
+The following example shows how to use the `<use>` element to draw multiple circles with different fill and stroke colors.
 
 ```css hidden
 html,
