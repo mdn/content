@@ -150,7 +150,7 @@ The `border-shape` property has two different modes:
 
 Optionally, you can include a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value, to specify the reference box the shapes should be drawn relative to.
 
-The `border-shape` creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
+The `border-shape` property creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
 The content and background of the element is clipped by the `border-shape` (inner shape, in fill mode). When the shape you are specifying is the same size or smaller than the content/background, you don't tend to need to adjust the reference box, unless you want to create some kind of offset effect. However, when the shape you are specifying is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to employ a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
 
