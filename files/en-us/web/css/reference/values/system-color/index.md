@@ -131,7 +131,7 @@ Depending on your settings, the sample colors displayed in the table may change.
 </table>
 
 > [!NOTE]
-> To reduce the risk of {{glossary("fingerprinting")}}, the `AccentColor` and `AccentColorText` colors are only set in installed web apps, on a user's initial profile.
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `AccentColor` and `AccentColorText` unless they are used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ### Deprecated system color keywords
 

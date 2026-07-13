@@ -95,7 +95,7 @@ every state of the control. The `accent-color` is only applied to user-interface
 controls that use an accent color in the states where it is applicable.
 
 > [!NOTE]
-> To reduce the risk of {{glossary("fingerprinting")}}, `accent-color: auto` is only set in installed web apps, on a user's initial profile.
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `accent-color: auto` unless it is used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ## Formal definition
 
