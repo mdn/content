@@ -124,6 +124,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **JPEG XL image support** (Nightly): `image.jxl.enabled`
 
   The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
+
 - **Tree counting CSS functions**: `layout.css.tree-counting-functions.enabled`
 
   The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`.
