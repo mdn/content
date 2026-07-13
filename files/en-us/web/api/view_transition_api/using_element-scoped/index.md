@@ -41,8 +41,8 @@ The markup includes a {{htmlelement("ul")}} list of links between two {{htmlelem
 
 ```html live-sample___basic-element-scoped
 <p>
-  I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea narwhal
-  asymmetrical.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus.
+  Set sit amet ipsum mauris.
 </p>
 
 <ul>
@@ -53,8 +53,8 @@ The markup includes a {{htmlelement("ul")}} list of links between two {{htmlelem
 </ul>
 
 <p>
-  Kombucha laborum tempor iceland pour-over. Keytar in echo park gorpcore
-  bespoke.
+  Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et
+  mollis dolor.
 </p>
 ```
 
@@ -196,7 +196,7 @@ function handleClick(e) {
 
 {{embedlivesample("basic-element-scoped", "100%", "520")}}
 
-Click/activate the links to see the view tranasition on each one.
+Click/activate the links to see the view transition on each one.
 
 Each `<a>` element has its own view transition, scoped just to that element. The rest of the page stays interactive while a view transition is ongoing, so you can run multiple view transitions at the same time. In addition, the transitioning elements stay below the overlapping generated content positioned above them.
 
@@ -244,25 +244,25 @@ The HTML is similar to the previous example, except that the central element is 
 
 ```html live-sample___element-scoped-clipping
 <p>
-  I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea narwhal
-  asymmetrical.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus.
+  Set sit amet ipsum mauris.
 </p>
 
 <section>
   <p>
-    I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea
-    narwhal asymmetrical. Af health goth shaman in slow-carb godard echo park.
-    Tofu farm-to-table labore salvia tote bag food truck dolore gluten-free
-    poutine kombucha fanny pack +1 franzen lyft fugiat. Chicharrones next level
-    jianbing, enamel pin seitan cardigan bruh snackwave beard incididunt dolor
-    lumber before they sold out dreamcatcher single-origin coffee.
+    Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec
+    et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae
+    augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec
+    ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit
+    amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis
+    felis, pulvinar a semper sed, adipiscing id dolor.
   </p>
 </section>
 <button>Change!</button>
 
 <p>
-  Kombucha laborum tempor iceland pour-over. Keytar in echo park gorpcore
-  bespoke.
+  Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et
+  mollis dolor.
 </p>
 ```
 
@@ -340,8 +340,8 @@ The script defines a `content` array containing two different strings to swap th
 
 ```js hidden live-sample___element-scoped-clipping
 const content = [
-  "I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon eanarwhal asymmetrical. Af health goth shaman in slow-carb godard echopark. Tofu farm-to-table labore salvia tote bag food truck dolore gluten-free poutine kombucha fanny pack +1 franzen lyft fugiat. Chicharrones next level jianbing, enamel pin seitan cardigan bruh snackwave beard incididunt dolor lumber before they sold out dreamcatcher single-origin coffee.",
-  "Kombucha laborum tempor iceland pour-over. Keytar in echo park gorpcore bespoke. Art party quinoa stumptown celiac, sed chillwave 3 wolf moon. Scenester fugiat pariatur, seitan selvage excepteur chambray yuccie artisan. Sunt schlitz ugh, et jawn sus four loko pop-up post-ironic photo booth occaecat deep v 8-bit tacos marfa. Tattooed ipsum tbh occaecat umami four loko adaptogen taiyaki truffaut hexagon neutral milk hotel.",
+  "Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.",
+  "Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum.",
 ];
 
 const section = document.querySelector("section");
@@ -350,7 +350,7 @@ const btn = document.querySelector("button");
 ```
 
 ```js
-const content = ["I'm baby xOXO ...", "Kombucha laborum ..."];
+const content = ["Maecenas congue ligula ...", "Nam vulputate diam ..."];
 
 const section = document.querySelector("section");
 const para = document.querySelector("section p");
@@ -398,8 +398,8 @@ The HTML is the same as for the [first example](#basic_element-scoped_example), 
 
 ```html hidden live-sample___element-scoped-nested
 <p>
-  I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea narwhal
-  asymmetrical.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus.
+  Set sit amet ipsum mauris.
 </p>
 <div class="wrapper">
   <ul class="one">
@@ -417,8 +417,8 @@ The HTML is the same as for the [first example](#basic_element-scoped_example), 
   </ul>
 </div>
 <p>
-  Kombucha laborum tempor iceland pour-over. Keytar in echo park gorpcore
-  bespoke.
+  Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et
+  mollis dolor.
 </p>
 ```
 

@@ -406,6 +406,20 @@ The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
+### Tree counting CSS functions
+
+The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`. ([Firefox bug 2042063](https://bugzil.la/2042063)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.tree-counting-functions.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -444,22 +458,6 @@ This algorithm is similar to strict equality `===` (where `-0` and `+0` are cons
 
 - `javascript.options.experimental.iterator_includes`
   - : Set to `true` to enable.
-
-### TC39 Intl.Locale info proposal
-
-The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
-This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
-([Firefox bug 1693576](https://bugzil.la/1693576)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | No                  |
-| Developer Edition | —             | —                   |
-| Beta              | —             | —                   |
-| Release           | —             | —                   |
-
-- `javascript.options.experimental.intl_locale_info`
-  - : Set to `true` to enable on Nightly.
 
 ### Text module import
 
@@ -633,7 +631,7 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 90            | Yes                 |
+| Nightly           | 153           | Yes                 |
 | Developer Edition | 152           | No                  |
 | Beta              | 152           | No                  |
 | Release           | 152           | No                  |

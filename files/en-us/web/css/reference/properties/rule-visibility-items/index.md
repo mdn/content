@@ -45,7 +45,7 @@ rule-visibility-items: normal;
     <p>Two fish</p>
     <p>Red fish</p>
     <p>Blue fish</p>
-    <cite>-- Dr. Seuss<cite>
+    <cite>-- Dr. Seuss</cite>
   </section>
 </section>
 ```
@@ -87,7 +87,7 @@ rule-visibility-items: unset;
   - : Rules should be painted in all gap segments, regardless of whether adjacent areas contain an item.
 
 - `around`
-  - : A rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by a item.
+  - : A rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by an item.
 
 - `between`
   - : A rule should be painted in a gap segment only if both adjacent areas are occupied by items.

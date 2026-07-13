@@ -17,7 +17,7 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refere
 Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
 
 The **`url()`** function can be included as a value for
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
 [src](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src) as part of a {{cssxref("@font-face")}} block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
 
 ## Syntax
