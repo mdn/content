@@ -72,9 +72,11 @@ The `border-shape` property enables you to define the shape of any element's bor
 - {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
 - {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()` and solves its shortcomings.
 
+You can also include an optional [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value to specify the reference box relative to which the shapes should be drawn.
+
 When you apply the `border-shape` property to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element follow the shape of the border.
 
-This allows precise creation of speech bubbles and abstract tooltip shapes without resorting to hacks. For example,
+This allows precise creation of speech bubbles and abstract tooltip shapes that play well with other styles defined on the element, without resorting to hacks. For example:
 
 ```html hidden live-sample___speech-bubble-demo
 <img src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg" />
@@ -140,15 +142,13 @@ p {
 
 {{EmbedLiveSample("speech-bubble-demo", "100%", "240")}}
 
-The `border-shape` property has two different modes:
+The `border-shape` property has the following two modes:
 
-- If a single basic shape is provided in the value, that shape defines the border shape of the element, with defined border styles drawn as a stroke around the shape. This is known as **stroke mode**.
-- If two basic shapes are provided in the value, the first shape defines the outer boundary of the border, the second shape defines in inner boundary of the border, and any defined border color fills the area between the two. This is known as **fill mode**.
+- If a single `<basic-shape>` is provided in the value, that shape defines the shape of the element's border, with the defined border styles drawn as a stroke around the shape, as shown in the previous example. This is known as **stroke mode**.
+- If two `<basic-shape>`s are provided in the value, the first shape defines the outer boundary of the border, the second shape defines the inner boundary of the border, and any defined border color fills the area between the two boundaries. This is known as **fill mode**.
 
 > [!NOTE]
-> It doesn't make sense to define a bigger shape for the inner boundary than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered, or one shape rendered behind the other.
-
-Optionally, you can include a [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value, to specify the reference box the shapes should be drawn relative to.
+> Avoid defining a shape for the inner boundary that's larger than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered or one shape rendered behind the other.
 
 The `border-shape` creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
@@ -158,17 +158,18 @@ The content and background of the element is clipped by the `border-shape` (inne
 
 There are several limitations on the styles that will be applied to borders with a `border-shape` property set:
 
-- {{cssxref("border-image")}}: Not applied.
-- {{cssxref("border-style")}}: Not applied. All borders are rendered with a `solid` style.
-- {{cssxref("border-color")}}: Border color is applied, however when different colors are applied to different edges of the element, the browser chooses the first edge it finds that has a border color applied, in the following order:
+- {{cssxref("border-color")}}: This property is applied. However, when multiple element borders have different colors applied, the browser chooses the first edge with a border color, in the following order:
+
   - Block start edge
   - Inline start edge
   - Block end edge
   - Inline end edge
 
-  It then applies that edge's border color to the entire rendered border.
+  The browser then applies that edge's border color to the entire rendered `border-shape`.
 
-- {{cssxref("border-width")}}: In stroke mode, border width is applied directly to the rendered border. When different widths are applied to different edges of the element, the browser selects a width to apply to the entire rendered border using the same process as described for `border-color`.
+- {{cssxref("border-image")}}: Not applied.
+- {{cssxref("border-style")}}: Not applied. All borders are rendered with a `solid` style.
+- {{cssxref("border-width")}}: In stroke mode, border width is applied directly to the rendered border. When multiple element borders have different widths applied, the browser selects a width to apply to the entire rendered `border-shape` using the same process as described for `border-color`.
 
   In fill mode, the border area is defined by the difference in area between the outer and inner shapes, therefore `border-width` doesn't have any direct effect on the rendered border width. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` keywords to `content-box` or `padding-box`), therefore you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
 
