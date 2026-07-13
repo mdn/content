@@ -150,13 +150,13 @@ The `border-shape` property has the following two modes:
 > [!NOTE]
 > Avoid defining a shape for the inner boundary that's larger than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered or one shape rendered behind the other.
 
-The `border-shape` creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
+The `border-shape` property creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
-The content and background of the element is clipped by the `border-shape` (inner shape, in fill mode). When the shape you are specifying is the same size or smaller than the content/background, you don't tend to need to adjust the reference box, unless you want to create some kind of offset effect. However, when the shape you are specifying is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to employ a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
+The element's content and background are clipped by the `border-shape` property (the inner shape in fill mode). When the specified shape is the same size or smaller than the content/background, you won't need to adjust the reference box unless you want to create some kind of offset effect. However, when the specified shape is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to use a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
 
 ### Limitations on border styles applied to border shapes
 
-There are several limitations on the styles that will be applied to borders with a `border-shape` property set:
+Not all border styles are applied to elements with a `border-shape` property set. The following list explains how each property is affected:
 
 - {{cssxref("border-color")}}: This property is applied. However, when multiple element borders have different colors applied, the browser chooses the first edge with a border color, in the following order:
 
@@ -169,9 +169,9 @@ There are several limitations on the styles that will be applied to borders with
 
 - {{cssxref("border-image")}}: Not applied.
 - {{cssxref("border-style")}}: Not applied. All borders are rendered with a `solid` style.
-- {{cssxref("border-width")}}: In stroke mode, border width is applied directly to the rendered border. When multiple element borders have different widths applied, the browser selects a width to apply to the entire rendered `border-shape` using the same process as described for `border-color`.
+- {{cssxref("border-width")}}: In stroke mode, `border-width` is applied directly to the rendered `border-shape`. When multiple edges have different border widths, the browser selects a width to apply to the entire border using the same process as described for `border-color`.
 
-  In fill mode, the border area is defined by the difference in area between the outer and inner shapes, therefore `border-width` doesn't have any direct effect on the rendered border width. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` keywords to `content-box` or `padding-box`), therefore you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
+  In fill mode, the border area is defined by the difference between the areas of the outer and inner shapes; therefore, `border-width` doesn't have any direct effect on the width of the rendered border. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` to `content-box` or `padding-box`), though you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
 
 As an example, if an element has the following declarations applied:
 
@@ -182,7 +182,7 @@ border-left: 40px dotted hotpink;
 border-right: 50px double yellow;
 ```
 
-The rendered box will have a rectangular border with rounded corners. The border style will be `solid`, as other styles are ignored. The border width and color will be `40px` and `hotpink`, because the `border-left` property applies styles to the inline start edge (assuming that the page has a horizontal {{cssxref("writing-mode")}}) and that is the first edge with border styles applied in the browser's priority list described earlier.
+The rendered box will have a rectangular border with rounded corners. The border style will be `solid` because other styles are ignored. The border width and color will be `40px` and `hotpink`, respectively – this is because the `border-left` property applies styles to the inline start edge (assuming that the page has a horizontal {{cssxref("writing-mode")}}), which is the first edge with border styles; this gets chosen by the browser per the priority list described earlier.
 
 ### Interaction with `border-radius` and `corner-shape`
 
