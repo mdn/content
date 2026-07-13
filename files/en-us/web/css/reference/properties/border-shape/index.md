@@ -181,7 +181,7 @@ border-left: 40px dotted hotpink;
 border-right: 50px double yellow;
 ```
 
-The rendered box will have a rectangular border with rounded corners. The border style will be `solid`, as other styles are ignored. The border width and color will be `40px` and `hotpink`, because the `border-left` property applies styles to the inline start edge (assuming that the page has a horizontal {{cssxref("writing-mode")}}) and that is the first edge with border styles applied in the browser's priority list described earlier.
+The rendered box will have a rectangular border with rounded corners. The border style will be `solid` because other styles are ignored. The border width and color will be `40px` and `hotpink`, respectively – this is because the `border-left` property applies styles to the inline start edge (assuming that the page has a horizontal {{cssxref("writing-mode")}}), which is the first edge with border styles; this gets chosen by the browser per the priority list described earlier.
 
 ### Interaction with `border-radius` and `corner-shape`
 
