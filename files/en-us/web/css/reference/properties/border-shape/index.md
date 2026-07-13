@@ -168,9 +168,9 @@ Not all border styles are applied to elements with a `border-shape` property set
 
   It then applies that edge's border color to the entire rendered border.
 
-- {{cssxref("border-width")}}: In stroke mode, border width is applied directly to the rendered border. When different widths are applied to different edges of the element, the browser selects a width to apply to the entire rendered border using the same process as described for `border-color`.
+- {{cssxref("border-width")}}: In stroke mode, `border-width` is applied directly to the rendered border. When multiple edges have different border widths, the browser selects a width to apply to the entire rendered border using the same process as described for `border-color`.
 
-  In fill mode, the border area is defined by the difference in area between the outer and inner shapes, therefore `border-width` doesn't have any direct effect on the rendered border width. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` keywords to `content-box` or `padding-box`), therefore you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
+  In fill mode, the border area is defined by the difference between the areas of the outer and inner shapes; therefore, `border-width` doesn't have any direct effect on the width of the rendered border. However, it does have an indirect effect — it still affects the size of the reference boxes the shapes are drawn relative to (unless you set their `<geometry-box>` to `content-box` or `padding-box`), though you still need to be mindful of the `border-width` set on the underlying element while using fill mode.
 
 As an example, if an element has the following declarations applied:
 
