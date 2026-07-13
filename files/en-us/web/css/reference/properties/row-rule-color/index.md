@@ -87,7 +87,7 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
   - : A {{cssxref("&lt;color&gt;")}} representing the color of the line.
 
 - `<repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a comma-separated list of {{cssxref("&lt;color&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;color&gt;")}} values, should be repeated.
 
 - `<auto-repeat-line-color>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<color>` values as subsequent arguments. The provided `<color>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
@@ -137,7 +137,7 @@ row-rule-color:
 
 This creates a list of five colors. If the number of colors in the `row-rule-color` value's color list exceeds the number of gaps between rows, the excess color values are ignored. If the container has three rows, the rule in the first gutter will be blue and the second yellow.
 
-If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of colors will be repeated one, two, three or four times, respectively, with the last rule being red.
+If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16, or 21 rows, this sequence of colors will be repeated one, two, three, or four times, respectively, with the last rule being red.
 
 ### Auto-repeating line colors
 
@@ -147,9 +147,9 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 row-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-In this case, the first row rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first will always be blue and, as long as there are at least two row-rules, the last will always be red. All the other row rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow row rules.
+In this case, the first row rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows; the first will always be blue and, as long as there are at least two row-rules, the last will always be red. All the other row rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow row rules.
 
-The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <color>)` can be present in a `row-rule-color` value.
+The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <color>)` can be present in a `row-rule-color` value.
 
 ## Formal definition
 
@@ -182,7 +182,7 @@ We include a list of dynamic sports duos:
 
 #### CSS
 
-We define the list to be a flex container, creating rows by setting the {{cssxref("flex-direction")}} to `column` using the {{cssxref("flex-flow")}} shorthand. We include a {{cssxref("gap")}} of `5px` to provide enough room between the rows to fit our `3px` dashed rule:
+We define the list as a flex container, creating rows by setting {{cssxref("flex-direction")}} to `column` with the {{cssxref("flex-flow")}} shorthand. We include a {{cssxref("gap")}} of `5px` to provide enough room between the rows to fit our `3px` dashed rule:
 
 ```css live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 ul {
@@ -215,7 +215,7 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `row-rule-color` property value, and how this function can help make complex values not become unwieldy.
+This example demonstrates using the `repeat()` function within the `row-rule-color` property value and how this function can help prevent complex values from becoming unwieldy.
 
 We use the same HTML and CSS as in the previous examples. To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in three {{cssxref("color-mix()")}} color function declarations to create the same blue, red, and yellow colors as in the previous example. The second declaration is within a `repeat()` function, set to repeat 3 times.
 
@@ -232,13 +232,13 @@ ul {
 
 {{EmbedLiveSample("func", "", "180")}}
 
-The middle color is repeated three times. The flex container has six rows, so five gutters. The `repeat()` function repeats our second color three times, creating a color-list with five colors. As there are the same number of row gutters as total colors, the colors are not repeated.
+The middle color is repeated three times. The flex container has six rows, so five gutters. The `repeat()` function repeats our second color three times, creating a color list with five colors. Since there are as many row gutters as there are total colors, the colors are not repeated.
 
 ### Using `auto` within `repeat()`
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-Using `repeat(auto, <color>)` we set all the row rules to be almost transparent black (`#0001`), except the first and last, which we set to a solid `black`.
+Using `repeat(auto, <color>)` we set all the row rules to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
