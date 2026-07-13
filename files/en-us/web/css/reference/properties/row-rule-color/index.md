@@ -213,7 +213,7 @@ ul {
 
 This example demonstrates using the `repeat()` function within the `row-rule-color` property value, and how this function can help make complex values not become unwieldy.
 
-We use the same HTML and CSS as in the previous examples. To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in three {{cssxref("color-mix()")}} color function declarations (to create the same blue, red, and yellow colors as in the previous example). The second declaration is within a `repeat()` function, set to repeat 3 times.
+We use the same HTML and CSS as in the previous examples. To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in three {{cssxref("color-mix()")}} color function declarations to create the same blue, red, and yellow colors as in the previous example. The second declaration is within a `repeat()` function, set to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
