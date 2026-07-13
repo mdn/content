@@ -103,4 +103,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **JPEG XL image support** (Nightly): `image.jxl.enabled`
 
-The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
+  The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
