@@ -93,7 +93,7 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
 
 The `row-rule-color` property defines the colors of any row rule lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
-The value is a comma-separated list of components, each of which can be a `<line-color>`, `<repeated-line-color>`, or `<auto-repeat-line-color>`.
+The value is a comma-separated list of components, which can include `<line-color>`, `<repeated-line-color>`, and `<auto-repeat-line-color>` types.
 
 The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
