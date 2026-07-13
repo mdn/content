@@ -87,7 +87,7 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
   - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a {{cssxref("&lt;color&gt;")}} value, should be repeated.
 
 - `<auto-repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and a `<color>` as the second, representing one or more comma-separated `<color>` values to be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
+  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<color>` values as subsequent arguments. The provided `<color>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
 
 ## Description
 
