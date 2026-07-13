@@ -7,11 +7,11 @@ browser-compat: webdriver.bidi.browsingContext.navigationFailed_event
 sidebar: webdriver
 ---
 
-The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation cannot be completed.
+The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation is blocked.
 
 ## Description
 
-In the lifecycle of a failed navigation, this event fires after [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) when the navigation cannot be completed.
+In the lifecycle of a navigation, this event fires after [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) when the navigation is blocked, for example because of a security or CSP restriction or because a user cancels the unload prompt.
 
 ## Event data
 
@@ -21,7 +21,8 @@ The `params` field in the event notification is a navigation object with the fol
   - : A string that contains the ID of the context in which the navigation failed.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
-    This ID matches the `navigation` value in the response of the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands.
+    If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
+    The same ID is shared by all events related to this navigation, including other navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module.
 - `timestamp`
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
