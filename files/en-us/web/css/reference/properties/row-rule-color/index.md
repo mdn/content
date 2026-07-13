@@ -238,7 +238,7 @@ Using `repeat(auto, <color>)` we set all the row rules to be almost transparent 
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0002), black;
+  row-rule-color: black, repeat(auto, #0003), black;
 }
 ```
 
