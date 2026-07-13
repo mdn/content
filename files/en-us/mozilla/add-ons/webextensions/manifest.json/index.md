@@ -52,6 +52,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only in Chrome)
 - [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Firefox only)
+- [sandbox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox)
 - [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
 - [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
 - [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (Not supported in Firefox)
