@@ -156,7 +156,7 @@ The element's content and background are clipped by the `border-shape` property 
 
 ### Limitations on border styles applied to border shapes
 
-There are several limitations on the styles that will be applied to borders with a `border-shape` property set:
+Not all border styles are applied to elements with a `border-shape` property set. The following list explains how each property is affected:
 
 - {{cssxref("border-image")}}: Not applied.
 - {{cssxref("border-style")}}: Not applied. All borders are rendered with a `solid` style.
