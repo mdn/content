@@ -16,7 +16,7 @@ This configuration removes the following sorts of items:
    - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
 2. Items that might be used in clickjacking, spoofing, or other attacks.
 3. Deprecated items.
-4. Comments and `data-*` attributes.```
+4. Comments and `data-*` attributes.
 
 It therefore provides a sanitizer with a minimal attack surface, which is still suitable for the majority of sanitization use cases.
 
