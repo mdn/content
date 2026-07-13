@@ -44,6 +44,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{jsxref("Error.stackTraceLimit")}} static data property is supported for setting or getting the maximum number of stack frames captured in an error stack trace.
   Setting the value smaller than the default can improve performance.
   ([Firefox bug 2037856](https://bugzil.la/2037856)).
+- The [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) syntax (part of the [TC39 source phase imports](https://github.com/tc39/proposal-source-phase-imports) proposal) is now supported.
+  It is similar to the normal [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration, but instead of loading and evaluating a module, it produces an object representing the module's source code that can be evaluated later.
+  Note that this feature is not yet useful for developers, as only the syntax is currently supported: the source representation of WebAssembly modules is implemented separately and is not yet available.
+  ([Firefox bug 2043242](https://bugzil.la/2043242)).
 
 <!-- #### Removals -->
 
