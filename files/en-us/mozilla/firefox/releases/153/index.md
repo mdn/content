@@ -101,6 +101,6 @@ These features are shipping in Firefox 153 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- \*\*JPEG XL image support: (Nightly): `image.jxl.enabled`
+- **JPEG XL image support** (Nightly): `image.jxl.enabled`
 
-  The rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled on nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
+The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
