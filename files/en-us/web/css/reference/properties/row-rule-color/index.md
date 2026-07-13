@@ -120,7 +120,9 @@ row-rule-color: blue, yellow, yellow, yellow, red;
 row-rule-color: blue, repeat(3, yellow), red;
 ```
 
-Because you can use any valid color value, with all the CSS color features, color spaces, custom properties, etc., using `repeat()` can make values easier to write. It enables a recurring pattern, to be written in a more compact form, no matter how large the number of rows. If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
+You can use any valid color value from any color space, including CSS color functions, custom properties, etc. Using `repeat()` can make values easier to write, especially as your color values become more complex. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
+
+If we set `--base: yellow` and `--mixin: blue`, the following will provide similar results to the previous declaration:
 
 ```css
 row-rule-color:
