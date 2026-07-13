@@ -38,8 +38,6 @@ The `params` field in the event notification is a navigation object with the fol
   - : A non-negative integer that represents the time in UTC when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL being loaded.
-- `userContext` {{optional_inline}}
-  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the navigation is starting.
 
 ## Examples
 

@@ -26,8 +26,6 @@ The `params` field in the event notification is a history update object with the
   - : A non-negative integer that represents the time in UTC when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the updated URL.
-- `userContext` {{optional_inline}}
-  - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the history update is occurring.
 
 ## Examples
 
