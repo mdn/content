@@ -66,7 +66,10 @@ row-rule-color: var(--primaryColor);
 /* Multiple values */
 row-rule-color: red, transparent;
 row-rule-color: repeat(3, red), repeat(3, transparent);
+row-rule-color: repeat(3, red), repeat(3, yellowm, blue);
 row-rule-color: red, repeat(auto, transparent), red;
+row-rule-color: red, repeat(auto, blue, yellow), red;
+row-rule-color: repeat(3, red), repeat(auto, transparent), repeat(3, red);
 
 /* Global values */
 row-rule-color: inherit;
