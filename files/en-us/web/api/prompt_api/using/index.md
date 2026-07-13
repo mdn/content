@@ -6,15 +6,62 @@ page-type: guide
 
 {{DefaultAPISidebar("Prompt API")}}
 
-The [Prompt API](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to directly prompt a language model provided by the user agent, without needing to manage implementation-specific details of the AI model being used. This is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services.
+The [Prompt API](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to directly prompt a language model provided by the user agent, without needing to manage implementation-specific details of the AI model being used. Having an on-device model is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services.
 
-This article explains how to use the core fundamentals of the Prompt API.
+This article explains how to use the core fundamentals of the Prompt API. All of the AI prompting functionality is managed via the {{domxref("LanguageModel")}} interface.
 
-## Creating a session
+## Checking configuration support
 
-All of the AI prompting functionality is contained within the {{domxref("LanguageModel")}} interface.
+Before trying to use the Prompt API, you should first check whether your desired model configuration is supported by the current browser, so that you can gracefully handle outright failure cases and situations where extra data downloads are required to provide a working model.
 
-The first step in prompting the AI model is to create a `LanguageModel` object instance. This is done using the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} static method, which takes an options object as an argument:
+Checking configuration support is handled using the {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} static method.
+
+For example:
+
+```js
+const availability = await LanguageModel.availability({
+  expectedInputs: [{ type: "text", languages: ["en"] }],
+  expectedOutputs: [{ type: "text", languages: ["en"] }],
+});
+```
+
+This method's return promise fulfills with an enumerated value indicating whether support is, or will be available for the specified set of options:
+
+- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
+- `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
+- `available` means that the implementation supports the requested options without requiring any new downloads.
+- `unavailable` means that the implementation doesn't support the requested options.
+
+If a download is required, it will be started automatically by the browser once a `LanguageModel` instance is created using the `create()` method. You can track download progress automatically using a monitor, which we'll cover in the next section.
+
+> [!NOTE]
+> Even though you can ask for a language model session that expects multimedia outputs, this will fail — the availability will be `unavailable`. The API currently only supports text outputs.
+
+### Monitoring download progress
+
+If the AI model is downloading (`availability()` returns `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
+
+The `create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the AI model.
+
+You can use this event to expose loading progress data:
+
+```js
+const session = await LanguageModel.create({
+  expectedInputs: [{ type: "text", languages: ["en"] }],
+  expectedOutputs: [{ type: "text", languages: ["en"] }],
+  monitor(monitor) {
+    monitor.addEventListener("downloadprogress", (e) => {
+      promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+    });
+  },
+});
+```
+
+If the specified languages are not supported, a download will not be initiated, and a `NotSupportedError` {{domxref("DOMException")}} will be thrown.
+
+## Creating a `LanguageModel` session
+
+Once you have checked that your configuration is supported, the next step in prompting the AI model is to create a `LanguageModel` object instance. This is done using the {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} static method, which takes an options object as an argument:
 
 ```js
 const session = await LanguageModel.create({
@@ -26,7 +73,7 @@ const session = await LanguageModel.create({
 The browser will automatically download the corresponding model data to handle the requested language model if it is not already available, and if the browser is able to do so.
 
 > [!NOTE]
-> The `create()` method (and other methods contained within the Prompt API) require [transient activation](/en-US/docs/Glossary/Transient_activation) to invoke, as a precaution to stop apps from using language model resources without user interaction.
+> The `create()` method (and other methods available via the Prompt API) require [transient activation](/en-US/docs/Glossary/Transient_activation) to invoke, as a precaution to stop apps from using language model resources without user interaction.
 
 A `LanguageModel` object instance and the activity that occurs as a result of using its methods and properties is called a **session**. The browser stores all the prompts and responses sent to and received from the Prompt API as part of a single session, allowing the API to tailor its responses based on previous interactions and hold a conversation.
 
@@ -69,54 +116,11 @@ You'll learn more about these roles in the next article, [Adding context with in
 > [!NOTE]
 > If you want to return the AI response gradually as a {{domxref("ReadableStream")}} rather than a single large string, you can use the {{domxref("LanguageModel.promptStreaming()")}} method.
 
-## Checking configuration support
-
-Before creating a `LanguageModel` object instance, you can check whether your desired model configuration is supported by the current browser using the {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} static method. For example:
-
-```js
-const availability = await LanguageModel.availability({
-  expectedInputs: [{ type: "text", languages: ["en"] }],
-  expectedOutputs: [{ type: "text", languages: ["en"] }],
-});
-```
-
-This method's return promise fulfills with an enumerated value indicating whether support is, or will be available for the specified set of options:
-
-- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
-- `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
-- `available` means that the implementation supports the requested options without requiring any new downloads.
-- `unavailable` means that the implementation doesn't support the requested options.
-
-If a download is required, it will be started automatically by the browser once a `LanguageModel` instance is created using the `create()` method. You can track download progress automatically using a monitor, which we'll cover in the next section.
-
-> [!NOTE]
-> Even though you can ask for a language model session that expects multimedia outputs, this will fail — the availability will be `unavailable`. The API currently only supports text outputs.
-
-## Monitoring download progress
-
-If the AI model is downloading (`availability()` returns `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
-
-The `create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the AI model.
-
-You can use this event to expose loading progress data:
-
-```js
-const session = await LanguageModel.create({
-  expectedInputs: [{ type: "text", languages: ["en"] }],
-  expectedOutputs: [{ type: "text", languages: ["en"] }],
-  monitor(monitor) {
-    monitor.addEventListener("downloadprogress", (e) => {
-      promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-    });
-  },
-});
-```
-
-If the specified languages are not supported, a download will not be initiated, and a `NotSupportedError` {{domxref("DOMException")}} will be thrown.
-
 ## The context window
 
-Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. The {{domxref("LanguageModel.contextWindow", "contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage", "contextUsage")}} reports how many tokens have been consumed so far.
+Every `LanguageModel` session has a finite context window, which constrains the total number of input and output tokens it can hold at once. Once you use up your session's token allowance, you cannot issue any more prompts, and you need to use a technique such as [session cloning](#cloning_a_session) to continue usage.
+
+The {{domxref("LanguageModel.contextWindow", "contextWindow")}} property reports the session's maximum capacity, and {{domxref("LanguageModel.contextUsage", "contextUsage")}} reports how many tokens have been consumed so far.
 
 For example, after each prompt, you can report how many tokens are left using something like this:
 
@@ -130,7 +134,7 @@ To check how many tokens a prompt operation would consume without actually sendi
 
 ## Cloning a session
 
-One way to get around the problem of running out of tokens is to copy your existing session using the {{domxref("LanguageModel.clone()")}} function. This creates a replica of the `LanguageModel` object instance in which the conversation up to that point and initial prompt are preserved, but the token count (`contextUsage`) is reset. You can think of the session clone as being a fork of the original conversation, with its own token allowance.
+A common way to get around the problem of running out of tokens is to copy your existing session using the {{domxref("LanguageModel.clone()")}} function. This creates a replica of the `LanguageModel` object instance in which the conversation up to that point and initial prompt are preserved, but the token count (`contextUsage`) is reset. You can think of the session clone as being a fork of the original conversation, with its own token allowance.
 
 ```js
 const clonedSession = await session.clone();

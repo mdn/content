@@ -15,9 +15,9 @@ The **Prompt API** allows web pages to directly prompt a language model provided
 
 ## Concepts and usage
 
-Using AI prompts to return information is very common on the web, with examples including rapid information look up, code and content generation, chatbots to provide customer service functions, image generation and description, audio transcription, and more.
+Using AI prompts to return information is very common on the web, with examples including rapid information look up, code and content generation, chatbots to provide customer service functions, image identification and description, audio transcription, and more.
 
-The Prompt API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to prompt the browser's own internal AI model. This is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services. The API abstracts away model-specific details such as tokenization and templating, so developers don't need to handle those differences across different implementations.
+The Prompt API provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to prompt the browser's own internal AI model. Having an on-device model is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services. The API abstracts away model-specific details such as tokenization and templating, so developers don't need to handle those differences across different implementations.
 
 All interaction with the language model happens through a {{domxref("LanguageModel")}} session.
 You can use this session to specify context for the model, such as providing documents, background information, or conversation history, and to prompt it for responses to specific questions.
