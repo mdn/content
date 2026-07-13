@@ -113,7 +113,7 @@ The level of security must match the sensitivity and volume of data processed. Y
 GDPR uses the following terms:
 
 - Personal data
-  - : Captured data; any information that relates to an individual, generally a user, who can be directly or indirectly identified. This includes names, email addresses, location information, ethnicity, gender, biometric data, religious beliefs, web cookies, and even political opinions. Personal data also includes pseudo-anonymous data if it is relatively easy to identify someone from the nominally anonymized data.
+  - : Captured data; any information that relates to an individual, generally a user, who can be directly or indirectly identified. This includes names, email addresses, location information, ethnicity, gender, biometric data, religious beliefs, web [cookies](/en-US/docs/Web/HTTP/Guides/Cookies), and even political opinions. Personal data also includes pseudo-anonymous data if it is relatively easy to identify someone from the nominally anonymized data.
 
 - Data processing
   - : Data actions; any actions performed on data, whether automated or manually, including but not limited to collecting, recording, organizing, structuring, storing, using, and deleting data.
@@ -129,6 +129,6 @@ GDPR uses the following terms:
 
 ## See also
 
-- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Guides/CCPA)
+- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Guides/Legislation/CCPA)
 - [Designing for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy)
 - [Privacy](/en-US/docs/Web/Privacy)

@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-The **California Consumer Privacy Act (CCPA)** is California privacy law that gives California residents rights over their personal information and sets requirements on businesses that collect, use, or share that data. The CCPA was enacted in 2018 and strengthened by the **California Privacy Rights Act (CPRA)** in 2023, amending and expanding the CCPA, rather than replacing it, with **California Consumer Privacy Act Regulations (CCPAR)** taking effect in 2026.
+The **California Consumer Privacy Act (CCPA)** is California privacy law that gives California residents rights over their personal information and sets requirements on businesses that collect, use, or share that data. The CCPA was originally enacted in 2018 and strengthened by the **California Privacy Rights Act (CPRA)** in 2023, amending and expanding the CCPA, rather than replacing it, with **California Consumer Privacy Act Regulations (CCPAR)** taking effect January 1, 2026.
 
 The CCPA gives Californians the rights to know, delete, opt out, correct, and limit the use of their personal data.
 The CCPA applies to data controllers and processors that meet certain thresholds (e.g., revenue, data volume). It grants data subjects strong rights over their personal data and requires data controllers to be transparent, responsive, and responsible in how they handle that data.
@@ -39,17 +39,18 @@ CCPA defines consumer rights over their personal data, including:
       For a better user experience, and to comply with the spirit, not just the letter, of the law, enable the user to delete their own data without requiring them to make a request.
 
 - Right to opt-out of sale or sharing
-  - : Data subjects can direct data controllers not to sell or share their personal data, - Right to opt-out of sale or sharing. The law requires you to provide data subjects the ability to opt out of having their information shared; and it is illegal to sell or share the personal data of data subject who have opted out. To comply, you have to both provide the ability to opt out and provide the business logic to prevent their data from being shared.
+  - : Data subjects can direct data controllers not to sell or share their personal data, CCPA requires you to provide data subjects the ability to opt out of having their information shared; and it is illegal to sell or share the personal data of data subject who have opted out. To comply, you have to both provide the ability to opt out and provide the business logic to prevent their data from being shared.
     - Include a "Do Not Sell or Share My Personal Information" link or setting.
     - Respect user consent preference signals, including {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}}.
     - Ensure backend logic suppresses data sharing with ad networks or analytics vendors.
-      Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}.
+      Leverage Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}. GPC is signal, transmitted over HTTP and through the DOM, that conveys a data subject's request to websites and services to not sell or share their personal information with third parties.
+  - : Both GDPR and CCPA define a right for data subjects to not have their personal data shared or sold, but GDPR is opt in; by default you should assume all data subjects have opted out until they explicitly opt in to allowing the sharing and selling of their data.
 
 - Right to correct
-  - : Added by CPRA, data subjects can request correction of inaccurate personal data. To comply and for a good user experience, provide a UI and API methods for users to update inaccurate data.
+  - : Data subjects can request correction of inaccurate personal data. To comply and for a good user experience, provide a UI and API methods for users to update inaccurate data.
 
 - Right to limit use of sensitive personal data
-  - : Data subjects can restrict how data controllers use and disclose sensitive personal data, such as precise geolocation, race, and health data). When data subjects restrict how you use their sensitive personal data. Make sure your UI include toggles for users to restrict the use of their sensitive data, and enforce the restrictions they've set at the API authorization layer level.
+  - : Data subjects can restrict how data controllers use and disclose sensitive personal data, such as precise geolocation, race, and health data. When data subjects restrict how you use their sensitive personal data. Make sure your UI include toggles for users to restrict the use of their sensitive data, and enforce the restrictions they've set at the API authorization layer level.
 
 CCPA also explicitly prevents discrimination. Data controllers cannot retaliate against data subjects for exercising their privacy rights.
 
@@ -72,13 +73,14 @@ to comply with CCPA,If you collect any personal data, or incorporate third party
 Map and classify personal data to create a complete picture of the information you're collecting. Identify what data is collected, why it is being collected, and how the data is used across the application. Better understanding of the data collected will help you identify what falls under CCPA, enabling you to apply the correct protections, retention rules, and user‑rights workflows.
 
 - Identify all data points collected
-  - : Enumerate all the data sources in your system, including analytics events, error logs, cookies, and telemetry signals. Privacy risks aren't limited to user‑submitted form fields. Debug logs, third‑party SDKs, and default analytics settings all collect personal data so must be considered to ensure no personal data is collected unintentionally and that there are no unaccounted-for data points.
+  - : Enumerate all the data sources in your system, including analytics events, error logs, [cookies](/en-US/docs/Web/HTTP/Guides/Cookies), and telemetry signals. Privacy risks aren't limited to user‑submitted form fields. Debug logs, third‑party SDKs, and default analytics settings all collect personal data so must be considered to ensure no personal data is collected unintentionally and that there are no unaccounted-for data points.
 
 - Classify data as personal, sensitive, or non‑personal
-  - : Each data point must be categorized based on CCPA definitions, which classifies personal data as being either personal, sensitive, or non‑personal. Personal data includes anything that can identify a user directly or indirectly, while sensitive data covers higher‑risk categories such as health information, precise location, or financial identifiers. Non‑personal data includes aggregated or anonymized information. The classification determines which legal obligations apply, what security controls are required, and how user rights requests must be handled. Anonymized information should be categorized as personal if it is relatively easy to identify someone from the nominally anonymized data.
+  - : Each data point must be categorized based on CCPA definitions, which classifies personal data as being either personal, sensitive, or non‑personal. _Personal data_ includes anything that can identify a user directly or indirectly, while _sensitive data_ covers higher‑risk categories such as health information, precise location, or financial identifiers. _Non‑personal data_ includes aggregated or anonymized information. With CCPA, the classification determines which legal obligations apply, what security controls are required, and how user rights requests must be handled.
+  - : Classifying data as personal, sensitive, or non‑personal is an important component of CCPA, but not GDPR. GDPR protects all data that can be used to identify a data subject. To satisfy both regulations, anonymized information should be categorized as personal under CCPA if it is relatively easy to identify someone from the nominally anonymized data, and treated as personal data under GDPR.
 
 - Document data flow
-  - : Understanding data flow is essential for both GDPR and CCPA compliance. Document how data moves throught clients, APIs, databases, and third‑party services. Include the client interface to backend APIs, internal databases, caches, logs, and any external processors or service providers. Documentation helps identify where data is stored, duplicated, transformed, or shared, enabling accurate deletion, export, and opt‑out handling. It also exposes unnecessary transfers or risky integrations that may need to be redesigned.
+  - : Understanding data flow is essential for both GDPR and CCPA compliance. Document how data moves through clients, APIs, databases, and third‑party services. Include the client interface to backend APIs, internal databases, caches, logs, and any external processors or service providers. Documentation helps identify where data is stored, duplicated, transformed, or shared, enabling accurate deletion, export, and opt‑out handling. It also exposes unnecessary transfers or risky integrations that may need to be redesigned.
 
 - Tag your schema data fields
   - : Tag data fields in your codebase or schema to support automated handling, such as deletion and export. Tagging your models, schemas, or metadata, marking fields as personal or sensitive, enables automating compliance tasks like data deletion, correction, and export. Tagging will also help when it comes to responding to user rights requests without manual intervention, while reducing errors. Labeling privacy features enables maintainable as your system evolves. It also simplifies audits by showing exactly how regulated data is managed.
