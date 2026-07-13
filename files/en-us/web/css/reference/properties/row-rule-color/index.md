@@ -84,7 +84,7 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
   - : A {{cssxref("&lt;color&gt;")}} representing the color of the line.
 
 - `<repeat-line-color>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a {{cssxref("&lt;color&gt;")}} value, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a comma-separated list of {{cssxref("&lt;color&gt;")}} values, should be repeated.
 
 - `<auto-repeat-line-color>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<color>` values as subsequent arguments. The provided `<color>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
@@ -97,9 +97,7 @@ The value is a comma-separated list of components, which can include `<line-colo
 
 The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
-### Line colors
-
-A line-color can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the row rules will be that color. If we declare the following, all row rules will be blue:
+A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the row rules will be that color. If we declare the following, all row rules will be blue:
 
 ```css
 row-rule-color: blue;
@@ -113,11 +111,11 @@ row-rule-color: blue, yellow;
 
 ### Repeated line colors
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid CSS {{cssxref("&lt;color&gt;")}} passed as the second argument the specified number of times. This allows the same color to be repeated a set number of times without repeating the same `<line-color>` multiple times. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;color&gt;")}} values passed as the second argument the specified number of times. This allows the same color to be repeated a set number of times without repeating the same `<line-color>` multiple times. The following declarations are equivalent:
 
 ```css
-row-rule-color: blue, yellow, yellow, yellow, red;
-row-rule-color: blue, repeat(3, yellow), red;
+row-rule-color: blue, yellow, red, yellow, red;
+row-rule-color: blue, repeat(2, yellow, red);
 ```
 
 You can use any valid color value from any color space, including CSS color functions, custom properties, etc. Using `repeat()` can make values easier to write, especially as your color values become more complex. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
@@ -127,17 +125,20 @@ If we set `--base: yellow` and `--mixin: blue`, the following will provide simil
 ```css
 row-rule-color:
   color-mix(in lch decreasing hue, var(--base) 0%, var(--mixin)),
-  repeat(3, color-mix(in lch decreasing hue, var(--base) 100%, var(--mixin))),
-  color-mix(in lch decreasing hue, var(--base) 58%, var(--mixin));
+  repeat(
+    2,
+    color-mix(in lch decreasing hue, var(--base) 100%, var(--mixin)),
+    color-mix(in lch decreasing hue, var(--base) 58%, var(--mixin))
+  );
 ```
 
 This creates a list of five colors. If the number of colors in the `row-rule-color` value's color list exceeds the number of gaps between rows, the excess color values are ignored. If the container has three rows, the rule in the first gutter will be blue and the second yellow.
 
-If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of colors will be repeated one, two, three or four times, respectively, with the last rule being red. If the container has any other number of rows, up to 25, the last row rule will not be red.
+If there are more gutters than colors, as there are no `repeat()` functions that include the keyword `auto`, the list of colors is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of colors will be repeated one, two, three or four times, respectively, with the last rule being red.
 
 ### Auto-repeating line colors
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<color>` passed as the second will be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<color>` values passed as the second will be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value, if any.
 
 ```css
 row-rule-color: blue, repeat(auto, yellow), red;
