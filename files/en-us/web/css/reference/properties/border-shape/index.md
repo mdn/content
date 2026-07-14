@@ -329,7 +329,7 @@ In this example, we let you select from different `border-shape` values to apply
 
 #### HTML
 
-The HTML is similar the previous example, except that this time we include a bit more text in the `<p>` element, and we also include a {{htmlelement("select")}} element allowing you to choose different classes to apply to the `<p>` via JavaScript (we've hidden both the `<select>` and the JavaScript for brevity).
+The HTML is similar to that in the previous example, except this time we include a bit more text in the `<p>` element. We've also included a {{htmlelement("select")}} element so you can choose different classes to apply to the `<p>` via JavaScript (we've hidden both the `<select>` and the JavaScript for brevity).
 
 ```html live-sample___border-shape-select
 <p>Fashion is something so ugly it has to be changed every 15 minutes.</p>
