@@ -279,7 +279,7 @@ p {
 }
 ```
 
-We give the box a {{cssxref("width")}} of `fit-content` and an {{cssxref("aspect-ratio")}} of `1/1` to neatly fit the content inside a square. We also set a thick black {{cssxref("border")}} and a {{cssxref("box-shadow")}}, before setting a {{cssxref("border-shape")}} of `circle(50%)` to create a circular border that neatly fits the content and background.
+We give the box a {{cssxref("width")}} of `fit-content` and an {{cssxref("aspect-ratio")}} of `1/1` to neatly fit the content inside a square. We also set a thick black {{cssxref("border")}} and a {{cssxref("box-shadow")}} before setting a {{cssxref("border-shape")}} of `circle(50%)` to create a circular border that neatly fits the content and background.
 
 ```css live-sample___basic-border-shape
 p {
