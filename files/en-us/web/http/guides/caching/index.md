@@ -693,4 +693,4 @@ For more information, see the documentation for your CDN, and consult the [servi
 
 - [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
 - [Caching Tutorial - Mark Nottingham](https://mnot.net/cache_docs/)
-- [Cache-Control header]((/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
+- [Cache-Control header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
