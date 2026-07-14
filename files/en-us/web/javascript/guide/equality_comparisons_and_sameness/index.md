@@ -211,17 +211,17 @@ const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // Get a byte representation of NaN
 const n = f2b(NaN);
-// Change the first bit, which is ignored for NaN values
-n[0] = 1;
+// Change the first bit, which is the sign bit and doesn't matter for NaN
+n[7] |= 0x80;
 const nan2 = b2f(n);
 console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
-console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 255]
 ```
 
 > [!NOTE]
-> This example relies on platform dependent behavior. It will not work on Safari, Firefox or on big-endian machines.
+> Implementations are allowed to canonicalize the bit representation of `NaN`, so `nan2`, when converted back to floating point, may have the same bit representation as `NaN`
 
 ## See also
 
