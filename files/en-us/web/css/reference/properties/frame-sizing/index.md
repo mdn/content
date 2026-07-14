@@ -32,7 +32,7 @@ frame-sizing: unset;
 The `frame-sizing` property value is equal to one of the following keywords:
 
 - `auto`
-  - : The inital value. The `<iframe>` element's size is not affected by the layout size of its embedded document.
+  - : The initial value. The `<iframe>` element's size is not affected by the layout size of its embedded document.
 - `content-width`
   - : The `<iframe>` element's {{cssxref("width")}} is set to the layout width of its embedded document.
 - `content-height`
@@ -46,7 +46,7 @@ The `frame-sizing` property value is equal to one of the following keywords:
 
 For security and privacy reasons, {{htmlelement("iframe")}} elements do not by default expose any information to the parent document about the size of the content in the document they are embedding.
 
-To enable responsive sizing of {{htmlelement("iframe")}} elements based on their content, the [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) tag can be included in an embedded document to opt it in to sharing its size information with the parent document. The `frame-sizing` property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size (termed the **internal layout intrinsic size** in the spec, but abbreviated to "layout size" in our documentation). This is useful for avoiding scrollbars on `<iframe>` content so that it fits more seamlessly with its embedder.
+To enable responsive sizing of {{htmlelement("iframe")}} elements based on their content, the [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) tag can be included in an embedded document to opt it in to sharing its size information with the parent document. The `frame-sizing` property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size (termed the **internal layout intrinsic size** in the spec, but abbreviated to "layout size" in our documentation). This is useful for avoiding scrollbars on `<iframe>` content so that it fits more seamlessly into its embedder.
 
 The `frame-sizing` property can take values of `content-width` or `content-height` to cause the `<iframe>` element's `width` or `height` to adopt the embedded document's layout width or layout height, respectively.
 
@@ -66,17 +66,30 @@ To resize the `<iframe>` dynamically as the embedded document changes layout siz
 
 ### Basic usage
 
-Our [basic responsive `<iframe>` sizing demo](https://mdn.github.io/dom-examples/responsive-iframe-sizing/basic/) ([see source code](https://github.com/mdn/dom-examples/tree/main/responsive-iframe-sizing/basic)) demonstrates usage of the `frame-sizing` property.
+This example demonstrates usage of the `frame-sizing` property.
 
-#### HTML
+We have two documents, the main `index.html` document, and the embedded `frame.html` document.
 
-We have two HTML documents. The main `index.html` document contains a heading and an `<iframe>`, into which is embedded the `frame.html` document:
+#### The main `index.html`
+
+The `index.html` document's HTML contains a heading and an `<iframe>`, into which is embedded the `frame.html` document:
 
 ```html
 <h1>Responsive iframes — basic example</h1>
 
 <iframe src="frame.html"></iframe>
 ```
+
+In the `index.html` CSS, we give the `<iframe>` a `frame-sizing` value of `content-block-size`. Because the `<iframe>` has a horizontal `writing-mode`, its `height` will be set to the embedded document's layout height.
+
+```css
+iframe {
+  frame-sizing: content-block-size;
+  border: 2px solid gray;
+}
+```
+
+#### The embedded `frame.html`
 
 The `frame.html` document contains a heading and some paragraphs. More significantly, however, it includes the `<meta name="responsive-embedded-sizing" />` tag, which opts it in to sharing its content layout size with the parent document.
 
@@ -95,24 +108,11 @@ The `frame.html` document contains a heading and some paragraphs. More significa
 </body>
 ```
 
-#### CSS
-
-The `<iframe>` inside `index.html` is given a `frame-sizing` value of `content-block-size`. Because the `<iframe>` has a horizontal `writing-mode`, its `height` will be set to the embedded document's layout height.
-
-```css
-iframe {
-  frame-sizing: content-block-size;
-  border: 2px solid gray;
-}
-```
-
 #### Result
 
-{{EmbedGHLiveSample("dom-examples/responsive-iframe-sizing/basic/", "100%", 300)}}
+Open our [basic responsive `<iframe>` sizing demo](https://mdn.github.io/dom-examples/responsive-iframe-sizing/basic/) in a separate tab to see it in action ([see the source code](https://github.com/mdn/dom-examples/tree/main/responsive-iframe-sizing/basic)).
 
 Even though no explicit `height` has been set on the `<iframe>`, it is sized to the right height to exactly contain its embedded document, with no scroll bars.
-
-You can also [load the demo in a separate tab](https://mdn.github.io/dom-examples/responsive-iframe-sizing/basic/) and view the [source code](https://github.com/mdn/dom-examples/tree/main/responsive-iframe-sizing/basic).
 
 ## Specifications
 
