@@ -11,7 +11,7 @@ sidebar: htmlsidebar
 
 {{SeeCompatTable}}
 
-The **`responsive-embedded-sizing`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element opts in an embedded document to sharing its size information with the parent document. The embedding {{htmlelement("iframe")}} can then be sized relative to the embedded document's layout size using the {{cssxref("frame-sizing")}} CSS property.
+The **`responsive-embedded-sizing`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of a {{htmlelement("meta")}} element opts in a document embedded in an {{htmlelement("iframe")}} to sharing its size information with the parent document. The frame can then be sized relative to its contained document's layout size using the {{cssxref("frame-sizing")}} CSS property.
 
 ## Description
 
