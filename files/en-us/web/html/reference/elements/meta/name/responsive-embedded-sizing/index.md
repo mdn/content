@@ -19,7 +19,7 @@ For security and privacy reasons, {{htmlelement("iframe")}} elements do not by d
 
 To enable responsive sizing of {{htmlelement("iframe")}} elements based on their content, the `<meta name="responsive-embedded-sizing">` tag can be included in an embedded document to opt it in to sharing its size information with the parent document.
 
-The {{cssxref("frame-sizing")}} CSS property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size (termed the **internal layout intrinsic size** in the spec, but abbreviated to "layout size" in our documentation). This is useful for avoiding scrollbars on `<iframe>` content so that it fits more seamlessly with its embedder.
+The {{cssxref("frame-sizing")}} CSS property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size (termed the **internal layout intrinsic size** in the spec, but abbreviated to "layout size" in our documentation). This is useful for avoiding scrollbars on `<iframe>` content so that it fits more seamlessly into its embedder.
 
 To resize the `<iframe>` dynamically as the embedded document changes layout size, you can call the {{domxref("Window.requestResize()")}} method from the embedded document to make it report an updated size.
 
