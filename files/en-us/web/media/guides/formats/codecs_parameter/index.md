@@ -578,14 +578,14 @@ All media types based upon the [ISO Base Media File Format](https://en.wikipedia
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
 
-The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
+The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's case-sensitive four-character sample entry code. Some codecs append a period separator (`.`) followed by additional parameters, such as an Object Type Indication (OTI) value or details about the codec's profile. For most codecs that use an OTI, the value is a two-digit hexadecimal number; however, AVC (H.264) uses six hexadecimal digits to identify the [profile](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
 
 Thus, the syntaxes for each of the supported codecs look like this:
 
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/registered-types/object-types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/registered-types/object-types). For example, AAC-LC audio in an MP4 file is `mp4a.40.2`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1[.PPCCLL]` (AVC video)
@@ -902,6 +902,15 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
   </tbody>
 </table>
 
+#### Opus
+
+Opus audio in an ISO BMFF container uses `Opus` as its sample entry and `codecs` value. The value is case-sensitive. Although the MP4 Registration Authority assigns the Object Type Indication `0xAD` to Opus, the [Opus encapsulation specification](https://opus-codec.org/docs/opus_in_isobmff.html) does not define an `MP4AudioSampleEntry` using that value, so `mp4a.ad` is not used.
+
+```plain
+audio/mp4;codecs=Opus
+video/mp4;codecs=avc1.4D401E,Opus
+```
+
 ### HEVC: MP4, Quicktime, Matroska
 
 The [High Efficiency Video Coding](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) codec, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
@@ -910,9 +919,9 @@ Use of HEVC is generally described using a supporting MIME type with the `codecs
 
 ```plain
 video/mp4;codecs=hvc1.1.6.L186.B0,mp4a.40.2
-video/mp4;codecs=hvc1.1.6.L186.B0,opus
+video/mp4;codecs=hvc1.1.6.L186.B0,Opus
 video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2
-video/mp4;codecs=hev1.1.6.L186.B0,opus
+video/mp4;codecs=hev1.1.6.L186.B0,Opus
 ```
 
 The syntaxes for each of the supported codecs look like this:
