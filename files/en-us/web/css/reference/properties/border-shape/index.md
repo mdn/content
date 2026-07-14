@@ -305,7 +305,7 @@ The HTML is the same as in the previous example.
 
 #### CSS
 
-The CSS is the same in the previous example, except that this time we color the border `hotpink`, and we include two `<basic-shape>` definitions inside the `border-shape` value. There's an outer rectangle that covers the whole area of the content, and an inner circle that is the same as in the previous example.
+The CSS is the same as in the previous example, except this time we color the border `hotpink`, and we include two `<basic-shape>` definitions inside the `border-shape` value. There's an outer rectangle that covers the whole area of the content and an inner circle that's the same as in the previous example.
 
 ```css live-sample___basic-border-shape-fill
 p {
