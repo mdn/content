@@ -525,7 +525,7 @@ form select {
 
 {{EmbedLiveSample("border-shape-select", "100%", "350")}}
 
-Use your developer tools to inspect the `border-shape` values applied to the `<p>` element at any point, and edit them to get an idea of how the values work.
+Select different options from the drop-down menu to see how the different border shapes render. At any point, feel free to use your browser's developer tools to inspect the `border-shape` values applied to the `<p>` element and edit them to get an idea of how the values work.
 
 ### Animating a `border-shape`
 
