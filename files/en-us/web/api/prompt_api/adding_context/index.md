@@ -417,11 +417,7 @@ await session.append(excerpt);
 const response = await session.prompt([
   {
     role: "user",
-    content: "I have a question for you, about the text that was just entered",
-  },
-  {
-    role: "user",
-    content: "What book is it taken from?",
+    content: "What book was the last entered text taken from?",
   },
 ]);
 ```
