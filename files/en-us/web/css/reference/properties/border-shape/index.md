@@ -325,7 +325,7 @@ Note how this time, the border covers the area between the rectangle and the cir
 
 ### Comparing `border-shape` values
 
-In this example, we allow you to set different `border-shape` values on an element, to allow you to compare and contrast them.
+In this example, we let you select from different `border-shape` values to apply to an element, so you can compare and contrast how they render.
 
 #### HTML
 
