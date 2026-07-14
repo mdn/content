@@ -32,7 +32,7 @@ The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) rol
 
 The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range), is a read-write input range. Sliders allow users to select a value between the predefined minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
-While all three of these ranges have the same ARIA states and properties, the `spinbutton` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
+Unlike the read-only `progressbar` and `meter` roles, the `slider` and `spinbutton` roles are read-write ranges: their values change via user interaction. Both roles must be able to receive focus and support keyboard, pointer, and touch interaction.
 
 > [!WARNING]
 > To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
