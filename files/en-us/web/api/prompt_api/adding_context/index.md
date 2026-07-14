@@ -117,7 +117,7 @@ const session = await LanguageModel.create({
   initialPrompts: [
     {
       role: "system",
-      content: "You are a pirate, and will respond as such.",
+      content: "Respond like a pirate.",
     },
     {
       role: "assistant",
