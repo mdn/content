@@ -37,7 +37,7 @@ p {
 }
 ```
 
-The `<style>` element must be included inside the {{htmlelement("head")}} of the document. In general, it is better to put your styles in external stylesheets and apply them using {{htmlelement("link")}} elements.
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.,
 
 If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
 
@@ -94,10 +94,29 @@ In the following example, we apply a short stylesheet to a document:
 
 {{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
 
+### Using `<style>` inside `<template>`
+
+A `<style>` element can also be placed inside a {{HTMLElement("template")}} element. The styles remain inactive until the template content is instantiated and inserted into the document.
+
+```html
+<template id="card-template">
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+  <div class="card">
+    Template content
+  </div>
+</template>
+```
+
 ### Multiple style elements
 
 In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
-
 ```html
 <!doctype html>
 <html lang="en-US">
