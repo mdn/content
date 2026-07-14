@@ -475,7 +475,7 @@ The first four components are required; everything from `CC` (chroma subsampling
               </td>
             </tr>
             <tr>
-              <td><code>70</code></td>
+              <td><code>07</code></td>
               <td>
                 {{Glossary("SMPTE")}} 240M (historical).
                 <em>Functionally identical to <code>6</code>.</em>
