@@ -28,7 +28,7 @@ The following example tries to make a call to a payment API using a POST request
 POST /merchant/transfers/payment HTTP/1.1
 Host: payments.example.com
 Content-Type: application/json
-Content-Length: 402
+Content-Length: 529
 
 {
   "payment_transfer": {
