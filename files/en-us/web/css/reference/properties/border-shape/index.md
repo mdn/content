@@ -529,7 +529,7 @@ Select different options from the drop-down menu to see how the different border
 
 ### Animating a `border-shape`
 
-This example demonstrates how it is possible to animate the `border-shape` property.
+This example demonstrates how you can animate the `border-shape` property.
 
 #### HTML
 
