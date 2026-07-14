@@ -64,7 +64,11 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   This provides a convenient mechanism for websites to toggle display of a {{htmlelement("video")}} element between a page and a floating always-on-top video window, allowing users to continue watching while they interact with other sites or applications.
   ([Firefox bug 1463402](https://bugzil.la/1463402)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The [Popover API](/en-US/docs/Web/API/Popover_API) now has more consistent behavior when [`hint` and `auto` popovers are opened and closed](/en-US/docs/Web/API/Popover_API/Using#popover_openclose_interaction_rules).
+  This follows the specification update in [whatwg/html#12345](https://github.com/whatwg/html/pull/12345).
+  ([Firefox bug 2029974](https://bugzil.la/2029974)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -116,6 +120,10 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 153 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **JPEG XL image support** (Nightly): `image.jxl.enabled`
+
+  The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
 
 - **Tree counting CSS functions**: `layout.css.tree-counting-functions.enabled`
 
