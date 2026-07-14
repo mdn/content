@@ -353,7 +353,7 @@ The HTML is similar to that in the previous example, except this time we include
 </form>
 ```
 
-The classes set different `border-shape` values on the `<p>` element. A `class` of `ellipse` is set on it to begin with, so that initially, it has an `ellipse()` `border-shape` applied to it.
+The classes set different `border-shape` values on the `<p>` element. To begin with, a `class` of `ellipse` is set on the `<p>` element, so initially it has an `ellipse()` `border-shape`.
 
 ```js hidden live-sample___border-shape-select
 const box = document.querySelector("p");
