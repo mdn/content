@@ -54,9 +54,9 @@ The object representation can have the following properties:
     - `rtl`
       - : Specifies a right-to-left text direction.
 - `lang` {{optional_inline}}
-  - : A string containing a BCP 47 language tag, used in cases where localized text needs to be presented in a different language from the user's locale.
+  - : A string containing a BCP 47 language tag representing a locale for the localized text.
 
-In cases where the `dir` and `lang` properties do not need to be specified, a shorthand string representation can be used, which contains the localized text `value`.
+In most cases, the shorthand string representation can be used, which contains the localized text `value`. The object form is only needed in cases where you want to specify a different text direction to the default browser text direction, or the localized text needs to be presented in a different language from the user's locale.
 
 #### Icon localization
 
@@ -75,6 +75,9 @@ The `_localized` suffix is used to create localized manifests.
 You can add the `_localized` suffix to a supporting manifest member to create localized variants of that member. The browser will use the variant that best suits the user based on their browser language settings. Each property of a localized variant has a key equal to a BCP47 language tag representing the locale language, and a value that represents the localized variant.
 
 If one of the keys matches the user's browser language setting, that variant will be used. If not, the non-prefixed manifest member value will be used.
+
+> [!NOTE]
+> In cases where multiple related language variants are specified, the browser matches more granular language tags first, before falling back to more general tags. For example, if the user's browser language is set to `fr-CA`, it'll look for a variant with the `fr-CA` language tag first, then fall back to an `fr` variant if `fr-CA` is not available. If neither are available, it will fall back to the non-localized value. See [Localize an app manifest](/en-US/docs/Web/Progressive_web_apps/How_to/Localize_an_app_manifest) for an example.
 
 Members for which localized variants are supported (both at the manifest top level, and inside the [`shortcuts`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/shortcuts) member):
 
@@ -119,7 +122,7 @@ Sometimes you will want to specify a different `lang` value inside a localized v
   "short_name_localized": {
     "fr": {
       "lang": "en-US",
-      "value": "SuperSausage"
+      "value": "Sausage Super"
     },
     "de": "SuperWurst",
     "ur": "سپر ساسیج",
@@ -129,7 +132,7 @@ Sometimes you will want to specify a different `lang` value inside a localized v
 }
 ```
 
-In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation). This is done by specifying a `lang` value of `en-US` inside the variant.
+In this case, our French audience knows our app by a variant of the English brand name — "Sausage Super" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation). This is done by specifying a `lang` value of `en-US` inside the variant.
 
 ### Localized icons
 
@@ -171,6 +174,8 @@ A localized `icons` set consists of an object containing multiple arrays, each o
 ```
 
 If the user has their browser language set to `de`, `ar`, or `fr`, an appropriate entry from the `icons_localized` member will be used. If not, the icon referenced in the `icons` member will be used.
+
+Each localized icons array is treated as completely independent from all the others. If an icons variant matches the user's browser language setting, only icons from within that variant will be chosen for that user. For example, if you have 20 icons specified inside `icons`, and only one icon specified inside `icons_localized.fr`, users with `fr` set as their browser's language will only ever see one icon used everywhere. The browser won't look inside the `icons` array for more suitable sizes.
 
 ### Localized shortcuts
 

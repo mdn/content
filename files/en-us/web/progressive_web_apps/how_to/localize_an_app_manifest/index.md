@@ -69,7 +69,7 @@ Our sample manifest has all of these; we'll show how to localize each one.
 
 Generally you should support all of the languages relevant to your major target audience locales.
 
-For this example, we'll choose French (`fr`), German (`de`), Urdu (`ur`), and Japanese (`ja`).
+For this example, we'll choose French (`fr`), French Canadian (`fr-CA`), German (`de`), Urdu (`ur`), and Japanese (`ja`).
 
 ## Localizing the `name` member
 
@@ -93,6 +93,8 @@ In this case, we've used the string form for all the languages, except for Urdu,
 
 If the user has their browser language set to `fr`, `de`, `ur`, or `ja`, the browser will use the appropriate name found in the `name_localized` member for that language as the app's `name`. If not, the browser will use the name found in the `name` member.
 
+French Canadian users that set their browser language specifically to `fr-CA` will see the `fr` variant used. This is because, in cases where multiple related language variants are specified, the browser matches more granular language tags first, before falling back to more general tags. In this case, a `fr-CA` variant is not provided, so the browser falls back to `fr` for those users.
+
 ## Localizing the other text-based members
 
 We can follow the same pattern as we did for the `name` member to localize the `short_name` and `description` members:
@@ -101,25 +103,25 @@ We can follow the same pattern as we did for the `name` member to localize the `
 "short_name_localized": {
   "fr": {
     "lang": "en-US",
-    "value": "SuperSausage"
+    "value": "Sausage Super"
   },
   "de": "SuperWurst",
   "ur": "سپر ساسیج",
   "ja": "スーパーソーセージ"
 },
 "description_localized": {
-  "fr": "Trouvez des informations sur toutes vos saucisses préférées !",
+  "fr": "Trouvez des informations sur toutes vos saucisses préférées!",
   "de": "Finden Sie Informationen zu all Ihren Lieblingswürstchen!",
   "ur": "اپنی تمام پسندیدہ ساسیجز کے بارے میں معلومات حاصل کریں!",
   "ja": "お気に入りのソーセージの情報を全部見つけましょう!"
 },
 ```
 
-The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by its English brand name — "SuperSausage" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation).
+The French (`fr`) `short_name` translation shows typical usage of the object value form with a `lang` property specified. In this case, our French audience knows our app by a variant of the English brand name — "Sausage Super" — and we want to specify that this should be handled as English rather than French (for example, for the purposes of pronunciation).
 
 ## Localizing the `icons` member
 
-Localized icons are handled somewhat differently to localized text. The properties of each `icons_localized` member are equal to an array of objects containing the same properties as the non-localized `icons` member; each one provides details for a localized icon.
+The properties of each `icons_localized` member are equal to an array of objects containing the same properties as the non-localized `icons` member; each one provides details for a localized icon.
 
 Let's see what this looks like:
 
@@ -133,6 +135,18 @@ Let's see what this looks like:
     },
     {
       "src": "./icons/l10n/fr/saus-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "fr-CA": [
+    {
+      "src": "./icons/l10n/fr-CA/saus-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/l10n/fr-CA/saus-256.png",
       "sizes": "256x256",
       "type": "image/png"
     }
@@ -175,6 +189,8 @@ Let's see what this looks like:
   ],
 }
 ```
+
+In this case, we have provided a specific variant for French Canadian users — the `fr` text variants are arguably suitable for `fr` and `fr-CA` users, but it is a nice idea to provide an explicit icon that fits better with the Canadian locale. In this case, users that set their browser language specifically to `fr-CA` will see the `fr-CA` icon used, whereas those with a `fr` language set will see the `fr` icon.
 
 ## Localizing the `shortcuts` member
 
@@ -265,7 +281,7 @@ Putting this all together, the complete manifest looks like this:
   "short_name_localized": {
     "fr": {
       "lang": "en-US",
-      "value": "SuperSausage"
+      "value": "Sausage Super"
     },
     "de": "SuperWurst",
     "ur": "سپر ساسیج",
@@ -286,6 +302,18 @@ Putting this all together, the complete manifest looks like this:
       },
       {
         "src": "./icons/l10n/fr/saus-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ],
+    "fr-CA": [
+      {
+        "src": "./icons/l10n/fr-CA/saus-128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "./icons/l10n/fr-CA/saus-256.png",
         "sizes": "256x256",
         "type": "image/png"
       }
