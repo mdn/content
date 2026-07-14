@@ -18,9 +18,11 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- ### Developer Tools -->
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
+- HTML parsing rules for {{htmlelement("select")}} elements have been updated to allow all nested elements to be parsed into DOM rather than just `<option>`, `<optgroup>`, and `<hr>`.
+  This enables possible future support of [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
+  ([Firefox bug 2019977](https://bugzil.la/2019977)).
 
 <!-- #### Removals -->
 
