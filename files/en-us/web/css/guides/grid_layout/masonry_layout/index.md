@@ -191,4 +191,3 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 ## See also
 
 - {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) via Smashing Magazine (2020)
