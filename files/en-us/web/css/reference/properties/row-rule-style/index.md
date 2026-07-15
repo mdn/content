@@ -227,7 +227,7 @@ ul {
 
 ```css hidden live-sample___basic live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
-  @supports not (row-rule-style: thin, thick) {
+  @supports not (row-rule-style: solid, dotted) {
     body::before {
       content: "Your browser doesn't support the row-rule-style property";
       background-color: wheat;
