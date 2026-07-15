@@ -158,7 +158,7 @@ row-rule:
 
 This creates a list of seven rules. If the number of styles in the `row-rule` value's style list exceeds the number of gaps between rows, the excess style values are ignored. If the container has three rows, the rule in the first gutter will be `solid red 5px` and the second `outset blue 10px`.
 
-If there are more gutters than styles, as there are no `repeat()` functions that include the keyword `auto`, the list of styles is repeated. If the container has 8, 15, 22 or 29 rows, this sequence of styles will be repeated one, two, three or four times, respectively, with the last rule being `inset green 1px`.
+If there are more gutters than styles, as there are no `repeat()` functions that include the keyword `auto`, the list of styles is repeated. If the container has 8, 15, 22, or 29 rows, this sequence of styles will be repeated one, two, three, or four times, respectively, with the last rule being `inset green 1px`.
 
 ### Auto-repeating line styles
 
@@ -171,7 +171,7 @@ row-rule:
   solid red 5px;
 ```
 
-In this case, the first and last row rules will be `solid red 5px`, and all others will alternate between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("rule-visibility-items")}} leads to no line being drawn), while all the other row rules will be thin, dotted or dashed, and green or blue, which means if there are only 2 or 3 rows, there will be no dotted or dashed lines.
+In this case, the first and last row rules will be `solid red 5px`, and all others will alternate between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows, the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("rule-visibility-items")}} leads to no line being drawn), while all the other row rules will be thin, dotted or dashed, and green or blue, which means if there are only 2 or 3 rows, there will be no dotted or dashed lines.
 
 The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <gap-rule>)` can be present in a `row-rule` value.
 
