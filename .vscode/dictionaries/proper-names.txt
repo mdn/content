@@ -233,6 +233,7 @@ Giorgio
 Golightly
 Googlebot
 Gordo
+Gorman
 Grahl
 Grande-Dixence
 Graywolf9
@@ -620,6 +621,7 @@ Tonisha
 Transcribear
 Transfonter
 Transformiix
+Treanor
 Trekhleb
 Trint
 Trish

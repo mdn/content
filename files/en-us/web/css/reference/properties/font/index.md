@@ -39,7 +39,7 @@ font: caption;
 <section id="default-example">
   <q id="example-element">
     Prejudices, it is well known, are most difficult to eradicate from the heart
-    whose soil has never been loosened or fertilised by education: they grow
+    whose soil has never been loosened or fertilized by education: they grow
     there, firm as weeds among stones.
   </q>
 </section>
@@ -290,7 +290,7 @@ As the URL in our HTML link is not good practice, we include a script that preve
 
 ```js
 const aElem = document.querySelector("a");
-aElem.addEventListener("click", function (e) {
+aElem.addEventListener("click", (e) => {
   e.preventDefault();
   return false;
 });
