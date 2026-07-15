@@ -820,7 +820,7 @@ li {
 }
 ```
 
-A side-effect of the `margin-right` is that all of the `<li>` items are moved to the right, so the nav menu is no longer centered. To fix this, we use [relative positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#relative_positioning) to move the `<ul>` back to the left:
+A side-effect of this `margin-right` setting is that all of the `<li>` items are moved to the right, so the nav menu is no longer centered. To fix this, we use [relative positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#relative_positioning) to move the `<ul>` back to the left:
 
 ```css live-sample___jigsaw-example
 ul {
