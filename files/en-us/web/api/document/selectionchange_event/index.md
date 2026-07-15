@@ -12,7 +12,6 @@ The browser fires the **`selectionchange`** event of the [Selection API](/en-US/
 
 The browser triggers this event when:
 
-
 - A user or script creates or clears a selection.
 - The start or end boundary point of a selected range moves.
 - A selected range changes completely.
