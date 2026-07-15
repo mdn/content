@@ -48,7 +48,7 @@ The object representation can have the following properties:
 - `dir` {{optional_inline}}
   - : A string representing the text direction of the localized text. Valid values of `dir` are:
     - `auto`
-      - : The default. Specifies that the text direction is unknown. The browser will use heuristics to estimate the display direction of the text.
+      - : The default. Specifies that the text direction is unknown. The direction will be inferred from the browser's language settings.
     - `ltr`
       - : Specifies a left-to-right text direction.
     - `rtl`
@@ -56,7 +56,7 @@ The object representation can have the following properties:
 - `lang` {{optional_inline}}
   - : A string containing a BCP 47 language tag representing a locale for the localized text.
 
-In most cases, the shorthand string representation can be used, which contains the localized text `value`. The object form is only needed in cases where you want to specify a different text direction to the default browser text direction, or the localized text needs to be presented in a different language from the user's locale.
+In most cases, the shorthand string representation can be used, which contains the localized text `value`. The object form is only needed in cases where you want to specify a different text direction to the default browser language, or the localized text needs to be presented in a different language from the user's locale.
 
 #### Icon localization
 
@@ -88,7 +88,7 @@ Members for which localized variants are supported (both at the manifest top lev
 
 ### Localized text
 
-Localized text field properties have values equal to objects or strings.
+Localized text field properties have values equal to objects or strings; the string form is by the far the most common.
 
 For example:
 
@@ -99,10 +99,7 @@ For example:
   "name_localized": {
     "fr": "L'application de saucisse SuperSausage",
     "de": "Die SuperWurst-App",
-    "ur": {
-      "dir": "rtl",
-      "value": "سپر ساسیج ساسیج ایپ"
-    },
+    "ur":  "سپر ساسیج ساسیج ایپ",
     "ja": "スーパーソーセージのソーセージアプリ"
   }
   ...
@@ -110,8 +107,6 @@ For example:
 ```
 
 If the user has their browser language set to `fr`, `de`, `ur`, or `ja`, the browser will use the appropriate name found in the `name_localized` member for that language as the app's `name`. If not, the browser will use the name found in the `name` member.
-
-The `fr`, `de`, and `ja` members have string values representing the localized text for that language. The `ur` member needs to specify an RTL directionality, so its value is an object containing both the localized text (in the `value` property) and the directionality (in the `dir` property).
 
 Sometimes you will want to specify a different `lang` value inside a localized variant to the actual language of that variant. For example:
 
@@ -188,21 +183,21 @@ For example:
   {
     "name": "Open dashboard",
     "name_localized": {
-      "en": { "value": "Open dashboard", "lang": "en", "dir": "ltr" },
-      "de": { "value": "Dashboard öffnen", "lang": "de", "dir": "ltr" },
-      "ar": { "value": "فتح لوحة المعلومات", "lang": "ar", "dir": "rtl" }
+      "en": "Open dashboard",
+      "de": "Dashboard öffnen",
+      "ar": "فتح لوحة المعلومات"
     },
     "short_name": "Dashboard",
     "short_name_localized": {
-      "en": { "value": "Dashboard", "lang": "en", "dir": "ltr" },
-      "de": { "value": "Dashboard", "lang": "de", "dir": "ltr" },
-      "ar": { "value": "لوحة", "lang": "ar", "dir": "rtl" }
+      "en": "Dashboard",
+      "de": "Dashboard",
+      "ar": "لوحة"
     },
     "description": "Go to your dashboard.",
     "description_localized": {
-      "en": { "value": "Go to your dashboard.", "lang": "en", "dir": "ltr" },
-      "de": { "value": "Zum Dashboard wechseln.", "lang": "de", "dir": "ltr" },
-      "ar": { "value": "انتقل إلى لوحتك.", "lang": "ar", "dir": "rtl" }
+      "en": "Go to your dashboard.",
+      "de": "Zum Dashboard wechseln.",
+      "ar": "انتقل إلى لوحتك."
     },
     "url": "./dashboard",
     "icons": [

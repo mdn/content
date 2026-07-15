@@ -9,7 +9,7 @@ sidebar: pwasidebar
 
 This guide shows how to localize a PWA manifest.
 
-## Example non-localised PWA
+## Example non-localized PWA
 
 This guide develops a multilingual PWA manifest using the following example as a starting point.
 
@@ -81,15 +81,10 @@ Let's see what this could look like for our example:
 "name_localized": {
   "fr": "L'application de saucisse SuperSausage",
   "de": "Die SuperWurst-App",
-  "ur": {
-    "dir": "rtl",
-    "value": "سپر ساسیج ساسیج ایپ"
-  },
+  "ur": "سپر ساسیج ساسیج ایپ",
   "ja": "スーパーソーセージのソーセージアプリ"
 }
 ```
-
-In this case, we've used the string form for all the languages, except for Urdu, which uses the object form. We've done it this way because Urdu is an RTL language, and we need to specify a `dir` value of `rtl` for it so that browsers will display it correctly.
 
 If the user has their browser language set to `fr`, `de`, `ur`, or `ja`, the browser will use the appropriate name found in the `name_localized` member for that language as the app's `name`. If not, the browser will use the name found in the `name` member.
 
@@ -123,7 +118,7 @@ The French (`fr`) `short_name` translation shows typical usage of the object val
 
 The properties of each `icons_localized` member are equal to an array of objects containing the same properties as the non-localized `icons` member; each one provides details for a localized icon.
 
-Let's see what this looks like:
+Let's see what this could look like:
 
 ```json
 "icons_localized": {
@@ -196,7 +191,7 @@ In this case, we have provided a specific variant for French Canadian users — 
 
 In the case of the `shortcuts` member, you don't specify the localizations inside a `shortcuts_localized` member. Instead, you provide `*_localized` versions of the `name`, `short_name`, `description`, and `icons` members nested inside the `shortcut` member.
 
-For our example, this looks like so:
+For our example, this could look like so:
 
 ```json
 "shortcuts": [
@@ -205,21 +200,21 @@ For our example, this looks like so:
     "name_localized": {
       "fr": "Menu ouvert",
       "de": "Menü öffnen",
-      "ur": { "value": "اوپن مینو", "dir": "rtl" },
+      "ur": "اوپن مینو",
       "ja": "メニューを開く"
     },
     "short_name": "Menu",
     "short_name_localized": {
       "fr": "Menu",
       "de": "Speisekarte",
-      "ur": { "value": "مینو", "dir": "rtl" },
+      "ur": "مینو",
       "ja": "メニュー"
     },
     "description": "Go to the menu.",
     "description_localized": {
       "fr": "Allez au menu.",
       "de": "Geh zur Speisekarte.",
-      "ur": { "value": "مینو پر جائیں۔", "dir": "rtl" },
+      "ur": "مینو پر جائیں۔",
       "ja": "メニューに行け。"
     },
     "url": "./menu",
@@ -272,10 +267,7 @@ Putting this all together, the complete manifest looks like this:
   "name_localized": {
     "fr": "L'application de saucisse SuperSausage",
     "de": "Die SuperWurst-App",
-    "ur": {
-      "dir": "rtl",
-      "value": "سپر ساسیج ساسیج ایپ"
-    },
+    "ur": "سپر ساسیج ساسیج ایپ",
     "ja": "スーパーソーセージのソーセージアプリ"
   },
   "short_name_localized": {
@@ -361,21 +353,21 @@ Putting this all together, the complete manifest looks like this:
       "name_localized": {
         "fr": "Menu ouvert",
         "de": "Menü öffnen",
-        "ur": { "value": "اوپن مینو", "dir": "rtl" },
+        "ur": "اوپن مینو",
         "ja": "メニューを開く"
       },
       "short_name": "Menu",
       "short_name_localized": {
         "fr": "Menu",
         "de": "Speisekarte",
-        "ur": { "value": "مینو", "dir": "rtl" },
+        "ur": "مینو",
         "ja": "メニュー"
       },
       "description": "Go to the menu.",
       "description_localized": {
         "fr": "Allez au menu.",
         "de": "Geh zur Speisekarte.",
-        "ur": { "value": "مینو پر جائیں۔", "dir": "rtl" },
+        "ur": "مینو پر جائیں۔",
         "ja": "メニューに行け。"
       },
       "url": "./menu",
