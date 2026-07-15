@@ -79,10 +79,10 @@ row-rule-style: unset;
 The `row-rule-style` property accepts a comma-separated list of values, including:
 
 - `<line-style>`
-  - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset;. The default value is`none`.
+  - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is`none`.
 
 - `<repeat-line-style>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a comma-separated list of {{cssxref("&lt;line-style&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;line-style&gt;")}} values, should be repeated.
 
 - `<auto-repeat-line-style>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-style>` values as subsequent arguments. The provided `<line-style>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
@@ -95,7 +95,7 @@ The value is a comma-separated list of components, which can include `<line-styl
 
 The `row-rule-style`, along with the {{cssxref("row-rule-color")}} and {{cssxref("row-rule-width")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-style`, along with the {{cssxref("column-rule-style")}} property, can also be set using the {{cssxref("rule-style")}} shorthand.
 
-If the property value consists of only one `<line-style>`, all the row rules will be that style. If we declare the following, all row rules will be `dashed`:
+If the property value has only one `<line-style>`, all the row rules will be that style. If we declare the following, all row rules will be `dashed`:
 
 ```css
 row-rule-style: `dashed`;
@@ -109,7 +109,7 @@ row-rule-style: dashed, dotted;
 
 ### Repeated line styles
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-style&gt;")}} values passed as the second argument the specified number of times. This allows the same style to be repeated a set number of times without repeating the same value multiple times. You can use any of the `<line-style>` keywords, or custom properties that resolve to a valid `<line-style>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of rows. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-style&gt;")}} values passed as the second argument the specified number of times. This allows the same style to be repeated a set number of times without repeating the same value. You can use any of the `<line-style>` keywords or custom properties that resolve to a valid `<line-style>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of rows. The following declarations are equivalent:
 
 ```css
 row-rule-style: solid, outset, inset, outset, inset;
@@ -118,7 +118,7 @@ row-rule-style: solid, repeat(2, outset, inset);
 
 This creates a list of five styles. If the number of styles in the `row-rule-style` value's style list exceeds the number of gaps between rows, the excess style values are ignored. If the container has three rows, the rule in the first gutter will be `solid` and the second `outset`.
 
-If there are more gutters than styles, as there are no `repeat()` functions that include the keyword `auto`, the list of styles is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of styles will be repeated one, two, three or four times, respectively, with the last rule being `inset`.
+If there are more gutters than styles, as there are no `repeat()` functions that include the keyword `auto`, the list of styles is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of styles will be repeated one, two, three, or four times, respectively, with the last rule being `inset`.
 
 ### Auto-repeating line styles
 
@@ -128,9 +128,9 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 row-rule-style: solid, repeat(auto, dotted), solid;
 ```
 
-In this case, the first and last row rules will be `sold`, and all others will be `dotted`. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first and last rows will always be `thin`. All the other row rules will be `dotted`, which means if there are only 2 or 3 rows, there will be no dotted row rules.
+In this case, the first and last row rules will be `sold`, and all others will be `dotted`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows, the first and last rows will always be `thin`. All the other row rules will be `dotted`, which means if there are only 2 or 3 rows, there will be no dotted row rules.
 
-The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <line-style>)` can be present in a `row-rule-style` value.
+The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. Only one `repeat(auto, <line-style>)` is allowed within a `row-rule-style` value.
 
 ## Formal definition
 
@@ -209,13 +209,13 @@ ul {
 
 {{EmbedLiveSample("func", "", "180")}}
 
-The flex container has six rows, so five gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values. As there are fewer row gutters than total line-styles, the last three values in the list are discarded.
+The flex container has six rows, so five gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values, so the last three values in the list are discarded.
 
 ### Using `auto` within `repeat()`
 
-This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
+This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
-Using `repeat(auto, <line-style>)` we set all the row rules to be `dotted`, except the first and last, which we set to `solid`.
+Using `repeat(auto, <line-style>)` we set all row rules to `dotted`, except the first and last, which we set to `solid`.
 
 ```css live-sample___auto
 ul {
