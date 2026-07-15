@@ -171,9 +171,9 @@ row-rule:
   solid red 5px;
 ```
 
-In this case, the first and last row rules will be `solid red 5px`, and all others will alternated between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("rule-visibility-items")}} leads to no line being drawn), while all the other row rules will be thin, dotted or dashed, and green or blue, which means if there are only 2 or 3 rows, there will be no dotted or dashed lines.
+In this case, the first and last row rules will be `solid red 5px`, and all others will alternate between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("rule-visibility-items")}} leads to no line being drawn), while all the other row rules will be thin, dotted or dashed, and green or blue, which means if there are only 2 or 3 rows, there will be no dotted or dashed lines.
 
-The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <gap-rule>)` can be present in a `row-rule` value.
+The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <gap-rule>)` can be present in a `row-rule` value.
 
 ## Formal definition
 
@@ -224,9 +224,9 @@ ul {
 
 ### Repeating values
 
-This example demonstrates how, when there are fewer values in the list of styles than row rules, the values are repeated. It also demonstrates the default values for the the width, color, and style of `medium`, `currentcolor` and `none`, respectively.
+This example demonstrates how the values are repeated when there are fewer values in the list of styles than row rules. It also demonstrates the default values for the width, color, and style of `medium`, `currentcolor` and `none`, respectively.
 
-Using the same HTML and CSS as in the previous example, we include four comma-separated `<gap-rule>` values as the `row-rule` value, omitting the width in the first `<gap-rule>`, the color in the second, the style from the third, with the fourth including all three components:
+Using the same HTML and CSS as in the previous example, we include four comma-separated `<gap-rule>` values as the `row-rule` value, omitting the width in the first `<gap-rule>`, the color in the second, and the style from the third, with the fourth including all three components:
 
 ```css live-sample___repeat
 ul {
@@ -244,7 +244,7 @@ The red line is `3px` wide, the dotted line is the same color as the text, and t
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `row-rule` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<gap-rule>` values to be repeat 3 times.
+This example demonstrates using the `repeat()` function within the `row-rule` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<gap-rule>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -263,9 +263,9 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 ### Using `auto` within `repeat()`
 
-This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
+This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
 
-Using `repeat(auto, <gap-rule>)` we set all the row rules to be `1px dotted` and default to the current color, except the first and last, which we set to `3px solid red`.
+Using `repeat(auto, <gap-rule>)` we set all row rules to `1px dotted` and default to the current color, except the first and last, which we set to `3px solid red`.
 
 ```css live-sample___auto
 ul {
