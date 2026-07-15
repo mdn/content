@@ -134,12 +134,12 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
           # Workaround, as fred-ssr doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          npx fred-ssr
+          npx --package=@mdn/fred fred-ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
