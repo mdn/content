@@ -87,7 +87,7 @@ The `row-rule-width` property accepts a comma-separated list of values, includin
   - : A {{cssxref("&lt;line-width&gt;")}}, the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
 
 - `<repeat-line-width>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of the times the second parameter, a comma-separated list of {{cssxref("&lt;line-width&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;line-width&gt;")}} values, should be repeated.
 
 - `<auto-repeat-line-width>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments. The provided `<line-width>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
@@ -106,7 +106,7 @@ A `<line-width>` can be declared as any valid CSS {{cssxref("&lt;line-width&gt;"
 row-rule-width: `3px`;
 ```
 
-When more than one `<line-width>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-width>` values, the list of line widths is repeated until every row rule has a width. If we declare the following, for example, every odd rule will be `thin`, and every even rule will be `1em`.
+When more than one `<line-width>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-width>` values, the list of line widths is repeated until every rule has a width. If we declare the following, for example, every odd rule will be `thin`, and every even rule will be `1em`.
 
 ```css
 row-rule-width: thin, 1em;
@@ -121,7 +121,7 @@ row-rule-width: 1rem, thick, thin, thick, thin;
 row-rule-width: 1rem, repeat(2, thick, thin);
 ```
 
-You can use any `<line-width>` values, including custom properties that resolve to a `<line-width>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of rows. Using `repeat()` can make values easier to write, especially when using complex length calculations become. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
+You can use any `<line-width>` values, including custom properties that resolve to a `<line-width>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of rows. Using `repeat()` can make values easier to write, especially when using complex length calculations. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
 
 If we set `--base: 1vh` and `--secondary: 1vw`, the following will provide similar results to the previous declaration:
 
@@ -136,9 +136,9 @@ row-rule-width:
   thin;
 ```
 
-This creates a list of five widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be 1rem wide and the second is determined by the {{cssxref("minmax()")}} function.
+This creates a list of five widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be `1rem` wide, and the second is determined by the {{cssxref("minmax()")}} function.
 
-If there are more gutters than widths, as there are no `repeat()` functions that include the keyword `auto`, the list of widths is repeated. If the container has 6, 11, 16 or 21 rows, this sequence of widths will be repeated one, two, three or four times, respectively, with the last rule being `thin`. Any other number of rows, up to 25, the last rule will be `1em`, or the result of the `minmax()` or {{cssxref("abs()")}} function.
+If there are more gutters than widths, as there are no `repeat()` functions that include the keyword `auto`, the list of widths is repeated. If the container has 6, 11, 16, or 21 rows, this sequence of widths will be repeated one, two, three or four times, respectively, with the last rule being `thin`. For any other number of rows, up to 25, the last rule will be `1em`, or the result of the `minmax()` or {{cssxref("abs()")}} function.
 
 ### Auto-repeating line widths
 
@@ -148,7 +148,7 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 row-rule-width: thin, repeat(auto, medium), thin;
 ```
 
-In this case, the first row rule will be `thin`, the last will be `thin`, and all others will be `medium`. It doesn't matter if the container has 3, 6, 11, 16 or 21 rows, the first and last rows will always be `thin`. All the other row rules will be `medium`, which means if there are only 2 or 3 rows, there will be no medium-sized row rules.
+In this case, the first row rule will be `thin`, the last will be `thin`, and all others will be `medium`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows, the first and last rows will always be `thin`. All other row rules will be `medium`, which means if there are only 2 or 3 rows, there will be no medium-sized row rules.
 
 The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <width>)` can be present in a `row-rule-width` value.
 
@@ -216,9 +216,9 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `row-rule-width` property value, and how this function can help reduce the verbosity of value declarations.
+This example demonstrates using the `repeat()` function within the `row-rule-width` property value and how this function can help reduce the verbosity of value declarations.
 
-We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function, set the list of two `<line-width>` values to be repeat 3 times.
+We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function sets the list of two `<line-width>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -237,13 +237,13 @@ ul {
 
 {{EmbedLiveSample("func", "", "180")}}
 
-The flex container has six rows, so five gutters. The `repeat()` function repeats two width values three times, creating a list of eight width values. As there are fewer row gutters than total line-widths, the last three values in the list are discarded.
+The flex container has six rows, so five gutters. The `repeat()` function repeats two width values three times, creating a list of eight width values. As there are fewer row gutters than total widths, the last three values in the list are discarded.
 
 ### Using `auto` within `repeat()`
 
-This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
+This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
-Using `repeat(auto, <line-width>)` we set all the row rules to be `1px`, except the first and last, which we set to `5px`.
+Using `repeat(auto, <line-width>)` we set all row rules to `1px`, except the first and last, which we set to `5px`.
 
 ```css live-sample___auto
 ul {
