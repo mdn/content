@@ -192,7 +192,7 @@ If you want to use shaped corners in a `border-shape`, you will have to draw the
 
 ### `border-shape` versus `clip-path`
 
-The {{cssxref("clip-path")}} property takes similar values to `border-shape`, and produces similar effects — both properties can be used to change the shape of an element and therefore the element's hit area, altering the boundary of where `:hover` effects and pointer-related events will activate.
+The {{cssxref("clip-path")}} property takes values similar to `border-shape` and produces similar effects. Both properties can be used to change the shape of an element and therefore the element's hit area, altering the boundary inside which `:hover` effects and pointer-related events activate.
 
 However, there is a fundamental difference in how the two properties work:
 
