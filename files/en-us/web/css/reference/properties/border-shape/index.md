@@ -533,7 +533,7 @@ This example demonstrates how you can animate the `border-shape` property.
 
 #### HTML
 
-The same HTML `<p>` is used as in the previous example, except that this time, we've included a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute so it can be focused via the keyboard.
+The same `<p>` element is used as in the previous example, except this time we've included a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute so it can be focused via the keyboard.
 
 ```html live-sample___animate-border-shape
 <p tabindex="0">
