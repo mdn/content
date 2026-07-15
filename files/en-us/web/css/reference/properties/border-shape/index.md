@@ -63,20 +63,7 @@ The `border-shape` property may be specified using the keyword `none`, or one or
 
 ## Description
 
-The `border-shape` property enables you to define the shape of any element's border (including those of inline and pseudo-elements) using one of the {{cssxref("basic-shape")}} functions. These functions include:
-
-- {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}: Provide different ways to define basic rectangle shapes.
-- {{cssxref("basic-shape/circle","circle()")}}: Defines circle shapes.
-- {{cssxref("basic-shape/ellipse","ellipse()")}}: Defines ellipse shapes.
-- {{cssxref("basic-shape/path","path()")}}: Defines any kind of shape using [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string syntax. SVG path syntax has limitations — it can use only pixel values and the path has to be defined as a single string, so custom properties can't be included via {{cssxref("var()")}}. You are advised to use `shape()` instead.
-- {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
-- {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()` and solves its shortcomings.
-
-You can also include an optional [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value to specify the reference box relative to which the shapes should be drawn.
-
-When you apply the `border-shape` property to an element, properties such as {{cssxref("border")}}, {{cssxref("box-shadow")}}, and {{cssxref("outline")}} defined on the element follow the shape of the border.
-
-This allows precise creation of speech bubbles and abstract tooltip shapes that play well with other styles defined on the element, without resorting to hacks. For example:
+The `border-shape` property enables the precise creation of shapes such as speech bubbles, as shown here, or abstract tooltip shapes, without having to use workarounds.
 
 ```html hidden live-sample___speech-bubble-demo
 <img src="https://mdn.github.io/shared-assets/images/examples/leopard.jpg" />
@@ -142,6 +129,23 @@ p {
 
 {{EmbedLiveSample("speech-bubble-demo", "100%", "240")}}
 
+Note here that the applied `border-shape` plays well with the {{cssxref("border")}} and {{cssxref("box-shadow")}} defined on the element — they follow the shape of the border.
+
+### Supported shape functions
+
+You can define an element's `border-shape` (including that of an inline or pseudo-element) using one of the {{cssxref("basic-shape")}} functions. These functions include:
+
+- {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/rect","rect()")}}, and {{cssxref("basic-shape/xywh","xywh()")}}: Provide different ways to define basic rectangle shapes.
+- {{cssxref("basic-shape/circle","circle()")}}: Defines circle shapes.
+- {{cssxref("basic-shape/ellipse","ellipse()")}}: Defines ellipse shapes.
+- {{cssxref("basic-shape/path","path()")}}: Defines any kind of shape using [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string syntax. SVG path syntax has limitations — it can use only pixel values and the path has to be defined as a single string, so custom properties can't be included via {{cssxref("var()")}}. You are advised to use `shape()` instead.
+- {{cssxref("basic-shape/polygon","polygon()")}}: Defines any kind of polygon via pairs of vertex coordinates. If your desired shape includes smooth curves, you are advised to use `shape()`.
+- {{cssxref("basic-shape/shape","shape()")}}: Defines any kind of shape. The syntax of `shape()` is more CSS-compatible than that of `path()` and solves its shortcomings.
+
+You can also include an optional [`<geometry-box>`](/en-US/docs/Web/CSS/Reference/Values/box-edge#geometry-box) keyword after each `<basic-shape>` value to specify the reference box relative to which the shapes should be drawn.
+
+### Stroke and fill modes
+
 The `border-shape` property has the following two modes:
 
 - If a single `<basic-shape>` is provided in the value, that shape defines the shape of the element's border, with the defined border styles drawn as a stroke around the shape, as shown in the previous example. This is known as **stroke mode**.
@@ -150,9 +154,11 @@ The `border-shape` property has the following two modes:
 > [!NOTE]
 > Avoid defining a shape for the inner boundary that's larger than the outer boundary. If you do this, the border area does not render properly; you might end up with no border fill rendered or one shape rendered behind the other.
 
+### Effect on layout and rendering
+
 The `border-shape` property creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
-The element's content and background are clipped by the `border-shape` property (the inner shape in fill mode). When the specified `border-shape` is the same size or smaller than the content/background, you won't need to adjust the reference box, unless you want to create some kind of offset effect. However, when the specified `border-shape` is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to use a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
+The element's content and background are clipped by the `border-shape` property (the inner shape in fill mode). When the specified `border-shape` is the same size or smaller than the content/background, you won't need to adjust the reference box, unless you want to create some kind of offset effect. However, when the specified `border-shape` is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to use a different reference box to fix the display (see [Handling border-shapes larger than the element's background](#handling_border-shapes_larger_than_the_elements_background) for more information).
 
 ### Limitations on border styles applied to border shapes
 
@@ -203,7 +209,7 @@ This means `border-shape` clips the element's content while still letting the {{
 
 More significantly, properties such as `box-shadow` and `outline` do not follow the shape created by `clip-path` — it chops off the outside of the element, meaning that such effects are truncated in an ugly fashion or removed altogether. The `border-shape` property, on the other hand, creates a differently-shaped border that is neatly followed by such effects.
 
-### Handling backgrounds inside larger border-shapes
+### Handling border-shapes larger than the element's background
 
 As mentioned earlier, one issue with `border-shape` is that when you define a shape that is larger than the element's content/background, you can end up with a gap between the background and the border.
 
@@ -272,7 +278,7 @@ p {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  padding: 30px 50px;
+  padding: 40px 50px;
   background-color: chartreuse;
   display: flex;
   align-items: center;
@@ -332,7 +338,7 @@ In this example, we let you select from different `border-shape` values to apply
 The HTML is similar to that in the previous example, except this time we include a bit more text in the `<p>` element. We've also included a {{htmlelement("select")}} element so you can choose different classes to apply to the `<p>` via JavaScript (we've hidden both the `<select>` and the JavaScript for brevity).
 
 ```html live-sample___border-shape-select
-<p>Fashion is something so ugly it has to be changed every 15 minutes.</p>
+<p>Blessed are the cheesemakers.</p>
 ```
 
 ```html hidden live-sample___border-shape-select
@@ -382,7 +388,7 @@ p {
 
 Next, we define the rules for each of the classes that will be applied when you select the different options in the `<select>` element:
 
-```css live-sample___border-shape-select
+```css-nolint live-sample___border-shape-select
 .circle {
   border-shape: circle(60%);
 }
@@ -403,30 +409,7 @@ Next, we define the rules for each of the classes that will be applied when you 
 }
 
 .polygon {
-  border-shape: polygon(
-      0% 60%,
-      0% 85%,
-      8% 100%,
-      18% 88%,
-      30% 100%,
-      42% 88%,
-      55% 100%,
-      68% 88%,
-      80% 100%,
-      86% 88%,
-      90% 75%,
-      100% 60%,
-      90% 30%,
-      85% 5%,
-      75% 18%,
-      65% 3%,
-      52% 16%,
-      40% 3%,
-      27% 16%,
-      15% 3%,
-      5% 18%
-    )
-    view-box;
+  border-shape: polygon(0% 60%, 0% 85%, 8% 100%, 18% 88%, 30% 100%, 42% 88%, 55% 100%, 68% 88%, 80% 100%, 86% 88%, 90% 75%, 100% 60%, 90% 30%, 85% 5%, 75% 18%, 65% 3%, 52% 16%, 40% 3%, 27% 16%, 15% 3%, 5% 18%) view-box;
 }
 
 .rect {
@@ -451,52 +434,8 @@ Next, we define the rules for each of the classes that will be applied when you 
 }
 
 .two-polygons {
-  border-shape: polygon(
-      0% 60%,
-      0% 85%,
-      8% 100%,
-      18% 88%,
-      30% 100%,
-      42% 88%,
-      55% 100%,
-      68% 88%,
-      80% 105%,
-      86% 88%,
-      91% 75%,
-      101% 60%,
-      93% 30%,
-      86% 5%,
-      75% 18%,
-      65% 3%,
-      52% 16%,
-      40% 3%,
-      27% 16%,
-      15% 3%,
-      5% 18%
-    )
-    polygon(
-      0% 55%,
-      0% 90%,
-      6% 104%,
-      17% 93%,
-      30% 100%,
-      43% 93%,
-      56% 102%,
-      69% 93%,
-      81% 102%,
-      88% 93%,
-      94% 78%,
-      100% 58%,
-      94% 24%,
-      88% -2%,
-      76% 13%,
-      64% -4%,
-      51% 11%,
-      39% -4%,
-      26% 11%,
-      13% -4%,
-      3% 13%
-    );
+  border-shape: polygon(0% 60%, 0% 85%, 8% 100%, 18% 88%, 30% 100%, 42% 88%, 55% 100%, 68% 88%, 80% 105%, 86% 88%, 91% 75%, 101% 60%, 93% 30%, 86% 5%, 75% 18%, 65% 3%, 52% 16%, 40% 3%, 27% 16%, 15% 3%, 5% 18%)
+    polygon(0% 55%, 0% 90%, 6% 104%, 17% 93%, 30% 100%, 43% 93%, 56% 102%, 69% 93%, 81% 102%, 88% 93%, 94% 78%, 100% 58%, 94% 24%, 88% -2%, 76% 13%, 64% -4%, 51% 11%, 39% -4%, 26% 11%, 13% -4%, 3% 13%);
 }
 
 .xywh {
@@ -536,50 +475,25 @@ This example demonstrates how you can animate the `border-shape` property.
 The same `<p>` element is used as in the previous example, except this time we've included a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute so it can be focused via the keyboard.
 
 ```html live-sample___animate-border-shape
-<p tabindex="0">
-  Fashion is something so ugly it has to be changed every 15 minutes.
-</p>
+<p tabindex="0">Blessed are the cheesemakers.</p>
 ```
 
 #### CSS
 
 For this example, we apply a `polygon()` `border-shape` to the `<p>`.
 
-```css live-sample___animate-border-shape
+```css-nolint live-sample___animate-border-shape
 p {
   width: 550px;
   border: 15px solid black;
   box-shadow: 5px 5px 10px rgb(0 0 0 / 0.5);
-  border-shape: polygon(
-      0% 60%,
-      0% 85%,
-      8% 100%,
-      18% 88%,
-      30% 100%,
-      42% 88%,
-      55% 100%,
-      68% 88%,
-      80% 100%,
-      86% 88%,
-      90% 75%,
-      100% 60%,
-      90% 30%,
-      85% 5%,
-      75% 18%,
-      65% 3%,
-      52% 16%,
-      40% 3%,
-      27% 16%,
-      15% 3%,
-      5% 18%
-    )
-    view-box;
+  border-shape: polygon(0% 60%, 0% 85%, 8% 100%, 18% 88%, 30% 100%, 42% 88%, 55% 100%, 68% 88%, 80% 100%, 86% 88%, 90% 75%, 100% 60%, 90% 30%, 85% 5%, 75% 18%, 65% 3%, 52% 16%, 40% 3%, 27% 16%, 15% 3%, 5% 18%) view-box;
 }
 ```
 
 We also set an {{cssxref("animation")}} on the `<p>` element's {{cssxref(":hover")}} and {{cssxref(":focus")}} states, so that when the element is hovered or focused, it smoothly animates back and forth between two polygon border shapes for infinite iterations.
 
-```css live-sample___animate-border-shape
+```css-nolint live-sample___animate-border-shape
 p:hover,
 p:focus {
   animation: morph 1s ease-in-out infinite alternate;
@@ -587,56 +501,10 @@ p:focus {
 
 @keyframes morph {
   from {
-    border-shape: polygon(
-        0% 60%,
-        0% 85%,
-        8% 100%,
-        18% 88%,
-        30% 100%,
-        42% 88%,
-        55% 100%,
-        68% 88%,
-        80% 100%,
-        86% 88%,
-        90% 75%,
-        100% 60%,
-        90% 30%,
-        85% 5%,
-        75% 18%,
-        65% 3%,
-        52% 16%,
-        40% 3%,
-        27% 16%,
-        15% 3%,
-        5% 18%
-      )
-      view-box;
+    border-shape: polygon(0% 60%, 0% 85%, 8% 100%, 18% 88%, 30% 100%, 42% 88%, 55% 100%, 68% 88%, 80% 100%, 86% 88%, 90% 75%, 100% 60%, 90% 30%, 85% 5%, 75% 18%, 65% 3%, 52% 16%, 40% 3%, 27% 16%, 15% 3%, 5% 18%) view-box;
   }
   to {
-    border-shape: polygon(
-        0% 55%,
-        0% 90%,
-        6% 104%,
-        17% 93%,
-        30% 100%,
-        43% 93%,
-        56% 102%,
-        69% 93%,
-        81% 102%,
-        88% 93%,
-        94% 78%,
-        100% 58%,
-        94% 24%,
-        88% -2%,
-        76% 13%,
-        64% -4%,
-        51% 11%,
-        39% -4%,
-        26% 11%,
-        13% -4%,
-        3% 13%
-      )
-      view-box;
+    border-shape: polygon(0% 55%, 0% 90%, 6% 104%, 17% 93%, 30% 100%, 43% 93%, 56% 102%, 69% 93%, 81% 102%, 88% 93%, 94% 78%, 100% 58%, 94% 24%, 88% -2%, 76% 13%, 64% -4%, 51% 11%, 39% -4%, 26% 11%, 13% -4%, 3% 13%) view-box;
   }
 }
 ```
