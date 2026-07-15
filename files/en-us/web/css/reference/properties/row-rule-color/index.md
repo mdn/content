@@ -94,19 +94,19 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
 
 ## Description
 
-The `row-rule-color` property defines the colors of any row rule lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
+The `row-rule-color` property defines the colors of any lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
 The value is a comma-separated list of components, which can include `<line-color>`, `<repeated-line-color>`, and `<auto-repeat-line-color>` types.
 
 The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
-A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the row rules will be that color. If we declare the following, all row rules will be blue:
+A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the rule lines will be that color. If we declare the following, the lines will all be blue:
 
 ```css
 row-rule-color: blue;
 ```
 
-When more than one `<line-color>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-color>` values, the list of line colors is repeated until every row rule has a color. If we declare the following, for example, every odd rule will be blue, and every even rule will be yellow.
+When more than one `<line-color>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-color>` values, the list of line colors is repeated until every row-rule has a color. If we declare the following, for example, every odd rule will be blue, and every even rule will be yellow.
 
 ```css
 row-rule-color: blue, yellow;
@@ -137,7 +137,7 @@ row-rule-color:
 
 This creates a list of five colors. If the number of colors in the `row-rule-color` value's color list exceeds the number of gaps between rows, the excess color values are ignored. If the container has three rows, the rule in the first gutter will be blue and the second yellow.
 
-If there are more gutters than colors, the list of colors is repeated until all row rules receive a color. If the container has 6, 11, 16, or 21 rows, this sequence of colors will be repeated one, two, three, or four times, respectively, with the last rule being red.
+If there are more gutters than colors, the list of colors is repeated until all row-rules receive a color. If the container has 6, 11, 16, or 21 rows, this sequence of colors will be repeated one, two, three, or four times, respectively, with the last one being red.
 
 ### Auto-repeating line colors
 
@@ -147,9 +147,9 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 row-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-In this case, the first row rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows; the first will always be blue and, as long as there are at least two row-rules, the last will always be red. All the other row rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow row rules.
+In this case, the first row-rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows; the first will always be blue and, as long as there are at least two row-rules, the last will always be red. All the other rules will be yellow, which means if there are only 2 or 3 rows, there will be no yellow lines.
 
-The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <color>)` can be present in a `row-rule-color` value.
+The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for the row-rule line colors that would not otherwise receive values from other parts of the list, preventing the list from being cycled. A `row-rule-color` value can include, at most, one `repeat(auto, <color>)`.
 
 ## Formal definition
 
@@ -201,7 +201,7 @@ ul {
 
 ### Repeating values
 
-This example demonstrates how, when there are fewer values in the list of colors than row rules, the values are repeated.
+This example demonstrates how, when there are fewer values in the list of colors than gutters between rows, the values are repeated.
 
 Using the same HTML and CSS as in the previous example, we include three comma-separated colors as the `row-rule-color` value:
 
@@ -238,7 +238,7 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-Using `repeat(auto, <color>)`, we set all the row rules to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
