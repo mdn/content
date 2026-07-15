@@ -797,7 +797,7 @@ li:nth-child(odd) a {
 }
 ```
 
-This immediately creates an issue — the notches on the jigsaw pieces that extend out from the original `<a>` area aren't filled by their background colors.
+This immediately creates an issue — the notches on the jigsaw pieces that extend out from the original `<a>` area aren't filled by the `<a>` elements' background colors.
 
 There is a solution to this problem. We've deliberately included the `content-box` `<geometry-box>` value after each `shape()` function in the previous two rules. This means the shapes will be drawn relative to the elements' content boxes, and any applied `padding` won't be set inside the shape. Instead, the padding will be placed outside the shape, causing it to get smaller and forcing the background color to fill up the notches.
 
