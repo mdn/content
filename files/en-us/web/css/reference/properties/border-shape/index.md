@@ -855,7 +855,7 @@ a:focus {
 
 {{EmbedLiveSample("jigsaw-example", "100%", "240")}}
 
-Hover or focus the nav items to see the animated effects. Note how naturally the different applied effects work with the applied `border-shape` values.
+Hover over or focus the nav items to see the animated effects. Note how naturally the different applied effects work with the `border-shape` values.
 
 ```css hidden live-sample___basic-border-shape live-sample___basic-border-shape-fill live-sample___border-shape-select live-sample___animate-border-shape live-sample___jigsaw-example
 @supports not (border-shape: circle(50%)) {
