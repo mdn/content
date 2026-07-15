@@ -666,7 +666,7 @@ Our HTML is a fairly typical navigation menu — a list of links.
 
 #### CSS
 
-There is a fair bit of CSS in this example; we have hidden some of the basic page setup code completely (as with previous examples), then we have split the remaining CSS into two sections. If you want to ignore most of the styling and just read about the code that is most relevant to the `border-shape` styles, jump to [Handling the border shape](#handling_the_border_shape).
+There is a fair bit of CSS in this example; we've hidden some of the basic page setup code (as with previous examples) and split the remaining CSS into two sections. If you want to ignore most of the styling and just read about the code that is most relevant to the `border-shape` styles, jump to [Handling the border shape](#handling_the_border_shape).
 
 ```css hidden live-sample___jigsaw-example
 * {
