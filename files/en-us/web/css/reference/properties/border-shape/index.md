@@ -152,7 +152,7 @@ The `border-shape` property has the following two modes:
 
 The `border-shape` property creates a purely visual effect — the element's layout is still computed using the underlying rectangular box definition, and the content flow is not affected.
 
-The element's content and background are clipped by the `border-shape` property (the inner shape in fill mode). When the specified shape is the same size or smaller than the content/background, you won't need to adjust the reference box unless you want to create some kind of offset effect. However, when the specified shape is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to use a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
+The element's content and background are clipped by the `border-shape` property (the inner shape in fill mode). When the specified `border-shape` is the same size or smaller than the content/background, you won't need to adjust the reference box, unless you want to create some kind of offset effect. However, when the specified `border-shape` is larger than the content/background, you will see gaps between the edge of the background and the shape(s). In such cases, you may need to use a different reference box to fix the display (see [Handling backgrounds inside larger border-shapes](#handling_backgrounds_inside_larger_border-shapes) for more information).
 
 ### Limitations on border styles applied to border shapes
 
