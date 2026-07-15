@@ -543,7 +543,7 @@ The same HTML `<p>` is used as in the previous example, except that this time, w
 
 #### CSS
 
-This time, we apply a `polygon()` `border-shape` to the `<p>`.
+For this example, we apply a `polygon()` `border-shape` to the `<p>`.
 
 ```css live-sample___animate-border-shape
 p {
