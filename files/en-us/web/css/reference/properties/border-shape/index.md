@@ -577,7 +577,7 @@ p {
 }
 ```
 
-We also set an {{cssxref("animation")}} on the `<p>` element's {{cssxref(":hover")}} and {{cssxref(":focus")}} states so that, when it is hovered or focused, it smoothy animates between two polygon border shapes for infinite iterations.
+We also set an {{cssxref("animation")}} on the `<p>` element's {{cssxref(":hover")}} and {{cssxref(":focus")}} states, so that when the element is hovered or focused, it smoothly animates back and forth between two polygon border shapes for infinite iterations.
 
 ```css live-sample___animate-border-shape
 p:hover,
