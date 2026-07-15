@@ -11,6 +11,7 @@ browser-compat: api.Document.selectionchange_event
 The browser fires the **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) when the current {{domxref("Selection")}} of a {{domxref("Document")}} changes. A document selection represents either a range of selected content across DOM nodes or a collapsed caret position.
 
 The browser triggers this event when:
+
 - A user or script creates or clears a selection.
 - The start or end boundary point of a selected range moves.
 - A selected range changes completely.
@@ -20,6 +21,7 @@ The event object itself does not contain the updated selection details. You can 
 
 > [!NOTE]
 > This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
+>
 > - **Representation:** Document selections use DOM node positions and require {{domxref("Document.getSelection()")}} for inspection. Text controls maintain independent selections within their internal text values, using character offsets inspected via `selectionStart`, `selectionEnd`, and `selectionDirection`.
 > - **Bubbling:** The document-level event fires directly on the {{domxref("Document")}} and does not bubble. The text-control `selectionchange` event fires on the input/textarea element and bubbles up the DOM tree.
 >   See the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} event of `HTMLInputElement` and the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} event of `HTMLTextAreaElement` for more details.
