@@ -34,7 +34,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("::-webkit-scrollbar")}} pseudo-element selector is now recognized, so the `@supports selector(::-webkit-scrollbar)` check returns `true`. Note that this reports the selector as supported even though scrollbar styling via `::-webkit-scrollbar` is not truly implemented. This was added to fix an issue where scrollbars of nested scrollable areas could stack on top of each other. For example, when a scrollbar is set to `display: none` or `width: 0` leaving some content unreachable. ([Firefox bug 2038877](https://bugzil.la/2038877)).
 
 <!-- #### Removals -->
 
