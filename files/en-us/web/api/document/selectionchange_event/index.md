@@ -5,6 +5,7 @@ slug: Web/API/Document/selectionchange_event
 page-type: web-api-event
 browser-compat: api.Document.selectionchange_event
 ---
+
 {{APIRef("Selection API")}}
 
 The browser fires the **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) when the current {{domxref("Selection")}} of a {{domxref("Document")}} changes. A document selection represents either a range of selected content across DOM nodes or a collapsed caret position.
