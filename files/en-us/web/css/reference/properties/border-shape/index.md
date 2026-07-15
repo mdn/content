@@ -645,7 +645,7 @@ p:focus {
 
 {{EmbedLiveSample("animate-border-shape", "100%", "240")}}
 
-Hover or focus the paragraph to see the animation.
+Hover over or focus the paragraph to see the animation.
 
 ### Creating a jigsaw piece navigation menu
 
