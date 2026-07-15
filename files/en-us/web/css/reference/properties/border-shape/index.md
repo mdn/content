@@ -581,7 +581,7 @@ li {
 
 Next, we style the {{htmlelement("a")}} elements inside the list items. We start by removing the default {{cssxref("text-decoration")}} and setting the {{cssxref("color")}} to `black`. We then set a `width` and `height` of `100%` to make the `<a>` elements fill the full area of the `<li>` elements, then use [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to center their text horizontally and vertically.
 
-We then set {{cssxref("box-shadow")}} and {{cssxref("text-shadow")}} properties on the links, plus a `transition` so that any property value changes on state changes are animated smoothly.
+We then set {{cssxref("box-shadow")}} and {{cssxref("text-shadow")}} properties on the links, plus a `transition` so that any property value changes are animated smoothly when the element's state changes.
 
 ```css live-sample___jigsaw-example
 a {
@@ -623,7 +623,7 @@ li:nth-child(4) a {
 
 ##### Handling the border shape
 
-We set a downwards-pointing jigsaw piece `border-shape` on each odd-numbered `<a>` element, and an upwards-pointing jigsaw piece `border-shape` on each even-numbered `<a>` element, for some variety:
+For variety, we've set a downwards-pointing jigsaw-piece `border-shape` on each odd-numbered `<a>` element and an upwards-pointing jigsaw-piece `border-shape` on each even-numbered `<a>` element:
 
 ```css live-sample___jigsaw-example
 li:nth-child(even) a {
@@ -665,7 +665,7 @@ li:nth-child(odd) a {
 }
 ```
 
-This immediately creates an issue — the notches on the jigsaw pieces that extend out from the original `<a>` area aren't filled by their background colors.
+This immediately creates an issue — the notches on the jigsaw pieces that extend out from the original `<a>` area aren't filled by the `<a>` elements' background colors.
 
 There is a solution to this problem. We've deliberately included the `content-box` `<geometry-box>` value after each `shape()` function in the previous two rules. This means the shapes will be drawn relative to the elements' content boxes, and any applied `padding` won't be set inside the shape. Instead, the padding will be placed outside the shape, causing it to get smaller and forcing the background color to fill up the notches.
 
@@ -678,9 +678,9 @@ a {
 ```
 
 > [!NOTE]
-> You can see what the background problem looks like by inspecting the [live example](#result_5) later on in your DevTools and disabling the `padding` applied to the `<a>` elements.
+> You can see what the background problem looks like by inspecting the [live example](#result_5) in your browser's developer tools and disabling the `padding` applied to the `<a>` elements.
 
-The set `padding` causes the jigsaw piece shapes to get smaller, so there are gaps between them. We want them to touch initially, so we set a large negative {{cssxref("margin-right")}} value on each list item to bring them together again:
+The `padding` causes the jigsaw-piece shapes to get smaller, so there are gaps between them. We want them to touch initially, so we set a large negative {{cssxref("margin-right")}} value on each list item to bring them together:
 
 ```css live-sample___jigsaw-example
 li {
