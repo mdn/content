@@ -838,7 +838,7 @@ ul:has(a:focus) {
 }
 ```
 
-We then set an increased `brightness` {{cssxref("filter")}}, {{cssxref("scale")}} factor, and outer `box-shadow` on the `<a>` elements themselves when they are hovered or focused, making them appear brighter and raised up when interacted with.
+We then set an increased `brightness` {{cssxref("filter")}}, {{cssxref("scale")}} factor, and outer `box-shadow` on the `<a>` elements themselves when they are hovered over or focused, making them appear brighter and raised up on interaction.
 
 ```css live-sample___jigsaw-example
 a:hover,
