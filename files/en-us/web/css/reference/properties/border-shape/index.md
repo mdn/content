@@ -697,7 +697,7 @@ ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  gap: 0px;
+  gap: 0;
   transition: gap 0.6s;
 }
 ```
