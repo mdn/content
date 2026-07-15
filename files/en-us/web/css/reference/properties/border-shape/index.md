@@ -649,7 +649,7 @@ Hover over or focus the paragraph to see the animation.
 
 ### Creating a jigsaw-piece navigation menu
 
-In this example, we show how to use `border-shape` to create an irregular navigation menu example with each nav item shaped like a jigsaw piece.
+In this example, we show how to use `border-shape` to create an irregular navigation menu with each nav item shaped like a jigsaw piece.
 
 #### HTML
 
