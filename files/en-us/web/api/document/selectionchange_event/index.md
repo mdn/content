@@ -35,7 +35,7 @@ The `Document` object `selectionchange` event is fired when:
 - A selected range changes completely.
 - A selection collapses to a single caret position.
 
-The event object itself does not contain the updated selection details. You can retrieve the current selection by calling {{domxref("Document.getSelection()", "document.getSelection()")}} within your event listener. 
+The event object itself does not contain the updated selection details. You can retrieve the current selection by calling {{domxref("Document.getSelection()", "document.getSelection()")}} within your event listener.
 
 This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
 
