@@ -23,6 +23,7 @@ The event object itself does not contain the updated selection details. You can 
 > [!NOTE]
 > This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
 >
+>
 > - **Representation:** Document selections use DOM node positions and require {{domxref("Document.getSelection()")}} for inspection. Text controls maintain independent selections within their internal text values, using character offsets inspected via `selectionStart`, `selectionEnd`, and `selectionDirection`.
 > - **Bubbling:** The document-level event fires directly on the {{domxref("Document")}} and does not bubble. The text-control `selectionchange` event fires on the input/textarea element and bubbles up the DOM tree.
 >   See the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} event of `HTMLInputElement` and the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} event of `HTMLTextAreaElement` for more details.
