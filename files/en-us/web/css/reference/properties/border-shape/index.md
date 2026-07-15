@@ -755,7 +755,7 @@ li:nth-child(4) a {
 
 ##### Handling the border shape
 
-We set a downwards-pointing jigsaw piece `border-shape` on each odd-numbered `<a>` element, and an upwards-pointing jigsaw piece `border-shape` on each even-numbered `<a>` element, for some variety:
+For variety, we've set a downwards-pointing jigsaw-piece `border-shape` on each odd-numbered `<a>` element and an upwards-pointing jigsaw-piece `border-shape` on each even-numbered `<a>` element:
 
 ```css live-sample___jigsaw-example
 li:nth-child(even) a {
