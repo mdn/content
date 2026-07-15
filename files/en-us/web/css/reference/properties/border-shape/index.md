@@ -199,7 +199,7 @@ However, there is a fundamental difference in how the two properties work:
 - `clip-path` hides the area of the element that sits outside the region defined by the provided shape.
 - `border-shape` changes the visual rendering of the element so that it sits inside the region defined by the provided shape.
 
-This means that, whereas `border-shape` clips the element's content, allowing its display to be controlled by the {{cssxref("overflow")}} property, `clip-path` hides it altogether, meanng that overflow control is not possible.
+This means `border-shape` clips the element's content while still letting the {{cssxref("overflow")}} property control its display, whereas `clip-path` hides the element's content altogether, so overflow control is not possible.
 
 More significantly, properties such as `box-shadow` and `outline` do not follow the shape created by `clip-path` — it chops off the outside of the element, meaning that such effects are truncated in an ugly fashion or removed altogether. The `border-shape` property, on the other hand, creates a differently-shaped border that is neatly followed by such effects.
 
