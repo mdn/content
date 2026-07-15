@@ -27,13 +27,13 @@ append(input, options)
     - An array of objects, each representing a single message in a conversation with a language model.
       Objects may have the following properties:
       - `role`
-        - : A string indicating who sent the message. Must be one of:
+        - : A string indicating the point of view the message is phrased from. Must be one of:
           - `"system"`
             - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
           - `"user"`
-            - : A message from the user.
+            - : A message from the user, which the API should respond to.
           - `"assistant"`
-            - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+            - : Inputs that come from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds.
       - `content`
         - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
           - `type`

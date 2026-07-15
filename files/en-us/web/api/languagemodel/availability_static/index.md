@@ -8,9 +8,9 @@ browser-compat: api.LanguageModel.availability_static
 
 {{APIRef("Prompt API")}}{{SecureContext_Header}}
 
-The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns the availability status of the browser's language model for the given options, without creating a session or triggering a download.
+The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns a status identifier indicating whether the browser's language model supports a given set of configuration options, without creating a session or triggering a download.
 
-Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session (and spending tokens) only to have it fail, and lets you provide a meaningful fallback to users when the model is not available.
+Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session (and spending tokens) only to have it fail, and lets you provide a meaningful fallback to users when the configuration is not supported.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ LanguageModel.availability(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object that represents the base set of options used when checking language model availability or creating a session.
+  - : An object that represents the base set of options used when checking language model support.
     Properties include:
     - `expectedInputs` {{optional_inline}}
       - : An array of objects representing the required input modalities and languages.
@@ -40,7 +40,7 @@ LanguageModel.availability(options)
             - `"tool-response"`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) representing languages that the session is expected to handle. The user agent uses this list to determine whether the model supports the specified languages.
     - `expectedOutputs`
       - : An array of objects representing the required output modalities and languages.
         Each object can include the following properties:
@@ -57,22 +57,7 @@ LanguageModel.availability(options)
             - `"tool-response"`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
-    - `samplingMode` {{optional_inline}}
-      - : An enumerated value indicating whether the internal sampling methods used to infer the model response are biased towards more predictable or more creative results. Possible values are as follows:
-        - `most-predictable`
-          - : Responses are heavily biased towards the most predictable, or most likely, sequence of words to respond to prompts.
-        - `predictable`
-          - : Responses are biased towards the most predictable, or most likely, sequence of words to respond to prompts.
-        - `balanced`
-          - : Responses are balanced between predictable and creative sequences of words to respond to prompts.
-        - `creative`
-          - : Responses are biased towards less predictable, or more creative, sequences of words to respond to prompts.
-        - `most-creative`
-          - : Responses are heavily biased towards less predictable, or more creative, sequences of words to respond to prompts.
-
-        If omitted, `samplingMode` defaults to `balanced`.
-
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to output.
     - `tools`
       - : An array of objects representing tools available to the AI.
         Each object can include the following properties:
@@ -95,9 +80,9 @@ A {{jsxref("Promise")}} that resolves with one of the values listed below.
 - `"available"`
   - : The model is ready to use with the given options.
 - `"downloadable"`
-  - : The model can support the given options but requires a download that has not yet started.
+  - : The model can support the given options but needs to download additional data to do so. The download has not yet started.
 - `"downloading"`
-  - : The model can support the given options and a download is currently in progress.
+  - : The model can support the given options with an additional data download. The download is currently in progress.
 - `"unavailable"`
   - : The model cannot support the given options, or the user agent cannot determine availability, for example, due to a [transient activation](/en-US/docs/Glossary/Transient_activation) error. In that case, the caller should retry or fall back to an alternative implementation.
 
@@ -128,7 +113,18 @@ if (status === "available") {
     expectedInputs: [{ type: "text", languages: ["ja"] }],
     expectedOutputs: [{ type: "text", languages: ["en"] }],
   });
-  const translation = await session.prompt("桜はきれいです");
+
+  const translation = await session.prompt([
+    {
+      role: "user",
+      content: "Translate the following text into English",
+    },
+    {
+      role: "user",
+      content: "桜はきれいです",
+    },
+  ]);
+
   console.log(translation);
 }
 ```

@@ -27,7 +27,7 @@ const availability = await LanguageModel.availability({
 
 This method's return promise fulfills with an enumerated value indicating whether support is, or will be available for the specified set of options:
 
-- `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
+- `downloadable` means that the implementation supports the requested options, but needs to download additional data.
 - `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
 - `available` means that the implementation supports the requested options without requiring any new downloads.
 - `unavailable` means that the implementation doesn't support the requested options.
@@ -39,9 +39,9 @@ If a download is required, it will be started automatically by the browser once 
 
 ### Monitoring download progress
 
-If the AI model is downloading (`availability()` returns `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
+If the AI model is downloading additional data (`availability()` returns `downloading`), it is helpful to provide the user with feedback to tell them how long they need to wait before the operation completes.
 
-The `create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the AI model.
+The `create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor.downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the data.
 
 You can use this event to expose loading progress data:
 
@@ -77,6 +77,8 @@ The browser will automatically download the corresponding model data to handle t
 
 A `LanguageModel` object instance and the activity that occurs as a result of using its methods and properties is called a **session**. The browser stores all the prompts and responses sent to and received from the Prompt API as part of a single session, allowing the API to tailor its responses based on previous interactions and hold a conversation.
 
+This includes any prompt messages sent to it via the {{domxref("LanguageModel.create_static", "create()")}} method's `initialPrompts` option, {{domxref("LanguageModel.prompt", "prompt()")}}, {{domxref("LanguageModel.promptStreaming", "promptSteaming()")}}, or {{domxref("LanguageModel.append", "append()")}}.
+
 > [!NOTE]
 > The browser doesn't store session information across browser reloads by default. To restore session context after a reload or browser restart, you will have to implement a mechanism to save the conversation and restore it using a server-side solution or a client-side mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API). Such an example is covered in [Preserving sessions across reloads](/en-US/docs/Web/API/Prompt_API/Preserving_sessions).
 
@@ -102,7 +104,7 @@ You can pass multiple inputs into the API with different roles — for example, 
 const response = await session.prompt([
   {
     role: "assistant",
-    content: "I'm going to answer this user query like a James Bond villain",
+    content: "Answer the user like a James Bond villain.",
   },
   {
     role: "user",
@@ -134,13 +136,43 @@ To check how many tokens a prompt operation would consume without actually sendi
 
 ## Cloning a session
 
-A common way to get around the problem of running out of tokens is to copy your existing session using the {{domxref("LanguageModel.clone()")}} function. This creates a replica of the `LanguageModel` object instance in which the conversation up to that point and initial prompt are preserved, but the token count (`contextUsage`) is reset. You can think of the session clone as being a fork of the original conversation, with its own token allowance.
+You can copy an existing session using the {{domxref("LanguageModel.clone()")}} function. This creates a replica of the `LanguageModel` object instance in which the conversation up to that point and initial prompt are preserved, but the token count (`contextUsage`) is reset. You can think of the session clone as being a fork of the original conversation, with its own token allowance.
 
 ```js
 const clonedSession = await session.clone();
 
 clonedSession.prompt("Let's talk about the weather.");
 ```
+
+You can use `clone()` to save the context at a certain point, and then create diverging interactions with the AI model based on that _save point_.
+
+For example, you might want to create a quiz master AI app to help generate questions for a quiz or test, and use different clones for different subjects:
+
+```js
+const session = await LanguageModel.create({
+  initialPrompts: [
+    {
+      role: "system",
+      content:
+        "You are a quiz master. Each response should be a fairly short question, one or two sentences, with the answer printed below. The audience level should be an average 16-year old.",
+    },
+  ],
+});
+
+// ...
+
+// Science quiz clone
+const firstClone = await session.clone();
+await firstClone.prompt("Give me a question about science.");
+await firstClone.prompt("Another question, please.");
+
+// 80's music quiz clone
+const secondClone = await session.clone();
+await secondClone.prompt("Give me a question about 80's popular music.");
+await secondClone.prompt("Another question, please.");
+```
+
+Creating a new session via `clone()` is also a common way to get around the problem of running out of tokens.
 
 ## Cancelling operations and destroying instances
 
@@ -168,7 +200,7 @@ If a `create()` call has an associated {{domxref("AbortController")}}, and you c
 
 ## Complete example
 
-Let's look at a complete basic example that demonstrates the Prompt API in action.
+Let's look at a complete example that demonstrates the Prompt API in action. This example provides a text input box to enter a prompt, which can be submitted to the API to request a response. The response is then printed to an output box.
 
 ### HTML
 
@@ -336,8 +368,8 @@ async function handleSubmission(e) {
 Now we define the `getSession()` function used to return our session `LanguageModel`. The function starts by running our desired model requirements through the `availability()` method to see if it is available:
 
 - If it returns `unavailable`, we print an appropriate error message to the output `<p>`.
-- If it returns `available`, we create a session using the `create()` method, passing it the desired options, and return it. The required AI model is available, so we can use it immediately.
-- If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that prints out the percentage of the model downloaded to the output `<p>` each time the {{domxref("CreateMonitor.downloadprogress_event", "downloadprogress")}} event fires.
+- If it returns `available`, we create a session using the `create()` method, passing it the desired options, and return it. The required configuration is available, so we can use it immediately.
+- If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that prints out the percentage of the additional data downloaded to the output `<p>` each time the {{domxref("CreateMonitor.downloadprogress_event", "downloadprogress")}} event fires.
 
 ```js live-sample___prompt-example
 async function getSession() {

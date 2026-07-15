@@ -17,7 +17,7 @@ When {{domxref("LanguageModel.prompt()")}} is called, it takes an `input` parame
 const response = await session.prompt(inputElem.value);
 ```
 
-The previous `prompt()` call only receives a single string as a parameter. This is a shorthand form, available for the common situation where you only want to pass the model a single user text prompt (note that this form cannot be used in the [`initialPrompts`](/en-US/docs/Web/API/LanguageModel/create_static#initialprompts) option of a `create()` call). You can expand this to explicitly declare the `role` of the `input` object:
+The previous `prompt()` call only receives a single string as a parameter. This is a shorthand form, available for the common situation where you only want to pass the model a single user text prompt. You can expand this to explicitly declare the `role` of the `input` object:
 
 ```js
 const response = await session.prompt([
@@ -33,7 +33,7 @@ The three available `role` types are:
 - `user`
   - : Inputs that come from the `user`, which the API should respond to.
 - `assistant`
-  - : Inputs that come from the AI assistant, which mainly serve to provide context/history.
+  - : Inputs that are written from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds. These are commonly used for [preserving sessions](/en-US/docs/Web/API/Prompt_API/Preserving_sessions) and [few-shot prompts](#few-shot_prompts).
 - `system`
   - : Global inputs from the overall system that give the model instructions on how to respond. If a `system` input is included, it must come first in the provided inputs, otherwise an exception is thrown. As a result, `system` inputs are usually only included as [initial prompts](#providing_initial_prompts_during_session_creation).
 
@@ -89,7 +89,7 @@ const response = await session.prompt([
 ]);
 ```
 
-However, you could rewrite the previous multiple user inputs example into this form, which you might find easier to understand:
+However, you could rewrite the previous multiple-user-input example into this form, which includes both messages in a single input object. You might find this version easier to understand:
 
 ```js
 const response = await session.prompt([
@@ -134,6 +134,48 @@ const session = await LanguageModel.create({
 
 As well as telling the model what kind of personality it should have, `initialPrompts` is also useful for loading a previous saved conversation into the session after a page reload or subsequent visit to the app. See [preserving sessions across reloads](/en-US/docs/Web/API/Prompt_API/Preserving_sessions).
 
+> [!NOTE]
+> The text string shorthand form discussed at the top of [Prompt input syntax](#prompt_input_syntax) cannot be used in the `initialPrompts` option of a `create()` call.
+
+## Few-shot prompts
+
+A few-shot prompt is a set of `user` role and `assistant` role input pairs passed as an example to the API to train it how to respond to a particular type of input, before asking it to complete a similar task.
+
+The following example shows how use a few-shot prompt to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
+
+```js
+const session = await LanguageModel.create({
+  expectedInputs: [{ type: "text", languages: ["en"] }],
+  expectedOutputs: [{ type: "text", languages: ["en", "fr"] }],
+  initialPrompts: [
+    {
+      role: "system",
+      content:
+        "Translate the user's input to French. Use the output format 'English input: French output'",
+    },
+    { role: "user", content: "Hello" },
+    { role: "assistant", content: "Hello: Bonjour" },
+    { role: "user", content: "Goodbye" },
+    { role: "assistant", content: "Goodbye: Au revoir" },
+    { role: "user", content: "The train is late" },
+    {
+      role: "assistant",
+      content: "The train is late: Le train est en retard",
+    },
+    { role: "user", content: "My shoes are pink" },
+    {
+      role: "assistant",
+      content: "My shoes are pink: Mes chaussures sont roses",
+    },
+  ],
+});
+
+const result = await session.prompt("Window");
+console.log(result); // "Window: Fenêtre"
+```
+
+You could include just the `system` initial prompt and the example would still work, but it would be less likely to provide responses in the desired format.
+
 ## Initial and multiple inputs example
 
 Let's look at an example that makes use of intial and multiple inputs for extra context. In this example, the user is prompted to enter their name, and the API provides a whimsical review of it.
@@ -163,7 +205,7 @@ Technically, this is very similar to the [complete example](/en-US/docs/Web/API/
 <p class="prompt-output"></p>
 ```
 
-```css hidden live-sample___rate-my-name live-sample___excerpt-question
+```css hidden live-sample___rate-my-name live-sample___excerpt-question live-sample___constraint-example
 * {
   box-sizing: border-box;
 }
@@ -368,9 +410,9 @@ Try entering a name into the `<input>`, then press the submit button to prompt t
 
 ## Adding response constraints
 
-The `prompt()` and {{domxref("LanguageModel.promptStreaming", "promptStreaming()")}} methods both accept a [`responseConstraint`](/en-US/docs/Web/API/LanguageModel/prompt#responseconstraint) option that takes as its value a [JSON Schema](https://json-schema.org/) object defining the precise format the assistant's responses should be delivered in.
+The `prompt()` and {{domxref("LanguageModel.promptStreaming", "promptStreaming()")}} methods both accept a [`responseConstraint`](/en-US/docs/Web/API/LanguageModel/prompt#responseconstraint) option that takes as its value a [JSON Schema](https://json-schema.org/) object defining the precise format the assistant's responses should be delivered in. This delivers more precise results than just asking the API to respond in a particular way via a `system` prompt, for example.
 
-For example, a very simple schema might define a response that should contain a single boolean value:
+A very simple schema might define a response that should contain a single boolean value:
 
 ```js
 const schema = {
@@ -395,6 +437,195 @@ const response = await session.prompt(
 ```
 
 In this case, we set the prompt content to "Is this a color:" followed by an `<input>` element `value`. As a result, the API will evaluate whether the user's input is a color or not, and return a value of `true` or `false`.
+
+Let's look at a more complex example, to give you more of an idea of what is possible with response constraints. In this case, the schema specifies that the API response should be delivered as JSON containing:
+
+- A single string representing a summary description.
+- An array of exactly three strings representing three supporting bullet points.
+
+```js
+const schema = {
+  $schema: "https://json-schema.org/draft/2020-12/schema",
+  title: "Description with Three Bullets",
+  type: "object",
+  properties: {
+    description: {
+      type: "string",
+      description: "A descriptive sentence summarizing the content.",
+      minLength: 1,
+    },
+    bullets: {
+      type: "array",
+      description: "Exactly three supporting bullet points.",
+      items: {
+        type: "string",
+        minLength: 1,
+      },
+      minItems: 3,
+      maxItems: 3,
+    },
+  },
+  required: ["description", "bullets"],
+  additionalProperties: false,
+};
+```
+
+This is included in the `prompt()` call's `responseConstraint` option, as before:
+
+```js
+const response = await session.prompt(textarea.value, {
+  responseConstraint: schema,
+});
+```
+
+Because the response is specified as a JSON string, we can parse the response into an object, and then use the object's properties in our response:
+
+```js
+const structuredOutput = JSON.parse(response);
+
+promptOutput.innerHTML = `${structuredOutput.description}<br><br>- ${structuredOutput.bullets[0]}<br>- ${structuredOutput.bullets[1]}<br>- ${structuredOutput.bullets[2]}`;
+```
+
+You can try this demo out in the following live example:
+
+```html hidden live-sample___constraint-example
+<h1>Prompt API constraint demo</h1>
+<p>
+  Type in a subject. The demo uses a JSON schema to constraint the API response
+  to a JSON string containing a summary string and an array containing three
+  supporting strings. Released in Chrome 148, but trialled since version 137.
+</p>
+
+<h2>Input</h2>
+
+<form>
+  <div>
+    <label for="prompt-text">Enter prompt text:</label>
+    <textarea id="prompt-text" name="promptText" rows="6"></textarea>
+  </div>
+  <button type="submit" id="submit">Submit query</button
+  ><button type="button" id="abort">Abort query</button>
+</form>
+
+<h2>Output</h2>
+
+<p class="prompt-output"></p>
+```
+
+```js hidden live-sample___constraint-example
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+const submitBtn = document.querySelector("#submit");
+const abortBtn = document.querySelector("#abort");
+abortBtn.disabled = true;
+submitBtn.disabled = true;
+const promptOutput = document.querySelector(".prompt-output");
+
+let session;
+textarea.addEventListener("focus", () => {
+  if (!session) {
+    init();
+  }
+});
+
+async function init() {
+  session = await getSession();
+  promptOutput.textContent = `Session created.`;
+  submitBtn.disabled = false;
+}
+
+form.addEventListener("submit", handleSubmission);
+
+async function handleSubmission(e) {
+  e.preventDefault();
+
+  if (textarea.value === "") {
+    promptOutput.innerHTML = `<span class="error">No text entered!</span>`;
+    return;
+  }
+
+  try {
+    promptOutput.textContent = "...generating response...";
+    submitBtn.disabled = true;
+    abortBtn.disabled = false;
+
+    const controller = new AbortController();
+    abortBtn.addEventListener("click", () => {
+      controller.abort("Query aborted by user.");
+      submitBtn.disabled = false;
+      abortBtn.disabled = true;
+    });
+
+    const schema = {
+      $schema: "https://json-schema.org/draft/2020-12/schema",
+      title: "Description with Three Bullets",
+      type: "object",
+      properties: {
+        description: {
+          type: "string",
+          description: "A descriptive sentence summarizing the content.",
+          minLength: 1,
+        },
+        bullets: {
+          type: "array",
+          description: "Exactly three supporting bullet points.",
+          items: {
+            type: "string",
+            minLength: 1,
+          },
+          minItems: 3,
+          maxItems: 3,
+        },
+      },
+      required: ["description", "bullets"],
+      additionalProperties: false,
+    };
+
+    const response = await session.prompt(textarea.value, {
+      signal: controller.signal,
+      responseConstraint: schema,
+    });
+
+    const structuredOutput = JSON.parse(response);
+
+    promptOutput.innerHTML = `${structuredOutput.description}<br><br>- ${structuredOutput.bullets[0]}<br>- ${structuredOutput.bullets[1]}<br>- ${structuredOutput.bullets[2]}`;
+
+    submitBtn.disabled = false;
+    abortBtn.disabled = true;
+    console.log(`${session.contextUsage}/${session.contextWindow}`);
+  } catch (e) {
+    promptOutput.innerHTML = `<span class="error">${e}</span>`;
+  }
+}
+
+async function getSession() {
+  const availability = await LanguageModel.availability({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+  });
+  if (availability === "unavailable") {
+    promptOutput.textContent = "Language model not available.";
+    return undefined;
+  } else if (availability === "available") {
+    return await LanguageModel.create({
+      expectedInputs: [{ type: "text", languages: ["en"] }],
+      expectedOutputs: [{ type: "text", languages: ["en"] }],
+    });
+  } else {
+    return await LanguageModel.create({
+      expectedInputs: [{ type: "text", languages: ["en"] }],
+      expectedOutputs: [{ type: "text", languages: ["en"] }],
+      monitor(monitor) {
+        monitor.addEventListener("downloadprogress", (e) => {
+          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+        });
+      },
+    });
+  }
+}
+```
+
+{{EmbedLiveSample("constraint-example", , "660px", , , , "language-model", "allow-forms")}}
 
 ## Appending extra messages to the context
 
@@ -424,7 +655,9 @@ const response = await session.prompt([
 
 ## An append example
 
-Let's look at a real implementation of the excerpt example mentioned previously. It works similarly to previous examples, so we won't walk through all the code exhaustively. To study the full code, press the "Play" button in the rendered live output to open the full code in MDN Playground.
+Let's look at a real implementation of the excerpt example mentioned previously. In this case, you can enter a passage of text into one input and a question about that text into another input. When submitted, the API response will answer the question specifically in the context of the provided text passage.
+
+It works similarly to previous examples, so we won't walk through all the code exhaustively. To study the full code, press the "Play" button in the rendered live output to open the full code in MDN Playground.
 
 ```html hidden live-sample___excerpt-question
 <h1>Prompt API excerpt question demo</h1>

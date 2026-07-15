@@ -58,13 +58,13 @@ LanguageModel.create(options)
     - `initialPrompts`
       - : An array of objects representing messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Each object can include the following properties:
         - `role`
-          - : A string indicating who sent the message. Must be one of:
+          - : A string indicating the point of view the message is phrased from. Must be one of:
             - `"system"`
               - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
             - `"user"`
-              - : A message from the user.
+              - : A message from the user, which the API should respond to.
             - `"assistant"`
-              - : A message from the model. Use this for few-shot examples or continued dialogue. A few-shot example is a set of input-output pairs passed as an example to an AI before asking it to complete a similar task.
+              - : Inputs that come from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds.
         - `content`
           - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
             - `type`
@@ -85,21 +85,6 @@ LanguageModel.create(options)
           - : A boolean, defaulting to `false`. When `true`, the message is treated as a prefix for the model's next generated response rather than a complete turn.
     - `monitor`
       - : A reference to a {{domxref("CreateMonitor")}} callback function to receive download progress events.
-    - `samplingMode` {{optional_inline}}
-      - : An enumerated value indicating whether the internal sampling methods used to infer the model response are biased towards more predictable or more creative results. Possible values are as follows:
-        - `most-predictable`
-          - : Responses are heavily biased towards the most predictable, or most likely, sequence of words to respond to prompts.
-        - `predictable`
-          - : Responses are biased towards the most predictable, or most likely, sequence of words to respond to prompts.
-        - `balanced`
-          - : Responses are balanced between predictable and creative sequences of words to respond to prompts.
-        - `creative`
-          - : Responses are biased towards less predictable, or more creative, sequences of words to respond to prompts.
-        - `most-creative`
-          - : Responses are heavily biased towards less predictable, or more creative, sequences of words to respond to prompts.
-
-        If omitted, `samplingMode` defaults to `balanced`.
-
     - `signal`
       - : An {{domxref("AbortSignal")}} to cancel session creation.
     - `tools`
@@ -188,23 +173,39 @@ const session = await LanguageModel.create({
 });
 ```
 
-### Providing few-shot examples
+### Providing few-shot prompts
 
-A few-shot example is a set of `user` role and `assistant` role input pairs passed as an example to an AI, using the `initialPrompts` property, before asking it to complete a similar task.
+The following example shows how use a [few-shot prompt](/en-US/docs/Web/API/Prompt_API/Adding_context#few-shot_prompts) to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
 
 ```js
 const session = await LanguageModel.create({
+  expectedInputs: [{ type: "text", languages: ["en"] }],
+  expectedOutputs: [{ type: "text", languages: ["en", "fr"] }],
   initialPrompts: [
-    { role: "system", content: "Translate the user's input to French." },
+    {
+      role: "system",
+      content:
+        "Translate the user's input to French. Use the output format 'English input: French output'",
+    },
     { role: "user", content: "Hello" },
-    { role: "assistant", content: "Bonjour" },
+    { role: "assistant", content: "Hello: Bonjour" },
     { role: "user", content: "Goodbye" },
-    { role: "assistant", content: "Au revoir" },
+    { role: "assistant", content: "Goodbye: Au revoir" },
+    { role: "user", content: "The train is late" },
+    {
+      role: "assistant",
+      content: "The train is late: Le train est en retard",
+    },
+    { role: "user", content: "My shoes are pink" },
+    {
+      role: "assistant",
+      content: "My shoes are pink: Mes chaussures sont roses",
+    },
   ],
 });
 
-const result = await session.prompt("Good morning");
-console.log(result); // "Bonjour matin" or "Bonjour"
+const result = await session.prompt("Window");
+console.log(result); // "Window: Fenêtre"
 ```
 
 ### Defining a tool with a callback
