@@ -711,7 +711,7 @@ li {
 }
 ```
 
-Now we'll go on to style the {{htmlelement("a")}} elements inside the list items. We start off by removing the default {{cssxref("text-decoration")}} and setting the {{cssxref("color")}} to `black`. We then set a `width` and `height` of `100%` to make the `<a>` elements fill the full area of the `<li>` elements, then use [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to center their text horizontally and vertically.
+Next, we style the {{htmlelement("a")}} elements inside the list items. We start by removing the default {{cssxref("text-decoration")}} and setting the {{cssxref("color")}} to `black`. We then set a `width` and `height` of `100%` to make the `<a>` elements fill the full area of the `<li>` elements, then use [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to center their text horizontally and vertically.
 
 We then set {{cssxref("box-shadow")}} and {{cssxref("text-shadow")}} properties on the links, plus a `transition` so that any property value changes on state changes are animated smoothly.
 
