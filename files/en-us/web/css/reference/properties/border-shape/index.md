@@ -688,7 +688,7 @@ body {
 }
 ```
 
-##### Implementing the general nav styles
+##### Applying the general nav styles
 
 First of all, we style our {{htmlelement("ul")}}, removing the default {{cssxref("list-style-type")}} and {{cssxref("padding")}}, and setting a {{cssxref("display")}} value of `flex` to lay out the contained {{htmlelement("li")}} elements in a row. We then set a {{cssxref("gap")}} value of `0` and apply a {{cssxref("transition")}} so that, when the `<ul>` state changes, a change in the `gap` value will smoothly animate.
 
