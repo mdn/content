@@ -812,7 +812,7 @@ a {
 > [!NOTE]
 > You can see what the background problem looks like by inspecting the [live example](#result_5) in your browser's developer tools and disabling the `padding` applied to the `<a>` elements.
 
-The set `padding` causes the jigsaw piece shapes to get smaller, so there are gaps between them. We want them to touch initially, so we set a large negative {{cssxref("margin-right")}} value on each list item to bring them together again:
+The `padding` causes the jigsaw-piece shapes to get smaller, so there are gaps between them. We want them to touch initially, so we set a large negative {{cssxref("margin-right")}} value on each list item to bring them together:
 
 ```css live-sample___jigsaw-example
 li {
