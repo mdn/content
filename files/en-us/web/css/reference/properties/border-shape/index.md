@@ -829,7 +829,7 @@ ul {
 }
 ```
 
-Finally, we apply some style updates on `:hover` and `:focus` that, when combined with the `transition` properties set earlier, produce some animated effects when the nav items are interacted with. We increase the `gap` set on the `<ul>` flexbox layout when it is hovered or focused. To handle the focus state, we use the {{cssxref(":has")}} pseudo-class to select the entire `<ul>` when any `<a>` inside it is focused.
+Finally, we apply some style updates on `:hover` and `:focus` that, when combined with the `transition` properties we set earlier, produce some animated effects on interaction with the nav items. We increase the `gap` set on the `<ul>` flexbox layout when it is hovered over or focused. To handle the focus state, we use the {{cssxref(":has")}} pseudo-class to select the entire `<ul>` when any `<a>` inside it is focused.
 
 ```css live-sample___jigsaw-example
 ul:hover,
