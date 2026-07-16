@@ -16,6 +16,9 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refere
 
 Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
 
+> [!NOTE]
+> When a `url()` is used within a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., `--my-image: url(foo.jpg)`), the relative URL is not resolved immediately. It is resolved when the custom property is evaluated via `var()` substitution in a standard property. The base URL at that point is the stylesheet where the `var()` reference appears, not where the custom property was defined. See [CSS Custom Properties for Cascading Variables Module Level 1](https://www.w3.org/TR/css-variables-1/#syntax) for more details.
+
 The **`url()`** function can be included as a value for
 {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
 [src](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src) as part of a {{cssxref("@font-face")}} block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
