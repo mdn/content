@@ -115,7 +115,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Extended the `emulation.setLocaleOverride` command to also apply a locale emulation to dedicated and shared workers. ([Firefox bug 2015655](https://bugzil.la/2015655)).
 - Extended the `emulation.setTimezoneOverride` command to also apply a timezone emulation to dedicated and shared workers. ([Firefox bug 2015657](https://bugzil.la/2015657)).
 - Updated the `browsingContext.create` command to no longer emit `browsingContext.domContentLoaded` and `browsingContext.load` events for the initial `about:blank` page when creating new top-level browsing contexts, and to now emit the `browsingContext.contextCreated` event at the end of the creation process. ([Firefox bug 1930594](https://bugzil.la/1930594)).
-- Fixed a bug where functions created by the `script.addPreloadScript` command stopped working after several navigations. ([Firefox bug 2046390](https://bugzil.la/2046390)).
+- Fixed a bug where functions created by the `script.addPreloadScript` command might have stopped working after several navigations. ([Firefox bug 2046390](https://bugzil.la/2046390)).
 
 #### Marionette
 
