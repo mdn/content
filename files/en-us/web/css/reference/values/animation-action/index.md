@@ -21,9 +21,9 @@ The `<animation-action>` enumerated type is specified using one of the the follo
 - `play`
   - : The animation will play, resume (if paused), or restart (if currently finished) in the same direction as its current direction of play.
 - `play-forwards`
-  - : As `play`, except that the direction of play is adjusted if required (flipping it to forwards if the animation is currently playing backwards) so that the animation will play forwards.
+  - : As `play`, except that the animation's {{domxref("Animation.playbackRate", "playbackRate")}} is adjusted if required (flipping it to positive if negative) so that the animation will play forwards.
 - `play-backwards`
-  - : As `play`, except that the direction of play is adjusted if required (flipping it to backwards if the animation is currently playing forwards) so that the animation will play in reverse.
+  - : As `play`, except that the animation's `playbackRate` is adjusted if required (flipping it to negative if positive) so that the animation will play in reverse.
 - `play-once`
   - : As `play`, except that once the animation has played through all its iterations, it won't be triggered again. Like `play`, if an animation is paused, `play-once` will resume playing it; unlike `play`, it won't replay a finished animation.
 - `pause`
@@ -79,7 +79,7 @@ While valid, combining `play` with `play-once` is unnecessary, as it behaves the
 
 #### `play-forwards` and `play-backwards`
 
-Setting `play-forwards` and `play-backwards` will play the animation through all its iterations, except that the direction of play will be changed to forwards or backwards, ensuring that the animation plays forwards or backwards, respectively.
+Setting `play-forwards` and `play-backwards` will play the animation through all its iterations, except that the direction of play will be changed to forwards or backwards, respectively. It is important to note that this is achived by adjusting the animation's {{domxref("Animation.playbackRate", "playbackRate")}}; the {{cssxref("animation-direction")}} value is not affected.
 
 Specifying an activation action of `play-forwards` only has the same effect as specifying `play` only:
 
@@ -179,9 +179,9 @@ The behavior specified by the various `<animation-action>` keywords is equivalen
 - `play`
   - : Equivalent to calling {{domxref("Animation.play()")}} on the animation.
 - `play-forwards`
-  - : Equivalent to flipping the {{domxref("Animation.playbackRate")}} of a playing animation from a negative to a positive value.
+  - : Equivalent to setting the {{domxref("Animation.playbackRate")}} of a playing animation to its absolute positive value.
 - `play-backwards`
-  - : Equivalent to flipping the {{domxref("Animation.playbackRate")}} of a playing animation from a positive to a negative value.
+  - : Equivalent to setting the {{domxref("Animation.playbackRate")}} of a playing animation to its absolute positive value multiplied by `-1`.
 - `play-once`
   - : Equivalent to calling `Animation.play()` on the animation except that it only plays once.
 - `pause`

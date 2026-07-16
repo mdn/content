@@ -486,7 +486,7 @@ img {
 
 ## Adjusting the animation's action
 
-All the examples so far in this guide have triggered the `fade-in` animation, causing the caption to fade in and fade out. The forwards and backwards play has been controlled by the `animation-trigger` declaration set on the animating element:
+All the examples so far in this guide have triggered the `fade-in` animation, causing the caption to fade in and fade out. The forwards and backwards play is controlled by the `animation-trigger` declaration set on the animated element:
 
 ```css
 animation-trigger: --t play-forwards play-backwards;
@@ -505,11 +505,11 @@ The animation only happens once when the trigger is activated, and once in rever
 There are other `animation-action` values that can be set to produce different effects. For example:
 
 - `play-once` causes the animation to play only once. Once finished, it won't play again on subsequent activations/deactivations.
-- `play` causes the animation to play, in whatever direction it was previously playing in. In contrast, `play-forwards` and `play-backwards` ensure that the animation plays forwards or backwards, respectively.
+- `play` causes the animation to play, in whatever direction it was previously playing in. In contrast, `play-forwards` and `play-backwards` interact with the animation's {{domxref("Animation.playbackRate", "playbackRate")}}, setting it to its absolute positive value or its absolute positive value multiplied by `-1`, respectively. This results in the animation playing forwards or backwards. Note that the {{cssxref("animation-direction")}} value is not affected.
 - `pause` causes the animation to pause. For example, you could set an animation's iteration count to `infinite`, and set the corresponding `animation-trigger` to `--t play pause`: This would cause the animation to play when the trigger is activated, and pause when it deactivates.
 - `reset` has the same effect as `pause`, except that additionally it sets the animation progress back to `0`.
 
-Some of these values are designed to be used together. For example, `play-forwards play-backwards` is very common when you want a UI element to "animate in" when it appears on-screen and then "animate out" again when it goes off-screen, whereas `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
+Some of these values are designed to be used together. For example, `play-forwards play-backwards` is intended for use in cases where you want to alternate the direction of play in the animation's end visual effect, causing a UI element to "animate in" when it appears on-screen and then "animate out" again when it goes off-screen. On the other hand, `play pause` is common for animating an element as it appears, then pausing the animation as it starts to go off-screen.
 
 Let's look at a brief example — we'll take our first example and change it so that our `<figure>` fades in only once, when has completely entered the scrollport, and doesn't fade out or animate again until the page is reloaded.
 
@@ -528,7 +528,7 @@ This example renders like so:
 
 {{embedlivesample("play-once", "100%", 500)}}
 
-When you first scroll the `<figure>` on-screen, it will fade in. After that, it will stay at `100%` opacity regardless of how many times you scroll it up and down the scrollport. You can only get it to fade in again after refreshing the page (or reloading the embedded example's `<iframe>`).
+When you first scroll the `<figure>` on-screen, it will fade in. After that, it will stay at `100%` opacity regardless of how many times you scroll it up and down the scrollport. You can only get it to fade in again by refreshing the page (or reloading the embedded example's `<iframe>`).
 
 ## Trigger scope
 
