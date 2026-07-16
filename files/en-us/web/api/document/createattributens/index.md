@@ -78,12 +78,12 @@ This attribute specifies the language of the element's content for XML processin
 
 ```js
 const el = document.getElementById("greeting");
-const a = document.createAttributeNS(
+const attr = document.createAttributeNS(
   "http://www.w3.org/XML/1998/namespace",
   "xml:lang",
 );
-a.value = "fr";
-el.setAttributeNode(a);
+attr.value = "fr";
+el.setAttributeNode(attr);
 ```
 
 ### Creating an unprefixed attribute
@@ -91,20 +91,23 @@ el.setAttributeNode(a);
 In HTML documents, unprefixed attributes (such as SVG presentation attributes like `viewBox`) are in the null namespace.
 Use the empty string for the `namespaceURI` parameter to match this.
 
+```html
+<svg id="svg"></svg>
+```
+
 ```js
 const svg = document.getElementById("svg");
-const a = document.createAttributeNS("", "viewBox");
-a.value = "0 0 100 100";
-svg.setAttributeNode(a);
+const attr = document.createAttributeNS("", "viewBox");
+attr.value = "0 0 100 100";
+svg.setAttributeNode(attr);
 console.log(svg.getAttribute("viewBox")); // "0 0 100 100"
 ```
 
-> [!NOTE]
-> In most cases, you can use {{domxref("Element.setAttribute()")}} instead of `createAttributeNS()` for unprefixed attributes:
->
-> ```js
-> svg.setAttribute("viewBox", "0 0 100 100");
-> ```
+Note that, in most cases, you can use {{domxref("Element.setAttribute()")}} instead of `createAttributeNS()` for unprefixed attributes:
+
+```js
+svg.setAttribute("viewBox", "0 0 100 100");
+```
 
 ## Specifications
 
