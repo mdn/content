@@ -130,15 +130,15 @@ row-rule-width:
   1rem,
   repeat(
     2,
-    minmax(calc(var(--base) - 3px), 10px),
+    min(calc(var(--base) - 3px), 10px),
     abs(calc(var(--secondary) - 30px))
   ),
   thin;
 ```
 
-This creates a list of five widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be `1rem` wide, and the second is determined by the {{cssxref("minmax()")}} function.
+This creates a list of five widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be `1rem` wide, and the second is determined by the {{cssxref("min()")}} function.
 
-If there are more gutters than widths, as there are no `repeat()` functions that include the keyword `auto`, the list of widths is repeated. If the container has 6, 11, 16, or 21 rows, this sequence of widths will be repeated one, two, three or four times, respectively, with the last rule being `thin`. For any other number of rows, up to 25, the last rule will be `1em`, or the result of the `minmax()` or {{cssxref("abs()")}} function.
+If there are more gutters than widths, as there are no `repeat()` functions that include the keyword `auto`, the list of widths is repeated. If the container has 6, 11, 16, or 21 rows, this sequence of widths will be repeated one, two, three or four times, respectively, with the last rule being `thin`. For any other number of rows, up to 25, the last rule will be `1em`, or the result of the `min()` or {{cssxref("abs()")}} function.
 
 ### Auto-repeating line widths
 
@@ -228,7 +228,7 @@ ul {
     15px,
     repeat(
       3,
-      minmax(calc(var(--base) + 3px), 10px),
+      min(calc(var(--base) + 3px), 10px),
       abs(calc(var(--secondary) - 2px))
     ),
     15px;
