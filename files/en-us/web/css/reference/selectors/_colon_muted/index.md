@@ -33,13 +33,13 @@ The `muted` attribute is added to the `<audio>` element so that the sound is mut
 
 ### CSS
 
+If the `<audio>` element is `muted` then a red outline is drawn around it, when it is not muted then it has a green outline. Try toggling the mute icon in the controls to see the state change.
+
 ```css hidden
 audio {
   margin: 5px;
 }
 ```
-
-If the `<audio>` element is `muted` then a red outline is drawn around it, when it is not muted then it has a green outline. Try toggling the mute icon in the controls to see the state change.
 
 ```css
 audio:muted {
