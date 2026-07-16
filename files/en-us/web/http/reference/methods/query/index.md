@@ -3,7 +3,7 @@ title: QUERY request method
 short-title: QUERY
 slug: Web/HTTP/Reference/Methods/QUERY
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/info/rfc10008/#section-2
+spec-urls: https://www.rfc-editor.org/rfc/rfc10008.html#section-2
 sidebar: http
 ---
 
@@ -98,16 +98,11 @@ Content-Type: application/json
 
 {{Specifications}}
 
-## Browser compatibility
-
-Browsers don't use the `QUERY` method for user-initiated actions, so "browser compatibility" doesn't apply.
-Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
-A cross-origin `QUERY` request requires a [CORS preflight request](/en-US/docs/Glossary/Preflight_request).
-
 ## See also
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
 - {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}}
+- {{HTTPHeader("Accept-Query")}}
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}}
 - {{HTTPHeader("Allow")}}
