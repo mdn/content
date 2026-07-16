@@ -248,8 +248,6 @@ This example demonstrates using the `repeat()` function within the `row-rule` pr
 
 ```css live-sample___func live-sample___auto
 ul {
-  --base: 0.5vw;
-  --secondary: 1vw;
   row-rule:
     3px red dashed,
     repeat(3, dotted green 1px, dashed blue 1px),
