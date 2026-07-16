@@ -94,7 +94,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 - `muted`
   - : A Boolean attribute that indicates the default audio mute setting contained in the audio. If set, the audio will be initially silenced. Its default value is `false`, meaning the audio will be heard when the audio is played.
 
-    To unmute, setting `muted="false"` will not work; the audio will be muted if the attribute is present at all. To unmute, the attribute must be removed entirely.
+    > [!NOTE]
+    > To unmute, setting `muted="false"` will not work; the audio will be muted if the attribute is present at all. To unmute, the attribute must be removed entirely.
 
 - `preload`
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:

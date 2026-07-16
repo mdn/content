@@ -25,7 +25,7 @@ An element that is `:volume-locked` cannot be muted, un-muted, or have its volum
 
 ### HTML
 
-The `muted` attribute is added to the `<audio>` element so that the sound is muted, this works the same for {{htmlelement("video")}} elements.
+The `muted` attribute is added to the {{htmlelement("audio")}} element so that the sound is muted, this works the same for {{htmlelement("video")}} elements.
 
 ```html
 <audio controls muted src="/shared-assets/audio/t-rex-roar.mp3"></audio>
