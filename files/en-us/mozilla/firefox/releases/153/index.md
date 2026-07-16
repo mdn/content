@@ -108,7 +108,8 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### General
 
 - Improved the window manipulation commands in Marionette and WebDriver BiDi to allow individual window geometry properties, such as x, y, width, and height, to be adjusted independently. ([Firefox bug 1941404](https://bugzil.la/1941404)).
-- Fixed a bug where click and pointer action commands could fail if the element's first DOMRect (e.g., inline elements spanning multiple lines) was zero-sized. ([Firefox bug 2038932](https://bugzil.la/2038932))
+- Fixed a bug where click and pointer action commands could fail if the element's first DOMRect (e.g., inline elements spanning multiple lines) was zero-sized. ([Firefox bug 2038932](https://bugzil.la/2038932)).
+- Restricted navigation to privileged pages (certain `about:*` pages, `chrome://`, and `resource://` URLs) when operating in content scope. ([Firefox bug 1579790](https://bugzil.la/1579790)).
 
 #### WebDriver BiDi
 
@@ -119,7 +120,6 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Marionette
 
-- Restricted navigation to privileged pages (certain `about:*` pages, `chrome://`, and `resource://` URLs) when operating in content scope. ([Firefox bug 1579790](https://bugzil.la/1579790)).
 - Fixed the `Take Element Screenshot` command from WebDriver Classic to crop screenshots of elements which exceed the viewport. ([Firefox bug 2013176](https://bugzil.la/2013176)).
 - Fixed the `Perform Actions` command to properly await internal action finalization, preventing potential race conditions. ([Firefox bug 2031596](https://bugzil.la/2031596)).
 
