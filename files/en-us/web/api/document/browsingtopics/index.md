@@ -19,10 +19,8 @@ browser-compat: api.Document.browsingTopics
 
 The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. These topics could then be returned to the ad tech platform in a subsequent fetch request. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
 
-See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
-
 > [!NOTE]
-> `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other [Topics API enabling features](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api), but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
+> `browsingTopics()` does not rely on HTTP headers to send topics and mark topics as observed like the other Topics API enabling features, but it is somewhat less performant. You are advised to use one of the HTTP header-using features, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
 
 ## Syntax
 

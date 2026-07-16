@@ -51,63 +51,52 @@ Throws an error if `hostname` is not a valid hostname.
 Get the registrable domain of a hostname:
 
 ```js
-console.log(browser.publicSuffix.getDomain("sub.example.com")); // "example.com"
-console.log(browser.publicSuffix.getDomain("sub.example.co.uk")); // "example.co.uk"
-console.log(browser.publicSuffix.getDomain("user.github.io")); // "user.github.io"
-console.log(browser.publicSuffix.getDomain("com")); // null (is itself a suffix)
-console.log(browser.publicSuffix.getDomain("192.0.2.1")); // null (IP address)
-console.log(browser.publicSuffix.getDomain("localhost")); // null (no known suffix)
+browser.publicSuffix.getDomain("sub.example.com"); // "example.com"
+browser.publicSuffix.getDomain("sub.example.co.uk"); // "example.co.uk"
+browser.publicSuffix.getDomain("user.github.io"); // "user.github.io"
+browser.publicSuffix.getDomain("com"); // null (is itself a suffix)
+browser.publicSuffix.getDomain("192.0.2.1"); // null (IP address)
+browser.publicSuffix.getDomain("localhost"); // null (no known suffix)
 ```
 
 Using `allowIPAddress` to return IP addresses as-is:
 
 ```js
-console.log(
-  browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true }),
-); // "192.0.2.1"
-console.log(
-  browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true }),
-); // "2001:db8::1"
+browser.publicSuffix.getDomain("192.0.2.1", { allowIPAddress: true });
+// "192.0.2.1"
+
+browser.publicSuffix.getDomain("[2001:db8::1]", { allowIPAddress: true });
+// "2001:db8::1"
 ```
 
 Using `allowPlainSuffix` to return hostnames that are public suffixes:
 
 ```js
-console.log(
-  browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true }),
-); // "co.uk"
+browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true });
+// "co.uk"
 ```
 
 Using `allowUnknownSuffix` to handle private or local domains:
 
 ```js
-console.log(
-  browser.publicSuffix.getDomain("mydevice.local", {
-    allowUnknownSuffix: true,
-  }),
-); // "mydevice.local"
-console.log(
-  browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true }),
-); // "host.intranet"
+browser.publicSuffix.getDomain("my-device.local", { allowUnknownSuffix: true });
+// "my-device.local"
+
+browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true });
+// "host.intranet"
 ```
 
 Using `encoding: "display"` for internationalized domain names:
 
 ```js
 // "xn--nxasmq6b.com" is the punycode form of "βόλος.com"
-console.log(
-  browser.publicSuffix.getDomain("sub.xn--nxasmq6b.com", {
-    encoding: "display",
-  }),
-); // "βόλος.com"
+browser.publicSuffix.getDomain("sub.xn--nxasmq6b.com", { encoding: "display" });
+// "βόλος.com"
 
 // Domains with confusable characters remain in punycode
 // "xn--bs-red.com" has characters confusable with another script
-console.log(
-  browser.publicSuffix.getDomain("sub.xn--bs-red.com", {
-    encoding: "display",
-  }),
-); // "xn--bs-red.com"
+browser.publicSuffix.getDomain("sub.xn--bs-red.com", { encoding: "display" });
+// "xn--bs-red.com"
 ```
 
 {{WebExtExamples}}

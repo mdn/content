@@ -1017,8 +1017,7 @@ The full example looks like this (press the **Play** button to run the example i
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="zip-code">Zip/postal code: </label>

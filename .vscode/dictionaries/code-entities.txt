@@ -139,6 +139,7 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
 controlslist
 cookiechange
@@ -575,6 +576,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -790,6 +792,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -837,6 +840,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -860,6 +864,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL

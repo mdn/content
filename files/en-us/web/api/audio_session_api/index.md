@@ -24,7 +24,7 @@ A web page can perform audio processing in various ways using APIs such as {{dom
 The API supports several audio session types, which specify the type of audio an application is producing:
 
 - `"auto"` — The default. The user agent automatically chooses the best type based on the audio APIs being used.
-- `"playback"` — For media playback such as music or video. This type should not mix with other audio playback .
+- `"playback"` — For media playback such as music or video. This type should not mix with other audio playback.
 - `"transient"` — For short sounds like notifications. This type usually plays on top of other audio.
 - `"transient-solo"` — For audio that should play exclusively, pausing all other audio (such as voice prompts).
 - `"ambient"` — For audio that can mix with other audio sources.

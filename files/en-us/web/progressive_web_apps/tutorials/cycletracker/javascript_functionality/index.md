@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: pwasidebar
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
 
 In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
