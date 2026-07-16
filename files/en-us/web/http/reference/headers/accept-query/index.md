@@ -9,7 +9,7 @@ sidebar: http
 
 The HTTP **`Accept-Query`** {{Glossary("response header")}} indicates that a resource supports the {{HTTPMethod("QUERY")}} method and identifies the query format [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) that it accepts.
 
-`Accept-Query` is a [structured field](https://www.rfc-editor.org/rfc/rfc9651.html) whose value is a list of media ranges.
+`Accept-Query` is a structured field whose value is a list of media ranges.
 The order of media ranges in the list is not significant.
 Its value applies to every URI on the server with the same path, regardless of the URI's query component.
 
@@ -40,12 +40,12 @@ Accept-Query: <media-range>, <media-range>
 
 ### Advertising supported query formats
 
-The following response indicates that the resource supports `QUERY` requests with JSONPath or SQL content:
+The following response indicates that the resource supports `QUERY` requests with URL-encoded form data or SQL content:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Accept-Query: "application/jsonpath", application/sql;charset="UTF-8"
+Accept-Query: application/x-www-form-urlencoded, application/sql
 ```
 
 ## Specifications
@@ -57,4 +57,7 @@ Accept-Query: "application/jsonpath", application/sql;charset="UTF-8"
 - {{HTTPMethod("QUERY")}}
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Location")}}
+- {{HTTPHeader("Location")}}
 - {{HTTPStatus("415", "415 Unsupported Media Type")}}
+- [RFC 9651: Structured Field Values for HTTP](https://www.rfc-editor.org/rfc/rfc9651.html)
