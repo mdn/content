@@ -144,6 +144,8 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 > Even when bfcache is not used, the browser may still serve the cached response without revalidating.
 > This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
+#### `must-revalidate`
+
 The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
 
 Typically, `must-revalidate` is used with `max-age`.
