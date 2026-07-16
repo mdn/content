@@ -443,15 +443,6 @@ In some browsers, scrolling content areas are not keyboard-focusable, so they ca
     feel."
   </p>
 </div>
-
-<div>
-  <code>overlay</code>
-  <p class="overlay">
-    Maya Angelou: "I've learned that people will forget what you said, people
-    will forget what you did, but people will never forget how you made them
-    feel."
-  </p>
-</div>
 ```
 
 #### CSS
@@ -503,9 +494,7 @@ p.auto {
   overflow: auto;
 }
 
-p.overlay {
-  overflow: overlay;
-}
+
 ```
 
 #### Result
