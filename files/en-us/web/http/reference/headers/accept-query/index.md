@@ -40,7 +40,7 @@ Accept-Query: <media-range>, <media-range>
 
 ### Advertising supported query formats
 
-The following response indicates that the resource supports `QUERY` requests with URL-encoded form data or SQL content:
+The following response indicates that the resource supports `QUERY` requests with `application/x-www-form-urlencoded` or `application/sql` content:
 
 ```http
 HTTP/1.1 200 OK
