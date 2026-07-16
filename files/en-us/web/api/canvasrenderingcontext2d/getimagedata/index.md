@@ -72,6 +72,13 @@ canvas specified. The coordinates of the rectangle's top-left corner are
     configure CORS to allow the source image to be used in this way.
     See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image).
 
+> [!NOTE]
+> Browsers may apply anti-fingerprinting measures to the data returned by `getImageData()`.
+> For example, Firefox's [protection against fingerprinting](https://support.mozilla.org/en-US/kb/firefox-protection-against-fingerprinting)
+> introduces random noise to canvas image data when read from background canvases.
+> This means the pixel data you receive may differ subtly from what was originally rendered,
+> particularly if the canvas is not visible or was rendered off-screen.
+
 ## Examples
 
 ### Getting image data from a canvas
