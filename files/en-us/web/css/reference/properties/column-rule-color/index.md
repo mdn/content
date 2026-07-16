@@ -215,7 +215,7 @@ p {
 }
 ```
 
-#### Results
+#### Result
 
 {{EmbedLiveSample("Multiple color values", "", "180")}}
 
@@ -254,7 +254,7 @@ We also added a border around each grid item so you can see how the line is rule
 ```css live-sample___repeat live-sample___auto
 ul {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   gap: 7px;
   list-style-type: none;
   column-rule-style: dashed;
@@ -272,15 +272,17 @@ li {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("repeat", "", "180")}}
 
-The grid has six cells across, so five gutters. The `repeat()` function repeats our second color three times, creating a color list with five colors. Since there are as many column gutters as there are total colors, the colors are not repeated.
+The grid has nine cells across, so eight gutters. The `repeat()` function repeats our two mixed color three times, creating a color list with seven colors. Since there are as more column gutters than list colors, the last color in the list is not used.
 
-### Using `auto` within `repeat()`
+### Using `auto` within `repeat()`o m
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-We use the same HTML and CSS as in the previous example, but override the `column-rule-color`. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+We use the same HTML and CSS as in the previous examples, but override the `column-rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
@@ -288,8 +290,9 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("auto", "", "180")}}
-n l
 
 ```css hidden live-sample___repeat live-sample___auto
 @layer no-support {
