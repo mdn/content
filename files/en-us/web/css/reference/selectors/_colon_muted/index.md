@@ -25,33 +25,44 @@ An element that is `:volume-locked` cannot be muted, un-muted, or have its volum
 
 ### HTML
 
-The `muted` attribute is added to the {{htmlelement("audio")}} element so that the sound is muted, this works the same for {{htmlelement("video")}} elements.
+The `muted` attribute is added to the {{htmlelement("video")}} element so that the sound is muted, this works the same for {{htmlelement("audio")}} elements.
 
 ```html
-<audio controls muted src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+<!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
+<!-- Poster from peach.blender.org -->
+<video
+  controls
+  muted
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
+  and watch it with your favorite video player!
+</video>
 ```
 
 ### CSS
 
-If the `<audio>` element is `muted` then a red outline is drawn around it, when it is not muted then it has a green outline. Try toggling the mute icon in the controls to see the state change.
+If the `<video>` element is `muted` then a red outline is drawn around it, when it is not muted then it has a green outline. Try toggling the mute icon in the controls to see the state change.
 
 ```css hidden
-audio {
+video {
   margin: 5px;
 }
 ```
 
 ```css
-audio:muted {
+video:muted {
   outline: 5px solid red;
 }
 
-audio:not(:muted) {
+video:not(:muted) {
   outline: 5px solid green;
 }
 ```
 
-{{EmbedLiveSample('examples', '', '60')}}
+{{EmbedLiveSample('examples', '', '400')}}
 
 ## Specifications
 
