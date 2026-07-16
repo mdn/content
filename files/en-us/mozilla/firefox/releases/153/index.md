@@ -108,7 +108,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### General
 
 - Improved the window manipulation commands in Marionette and WebDriver BiDi to allow individual window geometry properties, such as x, y, width, and height, to be adjusted independently. ([Firefox bug 1941404](https://bugzil.la/1941404)).
-- Fixed the computation of an element's center point by ignoring zero-sized rectangles. ([Firefox bug 2038932](https://bugzil.la/2038932)).
+- Fixed a bug where click and pointer action commands could fail if the element's first DOMRect (e.g. inline elements spanning multiple lines) was zero-sized. ([Firefox bug 2038932](https://bugzil.la/2038932))
 
 #### WebDriver BiDi
 
