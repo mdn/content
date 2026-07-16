@@ -493,8 +493,6 @@ p.scroll {
 p.auto {
   overflow: auto;
 }
-
-
 ```
 
 #### Result
