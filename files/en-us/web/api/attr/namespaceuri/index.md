@@ -28,7 +28,7 @@ A string containing the URI of the namespace, or `null` if the attribute is not 
 
 ## Example
 
-The following example shows the results for a prefixed attribute in a case of an HTML element, and of a SVG element.
+The following example shows the results for a prefixed attribute in a case of an HTML element, and of an SVG element.
 As HTML doesn't handle namespaces, it will always return `null` in that case.
 In the case of the SVG element, it will return the URI of the XML namespace, `http://www.w3.org/XML/1998/namespace`.
 

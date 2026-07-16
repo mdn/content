@@ -1085,7 +1085,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
       <th scope="row">Specifications</th>
       <td>
         <a href="https://www.itu.int/rec/T-REC-H.265"
-          >http://www.itu.int/rec/T-REC-H.265</a
+          >https://www.itu.int/rec/T-REC-H.265</a
         ><br /><a href="https://www.iso.org/standard/69668.html"
           >https://www.iso.org/standard/69668.html</a
         >

@@ -93,7 +93,7 @@ Finally we close off the `<figure>` element with a {{htmlelement("figcaption")}}
 ```html live-sample___video-player
   <figcaption>
     &copy; Blender Foundation |
-    <a href="http://mango.blender.org">mango.blender.org</a>
+    <a href="https://mango.blender.org">mango.blender.org</a>
   </figcaption>
 </figure>
 ```

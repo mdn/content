@@ -51,7 +51,7 @@ With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the
 
 ## Examples
 
-### Defining the opacity of a SVG gradient color stop
+### Defining the opacity of an SVG gradient color stop
 
 This example demonstrates the basic use case of `stop-opacity`, and how the CSS `stop-opacity` property takes precedence over the `stop-opacity` attribute.
 
@@ -135,7 +135,7 @@ polygon:nth-of-type(3) {
 
 #### Results
 
-{{EmbedLiveSample("Defining the opacity of a SVG gradient color stop", "300", "200")}}
+{{EmbedLiveSample("Defining the opacity of an SVG gradient color stop", "300", "200")}}
 
 The first star is fully opaque. The fill of the second star is 80% opaque because the color stops are slightly translucent; the `stop-opacity: 0.8;` overrode the `stop-opacity="1"` element attribute value. The fill of the last star is barely noticeable with color stops that are 25% opaque. Note the stroke is the same opaque dark grey in all cases.
 
