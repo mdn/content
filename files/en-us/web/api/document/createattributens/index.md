@@ -23,7 +23,8 @@ createAttributeNS(namespaceURI, qualifiedName)
 
 - `namespaceURI`
   - : A string that specifies the {{DOMxRef("Attr.namespaceURI", "namespaceURI")}} to associate with the attribute, or the empty string.
-    Some important namespace URIs are:
+    The empty string is typically used for most attributes, as namespaced attributes in element
+    documents (such as HTML) do not affect element behavior. Some namespace URIs to be aware of are:
     - [HTML](/en-US/docs/Web/HTML)
       - : `http://www.w3.org/1999/xhtml`
     - [SVG](/en-US/docs/Web/SVG)
@@ -72,7 +73,10 @@ The new {{domxref("Attr")}} node.
 
 ```js
 const node = document.getElementById("svg");
-const a = document.createAttributeNS("http://www.w3.org/2000/svg", "viewBox");
+// Create a viewBox attribute on an SVG element.
+// Use an empty string namespace for attributes that should
+// affect element behavior in HTML documents.
+const a = document.createAttributeNS("", "viewBox");
 a.value = "0 0 100 100";
 node.setAttributeNode(a);
 console.log(node.getAttribute("viewBox")); // "0 0 100 100"
