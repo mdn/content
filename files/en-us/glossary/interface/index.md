@@ -11,7 +11,7 @@ In the context of {{glossary("WebAPI","Web APIs")}}, an interface is a type that
 
 ## See also
 
-- [Interface (object-oriented programming)](https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)) on Wikipedia
+- [Interface (object-oriented programming)](<https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)>) on Wikipedia
 - [Web IDL](https://en.wikipedia.org/wiki/Web_IDL) on Wikipedia
 - {{Glossary("Mixin")}}
 - {{Glossary("Class")}}
