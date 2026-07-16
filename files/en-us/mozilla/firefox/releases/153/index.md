@@ -103,13 +103,25 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Improved the window manipulation commands in Marionette and WebDriver BiDi to allow individual window geometry properties, such as x, y, width, and height, to be adjusted independently. ([Firefox bug 1941404](https://bugzil.la/1941404)).
+- Fixed the computation of an element's center point by ignoring zero-sized rectangles. ([Firefox bug 2038932](https://bugzil.la/2038932)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Extended the `emulation.setLocaleOverride` command to also apply a locale emulation to dedicated and shared workers. ([Firefox bug 2015655](https://bugzil.la/2015655)).
+- Extended the `emulation.setTimezoneOverride` command to also apply a timezone emulation to dedicated and shared workers. ([Firefox bug 2015657](https://bugzil.la/2015657)).
+- Updated the `browsingContext.create` command to no longer emit `browsingContext.domContentLoaded` and `browsingContext.load` events for the initial `about:blank` page when creating new top-level browsing contexts, and to now emit the `browsingContext.contextCreated` event at the end of the creation process. ([Firefox bug 1930594](https://bugzil.la/1930594)).
+- Fixed a bug where functions created by the `script.addPreloadScript` command stopped working after several navigations. ([Firefox bug 2046390](https://bugzil.la/2046390)).
+
+#### Marionette
+
+- Restricted navigation to privileged pages (certain `about:*` pages, `chrome://`, and `resource://` URLs) when operating in content scope. ([Firefox bug 1579790](https://bugzil.la/1579790)).
+- Fixed the `Take Element Screenshot` command from WebDriver Classic to crop screenshots of elements which exceed the viewport. ([Firefox bug 2013176](https://bugzil.la/2013176)).
+- Fixed the `Perform Actions` command to properly await internal action finalization, preventing potential race conditions. ([Firefox bug 2031596](https://bugzil.la/2031596)).
 
 ## Changes for add-on developers
 
