@@ -214,7 +214,7 @@ The CSS borders and box decorations module level 4 also introduces the `border-l
 
 - [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Learn how borders and other box model properties impact the CSS box model.
-- [Creating an irregular nav menu with border-shape](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/border-shape_nav_menu)
+- [Creating an irregular nav menu with border-shape](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu)
   - : How to use the {{cssxref("border-shape")}} property to create an irregular animated navigation menu.
 
 ## Related concepts

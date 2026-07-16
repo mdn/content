@@ -1,7 +1,7 @@
 ---
 title: Creating an irregular nav menu with border-shape
 short-title: border-shape nav menu
-slug: Web/CSS/Guides/Borders_and_box_decorations/border-shape_nav_menu
+slug: Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu
 page-type: guide
 sidebar: cssref
 ---
