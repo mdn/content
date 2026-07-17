@@ -3,9 +3,13 @@ title: "`row-rule-color` CSS property"
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-color
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between rows in multi-row grid, flex, and multi-col layouts.
 

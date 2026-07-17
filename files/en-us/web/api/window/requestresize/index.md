@@ -3,10 +3,12 @@ title: "Window: requestResize() method"
 short-title: requestResize()
 slug: Web/API/Window/requestResize
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Window.requestResize
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`requestResize()`** method of the {{domxref("Window")}} interface updates the size information shared by an embedded document with its embedding parent, but only if the embedded document has opted in to sharing its size information via the [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) meta tag.
 
