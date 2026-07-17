@@ -106,9 +106,9 @@ The `row-rule` property accepts a comma-separated list of values, including:
     - `<'line-width'>`
       - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium. See {{cssxref("row-rule-width")}}.
     - `<'line-style'>`
-    - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("row-rule-style")}}.
+      - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("row-rule-style")}}.
     - `<'color'>`
-    - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. See {{cssxref("row-rule-color")}}.
+      - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. See {{cssxref("row-rule-color")}}.
 
 - `<gap-repeat-rule>`
   - : A {{cssxref("repeat()")}} function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>` specifies how many times the list of `<gap-rule>` values should be repeated.
