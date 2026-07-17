@@ -3,7 +3,7 @@ title: "func: Wasm type definition"
 short-title: func
 slug: WebAssembly/Reference/Definitions/types/func
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-functype
+browser-compat: webassembly.definitions.func
 sidebar: webassemblysidebar
 ---
 
@@ -72,6 +72,10 @@ Calling `dispatch(0, 3, 4)` invokes `$add` and returns `7`; calling `dispatch(1,
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
