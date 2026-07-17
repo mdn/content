@@ -11,7 +11,7 @@ The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Referen
 
 ## Description
 
-In the lifecycle of a navigation, this event fires after [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) when the navigation is blocked, for example because of a security or CSP restriction or because the client cancels the unload prompt.
+In the lifecycle of a navigation, this event fires when the navigation is blocked, for example because of a security or CSP restriction or because the client cancels the unload prompt.
 
 ## Event data
 
