@@ -9,8 +9,8 @@ sidebar: http
 
 The HTTP **`Accept-Query`** {{Glossary("response header")}} indicates that a resource supports the {{HTTPMethod("QUERY")}} method and identifies the query format [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) that it accepts.
 
-`Accept-Query` is a structured field whose value is a list of media ranges, each represented as a structured field string or token and optionally including structured field parameters.
-The order of media ranges in the list is not significant.
+`Accept-Query` is a structured field whose value is a list of media ranges (a media type that might include wildcards), each represented as a structured field string or token and optionally including structured field parameters.
+The order of media types in the list is not significant.
 Its value applies to every URI on the server with the same path, regardless of the URI's query component.
 
 <table class="properties">
@@ -29,7 +29,7 @@ Accept-Query: <media-type>/<subtype>
 Accept-Query: <media-type>/*
 Accept-Query: */*
 
-// Comma-separated list of media types
+// Comma-separated list of media ranges in any order
 Accept-Query: <media-type>/<subtype>, <media-type>/<subtype-2>, <media-type-2>/*
 ```
 
