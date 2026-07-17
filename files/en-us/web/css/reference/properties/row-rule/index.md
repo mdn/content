@@ -104,17 +104,17 @@ The `row-rule` property accepts a comma-separated list of values, including:
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.
     - `<'line-width'>`
-      - : Is a {{cssxref("&lt;line-width&gt;")}}; a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium. See {{cssxref("row-rule-width")}}.
+      - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium. See {{cssxref("row-rule-width")}}.
     - `<'line-style'>`
-    - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. {{cssxref("row-rule-style")}}
+    - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("row-rule-style")}}.
     - `<'color'>`
-    - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. {{cssxref("row-rule-color")}}
+    - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. See {{cssxref("row-rule-color")}}.
 
 - `<gap-repeat-rule>`
   - : A {{cssxref("repeat()")}} function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>` specifies how many times the list of `<gap-rule>` values should be repeated.
 
 - `<gap-auto-repeat-rule>`
-  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments. The provided list of `<gap-rule>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
+  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments. The provided list of `<gap-rule>` values is repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
 
 ## Description
 
@@ -122,15 +122,15 @@ The `row-rule` property defines the line style of any rule lines drawn in the ga
 
 The `row-rule` is shorthand for {{cssxref("row-rule-color")}}, {{cssxref("row-rule-style")}}, and {{cssxref("row-rule-width")}}. The `row-rule`, along with the {{cssxref("column-rule")}} shorthand property, can also be set using the {{cssxref("rule")}} shorthand.
 
-The value is a comma-separated list of components, which can include `<gap-rule>`, `<repeated-gap-rule>`, and `<auto-repeat-gap-rule>` types. Each `<gap-rule>` defines the width, color, and style of the rule line.
+The property value is a comma-separated list of components, which can include `<gap-rule>`, `<repeated-gap-rule>`, and `<auto-repeat-gap-rule>` types. Each `<gap-rule>` defines the width, color, and style of one or more rule lines.
 
 If the property value consists of only one `<gap-rule>`, all the row rules will be that style. If we declare the following, all row rules will be `dashed red 3px`:
 
 ```css
-row-rule: `dashed red 3px`;
+row-rule: dashed red 3px;
 ```
 
-When more than one `<gap-rule>` is declared, they will be applied to row-rules in the order specified. If there are more gutters between rows than `<gap-rule>` values, the list of lines is repeated until every row rule has a gap line. If we declare the following, for example, every odd rule will be `dashed red 3px`, and every even rule will be `dotted blue 5px`.
+When more than one `<gap-rule>` is declared, they will be applied to row-rules in the order specified. If there are more gutters between rows than `<gap-rule>` values, the list of values is repeated until every row rule has a gap line. If we declare the following, for example, every odd rule will be `dashed red 3px`, and every even rule will be `dotted blue 5px`.
 
 ```css
 row-rule:
@@ -162,7 +162,7 @@ If there are more gutters than styles, the list of styles is repeated. If the co
 
 ### Auto-repeating line styles
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the [`<gap-rule>`](#gap-rule) values passed as subsequent arguments will be repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the [`<gap-rule>`](#gap-rule) values passed as subsequent arguments will be repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value.
 
 ```css
 row-rule:
@@ -171,7 +171,7 @@ row-rule:
   solid red 5px;
 ```
 
-In this case, the first and last row rules will be `solid red 5px`, and all others will alternated between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows, the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("row-rule-visibility-items")}} leads to no line being drawn), while all the other row rules will be thin, dotted or dashed, and green or blue, which means if there are only 2 or 3 rows, there will be no dotted or dashed lines.
+In this case, the first and last row rules will be `solid red 5px`, and all others will alternate between `dotted green 1px` and `dashed blue 1px`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows; the first and last gutters will always have a thick solid red line painted between them (unless {{cssxref("row-rule-visibility-items")}} leads to no line being drawn), and all the other row rules will be thin, dotted green or dashed blue lines. If there are only 2 or 3 rows, there will be no dotted or dashed lines.
 
 The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <gap-rule>)` can be present in a `row-rule` value.
 
@@ -263,7 +263,7 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
 
-Using `repeat(auto, <gap-rule>)` we set all row rules to `1px dotted` and default to the current color, except the first and last, which we set to `3px solid red`.
+Using `repeat(auto, <gap-rule>)`, we set all row rules to `1px dotted` and default to the current color, except the first and last, which we set to `3px solid red`.
 
 ```css live-sample___auto
 ul {

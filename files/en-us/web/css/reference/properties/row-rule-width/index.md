@@ -84,10 +84,10 @@ row-rule-width: unset;
 The `row-rule-width` property accepts a comma-separated list of values, including:
 
 - `<line-width>`
-  - : A {{cssxref("&lt;line-width&gt;")}}, the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
+  - : A {{cssxref("&lt;line-width&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
 
 - `<repeat-line-width>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;line-width&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and one or more {{cssxref("&lt;line-width&gt;")}} values as subsequent arguments. The integer defines the number of times the `<line-width>` values should be repeated.
 
 - `<auto-repeat-line-width>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments. The provided `<line-width>` values are repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
@@ -100,7 +100,7 @@ The value is a comma-separated list of components, which can include `<line-widt
 
 The `row-rule-width`, along with the {{cssxref("row-rule-color")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-width`, along with the {{cssxref("column-rule-width")}} property, can also be set using the {{cssxref("rule-width")}} shorthand.
 
-A `<line-width>` can be declared as any valid CSS {{cssxref("&lt;line-width&gt;")}} value. If the property value consists of only one `<line-width>`, all the row rules will be that width. If we declare the following, all row rules will be `3px`:
+If the property value consists of only one `<line-width>`, all the row rules will be that width. If we declare the following, all row rules will be `3px`:
 
 ```css
 row-rule-width: `3px`;
@@ -114,14 +114,14 @@ row-rule-width: thin, 1em;
 
 ### Repeated line widths
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-width&gt;")}} values passed as the second argument the specified number of times. This allows the same width to be repeated a set number of times without repeating the same value multiple times. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-width&gt;")}} values passed as subsequent arguments the specified number of times. This allows the same widths to be repeated a set number of times without repeating the same values multiple times. The following declarations are equivalent:
 
 ```css
 row-rule-width: 1rem, thick, thin, thick, thin;
 row-rule-width: 1rem, repeat(2, thick, thin);
 ```
 
-You can use any `<line-width>` values, including custom properties that resolve to a `<line-width>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of rows. Using `repeat()` can make values easier to write, especially when using complex length calculations. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
+You can use any `<line-width>` values, including custom properties that resolve to a `<line-width>`. Using `repeat()` can make values easier to write, especially when using complex length calculations. It enables a recurring pattern to be written using a single function, regardless of the number of rows.
 
 If we set `--base: 1vh` and `--secondary: 1vw`, the following will provide similar results to the previous declaration:
 
@@ -136,19 +136,19 @@ row-rule-width:
   thin;
 ```
 
-This creates a list of five widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be `1rem` wide, and the second is determined by the {{cssxref("min()")}} function.
+This creates a list of six widths. If the number of widths in the `row-rule-width` value's width list exceeds the number of gaps between rows, the excess width values are ignored. If the container has three rows, the rule in the first gutter will be `1rem` wide, and the second is determined by the {{cssxref("min()")}} function.
 
-If there are more gutters than widths, as there are no `repeat()` functions that include the keyword `auto`, the list of widths is repeated. If the container has 6, 11, 16, or 21 rows, this sequence of widths will be repeated one, two, three or four times, respectively, with the last rule being `thin`. For any other number of rows, up to 25, the last rule will be `1em`, or the result of the `min()` or {{cssxref("abs()")}} function.
+If there are more gutters than widths, the list of widths is repeated. If the container has 7, 13, 19, or 25 rows, this sequence of widths will be repeated one, two, three, or four times, respectively, with the last rule being `thin`.
 
 ### Auto-repeating line widths
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the list of `<line-width>` values passed as the second will be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the list of `<line-width>` values passed as subsequent arguments will be repeated as many times as needed to fill in values for any row-rules that are not explicitly specified by other components of the property value.
 
 ```css
 row-rule-width: thin, repeat(auto, medium), thin;
 ```
 
-In this case, the first row rule will be `thin`, the last will be `thin`, and all others will be `medium`. It doesn't matter if the container has 3, 6, 11, 16, or 21 rows, the first and last rows will always be `thin`. All other row rules will be `medium`, which means if there are only 2 or 3 rows, there will be no medium-sized row rules.
+In this case, it doesn't matter if the container has 3, 6, 11, 16, or 21 rows; the first and last rows will always be `thin`, and all other row rules will be `medium`. If there are only 2 or 3 rows, there will be no medium-sized row rules.
 
 The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <width>)` can be present in a `row-rule-width` value.
 
@@ -191,8 +191,9 @@ ul {
   flex-flow: column;
   gap: 5px;
   row-rule-style: dashed;
-  row-rule-width: 3px;
   row-rule-color: red;
+  
+  row-rule-width: 3px;
 }
 ```
 
@@ -218,7 +219,7 @@ ul {
 
 This example demonstrates using the `repeat()` function within the `row-rule-width` property value and how this function can help reduce the verbosity of value declarations.
 
-We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function sets the list of two `<line-width>` values to repeat 3 times.
+We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function sets a list of two `<line-width>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
