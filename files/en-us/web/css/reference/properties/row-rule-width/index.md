@@ -192,7 +192,6 @@ ul {
   gap: 5px;
   row-rule-style: dashed;
   row-rule-color: red;
-  
   row-rule-width: 3px;
 }
 ```
