@@ -3,7 +3,7 @@ title: QUERY request method
 short-title: QUERY
 slug: Web/HTTP/Reference/Methods/QUERY
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc10008.html#section-2
+spec-urls: https://www.rfc-editor.org/info/rfc10008/#name-query-method
 sidebar: http
 ---
 
@@ -71,7 +71,7 @@ Host: example.org
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 
-select=surname,givenname,email&limit=10&match=%22email=*@example.*%22
+select=surname,givenname,email&limit=10&email=%2A%40example.%2A
 ```
 
 A successful response includes the query result in the response content:
@@ -98,11 +98,19 @@ Content-Type: application/json
 
 {{Specifications}}
 
+## Browser compatibility
+
+Browser compatibility is not relevant for this method.
+Browsers have no specific integration support for `QUERY`: it isn't sent for user-initiated actions like HTML form submissions, and browsers don't send it automatically in response to other headers or mechanisms.
+
+Developers can issue a `QUERY` request using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
+NOte that because `QUERY` isn't one of the CORS-safelisted methods, cross-origin requests trigger a [CORS](/en-US/docs/Web/HTTP/Guides/CORS) preflight {{HTTPMethod("OPTIONS")}} request, the same as for other non-simple methods.
+
 ## See also
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
-- {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}}
 - {{HTTPHeader("Accept-Query")}}
+- {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}}
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}}
 - {{HTTPHeader("Allow")}}
