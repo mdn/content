@@ -79,6 +79,22 @@ h4 {
 }
 ```
 
+### Using with env() and param()
+
+When a `<dashed-dent>` is used in an external resource in an {{cssxref("env")}} CSS function, it can be updated using the {{cssxref("param")}} CSS function.
+
+```svg
+<svg>
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
+```css
+path:hover {
+  link-parameters: param(--color, tomato)
+}
+```
+
 ## Specifications
 
 {{Specifications}}
