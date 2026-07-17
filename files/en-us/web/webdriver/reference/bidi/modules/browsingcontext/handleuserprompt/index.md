@@ -35,9 +35,6 @@ The `browsingContext.handleUserPrompt` [command](/en-US/docs/Web/WebDriver/Refer
 
 The `params` field contains:
 
-- `context`
-  - : A string that contains the ID of the context that has the user prompt to close.
-    Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `accept` {{optional_inline}}
   - : A boolean that indicates whether to accept or dismiss the prompt; its effect depends on the prompt type.
 
@@ -45,15 +42,18 @@ The `params` field contains:
 
     - `true`: This is the default.
 
-      For a `confirm()`, the action is confirmed.
-      For a `prompt()`, the prompt is submitted with the value of `userText`.
-      For a `beforeunload` prompt, the navigation is confirmed.
+      For a {{domxref("Window.confirm", "confirm()")}}, the action is confirmed.
+      For a {{domxref("Window.prompt", "prompt()")}}, the prompt is submitted with the value of `userText`.
+      For a {{domxref("Window.beforeunload_event", "beforeunload")}} prompt, the navigation is confirmed.
 
     - `false`:
 
       For a `confirm()`, the action is declined.
       For a `prompt()`, the prompt is canceled.
       For a `beforeunload` prompt, the navigation is refused.
+- `context`
+  - : A string that contains the ID of the context that has the user prompt to close.
+    Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 - `userText` {{optional_inline}}
   - : A string that specifies the value to submit for a `prompt()`. This field is ignored for prompt types other than `prompt()`.
     If not specified, it defaults to an empty string.
@@ -105,7 +105,7 @@ The browser closes the prompt and responds as follows:
 
 ### Accepting a `prompt()` with text
 
-Suppose a page calls `prompt()` and shows the resulting text input dialog.
+Using the same connection and session, suppose a page calls `prompt()` and shows the resulting text input dialog.
 Send the following message to submit a value:
 
 ```json
