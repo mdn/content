@@ -364,20 +364,6 @@ The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rul
 - `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
-### Fix for nested scrollable areas
-
-This implementation has been added in order to fix an issue where scrollable content was unreachable. If a scrollbar is set to `display: none;` or `width: 0;` then the scrollbars of nested scrollable areas would be stacked on top of each other meaning that some of the content may well be unreachable. This does however mean that the `@supports selector(::-webkit-scrollbar)` check will return `true` even though the [`::-webkit-scrollbar`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) pseudo-element is not truly supported. ([Firefox bug 1977511](https://bugzil.la/1977511)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 151           | Yes                 |
-| Developer Edition | 151           | No                  |
-| Beta              | 151           | No                  |
-| Release           | 151           | No                  |
-
-- `layout.css.fake-webkit-scrollbar.enabled`
-  - : Set to `true` to enable.
-
 ### `<timeline-range-name>` values
 
 The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
@@ -404,6 +390,20 @@ The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en
 | Release           | 152           | No                  |
 
 - `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### Tree counting CSS functions
+
+The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`. ([Firefox bug 2042063](https://bugzil.la/2042063)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.tree-counting-functions.enabled`
   - : Set to `true` to enable.
 
 ## SVG
@@ -461,22 +461,6 @@ This includes all the instance methods on `Intl.Locale` that are prefixed with "
 - `javascript.options.experimental.intl_locale_info`
   - : Set to `true` to enable on Nightly.
 
-### Text module import
-
-The `with` clause [`{ type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) allows importing a module's source as a string value.
-The media type of the response is ignored, and the content is parsed as text even if the source contains scripts or other executable code.
-([Firefox bug 2024854](https://bugzil.la/2024854)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | No                  |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `javascript.options.experimental.import_text`
-  - : Set to `true` to enable.
-
 ### Multiple import maps
 
 Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
@@ -494,6 +478,22 @@ These give developers more flexibility when structuring and loading JavaScript m
   - : Set to `true` to enable.
 
 ## APIs
+
+### Crash Reporting
+
+Crash reports can now be sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API) to the `default` endpoint.
+Note that Firefox does not support providing {{domxref("CrashReportContext")}} in the report body.
+([Firefox bug 2036160](https://bugzil.la/2036160)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `dom.reporting.crash.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
 
 ### Scoped custom element registries
 
@@ -617,7 +617,7 @@ In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decod
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 90            | Yes                 |
+| Nightly           | 153           | Yes                 |
 | Developer Edition | 152           | No                  |
 | Beta              | 152           | No                  |
 | Release           | 152           | No                  |

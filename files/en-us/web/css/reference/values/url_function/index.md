@@ -12,12 +12,12 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refere
 > [!NOTE]
 > There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
 >
-> In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
+> In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are rarely used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
-Relative URLs, if used, are relative to the URL of the stylesheet (not to the URL of the web page).
+Relative URLs are resolved relative to the stylesheet URL, not the web page URL. However, when a `url()` is used within a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) (e.g., `--my-image: url(foo.jpg)`), the relative URL is not resolved immediately. It is resolved when the custom property is evaluated via `var()` substitution in a standard property. The base URL at that point is the stylesheet where the `var()` reference appears, not where the custom property was defined.
 
 The **`url()`** function can be included as a value for
-{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
+{{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
 [src](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/src) as part of a {{cssxref("@font-face")}} block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/Reference/At-rules/@counter-style/symbols)
 
 ## Syntax

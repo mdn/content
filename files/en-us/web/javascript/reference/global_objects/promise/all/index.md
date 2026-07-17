@@ -49,6 +49,8 @@ The `Promise.all()` method is one of the [promise concurrency](/en-US/docs/Web/J
 
 `Promise.all()` will reject immediately upon **any** of the input promises rejecting. In comparison, the promise returned by {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete, regardless of whether or not one rejects. Use `allSettled()` if you need the final result of every promise in the input iterable.
 
+Like other promise combinators, `Promise.all()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first rejection will be ignored, and will not trigger any `unhandledrejection` events.
+
 ## Examples
 
 ### Using Promise.all()

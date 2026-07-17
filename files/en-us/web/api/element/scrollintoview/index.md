@@ -22,17 +22,8 @@ scrollIntoView(options)
 
 - `alignToTop` {{optional_inline}}
   - : A boolean value:
-    - If `true`, the top of the element will be aligned to the top of the
-      visible area of the scrollable ancestor. Corresponds to
-      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is
-      the default value.
-    - If `false`, the bottom of the element will be aligned to the bottom
-      of the visible area of the scrollable ancestor. Corresponds to
-- If `true`, the top of the element will be aligned to the top of the visible area of the scrollable ancestor.
-  Corresponds to `scrollIntoViewOptions: {block: "start", inline: "nearest"}`.
-  This is the default value.
-- If `false`, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor.
-  Corresponds to `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
+    - If `true`, the top of the element will be aligned to the top of the visible area of the scrollable ancestor. Corresponds to `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is the default value.
+    - If `false`, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor. Corresponds to `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 
 - `options` {{optional_inline}}
   - : An object with the following properties:
@@ -163,9 +154,9 @@ Our HTML includes a {{htmlelement("section")}} element containing several paragr
 ```html
 <div>
   <button class="scroll">scroll() to 1000</button>
-  <button class="scrollto">scrollTo() top</button>
-  <button class="scrollby">scrollBy() 200</button>
-  <button class="scrollintoview">Scroll last &lt;p&gt; into view</button>
+  <button class="scroll-to">scrollTo() top</button>
+  <button class="scroll-by">scrollBy() 200</button>
+  <button class="scroll-into-view">Scroll last &lt;p&gt; into view</button>
 </div>
 
 <section>
@@ -229,7 +220,7 @@ The rest of the CSS is not shown, for brevity.
 We start by grabbing references to the `<button>` that runs the `scrollIntoView()` operation, the toolbar `<div>`, and the paragraph with an `id` of `end`:
 
 ```js
-const scrollIntoViewBtn = document.querySelector(".scrollintoview");
+const scrollIntoViewBtn = document.querySelector(".scroll-into-view");
 const toolbar = document.querySelector("div");
 const end = document.querySelector("#end");
 ```
@@ -245,7 +236,7 @@ function isInterrupted(interrupted) {
 }
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollIntoView()` on the end paragraph to cause the `<section>` to scroll until the end paragraph is in view, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollIntoView()` on the end paragraph to cause the `<section>` to scroll until the end paragraph is in view, awaiting its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollIntoViewBtn.addEventListener("click", async () => {

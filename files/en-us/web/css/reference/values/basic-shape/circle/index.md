@@ -54,6 +54,7 @@ clip-path: circle(farthest-side);
 ```css
 shape-outside: circle(50%);
 clip-path: circle(6rem at 12rem 8rem);
+border-shape: circle(60%);
 ```
 
 ### Values
@@ -119,5 +120,5 @@ img {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
