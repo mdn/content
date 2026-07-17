@@ -18,7 +18,7 @@ These calls change the active URL in the context.
 
 ## Event data
 
-The `params` field in the event notification is a history update object with the following fields:
+The `params` field in the event notification is an object with the following fields:
 
 - `context`
   - : A string that contains the ID of the context in which the history update is occurring.

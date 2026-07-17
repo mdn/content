@@ -13,13 +13,13 @@ The `browsingContext.domContentLoaded` [event](/en-US/docs/Web/WebDriver/Referen
 
 In the lifecycle of a successful navigation, this event fires after [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) and before [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) events.
 
-At this point, the HTML has been parsed, equivalent to the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event firing in the context, but subresources such as stylesheets and images may still be loading.
+At this point, the HTML has been parsed, but subresources such as stylesheets and images may still be loading. This event is equivalent to the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event firing in the context.
 
 If you set `wait` to `"interactive"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.domContentLoaded` fires.
 
 ## Event data
 
-The `params` field in the event notification is a navigation object with the following fields:
+The `params` field in the event notification is an object with the following fields:
 
 - `context`
   - : A string that contains the ID of the context in which the HTML document is being parsed.

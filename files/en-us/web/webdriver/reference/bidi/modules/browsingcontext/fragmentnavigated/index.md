@@ -11,7 +11,7 @@ The `browsingContext.fragmentNavigated` [event](/en-US/docs/Web/WebDriver/Refere
 
 ## Event data
 
-The `params` field in the event notification is a navigation object with the following fields:
+The `params` field in the event notification is an object with the following fields:
 
 - `context`
   - : A string that contains the ID of the context in which the fragment navigation is occurring.

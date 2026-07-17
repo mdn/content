@@ -23,7 +23,7 @@ For URL changes made through the History API without a full navigation, see [`br
 
 ## Event data
 
-The `params` field in the event notification is a navigation object with the following fields:
+The `params` field in the event notification is an object with the following fields:
 
 - `context`
   - : A string that contains the ID of the context in which the navigation is committed.
