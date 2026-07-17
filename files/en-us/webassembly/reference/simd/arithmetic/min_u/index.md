@@ -57,7 +57,7 @@ value_type.min_u
 - `input2`
   - : The second input value.
 - `output`
-  - : The output value. A new `v128` of the same type as the inputs, with each lane set to the greater of that lane index's value on the two inputs.
+  - : The output value. A new `v128` of the same type as the inputs, with each lane set to the lower of that lane index's value on the two inputs.
 
 ### Binary encoding
 
