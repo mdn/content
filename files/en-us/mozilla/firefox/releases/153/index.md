@@ -23,7 +23,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - HTML parsing rules for {{htmlelement("select")}} elements have been updated to allow all nested elements to be parsed into DOM rather than just `<option>`, `<optgroup>`, and `<hr>`.
   This enables possible future support of [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
   ([Firefox bug 2019977](https://bugzil.la/2019977)).
-- The `muted` attribute for {{htmlelement("audio", "", "muted")}} and {{htmlelement("video", "", "muted")}} elements have now been updated to reflect when it is added or removed. This attribute now also matches the state for the {{cssxref(":muted")}} CSS pseudo-class.
+- The `muted` attribute has now been updated for the {{htmlelement("audio", "", "#muted")}} and {{htmlelement("video", "", "#muted")}} elements to reflect when it is added to or removed from the DOM. This attribute now also matches the state of the {{cssxref(":muted")}} CSS pseudo-class.
   ([Firefox bug 2037015](https://bugzil.la/2037015)).
 
 <!-- #### Removals -->
