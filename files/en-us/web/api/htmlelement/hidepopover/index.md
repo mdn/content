@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.hidePopover
 
 The **`hidePopover()`** method of the {{domxref("HTMLElement")}} interface hides a [popover](/en-US/docs/Web/API/Popover_API) element (i.e., one that has a valid [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute) by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
 
-When `hidePopover()` is called on a showing element with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover being hidden, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing. If the element is already hidden, an error is thrown.
+When `hidePopover()` is called on a showing element with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover being hidden, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the popover is already hidden, or if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
+  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
 
 ## Examples
 
