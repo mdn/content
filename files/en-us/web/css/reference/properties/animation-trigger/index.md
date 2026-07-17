@@ -11,23 +11,23 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`animation-trigger`** [CSS](/en-US/docs/Web/CSS) property specifies whether [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) declared on an element are triggered animations or not, and if so, what their triggers are and how they should behave when the trigger becomes active or inactive. This can be used to create [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
+The **`animation-trigger`** [CSS](/en-US/docs/Web/CSS) property specifies whether [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) declared on an element are triggered animations or not and, if so, what their triggers are and how they should behave when the trigger becomes active or inactive. This can be used to create [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
 
 ## Syntax
 
 ```css
-/* none keyword */
+/* Keyword */
 animation-trigger: none;
 
-/* Dashed ident plus a single <animation-action> */
+/* Dashed ident with one <animation-action> */
 animation-trigger: --my-trigger play;
 animation-trigger: --my-other-trigger play-once;
 
-/* Dashed ident plus two <animation-action>s */
+/* Dashed ident with two <animation-action>s */
 animation-trigger: --my-trigger play-forwards play-backwards;
 animation-trigger: --my-other-trigger play reset;
 
-/* Multiple animation-trigger values */
+/* Multiple values */
 animation-trigger:
   none,
   --my-trigger play-forwards play-backwards,
@@ -43,20 +43,22 @@ animation-trigger: unset;
 
 ### Values
 
-Specified as one or more values, separated by commas. Each value consists of the keyword `none`, or a {{cssxref("dashed-ident")}} followed by one or more {{cssxref("animation-action")}} values.
+The property accepts a comma-separated list of values. Each value is either the keyword `none` or {{cssxref("dashed-ident")}}s, followed by one or two {{cssxref("animation-action")}} values each.
 
 - `none`
-  - : Specifies that the animation is not a triggered animation.
+  - : The associated animation is not a triggered animation.
 - {{cssxref("dashed-ident")}}
-  - : An identifier equal to the {{cssxref("timeline-trigger-name")}} of the trigger that will trigger the animation.
+  - : A custom identifier defining the name of the trigger that will trigger the animation.
 - {{cssxref("animation-action")}}
-  - : Specifies the behavior of the animation once the trigger is activated (in the case of the first value) and deactivated (in the case of the second, optional value).
+  - : An `<animation-action>`: The keywords `none`, `play`, `play-forwards`, `play-backwards`, `play-once`,`pause`, `replay`, or `reset`.
 
 ## Description
 
-The `animation-trigger` property specifies which trigger will control an animated element's animations, turning them, for example, into [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations). The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If the `<dashed-ident>` specified inside the `animation-trigger` isn't set as a `timeline-trigger-name` on a suitable element inside the same document, the `animation-trigger` is ignored.
+The `animation-trigger` property specifies which trigger will control the animated element's animations. A value other than `none` turns the animation into a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
 
-You can also include one or more {{cssxref("animation-action")}} keywords in an `animation-trigger` value, which specify the behavior of the animation once the trigger is activated and deactivated.
+The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If there is no scrolling element with the same `<dashed-ident>` set as the `timeline-trigger-name` value, the animation will not have a trigger, and will never occur.
+
+You must include at least one but no more than two {{cssxref("animation-action")}} keywords after the `<dashed-ident>` to specify the behavior of the animation when the trigger is activated and deactivated.
 
 For example:
 
@@ -80,15 +82,31 @@ In this case, the animation will be triggered by a trigger with a `timeline-trig
 
 The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. An `animation-trigger` value cannot be set via the `animation` shorthand; instead, `animation` resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list.
 
-### Multiple scroll-triggered animations
+### Multiple `animation-trigger` values
 
-The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regards to setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
+The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regard to setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
-- If two `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set.
-- And so on.
+- If two comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
+- If an animation has more than one trigger, the two `animation-trigger` values must be separated by a space.
 
-See [Using CSS scroll-triggered animations > Multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations) for a working example.
+Given the following CSS:
+
+```css
+.animated {
+  animation:
+    fade-in linear 1s forwards,
+    rotate infinite 5s both;
+}
+.trigger1 {
+  timeline-trigger: --t1 view();
+}
+.trigger2 {
+  timeline-trigger: --t2 view();
+}
+```
+
+If `animation-trigger: --t1 play pause, --t2 forwards backwards` is set on the animated element, `--t1` will trigger the fade-in animation while --t2 will trigger the rotate animation.
 
 ## Formal definition
 
@@ -407,8 +425,8 @@ Try scrolling the content up. When the `<div>` fully appears in the scrollport, 
 
 ## See also
 
-- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
+- {{cssxref("timeline-trigger")}} shorthand property
 - {{cssxref("trigger-scope")}}
 - {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
