@@ -3,7 +3,10 @@ name: Check cSpell lists
 on:
   pull_request:
     paths:
+      - .github/workflows/pr-check_cspell_lists.yml
+      - .nvmrc
       - .vscode/dictionaries/*
+      - scripts/sort_and_unique_file_lines.js
 
 # No GITHUB_TOKEN permissions, as we don't use it.
 permissions: {}
@@ -24,7 +27,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: ".nvmrc"
 

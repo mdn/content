@@ -3,9 +3,13 @@ title: "`row-rule-visibility-items` CSS property"
 short-title: row-rule-visibility-items
 slug: Web/CSS/Reference/Properties/row-rule-visibility-items
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-visibility-items
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) property defines whether a row-rule segment is painted in gaps adjacent to empty areas.
 
@@ -34,7 +38,7 @@ row-rule-visibility-items: normal;
     <p>Two fish</p>
     <p>Red fish</p>
     <p>Blue fish</p>
-    <cite>-- Dr. Seuss<cite>
+    <cite>-- Dr. Seuss</cite>
   </section>
 </section>
 ```
@@ -88,7 +92,7 @@ row-rule-visibility-items: unset;
 
 The `row-rule-visibility-items` property defines whether, in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row, row rule segments are painted in the gaps between two adjacent areas if one or both of the areas are empty.
 
-The `row-rule-visibility-items` and {{cssxref("row-rule-visibility-items")}} properties can both be set to the same values using the {{cssxref("rule-visibility-items")}} shorthand.
+The `row-rule-visibility-items` and {{cssxref("column-rule-visibility-items")}} properties can both be set to the same values using the {{cssxref("rule-visibility-items")}} shorthand.
 
 ## Formal definition
 

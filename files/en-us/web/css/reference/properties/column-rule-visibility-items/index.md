@@ -3,9 +3,13 @@ title: "`column-rule-visibility-items` CSS property"
 short-title: column-rule-visibility-items
 slug: Web/CSS/Reference/Properties/column-rule-visibility-items
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.column-rule-visibility-items
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`column-rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) property defines whether a column-rule segment is painted in gaps adjacent to empty areas.
 
@@ -34,7 +38,7 @@ column-rule-visibility-items: normal;
     <p>Two fish</p>
     <p>Red fish</p>
     <p>Blue fish</p>
-    <cite>-- Dr. Seuss<cite>
+    <cite>-- Dr. Seuss</cite>
   </section>
 </section>
 ```
@@ -76,7 +80,7 @@ column-rule-visibility-items: unset;
   - : The column rule should be painted in all gap segments, regardless of whether adjacent areas contain an item.
 
 - `around`
-  - : The column rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by a item.
+  - : The column rule should be painted in a gap segment if at least one of the two adjacent areas is occupied by an item.
 
 - `between`
   - : The column rule should be painted in a gap segment if both adjacent areas are occupied by items.
