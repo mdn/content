@@ -78,8 +78,7 @@ li:nth-child(even) {
   - : Represents elements whose numeric position in a series of siblings matches the pattern `An+B`, for every positive integer or zero value of `n`, where:
     - `A` is an integer step size,
     - `B` is an integer offset,
-    - `n` is all non-negative
-      integers, starting from 0.
+    - `n` is all non-negative integers, starting from 0.
 
     It can be read as the `An+B`-th element of a list. The `A` and `B` must both have {{cssxref("&lt;integer&gt;")}} values.
 
