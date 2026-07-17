@@ -18,7 +18,7 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### Developer Tools
 
-- The developer tools now indicate the heading level in the accessibility highlighter and accessibility tree, where previously only the fact that it was a heading was provided.
+- The developer tools now provide the heading level for a heading element in the accessibility highlighter and accessibility tree (previously just the fact that it was a heading was shown).
   The information can be found in the [Accessibility Inspector panel](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
   ([Firefox bug 1588784](https://bugzil.la/1588784) and [Firefox bug 2044904](https://bugzil.la/2044904)).
 
