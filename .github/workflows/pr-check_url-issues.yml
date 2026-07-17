@@ -5,7 +5,10 @@ on:
     paths:
       - .github/workflows/pr-check_url-issues.yml
       - .nvmrc
+      - package.json
+      - package-lock.json
       - "files/**/*.md"
+      - scripts/log-url-issues.js
 
 # No GITHUB_TOKEN permissions, as we don't use it.
 permissions: {}
