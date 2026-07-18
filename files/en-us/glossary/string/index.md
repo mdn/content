@@ -4,12 +4,10 @@ slug: Glossary/String
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+A **string** is a sequence of {{Glossary("character", "characters")}} used to represent text.
 
-In any computer programming language, a string is a sequence of {{Glossary("character","characters")}} used to represent text.
-
-In {{Glossary("JavaScript")}}, a String is one of the {{Glossary("Primitive", "primitive values")}} and the {{jsxref("String")}} object is a {{Glossary("wrapper")}} around a String primitive.
+In {{Glossary("JavaScript")}}, strings are {{Glossary("primitive")}} values, immutable, and created with quotes or backticks.
 
 ## See also
-
-- [String (computer science)](<https://en.wikipedia.org/wiki/String_(computer_science)>) on Wikipedia
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures#string_type)
+- [String on Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
+- [JavaScript String reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
