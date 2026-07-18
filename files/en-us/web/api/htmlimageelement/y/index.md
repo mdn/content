@@ -10,7 +10,7 @@ browser-compat: api.HTMLImageElement.y
 
 The read-only **`y`** property of the {{domxref("HTMLImageElement")}} interface indicates the y-coordinate of the {{HTMLElement("img")}} element's top border edge relative to the root element's origin.
 
-The {{domxref("HTMLImageElement.x", "x")}} and `y` properties are only valid for an image if its {{cssxref("display")}} property has the computed value `table-column` or `table-column-group`. In other words: it has either of those values set explicitly on it, or it has inherited it from a containing element, or by being located within a column described by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
+The {{domxref("HTMLImageElement.x", "x")}} and `y` properties return the offset of the image relative to the root element. They are available for all {{domxref("HTMLImageElement")}} instances, regardless of the element's {{cssxref("display")}} value.
 
 ## Value
 
