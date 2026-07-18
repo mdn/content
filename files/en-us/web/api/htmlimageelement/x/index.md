@@ -10,7 +10,7 @@ browser-compat: api.HTMLImageElement.x
 
 The read-only **`x`** property of the {{domxref("HTMLImageElement")}} interface indicates the x-coordinate of the {{HTMLElement("img")}} element's left border edge relative to the root element's origin.
 
-The `x` and {{domxref("HTMLImageElement.y", "y")}} properties are only valid for an image if its {{cssxref("display")}} property has the computed value `table-column` or `table-column-group`. In other words: it has either of those values set explicitly on it, or it has inherited it from a containing element, or by being located within a column described by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
+The `x` and {{domxref("HTMLImageElement.y", "y")}} properties return the offset of the image relative to the root element. They are available for all {{domxref("HTMLImageElement")}} instances, regardless of the element's {{cssxref("display")}} value.
 
 ## Value
 
