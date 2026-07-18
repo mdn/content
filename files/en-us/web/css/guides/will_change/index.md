@@ -1,5 +1,5 @@
 ---
-title: CSS will change
+title: CSS will-change
 short-title: Will change
 slug: Web/CSS/Guides/Will_change
 page-type: css-module
@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-will-change/
 sidebar: cssref
 ---
 
-The **CSS will change** module provides a hit to the browser to enable optimizations that can improve rendering performance by doing potentially expensive work before it is required via the {{cssxref("will-change")}} property.
+The **CSS will change** module provides a hint to the browser to enable optimizations that can improve rendering performance by doing potentially expensive work before it is required via the {{cssxref("will-change")}} property.
 
 ## Reference
 
@@ -17,7 +17,7 @@ The **CSS will change** module provides a hit to the browser to enable optimizat
 
 ## Related concepts
 
-- [CSS transforms](/en-US/docs/Web/CSS/Guides/Animations)
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms)
   - {{cssxref("transform")}}
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
@@ -41,7 +41,7 @@ The **CSS will change** module provides a hit to the browser to enable optimizat
 
 ## See also
 
-- [CSS scroll driven animations](/en-US/doc/sWeb/CSS/Guides/Scroll-driven_animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - [Animation Interface](/en-US/docs/Web/API/Animation/Animation)
 - [Web performance](/en-US/docs/Web/Performance)
