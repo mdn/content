@@ -82,10 +82,10 @@ column-rule-width: unset;
 The `column-rule-width` property accepts a comma-separated list of values, including:
 
 - `<line-width>`
-  - : A {{cssxref("&lt;line-width&gt;")}}, the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
+  - : A {{cssxref("&lt;line-width&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
 
 - `<repeat-line-width>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;line-width&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and one or more {{cssxref("&lt;line-width&gt;")}} values as subsequent arguments. The integer defines the number of times the `<line-width>` values should be repeated.
 
 - `<auto-repeat-line-width>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-width>` values as subsequent arguments. The provided `<line-width>` values are repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
@@ -97,16 +97,16 @@ The `column-rule-width` property defines the widths of any column rule lines dra
 > [!NOTE]
 > The `column-rule-width` only defines the width of the lines painted in the gaps. These lines have no effect on the [box model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction) or layout. The size of the gutter is defined by the {{cssxref("gap")}} property; with the default value being `1em` on multi-column containers and `0` in all other contexts. If the width of a rule is wider than the {{cssxref("gap")}}, the line will be painted behind the column content.
 
-The value is a comma-separated list of components, which can include `<line-width>`, `<repeated-line-width>`, and `<auto-repeat-line-width>` types.
+The value is a comma-separated list of components, which can include `<line-width>`, `<repeat-line-width>`, and `<auto-repeat-line-width>` types.
 
-The `column-rule-width`, along with the {{cssxref("column-rule-color")}} and {{cssxref("column-rule-style")}} properties, can also be set using the {{cssxref("column-rule")}} shorthand, while {{cssxref("rule-width")}} is a shorthand that set both the `column-rule-width` and the {{cssxref("row-rule-width")}} properties.
+The `column-rule-width`, along with the {{cssxref("column-rule-color")}} and {{cssxref("column-rule-style")}} properties, can also be set using the {{cssxref("column-rule")}} shorthand, while {{cssxref("rule-width")}} is a shorthand that sets both the `column-rule-width` and the {{cssxref("row-rule-width")}} properties.
 
 A `<line-width>` can be declared as any valid CSS {{cssxref("&lt;line-width&gt;")}} value: the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value. Percentage values are invalid.
 
 If the property value consists of only one `<line-width>`, all the column rules will be that width. If we declare the following, all column rules will be `2px`:
 
 ```css
-column-rule-width: `2px`;
+column-rule-width: 2px;
 ```
 
 When more than one `<line-width>` is declared, they will be applied to column-rules in the order specified. If there are more column-rules than `<line-width>` values, the list of line widths is repeated until every rule has a width. If we declare the following, for example, every odd rule will be `thick`, and every even rule will be `0.25rem`.
@@ -117,7 +117,7 @@ column-rule-width: thick, 0.25rem;
 
 ### Repeated line widths
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-width&gt;")}} values passed as subsequent arguments the specified number of times. This allows the same color to be repeated a set number of times without repeating the same `<line-width>` multiple times. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-width&gt;")}} values passed as subsequent arguments the specified number of times. This allows the same width to be repeated a set number of times without repeating the same `<line-width>` multiple times. The following declarations are equivalent:
 
 ```css
 column-rule-width: 1rem, thick, thin, thick, thin, thick, thin;
@@ -138,7 +138,8 @@ column-rule-width:
   min(calc(var(--base) - 3px), 10px),
   abs(calc(var(--secondary) - 30px)),
   min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)) thin;
+  abs(calc(var(--secondary) - 30px)),
+  thin;
 column-rule-width:
   1rem,
   repeat(
@@ -163,7 +164,7 @@ column-rule-width: 10px, repeat(auto, thin), 10px;
 
 In this case, the first column rule will be `10px`, the last will be `10px`, and all others will be `thin`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns, the first and last columns will always be `10px`. Which means, if there are only 2 or 3 columns, there will be no thin-sized column rules.
 
-The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for the row-rule line widths that would not otherwise receive values from other parts of the list, preventing the list from being cycled. A `row-rule-width` value can include, at most, one `repeat(auto, <line-width>)`.
+The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for the row-rule line widths that would not otherwise receive values from other parts of the list, preventing the list from being cycled. A `column-rule-width` value can include, at most, one `repeat(auto, <line-width>)`.
 
 ## Formal definition
 

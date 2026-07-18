@@ -7,7 +7,7 @@ browser-compat: css.properties.column-rule-color
 sidebar: cssref
 ---
 
-The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns in multi-column grid, flex, and multi-col layouts.
+The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns in multi-column grid, flex, and multi-column layouts.
 
 {{InteractiveExample("CSS Demo: column-rule-color")}}
 
@@ -90,11 +90,11 @@ The `column-rule-color` property accepts a comma-separated list of values, inclu
 
 The `column-rule-color` property defines the colors of any lines drawn in the gaps between columns in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column.
 
-The value is a comma-separated list of components, which can include `<line-color>`, `<repeated-line-color>`, and `<auto-repeat-line-color>` types.
+The value is a comma-separated list of components, which can include `<line-color>`, `<repeat-line-color>`, and `<auto-repeat-line-color>` types.
 
 The `column-rule-color`, along with the {{cssxref("column-rule-width")}} and {{cssxref("column-rule-style")}} properties, can be set using the {{cssxref("column-rule")}} shorthand. The `column-rule-color`, along with the {{cssxref("row-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
-A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the rule lines will be that color. If we declare the following, the lines in the gutters between columns will all be blue:
+A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} value. If the property value consists of only one `<color>`, all the rule lines will be that color. For example, if we declare the following, the lines in the gutters between columns will all be blue:
 
 ```css
 column-rule-color: blue;
@@ -108,7 +108,7 @@ column-rule-color: red, yellow;
 
 ### Repeated line colors
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;color&gt;")}} values passed as subsequent arguments the specified number of times. This allows the same color to be repeated a set number of times without repeating the same `<line-color>` multiple times. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;color&gt;")}} values passed as subsequent arguments the specified number of times. This allows the color values to be repeated as many times as you need without having to list them individually. The following declarations are equivalent:
 
 ```css
 column-rule-color: blue, yellow, red, yellow, red;
@@ -278,7 +278,7 @@ li {
 
 The grid has nine cells across, so eight gutters. The `repeat()` function repeats our two mixed color three times, creating a color list with seven colors. Since there are as more column gutters than list colors, the last color in the list is not used.
 
-### Using `auto` within `repeat()`o m
+### Using `auto` within `repeat()`
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 

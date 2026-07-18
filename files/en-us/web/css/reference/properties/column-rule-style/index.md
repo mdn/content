@@ -88,7 +88,7 @@ The `column-rule-style` property accepts a comma-separated list of values, inclu
   - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is`none`.
 
 - `<repeat-line-style>`
-  - : A {{cssxref("repeat()")}} function, with the first parameter being an {{cssxref("&lt;integer&gt;")}} of `1` or more, representing the number of times the second parameter, a comma-separated list of {{cssxref("&lt;line-style&gt;")}} values, should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and one or more {{cssxref("&lt;line-width&gt;")}} values as subsequent arguments. The integer defines the number of times the `<line-width>` values should be repeated.
 
 - `<auto-repeat-line-style>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-style>` values as subsequent arguments. The provided `<line-style>` values are repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
@@ -97,14 +97,14 @@ The `column-rule-style` property accepts a comma-separated list of values, inclu
 
 The `column-rule-style` property defines the line style of any column rule lines drawn in the gaps between columns in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column.
 
-The value is a comma-separated list of components, which can include `<line-style>`, `<repeated-line-style>`, and `<auto-repeat-line-style>` types.
+The value is a comma-separated list of components, which can include `<line-style>`, `<repeat-line-style>`, and `<auto-repeat-line-style>` types.
 
 The `column-rule-style`, along with the {{cssxref("column-rule-color")}} and {{cssxref("column-rule-width")}} properties, can be set using the {{cssxref("column-rule")}} shorthand. The `column-rule-style`, along with the {{cssxref("row-rule-style")}} property, can also be set using the {{cssxref("rule-style")}} shorthand.
 
 If the property value has only one `<line-style>`, all the column rules will be that style. If we declare the following, all column rules will be `double`:
 
 ```css
-column-rule-style: `double`;
+column-rule-style: double;
 ```
 
 When more than one `<line-style>` is declared, they will be applied to column-rules in the order specified. If there are more column-rules than `<line-style>` values, the list of line styles is repeated until every column rule has a style. If we declare the following, for example, every odd rule will be `double`, and every even rule will be `groove`.
@@ -134,7 +134,7 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 column-rule-style: solid, repeat(auto, dotted), solid;
 ```
 
-In this case, the first and last column rules will be `sold`, and all others will be `dotted`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns, the first and last columns will always be `thin`. All the other column rules will be `dotted`, which means if there are only 2 or 3 columns, there will be no dotted column rules.
+In this case, the first and last column rules will be `solid`, and all others will be `dotted`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns, the first and last columns will always be `thin`. All the other column rules will be `dotted`, which means if there are only 2 or 3 columns, there will be no dotted column rules.
 
 The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for column rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. Only one `repeat(auto, <line-style>)` is allowed within a `column-rule-style` value.
 
@@ -232,7 +232,7 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `column-rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeat 3 times.
+This example demonstrates using the `repeat()` function within the `column-rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
