@@ -4,10 +4,10 @@ slug: Glossary/Operator
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+An **operator** is a symbol that performs an operation on one or more {{Glossary("operand", "operands")}} and produces a result.
 
-Reserved **syntax** consisting of punctuation or alphanumeric characters that carries out built-in functionality. For example, in JavaScript the addition operator ("+") adds numbers together and concatenates strings, whereas the "not" operator ("!") negates an expression — for example making a `true` statement return `false`.
+In {{Glossary("JavaScript")}}, operators are categorized by arity (unary, binary, ternary) and function (arithmetic, comparison, logical, assignment).
 
 ## See also
-
-- [Operator (computer programming)](<https://en.wikipedia.org/wiki/Operator_(computer_programming)>) on Wikipedia
-- [JavaScript operators](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [JavaScript operators reference](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [Operator on Wikipedia](https://en.wikipedia.org/wiki/Operator_(computer_programming))
