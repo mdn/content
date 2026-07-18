@@ -1,4 +1,5 @@
 ---
+> **Note:** The `controls` attribute is not yet implemented in any browser.
 title: "`<img>` HTML image embed element"
 short-title: <img>
 slug: Web/HTML/Reference/Elements/img
