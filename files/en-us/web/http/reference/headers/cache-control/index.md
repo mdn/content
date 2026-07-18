@@ -471,4 +471,6 @@ Note that this will not affect shared or intermediate caches.
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
 - [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)
 - [RFC 5861 – HTTP Cache-Control Extensions for Stale Content](https://httpwg.org/specs/rfc5861.html)
-- [RFC 8246 – HTTP Immutable Responses](https://httpwg.org/specs/rfc8246.html)
+- [RFC 8246 – HTTP Immutable Responses](https://httpwg.org/specs/rfc8246.html)#### must-revalidate
+
+
