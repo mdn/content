@@ -122,7 +122,7 @@ The `row-rule` property defines the line style of any rule lines drawn in the ga
 
 The `row-rule` is shorthand for {{cssxref("row-rule-color")}}, {{cssxref("row-rule-style")}}, and {{cssxref("row-rule-width")}}. The `row-rule`, along with the {{cssxref("column-rule")}} shorthand property, can also be set using the {{cssxref("rule")}} shorthand.
 
-The property value is a comma-separated list of components, which can include `<gap-rule>`, `<repeated-gap-rule>`, and `<auto-repeat-gap-rule>` types. Each `<gap-rule>` defines the width, color, and style of one or more rule lines.
+The property value is a comma-separated list of components, which can include `<gap-rule>`, `<gap-repeat-rule>`, and `<gap-auto-repeat-rule>` types. Each `<gap-rule>` defines the width, color, and style of one or more rule lines.
 
 If the property value consists of only one `<gap-rule>`, all the row rules will be that style. If we declare the following, all row rules will be `dashed red 3px`:
 

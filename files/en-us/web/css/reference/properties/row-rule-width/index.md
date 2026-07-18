@@ -96,14 +96,14 @@ The `row-rule-width` property accepts a comma-separated list of values, includin
 
 The `row-rule-width` property defines the widths of any row rule lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
-The value is a comma-separated list of components, which can include `<line-width>`, `<repeated-line-width>`, and `<auto-repeat-line-width>` types.
+The value is a comma-separated list of components, which can include `<line-width>`, `<repeat-line-width>`, and `<auto-repeat-line-width>` types.
 
 The `row-rule-width`, along with the {{cssxref("row-rule-color")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-width`, along with the {{cssxref("column-rule-width")}} property, can also be set using the {{cssxref("rule-width")}} shorthand.
 
 If the property value consists of only one `<line-width>`, all the row rules will be that width. If we declare the following, all row rules will be `3px`:
 
 ```css
-row-rule-width: `3px`;
+row-rule-width: 3px;
 ```
 
 When more than one `<line-width>` is declared, they will be applied to row-rules in the order specified. If there are more row-rules than `<line-width>` values, the list of line widths is repeated until every rule has a width. If we declare the following, for example, every odd rule will be `thin`, and every even rule will be `1em`.

@@ -91,7 +91,7 @@ The `row-rule-style` property accepts a comma-separated list of values, includin
 
 The `row-rule-style` property defines the line style of any row rule lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
-The value is a comma-separated list of components, which can include `<line-style>`, `<repeated-line-style>`, and `<auto-repeat-line-style>` types.
+The value is a comma-separated list of components, which can include `<line-style>`, `<repeat-line-style>`, and `<auto-repeat-line-style>` types.
 
 The `row-rule-style`, along with the {{cssxref("row-rule-color")}} and {{cssxref("row-rule-width")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-style`, along with the {{cssxref("column-rule-style")}} property, can also be set using the {{cssxref("rule-style")}} shorthand.
 
@@ -197,7 +197,7 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `row-rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeat 3 times.
+This example demonstrates using the `repeat()` function within the `row-rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
