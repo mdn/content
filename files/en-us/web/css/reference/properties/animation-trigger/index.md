@@ -27,7 +27,8 @@ animation-trigger: --my-other-trigger play reset;
 
 /* Multiple triggers */
 animation-trigger: --my-trigger play --my-other-trigger play-backwards;
-animation-trigger: --my-trigger play-forwards play-backwards --my-other-trigger play reset;
+animation-trigger: 
+  --my-trigger play-forwards play-backwards --my-other-trigger play reset;
 
 /* Multiple values */
 animation-trigger:
