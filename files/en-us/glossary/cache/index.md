@@ -4,9 +4,10 @@ slug: Glossary/Cache
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+A **cache** is a temporary storage layer that stores copies of frequently accessed data to reduce latency and bandwidth usage.
 
-A **cache** (web cache or HTTP cache) is a component that stores HTTP responses temporarily so that it can be used for subsequent HTTP requests as long as it meets certain conditions.
+In web development, browser caches store HTML pages, CSS, images, and other resources. HTTP caching headers like `Cache-Control` and `ETag` control caching behavior.
 
 ## See also
-
-- [Web cache](https://en.wikipedia.org/wiki/Web_cache) on Wikipedia
+- [HTTP caching](/en-US/docs/Web/HTTP/Caching)
+- [Cache on Wikipedia](https://en.wikipedia.org/wiki/Cache_(computing))
