@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.showPopover
 
 The **`showPopover()`** method of the {{domxref("HTMLElement")}} interface shows a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e., one that has a valid [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute) by adding it to the {{glossary("top layer")}}.
 
-When `showPopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute that is currently hidden, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover showing, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing. If the element is already showing, an error will be thrown.
+When `showPopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute that is currently hidden, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover showing, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the popover is already showing, or if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
+  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
 
 ## Examples
 
