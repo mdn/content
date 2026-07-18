@@ -9,7 +9,7 @@ browser-compat:
 sidebar: cssref
 ---
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list], allowing a large number of columns and rows, and their gap decorations, that exhibit a recurring pattern to be written in a more compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list]. It allows repeated patterns of columns, rows, and their gap decorations, to be written in a compact form.
 
 {{InteractiveExample("CSS Demo: repeat()")}}
 
