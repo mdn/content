@@ -5,8 +5,10 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Bandwidth** is the measure of how much information can pass through a data connection in a given amount of time. It is usually measured in multiples of bits-per-second (bps), for example megabits-per-second (Mbps) or gigabits-per-second (Gbps).
+**Bandwidth** is the measure of how much data can be transmitted over a data connection in a given amount of time. It is typically expressed in bits per second (bps), kilobits per second (Kbps), or megabits per second (Mbps).
+
+Higher bandwidth allows more data to be transferred simultaneously, resulting in faster download and upload speeds. Bandwidth is distinct from {{Glossary("latency")}}, which measures delay rather than capacity.
 
 ## See also
 
-- [Bandwidth](https://en.wikipedia.org/wiki/Bandwidth) on Wikipedia
+- [Bandwidth](https://en.wikipedia.org/wiki/Bandwidth_(computing)) on Wikipedia
