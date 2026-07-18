@@ -4,10 +4,10 @@ slug: Glossary/Git
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+**Git** is a distributed version control system ({{Glossary("VCS")}}) that tracks changes in source code during software development.
 
-**Git** is a free, open-source, distributed Source Code Management ({{Glossary("SCM")}}) system. It facilitates handling code bases with distributed development teams. What sets it apart from previous SCM systems is the ability to do common operations (branching, committing, etc.) on your local development machine, without having to change the master repository or even having write access to it.
+Git was created by Linus Torvalds in 2005. It allows multiple developers to work on the same project simultaneously, with branching and merging capabilities.
 
 ## See also
-
-- [Official website with documentation](https://git-scm.com/)
-- [GitHub](https://github.com/), a Git-based graphical project host
+- [Git on Wikipedia](https://en.wikipedia.org/wiki/Git)
+- [Git documentation](https://git-scm.com/doc)
