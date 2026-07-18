@@ -5,18 +5,11 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**ARIA** (_{{Glossary("Accessibility", "Accessible")}} Rich {{glossary("Internet")}} Applications_) is a {{Glossary("W3C")}} specification developed by {{Glossary("WAI")}} to make Web content and Web applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies.
+**ARIA** (Accessible Rich Internet Applications) is a {{Glossary("W3C")}} specification for adding accessibility semantics to otherwise non-accessible {{Glossary("HTML")}} elements and dynamic content.
 
-The specification, for example, allows you to add the attribute `role="alert"` to a {{HTMLElement("p")}} {{glossary("tag")}} to notify a sight-challenged user that the information is important and time-sensitive (which you might otherwise convey through text color).
+ARIA provides a set of attributes (such as `role`, `aria-label`, and `aria-hidden`) that can be added to HTML elements to convey their purpose and state to assistive technologies like screen readers.
 
 ## See also
 
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
-- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
-- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
-- [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
-- [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn: Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
-- Related glossary terms
-  - {{Glossary("Accessibility")}}
-  - {{Glossary("WAI")}}
+- [ARIA overview](/en-US/docs/Web/Accessibility/ARIA)
+- [ARIA on Wikipedia](https://en.wikipedia.org/wiki/Accessible_Rich_Internet_Applications)
