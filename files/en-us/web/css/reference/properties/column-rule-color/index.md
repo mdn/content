@@ -7,7 +7,7 @@ browser-compat: css.properties.column-rule-color
 sidebar: cssref
 ---
 
-The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns in multi-column grid, flex, and multi-column layouts.
+The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns in multi-column grid, flex, and multi-col layouts.
 
 {{InteractiveExample("CSS Demo: column-rule-color")}}
 
@@ -125,7 +125,7 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 column-rule-color: blue, repeat(auto, yellow), red;
 ```
 
-In this case, the first column-rule will be blue, the last will be red, and all others will be yellow. It doesn't matter if the container has; the first will always be blue and, as long as there are at least two column-rules, the last will always be red. All the other rules will be yellow, which means if there are only 2 or 3 columns, there will be no yellow lines.
+In this case, the first column-rule will be blue, the last will be red, and all others will be yellow. As long as there are at least two column-rules, the first will always be blue and the last will always be red. All the other rules will be yellow, which means if there are only 2 or 3 columns, there will be no yellow lines.
 
 The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for the column-rule line colors that would not otherwise receive values from other parts of the list, preventing the list from being cycled. A `column-rule-color` value can include, at most, one `repeat(auto, <color>)`.
 

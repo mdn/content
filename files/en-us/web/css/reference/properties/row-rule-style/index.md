@@ -201,8 +201,6 @@ This example demonstrates using the `repeat()` function within the `row-rule-sty
 
 ```css live-sample___func live-sample___auto
 ul {
-  --base: 0.5vw;
-  --secondary: 1vw;
   row-rule-style: double, repeat(3, inset, dashed), double;
 }
 ```

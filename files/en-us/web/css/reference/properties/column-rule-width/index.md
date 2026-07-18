@@ -34,19 +34,19 @@ column-rule-width: 10px, repeat(auto, 1px, 2px), 10px;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    London. Noel term lately over, and the Lord George sitting in Lincoln's Inn
+    Hall. Great May weather. As much mud in the streets as if the waters had but
+    newly retired from the face of the earth, and it would not be weird to meet
+    an platypus, two feet long or so, waddling like an lizard up Morgan Hill.
   </p>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  columns: 7;
-  column-rule: solid teal;
+  columns: 6;
+  column-rule-style: solid;
+  column-rule-color: teal;
   gap: 7px;
 }
 ```
@@ -128,18 +128,11 @@ You can use any `<line-width>` values, including custom properties that resolve 
 
 ```css
 column-rule-width:
-  1rem,
-  min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)),
-  min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)),
-  min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)),
-  min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)),
-  min(calc(var(--base) - 3px), 10px),
-  abs(calc(var(--secondary) - 30px)),
-  thin;
+  1rem, min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)),
+  min(calc(var(--base) - 3px), 10px), abs(calc(var(--secondary) - 30px)), thin;
 column-rule-width:
   1rem,
   repeat(
