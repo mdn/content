@@ -14,7 +14,7 @@ The **`scan`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Re
 The `scan` feature is specified as one of the following keyword values:
 
 - `interlace`
-  - : The output device uses "interlaced" rendering, where video frames alternate between specifying only the "even" lines on the screen and only the "odd" lines.
+  - : The output device uses "interlace" rendering, where video frames alternate between specifying only the "even" lines on the screen and only the "odd" lines.
 - `progressive`
   - : The output device renders content to the screen with no special treatment.
 
@@ -24,7 +24,7 @@ Most modern screens (and all computer screens) use progressive rendering, displa
 
 Interlacing was used by CRT monitors and some plasma TVs to enable the appearance of faster frames per second (FPS) while reducing bandwidth. With interlacing, video frames alternate between rendering the even lines and the odd lines on the screen, downloading and rendering only half the screen for each frame, exploiting the human image-smoothing ability so the brain simulates a higher FPS broadcast at half the bandwidth cost.
 
-When targeting interlaced screens, avoid very fast movement across the screen and ensure animated details are wider than 1px to reduce flickering.
+When targeting interlace screens, avoid very fast movement across the screen and ensure animated details are wider than 1px to reduce flickering.
 
 ## Examples
 
@@ -57,7 +57,7 @@ p {
     border-style: dashed;
   }
 }
-@media not screen and (scan: interlaced) {
+@media not screen and (scan: interlace) {
   p {
     color: purple;
   }
