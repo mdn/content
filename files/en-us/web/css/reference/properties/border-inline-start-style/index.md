@@ -50,7 +50,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
 border-inline-start-style: groove;
@@ -67,7 +67,7 @@ Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("line-style")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition

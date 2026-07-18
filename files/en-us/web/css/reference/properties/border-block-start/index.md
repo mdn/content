@@ -83,7 +83,7 @@ The `border-block-start` is specified with one or more of the following, in any 
 
 - {{cssxref("line-width")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("line-style")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.

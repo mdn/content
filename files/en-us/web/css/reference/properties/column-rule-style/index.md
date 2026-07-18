@@ -55,7 +55,7 @@ column-rule-color: #8888ff;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -79,7 +79,7 @@ The `column-rule-style` property is specified as a single `<'border-style'>` val
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("line-style")}}
   - : Is a keyword defined by {{ cssxref("border-style") }} describing the style of the rule. The styling must be interpreted as in the collapsing border model.
 
 ## Formal definition

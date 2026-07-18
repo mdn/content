@@ -54,7 +54,7 @@ writing-mode: vertical-lr;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-block-start-style: dashed;
 border-block-start-style: dotted;
 border-block-start-style: groove;
@@ -71,7 +71,7 @@ Related properties are {{cssxref("border-block-end-style")}}, {{cssxref("border-
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("line-style")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition
