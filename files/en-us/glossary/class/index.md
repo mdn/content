@@ -4,12 +4,10 @@ slug: Glossary/Class
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+In {{Glossary("OOP","object-oriented programming")}}, a **class** defines a template for creating {{Glossary("object","objects")}}.
 
-In {{glossary("OOP","object-oriented programming")}}, a **class** defines an {{glossary("object","object's")}} characteristics. Class is a template definition of an object's {{glossary("property","properties")}} and {{glossary("method","methods")}}, the "blueprint" from which other more specific instances of the object are drawn.
+In {{Glossary("JavaScript")}}, classes are syntactic sugar over prototype-based inheritance, introduced in ES2015.
 
 ## See also
-
-- [Classes in JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
-- [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) on Wikipedia
-- [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) on Wikipedia
+- [Classes in JavaScript](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Class on Wikipedia](https://en.wikipedia.org/wiki/Class_(computer_programming))
