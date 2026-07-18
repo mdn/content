@@ -4,13 +4,10 @@ slug: Glossary/Cookie
 page-type: glossary-definition
 sidebar: glossarysidebar
 ---
+A **cookie** (also called an HTTP cookie or web cookie) is a small piece of data sent from a website and stored on the user's browser.
 
-A **cookie** is a small piece of information left on a visitor's computer by a website, via a web browser.
-
-Cookies are used to personalize a user's web experience with a website. It may contain the user's preferences or inputs when accessing that website. A user can customize their web browser to accept, reject, or delete cookies.
-
-Cookies can be set and modified at the server level using the `Set-Cookie` [HTTP header](/en-US/docs/Web/HTTP/Guides/Cookies), or with JavaScript using [`document.cookie`](/en-US/docs/Web/API/Document/cookie).
+Cookies are used for session management, personalization, and tracking. They are set via the `Set-Cookie` HTTP header and sent with subsequent requests via the `Cookie` header.
 
 ## See also
-
-- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) on Wikipedia
+- [HTTP cookies on MDN](/en-US/docs/Web/HTTP/Cookies)
+- [Cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
