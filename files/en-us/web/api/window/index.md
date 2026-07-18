@@ -238,7 +238,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
 - {{domxref("Window.requestIdleCallback()")}}
   - : Enables the scheduling of tasks during a browser's idle periods.
-- {{domxref("Window.requestResize()")}}
+- {{domxref("Window.requestResize()")}} {{experimental_inline}}
   - : Updates the size information shared by an embedded document with its embedding parent, but only if the embedded document has opted in to sharing its size information.
 - {{domxref("Window.resizeBy()")}}
   - : Resizes the current window by a certain amount.
