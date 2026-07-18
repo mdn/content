@@ -799,6 +799,21 @@ This example renders as follows:
 
 Try carefully scrolling the example, and note how each animation is applied to the `<section>` when each `<div>` is scrolled to.
 
+Because of the commas `animation-trigger` property values, each value applies to a different `animation`. If an animation has multiple triggers, the triggers for that animation are space separated.
+
+In this code, there is a `rotate` animation and a `rainbow` animation. The `rotate` animation is bound by two triggers: both `t1` and `t2`, so the triggers are separated. We have different triggers from each animation, so those are comma separated. The space means multiple triggers are bound to one animation. The comma means the triggers are operating on a different animation, using the coordinated list syntax.
+
+```css
+.animated {
+  animation:
+    rotate 1s infinite both,
+    rainbow 1s infinite both;
+  animation-trigger:
+    --t1 play pause --t2 play pause,
+    --t1 play pause;
+}
+```
+
 ## See also
 
 - [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
