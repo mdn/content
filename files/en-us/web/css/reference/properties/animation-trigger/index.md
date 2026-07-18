@@ -16,22 +16,28 @@ The **`animation-trigger`** [CSS](/en-US/docs/Web/CSS) property specifies whethe
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 animation-trigger: none;
 
-/* Dashed ident with one <animation-action> */
+/* One trigger */
 animation-trigger: --my-trigger play;
 animation-trigger: --my-other-trigger play-once;
-
-/* Dashed ident with two <animation-action>s */
 animation-trigger: --my-trigger play-forwards play-backwards;
 animation-trigger: --my-other-trigger play reset;
+
+/* Multiple triggers */
+animation-trigger: --my-trigger play --my-other-trigger play-backwards;
+animation-trigger: --my-trigger play-forwards play-backwards --my-other-trigger play reset;
 
 /* Multiple values */
 animation-trigger:
   none,
   --my-trigger play-forwards play-backwards,
   --my-other-trigger play reset;
+animation-trigger:
+  --my-trigger play-forwards --my-other-trigger play-backwards,
+  none,
+  --my-trigger play-forwards play-backwards --my-other-trigger play pause;
 
 /* Global values */
 animation-trigger: inherit;
