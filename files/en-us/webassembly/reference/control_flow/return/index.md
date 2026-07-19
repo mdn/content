@@ -3,6 +3,7 @@ title: "return: Wasm text instruction"
 short-title: return
 slug: WebAssembly/Reference/Control_flow/return
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.return
 sidebar: webassemblysidebar
 ---
 
@@ -52,3 +53,11 @@ return
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `return`    | `0x0f`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
