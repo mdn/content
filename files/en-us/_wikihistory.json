@@ -15508,19 +15508,6 @@
     "modified": "2020-10-15T21:38:35.254Z",
     "contributors": ["wbamberg", "abbycar", "Makyen"]
   },
-  "Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled": {
-    "modified": "2020-11-04T21:11:17.147Z",
-    "contributors": [
-      "sideshowbarker",
-      "room.booking7788",
-      "apselivi",
-      "Alling",
-      "wbamberg",
-      "hellosct1",
-      "ExE-Boss",
-      "vitaly-zdanevich"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/manifest.json/omnibox": {
     "modified": "2020-10-15T21:52:06.691Z",
     "contributors": ["wbamberg", "andrewtruongmoz"]
