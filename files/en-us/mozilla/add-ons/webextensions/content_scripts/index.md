@@ -75,7 +75,12 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-By default, content scripts do not run in `about:blank`, `about:srcdoc`, `data:`, and `blob:` pages. To enable their execution, use the [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) option in the `content_scripts` manifest key or the [`matchOriginAsFallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback) option in the `scripting` API.
+By default, content scripts don't run in `about:`, `data:`, and `blob:` pages. This is because these pages typically have an opaque origin that can't be matched against the `matches` patterns used to register the content script.
+
+From Firefox 128, you can run a content script in these pages by setting the [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback) option in the `content_scripts` manifest key, or the [`matchOriginAsFallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript#matchoriginasfallback) option of {{WebExtAPIRef("scripting.registerContentScripts()")}} or (in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, to `true`. Using these settings, instead of matching the page's (opaque) origin, the browser falls back to matching the origin the page inherited from the document that created it. For example, the page that navigated to a `data:` URL, or that created a `blob:` URL.
+
+> [!NOTE]
+> Before Firefox 128, content scripts could be injected into a `blob:` page whenever the origin of the document that created the blob matched the extension's `matches` patterns, with no way to opt out. From Firefox 128, `blob:` pages require `match_origin_as_fallback` (or `matchOriginAsFallback`) to be `true`, the same as `about:` and `data:` pages, matching Chrome's behavior.
 
 Extensions cannot inject content scripts into privileged browser UI pages (such as `about:debugging`, `about:addons`, reader view, view-source, or the PDF viewer) or [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
 
