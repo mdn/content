@@ -31,6 +31,9 @@ sidebar: addonsidebar
 
 {{Non-standard_Header}}
 
+> [!NOTE]
+> `offline_enabled` is not supported in Manifest V3, which Chrome has supported generally since Chrome 88. This key only applies to Manifest V2 extensions and apps.
+
 Whether the app or extension is expected to work offline. When Chrome detects that it is offline, apps with this field set to true will be highlighted on the New Tab page.
 
 As of Chrome 35, apps (ChromeOS only from 2018) are assumed to be offline enabled and the default value of `"offline_enabled"` is `true` unless `"webview"` permission is requested. In this case, network connectivity is assumed to be required and `"offline_enabled"` defaults to `false`.
