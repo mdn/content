@@ -3,8 +3,7 @@ title: "funcref: Wasm value type"
 short-title: funcref
 slug: WebAssembly/Reference/Value_types/funcref
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-types
+browser-compat: webassembly.types.funcref
 sidebar: webassemblysidebar
 ---
 
