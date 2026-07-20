@@ -17,9 +17,7 @@ link-parameters: param(--color, red);
 
 /* multiple values */
 link-parameters:
-  param(--color1, red),
-  param(--color2, blue),
-  param(--color3, green);
+  param(--color1, red), param(--color2, blue), param(--color3, green);
 ```
 
 ## Values
