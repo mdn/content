@@ -11,7 +11,7 @@ In this way, certificate authorities (CAs) can be subject to much greater public
 
 ## Background
 
-CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes are labelled with the _cryptographic hashes_ of their child nodes. Leaf nodes contain hashes of actual pieces of data. The label of the root node therefore depends on all other nodes in the tree.
+CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes are labeled with the _cryptographic hashes_ of their child nodes. Leaf nodes contain hashes of actual pieces of data. The label of the root node therefore depends on all other nodes in the tree.
 
 In the context of certificate transparency, the data hashed by the leaf nodes are the certificates that have been issued by the various different CAs operating today. Certificate inclusion can be verified via an _audit proof_ which can be generated and verified efficiently, in logarithmic O(log n) time.
 

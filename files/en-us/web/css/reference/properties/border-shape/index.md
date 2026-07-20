@@ -235,7 +235,7 @@ border-shape: shape(
 padding: 24px;
 ```
 
-This way, the `padding` will be set outside the shape, causing it to get smaller, and forcing the background to fill up the parts of the shape extending outside the content area. You can see this technique in action in our [irregular jigsaw piece navigation menu](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/border_shape_nav_menu) example.
+This way, the `padding` will be set outside the shape, causing it to get smaller, and forcing the background to fill up the parts of the shape extending outside the content area. You can see this technique in action in our [irregular jigsaw piece navigation menu](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu) example.
 
 ## Formal definition
 
@@ -543,7 +543,7 @@ Hover over or focus the paragraph to see the animation.
 
 - {{cssxref("border")}}
 - {{cssxref("corner-shape")}}
-- [Creating an irregular nav menu with border-shape](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/border_shape_nav_menu)
+- [Creating an irregular nav menu with border-shape](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu)
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [border-shape: the future of the non-rectangular web](https://una.im/border-shape) by Una Kravets (2026)
