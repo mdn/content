@@ -48,7 +48,7 @@ All of the following examples use the same SVG file, which has attributes set wi
 </svg -->
 ```
 
-### Using `link-paramters` property
+### Using `link-parameters` property
 
 In this example the SVG attributes are updated with the {{cssxref("link-parameters")}} CSS property and `param()` function.
 
@@ -95,7 +95,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample('unsing_link-parameters_property', '100%', '300px')}}
+{{EmbedLiveSample('using_link-parameters_property', '100%', '210px')}}
 
 ### Passing `param()` into URL modifier
 
