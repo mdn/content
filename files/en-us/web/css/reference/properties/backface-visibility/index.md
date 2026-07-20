@@ -94,9 +94,9 @@ backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
-The `backface-visibility` property is specified as one of the keywords listed below.
-
 ### Values
+
+The `backface-visibility` property is specified as one of the following keywords listed:
 
 - `visible`
   - : The back face is visible when turned towards the user.

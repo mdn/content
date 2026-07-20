@@ -84,9 +84,9 @@ background-color: revert-layer;
 background-color: unset;
 ```
 
-The `background-color` property is specified as a single `<color>` value.
-
 ### Values
+
+The `background-color` property is specified as a single `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.

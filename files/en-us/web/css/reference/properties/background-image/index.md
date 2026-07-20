@@ -67,20 +67,20 @@ background-image: revert-layer;
 background-image: unset;
 ```
 
-Each background image is specified either as the keyword `none` or as an {{cssxref("image")}} value.
-
-To specify multiple background images, supply multiple values, separated by a comma.
-
 ### Values
+
+This property is specified as the keyword `none` or as a comma-separated list of {{cssxref("image")}} values.
 
 - `none`
   - : Is a keyword denoting the absence of images.
 - `<image>`
-  - : Is an {{cssxref("image")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) are supported.
+  - : Is an {{cssxref("image")}} denoting the image to display.
 
 ## Description
 
-The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
+The `background-image` property sets background images on an element.
+
+You can define [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) on an element by specifying a list of comma-separated image. The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
 
 The [borders](/en-US/docs/Web/CSS/Reference/Properties/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
 

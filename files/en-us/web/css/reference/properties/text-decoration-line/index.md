@@ -85,9 +85,9 @@ text-decoration-line: revert-layer;
 text-decoration-line: unset;
 ```
 
-The `text-decoration-line` property is specified as `none`, or **one or more** space-separated values from the list below.
-
 ### Values
+
+This property is specified either as `none` or a space-separated list of keyword values:
 
 - `none`
   - : Produces no text decoration.

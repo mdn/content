@@ -127,9 +127,9 @@ animation-iteration-count: revert-layer;
 animation-iteration-count: unset;
 ```
 
-The **`animation-iteration-count`** property is specified as one or more comma-separated values.
-
 ### Values
+
+The **`animation-iteration-count`** property is specified as one or more comma-separated values.
 
 - `infinite`
   - : The animation will repeat forever.

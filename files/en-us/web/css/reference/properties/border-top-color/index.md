@@ -69,9 +69,9 @@ border-top-color: revert-layer;
 border-top-color: unset;
 ```
 
-The `border-top-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as a single value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the top border.
