@@ -3,7 +3,7 @@ title: "v128: Wasm value type"
 short-title: v128
 slug: WebAssembly/Reference/Value_types/v128
 page-type: webassembly-instruction
-browser-compat: webassembly.simd
+browser-compat: webassembly.types.v128
 sidebar: webassemblysidebar
 ---
 
