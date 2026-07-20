@@ -42,7 +42,7 @@ path-length: unset;
   - : No author path length is specified and the user agent's own computed path length is used for all path-related calculations.
 
 - `<length>`
-  - : A non-negative unitless value representing an author-defined total path length, in user units.
+  - : A non-negative unitless value representing an author-defined total path length, in user units. A user unit in SVG is a unit of length defined in the current user coordinate system, which is typically equivalent to one pixel on the output device.
 
 ## Formal definition
 
