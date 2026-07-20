@@ -11,13 +11,15 @@ The **`link-parameters`** [CSS](/en-US/docs/Web/CSS) property sets values of ext
 
 ## Syntax
 
-```css
+```css-nolint
 /* single value */
 link-parameters: param(--color, red);
 
 /* multiple values */
 link-parameters:
-  param(--color1, red), param(--color2, blue), param(--color3, green);
+  param(--color1, red),
+  param(--color2, blue),
+  param(--color3, green);
 ```
 
 ## Values
@@ -57,9 +59,11 @@ img {
 }
 ```
 
-```css
+```css-nolint
 .updated {
-  link-parameters: param(--color1, red), param(--color2, tomato);
+  link-parameters:
+    param(--color1, red),
+    param(--color2, tomato);
 }
 ```
 
