@@ -230,8 +230,7 @@ const declaration = document.getElementById("declaration");
 const marker = document.getElementById("center-marker");
 const supportNote = document.getElementById("support-note");
 
-// Feature-test each keyword, since closest-corner/farthest-corner are a
-// newer addition to circle() and may not be supported everywhere yet.
+// Feature-test each keyword
 function checkSupport() {
   const unsupported = [];
   for (const option of select.options) {
