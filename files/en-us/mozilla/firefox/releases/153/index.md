@@ -154,3 +154,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`.
   ([Firefox bug 2042063](https://bugzil.la/2042063)).
+
+- **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
+
+  The `farthest-corner` and `closest-corner` keywords can now be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+  ([Firefox bug 2037673](https://bugzil.la/2037673)).
