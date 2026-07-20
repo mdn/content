@@ -91,7 +91,7 @@ When a `<dashed-dent>` is used in an external resource in an {{cssxref("env")}} 
 
 ```css
 path:hover {
-  link-parameters: param(--color, tomato)
+  link-parameters: param(--color, tomato);
 }
 ```
 
