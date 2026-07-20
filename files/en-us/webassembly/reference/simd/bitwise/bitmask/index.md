@@ -3,7 +3,7 @@ title: "bitmask: Wasm SIMD bitwise instruction"
 short-title: bitmask
 slug: WebAssembly/Reference/SIMD/bitwise/bitmask
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.bitmask
+browser-compat: webassembly.instructions.bitmask
 sidebar: webassemblysidebar
 ---
 
@@ -83,7 +83,3 @@ value_type.bitmask
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)
