@@ -37,7 +37,7 @@ param(--color3, green);
 
 All of the following examples use the same SVG file, which has attributes set with {{cssxref("env")}} CSS function.
 
-```svg-nolint
+```svg
 <!-- example of the code in the external SVG file -->
 <!-- svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <rect
