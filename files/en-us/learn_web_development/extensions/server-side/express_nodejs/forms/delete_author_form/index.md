@@ -149,7 +149,7 @@ p
 
 The control should now appear as a link, as shown below on the _Author detail_ page.
 
-![The Author details section of the Local library application. The left column has a vertical navigation bar. The right section contains the author details with a heading that has the Author's name followed by the life dates of the author and lists the books written by the author below it. There is a button labelled 'Delete Author' at the bottom.](locallibary_express_author_detail_delete.png)
+![The Author details section of the Local library application. The left column has a vertical navigation bar. The right section contains the author details with a heading that has the Author's name followed by the life dates of the author and lists the books written by the author below it. There is a button labeled 'Delete Author' at the bottom.](locallibary_express_author_detail_delete.png)
 
 ## What does it look like?
 
