@@ -11,7 +11,7 @@ The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path
 
 This can affect the browser's distance-along-a-path calculations and therefore the actual rendered lengths of paths — this includes text paths, animation paths, and various stroke operations.
 
-The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}. 
+The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}.
 
 > [!NOTE]
 > If present, the `path-length` CSS property overrides an SVG element's {{SVGAttr("pathLength")}} attribute.
@@ -85,7 +85,7 @@ path {
 
 #### Results
 
-{{EmbedLiveSample("basic-path-length", "100%", "230")}}
+{{EmbedLiveSample("basic-path-length", "100%", "250")}}
 
 Setting a large `path-length` value results in the dashes becoming smaller and more frequent.
 
@@ -165,7 +165,7 @@ slider.addEventListener("input", () => {
 
 #### Results
 
-{{EmbedLiveSample("path-length-animation", "100%", "230")}}
+{{EmbedLiveSample("path-length-animation", "100%", "250")}}
 
 Adjust the slider, and note how larger values result in a smaller dash size.
 
@@ -180,4 +180,3 @@ Adjust the slider, and note how larger values result in a smaller dash size.
 ## See also
 
 - SVG {{SVGAttr("pathLength")}} attribute
-- Presentation properties: {{cssxref("fill")}}, {{cssxref("clip-rule")}}, {{cssxref("color-interpolation-filters")}}, {{cssxref("fill-opacity")}}, {{cssxref("fill-rule")}}, {{cssxref("marker-end")}}, {{cssxref("marker-mid")}}, {{cssxref("marker-start")}}, `path-length`, {{cssxref("shape-rendering")}}, {{cssxref("stop-color")}}, {{cssxref("stop-opacity")}}, {{cssxref("stroke")}}, {{cssxref("stroke-dasharray")}}, {{cssxref("stroke-dashoffset")}}, {{cssxref("stroke-linecap")}}, {{cssxref("stroke-linejoin")}}, {{cssxref("stroke-miterlimit")}}, {{cssxref("stroke-opacity")}}, {{cssxref("stroke-width")}}, {{cssxref("text-anchor")}}, and {{cssxref("vector-effect")}}
