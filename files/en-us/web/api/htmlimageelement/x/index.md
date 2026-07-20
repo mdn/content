@@ -10,7 +10,7 @@ browser-compat: api.HTMLImageElement.x
 
 The read-only **x** property of the {{domxref("HTMLImageElement")}} interface indicates the x-coordinate of the {{HTMLElement("img")}} element's left border edge relative to the root element's origin.
 
-The {{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}} properties return the offset of the image relative to the root element.
+The `x` and {{domxref("HTMLImageElement.y", "y")}} properties return the offset of the image relative to the root element.
 
 ## Value
 

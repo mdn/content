@@ -1,16 +1,16 @@
 ---
-title: "HTMLImageElement: x property"
-short-title: x
-slug: Web/API/HTMLImageElement/x
+title: "HTMLImageElement: y property"
+short-title: y
+slug: Web/API/HTMLImageElement/y
 page-type: web-api-instance-property
-browser-compat: api.HTMLImageElement.x
+browser-compat: api.HTMLImageElement.y
 ---
 
 {{APIRef("HTML DOM")}}
 
-The read-only **x** property of the {{domxref("HTMLImageElement")}} interface indicates the y-coordinate of the {{HTMLElement("img")}} element's top border edge relative to the root element's origin.
+The read-only **y** property of the {{domxref("HTMLImageElement")}} interface indicates the y-coordinate of the {{HTMLElement("img")}} element's top border edge relative to the root element's origin.
 
-The {{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}} properties return the offset of the image relative to the root element.
+The {{domxref("HTMLImageElement.x", "x")}} and `y` properties return the offset of the image relative to the root element.
 
 ## Value
 
