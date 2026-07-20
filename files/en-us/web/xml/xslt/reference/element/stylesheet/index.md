@@ -36,7 +36,7 @@ A pseudo-attribute required to identify the document as an XSLT stylesheet. Typi
 - `extension-element-prefixes`
   - : Specifies a space-separated list of any namespace prefixes for extension elements in this document.
 - `default-collation`
-  - : Specifies the default collation used by all {{Glossary("XPath")}} expressions appearing in attributes or text value templates that have the element as an ancestor, unless overridden by another `default-collation` attribute on an inner element. It also determines the collation used by certain XSLT constructs (such as [`<xsl:key>`](/en-US/docs/Web/XML/XSLT/Reference/Element/key) and [`<xsl:for-each-group>`](/en-US/docs/Web/XSLT/Element/for-each-group)) within its scope.
+  - : Specifies the default collation used by all {{Glossary("XPath")}} expressions appearing in attributes or text value templates that have the element as an ancestor, unless overridden by another `default-collation` attribute on an inner element. It also determines the collation used by certain XSLT constructs (such as [`<xsl:key>`](/en-US/docs/Web/XML/XSLT/Reference/Element/key) and `<xsl:for-each-group>`) within its scope.
 - `default-mode`
   - : Defines the default value for the `mode` attribute of all [`<xsl:template>`](/en-US/docs/Web/XML/XSLT/Reference/Element/template) and [`<xsl:apply-templates>`](/en-US/docs/Web/XML/XSLT/Reference/Element/apply-templates) elements within its scope.
 - `default-validation`

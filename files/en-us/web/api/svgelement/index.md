@@ -47,18 +47,10 @@ _This interface also inherits methods from {{DOMxRef("Element")}}._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property.
 
-- [`abort`](/en-US/docs/Web/API/SVGElement/abort_event)
-  - : Fired when page loading is stopped before an SVG element has been allowed to load completely.
 - [`error`](/en-US/docs/Web/API/SVGElement/error_event)
   - : Fired when an SVG element does not load properly or when an error occurs during script execution.
 - [`load`](/en-US/docs/Web/API/SVGElement/load_event)
   - : Fires on an `SVGElement` when it is loaded in the browser.
-- [`resize`](/en-US/docs/Web/API/SVGElement/resize_event)
-  - : Fired when an SVG document is being resized.
-- [`scroll`](/en-US/docs/Web/API/SVGElement/scroll_event)
-  - : Fired when an SVG document view is being shifted along the X and/or Y axes.
-- [`unload`](/en-US/docs/Web/API/SVGElement/unload_event)
-  - : Fired when the DOM implementation removes an SVG document from a window or frame.
 
 ## Specifications
 
