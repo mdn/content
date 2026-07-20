@@ -7,7 +7,7 @@ browser-compat: css.properties.path-length
 sidebar: cssref
 ---
 
-The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path length, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio path-length / _(computed value of path length)_.
+The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path length, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `path-length` / _(computed value of path length)_.
 
 This can affect the browser's distance-along-a-path calculations and therefore the actual rendered lengths of paths — this includes text paths, animation paths, and various stroke operations.
 
@@ -99,7 +99,7 @@ This example includes the same SVG `<path>` as the previous one. In addition, it
 ```html live-sample___path-length-animation
 <div>
   <label for="path-slider">Adjust path-length</label>
-  <input type="range" min="0" max="800" value="200" />
+  <input type="range" id="path-slider" min="0" max="800" value="200" />
   <output>200</output>
 </div>
 ```
@@ -166,7 +166,7 @@ slider.addEventListener("input", () => {
 
 {{EmbedLiveSample("path-length-animation", "100%", "230")}}
 
-Adjust the slider, and note how larger values rules in a smaller dash size.
+Adjust the slider, and note how larger values result in a smaller dash size.
 
 ## Specifications
 

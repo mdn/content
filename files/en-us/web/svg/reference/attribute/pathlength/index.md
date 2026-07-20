@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('rect')}}
 
 > [!NOTE]
-> The `pathLength` attribute also has a CSS property counterpart: [`path-length`](/en-US/docs/Web/CSS/Reference/Properties/path-length). When both are specified, the CSS property takes priority.
+> As a presentation attribute, `pathLength` also has a CSS property counterpart: {{cssxref("path-length")}}. When both are specified, the CSS property takes priority.
 
 ## Example
 
@@ -244,4 +244,4 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
 
 ## See also
 
-- [`path-length`](/en-US/docs/Web/CSS/Reference/Properties/path-length) CSS property
+- CSS {{cssxref("path-length")}} property
