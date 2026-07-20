@@ -129,7 +129,7 @@ animation-iteration-count: unset;
 
 ### Values
 
-The **`animation-iteration-count`** property is specified as one or more comma-separated values.
+This property is specified as one or more comma-separated values:
 
 - `infinite`
   - : The animation will repeat forever.
