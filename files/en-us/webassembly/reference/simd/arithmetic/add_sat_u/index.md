@@ -3,7 +3,7 @@ title: "add_sat_u: Wasm SIMD arithmetic instruction"
 short-title: add_sat_u
 slug: WebAssembly/Reference/SIMD/arithmetic/add_sat_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.add_sat_u
+browser-compat: webassembly.instructions.add_sat_u
 sidebar: webassemblysidebar
 ---
 

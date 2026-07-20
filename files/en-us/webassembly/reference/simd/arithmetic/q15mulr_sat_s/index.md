@@ -3,7 +3,7 @@ title: "q15mulr_sat_s: Wasm SIMD arithmetic instruction"
 short-title: q15mulr_sat_s
 slug: WebAssembly/Reference/SIMD/arithmetic/q15mulr_sat_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.q15mulr_sat_s
+browser-compat: webassembly.instructions.q15mulr_sat_s
 sidebar: webassemblysidebar
 ---
 

@@ -3,7 +3,7 @@ title: "extmul_low_i16x8_s: Wasm SIMD arithmetic instruction"
 short-title: extmul_low_i16x8_s
 slug: WebAssembly/Reference/SIMD/arithmetic/extmul_low_i16x8_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extmul_low_i16x8_s
+browser-compat: webassembly.instructions.extmul_low_i16x8_s
 sidebar: webassemblysidebar
 ---
 
