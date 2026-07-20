@@ -1,8 +1,8 @@
 ---
-title: Firefox 152 release notes for developers (Stable)
-short-title: Firefox 152 (Stable)
+title: Firefox 152 release notes for developers
+short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
