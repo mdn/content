@@ -59,9 +59,7 @@ img {
 
 ```css
 .updated {
-  link-parameters:
-    param(--color1, red),
-    param(--color2, tomato);
+  link-parameters: param(--color1, red), param(--color2, tomato);
 }
 ```
 
