@@ -16,7 +16,11 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The developer tools now provide the heading level for a heading element in the accessibility highlighter and accessibility tree (previously just the fact that it was a heading was shown).
+  The information can be found in the [Accessibility Inspector panel](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
+  ([Firefox bug 1588784](https://bugzil.la/1588784) and [Firefox bug 2044904](https://bugzil.la/2044904)).
 
 ### HTML
 
@@ -158,3 +162,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Updating attributes of external recourses**: `layout.css.link-parameters.enabled`
 
   The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
+- **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
+
+  The `farthest-corner` and `closest-corner` keywords can now be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+  ([Firefox bug 2037673](https://bugzil.la/2037673)).
