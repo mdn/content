@@ -96,7 +96,7 @@ backface-visibility: unset;
 
 ### Values
 
-The `backface-visibility` property is specified as one of the following keywords listed:
+This property is specified as one of the following keywords:
 
 - `visible`
   - : The back face is visible when turned towards the user.
