@@ -11,10 +11,11 @@ The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path
 
 This can affect the browser's distance-along-a-path calculations and therefore the actual rendered lengths of paths — this includes text paths, animation paths, and various stroke operations.
 
-If present, the `path-length` CSS property overrides an SVG element's {{SVGAttr("pathLength")}} attribute.
+The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}. 
 
 > [!NOTE]
-> The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
+> If present, the `path-length` CSS property overrides an SVG element's {{SVGAttr("pathLength")}} attribute.
+> This property doesn't apply to SVG, HTML, or pseudo-elements other than those listed above.
 
 ## Syntax
 
