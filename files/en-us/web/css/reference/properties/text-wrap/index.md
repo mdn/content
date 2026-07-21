@@ -87,9 +87,9 @@ text-wrap: revert-layer;
 text-wrap: unset;
 ```
 
-The `text-wrap` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.

@@ -31,9 +31,9 @@ font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
-The `font-variant-position` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Deactivates alternate superscript and subscript glyphs.

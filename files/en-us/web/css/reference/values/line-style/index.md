@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
 sidebar: cssref
 ---
 
-The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/Guides/Multicol_layout) properties:
+The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) and [gap decoration](/en-US/docs/Web/CSS/Guides/Gaps) properties:
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
@@ -22,6 +22,7 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 - {{cssxref("border-right")}}, {{cssxref("border-right-style")}}
 - {{cssxref("border-top")}}, {{cssxref("border-top-style")}}
 - {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
+- {{cssxref("row-rule")}}, {{cssxref("row-rule-style")}}
 
 ## Syntax
 
@@ -272,4 +273,5 @@ Notice that the almost-black color of `#000001` may be different from the actual
 - {{cssxref("line-width")}} data type
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module

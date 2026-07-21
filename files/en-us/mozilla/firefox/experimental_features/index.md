@@ -79,6 +79,21 @@ The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/
 
 ## CSS
 
+### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
+
+The `farthest-corner` and `closest-corner` keywords can now be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+(See [Firefox bug 2037673](https://bugzil.la/2037673) for more details.)
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 153           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.ellipse-corners.enabled`
+  - : Set to `true` to enable.
+
 ### Hex boxes to display stray control characters
 
 This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hex box when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
@@ -404,6 +419,20 @@ The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are n
 | Release           | 153           | No                  |
 
 - `layout.css.tree-counting-functions.enabled`
+  - : Set to `true` to enable.
+
+### Updating attributes of external recourses
+
+The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.link-parameters.enabled`
   - : Set to `true` to enable.
 
 ## SVG

@@ -66,9 +66,9 @@ outline-width: revert-layer;
 outline-width: unset;
 ```
 
-The `outline-width` property is specified as any one of the values listed below.
-
 ### Values
+
+This property is specified as one `<line-width>` value.
 
 - {{cssxref("line-width")}}
   - : Defines the width of the outline, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords `thin`, `medium`, or `thick`. The default is `medium`.
