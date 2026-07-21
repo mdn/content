@@ -33,6 +33,8 @@ interest-delay-end: unset;
 
 ### Values
 
+This property is specified as one `<time>` value or the keyword `normal`.
+
 - `normal`
   - : Sets the delay to the browser's default delay. This is the initial value.
 - {{cssxref("&lt;time>")}}

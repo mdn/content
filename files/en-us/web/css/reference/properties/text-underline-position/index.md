@@ -63,6 +63,8 @@ text-underline-position: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("Baseline/Typography", "alphabetic baseline")}}.
 - `from-font`

@@ -87,6 +87,8 @@ page-break-inside: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Initial value. Automatic page breaks (neither forced nor forbidden).
 - `avoid`

@@ -64,6 +64,8 @@ image-rendering: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
 - `smooth`

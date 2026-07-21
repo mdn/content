@@ -75,6 +75,8 @@ text-decoration-color: unset;
 
 ### Values
 
+This property is specified as one `<color>` value.
+
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the line decoration.
 

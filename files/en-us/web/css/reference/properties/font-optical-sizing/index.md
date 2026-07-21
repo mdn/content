@@ -71,9 +71,11 @@ font-optical-sizing: unset;
 
 ### Values
 
-- none
+This property is specified as one of the following keyword values:
+
+- `none`
   - : The browser will not modify the shape of glyphs for optimal viewing.
-- auto
+- `auto`
   - : The browser will modify the shape of glyphs for optimal viewing.
 
 ## Description

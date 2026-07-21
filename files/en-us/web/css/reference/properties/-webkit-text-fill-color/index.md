@@ -27,6 +27,8 @@ The **`-webkit-text-fill-color`** [CSS](/en-US/docs/Web/CSS) property specifies 
 
 ### Values
 
+This property is specified as one `<color>` value.
+
 - `<color>`
   - : The foreground fill color of the element's text content.
 
