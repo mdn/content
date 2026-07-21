@@ -113,7 +113,7 @@ animation-direction: unset;
 
 ### Values
 
-This property is specified as a comma-separated list, each being one of the following keyword values:
+This property is specified as a comma-separated list of keyword values from the following list:
 
 - `normal`
   - : The animation plays _forwards_ each cycle. In other words, each time the animation cycles, the animation will reset to the beginning state and start over again. This is the default value.
