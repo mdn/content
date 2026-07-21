@@ -39,7 +39,7 @@ All of the following examples use the same SVG file, which has attributes set wi
 
 ```svg
 <!-- example of the code in the external SVG file -->
-<!-- svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <rect
     width="100"
     height="100"
@@ -47,7 +47,7 @@ All of the following examples use the same SVG file, which has attributes set wi
     stroke-width="10"
     fill="env(--color2, darkgreen)"
    />
-</svg -->
+</svg>
 ```
 
 ### Using `link-parameters` property
