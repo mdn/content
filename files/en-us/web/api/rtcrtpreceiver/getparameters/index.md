@@ -60,8 +60,14 @@ An object indicating the current configuration of the receiver.
   - : An array of zero or more RTP header extensions, each identifying an extension supported by the sender or receiver.
     Header extensions are described in {{RFC(3550, "", "5.3.1")}}. This parameter cannot be changed once initially set.
 - `rtcp`
-  - : An {{domxref("RTCRtcpParameters")}} object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver.
+  - : An object providing the configuration parameters used for {{Glossary("RTCP")}} on the sender or receiver.
     This parameter cannot be changed once initially set.
+
+    The object may have the following properties: <!-- RTCRtcpParameters -->
+    - `cname`
+      - : A read-only string giving the canonical name (CNAME) used by RTCP (e.g., in SDES messages).
+    - `reducedSize`
+      - : A read-only boolean that is `True` if reduced size RTCP is configured ({{rfc("5506")}}), and `False` if compound RTCP is specified ({{rfc("3550")}}).
 
 ## Examples
 
