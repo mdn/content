@@ -3,7 +3,7 @@ title: "swizzle: Wasm SIMD conversion instruction"
 short-title: swizzle
 slug: WebAssembly/Reference/SIMD/conversion/swizzle
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.swizzle
+browser-compat: webassembly.instructions.swizzle
 sidebar: webassemblysidebar
 ---
 

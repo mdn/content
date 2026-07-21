@@ -3,7 +3,7 @@ title: "extend_low_i8x16_s: Wasm SIMD conversion instruction"
 short-title: extend_low_i8x16_s
 slug: WebAssembly/Reference/SIMD/conversion/extend_low_i8x16_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extend_low_i8x16_s
+browser-compat: webassembly.instructions.extend_low_i8x16_s
 sidebar: webassemblysidebar
 ---
 

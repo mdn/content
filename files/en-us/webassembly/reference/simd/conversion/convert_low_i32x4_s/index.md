@@ -3,7 +3,7 @@ title: "convert_low_i32x4_s: Wasm SIMD conversion instruction"
 short-title: convert_low_i32x4_s
 slug: WebAssembly/Reference/SIMD/conversion/convert_low_i32x4_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.convert_low_i32x4_s
+browser-compat: webassembly.instructions.convert_low_i32x4_s
 sidebar: webassemblysidebar
 ---
 

@@ -3,7 +3,7 @@ title: "shuffle: Wasm SIMD conversion instruction"
 short-title: shuffle
 slug: WebAssembly/Reference/SIMD/conversion/shuffle
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.shuffle
+browser-compat: webassembly.instructions.shuffle
 sidebar: webassemblysidebar
 ---
 

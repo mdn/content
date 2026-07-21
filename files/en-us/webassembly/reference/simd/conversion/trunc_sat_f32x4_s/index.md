@@ -3,7 +3,7 @@ title: "trunc_sat_f32x4_s: Wasm SIMD conversion instruction"
 short-title: trunc_sat_f32x4_s
 slug: WebAssembly/Reference/SIMD/conversion/trunc_sat_f32x4_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.trunc_sat_f32x4_s
+browser-compat: webassembly.instructions.trunc_sat_f32x4_s
 sidebar: webassemblysidebar
 ---
 

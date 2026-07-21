@@ -3,7 +3,7 @@ title: "narrow_i16x8_s: Wasm SIMD conversion instruction"
 short-title: narrow_i16x8_s
 slug: WebAssembly/Reference/SIMD/conversion/narrow_i16x8_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.narrow_i16x8_s
+browser-compat: webassembly.instructions.narrow_i16x8_s
 sidebar: webassemblysidebar
 ---
 

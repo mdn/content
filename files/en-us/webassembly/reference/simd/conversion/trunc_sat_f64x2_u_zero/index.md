@@ -3,7 +3,7 @@ title: "trunc_sat_f64x2_u_zero: Wasm SIMD conversion instruction"
 short-title: trunc_sat_f64x2_u_zero
 slug: WebAssembly/Reference/SIMD/conversion/trunc_sat_f64x2_u_zero
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.trunc_sat_f64x2_u_zero
+browser-compat: webassembly.instructions.trunc_sat_f64x2_u_zero
 sidebar: webassemblysidebar
 ---
 

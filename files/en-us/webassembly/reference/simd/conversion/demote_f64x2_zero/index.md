@@ -3,7 +3,7 @@ title: "demote_f64x2_zero: Wasm SIMD conversion instruction"
 short-title: demote_f64x2_zero
 slug: WebAssembly/Reference/SIMD/conversion/demote_f64x2_zero
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.demote_f64x2_zero
+browser-compat: webassembly.instructions.demote_f64x2_zero
 sidebar: webassemblysidebar
 ---
 
