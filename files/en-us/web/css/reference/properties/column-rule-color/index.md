@@ -119,7 +119,7 @@ This creates a list of five colors. If the number of colors in the `column-rule-
 
 ### Auto-repeating line colors
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<color>` values passed in subsequent arguments will be repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<color>` values passed as subsequent arguments will be repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
 
 ```css
 column-rule-color: blue, repeat(auto, yellow), red;

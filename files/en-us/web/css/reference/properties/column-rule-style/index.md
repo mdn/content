@@ -84,10 +84,10 @@ column-rule-style: unset;
 The `column-rule-style` property accepts a comma-separated list of values, including:
 
 - `<line-style>`
-  - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is`none`.
+  - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`.
 
 - `<repeat-line-style>`
-  - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and one or more {{cssxref("&lt;line-width&gt;")}} values as subsequent arguments. The integer defines the number of times the `<line-width>` values should be repeated.
+  - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and subsequent arguments being {{cssxref("&lt;line-style&gt;")}} values. The integer specifies how many times the `<line-style>` values should be repeated.
 
 - `<auto-repeat-line-style>`
   - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<line-style>` values as subsequent arguments. The provided `<line-style>` values are repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
@@ -114,7 +114,7 @@ column-rule-style: double, groove;
 
 ### Repeated line styles
 
-The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-style&gt;")}} values passed as the second argument the specified number of times. This allows the same style to be repeated a set number of times without repeating the same value. You can use any of the `<line-style>` keywords or custom properties that resolve to a valid `<line-style>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of columns. The following declarations are equivalent:
+The `repeat()` function, with an integer of `1` or greater as the first argument, can be used to repeat a valid list of CSS {{cssxref("&lt;line-style&gt;")}} values passed as subsequent arguments the specified number of times. This allows the same style to be repeated a set number of times without repeating the same value. You can include `<line-style>` keyword values or custom properties that resolve to a valid `<line-style>`. Using `repeat()` can make values easier to write, enabling recurring patterns to be written using a single function, regardless of the number of columns. The following declarations are equivalent:
 
 ```css
 column-rule-style: solid, outset, inset, outset, inset;
@@ -123,17 +123,17 @@ column-rule-style: solid, repeat(2, outset, inset);
 
 This creates a list of five styles. If the number of styles in the `column-rule-style` value's style list exceeds the number of gaps between columns, the excess style values are ignored. If the container has three columns, the rule in the first gutter will be `solid` and the second `outset`.
 
-If there are more gutters than styles, as there are no `repeat()` functions that include the keyword `auto`, the list of styles is repeated. If the container has 6, 11, 16 or 21 columns, this sequence of styles will be repeated one, two, three, or four times, respectively, with the last rule being `inset`.
+If there are more gutters than styles, the list of styles is repeated. If the container has 6, 11, 16, or 21 columns, this sequence of styles will be repeated one, two, three, or four times, respectively, with the last rule being `inset`.
 
 ### Auto-repeating line styles
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the comma-separated list of `<line-style>` values passed as the second parameter will be repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the `<line-style>` values passed as subsequent parameters will be repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
 
 ```css
 column-rule-style: solid, repeat(auto, dotted), solid;
 ```
 
-In this case, the first and last column rules will be `solid`, and all others will be `dotted`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns, the first and last columns will always be `thin`. All the other column rules will be `dotted`, which means if there are only 2 or 3 columns, there will be no dotted column rules.
+In this case, it doesn't matter if the container has 3, 6, 11, 16, or 21 columns; the first and last column rules will always be `solid`, and all the other column rules will be `dotted`. If there are only 2 or 3 columns, there will be no dotted column rules.
 
 The `auto` keyword within the `repeat()` function creates an auto repeater that fills in values for column rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. Only one `repeat(auto, <line-style>)` is allowed within a `column-rule-style` value.
 

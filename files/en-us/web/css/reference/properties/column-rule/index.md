@@ -103,15 +103,15 @@ The `column-rule` property accepts a comma-separated list of values, including:
     - `<'line-width'>`
       - : A {{cssxref("&lt;line-width&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
     - `<'line-style'>`
-      - : A {{cssxref("&lt;line-style&gt;")}}, either `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("column-rule-style")}}
+      - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("column-rule-style")}}.
     - `<'color'>`
-      - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. See {{cssxref("column-rule-color")}}
+      - : A {{cssxref("&lt;color&gt;")}} value representing the color of the line. The default value is `currentcolor`. See {{cssxref("column-rule-color")}}.
 
 - `<gap-repeat-rule>`
   - : A {{cssxref("repeat()")}} function, with an {{cssxref("&lt;integer&gt;")}} of `1` or more as the first argument and one or more `<gap-rule>` values as subsequent arguments. The `<integer>` specifies how many times the list of `<gap-rule>` values should be repeated.
 
 - `<gap-auto-repeat-rule>`
-  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments. The provided list of `<gap-rule>` values are repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
+  - : A {{cssxref("repeat()")}} function, with `auto` as the first argument and one or more `<gap-rule>` values as subsequent arguments. The provided list of `<gap-rule>` values is repeated as many times as needed to fill in values for any column-rules that are not explicitly specified by other components of the property value.
 
 ## Description
 
@@ -119,7 +119,7 @@ The `column-rule` property defines the line style of any rule lines drawn in the
 
 The `column-rule` is shorthand for {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}}, and {{cssxref("column-rule-width")}}. The `column-rule`, along with the {{cssxref("row-rule")}} shorthand property, can also be set using the {{cssxref("rule")}} shorthand.
 
-The value is a comma-separated list of components, which can include `<gap-rule>`, `<repeat-gap-rule>`, and `<auto-repeat-gap-rule>` types. Each `<gap-rule>` defines the width, color, and style of the rule line.
+The property value is a comma-separated list of components, which can include `<gap-rule>`, `<gap-repeat-rule>`, and `<gap-auto-repeat-rule>` types. Each `<gap-rule>` defines the width, color, and style of one or more rule lines.
 
 If the property value consists of only one `<gap-rule>`, all the column rules will be that style. If we declare the following, all column rules will be `dashed maroon 3px`:
 
@@ -127,7 +127,7 @@ If the property value consists of only one `<gap-rule>`, all the column rules wi
 column-rule: dashed maroon 3px;
 ```
 
-When more than one `<gap-rule>` is declared, they will be applied to column-rules in the order specified. If there are more gutters between columns than `<gap-rule>` values, the list of lines is repeated until every column rule has a gap line. If we declare the following, for example, every odd rule will be `dashed maroon 3px`, and every even rule will be `dotted navy 5px`.
+When more than one `<gap-rule>` is declared, they will be applied to column-rules in the order specified. If there are more gutters between columns than `<gap-rule>` values, the list of values is repeated until every column rule has a gap line. If we declare the following, for example, every odd rule will be `dashed maroon 3px`, and every even rule will be `dotted navy 5px`.
 
 ```css
 column-rule:
@@ -159,7 +159,7 @@ If there are more gutters than styles, the list of styles is repeated. If the co
 
 ### Auto-repeating line styles
 
-The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the [`<gap-rule>`](#gap-rule) values passed as subsequent arguments will be repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value, if any.
+The `repeat()` function also accepts `auto` as the first argument instead of a positive integer. With `auto` as the first argument, the [`<gap-rule>`](#gap-rule) values passed as subsequent arguments will be repeated as many times as needed to fill in values for any rules that are not explicitly specified by other components of the property value.
 
 ```css
 column-rule:
@@ -168,7 +168,7 @@ column-rule:
   solid maroon 5px;
 ```
 
-In this case, the first and last column rules will be `solid maroon 5px`, and all others will alternate between `dotted olive 1px` and `dashed navy 1px`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns, the first and last gutters will always have a thick solid maroon line painted between them (unless {{cssxref("column-rule-visibility-items")}} leads to no line being drawn), while all the other column rules will be thin, dotted or dashed, and olive or navy, which means if there are only 2 or 3 columns, there will be no dotted or dashed lines.
+In this case, the first and last column rules will be `solid maroon 5px`, and all others will alternate between `dotted olive 1px` and `dashed navy 1px`. It doesn't matter if the container has 3, 6, 11, 16, or 21 columns; the first and last gutters will always have a thick solid maroon line painted between them (unless {{cssxref("column-rule-visibility-items")}} leads to no line being drawn), and all the other column rules will be thin, dotted olive or dashed navy lines. If there are only 2 or 3 columns, there will be no dotted or dashed lines.
 
 The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for column rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <gap-rule>)` can be present in a `column-rule` value.
 
@@ -264,7 +264,7 @@ The flex container has nine columns, so eight gutters. The `repeat()` function r
 
 This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
 
-Using `repeat(auto, <gap-rule>)` we set all column rules to `1px dotted` and default to the current color, except the first and last, which we set to `10px groove maroon`.
+Using `repeat(auto, <gap-rule>)`, we set all column rules to `1px dotted` and default to the current color, except the first and last, which we set to `10px groove maroon`.
 
 ```css live-sample___auto
 ul {

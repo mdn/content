@@ -79,7 +79,7 @@ row-rule-style: unset;
 The `row-rule-style` property accepts a comma-separated list of values, including:
 
 - `<line-style>`
-  - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is`none`.
+  - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`.
 
 - `<repeat-line-style>`
   - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and subsequent arguments being {{cssxref("&lt;line-style&gt;")}} values. The integer specifies how many times the `<line-style>` values should be repeated.
