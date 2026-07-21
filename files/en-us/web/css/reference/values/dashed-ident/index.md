@@ -84,7 +84,7 @@ h4 {
 When a `<dashed-dent>` is used in an external resource in an {{cssxref("env")}} CSS function, it can be updated using the {{cssxref("param")}} CSS function.
 
 ```svg
-<svg>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <path fill="env(--color, black)" d="..." />
 </svg>
 ```
