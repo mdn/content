@@ -40,9 +40,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-lines` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `single`
   - : Box elements lay out in a single row or column.

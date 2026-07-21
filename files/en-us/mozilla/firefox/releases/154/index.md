@@ -1,13 +1,13 @@
 ---
-title: Firefox 154 release notes for developers (Nightly)
-short-title: Firefox 154 (Nightly)
+title: Firefox 154 release notes for developers (Beta)
+short-title: Firefox 154 (Beta)
 slug: Mozilla/Firefox/Releases/154
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 154 that affect developers.
-Firefox 154 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [August 18, 2026](https://whattrainisitnow.com/release/?version=154).
+Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [August 18, 2026](https://whattrainisitnow.com/release/?version=154).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

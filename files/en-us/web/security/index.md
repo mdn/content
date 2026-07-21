@@ -86,7 +86,7 @@ In this section we document the following defenses:
 - [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [User activation](/en-US/docs/Web/Security/Defenses/User_activation)
 
-Note that not all defenses are described in this section: some, such as [CSP](2/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
+Note that not all defenses are described in this section: some, such as [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
 
 ## Threat modeling
 

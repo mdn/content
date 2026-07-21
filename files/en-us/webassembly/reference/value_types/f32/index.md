@@ -3,7 +3,7 @@ title: "f32: Wasm value type"
 short-title: f32
 slug: WebAssembly/Reference/Value_types/f32
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
+browser-compat: webassembly.types.f32
 sidebar: webassemblysidebar
 ---
 
@@ -40,6 +40,10 @@ Arithmetic instructions ([`f32.add`](/en-US/docs/WebAssembly/Reference/Numeric/a
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
