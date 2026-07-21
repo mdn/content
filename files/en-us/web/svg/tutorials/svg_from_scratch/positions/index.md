@@ -39,7 +39,7 @@ Like CSS, SVG also supports absolute units such as `cm`, `mm`, and `pt`. These a
 <svg width="100" height="100">…</svg>
 ```
 
-The above element defines an SVG canvas with 100x100px. One user unit equals one screen unit.
+The above element defines an SVG viewport that is 100 by 100 CSS pixels in size. In this initial coordinate system, one user unit corresponds to one CSS pixel.
 
 ```html
 <svg width="200" height="200" viewBox="0 0 100 100">…</svg>
