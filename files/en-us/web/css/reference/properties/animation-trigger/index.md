@@ -25,20 +25,11 @@ animation-trigger: --my-other-trigger play-once;
 animation-trigger: --my-trigger play-forwards play-backwards;
 animation-trigger: --my-other-trigger play reset;
 
-/* Multiple triggers */
-animation-trigger: --my-trigger play --my-other-trigger play-backwards;
-animation-trigger: --my-trigger play-forwards play-backwards --my-other-trigger
-  play reset;
-
 /* Multiple values */
 animation-trigger:
   none,
   --my-trigger play-forwards play-backwards,
   --my-other-trigger play reset;
-animation-trigger:
-  --my-trigger play-forwards --my-other-trigger play-backwards,
-  none,
-  --my-trigger play-forwards play-backwards --my-other-trigger play pause;
 
 /* Global values */
 animation-trigger: inherit;
@@ -50,7 +41,7 @@ animation-trigger: unset;
 
 ### Values
 
-The property accepts a comma-separated list of values. Each value is either the keyword `none` or {{cssxref("dashed-ident")}}s, followed by one or two {{cssxref("animation-action")}} values each.
+The property accepts a comma-separated list of values. Each value is either the keyword `none` or a {{cssxref("dashed-ident")}} followed by one or two {{cssxref("animation-action")}} values.
 
 - `none`
   - : The associated animation is not a triggered animation.
@@ -61,7 +52,7 @@ The property accepts a comma-separated list of values. Each value is either the 
 
 ## Description
 
-The `animation-trigger` property specifies which trigger will control the animated element's animations. A value other than `none` turns the animation into a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
+The `animation-trigger` property specifies which trigger will control an animated element's animations. A value other than `none` turns the animation into a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
 
 The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If there is no scrolling element with the same `<dashed-ident>` set as the `timeline-trigger-name` value, the animation will not have a trigger, and will never occur.
 
@@ -85,6 +76,33 @@ In this case, the animation will be triggered by a trigger with a `timeline-trig
 > [!NOTE]
 > It is possible for the animated element and the element that creates the timeline to be the same element.
 
+### Triggering the same animation via multiple different triggers
+
+If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the animation multiple times on the animated element, and then give each animation instance a different trigger.
+
+For example:
+
+```css
+.animated {
+  animation:
+    moveright 2s 1 ease-out both,
+    moveright 2s 1 ease-out forwards;
+  animation-trigger:
+    --t play-forwards play-backwards,
+    --t2 play-forwards play-backwards;
+}
+
+.trigger1 {
+  timeline-trigger: --t1 view();
+}
+
+.trigger2 {
+  timeline-trigger: --t2 view();
+}
+```
+
+See [Multiple triggers for the same animation](#multiple_triggers_for_the_same_animation) for a working example.
+
 ### `animation` shorthand reset behavior
 
 The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. An `animation-trigger` value cannot be set via the `animation` shorthand; instead, `animation` resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list.
@@ -95,7 +113,6 @@ The {{cssxref("animation-trigger")}} property works in the same way as the {{css
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
 - If two comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
-- If an animation has more than one trigger, the two `animation-trigger` values must be separated by a space.
 
 Given the following CSS:
 
@@ -232,7 +249,7 @@ div {
 }
 ```
 
-```css live-sample___basic-example
+```css live-sample___basic-example live-sample___multiple-triggers
 div.animated {
   position: fixed;
   top: 25px;
@@ -242,7 +259,7 @@ div.animated {
 
 Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
 
-```css live-sample___basic-example
+```css live-sample___basic-example live-sample___multiple-triggers
 @keyframes rotate {
   from {
     rotate: 0deg;
@@ -398,7 +415,141 @@ div {
 }
 ```
 
-```css hidden live-sample___basic-example live-sample___same-element
+#### Result
+
+The rendered result looks like this:
+
+{{EmbedLiveSample("same-element", "100%", "240")}}
+
+Try scrolling the content up. When the `<div>` fully appears in the scrollport, its animation will play; when any part of the `<div>` leaves the scrollport at either edge, the animation will play backwards.
+
+### Multiple triggers for the same animation
+
+In this example, we show how to assign multiple triggers to control the same animation. This example is very similar to our initial [basic usage example](#basic_usage), except that it has multiple trigger elements.
+
+```html hidden live-sample___multiple-triggers
+<div class="animated">I am animated</div>
+
+<p>
+  Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+  purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+  ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+  euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+  Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+  sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+  facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+  suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+  iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+  luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+  tristique tellus, sed tincidunt velit.
+</p>
+
+<div class="trigger1">I create a trigger</div>
+
+<p>
+  Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+  purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+  ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+  euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+  Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+  sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+  facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+  suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+  iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+  luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+  tristique tellus, sed tincidunt velit.
+</p>
+
+<div class="trigger2">I create another trigger</div>
+
+<p>
+  Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+  purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+  ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+  euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+  Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+  sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+  facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+  suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+  iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+  luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+  tristique tellus, sed tincidunt velit.
+</p>
+
+<div class="trigger3">I create yet another trigger</div>
+
+<p>
+  Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+  purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+  ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+  euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+  Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+  sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+  facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+  suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+  iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+  luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+  tristique tellus, sed tincidunt velit.
+</p>
+```
+
+```css hidden live-sample___multiple-triggers
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+}
+
+div {
+  height: 100px;
+  border: 5px solid black;
+}
+
+.animated {
+  width: 100px;
+  background: orange;
+}
+
+.trigger1,
+.trigger2,
+.trigger3 {
+  background: wheat;
+}
+```
+
+This time, our `.animated` `<div>` has the `rotate` `animation` applied to it three times. It then has three differently-named `animation-trigger` values set on it, one for each instance of the `animation`.
+
+```css live-sample___multiple-triggers
+div.animated {
+  animation:
+    rotate 3s infinite linear both,
+    rotate 3s infinite linear forwards,
+    rotate 3s infinite linear forwards;
+  animation-trigger:
+    --t1 play-forwards play-backwards,
+    --t2 play-forwards play-backwards,
+    --t3 play-forwards play-backwards;
+}
+```
+
+This example contains three trigger `<div>` elements. On each one, we define a timeline trigger with a different name. These names correspond to the names referenced in the `.animated` `<div>` element's `animation-trigger` property.
+
+```css live-sample___multiple-triggers
+.trigger1 {
+  timeline-trigger: --t1 view();
+}
+
+.trigger2 {
+  timeline-trigger: --t2 view();
+}
+
+.trigger3 {
+  timeline-trigger: --t3 view();
+}
+```
+
+```css hidden live-sample___basic-example live-sample___same-element live-sample___multiple-triggers
 @supports not (animation-trigger: --t play-forwards play-backwards) {
   body::before {
     content: "Your browser does not support the animation-trigger property.";
@@ -418,9 +569,9 @@ div {
 
 The rendered result looks like this:
 
-{{EmbedLiveSample("same-element", "100%", "240")}}
+{{EmbedLiveSample("multiple-triggers", "100%", "160")}}
 
-Try scrolling the content up. When the `<div>` fully appears in the scrollport, its animation will play; when any part of the `<div>` leaves the scrollport at either edge, the animation will play backwards.
+Try scrolling the content up and down, and note how the the animation is activated and then deactivated when each of the trigger elements scrolls into view and out of view again.
 
 ## Specifications
 
