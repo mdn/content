@@ -7,7 +7,7 @@ browser-compat: css.properties.writing-mode
 sidebar: cssref
 ---
 
-The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
+The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress.
 
 {{InteractiveExample("CSS Demo: writing-mode")}}
 
@@ -57,8 +57,6 @@ writing-mode: sideways-lr;
 }
 ```
 
-This property specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
-
 ## Syntax
 
 ```css
@@ -77,9 +75,9 @@ writing-mode: revert-layer;
 writing-mode: unset;
 ```
 
-The `writing-mode` property is specified as one of the values listed below. The flow direction in horizontal scripts is also affected by the [directionality of that script](https://www.w3.org/International/questions/qa-scripts.en), either left-to-right (`ltr`, like English and most other languages) or right-to-left (`rtl`, like Hebrew or Arabic).
-
 ### Values
+
+This property is specified as one of the following keywords:
 
 - `horizontal-tb`
   - : For `ltr` scripts, content flows horizontally from left to right. For `rtl` scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.
@@ -103,6 +101,14 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
+
+## Description
+
+The `writing-mode` property sets whether lines of text are laid out horizontally or vertically. It specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
+
+The flow direction in horizontal scripts is also affected by the [directionality of that script](https://www.w3.org/International/questions/qa-scripts.en), either left-to-right (`ltr`, like English and most other languages) or right-to-left (`rtl`, like Hebrew or Arabic).
+
+When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
 ## Formal definition
 
