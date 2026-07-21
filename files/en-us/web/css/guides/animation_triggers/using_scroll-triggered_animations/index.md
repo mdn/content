@@ -247,7 +247,7 @@ In this case, the `<figcaption>` fades into view when it, rather than the image,
 
 ## Adjusting the trigger activation range
 
-In the previous examples, the trigger activates (`fade-in` starts) as soon as a block edge of the tracked element enters the scrollport at one edge, and deactivates (fade-out starts: `fade-in` is played backwards) when the tracked element has finished exiting the scrollport at the opposite edge. As a result, the fade out is never visible. This is because the default activation range {{cssxref("timeline-range-name")}} when using a `view()` as the `timeline-trigger-source` is `cover`.
+In the previous examples, the trigger activates (`fade-in` starts) as soon as a block edge of the tracked element enters the scrollport at one edge, and deactivates (fade-out starts: `fade-in` is played backwards) when the tracked element has finished exiting the scrollport at the opposite edge. As a result, the fade out is never visible. This is because the default activation range {{cssxref("timeline-range-name")}} when using `view()` as the `timeline-trigger-source` is `cover`.
 
 To make the fade out animation visible, we can offset the start and end of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each of these properties can take as values:
 
