@@ -122,47 +122,93 @@ img {
 
 This example allows you to test the effect of moving the center point of the circle when using each of the four `<shape-radius>` keywords.
 
-The code defines a reference box (`#refbox`) that contains a `.fill` element.
-We set a `clip-path` on `#refbox` to clip the box and the fill to the computed circle (the colored circle is the fill's gradient, clipped to a circle geometry).
-The geometry that is used depends on the selected radius keyword and the position of the center within the reference box.
+#### HTML
 
-Because `closest-corner` and `farthest-corner` are a newer addition to `circle()`, the code feature-tests each keyword with {{domxref("CSS.supports_static", "CSS.supports()")}} before enabling it.
-Any keyword your browser doesn't support is disabled in the dropdown (and labeled "not supported").
+The HTML first defines controls for selecting a chosen radius keyword and setting the position where the circle is to be displayed, followed by a {{htmlelement("pre")}} element for displaying the {{cssxref("clip-path")}} that the control values select.
+After this a `#support-note` element is provided for indicating when particular radius keywords are not supported.
 
 ```html live-sample___circle-keywords-interactive
 <div class="controls">
-  <label>
-    Shape radius:
-    <select id="radius-keyword">
-      <option value="closest-side">closest-side</option>
-      <option value="closest-corner">closest-corner</option>
-      <option value="farthest-side">farthest-side</option>
-      <option value="farthest-corner" selected>farthest-corner</option>
-    </select>
-  </label>
-  <label>
-    Position X: <input type="range" id="pos-x" min="0" max="200" value="120" />
-  </label>
-  <label>
-    Position Y: <input type="range" id="pos-y" min="0" max="120" value="40" />
-  </label>
+  <div class="controls-row">
+    <label>
+      Shape radius:
+      <select id="radius-keyword">
+        <option value="closest-side">closest-side</option>
+        <option value="closest-corner">closest-corner</option>
+        <option value="farthest-side">farthest-side</option>
+        <option value="farthest-corner" selected>farthest-corner</option>
+      </select>
+    </label>
+  </div>
+  <div class="controls-row">
+    <label>
+      Position X:
+      <input type="range" id="pos-x" min="0" max="200" value="120" />
+    </label>
+    <label>
+      Position Y:
+      <input type="range" id="pos-y" min="0" max="120" value="40" />
+    </label>
+  </div>
 </div>
 
-<p id="support-note"></p>
+<pre id="declaration"></pre>
 
+<p id="support-note"></p>
+```
+
+The HTML then defines a number of {{htmlelement("div")}} elements that are used to render the circle, reference box and center marker.
+The most important elements are the reference box (`#refbox`) and the `.fill` element it contains, which define the gradient that is drawn (as discussed in the following CSS section).
+A `clipPath` is set on the reference box in JavaScript to clip that gradient to a circular shape.
+
+```html live-sample___circle-keywords-interactive
 <div class="canvas">
-  <div class="outline"></div>
   <div class="refbox" id="refbox">
     <div class="fill"></div>
   </div>
   <div class="outline"></div>
   <div class="center-marker" id="center-marker"></div>
 </div>
-
-<pre id="declaration"></pre>
 ```
 
+Note that the `.outline` and `.center-marker` are provided to make it easier to see the reference box and the center of the clipping circle, which would otherwise be invisible.
+The `.outline` element must be placed after `#refbox` in the markup: since it isn't clipped itself, painting it after the reference box means its dashed border always renders on top of the `.fill` gradient, even when the clipping circle extends beyond the reference box.
+
+#### CSS
+
+The CSS for the canvas, reference box and fill elements are shown below.
+Note that the `.fill` defines a gradient that overflows the reference box, filling most of the canvas.
+This is the gradient that we will clip using the `circle()` (we do this by setting the CSS clip path dynamically in our JavaScript code).
+
 ```css live-sample___circle-keywords-interactive
+.canvas {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  border: 1px solid #888;
+}
+
+.refbox {
+  position: absolute;
+  top: 180px;
+  left: 220px;
+  width: 200px;
+  height: 120px;
+  box-sizing: border-box;
+}
+
+.fill {
+  position: absolute;
+  inset: -240px;
+  background: linear-gradient(to bottom right, #ff5522, #0055ff);
+}
+```
+
+The CSS for the controls and other elements is not shown, as it isn't needed to understand the `circle()` method.
+Interested readers can view it in the example playground.
+
+```css live-sample___circle-keywords-interactive hidden
 body {
   display: flex;
   flex-direction: column;
@@ -172,37 +218,31 @@ body {
 
 .controls {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls-row {
+  display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
+```
 
-.canvas {
-  position: relative;
-  width: 640px;
-  height: 480px;
-  overflow: hidden;
-  border: 1px solid #888;
-}
-
-.outline,
-.refbox {
+```css live-sample___circle-keywords-interactive hidden
+.outline {
   position: absolute;
   top: 180px;
   left: 220px;
   width: 200px;
   height: 120px;
+  box-sizing: border-box;
 }
 
 .outline {
   border: 3px dashed #e6007a;
   pointer-events: none;
-}
-
-.fill {
-  position: absolute;
-  inset: -240px;
-  background: linear-gradient(to bottom right, #ff5522, #0055ff);
 }
 
 .center-marker {
@@ -216,10 +256,23 @@ body {
   pointer-events: none;
 }
 
+#declaration {
+  margin: 0;
+}
+
 #support-note {
+  margin: 0;
   color: #b3001b;
 }
 ```
+
+#### JavaScript
+
+The JavaScript for the example is shown below.
+First we get handles to each of the elements used by the example.
+
+Then we define `checkSupport()` method to feature-test whether each radius keyword is supported and enable/disable the associated selection options.
+This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
 
 ```js live-sample___circle-keywords-interactive
 const select = document.getElementById("radius-keyword");
@@ -252,15 +305,22 @@ function checkSupport() {
     }
   }
 }
+```
 
+Next we define an `update()` function that is called whenever the input controls are changed.
+This sets the clip path on the reference box based on the selected keyword and position, and moves the center marker to match.
+
+```js live-sample___circle-keywords-interactive
 function update() {
   const keyword = select.value;
   const x = Number(posX.value);
   const y = Number(posY.value);
-  const value = `circle(${keyword} at ${x}px ${y}px)`;
 
-  // Set the clip path when the keyword or center position changes
+  // Build the clip-path value and apply it to the reference box
+  const value = `circle(${keyword} at ${x}px ${y}px)`;
   refbox.style.clipPath = value;
+
+  // Update the displayed declaration text and marker position
   declaration.textContent = `clip-path: ${value};`;
   marker.style.left = `${refbox.offsetLeft + x}px`;
   marker.style.top = `${refbox.offsetTop + y}px`;
@@ -273,9 +333,13 @@ checkSupport();
 update();
 ```
 
-Change the position of the center and the keyword used to see their relative effects.
+#### Result
 
-{{EmbedLiveSample("circle-keywords-interactive", "", "620px")}}
+Change the position of the center and the keyword used to see their relative effects.
+Note that the reference box, together with the selected radius keyword and position, is used to calculate the clipping circle.
+This circle can extend beyond the reference box (for example, with `closest-corner` or `farthest-corner`); the `.fill` gradient is deliberately sized larger than the reference box so that it always fully covers the clipped circle, however far it extends.
+
+{{EmbedLiveSample("circle-keywords-interactive", "", "640px")}}
 
 ## Specifications
 
