@@ -71,7 +71,7 @@ border-top-color: unset;
 
 ### Values
 
-This property is specified as a single value:
+This property is specified as one `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the top border.

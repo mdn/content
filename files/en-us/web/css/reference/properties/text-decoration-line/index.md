@@ -87,7 +87,7 @@ text-decoration-line: unset;
 
 ### Values
 
-This property is specified either as `none` or a space-separated list of keyword values:
+This property is specified either as `none` or a space-separated list of keyword values chosen from the list below:
 
 - `none`
   - : Produces no text decoration.

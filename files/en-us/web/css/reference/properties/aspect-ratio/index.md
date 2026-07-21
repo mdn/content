@@ -65,7 +65,7 @@ aspect-ratio: unset;
 
 ### Values
 
-This property is specified as one or both of the keyword auto or a `<ratio>`.
+This property is specified as one or both of the keyword `auto` or a `<ratio>`.
 
 - `auto`
   - : {{glossary("Replaced elements")}} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
