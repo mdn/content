@@ -42,8 +42,7 @@ This element implements the {{domxref("SVGUseElement")}} interface.
 
 ## Example
 
-The following example shows how to use the `<use>` element to draw a circle with a different fill and stroke color.
-In the last circle, `stroke="red"` will be ignored because stroke was already set on `myCircle`.
+The following example shows how to use the `<use>` element to draw multiple circles with different fill and stroke colors.
 
 ```css hidden
 html,
@@ -55,7 +54,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
+  <circle id="myCircle" cx="5" cy="5" r="4" />
   <use href="#myCircle" x="10" fill="blue" />
   <use href="#myCircle" x="20" fill="white" stroke="red" />
 </svg>
