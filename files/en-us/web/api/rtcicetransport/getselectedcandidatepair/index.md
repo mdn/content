@@ -8,7 +8,7 @@ browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 
 {{APIRef("WebRTC")}}
 
-The **`getSelectedCandidatePair()`** method of the {{domxref("RTCIceTransport")}} interface returns an {{domxref("RTCIceCandidatePair")}} object containing the current best-choice pair of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.
+The **`getSelectedCandidatePair()`** method of the {{domxref("RTCIceTransport")}} interface returns an {{domxref("RTCIceCandidatePair")}} instance containing the current best-choice pair of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.
 
 ## Syntax
 
@@ -22,12 +22,11 @@ None.
 
 ### Return value
 
-A {{domxref("RTCIceCandidatePair")}} object describing the configurations of the currently-selected candidate pair's two endpoints.
-{{domxref("RTCIceCandidatePair.local", "local")}} describes the configuration of the local end of the connection, while {{domxref("RTCIceCandidatePair.remote", "remote")}} describes the remote peer's configuration.
+A {{domxref("RTCIceCandidatePair")}} instance describing the configurations of the currently-selected candidate pair's {{domxref("RTCIceCandidatePair.local", "local")}} and {{domxref("RTCIceCandidatePair.remote", "remote")}} endpoints.
 
 The return value is `null` if no pair of candidates has been selected yet.
 
-## Usage notes
+## Description
 
 As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers and analyzes candidate configurations from each the two peers.
 As soon as it finds an acceptable matching pair of candidates, meeting the requirements for the connection, a {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event is fired at the {{domxref("RTCIceTransport")}}.
