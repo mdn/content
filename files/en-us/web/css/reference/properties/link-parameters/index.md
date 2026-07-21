@@ -42,8 +42,8 @@ In this example the original SVG, on the left, is a square with `stroke` attribu
 
 ```html
 <div class="squares">
-  <img class="original" src="square.svg" />
-  <img class="updated" src="square.svg" />
+  <img class="original" src="square.svg" alt="A square with a border." />
+  <img class="updated" src="square.svg" alt="A square with a border." />
 </div>
 ```
 
