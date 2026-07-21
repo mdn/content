@@ -9,7 +9,7 @@ browser-compat:
 sidebar: cssref
 ---
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list]. It allows repeated patterns of columns, rows, and their gap decorations, to be written in a compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list](/en-US/docs/Web/CSS/Guides/Gaps). It allows repeated patterns of columns, rows, and their gap decorations, to be written in a compact form.
 
 {{InteractiveExample("CSS Demo: repeat()")}}
 
@@ -235,7 +235,7 @@ The syntax of the `repeat()` function has several forms:
 
 ### Auto-fit versus auto-fill
 
-When the repeat count first parameter of the `repeat()` function is a keyword, either `auto-fill`, `auto-fit`, or `auto`, rather than an integer, it creates an auto-repeater. An auto-repeating `repeat()` function repeats the values provided as the second parameter as many times as necessary to completely fill
+When the first parameter of the `repeat()` function is a keyword, either `auto-fill`, `auto-fit`, or `auto`, rather than an integer, it creates an auto-repeater. An auto-repeating `repeat()` function repeats the values provided as the second parameter as many times as necessary.
 
 With `auto-fill`, if the container has a definite or maximum size set in the relevant axis, the number of repetitions is the largest possible positive integer that does not cause the content to overflow its container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, if there is no definite or maximum size defined, the `repeat()` function is a minimum track sizing function. If any number of repetitions would overflow, the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
 
