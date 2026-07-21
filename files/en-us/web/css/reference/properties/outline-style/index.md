@@ -73,9 +73,9 @@ outline-style: revert-layer;
 outline-style: unset;
 ```
 
-The `outline-style` property is specified as any one of the values listed below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : Permits the user agent to render a custom outline style.

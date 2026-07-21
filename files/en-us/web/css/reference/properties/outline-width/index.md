@@ -66,9 +66,9 @@ outline-width: revert-layer;
 outline-width: unset;
 ```
 
-The `outline-width` property is specified as any one of the values listed below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - {{cssxref("&lt;length&gt;")}}
   - : The width of the outline specified as a `<length>`.

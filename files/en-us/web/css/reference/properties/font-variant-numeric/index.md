@@ -119,12 +119,9 @@ font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
-This property can take one of two forms:
-
-- either the keyword value `normal`
-- or one or more of the other values listed below, space-separated, in any order.
-
 ### Values
+
+This property is specified either as `normal` or a space-separated list of the following values:
 
 - `normal`
   - : This keyword leads to the deactivation of the use of such alternate glyphs.

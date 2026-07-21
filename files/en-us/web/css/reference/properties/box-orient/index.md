@@ -32,9 +32,9 @@ box-orient: initial;
 box-orient: unset;
 ```
 
-The `box-orient` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `horizontal`
   - : The box lays out its contents horizontally.

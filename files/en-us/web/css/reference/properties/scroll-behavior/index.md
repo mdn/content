@@ -82,9 +82,9 @@ scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
-The `scroll-behavior` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The scrolling box scrolls instantly.
