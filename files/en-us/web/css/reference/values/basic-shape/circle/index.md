@@ -70,9 +70,9 @@ border-shape: circle(60%);
     - `farthest-side`
       - : The radius is the length from the center of the circle to the farthest side of the reference box, so that the circle's boundary just touches that side.
     - `closest-corner`
-      - : The radius is the length from the center of the circle to the closest corner of the reference box, so that the circle passes through that corner.
+      - : The radius is the length from the center of the circle to the closest corner of the reference box, so that the circle's boundary passes through that corner.
     - `farthest-corner`
-      - : The radius is the length from the center of the circle to the farthest corner of the reference box, so that the circle passes through that corner.
+      - : The radius is the length from the center of the circle to the farthest corner of the reference box, so that the circle's boundary passes through that corner.
 
 - `<position>`
   - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`. The `<position>` value defaults to center if omitted.
