@@ -24,7 +24,7 @@ env(viewport-segment-width 0 0, 40%);
 ```
 
 ```svg
-<svg>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <path fill="env(--color, black)" d="..." />
 </svg>
 ```
