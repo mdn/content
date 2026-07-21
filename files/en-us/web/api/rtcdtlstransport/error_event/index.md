@@ -46,12 +46,22 @@ Transport-level errors will have one of the following values for the specified e
 
 ## Examples
 
-In this example, the `onerror` event handler property is used to set the handler for the `error` event.
+Given an {{domxref("RTCPeerConnection")}}, `pc`, the following code handles a DTLS transport error:
 
 ```js
-transport.onerror = (ev) => {
-  const err = ev.error;
+const dtlsTransport = pc.getSenders()[0].transport;
 
+dtlsTransport.addEventListener("error", (ev) => {
+  const err = ev.error;
+  // …
+});
+```
+
+The same code, using the `onerror` event handler property, looks like this:
+
+```js
+dtlsTransport.onerror = (ev) => {
+  const err = ev.error;
   // …
 };
 ```
