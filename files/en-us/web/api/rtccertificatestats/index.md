@@ -31,7 +31,6 @@ The following properties are common to all WebRTC statistics objects (See [`RTCS
 
 - {{domxref("RTCCertificateStats.id", "id")}}
   - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
-
 - {{domxref("RTCCertificateStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCCertificateStats.type", "type")}}
