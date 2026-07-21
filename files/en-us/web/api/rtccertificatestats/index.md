@@ -13,12 +13,15 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
 
 ## Instance properties
 
+- {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
+  - : A string containing the base-64 representation of the DER-encoded certificate.
 - {{domxref("RTCCertificateStats.fingerprint", "fingerprint")}}
   - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](/en-US/docs/Web/API/RTCCertificateStats/fingerprintAlgorithm).
 - {{domxref("RTCCertificateStats.fingerprintAlgorithm", "fingerprintAlgorithm")}}
   - : A string containing the hash function used to compute the certificate [`fingerprint`](/en-US/docs/Web/API/RTCCertificateStats/fingerprint), such as "sha-256".
-- {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
-  - : A string containing the base-64 representation of the DER-encoded certificate.
+- {{domxref("RTCCertificateStats.issuerCertificateId", "issuerCertificateId")}}
+  - : A string containing the `id` of the {{domxref("RTCCertificateStats")}} object in this report that contains the next certificate in the certificate chain.
+    This will not be set if the current certificate is a self-signed certificate or the end of the certificate chain (a root certificate).
 
 ### Common instance properties
 
@@ -28,12 +31,15 @@ The following properties are common to all WebRTC statistics objects (See [`RTCS
 
 - {{domxref("RTCCertificateStats.id", "id")}}
   - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+
 - {{domxref("RTCCertificateStats.timestamp", "timestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
 - {{domxref("RTCCertificateStats.type", "type")}}
   - : A string with the value `"certificate"`, indicating the type of statistics that the object contains.
 
 ## Examples
+
+### Basic usage
 
 Given a variable `myPeerConnection`, which is an instance of {{domxref("RTCPeerConnection")}}, the code below uses `await` to wait for the statistics report, and then iterates it using `RTCStatsReport.forEach()`.
 It then filters the dictionaries for just those reports that have the type of `certificate` and logs the result.
