@@ -1,18 +1,13 @@
 ---
-title: Firefox 153 release notes for developers (Beta)
-short-title: Firefox 153 (Beta)
+title: Firefox 153 release notes for developers (Stable)
+short-title: Firefox 153 (Stable)
 slug: Mozilla/Firefox/Releases/153
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 153 that affect developers.
-Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 153 was released on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
 
 ## Changes for web developers
 
@@ -30,21 +25,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `muted` attribute has now been updated for the {{htmlelement("audio", "", "#muted")}} and {{htmlelement("video", "", "#muted")}} elements to reflect when it is added to or removed from the DOM. This attribute now also matches the state of the {{cssxref(":muted")}} CSS pseudo-class.
   ([Firefox bug 2037015](https://bugzil.la/2037015)).
 
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("::-webkit-scrollbar")}} pseudo-element selector is now recognized, so the `@supports selector(::-webkit-scrollbar)` check returns `true`. Note that this reports the selector as supported even though scrollbar styling via `::-webkit-scrollbar` is not truly implemented. This was added to fix an issue where scrollbars of nested scrollable areas could stack on top of each other. For example, when a scrollbar is set to `display: none` or `width: 0` leaving some content unreachable. ([Firefox bug 2038877](https://bugzil.la/2038877)).
-
-<!-- #### Removals -->
 
 ### JavaScript
 
@@ -61,16 +44,6 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   It is similar to the normal [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration, but instead of loading and evaluating a module, it produces an object representing the module's source code that can be evaluated later.
   Note that this feature is not yet useful for developers, as only the syntax is currently supported: the source representation of WebAssembly modules is implemented separately and is not yet available.
   ([Firefox bug 2043242](https://bugzil.la/2043242)).
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -101,13 +74,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   In addition the `transportId` property is now available on {{domxref("RTCOutboundRtpStreamStats.transportId","RTCOutboundRtpStreamStats")}}, {{domxref("RTCRemoteOutboundRtpStreamStats.transportId","RTCRemoteOutboundRtpStreamStats")}}, {{domxref("RTCRemoteInboundRtpStreamStats.transportId","RTCRemoteInboundRtpStreamStats")}} and {{domxref("RTCInboundRtpStreamStats.transportId","RTCInboundRtpStreamStats")}}.
   ([Firefox bug 1225723](https://bugzil.la/1225723) and [Firefox bug 2019389](https://bugzil.la/2019389)).
 
-<!-- #### Removals -->
-
 ### WebAssembly
 
 - JavaScript Promise Integration (JS-PI) is now enabled, allowing [WebAssembly](/en-US/docs/WebAssembly) modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles. See [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending) for an explanation and working example. ([Firefox bug 2044809](https://bugzil.la/2044809)).
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -139,10 +108,6 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - For contextual identities (containers):
   - Adds the {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} methods to retrieve the supported colors and icons, avoiding the need to hardcode those values. ([Firefox bug 2044712](https://bugzil.la/2044712))
   - Updates the colors available. `"turquoise"` is renamed to `"cyan"`, `"toolbar"` is renamed to `"gray"`, and `"violet"` is added. The legacy names `"turquoise"` and `"toolbar"` are accepted for backward compatibility. To avoid hardcoding color names, use {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} to retrieve the available colors. ([Firefox bug 2044354](https://bugzil.la/2044354))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
