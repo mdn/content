@@ -71,7 +71,7 @@ outline-width: unset;
 This property is specified as one `<line-width>` value.
 
 - {{cssxref("line-width")}}
-  - : Defines the width of the outline, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords `thin`, `medium`, or `thick`. The default is `medium`.
+  - : Defines the width of the outline, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 

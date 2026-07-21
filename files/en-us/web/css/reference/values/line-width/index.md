@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-width
 sidebar: cssref
 ---
 
-The **`<line-width>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-width>` keyword values are used in the following longhand and shorthand properties:
+The **`<line-width>`** {{glossary("enumerated")}} value type represents the length or the keyword values that define the width of a line, or the lack of a line. The `<line-width>` keyword values are used in the following longhand and shorthand properties:
 
 - {{cssxref("border")}}, {{cssxref("border-width")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-width")}}
