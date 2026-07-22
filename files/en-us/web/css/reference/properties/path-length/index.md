@@ -7,9 +7,7 @@ browser-compat: css.properties.path-length
 sidebar: cssref
 ---
 
-The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path length, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `path-length` / _(computed value of path length)_.
-
-This can affect the browser's distance-along-a-path calculations and therefore the actual rendered lengths of paths — this includes text paths, animation paths, and various stroke operations.
+The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path length, in user units. All path computations are then scaled using the ratio `path-length` / _(computed value of path length)_ — this includes text paths, animation paths, and various stroke operations.
 
 The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}.
 
@@ -42,7 +40,7 @@ path-length: unset;
   - : No author path length is specified and the user agent's own computed path length is used for all path-related calculations.
 
 - `<length>`
-  - : A non-negative unitless value representing an author-defined total path length, in user units. A user unit in SVG is a unit of length defined in the current user coordinate system, which is typically equivalent to one pixel on the output device.
+  - : A non-negative unitless value representing an author-defined total path length, in user units.
 
 ## Formal definition
 
