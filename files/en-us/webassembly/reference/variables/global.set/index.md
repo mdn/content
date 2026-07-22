@@ -1,13 +1,13 @@
 ---
-title: "global.set: Wasm text instruction"
+title: "global.set: Wasm variable instruction"
 short-title: global.set
 slug: WebAssembly/Reference/Variables/global.set
 page-type: webassembly-instruction
-browser-compat: webassembly.instructions.global_get
+browser-compat: webassembly.instructions.global_set
 sidebar: webassemblysidebar
 ---
 
-The **`global.set`** instruction sets the values of a global variable.
+The **`global.set`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the values of a global variable.
 
 {{InteractiveExample("Wat Demo: global_set", "tabbed-taller")}}
 

@@ -3,8 +3,7 @@ title: "get: Wasm table instruction"
 short-title: get
 slug: WebAssembly/Reference/Table/get
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_get
 sidebar: webassemblysidebar
 ---
 

@@ -1,12 +1,13 @@
 ---
-title: "local.set: Wasm text instruction"
+title: "local.set: Wasm variable instruction"
 short-title: local.set
 slug: WebAssembly/Reference/Variables/local.set
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.local_set
 sidebar: webassemblysidebar
 ---
 
-The **`local.set`** instruction sets the values of a local variable.
+The **`local.set`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the values of a local variable.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
@@ -43,3 +44,11 @@ local.set $val
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `local.set` | `0x21`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
