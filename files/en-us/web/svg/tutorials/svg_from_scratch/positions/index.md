@@ -25,7 +25,7 @@ When an SVG viewport is first created, one user unit corresponds to one CSS pixe
 
 SVG also supports absolute units such as `cm`, `mm`, and `pt`. These are resolved into the user coordinate system before rendering.
 
-We'll start with the `svg` root element:
+We'll start with an `<svg>` root element:
 
 ```html
 <svg width="200" height="200">…</svg>
@@ -33,12 +33,18 @@ We'll start with the `svg` root element:
 
 The above element defines an SVG viewport that is 200 by 200 CSS pixels. Because no `viewBox` is specified, the initial mapping is used, so one user unit corresponds to one CSS pixel.
 
-Let's add a `viewBox` attribute:
+Let's add a `viewBox` attribute and render a square on the SVG viewport using a `<rect>` element:
 
 ```html live-sample___svg-user-units
 <svg width="200" height="200" viewBox="0 0 100 100">
   <rect x="10" y="10" width="40" height="40" fill="royalblue" />
 </svg>
+```
+
+```css hidden live-sample___svg-user-units
+svg {
+  border: 1px solid gray;
+}
 ```
 
 The SVG viewport is still 200 by 200 CSS pixels in size, but the `viewBox` defines a coordinate system spanning from `(0,0)` to `(100,100)` in user units. The browser maps this 100 × 100 user-unit coordinate system to the 200 × 200 CSS pixel viewport, so each user unit is rendered using 2 × 2 CSS pixels.
@@ -47,6 +53,6 @@ The example renders like so:
 
 {{EmbedLiveSample("svg-user-units", "100%", "250")}}
 
-The rectangle is positioned at `(10,10)` and is `40 × 40` user units in size. Because each user unit is rendered using 2 × 2 CSS pixels, the rectangle appears as an 80 × 80 CSS pixel square on the screen.
+The rectangle is positioned at `(10,10)` and is `40 × 40` user units in size inside the `viewBox`. However, because each user unit is rendered using 2 × 2 CSS pixels, the rectangle appears as an 80 × 80 CSS pixel square on the screen, 20 pixels from the left and top of the SVG edge.
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
