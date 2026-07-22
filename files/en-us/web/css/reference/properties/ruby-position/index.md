@@ -7,7 +7,7 @@ browser-compat: css.properties.ruby-position
 sidebar: cssref
 ---
 
-The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position of a ruby element relative to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters (`inter-character`).
+The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position of a ruby element relative to its base element. It can be positioned over the element (`over`), under it (`under`), or to the right (`inter-character`).
 
 {{InteractiveExample("CSS Demo: ruby-position")}}
 
@@ -61,7 +61,7 @@ ruby-position: unset;
 - `alternate`
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 - `inter-character`
-  - : Is a keyword indicating that the ruby annotation is placed between the characters of the base text. This value is intended for bopomofo (zhuyin fuhao) ruby.
+  - : Is a keyword indicating that the ruby annotation is placed to the right of the base text characters. This value is intended for bopomofo (zhuyin fuhao) ruby.
 
 ## Formal definition
 
