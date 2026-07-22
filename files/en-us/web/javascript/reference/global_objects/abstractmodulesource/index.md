@@ -6,11 +6,11 @@ browser-compat: javascript.builtins.AbstractModuleSource
 sidebar: jsref
 ---
 
-An **_AbstractModuleSource_** object represents the raw module source code accessible with [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) or [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source). There is no directly visible `AbstractModuleSource` constructor.
+An **_AbstractModuleSource_** object represents the raw module source code obtained with [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) or [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source). There is no directly visible `AbstractModuleSource` constructor.
 
 ## Description
 
-The `AbstractModuleSource` constructor (often referred to as `%AbstractModuleSource%` to indicate its "intrinsicness", since it does not correspond to any global exposed to a JavaScript program) serves as the common superclass of all module source subclasses, providing a common interface of utility methods for all module source subclasses. This constructor is not directly exposed: there is no global `AbstractModuleSource` property. It is only accessible through `Object.getPrototypeOf(moduleSourceObject.constructor)` and similar.
+The `AbstractModuleSource` constructor (often referred to as `%AbstractModuleSource%` to indicate its "intrinsicness", since it does not correspond to any global exposed to a JavaScript program) serves as the common superclass of all module source subclasses, providing a common interface of utility methods. This constructor is not directly exposed: there is no global `AbstractModuleSource` property. It is only accessible through `Object.getPrototypeOf(moduleSourceObject.constructor)` and similar.
 
 ### AbstractModuleSource objects
 

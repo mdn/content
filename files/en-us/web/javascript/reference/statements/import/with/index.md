@@ -138,6 +138,8 @@ import text from "https://example.com/file.txt" with { type: "text" };
 
 The file will be requested with an `{{HTTPHeader("Accept")}}: text/plain` header, but the value of the response's `{{HTTPHeader("Content-Type")}}` header is ignored, and all files are parsed as UTF-8. It can contain any textual data, even JavaScript code (which is treated as plain text).
 
+If possible, prefer using [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) if the goal is to defer the execution of a JavaScript or WASM module. Using `with { type: "text" }` means the module cannot reuse the cache if it was imported somewhere else, and userland evaluation of string sources may be incompatible with strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings.
+
 ### Intended semantics for import attributes
 
 An attribute can change the runtime's behavior at every stage of the module loading process:
