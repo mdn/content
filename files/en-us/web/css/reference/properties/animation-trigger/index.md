@@ -427,6 +427,22 @@ Try scrolling the content up. When the `<div>` fully appears in the scrollport, 
 
 In this example, we show how to assign multiple triggers to control the same animation. This example is very similar to our initial [basic usage example](#basic_usage), except that it has multiple trigger elements.
 
+```html
+...
+
+<div class="trigger1">I create a trigger</div>
+
+...
+
+<div class="trigger2">I create another trigger</div>
+
+...
+
+<div class="trigger3">I create yet another trigger</div>
+
+...
+```
+
 ```html hidden live-sample___multiple-triggers
 <div class="animated">I am animated</div>
 
