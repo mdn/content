@@ -17,40 +17,30 @@ For all elements, SVG uses a coordinate system or **grid** system similar to the
 
 Note that this is slightly different than the way you're taught to graph as a kid (y axis is flipped). However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left).
 
-### Example
+## Pixels, user units, and the SVG user coordinate system
 
-The element
+SVG graphics are drawn using a **user coordinate system**, where positions and lengths are expressed in **user units**. User units are the unitless coordinate values you write in SVG attributes such as `x`, `y`, `width`, and `height`.
 
-```html
-<rect x="0" y="0" width="100" height="100" />
-```
+When an SVG viewport is first created, one user unit corresponds to one CSS pixel. This is only the initial mapping, however. Features such as the `viewBox` attribute can transform the user coordinate system so that one user unit corresponds to more or fewer CSS pixels.
 
-defines a rectangle from the upper left corner that spans 100px to the right and 100px to the bottom.
+SVG also supports absolute units such as `cm`, `mm`, and `pt`. These are resolved into the user coordinate system before rendering.
 
-### What are "pixels"?
-
-In the most basic case, one CSS pixel in an SVG document maps to one CSS pixel on the output device. However, SVG graphics are defined using a **user coordinate system**, where positions and lengths are expressed in **user units**. User units are the unitless coordinate values you write in SVG attributes such as `x`, `y`, `width`, and `height`.
-
-When an SVG viewport is first created, one user unit corresponds to one CSS pixel. This is only the initial mapping, however. Features such as the `viewBox` attribute can transform the user coordinate system, causing one user unit to correspond to more or fewer CSS pixels.
-
-Like CSS, SVG also supports absolute units such as `cm`, `mm`, and `pt`. These are converted to user units before rendering. We start with the `svg` root element:
+We'll start with the `svg` root element:
 
 ```html
 <svg width="100" height="100">…</svg>
 ```
 
-The above element defines an SVG viewport that is 100 by 100 CSS pixels in size. In this initial coordinate system, one user unit corresponds to one CSS pixel.
+The above element defines an SVG viewport that is 100 by 100 CSS pixels in size. Because no `viewBox` is specified, the initial mapping is used, so one user unit corresponds to one CSS pixel.
 
 ```html
-<svg width="200" height="200" viewBox="0 0 100 100">…</svg>
+<svg width="200" height="200" viewBox="0 0 100 100">
+  <rect x="10" y="10" width="40" height="40" fill="royalblue" />
+</svg>
 ```
 
-The SVG viewport is 200 by 200 CSS pixels in size. The `viewBox` attribute defines a rectangle in the user coordinate system that spans from (0,0) to (100,100). The browser automatically maps that 100 × 100 user-unit rectangle to the 200 × 200 CSS pixel viewport, so each user unit is rendered using 2 × 2 CSS pixels.
+The SVG viewport is 200 by 200 CSS pixels in size, while the `viewBox` defines a coordinate system spanning from `(0,0)` to `(100,100)` in user units. The browser maps this 100 × 100 user-unit coordinate system to the 200 × 200 CSS pixel viewport, so each user unit is rendered using 2 × 2 CSS pixels.
 
-The **user coordinate system** determines how user units are mapped to the viewport. Besides scaling, this coordinate system can also be translated, rotated, skewed, or flipped. Because the mapping can change, a user unit does not always correspond to a single CSS pixel. Features such as `viewBox`, transforms, and nested SVG viewports can all establish a different mapping between user units and the rendered image.
-
-A quote from the SVG 1.1 specification illustrates this:
-
-> \[...] suppose that the user agent can determine from its environment that "1px" corresponds to "0.2822222mm" (i.e., 90dpi). Then, for all processing of SVG content: \[...] "1cm" equals "35.43307px" (and therefore 35.43307 user units)
+In this example, the rectangle is positioned at `(10,10)` and is `40 × 40` user units in size. Because each user unit is rendered using 2 × 2 CSS pixels, the rectangle appears as an 80 × 80 CSS pixel square on the screen.
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
