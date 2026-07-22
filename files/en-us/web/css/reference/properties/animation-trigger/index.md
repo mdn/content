@@ -533,7 +533,7 @@ div.animated {
 }
 ```
 
-This example contains three trigger `<div>` elements. On each one, we define a timeline trigger with a different name. These names correspond to the names referenced in the `.animated` `<div>` element's `animation-trigger` property.
+On each trigger `<div>` element we define a timeline trigger with a different name. These names correspond to the names referenced in the `.animated` `<div>` element's `animation-trigger` property.
 
 ```css live-sample___multiple-triggers
 .trigger1 {
