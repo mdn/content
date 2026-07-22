@@ -81,6 +81,9 @@ Extensions cannot inject content scripts into privileged browser UI pages (such 
 
 If an extension wants to run code in an extension page dynamically, it can include a script in the page. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 
+> [!NOTE]
+> Content scripts run with more privilege than the page they're injected into, and can be exposed to untrusted page content. See [Security considerations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Cross-origin_network_requests#security_considerations) in Cross-origin network requests for guidance.
+
 ## Content script environment
 
 ### DOM access
@@ -209,29 +212,9 @@ In addition to the standard DOM APIs, content scripts can use these WebExtension
 
 ### XHR and Fetch
 
-Content scripts can make requests using the normal [`window.XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) and [`window.fetch()`](/en-US/docs/Web/API/Fetch_API) APIs.
+Content scripts can make requests using the [`window.XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) and [`window.fetch()`](/en-US/docs/Web/API/Fetch_API) APIs.
 
-> [!NOTE]
-> In Firefox in Manifest V2, content script requests (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) happen in the context of an extension, so you must provide an absolute URL to reference page content.
->
-> In Chrome and Firefox in Manifest V3, these requests happen in context of the page, so they are made to a relative URL. For example, `/api` is sent to `https://«current page URL»/api`.
-
-Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key in `manifest.json`, then its content scripts get access that domain as well.
-
-> [!NOTE]
-> When using Manifest V3, content scripts can perform cross-origin requests when the destination server opts in using [CORS](/en-US/docs/Web/HTTP/Guides/CORS); however, host permissions don't work in content scripts, but they still do in regular extension pages.
-
-This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
-
-> [!NOTE]
-> In Firefox in Manifest V2, extensions that need to perform requests that behave as if they were sent by the content itself can use `content.XMLHttpRequest` and `content.fetch()` instead.
->
-> For cross-browser extensions, the presence of these methods must be feature-detected.
->
-> This is not possible in Manifest V3, as `content.XMLHttpRequest` and `content.fetch()` are not available.
-
-> [!NOTE]
-> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/Guides/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
+See [Make cross-origin network requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Cross-origin_network_requests) for details.
 
 ## Communicating with background scripts
 
