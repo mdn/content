@@ -518,7 +518,7 @@ div {
 }
 ```
 
-This time, our `.animated` `<div>` has the `rotate` `animation` applied to it three times. It then has three differently-named `animation-trigger` values set on it, one for each instance of the `animation`.
+This time, our `.animated` `<div>` has the same `rotate` animation applied to it three times using the `animation` shorthand property. It then has three differently-named `animation-trigger` values set on it, one for each animation instance.
 
 ```css live-sample___multiple-triggers
 div.animated {
