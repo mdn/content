@@ -88,7 +88,7 @@ For example:
     moveright 2s 1 ease-out both,
     moveright 2s 1 ease-out forwards;
   animation-trigger:
-    --t play-forwards play-backwards,
+    --t1 play-forwards play-backwards,
     --t2 play-forwards play-backwards;
 }
 
