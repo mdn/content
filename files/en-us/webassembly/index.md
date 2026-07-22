@@ -33,4 +33,5 @@ Our reference documentation has several live examples to demonstrate how the dif
 ## See also
 
 - [webassembly.org](https://webassembly.org/)
+- [WebAssembly browser feature support status](https://webassembly.org/features/?categories=browsers) on webassembly.org (2026)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
