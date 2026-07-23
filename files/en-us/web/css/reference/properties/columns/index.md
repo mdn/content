@@ -24,7 +24,7 @@ columns: 12em;
 ```
 
 ```css interactive-example-choice
-columns: 3;
+columns: 2 / 5em;
 ```
 
 ```html interactive-example
