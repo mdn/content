@@ -28,11 +28,11 @@ This includes data that can be directly used to identify a person, such as a nam
 
 ### Requesting personal data
 
-Websites should collect only personal data that the user wishes to provide.
+Websites should collect only personal data that the user wishes to provide, and collect only the data they they actually need. For example, a shopping site might allow people to make purchases without creating an account: this means the site doesn't collect as much personal data, and also reduces friction for shoppers.
 
 When requesting data, websites should clearly explain what they are asking for and how it will be used.
 
-Web developers should design the user interface that requests data so as to learn the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data then not to share it, or by asking users to agree to terms that they could not be expected to understand.
+Web developers should design the user interface that requests data so as to learn the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
 
 ### Using personal data
 
@@ -40,18 +40,31 @@ Websites should use personal data only for the purposes they specified when requ
 
 If possible, before sites use personal data, they should process it in such a way that individual users are not identifiable: this process is called _de-identification_.
 
-Websites should protect the personal data that they collect from unauthorized access by third parties. This typically means that stored personal data should be encrypted, and that personal data should only be transmitted using a secure protocol such as TLS.
+Websites should protect the personal data that they collect from unauthorized access by third parties. This typically means that stored personal data should be encrypted, and that personal data should only be transmitted using a secure protocol such as TLS. If unauthorized access is detected, the website should notify the user as soon as possible.
+
+Websites should delete personal data once they no longer need it.
 
 ### Allowing users to manage their data
 
 Websites should allow users to manage the personal data that they have provided. This includes the ability to:
 
-- Access, correct, export, and delete any stored personal data correct.
+- Access, correct, export, and delete any stored personal data.
 - Withdraw any consent that they have given about how their data should be used.
 
 Websites should make it as easy for users to perform these actions as it is for them to share their data in the first place. That is, websites should not make it easy for users to share data but hard for them to delete it.
 
 Websites should not retaliate against users who exercise these rights. For example, if a user withdraws consent to the use of their data, and the website then denies access to a service that does not depend on that data, this could be considered retaliation.
+
+### Publishing a privacy policy
+
+Websites should publish a privacy policy, to help users understand how the site will use their data. The policy should describe:
+
+- What personal data the site collects.
+- How the data will be used.
+- Steps the site takes to protect data from unauthorised access.
+- Any third parties with which the site will share the data, including a declaration that the site will ask for user consent before sharing.
+- The duration for which the site will keep the data before it is deleted.
+- How the user can view and manage their data.
 
 ## User recognition and tracking
 
@@ -90,6 +103,8 @@ A good example of a situation in which cross-context tracking is legitimate is [
 ### Tracking prevention in web browsers
 
 Most web browsers implement some form of tracking prevention. Although the details are not always the same, tracking prevention policies broadly follow the principles outlined above. That is, browsers try to prevent unsanctioned tracking as much as possible, and all cross-context tracking, except in specific legitimate cases.
+
+This means that, by following the principles listed above, sites can ensure that they work in as many browsers as possible.
 
 ## See also
 
