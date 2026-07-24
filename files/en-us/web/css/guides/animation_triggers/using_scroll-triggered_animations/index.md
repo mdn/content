@@ -661,7 +661,11 @@ The HTML is similar to previous examples except that we have included a {{htmlel
 <div id="three"></div>
 
 <p>
-  Walshs Pyramid is located within Wooroonooran National Park south of Cairns, Queensland, Australia. An annual footrace to its summit is held on the third Saturday in August. For experienced hikers, the ascent and descent can take 4 to 6 hours. The vegetation on the mountain is fairly dense with exposed rocks which can make the surface very slippery after rain.
+  Walshs Pyramid is located within Wooroonooran National Park south of Cairns,
+  Queensland, Australia. An annual footrace to its summit is held on the third
+  Saturday in August. For experienced hikers, the ascent and descent can take 4
+  to 6 hours. The vegetation on the mountain is fairly dense with exposed rocks
+  which can make the surface very slippery after rain.
 </p>
 ```
 
