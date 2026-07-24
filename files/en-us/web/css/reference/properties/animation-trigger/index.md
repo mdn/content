@@ -535,7 +535,7 @@ We include three `<div>` elements as trigger. The text content is hidden for bre
 </p>
 ```
 
-###3 CSS
+### CSS
 
 ```css hidden live-sample___multiple-triggers
 body {
