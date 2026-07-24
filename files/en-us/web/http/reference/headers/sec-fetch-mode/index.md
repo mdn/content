@@ -12,6 +12,8 @@ The HTTP **`Sec-Fetch-Mode`** [fetch metadata request header](/en-US/docs/Web/HT
 Broadly speaking, this allows a server to distinguish between requests originating from a user navigating between HTML pages, and requests to load images and other resources.
 For example, this header would contain `navigate` for top level navigation requests, while `no-cors` is used for loading an image.
 
+The header is only included in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls).
+
 <table class="properties">
   <tbody>
     <tr>
