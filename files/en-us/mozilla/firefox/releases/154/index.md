@@ -32,7 +32,10 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref(":open")}} pseudo-class now matches {{htmlelement("select")}} elements while their drop-down picker is open, allowing authors to style the control based on their open state.
+  ([Firefox bug 2048183](https://bugzil.la/2048183)).
 
 <!-- #### Removals -->
 
