@@ -212,7 +212,12 @@ Let's have a look at the work so far — note how the picker arrow rotates smoot
 
 The drop-down picker can be targeted using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element. As mentioned earlier, the picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`. In our example, this means all the `<option>` elements and their contents.
 
-First of all, the picker's default black {{cssxref("border")}} is removed:
+When the picker is opened, its contents (contained within the `::picker(select)` pseudo-element) are promoted to the {{glossary("top layer")}}, because the picker is a [popover](/en-US/docs/Web/API/Popover_API). This ensures that the picker displays on top of other elements, and interacts gracefully with other popovers on the page (for example, closing unrelated ones that are already open).
+
+> [!NOTE]
+> The select picker is also subject to [top-layer ancestor matching boundary](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#top-layer_ancestor_matching_boundary) behavior, which ensures that {{cssxref(":hover")}}, {{cssxref(":active")}}, or {{cssxref(":focus-within")}} styles applied to the `<select>` will only match the picker's descendants while the picker is interacted with, not the `<select>` itself.
+
+In our example, we start by removing the picker's default black {{cssxref("border")}}:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 ::picker(select) {
@@ -354,7 +359,7 @@ The list of transitioned properties features `opacity`, however it also includes
 - {{cssxref("display")}}
   - : The `display` values changes from `none` to `block` when the popover changes state from hidden to shown. This needs to be animated to ensure that other transitions are visible.
 - {{cssxref("overlay")}}
-  - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the {{glossary("top layer")}}, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, ensuring the transition is visible.
+  - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the top layer, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, ensuring the transition is visible.
 
 > [!NOTE]
 > The [`allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
