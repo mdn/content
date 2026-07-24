@@ -28,13 +28,6 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
-
 ## Examples
 
 ### Drag and drop example

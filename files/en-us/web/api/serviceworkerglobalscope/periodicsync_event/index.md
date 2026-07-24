@@ -30,13 +30,6 @@ A {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PeriodicSyncEvent")}}
 
-## Event properties
-
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
-
-- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}}
-  - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
-
 ## Examples
 
 The following example shows how to respond to a periodic sync event in the service worker.

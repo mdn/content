@@ -26,11 +26,6 @@ A {{domxref("PopStateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PopStateEvent")}}
 
-## Event properties
-
-- {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
-  - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onpopstate` is also available on the following elements:

@@ -45,11 +45,6 @@ A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageTransitionEvent")}}
 
-## Event properties
-
-- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
-  - : Indicates if the document is loading from a cache.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onpageshow` is also available on the following targets:

@@ -36,13 +36,6 @@ A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamEvent")}}
 
-## Event properties
-
-_A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
-
-- {{domxref("MediaStreamEvent.stream")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
-
 ## Examples
 
 This example looks to determine if the user's browser supports the {{domxref("RTCPeerConnection.track_event", "track")}} event. If it does, a `track` event listener is set up; otherwise, an `addstream` event listener is set up. `pc` is an `RTCPeerConnection`.

@@ -28,13 +28,6 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("HashChangeEvent")}}
 
-## Event properties
-
-- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
-  - : A string representing the new URL the window is navigating to.
-- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
-  - : A string representing the previous URL from which the window was navigated.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onhashchange` is also available on the following targets:

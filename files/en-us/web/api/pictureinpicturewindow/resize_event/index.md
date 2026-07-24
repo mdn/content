@@ -28,13 +28,6 @@ A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
-  - : Returns the {{domxref("PictureInPictureWindow")}} that is resized.
-
 ## Examples
 
 ### Window size logger
