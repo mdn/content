@@ -3,7 +3,7 @@ title: "load16x4_u: Wasm SIMD load/store instruction"
 short-title: load16x4_u
 slug: WebAssembly/Reference/SIMD/load_store/load16x4_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load16x4_u
+browser-compat: webassembly.instructions.load16x4_u
 sidebar: webassemblysidebar
 ---
 
@@ -76,7 +76,3 @@ v128.load16x4_u mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)
