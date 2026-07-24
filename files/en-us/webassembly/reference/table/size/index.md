@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.table_size
 sidebar: webassemblysidebar
 ---
 
-The **`table.size`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current size of the table.
+The **`table.size`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) returns the current size of the table.
 
 {{InteractiveExample("Wat Demo: table.size", "tabbed-taller")}}
 

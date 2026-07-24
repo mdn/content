@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.table_grow
 sidebar: webassemblysidebar
 ---
 
-The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
+The **`table.grow`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 

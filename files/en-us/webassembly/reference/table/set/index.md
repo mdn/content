@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.table_set
 sidebar: webassemblysidebar
 ---
 
-The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the value stored in a particular table element.
+The **`table.set`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the value stored in a particular table element.
 
 {{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
