@@ -67,7 +67,3 @@ value_type.trunc_sat_f64x2_s_zero
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

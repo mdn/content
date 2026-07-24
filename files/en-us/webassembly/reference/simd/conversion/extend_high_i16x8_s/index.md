@@ -62,7 +62,3 @@ i32x4.extend_high_i16x8_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)
