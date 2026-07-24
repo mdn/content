@@ -42,7 +42,7 @@ Most probably, the user or device administrator would install the `PKCS #11` mod
 
 However, the module and manifest can't be installed as part of the extension's own installation process.
 
-For details about the manifest file's contents and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+For details about the manifest file's contents and location, see [PKCS #11 manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests).
 
 ## Functions
 
