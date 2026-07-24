@@ -36,9 +36,11 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The {{jsxref("Iterator.prototype.join()")}} method is now supported, returning a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
+  This is similar to {{jsxref("Array.prototype.join()")}}.
+  ([Firefox bug 2047995](https://bugzil.la/2047995)).
 
 <!-- #### Removals -->
 
