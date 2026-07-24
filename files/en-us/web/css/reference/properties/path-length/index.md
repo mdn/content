@@ -3,9 +3,13 @@ title: "`path-length` CSS property"
 short-title: path-length
 slug: Web/CSS/Reference/Properties/path-length
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.path-length
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`path-length`** [CSS](/en-US/docs/Web/CSS) property specifies a total path length, in user units. All path computations are then scaled using the ratio `path-length` / _(computed value of path length)_ — this includes text paths, animation paths, and various stroke operations.
 

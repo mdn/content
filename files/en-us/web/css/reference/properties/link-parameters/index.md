@@ -3,9 +3,13 @@ title: "`link-parameters` CSS property"
 short-title: link-parameters
 slug: Web/CSS/Reference/Properties/link-parameters
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.link-parameters
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`link-parameters`** [CSS](/en-US/docs/Web/CSS) property sets values of external resources, such as SVGs, whose attributes have been set with the {{cssxref("env")}} CSS function
 
