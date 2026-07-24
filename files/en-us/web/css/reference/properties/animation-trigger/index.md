@@ -142,7 +142,9 @@ Given the following CSS:
     shrink ease-in 3s forwards,
     colorchange steps(5) 5s forwards;
 
-  animation-trigger: --t1 play pause, --t2 forwards backwards;
+  animation-trigger:
+    --t1 play pause,
+    --t2 forwards backwards;
 }
 .trigger1 {
   timeline-trigger: --t1 view();
