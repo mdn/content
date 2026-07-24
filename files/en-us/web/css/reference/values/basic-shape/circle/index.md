@@ -270,9 +270,6 @@ body {
 
 First we get handles to each of the elements used by the example.
 
-Then we define the `checkSupport()` function used to feature-test whether each radius keyword is supported and enable/disable the associated selection options.
-This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
-
 ```js live-sample___circle-keywords-interactive
 const select = document.getElementById("radius-keyword");
 const posX = document.getElementById("pos-x");
@@ -281,8 +278,12 @@ const refbox = document.getElementById("refbox");
 const declaration = document.getElementById("declaration");
 const marker = document.getElementById("center-marker");
 const supportNote = document.getElementById("support-note");
+```
 
-// Feature-test each keyword
+Then we define the `checkSupport()` function used to feature-test whether each radius keyword is supported and enable/disable the associated selection options.
+This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
+
+```js live-sample___circle-keywords-interactive
 function checkSupport() {
   const unsupported = [];
   for (const option of select.options) {

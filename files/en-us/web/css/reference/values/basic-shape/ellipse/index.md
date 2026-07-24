@@ -326,9 +326,6 @@ body {
 
 First we get handles to each of the elements used by the example.
 
-Then we define a `checkSupport()` function to feature-test whether each radius keyword is supported and enable/disable the associated options in both dropdowns.
-This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
-
 ```js live-sample___ellipse-keywords-interactive
 const selectX = document.getElementById("radius-x-keyword");
 const selectY = document.getElementById("radius-y-keyword");
@@ -338,9 +335,12 @@ const refbox = document.getElementById("refbox");
 const declaration = document.getElementById("declaration");
 const marker = document.getElementById("center-marker");
 const supportNote = document.getElementById("support-note");
+```
 
-// Feature-test each keyword, since closest-corner/farthest-corner are a
-// newer addition to ellipse() and may not be supported everywhere yet.
+Then we define a `checkSupport()` function to feature-test whether each radius keyword is supported and enable/disable the associated options in both dropdowns.
+This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
+
+```js live-sample___ellipse-keywords-interactive
 function checkSupport() {
   const unsupported = new Set();
   for (const option of selectX.options) {
