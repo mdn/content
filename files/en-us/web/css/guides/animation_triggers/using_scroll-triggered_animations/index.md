@@ -544,13 +544,13 @@ In previous examples, we set only a single scroll-triggered animation on an elem
 
 The {{cssxref("animation-trigger")}} property works in exactly the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regards to setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values). If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations. If two `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. And so on.
 
-This example progressively animates an element — applying further animations when new triggers are activated as the page scrolls. As the user scrolls, the element first slides in from the right of the screen, then reveals its contents, then slides down the screen and changes its dimensions and background color.
+This example progressively animates an element — applying further animations when new triggers are activated as the page scrolls. As the user scrolls, the element first slides in from the right of the screen, then reveals its contents, then slides down the screen and changes its background color.
 
 The HTML is similar to previous examples except that we have included a {{htmlelement("section")}} element at the top containing some highlighted content, and some empty {{htmlelement("div")}} elements interspersed throughout our main content that will have triggers defined on them to trigger our animations.
 
 ```html
 <section>
-  <h2>Hello! This is my content!</h2>
+  <h2>This content is animated!</h2>
 
   <p>
     The countryside surrounding Cairns, located in eastern Australia, is a
@@ -661,15 +661,15 @@ The HTML is similar to previous examples except that we have included a {{htmlel
 <div id="three"></div>
 
 <p>
-  You can embark on hiking trails that lead to breathtaking viewpoints, offering
-  panoramic vistas of the surrounding rainforest-clad mountains and valleys.
-  Further west, the towering peaks of the Great Dividing Range present
-  opportunities for adventurous hiking and exploring scenic vistas, including
-  the iconic Walsh's Pyramid near Gordonvale.
+  Walshs Pyramid is located within Wooroonooran National Park south of Cairns,
+  Queensland, Australia. An annual footrace to its summit is held on the third
+  Saturday in August. For experienced hikers, the ascent and descent can take 4
+  to 6 hours. The vegetation on the mountain is fairly dense with exposed rocks
+  which can make the surface very slippery after rain.
 </p>
 ```
 
-Initially, the highlighted content `<section>` is hidden off-screen. Our CSS starts by styling our `<section>` element, giving it a {{cssxref("position")}} of `fixed` and positioning it near the top-left of the scrollport. We also define the initial styles that we will be animating from and returning to. We then set three {{cssxref("animation")}} values, which will make the `<section>` element `slide-from-right`, then `reveal` its contents, then `slide-down` the screen and change its dimensions and background color. We also set an `animation-trigger` for each one of the animations so that they will be triggered by different triggers being activated.
+Initially, the highlighted content `<section>` is hidden off-screen. Our CSS starts by styling the `<section>` element, giving it a {{cssxref("position")}} of `fixed` and positioning it near the top-left of the scrollport. We also define the initial styles that we will be animating from and returning to. We then set three {{cssxref("animation")}} values, which will make the `<section>` element `slide-from-right`, then `reveal` its contents, then `slide-down` the screen and change its background color. We also set an `animation-trigger` for each one of the animations so that they will be triggered by different triggers being activated.
 
 We want the finished state of each animation to apply throughout, after it is reached, therefore it is important to set appropriate {{cssxref("animation-fill-mode")}} values on the animations and `<animation-action>` values on the `animation-trigger` values to achieve this. We had to set an `animation-fill-mode` of `forwards` rather than `both` on the last animation because there is no `from` keyframe.
 
@@ -754,7 +754,7 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
     translate: 400%;
   }
   to {
-    translate: 1rem;
+    translate: 0;
   }
 }
 
@@ -771,10 +771,8 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
 
 @keyframes slide-down {
   to {
-    translate: 1rem 100%;
+    translate: 0 100%;
     background: blue;
-    width: 600px;
-    height: 200px;
   }
 }
 ```
@@ -801,8 +799,9 @@ This example renders as follows:
 
 Try carefully scrolling the example, and note how each animation is applied to the `<section>` when each `<div>` is scrolled to.
 
-> [!NOTE]
-> If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the animation multiple times on the animated element, and then give each animation instance a different trigger. See [Triggering the same animation via multiple different triggers](/en-US/docs/Web/CSS/Reference/Properties/animation-trigger#triggering_the_same_animation_via_multiple_different_triggers) for more information.
+### Multiple triggers for the same animation
+
+If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the same named animation multiple times on the animated element, and then give each instance of that animation a different trigger. See [Triggering the same animation via multiple different triggers](/en-US/docs/Web/CSS/Reference/Properties/animation-trigger#triggering_the_same_animation_via_multiple_different_triggers) for more information.
 
 ## See also
 
