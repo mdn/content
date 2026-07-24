@@ -378,6 +378,7 @@ Most presentation attributes inherit when used as CSS properties (for example, {
 - {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
+- {{SVGAttr("pathLength")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("r")}}
 - {{SVGAttr("rx")}}

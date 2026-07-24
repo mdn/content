@@ -72,9 +72,10 @@ The parameters common across the syntax of some basic shape functions include:
   - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property.
 
 - `<shape-radius>`
-  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
+  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), `farthest-side`, `closest-corner`, and `farthest-corner`. Negative values are invalid.
 
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
+    Similarly, the `closest-corner` and `farthest-corner` use the length from the center of the shape to the closest and farthest corners, respectively.
 
 - `<position>`
   - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
