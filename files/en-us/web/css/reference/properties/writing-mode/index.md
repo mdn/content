@@ -7,7 +7,7 @@ browser-compat: css.properties.writing-mode
 sidebar: cssref
 ---
 
-The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress.
+The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which text flows.
 
 {{InteractiveExample("CSS Demo: writing-mode")}}
 
