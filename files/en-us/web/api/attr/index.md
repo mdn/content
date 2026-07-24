@@ -22,7 +22,7 @@ The name is deemed _local_ when it ignores the eventual namespace prefix and dee
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
 > [!NOTE]
-> This interface represents only attributes present in the tree representation of the {{domxref("Element")}}, being a SVG, an HTML or a MathML element. It doesn't represent the _property_ of an interface associated with such element, such as {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
+> This interface represents only attributes present in the tree representation of an {{domxref("Element")}}—an SVG, HTML, or MathML element. It doesn't represent the IDL properties of the interface associated with that element, such as the properties of {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
 
 ## Instance properties
 
