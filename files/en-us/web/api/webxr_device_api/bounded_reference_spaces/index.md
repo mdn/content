@@ -161,4 +161,4 @@ The new transform is passed into `getOffsetReferenceSpace()` to obtain a referen
 - [Spatial tracking in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking)
 - [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Supporting gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)
+- [Advanced controllers using the gamepad object](/en-US/docs/Web/API/WebXR_Device_API/Inputs#advanced_controllers_using_the_gamepad_object)
