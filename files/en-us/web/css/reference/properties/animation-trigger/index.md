@@ -28,7 +28,7 @@ animation-trigger: --my-other-trigger play reset;
 /* Multiple values */
 animation-trigger:
   none,
-  --my-trigger play-forwards play-backwards,
+  -forwards play-backwards,
   --my-other-trigger play reset;
 
 /* Global values */
@@ -56,7 +56,7 @@ The `animation-trigger` property specifies which trigger will control an animate
 
 ### Defining a trigger
 
-The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If there is no scrolling element with the same `<dashed-ident>` set as the `timeline-trigger-name` value, the animation will not have a trigger, and will never occur.
+The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If there is no scrolling element with the same `<dashed-ident>` set as the `timeline-trigger-name` value, the animation will not have a trigger and will play as soon as the page loads.
 
 For example:
 
@@ -92,7 +92,9 @@ For example:
 
 When the trigger is activated, the animation will `play-forwards`. When the trigger is deactivated, the animation will `play-backwards`.
 
-There are eight `<animation-action>` values, each providing different animation behaviors. The `play-forwards play-backwards` is a common pattern, often used to "animate in" an element it's trigger scrolls into view, and then "animate out" again when the trigger scrolls out of view. The `play-once` is generally used on its own or as `play-once pause`; with `play-once`, the animation plays only once when it scrolls into view, The addition of `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting where it was paused if re-activated. See the {{cssxref("animation-action")}} data type to see examples and learn more about the each keyword value.
+There are eight `<animation-action>` values, each providing different animation behaviors. Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger scrolls into view, and then "animate out" the element again when the trigger scrolls out of view.
+
+The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. The addition of `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting from where it was paused if re-activated. See the {{cssxref("animation-action")}} data type for examples and more about each keyword value.
 
 ### Triggering the same animation via multiple different triggers
 
@@ -121,13 +123,13 @@ For example:
 
 See [Multiple triggers for the same animation](#multiple_triggers_for_the_same_animation) for a working example.
 
-### Reset by the `animation` shorthand
+### Resetting via the `animation` shorthand
 
-The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. This means that trigger name and animation actions can not be included in the `animation` shorthand, but using the inclusion of the `animation` shorthand resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list or declare the `animation-trigger` in a declaration block with selectors with stronger {{cssxref("specificity")}}.
+The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. This means that trigger names and animation actions can not be included in the `animation` shorthand, but setting the `animation` shorthand resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list or declare the `animation-trigger` in a declaration block with selectors with stronger {{cssxref("specificity")}}.
 
 ### Multiple `animation-trigger` values
 
-The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties with regard to setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
+The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties concerning setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
 - If two comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
@@ -172,7 +174,7 @@ This example demonstrates how to create a scroll-triggered animation that plays 
 
 #### HTML
 
-The markup contains two {{htmlelement("div")}} elements, one to animate and one to create a trigger on, plus some basic text content to cause the page to scroll. The text is hidden for brevity.
+The markup contains two {{htmlelement("div")}} elements, one to animate and one on which to create a trigger, plus some basic text content to cause the page to scroll. The text is hidden for brevity.
 
 ```html
 <div class="animated">I am animated</div>
@@ -248,7 +250,7 @@ The markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable seeing when the animation plays and pauses.
+The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when the animation plays and pauses.
 
 ```css hidden live-sample___basic-example
 body {
@@ -324,7 +326,7 @@ In this example, we demonstrate how an animated element can also create its own 
 
 #### HTML
 
-This time, the markup contains only a single {{htmlelement("div")}} element, plus basic text content to cause the page to scroll. We have hidden the markup for the content for brevity.
+This time, the markup contains only a single {{htmlelement("div")}} element, plus basic text content to cause the page to scroll. We have hidden the content markup for brevity.
 
 ```html
 <div>I create my own trigger</div>
@@ -447,11 +449,11 @@ Try scrolling the content up. When the `<div>` fully appears in the scrollport, 
 
 ### Multiple triggers for the same animation
 
-This example shows how to assign multiple triggers to control the same animation. This example is similar to the [basic usage example](#basic_usage), but with multiple triggers triggering one keyframe animation.
+This example shows how to assign multiple triggers to control the same animation. This example is similar to the [basic usage example](#basic_usage), but with multiple triggers triggering the same keyframe animation.
 
 #### HTML
 
-We include three `<div>` elements as trigger. The text content is hidden for brevity.
+We include three `<div>` elements as triggers. The text content is hidden for brevity.
 
 ```html
 ...
@@ -562,7 +564,7 @@ div {
 }
 ```
 
-The value of the `animation` shorthand property is a comma separated list of animations, applying the same `rotate` keyframe animation three times. The `animation-trigger` value is a comma separated list of three animation triggers, one for each animation instance.
+The value of the `animation` shorthand property is a comma-separated list of animations, applying the same `rotate` keyframe animation three times. The `animation-trigger` value is a comma-separated list of three animation triggers, one for each animation instance.
 
 ```css live-sample___multiple-triggers
 .animated {
@@ -613,7 +615,7 @@ We define a timeline trigger with a different name on each trigger `<div>` eleme
 
 {{EmbedLiveSample("multiple-triggers", "100%", "160")}}
 
-Try scrolling the content up and down, and note how the the animation is activated and then deactivated when each of the trigger elements scrolls into view and out of view again.
+Try scrolling the content up and down, and note how the animation is activated and then deactivated when each trigger element scrolls into and out of view.
 
 ## Specifications
 
