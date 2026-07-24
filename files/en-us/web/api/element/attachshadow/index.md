@@ -428,5 +428,6 @@ The example below should show the content of the slots displayed in the appropri
 - {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
+- {{domxref("ShadowRoot.referenceTarget")}}
 - Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Reference/Elements/template)
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)
