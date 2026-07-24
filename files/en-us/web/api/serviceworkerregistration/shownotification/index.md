@@ -44,8 +44,11 @@ showNotification(title, options)
             See {{domxref("Notification.navigate")}} for more information.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
-        On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
+      - : A string containing the URL of a small icon representing the web application itself.
+        The badge is used by the platform when there is not enough space to display the full notification —
+        for example, in a status bar. It should have less visual priority than the `icon` and `image` options.
+        On Android, the badge should accommodate up to 4x display resolution (about 96×96px),
+        and the image will be automatically masked to a monochrome silhouette.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
         The default is the empty string.
@@ -57,9 +60,18 @@ showNotification(title, options)
       - : The direction in which to display the notification.
         It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
-      - : A string containing the URL of an icon to be displayed in the notification.
+      - : A string containing the URL of a small image that reinforces the notification — for example,
+        an app logo or a photo of the message sender. It is displayed alongside the notification title and body.
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of an image to be displayed in the notification.
+      - : A string containing the URL of a large image displayed as part of the notification's content body —
+        for example, a news photo or product thumbnail. It has the highest visual priority of the three image options
+        (`image`, `icon`, `badge`).
+
+    > [!NOTE]
+    > The three image options serve distinct purposes and appear in different locations:
+    > `image` is a large content picture inside the notification body (highest priority),
+    > `icon` is a small reinforcing image next to the title,
+    > and `badge` is a tiny monochrome app icon for constrained UI surfaces like status bars (lowest priority).
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
         The default is the empty string.
