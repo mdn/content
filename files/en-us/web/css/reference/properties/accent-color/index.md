@@ -75,7 +75,7 @@ accent-color: unset;
 
 ### Values
 
-This property is specified as the keyword `auto` or one `<color>` value.
+This property is specified as the keyword `auto` or one `<color>` value:
 
 - `auto`
   - : Represents a UA-chosen color, which should match the accent color of the platform, if any.

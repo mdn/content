@@ -65,7 +65,7 @@ border-inline-color: unset;
 
 ### Values
 
-This property is specified as one `<color>` value.
+This property is specified as one `<color>` value:
 
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
