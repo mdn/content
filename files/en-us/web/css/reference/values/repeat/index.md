@@ -148,7 +148,7 @@ repeat(auto, var(--lineColor) var(--lineSize) solid)
 
 ### Values
 
-The `repeat()` function takes two arguments: The first argument specifies [**repeat count**](#repeat-count-values), and the second specifies the [**repeated values list**](#repeated-values-list), the list of values to be repeated.
+The `repeat()` function takes two arguments: The first argument specifies [**repeat count**](#repeat-count-values), and the second specifies the [**repeated values list**](#repeated-values-list) (the list of values to be repeated).
 
 #### Repeat count values
 
