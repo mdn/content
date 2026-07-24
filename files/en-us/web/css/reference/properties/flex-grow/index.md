@@ -69,9 +69,9 @@ flex-grow: revert-layer;
 flex-grow: unset;
 ```
 
-The `flex-grow` property is specified as a single `<number>`.
-
 ### Values
+
+This property is specified as a `<number>`:
 
 - `<number>`
   - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 0, which prevents the flex item from growing.

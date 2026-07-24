@@ -60,9 +60,9 @@ text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
-The `text-underline-offset` property is specified as a single value from the list below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : The browser chooses the appropriate offset for underlines.

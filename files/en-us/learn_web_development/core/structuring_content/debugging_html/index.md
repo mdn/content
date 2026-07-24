@@ -95,7 +95,7 @@ You can open the devtools in a similar way in each browser — see [How to open 
 For this article, the only relevant devtools function is the **DOM inspector**, which shows the currently-rendered HTML DOM and allows you to edit it. Let's look at this now:
 
 1. Open the devtools in your browser.
-2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labelled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
+2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labeled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
 3. Examine the DOM tree structure shown in the tab, and note how you can click the little expansion arrows at the start of each DOM node to expand and collapse them and reveal their descendant nodes. You can also use the up and down cursor keys to move up and down the nodes, and the right and left cursor keys to expand and collapse the nodes.
 4. Also try hovering over the nodes (or selecting them with the cursor keys) and note how the currently-hovered (or selected) element is highlighted in the viewport.
 5. You can also edit the rendered DOM. We won't use the editing functionality in this article, but take some time to look up how to do this if you are curious.

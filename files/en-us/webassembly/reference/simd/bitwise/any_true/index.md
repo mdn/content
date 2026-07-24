@@ -3,7 +3,7 @@ title: "any_true: Wasm SIMD bitwise instruction"
 short-title: any_true
 slug: WebAssembly/Reference/SIMD/bitwise/any_true
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.any_true
+browser-compat: webassembly.instructions.any_true
 sidebar: webassemblysidebar
 ---
 
@@ -61,7 +61,3 @@ v128.any_true
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

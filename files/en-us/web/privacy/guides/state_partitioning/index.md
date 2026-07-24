@@ -18,8 +18,8 @@ From Firefox 103, State Partitioning is turned on by default.
 
 Browsers traditionally key client-side state by the origin (or sometimes registrable domain) of the location a resource was loaded from.
 For example, the cookies, localStorage objects, and caches available to an iframe loaded from `https://example.com/hello.html` will be keyed by `example.com`.
-This is true regardless of whether the browser is currently loading resources from that domain as a _first-party_
-resources or as an embedded _third party_ resources.
+This is true regardless of whether the browser is currently loading resources from that domain as _first-party_
+resources or as embedded _third-party_ resources.
 Trackers have taken advantage of this cross-site state to store user identifiers and access them across websites.
 The example below shows how `example.com` can use its cross-site state (in this instance, cookies) to track a user across its own site as well as `A.example` and `B.example`.
 
@@ -141,7 +141,7 @@ Let's say a site hosted at `a.example` navigates a user to `b.example` in the sa
 ## Storage Access API
 
 Third-party frames may use
-[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookie through the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookies through the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 Once granted, the requesting party will gain access to its entire first-party cookies (i.e., the cookies it would have access to if visited as a first-party).
 
 > [!WARNING]

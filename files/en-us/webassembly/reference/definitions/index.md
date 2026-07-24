@@ -27,7 +27,3 @@ This set of pages details the top-level module definition features available in 
   - : Creates a new table.
 - [`tag`](/en-US/docs/WebAssembly/Reference/Definitions/tag)
   - : Declares an exception type that can be thrown in the module.
-
-## Specifications
-
-{{Specifications}}

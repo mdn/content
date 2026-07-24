@@ -117,7 +117,7 @@ div {
 }
 ```
 
-### Properties that follow the corner shape
+### Properties that follow `corner-shape`
 
 The following properties all follow the shape of the corner when set on the container:
 
@@ -130,6 +130,12 @@ The following properties all follow the shape of the corner when set on the cont
 - {{cssxref("backdrop-filter")}}
 
 See [Demonstration of properties that follow the `corner-shape`](#demonstration_of_properties_that_follow_the_corner-shape) for some examples.
+
+### Interaction with `border-shape`
+
+The `corner-shape` property has no effect when the {{cssxref("border-shape")}} property is set on an element. This is because `border-shape` is incompatible with `border-radius`: when `border-shape` is set, any specified `border-radius` is ignored; `corner-shape` depends on `border-radius` and therefore has no effect either.
+
+If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
 
 ## Formal definition
 
@@ -628,7 +634,8 @@ The rendered result looks like this:
 
 ## See also
 
-- {{Cssxref("border-radius")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

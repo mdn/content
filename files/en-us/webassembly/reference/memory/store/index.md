@@ -1,12 +1,9 @@
 ---
-title: "store: Wasm text instruction"
+title: "store: Wasm memory instruction"
 short-title: store
 slug: WebAssembly/Reference/Memory/store
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_store
 sidebar: webassemblysidebar
 ---
 
@@ -105,6 +102,3 @@ i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `store` can be used with a specified memory.

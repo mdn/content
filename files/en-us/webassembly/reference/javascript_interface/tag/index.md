@@ -39,7 +39,7 @@ const env = {
   my_error: myErrorTag,
 };
 
-WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(/* ... */);
 ```
 
 Inside the Wasm module, you'd import the error tag and throw an exception of that type somewhere in your code:

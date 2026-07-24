@@ -3,6 +3,7 @@ title: "call: Wasm text instruction"
 short-title: call
 slug: WebAssembly/Reference/Control_flow/call
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.call
 sidebar: webassemblysidebar
 ---
 
@@ -91,6 +92,14 @@ call $greet
 | `call_indirect`        | `0x11`        |
 | `return_call`          | `0x12`        |
 | `return_call_indirect` | `0x13`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

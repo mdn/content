@@ -3,7 +3,7 @@ title: "table: Wasm definition"
 short-title: table
 slug: WebAssembly/Reference/Definitions/table
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/modules.html#syntax-table
+browser-compat: webassembly.definitions.table
 sidebar: webassemblysidebar
 ---
 
@@ -227,6 +227,10 @@ This makes sense, as the exported `accessTable()` function has an index value pa
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -29,7 +29,7 @@ None.
 ## Description
 
 The **`removeUnsafe()`** method configures the sanitizer so that it will remove all elements and attributes that are considered XSS-unsafe by the browser.
-This includes the elements {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}, and the event handler content attributes such as `onafterprint`, `onbeforeinput`, and so on.
+This includes the elements {{htmlelement("base")}}, {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}, and the event handler content attributes such as `onafterprint`, `onbeforeinput`, and so on.
 
 Note that if you're using the sanitizer with one of the "safe" HTML setters, such as {{domxref("Element.setHTML()")}} and {{domxref("ShadowRoot.setHTML()")}}, you do not need to call this method to make the sanitizer safe.
 When used in these setters the same elements and attributes are removed from the input, without modifying the `Sanitizer` instance that is passed.

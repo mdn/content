@@ -73,14 +73,14 @@ outline-style: revert-layer;
 outline-style: unset;
 ```
 
-The `outline-style` property is specified as any one of the values listed below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : Permits the user agent to render a custom outline style.
 - `none`
-  - : No outline is used. The {{cssxref("outline-width")}} is `0`.
+  - : No outline is used.
 - `dotted`
   - : The outline is a series of dots.
 - `dashed`

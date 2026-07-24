@@ -3,12 +3,11 @@ title: "grow: Wasm table instruction"
 short-title: grow
 slug: WebAssembly/Reference/Table/grow
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_grow
 sidebar: webassemblysidebar
 ---
 
-The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
+The **`table.grow`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 

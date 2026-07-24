@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape
 sidebar: cssref
 ---
 
-The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
+The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a shape used in the {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, and {{cssxref("shape-outside")}} properties.
 
 {{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
 
@@ -72,9 +72,10 @@ The parameters common across the syntax of some basic shape functions include:
   - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property.
 
 - `<shape-radius>`
-  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
+  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), `farthest-side`, `closest-corner`, and `farthest-corner`. Negative values are invalid.
 
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
+    Similarly, the `closest-corner` and `farthest-corner` use the length from the center of the shape to the closest and farthest corners, respectively.
 
 - `<position>`
   - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
@@ -287,7 +288,7 @@ div {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("offset-path")}}, {{cssxref("shape-outside")}}
 - SVG shape elements: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module

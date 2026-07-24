@@ -27,9 +27,9 @@ overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
-The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.

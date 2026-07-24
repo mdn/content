@@ -1,12 +1,9 @@
 ---
-title: "grow: Wasm text instruction"
+title: "grow: Wasm memory instruction"
 short-title: grow
 slug: WebAssembly/Reference/Memory/grow
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory.grow
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_grow
 sidebar: webassemblysidebar
 ---
 
@@ -181,6 +178,3 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `grow` can be used with a specified memory.

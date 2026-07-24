@@ -2,8 +2,6 @@
 title: WebAssembly table instructions
 slug: WebAssembly/Reference/Table
 page-type: landing-page
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#table-instructions
 sidebar: webassemblysidebar
 ---
 
@@ -28,11 +26,3 @@ This set of pages details the table instructions available in Wasm to create and
   - : Changes the value stored in a particular table element.
 - [`table.size`](/en-US/docs/WebAssembly/Reference/Table/size)
   - : Returns the current size of the table.
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

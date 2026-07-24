@@ -3,7 +3,7 @@ title: "avgr_u: Wasm SIMD arithmetic instruction"
 short-title: avgr_u
 slug: WebAssembly/Reference/SIMD/arithmetic/avgr_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.avgr_u
+browser-compat: webassembly.instructions.avgr_u
 sidebar: webassemblysidebar
 ---
 
@@ -70,7 +70,3 @@ value_type.avgr_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

@@ -1,12 +1,9 @@
 ---
-title: "fill: Wasm text instruction"
+title: "fill: Wasm memory instruction"
 short-title: fill
 slug: WebAssembly/Reference/Memory/fill
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.bulk-memory-operations
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_fill
 sidebar: webassemblysidebar
 ---
 
@@ -127,4 +124,3 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 ## See also
 
 - [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
-- [WebAssembly memory instructions](/en-US/docs/WebAssembly/Reference/Memory)

@@ -87,7 +87,7 @@ The `outline` property may be specified using one, two, or three of the values l
 ### Values
 
 - `<'outline-width'>`
-  - : Sets the thickness of the outline. Defaults to `medium` if absent. See {{cssxref("outline-width")}}.
+  - : A {{cssxref("line-width")}} value setting the thickness of the outline. Defaults to `medium` if absent. See {{cssxref("outline-width")}}.
 - `<'outline-style'>`
   - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-color'>`
