@@ -1,12 +1,13 @@
 ---
-title: "shl: Wasm text instruction"
+title: "shl: Wasm numeric instruction"
 short-title: shl
 slug: WebAssembly/Reference/Numeric/shl
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.shl
 sidebar: webassemblysidebar
 ---
 
-The **`shl`** instruction, short for _shift-left_, is used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
+The **`shl`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _shift-left_, is used for performing a bitwise left-shift, similar to the **`<<`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shl", "tabbed-taller")}}
 
@@ -164,6 +165,14 @@ The output is as follows:
 {{embedlivesample("simd_shl", "100%", 100)}}
 
 The result is `48`, because the value stored in lane `3` of the input value is `12`. Once shifted left by two positions, the output value's lane `3` will contain the value `48`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

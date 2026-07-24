@@ -1,12 +1,13 @@
 ---
-title: "copysign: Wasm text instruction"
+title: "copysign: Wasm numeric instruction"
 short-title: copysign
 slug: WebAssembly/Reference/Numeric/copysign
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.copysign
 sidebar: webassemblysidebar
 ---
 
-The **`copysign`** instructions are used to copy just the sign bit from one number to another.
+The **`copysign`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to copy just the sign bit from one number to another.
 
 {{InteractiveExample("Wat Demo: copysign", "tabbed-taller")}}
 
@@ -47,3 +48,11 @@ f32.copysign
 | -------------- | ------------- |
 | `f32.copysign` | `0x98`        |
 | `f64.copysign` | `0xa6`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
