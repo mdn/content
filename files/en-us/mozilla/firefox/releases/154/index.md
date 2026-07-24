@@ -50,11 +50,14 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The [`RTCIceTransport.getSelectedCandidatePair()`](/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair) method and [`selectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event) event are now supported for getting the current {{domxref("RTCIceCandidatePair")}} for the transport.
+  ([Firefox bug 2019332](https://bugzil.la/2019332)).
 
 <!-- #### Removals -->
 
