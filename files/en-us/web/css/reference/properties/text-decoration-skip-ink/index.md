@@ -56,6 +56,8 @@ text-decoration-skip-ink: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : Underlines and overlines are drawn across the full length of the text content, including parts that cross over glyph descenders and ascenders.
 - `auto`

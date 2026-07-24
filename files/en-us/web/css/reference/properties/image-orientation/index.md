@@ -51,6 +51,8 @@ image-orientation: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.
 - `from-image`

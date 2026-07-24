@@ -51,6 +51,8 @@ ruby-overhang: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : When a ruby annotation container is longer than its corresponding base container, the annotation may partially overlap adjacent text.
     Whether, and how much to overhang are determined by the user agent.

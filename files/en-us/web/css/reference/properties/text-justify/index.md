@@ -28,6 +28,8 @@ text-justify: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : The text justification is turned off. This has the same effect as not setting {{cssxref("text-align")}} at all, although it is useful if you need to turn justification on and off for some reason.
 - `auto`

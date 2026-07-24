@@ -129,6 +129,8 @@ animation-delay: unset;
 
 ### Values
 
+This property is specified as a comma-separated list of `<time>` values:
+
 - {{cssxref("&lt;time&gt;")}}
   - : The time offset, from the moment at which the animation is applied to the element, at which the animation should begin. This may be specified in either seconds (`s`) or milliseconds (`ms`). The unit is required.
 
