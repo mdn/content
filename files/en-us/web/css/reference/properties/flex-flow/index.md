@@ -20,11 +20,19 @@ flex-flow: row-reverse nowrap;
 ```
 
 ```css interactive-example-choice
+flex-flow: row-reverse wrap-reverse balance;
+```
+
+```css interactive-example-choice
 flex-flow: column wrap-reverse;
 ```
 
 ```css interactive-example-choice
 flex-flow: column wrap;
+```
+
+```css interactive-example-choice
+flex-flow: column balance wrap;
 ```
 
 ```html interactive-example
@@ -36,6 +44,7 @@ flex-flow: column wrap;
     <div>Item Four</div>
     <div>Item Five</div>
     <div>Item Six</div>
+    <div>Item Seven</div>
   </div>
 </section>
 ```
@@ -52,7 +61,7 @@ flex-flow: column wrap;
   background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   width: 60px;
-  margin: 10px;
+  margin: 5px 10px;
 }
 ```
 
@@ -76,11 +85,14 @@ flex-flow: column-reverse;
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
+flex-flow: wrap balance;
+flex-flow: balance wrap-reverse;
 
 /* flex-flow: <'flex-direction'> and <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
+flex-flow: row-reverse balance wrap
 
 /* Global values */
 flex-flow: inherit;
@@ -111,6 +123,14 @@ In this example, the main-axis is the block direction with a reversed main-start
 ```css
 .container {
   flex-flow: column-reverse wrap;
+}
+```
+
+To distribute the flex items evenly across each flex line, you can include the [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) `flex-wrap` keyword in addition to `wrap`:
+
+```css
+.container {
+  flex-flow: column-reverse wrap balance;
 }
 ```
 

@@ -121,6 +121,100 @@ Wrapping works as you might expect when combined with `flex-direction`. If `flex
 
 Note that the reversing is only happening in the inline, row direction. We start on the right then go onto the second line and again start from the right. We aren't reversing in both directions, starting from the bottom coming up the container!
 
+## Balanced wrapping
+
+One potential issue with flexbox wrapping is that, by default, the flex items are not distributed evenly across the lines. In the previous example, we have three items on the first three lines, but only one on the last line. This can be remedied using the `flex-wrap` [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) keyword — including it alongside the `wrap` or `wrap-reverse` keyword causes the items to be distributed across the lines as evenly as possible.
+
+The next example uses the same HTML as the previous example, and nearly the same CSS, except that the `flex-wrap` value has been changed from `wrap` to `wrap balance`.
+
+```html hidden live-sample___balanced-wrap live-sample___line-count
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css hidden live-sample___balanced-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+```css hidden live-sample___balanced-wrap live-sample___line-count
+@supports not (flex-wrap: balance) {
+  body::before {
+    content: "Your browser does not support flex-wrap: balance.";
+    background-color: wheat;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+```css
+flex-wrap: wrap balance;
+```
+
+The updated rendering looks like so:
+
+{{EmbedLiveSample("balanced-wrap")}}
+
+Note how the items are now distributed more evenly, with two lines of three and two lines of two.
+
+If you want to distribute your balanced flex items across a greater number of lines, you can do so using the {{cssxref("flex-line-count")}} property. This specifies a minimum number of lines. If we add the following to the previous example:
+
+```css hidden live-sample___line-count
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap balance;
+  flex-line-count: 5;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+```css
+flex-line-count: 5;
+```
+
+We end up with the following:
+
+{{EmbedLiveSample("line-count")}}
+
+We now have five lines of two flex items.
+
+> [!NOTE]
+> The `flex-line-count` property has no effect on flex-containers that do not have the `balance` keyword included in their `flex-wrap` property values.
+
 ## Single-dimensional layout explained
 
 As we have seen from the above examples if our items are allowed to grow and shrink, when there are fewer items in the last row or column then those items grow to fill the available space.
