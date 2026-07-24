@@ -76,7 +76,7 @@ word-spacing: unset;
 
 ### Values
 
-This property is specified as the keyword `normal` or a `<length-percentage>`.
+This property is specified as the keyword `normal` or a `<length-percentage>`:
 
 - `normal`
   - : The normal inter-word spacing, as defined by the current font and/or the browser.
