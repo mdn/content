@@ -34,8 +34,8 @@ The `<line-width>` type is specified using either `<length>` or a keyword:
 
 - `<length>`
   - : A non-negative {{cssxref("&lt;length&gt;")}}
-- `hairline`
-  - : Represents a "just visible" line that is less than or equal to `1px`. {{Experimental_Inline}}
+- `hairline` {{Experimental_Inline}}
+  - : Represents a "just visible" line that is less than or equal to `1px`.
 - `thin`
   - : Same as `1px`.
 - `medium`
