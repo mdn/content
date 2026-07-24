@@ -36,9 +36,12 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The {{jsxref("Iterator.prototype.chunks()")}} and {{jsxref("Iterator.prototype.windows()")}} methods are now supported.
+  These both return an [Iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that can be iterated to yield a number of elements from the original iterator as an array.
+  The difference between the methods is that the `chunks()` helper splits the elements from the original iterator into consecutive array chunks, while the `windows()` helper returns an array that is a sliding window over the original iterator (each iteration yields an array that slides forward one element: dropping the first element in the previous iteration and fetching a new element from the original iterator).
+  ([Firefox bug 2047997](https://bugzil.la/2047997)).
 
 <!-- #### Removals -->
 
