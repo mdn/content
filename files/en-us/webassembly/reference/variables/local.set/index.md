@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.local_set
 sidebar: webassemblysidebar
 ---
 
-The **`local.set`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the values of a local variable.
+The **`local.set`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the value of a local variable.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
