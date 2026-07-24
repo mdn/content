@@ -2,6 +2,9 @@
 title: edgeMode
 slug: Web/SVG/Reference/Attribute/edgeMode
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feConvolveMatrix.edgeMode
+  - svg.elements.feGaussianBlur.edgeMode
 spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-feconvolvematrix-edgemode
 sidebar: svgref
 ---
@@ -72,3 +75,7 @@ For {{SVGElement("feGaussianBlur")}}, `edgeMode` determines how to extend the in
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

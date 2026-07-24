@@ -2,6 +2,7 @@
 title: values
 slug: Web/SVG/Reference/Attribute/values
 page-type: svg-attribute
+browser-compat: svg.elements.feColorMatrix.values
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecolormatrix-values
   - https://svgwg.org/specs/animations/#ValuesAttribute
@@ -91,3 +92,7 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
