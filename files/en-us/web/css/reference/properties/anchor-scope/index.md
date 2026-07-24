@@ -30,7 +30,7 @@ anchor-scope: unset;
 
 ### Values
 
-This property is specified as the keyword `none` or `all` or a comma-separated list of `<dashed-ident>` values.:
+This property is specified as the keyword `none` or `all` or a comma-separated list of `<dashed-ident>` values:
 
 - `none`
   - : No anchor scope limiting happens on an element. This is the default value.
