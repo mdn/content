@@ -161,6 +161,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 
 ## Instance methods
 
+- {{jsxref("Iterator.prototype.chunks()")}}
+  - : Returns a new iterator helper object that yields non-overlapping element sequences as arrays. Each time, the specified number of elements are retrieved from the underlying iterator and are yielded together as a chunk.
 - {{jsxref("Iterator.prototype.drop()")}}
   - : Returns a new iterator helper object that skips the given number of elements at the start of this iterator.
 - {{jsxref("Iterator.prototype.every()")}}
@@ -185,6 +187,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper object that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
+- {{jsxref("Iterator.prototype.windows()")}}
+  - : Returns a new iterator helper object that yields overlapping element sequences as arrays. A sliding window sweeps across the input iterator; each time, a new element is added to the right while the leftmost element is removed.
 - [`Iterator.prototype[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.dispose)
   - : Calls the `return()` method of `this`, if it exists. This implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 - [`Iterator.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
