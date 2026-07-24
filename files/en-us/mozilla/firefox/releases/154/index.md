@@ -50,11 +50,15 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The `rtcp` property is now included in the object returned from {{domxref("RTCRtpReceiver.getParameters()")}} and {{domxref("RTCRtpSender.getParameters()")}}, and can be set in the object passed to {{domxref("RTCRtpSender.setParameters()")}}.
+  This provides the {{glossary("RTCP")}} configuration parameters for the connection.
+  ([Firefox bug 1584318](https://bugzil.la/1584318)).
 
 <!-- #### Removals -->
 
