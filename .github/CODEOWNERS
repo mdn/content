@@ -26,9 +26,6 @@
 # CSS
 /files/en-us/web/css/ @mdn/css
 
-# Web
-files/en-us/web/ @mdn/web
-
 # HTML
 /files/en-us/web/html/ @mdn/html
 

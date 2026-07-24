@@ -1,12 +1,13 @@
 ---
-title: "add: Wasm text instruction"
+title: "add: Wasm numeric instruction"
 short-title: add
 slug: WebAssembly/Reference/Numeric/add
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.add
 sidebar: webassemblysidebar
 ---
 
-The **`add`** instruction is used for adding up two numbers, similar to the **`+`** operator in other languages.
+The **`add`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for adding up two numbers, similar to the **`+`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: add", "tabbed-taller")}}
 
@@ -143,3 +144,11 @@ The output is as follows:
 {{embedlivesample("simd_add", "100%", 100)}}
 
 The result is `24`, because the value stored in lane `3` of each of the input values is `12`. Once added together, the output value's lane `3` will contain the value `24`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

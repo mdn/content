@@ -32,9 +32,9 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-The `-moz-user-modify` property is specified as one of the keyword values from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `read-only`
   - : Default value. Contents are read-only.

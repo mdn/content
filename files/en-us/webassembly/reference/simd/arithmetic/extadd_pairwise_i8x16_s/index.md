@@ -3,7 +3,7 @@ title: "extadd_pairwise_i8x16_s: Wasm SIMD arithmetic instruction"
 short-title: extadd_pairwise_i8x16_s
 slug: WebAssembly/Reference/SIMD/arithmetic/extadd_pairwise_i8x16_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extadd_pairwise_i8x16_s
+browser-compat: webassembly.instructions.extadd_pairwise_i8x16_s
 sidebar: webassemblysidebar
 ---
 
@@ -64,7 +64,3 @@ i16x8.extadd_pairwise_i8x16_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

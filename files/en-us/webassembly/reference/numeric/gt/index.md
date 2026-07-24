@@ -1,12 +1,13 @@
 ---
-title: "gt: Wasm text instruction"
+title: "gt: Wasm numeric instruction"
 short-title: gt
 slug: WebAssembly/Reference/Numeric/gt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.gt
 sidebar: webassemblysidebar
 ---
 
-The **`gt`** instruction, short for _greater than_, checks if a floating point number is greater than another floating point number.
+The **`gt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater than_, checks if a floating point number is greater than another floating point number.
 
 Integer types have separate greater than signed ([**`gt_s`**](/en-US/docs/WebAssembly/Reference/Numeric/gt_s)) and unsigned ([**`gt_u`**](/en-US/docs/WebAssembly/Reference/Numeric/gt_u)) instructions.
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_gt", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

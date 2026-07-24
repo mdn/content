@@ -1,12 +1,13 @@
 ---
-title: "ne: Wasm text instruction"
+title: "ne: Wasm numeric instruction"
 short-title: ne
 slug: WebAssembly/Reference/Numeric/ne
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ne
 sidebar: webassemblysidebar
 ---
 
-The **`ne`** instruction, short for _not equal_, checks if two numbers are not equal.
+The **`ne`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _not equal_, checks if two numbers are not equal.
 
 {{InteractiveExample("Wat Demo: ne", "tabbed-taller")}}
 
@@ -150,3 +151,11 @@ The output is as follows:
 {{embedlivesample("simd_ne", "100%", 100)}}
 
 `1` is output because the values in lane `1` of the two input values are not equal.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

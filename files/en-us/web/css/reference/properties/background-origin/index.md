@@ -62,9 +62,9 @@ background-origin: revert-layer;
 background-origin: unset;
 ```
 
-The `background-origin` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `border-box`
   - : The background is positioned relative to the border box.
