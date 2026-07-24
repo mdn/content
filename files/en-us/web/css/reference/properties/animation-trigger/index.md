@@ -451,7 +451,7 @@ This example shows how to assign multiple triggers to control the same animation
 
 #### HTML
 
-We include three `<div>` elements as trigger. The text content is hidden for brevity. 
+We include three `<div>` elements as trigger. The text content is hidden for brevity.
 
 ```html
 ...
