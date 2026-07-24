@@ -67,7 +67,7 @@ border-inline-width: unset;
 
 ### Values
 
-- {{cssxref("line-width")}}
+- {{cssxref("&lt;line-width&gt;")}}
   - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition

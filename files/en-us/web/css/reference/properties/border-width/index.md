@@ -97,7 +97,7 @@ The `border-width` property may be specified using one, two, three, or four valu
 
 ### Values
 
-- {{cssxref("line-width")}}
+- {{cssxref("&lt;line-width&gt;")}}
   - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition

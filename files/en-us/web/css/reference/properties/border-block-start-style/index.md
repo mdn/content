@@ -71,7 +71,7 @@ Related properties are {{cssxref("border-block-end-style")}}, {{cssxref("border-
 
 ### Values
 
-- {{cssxref("line-style")}}
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition

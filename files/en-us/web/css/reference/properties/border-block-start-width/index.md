@@ -70,7 +70,7 @@ Related properties are {{cssxref("border-block-end-width")}}, {{cssxref("border-
 
 ### Values
 
-- {{cssxref("line-width")}}
+- {{cssxref("&lt;line-width&gt;")}}
   - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
