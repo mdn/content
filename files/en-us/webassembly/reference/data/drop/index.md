@@ -3,7 +3,7 @@ title: "drop: Wasm data instruction"
 short-title: drop
 slug: WebAssembly/Reference/Data/drop
 page-type: webassembly-instruction
-browser-compat: webassembly.data.drop
+browser-compat: webassembly.instructions.data_drop
 sidebar: webassemblysidebar
 ---
 

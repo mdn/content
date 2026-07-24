@@ -3,7 +3,7 @@ title: "drop: Wasm elem instruction"
 short-title: drop
 slug: WebAssembly/Reference/Elem/drop
 page-type: webassembly-instruction
-browser-compat: webassembly.elem.drop
+browser-compat: webassembly.instructions.elem_drop
 sidebar: webassemblysidebar
 ---
 

@@ -3,7 +3,7 @@ title: "init: Wasm memory instruction"
 short-title: init
 slug: WebAssembly/Reference/Memory/init
 page-type: webassembly-instruction
-browser-compat: webassembly.memory.init
+browser-compat: webassembly.instructions.memory_init
 sidebar: webassemblysidebar
 ---
 
@@ -102,4 +102,3 @@ The `memory.init` instruction traps if:
 
 - [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
 - [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition
-- [WebAssembly memory instructions](/en-US/docs/WebAssembly/Reference/Memory)

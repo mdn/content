@@ -3,7 +3,7 @@ title: "copy: Wasm table instruction"
 short-title: copy
 slug: WebAssembly/Reference/Table/copy
 page-type: webassembly-instruction
-browser-compat: webassembly.table.copy
+browser-compat: webassembly.instructions.table_copy
 sidebar: webassemblysidebar
 ---
 
@@ -112,4 +112,3 @@ If any copied element reference would be out of bounds in the source or destinat
 ## See also
 
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
-- [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)

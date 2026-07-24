@@ -3,7 +3,7 @@ title: "init: Wasm table instruction"
 short-title: init
 slug: WebAssembly/Reference/Table/init
 page-type: webassembly-instruction
-browser-compat: webassembly.table.init
+browser-compat: webassembly.instructions.table_init
 sidebar: webassemblysidebar
 ---
 
@@ -112,4 +112,3 @@ The `table.init` instruction traps if:
 
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
 - [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition
-- [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)
