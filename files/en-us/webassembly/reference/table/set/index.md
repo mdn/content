@@ -127,7 +127,7 @@ When using instructions like `table.set`, you also need to forward-declare the f
   ...
 ```
 
-Later on, you can then dynamically change the function reference stored in the table element using `table.set`:
+Later on, you can then dynamically change the reference stored in the table element using `table.set`:
 
 ```wat
   ...
