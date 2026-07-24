@@ -56,7 +56,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The [`error`](/en-US/docs/Web/API/RTCDtlsTransport/error_event) event is now fired on {{domxref("RTCDtlsTransport")}} to report DTLS and fingerprinting errors.
+- The {{domxref("RTCDtlsTransport/error_event", "error")}} event is now fired on {{domxref("RTCDtlsTransport")}} to report DTLS and fingerprinting errors.
   ([Firefox bug 1805447](https://bugzil.la/1805447)).
 
 <!-- #### Removals -->
