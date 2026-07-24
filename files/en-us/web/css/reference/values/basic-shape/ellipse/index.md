@@ -213,7 +213,7 @@ After this a `#support-note` element is provided for indicating when particular 
 <p id="support-note"></p>
 ```
 
-The HTML then defines a number of {{htmlelement("div")}} elements that are used to render the ellipse, reference box and center marker.
+The HTML then defines several {{htmlelement("div")}} elements used to render the ellipse, reference box, and center marker.
 The most important elements are the reference box (`#refbox`) and the `.fill` element it contains, which define the gradient that is drawn (as discussed in the following CSS section).
 A `clipPath` is set on the reference box in JavaScript to clip that gradient to an elliptical shape.
 
@@ -232,7 +232,7 @@ The `.outline` element must be placed after `#refbox` in the markup: since it is
 
 #### CSS
 
-The CSS for the canvas, reference box and fill elements are shown below.
+The CSS for the canvas, reference box, and fill elements is shown below.
 Note that the `.fill` defines a gradient that overflows the reference box, filling most of the canvas.
 This is the gradient that we will clip using the `ellipse()` function (we do this by setting the CSS clip path dynamically in our JavaScript code).
 
@@ -324,10 +324,9 @@ body {
 
 #### JavaScript
 
-The JavaScript for the example is shown below.
 First we get handles to each of the elements used by the example.
 
-Then we define `checkSupport()` to feature-test whether each radius keyword is supported and enable/disable the associated options in both dropdowns.
+Then we define a `checkSupport()` function to feature-test whether each radius keyword is supported and enable/disable the associated options in both dropdowns.
 This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
 
 ```js live-sample___ellipse-keywords-interactive

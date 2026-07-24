@@ -176,7 +176,7 @@ The `.outline` element must be placed after `#refbox` in the markup: since it is
 
 #### CSS
 
-The CSS for the canvas, reference box and fill elements are shown below.
+The CSS for the canvas, reference box, and fill elements is shown below.
 Note that the `.fill` defines a gradient that overflows the reference box, filling most of the canvas.
 This is the gradient that we will clip using the `circle()` (we do this by setting the CSS clip path dynamically in our JavaScript code).
 
@@ -268,10 +268,9 @@ body {
 
 #### JavaScript
 
-The JavaScript for the example is shown below.
 First we get handles to each of the elements used by the example.
 
-Then we define `checkSupport()` method to feature-test whether each radius keyword is supported and enable/disable the associated selection options.
+Then we define the `checkSupport()` function used to feature-test whether each radius keyword is supported and enable/disable the associated selection options.
 This uses the {{domxref("CSS.supports_static", "CSS.supports()")}} method to check for keyword support.
 
 ```js live-sample___circle-keywords-interactive
@@ -335,7 +334,7 @@ update();
 
 #### Result
 
-Change the position of the center and the keyword used to see their relative effects.
+Change the position of the circle center and the keyword used to see their relative effects.
 Note that the reference box, together with the selected radius keyword and position, is used to calculate the clipping circle.
 This circle can extend beyond the reference box (for example, with `closest-corner` or `farthest-corner`); the `.fill` gradient is deliberately sized larger than the reference box so that it always fully covers the clipped circle, however far it extends.
 
