@@ -30,7 +30,7 @@ lighting-color: unset;
 
 ### Values
 
-This property is specified as one `<color>` value.
+This property is specified as one `<color>` value:
 
 - {{cssxref("color_value", "&lt;color>")}}
   - : The lighting's color. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
