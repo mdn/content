@@ -457,23 +457,6 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
 
 ## JavaScript
 
-### TC39 Iterator includes proposal
-
-The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether an `Iterator` instance will produce a specified value.
-The comparison uses the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
-This algorithm is similar to strict equality `===` (where `-0` and `+0` are considered equal), but differs in that {{jsxref("NaN")}} is considered equal to itself.
-([Firefox bug 2025779](https://bugzil.la/2025779)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | No                  |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `javascript.options.experimental.iterator_includes`
-  - : Set to `true` to enable.
-
 ### TC39 Intl.Locale info proposal
 
 The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
