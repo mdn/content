@@ -3,6 +3,7 @@ title: "pmin: Wasm SIMD arithmetic instruction"
 short-title: pmin
 slug: WebAssembly/Reference/SIMD/arithmetic/pmin
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.pmin
 sidebar: webassemblysidebar
 ---
 
@@ -64,6 +65,14 @@ value_type.pmin
 | ------------ | -------------- | -------------------------------- |
 | `f32x4.pmin` | `0xfd 234:u32` | `f32x4.pmin` => `0xfd 0xea 0x01` |
 | `f64x2.pmin` | `0xfd 246:u32` | `f64x2.pmin` => `0xfd 0xf6 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
