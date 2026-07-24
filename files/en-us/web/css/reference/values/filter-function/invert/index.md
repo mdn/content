@@ -145,24 +145,15 @@ td {
     <tr>
       <td>
         <img
-          class="svgFilter"
+          class="filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
       <td>
-        <svg id="svg" height="220" width="220" overflow="visible">
-          <filter id="svgInvert">
-            <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.3 0" />
-              <feFuncG type="table" tableValues="0.3 0" />
-              <feFuncB type="table" tableValues="0.3 0" />
-            </feComponentTransfer>
-          </filter>
-          <image
-            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
-            filter="url('#svgInvert')" />
-        </svg>
+        <img
+          class="svgFilter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <img
