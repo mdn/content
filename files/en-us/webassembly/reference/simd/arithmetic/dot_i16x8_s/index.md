@@ -79,7 +79,3 @@ i32x4.dot_i16x8_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

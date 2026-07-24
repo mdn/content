@@ -91,7 +91,3 @@ i64x2.extmul_low_i32x4_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

@@ -79,4 +79,3 @@ value_type.add_sat_u
 ## See also
 
 - [`add`](/en-US/docs/WebAssembly/Reference/Numeric/add)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

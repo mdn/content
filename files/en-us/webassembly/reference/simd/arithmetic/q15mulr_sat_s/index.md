@@ -83,7 +83,3 @@ i16x8.q15mulr_sat_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

@@ -79,4 +79,3 @@ value_type.sub_sat_s
 ## See also
 
 - [`sub`](/en-US/docs/WebAssembly/Reference/Numeric/sub)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

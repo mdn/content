@@ -64,7 +64,3 @@ i32x4.extadd_pairwise_i16x8_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)
