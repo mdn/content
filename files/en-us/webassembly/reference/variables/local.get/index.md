@@ -1,12 +1,13 @@
 ---
-title: "local.get: Wasm text instruction"
+title: "local.get: Wasm variable instruction"
 short-title: local.get
 slug: WebAssembly/Reference/Variables/local.get
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.local_get
 sidebar: webassemblysidebar
 ---
 
-The **`local.get`** instruction loads the value of a local variable onto the stack.
+The **`local.get`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) loads the value of a local variable onto the stack.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
@@ -40,3 +41,11 @@ local.get $val
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `local.get` | `0x20`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
