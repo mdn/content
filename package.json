@@ -75,7 +75,7 @@
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^9.0.0",
     "parse-diff": "^0.12.0",
-    "prettier": "3.9.5",
+    "prettier": "3.9.6",
     "tempy": "^3.2.0",
     "yaml": "^2.9.0",
     "yargs": "^18.0.0"
