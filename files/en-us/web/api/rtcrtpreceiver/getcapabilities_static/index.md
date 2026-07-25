@@ -133,12 +133,9 @@ The function below returns a Boolean indicating whether or not the device suppor
 function canReceiveH264() {
   let capabilities = RTCRtpReceiver.getCapabilities("video");
 
-  capabilities.codecs.forEach((codec) => {
-    if (codec.mimeType === "video/H264") {
-      return true;
-    }
+  return capabilities.codecs.some((codec) => {
+    return codec.mimeType === "video/H264";
   });
-  return false;
 }
 ```
 
