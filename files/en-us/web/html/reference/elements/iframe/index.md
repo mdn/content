@@ -219,6 +219,14 @@ Being a {{ glossary("replaced elements", "replaced element")}}, the `<iframe>` a
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
+## Responsive `<iframe>` sizing
+
+For security and privacy reasons, {{htmlelement("iframe")}} elements do not by default expose any information to the parent document about the size of the content in the document they are embedding.
+
+To enable responsive sizing of {{htmlelement("iframe")}} elements based on their content, the [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) tag can be included in an embedded document to opt it in to sharing its size information with the parent document. The {{cssxref("frame-sizing")}} CSS property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size. This ensures that `<iframe>` content fits seamlessly into its embedder, avoiding unnecessary scrollbars.
+
+To resize the `<iframe>` dynamically as the embedded document changes layout size, you can call the {{domxref("Window.requestResize()")}} method from the embedded document to make it report an updated size.
+
 ## Accessibility
 
 People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
