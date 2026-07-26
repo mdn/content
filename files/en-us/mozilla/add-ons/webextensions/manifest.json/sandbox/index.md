@@ -37,7 +37,7 @@ Use the `sandbox` key to designate one or more of an extension's pages as **sand
 Sandboxed pages are loaded with a unique, opaque origin, instead of the extension's usual `moz-extension://` origin. As a result:
 
 - Sandboxed pages can't access [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API). The `browser` and `chrome` global objects are not available.
-- Sandboxed pages can't access, and can't be accessed by, other pages in the extension, except by using {{DOMxRef("Window.postMessage()")}}.
+- Sandboxed pages can't access, and can't be accessed by, other pages in the extension, except indirectly by communicating through APIs such as {{DOMxRef("Window.postMessage()")}}.
 
 A sandboxed page can be given a more permissive [content security policy (CSP)](#content_security_policy_for_sandboxed_pages) than the rest of the extension. This includes a CSP that permits [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) and similar constructs that are blocked by an extension's [default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy). Because a sandboxed page can't use WebExtension APIs or reach the rest of the extension directly, this can be done without weakening the security of the extension as a whole.
 
@@ -106,10 +106,7 @@ If a policy is not supplied, sandboxed pages get this default content security p
 sandbox allow-scripts; script-src 'self';
 ```
 
-This isolates a sandboxed page from the rest of the extension, but doesn't allow `eval()` or similar constructs. To permit these, include `'unsafe-eval'` (or `'wasm-unsafe-eval'` for [WebAssembly](/en-US/docs/WebAssembly)) in the `script-src` directive of a custom policy.
-
-> [!NOTE]
-> Chrome has a more permissive default sandboxed pages CSP: `sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';`.
+This isolates a sandboxed page from the rest of the extension, but doesn't allow `eval()` or similar constructs. To permit these, include `'unsafe-eval'` in the `script-src` directive of a custom policy.
 
 Any custom policy supplied for sandboxed pages must meet these requirements:
 
@@ -191,6 +188,13 @@ sandbox.addEventListener("load", () => {
 });
 
 window.addEventListener("message", (event) => {
+  if (event.origin !== location.origin) {
+    // Reject messages not coming from the extension.
+    // Although the popup origin is opaque,
+    // location.origin still reflects the true URL of
+    // the resource in the extension package.
+    return;
+  }
   console.log(event.data.result);
 });
 ```
