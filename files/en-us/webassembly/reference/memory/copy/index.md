@@ -1,12 +1,9 @@
 ---
-title: "copy: Wasm text instruction"
+title: "copy: Wasm memory instruction"
 short-title: copy
 slug: WebAssembly/Reference/Memory/copy
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.bulk-memory-operations
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_copy
 sidebar: webassemblysidebar
 ---
 
@@ -62,6 +59,3 @@ memory.copy (memory $destMem) (memory $sourceMem) ;; Copy memory from "$sourceMe
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `copy` can be used with a specified memory.
