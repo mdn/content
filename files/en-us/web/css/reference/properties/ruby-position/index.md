@@ -52,6 +52,8 @@ ruby-position: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `over`
   - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)
     Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
