@@ -96,9 +96,9 @@ transform: revert-layer;
 transform: unset;
 ```
 
-The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
-
 ### Values
+
+This property is specified as either the keyword value `none` or as a space-separated list of `<transform-function>` values.
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.

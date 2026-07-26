@@ -119,6 +119,10 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 
 - {{cssxref("border-radius")}} shorthand
 
+[CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+
+- {{cssxref("border-shape")}}
+
 [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 
 - {{cssxref("box-edge")}} data type

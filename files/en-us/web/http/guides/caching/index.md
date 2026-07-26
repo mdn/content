@@ -53,7 +53,7 @@ On the other hand, if a {{Glossary("TLS")}} bridge proxy decrypts all communicat
 
 Managed caches are explicitly deployed by service developers to offload the origin server and to deliver content efficiently. Examples include reverse proxies, CDNs, and service workers in combination with the Cache API.
 
-The characteristics of managed caches vary depending on the product deployed. In most cases, you can control the cache's behavior through the `Cache-Control` header and your own configuration files or dashboards.
+The characteristics of managed caches vary depending on the product deployed. In most cases, you can control the cache's behavior through the [`Cache-Control`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) header and your own configuration files or dashboards.
 
 For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts, and so on. That allows for a more proactive caching strategy.
 
@@ -65,7 +65,7 @@ Cache-Control: no-store
 
 For example, Varnish Cache uses VCL (Varnish Configuration Language, a type of {{Glossary("DSL/Domain_specific_language", "DSL")}}) logic to handle cache storage, while service workers in combination with the Cache API allow you to create that logic in JavaScript.
 
-That means if a managed cache intentionally ignores a `no-store` directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
+That means if a managed cache intentionally ignores a [`no-store`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store) directive, there is no need to perceive it as being "non-compliant" with the standard. What you should do is, avoid using kitchen-sink headers, but carefully read the documentation of whatever managed-cache mechanism you're using, and ensure you're controlling the cache properly in the ways provided by the mechanism you've chosen to use.
 
 Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) header to standardize those.
 
@@ -148,7 +148,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore, `max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
 
-If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
+If both [`Expires`](/en-US/docs/Web/HTTP/Reference/Headers/Expires) and [`Cache-Control: max-age`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#max-age) are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
 ## Vary
 
@@ -162,7 +162,7 @@ The way that responses are distinguished from one another is essentially based o
 
 But the contents of responses are not always the same, even if they have the same URL. Especially when content negotiation is performed, the response from the server can depend on the values of the `Accept`, `Accept-Language`, and `Accept-Encoding` request headers.
 
-For example, for English content returned with an `Accept-Language: en` header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding `Accept-Language` to the value of the `Vary` header.
+For example, for English content returned with an [`Accept-Language: en`](/en-US/docs/Web/HTTP/Reference/Headers/Accept-Language) header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding `Accept-Language` to the value of the [`Vary`](/en-US/docs/Web/HTTP/Reference/Headers/Vary) header.
 
 ```http
 Vary: Accept-Language
@@ -179,13 +179,13 @@ That causes the cache to be keyed based on a composite of the response URL and t
 
 Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include `User-Agent` in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
 
-For applications that employ cookies to prevent others from reusing cached personalized content, you should specify `Cache-Control: private` instead of specifying a cookie for `Vary`.
+For applications that employ cookies to prevent others from reusing cached personalized content, you should specify [`Cache-Control: private`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#private) instead of specifying a cookie for `Vary`.
 
 ## Validation
 
 Stale responses are not immediately discarded. HTTP has a mechanism to transform a stale response into a fresh one by asking the origin server. This is called **validation**, or sometimes, **revalidation**.
 
-Validation is done by using a **conditional request** that includes an `If-Modified-Since` or `If-None-Match` request header.
+Validation is done by using a **conditional request** that includes an [`If-Modified-Since`](/en-US/docs/Web/HTTP/Reference/Headers/If-Modified-Since) or [`If-None-Match`](/en-US/docs/Web/HTTP/Reference/Headers/If-None-Match) request header.
 
 ### If-Modified-Since
 
@@ -228,7 +228,7 @@ Upon receiving that response, the client reverts the stored stale response back 
 
 The server can obtain the modification time from the operating-system file system, which is relatively easy to do for the case of serving static files. However, there are some problems; for example, the time format is complex and difficult to parse, and distributed servers have difficulty synchronizing file-update times.
 
-To solve such problems, the `ETag` response header was standardized as an alternative.
+To solve such problems, the [`ETag`](/en-US/docs/Web/HTTP/Reference/Headers/ETag) response header was standardized as an alternative.
 
 ### ETag/If-None-Match
 
@@ -272,7 +272,7 @@ But if the server determines the requested resource should now have a different 
 
 If you do not want a response to be reused, but instead want to always fetch the latest content from the server, you can use the `no-cache` directive to force validation.
 
-By adding `Cache-Control: no-cache` to the response along with `Last-Modified` and `ETag` — as shown below — the client will receive a `200 OK` response if the requested resource has been updated, or will otherwise receive a `304 Not Modified` response if the requested resource has not been updated.
+By adding [`Cache-Control: no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) to the response along with [`Last-Modified`](/en-US/docs/Web/HTTP/Reference/Headers/Last-Modified) and `ETag` — as shown below — the client will receive a `200 OK` response if the requested resource has been updated, or will otherwise receive a `304 Not Modified` response if the requested resource has not been updated.
 
 ```http
 HTTP/1.1 200 OK
@@ -691,5 +691,6 @@ For more information, see the documentation for your CDN, and consult the [servi
 
 ## See also
 
+- [`Cache-Control` HTTP header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - [RFC 9111: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/RFC9111)
 - [Caching Tutorial - Mark Nottingham](https://mnot.net/cache_docs/)
