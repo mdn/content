@@ -68,7 +68,7 @@ Websites should publish a privacy policy to help users understand how the site w
 
 ## User recognition and tracking
 
-User recognition is the act of realising that an identity belongs to the same person as some other identity which was observed at some other time. Websites often have a legitimate need to recognize users. For example, a library website needs to be able to show the user which books they have checked out, and to do this they need to know that this user is the same user who checked out those books. Websites typically use cookies to implement this.
+User recognition is the act of realizing that an identity belongs to the same person as another identity observed previously. Websites often have a legitimate need to recognize users. For example, a library website needs to be able to show the user which books they have checked out, and to do this they need to know that this user is the same user who checked out those books. Websites typically use cookies to implement this.
 
 Recognizing a user is sometimes called _tracking_ a user.
 
