@@ -105,6 +105,8 @@ To respect a user's privacy, **sites should avoid cross-context tracking unless 
 
 A good example of a situation in which cross-context tracking is legitimate is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which a third-party {{glossary("identity provider")}} needs to recognise a user who is trying to sign into a different site. In this situation, the user intends for the third party to recognise them.
 
+Websites typically implement cross-context tracking using [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
+
 ### Tracking prevention in web browsers
 
 Most web browsers implement some form of tracking prevention. Although the details are not always the same, tracking prevention policies broadly follow the principles outlined above. That is, browsers try to prevent unsanctioned tracking as much as possible, and all cross-context tracking, except in specific legitimate cases.
