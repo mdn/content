@@ -24,7 +24,12 @@ Personal data is defined in the [General Data Protection Regulation (GDPR)](http
 
 > any information relating to an identified or identifiable natural person
 
-This includes data that can be directly used to identify a person, such as a name, social security number, date of birth, or address. It also includes information that is associated with a person, such as medical, financial, or employment information.
+This includes:
+
+- Data that can be directly used to identify a person, such as a name, social security number, date of birth, or address.
+- Physical attributes, such as height, eye color, or ethnicity.
+- Societal data such as religion or political affiliation.
+- Any other information that is associated with a person, such as medical, financial, or employment information.
 
 ### Requesting personal data
 
