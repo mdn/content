@@ -20,7 +20,7 @@ Authenticator data is made available to the browser as an {{jsxref("ArrayBuffer"
 An authenticator data {{jsxref("ArrayBuffer")}} is at least 37 bytes in length, and contains the following fields:
 
 - **rpIdHash** (32 bytes)
-  - : The SHA-256 hash of the [Relying Party ID](https://w3c.github.io/webauthn/#relying-party-identifier) that the credential is scoped to. The server will ensure that this hash matches the SHA256 hash of its own relying party ID in order to prevent phishing or other man-in-the-middle attacks.
+  - : The SHA-256 hash of the [Relying Party ID](https://w3c.github.io/webauthn/#relying-party-identifier) that the credential is scoped to. The server will ensure that this hash matches the SHA256 hash of its own relying party ID in order to prevent phishing or other [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacks.
 - **flags** (1 bytes)
   - : A bitfield that indicates various attributes that were asserted by the authenticator. The bits are as follows, where Bit 0 is the least significant bit and all bits not specifically mentioned below are "reserved for future use":
     - Bit 0, User Presence (UP): If set (i.e., to `1`), the authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.

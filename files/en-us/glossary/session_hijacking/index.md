@@ -22,7 +22,7 @@ Most authentication occurs only at the start of a {{glossary("TCP")}} session. I
 
 ## Session hijacking process
 
-1. **Sniff**, that is perform a man-in-the-middle (MITM) attack, place yourself between victim and server.
+1. **Sniff**, that is perform a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attack, place yourself between victim and server.
 2. **Monitor** packets flowing between server and user.
 3. **Break** the victim machine's connection.
 4. **Take control** of the session.
