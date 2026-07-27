@@ -56,7 +56,7 @@ The `animation-trigger` property specifies which trigger will control an animate
 
 ### Defining a trigger
 
-The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If there is no scrolling element with the same `<dashed-ident>` set as the `timeline-trigger-name` value, the animation will not have a trigger and will play as soon as the page loads.
+The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If an element has an animation _and_ a `animation-trigger` set on it, but no scrolling element exists with the same `<dashed-ident>` set as its `timeline-trigger-name` value, the animation will not have a trigger and therefore will never play.
 
 For example:
 
@@ -69,7 +69,7 @@ For example:
 
 In this case, the animation will only play when an element with a `timeline-trigger-name` of `--my-trigger` enters the activation range defined on the trigger.
 
-Here we create a trigger setting the `timeline-trigger-name` using the {{cssxref("timeline-trigger")}} shorthand property. The `.trigger` can be any element, including the `.animated` element.
+Here we create a trigger by setting the `timeline-trigger-name` using the {{cssxref("timeline-trigger")}} shorthand property. The `.trigger` can be any element, including the `.animated` element.
 
 ```css
 .trigger {
