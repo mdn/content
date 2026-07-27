@@ -111,6 +111,14 @@ A `throw_ref` instruction can be used to rethrow a previously-thrown exception, 
 
 Generally, rethrowing exceptions is useful because you might want to perform an action such as cleanup or logging but then still let users know that an error occurred.
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction

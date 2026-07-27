@@ -1,12 +1,13 @@
 ---
-title: "promote_32: Wasm text instruction"
+title: "promote_32: Wasm numeric instruction"
 short-title: promote_32
 slug: WebAssembly/Reference/Numeric/promote_32
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.promote_32
 sidebar: webassemblysidebar
 ---
 
-The **`promote_32`** instruction is used to convert (promote) numbers of type `f32` to type `f64`.
+The **`promote_32`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to convert (promote) numbers of type `f32` to type `f64`.
 
 {{InteractiveExample("Wat Demo: promote_32", "tabbed-taller")}}
 
@@ -46,3 +47,11 @@ f64.promote_f32
 | Instruction       | Binary opcode |
 | ----------------- | ------------- |
 | `f64.promote_f32` | `0xbb`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -64,6 +64,8 @@ caret-color: unset;
 
 ### Values
 
+This property is specified as one `<color>` value or the keyword `auto`.
+
 - `auto`
   - : Generally resolves to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the {{cssxref("color")}} of the text that will be modified.
 

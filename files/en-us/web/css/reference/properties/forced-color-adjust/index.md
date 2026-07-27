@@ -24,9 +24,9 @@ forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 
-The `forced-color-adjust` property's value must be one of the following keywords.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The element's colors are adjusted by the {{Glossary("user agent")}} in forced colors mode. This is the default value.
