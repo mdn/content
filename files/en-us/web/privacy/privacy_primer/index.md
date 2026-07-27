@@ -28,7 +28,7 @@ This includes data that can be directly used to identify a person, such as a nam
 
 ### Requesting personal data
 
-Websites should collect only personal data that the user wishes to provide, and collect only the data they they actually need. For example, a shopping site might allow people to make purchases without creating an account: this means the site doesn't collect as much personal data, and also reduces friction for shoppers.
+Websites should collect only personal data that the user wishes to provide, and collect only the data that they actually need. For example, a shopping site might allow people to make purchases without creating an account: this means the site doesn't collect as much personal data, and also reduces friction for shoppers.
 
 When requesting data, websites should clearly explain what they are asking for and how it will be used.
 
