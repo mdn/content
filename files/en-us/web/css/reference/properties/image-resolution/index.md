@@ -33,6 +33,8 @@ image-resolution: unset;
 
 ### Values
 
+This property is specified as the `from-image` keyword, a `<resolution>`, or both, space-separated, optionally with the `snap` keyword:
+
 - {{cssxref("resolution")}}
   - : Specifies the intrinsic resolution explicitly.
 - `from-image`
