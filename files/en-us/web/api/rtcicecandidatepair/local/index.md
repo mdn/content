@@ -8,7 +8,7 @@ browser-compat: api.RTCIceCandidatePair.local
 
 {{APIRef("WebRTC")}}
 
-The **`local`** property of the **{{domxref("RTCIceCandidatePair")}}** interface specifies the {{domxref("RTCIceCandidate")}} which describes the configuration of the local end of a viable WebRTC connection.
+The **`local`** property of the {{domxref("RTCIceCandidatePair")}} interface specifies the {{domxref("RTCIceCandidate")}} that describes the configuration of the local end of a viable WebRTC connection.
 
 The `RTCIceCandidatePair` is returned by the {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}} method of {{domxref("RTCIceTransport")}}.
 

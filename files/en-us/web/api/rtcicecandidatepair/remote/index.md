@@ -8,7 +8,7 @@ browser-compat: api.RTCIceCandidatePair.remote
 
 {{APIRef("WebRTC")}}
 
-The **`remote`** property of the **{{domxref("RTCIceCandidatePair")}}** interface specifies the {{domxref("RTCIceCandidate")}} describing the configuration of the remote end of a viable WebRTC connection.
+The **`remote`** property of the {{domxref("RTCIceCandidatePair")}} interface specifies the {{domxref("RTCIceCandidate")}} that describes the configuration of the remote end of a viable WebRTC connection.
 
 The `RTCIceCandidatePair` is returned by the {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}} method of {{domxref("RTCIceTransport")}}.
 

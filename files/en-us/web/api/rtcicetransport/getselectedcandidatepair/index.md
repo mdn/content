@@ -22,13 +22,13 @@ None.
 
 ### Return value
 
-A {{domxref("RTCIceCandidatePair")}} instance describing the configurations of the currently-selected candidate pair's {{domxref("RTCIceCandidatePair.local", "local")}} and {{domxref("RTCIceCandidatePair.remote", "remote")}} endpoints.
+An {{domxref("RTCIceCandidatePair")}} instance describing the configurations of the currently-selected candidate pair's {{domxref("RTCIceCandidatePair.local", "local")}} and {{domxref("RTCIceCandidatePair.remote", "remote")}} endpoints.
 
 The return value is `null` if no pair of candidates has been selected yet.
 
 ## Description
 
-As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers and analyzes candidate configurations from each the two peers.
+As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers and analyzes candidate configurations from each of the two peers.
 As soon as it finds an acceptable matching pair of candidates, meeting the requirements for the connection, a {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event is fired at the {{domxref("RTCIceTransport")}}.
 From that time forward, the best matching pair of candidates will always be available by calling `getSelectedCandidatePair()`.
 
