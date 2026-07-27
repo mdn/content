@@ -79,7 +79,7 @@ elem name declare value_type element_list
   - : A keyword that identifies the `elem` definition as being of the declarative form, meaning that it declares references that will be used at runtime (for example, by `ref.func`), without them being inserted into a table.
 - `value_type`
   - : A value type that defines which type of reference will be stored in this table. All references in the `element_list` must match this type. The value can be any reference type, such as:
-    - `func`: An abbreviation that more concisely declares a list of non-nullable function references. For example `func $my_func` is equivaent to `(ref func) (ref.func $my_func)`.
+    - `func`: An abbreviation that more concisely declares a list of non-nullable function references. For example `func $my_func` is equivalent to `(ref func) (ref.func $my_func)`.
     - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref): Function references, for example `(ref.func $my_func)`, `(ref null func)`, `(ref func)`.
     - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref): External value references, for example `(ref.null extern)`, `(ref null extern)`.
     - [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref): Exception references, for example `(ref.null extern)`.
@@ -123,9 +123,9 @@ We've also included a `table_identifier` — `(table $return_values)` — to ind
 
 ### Passive form
 
-In passive form, the `elem` definition declares the references that should be stored in the table in the same way as in active form. The main difference is that, in passive form, you don't specify the `table_index` or `offset` value. This means that the references are not stored in the `table` immediately. Instead, this part of the process is handled manually using a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init) instruction.
+In passive form, the `elem` definition declares the references that should be stored in the table in the same way as in active form. The main difference is that, in passive form, you don't specify the `table_identifier` or `offset` value. This means that the references are not stored in the `table` immediately. Instead, this part of the process is handled manually using a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init) instruction.
 
-Let's see what this looks like in code. We include the `elem` definition in a similar manner to the active form example, except that this time we don't include the `table_index`. Instead, we include a `name` value (`$funcs`) to identify the `elem` later on.
+Let's see what this looks like in code. We include the `elem` definition in a similar manner to the active form example, except that this time we don't include the `table_identifier`. Instead, we include a `name` value (`$funcs`) to identify the `elem` later on.
 
 ```wat
 (elem $funcs funcref (ref.func $f1) (ref.func $f2))
@@ -166,7 +166,7 @@ The declarative form of `elem` is needed when you want to use a reference in you
 )
 ```
 
-This was added to the language because normally you can only reference functions with `ref.func` that have been made referencable, for example in a [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) definition or by being imported from the JavaScript host. Declarative `elem` definitions exist to make some functions referencable that otherwise wouldn't be.
+This was added to the language because normally you can only reference functions with `ref.func` that have been made referenceable, for example in a [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global) definition or by being imported from the JavaScript host. Declarative `elem` definitions exist to make some functions referenceable that otherwise wouldn't be.
 
 ## Examples
 
@@ -248,5 +248,5 @@ Note that we have to call `init()` before we call `accessTable()`, to initialize
 
 ## See also
 
-- [`table`](WebAssembly/Reference/Definitions/table) definition
+- [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
 - [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)

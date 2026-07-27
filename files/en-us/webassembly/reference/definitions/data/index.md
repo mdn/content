@@ -35,7 +35,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 });
 ```
 
-In the above example, we specify two `data` definitions with identifiers `$greeting1` and `$greeting2`, containing the strings "Hello " and "World", respectively. The first `data` definition has a memory offset specified (`(i32.const 0)`), so immediately writes the string to the [`memory`](WebAssembly/Reference/Definitions/memory) at bytes 0–4. The second `data` definition doesn't have a memory offset specified, so isn't written to memory until the [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction is executed later on.
+In the above example, we specify two `data` definitions with identifiers `$greeting1` and `$greeting2`, containing the strings "Hello " and "World", respectively. The first `data` definition has a memory offset specified (`(i32.const 0)`), so immediately writes the string to the [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) at bytes 0–4. The second `data` definition doesn't have a memory offset specified, so isn't written to memory until the [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction is executed later on.
 
 In the JavaScript, we call the exported `init()` function to write the second data definition into memory, then decode the exported memory buffer and log the result to the console.
 
@@ -81,5 +81,5 @@ data name data_string
 
 ## See also
 
-- [`memory`](WebAssembly/Reference/Definitions/memory) definition
+- [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
 - [WebAssembly memory instructions](/en-US/docs/WebAssembly/Reference/Memory)

@@ -21,7 +21,7 @@ Currently each page is 64KiB.
   (func $main
 
     ;; grow memory by 1 page
-    ;; grow returns in 1 for success and -1 for failure
+    ;; grow returns 1 for success and -1 for failure
     ;; will fail if you grow to more than 2 pages
     (memory.grow (i32.const 1))
     call $log ;; log the result

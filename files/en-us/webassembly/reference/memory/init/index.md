@@ -9,7 +9,7 @@ sidebar: webassemblysidebar
 
 The **`memory.init`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) manually copies the bytes from a passive [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition into a [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory).
 
-{{InteractiveExample("Wat Demo: data", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: memory.init", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

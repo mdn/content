@@ -67,7 +67,7 @@ memory.fill dest_memory
 - `value`
   - : An `i32` representing the value to fill the selected bytes with. The `value` is truncated to 8 bits so it can be applied to each byte.
 - `length`
-  - : An `i32` representing the number of bytes to fill with the `value`. This will be an `i32` or an `i64`, to match the `address_type` the `memory` was defined with.
+  - : An `i32` or an `i64` representing the number of bytes to fill with the `value`. This will match the `address_type` the `memory` was defined with.
 
 ### Traps
 
