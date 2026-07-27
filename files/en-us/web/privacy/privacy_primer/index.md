@@ -32,7 +32,7 @@ Websites should collect only personal data that the user wishes to provide, and 
 
 When requesting data, websites should clearly explain what they are asking for and how it will be used.
 
-Web developers should design the user interface that requests data so as to learn the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
+Web developers should design the user interface that requests data so they can learn the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
 
 ### Using personal data
 
@@ -57,11 +57,11 @@ Websites should not retaliate against users who exercise these rights. For examp
 
 ### Publishing a privacy policy
 
-Websites should publish a privacy policy, to help users understand how the site will use their data. The policy should describe:
+Websites should publish a privacy policy to help users understand how the site will use their data. The policy should describe:
 
 - What personal data the site collects.
 - How the data will be used.
-- Steps the site takes to protect data from unauthorised access.
+- Steps the site takes to protect data from unauthorized access.
 - Any third parties with which the site will share the data, including a declaration that the site will ask for user consent before sharing.
 - The duration for which the site will keep the data before it is deleted.
 - How the user can view and manage their data.
