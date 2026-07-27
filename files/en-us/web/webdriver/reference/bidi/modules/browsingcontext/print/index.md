@@ -234,8 +234,5 @@ The browser responds with the Base64-encoded PDF data:
 
 ## See also
 
-- [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) command
 - [`browsingContext.captureScreenshot`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/captureScreenshot) command
-- [`browsingContext.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/close) command
-- [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create) command
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree) command
