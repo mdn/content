@@ -18,7 +18,7 @@ The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 {
   "method": "browser.removeUserContext",
   "params": {
-    "userContext": "<userContextId>"
+    "userContext": "4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"
   }
 }
 ```
@@ -28,7 +28,7 @@ The `browser.removeUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 The `params` field contains:
 
 - `userContext`
-  - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) of the user context to remove.
+  - : A string that contains the ID of the user context to remove.
     User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
     The default user context (`"default"`) cannot be removed.
 

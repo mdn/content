@@ -362,6 +362,6 @@ Aside from that, try searching your favorite search engine for an answer to your
 
 So that's JavaScript debugging and error handling. Simple huh? Maybe not so simple, but this article should at least give you a start and some ideas on how to tackle the JavaScript-related problems you will come across.
 
-That's it for the Dynamic scripting with JavaScript module; congratulations on reaching the end! In the next module, we'll help you explore JavaScript frameworks and libraries.
+That's it for the Dynamic scripting with JavaScript module; congratulations on reaching the end! In the next module, we'll help you explore [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries).
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/House_data_UI","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}

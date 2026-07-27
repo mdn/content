@@ -84,21 +84,29 @@ background-color: revert-layer;
 background-color: unset;
 ```
 
-The `background-color` property is specified as a single `<color>` value.
-
 ### Values
+
+This property is specified as one `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.
 
+## Description
+
+The `background-color` property sets the background color of an element box. The color is drawn behind any background images. By default, the background color is painted within the [border-box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area), meaning it's painted behind the border, ending at the outer edge of the border-box.
+
+Clipping of the `background-color` paint area is controlled via the {{cssxref("background-clip")}} property. If multiple background images are set, the background color's clipping is determined by the value of the `background-clip` associated with the bottom-most background image.
+
 ## Accessibility
 
-It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
+It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page. A high contrast ratio also improves content accessibility for glossy-screened mobile device users when in a bright environment, such as sunlight.
 
 Color contrast ratio is determined by comparing the luminance of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/en-US/docs/Web/CSS/Reference/Properties/font-weight) or larger, or 24px or larger.
 
+- [Understanding WCAG: Perceivable Guideline 1.4.3](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
+- [Understanding color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Formal definition
@@ -111,21 +119,23 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 
 ## Examples
 
-### Colorize boxes
+### Basic example
 
-This example demonstrates the applying `background-color` to HTML {{HTMLelement("div")}} elements using different CSS {{cssxref("color_value", "&lt;color&gt;")}} values.
+This example demonstrates applying `background-color` to HTML {{HTMLelement("p")}} elements using different CSS {{cssxref("color_value", "&lt;color&gt;")}} values.
 
 #### HTML
 
 ```html
-<div class="example-one">Lorem ipsum dolor sit amet, consectetuer</div>
+<p class="example-one">Lorem ipsum dolor sit amet, consectetuer</p>
 
-<div class="example-two">Lorem ipsum dolor sit amet, consectetuer</div>
+<p class="example-two">Lorem ipsum dolor sit amet, consectetuer</p>
 
-<div class="example-three">Lorem ipsum dolor sit amet, consectetuer</div>
+<p class="example-three">Lorem ipsum dolor sit amet, consectetuer</p>
 ```
 
 #### CSS
+
+Each paragraph is set to a different background color, including explicitly setting the default [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent), an {{cssxref("rgb()")}} color function, and a {{cssxref("hex-color")}}. We also set the {{cssxref("color")}} property to ensure enough contrast between the text and its background.
 
 ```css
 .example-one {
@@ -145,11 +155,11 @@ This example demonstrates the applying `background-color` to HTML {{HTMLelement(
 
 #### Result
 
-{{EmbedLiveSample("Colorize boxes", 200, 150)}}
+{{EmbedLiveSample("Basic example", 200, 150)}}
 
-### Colorize tables
+### Colorized tables
 
-This example demonstrates the use of `background-color` on HTML {{HTMLelement("table")}} elements, including {{HTMLelement("tr")}} rows and {{HTMLelement("td")}} cells.
+This example demonstrates the use of `background-color` on HTML {{HTMLelement("table")}} elements, including {{HTMLelement("tr")}} rows and {{HTMLelement("td")}} cells. It also demonstrates how background colors are painted behind any borders.
 
 #### HTML
 
@@ -177,15 +187,17 @@ This example demonstrates the use of `background-color` on HTML {{HTMLelement("t
 
 #### CSS
 
+We use CSS to set different {{cssxref("named-color")}} values. We also set a large dashed border on the table and every cell to demonstrate how the `background-color` is painted to the outer edge of the border-box.
+
 ```css
 table {
   border-collapse: collapse;
-  border: solid black 1px;
+  border: dashed black 5px;
   width: 250px;
   height: 150px;
 }
 td {
-  border: solid 1px black;
+  border: dashed 5px black;
 }
 #r1 {
   background-color: lightblue;
@@ -203,7 +215,7 @@ td {
 
 #### Result
 
-{{EmbedLiveSample('Colorize tables', "100%", "100%")}}
+{{EmbedLiveSample('Colorized tables', "100%", "100%")}}
 
 ## Specifications
 
@@ -215,6 +227,7 @@ td {
 
 ## See also
 
+- {{cssxref("background-clip")}}
 - [Multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

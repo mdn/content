@@ -6,9 +6,9 @@ page-type: landing-page
 sidebar: svgref
 ---
 
-SVG elements can be modified using attributes that specify details about exactly how the element should be handled or rendered.
+SVG elements can be modified using attributes that modify how the element is handled or rendered.
 
-Below is a list of all of the attributes available in SVG along with links to reference documentation to help you learn which elements support them and how they work.
+Below is a list of all of the attributes available in SVG, along with links to reference documentation to help you learn which elements support them and how they work.
 
 ## SVG attributes A to Z
 
@@ -309,7 +309,7 @@ The core attributes are global attributes.
 
 ### Conditional processing attributes
 
-The conditional processing attributes control whether or not the element on which it appears is processed.
+The conditional processing attributes control whether the elements they are set on are processed.
 
 - {{SVGAttr("requiredExtensions")}}
 - {{SVGAttr("requiredFeatures")}}
@@ -329,10 +329,12 @@ The XLink attributes can reference resources.
 
 ### Presentation attributes
 
-All SVG presentation attributes can be used as CSS properties.
+SVG presentation attributes are SVG attributes that can also be used as CSS properties on SVG elements.
+They set CSS property values on an element with a specificity of `0`, so other author styles in a stylesheet or {{SVGAttr("style")}} attribute can override them.
+Presentation attribute values are parsed as CSS values, not declarations, so they cannot contain `!important`.
 
-> [!NOTE]
-> Whether these attributes are presentation attributes depends on the element on which they are set. For example, `x` is a presentation attribute for {{svgelement("circle")}}, but not for {{svgelement("tspan")}}; it's the coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+Most presentation attributes inherit when used as CSS properties (for example, {{cssxref("fill")}} and {{cssxref("stroke")}}).
+[Geometry properties](#geometry_properties) are the main exception: their CSS counterparts do not inherit.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -376,6 +378,7 @@ All SVG presentation attributes can be used as CSS properties.
 - {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
+- {{SVGAttr("pathLength")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("r")}}
 - {{SVGAttr("rx")}}
@@ -406,6 +409,29 @@ All SVG presentation attributes can be used as CSS properties.
 - {{SVGAttr("writing-mode")}}
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
+
+#### Geometry properties
+
+Geometry properties describe the position and dimensions of SVG shapes.
+In [SVG 2](https://svgwg.org/svg2-draft/geometry.html), they are a defined subset of presentation attributes whose CSS counterparts do not inherit.
+
+Each geometry property applies as a presentation attribute only on certain elements.
+For example, {{SVGAttr("r")}} defines the radius of a {{SVGElement("circle")}}, but has no effect on elements such as {{SVGElement("rect")}}.
+
+The SVG geometry properties are:
+
+- {{cssxref("cx")}}
+- {{cssxref("cy")}}
+- {{cssxref("d")}}
+- {{cssxref("r")}}
+- {{cssxref("rx")}}
+- {{cssxref("ry")}}
+- {{cssxref("x")}}
+- {{cssxref("y")}}
+- {{cssxref("width")}}
+- {{cssxref("height")}}
+
+For element-by-element applicability, see each property's attribute page and the list on the {{SVGElement("g")}} element page.
 
 ### Filters attributes
 

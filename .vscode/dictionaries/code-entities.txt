@@ -139,6 +139,7 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
 controlslist
 cookiechange
@@ -308,6 +309,7 @@ iexact
 ifchanged
 ifequal
 ifnotequal
+ifrac
 imageset
 imghp
 imgur
@@ -574,6 +576,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -778,6 +781,7 @@ tabbox
 tabbrowser
 tabs-closebutton
 tabular-nums
+tagidx
 takr
 talu
 taml
@@ -788,6 +792,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -835,6 +840,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -858,6 +864,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL

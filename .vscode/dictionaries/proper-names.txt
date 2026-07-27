@@ -233,6 +233,7 @@ Giorgio
 Golightly
 Googlebot
 Gordo
+Gorman
 Grahl
 Grande-Dixence
 Graywolf9
@@ -259,6 +260,7 @@ Hidde
 Highrise
 Hildy
 Hiroshi
+Hitman
 hmatrjp
 Hobday
 hochan
@@ -482,6 +484,7 @@ Pereira
 Perlin
 Petrov
 Phong
+Picos
 Picryl
 Pinterest
 Pissuti
@@ -618,6 +621,7 @@ Tonisha
 Transcribear
 Transfonter
 Transformiix
+Treanor
 Trekhleb
 Trint
 Trish
