@@ -53,8 +53,6 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt
             code: true
-          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes
-            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/print
