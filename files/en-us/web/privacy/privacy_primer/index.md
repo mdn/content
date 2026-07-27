@@ -83,7 +83,7 @@ Websites can use various techniques to track users. The W3C document [Unsanction
 
 Even when individual users don't take advantage of these controls, privacy researchers and advocates can identify and highlight tracking which uses these explicit techniques. This helps the development of tools and regulations that can help protect the privacy of all users.
 
-Unsanctioned tracking is also sometimes called _covert tracking_ to emphasise that it is hidden from user visibility and control.
+Unsanctioned tracking is also sometimes called _covert tracking_ to emphasize that it is hidden from user visibility and control.
 
 ### Cross-context tracking
 
