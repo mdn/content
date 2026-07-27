@@ -43,7 +43,7 @@ Web developers should design the user interface that requests data so they can l
 
 Websites should use personal data only for the purposes they specified when requesting it.
 
-If possible, before sites use personal data, they should process it in such a way that individual users are not identifiable: this process is called _de-identification_.
+If possible, before sites use personal data, they should process it in such a way that individual users are not identifiable: this process is called _de-identification_. For example, a site could use and share only data aggregated across many individuals, instead of a collection of individual data points.
 
 Websites should protect the personal data that they collect from unauthorized access by third parties. This typically means that stored personal data should be encrypted, and that personal data should only be transmitted using a secure protocol such as TLS. If unauthorized access is detected, the website should notify the user as soon as possible.
 
