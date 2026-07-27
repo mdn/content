@@ -74,9 +74,9 @@ box-sizing: revert-layer;
 box-sizing: unset;
 ```
 
-The `box-sizing` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `content-box`
   - : This is the initial and default value as specified by the CSS standard. The {{Cssxref("width")}} and {{Cssxref("height")}} properties include the content, but does not include the padding, border, or margin. For example, `.box {width: 350px; border: 10px solid black;}` renders a box that is 370px wide.

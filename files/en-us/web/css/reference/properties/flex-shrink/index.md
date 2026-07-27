@@ -79,7 +79,7 @@ Generally, `flex-shrink` is used alongside the {{cssxref("flex-grow")}} and {{cs
 
 ## Values
 
-The `flex-shrink` property is specified as a single `<number>`.
+This property is specified as one `<number>` value:
 
 - `<number>`
   - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.

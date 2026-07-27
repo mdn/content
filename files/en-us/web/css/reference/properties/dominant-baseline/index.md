@@ -48,6 +48,8 @@ dominant-baseline: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : If this property is applied to a {{SVGElement("text")}} element, then the computed value depends on the value of the {{SVGAttr("writing-mode")}} attribute.
 

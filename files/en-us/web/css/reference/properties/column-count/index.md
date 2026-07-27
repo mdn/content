@@ -68,6 +68,8 @@ column-count: unset;
 
 ### Values
 
+This property is specified as an `<integer>` or the keyword `auto`:
+
 - `auto`
   - : The number of columns is determined by other CSS properties, such as {{cssxref("column-width")}}.
 - {{cssxref("&lt;integer&gt;")}}

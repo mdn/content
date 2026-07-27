@@ -79,7 +79,7 @@ flex-direction: unset;
 
 ### Values
 
-The following values are accepted:
+This property is specified as one of the following keyword values:
 
 - `row`
   - : The flex container's main-axis is defined to be the same as the text direction. The **main-start** and **main-end** points are the same as the content direction.

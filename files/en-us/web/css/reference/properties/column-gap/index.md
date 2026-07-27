@@ -77,6 +77,8 @@ column-gap: unset;
 
 ### Values
 
+This property is specified as a `<length>`, `<percentage>`, or the keyword `normal`:
+
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
 - {{CSSxRef("&lt;length&gt;")}}

@@ -70,7 +70,7 @@ flex-wrap: unset;
 
 ### Values
 
-The `flex-wrap` property is specified as a single keyword chosen from the following values below:
+This property is specified as one of the following keyword values:
 
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. The cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the {{cssxref("flex-direction")}} value. This is the default value.

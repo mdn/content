@@ -28,6 +28,8 @@ clip-rule: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `nonzero`
   - : For every point in the clipping mask's box, a ray is drawn in a random direction. Every time the ray intersects with any part of the clipping path, a tally is increased by one if the clipping path's part is moving from left to right across the ray, whereas it is decreased by one if the path part is moving right to left across the ray. If the final total of the tally is zero, the point is outside the path's shape. Otherwise, it's inside the path's shape.
 

@@ -27,6 +27,8 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 
 ### Values
 
+This property is specified as a `<dashed-ident>`, a `paletter-mix()` function, or one of the following keyword values:
+
 - `normal`
   - : Specifies the default color palette or the default glyph colorization (set by the font maker) to be used for the font. With this setting, the palette in the font at index 0 is rendered.
 - `light`
