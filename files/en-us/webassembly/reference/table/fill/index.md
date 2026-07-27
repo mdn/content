@@ -3,12 +3,11 @@ title: "fill: Wasm table instruction"
 short-title: fill
 slug: WebAssembly/Reference/Table/fill
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_fill
 sidebar: webassemblysidebar
 ---
 
-The **`table.fill`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) sets a range of table elements to the same value.
+The **`table.fill`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) sets a range of table elements to the same value.
 
 {{InteractiveExample("Wat Demo: table.fill", "tabbed-taller")}}
 
