@@ -116,3 +116,4 @@ This means that, by following the principles listed above, sites can ensure that
 ## See also
 
 - [Privacy principles](https://www.w3.org/TR/privacy-principles/#dfn-context) (W3C)
+- [Learn Privacy](https://web.dev/learn/privacy) (web.dev)
