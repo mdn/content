@@ -320,6 +320,8 @@ for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
 }
 ```
+> [!NOTE]
+> In the `for...of` example above, the loop variable `cat` represents the *value* of each element in the array. In the traditional `for` loop, the loop variable (`i`) represents the *array index*, and the value must be accessed explicitly using `cats[i]`. Both loops produce the same output in this simple example, but they are not mechanically equivalent — `for...of` iterates over values, while `for` iterates over array index numbers.
 
 In this loop we're starting `i` at `0`, and stopping when `i` reaches the length of the array.
 Then inside the loop, we're using `i` to access each item in the array in turn.
