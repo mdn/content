@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.extend16_s
 sidebar: webassemblysidebar
 ---
 
-The **`extend16_s`** instruction sign-extends the low 16 bits of an integer to propagate its sign throughout the entire value.
+The **`extend16_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) [sign-extends](/en-US/docs/WebAssembly/Reference/Numeric/extend8_s#description) the low 16 bits of an integer to propagate its sign throughout the entire value.
 
 {{InteractiveExample("Wat Demo: extend16_s", "tabbed-taller")}}
 
@@ -29,6 +29,8 @@ The **`extend16_s`** instruction sign-extends the low 16 bits of an integer to p
 const url = "{%wasm-url%}";
 await WebAssembly.instantiateStreaming(fetch(url), { console });
 ```
+
+In this example, `i32.const 0xffff` pushes the value `0xffff` (`65535`) onto the stack. This value represents `-1` when read as a signed 16-bit number; `i32.extend16_s` sign-extends it to `0xffffffff` — which is `-1` represented as a full 32-bit signed integer.
 
 ## Syntax
 

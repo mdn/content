@@ -10,7 +10,7 @@ WebAssembly numeric instructions.
 ## Constants
 
 - [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const)
-  - : Declare a constant numbers.
+  - : Declare a constant number.
 
 ## Comparison
 
@@ -134,8 +134,8 @@ WebAssembly numeric instructions.
 ## Sign extension operations
 
 - [`extend8_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend8_s)
-  - : Sign-extends the low 8 bits of an integer to propagate its sign throughout the entire value.
+  - : Sign-extend the low 8 bits of an integer to propagate its sign throughout the entire value.
 - [`extend16_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend16_s)
-  - : Sign-extends the low 16 bits of an integer to propagate its sign throughout the entire value.
+  - : Sign-extend the low 16 bits of an integer to propagate its sign throughout the entire value.
 - [`extend32_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend32_s)
-  - : Sign-extends the low 32 bits of a 64-bit integer to propagate its sign throughout the entire value.
+  - : Sign-extend the low 32 bits of a 64-bit integer to propagate its sign throughout the entire value.
