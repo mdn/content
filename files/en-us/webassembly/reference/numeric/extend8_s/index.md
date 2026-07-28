@@ -52,9 +52,9 @@ value_type.extend8_s
 ```
 
 - `input`
-  - : The input integer.
+  - : The input `i32` or `i64` integer.
 - `output`
-  - : The output integer.
+  - : The output `i32` or `i64` integer.
 
 ### Binary encoding
 

@@ -48,9 +48,9 @@ i64.extend32_s
 ```
 
 - `input`
-  - : The input integer.
+  - : The input `i64` integer.
 - `output`
-  - : The output integer.
+  - : The output `i64` integer.
 
 ### Binary encoding
 
