@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.toSum
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`toSum()`** method of the
-{{domxref("CSSNumericValue")}} interface converts the object's value to a
-{{domxref("CSSMathSum")}} object to values of the specified unit.
+The **`toSum()`** method of the {{domxref("CSSNumericValue")}} interface converts the object's value to a {{domxref("CSSMathSum")}} object to values of the specified unit.
 
 ## Syntax
 
@@ -33,6 +31,8 @@ A {{domxref('CSSMathSum')}}.
   - : Thrown if an invalid type was passed to the method.
 
 ## Examples
+
+### Basic usage
 
 ```js
 let v = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));

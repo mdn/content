@@ -11,9 +11,7 @@ browser-compat: api.CSSPositionValue.CSSPositionValue
 
 {{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}{{Non-standard_header}}
 
-The **`CSSPositionValue()`** constructor
-creates a new {{domxref("CSSPositionValue")}} object which represents values for
-properties that take a position, for example {{cssxref('object-position')}}.
+The **`CSSPositionValue()`** constructor creates a new {{domxref("CSSPositionValue")}} object which represents values for properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Syntax
 
@@ -30,8 +28,9 @@ new CSSPositionValue(x, y)
 
 ## Examples
 
-The following example positions a container `<div>` 5 pixels from the
-top and 10 pixels from the left of the page.
+### Basic usage
+
+The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
 ```js
 let someDiv = document.getElementById("container");

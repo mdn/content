@@ -8,8 +8,7 @@ browser-compat: api.CSSMathInvert.value
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The CSSMathInvert.value read-only property of the
-{{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
+The CSSMathInvert.value read-only property of the {{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
 
 ## Value
 
