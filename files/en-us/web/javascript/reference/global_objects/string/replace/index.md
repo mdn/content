@@ -59,6 +59,22 @@ If the `pattern` is an empty string, the replacement is prepended to the start o
 
 A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace).
 
+When `pattern` is a regex with the [`g` flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global), `replace()` sets the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to `0` before matching, so replacement always starts from the beginning of the string regardless of the regex's previous `lastIndex`. After the call, `lastIndex` is left at `0`.
+
+This means you don't need to manually reset `lastIndex` before calling `replace()`, even if the same regex was previously used with methods that advance `lastIndex`, such as [`test()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test):
+
+```js
+const re = /b/g;
+const str = "aAbBcC";
+
+console.log(re.test(str)); // true
+console.log(re.lastIndex); // 3; advanced by test()
+console.log(str.replace(re, "-")); // "aA-BcC"; replace() resets lastIndex itself
+console.log(re.lastIndex); // 0
+```
+
+If the regex does not have the `g` flag, `lastIndex` is not reset before matching.
+
 ### Specifying a string as the replacement
 
 The replacement string can include the following special replacement patterns:
