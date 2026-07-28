@@ -333,7 +333,7 @@ This example demonstrates using the `repeat()` function within the `rule-color` 
 
 #### CSS
 
-To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in four {{cssxref("color-mix()")}} color function declarations to create blue, redish, tealish, and yellow colors. The redish and greenish `color-mix()` colors are within a `repeat()` function, set to repeat 3 times.
+To demonstrate how values can become complicated and the utility of the `repeat()` function, we declare two custom properties, which we use in four {{cssxref("color-mix()")}} color function declarations to create blue, redish, tealish, and yellow colors. The redish and tealish `color-mix()` colors are within a `repeat()` function, set to repeat 3 times.
 
 We also added a border around each grid item so you can see how the line is rule in the middle of the gutter between the columns and rows.
 
