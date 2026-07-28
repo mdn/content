@@ -7,7 +7,7 @@ browser-compat: css.properties.rule-color
 sidebar: cssref
 ---
 
-The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts.
+The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-color")}}
 
@@ -24,7 +24,7 @@ rule-color: rgb(48 125 222), repeat(3, rgb(222 48 125));
 ```
 
 ```css interactive-example-choice
-rule-color: purple, repeat(auto, orange, yellow);
+rule-color: purple, repeat(auto, red, yellow);
 ```
 
 ```html interactive-example
@@ -118,10 +118,10 @@ The `rule-color` property accepts a comma-separated list of values, including:
 
 ## Description
 
-The `rule-color` property defines the colors of any lines drawn in the gaps between columns and rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column or row. It is a shorthand property that sets both the {{cssxref("row-rule-color")}} {{cssxref("column-rule-color")}} properties to the same value.
+The `rule-color` property defines the colors of any lines drawn in the gaps between columns and rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column or row. It is a shorthand property that sets both the {{cssxref("row-rule-color")}} and {{cssxref("column-rule-color")}} properties to the same value.
 
 The value is a comma-separated list of components, which can include `<line-color>`, `<repeat-line-color>`, and `<auto-repeat-line-color>` types.
-The `rule-color`, along with the {{cssxref("rule-width")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shothand.
+The `rule-color` property, along with the {{cssxref("rule-width")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shothand.
 
 ### Line colors
 
@@ -131,7 +131,7 @@ A `<line-color>` can be declared as any valid CSS {{cssxref("&lt;color&gt;")}} v
 rule-color: blue;
 ```
 
-When more than one `<line-color>` is declared, they will be applied to lines painted in the column and row gutters in the order specified. If there are more rules than `<line-color>` values, the list of colors is repeated until every column-rule has a color. If we declare the following, for example, every odd rule will be red, and every even rule will be yellow.
+When multiple `<line-color>` values are declared, they will be applied to lines painted in the column and row gutters in the order specified. If there are more rules than `<line-color>` values, the list of colors is repeated until every column-rule has a color. If we declare the following, for example, every odd rule will be red, and every even rule will be yellow.
 
 ```css
 rule-color: red, yellow;
@@ -146,7 +146,7 @@ rule-color: blue, yellow, red, yellow, red, yellow, red;
 rule-color: blue, repeat(3, yellow, red);
 ```
 
-This creates a list of seven colors. If the number of colors in the `rule-color` value's color list exceeds the number of gaps between columns and rows, the excess color values are ignored. If there are fewer colors than gutters, the list of values is repeated until every rule has an associated color. For example, if the container has three columns and 18 rows, the rule in the first column gutter will be blue and the second yellow, with the sequence repeating for the row rules, with the first, eighth, and fifteenth row rules being blue.
+This creates a list of seven colors. If the number of colors in the `rule-color` value's color list exceeds the number of gaps between columns and rows, the excess color values are ignored. If there are fewer colors than gutters, the list of values is repeated until every rule has an associated color. For example, if the container has three columns and 18 rows, the rule in the first column gutter will be blue and the second yellow. For the row rules, the sequence repeats, with the first, eighth, and fifteenth row rules being blue.
 
 ### Auto-repeating line colors
 
@@ -236,7 +236,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
   <li>44</li>
   <li>45</li>
   <li>46</li>
-  <li>47<n l
+  <li>47</li>
   <li>48</li>
   <li>49</li>
   <li>50</li>
@@ -270,9 +270,9 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list to be a 10-column container, creating columns and rows with the {{cssxref("grid-template-columns and rows")}} property. We include a {{cssxref("gap")}} of `5px` to provide enough room between the columns and rows to fit our `3px` dashed rule, and remove the bullets with {{cssxref("list-style-type")}} set to `none`.
+We define the unordered list as a 10-column container, creating columns and rows with the {{cssxref("grid-template-columns")}} property. We include a {{cssxref("gap")}} of `5px` to provide enough room between the columns and rows to fit our `3px` dashed rule, and set {{cssxref("list-style-type")}} to `none` to remove the bullets.
 
-We include a {{cssxref("gap")}} of `5px` to provide enough room between the items to fit our medium dashed rule that we set to `#22BB22`, a green {{cssxref("hex color")}} value:
+We include a {{cssxref("gap")}} of `5px` to provide enough room between the items to fit our medium dashed rule. We set the `rule-color` to `#22BB22`, a green {{cssxref("hex-color")}} value:
 
 ```css live-sample___basic live-sample___multiple live-sample___repeat live-sample___func live-sample___auto
 ul {
@@ -357,7 +357,7 @@ ul {
 
 {{EmbedLiveSample("repeat", "", "600")}}
 
-The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `repeat()` function repeats our two mixed color three times, creating a color list with eight colors in all. While there is a lot of CSS to create the four colors, at least we didn't have to write out all eight `color-mix()` functions. Since there are as more column than list colors, the colors are repeated for the columns gutters. As there are fewer row gutters than colors, the last two colors in the list are not used.
+The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `repeat()` function repeats the two contained mixed colors three times, creating a color list with eight colors in all. While there is a lot of CSS to create the four colors, at least we didn't have to write out all eight `color-mix()` functions. Since there are more column gutters than list colors, the colors are repeated for the column gutters. As there are fewer row gutters than colors, the last two colors in the list are not used for the row gutters.
 
 ### Using `auto` within `repeat()`
 
@@ -375,7 +375,7 @@ ul {
 
 {{EmbedLiveSample("auto", "", "600")}}
 
-Even though there are more column than row rule lines, the `<auto-repeat-line-color>` enabled the creation of this symmetric effect.
+Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` value enables the creation of this symmetric effect.
 
 ```css hidden live-sample___repeat live-sample___auto
 @layer no-support {

@@ -127,7 +127,7 @@ The `rule-width` shorthand property defines the widths of rule lines drawn in th
 
 The value is a comma-separated list of components, which can include `<line-width>`, `<repeat-line-width>`, and `<auto-repeat-line-width>` types.
 
-The `rule-width`, along with the {{cssxref("rule-color")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shorthand.
+The `rule-width` property, along with the {{cssxref("rule-color")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shorthand.
 
 If the property value consists of only one `<line-width>`, all the row and column rules will be that width. If we declare the following, all rules will be `3px`:
 
@@ -135,7 +135,7 @@ If the property value consists of only one `<line-width>`, all the row and colum
 rule-width: 3px;
 ```
 
-When more than one `<line-width>` is declared, they will be applied to rules in the order specified. If there are more rules than `<line-width>` values, the list of line widths is repeated until every rule has a width. If we declare the following, for example, every odd horizontal and vertical rule will be `thin`, and every even rule will be `1em`.
+When multiple `<line-width>` values are declared, they will be applied to rules in the order specified. If there are more rules than `<line-width>` values, the list of line widths is repeated until every rule has a width. If we declare the following, for example, every odd horizontal and vertical rule will be `thin`, and every even rule will be `1em`.
 
 ```css
 rule-width: thin, 1em;
@@ -162,7 +162,7 @@ The `repeat()` function also accepts `auto` as the first argument instead of a p
 rule-width: thin, repeat(auto, medium), thin;
 ```
 
-In this case, the first and last columns and row rules will always be `thin`, and all other rules will be `medium`. If there are only 2 or 3 columns and rows, there will be no medium-sized rules.
+In this case, the first and last column and row rules will always be `thin`, and all other rules will be `medium`. If there are only 2 or 3 columns and rows, there will be no medium-sized rules.
 
 The `auto` keyword within the `repeat()` function creates an auto-repeater that fills in values for column and row rules that would not otherwise receive values from other parts of the list, preventing the list from being cycled. At most, only one `repeat(auto, <width>)` can be present in a `rule-width` value.
 
@@ -333,7 +333,7 @@ As the grid container has 10 rows and 10 columns, there are nine gutters in each
 
 This example demonstrates using the `repeat()` function within the `rule-width` property value and how this function can help reduce the verbosity of value declarations.
 
-We use the same HTML and CSS as in the previous examples. To demonstrate how values can become verbose and the utility of the `repeat()` function, we declare two custom properties, which we use in `repeat()` function declarations. The `repeat()` function sets a list of two `<line-width>` values to repeat 3 times.
+We use the same HTML and CSS as in the previous examples. In addition, we declare two custom properties, which we use in a `repeat()` function inside our `rule-width` value. The `repeat()` function sets a list of two `<line-width>` values to repeat 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -358,7 +358,7 @@ The `repeat()` function repeats two width values four times, creating a list of 
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
-Using `repeat(auto, <line-width>)` we set all column and row rules to `1px`, except the first and last, which we set to `5px`.
+Using `repeat(auto, <line-width>)`, we set all column and row rules to `1px`, except the first and last, which we set to `5px`.
 
 ```css live-sample___auto
 ul {

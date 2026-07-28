@@ -7,7 +7,7 @@ browser-compat: css.properties.rule-style
 sidebar: cssref
 ---
 
-The **`rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts.
+The **`rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-style")}}
 
@@ -129,7 +129,7 @@ The `rule-style` property accepts a comma-separated list of values, including:
 The `rule-style` property defines the line style of any column and row rule lines drawn in the gaps between columns and rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column or row.
 
 The `rule-style` sets both the {{cssxref("column-rule-style")}} and {{cssxref("row-rule-style")}} properties to the same value.
-The `rule-style`, along with the {{cssxref("rule-color")}} and {{cssxref("rule-width")}} properties, can also be set using the {{cssxref("rule")}} shorthand.
+The `rule-style` property, along with the {{cssxref("rule-color")}} and {{cssxref("rule-width")}} properties, can also be set using the {{cssxref("rule")}} shorthand.
 
 The value is a comma-separated list of components, which can include `<line-style>`, `<repeat-line-style>`, and `<auto-repeat-line-style>` types.
 
@@ -139,7 +139,7 @@ If the property value has only one `<line-style>`, all the column and row rules 
 rule-style: double;
 ```
 
-When more than one `<line-style>` is declared, they will be applied to rules in the order specified. If there are more rules than `<line-style>` values, the list of line styles is repeated until every column and row rule has a style. For example, if we declare the following, every odd rule will be `double`, and every even rule will be `inset`.
+When multiple `<line-style>` values are declared, they will be applied to rules in the order specified. If there are more rules than `<line-style>` values, the list of line styles is repeated until every column and row rule has a style. For example, if we declare the following, every odd rule will be `double`, and every even rule will be `inset`.
 
 ```css
 rule-style: double, inset;
@@ -280,7 +280,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list to be a 10-column container, creating columns and rows with the {{cssxref("grid-template-columns and rows")}} property and remove the bullets with {{cssxref("list-style-type")}} set to `none`. We include a {{cssxref("gap")}} of `5px` to provide enough room between the columns and rows to fit our `thick dashed orange` rule.
+We define the unordered list as a 10-column container, creating columns and rows with the {{cssxref("grid-template-columns")}} property; we then set {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `5px` to provide enough room between the columns and rows to fit our `thick dashed orange` rule.
 
 ```css live-sample___basic live-sample___multiple live-sample___repeat live-sample___func live-sample___auto
 ul {
@@ -305,7 +305,7 @@ li {
 
 ### Multiple values
 
-This example demonstrates using multiple `<line-style>` values as a property value, and also provides an example of all the possible styles.
+This example demonstrates using multiple `<line-style>` values as a property value, and what happens when more `<line-style>` values are specified than there are gutters to style.
 
 We set the `rule-style` property to be a comma-separated list of all the possible `<line-style>` values.
 
@@ -320,7 +320,7 @@ ul {
 
 {{EmbedLiveSample("Multiple", "", "600")}}
 
-As there are more values than gutters so the last values are not used.
+There are more values than gutters for both the rows and columns; the last values are not used in each case.
 
 ### Repeating values
 
@@ -338,7 +338,7 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeated 3 times.
+This example demonstrates using the `repeat()` function within the `rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -348,13 +348,13 @@ ul {
 
 {{EmbedLiveSample("func", "", "600")}}
 
-The `repeat()` function repeats two style values three times, creating a list of eight style values, so the styles are repeated for the columns, and the last values in the list are discarded for the rows.
+The `repeat()` function repeats two style values three times, creating a list of eight style values. The styles are repeated for the columns; however, the last values in the list are discarded for the rows.
 
 ### Using `auto` within `repeat()`
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
-Using `repeat(auto, <line-style>)` we set all column and row rules to `groove`, except the first and last, which we set to `solid`.
+Using `repeat(auto, <line-style>)`, we set all column and row rules to `groove`, except the first and last, which we set to `solid`.
 
 ```css live-sample___auto
 ul {
@@ -364,7 +364,7 @@ ul {
 
 {{EmbedLiveSample("auto", "", "600")}}
 
-Even though there are more column than row rule lines, the `<auto-repeat-line-color>` enabled the creation of this symmetric effect.
+Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` enables the creation of this symmetric effect.
 
 ```css hidden live-sample___multiple live-sample___repeat live-sample___func live-sample___auto
 @layer no-support {
