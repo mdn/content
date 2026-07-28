@@ -85,7 +85,7 @@ Websites can use various techniques to track users. The W3C document [Unsanction
 1. Those that are based on explicit web standards, such as [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) or other [client-side storage APIs](/en-US/docs/Web/API/Web_Storage_API).
 2. Those that are not, such as {{glossary("fingerprinting")}}, that typically exploit information leaked by unrelated Web APIs. This second category constitutes _unsanctioned tracking_.
 
-**Websites should only use techniques in the first category to track users.** The reason for this is that techniques in the first category are visible and can be controlled by users, either directly in the browser or through extensions. For example, a user can see which cookies they have and can clear them, or an extension can automatically clear cookies in certain situations.
+Websites should **only use techniques in the first category** to track users. The reason for this is that techniques in the first category are visible and can be controlled by users, either directly in the browser or through extensions. For example, a user can see which cookies have been set and can clear them, or an extension can automatically block cookies or clear cookies in certain situations.
 
 Even when individual users don't take advantage of these controls, privacy researchers and advocates can identify and highlight tracking which uses these explicit techniques. This helps the development of tools and regulations that can help protect the privacy of all users.
 
