@@ -213,7 +213,87 @@ We then apply a different `flex-line-count` value to each flex container. Note h
 }
 ```
 
-```css hidden live-sample___flex-line-count
+We've hidden the rest of the CSS for brevity.
+
+#### Results
+
+{{ EmbedLiveSample("flex-line-count", "100%", "600") }}
+
+Note the effect of the different property combinations:
+
+- The first flex container doesn't have the `balance` keyword set in its `flex-wrap` value. Its flex children are therefore not given a balanced distribution and are still laid out over three flex lines: its `flex-line-count` value of `6` is ignored.
+- The other flex containers are given a balanced distribution for their flex children and laid out over progressively greater numbers of flex lines as the `flex-line-count` value increases.
+- Note that the second flex container has `flex-line-count: 3` set on it, but this actually makes no difference to the layout of its flex children, because they fit on a minimum of three lines anyway. You can prove this by inspecting the second flex container using your browser's developer tools and disabling the `flex-line-count` property — the layout should not change.
+
+### Creating balanced columns
+
+This example demonstrates how `flex-line-count` can be used to create a balanced set of two columns. This is useful for cases such as wiki reference sections, where the layout requirement might be a set number of balanced columns, regardless of the number of items in the list. Setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} in this case doesn't work, as you may end up with less or more columns than desired.
+
+#### HTML
+
+We include an {{htmlelement("ol")}} element containing ten {{htmlelement("li")}} elements.
+
+```html live-sample___balanced-columns
+<ol>
+  <li>
+    <a href="#">The Silent Cartographer</a>, published by Meridian House,
+    released March 12, 2014.
+  </li>
+  <li>
+    <a href="#">Echoes of the Fallow Field</a>, published by Northbridge Press,
+    released July 4, 2009.
+  </li>
+  <li>
+    <a href="#">A Ledger of Small Regrets</a>, published by Ashwood & Kline,
+    released November 21, 2017.
+  </li>
+  <li>
+    <a href="#">The Clockmaker's Daughter's Shadow</a>, published by Hollow Pine
+    Publishing, released February 8, 2011.
+  </li>
+  <li>
+    <a href="#">Salt and Signal</a>, published by Redcliffe Editions, released
+    September 30, 2019.
+  </li>
+  <li>
+    <a href="#">Under a Borrowed Sky</a>, published by Fenwick & Marsh, released
+    May 16, 2006.
+  </li>
+  <li>
+    <a href="#">The Last Cartel of Winter</a>, published by Graywolf Bindery,
+    released January 2, 2021.
+  </li>
+  <li>
+    <a href="#">Notes from an Unfinished Atlas</a>, published by Coastline
+    Books, released June 27, 2013.
+  </li>
+  <li>
+    <a href="#">The Weight of Empty Rooms</a>, published by Draymoor House,
+    released October 15, 2008.
+  </li>
+  <li>
+    <a href="#">A Brief History of Almost Everyone</a>, published by Ferngate
+    Press, released April 9, 2022.
+  </li>
+</ol>
+```
+
+#### CSS
+
+We set the list's {{cssxref("display")}} to `flex`, then set a {{cssxref("gap")}} of `10px` between flex items and `40px` between flex lines. We then set a {{cssxref("flex-direction")}} value of `column` and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped.
+
+Finally, we set a `flex-line-count` value of `2`, meaning that, even though no fixed height is set on the list, its content will always be wrapped over two balanced columns, regardless of how much content is included.
+
+```css live-sample___balanced-columns
+ol {
+  display: flex;
+  gap: 10px 40px;
+  flex-flow: column balance;
+  flex-line-count: 2;
+}
+```
+
+```css hidden live-sample___flex-line-count, live-sample___balanced-columns
 * {
   box-sizing: border-box;
 }
@@ -240,13 +320,7 @@ We've hidden the rest of the CSS for brevity.
 
 #### Results
 
-{{ EmbedLiveSample("flex-line-count", "100%", "600") }}
-
-Note the effect of the different property combinations:
-
-- The first flex container doesn't have the `balance` keyword set in its `flex-wrap` value. Its flex children are therefore not given a balanced distribution and are still laid out over three flex lines: its `flex-line-count` value of `6` is ignored.
-- The other flex containers are given a balanced distribution for their flex children and laid out over progressively greater numbers of flex lines as the `flex-line-count` value increases.
-- Note that the second flex container has `flex-line-count: 3` set on it, but this actually makes no difference to the layout of its flex children, because they fit on a minimum of three lines anyway. You can prove this by inspecting the second flex container using your browser's developer tools and disabling the `flex-line-count` property — the layout should not change.
+{{ EmbedLiveSample("balanced-columns", "100%", "350") }}
 
 ## Specifications
 
