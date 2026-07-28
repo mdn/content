@@ -145,4 +145,4 @@ But because there is only one `firstMatch` arm, and we know that session creatio
 ## See also
 
 - [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) command
-- [Delete Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) command
+- [Delete Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/DeleteSession) command
