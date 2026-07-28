@@ -78,8 +78,6 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-
-
 ### Values
 
 This property is specified as `normal`, `none`, or a space-separated list of the following values:
