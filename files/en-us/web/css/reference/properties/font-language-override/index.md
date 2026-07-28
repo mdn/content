@@ -35,7 +35,7 @@ The `font-language-override` property is specified as the keyword `normal` or a 
 
 ### Values
 
-This property is specified as a `<string>`  or the keyword `normal`:
+This property is specified as a `<string>` or the keyword `normal`:
 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.
