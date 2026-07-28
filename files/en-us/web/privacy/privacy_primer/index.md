@@ -82,7 +82,7 @@ Recognizing a user is sometimes called _tracking_ a user.
 
 Websites can use various techniques to track users. The W3C document [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) distinguishes two categories of technique:
 
-1. Those that are based on explicit web standards, such as cookies or other client-side storage APIs.
+1. Those that are based on explicit web standards, such as [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) or other [client-side storage APIs](/en-US/docs/Web/API/Web_Storage_API).
 2. Those that are not, such as {{glossary("fingerprinting")}}, that typically exploit information leaked by unrelated Web APIs. This second category constitutes _unsanctioned tracking_.
 
 **Websites should only use techniques in the first category to track users.** The reason for this is that techniques in the first category are visible and can be controlled by users, either directly in the browser or through extensions. For example, a user can see which cookies they have and can clear them, or an extension can automatically clear cookies in certain situations.
