@@ -34,11 +34,11 @@ let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
-## Browser API differences
+## Browser namespace differences
 
-Note that this is different from Google Chrome's extension system, which uses the `chrome` namespace instead of `browser`, and which uses callbacks instead of promises for asynchronous functions in Manifest V2. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and promises. Mozilla has also written a polyfill which enables code that uses `browser` and promises to work unchanged in Chrome: <https://github.com/mozilla/webextension-polyfill>.
+Starting with Chrome 148, Chrome natively supports the `browser` namespace. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
 
-Firefox also implements these APIs under the `chrome` namespace using callbacks. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here.
+Before Chrome 148, Chrome uses the `chrome` namespace. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and Promises. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here. A [polyfill](https://github.com/mozilla/webextension-polyfill) that enables code that uses `browser` and promises to work unchanged in Chrome is also available. This polyfill is a no-op in Chrome 148 and later.
 
 Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) and [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities).
 
