@@ -100,7 +100,7 @@ Typically, a context maps to a {{glossary("site")}}, so:
 - A site understanding that two separate requests to itself are from the same user typically represents same-context recognition.
 - A site understanding that a request to itself is from the same user as a request to a different site typically represents cross-context recognition.
 
-However, this isn't necessarily the case, because the definition of a context is subjective: a user might interpret two sites as a single context.
+However, this isn't necessarily the case, because the definition of a context is subjective: a user might interpret two sites as a single context. For example, a user might think of "interacting with my bank" as a single context, even if it might involve interacting with multiple sites (for example, `my-bank.example.co.uk` and `my-bank.example.com`).
 
 To respect a user's privacy, **sites should avoid cross-context tracking unless the user intends for it to happen and can control whether it does**.
 
