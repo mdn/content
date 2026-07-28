@@ -10,7 +10,12 @@ The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the
 
 Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
-A Gaussian blur can extend beyond the bounds of the input image. The {{SVGElement("filter")}} element's {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, and {{SVGAttr("height")}} attributes define the filter region within which the blurred output is rendered. Pixels outside this region are clipped. For large blur values, expand the filter region as needed, for example, with `<filter x="-30%" y="-30%" width="160%" height="160%">`.
+A Gaussian blur can extend beyond the bounds of the input image. The {{SVGElement("filter")}} element's {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, and {{SVGAttr("height")}} attributes define the filter region within which the blurred output is rendered; pixels outside this region are clipped. By default, `x` and `y` are `-10%` and `width` and `height` are `120%`, providing a margin for the blur to spread. For larger {{SVGAttr("stdDeviation")}} values, expand the filter region further.
+For example:
+
+```svg
+<filter x="-30%" y="-30%" width="160%" height="160%">
+```
 
 ## Usage context
 
