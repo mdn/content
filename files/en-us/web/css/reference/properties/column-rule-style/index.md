@@ -54,7 +54,7 @@ column-rule-style: hidden;
 ## Syntax
 
 ```css
-/* One value */
+/* Keyword values */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;

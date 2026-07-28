@@ -192,7 +192,7 @@ There are two types of HTTP messages, requests and responses, each with its own 
 
 An example HTTP request:
 
-![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![Overview of an HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Requests consist of the following elements:
 

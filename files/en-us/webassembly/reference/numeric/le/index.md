@@ -1,12 +1,13 @@
 ---
-title: "le: Wasm text instruction"
+title: "le: Wasm numeric instruction"
 short-title: le
 slug: WebAssembly/Reference/Numeric/le
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.le
 sidebar: webassemblysidebar
 ---
 
-The **`le`** instruction, short for _less or equal_, checks if a floating point number is less than or equal to another floating point number.
+The **`le`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less or equal_, checks if a floating point number is less than or equal to another floating point number.
 
 Integer types have separate less than or equal to signed ([**`le_s`**](/en-US/docs/WebAssembly/Reference/Numeric/le_s)) and unsigned ([**`le_u`**](/en-US/docs/WebAssembly/Reference/Numeric/le_u)) instructions.
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_le", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

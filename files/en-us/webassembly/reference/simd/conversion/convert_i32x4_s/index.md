@@ -3,7 +3,7 @@ title: "convert_i32x4_s: Wasm SIMD conversion instruction"
 short-title: convert_i32x4_s
 slug: WebAssembly/Reference/SIMD/conversion/convert_i32x4_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.convert_i32x4_s
+browser-compat: webassembly.instructions.convert_i32x4_s
 sidebar: webassemblysidebar
 ---
 
@@ -65,7 +65,3 @@ value_type.convert_i32x4_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)
