@@ -35,9 +35,10 @@ This includes:
 
 Websites should collect only personal data that the user wishes to provide, and collect only the data that they actually need. For example, a shopping site might allow people to make purchases without creating an account: this means the site doesn't collect as much personal data, and also reduces friction for shoppers.
 
-When requesting data, websites should clearly explain what they are asking for and how it will be used.
+When requesting data, websites should:
 
-Web developers should design the user interface that requests data so they can learn the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
+- Clearly explain what they are asking for and how it will be used.
+- Design user interfaces that honestly attempt to discover the user's true intent. This means that user interfaces should not attempt to manipulate users into sharing more data than they really intend to, for example by making it easier to share data than not to share it, or by asking users to agree to terms that they could not be expected to understand.
 
 ### Using personal data
 
