@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-The **California Consumer Privacy Act (CCPA)** is California privacy law that gives California residents rights over their personal information and sets requirements on businesses that collect, use, or share that data. The CCPA was originally enacted in 2018 and strengthened by the **California Privacy Rights Act (CPRA)** in 2023, amending and expanding the CCPA, rather than replacing it, with **California Consumer Privacy Act Regulations (CCPAR)** taking effect January 1, 2026.
+The **California Consumer Privacy Act (CCPA)** is a California privacy law that gives California residents rights over their personal information and sets requirements on businesses that collect, use, or share that data. The CCPA was originally enacted in 2018 and strengthened by the **California Privacy Rights Act (CPRA)** in 2023, amending and expanding the CCPA, rather than replacing it, with **California Consumer Privacy Act Regulations (CCPAR)** taking effect January 1, 2026.
 
 The CCPA gives Californians the rights to know, delete, opt out, correct, and limit the use of their personal data.
 The CCPA applies to data controllers and processors that meet certain thresholds (e.g., revenue, data volume). It grants data subjects strong rights over their personal data and requires data controllers to be transparent, responsive, and responsible in how they handle that data.
@@ -14,14 +14,14 @@ The CCPA applies to data controllers and processors that meet certain thresholds
 
 CCPA applies to for‑profit businesses that collect personal information of California residents and either have an annual revenue of over $25M, buy, sell, or share the personal data of over 100,000 data subjects, or derive most of their revenue from the selling or sharing of personal data. Non-profit organizations and businesses that fall below these thresholds are generally exempt.
 
-While your site my not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Guides/Legislation/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
+While your site may not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Guides/Legislation/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
 
-- A clear privacy policy that explaining data practices.
+- A clear privacy policy that explains data practices.
 - Provide methods for submitting requests to know, delete, correct, or limit use of personal data.
 - Respond to consumer requests within defined timelines.
 - Maintain security procedures to protect personal data.
 
-CCPA requires only an **opt‑out** mechanisms, including "Do Not Sell or Share My Personal Information" links, whereas GDPR is **opt-in**, preventing the selling or sharing of personal information with explicit consent from the privacy subject.
+CCPA requires only an **opt‑out** mechanism, including "Do Not Sell or Share My Personal Information" links, whereas GDPR is **opt-in**, preventing the selling or sharing of personal information without explicit consent from the privacy subject.
 
 ## Data subject rights
 
@@ -39,18 +39,18 @@ CCPA defines consumer rights over their personal data, including:
       For a better user experience, and to comply with the spirit, not just the letter, of the law, enable the user to delete their own data without requiring them to make a request.
 
 - Right to opt-out of sale or sharing
-  - : Data subjects can direct data controllers not to sell or share their personal data, CCPA requires you to provide data subjects the ability to opt out of having their information shared; and it is illegal to sell or share the personal data of data subject who have opted out. To comply, you have to both provide the ability to opt out and provide the business logic to prevent their data from being shared.
+  - : Data subjects can direct data controllers not to sell or share their personal data. CCPA requires you to provide data subjects the ability to opt out of having their information shared; and it is illegal to sell or share the personal data of data subjects who have opted out. To comply, you have to both provide the ability to opt out and provide the business logic to prevent their data from being shared.
     - Include a "Do Not Sell or Share My Personal Information" link or setting.
     - Respect user consent preference signals, including {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}}.
     - Ensure backend logic suppresses data sharing with ad networks or analytics vendors.
-      Leverage Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}. GPC is signal, transmitted over HTTP and through the DOM, that conveys a data subject's request to websites and services to not sell or share their personal information with third parties.
-  - : Both GDPR and CCPA define a right for data subjects to not have their personal data shared or sold, but GDPR is opt in; by default you should assume all data subjects have opted out until they explicitly opt in to allowing the sharing and selling of their data.
+      Leverage Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}. GPC is a signal, transmitted over HTTP and through the DOM, that conveys a data subject's request to websites and services not to sell or share their personal information with third parties.
+  - : Both GDPR and CCPA define a right for data subjects not to have their personal data shared or sold, but GDPR is opt-in; for this reason, you should assume all data subjects have opted out until they explicitly opt in to allowing the sharing and selling of their data.
 
 - Right to correct
   - : Data subjects can request correction of inaccurate personal data. To comply and for a good user experience, provide a UI and API methods for users to update inaccurate data.
 
 - Right to limit use of sensitive personal data
-  - : Data subjects can restrict how data controllers use and disclose sensitive personal data, such as precise geolocation, race, and health data. When data subjects restrict how you use their sensitive personal data. Make sure your UI include toggles for users to restrict the use of their sensitive data, and enforce the restrictions they've set at the API authorization layer level.
+  - : Data subjects can restrict how data controllers use and disclose sensitive personal data, such as precise geolocation, race, and health data. When data subjects restrict how you use their sensitive personal data. Make sure your UI includes toggles for users to restrict the use of their sensitive data, and enforce the restrictions they've set at the API authorization layer level.
 
 CCPA also explicitly prevents discrimination. Data controllers cannot retaliate against data subjects for exercising their privacy rights.
 
@@ -58,7 +58,7 @@ CCPA also explicitly prevents discrimination. Data controllers cannot retaliate 
 
 CCPA compliance is ultimately an engineering problem as much as a legal one. To comply with CCPA, you should [design for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy) and build privacy into your application's architecture, data flows, and UI features. Ensure you collect the minimum data needed, store it securely and transparently, make it retrievable and deletable, and provide your users with control over their privacy choices.
 
-to comply with CCPA,If you collect any personal data, or incorporate third party scripts that do, in addition to implementing all the [data subject rights](#data-subject-rights), there are several steps you need to complete and maintain to comply with the law:
+To comply with CCPA, if you collect any personal data, or incorporate third-party scripts that do, in addition to implementing all the [data subject rights](#data-subject-rights), there are several steps you need to complete and maintain to comply with the law:
 
 - [Data inventory & classification](#data-inventory--classification)
 - [Access/delete/correct/opt‑out features](#)
@@ -76,14 +76,14 @@ Map and classify personal data to create a complete picture of the information y
   - : Enumerate all the data sources in your system, including analytics events, error logs, [cookies](/en-US/docs/Web/HTTP/Guides/Cookies), and telemetry signals. Privacy risks aren't limited to user‑submitted form fields. Debug logs, third‑party SDKs, and default analytics settings all collect personal data so must be considered to ensure no personal data is collected unintentionally and that there are no unaccounted-for data points.
 
 - Classify data as personal, sensitive, or non‑personal
-  - : Each data point must be categorized based on CCPA definitions, which classifies personal data as being either personal, sensitive, or non‑personal. _Personal data_ includes anything that can identify a user directly or indirectly, while _sensitive data_ covers higher‑risk categories such as health information, precise location, or financial identifiers. _Non‑personal data_ includes aggregated or anonymized information. With CCPA, the classification determines which legal obligations apply, what security controls are required, and how user rights requests must be handled.
+  - : Each data point must be categorized based on CCPA definitions, which classify personal data as being either personal, sensitive, or non‑personal. _Personal data_ includes anything that can identify a user directly or indirectly, while _sensitive data_ covers higher‑risk categories such as health information, precise location, or financial identifiers. _Non‑personal data_ includes aggregated or anonymized information. With CCPA, the classification determines which legal obligations apply, what security controls are required, and how user rights requests must be handled.
   - : Classifying data as personal, sensitive, or non‑personal is an important component of CCPA, but not GDPR. GDPR protects all data that can be used to identify a data subject. To satisfy both regulations, anonymized information should be categorized as personal under CCPA if it is relatively easy to identify someone from the nominally anonymized data, and treated as personal data under GDPR.
 
 - Document data flow
   - : Understanding data flow is essential for both GDPR and CCPA compliance. Document how data moves through clients, APIs, databases, and third‑party services. Include the client interface to backend APIs, internal databases, caches, logs, and any external processors or service providers. Documentation helps identify where data is stored, duplicated, transformed, or shared, enabling accurate deletion, export, and opt‑out handling. It also exposes unnecessary transfers or risky integrations that may need to be redesigned.
 
 - Tag your schema data fields
-  - : Tag data fields in your codebase or schema to support automated handling, such as deletion and export. Tagging your models, schemas, or metadata, marking fields as personal or sensitive, enables automating compliance tasks like data deletion, correction, and export. Tagging will also help when it comes to responding to user rights requests without manual intervention, while reducing errors. Labeling privacy features enables maintainable as your system evolves. It also simplifies audits by showing exactly how regulated data is managed.
+  - : Tag data fields in your codebase or schema to support automated handling, such as deletion and export. Tagging your models, schemas, or metadata, marking fields as personal or sensitive, enables automating compliance tasks like data deletion, correction, and export. Tagging will also help when it comes to responding to user rights requests without manual intervention, while reducing errors. Labeling privacy features enables maintainability as your system evolves. It also simplifies audits by showing exactly how regulated data is managed.
 
 ### Data minimization
 
@@ -119,7 +119,7 @@ CCPA requires "reasonable security." For developers, this means:
 
 ### Third‑parties
 
-Your work is not limited to the code you control. If you include any third party scripts or services, you are responsible for and need to manage any third-party data-sharing. This includes:
+Your work is not limited to the code you control. If you include any third-party scripts or services, you are responsible for and need to manage any third-party data-sharing. This includes:
 
 - Tracking all SDKs, analytics tools, and integrations
 - Disabling data sharing when users opt out
@@ -128,7 +128,7 @@ Your work is not limited to the code you control. If you include any third party
 
 ### Data automation
 
-Even if these regulations didn't exist, if you collect data, you should automate data retention and deletion. It is good practice, and now the law, to define retention periods for the data you collect, automatically delete expired data, ensure that when data is deleted, the data is deleted from your back ups, with your backup databases following the same deletion rules. Because of regulations and associated audits, you do need to document retention logic.
+Even if these regulations didn't exist, if you collect data, you should automate data retention and deletion. It is good practice, and now the law, to define retention periods for the data you collect, automatically delete expired data, and ensure that, when data is deleted, the data is deleted from your backups, with your backup databases following the same deletion rules. Because of regulations and associated audits, you do need to document retention logic.
 
 ### Logs and audits
 
@@ -154,7 +154,7 @@ Test and monitor privacy features
 
 Developers are responsible for implementing all the required features of CCPA, but it takes a team to meet the spirit of the law. For example, the developer must ensuring user's can physically opt-out, but it is important to also have good UX designers who ensure that the options to opt out is evident and easy to use, and technical writers who write clear explanations and understandable calls to action, clearly conveying to the user the purpose of the data collection, what the user's options are, and stating that there will be no discrimination if the user opts out.
 
-Here is an example of an opt out message for email tracking:
+Here is an example of an opt-out message for email tracking:
 
 > Our emails contain a feature that lets us know **whether they are opened and read**. This is useful to:
 >
@@ -162,7 +162,7 @@ Here is an example of an opt out message for email tracking:
 > - **Write to you at the right time** and the right pace;
 > - **​Measure the quality of our communications** in order to improve them.
 >
-> This indicator tells us about the opening of an email, the time it was read and the type of device used.
+> This indicator tells us about the opening of an email, the time it was read, and the type of device used.
 >
 > Nothing to do on your end: this tracking is already active. But you remain free to opt out at any time, from your account or by clicking here:
 >
