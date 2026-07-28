@@ -38,7 +38,7 @@ CCPA defines consumer rights over their personal data, including:
     - Handles soft‑delete vs. hard‑delete logic safely
       For a better user experience, and to comply with the spirit, not just the letter, of the law, enable the user to delete their own data without requiring them to make a request.
 
-- Right to opt-out of sale or sharing
+- Right to opt out of sale or sharing
   - : Data subjects can direct data controllers not to sell or share their personal data. CCPA requires you to provide data subjects the ability to opt out of having their information shared; and it is illegal to sell or share the personal data of data subjects who have opted out. To comply, you have to both provide the ability to opt out and provide the business logic to prevent their data from being shared.
     - Include a "Do Not Sell or Share My Personal Information" link or setting.
     - Respect user consent preference signals, including {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}}.
