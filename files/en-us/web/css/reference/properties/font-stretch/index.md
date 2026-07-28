@@ -91,8 +91,6 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-
-
 ### Values
 
 This property is specified as a {{cssxref("&lt;percentage&gt;")}} value or one of the following keyword values:
