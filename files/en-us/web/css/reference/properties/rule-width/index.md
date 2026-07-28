@@ -113,7 +113,7 @@ rule-width: unset;
 The `rule-width` property accepts a comma-separated list of values, including:
 
 - `<line-width>`
-  - : A {{cssxref("&lt;line-width&gt;")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
+  - : A {{cssxref("line-width")}}: This can be one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value, representing the width of the line. The default value is `medium`.
 
 - `<repeat-line-width>`
   - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and one or more {{cssxref("&lt;line-width&gt;")}} values as subsequent arguments. The integer defines the number of times the `<line-width>` values should be repeated.
@@ -140,8 +140,6 @@ When multiple `<line-width>` values are declared, they will be applied to rules 
 ```css
 rule-width: thin, 1em;
 ```
-
-If there are more gutters than widths in either direction, the list of widths is repeated.
 
 ### Repeated line widths
 

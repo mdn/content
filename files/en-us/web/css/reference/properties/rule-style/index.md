@@ -340,7 +340,7 @@ ul {
 
 This example demonstrates using the `repeat()` function within the `rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
 
-```css live-sample___func live-sample___auto
+```css live-sample___func
 ul {
   rule-style: solid, repeat(3, inset, outset), solid;
 }
