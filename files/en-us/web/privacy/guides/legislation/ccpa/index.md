@@ -93,7 +93,9 @@ Unless required, disable tracking. If tracking is required, anonymize it.
 
 ### Privacy notices
 
-Build privacy notices into the UI. Ensure privacy notices are accessible, clear, and dynamic. The notices should be visible, easily locatable. For example, you can include a link to the notice from the footer and settings page.The prose of the notice should clearly state what data is collected and why. It should also be dynamic; if your application changes data practices, your privacy notice should be updated.
+Build privacy notices into the UI. Ensure privacy notices are accessible, clear, and dynamic. The notices should be visible and easily locatable. For example, you can include a link to the notice in the footer that appears on every page and on any settings pages. The prose of the notice should clearly state what data is collected and why. It should also be dynamic; if your application changes data practices, your privacy notice should be updated.
+
+Note that while U.S.A. federal laws do not require a privacy policy, if a privacy policy is displayed, the policy must be honored. The Federal Trade Commission (FTC) prohibits "unfair or deceptive acts or practices." While the FTC doesn't require having a privacy policy, having one and not honoring it constitutes a "deceptive practice."
 
 ### Verification
 
