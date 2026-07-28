@@ -5,9 +5,9 @@ page-type: landing-page
 sidebar: webassemblysidebar
 ---
 
-WebAssembly is a low-level assembly-like language with a compact binary format that runs with near-native performance and provides languages such as C/C++, C# and Rust with a compilation target so that they can run on the web.
+WebAssembly (Wasm) is a low-level assembly-like language that brings near-native performance to the web. It serves as a compilation target for languages like C/C++, C#, and Rust, allowing high-performance code to run directly in the browser.
 
-WebAssembly is designed to complement and run alongside JavaScript — using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same app, even if you don't know how to write WebAssembly code.
+WebAssembly is designed to complement and run alongside JavaScript. Using the WebAssembly JavaScript APIs, you can load WebAssembly modules into a JavaScript app and share functionality between the two. This allows you to take advantage of WebAssembly's performance and power and JavaScript's expressiveness and flexibility in the same app — without having to write low-level WebAssembly code yourself.
 
 ## Guides
 
