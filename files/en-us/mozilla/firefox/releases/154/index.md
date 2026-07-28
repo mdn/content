@@ -92,3 +92,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Percentage values for `text-decoration-inset`**: `layout.css.text-decoration-inset-percentage.enabled`
 
   The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+
+- **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
+
+  The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) (as defined in the CSS Typed Object Model Level 1 specification) is now implemented.
+  This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. ([Firefox bug 2051047](https://bugzil.la/2051047)).
