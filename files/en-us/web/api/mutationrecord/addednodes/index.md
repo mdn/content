@@ -67,7 +67,7 @@ reset.addEventListener("click", () => self.location.reload());
 
 function logNewNodes(records) {
   for (const record of records) {
-    // Check if the childlist of the target node has been mutated
+    // Check if the childList of the target node has been mutated
     if (record.type === "childList") {
       totalAddedNodes += record.addedNodes.length;
       // Log the number of nodes added
