@@ -275,6 +275,14 @@ The `$might_throw` function itself takes a single parameter, and checks its valu
 
 We call the `try_multiple()` function three times. The first time throws a `$type_error`, so error code `10` is logged. The second throws a `$range_error`, so error code `99` is logged. The third does not throw an exception.
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction

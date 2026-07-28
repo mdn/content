@@ -69,9 +69,9 @@ border-right-color: revert-layer;
 border-right-color: unset;
 ```
 
-The `border-right-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the right border.

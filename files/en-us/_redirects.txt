@@ -6265,6 +6265,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/devtools_panels	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /en-US/docs/Mozilla/Add-ons/WebExtensions/differences_between_extensions_API_implementations	/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox/OnInputEnteredDisposition	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button

@@ -1,12 +1,13 @@
 ---
-title: "popcnt: Wasm text instruction"
+title: "popcnt: Wasm numeric instruction"
 short-title: popcnt
 slug: WebAssembly/Reference/Numeric/popcnt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.popcnt
 sidebar: webassemblysidebar
 ---
 
-The **`popcnt`** instruction, short for _population count_, is used to count the amount of `1`s in a number's binary representation.
+The **`popcnt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _population count_, is used to count the amount of `1`s in a number's binary representation.
 
 {{InteractiveExample("Wat Demo: popcnt", "tabbed-taller")}}
 
@@ -130,3 +131,11 @@ The output is as follows:
 {{embedlivesample("simd_popcnt", "100%", 100)}}
 
 `4` is output because the value in lane 15 of the input value is `30`. `30` in binary is `00011110`, which has 4 `1`s in it.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

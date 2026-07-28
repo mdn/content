@@ -135,12 +135,9 @@ The function below returns a `true` or `false` indicating whether or not the dev
 function canSendH264() {
   let capabilities = RTCRtpSender.getCapabilities("video");
 
-  capabilities.codecs.forEach((codec) => {
-    if (codec.mimeType === "video/H264") {
-      return true;
-    }
+  return capabilities.codecs.some((codec) => {
+    return codec.mimeType === "video/H264";
   });
-  return false;
 }
 ```
 

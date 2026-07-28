@@ -21,7 +21,7 @@ The **timeouts object** is a JSON Object that either describes the current sessi
 - `pageLoad`
   - : Time in milliseconds to wait for the document to finish loading. By default WebDriver will wait five minutes (or 300,000 ms).
 - `script`
-  - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [script timeout error](/en-US/docs/Web/WebDriver/Reference/Errors/ScriptTimeoutError) will be returned. Defaults to 30 seconds (or 30,000 ms).
+  - : Scripts injected with [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript) or [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript) will run until they hit the script timeout duration, which is also given in milliseconds. The scripts will then be interrupted and a [script timeout error](/en-US/docs/Web/WebDriver/Reference/Errors/ScriptTimeout) will be returned. Defaults to 30 seconds (or 30,000 ms).
 
 When the object is used as input for the [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetTimeouts) command or as part of the [timeouts capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) when [creating a new session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession), all fields are optional. This means you can configure zero or more of the timeout duration values individually or all at once.
 

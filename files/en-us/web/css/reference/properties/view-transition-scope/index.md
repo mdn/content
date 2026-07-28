@@ -30,6 +30,8 @@ view-transition-scope: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : The initial value. Discoverability of elements to snapshot during a view transition is not limited to any specific subtree.
 - `all`
