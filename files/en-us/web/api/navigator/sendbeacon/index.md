@@ -105,6 +105,8 @@ Firefox will also exclude pages from the bfcache if they contain `beforeunload` 
 To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
 Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
 
+> **Note:** The `pagehide` fallback stays useful even though all modern browsers implement `visibilitychange`. `visibilitychange` fires on _every_ transition to `hidden` (for example, when you switch tabs), so its handler can run multiple times. `pagehide`, by contrast, fires a single time as the page is unloaded, making it a reliable place for a final, fire-and-forget beacon in addition to `visibilitychange`.
+
 ## Examples
 
 The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
