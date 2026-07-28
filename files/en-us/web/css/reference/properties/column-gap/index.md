@@ -67,6 +67,11 @@ column-gap: 2.5em;
 column-gap: 3%;
 column-gap: calc(3% - 6px);
 
+/* <line-width> values */
+column-gap: thin;
+column-gap: medium;
+column-gap: thick;
+
 /* Global values */
 column-gap: inherit;
 column-gap: initial;
@@ -77,12 +82,14 @@ column-gap: unset;
 
 ### Values
 
+This property is specified as either a `<length-percentage>`, `<line-width>`, or the keyword `normal`:
+
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap between columns, as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap between columns, defined as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value.
+- `<line-width>`
+  - : A {{cssxref("&lt;line-width&gt;")}}: one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+- {{CSSxRef("length-percentage")}}
+  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value.
 
 ## Description
 
