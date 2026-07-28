@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.join
 sidebar: jsref
 ---
 
-The **`join()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.join()")}}: it returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
+The **`join()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.join()")}}: it returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string. If the iterator has only one item, that item's stringification is returned without using the separator.
 
 ## Syntax
 
