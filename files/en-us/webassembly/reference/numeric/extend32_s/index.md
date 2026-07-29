@@ -62,7 +62,7 @@ i64.extend32_s
 
 Sign extension is useful because Wasm integers are a fixed width (32- or 64-bit), but you often want to work with smaller values — like an i8, i16, or i32 — stored inside them. If you zero-pad a negative small value to fill the rest of the bits, you get the wrong number: the bit pattern that means `-1` represented as a 32-bit value, for example, no longer represents `-1` once you've zero-padded it to 64 bits.
 
-The `extend32_s` instruction fixes this by taking the low 32 bits of the value, treating them as a signed 32-bit integer, and copying that sign bit (bit 31) up through all the remaining bits of the `i64`.
+The `extend32_s` instruction fixes this by taking the low 32 bits of the value, treating them as a signed 32-bit integer, and copying the sign bit (bit 31) up through all the remaining bits of the `i64`.
 
 This is useful whenever you've loaded or produced an 32-bit value (say, from a four-byte value in memory) and need to use it correctly in arithmetic at the full 64-bit width.
 
