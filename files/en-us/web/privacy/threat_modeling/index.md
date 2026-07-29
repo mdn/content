@@ -5,15 +5,19 @@ page-type: guide
 sidebar: privacy
 ---
 
-In MDN's [security](/en-US/docs/Web/Security) section, we introduce [threat modeling](/en-US/docs/Web/Security/Threat_modeling) as a process helping you to identify and understand potential security risks and determine vulnerabilities specific to your application. This article gives guidance on how to do threat modeling from a privacy perspective. For a more general introduction to threat modeling, consult the articles in MDN's security section.
+Threat modeling helps you identify problems before they become part of your application. While security threat modeling focuses on protecting systems and data from attackers, privacy threat modeling focuses on identifying and reducing risks to the people who use your application and the personal information it processes.
 
-This article presents a general approach to privacy threat modeling. Depending on your application, legal obligations, and the privacy expectations of your users, a more detailed assessment may be required. Privacy risk assessments often extend beyond technical design to include organizational, legal, and policy considerations. For example, evaluating a personal blog is very different from evaluating an application that processes health records.
+This article explains how to apply the threat modeling process from a privacy perspective. If you are new to threat modeling, first read the MDN guide to [threat modeling](/en-US/docs/Web/Security/Threat_modeling).
+
+This article presents a generic approach to privacy threat modeling. Depending on your application, legal obligations, and the privacy expectations of your users, a more detailed assessment may be required. Privacy risk assessments often extend beyond technical design to include organizational, legal, and policy considerations. For example, evaluating a personal blog is very different from evaluating an application that processes health records.
+
+If you are unfamiliar with common privacy concepts such as personal information, consent, or data minimization, start with the [Privacy Primer](/en-US/docs/Web/Privacy/Privacy_Primer).
 
 ## What is a privacy threat?
 
-A privacy threat is an action or condition that can lead to privacy harms for an individual. These harms can affect:
+A privacy threat is an action or condition that can lead to privacy harms for an individual. Privacy harms can affect a person's:
 
-- Financial loss of money, employment, or other economic opportunities.
+- Finances: loss of money, employment, or other economic opportunities.
 - Reputation: disclosure or misrepresentation of information that causes embarrassment or damages trust.
 - Solitude: reduced ability to be left alone or to carry out activities without observation.
 - Autonomy: reduced ability to think, communicate, or act freely without fear of monitoring or judgment.
@@ -21,142 +25,159 @@ A privacy threat is an action or condition that can lead to privacy harms for an
 
 Whether a privacy threat results in an unacceptable privacy risk depends on the context, including the likelihood and severity of the harm, as well as the individual's awareness, expectations, and consent. For example, a user may knowingly consent to certain forms of monitoring in exchange for a service. The underlying privacy threat (such as surveillance) still exists, but the individual may consider the associated risk acceptable under those circumstances.
 
-## Identifying personal information
+Privacy threat modeling follows the same four questions as security threat modeling, but focuses on identifying and reducing risks to people's privacy.
 
-When answering the first key threat modeling question ["What are we working on?"](/en-US/docs/Web/Security/Threat_modeling#2._what_can_go_wrong), we can take a particular focus on identify personal information.
+## What are we working on?
+
+When answering the first key threat modeling question ["What are we working on?"](/en-US/docs/Web/Security/Threat_modeling#1._what_are_we_working_on), start by identifying the personal information your application processes. This includes information that users intentionally provide, such as names and email addresses, as well as information generated automatically, such as IP addresses, cookies, analytics events, or device identifiers.
+
+Consider creating a simple data flow diagram showing how personal information moves through your application. Include where data enters the system, where it is stored, which components process it, and any external services that receive it. This diagram can help you identify where privacy threats may arise.
+
+Ask yourself:
 
 - What personal information does the site collect?
 - Where is it collected?
 - Where is it stored?
 - Who can access it?
 - Which third parties receive it?
+- How long is the information retained?
+- Is each piece of information actually necessary?
 
-(TBD maybe expand this some more)
+## What can go wrong?
 
-## Common privacy threats
+The next step is to answer the third threat modeling question: ["What can go wrong?"](/en-US/docs/Web/Security/Threat_modeling#2._what_can_go_wrong). Established privacy threat modeling approaches can help identify common privacy threats.
 
-In [Threat modeling frameworks and tools](/en-US/docs/Web/Security/Threat_modeling/Frameworks), we introduce the [LINDDUN](https://linddun.org) framework which represents seven categories of privacy threats. Additionally, [RFC6973](https://datatracker.ietf.org/doc/html/rfc6973) "Privacy considerations for Internet protocols" as well as the W3C TAG's [Privacy Principles](https://w3ctag.github.io/privacy-principles/) provide useful guiding principles which help you to think more about privacy threats.
-
-The LINDDUN categories, RFC6973, and the W3C TAG's Privacy Principles are particularly helpful resources for answering one of the third threat modeling questions: ["What can go wrong?"](/en-US/docs/Web/Security/Threat_modeling#2._what_can_go_wrong).
-
-The following common privacy threat categories are inspired by RFC6973 and the LINDDUN framework. For each category, we provide some common questions and an example scenario.
+The following privacy threat categories are inspired by established privacy threat modeling approaches, including [LINDDUN](/en-US/docs/Web/Security/Threat_modeling/Frameworks#linddun) and [RFC6973](https://datatracker.ietf.org/doc/html/rfc6973) (Privacy considerations for Internet protocols). For each category, we provide some common questions and an example scenario. Not every threat applies to every application. Use the following categories as prompts while reviewing each component and data flow in your application. If a question does not apply, move on; if it does, document the affected data, the potential privacy harms, and possible mitigations.
 
 ### Surveillance
 
-Monitoring an individual's communications, behavior, or activities, either directly or indirectly.
+Collecting or observing information about how people use your application.
 
-Questions to ask:
+Ask yourself:
 
 - Can users be continuously observed or tracked?
 - Is monitoring proportional to its intended purpose?
 
-Example:
-
-An e-commerce website records every mouse movement, scroll event, click, and keystroke using a session replay service. Although intended to improve usability, the recordings also capture sensitive searches and partially completed forms, allowing administrators or third-party providers to reconstruct a user's browsing session in great detail.
+For example, an e-commerce website records every mouse movement, scroll event, click, and keystroke using a session replay service. Although intended to improve usability, the recordings also capture sensitive searches and partially completed forms, allowing administrators or third-party providers to reconstruct a user's browsing session in great detail.
 
 ### Linkability (Correlation)
 
-Associating two or more pieces of data or actions with the same individual or group, even if their identity is unknown.
+Combining information from different sources to build a more complete picture of a person, even if their identity is unknown.
 
-Questions to ask:
+Ask yourself:
 
 - Can user behavior be linked across services or sessions?
 - Can multiple datasets be combined to build detailed user profiles?
 
-Example:
-
-A news website uses the same analytics identifier across its main site, discussion forum, and newsletter. Even though users never log in, the identifier allows the operator to correlate which articles they read, which comments they post, and which emails they open, creating a detailed behavioral profile.
+For example, a news website uses the same analytics identifier across its main site, discussion forum, and newsletter. Even though users never log in, the identifier allows the operator to correlate which articles they read, which comments they post, and which emails they open, creating a detailed behavioral profile.
 
 ### Identifiability (Identification)
 
 Determining the identity of an individual from data that was intended to be anonymous or pseudonymous.
 
-Questions to ask:
+Ask yourself:
 
 - Are pseudonyms or identifiers sufficient to protect identities?
 - Could identities be inferred by combining multiple data sources?
 
-Example:
-
-A website publishes "anonymous" user reviews but includes each reviewer's city, employer, and posting dates. By comparing this information with publicly available social media profiles, someone can determine who wrote many of the reviews.
+For example, a website publishes "anonymous" user reviews but includes each reviewer's city, employer, and posting dates. By comparing this information with publicly available social media profiles, someone can determine who wrote many of the reviews.
 
 ### Information disclosure
 
 Unauthorized or unnecessary exposure of personal information to other people, systems, or organizations.
 
-Questions to ask:
+Ask yourself:
 
 - Are personal data, backups, logs, and exports adequately protected?
 - Do analytics or third-party services receive unnecessary personal information?
 
-Example:
-
-A contact form sends visitors' names, email addresses, and message contents to a third-party analytics service because the developer configured analytics to capture every form submission. The analytics provider now receives personal information that it does not need to perform its service.
+For example, a contact form sends visitors' names, email addresses, and message contents to a third-party analytics service because the developer configured analytics to capture every form submission. The analytics provider now receives personal information that it does not need to perform its service.
 
 ### Secondary use
 
 Using personal information for purposes other than those for which it was originally collected or reasonably expected. Even if users consented to the original collection, they may not reasonably expect or consent to the new purpose.
 
-Questions to ask:
+Ask yourself:
 
 - Is personal data reused for advertising, analytics, or profiling?
 - Are users aware of and able to control secondary uses of their data?
 
-Example:
-
-Users create accounts solely to purchase products. Months later, the company begins using their purchase history to train a recommendation model and to send targeted marketing emails without informing users or providing a way to opt out.
+For example: Users create accounts solely to purchase products. Months later, the company begins using their purchase history to train a recommendation model and to send targeted marketing emails without informing users or providing a way to opt out.
 
 ### Stored data compromise
 
 Unauthorized access to or disclosure of stored personal information due to security failures or data breaches.
 
-Questions to ask:
+Ask yourself:
 
 - Are stored data encrypted and access-controlled?
 - Could a breach expose sensitive personal information?
 
-Example:
-
-A website stores user profiles, addresses, and password hashes in an unencrypted database backup that is accidentally exposed through a publicly accessible cloud storage bucket. Anyone who discovers the bucket can download the entire dataset.
+For example, a website stores user profiles, addresses, and password hashes in an unencrypted database backup that is accidentally exposed through a publicly accessible cloud storage bucket. Anyone who discovers the bucket can download the entire dataset.
 
 ### Exclusion (Unawareness)
 
 Individuals are unable to understand, influence, or exercise control over how their personal information is collected or used.
 
-Questions to ask:
+Ask yourself:
 
 - Do users understand what data is collected and why?
 - Can users access, correct, export, or delete their personal data?
 - Are consent and privacy choices clear and meaningful?
 
-Example:
-
-A website requires visitors to accept all tracking cookies through a single "Accept" button but provides no explanation of which data will be collected, no option to reject non-essential cookies, and no way to later change their preferences or delete collected data.
+For example, a website requires visitors to accept all tracking cookies through a single "Accept" button but provides no explanation of which data will be collected, no option to reject non-essential cookies, and no way to later change their preferences or delete collected data.
 
 ### Non-repudiation
 
 Creating records that permanently attribute actions or claims to an individual, limiting their ability to plausibly deny those actions.
 
-Questions to ask:
+Ask yourself:
 
 - Are actions unnecessarily tied to a user's identity?
 - Are logs retained longer than necessary?
 
-Example:
+For example, a community forum permanently stores every post, edit, IP address, and login history under a user's real name, even after the account has been deleted. Years later, those records can still be used to prove that a particular person performed specific actions, even though retaining that information is no longer necessary.
 
-A community forum permanently stores every post, edit, IP address, and login history under a user's real name, even after the account has been deleted. Years later, those records can still be used to prove that a particular person performed specific actions, even though retaining that information is no longer necessary.
+A single feature often raises multiple privacy threats. For example, adding a third-party analytics script may introduce surveillance, linkability, information disclosure, and secondary use at the same time.
 
-## Mitigations and responses
+## What are we going to do about it?
 
-To answer the third threat modeling question ["What are we going to do about it?"](/en-US/docs/Web/Security/Threat_modeling#3._what_are_we_going_to_do_about_it), we will need to look into deciding how to respond to the identified privacy threats.
+To answer the third threat modeling question ["What are we going to do about it?"](/en-US/docs/Web/Security/Threat_modeling#3._what_are_we_going_to_do_about_it), we will need to look into deciding how to respond and mitigate the identified privacy threats.
 
-TBD TBD
+Once you have identified privacy threats, decide how to respond to each one. Some threats can be eliminated by changing the design of your application, while others can be reduced by collecting less data, limiting access to it, or giving users more control over how it is used.
 
-TBD TBD
+- Eliminate: Remove the feature or data collection entirely
+- Reduce: Apply technical or organizational mitigations, for example: encrypt stored personal data and minimize logging.
+- Accept: Document and accept the remaining privacy risk.
+
+Note that the "transfer strategy from security threat modeling is often not an applicable strategy in privacy threat modeling. Unlike security threat modeling, delegating data processing to a third party does not necessarily transfer the privacy risk. While a specialized provider may offer better technical or organizational safeguards, sharing personal information with another organization may introduce additional privacy considerations.
+
+Common privacy mitigations include:
+
+- Collect only the data you need. Avoid collecting personal information that is not necessary for your feature.
+- Avoid unnecessary identifiers. Where possible, use short-lived or pseudonymous identifiers instead of persistent identifiers.
+- Limit sharing with third parties. Review analytics, advertising, and embedded content to ensure they receive only the information they need.
+- Protect personal information in storage and transit. Use encryption, strong authentication, and least-privilege access controls.
+- Limit how long you retain data. Delete or anonymize personal information when it is no longer required.
+- Provide transparency. Explain what data is collected, why it is collected, and who receives it.
+- Give users control. Allow users to view, export, correct, and delete their data where possible.
+- Use privacy-friendly defaults. Ask users to opt in rather than opt out where appropriate.
+- Review regularly. Revisit your privacy threat model whenever you introduce new features or data processing activities.
+
+These mitigations reflect the principle of _privacy by design_: considering privacy throughout the design and development process instead of adding it after an application has been built.
 
 ## Did we do a good enough job?
 
-The fourth threat modeling question ["Did we do a good enough job?"](/en-US/docs/Web/Security/Threat_modeling#4._did_we_do_a_good_enough_job), like security, is hard to measure and to give an ultimate answer to. However, like with general threat modeling, it should be understood as an recurring exercise to revisit the identified threats and their responses as well as keeping an active eye on new developments in the privacy field on a regular basis. Your privacy focused threat model document can also help inform the privacy policy for your website or project.
+As with security, there is rarely a definitive answer to the fourth threat modeling question ["Did we do a good enough job?"](/en-US/docs/Web/Security/Threat_modeling#4._did_we_do_a_good_enough_job).
+
+Threat modeling should be an ongoing activity rather than a one-time exercise. Revisit your privacy threat model whenever you:
+
+- introduce new features,
+- collect new kinds of personal information,
+- integrate new third-party services, or
+- significantly change how existing information is processed.
+
+Review your privacy threat model regularly to ensure that it continues to reflect how your application actually handles personal information.
 
 ## See also
 
@@ -165,3 +186,4 @@ The fourth threat modeling question ["Did we do a good enough job?"](/en-US/docs
 - [LINDDUN](https://linddun.org)
 - [RFC 6973 Privacy Considerations for Internet Protocols](https://datatracker.ietf.org/doc/html/rfc6973)
 - [Privacy Principles](https://w3ctag.github.io/privacy-principles/)
+- [Privacy Primer](/en-US/docs/Web/Privacy/Privacy_Primer)
