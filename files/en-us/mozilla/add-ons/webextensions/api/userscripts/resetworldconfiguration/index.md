@@ -3,9 +3,8 @@ title: userScripts.resetWorldConfiguration()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/resetWorldConfiguration
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.resetWorldConfiguration
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Resets the configuration of a `USER_SCRIPT` world set by {{WebExtAPIRef("userScripts.configureWorld")}} to the defaults specified in {{WebExtAPIRef("userScripts.WorldProperties")}}. When the default world is reset, all worlds without an explicit configuration are also reset.
 

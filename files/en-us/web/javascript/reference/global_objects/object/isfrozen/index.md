@@ -1,11 +1,11 @@
 ---
 title: Object.isFrozen()
+short-title: isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isFrozen
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.isFrozen()`** static method determines if an object is
 {{jsxref("Object/freeze", "frozen", "", 1)}}.
@@ -13,16 +13,16 @@ The **`Object.isFrozen()`** static method determines if an object is
 {{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-console.log(Object.isFrozen(object1));
+console.log(Object.isFrozen(object));
 // Expected output: false
 
-Object.freeze(object1);
+Object.freeze(object);
 
-console.log(Object.isFrozen(object1));
+console.log(Object.isFrozen(object));
 // Expected output: true
 ```
 

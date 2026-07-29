@@ -8,7 +8,7 @@ spec-urls:
   - https://w3c.github.io/webauthn/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 Secure Payment Confirmation (SPC), available through the Payment Request API, provides a mechanism for strong customer authentication during checkout, thereby protecting against online payment fraud.
 
@@ -157,6 +157,19 @@ try {
   // send response.details to the issuing bank for verification
 } catch (err) {
   // SPC cannot be used; merchant should fallback to traditional flows
+}
+```
+
+Before starting a payment flow, you can determine whether SPC is available by calling the {{domxref('PaymentRequest.securePaymentConfirmationAvailability_static', 'PaymentRequest.securePaymentConfirmationAvailability()')}} static method. For example:
+
+```js
+async function spcSupport() {
+  const support = await PaymentRequest.securePaymentConfirmationAvailability();
+  if (support === "available") {
+    // Commence SPC payment flow
+  } else {
+    // Fallback to traditional flows
+  }
 }
 ```
 

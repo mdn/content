@@ -2,9 +2,8 @@
 title: Array
 slug: Glossary/Array
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **array** is an ordered collection of data (either {{Glossary("primitive")}} or {{Glossary("object")}} depending upon the language). Arrays are used to store multiple values under a single variable name. A regular variable, on the other hand, can store only one value.
 

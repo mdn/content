@@ -4,9 +4,8 @@ short-title: default-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** directive serves as a fallback for the other CSP {{Glossary("fetch directive", "fetch directives")}}. For each of the following directives that are absent, the user agent looks for the `default-src` directive and uses this value for it:
 
@@ -52,7 +51,6 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources may be loaded if they match any of the given source expressions. For this directive, any of the source expression values listed in [Fetch directive syntax](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax) are applicable.
 
 ## Examples
@@ -128,8 +126,7 @@ Alternatively, if the `default-src 'none'` policy is a hard requirement, you can
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- CSP directives (<https://www.w3.org/TR/CSP/#csp-directives>):
-
+- CSP directives (<https://w3c.github.io/webappsec-csp/#csp-directives>):
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}

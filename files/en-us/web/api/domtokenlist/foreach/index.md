@@ -22,9 +22,7 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : The function to execute for each element, eventually taking three arguments:
-
     - `currentValue`
       - : The current element being processed in the array.
     - `currentIndex`
@@ -33,7 +31,7 @@ forEach(callback, thisArg)
       - : The array that `forEach()` is being applied to.
 
 - `thisArg` {{Optional_inline}}
-  - : The value to use as {{jsxref("Operators/this", "this")}} when executing `callback`.
+  - : The value to use as {{jsxref("this")}} when executing `callback`.
 
 ### Return value
 

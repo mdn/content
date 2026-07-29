@@ -18,9 +18,7 @@ new WebAssembly.Table(tableDescriptor, value)
 ### Parameters
 
 - `tableDescriptor`
-
   - : An object that can contain the following members:
-
     - `element`
       - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
     - `initial`
@@ -29,7 +27,6 @@ new WebAssembly.Table(tableDescriptor, value)
       - : The maximum number of elements the WebAssembly Table is allowed to grow to.
 
 - `value` {{optional_inline}}
-
   - : The element to fill the newly-allocated space with.
 
 ### Exceptions
@@ -47,8 +44,11 @@ The following example creates a `WebAssembly.Table` instance with an initial siz
 
 This example uses the following reference files:
 
-1. `table2.html`: An HTML file containing JavaScript that creates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html))
-2. `table2.wasm`: A WebAssembly module imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
+1. `table2.html`: An HTML page containing JavaScript that creates and manipulates a `WebAssembly.Table` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html))
+2. `table2.wat`: A WebAssembly text format module that is converted to a binary format and imported by the JavaScript code in `table2.html` ([source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat))
+
+> [!NOTE]
+> A precompiled WebAssembly binary [table2.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/refs/heads/main/js-api-examples/table2.wasm) is available for download.
 
 In `table2.html`, we create a `WebAssembly.Table`:
 
@@ -79,10 +79,10 @@ Next, we load and instantiate a WebAssembly module. The `table2.wasm` module def
 
 ```wat
 (module
-    (import "js" "tbl" (table 2 anyfunc))
-    (func $f42 (result i32) i32.const 42)
-    (func $f83 (result i32) i32.const 83)
-    (elem (i32.const 0) $f42 $f83)
+  (import "js" "tbl" (table 2 funcref))
+  (func $f42 (result i32) i32.const 42)
+  (func $f83 (result i32) i32.const 83)
+  (elem (i32.const 0) $f42 $f83)
 )
 ```
 

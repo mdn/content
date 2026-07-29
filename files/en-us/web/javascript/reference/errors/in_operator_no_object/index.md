@@ -2,9 +2,8 @@
 title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "right-hand side of 'in' should be an object" occurs when the
 [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)

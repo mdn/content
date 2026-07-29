@@ -3,9 +3,8 @@ title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
 page-type: webextension-api
 browser-compat: webextensions.api.runtime
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 This module provides information about your extension and the environment it's running in.
 
@@ -27,8 +26,8 @@ It also provides messaging APIs enabling you to:
   - : Identifies the browser's processor architecture.
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
   - : Contains information about the platform the browser is running on.
-- {{WebExtAPIRef("runtime.PlatformNaclArch")}}
-  - : The native client architecture. This may be different from `PlatformArch` on some platforms.
+- {{WebExtAPIRef("runtime.PlatformNaclArch")}} {{deprecated_inline}}
+  - : The deprecated enumeration value representing Google Native Client architecture. Consider migrating to `PlatformArch`, which is supported by Safari and Mozilla, and represents the true CPU architecture and conveys correct bitness information on ARM.
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
@@ -51,6 +50,8 @@ It also provides messaging APIs enabling you to:
 
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : Retrieves the [Window](/en-US/docs/Web/API/Window) object for the background page running inside the current extension.
+- {{WebExtAPIRef("runtime.getDocumentId()")}}
+  - : Returns the document ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).
 - {{WebExtAPIRef("runtime.getContexts()")}}
@@ -58,9 +59,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.getFrameId()")}}
   - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Gets the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, serialized as an object.
+  - : Gets an object representation of the complete [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 - {{WebExtAPIRef("runtime.getURL()")}}
   - : Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, returns a fully-qualified URL.
+- {{WebExtAPIRef("runtime.getVersion()")}}
+  - : Gets the extension version string from the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key. The returned version may differ from the string in the file because the browser can parse and serialize it.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : Sets a URL to be visited when the extension is uninstalled.
 - {{WebExtAPIRef("runtime.reload()")}}
@@ -113,11 +116,11 @@ It also provides messaging APIs enabling you to:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

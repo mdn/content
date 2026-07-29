@@ -2,9 +2,8 @@
 title: Challenge-response authentication
 slug: Glossary/Challenge
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In security protocols, a **challenge** is some data sent to the client by the server in order to generate a different response each time. Challenge-response protocols are one way to fight against {{glossary("replay attack", "replay attacks")}} where an attacker listens to the previous messages and resends them at a later time to get the same credentials as the original message.
 

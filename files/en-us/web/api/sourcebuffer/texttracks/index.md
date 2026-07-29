@@ -16,7 +16,7 @@ contained inside the `SourceBuffer`.
 
 ## Value
 
-An {{domxref("TextTrackList")}} object.
+A {{domxref("TextTrackList")}} object.
 
 ## Examples
 

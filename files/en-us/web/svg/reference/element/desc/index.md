@@ -12,6 +12,18 @@ Text in a `<desc>` element is not rendered as part of the graphic. If the elemen
 
 The hidden text of a `<desc>` element can also be concatenated with the visible text of other elements using multiple IDs in an `aria-describedby` value. In that case, the `<desc>` element must provide an ID for reference.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+This element only includes global attributes.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGDescElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -34,14 +46,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 150, '100%')}}
-
-## Attributes
-
-This element only includes global attributes
-
-## Usage context
-
-{{svginfo}}
 
 ## Specifications
 

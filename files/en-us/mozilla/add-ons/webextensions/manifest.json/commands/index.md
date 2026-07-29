@@ -3,9 +3,8 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.commands
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -179,7 +178,6 @@ Key combinations must consist of 2 or 3 keys:
 1. **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
 2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
 3. **key** (mandatory). This can be any one of:
-
    - the letters `A` – `Z`
    - the numbers `0` – `9`
    - the function keys `F1` – `F12`
@@ -206,7 +204,7 @@ In Firefox, your extension can update shortcut key settings using {{WebExtAPIRef
 
 In Chrome, extensions can't programmatically update shortcut keys. Users can change shortcuts at `chrome://extensions/shortcuts`, which can be opened using {{WebExtAPIRef("tabs.create()")}}.
 
-Safari doesn't support programmatic or user modification of extension shortcut keys.
+Safari doesn't support programmatic modification of extension shortcut keys. From Safari 26, users can change an extension's shortcuts in Safari's extensions settings.
 
 ## Example
 

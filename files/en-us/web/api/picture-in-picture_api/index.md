@@ -12,6 +12,11 @@ The **Picture-in-Picture API** allow websites to create a floating, always-on-to
 > [!NOTE]
 > The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
+> [!NOTE]
+> You can run code when the always-on-top window is programmatically opened, using the {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event. However, this event isn't fired when the browser itself (rather than your code) triggers moving content into the always-on-top window. This can occur, for example, due to the content being occluded, by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from a video's context menu or the browser chrome.
+>
+> To run code in response to such actions, set up a media session action handler using {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`.
+
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
@@ -69,7 +74,7 @@ If media action handlers have been set via the [Media Session API](/en-US/docs/W
 
 ## Controlling styling
 
-The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
+The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
 
 ## Controlling access
 
@@ -77,29 +82,80 @@ The availability of picture-in-picture mode can be controlled using [Permissions
 
 ## Examples
 
-In this example, a video is presented in a web page. Clicking the button below lets the user toggle the floating video window.
-
-{{EmbedGHLiveSample("dom-examples/picture-in-picture/index.html", '100%', 350)}}
-
 ### Toggling picture-in-picture mode
 
-This code is called by a click handler when the user clicks the "Toggle Picture-in-Picture" button:
+In this example, we have a {{HTMLElement("video")}} element in a web page, a {{HTMLElement("button")}} to toggle picture-in-picture, and an element to log information relevant for the example.
+The {{HTMLElement("button")}} element is `disabled` initially until we've determined browser support.
 
-```js
-function togglePictureInPicture() {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
-  } else if (document.pictureInPictureEnabled) {
-    video.requestPictureInPicture();
-  }
+```html
+<video
+  src="/shared-assets/videos/friday.mp4"
+  id="video"
+  muted
+  controls
+  loop
+  width="300"></video>
+
+<button id="pip-button" disabled>Toggle PiP</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+body {
+  font:
+    14px "Open Sans",
+    sans-serif;
+  padding: 0.5em;
+}
+
+button {
+  display: block;
+  margin-block: 1rem;
 }
 ```
 
-This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
+We first check if the browser supports PiP with `document.pictureInPictureEnabled`, and if it's not supported, we log that information to the `<pre>` element.
+If it is available in the browser, we can enable the toggle to enter and exit PiP.
 
-If the value is not `null`, it's the element that's currently in picture-in-picture mode, that is in a floating window. We call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box.
+For the controls, an event listener on the {{HTMLElement("button")}} element calls a `togglePictureInPicture()` function that we've defined.
+In `togglePictureInPicture()`, an `if` statement checks the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute.
 
-If the value is `null`, no video is in the floating window. So we can request a video to enter the picture-in-picture mode. We do it by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+- If the value is `null`, no video is in a floating window, so we can request the video to enter picture-in-picture mode.
+  We do that by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
+- If the value is not `null`, an element is currently in picture-in-picture mode.
+  We can then call {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} to bring the video back into its initial box, exiting picture-in-picture mode.
+
+```js
+const video = document.getElementById("video");
+const pipButton = document.getElementById("pip-button");
+const log = document.getElementById("log");
+
+if (document.pictureInPictureEnabled) {
+  pipButton.removeAttribute("disabled");
+} else {
+  log.innerText = "PiP not supported. Check browser compatibility for details.";
+}
+
+function togglePictureInPicture() {
+  if (document.pictureInPictureElement) {
+    document.exitPictureInPicture();
+  } else {
+    video.requestPictureInPicture();
+  }
+}
+
+pipButton.addEventListener("click", togglePictureInPicture);
+```
+
+```css
+:picture-in-picture {
+  outline: 5px dashed green;
+}
+```
+
+Clicking the "Toggle PiP" button lets the user toggle between playing the video in the page and in a floating window:
+
+{{embedlivesample("toggling_picture-in-picture", , "350")}}
 
 ## Specifications
 

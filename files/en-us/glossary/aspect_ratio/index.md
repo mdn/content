@@ -2,9 +2,8 @@
 title: Aspect ratio
 slug: Glossary/Aspect_ratio
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **aspect ratio** is the proportional relationship between an element or {{glossary("viewport")}}'s width and height. It is represented as a {{cssxref("ratio")}} of two numbers.
 
@@ -42,8 +41,8 @@ myTrack.applyConstraints(constraints);
 ## See also
 
 - CSS {{cssxref("aspect-ratio")}} property
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio) guide
-- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios) guide
+- [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 - Related glossary terms:
   - {{glossary("intrinsic size")}}
 - CSS {{cssxref("min-content")}}, {{cssxref("max-content")}}, and {{cssxref("fit-content")}} property values.

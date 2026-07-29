@@ -30,13 +30,6 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCDTMFToneChangeEvent")}}
 
-## Event properties
-
-_In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
-
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
-  - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
-
 ## Examples
 
 This example establishes a handler for the `tonechange` event which updates an element to display the currently playing tone in its content, or, if all tones have played, the string "\<none>".
@@ -44,18 +37,14 @@ This example establishes a handler for the `tonechange` event which updates an e
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener(
-  "tonechange",
-  (ev) => {
-    let tone = ev.tone;
-    if (tone === "") {
-      tone = "&lt;none&gt;";
-    }
+dtmfSender.addEventListener("tonechange", (ev) => {
+  let tone = ev.tone;
+  if (tone === "") {
+    tone = "&lt;none&gt;";
+  }
 
-    document.getElementById("playingTone").innerText = tone;
-  },
-  false,
-);
+  document.getElementById("playingTone").innerText = tone;
+});
 ```
 
 You can also just set the `ontonechange` event handler property directly:

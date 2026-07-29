@@ -8,7 +8,7 @@ browser-compat: api.CSSStyleSheet.CSSStyleSheet
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
+The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Style_sheet).
 
 After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}}, {{domxref("CSSStyleSheet.insertRule()")}}, and {{domxref("CSSStyleSheet.deleteRule()")}} methods can be used to modify the rules of the new stylesheet.
 
@@ -25,9 +25,7 @@ new CSSStyleSheet(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing the following:
-
     - `baseURL` {{optional_inline}}
       - : A string containing the `baseURL` used to resolve relative URLs in the stylesheet.
     - `media` {{optional_inline}}

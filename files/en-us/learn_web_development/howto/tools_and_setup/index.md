@@ -27,8 +27,6 @@ This section lists questions related to the tools/software you can use to build 
   - : This article shows how to publish your site online with {{Glossary("FTP")}} tools — one of the most common ways to get a website online so others can access it from their computers.
 - [How do I use GitHub Pages?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)
   - : This article provides a basic guide to publishing content using GitHub's gh-pages feature.
-- [How do you host your website on Google App Engine?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
-  - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.
 - [What tools are available to debug and improve website performance?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : This set of articles shows you how to use the Developer Tools in Firefox to debug and improve performance of your
     website, using the tools to check memory usage, the JavaScript call tree, the number of DOM nodes being rendered, and

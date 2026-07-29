@@ -129,17 +129,17 @@ data:hover::after {
 {{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add("forty two");
+set.add(42);
+set.add("forty two");
 
-const iterator1 = set1[Symbol.iterator]();
+const iterator = set[Symbol.iterator]();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: 42
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "forty two"
 ```
 
@@ -182,7 +182,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 
 ```css interactive-example
 .example-container {
-  background-color: #fff;
+  background-color: white;
   width: 260px;
   height: 260px;
   display: flex;
@@ -242,7 +242,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
@@ -298,7 +298,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
         </p>
         <p>
           The <code>cover</code> value means that the viewport is scaled to fill the device display.
-          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
+          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/Reference/Values/env">safe area inset</a> variables to
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
@@ -358,32 +358,35 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
   Move the rectangle with arrow keys. Green means collision, blue means no
   collision.
 </p>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```js
 Crafty.init(200, 200);
 
-var dim1 = {x: 5, y: 5, w: 50, h: 50}
-var dim2 = {x: 20, y: 10, w: 60, h: 40}
+var dim1 = { x: 5, y: 5, w: 50, h: 50 };
+var dim2 = { x: 20, y: 10, w: 60, h: 40 };
 
 var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
-var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .color("blue");
 
 rect2.bind("EnterFrame", function () {
-if (rect1.x > rect2.x + rect2.w &#x26;&#x26;
-rect1.x + rect1.w > rect2.x &#x26;&#x26;
-rect1.y > rect2.y + rect2.h &#x26;&#x26;
-rect1.h + rect1.y > rect2.y) {
-// collision detected!
-this.color("green");
-} else {
-// no collision
-this.color("blue");
-}
+  if (
+    rect1.x > rect2.x + rect2.w &&
+    rect1.x + rect1.w > rect2.x &&
+    rect1.y > rect2.y + rect2.h &&
+    rect1.h + rect1.y > rect2.y
+  ) {
+    // collision detected!
+    this.color("green");
+  } else {
+    // no collision
+    this.color("blue");
+  }
 });
 ```
 
@@ -428,7 +431,6 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 <!---->
 
 - [MDN Web Docs Glossary](/en-US/docs/Glossary):
-
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia

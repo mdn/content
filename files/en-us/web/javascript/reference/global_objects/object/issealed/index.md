@@ -1,27 +1,27 @@
 ---
 title: Object.isSealed()
+short-title: isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isSealed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.isSealed()`** static method determines if an object is [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
 {{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-console.log(Object.isSealed(object1));
+console.log(Object.isSealed(object));
 // Expected output: false
 
-Object.seal(object1);
+Object.seal(object);
 
-console.log(Object.isSealed(object1));
+console.log(Object.isSealed(object));
 // Expected output: true
 ```
 

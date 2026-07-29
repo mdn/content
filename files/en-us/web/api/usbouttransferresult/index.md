@@ -21,9 +21,7 @@ The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/Web
 - {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the transfer request that were sent to the device.
 - {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : Returns the status of the transfer request, one of:
-
     - `"ok"` - The transfer was successful.
     - `"stall"` - The device indicated an error by generating a stall condition on the endpoint. A stall on a bulk or interrupt endpoint must be cleared by calling `clearHalt()` before `transferOut()` can be called again.
 

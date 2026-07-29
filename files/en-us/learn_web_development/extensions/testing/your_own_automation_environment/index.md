@@ -26,7 +26,7 @@ In this article, we will teach you how to install your own automation environmen
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like LambdaTest, Sauce Labs, and BrowserStack.
+        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like Sauce Labs and BrowserStack.
       </td>
     </tr>
   </tbody>
@@ -74,7 +74,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
 2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
-   #Add WebDriver browser drivers to PATH
+   # Add WebDriver browser drivers to PATH
    export PATH=$PATH:/Users/bob
    ```
 
@@ -88,7 +88,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
    You should see it printed out in the terminal.
 
 > [!NOTE]
-> To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://www.itprotoday.com/)
+> To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots)
 
 Let's try a quick test to make sure everything is working.
 
@@ -137,8 +137,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
    ```js
    const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
-   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
-   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+   const driverFx = new Builder().forBrowser(Browser.FIREFOX).build();
+   const driverChr = new Builder().forBrowser(Browser.CHROME).build();
 
    async function searchTest(driver) {
      try {
@@ -156,8 +156,8 @@ There is also nothing to stop you running the test on multiple browsers simultan
      }
    }
 
-   searchTest(driver_fx);
-   searchTest(driver_chr);
+   searchTest(driverFx);
+   searchTest(driverChr);
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
@@ -493,7 +493,8 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
-> **Note:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
 
 ## Running remote tests
 
@@ -601,7 +602,7 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
    });
    ```
 
-5. Finally, update the `if ... else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
+5. Finally, update the `if...else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
 
    ```js
    if (title === "webdriver at DuckDuckGo") {
@@ -794,7 +795,7 @@ So this is pretty cool. We have tested this locally, but you could set this up o
 
 ## Integrating Selenium with CI tools
 
-As another point, it is also possible to integrate Selenium and related tools like LambdaTest, and Sauce Labs with continuous integration (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
+As another point, it is also possible to integrate Selenium and related tools like Sauce Labs with {{glossary("continuous integration")}} (CI) tools — this is useful, as it means you can run your tests via a CI tool, and only commit new changes to your code repository if the tests pass.
 
 It is out of scope to look at this area in detail in this article, but we'd suggest getting started with Travis CI — this is probably the easiest CI tool to get started with and has good integration with web tools like GitHub and Node.
 
@@ -802,13 +803,10 @@ To get started, see for example:
 
 - [Travis CI for complete beginners](https://docs.travis-ci.com/user/for-beginners)
 - [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/) (with Travis)
-- [Using LambdaTest with Travis CI](https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/)
-- [Using LambdaTest with CircleCI](https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/)
-- [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
 > [!NOTE]
-> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://www.endtest.io/) or [TestingBot](https://testingbot.com/).
+> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://endtest.io/) or [TestingBot](https://testingbot.com/).
 
 ## Summary
 

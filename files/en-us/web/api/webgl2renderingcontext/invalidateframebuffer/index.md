@@ -21,9 +21,7 @@ invalidateFramebuffer(target, attachments)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`
       - : Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.
@@ -33,10 +31,8 @@ invalidateFramebuffer(target, attachments)
       - : Used as a source for reading operations.
 
 - `attachments`
-
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment points to
     invalidate. Possible values:
-
     - `gl.COLOR_ATTACHMENT{0-15}`
       - : Invalidates one of the framebuffer's
         color buffers.

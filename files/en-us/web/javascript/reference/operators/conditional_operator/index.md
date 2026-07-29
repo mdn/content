@@ -3,9 +3,8 @@ title: Conditional (ternary) operator
 slug: Web/JavaScript/Reference/Operators/Conditional_operator
 page-type: javascript-operator
 browser-compat: javascript.operators.conditional
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
 a condition followed by a question mark (`?`), then an expression to execute if the condition is {{Glossary("truthy")}} followed by a colon (`:`), and finally the expression to execute if the condition is {{Glossary("falsy")}}.

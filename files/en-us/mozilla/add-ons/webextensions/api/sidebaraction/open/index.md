@@ -3,9 +3,8 @@ title: sidebarAction.open()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
 page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.open
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Open the sidebar in the active window.
 
@@ -27,10 +26,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Open the sidebar when the user selects a context menu item:
@@ -48,3 +43,7 @@ browser.menus.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

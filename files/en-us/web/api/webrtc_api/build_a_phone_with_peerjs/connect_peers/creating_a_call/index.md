@@ -35,7 +35,6 @@ Exciting times — now you're going to give your users the ability to create cal
    ```
 
    Let's walk through this code:
-
    - `const call = peer.call(code, window.localStream)`: This will create a call with the `code` and `window.localStream` we've previously assigned. Note that the `localStream` will be the user's `localStream`. So for caller A it'll be their stream & for B, their own stream.
    - `call.on('stream', (stream) => {` : peerJS gives us a `stream` event which you can use on the `call` that you've created. When a call starts streaming, you need to ensure that the remote stream coming from the call is assigned to the correct HTML elements and window, this is where you'll do that.
    - The anonymous function takes a `MediaStream` object as an argument, which you then have to set to your window's HTML like you've done before. Here we get your remote `<audio>` element and assign the stream passed to the function to the `srcObject` property.

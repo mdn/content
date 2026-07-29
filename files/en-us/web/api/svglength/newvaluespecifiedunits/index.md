@@ -19,7 +19,6 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ### Parameters
 
 - `unitType`
-
   - : A constant representing the unit type to which the length's value should be converted. This must be one of the constant values defined for the {{domxref("SVGLength.unitType", "unitType")}} property, with the exception of `SVG_LENGTHTYPE_UNKNOWN`.
     - `SVGLength.SVG_LENGTHTYPE_NUMBER`: convert to unitless number
     - `SVGLength.SVG_LENGTHTYPE_PERCENTAGE`: convert to percentage

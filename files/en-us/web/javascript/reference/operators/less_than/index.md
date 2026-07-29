@@ -3,9 +3,8 @@ title: Less than (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
 page-type: javascript-operator
 browser-compat: javascript.operators.less_than
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 

@@ -1,11 +1,11 @@
 ---
 title: Promise.any()
+short-title: any()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.any
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.any()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 
@@ -49,6 +49,8 @@ The `Promise.any()` method is one of the [promise concurrency](/en-US/docs/Web/J
 Unlike {{jsxref("Promise.all()")}}, which returns an _array_ of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills). This can be beneficial if we need only one promise to fulfill but we do not care which one does. Note another difference: this method rejects upon receiving an _empty iterable_, since, truthfully, the iterable contains no items that fulfill. You may compare `Promise.any()` and `Promise.all()` with {{jsxref("Array.prototype.some()")}} and {{jsxref("Array.prototype.every()")}}.
 
 Also, unlike {{jsxref("Promise.race()")}}, which returns the first _settled_ value (either fulfillment or rejection), this method returns the first _fulfilled_ value. This method ignores all rejected promises up until the first promise that fulfills.
+
+Like other promise combinators, `Promise.any()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first fulfillment will be ignored, and will not trigger any `unhandledrejection` events.
 
 ## Examples
 

@@ -19,9 +19,7 @@ configure(config)
 ### Parameters
 
 - `config`
-
   - : A dictionary object containing the following members:
-
     - `codec`
       - : A string containing a [valid codec string](https://w3c.github.io/webcodecs/codec_registry.html#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
@@ -31,13 +29,10 @@ configure(config)
     - `bitrate` {{optional_inline}}
       - : An integer representing the bitrate.
     - `bitrateMode` {{optional_inline}}
-
       - : An enumerated value that defines the bitrate mode the encoder should use. Possible values are:
-
         - `"constant"`
           - : Forces an audio encoder to maintain the same bitrate, regardless of the audio content. This can be useful when a predictable bandwidth consumption is preferable.
         - `"variable"` (default)
-
           - : Allows an audio encoder to increase or lower its bitrate according to the content of the audio it is encoding, in order to preserve bandwidth/binary-size, while still maintaining a target quality. For example, an encoder might lower its bitrate when encoding silence, and revert to a full bitrate when encoding speech.
 
         Specific codec encoder implementations may use slightly different terminology (for example, CBR vs VBR for Opus), but they should all map to the general concept of "constant" versus "variable" bitrate.
@@ -53,7 +48,7 @@ configure(config)
             - `voip`
               - : Process signal for improved speech intelligibility.
         - `complexity` {{optional_inline}}
-          - : A number that defines the encoder's computational complexity, based on the aspects described in section [RFC6716, 2.1.5. — Complexity](https://www.rfc-editor.org/rfc/rfc6716#section-2.1.5). The valid range is 0 to 10, with 10 representing the highest complexity. If no value is specified, the default value is platform-specific, with the specification recommending 5 for mobile platforms, and 9 for all other platforms.
+          - : A number that defines the encoder's computational complexity, based on the aspects described in section [RFC6716, 2.1.5. — Complexity](https://www.rfc-editor.org/info/rfc6716/#section-2.1.5). The valid range is 0 to 10, with 10 representing the highest complexity. If no value is specified, the default value is platform-specific, with the specification recommending 5 for mobile platforms, and 9 for all other platforms.
         - `format` {{optional_inline}}
           - : An enumerated value that specifies the format in which the encoder should output {{domxref("EncodedAudioChunk")}}s. Possible values are:
             - `opus` (default)

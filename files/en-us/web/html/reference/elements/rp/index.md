@@ -1,11 +1,11 @@
 ---
-title: "<rp>: The Ruby Fallback Parenthesis element"
+title: "`<rp>` HTML ruby fallback parenthesis element"
+short-title: <rp>
 slug: Web/HTML/Reference/Elements/rp
 page-type: html-element
 browser-compat: html.elements.rp
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<rp>`** [HTML](/en-US/docs/Web/HTML) element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the {{HTMLElement("ruby") }} element. One `<rp>` element should enclose each of the opening and closing parentheses that wrap the {{HTMLElement("rt")}} element that contains the annotation's text.
 
@@ -106,7 +106,7 @@ body {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>
@@ -136,3 +136,4 @@ body {
 - {{HTMLElement("rt")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

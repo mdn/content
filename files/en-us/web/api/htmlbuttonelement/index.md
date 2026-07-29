@@ -34,6 +34,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A boolean value indicating that the form is not to be validated when it is submitted. If specified, this attribute overrides the [`novalidate`](/en-US/docs/Web/HTML/Reference/Elements/form#novalidate) attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formTarget")}}
   - : A string reflecting a name or keyword indicating where to display the response received after submitting the form. If specified, this attribute overrides the [`target`](/en-US/docs/Web/HTML/Reference/Elements/form#target) attribute of the {{HTMLElement("form")}} element that owns this element.
+- {{domxref("HTMLButtonElement.interestForElement")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Gets or sets the target element of an interest invoker, in cases where the associated {{htmlelement("button")}} element is specified as an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers#creating_an_interest_invoker).
 - {{domxref("HTMLButtonElement.labels")}} {{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} that represents a list of {{HTMLElement("label")}} elements that are labels for this button.
 - {{domxref("HTMLButtonElement.name")}}
@@ -43,9 +45,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.type")}}
-
   - : A string indicating the behavior of the button. This is an enumerated attribute with the following possible values:
-
     - `submit`: The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
     - `reset`: The button resets the form.
     - `button`: The button does nothing.

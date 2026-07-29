@@ -1,6 +1,6 @@
 ---
 title: from
-slug: Web/SVG/Reference/Attribute/From
+slug: Web/SVG/Reference/Attribute/from
 page-type: svg-attribute
 browser-compat: svg.elements.animate.from
 sidebar: svgref

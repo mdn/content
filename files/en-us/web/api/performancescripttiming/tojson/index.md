@@ -42,25 +42,24 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: "long-animation-frame", buffered: true });
 ```
 
-This would log a JSON object like so:
+This would log an object like so:
 
-```json
-{
-  "duration": 45,
-  "entryType": "script",
-  "executionStart": 11803.199999999255,
-  "forcedStyleAndLayoutDuration": 0,
-  "invoker": "DOMWindow.onclick",
-  "invokerType": "event-listener",
-  "name": "script",
-  "pauseDuration": 0,
-  "sourceURL": "https://web.dev/js/index-ffde4443.js",
-  "sourceFunctionName": "myClickHandler",
-  "sourceCharPosition": 17796,
-  "startTime": 11803.199999999255,
-  "window": [Window object],
-  "windowAttribution": "self"
-}
+```js
+({
+  duration: 45,
+  entryType: "script",
+  executionStart: 11803.199999999255,
+  forcedStyleAndLayoutDuration: 0,
+  invoker: "DOMWindow.onclick",
+  invokerType: "event-listener",
+  name: "script",
+  pauseDuration: 0,
+  sourceURL: "https://web.dev/js/index-ffde4443.js",
+  sourceFunctionName: "myClickHandler",
+  sourceCharPosition: 17796,
+  startTime: 11803.199999999255,
+  windowAttribution: "self",
+});
 ```
 
 To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.

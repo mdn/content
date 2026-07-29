@@ -3,8 +3,8 @@ title: points
 slug: Web/SVG/Reference/Attribute/points
 page-type: svg-attribute
 spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
-  - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolygonElementPointsAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolylineElementPointsAttribute
 sidebar: svgref
 ---
 
@@ -122,7 +122,7 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polygon is an closed shape -->
+  <!-- polygon is a closed shape -->
   <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```

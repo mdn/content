@@ -8,6 +8,18 @@ sidebar: svgref
 
 The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate an attribute of an element over time.
 
+## Usage context
+
+{{svginfo}}
+
+## Attributes
+
+This element only includes global attributes.
+
+## DOM Interface
+
+This element implements the {{domxref("SVGAnimateElement")}} interface.
+
 ## Example
 
 ```css hidden
@@ -34,15 +46,11 @@ svg {
 
 {{EmbedLiveSample('Example', 150, '100%')}}
 
-## Usage notes
-
-This element implements the {{domxref("SVGAnimateElement")}} interface.
-
 ## Accessibility concerns
 
 Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} to create a complimentary experience for users who have expressed a preference for no animated experiences.
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

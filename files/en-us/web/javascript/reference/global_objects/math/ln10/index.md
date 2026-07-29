@@ -1,11 +1,11 @@
 ---
 title: Math.LN10
+short-title: LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.LN10
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.LN10`** static data property represents the natural logarithm of 10, approximately 2.303.
 

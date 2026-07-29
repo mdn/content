@@ -58,7 +58,7 @@ element.dispatchEvent(dogFound);
 // "cat" and "dog" logged in the console
 ```
 
-Additional examples can be found at [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
+Additional examples can be found at [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events).
 
 ## Specifications
 
@@ -71,4 +71,4 @@ Additional examples can be found at [Creating and triggering events](/en-US/docs
 ## See also
 
 - {{domxref("CustomEvent")}}
-- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)

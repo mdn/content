@@ -1,11 +1,11 @@
 ---
 title: ArrayBuffer() constructor
+short-title: ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 page-type: javascript-constructor
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer()`** constructor creates {{jsxref("ArrayBuffer")}} objects.
 
@@ -26,7 +26,8 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -52,7 +53,7 @@ A new `ArrayBuffer` object of the specified size, with its {{jsxref("ArrayBuffer
 
 ### Creating an ArrayBuffer
 
-In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with an {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 const buffer = new ArrayBuffer(8);

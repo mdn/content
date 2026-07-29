@@ -4,9 +4,8 @@ short-title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
 page-type: http-header
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-2
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Content-Digest`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} provides a {{Glossary("hash function", "digest")}} calculated using a hashing algorithm applied to the message content.
 A recipient can use the `Content-Digest` to validate the HTTP message content for integrity purposes.
@@ -49,12 +48,12 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
 - `<digest-value>`
   - : The digest in bytes of the message content using the `<digest-algorithm>`.
     The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use {{Glossary("base64")}} encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
-    In contrast to earlier drafts of the specification, the standard base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
+    In contrast to earlier drafts of the specification, the standard base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/info/rfc8941/#name-byte-sequences).
 
 ## Description
 
 A `Digest` header was defined in previous specifications, but it proved problematic as the scope of what the digest applied to was not clear.
-Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of a HTTP message.
+Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of an HTTP message.
 As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`) to convey HTTP message content digests and resource representation digests, respectively.
 
 ## Examples

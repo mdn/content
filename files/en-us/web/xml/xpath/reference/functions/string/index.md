@@ -26,7 +26,6 @@ A string
 
 - If the object is a node-set, the string value of the first node in the set is returned.
 - A number is converted as follows:
-
   - NaN is converted to the string NaN.
   - Positive zero is converted to the string 0.
   - Negative zero is converted to the string 0.
@@ -38,7 +37,7 @@ A string
 
 ## Specifications
 
-[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath-10/#function-string)
 
 ## Gecko support
 

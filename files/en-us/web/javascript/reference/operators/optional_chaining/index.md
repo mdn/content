@@ -3,9 +3,8 @@ title: Optional chaining (?.)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
 page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
@@ -148,7 +147,7 @@ String?.raw`Hello, world!`;
 String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
-The constructor of {{jsxref("Operators/new", "new")}} expressions cannot be an optional chain (see [SyntaxError: new keyword cannot be used with an optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)):
+The constructor of {{jsxref("new")}} expressions cannot be an optional chain (see [SyntaxError: new keyword cannot be used with an optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)):
 
 ```js-nolint example-bad
 new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression

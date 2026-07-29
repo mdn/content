@@ -48,7 +48,7 @@ Attempting to set the sink ID to its existing value (i.e., returned by {{domxref
 
 ## Examples
 
-In our [SetSinkId test example](https://set-sink-id.glitch.me/) (check out the [source code](https://glitch.com/edit/#!/set-sink-id)), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit.
+In our [SetSinkId test example](https://mdn.github.io/dom-examples/audiocontext-setsinkid/) (check out the [source code](https://github.com/mdn/dom-examples/tree/main/audiocontext-setsinkid)), we create an audio graph that generates a three-second burst of white noise via an {{domxref("AudioBufferSourceNode")}}, which we also run through a {{domxref("GainNode")}} to quiet things down a bit.
 
 ```js
 mediaDeviceBtn.addEventListener("click", async () => {
@@ -107,7 +107,6 @@ The output device can be changed during audio playback, as well as before, or be
 
 ## See also
 
-- [SetSinkId test example](https://set-sink-id.glitch.me/)
 - [Change the destination output device in Web Audio](https://developer.chrome.com/blog/audiocontext-setsinkid/)
 - {{domxref("AudioContext.sinkId")}}
 - {{domxref("AudioContext/sinkchange_event", "sinkchange")}}

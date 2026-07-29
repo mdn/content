@@ -3,9 +3,8 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 page-type: javascript-class
 browser-compat: javascript.builtins.String
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`String`** object is used to represent and manipulate a
 sequence of characters.
@@ -117,7 +116,7 @@ Note that JavaScript distinguishes between `String` objects and
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
-the {{jsxref("Operators/new", "new")}} keyword) are primitive strings. In contexts where a
+the {{jsxref("new")}} keyword) are primitive strings. In contexts where a
 method is to be invoked on a primitive string or a property lookup occurs, JavaScript
 will automatically wrap the string primitive and call the method or perform the property
 lookup on the wrapper object instead.
@@ -316,7 +315,6 @@ These properties are own properties of each `String` instance.
   - : Returns a new string containing characters of the calling string from (or between)
     the specified index (or indices).
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : The characters within a string are converted to lowercase while respecting the
     current locale.
 
@@ -324,7 +322,6 @@ These properties are own properties of each `String` instance.
     {{jsxref("String/toLowerCase", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
-
   - : The characters within a string are converted to uppercase while respecting the
     current locale.
 

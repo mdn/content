@@ -8,16 +8,9 @@ browser-compat: api.HTMLImageElement.decode
 
 {{APIRef("HTML DOM")}}
 
-The **`decode()`**
-method of the {{domxref("HTMLImageElement")}} interface returns a
-{{jsxref("Promise")}} that resolves once the image is decoded and it is safe to append
-it to the DOM.
+The **`decode()`** method of the {{domxref("HTMLImageElement")}} interface returns a {{jsxref("Promise")}} that resolves once the image is decoded and is safe to be appended to the DOM.
 
-This can be used to initiate loading of the image prior
-to attaching it to an element in the DOM (or adding it to the DOM as a new element), so
-that the image can be rendered immediately upon being added to the DOM. This, in turn,
-prevents the rendering of the next frame after adding the image to the DOM from causing
-a delay while the image loads.
+This can be used to initiate loading of the image prior to attaching it to an element in the DOM (or adding it to the DOM as a new element), so that the image can be rendered immediately upon being added to the DOM. This, in turn, prevents the rendering of the next frame after adding the image to the DOM from causing a delay while the image loads.
 
 ## Syntax
 
@@ -35,19 +28,11 @@ A {{jsxref('Promise')}} that fulfills with `undefined` once the image data is re
 
 ### Exceptions
 
-- `EncodingError`
-  - : A {{domxref('DOMException')}} indicating that an error occurred while decoding the
-    image.
-
-## Usage notes
-
-One potential use case for `decode()`: when loading very large images (for
-example, in an online photo album), you can present a low resolution thumbnail image
-initially and then replace that image with the full-resolution image by instantiating a
-new {{domxref("HTMLImageElement")}}, setting its source to the full-resolution image's
-URL, then using `decode()` to get a promise which is resolved once the
-full-resolution image is ready for use. At that time, you can then replace the
-low-resolution image with the full-resolution one that's now available.
+- `EncodingError` {{domxref("DOMException")}}
+  - : An error occurred while decoding the image. This can happen if:
+    - The request failed
+    - The image request changed after calling `decode()` (for example, by changing its `src`)
+    - The image's data is corrupted
 
 ## Examples
 
@@ -70,9 +55,7 @@ img
 ```
 
 > [!NOTE]
-> Without a {{jsxref('Promise')}}-returning method, you
-> would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler,
-> and handle the error in the {{domxref("HTMLElement/error_event", "error")}} event's handler.
+> Without a {{jsxref('Promise')}}-returning method, you would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler, and handle the error in the {{domxref("HTMLElement/error_event", "error")}} event's handler.
 
 ### Avoiding empty images
 
@@ -98,7 +81,7 @@ async function getImage() {
 }
 ```
 
-This is particularly useful if you're dynamically swapping an existing image for a new one, and also prevents unrelated paints outside of this code from being held up while the image is decoding.
+This is particularly useful if you're dynamically swapping an existing image for a new one, and also prevents unrelated paints outside of this code from being held up while the image is decoding. For example, in an online photo album, you can present a low resolution thumbnail image initially and then replace that image with the full-resolution image by instantiating a new {{domxref("HTMLImageElement")}}, setting its source to the full-resolution image's URL, then using `decode()` to get a promise which is resolved once the full-resolution image is ready for use. At that time, you can then replace the low-resolution image with the full-resolution one that's now available.
 
 ## Specifications
 

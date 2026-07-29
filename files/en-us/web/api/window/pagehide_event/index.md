@@ -28,11 +28,6 @@ A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageTransitionEvent")}}
 
-## Event properties
-
-- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
-  - : Indicates if the document is loading from a cache.
-
 ## Event handler aliases
 
 In addition to the `Window` interface, the event handler property `onpagehide` is also available on the following targets:
@@ -64,15 +59,11 @@ See the [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page
 In this example, an event handler is established to watch for `pagehide` events and to perform special handling if the page is being persisted for possible reuse.
 
 ```js
-window.addEventListener(
-  "pagehide",
-  (event) => {
-    if (event.persisted) {
-      /* the page isn't being discarded, so it can be reused later */
-    }
-  },
-  false,
-);
+window.addEventListener("pagehide", (event) => {
+  if (event.persisted) {
+    /* the page isn't being discarded, so it can be reused later */
+  }
+});
 ```
 
 This can also be written using the `onpagehide` event handler property on the {{domxref("Window")}}:

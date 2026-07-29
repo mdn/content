@@ -31,16 +31,39 @@ method provides a cursor if the record exists, and no cursor if it does not.
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)
+getAllKeys(options)
 ```
 
 ### Parameters
 
+The `getAllKeys()` method can take separate parameters or a single options object containing the parameters as properties.
+
+The parameters can include:
+
 - `query` {{optional_inline}}
-  - : A value that is or resolves to an {{domxref("IDBKeyRange")}}.
+  - : A value that is or resolves to an {{domxref("IDBKeyRange")}}. If this value is not specified, this will
+    default to a key range that selects all the records in this object store.
 - `count` {{optional_inline}}
   - : Specifies the number of values to return if more than one is found. If it is lower
     than `0` or greater than `2^32 - 1` a
     {{jsxref("TypeError")}} exception will be thrown.
+
+If an object parameter is specified, its properties can include:
+
+- `query` {{optional_inline}}
+  - : See the earlier [`query`](#query) definition.
+- `count` {{optional_inline}}
+  - : See the earlier [`count`](#count) definition.
+- `direction` {{optional_inline}}
+  - : An enumerated value specifying the direction in which the objects are traversed. Possible values are:
+    - `next`
+      - : The objects are traversed from the beginning, in increasing key order. This is the default value.
+    - `nextunique`
+      - : The objects are traversed from the beginning, in increasing key order. This will yield the same keys as `next`, because duplicate keys are not allowed in `IDBObjectStore`s.
+    - `prev`
+      - : The objects are traversed from the end, in decreasing key order.
+    - `prevunique`
+      - : The objects are traversed from the end, in decreasing key order. This will yield the same keys as `prev`, because duplicate keys are not allowed in `IDBObjectStore`s.
 
 ### Return value
 
@@ -58,6 +81,8 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the key or key range provided contains an invalid key or is null.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
+- {{jsxref("TypeError")}} {{domxref("DOMException")}}
+  - : Thrown if the [`count`](#count) parameter is not between `0` and `2^32 - 1`, inclusive.
 
 ## Specifications
 

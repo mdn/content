@@ -5,7 +5,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -16,36 +17,34 @@ sidebar: mdnsidebar
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
+> title: :name-of-the-selector
+> slug: Web/CSS/Reference/Selectors/:name-of-the-selector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
 > status:
 >   - deprecated
 >   - experimental
 >   - non-standard
-> browser-compat: css.selectors.NameOfTheSelector
+> browser-compat: css.selectors.name-of-the-selector
 > sidebar: cssref
 > ---
 > ```
 >
 > - **title**
 >   - : Title heading displayed at the top of the page. Format as _:NameOfTheSelector_.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
+>     For example, the {{cssxref(":hover")}} selector has a title of _:hover_.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/Reference/Selectors/:name-of-the-selector`.
+>     For example, the {{cssxref(":hover")}} selector slug is `Web/CSS/Reference/Selectors/:hover`.
 > - **page-type**
->   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector).
+>   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators), or a [simple selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector).
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
 >
 >     Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : This is `cssref` for all CSS guide and reference pages.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.

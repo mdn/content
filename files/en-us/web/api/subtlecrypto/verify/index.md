@@ -35,9 +35,9 @@ verify(algorithm, key, signature, data)
   - : A {{domxref("CryptoKey")}} containing the key that will be used to verify the signature.
     It is the secret key for a symmetric algorithm and the public key for a public-key system.
 - `signature`
-  - : A {{jsxref("ArrayBuffer")}} containing the {{glossary("signature")}} to verify.
+  - : An {{jsxref("ArrayBuffer")}} containing the {{glossary("signature")}} to verify.
 - `data`
-  - : A {{jsxref("ArrayBuffer")}} containing the data whose signature is to be verified.
+  - : An {{jsxref("ArrayBuffer")}} containing the data whose signature is to be verified.
 
 ### Return value
 

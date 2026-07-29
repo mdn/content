@@ -1,11 +1,11 @@
 ---
-title: "<canvas>: The Graphics Canvas element"
+title: "`<canvas>` HTML graphics canvas element"
+short-title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
 page-type: html-element
 browser-compat: html.elements.canvas
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
@@ -58,7 +58,6 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Examples
@@ -142,7 +141,7 @@ ctx.fillRect(10, 10, 100, 100);
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

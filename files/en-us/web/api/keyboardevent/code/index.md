@@ -40,7 +40,7 @@ The code values for Windows, Linux, and macOS are listed on the [KeyboardEvent: 
 
 ```css
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: 1px solid black;
   width: 95%;
   margin: auto;
@@ -53,16 +53,12 @@ The code values for Windows, Linux, and macOS are listed on the [KeyboardEvent: 
 #### JavaScript
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    const p = document.createElement("p");
-    p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
-    document.getElementById("output").appendChild(p);
-    window.scrollTo(0, document.body.scrollHeight);
-  },
-  true,
-);
+window.addEventListener("keydown", (event) => {
+  const p = document.createElement("p");
+  p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+  document.getElementById("output").appendChild(p);
+  window.scrollTo(0, document.body.scrollHeight);
+});
 ```
 
 #### Try it out
@@ -169,46 +165,42 @@ refresh();
 Finally, the `addEventListener()` method is used to start listening for {{domxref("Element/keydown_event", "keydown")}} events, acting on each key by updating the ship position and rotation angle, then calling `refresh()` to draw the ship at its new position and angle.
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // Do nothing if event already handled
-    }
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // Do nothing if event already handled
+  }
 
-    switch (event.code) {
-      case "KeyS":
-      case "ArrowDown":
-        // Handle "back"
-        updatePosition(-moveRate);
-        break;
-      case "KeyW":
-      case "ArrowUp":
-        // Handle "forward"
-        updatePosition(moveRate);
-        break;
-      case "KeyA":
-      case "ArrowLeft":
-        // Handle "turn left"
-        angle -= turnRate;
-        break;
-      case "KeyD":
-      case "ArrowRight":
-        // Handle "turn right"
-        angle += turnRate;
-        break;
-    }
+  switch (event.code) {
+    case "KeyS":
+    case "ArrowDown":
+      // Handle "back"
+      updatePosition(-moveRate);
+      break;
+    case "KeyW":
+    case "ArrowUp":
+      // Handle "forward"
+      updatePosition(moveRate);
+      break;
+    case "KeyA":
+    case "ArrowLeft":
+      // Handle "turn left"
+      angle -= turnRate;
+      break;
+    case "KeyD":
+    case "ArrowRight":
+      // Handle "turn right"
+      angle += turnRate;
+      break;
+  }
 
-    refresh();
+  refresh();
 
-    if (event.code !== "Tab") {
-      // Consume the event so it doesn't get handled twice,
-      // as long as the user isn't trying to move focus away
-      event.preventDefault();
-    }
-  },
-  true,
-);
+  if (event.code !== "Tab") {
+    // Consume the event so it doesn't get handled twice,
+    // as long as the user isn't trying to move focus away
+    event.preventDefault();
+  }
+});
 ```
 
 #### Try it out

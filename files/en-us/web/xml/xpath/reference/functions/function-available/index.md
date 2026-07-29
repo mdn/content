@@ -24,7 +24,7 @@ Boolean `true` or `false`.
 
 ## Specifications
 
-[XSLT 1.0 15](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-function-available)
+[XSLT 1.0 15](https://www.w3.org/TR/xslt-10/#function-function-available)
 
 ## Gecko support
 

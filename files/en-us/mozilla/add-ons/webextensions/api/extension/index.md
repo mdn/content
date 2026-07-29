@@ -3,13 +3,13 @@ title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
 page-type: webextension-api
 browser-compat: webextensions.api.extension
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Utilities related to your extension. Get URLs to resources packages with your extension. Get the [`Window`](/en-US/docs/Web/API/Window) object for your extension's pages. Get the values for various settings.
 
-> **Note:** **The messaging APIs in this module are deprecated** in favor of the equivalent APIs in the [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) module.
+> [!NOTE]
+> **The messaging APIs in this module are deprecated** in favor of the equivalent APIs in the [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) module.
 
 ## Types
 
@@ -34,9 +34,9 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.getViews()")}}
   - : Returns an array of the [`Window`](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension.
 - {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
-  - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
+  - : Retrieves the state of the extension's access to tabs opened in "private browsing" mode (as determined by the user-controlled '_Run in Private Windows_' option in the extension's permissions).
 - {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by a user-controlled option in the extension's permissions: '_Allow access to File URLs_' on Chrome and '_Access local files on your computer_' on Firefox).
 - {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
   - : Sends a single request to other listeners within the extension.
 - {{WebExtAPIRef("extension.setUpdateUrlData()")}}
@@ -49,11 +49,11 @@ Utilities related to your extension. Get URLs to resources packages with your ex
 - {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
   - : Fired when a request is sent from another extension.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.

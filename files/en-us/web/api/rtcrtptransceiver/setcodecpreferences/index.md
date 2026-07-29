@@ -36,7 +36,6 @@ setCodecPreferences(codecs)
 ### Parameters
 
 - `codecs`
-
   - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
@@ -45,28 +44,23 @@ setCodecPreferences(codecs)
     > This lets you prevent the use of codecs you don't wish to use.
 
     Each codec object in the array has the following properties:
-
     - `channels` {{optional_inline}}
-
       - : A positive integer indicating the number of channels supported by the codec.
         For example, for audio codecs a value of 1 specifies monaural sound, while 2 indicates stereo.
 
     - `clockRate`
-
       - : A positive integer specifying the codec's clock rate in Hertz (Hz).
         The clock rate is the rate at which the codec's RTP timestamp advances.
         Most codecs have specific values or ranges of values they permit.
         The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
 
     - `mimeType`
-
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
         Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `sdpFmtpLine` {{optional_inline}}
-
       - : A string giving the format specific parameters field from the `a=fmtp` line in the {{Glossary("SDP")}} which corresponds to the codec, if the field is present.
         If there is no parameters field, this property is left out.
 

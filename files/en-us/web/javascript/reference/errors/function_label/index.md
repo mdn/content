@@ -2,9 +2,8 @@
 title: "SyntaxError: functions cannot be labelled"
 slug: Web/JavaScript/Reference/Errors/Function_label
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "functions cannot be labelled" occurs when a {{jsxref("Statements/function", "function")}} declaration has a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label) before it.
 

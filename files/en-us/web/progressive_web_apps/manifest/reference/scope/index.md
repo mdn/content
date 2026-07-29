@@ -26,7 +26,6 @@ When users navigate to pages outside the app's scope, they still experience the 
 ### Values
 
 - `scope`
-
   - : A string that represents a URL.
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.

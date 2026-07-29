@@ -2,9 +2,8 @@
 title: TypeScript
 slug: Glossary/TypeScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 TypeScript is a programming language that adds {{glossary("static_typing", "static type checking")}} to JavaScript.
 

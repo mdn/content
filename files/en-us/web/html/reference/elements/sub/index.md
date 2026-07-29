@@ -1,11 +1,11 @@
 ---
-title: "<sub>: The Subscript element"
+title: "`<sub>` HTML subscript element"
+short-title: <sub>
 slug: Web/HTML/Reference/Elements/sub
 page-type: html-element
 browser-compat: html.elements.sub
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
 
@@ -77,7 +77,7 @@ In mathematics, families of variables related to the same concept (such as dista
 
 ### Chemical formulas
 
-When writing a chemical formula, such as H<sub>2</sub>0, the number of atoms of a given element within the described molecule is represented using a subscripted number; in the case of water, the subscripted "2" indicates that there are two atoms of hydrogen in the molecule.
+When writing a chemical formula, such as H<sub>2</sub>O, the number of atoms of a given element within the described molecule is represented using a subscripted number; in the case of water, the subscripted "2" indicates that there are two atoms of hydrogen in the molecule.
 
 Another example:
 

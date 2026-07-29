@@ -20,13 +20,9 @@ An integer: `0`, `1` (`MODIFICATION`), `2` (`ADDITION`), or `3` (`REMOVAL`).
 ## Examples
 
 ```js
-element.addEventListener(
-  "DOMAttrModified",
-  (event) => {
-    console.log(event.attrChange);
-  },
-  false,
-);
+element.addEventListener("DOMAttrModified", (event) => {
+  console.log(event.attrChange);
+});
 ```
 
 ## Specifications

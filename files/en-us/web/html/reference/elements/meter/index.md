@@ -1,11 +1,11 @@
 ---
-title: "<meter>: The HTML Meter element"
+title: "`<meter>` HTML meter element"
+short-title: <meter>
 slug: Web/HTML/Reference/Elements/meter
 page-type: html-element
 browser-compat: html.elements.meter
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 
@@ -31,7 +31,6 @@ label {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `value`
-
   - : The current numeric value. This must be between the minimum and maximum values (`min` attribute and `max` attribute) if they are specified. If unspecified or malformed, the value is `0`. If specified, but not within the range given by the `min` attribute and `max` attribute, the value is equal to the nearest end of the range.
 
     > [!NOTE]
@@ -47,8 +46,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : The lower numeric bound of the high end of the measured range. This must be less than the maximum value (`max` attribute), and it also must be greater than the low value and minimum value (`low` attribute and `min` attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the `high` value is equal to the maximum value.
 - `optimum`
   - : This attribute indicates the optimal numeric value. It must be within the range (as defined by the `min` attribute and `max` attribute). When used with the `low` attribute and `high` attribute, it gives an indication where along the range is considered preferable. For example, if it is between the `min` attribute and the `low` attribute, then the lower range is considered preferred. The browser may color the meter's bar differently depending on whether the value is less than or equal to the optimum value.
-- `form`
-  - : This optional attribute is used to explicitly set a {{HTMLElement("form")}} owner for the `<meter>` element. If omitted, the `<meter>` is associated with its ancestor `<form>` element or the form association set by the `form` attribute on another ancestor element, such as on a {{HTMLElement("fieldset")}}, if any. If included, the value must be the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of a `<form>` in the same tree.
 
 ## Examples
 
@@ -73,7 +70,7 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 ```html
 <p>
   Student's exam score:
-  <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
+  <meter low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
@@ -152,6 +149,6 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{HTMLElement("progress")}}
 - {{cssxref("::-webkit-meter-bar")}}, {{cssxref("::-webkit-meter-inner-element") }}, {{cssxref("::-webkit-meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-suboptimum-value")}}: non-standard pseudo-elements

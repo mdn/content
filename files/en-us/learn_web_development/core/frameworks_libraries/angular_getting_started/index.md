@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Angular articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
 
 > [!NOTE]
@@ -69,7 +72,7 @@ To install Angular on your local system, you need the following:
 
 - **Node.js**
 
-  Angular requires a [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.dev/reference/versions) page.
+  Angular requires an [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.dev/reference/versions) page.
 
   For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.

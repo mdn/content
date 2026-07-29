@@ -162,7 +162,7 @@ Next, we'll style the buttons to look like tabs. Add the following CSS:
 
 ```css
 .info-box [role="tab"] {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   line-height: 3rem;
   background: white;
   color: #b60000;
@@ -242,7 +242,6 @@ This code does the following:
 - When a `TabsManual` object is created, in the constructor all the tab and panel references are collected in `tabs` and `tabpanels` variables, so we can easily do things to them later on.
 - The constructor also registers [`click`](/en-US/docs/Web/API/Element/click_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handlers on all the tabs. The event handlers include logic about what should happen when a tab is selected using a click or keypress.
 - In the `setSelectedTab(currentTab)` function, the following occurs:
-
   - A `for` loop is used to cycle through all the tabs and deselect them by setting `aria-selected` property to `false` and by setting `is-hidden` class on corresponding panels.
   - On the selected tab (`currentTab`) the `aria-selected` is set to `true` and `is-hidden` class is removed from the corresponding panel.
 

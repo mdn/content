@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.auxclick_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.
 
@@ -30,35 +30,6 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
 > [!NOTE]
 > In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}. Check [browser compatibility](#browser_compatibility) for more information.
-
-## Event properties
-
-_This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
-
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
-  - : A unique identifier for the pointer causing the event.
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
-  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
-  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Preventing default actions
 
@@ -105,7 +76,7 @@ Notice that in addition to capturing the `auxclick` event using `onauxclick`, th
 ### HTML
 
 ```html
-<button><h1>Click me!</h1></button>
+<button>Click me!</button>
 ```
 
 ```css hidden
@@ -129,9 +100,6 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-}
-
-h1 {
   letter-spacing: 0.5rem;
 }
 ```

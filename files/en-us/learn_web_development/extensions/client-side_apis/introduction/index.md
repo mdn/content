@@ -264,7 +264,7 @@ audioElement.addEventListener("ended", () => {
 
 ### They have additional security mechanisms where appropriate
 
-WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
+WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include [Service Workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API)).
 
 In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the [Notifications API](/en-US/docs/Web/API/Notifications_API) asks for permission using a pop-up dialog box:
 

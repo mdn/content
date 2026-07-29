@@ -4,7 +4,7 @@ slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 
@@ -147,7 +147,7 @@ xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
   inputSourceList.forEach((source) => {
-    switch (source) {
+    switch (source.handedness) {
       case "left":
         leftHandSource = source;
         break;
@@ -315,7 +315,7 @@ A **primary squeeze action** is a platform-specific action which sends the {{dom
 
 The sequence of events is identical to those sent by the primary action, save for the name of each event:
 
-1. An {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
+1. A {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the {{domxref("XRSession")}}, indicating that the user has begun a squeeze action.
 2. If the primary squeeze action ends successfully, the session is sent a {{domxref("XRSession.squeeze_event", "squeeze")}} event.
 3. Then, a {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is sent to indicate that the squeeze action is no longer underway. This is sent whether the squeeze action succeeded or not.
 

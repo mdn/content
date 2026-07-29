@@ -18,6 +18,10 @@ in this object. The keys are `unsigned integer`.
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
@@ -49,6 +53,10 @@ The result is:
 1
 2
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

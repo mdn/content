@@ -18,7 +18,7 @@ Safari additionally requires the **`default`**
 boolean attribute to be set to true when implementing your own video player controls in
 order for the subtitles cues to be shown.
 
-### Value
+## Value
 
 A string which indicates the track's current mode. One of:
 
@@ -82,16 +82,14 @@ finished, the video automatically pauses playback. This is done by setting the
 `mode` to `showing`.
 
 ```js
-window.addEventListener("load", (event) => {
-  let trackElem = document.querySelector("track");
-  let track = trackElem.track;
+let trackElem = document.querySelector("track");
+let track = trackElem.track;
 
-  track.mode = "showing";
+track.mode = "showing";
 
-  for (const cue of track.cues) {
-    cue.pauseOnExit = true;
-  }
-});
+for (const cue of track.cues) {
+  cue.pauseOnExit = true;
+}
 ```
 
 ## Specifications

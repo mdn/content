@@ -193,9 +193,7 @@ They're also commonly used for the animated portions of web browsers' user inter
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://wiki.mozilla.org/APNG_Specification"
-          >wiki.mozilla.org/APNG_Specification</a
-        >
+        <a href="https://w3c.github.io/png/#apng-frame-based-animation">W3C PNG Specification</a>
       </td>
     </tr>
     <tr>
@@ -236,7 +234,7 @@ They're also commonly used for the animated portions of web browsers' user inter
               <th scope="row">Indexed color</th>
               <td>1, 2, 4, and 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code> chunk in the APNG file;
+                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a <code><a href="https://w3c.github.io/png/#11PLTE">PLTE</a></code> chunk in the APNG file;
                 the colors in the palette all use an 8-bit depth.
               </td>
             </tr>
@@ -710,7 +708,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
               <th scope="row">Indexed color</th>
               <td>1, 2, 4, and 8</td>
               <td>
-                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code> chunk in the APNG file; the colors in the palette all use an 8-bit depth.
+                Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a <code><a href="https://w3c.github.io/png/#11PLTE">PLTE</a></code> chunk in the APNG file; the colors in the palette all use an 8-bit depth.
               </td>
             </tr>
             <tr>
@@ -854,7 +852,7 @@ PNG is widely supported, with all major browsers offering full support for its f
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://www.w3.org/TR/PNG">w3.org/TR/PNG</a></td>
+      <td><a href="https://w3c.github.io/png/">Portable Network Graphics (PNG) Specification</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>
@@ -898,7 +896,7 @@ PNG is widely supported, with all major browsers offering full support for its f
               <td>1, 2, 4, and 8</td>
               <td>
                 Each pixel is a <em>D</em>-bit value indicating an index into a color palette which is contained within a
-                <code><a href="https://www.w3.org/TR/PNG/#11PLTE">PLTE</a></code>
+                <code><a href="https://w3c.github.io/png/#11PLTE">PLTE</a></code>
                 chunk in the APNG file; the colors in the palette all use an 8-bit depth.
               </td>
             </tr>
@@ -941,7 +939,7 @@ SVG files are ideal for diagrams, icons, and other images which can be accuratel
 As such, SVG is popular for user interface elements in modern Web design.
 
 SVG files are text files containing source code that, when interpreted, draws the desired image.
-For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+For instance, this example defines a drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -970,7 +968,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://www.w3.org/TR/SVG2">w3.org/TR/SVG2</a></td>
+      <td><a href="https://w3c.github.io/svgwg/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>
@@ -986,7 +984,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Supported color modes</th>
       <td>
         Colors in SVG are specified using
-        <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
+        <a href="/en-US/docs/Web/CSS/Reference/Values/color_value">CSS color syntax</a>.
       </td>
     </tr>
     <tr>
@@ -1385,7 +1383,7 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
 ## Providing image fallbacks
 
 While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does.
-`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/Reference/At-rules/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
 
 For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
 

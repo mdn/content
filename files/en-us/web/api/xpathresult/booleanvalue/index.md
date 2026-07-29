@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.booleanValue
 ---
 
-{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The read-only **`booleanValue`** property of the
 {{domxref("XPathResult")}} interface returns the boolean value of a result with

@@ -1,13 +1,15 @@
 ---
 title: arguments.callee
+short-title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 page-type: javascript-instance-data-property
 status:
   - deprecated
 browser-compat: javascript.functions.arguments.callee
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Functions")}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > Accessing `arguments.callee` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) will throw a {{jsxref("TypeError")}}. If a function must reference itself, either give the [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) a name or use a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function).
@@ -20,7 +22,8 @@ A reference to the currently executing function.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** `callee` is a data property only in non-strict functions with simple parameters (in which case the `arguments` object is also [auto-syncing](/en-US/docs/Web/JavaScript/Reference/Functions/arguments#assigning_to_indices)). Otherwise, it is an accessor property whose getter and setter both throw a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `callee` is a data property only in non-strict functions with simple parameters (in which case the `arguments` object is also [auto-syncing](/en-US/docs/Web/JavaScript/Reference/Functions/arguments#assigning_to_indices)). Otherwise, it is an accessor property whose getter and setter both throw a {{jsxref("TypeError")}}.
 
 ## Description
 

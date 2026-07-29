@@ -2,9 +2,8 @@
 title: Accessibility
 slug: Glossary/Accessibility
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Accessibility** (**A11y**) means enabling as many people as possible to use websites, including those with limited abilities. The most common way to achieve this is by ensuring that assistive technologies work properly to access the content. These technologies include {{glossary("screen reader", "screen readers")}}, screen magnifiers, speech recognition tools, and alternative input devices.
 

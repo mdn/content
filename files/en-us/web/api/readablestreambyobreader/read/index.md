@@ -40,9 +40,7 @@ read(view, options)
 - `view`
   - : The view that data is to be read into.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `min`
       - : The minimum number of elements to read before the promise will fulfill while the stream is active.
         If not given, the promise will resolve with at least one element, up to the maximum size of the view.
@@ -194,13 +192,13 @@ class MockHypotheticalSocket {
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
     // Capped to remaining data and the max min return-per-read range
-    const remaining_data = this.max_data - this.data_read;
+    const remainingData = this.max_data - this.data_read;
     const numberBytesReceived =
-      remaining_data < this.min_per_read
-        ? remaining_data
+      remainingData < this.min_per_read
+        ? remainingData
         : this.getRandomIntInclusive(
             this.min_per_read,
-            Math.min(this.max_per_read, remaining_data),
+            Math.min(this.max_per_read, remainingData),
           );
     return numberBytesReceived;
   }

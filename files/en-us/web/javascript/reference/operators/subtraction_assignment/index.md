@@ -3,9 +3,8 @@ title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.subtraction_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **subtraction assignment (`-=`)** operator performs [subtraction](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) on the two operands and assigns the result to the left operand.
 

@@ -3,12 +3,10 @@ title: "GPUTexture: destroy() method"
 short-title: destroy()
 slug: Web/API/GPUTexture/destroy
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUTexture.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`destroy()`** method of the
 {{domxref("GPUTexture")}} interface destroys the `GPUTexture`.
@@ -25,7 +23,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

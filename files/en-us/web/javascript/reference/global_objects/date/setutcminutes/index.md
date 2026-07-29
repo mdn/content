@@ -1,25 +1,25 @@
 ---
 title: Date.prototype.setUTCMinutes()
+short-title: setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMinutes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to universal time.
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.setUTCMinutes()")}}
 
 ```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date = new Date("December 31, 1975, 23:15:30 GMT+11:00");
 
-console.log(date1.getUTCMinutes());
+console.log(date.getUTCMinutes());
 // Expected output: 15
 
-date1.setUTCMinutes(25);
+date.setUTCMinutes(25);
 
-console.log(date1.getUTCMinutes());
+console.log(date.getUTCMinutes());
 // Expected output: 25
 ```
 

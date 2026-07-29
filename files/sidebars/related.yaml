@@ -1,0 +1,15 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Related
+  - type: section
+    link: /Related/IMSC
+  - /Related/IMSC/Basics
+  - /Related/IMSC/Using_the_imscJS_polyfill
+  - /Related/IMSC/Styling
+  - /Related/IMSC/Subtitle_placement
+  - /Related/IMSC/Namespaces
+  - /Related/IMSC/Timing_in_IMSC
+  - /Related/IMSC/Mapping_video_time_codes_to_IMSC
+  - /Related/IMSC/IMSC_and_other_standards

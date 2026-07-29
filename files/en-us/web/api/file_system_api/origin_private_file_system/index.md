@@ -2,6 +2,7 @@
 title: Origin private file system
 slug: Web/API/File_System_API/Origin_private_file_system
 page-type: guide
+browser-compat: api.StorageManager.getDirectory
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -191,6 +192,10 @@ console.log(textDecoder.decode(dataView));
 // Truncate the file after 4 bytes.
 accessHandle.truncate(4);
 ```
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

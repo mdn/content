@@ -23,9 +23,9 @@ const video = document.querySelector("video");
 const captionTrack = video.addTextTrack("captions", "Captions", "en");
 captionTrack.mode = "showing";
 
-const cue1 = new VTTCue(0, 0.9, "Hildy!");
-captionTrack.addCue(cue1);
-console.log(cue1.track); // a TextTrack object.
+const cue = new VTTCue(0, 0.9, "Hildy!");
+captionTrack.addCue(cue);
+console.log(cue.track); // a TextTrack object.
 ```
 
 ## Specifications

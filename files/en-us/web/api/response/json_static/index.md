@@ -27,10 +27,8 @@ Response.json(data, options)
 - `data`
   - : The JSON data to be used as the response body.
 - `options` {{optional_inline}}
-
   - : An options object containing settings for the response, including the status code, status text, and headers.
     This is the same as the options parameter of the {{domxref("Response.Response", "Response()")}} constructor.
-
     - `status`
       - : The status code for the response, such as `200`.
     - `statusText`
@@ -66,16 +64,16 @@ function log(text) {
 }
 
 async function logResponse(response) {
-  const responseText = await jsonResponse.text();
+  const responseText = await response.text();
   log(`body: ${responseText}`);
-  jsonResponse.headers.forEach((header) => log(`header: ${header}`));
-  log(`status: ${jsonResponse.status}`);
-  log(`statusText: ${jsonResponse.statusText}`);
-  log(`type: ${jsonResponse.type}`);
-  log(`url: ${jsonResponse.url}`);
-  log(`ok: ${jsonResponse.ok}`);
-  log(`redirected: ${jsonResponse.redirected}`);
-  log(`bodyUsed: ${jsonResponse.bodyUsed}`);
+  response.headers.forEach((header) => log(`header: ${header}`));
+  log(`status: ${response.status}`);
+  log(`statusText: ${response.statusText}`);
+  log(`type: ${response.type}`);
+  log(`url: ${response.url}`);
+  log(`ok: ${response.ok}`);
+  log(`redirected: ${response.redirected}`);
+  log(`bodyUsed: ${response.bodyUsed}`);
 }
 ```
 
@@ -106,16 +104,16 @@ function log(text) {
 }
 
 async function logResponse(response) {
-  const responseText = await jsonResponse.text();
+  const responseText = await response.text();
   log(`body: ${responseText}`);
-  jsonResponse.headers.forEach((header) => log(`header: ${header}`));
-  log(`status: ${jsonResponse.status}`);
-  log(`statusText: ${jsonResponse.statusText}`);
-  log(`type: ${jsonResponse.type}`);
-  log(`url: ${jsonResponse.url}`);
-  log(`ok: ${jsonResponse.ok}`);
-  log(`redirected: ${jsonResponse.redirected}`);
-  log(`bodyUsed: ${jsonResponse.bodyUsed}`);
+  response.headers.forEach((header) => log(`header: ${header}`));
+  log(`status: ${response.status}`);
+  log(`statusText: ${response.statusText}`);
+  log(`type: ${response.type}`);
+  log(`url: ${response.url}`);
+  log(`ok: ${response.ok}`);
+  log(`redirected: ${response.redirected}`);
+  log(`bodyUsed: ${response.bodyUsed}`);
 }
 ```
 

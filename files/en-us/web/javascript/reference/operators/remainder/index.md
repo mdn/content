@@ -3,9 +3,8 @@ title: Remainder (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
 page-type: javascript-operator
 browser-compat: javascript.operators.remainder
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **remainder (`%`)** operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 

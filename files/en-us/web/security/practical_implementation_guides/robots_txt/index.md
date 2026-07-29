@@ -37,4 +37,7 @@ Disallow: /secret/admin-interface
 
 ## See also
 
+- {{HTTPHeader("X-Robots-Tag")}} HTTP header
+- [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML element ("robots tag")
+- {{RFC("9309", "Robots Exclusion Protocol")}}
 - [About /robots.txt](https://www.robotstxt.org/robotstxt.html) on `robotstxt.org`

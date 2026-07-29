@@ -20,13 +20,9 @@ A string.
 ## Examples
 
 ```js
-element.addEventListener(
-  "DOMSubtreeModified",
-  (event) => {
-    console.log(event.relatedNode);
-  },
-  false,
-);
+element.addEventListener("DOMSubtreeModified", (event) => {
+  console.log(event.relatedNode);
+});
 ```
 
 ## Specifications

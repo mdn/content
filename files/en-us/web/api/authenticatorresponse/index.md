@@ -31,9 +31,7 @@ None.
 
 ```js
 const options = {
-  challenge: new Uint8Array([
-    /* bytes sent from the server */
-  ]),
+  challenge: new Uint8Array([/* bytes sent from the server */]),
 };
 
 navigator.credentials
@@ -59,8 +57,8 @@ const publicKey = {
   },
   user: {
     id: new Uint8Array(16),
-    name: "jdoe@example.com",
-    displayName: "John Doe",
+    name: "msanchez@example.com",
+    displayName: "Maria Sanchez",
   },
   pubKeyCredParams: [
     {

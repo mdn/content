@@ -32,11 +32,8 @@ new ClipboardItem(data, options)
     - a string
     - a {{jsxref("Promise")}} that resolves to either a `Blob` or string.
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `presentationStyle` {{optional_inline}}
-
       - : One of the three strings: `unspecified`, `inline` or `attachment`.
         The default is `unspecified`.
 

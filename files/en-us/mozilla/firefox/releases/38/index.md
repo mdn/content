@@ -1,14 +1,14 @@
 ---
-title: Firefox 38 for developers
+title: Firefox 38 release notes for developers
+short-title: Firefox 38
 slug: Mozilla/Firefox/Releases/38
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 38 was released on May 12th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -27,11 +27,10 @@ Highlights:
 ### CSS
 
 - Support for {{cssxref("ruby-position")}} and {{cssxref("ruby-align")}} have been added and is available by default ([Firefox bug 1055676](https://bugzil.la/1055676) [Firefox bug 1123917](https://bugzil.la/1123917) and [Firefox bug 1039006](https://bugzil.la/1039006)).
-- The {{cssxref(":unresolved")}} pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
+- The `:unresolved` pseudo-class has been implemented for custom elements ([Firefox bug 1111633](https://bugzil.la/1111633)).
 - The predefined style {{cssxref("list-style-type", "ethiopic-numeric")}} now uses a space, instead of a dot, as the suffix to match a recent change to the spec ([Firefox bug 1120721](https://bugzil.la/1120721)).
 - CSS transitions on generated content (with {{cssxref("::before")}} and {{cssxref("::after")}}) on both an inline and the block that splits them now start as expected by the specification ([Firefox bug 1110277](https://bugzil.la/1110277)).
 - The implementation of CSS Logical Properties made big progress. The following properties are available behind the `layout.css.vertical-text.enabled` flag (`false` by default):
-
   - Direction-independent equivalents of {{cssxref("width")}} and {{cssxref("height")}}: {{cssxref("block-size")}} and {{cssxref("inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("min-width")}} and {{cssxref("min-height")}}: {{cssxref("min-block-size")}} and {{cssxref("min-inline-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
   - Direction-independent equivalents of {{cssxref("max-width")}} and {{cssxref("max-height")}}: {{cssxref("max-block-size")}} and {{cssxref("max-block-size")}} ([Firefox bug 1117983](https://bugzil.la/1117983)).
@@ -40,7 +39,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}} ([Firefox bug 649142](https://bugzil.la/649142)).
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: {{cssxref("inset-block-start")}}, `offset-block-end`, `offset-inline-start` and `offset-inline-end` ([Firefox bug 1120283](https://bugzil.la/1120283)).
 
-- How [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
+- How [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using) start has been modified to match a recent change of the specifications, aiming at having an interoperable behavior between browsers ([Firefox bug 960465](https://bugzil.la/960465)).
 
 ### HTML
 
@@ -54,7 +53,6 @@ Highlights:
 - {{jsxref("Functions/set", "Setter")}} with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is now a {{jsxref("SyntaxError")}} ([Firefox bug 1089632](https://bugzil.la/1089632)).
 - The {{jsxref("Function/name", "name")}} property of functions is configurable now ([Firefox bug 1084019](https://bugzil.la/1084019)).
 - Several {{jsxref("Array")}} methods have been implemented for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) as well:
-
   - The {{jsxref("TypedArray.of", "of()")}} and {{jsxref("TypedArray.from", "from()")}} methods ([Firefox bug 896608](https://bugzil.la/896608)).
   - The {{jsxref("TypedArray.forEach", "forEach()")}} method ([Firefox bug 1107645](https://bugzil.la/1107645)).
   - The {{jsxref("TypedArray.filter", "filter()")}} and {{jsxref("TypedArray.map", "map()")}} methods ([Firefox bug 1121936](https://bugzil.la/1121936)).
@@ -63,7 +61,7 @@ Highlights:
 - Duplicated parameter name is no longer allowed when rest-parameter is present ([Firefox bug 1096376](https://bugzil.la/1096376)).
 - Duplicated parameter name is no longer allowed in arrow functions ([Firefox bug 1096377](https://bugzil.la/1096377)).
 - Duplicated parameter name is no longer allowed in concise method definitions ([Firefox bug 1096378](https://bugzil.la/1096378)).
-- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("Operators/new", "new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
+- Warning is shown when {{jsxref("Map")}}/{{jsxref("Set")}}/{{jsxref("WeakMap")}} constructor is called without {{jsxref("new")}} ([Firefox bug 1108930](https://bugzil.la/1108930)).
 - The {{jsxref("WeakMap.get", "get")}}, {{jsxref("WeakMap.has", "has")}}, and {{jsxref("WeakMap.delete", "delete")}} methods of {{jsxref("WeakMap")}} objects no longer throw when the `key` parameter is not an object ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - The optional and non-standard second `fallback` parameter for {{jsxref("WeakMap.prototype.get()")}} has been removed ([Firefox bug 1127827](https://bugzil.la/1127827)).
 - When defining a [generator method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), `set` and `get` are no longer invalid names ([Firefox bug 1073809](https://bugzil.la/1073809)).
@@ -141,14 +139,10 @@ _No change._
 
 #### Downloads.jsm
 
-- [`DownloadTarget`](/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
+- [`DownloadTarget`](https://web.archive.org/web/20210623121639/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm/DownloadTarget) objects now have `exists` and `size` properties, allowing you to determine the existence of and the size of the download's target file on disk, as well as a new `refresh()` method, which asks that these values be updated.
 
 ### XPCOM
 
 - `"@mozilla.org/network/atomic-file-output-stream;1"` and `"@mozilla.org/network/safe-file-output-stream;1"` now throw an exception if `PR_APPEND` is passed without `PR_TRUNCATE` ([Firefox bug 1117580](https://bugzil.la/1117580)).
 - `nsICompositionStringSynthesizer` and `nsIDOMWindowUtils.sendCompositionEvent()` have been removed. Instead, use `nsITextInputProcessor`. ([Firefox bug 917322](https://bugzil.la/917322))
 - `nsIDOMWindowUtils.sendKeyEvent()` is now deprecated. Instead, use `nsITextInputProcessor` ([Firefox bug 1119609](https://bugzil.la/1119609)).
-
-## Older versions
-
-{{Firefox_for_developers}}

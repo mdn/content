@@ -2,9 +2,8 @@
 title: The add-on bar
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL `<toolbar>`; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
 

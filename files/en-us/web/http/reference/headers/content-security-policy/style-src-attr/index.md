@@ -4,9 +4,8 @@ short-title: style-src-attr
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src-attr
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src-attr`** directive specifies valid sources for inline styles applied to individual DOM elements.
 
@@ -47,9 +46,7 @@ This directive may have one of the following values:
 - `'none'`
   - : No resources of this type may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
-
   - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
-
     - [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
     - [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
     - [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
@@ -74,20 +71,20 @@ Content-Security-Policy: style-src-attr 'none'
 …the inline style applied to the element below will not be applied:
 
 ```html
-<div style="display:none">Foo</div>
+<div style="display: inline">Foo</div>
 ```
 
 The policy would also block any styles applied in JavaScript by setting the `style` attribute directly, or by setting {{domxref("CSSStyleDeclaration.cssText", "cssText")}}:
 
 ```js
-document.querySelector("div").setAttribute("style", "display:none;");
-document.querySelector("div").style.cssText = "display:none;";
+document.querySelector("div").setAttribute("style", "display: inline");
+document.querySelector("div").style.cssText = "display: inline";
 ```
 
 Style properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:
 
 ```js
-document.querySelector("div").style.display = "none";
+document.querySelector("div").style.display = "inline";
 ```
 
 Note that using JavaScript might independently be blocked using the {{CSP("script-src")}} CSP directive.

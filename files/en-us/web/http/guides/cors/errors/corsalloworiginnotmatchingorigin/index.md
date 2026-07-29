@@ -2,9 +2,8 @@
 title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 

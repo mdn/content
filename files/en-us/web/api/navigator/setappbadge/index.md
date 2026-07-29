@@ -20,7 +20,7 @@ setAppBadge(contents)
 ### Parameters
 
 - `contents` {{optional_inline}}
-  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
+  - : A {{jsxref("Number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
 
 ### Return value
 
@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the document is not fully active.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 

@@ -53,7 +53,9 @@ The following example returns a directory handle with the specified name; if the
 const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+const subDir = await currentDirHandle.getDirectoryHandle(dirName, {
+  create: true,
+});
 ```
 
 ### Return file path
@@ -72,7 +74,7 @@ async function returnPathDirectories(directoryHandle) {
   // Check if handle exists inside our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
-  if (relativePath === null) {
+  if (relativePaths === null) {
     // Not inside directory handle
   } else {
     // relativePath is an array of names, giving the relative path

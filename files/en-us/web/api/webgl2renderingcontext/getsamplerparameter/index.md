@@ -23,9 +23,7 @@ getSamplerParameter(sampler, pname)
 - `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
-
     - `gl.TEXTURE_COMPARE_FUNC`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating
       the texture comparison function.
     - `gl.TEXTURE_COMPARE_MODE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating

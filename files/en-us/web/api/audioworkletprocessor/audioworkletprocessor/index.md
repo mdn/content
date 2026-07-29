@@ -27,14 +27,12 @@ new AudioWorkletProcessor(options)
 ### Parameters
 
 - `options`
-
   - : An object that is passed as _options_ parameter to the
     {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
     passed through [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     Available properties are as follows:
 
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
-
     - `numberOfInputs` {{optional_inline}}
       - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
     - `numberOfOutputs` {{optional_inline}}

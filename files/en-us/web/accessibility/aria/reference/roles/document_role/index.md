@@ -39,7 +39,6 @@ In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Role
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-
   - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
 
 - tabindex="0"

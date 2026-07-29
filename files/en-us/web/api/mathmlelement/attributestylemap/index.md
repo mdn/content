@@ -25,24 +25,26 @@ A live {{domxref("StylePropertyMap")}} object.
 The following code snippet shows the relationship between the `style` attribute and the `attributeStyleMap` property:
 
 ```html
-<div style="white-space: pre-line;">
-  <math>
-    <mrow>
-      <mi>f</mi>
-      <mo stretchy="false">(</mo>
-      <mi id="el" style="border-top: 1px solid blue; color: red;">x</mi>
-      <mo stretchy="false">)</mo>
-      <mo>=</mo>
-      <mi>x</mi>
-    </mrow>
-  </math>
-  <div id="output"></div>
-</div>
+<math>
+  <mrow>
+    <mi>f</mi>
+    <mo stretchy="false">(</mo>
+    <mi id="el" style="border-top: 1px solid blue; color: red;">x</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <mi>x</mi>
+  </mrow>
+</math>
+<div id="output"></div>
 ```
 
 ```css
 #el {
   font-size: 16px;
+}
+
+#output {
+  white-space: pre-line;
 }
 ```
 

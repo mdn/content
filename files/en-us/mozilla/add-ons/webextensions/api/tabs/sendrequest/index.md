@@ -5,9 +5,8 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.sendRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("tabs.sendMessage()")}} instead.

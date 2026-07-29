@@ -3,12 +3,10 @@ title: "WorkerNavigator: globalPrivacyControl property"
 short-title: globalPrivacyControl
 slug: Web/API/WorkerNavigator/globalPrivacyControl
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WorkerNavigator.globalPrivacyControl
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{AvailableInWorkers("worker")}}
+{{APIRef("DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator.globalPrivacyControl`** read-only property returns the user's [Global Privacy Control](https://globalprivacycontrol.org/) setting for the current website.
 This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
@@ -39,5 +37,4 @@ console.log(navigator.globalPrivacyControl);
 
 - {{HTTPHeader("Sec-GPC")}} header
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
-- [Global Privacy Control Spec](https://privacycg.github.io/gpc-spec/)
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)

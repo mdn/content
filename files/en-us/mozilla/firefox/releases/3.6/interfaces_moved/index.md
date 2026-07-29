@@ -2,9 +2,8 @@
 title: Interfaces moved in Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Interfaces_moved
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 These interfaces were moved to new locations in the tree in Gecko 1.9.2.
 This is generally only interesting to people doing development on Mozilla itself.

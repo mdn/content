@@ -22,12 +22,12 @@ new Blob(blobParts, options)
 ### Parameters
 
 - `blobParts` {{optional_inline}}
-
   - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
     object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
     {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
     or a mix of any of such elements, that will be put inside the {{domxref("Blob")}}.
     Strings should be well-formed Unicode, and lone surrogates are sanitized using the same algorithm as {{jsxref("String.prototype.toWellFormed()")}}.
+    The resulting string is encoded as UTF-8.
 
 - `options` {{optional_inline}}
   - : An object which may specify any of the following properties:

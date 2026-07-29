@@ -2,9 +2,8 @@
 title: Proxy servers and tunneling
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.
 
@@ -70,7 +69,7 @@ function FindProxyForURL(url, host) {
   if (isResolvable(host)) {
     return "DIRECT";
   }
-  return "PROXY proxy.mydomain.com:8080";
+  return "PROXY proxy.example.com:8080";
 }
 ```
 

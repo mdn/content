@@ -2,9 +2,8 @@
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_precedence
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 **Operator precedence** determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.
 
@@ -112,7 +111,7 @@ async function* foo() {
 
 Because [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) has higher precedence than [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), this would become `(await yield) 1`, which is awaiting an identifier called `yield`, and a syntax error. Similarly, if you have `new !A;`, because `!` has lower precedence than `new`, this would become `(new !) A`, which is obviously invalid. (This code looks nonsensical to write anyway, since `!A` always produces a boolean, not a constructor function.)
 
-For postfix unary operators (namely, `++` and `--`), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because `++` evaluates to a _value_, not a _reference_, you can't chain multiple increments together either, as you may do in C.
+For postfix unary operators (namely, `++` and `--`), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because `++` evaluates to a _value_, not a _reference_, you can't chain multiple increments together either.
 
 ```js-nolint example-bad
 let a = 1;
@@ -222,14 +221,14 @@ console.log(C() || B() && A());
 Only `C()` is evaluated, despite `&&` having higher precedence. This does not mean that `||` has higher precedence in this case — it's exactly _because_ `(B() && A())` has higher precedence that causes it to be neglected as a whole. If it's re-arranged as:
 
 ```js-nolint
-console.log(A() && C() || B());
+console.log(A() && B() || C());
 // Logs:
 // called A
-// called B
-// false
+// called C
+// true
 ```
 
-Then the short-circuiting effect of `&&` would only prevent `C()` from being evaluated, but because `A() && C()` as a whole is `false`, `B()` would still be evaluated.
+Then the short-circuiting effect of `&&` would only prevent `B()` from being evaluated, but because `A() && B()` as a whole is `false`, `C()` would still be evaluated.
 
 However, note that short-circuiting does not change the final evaluation outcome. It only affects the evaluation of _operands_, not how _operators_ are grouped — if evaluation of operands doesn't have side effects (for example, logging to the console, assigning to variables, throwing an error), short-circuiting would not be observable at all.
 
@@ -278,7 +277,7 @@ Several general notes about the table:
       <td>[3]</td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new", "new")}} with argument list<br><code>new x(y)</code></td>
+      <td>{{jsxref("new")}} with argument list<br><code>new x(y)</code></td>
       <td rowspan="3">[4]</td>
     </tr>
     <tr>
@@ -292,7 +291,7 @@ Several general notes about the table:
     <tr>
       <td>16: new</td>
       <td>n/a</td>
-      <td>{{jsxref("Operators/new", "new")}} without argument list<br><code>new x</code></td>
+      <td>{{jsxref("new")}} without argument list<br><code>new x</code></td>
     </tr>
     <tr>
       <td rowspan="2">15: postfix operators</td>
@@ -612,7 +611,7 @@ Several general notes about the table:
       <td>1: comma</td>
       <td>left-to-right</td>
       <td>
-        {{jsxref("Operators/Comma_Operator", "Comma operator", "", 1)}}<br><code>x, y</code>
+        {{jsxref("Operators/Comma_operator", "Comma operator", "", 1)}}<br><code>x, y</code>
       </td>
     </tr>
   </tbody>
@@ -626,7 +625,7 @@ Notes:
 4. The "right-hand side" is a comma-separated list of any expression with precedence > 1 (i.e., not comma expressions). The constructor of a `new` expression cannot be an optional chain.
 5. The operand must be a valid assignment target (identifier or property access). Its precedence means `new Foo++` is `(new Foo)++` (a syntax error) and not `new (Foo++)` (a TypeError: (Foo++) is not a constructor).
 6. The operand must be a valid assignment target (identifier or property access).
-7. The operand cannot be an identifier or a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) access.
+7. The operand cannot be an identifier or a [private element](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) access.
 8. The left-hand side cannot have precedence 14.
 9. The operands cannot be a logical OR `||` or logical AND `&&` operator without grouping.
 10. The "left-hand side" must be a valid assignment target (identifier or property access).

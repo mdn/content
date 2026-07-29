@@ -3,9 +3,8 @@ title: devtools_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.devtools_page
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

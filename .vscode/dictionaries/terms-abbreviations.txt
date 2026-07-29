@@ -25,6 +25,7 @@ arcseconds
 ARGB
 arsinh
 artanh
+ASACP
 ASCAP
 ascendingly
 ASCIIID
@@ -62,6 +63,8 @@ BGRA
 Bignums
 bikeshedding
 bilevel
+bioinformatics
+biscotti
 bitfield
 bitmapped
 bitness
@@ -137,7 +140,6 @@ coprime
 CORB
 credentialled
 credentialless
-CRSF
 cryptids
 cryptosystem
 cryptosystems
@@ -155,11 +157,13 @@ datestamped
 DBFS
 DCDM
 DCSP
+debiased
 decodability
 Deinonychus
 demi
 demultiplexing
 demux
+demuxer
 demuxing
 deoptimize
 deprioritized
@@ -176,6 +180,7 @@ discardable
 distros
 DLRR
 DLSR
+DMARC
 docshell
 docshells
 doctypes
@@ -189,7 +194,9 @@ DTLSL
 dyscalculia
 EBNF
 ECSDA
+editability
 effectful
+elytra
 Emscripting
 encrypter
 engageable
@@ -199,6 +206,7 @@ equirect
 equirectangular
 ESSL
 ETSI
+exfiltrates
 exfiltrating
 EXIF
 expando
@@ -240,6 +248,7 @@ foveation
 fragmentainer
 fragmentainers
 framebuffers
+framebusting
 frontmost
 Fullband
 fullscreened
@@ -273,10 +282,13 @@ greenify
 greyscale
 gzipping
 halfwidth
+halteres
 harissa
 HDCP
 headworn
+highlightable
 HILN
+hindwings
 hissy
 hitbox
 hitmap
@@ -285,6 +297,7 @@ holodeck
 homescreen
 homothetic
 hotlinking
+HOTP
 hotspot
 hotspots
 hoverable
@@ -298,6 +311,7 @@ ICANN
 ICNS
 iconset
 idents
+IDOR
 IERS
 IMSC
 Indo-Pacific
@@ -337,6 +351,7 @@ JXON
 KACST
 Kbit
 Kbps
+kettlebell
 keysyms
 keyterm
 keyterms
@@ -356,10 +371,12 @@ lifecycles
 lightshow
 linecaps
 linkability
+linkified
 linkify
 livemark
 livemarks
 livestreamed
+lockdown
 lofi
 logpoints
 longhands
@@ -379,6 +396,7 @@ maplike
 MBASW
 Mbit
 Mbps
+mediacapabilities
 metalness
 metastring
 microcontrollers
@@ -422,6 +440,8 @@ multivalued
 multiview
 muscaria
 musicogenic
+muxer
+muxing
 MVVM
 namedspace
 narrowband
@@ -457,6 +477,7 @@ OOJS
 OPFS
 optimizability
 opto-electronic
+OTAC
 outdents
 outsetting
 overengineering
@@ -464,12 +485,14 @@ overlines
 overscript
 overscripts
 overscrolling
+overtype
 packetization
 packetizer
 packetizing
 paintable
 pantherina
 papermakers
+parasitoids
 parentless
 passwordless
 pathfinding
@@ -486,6 +509,7 @@ phonorecord
 phonorecords
 pilcrow
 pillarboxed
+pillarboxing
 pingback
 pingbacks
 pingpong
@@ -544,14 +568,15 @@ QPACK
 QTFF
 qtrs
 quantizer
-quarternion
 querysets
 quicklinks
 quickmenu
 qvalues
 QWERTZ
+RAII
 rari
 rasterizes
+raycaster
 RDBMS
 RDBMSes
 readback
@@ -581,6 +606,7 @@ resends
 resizability
 respecified
 restartless
+Resveratrol
 retarget
 retargeted
 retargetings
@@ -611,6 +637,7 @@ scorpionfish
 screenful
 scriptable
 scriptless
+scroll-snappable
 scrollers
 scrollport
 SECAM
@@ -634,6 +661,7 @@ side-scrollers
 sideload
 sideloaded
 SIDX
+signedness
 significand
 singlecast
 singlecasts
@@ -661,6 +689,7 @@ spatializations
 spatialize
 spatialized
 SPDY
+spearphishing
 speedwalk
 spinbuttons
 spinlocking
@@ -668,6 +697,7 @@ spinlocks
 spoofable
 spritesheet
 spritesheets
+squircle
 SSML
 ssthresh
 STIX
@@ -681,6 +711,7 @@ stringifiers
 stringifying
 stringly
 strobing
+stylability
 styracosaurus
 subarticle
 subarticles
@@ -749,6 +780,8 @@ superpowered
 superscaling
 supersets
 SVCB
+swashy
+swooshy
 syncbase
 tablists
 tabstrip
@@ -757,6 +790,7 @@ targetable
 taskbars
 taskboard
 teleporting
+telepresence
 texels
 textboxes
 thenables
@@ -773,7 +807,6 @@ tileset
 timebox
 timecode
 timecodes
-timerange
 timeslice
 timeslices
 timestep
@@ -782,6 +815,7 @@ TIPC
 toggletips
 toolkits
 toolsets
+TOTP
 touchpads
 touchpoint
 touchpoints
@@ -810,6 +844,8 @@ tweens
 UAAG
 ufrag
 UMTS
+unblinded
+unblinds
 unbookmark
 unbundling
 uncacheable
@@ -839,6 +875,7 @@ ungroup
 ungrouping
 unguaranteed
 unhovered
+unhovering
 uninterpolated
 unintuitively
 unioned
@@ -875,6 +912,7 @@ untriaged
 unzoomed
 uppercasing
 userbase
+Uyghur
 VDOM
 Velociraptor
 versor
@@ -882,6 +920,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP

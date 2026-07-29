@@ -1,11 +1,11 @@
 ---
 title: String.prototype.charCodeAt()
+short-title: charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.charCodeAt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`charCodeAt()`** method of {{jsxref("String")}} values returns an integer between `0` and `65535` representing the UTF-16 code unit at the given index.
 

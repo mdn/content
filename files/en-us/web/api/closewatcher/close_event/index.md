@@ -3,12 +3,10 @@ title: "CloseWatcher: close event"
 short-title: close
 slug: Web/API/CloseWatcher/close_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.CloseWatcher.close_event
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 A `close` event is fired at a {{domxref("CloseWatcher")}} object when a close request was received and only fired if the {{domxref("CloseWatcher.cancel_event", "cancel")}} event that preceded the `close` one was not canceled.
 

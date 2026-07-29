@@ -28,7 +28,7 @@ The **experimental** status of a technology may expire if one or more of the fol
 - It is supported by default by a single browser rendering engine for two or more years and undergoes no major changes.
 - Its defining specification is unlikely to change in ways that will break compatibility.
 
-For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) BCD documentation.
+For examples of these conditions, see the [experimental flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-experimental) BCD documentation.
 
 Usually, if a technology is supported across several major browsers, the specification will be stable, but this is not always the case.
 On the other hand, some technologies might have a stable specification, but do not have native support in browsers. [IMSC](/en-US/docs/Related/IMSC) for example is used via a JavaScript polyfill. <!-- need to revisit link -->
@@ -39,7 +39,7 @@ A feature or technology that is part of an active specification or standardizati
 
 The term **deprecated** on MDN Web Docs is used to mark an API or technology that is no longer recommended. A deprecated API or technology might be removed in the future or might only be kept for compatibility purposes and may still work. We recommend to avoid using the functionality marked as deprecated.
 
-For more information on the definition of **deprecated**, see the [deprecated flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated) BCD documentation.
+For more information on the definition of **deprecated**, see the [deprecated flag](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#setting-deprecated) BCD documentation.
 
 ## Obsolete
 

@@ -3,9 +3,8 @@ title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
 page-type: webextension-api
 browser-compat: webextensions.api.commands
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Listens for the user executing commands registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 

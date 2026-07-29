@@ -3,9 +3,8 @@ title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onHighlighted
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the set of highlighted tabs in a window changes.
 
@@ -33,9 +32,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `highlightInfo`
       - : `object`. ID(s) of the highlighted tabs, and ID of their window. See the [highlightInfo](#highlightinfo_2) section for more details.
 

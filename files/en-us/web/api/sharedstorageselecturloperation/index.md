@@ -3,11 +3,11 @@ title: SharedStorageSelectURLOperation
 slug: Web/API/SharedStorageSelectURLOperation
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SharedStorageSelectURLOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) operation.
 
@@ -15,7 +15,7 @@ The **`SharedStorageSelectURLOperation`** interface of the {{domxref("Shared Sto
 
 ## Instance methods
 
-- {{domxref("SharedStorageSelectURLOperation.run", "run()")}} {{Experimental_Inline}}
+- {{domxref("SharedStorageSelectURLOperation.run", "run()")}} {{Deprecated_Inline}}
   - : Defines the structure to which the `run()` method defined inside a URL Selection output gate operation should conform.
 
 ## Examples

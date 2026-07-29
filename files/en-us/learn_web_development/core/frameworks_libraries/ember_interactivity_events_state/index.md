@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization","Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Ember articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
 
 <table>
@@ -54,7 +57,7 @@ For our card-header / todo input, we'll want to be able to submit our typed in t
 
 We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.
 
-We can capture the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) if needed).
+We can capture the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers#on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) if needed).
 
 Add the new line shown below to your `header.hbs` file:
 

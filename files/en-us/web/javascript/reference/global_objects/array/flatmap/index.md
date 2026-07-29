@@ -1,20 +1,20 @@
 ---
 title: Array.prototype.flatMap()
+short-title: flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flatMap
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`flatMap()`** method of {{jsxref("Array")}} instances returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. It is identical to a {{jsxref("Array/map", "map()")}} followed by a {{jsxref("Array/flat", "flat()")}} of depth 1 (`arr.map(...args).flat()`), but slightly more efficient than calling those two methods separately.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.flatMap()", "shorter")}}
 
 ```js interactive-example
-const arr1 = [1, 2, 1];
+const arr = [1, 2, 1];
 
-const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+const result = arr.flatMap((num) => (num === 2 ? [2, 2] : 1));
 
 console.log(result);
 // Expected output: Array [1, 2, 2, 1]
@@ -81,16 +81,16 @@ its flexibility and readability are desired.
 ### map() and flatMap()
 
 ```js
-const arr1 = [1, 2, 3, 4];
+const arr = [1, 2, 3, 4];
 
-arr1.map((x) => [x * 2]);
+arr.map((x) => [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap((x) => [x * 2]);
+arr.flatMap((x) => [x * 2]);
 // [2, 4, 6, 8]
 
 // only one level is flattened
-arr1.flatMap((x) => [[x * 2]]);
+arr.flatMap((x) => [[x * 2]]);
 // [[2], [4], [6], [8]]
 ```
 
@@ -100,12 +100,12 @@ better showcases the use of `flatMap()`.
 Let's generate a list of words from a list of sentences.
 
 ```js
-const arr1 = ["it's Sunny in", "", "California"];
+const arr = ["it's Sunny in", "", "California"];
 
-arr1.map((x) => x.split(" "));
+arr.map((x) => x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap((x) => x.split(" "));
+arr.flatMap((x) => x.split(" "));
 // ["it's","Sunny","in", "", "California"]
 ```
 

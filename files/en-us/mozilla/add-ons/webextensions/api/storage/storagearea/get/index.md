@@ -3,9 +3,8 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves one or more items from the storage area.
 
@@ -19,7 +18,7 @@ let results = browser.storage.<storageType>.get(
 )
 ```
 
-Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
+Where `<storageType>` is one of the storage types: {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
 
 ### Parameters
 

@@ -64,7 +64,7 @@ You should notice that:
 
 The `<munder>`, `<mover>` and `<munderover>` elements are very similar except that they are used to attach underscripts and overscripts. Instead of giving details, we will let you figure out their definitions yourself with the following exercise.
 
-### Active learning: Recognize under/over scripts
+### Recognizing under/over scripts
 
 In the following example, try to guess the names of the mystery elements (written as question marks) and click the button to reveal the solution:
 
@@ -119,9 +119,9 @@ document.getElementById("showSolution").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Subtrees_of_munder_mover_munderover', 700, 400, "", "") }}
+{{ EmbedLiveSample('Recognizing under/over scripts', 700, 400, "", "") }}
 
-### Active learning: Recognize scripted elements
+### Recognizing scripted elements
 
 The following MathML formula contains a more complex expression, nesting fractions, roots and scripts. Try to guess the elements laid out with scripted elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>`. Each time you click such an element, it is highlighted and a confirmation message is displayed. Finally, read the MathML source to verify whether that corresponds to your expectation.
 
@@ -229,11 +229,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 });
 ```
 
-{{ EmbedLiveSample('Active_learning_recognize_scripted_elements', 700, 400, "", "") }}
+{{ EmbedLiveSample('Recognizing scripted elements', 700, 400, "", "") }}
 
 ## More operator properties
 
-We have previously seen some [properties of the `<mo>` element](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#operator_properties_of_mo) namely stretching in the vertical direction and spacing. Now that scripted elements are available, we can extend that list. We will do that by tweaking our [previous example](#active_learning_recognize_scripted_elements).
+We have previously seen some [properties of the `<mo>` element](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#operator_properties_of_mo) namely stretching in the vertical direction and spacing. Now that scripted elements are available, we can extend that list. We will do that by tweaking our [previous example](#recognizing_scripted_elements).
 
 ### Stretching in horizontal direction
 
@@ -337,7 +337,7 @@ math {
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
+We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#recognizing_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
 
 > [!NOTE]
 > Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
@@ -444,7 +444,7 @@ math {
 
 {{ EmbedLiveSample('Large_operator_and_limits', 700, 200, "", "") }}
 
-As expected, the formula is no longer centered and the rendering is modified to minimized the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
+As expected, the formula is no longer centered and the rendering is modified to minimize the height. Focusing on the summation symbol, one can notice that the sigma is drawn smaller and that the scripts of the `<munderover>` element are now attached as a subscript and a superscript! This is due to two properties of the "∑" operator:
 
 - _largeop_: The operator is drawn with a bigger glyph if the `<math>` tag has a `display="block"` attribute.
 - _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts if the `<math>` tag does not have the `display="block"` attribute.

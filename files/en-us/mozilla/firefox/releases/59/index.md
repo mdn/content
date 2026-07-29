@@ -1,10 +1,10 @@
 ---
-title: Firefox 59 for developers
+title: Firefox 59 release notes for developers
+short-title: Firefox 59
 slug: Mozilla/Firefox/Releases/59
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.
 
@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 59 that will affe
 - The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ([Firefox bug 1427292](https://bugzil.la/1427292)). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
 - {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) parts (e.g., {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
 - {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ([Firefox bug 984021](https://bugzil.la/984021)).
-- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/CSS_media_queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
+- {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/Guides/Media_queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
 - The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ([Firefox bug 1035091](https://bugzil.la/1035091)).
 - Implement the {{cssxref("font-optical-sizing")}} property ([Firefox bug 1435692](https://bugzil.la/1435692)).
 
@@ -94,7 +94,7 @@ _No changes._
 - The `SAMEORIGIN` directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ([Firefox bug 725490](https://bugzil.la/725490)).
 - Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)).
 - HTTP authentication now uses `utf-8` encoding for usernames and passwords (rather than `ISO-8859-1`) for parity with other browsers, and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
-- Everyday the [HSTS preload list](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc) is updated from Google. Normally this doesn't warrant a note, but in this release new TLDs were included, notably `.app` and `.dev`. While they are new TLDs developers might have used them for local development and be surprised by this change. Note that [reserved TLDs](https://datatracker.ietf.org/doc/html/rfc2606) should be used for local development instead.
+- Everyday the [HSTS preload list](https://searchfox.org/firefox-main/source/security/manager/ssl/nsSTSPreloadList.inc) is updated from Google. Normally this doesn't warrant a note, but in this release new TLDs were included, notably `.app` and `.dev`. While they are new TLDs developers might have used them for local development and be surprised by this change. Note that [reserved TLDs](https://datatracker.ietf.org/doc/html/rfc2606) should be used for local development instead.
 
 ### Plugins
 
@@ -117,7 +117,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 
 ### JavaScript
 
-- Non-standard [conditional catch clauses](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
+- Non-standard conditional catch clauses have been removed ([Firefox bug 1228841](https://bugzil.la/1228841)).
 
 ### APIs
 
@@ -139,33 +139,28 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 ### WebExtensions
 
 - [Theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) updates:
-
   - new properties: `colors.background_tab_text`, `colors.toolbar_field_border`
   - all color properties now support both Chrome-style arrays and CSS color values.
 
 - New [browser settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
-
   - [`contextMenuShowEvent`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
   - [`openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
   - [`openSearchResultsInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
   - [`proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
 
 - New [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) APIs:
-
   - [`tabs.captureTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab)
   - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
 
-- The [`contextMenus`](/en-US/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
+- The `contextMenus` API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 - New [`contentScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API enables runtime registration of content scripts.
 - New [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) APIs:
-
   - `browserAction/pageAction/sidebarAction.set*` functions now accept `null` to undo changes.
   - [`browserAction.isEnabled()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown), [`sidebarAction.isOpen()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) functions.
 
 - New option in [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) to show page actions by default.
 - New values for `protocol_handlers`:
-
   - "ssb" for Secure Scuttlebutt communications
   - "dat" for DATproject
   - "ipfs", "ipns", "dweb" for IPFS
@@ -173,7 +168,3 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - New [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) setting "cookieConfig".
 - Support in [`cookies`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API for [first-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - New option `upgradeToSecure` in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
-
-## Older versions
-
-{{Firefox_for_developers}}

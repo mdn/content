@@ -23,8 +23,7 @@ None.
 
 ### Return value
 
-- {{domxref("File")}}
-  - : If the drag data item is a file, a {{domxref("File")}} object is returned; otherwise `null` is returned.
+If the drag data item is a file, a {{domxref("File")}} object is returned; otherwise `null` is returned.
 
 ## Examples
 

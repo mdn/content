@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: end() method"
 short-title: end()
 slug: Web/API/GPUComputePassEncoder/end
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.end
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`end()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface completes recording of the current compute pass command sequence.
@@ -25,7 +23,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 
@@ -46,7 +44,7 @@ const BUFFER_SIZE = 1000;
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

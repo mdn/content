@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.measureInputUsage
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`measureInputUsage()`** method of the {{domxref("Translator")}} interface reports how much input quota would be used by a translation operation for a given text input.
 
@@ -32,7 +32,7 @@ measureInputUsage(input, options)
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("Translator.inputQuota", "inputQuota")}} usage of the given input text.
 
-This number is implementation-dependant; if it is less than the {{domxref("Translator.inputQuota", "inputQuota")}}, the string can be translated.
+This number is implementation-dependent; if it is less than the {{domxref("Translator.inputQuota", "inputQuota")}}, the string can be translated.
 
 ### Exceptions
 

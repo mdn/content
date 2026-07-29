@@ -19,7 +19,7 @@ None.
 
 - {{domxref('Scheduler.postTask()')}}
   - : Adds a task to the scheduler as a callback, optionally specifying a priority, delay, and/or a signal for aborting the task.
-- {{domxref('Scheduler.yield()')}} {{experimental_inline}}
+- {{domxref('Scheduler.yield()')}}
   - : Yields control of the main thread back to the browser, returning a promise that resolves to continue execution where it left off.
 
 ## Examples

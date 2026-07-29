@@ -1,13 +1,15 @@
 ---
-title: "<big>: The Bigger Text element"
+title: "`<big>` HTML bigger text element"
+short-title: <big>
 slug: Web/HTML/Reference/Elements/big
 page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.big
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
@@ -82,4 +84,3 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
-- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)

@@ -3,9 +3,8 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 page-type: webextension-api-property
 browser-compat: webextensions.api.storage.local
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Represents the `local` storage area. Items in `local` storage are local to the machine the extension is installed on.
 
@@ -28,6 +27,8 @@ The `local` object implements the methods defined on the {{WebExtAPIRef("storage
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.local.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()", "storage.local.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.local.set()")}}
   - : Stores one or more items in the storage area. If the item exists, its value is updated.
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.local.remove()")}}

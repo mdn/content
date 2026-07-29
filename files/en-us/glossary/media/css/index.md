@@ -2,9 +2,8 @@
 title: Media (CSS)
 slug: Glossary/Media/CSS
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In the context of {{Glossary("CSS")}} (Cascading Style Sheets), the term **_media_** refers to the destination to which the document is to be drawn by the {{Glossary("Engine/Rendering", "rendering engine")}}.
 
@@ -14,7 +13,7 @@ CSS offers several features that allow you to tweak your document's styles—or 
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule): Conditionally apply part of a CSS stylesheet, based on the result of a media query.
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules): Conditionally apply part of a CSS stylesheet, based on the result of a media query.
 - {{domxref("Window.matchMedia()")}}: Test the viewing device against a media query

@@ -1,11 +1,11 @@
 ---
 title: Promise.all()
+short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.all
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.all()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 
@@ -48,6 +48,8 @@ A {{jsxref("Promise")}} that is:
 The `Promise.all()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It can be useful for aggregating the results of multiple promises. It is typically used when there are multiple related asynchronous tasks that the overall code relies on to work successfully — all of whom we want to fulfill before the code execution continues.
 
 `Promise.all()` will reject immediately upon **any** of the input promises rejecting. In comparison, the promise returned by {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete, regardless of whether or not one rejects. Use `allSettled()` if you need the final result of every promise in the input iterable.
+
+Like other promise combinators, `Promise.all()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first rejection will be ignored, and will not trigger any `unhandledrejection` events.
 
 ## Examples
 
@@ -93,6 +95,22 @@ setTimeout(() => {
 // Promise { <state>: "fulfilled", <value>: Array[4] }
 // Promise { <state>: "rejected", <reason>: Error: bad }
 ```
+
+### Destructuring the result
+
+You will find [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) very useful if you are batching together a known number of tasks.
+
+```js
+// With then()
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+
+// With await
+const [a, b, c] = await Promise.all([p1, p2, p3]);
+```
+
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs.
 
 ### Asynchronicity or synchronicity of Promise.all
 

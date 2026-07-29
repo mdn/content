@@ -2,9 +2,8 @@
 title: Identifier
 slug: Glossary/Identifier
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **identifier** is a sequence of characters in the code that identifies a {{glossary("variable")}}, {{glossary("function")}}, or {{glossary("property")}}. In most languages, identifiers are case-sensitive and not quoted.
 

@@ -1,10 +1,10 @@
 ---
-title: Firefox 83 for developers
+title: Firefox 83 release notes for developers
+short-title: Firefox 83
 slug: Mozilla/Firefox/Releases/83
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
@@ -26,7 +26,7 @@ This article provides information about the changes in Firefox 83 that will affe
 ### CSS
 
 - The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ([Firefox bug 1666086](https://bugzil.la/1666086)).
-- We've added support for [CSS Conic Gradients](/en-US/docs/Web/CSS/gradient/conic-gradient) ([Firefox bug 1632351](https://bugzil.la/1632351)) and ([Firefox bug 1175958](https://bugzil.la/1175958)).
+- We've added support for [CSS Conic Gradients](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient) ([Firefox bug 1632351](https://bugzil.la/1632351)) and ([Firefox bug 1175958](https://bugzil.la/1175958)).
 
 ### JavaScript
 
@@ -48,7 +48,3 @@ _No changes._
 ## Changes for add-on developers
 
 _No changes._
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -75,7 +75,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo" />
+    <img src="..." alt="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>

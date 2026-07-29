@@ -2,9 +2,8 @@
 title: Constructor
 slug: Glossary/Constructor
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **constructor** is a specialized {{glossary("function")}} that generates {{glossary("object", "objects")}} with the same shape and behavior. The constructor initializes this object with some data specific to the object. The concept of a constructor can be applied to most {{glossary("OOP","object-oriented programming")}} languages.
 

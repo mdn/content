@@ -32,7 +32,7 @@ The possible values are:
 
 ## Examples
 
-Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/text-align#table_alignment) is available on the {{cssxref("text-align")}} page.
+Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/text-align#table_alignment) is available on the {{cssxref("text-align")}} page.
 
 ## Specifications
 

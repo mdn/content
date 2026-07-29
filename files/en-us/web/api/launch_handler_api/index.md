@@ -16,8 +16,10 @@ The **Launch Handler API** allows developers to control how a [progressive web a
 You can specify launch behavior for your app by adding the [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) field to your web app manifest file. This has one sub-field, `client_mode`, which contains a string value specifying how the app should be launched and navigated to. For example:
 
 ```json
-"launch_handler": {
+{
+  "launch_handler": {
     "client_mode": "focus-existing"
+  }
 }
 ```
 
@@ -40,7 +42,8 @@ window.launchQueue.setConsumer((launchParams) => {
 });
 ```
 
-> **Note:** {{domxref("LaunchParams")}} also has a {{domxref("LaunchParams.files")}} property, which returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method. This allows custom file handling to be implemented.
+> [!NOTE]
+> {{domxref("LaunchParams")}} also has a {{domxref("LaunchParams.files")}} property, which returns a read-only array of {{domxref("FileSystemHandle")}} objects representing any files passed along with the launch navigation via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method. This allows custom file handling to be implemented.
 
 ## Interfaces
 
@@ -66,7 +69,7 @@ if ("launchQueue" in window) {
       const track = params.get("track");
       if (track) {
         audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
+        title.textContent = new URL(track).pathname.slice(1);
         audio.play();
       }
     }
@@ -76,7 +79,7 @@ if ("launchQueue" in window) {
 
 This code is included in the PWA, and executed when the app loads, upon launch. The {{domxref("LaunchQueue.setConsumer", "window.launchQueue.setConsumer()")}}'s callback function extracts the search param out of the {{domxref("LaunchParams.targetURL")}} and, if it finds a `track` param, uses it to populate an {{htmlelement("audio")}} element's `src` and play the audio track that this points to.
 
-See the [Musicr 2.0](https://launch-handler.glitch.me/) demo app for full working code.
+See the [Musicr 2.0](https://mdn.github.io/dom-examples/launch-handler/) demo app for full working code.
 
 ## Specifications
 
@@ -89,4 +92,3 @@ See the [Musicr 2.0](https://launch-handler.glitch.me/) demo app for full workin
 ## See also
 
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
-- [Musicr 2.0](https://launch-handler.glitch.me/) demo app

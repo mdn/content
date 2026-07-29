@@ -3,9 +3,8 @@ title: declarativeNetRequest.RuleAction
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleAction
 page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleAction
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Details of the action to take if a rule is matched, as the `action` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 

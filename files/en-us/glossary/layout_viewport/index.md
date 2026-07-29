@@ -2,9 +2,8 @@
 title: Layout viewport
 slug: Glossary/Layout_viewport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The **layout viewport** is the {{glossary("viewport")}} into which the browser draws a web page. Essentially, it represents what is available to be seen, whereas the {{Glossary("visual viewport")}} represents the currently visible portion of the layout viewport, the currently visible subsection of the layout viewport that is currently visible on the user's display device.
 
@@ -14,8 +13,8 @@ This becomes important, for example, on mobile devices, where a pinching gesture
 
 - {{Glossary("Viewport")}}
 - {{Glossary("Visual viewport")}}
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
-- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
+- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module
+- [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

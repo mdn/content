@@ -35,11 +35,11 @@ The attribute node that was removed.
 ## Examples
 
 ```js
-// Given: <div id="top" align="center" />
-const d = document.getElementById("top");
-const d_align = d.getAttributeNode("align");
-d.removeAttributeNode(d_align);
-// align is now removed: <div id="top" />
+// Given: <div id="foo" lang="en-US" />
+const d = document.getElementById("foo");
+const dLang = d.getAttributeNode("lang");
+d.removeAttributeNode(dLang);
+// lang is now removed: <div id="foo" />
 ```
 
 ## Notes

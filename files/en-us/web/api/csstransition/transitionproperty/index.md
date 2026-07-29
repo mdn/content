@@ -30,7 +30,7 @@ that the transition is created for, which is `width`.
 ```css
 .box {
   background-color: #165baa;
-  color: #fff;
+  color: white;
   width: 100px;
   height: 100px;
   transition: width 4s;

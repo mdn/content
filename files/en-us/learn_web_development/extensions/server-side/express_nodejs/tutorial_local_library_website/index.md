@@ -59,7 +59,7 @@ Even though this is a very extensible example, it's called _**Local**Library_ fo
 
 As you work through the tutorial we'll provide the appropriate code snippets for you to copy and paste at each point, and there will be other code that we hope you'll extend yourself (with some guidance).
 
-Instead of copying and pasting all the code snippets, try typing them out, It'll benefit you in the long run as you'll be more familiar with the code next time you come to write something similar.
+Instead of copying and pasting all the code snippets, try typing them out. It'll benefit you in the long run as you'll be more familiar with the code next time you come to write something similar.
 
 If you get stuck, you can find the fully developed version of the website [on GitHub here](https://github.com/mdn/express-locallibrary-tutorial).
 

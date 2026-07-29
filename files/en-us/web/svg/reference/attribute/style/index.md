@@ -53,7 +53,6 @@ svg {
 </table>
 
 - `<style>`
-
   - : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
 ## Specifications

@@ -2,9 +2,8 @@
 title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "illegal character" occurs when the [lexer](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) reads a character that's not part of a string literal, and the character cannot constitute a valid token in the language.
 

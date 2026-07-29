@@ -3,9 +3,8 @@ title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGeneratorFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncGeneratorFunction`** object provides methods for [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*). In JavaScript, every async generator function is actually an `AsyncGeneratorFunction` object.
 

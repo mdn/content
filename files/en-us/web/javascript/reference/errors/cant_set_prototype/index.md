@@ -2,9 +2,8 @@
 title: "TypeError: can't set prototype of this object"
 slug: Web/JavaScript/Reference/Errors/Cant_set_prototype
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "can't set prototype of this object" occurs when attempting to set the prototype of an object, but the object's prototype is frozen, either by being a built-in immutable prototype object, or by being [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible).
 

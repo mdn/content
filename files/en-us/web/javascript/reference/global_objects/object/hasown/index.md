@@ -1,31 +1,31 @@
 ---
 title: Object.hasOwn()
+short-title: hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.hasOwn
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property. If the property is inherited, or does not exist, the method returns `false`.
 
-The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
-If the property is inherited, or does not exist, the method returns `false`.
-
-> **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.prototype.hasOwnProperty()")}}.
+> [!NOTE]
+> `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   prop: "exists",
 };
 
-console.log(Object.hasOwn(object1, "prop"));
+console.log(Object.hasOwn(object, "prop"));
 // Expected output: true
 
-console.log(Object.hasOwn(object1, "toString"));
+console.log(Object.hasOwn(object, "toString"));
 // Expected output: false
 
-console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+console.log(Object.hasOwn(object, "undeclaredPropertyValue"));
 // Expected output: false
 ```
 
@@ -44,26 +44,17 @@ Object.hasOwn(obj, prop)
 
 ### Return value
 
-`true` if the specified object has directly defined the specified property.
-Otherwise `false`
+`true` if the specified object has directly defined the specified property. Otherwise `false`
 
 ## Description
 
-The **`Object.hasOwn()`** method returns `true` if the specified property is a
-direct property of the object — even if the property value is `null` or `undefined`.
-The method returns `false` if the property is inherited, or has not been declared at all.
-Unlike the {{jsxref("Operators/in", "in")}} operator, this
-method does not check for the specified property in the object's prototype chain.
+The `Object.hasOwn()` method returns `true` if the specified property is a direct property of the object — even if the property value is `null` or `undefined`. The method returns `false` if the property is inherited, or has not been declared at all. Unlike the {{jsxref("Operators/in", "in")}} operator, this method does not check for the specified property in the object's prototype chain.
 
-It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because
-it works for [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and with objects that
-have overridden the inherited `hasOwnProperty()` method. While it is possible to
-workaround these problems by calling `Object.prototype.hasOwnProperty()` on an
-external object, `Object.hasOwn()` is more intuitive.
+It is recommended over {{jsxref("Object.prototype.hasOwnProperty()")}} because it works for [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) and with objects that have overridden the inherited `hasOwnProperty()` method. While it is possible to workaround these problems by accessing `Object.prototype.hasOwnProperty()` on another object (like `Object.prototype.hasOwnProperty.call(obj, prop)`, `Object.hasOwn()` is more intuitive and concise.
 
 ## Examples
 
-### Using hasOwn to test for a property's existence
+### Using Object.hasOwn() to test for a property's existence
 
 The following code shows how to determine whether the `example` object contains a property named `prop`.
 
@@ -124,8 +115,7 @@ for (const name in example) {
 
 ### Checking if an Array index exists
 
-The elements of an {{jsxref("Array")}} are defined as direct properties, so
-you can use `hasOwn()` method to check whether a particular index exists:
+The elements of an {{jsxref("Array")}} are defined as direct properties, so you can use `hasOwn()` method to check whether a particular index exists:
 
 ```js
 const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
@@ -133,11 +123,9 @@ Object.hasOwn(fruits, 3); // true ('Orange')
 Object.hasOwn(fruits, 4); // false - not defined
 ```
 
-### Problematic cases for hasOwnProperty
+### Problematic cases for hasOwnProperty()
 
-This section demonstrates that `hasOwn()` is immune to the problems that affect
-`hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
-`hasOwnProperty()`:
+This section demonstrates that `Object.hasOwn()` is immune to the problems that affect `hasOwnProperty()`. Firstly, it can be used with objects that have re-implemented `hasOwnProperty()`. In the example below, the re-implemented `hasOwnProperty()` method reports false for _every_ property, but the behavior of `Object.hasOwn()` remains unaffected:
 
 ```js
 const foo = {
@@ -147,20 +135,21 @@ const foo = {
   bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, "bar")) {
-  console.log(foo.bar); // true - re-implementation of hasOwnProperty() does not affect Object
-}
+console.log(foo.hasOwnProperty("bar")); // false
+
+console.log(Object.hasOwn(foo, "bar")); // true
 ```
 
-It can also be used with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). These do
-not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
+It can also be used with [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). These do not inherit from `Object.prototype`, and so `hasOwnProperty()` is inaccessible.
 
 ```js
 const foo = Object.create(null);
 foo.prop = "exists";
-if (Object.hasOwn(foo, "prop")) {
-  console.log(foo.prop); // true - works irrespective of how the object is created.
-}
+
+console.log(foo.hasOwnProperty("prop"));
+// Uncaught TypeError: foo.hasOwnProperty is not a function
+
+console.log(Object.hasOwn(foo, "prop")); // true
 ```
 
 ## Specifications

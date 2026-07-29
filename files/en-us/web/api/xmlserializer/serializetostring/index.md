@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLSerializer.serializeToString
 ---
 
-{{APIRef("DOM Parsing")}}
+{{APIRef("HTML DOM")}}
 
 The {{domxref("XMLSerializer")}} method
 **`serializeToString()`** constructs a string representing the

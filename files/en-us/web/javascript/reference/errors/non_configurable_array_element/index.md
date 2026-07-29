@@ -2,9 +2,8 @@
 title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
 was attempted to [shorten the length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)

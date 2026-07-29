@@ -3,12 +3,10 @@ title: "Navigation: updateCurrentEntry() method"
 short-title: updateCurrentEntry()
 slug: Web/API/Navigation/updateCurrentEntry
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.updateCurrentEntry
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`updateCurrentEntry()`** method of the {{domxref("Navigation")}} interface updates the `state` of the {{domxref("Navigation.currentEntry","currentEntry")}}; used in cases where the state change will be independent of a navigation or reload.
 
@@ -58,4 +56,3 @@ detailsElem.addEventListener("toggle", () => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

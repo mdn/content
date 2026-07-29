@@ -24,10 +24,8 @@ focus(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An optional object for controlling aspects of the focusing process.
     This object may contain the following properties:
-
     - `preventScroll` {{optional_inline}}
       - : A boolean value indicating whether or not the browser should scroll the document to bring the newly-focused element into view.
         A value of `false` for `preventScroll` (the default) means that the browser will scroll the element into view after focusing it.

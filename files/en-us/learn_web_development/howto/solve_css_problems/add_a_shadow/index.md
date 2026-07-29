@@ -44,7 +44,7 @@ button {
   font-weight: bold;
   font-size: 140%;
   background-color: #db1f48;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -61,5 +61,5 @@ button {
 
 ## See also
 
-- The [Box shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
+- The [Box shadow generator](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)
 - [Learn CSS: Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)

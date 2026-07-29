@@ -119,7 +119,7 @@ If Node is installed, you'll see a version number. If it isn't, you'll see an er
 
 You may use the Yarn package manager as an alternative to npm but we'll assume you're using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Git Bash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -344,7 +344,8 @@ We then import our `App()` function and `index.css`, which holds global styles t
 
 We then call the `createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
-> **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
+> [!NOTE]
+> `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 

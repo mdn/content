@@ -1,11 +1,11 @@
 ---
 title: RegExp() constructor
+short-title: RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 page-type: javascript-constructor
 browser-compat: javascript.builtins.RegExp.RegExp
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp()`** constructor creates {{jsxref("RegExp")}} objects.
 
@@ -36,20 +36,18 @@ RegExp(pattern)
 RegExp(pattern, flags)
 ```
 
-> **Note:** `RegExp()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but sometimes with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `RegExp()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but sometimes with different effects. See [Return value](#return_value).
 
 ### Parameters
 
 - `pattern`
-
   - : The text of the regular expression. This can also be another `RegExp` object.
 
 - `flags` {{optional_inline}}
-
   - : If specified, `flags` is a string that contains the flags to add. Alternatively, if a `RegExp` object is supplied for the `pattern`, the `flags` string will replace any of that object's flags (and `lastIndex` will be reset to `0`).
 
     `flags` may contain any combination of the following characters:
-
     - [`d` (indices)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices)
       - : Generate indices for substring matches.
     - [`g` (global)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)

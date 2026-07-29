@@ -3,9 +3,8 @@ title: action.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getTitle
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.getTitle
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the browser action's title.
 
@@ -27,9 +26,7 @@ let gettingTitle = browser.action.getTitle(
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `tabId` {{optional_inline}}
       - : `integer`. Specify the tab to get the title from.
     - `windowId` {{optional_inline}}

@@ -2,9 +2,8 @@
 title: Regular expression syntax cheat sheet
 slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
@@ -202,7 +201,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           Matches a control character using
           <a href="https://en.wikipedia.org/wiki/Caret_notation"
             >caret notation</a
-          >, where "X" is a letter from A–Z (corresponding to code points
+          >, where "X" is a letter from A–Z or a–z (corresponding to code points
           <code>U+0001</code><em>–</em><code>U+001A</code>). For example,
           <code>/\cM\cJ/</code> matches "\r\n".
         </p>
@@ -213,29 +212,29 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         <code>\x<em>hh</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Hex escape:</strong></a>
         Matches the character with the code <code><em>hh</em></code> (two
         hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>hhhh</em></code>
+        <code>\u<em>HHHH</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode escape:</strong></a>
         Matches a UTF-16 code-unit with the value
-        <code><em>hhhh</em></code> (four hexadecimal digits).
+        <code><em>HHHH</em></code> (four hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code>
+        <code>\u{<em>H…H</em>}</code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode code point escape:</strong></a>
         (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>hhhh</em></code> or <code
-          >U+<em>hhhhh</em></code
-        >
-        (hexadecimal digits).
+        the Unicode value <code>U+<em>H…H</em></code> (1 to 6 hexadecimal digits).
       </td>
     </tr>
     <tr>
@@ -570,7 +569,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
     </tr>
     <tr>
-      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
       <td>
         <p>
           <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>Modifier:</strong></a>
@@ -731,10 +730,9 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       <td>
         <p>
           By default quantifiers like <code>*</code> and <code>+</code> are
-          "greedy", meaning that they try to match as much of the string as
+          "greedy", meaning that they try to match as many times as
           possible. The <code>?</code> character after the quantifier makes the
-          quantifier "non-greedy": meaning that it will stop as soon as it finds
-          a match. For example, given a string like "some &#x3C;foo> &#x3C;bar>
+          quantifier "non-greedy": meaning that it will stop as soon as it finds the minimum number of matches. For example, given a string like "some &#x3C;foo> &#x3C;bar>
           new &#x3C;/bar> &#x3C;/foo> thing":
         </p>
         <ul>
@@ -744,6 +742,12 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           </li>
           <li><code>/&#x3C;.*?>/</code> will match "&#x3C;foo>"</li>
         </ul>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> Adding <code>?</code> after <code>{n}</code> is syntactically valid but practically useless.
+            Since <code>{n}</code> always matches exactly n times, <code>x{n}?</code> behaves the same as <code>x{n}</code>.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

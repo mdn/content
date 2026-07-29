@@ -1,11 +1,11 @@
 ---
-title: "<map>: The Image Map element"
+title: "`<map>` HTML image map element"
+short-title: <map>
 slug: Web/HTML/Reference/Elements/map
 page-type: html-element
 browser-compat: html.elements.map
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<map>`** [HTML](/en-US/docs/Web/HTML) element is used with {{HTMLElement("area")}} elements to define an image map (a clickable link area).
 
@@ -131,7 +131,7 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
         >
       </td>

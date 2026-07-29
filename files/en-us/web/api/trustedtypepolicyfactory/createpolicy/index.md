@@ -21,9 +21,7 @@ createPolicy(policyName, policyOptions)
 - `policyName`
   - : A string with the name of the policy.
 - `policyOptions` {{optional_inline}}
-
   - : User-defined functions for converting strings into trusted values.
-
     - `createHTML(input[,args])`
       - : A callback function in the form of a string that contains code to run when creating a {{domxref("TrustedHTML")}} object.
     - `createScript(input[,args])`

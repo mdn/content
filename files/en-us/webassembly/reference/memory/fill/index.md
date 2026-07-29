@@ -1,16 +1,13 @@
 ---
-title: "fill: Wasm text instruction"
+title: "fill: Wasm memory instruction"
 short-title: fill
-slug: WebAssembly/Reference/Memory/Fill
+slug: WebAssembly/Reference/Memory/fill
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.bulk-memory-operations
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_fill
 sidebar: webassemblysidebar
 ---
 
-The **`fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
+The **`memory.fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
 
 The instruction returns no value.
 It traps (exception) if the indicated memory region is out of bounds.
@@ -26,7 +23,7 @@ i32.const 255 ;; The value to set each byte to (must be < 256)
 i32.const 100 ;; The number of bytes to update
 memory.fill ;; Fill default memory
 
-;; Fill default memory using an S-function
+;; Fill default memory using an S-expression
 (memory.fill (i32.const 200) (i32.const 255) (i32.const 100))
 ```
 
@@ -45,7 +42,7 @@ i32.const 255 ;; The value to set each byte to (must be < 256)
 i32.const 100 ;; The number of bytes to update
 memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 
-;; Fill same memory using an S function
+;; Fill same memory using an S-expression
 (memory.fill (memory $memoryName) (i32.const 200) (i32.const 255) (i32.const 100))
 ```
 
@@ -62,6 +59,3 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `fill` can be used with a specified memory.

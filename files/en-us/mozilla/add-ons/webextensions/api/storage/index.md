@@ -3,9 +3,8 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 page-type: webextension-api
 browser-compat: webextensions.api.storage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to store and retrieve data, and listen for changes to stored items.
 
@@ -52,11 +51,11 @@ You can examine the stored data under the Extension Storage item in the [Storage
 - {{WebExtAPIRef("storage.onChanged")}}
   - : Fired when one or more items change in any of the storage areas.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

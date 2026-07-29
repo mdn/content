@@ -53,7 +53,8 @@ const endOffset = endNode.childNodes.length;
 range.setEnd(endNode, endOffset);
 ```
 
-> **Note:** `setEnd()` is commonly used in conjunction with
+> [!NOTE]
+> `setEnd()` is commonly used in conjunction with
 > {{domxref("Range.setStart", "setStart()")}} to fully configure a range.
 
 ## Specifications

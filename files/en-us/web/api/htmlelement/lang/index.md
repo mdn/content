@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.lang
 
 {{ APIRef("HTML DOM") }}
 
-The **`lang`** property of the {{domxref("HTMLElement")}} interface indicates the base language of an element's attribute values and text content, in the form of a {{RFC(5646, "BCP 47 language identifier tag")}}. It reflects the element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute; the `xml:lang` attribute does not affect this property.
+The **`lang`** property of the {{domxref("HTMLElement")}} interface indicates the base language of an element's attribute values and text content, in the form of a {{glossary("BCP 47 language tag")}}. It reflects the element's [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute; the `xml:lang` attribute does not affect this property.
 
 Note that if the `lang` attribute is unspecified, the element itself may still inherit the language from its parent. However, that inherited language is not reflected by this property's value.
 

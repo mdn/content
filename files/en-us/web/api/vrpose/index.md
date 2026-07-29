@@ -26,7 +26,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 - {{domxref("VRPose.linearAcceleration")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}, in meters per second per second.
 - {{domxref("VRPose.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the orientation of the sensor at the current {{domxref("VRFrameData.timestamp")}}, as a quarternion value.
+  - : Returns the orientation of the sensor at the current {{domxref("VRFrameData.timestamp")}}, as a quaternion value.
 - {{domxref("VRPose.angularVelocity")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}, in radians per second.
 - {{domxref("VRPose.angularAcceleration")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}

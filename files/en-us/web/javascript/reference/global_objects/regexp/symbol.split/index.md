@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype[Symbol.split]()
+short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.split]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) should behave when the regular expression is passed in as the separator.
 

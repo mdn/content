@@ -1,13 +1,15 @@
 ---
 title: Date.prototype.getYear()
+short-title: getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.Date.getYear
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`getYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to local time. Because `getYear()` does not return full years ("year 2000 problem"), it is deprecated and has been replaced by the {{jsxref("Date/getFullYear", "getFullYear()")}} method.
 

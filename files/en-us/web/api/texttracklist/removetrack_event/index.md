@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.TextTrackList.removetrack_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`removetrack`** event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
 
@@ -25,13 +25,6 @@ onremovetrack = (event) => { }
 A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The {{domxref("TextTrack")}} object to which the event refers.
 
 ## Examples
 

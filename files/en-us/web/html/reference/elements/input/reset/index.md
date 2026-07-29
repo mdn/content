@@ -1,11 +1,11 @@
 ---
-title: <input type="reset">
+title: '`<input type="reset">` HTML attribute value'
+short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_reset
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
@@ -174,10 +174,6 @@ We've included basic examples above. There isn't really anything more to say abo
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

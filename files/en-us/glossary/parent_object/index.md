@@ -2,9 +2,8 @@
 title: Parent object
 slug: Glossary/Parent_object
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The {{glossary("object")}} to which a given {{glossary("property")}} or {{glossary("method")}} belongs.
 

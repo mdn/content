@@ -34,27 +34,21 @@ request(name, options, callback)
 ### Parameters
 
 - `name`
-
   - : An identifier for the lock you want to request.
 
 - `options` {{optional_inline}}
-
   - : An object describing characteristics of the lock you want to create.
     Valid values are:
-
     - `mode` {{optional_inline}}
-
       - : Either `"exclusive"` or `"shared"`.
         The default value is `"exclusive"`.
 
     - `ifAvailable` {{optional_inline}}
-
       - : If `true`, the lock request will only be granted if it is not already held.
         If it cannot be granted, the callback will be invoked with `null` instead of a `Lock` instance.
         The default value is `false`.
 
     - `steal` {{optional_inline}}
-
       - : If `true`, then any held locks with the same name will be released, and the request will be granted, preempting any queued requests for it.
         The default value is `false`.
 
@@ -106,10 +100,10 @@ await navigator.locks.request("my_resource", async (lock) => {
 The following example shows how to use the `mode` option for readers and writers.
 
 Notice that both functions use a lock called `my_resource`.
-The `do_read()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
+The `doRead()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
 
 ```js
-async function do_read() {
+async function doRead() {
   await navigator.locks.request(
     "my_resource",
     { mode: "shared" },
@@ -120,11 +114,11 @@ async function do_read() {
 }
 ```
 
-The `do_write()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `do_read()` until the write operation has completed.
+The `doWrite()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `doRead()` until the write operation has completed.
 This applies across event handlers, tabs, or workers.
 
 ```js
-async function do_write() {
+async function doWrite() {
   await navigator.locks.request(
     "my_resource",
     { mode: "exclusive" },

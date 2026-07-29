@@ -3,9 +3,8 @@ title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
 page-type: webextension-api
 browser-compat: webextensions.api.alarms
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Schedule code to run at a specific time in the future. This is like {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}, except that those functions don't work with background pages that are loaded on demand.
 

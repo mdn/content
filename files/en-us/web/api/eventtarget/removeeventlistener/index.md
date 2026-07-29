@@ -41,11 +41,9 @@ removeEventListener(type, listener, useCapture)
   - : The [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) function of the event handler to remove from the
     event target.
 - `options` {{optional_inline}}
-
   - : An options object that specifies characteristics about the event listener.
 
     The available options are:
-
     - `capture`: A boolean value that specifies whether the [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to be removed is registered as a capturing listener or not. If this parameter is absent, the default value `false` is assumed.
 
 - `useCapture` {{optional_inline}}
@@ -134,10 +132,10 @@ function makeBackgroundYellow() {
   toggle = !toggle;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+clickTarget.addEventListener("click", makeBackgroundYellow);
 
 mouseOverTarget.addEventListener("mouseover", () => {
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  clickTarget.removeEventListener("click", makeBackgroundYellow);
 });
 ```
 

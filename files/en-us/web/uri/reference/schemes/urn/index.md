@@ -12,13 +12,9 @@ URNs provide globally-unique names for resources as opposed to providing informa
 
 ## Syntax
 
-An URN minimally consists of a Namespace Identifier (NID) and a Namespace Specific String (NSS):
-
 ```url
 urn:<NID>:<NSS>
 ```
-
-## Components
 
 - `<NID>`
   - : A NID (Namespace Identifier) is a case insensitive identifier for the namespace (e.g., `ISBN` and `isbn` are equivalent).

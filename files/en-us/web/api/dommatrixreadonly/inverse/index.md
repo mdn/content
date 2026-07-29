@@ -18,6 +18,10 @@ To mutate the matrix as you invert it, see {{domxref("DOMMatrix.invertSelf()")}}
 inverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("DOMMatrix")}}.

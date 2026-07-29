@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.PlainDate
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainDate()`** constructor creates {{jsxref("Temporal.PlainDate")}} objects.
 
@@ -20,7 +21,8 @@ new Temporal.PlainDate(year, month, day)
 new Temporal.PlainDate(year, month, day, calendar)
 ```
 
-> **Note:** `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainDate()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -57,13 +59,13 @@ console.log(plainDate.toString()); // 2021-07-01
 
 // Note that the date is stored internally as ISO 8601, even when it's
 // interpreted in a different calendar system. For example, even though
-// 2021-07-01 is 4658-05-22 in the Chinese calendar, you still pass the
+// 2021-07-01 ISO is 5781-10-21 in the Hebrew calendar, you still pass the
 // ISO date to the constructor.
-const plainDate2 = new Temporal.PlainDate(2021, 7, 1, "chinese");
-console.log(plainDate2.toString()); // 2021-07-01[u-ca=chinese]
-console.log(plainDate2.year); // 4658
-console.log(plainDate2.month); // 5
-console.log(plainDate2.day); // 22
+const plainDate2 = new Temporal.PlainDate(2021, 7, 1, "hebrew");
+console.log(plainDate2.toString()); // 2021-07-01[u-ca=hebrew]
+console.log(plainDate2.year); // 5781
+console.log(plainDate2.month); // 10
+console.log(plainDate2.day); // 21
 ```
 
 ## Specifications

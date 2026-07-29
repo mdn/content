@@ -2,8 +2,6 @@
 title: Media Source API
 slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
-status:
-  - experimental
 spec-urls:
   - https://w3c.github.io/media-source/
   - https://w3c.github.io/media-playback-quality/
@@ -53,6 +51,12 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
   - : Represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} via a `MediaSource` object.
 - {{domxref("SourceBufferList")}}
   - : A simple container list for multiple `SourceBuffer` objects.
+- {{domxref("ManagedMediaSource")}}
+  - : A {{domxref("MediaSource")}} that actively manages its memory content. Unlike a regular `MediaSource`, a `ManagedMediaSource` can evict content from its source buffers at any time for reasons such as memory or hardware limitations.
+- {{domxref("ManagedSourceBuffer")}}
+  - : A {{domxref("SourceBuffer")}} created by a `ManagedMediaSource`. Fires {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} events to notify the application when buffered ranges are modified, including when the user agent evicts content.
+- {{domxref("BufferedChangeEvent")}}
+  - : The event object for the {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} event, which contains {{domxref("TimeRanges")}} representing the added and removed buffered ranges.
 - {{domxref("VideoPlaybackQuality")}}
   - : Contains information about the quality of video being played by a {{htmlelement("video")}} element, such as number of dropped or corrupted frames. Returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method.
 

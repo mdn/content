@@ -3,12 +3,10 @@ title: "GPUCanvasContext: unconfigure() method"
 short-title: unconfigure()
 slug: Web/API/GPUCanvasContext/unconfigure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUCanvasContext.unconfigure
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`unconfigure()`** method of the
 {{domxref("GPUCanvasContext")}} interface removes any previously-set context configuration, and destroys any textures returned via {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} while the canvas context was configured.

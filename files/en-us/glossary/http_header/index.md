@@ -2,18 +2,17 @@
 title: HTTP header
 slug: Glossary/HTTP_header
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
-
-An **HTTP header** is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a `':'` and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
+An **HTTP header** is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate its preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a `':'` and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
 
 The HTTP and Fetch specifications refer to a number of header categories, including:
 
 - {{Glossary("Request header")}}: Headers containing more information about the resource to be fetched or about the client itself.
 - {{Glossary("Response header")}}: Headers with additional information about the response, like its location or about the server itself (name, version, …).
-- {{Glossary("Representation header")}}: metadata about the resource in the message body (e.g., encoding, media type, etc.).
-- {{Glossary("Fetch metadata request header")}}: Headers with metadata about the resource in the message body (e.g., encoding, media type, etc.).
+- {{Glossary("Representation header")}}: Metadata about the resource in the message body (e.g., encoding, media type, etc.).
+- {{Glossary("Fetch metadata request header")}}: Headers that provide information about the context in which the request is made.
 
 A basic request with one header:
 
@@ -25,14 +24,14 @@ Host: example.com
 Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
 ```http
-302 Found
+HTTP/1.1 302 Found
 Location: /NewPage.html
 ```
 
 A typical set of headers:
 
 ```http
-304 Not Modified
+HTTP/1.1 304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000

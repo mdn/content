@@ -24,25 +24,25 @@ An instance of the {{domxref("Crypto")}} interface, providing access to general-
 
 This example uses the `crypto` property to access the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.
 
+### HTML
+
+```html
+<p id="myRandText">The random numbers are:</p>
+<button type="button">Generate 10 random numbers</button>
+```
+
 ### JavaScript
 
 ```js
-globalThis.genRandomNumbers = () => {
+function genRandomNumbers() {
   const array = new Uint32Array(10);
   globalThis.crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `The random numbers are: ${array.join(" ")}`;
-};
-```
+}
 
-### HTML
-
-```html
-<p id="myRandText">The random numbers are:</p>
-<button type="button" onClick="genRandomNumbers()">
-  Generate 10 random numbers
-</button>
+document.querySelector("button").addEventListener("click", genRandomNumbers);
 ```
 
 ### Result

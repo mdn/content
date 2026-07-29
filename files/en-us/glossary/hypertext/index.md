@@ -2,9 +2,8 @@
 title: Hypertext
 slug: Glossary/Hypertext
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Hypertext is text that contains links to other texts, as opposed to a single linear flow like in a novel.
 

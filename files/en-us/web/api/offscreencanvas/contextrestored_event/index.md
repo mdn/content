@@ -8,7 +8,7 @@ browser-compat: api.OffscreenCanvas.contextrestored_event
 
 {{APIRef("Canvas API")}}
 
-The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser restores a [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context that was [previously lost](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event).
+The **`contextrestored`** event of the {{domxref("OffscreenCanvas")}} interface is fired if the browser restores an [`OffscreenCanvasRenderingContext2D`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) context that was [previously lost](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event).
 
 You can redraw, re-retrieve resources, and reinitialize the state of your context after receiving this event.
 
@@ -34,14 +34,10 @@ The code fragment below detects the context restored event.
 const canvas = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("2d");
 
-canvas.addEventListener(
-  "contextrestored",
-  (e) => {
-    console.log(e);
-    // call to redrawCanvas() or similar
-  },
-  false,
-);
+canvas.addEventListener("contextrestored", (e) => {
+  console.log(e);
+  // call to redrawCanvas() or similar
+});
 ```
 
 ## Specifications

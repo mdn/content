@@ -2,9 +2,8 @@
 title: First Contentful Paint (FCP)
 slug: Glossary/First_contentful_paint
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **First Contentful Paint** (FCP) is when the browser renders the first content from the DOM, providing feedback to the user that the page is loading. Completing the first contentful paint answers the question "Is it happening?"
 

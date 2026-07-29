@@ -523,7 +523,7 @@ Storing data that you won't use again can have high cost, particularly on tiled-
 Operations like `readPixels` and `getBufferSubData` are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: [Async downloads in blocking APIs](https://kdashg.github.io/misc/async-gpu-downloads.html)
 
 ```js
-function clientWaitAsync(gl, sync, flags, interval_ms) {
+function clientWaitAsync(gl, sync, flags, intervalMs) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
@@ -532,7 +532,7 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
         return;
       }
       if (res === gl.TIMEOUT_EXPIRED) {
-        setTimeout(test, interval_ms);
+        setTimeout(test, intervalMs);
         return;
       }
       resolve();
@@ -610,14 +610,6 @@ function getDevicePixelSize(elem) {
   });
 }
 ```
-
-Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.
-
-## ImageBitmap creation
-
-Using the [ImageBitmapOptions dictionary](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions) is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.
-
-[This JSFiddle](https://jsfiddle.net/ptkyewhx/) illustrates how to determine which dictionary members a given browser supports.
 
 ## Use `WEBGL_provoking_vertex` when it's available
 

@@ -2,9 +2,8 @@
 title: Screen reader
 slug: Glossary/Screen_reader
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Screen readers are software applications that attempt to convey what is seen on a screen display in a non-visual way, usually as text to speech, but also into braille or sound icons. Screen readers are essential to people who are visually impaired, illiterate, or have a learning disability. There are some browser extension screen readers, but most screen readers operate system-wide for all user applications, not just the browser.
 
@@ -24,7 +23,7 @@ See [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/wel
 
 Narrator is a screen-reading application that's built into Windows 10 and Windows 11.
 
-See [Complete guide to Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
+See [Complete guide to Narrator](https://support.microsoft.com/en-US/accessibility/windows/narrator/complete-guide-to-narrator).
 
 ### ChromeVox
 

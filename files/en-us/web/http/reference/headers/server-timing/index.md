@@ -4,9 +4,8 @@ short-title: Server-Timing
 slug: Web/HTTP/Reference/Headers/Server-Timing
 page-type: http-header
 browser-compat: http.headers.Server-Timing
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Server-Timing`** {{Glossary("response header")}} communicates one or more performance metrics about the request-response cycle to the user agent.
 It is used to surface backend server timing metrics (for example, database read/write, CPU time, file system access, etc.) in the developer tools in the user's browser or in the {{domxref("PerformanceServerTiming")}} interface.
@@ -16,10 +15,6 @@ It is used to surface backend server timing metrics (for example, database read/
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -107,7 +102,7 @@ Server-Timing: custom-metric;dur=123.4
 ```
 
 > [!WARNING]
-> Only the browser's DevTools can use the `Server-Timing` header as a HTTP trailer to display information in the Network -> Timings tab.
+> Only the browser's DevTools can use the `Server-Timing` header as an HTTP trailer to display information in the Network -> Timings tab.
 > The Fetch API cannot access HTTP trailers.
 > See [Browser compatibility](#browser_compatibility) for more information.
 

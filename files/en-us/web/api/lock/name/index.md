@@ -29,9 +29,9 @@ to {{domxref('LockManager.request()')}}. {{domxref('LockManager')}} is the objec
 by {{domxref('navigator.locks')}}.
 
 ```js
-navigator.locks.request("net_db_sync", show_lock_properties);
+navigator.locks.request("net_db_sync", showLockProperties);
 
-function show_lock_properties(lock) {
+function showLockProperties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }

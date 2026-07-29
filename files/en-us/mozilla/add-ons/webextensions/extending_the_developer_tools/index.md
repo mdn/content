@@ -2,9 +2,8 @@
 title: Extend the developer tools
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > This page describes the devtools APIs in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), Firefox does not implement all those features; therefore, not all features are documented here. To see which features are missing, refer to [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
@@ -28,7 +27,6 @@ The devtools page doesn't have any visible DOM, but can include JavaScript sourc
 - The normal DOM APIs accessible through the global [`window`](/en-US/docs/Web/API/Window) object
 - The same [WebExtension APIs as in Content Scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - The devtools APIs:
-
   - [`devtools.inspectedWindow`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

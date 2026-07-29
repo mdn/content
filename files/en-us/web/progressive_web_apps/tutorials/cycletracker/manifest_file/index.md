@@ -17,7 +17,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 ```json
 {
   "short_name": "CT",
-  "start_url": "/",
+  "start_url": "./",
   "icons": [
     {
       "src": "icon-512.png",
@@ -63,7 +63,6 @@ Write the first few lines of your manifest file. You can use the text below, or 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
 - [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
-
   - : The start page when a user launches the PWA.
 
 - [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)
@@ -76,7 +75,7 @@ There is also an [`orientation`](/en-US/docs/Web/Progressive_web_apps/Manifest/R
 - [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
 - [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
-  - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
+  - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the {{cssxref("&lt;color&gt;")}} declared as the app's {{cssxref("background-color")}} color.
 
 ### Task
 
@@ -84,16 +83,16 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 ### Example solution
 
-As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
+As the example application is a single page in a subdirectory, we can use `"./"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #eeffee;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
 ```json
 {
   "name": "...",
   "short_name": "...",
   "description": "...",
-  "start_url": "/",
+  "start_url": "./",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
   "display": "standalone"
@@ -133,7 +132,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support_masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/articles/maskable-icon).
 
-In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
+In Safari, and therefore for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
 
 ### Task
 

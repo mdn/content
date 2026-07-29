@@ -40,7 +40,7 @@ In this example, we retrieve the horizontal standard deviation for the blur oper
     y="50"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#drop-shadow-filter)" />
 </svg>
 ```

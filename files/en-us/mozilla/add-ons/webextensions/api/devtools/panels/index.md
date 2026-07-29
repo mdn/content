@@ -3,9 +3,8 @@ title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
 page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.panels
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).

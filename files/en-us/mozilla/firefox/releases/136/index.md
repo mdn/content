@@ -1,10 +1,10 @@
 ---
-title: Firefox 136 for developers
+title: Firefox 136 release notes for developers
+short-title: Firefox 136
 slug: Mozilla/Firefox/Releases/136
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
@@ -17,8 +17,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### CSS
 
-- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
-- The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
+- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
+- The [`:open`](/en-US/docs/Web/CSS/Reference/Selectors/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
 - The {{cssxref("gradient")}} CSS functions {{cssxref("linear-gradient")}}, {{cssxref("conic-gradient")}}, and {{cssxref("radial-gradient")}} now allow a single color stop and 0-1 positions. This produces a single solid color and is used in setting the {{cssxref("mask")}} CSS property. ([Firefox bug 1900530](https://bugzil.la/1900530)).
 
 ### JavaScript
@@ -39,7 +39,6 @@ This article provides information about the changes in Firefox 136 that affect d
 - Element properties are now reflected for the [Aria attributes that contain element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) ([Firefox bug 1919102](https://bugzil.la/1919102)).
 
   This includes:
-
   - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
   - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
 
@@ -61,7 +60,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzil.la/1927721)).
 
-- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
+- Navigations using the HTTP scheme, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
 
 #### WebDriver BiDi
 
@@ -76,7 +75,7 @@ This article provides information about the changes in Firefox 136 that affect d
 ## Changes for add-on developers
 
 - Adds the `preferred_environment` property to the [`background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background), enabling extensions to request that the browser run their background scripts as a document or service worker ([Firefox bug 1798655](https://bugzil.la/1798655)).
-- {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
+- {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases `contextMenus.update` and `contextMenus.remove` now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
 - A new version of the {{WebExtAPIRef("userScripts")}} API is available on desktop Firefox. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
 - The `canResume` property of {{WebExtAPIRef("downloads.DownloadItem")}} is now set to `true` when a download fails with `NETWORK_FAILED`. This enables downloads that fail due to a network error to be resumed using {{WebExtAPIRef("downloads.resume","downloads.resume()")}}. ([Firefox bug 1694049](https://bugzil.la/1694049)).
 
@@ -94,11 +93,7 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
 - **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
-  The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
+  The `<discard>` SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
 - **SVG path API methods**: `dom.svg.pathSegment.enabled`.
   The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
-
-## Older versions
-
-{{Firefox_for_developers}}

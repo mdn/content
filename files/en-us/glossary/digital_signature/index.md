@@ -2,9 +2,8 @@
 title: Digital signature
 slug: Glossary/Digital_signature
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **digital signature** is an object that can be used to {{glossary("authentication", "authenticate")}} the author of a document or message.
 

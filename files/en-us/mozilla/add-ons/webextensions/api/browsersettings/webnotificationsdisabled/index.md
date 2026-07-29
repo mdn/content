@@ -3,9 +3,8 @@ title: browserSettings.webNotificationsDisabled
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
 page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.webNotificationsDisabled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to prevent websites from showing notifications using the [`Notifications`](/en-US/docs/Web/API/Notifications_API) Web API.
 
@@ -18,10 +17,6 @@ Note that this won't affect sites for which the user has set a per-site preferen
 Setting `browserSettings.webNotificationsDisabled` to `false` switches the global default back to its default value.
 
 Note that this setting has no effect on notifications created by extensions using the [`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -42,3 +37,7 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

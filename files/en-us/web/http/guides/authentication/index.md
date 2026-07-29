@@ -2,9 +2,8 @@
 title: HTTP authentication
 slug: Web/HTTP/Guides/Authentication
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
 This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" scheme.
@@ -112,7 +111,13 @@ The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transm
 
 ### Security of basic authentication
 
-As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme **is not secure**. HTTPS/TLS should be used with basic authentication. Without these additional security enhancements, basic authentication should not be used to protect sensitive or valuable information.
+As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure.
+HTTPS/TLS should be used with basic authentication to prevent credential interception.
+
+In addition, sites that use HTTP Basic Auth are particularly vulnerable to [Cross-Site Request Forgery (CSRF)](/en-US/docs/Glossary/CSRF) attacks because the user credentials are sent in all requests regardless of origin (this differs cookie-based credential mechanisms, because cookies are commonly blocked in cross site requests).
+Sites should always use the POST requests when changing data, and include [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF).
+
+Without these security enhancements, basic authentication should not be used to protect sensitive or valuable information.
 
 ### Restricting access with Apache and basic authentication
 
@@ -148,14 +153,13 @@ location /status {
 
 ### Access using credentials in the URL
 
-Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:
+Historically some sites would allow you to login using an encoded URL containing the username and the password as shown:
 
 ```plain example-bad
 https://username:password@www.example.com/
 ```
 
-**The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is [removed from subresource URLs](https://codereview.chromium.org/2651943002) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you." In case the site does require authentication, Firefox will still ask for user confirmation "You are about to log in to the site `www.example.com` with the username `username`." before sending the credentials to the site. Note that Firefox sends the request without credentials in both cases before showing the prompt in order to determine whether the site requires authentication.
+This syntax is no longer allowed in modern browsers; the username and password are stripped from the request before it is sent.
 
 ## See also
 
@@ -164,3 +168,4 @@ In Chrome, the `username:password@` part in URLs is [removed from subresource UR
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}
 - {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [HTTP Security Best Practices](/en-US/docs/Web/Security)

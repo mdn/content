@@ -3,9 +3,8 @@ title: dom
 slug: Mozilla/Add-ons/WebExtensions/API/dom
 page-type: webextension-api
 browser-compat: webextensions.api.dom
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Access special extension only DOM features.
 

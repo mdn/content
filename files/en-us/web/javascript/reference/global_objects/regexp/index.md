@@ -3,9 +3,8 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 page-type: javascript-class
 browser-compat: javascript.builtins.RegExp
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.
 
@@ -278,7 +277,7 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expr
 ### Extracting subdomain name from URL
 
 ```js
-const url = "http://xxx.domain.com";
+const url = "http://xxx.example.com";
 console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 

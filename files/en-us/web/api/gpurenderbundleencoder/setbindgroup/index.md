@@ -3,12 +3,10 @@ title: "GPURenderBundleEncoder: setBindGroup() method"
 short-title: setBindGroup()
 slug: Web/API/GPURenderBundleEncoder/setBindGroup
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
@@ -45,7 +43,7 @@ If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of 
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

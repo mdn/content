@@ -3,9 +3,8 @@ title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 page-type: javascript-language-feature
 browser-compat: javascript.classes.constructor
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Classes")}}
 
 The **`constructor`** method is a special method of a [class](/en-US/docs/Web/JavaScript/Reference/Classes) for creating and initializing an object instance of that class.
 
@@ -21,9 +20,9 @@ class Polygon {
   }
 }
 
-const poly1 = new Polygon();
+const poly = new Polygon();
 
-console.log(poly1.name);
+console.log(poly.name);
 // Expected output: "Polygon"
 ```
 
@@ -180,7 +179,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) ones) to be defined on unrelated objects.
 
 The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 

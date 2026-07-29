@@ -2,11 +2,9 @@
 title: Using VR controllers with WebVR
 slug: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 page-type: guide
-status:
-  - experimental
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
+{{DefaultAPISidebar("WebVR API")}}
 
 Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/en-US/docs/Web/API/GamepadPose), [haptic actuators](/en-US/docs/Web/API/GamepadHapticActuator), and more. This article explains the basics.
 

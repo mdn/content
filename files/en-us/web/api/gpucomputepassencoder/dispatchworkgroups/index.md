@@ -3,12 +3,10 @@ title: "GPUComputePassEncoder: dispatchWorkgroups() method"
 short-title: dispatchWorkgroups()
 slug: Web/API/GPUComputePassEncoder/dispatchWorkgroups
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePassEncoder.dispatchWorkgroups
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`dispatchWorkgroups()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface dispatches a specific grid of workgroups to perform the work being done by the current {{domxref("GPUComputePipeline")}} (i.e., set via {{domxref("GPUComputePassEncoder.setPipeline()")}}).
@@ -35,7 +33,7 @@ dispatchWorkgroups(workgroupCountX, workgroupCountY, workgroupCountZ)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 
@@ -72,7 +70,7 @@ Later in the code, the `dispatchWorkgroups()` `workgroupCountX` parameter is set
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

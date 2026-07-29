@@ -78,7 +78,7 @@ The code creates a different {{domxref("TransformStream")}} to process outgoing 
 
 This example shows how to create a [message channel](/en-US/docs/Web/API/Channel_Messaging_API) and transfer one of its ports to the WebRTC encoded transform running in the worker. This main thread can then send and transfer objects and messages to the transformer running in the worker after construction, and vice versa.
 
-The code below first creates a {{domxref("MessageChannel")}} and then constructs a `RTCRtpScriptTransform` passing the {{domxref("MessageChannel.port2","port2")}} value as an property in the options argument.
+The code below first creates a {{domxref("MessageChannel")}} and then constructs a `RTCRtpScriptTransform` passing the {{domxref("MessageChannel.port2","port2")}} value as a property in the options argument.
 The port is also included in the array passed as the third constructor argument, so that it is transferred into the worker context.
 
 ```js

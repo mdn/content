@@ -14,7 +14,7 @@ example, the {{HTMLElement("html")}} element for HTML documents).
 
 ## Value
 
-A {{domxref("Element")}} object.
+An {{domxref("Element")}} object.
 
 ## Examples
 

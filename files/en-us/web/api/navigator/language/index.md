@@ -8,11 +8,11 @@ browser-compat: api.Navigator.language
 
 {{APIRef("HTML DOM")}}
 
-The **`Navigator.language`** read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
+The **`language`** read-only property of the {{domxref("Navigator")}} interface returns a string representing the preferred language of the user, usually the language of the browser UI.
 
 ## Value
 
-A string representing the language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+A string representing the language version in {{glossary("BCP 47 language tag")}} format. Examples of valid language tags include `en`, `en-US`, `fr`, `fr-FR`, `es-ES`, etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase: "en-us", "fr-fr" etc.
 

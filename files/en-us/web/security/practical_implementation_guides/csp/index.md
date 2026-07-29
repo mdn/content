@@ -22,7 +22,7 @@ CSP can also help to fix other problems, which are covered in other articles:
 
 ## Solution
 
-Implementing a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp) is the best way to mitigate XSS vulnerabilities with CSP. This uses [nonce-](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or [hash-](/en-US/docs/Web/HTTP/Guides/CSP#hashes)based fetch directives to ensure that only scripts and/or styles that include the correct nonce or hash will be executed. JavaScript inserted by a hacker will simply not run.
+Implementing a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp) is the best way to mitigate XSS vulnerabilities with CSP. This uses [nonce-](/en-US/docs/Web/HTTP/Guides/CSP#nonces) or [hash-](/en-US/docs/Web/HTTP/Guides/CSP#hashes)based fetch directives to ensure that only scripts and/or styles that include the correct {{Glossary("Nonce", "nonce")}} or hash will be executed. JavaScript inserted by a hacker will simply not run.
 
 Strict CSPs also:
 
@@ -57,7 +57,7 @@ If you are unable to get a strict CSP to work, an allowlist-based CSP is much be
 > - `data:` URIs inside `script-src`, `object-src`, or `default-src`.
 > - Overly broad sources or form submission targets.
 
-If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
+If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Reference/Elements/meta/http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
 
 ### Report-only CSPs
 

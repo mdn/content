@@ -640,23 +640,26 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/c
     </tr>
     <tr>
       <th scope="row">Opus</th>
-      <td></td>
-      <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th scope="row">Vorbis</th>
       <td></td>
       <td></td>
       <td>Yes</td>
-      <td></td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 > [!WARNING]
 > Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit ([Firefox bug 1810378](https://bugzil.la/1810378)).
+
+> [!NOTE]
+> Safari 18.4+ (on macOS 15.4+, iOS 18.4+, iPadOS 18.4+, and visionOS 2.4+) added support for Opus and Vorbis codecs in Ogg containers.
 
 ### QuickTime
 
@@ -1309,7 +1312,7 @@ If neither of those can be played, the text "This browser does not support the H
         <code>.oga</code><br /><code>.ogg</code>
       </td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
+        Firefox, Safari
       </td>
       <td style="vertical-align: top"><code>video/ogg</code></td>
       <td style="vertical-align: top">

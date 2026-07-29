@@ -7,7 +7,7 @@ browser-compat: api.SVGPointList
 
 {{APIRef("SVG")}}
 
-The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.
+The **`SVGPointList`** interface represents a list of {{domxref("DOMPoint")}} objects.
 
 An `SVGPointList` can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.
 

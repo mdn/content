@@ -3,9 +3,8 @@ title: action.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeText
 page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeText
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
@@ -27,11 +26,8 @@ This API is also available as `chrome.action.setBadgeText()`.
 ### Parameters
 
 - `details`
-
   - : An object with the following properties:
-
     - `text`
-
       - : `string` or `null`. Any number of characters can be passed, but only about four can fit in the space.
 
         Use an empty string - `""` - if you don't want any badge.

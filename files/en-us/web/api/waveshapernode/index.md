@@ -43,7 +43,7 @@ A `WaveShaperNode` always has exactly one input and one output.
 ## Constructor
 
 - {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
-  - : Creates a new instance of an `WaveShaperNode` object.
+  - : Creates a new instance of a `WaveShaperNode` object.
 
 ## Instance properties
 

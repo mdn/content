@@ -5,7 +5,7 @@ page-type: tutorial-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}
 
 There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
 
@@ -126,155 +126,70 @@ Citations are styled in italic font by default.
 
 {{EmbedLiveSample('Citations', '100%', '179px')}}
 
-### Active learning: Who said that?
+### Who said that? Blockquote practice
 
-Time for another active learning example! In this example we'd like you to:
+Time for another task! In this example we'd like you to:
 
-1. Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
-2. Turn "The Need To Eliminate Negative Self Talk" in the third paragraph into an inline quote, and include a `cite` attribute.
-3. Wrap the title of each source in `<cite>` tags and turn each one into a link to that source.
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
+3. Turn "The Need To Eliminate Negative Self Talk" in the third paragraph into an inline quote, and include a `cite` attribute.
+4. Wrap the title of each source in `<cite>` tags and turn each one into a link to that source.
 
 The citation sources you need are:
 
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` for the Confucius quote
 - `http://example.com/affirmationsforpositivethinking` for "The Need To Eliminate Negative Self Talk".
 
-If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-```html hidden
-<h2>Live output</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
-</p>
-
-<textarea id="code" class="input" style="min-height: 150px; width: 95%">
+```html live-sample___advanced-text-1
 <p>Hello and welcome to my motivation page. As Confucius' quotes site says:</p>
 <p>It does not matter how slowly you go as long as you do not stop.</p>
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+<p>
+  I also love the concept of positive thinking, and The Need To Eliminate
+  Negative Self Talk (as mentioned in Affirmations for Positive Thinking.)
+</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('advanced-text-1', "100%", 200) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>Click here to show the solution</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+Your finished HTML should look like this:
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<p>
+  Hello and welcome to my motivation page. As
+  <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"
+    ><cite>Confucius' quotes site</cite></a
+  >
+  says:
+</p>
+
+<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+  <p>It does not matter how slowly you go as long as you do not stop.</p>
+</blockquote>
+
+<p>
+  I also love the concept of positive thinking, and
+  <q cite="http://example.com/affirmationsforpositivethinking"
+    >The Need To Eliminate Negative Self Talk</q
+  >
+  (as mentioned in
+  <a href="http://example.com/affirmationsforpositivethinking"
+    ><cite>Affirmations for Positive Thinking</cite></a
+  >.)
+</p>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius\' quotes site</cite></a> says:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Who_said_that', 700, 450) }}
+</details>
 
 ## Abbreviations
 
 Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym. When including either, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means.
 
-If providing the expansion in addition to the abbreviation makes little sense, and the abbreviation or acronym is a fairly shortened term, provide the full expansion of the term as the value of [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute:
+If providing the expansion in addition to the abbreviation makes little sense, and the abbreviation or acronym is a fairly shortened term, provide the full expansion of the term as the value of the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute:
 
 ### Abbreviation example
 
@@ -292,143 +207,48 @@ Let's look at an example.
 </p>
 ```
 
-These will come out looking something like this:
+These are rendered as follows:
 
-{{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
+{{EmbedLiveSample('Abbreviation_example', '100%', '90')}}
 
 > [!NOTE]
 > Earlier versions of html also included support for the {{htmlelement("acronym")}} element, but it was removed from the HTML spec in favor of using `<abbr>` to represent both abbreviations and acronyms. `<acronym>` should not be used.
 
-### Active learning: marking up an abbreviation
+### Let's mark up an abbreviation
 
-For this simple active learning assignment, we'd like you to mark up an abbreviation. You can use our sample below, or replace it with one of your own.
+For this learning task, we'd like you to mark up an abbreviation.
 
-```html hidden
-<h2>Live output</h2>
+1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
+2. Mark up the included abbreviations using appropriate HTML. Feel free also to replace it with one of your own, and try marking that up instead.
 
-<div class="output" style="min-height: 50px;"></div>
+If you make a mistake, you can clear your work using the _Reset_ button in the MDN Playground. If you get really stuck, you can view the solution below the code block.
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+```html-nolint live-sample___advanced-text-2
+<p>NASA sure does some exciting work.</p>
+
+<p>The new user interface design LGTM!</p>
+```
+
+{{ EmbedLiveSample('advanced-text-2', "100%", 90) }}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Your finished HTML should look something like the following code snippet:
+
+```html
+<p>
+  <abbr>NASA</abbr> (the National Aeronautics and Space Administration) sure
+  does some exciting work.
 </p>
 
-<textarea id="code" class="input" style="min-height: 50px; width: 95%">
-<p>NASA, the National Aeronautics and Space Administration, sure does some exciting work.</p>
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
+<p>The new user interface design <abbr title="Looks good to me">LGTM</abbr>!</p>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+- Arguably, NASA should be expanded in text on first mention, as it is a useful bit of information for everyone to have available in the text.
+- Acronyms like "LGTM", on the other hand, are purely written to save space and time so it wouldn't make sense to also write it out, hence putting the expansion in the `title` attribute. In a real application, you probably wouldn't do this by hand — you'd get some kind of script to add it automatically for known terms.
 
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<p><abbr>NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_marking_up_an_abbreviation', 700, 300) }}
+</details>
 
 ## Marking up contact details
 
@@ -465,7 +285,7 @@ Note that something like this would also be OK, if the linked page contained the
 ```
 
 > [!NOTE]
-> The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
+> The {{htmlelement("address")}} element should only be used to provide contact information for the document contained by the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
 
 ## Superscript and subscript
 
@@ -546,7 +366,7 @@ Why is this useful? Well, there are many different ways that humans write down d
 - The 20th of next month
 - <span lang="fr">20e Janvier 2016</span>
 - <span lang="ja">2016 年 1 月 20 日</span>
-- And so on
+- And so on.
 
 <!-- markdownlint-enable MD033 -->
 
@@ -575,12 +395,10 @@ The basic example above just provides a simple machine readable date, but there 
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced HTML text](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text).
-
 ## Summary
 
-That marks the end of our study of less-common HTML text semantics. What you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild. Next up, we'll look at links, one of the most important features of the web.
+That marks the end of our study of less-common HTML text semantics. What you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+Next up, we'll give you some tests that you can use to check how well you've understood and retained the information we've provided on less-common HTML text features.
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics", "Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text", "Learn_web_development/Core/Structuring_content")}}

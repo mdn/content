@@ -2,9 +2,8 @@
 title: Source map
 slug: Glossary/Source_map
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **source map** is a {{Glossary("JSON")}} file format that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
 
@@ -14,7 +13,7 @@ Code executed by the browser is often transformed in some way from the original 
 - To support older browsers by transforming modern features into older equivalents.
 - To use languages that browsers don't support, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
 
-In these situations, debugging the original source is much easier than the source in the transformed state that the browser has downloaded.
+In these situations, debugging the original source is more intuitive than the source in the transformed state that the browser has downloaded.
 Browsers detect a source map via the {{HTTPHeader("SourceMap")}} HTTP header for a resource, or a `sourceMappingURL` annotation in the generated code.
 
 ## Example

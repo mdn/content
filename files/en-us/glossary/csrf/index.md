@@ -2,9 +2,8 @@
 title: Cross-site request forgery (CSRF)
 slug: Glossary/CSRF
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In a **cross-site request forgery** (CSRF) attack, an attacker tricks the browser into making an HTTP request to the target site from a malicious site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
 

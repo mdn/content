@@ -71,11 +71,11 @@ Yes, we get a circle:
 
 ## Backgrounds
 
-When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
+When we talk about a fancy box, the core properties to handle that are [background-\* properties](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders). When you start fiddling with backgrounds it's like your CSS box is turned into a blank canvas you'll fill.
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden
@@ -84,7 +84,7 @@ Before we jump to some practical examples, let's step back a bit as there are tw
 
 Okay, let's have fun with backgrounds:
 
-```css-nolint
+```css
 .fancy {
   padding: 1em;
   width: 100%;
@@ -100,29 +100,30 @@ Okay, let's have fun with backgrounds:
      As you will notice, color gradients are
      considered to be images and can be
      manipulated as such */
-  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
-                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
-                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
+  background-image:
+    linear-gradient(175deg, transparent 95%, #8da389 95%),
+    linear-gradient(85deg, transparent 95%, #8da389 95%),
+    linear-gradient(175deg, transparent 90%, #b4b07f 90%),
+    linear-gradient(85deg, transparent 92%, #b4b07f 92%),
+    linear-gradient(175deg, transparent 85%, #c5a68e 85%),
+    linear-gradient(85deg, transparent 89%, #c5a68e 89%),
+    linear-gradient(175deg, transparent 80%, #ba9499 80%),
+    linear-gradient(85deg, transparent 86%, #ba9499 86%),
+    linear-gradient(175deg, transparent 75%, #9f8fa4 75%),
+    linear-gradient(85deg, transparent 83%, #9f8fa4 83%),
+    linear-gradient(175deg, transparent 70%, #74a6ae 70%),
+    linear-gradient(85deg, transparent 80%, #74a6ae 80%);
 }
 ```
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
 > [!NOTE]
-> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
+> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/Guides/Images/Using_gradients).
 
 ## Pseudo-elements
 
-When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use [CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+When styling a single box, you could find yourself limited and could wish to have more boxes to create even more amazing styles. Most of the time, that leads to polluting the DOM by adding extra HTML element for the unique purpose of style. Even if it is necessary, it's somewhat considered bad practice. One solution to avoid such pitfalls is to use [CSS pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### A cloud
 
@@ -240,9 +241,7 @@ blockquote::after {
   position: absolute;
   height: 3rem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
+    6rem/100% "Georgia",
     serif;
 }
 
@@ -293,7 +292,7 @@ Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} pro
 ```css
 .fancy {
   position: relative;
-  background-color: #ffc;
+  background-color: #ffffcc;
   padding: 2rem;
   text-align: center;
   max-width: 200px;

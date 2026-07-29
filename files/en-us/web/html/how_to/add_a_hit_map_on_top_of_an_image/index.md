@@ -2,9 +2,8 @@
 title: Add a hitmap on top of an image
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 You can create a clickable image map in HTML using {{htmlelement('area')}} and {{htmlelement('map')}} elements.
 This article describes how to set up an image map, and some downsides to consider before you build one.
@@ -72,25 +71,20 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 `<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
 - [`shape`](/en-US/docs/Web/HTML/Reference/Elements/area#shape)
-
   - : The `shape` attribute takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.
     If there is any overlap between the defined areas, the source order determines which area takes preference.
     The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
 - [`coords`](/en-US/docs/Web/HTML/Reference/Elements/area#coords)
-
   - : Coordinates are given in CSS pixels, and its value is dependent on the `shape` selected.
-
     - For a circle, provide the center's x and y coordinates, followed by the length of the radius.
     - For a rectangle, provide the x and y coordinates of the upper-left and bottom-right corners.
     - For a polygon, to provide the x and y coordinates of each corner (so, at least six values).
 
 - [`href`](/en-US/docs/Web/HTML/Reference/Elements/area#href)
-
   - : The URL of the resource you're linking to. You may leave this attribute blank if you _don't_ want the current area to link anywhere (say, if you're making a hollow circle.)
 
 - [`alt`](/en-US/docs/Web/HTML/Reference/Elements/area#alt)
-
   - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#use_clear_link_wording).
 
     You may write `alt=""` if the `href` attribute is blank _and_ the entire image already has an `alt` attribute.

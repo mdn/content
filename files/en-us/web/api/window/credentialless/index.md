@@ -14,7 +14,7 @@ The **`window.credentialless`** read-only property returns a boolean that indica
 
 This context doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
-See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for a deeper explanation.
+See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for a deeper explanation.
 
 ## Value
 

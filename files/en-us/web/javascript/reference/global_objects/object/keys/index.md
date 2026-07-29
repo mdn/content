@@ -1,24 +1,24 @@
 ---
 title: Object.keys()
+short-title: keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.keys
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.keys()`** static method returns an array of a given object's own enumerable string-keyed property names.
 
 {{InteractiveExample("JavaScript Demo: Object.keys()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   a: "some string",
   b: 42,
   c: false,
 };
 
-console.log(Object.keys(object1));
+console.log(Object.keys(object));
 // Expected output: Array ["a", "b", "c"]
 ```
 

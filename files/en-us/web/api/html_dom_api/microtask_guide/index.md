@@ -32,11 +32,10 @@ The event loop driving your code handles these tasks one after another, in the o
 
 At first the difference between microtasks and tasks seems minor. And they are similar; both are made up of JavaScript code which gets placed on a queue and run at an appropriate time. However, whereas the event loop runs only the tasks present on the queue when the iteration began, one after another, it handles the microtask queue very differently.
 
-There are two key differences.
+There are two key differences:
 
-First, each time a task exits, the event loop checks to see if the task is returning control to other JavaScript code. If not, it runs all of the microtasks in the microtask queue. The microtask queue is, then, processed multiple times per iteration of the event loop, including after handling events and other callbacks.
-
-Second, if a microtask adds more microtasks to the queue by calling {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
+1. Each time a task exits, the event loop checks to see if the task is returning control to other JavaScript code. If not, it runs all of the microtasks in the microtask queue. The microtask queue is, then, processed multiple times per iteration of the event loop, including after handling events and other callbacks.
+2. If a microtask adds more microtasks to the queue by calling {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
 
 > [!WARNING]
 > Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
@@ -49,7 +48,7 @@ Before getting farther into this, it's important to note again that most develop
 
 As such, you should typically use microtasks only when there's no other solution, or when creating frameworks or libraries that need to use microtasks in order to create the functionality they're implementing. While there have been tricks available that made it possible to enqueue microtasks in the past (such as by creating a promise that resolves immediately), the addition of the {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} method adds a standard way to introduce a microtask safely and without tricks.
 
-By introducing `queueMicrotask()`, the quirks that arise when sneaking in using promises to create microtasks can be avoided. For instance, when using promises to create microtasks, exceptions thrown by the callback are reported as rejected promises rather than being reported as standard exceptions. Also, creating and destroying promises takes additional overhead both in terms of time and memory that a function which properly enqueues microtasks avoids.
+By introducing `queueMicrotask()`, the quirks that arise when sneaking in using promises to create microtasks can be avoided. For instance, when using promises to create microtasks, exceptions thrown by the callback are reported as rejected promises rather than being reported as standard exceptions. Also, creating and destroying promises takes additional overhead both in terms of time and memory, which a function that properly enqueues microtasks avoids.
 
 Pass the JavaScript {{jsxref("Function")}} to call while the context is handling microtasks into the `queueMicrotask()` method, which is exposed on the global context as defined by either the {{domxref("Window")}} or {{domxref("Worker")}} interface, depending on the current execution context.
 
@@ -63,11 +62,11 @@ The microtask function itself takes no parameters, and does not return a value.
 
 ### When to use microtasks
 
-In this section, we'll take a look at scenarios in which microtasks are particularly useful. Generally, it's about capturing or checking results, or performing cleanup, after the main body of a JavaScript execution context exits, but before any event handlers, timeouts and intervals, or other callbacks are processed.
+In this section, we'll take a look at scenarios in which microtasks are particularly useful. Generally, it's about capturing or checking results, or performing cleanup, after the main body of a JavaScript execution context exits—but _before_ any event handlers, timeouts and intervals, or other callbacks are processed.
 
 When is that useful?
 
-The main reason to use microtasks is that: to ensure consistent ordering of tasks, even when results or data is available synchronously, but while simultaneously reducing the risk of user-discernible delays in operations.
+The main reason to use microtasks is to ensure consistent ordering of tasks, even when results or data is available synchronously, but while simultaneously reducing the risk of user-discernible delays in operations.
 
 #### Ensuring ordering on conditional use of promises
 
@@ -117,7 +116,7 @@ Loaded data
 Data fetched
 ```
 
-Even worse, sometimes the element's `data` property will be set and other times it won't be by the time this code finishes running.
+Even worse, sometimes the element's `data` property will be set, but other times it won't complete before this code finishes running.
 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
@@ -239,7 +238,7 @@ log("Main program exiting");
 
 {{EmbedLiveSample("Timeout_and_microtask_example", 640, 100)}}
 
-Note that the output logged from the main program body appears first, followed by the output from the microtask, followed by the timeout's callback. That's because when the task that's handling the execution of the main program exits, the microtask queue gets processed before the task queue on which the timeout callback is located. Remembering that tasks and microtasks are kept on separate queues, and that microtasks run first will help keep this straight.
+Note that the output logged from the main program body appears first, followed by the output from the microtask, followed by the timeout's callback. That's because when the task that's handling the execution of the main program exits, the microtask queue gets processed before the task queue on which the timeout callback is located. To help keep this straight, remember that tasks and microtasks are kept on separate queues, and that microtasks run first.
 
 ### Microtask from a function
 

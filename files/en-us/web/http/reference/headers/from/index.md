@@ -4,9 +4,8 @@ short-title: From
 slug: Web/HTTP/Reference/Headers/From
 page-type: http-header
 browser-compat: http.headers.From
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`From`** {{Glossary("request header")}} contains an Internet email address for an administrator who controls an automated user agent.
 

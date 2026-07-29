@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TimeRanges.end
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the time offset (in seconds) at which a specified time range ends.
 

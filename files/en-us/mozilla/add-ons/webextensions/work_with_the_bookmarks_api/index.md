@@ -2,9 +2,8 @@
 title: Work with the Bookmarks API
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Bookmarks enable users to collect and organize lists of web pages, so they can easily get back to their favorites. Using the Bookmarks API, your extensions can manipulate bookmarks in much the same way users can.
 
@@ -23,7 +22,6 @@ To make use of the Bookmarks API, you need to ask for the `"bookmarks"` permissi
 The Bookmarks API lets your extension do the things users can do with bookmarks and includes functions for:
 
 - Basic bookmark item manipulation, offering:
-
   - add ({{WebExtAPIRef("bookmarks.create")}}).
   - retrieve ({{WebExtAPIRef("bookmarks.get")}}).
   - update ({{WebExtAPIRef("bookmarks.update")}}).
@@ -33,14 +31,12 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
 
 - Obtaining a list of recently added bookmarks ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Bookmark folder tree manipulation to:
-
   - get tree information ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - add branches ({{WebExtAPIRef("bookmarks.create")}}).
   - delete nodes ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - move nodes ({{WebExtAPIRef("bookmarks.move")}}).
 
 - Listening for bookmarks (or bookmark tree folders) events that:
-
   - add ({{WebExtAPIRef("bookmarks.onCreated")}}).
   - change ({{WebExtAPIRef("bookmarks.onChanged")}}).
   - move ({{WebExtAPIRef("bookmarks.onMoved")}}).
@@ -48,7 +44,6 @@ The Bookmarks API lets your extension do the things users can do with bookmarks 
   - remove ({{WebExtAPIRef("bookmarks.onRemoved")}}).
 
 - Listening for bookmark imports, which can be used to suspend other bookmark processing while an import is in progress:
-
   - import started ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
   - import finished ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
 
@@ -122,13 +117,23 @@ let gettingActiveTab = browser.tabs.query({
 gettingActiveTab.then(updateTab);
 ```
 
-`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`:
+`updateTab()` first passes the active tab's URL to `isSupportedProtocol()`. If the protocol is supported by bookmarks, the extension determines whether the tab's URL is bookmarked and, if it is, calls `updateIcon()`.
 
 ```js
-  function updateTab(tabs) {
-    if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
+function updateTab(tabs) {
+  if (tabs[0]) {
+    currentTab = tabs[0];
+    if (isSupportedProtocol(currentTab.url)) {
+      let searching = browser.bookmarks.search({ url: currentTab.url });
+      searching.then((bookmarks) => {
+        currentBookmark = bookmarks[0];
+        updateIcon();
+      });
+    } else {
+      console.log(`Bookmark it! does not support the '${currentTab.url}' URL.`);
+    }
+  }
+}
 ```
 
 `isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLAnchorElement](/en-US/docs/Web/API/HTMLAnchorElement) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
@@ -140,15 +145,6 @@ function isSupportedProtocol(urlString) {
   url.href = urlString;
   return supportedProtocols.includes(url.protocol);
 }
-```
-
-If the protocol is one supported by bookmarks, the extension determines if the tab's URL is already bookmarked and if it is, calls `updateIcon()`:
-
-```js
-      let searching = browser.bookmarks.search({ url: currentTab.url });
-      searching.then((bookmarks) => {
-        currentBookmark = bookmarks[0];
-        updateIcon();
 ```
 
 `updateIcon()` sets the toolbar button's icon and title, depending on whether the URL is bookmarked or not.

@@ -1,11 +1,11 @@
 ---
-title: "<select>: The HTML Select element"
+title: "`<select>` HTML select element"
+short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 page-type: html-element
 browser-compat: html.elements.select
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
@@ -60,26 +60,36 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
-- `form`
-
+- [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form)
   - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
 - [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
-  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
+  - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown. Multiple selected options are submitted using the {{domxref("URLSearchParams")}} array convention, i.e., `name=value1&name=value2`.
 - `name`
   - : This attribute is used to specify the name of the control.
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-
   - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
     > [!NOTE]
     > According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
+
+### Options inside wrapper elements
+
+The `<select>` element builds its list of options from all `<option>` descendants, not just its direct children.
+This means that options can be wrapped in other elements, such as {{HTMLElement("div")}} elements, and they will still appear as selectable options in the dropdown and be included in form submission.
+Wrapper elements are useful for styling in [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) but have no effect on the select's behavior: they don't create groups, labels, or separators.
+To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLElement("option")}} counts as part of an `<optgroup>` if the group is an ancestor, so wrapper elements may also be used inside a group without breaking the association.
+
+> [!NOTE]
+> Browsers with modern parsing behavior preserve all elements written inside a `<select>` in the DOM — including wrapper elements, {{HTMLElement("button")}}, and {{HTMLElement("selectedcontent")}}.
+> Older browsers instead remove non-permitted elements while parsing, keeping only the `<option>`, `<optgroup>`, and `<hr>` structure.
+> As a result, styling, markup, or scripting that depends on the removed elements will not work on older browsers.
 
 ### Selecting multiple options
 
@@ -106,11 +116,15 @@ Keyboard users can select multiple non-contiguous items by:
 
 ## Styling with CSS
 
-The `<select>` element has historically been notoriously difficult to style productively with CSS, hence features being introduced to enable creating [fully customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
+The `<select>` element has historically been difficult to style effectively with CSS.
+The following guides contain information about features that enable fully customizable select elements:
+
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [Customizable select listboxes](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
 
 ### Legacy select styling
 
-In browsers that don't support the modern customization features (or legacy codebases where they can't be used), you are limited to manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc. You can also use the {{cssxref("appearance")}} property to remove the default system `appearance`.
+In browsers that don't support the modern customization features (or legacy codebases where they can't be used), you are limited to manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/Guides/Fonts), etc. You can also use the {{cssxref("appearance")}} property to remove the default system `appearance`.
 
 It is however, hard to get a consistent result across browsers with traditional `<select>` elements. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
 
@@ -130,10 +144,9 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ### Basic select
 
-The following example creates a three-value dropdown menu, the second option of which is selected by default.
+The following example creates a three-value dropdown menu. The second option includes the `selected` attribute, making that option selected by default.
 
 ```html
-<!-- The second value will be selected initially -->
 <select name="choice">
   <option value="first">First Value</option>
   <option value="second" selected>Second Value</option>
@@ -189,7 +202,12 @@ The following example creates a dropdown menu with grouping using {{HTMLElement(
 
 ### Advanced select with multiple features
 
-The follow example is more complex, showing off more features you can use on a `<select>` element:
+The following example is more complex, showing off more features you can use on a `<select>` element:
+
+- The `multiple` attribute enables selecting more than one option.
+- The `size` attribute is set to `4`, which means 4 lines are displayed at a time. Users can scroll to view all the options.
+- Two {{htmlelement("optgroup")}} elements are included, creating two visual groupings, generally with the group name being bolded and nested options being indented.
+- The `disabled` attribute is included on the "Hamster" option, making that option not selectable.
 
 ```html
 <label>
@@ -212,13 +230,6 @@ The follow example is more complex, showing off more features you can use on a `
 #### Result
 
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
-
-You'll see that:
-
-- Multiple options are selectable because we've included the `multiple` attribute.
-- The `size` attribute causes only 4 lines to display at a time; you can scroll to view all the options.
-- We've included {{htmlelement("optgroup")}} elements to divide the options up into different groups. This is a purely visual grouping, its visualization generally consists of the group name being bolded, and the options being indented.
-- The "Hamster" option includes a `disabled` attribute and therefore can't be selected at all.
 
 ## Technical summary
 
@@ -261,11 +272,10 @@ You'll see that:
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}},
-        {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements in traditional <code>&lt;select&gt;</code> elements. In <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select elements</a>:
         <ul>
-        <li>The select {{htmlelement("button")}} is optionally included as a child <code>&lt;button&gt;</code> element with a nested {{htmlelement("selectedcontent")}} element.</li>
-        <li>The drop-down picker is defined as any other content, which can include zero or more <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;hr&gt;</code>, {{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.
+          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a drop down box.</li>
+          <li>{{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -287,7 +297,7 @@ You'll see that:
         <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>.
       </td>
     </tr>
     <tr>
@@ -295,8 +305,8 @@ You'll see that:
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
-        <code>size</code> attribute greater than 1, otherwise no
-        <code>role</code> permitted
+        <code>size</code> attribute greater than 1, otherwise <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+        is permitted but not recommended.
       </td>
     </tr>
     <tr>
@@ -316,7 +326,7 @@ You'll see that:
 
 ## See also
 
-- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element
 - [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}

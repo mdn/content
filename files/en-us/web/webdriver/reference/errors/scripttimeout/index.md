@@ -1,5 +1,6 @@
 ---
-title: Script timeout
+title: "`script timeout` error code"
+short-title: script timeout
 slug: Web/WebDriver/Reference/Errors/ScriptTimeout
 page-type: webdriver-error
 sidebar: webdriver
@@ -59,7 +60,6 @@ finished successfully
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - Associated commands and types:
-
   - [JavaScript error](/en-US/docs/Web/WebDriver/Reference/Errors/JavaScriptError)
   - [Execute Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteScript)
   - [Execute Async Script](/en-US/docs/Web/WebDriver/Reference/Commands/ExecuteAsyncScript)

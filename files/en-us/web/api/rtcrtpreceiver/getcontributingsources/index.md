@@ -26,7 +26,6 @@ An array of objects, each describing one of the contributing sources that provid
 These objects contain the following properties:
 
 - `audioLevel` {{optional_inline}}
-
   - : A floating-point value between 0.0 and 1.0 specifying the audio level contained in the last RTP packet played from the contributing source.
 
     The value is on a linear scale and is defined in units of dBov, or decibels (overload).
@@ -36,13 +35,11 @@ These objects contain the following properties:
     If this property is not present then no volume level was provided by the source.
 
 - `rtpTimestamp` {{optional_inline}}
-
   - : The RTP timestamp (an integer {{domxref("DOMHighResTimeStamp")}}) of the media.
     This source-generated timestamp indicates the time at which the media in this packet, scheduled for play out at the time indicated by `timestamp`, was initially sampled or generated.
     It may be useful for sequencing and synchronization purposes.
 
 - `source` {{optional_inline}}
-
   - : A positive integer value specifying the CSRC identifier of the contributing source.
     This uniquely identifies the source of the particular stream RTP packets.
 

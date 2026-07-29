@@ -2,12 +2,10 @@
 title: GPU
 slug: Web/API/GPU
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPU
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPU`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the starting point for using WebGPU. It can be used to return a {{domxref("GPUAdapter")}} from which you can request devices, configure features and limits, and more.
 
@@ -17,14 +15,14 @@ The `GPU` object for the current context is accessed via the {{domxref("Navigato
 
 ## Instance properties
 
-- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{ReadOnlyInline}}
   - : A {{domxref("WGSLLanguageFeatures")}} object that reports the [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) supported by the WebGPU implementation.
 
 ## Instance methods
 
-- {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}}
+- {{domxref("GPU.requestAdapter", "requestAdapter()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapter")}} object instance. From this you can request a {{domxref("GPUDevice")}}, which is the primary interface for using WebGPU functionality.
-- {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}} {{Experimental_Inline}}
+- {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}}
   - : Returns the optimal canvas texture format for displaying 8-bit depth, standard dynamic range content on the current system.
 
 ## Examples

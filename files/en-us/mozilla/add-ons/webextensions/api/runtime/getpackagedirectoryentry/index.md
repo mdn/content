@@ -3,9 +3,8 @@ title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets a `DirectoryEntry` object representing the package directory.
 
@@ -25,16 +24,11 @@ browser.runtime.getPackageDirectoryEntry(
 ### Parameters
 
 - `callback` {{optional_inline}}
-
   - : `function`. If provided, the function will be passed a `DirectoryEntry` object. If absent, the function returns a promise instead.
 
 ### Return value
 
 None (`undefined`) if a `callback` is provided. Otherwise, returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `DirectoryEntry` object representing the package directory.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -45,6 +39,10 @@ browser.runtime.getPackageDirectoryEntry((directoryEntry) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getPackageDirectoryEntry) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

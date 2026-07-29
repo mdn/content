@@ -3,8 +3,8 @@ title: operator
 slug: Web/SVG/Reference/Attribute/operator
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-femorphology-operator
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomposite-operator
 sidebar: svgref
 ---
 
@@ -23,8 +23,8 @@ body,
 svg {
   height: 100%;
   font:
-    20px Arial,
-    Helvetica,
+    20px "Helvetica",
+    "Arial",
     sans-serif;
 }
 ```
@@ -84,7 +84,6 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
 - `lighter`
   - : This value indicates that the sum of the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute is displayed.
 - `arithmetic`
-
   - : This value indicates that the source graphic defined in the `in` attribute and the destination graphic defined in the `in2` attribute are combined using the following formula:
 
     `result = k1*i1*i2 + k2*i1 + k3*i2 + k4`

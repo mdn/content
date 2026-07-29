@@ -2,9 +2,8 @@
 title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 

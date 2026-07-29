@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.submit_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
 
@@ -39,13 +39,6 @@ A {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SubmitEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
-
-- {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
-  - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
-
 ## Examples
 
 This example uses {{domxref("EventTarget.addEventListener()")}} to listen for form submit, and logs the current {{domxref("Event.timeStamp")}} whenever that occurs, then prevents the default action of submitting the form.
@@ -64,13 +57,14 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 ### JavaScript
 
 ```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 function logSubmit(event) {
   log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
 form.addEventListener("submit", logSubmit);
 ```
 

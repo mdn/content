@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.shadowColor
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.shadowColor`**

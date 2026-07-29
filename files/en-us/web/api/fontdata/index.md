@@ -29,7 +29,7 @@ The **`FontData`** interface of the {{domxref("Local Font Access API", "Local Fo
 
 ## Examples
 
-For a working live demo, see [Font Select Demo](https://local-font-access.glitch.me/demo/).
+For a live example, see our [Local Font Access API demo](https://mdn.github.io/dom-examples/local-font-access/).
 
 ### Font enumeration
 

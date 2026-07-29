@@ -3,9 +3,8 @@ title: "Modifier: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.modifier
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#regex_flags) settings in a specific part of a regular expression. It can be used to enable or disable flags that change the meanings of certain regex syntax elements. These flags are [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), and [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll).
 

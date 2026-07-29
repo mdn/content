@@ -10,13 +10,13 @@ browser-compat: api.HTMLElement.inert
 
 The {{domxref("HTMLElement")}} property **`inert`** reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute. It is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
-Note that if the `inert` attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property's value.
+Note that if the `inert` attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property's value. Explicitly setting the property to `false` cannot revert inertness inherited from the parent.
 
 ## Value
 
 A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -39,7 +39,7 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 }
 ```
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 > [!NOTE]
 > This attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.
@@ -55,6 +55,6 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 ## See also
 
 - [Global attribute: `inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
-- {{HTMLElement("dialog")}}
-- [Inert Polyfill](https://github.com/WICG/inert)
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
+- {{HTMLElement("dialog")}}
+- CSS {{cssxref("interactivity")}} property

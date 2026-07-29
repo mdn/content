@@ -1,11 +1,11 @@
 ---
 title: RegExp.prototype[Symbol.replace]()
+short-title: "[Symbol.replace]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 

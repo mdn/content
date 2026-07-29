@@ -35,14 +35,6 @@ You can use this class to style SVG content using CSS.
       <th scope="row">Animatable</th>
       <td>Yes</td>
     </tr>
-    <tr>
-      <th scope="row">Normative document</th>
-      <td>
-        <a href="https://www.w3.org/TR/SVG/styling.html#ClassAttribute"
-          >SVG 1.1 (2nd Edition): The class attribute</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 

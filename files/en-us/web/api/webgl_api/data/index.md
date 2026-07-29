@@ -10,7 +10,7 @@ Shader programs have access to three kinds of data storage, each of which has a 
 
 ## GLSL data types
 
-See [Data Types](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) in the GLSL documentation.
+See [Data Types](<https://wikis.khronos.org/opengl/Data_Type_(GLSL)>) in the GLSL documentation.
 
 ## GLSL variables
 

@@ -3,9 +3,8 @@ title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getURL
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
 
@@ -28,10 +27,6 @@ browser.runtime.getURL(
 
 `string`. The fully-qualified URL to the resource within the extension.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Given a file packaged with the extension at "beasts/frog.html", get the full URL like this:
@@ -44,6 +39,10 @@ console.log(fullURL);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

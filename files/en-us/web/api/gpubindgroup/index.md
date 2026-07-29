@@ -2,12 +2,10 @@
 title: GPUBindGroup
 slug: Web/API/GPUBindGroup
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUBindGroup`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is based on a {{domxref("GPUBindGroupLayout")}} and defines a set of resources to be bound together in a group and how those resources are used in shader stages.
 
@@ -17,7 +15,7 @@ A `GPUBindGroup` object instance is created using the {{domxref("GPUDevice.creat
 
 ## Instance properties
 
-- {{domxref("GPUBindGroup.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUBindGroup.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

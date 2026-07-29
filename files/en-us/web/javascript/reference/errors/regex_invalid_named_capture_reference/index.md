@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid named capture reference in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_named_capture_reference
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid named capture reference in regular expression" occurs when a regular expression pattern contains a [named backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference) that does not refer to a [named capture group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) before it. The similar error message "invalid named reference in regular expression" is thrown when the sequence `\k` is encountered but is not followed by `<`.
 

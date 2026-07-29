@@ -1,11 +1,11 @@
 ---
 title: ArrayBuffer.isView()
+short-title: isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 page-type: javascript-static-method
 browser-compat: javascript.builtins.ArrayBuffer.isView
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer.isView()`** static method determines whether the
 passed value is one of the `ArrayBuffer` views,

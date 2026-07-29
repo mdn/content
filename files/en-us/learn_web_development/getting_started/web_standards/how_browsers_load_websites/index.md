@@ -90,7 +90,7 @@ Certain HTML elements, when parsed, will trigger more HTTP requests:
 
 ## Parsing CSS and rendering the page
 
-Next, let's look at how the CSS is handled.
+Next, the CSS is handled.
 
 1. The browser parses the CSS found on the page (either included in the HTML file, or fetched from external stylesheets), and sorts the different CSS styling rules into different "buckets" based on which HTML elements (represented in the DOM as items called **nodes**) they will be applied to. The browser then attaches styles to different elements as required (this intermediate step is called a render tree).
 2. The render tree is laid out in the structure it should appear in after the rules have been applied. This includes any images and other media files that are to be embedded in the page.
@@ -126,7 +126,7 @@ The updated output is as follows:
 
 ## Handling JavaScript
 
-Any JavaScript found on the page (either included in the HTML file, or fetched from external script files) is parsed, interpreted, compiled, and executed. This happens at some point before the final page rendering is completed — after all, some JavaScript may affect the rendering, for example by adding nodes to the DOM or modifying existing ones.
+After the CSS has been handled, any JavaScript found on the page (either included in the HTML file, or fetched from external script files) is parsed, interpreted, compiled, and executed. This happens at some point before the final page rendering is completed — after all, some JavaScript may affect the rendering, for example by adding nodes to the DOM or modifying existing ones.
 
 Returning to our example, let's say the following JavaScript is found in the HTML file:
 
@@ -178,5 +178,10 @@ On the upside, the web is also an awesome programming environment, for many reas
 - App delivery across the web is simple and powerful. You don't need to take your users through a complicated installation process: you just point them to a web address and off they go.
 - App updates are usually straightforward. In many cases, visitors can see new versions of an application when they reload their browser tab. You don't need to worry about getting visitors to regularly download and install software updates.
 - The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can go to ask for help, and great resources available to learn from.
+
+## See also
+
+- [When and how to file bugs with browsers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs)
+  - : If something isn't working as expected in a browser, it could be a browser bug. This article explains how to figure out if it is, and how to file a bug report if so.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}

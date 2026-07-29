@@ -2,12 +2,10 @@
 title: GPUExternalTexture
 slug: Web/API/GPUExternalTexture
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.GPUExternalTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUExternalTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a wrapper object containing an {{domxref("HTMLVideoElement")}} snapshot that can be used as a texture in GPU rendering operations.
 
@@ -17,7 +15,7 @@ A `GPUExternalTexture` object instance is created using {{domxref("GPUDevice.imp
 
 ## Instance properties
 
-- {{domxref("GPUExternalTexture.label", "label")}} {{Experimental_Inline}}
+- {{domxref("GPUExternalTexture.label", "label")}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

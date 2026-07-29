@@ -1,11 +1,11 @@
 ---
-title: "<ins>: The Inserted Text element"
+title: "`<ins>` HTML inserted text element"
+short-title: <ins>
 slug: Web/HTML/Reference/Elements/ins
 page-type: html-element
 browser-compat: html.elements.ins
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been added to a document. You can use the {{HTMLElement("del")}} element to similarly represent a range of text that has been deleted from the document.
 
@@ -30,7 +30,7 @@ ins {
 }
 
 del {
-  background-color: #fbb;
+  background-color: #ffbbbb;
 }
 
 ins {
@@ -53,8 +53,8 @@ ins::before {
 }
 
 p {
-  margin: 0 1.8rem 0;
-  font-family: Georgia, serif;
+  margin: 0 1.8rem;
+  font-family: "Georgia", serif;
   font-size: 1rem;
 }
 ```
@@ -95,7 +95,7 @@ ins::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been inserted would adversely affect understanding.
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Examples

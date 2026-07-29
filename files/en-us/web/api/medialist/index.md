@@ -9,7 +9,8 @@ browser-compat: api.MediaList
 
 The **`MediaList`** interface represents the media queries of a stylesheet, e.g., those set using a {{htmlelement("link")}} element's `media` attribute.
 
-> **Note:** `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
+> [!NOTE]
+> `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
 
 ## Instance properties
 

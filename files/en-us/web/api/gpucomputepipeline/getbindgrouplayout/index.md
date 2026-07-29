@@ -3,12 +3,10 @@ title: "GPUComputePipeline: getBindGroupLayout() method"
 short-title: getBindGroupLayout()
 slug: Web/API/GPUComputePipeline/getBindGroupLayout
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUComputePipeline.getBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getBindGroupLayout()`** method of the
 {{domxref("GPUComputePipeline")}} interface returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e., included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
@@ -24,7 +22,6 @@ getBindGroupLayout(index)
 ### Parameters
 
 - `index`
-
   - : A number representing the index of the {{domxref("GPUBindGroupLayout")}} to return.
 
 ### Return value

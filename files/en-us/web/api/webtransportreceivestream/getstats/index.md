@@ -3,12 +3,10 @@ title: "WebTransportReceiveStream: getStats() method"
 short-title: getStats()
 slug: Web/API/WebTransportReceiveStream/getStats
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransportReceiveStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportReceiveStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
@@ -27,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a object containing statistics about the current stream.
+A {{jsxref("Promise")}} that resolves to an object containing statistics about the current stream.
 The returned object has the following properties:
 
 - `timestamp`

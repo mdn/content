@@ -27,7 +27,7 @@ The code below shows an example of how to use the `aria-label` attribute to prov
     xmlns="http://www.w3.org/2000/svg">
     <path
       d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z"
-      fill="#000" />
+      fill="black" />
   </svg>
 </button>
 ```
@@ -38,7 +38,8 @@ document.querySelector("button").addEventListener("click", () => {
 });
 ```
 
-> **Note:** `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
+> [!NOTE]
+> `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
@@ -83,8 +84,8 @@ Used in almost all roles **except** roles that cannot be provided an accessible 
 
 The `aria-label` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
@@ -95,8 +96,8 @@ The `aria-label` attribute is **NOT** supported in:
 - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 

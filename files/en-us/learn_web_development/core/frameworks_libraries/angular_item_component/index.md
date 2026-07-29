@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Angular articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
 <table>
@@ -374,9 +377,9 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .btn-save:hover {
@@ -384,8 +387,8 @@ Paste the following styles into `item.component.css`.
 }
 
 .btn-save:focus {
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: black;
 }
 
 .checkbox-wrapper {
@@ -394,7 +397,7 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn {
   background-color: #b90000;
-  color: #fff;
+  color: white;
   border-color: #9a0000;
 }
 
@@ -404,13 +407,13 @@ Paste the following styles into `item.component.css`.
 
 .btn-warn:active {
   background-color: #e30000;
-  border-color: #000;
+  border-color: black;
 }
 
 .sm-text-input {
   width: 100%;
   padding: 0.5rem;
-  border: 2px solid #555;
+  border: 2px solid #555555;
   display: block;
   box-sizing: border-box;
   font-size: 1rem;
@@ -434,21 +437,21 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 }
 
 /* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 1.25em;
   height: 1.25em;
-  border: 2px solid #ccc;
-  background: #fff;
+  border: 2px solid #cccccc;
+  background: white;
 }
 
 /* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
   content: "\2713\0020";
   position: absolute;
   top: 0.15em;
@@ -457,21 +460,21 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
   line-height: 0.8;
   color: #0d8dee;
   transition: all 0.2s;
-  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", "Arial";
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label::after {
   opacity: 0;
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
 
 /* accessibility */
-[type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
+[type="checkbox"]:checked:focus + label::before,
+[type="checkbox"]:not(:checked):focus + label::before {
   border: 2px dotted blue;
 }
 ```

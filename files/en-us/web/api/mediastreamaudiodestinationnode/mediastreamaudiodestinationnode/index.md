@@ -22,9 +22,7 @@ new MediaStreamAudioDestinationNode(context, options)
 - `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
 - `options` {{optional_inline}}
-
   - : An object defining the properties you want the `MediaStreamAudioDestinationNode` to have:
-
     - `channelCount`
       - : An integer used to determine how many channels are used when
         [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)

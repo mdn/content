@@ -15,7 +15,7 @@ It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creat
 The put method is an _update or insert_ method.
 See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
 
-Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
+Bear in mind that if you have an {{domxref("IDBCursor","IDBCursor")}} to the record you
 want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
 using `IDBObjectStore.put()`. Doing so makes it clear that an existing
 record will be updated, instead of a new record being inserted.

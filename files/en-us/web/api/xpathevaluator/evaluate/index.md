@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathEvaluator.evaluate
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The `evaluate()` method of the {{domxref("XPathEvaluator")}} interface
 executes an XPath expression on the given node or document and returns an

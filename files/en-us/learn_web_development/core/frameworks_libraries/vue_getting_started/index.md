@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Vue articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Now let's introduce Vue, the third of our frameworks. In this article we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
 
 <table>
@@ -142,7 +145,6 @@ If everything went successfully, the CLI should have created a series of files a
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
 - `index.html`: Your Vue app is run from this HTML page.
 - `src`: This directory contains the core of your Vue app.
-
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
   - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
   - `components`: this directory is where you keep your components. Currently, it just has one example component.

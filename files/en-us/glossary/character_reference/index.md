@@ -2,9 +2,8 @@
 title: Character reference
 slug: Glossary/Character_reference
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An {{glossary("HTML")}} **character reference** is an {{glossary("escape character", "escape sequence")}} of {{glossary("character", "characters")}} that is used to represent another character in the rendered web page.
 
@@ -14,13 +13,11 @@ They can also be used for invisible characters that would otherwise be impossibl
 There are three types of character references:
 
 - **Named character references**
-
   - : These use a name string between an ampersand (`&`) and a semicolon (`;`) to refer to the corresponding character.
     For example, `&lt;` is used for the less-than (`<`) symbol, and `&copy;` for the copyright symbol (`©`).
     The string used for the reference is often a {{glossary("Camel case","camel-cased")}} initialization or contraction of the character name.
 
 - **Decimal numeric character references**
-
   - : These references start with `&#`, followed by one or more ASCII digits representing the base-ten integer that corresponds to the character's {{glossary("Unicode")}} {{glossary("code point")}}, and ending with `;`.
     For example, the decimal character reference for `<` is `&#60;`, because the Unicode code point for the symbol is `U+0003C`, and `3C` hexadecimal is 60 in decimal.
 
@@ -40,9 +37,9 @@ A very small subset of useful named character references along with their unicod
 |           | `&nbsp;`        | U+000A0            |
 | –         | `&ndash;`       | U+02013            |
 | —         | `&mdash;`       | U+02014            |
-| ©        | `&copy;`        | U+000A9            |
-| ®        | `&reg;`         | U+000AE            |
-| ™        | `&trade;`       | U+02122            |
+| ©         | `&copy;`        | U+000A9            |
+| ®         | `&reg;`         | U+000AE            |
+| ™         | `&trade;`       | U+02122            |
 | ≈         | `&asymp;`       | U+02248            |
 | ≠         | `&ne;`          | U+02260            |
 | £         | `&pound;`       | U+000A3            |

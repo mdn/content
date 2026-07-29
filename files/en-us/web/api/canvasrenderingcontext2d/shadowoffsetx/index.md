@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetX
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.shadowOffsetX`**

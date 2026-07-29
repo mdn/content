@@ -47,20 +47,14 @@ svg {
     r="100"
     fx="100"
     fy="100"
-    gradientTransform="skewX(20) translate(-35, 0)">
+    gradientTransform="skewX(20) translate(185, 0)">
     <stop offset="0%" stop-color="darkblue" />
     <stop offset="50%" stop-color="skyblue" />
     <stop offset="100%" stop-color="darkblue" />
   </radialGradient>
 
   <rect x="0" y="0" width="200" height="200" fill="url(#gradient1)" />
-  <rect
-    x="0"
-    y="0"
-    width="200"
-    height="200"
-    fill="url(#gradient2)"
-    style="transform: translateX(220px);" />
+  <rect x="220" y="0" width="200" height="200" fill="url(#gradient2)" />
 </svg>
 ```
 
@@ -86,7 +80,7 @@ svg {
 </table>
 
 - `<transform-list>`
-  - : A list of [transformation functions](/en-US/docs/Web/CSS/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
+  - : A list of [transformation functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) specifying some additional transformation from the gradient coordinate system onto the target coordinate system.
 
 ## Specifications
 

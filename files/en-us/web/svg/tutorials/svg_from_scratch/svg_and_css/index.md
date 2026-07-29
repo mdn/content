@@ -12,7 +12,7 @@ This page illustrates the application of CSS to the specialized language for cre
 Below you'll create a demonstration that runs in a browser.
 
 > [!NOTE]
-> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
+> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables).
 
 ## Example
 
@@ -402,7 +402,7 @@ Notes about this demonstration:
 
   ```html
   <style>
-    @import url(style8.css);
+    @import "style8.css";
   </style>
   ```
 
@@ -412,11 +412,28 @@ Notes about this demonstration:
 
 Change the stylesheet so that the inner petals all turn pink when the mouse pointer is over any one of them, without changing the way the outer petals work.
 
-[See a solution to this challenge.](/en-US/docs/Learn_web_development/Core/Challenges#svg_and_css)
+<details>
+<summary>Click here to see the solution</summary>
+
+Move the position of the `:hover` pseudo-class from a specific petal to all petals:
+
+```css
+#inner-petals {
+  --segment-fill-fill-hover: pink;
+}
+
+/* Non-standard way for some older browsers */
+#inner-petals:hover .segment-fill {
+  fill: pink;
+  stroke: none;
+}
+```
+
+</details>
 
 ## Simplified structure
 
-The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
+The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://w3c.github.io/svgwg/svg2-draft/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
 
 See below how the structure then looks like.
 

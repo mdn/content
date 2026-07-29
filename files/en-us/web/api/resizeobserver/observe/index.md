@@ -25,14 +25,10 @@ observe(target, options)
   - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
     observed.
 - `options` {{optional_inline}}
-
   - : An options object allowing you to set options for the observation. Currently this
     only has one possible option that can be set:
-
     - `box`
-
       - : Sets which box model the observer will observe changes to. Possible values are:
-
         - `content-box` (the default)
           - : Size of the content area as defined in CSS.
         - `border-box`

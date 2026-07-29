@@ -11,6 +11,9 @@ browser-compat: api.Document.queryCommandEnabled
 
 {{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
+> [!NOTE]
+> Although the {{domxref("Document/execCommand", "execCommand()")}} method is deprecated, if you do decide to use it for reasons given on that page, you should consider checking the command's availability using `queryCommandEnabled()` to ensure compatibility.
+
 The **`Document.queryCommandEnabled()`** method reports whether
 or not the specified editor command is enabled by the browser.
 
@@ -50,7 +53,7 @@ if (flg) {
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+This feature is not part of any current specification. It is no longer on track to become a standard. There is an unofficial [W3C execCommand spec draft](https://w3c.github.io/editing/docs/execCommand/).
 
 ## Browser compatibility
 
@@ -58,5 +61,5 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandSupported()")}}
+- {{domxref("document.execCommand()")}}
+- {{domxref("document.queryCommandSupported()")}}

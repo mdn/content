@@ -14,7 +14,7 @@ With the basics of the CSS language covered, the next CSS topic for you to conce
 Before starting this module, you should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and the [basic fundamentals of CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
@@ -28,5 +28,10 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
   - : Here we will explore web fonts in detail — these allow you to download custom fonts along with your web page, to allow for more varied, custom text styling.
 - [Challenge: Typesetting a community school homepage](/en-US/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage) <sup>Challenge</sup>
   - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.
+
+## See also
+
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core")}}

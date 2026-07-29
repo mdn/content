@@ -8,16 +8,17 @@ browser-compat: api.CSSPageRule.style
 
 {{APIRef("CSSOM")}}
 
-The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSPageDescriptors")}} object.
-This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) for a CSS {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), and exposes style information and various style-related methods and properties for the page.
+The read-only **`style`** property of the {{domxref("CSSPageRule")}} interface contains a {{domxref("CSSPageDescriptors")}} object representing the descriptors available in the {{cssxref("@page")}} rule's body.
 
 ## Value
 
-A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+A {{domxref("CSSPageDescriptors")}} object.
 
 > [!NOTE]
 > Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
 > Check the compatibility data below for your browser.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSPageDescriptors` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSPageDescriptors` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 
@@ -63,11 +64,10 @@ This allows us to see how the properties map in the Web API object.
 
 #### JavaScript
 
-The code first gets the document stylesheet at index `1`, and then gets the `cssRules` defined in that stylesheet.
-We need to get this stylesheet because the example is embedded in a separate frame with its own sheet (index `0` is the CSS for this page).
+The MDN [live sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) infrastructure combines all the CSS blocks in the example into a single inline style with the id `css-output`, so we first use {{domxref("document.getElementById()")}} to find that sheet.
 
 ```js
-const myRules = document.styleSheets[1].cssRules;
+const myRules = document.getElementById("css-output").sheet.cssRules;
 ```
 
 We then iterate through the rules defined for the live example and match any that are of type `CSSPageRule`, as these correspond to `@page` rules.

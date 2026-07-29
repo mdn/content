@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/aria/#timer
 sidebar: accessibilitysidebar
 ---
 
-The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. Assistive technologies will not announce updates to a timer as it has an implicit [aria-live](https://www.w3.org/TR/wai-aria/#aria-live) value of `off`.
+The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. Assistive technologies will not announce updates to a timer as it has an implicit [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) value of `off`.
 
 ```html
 <div role="timer" id="eggtimer">0</div>
@@ -24,12 +24,10 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_ro
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-
   - : Some screen readers announce the name of a timer element before announcing its contents. If a name is visible, reference it using `aria-labelledby`. Including an `aria-label` provides a method for prefacing the visible content of a timer element with text that is not displayed when a screen reader reads the content. Naming a timer is not required so if nothing is appropriate both these attributes can be omitted.
 
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-
-  - : Elements with the role `timer` have an implicit [aria-live](https://www.w3.org/TR/wai-aria/#aria-live) value of `off`.
+  - : Elements with the role `timer` have an implicit `aria-live` value of `off`.
 
 ## Accessibility concerns
 

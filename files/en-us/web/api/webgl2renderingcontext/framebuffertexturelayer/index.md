@@ -24,19 +24,15 @@ framebufferTextureLayer(target, attachment, texture, level, layer)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
       depth and stencil buffers used to render an image.
     - `gl.DRAW_FRAMEBUFFER`: Equivalent to `gl.FRAMEBUFFER`.
     - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
 
 - `attachment`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
     `texture`. Possible values:
-
     - `gl.COLOR_ATTACHMENT{0-15}`: Attaches the texture to one of the
       framebuffer's color buffers.
     - `gl.DEPTH_ATTACHMENT`: Attaches the texture to the framebuffer's

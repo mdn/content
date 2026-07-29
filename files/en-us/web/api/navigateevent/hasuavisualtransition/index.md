@@ -3,12 +3,10 @@ title: "NavigateEvent: hasUAVisualTransition property"
 short-title: hasUAVisualTransition
 slug: Web/API/NavigateEvent/hasUAVisualTransition
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.hasUAVisualTransition
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`hasUAVisualTransition`** read-only property of the {{domxref("NavigateEvent")}} interface returns `true` if the user agent performed a visual transition for this navigation before dispatching this event, or `false` otherwise.
 
@@ -69,5 +67,4 @@ navigation.addEventListener("navigate", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)
 - [Same-document view transitions for single-page applications](https://developer.chrome.com/docs/web-platform/view-transitions/same-document)

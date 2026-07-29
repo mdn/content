@@ -3,9 +3,8 @@ title: Nullish coalescing operator (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **nullish coalescing (`??`)** operator is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
@@ -36,7 +35,7 @@ The nullish coalescing operator can be seen as a special case of the [logical OR
 
 The nullish coalescing operator has the fifth-lowest [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directly lower than `||` and directly higher than the [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
-It is not possible to combine both the AND (`&&`) and OR operators (`||`) directly with `??`. A [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) will be thrown in such cases.
+It is not possible to combine either the AND (`&&`) or OR operators (`||`) directly with `??`. A [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) will be thrown in such cases.
 
 ```js-nolint example-bad
 null || undefined ?? "foo"; // raises a SyntaxError

@@ -1,11 +1,11 @@
 ---
 title: Number.MAX_VALUE
+short-title: MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_VALUE
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.MAX_VALUE`** static data property represents the maximum numeric value representable in JavaScript.
 
@@ -34,7 +34,7 @@ console.log(multiply(1.7976931348623157e308, 2));
 
 ## Description
 
-Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}} and will lose their actual value.
+Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}} and will lose their actual value. As mentioned in {{jsxref("Number.EPSILON")}}, the precision of numbers depends on their magnitude. Integers can only be represented precisely up to {{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 2<sup>53</sup> - 1.
 
 Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_VALUE`, rather than as a property of a number value.
 
@@ -63,4 +63,5 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 ## See also
 
 - {{jsxref("Number.MIN_VALUE")}}
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
 - {{jsxref("Number")}}

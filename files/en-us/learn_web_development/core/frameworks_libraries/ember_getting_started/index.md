@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Ember articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
 
 <table>
@@ -50,11 +53,9 @@ What does it mean to be a component-service framework? Components are individual
 Generally, EmberJS works well for building apps that desire either or both of the following traits:
 
 - Single Page Applications, including native-like web apps, and [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs)
-
   - Ember works best when it is the entire front end of your application.
 
 - Increasing cohesion among many team's technology stacks
-
   - Community-backed "best practices" allow for faster long-term development speed.
   - Ember has clear conventions that are useful for enforcing consistency and helping team members get up to speed quickly.
 
@@ -67,10 +68,6 @@ Examples include:
 - [PREmber](https://github.com/ef4/prember): Static website rendering for blogs or marketing content.
 - [empress-blog](https://empress-blog.netlify.app/welcome/): Authoring blog posts in markdown while optimizing for SEO with PREmber.
 - [ember-service-worker](https://ember-service-worker.com/): Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.
-
-### Native mobile apps
-
-Ember can also be used with native mobile apps with a native-mobile bridge to JavaScript, such as that provided by [Corber](http://corber.io/).
 
 ## Opinions
 
@@ -153,7 +150,7 @@ This generates a production-ready application development environment that inclu
 
 ## Getting ready to build our Ember project
 
-You'll need a code editor before continuing to interact with your brand new project. If you don't have one configured already, [The Ember Atlas](https://www.notion.so/Editors-Tooling-5da96f0b2baf4ce1bf3fd58e3b60c7f6) has some guides on how to set up various editors.
+You'll need a code editor before continuing to interact with your brand new project. If you don't have one configured already, [The Ember Atlas](https://app.notion.com/p/Editors-Tooling-5da96f0b2baf4ce1bf3fd58e3b60c7f6) has some guides on how to set up various editors.
 
 ### Installing the shared assets for TodoMVC projects
 
@@ -166,9 +163,9 @@ Installing shared assets, as we're about to do, isn't normally a required step f
    npm install --save-dev todomvc-app-css todomvc-common
    ```
 
-3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
+3. Next, find the [ember-cli-build.js](https://github.com/ember-cli/ember-cli/blob/master/packages/app-blueprint/files/ember-cli-build.js) file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.
 
-   We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly [`@import`](/en-US/docs/Web/CSS/@import) them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
+   We will however add lines to the ember-cli-build.js file to import our shared CSS files, so that they become part of our build without having to explicitly {{cssxref("@import")}} them into the `app.css` file (this would require URL rewrites at build time and therefore be less efficient and more complicated to set up).
 
 4. In `ember-cli-build.js`, find the following code:
 

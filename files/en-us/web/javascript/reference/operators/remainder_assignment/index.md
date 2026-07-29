@@ -3,9 +3,8 @@ title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.remainder_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **remainder assignment (`%=`)** operator performs [remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) on the two operands and assigns the result to the left operand.
 

@@ -1,11 +1,11 @@
 ---
-title: "<data>: The Data element"
+title: "`<data>` HTML data element"
+short-title: <data>
 slug: Web/HTML/Reference/Elements/data
 page-type: html-element
 browser-compat: html.elements.data
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} element must be used.
 

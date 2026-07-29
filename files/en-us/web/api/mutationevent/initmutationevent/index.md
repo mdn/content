@@ -44,7 +44,7 @@ initMutationEvent(type, canBubble, cancelable, relatedNode,
 - `attrName`
   - : A string representing the name of the {{domxref("Attr")}} node changed, if any. Sets the value of {{domxref("MutationEvent.attrName")}}.
 - `attrChange`
-  - : A integer representing the reason attribute node changed. Sets the value of {{domxref("MutationEvent.attrChange")}}.
+  - : An integer representing the reason attribute node changed. Sets the value of {{domxref("MutationEvent.attrChange")}}.
 
 ### Return value
 

@@ -51,12 +51,13 @@ svg {
     href="mdn_logo_only_color.png"
     width="200"
     height="200"
-    style="filter:url(#blending1);" />
+    filter="url(#blending1)" />
   <image
+    x="220"
     href="mdn_logo_only_color.png"
     width="200"
     height="200"
-    style="filter:url(#blending2); transform:translateX(220px);" />
+    filter="url(#blending2)" />
 </svg>
 ```
 

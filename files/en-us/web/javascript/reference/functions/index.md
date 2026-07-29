@@ -3,9 +3,8 @@ title: Functions
 slug: Web/JavaScript/Reference/Functions
 page-type: guide
 browser-compat: javascript.functions
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code external (or internal, in the case of recursion) to the function. Like the program itself, a function is composed of a sequence of statements called the _function body_. Values can be _passed_ to a function as parameters, and the function will _return_ a value.
 

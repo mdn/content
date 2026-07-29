@@ -32,10 +32,6 @@ So when you get an idea and want to turn it into a website, there are a few ques
 
 All of this is called _project ideation_ and is a necessary first step to reach your goal, whether you are a beginner or an experienced developer.
 
-## Active Learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
-
 ## Deeper dive
 
 A project never starts with the technical side. Musicians will never make any music unless they first have an idea of what they want to play—and the same is true for painters, writers, and web developers. Technique comes second.

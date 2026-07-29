@@ -26,7 +26,7 @@ An {{domxref("SVGAnimatedLength")}} representing the y-coordinate of the circle'
   viewBox="0 0 100 100"
   width="200"
   height="200">
-  <circle cy="50" cy="50" r="50" fill="gold" id="circle" />
+  <circle cx="50" cy="50" r="50" fill="gold" id="circle" />
 </svg>
 ```
 

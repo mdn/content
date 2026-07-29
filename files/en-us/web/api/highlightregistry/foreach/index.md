@@ -23,9 +23,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callback`
-
   - : Function to execute for each `Highlight` object, taking three arguments:
-
     - `highlight`
       - : The current highlight.
     - `name`

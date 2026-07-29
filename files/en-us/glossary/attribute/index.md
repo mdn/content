@@ -2,9 +2,8 @@
 title: Attribute
 slug: Glossary/Attribute
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossary("element")}}, changing its behavior or providing metadata.
 
@@ -26,7 +25,7 @@ For more information see [Attribute reflection](/en-US/docs/Web/API/Document_Obj
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - [Attribute reflection](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes)
 - Information about HTML's [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
-- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)
+- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml/#sec-starttags)
 - Related glossary terms:
   - {{Glossary("Element")}}
   - {{Glossary("Tag")}}

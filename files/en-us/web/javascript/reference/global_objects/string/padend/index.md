@@ -1,11 +1,11 @@
 ---
 title: String.prototype.padEnd()
+short-title: padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.padEnd
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`padEnd()`** method of {{jsxref("String")}} values pads this string with a given string (repeated and/or truncated, if needed) so that the resulting string has a given length. The padding is applied from the end of this string.
 

@@ -16,7 +16,7 @@ The **Web Periodic Background Synchronization API** provides a way to register t
 
 ## Concepts and Usage
 
-The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to Wi-Fi, or allowing background updates to an application.
+The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content while a device is connected to Wi-Fi, or allowing background updates to an application.
 
 The minimum time interval is set when the API is invoked; however the user agent might also take into account other factors which affect when the service worker receives the event. For instance previous website engagement, or connection to a known network.
 
@@ -106,4 +106,3 @@ self.addEventListener("periodicsync", (event) => {
 ## See also
 
 - [An article on using Periodic Background Sync](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

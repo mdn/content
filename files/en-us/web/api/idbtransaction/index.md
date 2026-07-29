@@ -131,7 +131,7 @@ Transactions can have one of three modes:
   </tbody>
 </table>
 
-Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
+Even if these constants are now deprecated, you can still use them to provide backward compatibility if required. You should code defensively in case the object is not available anymore:
 
 ```js
 const myIDBTransaction = window.IDBTransaction ||

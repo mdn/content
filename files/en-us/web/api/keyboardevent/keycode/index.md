@@ -38,10 +38,8 @@ Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable b
 5. If the pressed key inputs a different ASCII character with no modifier key, use a keycode for it.
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
 7. Otherwise, i.e., pressed key inputs a unicode character:
-
    1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with the following additional rules.
    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
-
       1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
       2. Otherwise, use 0 or compute with the following additional rules.
 
@@ -51,9 +49,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
 > The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
 
 1. If running macOS or Linux:
-
    1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
-
       1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
       2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
       3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
@@ -61,7 +57,6 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
    2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
 2. If running on Windows:
-
    1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
 
 <table class="no-markdown">
@@ -3269,29 +3264,25 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
 ## Examples
 
 ```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // Should do nothing if the default action has been cancelled
-    }
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // Should do nothing if the default action has been cancelled
+  }
 
-    let handled = false;
-    if (event.key !== undefined) {
-      // Handle the event with KeyboardEvent.key
-      handled = true;
-    } else if (event.keyCode !== undefined) {
-      // Handle the event with KeyboardEvent.keyCode
-      handled = true;
-    }
+  let handled = false;
+  if (event.key !== undefined) {
+    // Handle the event with KeyboardEvent.key
+    handled = true;
+  } else if (event.keyCode !== undefined) {
+    // Handle the event with KeyboardEvent.keyCode
+    handled = true;
+  }
 
-    if (handled) {
-      // Suppress "double action" if event handled
-      event.preventDefault();
-    }
-  },
-  true,
-);
+  if (handled) {
+    // Suppress "double action" if event handled
+    event.preventDefault();
+  }
+});
 ```
 
 ## Specifications

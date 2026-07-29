@@ -3,9 +3,8 @@ title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.getPermissionWarningsById
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
@@ -32,10 +31,6 @@ let gettingWarnings = browser.management.getPermissionWarningsById(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of strings, each of which contains the text of a permission warning.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the permission warnings for the add-on whose ID is "my-add-on":
@@ -53,6 +48,10 @@ browser.management.getPermissionWarningsById(id).then(gotWarnings);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-getPermissionWarningsById) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.

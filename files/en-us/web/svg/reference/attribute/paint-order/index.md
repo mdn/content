@@ -56,8 +56,8 @@ You can use this attribute with the following SVG elements:
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
   <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#888" />
-    <stop stop-color="#ccc" offset="1" />
+    <stop stop-color="#888888" />
+    <stop stop-color="#cccccc" offset="1" />
   </linearGradient>
   <rect width="400" height="200" fill="url(#g)" />
   <g

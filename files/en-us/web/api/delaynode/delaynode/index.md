@@ -26,9 +26,7 @@ new DelayNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
-
   - : An object specifying the delay node options. Can contain the following members:
-
     - `delayTime`
       - : The initial delay time for the node, in seconds. The
         default is `0`.

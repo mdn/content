@@ -221,13 +221,11 @@ Meters and progress bars are visual representations of numeric values. Support f
 A meter bar represents a fixed value in a range delimited by [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) and [`min`](/en-US/docs/Web/HTML/Reference/Elements/meter#min) values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
 - The [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) values divide the range into the following three parts:
-
   - The lower part of the range is between the [`min`](/en-US/docs/Web/HTML/Reference/Elements/meter#min) and [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) values, inclusive.
   - The medium part of the range is between the [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) values, exclusive.
   - The higher part of the range is between the [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) values, inclusive.
 
 - The [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value defines the optimum value for the {{HTMLElement("meter")}} element. In conjunction with the [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) value, it defines which part of the range is preferred:
-
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the preferred part, and the higher range is considered to be average as well.
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the preferred part.
@@ -261,10 +259,6 @@ A progress bar represents a value that changes over time up to a maximum value s
 This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
 
 The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Other controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls).
 
 ## Summary
 

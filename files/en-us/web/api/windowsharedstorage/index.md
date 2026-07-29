@@ -3,11 +3,11 @@ title: WindowSharedStorage
 slug: Web/API/WindowSharedStorage
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.WindowSharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{SeeCompatTable}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}
 
 The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a standard browsing context.
 
@@ -17,16 +17,16 @@ The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "
 
 ## Instance properties
 
-- {{domxref("WindowSharedStorage.worklet", "worklet")}} {{Experimental_Inline}}
+- {{domxref("WindowSharedStorage.worklet", "worklet")}} {{deprecated_inline}}
   - : Contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin. `SharedStorageWorklet` includes the {{domxref("Worklet.addModule", "addModule()")}} method, which is used to add a module to the shared storage worklet.
 
 ## Instance methods
 
 _`WindowSharedStorage` inherits properties from its parent interface, {{domxref("SharedStorage")}}._
 
-- {{domxref("WindowSharedStorage.run", "run()")}} {{Experimental_Inline}}
+- {{domxref("WindowSharedStorage.run", "run()")}} {{Deprecated_Inline}}
   - : Executes a [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) operation that has been registered in a module added to the {{domxref("SharedStorageWorklet")}} of the current origin.
-- {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} {{Experimental_Inline}}
+- {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} {{Deprecated_Inline}}
   - : Executes a [URL Selection output gate](/en-US/docs/Web/API/Shared_Storage_API#url_selection) operation that has been registered in a module added to the {{domxref("SharedStorageWorklet")}} of the current origin.
 
 ## Examples

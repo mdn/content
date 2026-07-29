@@ -3,9 +3,8 @@ title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 page-type: webextension-api
 browser-compat: webextensions.api.webRequest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 
@@ -34,26 +33,21 @@ To intercept resources loaded by a page (such as images, scripts, or stylesheets
 On some of these events, you can modify the request. Specifically, you can:
 
 - cancel the request in:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - redirect the request in:
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - modify request headers in:
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - modify response headers in:
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - supply authentication credentials in:
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 To do this, you need to pass an option with the value `"blocking"` in the `extraInfoSpec` argument to the event's `addListener()`. This makes the listener synchronous.
@@ -134,13 +128,13 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 [Additional notes on Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_api).
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.

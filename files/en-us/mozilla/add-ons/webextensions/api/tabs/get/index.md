@@ -3,9 +3,8 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Given a tab ID, get the tab's details as a {{WebExtAPIRef("tabs.Tab")}} object.
 

@@ -3,12 +3,10 @@ title: "Navigation: entries() method"
 short-title: entries()
 slug: Web/API/Navigation/entries
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.entries
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`entries()`** method of the
 {{domxref("Navigation")}} interface returns an array of {{domxref("NavigationHistoryEntry")}} objects representing all existing history entries.
@@ -70,4 +68,3 @@ backButtonEl.addEventListener("click", () => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

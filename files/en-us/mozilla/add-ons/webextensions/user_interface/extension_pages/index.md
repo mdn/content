@@ -2,9 +2,8 @@
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
 
@@ -58,7 +57,7 @@ By default, pages you open in this way will be stored in the user's history, jus
 
 ```js
 function onVisited(historyItem) {
-  if (historyItem.url === browser.extension.getURL(myPage)) {
+  if (historyItem.url === browser.runtime.getURL(myPage)) {
     browser.history.deleteUrl({ url: historyItem.url });
   }
 }

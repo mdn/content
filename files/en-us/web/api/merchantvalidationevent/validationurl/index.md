@@ -5,10 +5,11 @@ slug: Web/API/MerchantValidationEvent/validationURL
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}{{non-standard_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`validationURL`** is a read-only string value providing the

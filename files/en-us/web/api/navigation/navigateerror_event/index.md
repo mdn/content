@@ -3,12 +3,10 @@ title: "Navigation: navigateerror event"
 short-title: navigateerror
 slug: Web/API/Navigation/navigateerror_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.navigateerror_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigateerror`** event of the {{domxref("Navigation")}} interface is fired when a navigation fails.
 
@@ -61,4 +59,3 @@ navigation.addEventListener("navigateerror", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

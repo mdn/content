@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.referrerPolicy
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The
 **`HTMLAnchorElement.referrerPolicy`**
@@ -32,7 +32,7 @@ A string; one of the following:
   - : Send a full URL when performing a same-origin request, but only send the origin of
     the document for other cases.
 - `same-origin`
-  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Defenses/Same-origin_policy), but
     cross-origin requests will contain no referrer information.
 - `strict-origin`
   - : Only send the origin of the document as the referrer when the protocol security

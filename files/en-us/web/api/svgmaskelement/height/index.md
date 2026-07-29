@@ -8,7 +8,7 @@ browser-compat: api.SVGMaskElement.height
 
 {{APIRef("SVG")}}
 
-The read-only **`height`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("marker")}}.
+The read-only **`height`** property of the {{domxref("SVGMaskElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("height")}} attribute of the {{SVGElement("mask")}}.
 
 > [!NOTE]
 > Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} and {{domxref("SVGAnimatedLength.animVal", "animVal")}}.

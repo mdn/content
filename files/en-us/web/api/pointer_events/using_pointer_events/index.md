@@ -78,7 +78,7 @@ function handleStart(event) {
   ctx.fill();
 }
 
-canvas.addEventListener("pointerdown", handleStart, false);
+canvas.addEventListener("pointerdown", handleStart);
 ```
 
 The `handleEnd` function listens to the {{domxref("Element/pointerup_event", "pointerup")}} event and draws a square at the end of the touch.
@@ -101,7 +101,7 @@ function handleEnd(event) {
   ongoingTouches.delete(event.pointerId);
 }
 
-canvas.addEventListener("pointerup", handleEnd, false);
+canvas.addEventListener("pointerup", handleEnd);
 ```
 
 The `handleCancel` function listens to the {{domxref("Element/pointercancel_event", "pointercancel")}} event and stops tracking the touch.
@@ -118,7 +118,7 @@ function handleCancel(event) {
   ongoingTouches.delete(event.pointerId);
 }
 
-canvas.addEventListener("pointercancel", handleCancel, false);
+canvas.addEventListener("pointercancel", handleCancel);
 ```
 
 The `handleMove` function listens to the {{domxref("Element/pointermove_event", "pointermove")}} event and draws a line between the start and end of the touch.
@@ -148,7 +148,7 @@ function handleMove(event) {
   ongoingTouches.set(event.pointerId, newTouch);
 }
 
-canvas.addEventListener("pointermove", handleMove, false);
+canvas.addEventListener("pointermove", handleMove);
 ```
 
 Finally, add clearing functionality.

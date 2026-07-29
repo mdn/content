@@ -198,6 +198,5 @@ Once the reviewer mentioned in the description has approved the changes, they wi
 Reviewers are encouraged to read the following articles for help with common tasks:
 
 - [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
-- [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
 - [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
 - [How to do a code review](https://google.github.io/eng-practices/review/reviewer/) on google.github.io/eng-practices

@@ -28,21 +28,6 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
-## Event properties
-
-_This interface also inherits properties from its parent, {{domxref("Event")}}._
-
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
-  - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array containing all {{domxref("MessagePort")}} objects sent with the message, in order.
-
 ## Examples
 
 Suppose a script creates a [`MessageChannel`](/en-US/docs/Web/API/MessageChannel) and sends one of the ports to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), using code like this:
@@ -63,7 +48,7 @@ channelMessageButton.addEventListener("click", () => {
 targetFrame.postMessage("init", targetOrigin, [channel.port2]);
 ```
 
-The target can receive the port and start listening for messages on it using code like this:
+The target can receive the port and start listening for messages and message errors on it using code like this:
 
 ```js
 window.addEventListener("message", (event) => {
@@ -71,6 +56,10 @@ window.addEventListener("message", (event) => {
 
   myPort.addEventListener("message", (event) => {
     received.textContent = event.data;
+  });
+
+  myPort.addEventListener("messageerror", (event) => {
+    console.error(event.data);
   });
 
   myPort.start();
@@ -85,6 +74,10 @@ window.addEventListener("message", (event) => {
 
   myPort.onmessage = (event) => {
     received.textContent = event.data;
+  };
+
+  myPort.onmessageerror = (event) => {
+    console.error(event.data);
   };
 });
 ```

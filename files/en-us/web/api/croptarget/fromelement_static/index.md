@@ -23,9 +23,7 @@ CropTarget.fromElement(element)
 ### Parameters
 
 - `element`
-
   - : A reference to an {{domxref("Element")}} that you want to use as a crop target. For an element to be used as a crop target, it must be:
-
     - On-screen
     - Visible, that is, not hidden via `display: none` for example.
 

@@ -6,11 +6,9 @@ page-type: guide
 
 {{DefaultAPISidebar("Encoding API")}}
 
-The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label`, representing the encoding to be used.
-The default is `UTF-8`.
+The constructors for the [Encoding API](/en-US/docs/Web/API/Encoding_API) interfaces {{domxref("TextDecoder")}} and {{domxref("TextDecoderStream")}} can be passed an optional `label` argument, which identifies the encoding to be used.
 
-The following table lists all encoding names and labels that user agents must support, as defined in the Encoding Spec.
-These are generally applicable anywhere character encodings are used.
+The following table lists all encoding labels that user agents must support, along with the encoding that the label identifies. Note that most encodings have more than one label.
 
 <table class="no-markdown">
   <thead>
@@ -126,7 +124,7 @@ These are generally applicable anywhere character encodings are used.
         <code>"logical"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8i</a>
+        <a href="https://en.wikipedia.org/wiki/ISO-8859-8-I">iso-8859-8-i</a>
       </td>
     </tr>
     <tr>
@@ -322,12 +320,6 @@ These are generally applicable anywhere character encodings are used.
       </td>
     </tr>
     <tr>
-      <td><code>"hz-gb-2312"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/HZ_(character_encoding)">hz-gb-2312</a>
-      </td>
-    </tr>
-    <tr>
       <td>
         <code>"big5"</code>, <code>"big5-hkscs"</code>, <code>"cn-big5"</code>,
         <code>"csbig5"</code>, <code>"x-x-big5"</code>
@@ -358,7 +350,7 @@ These are generally applicable anywhere character encodings are used.
         <code>"windows-31j"</code>, <code>"x-sjis"</code>
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift-jis</a>
+        <a href="https://en.wikipedia.org/wiki/Shift_JIS">shift_jis</a>
       </td>
     </tr>
     <tr>
@@ -371,12 +363,6 @@ These are generally applicable anywhere character encodings are used.
       </td>
       <td>
         <a href="https://en.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">euc-kr</a>
-      </td>
-    </tr>
-    <tr>
-      <td><code>"csiso2022kr"</code>, <code>"iso-2022-kr"</code></td>
-      <td>
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">iso-2022-kr</a>
       </td>
     </tr>
     <tr>
@@ -394,10 +380,6 @@ These are generally applicable anywhere character encodings are used.
     <tr>
       <td><code>"x-user-defined"</code></td>
       <td><code>"x-user-defined"</code></td>
-    </tr>
-    <tr>
-      <td><code>"iso-2022-cn"</code>, <code>"iso-2022-cn-ext"</code></td>
-      <td><code>"replacement"</code></td>
     </tr>
   </tbody>
 </table>

@@ -21,6 +21,7 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 - {{SVGAttr("seed")}}
 - {{SVGAttr("stitchTiles")}}
 - {{SVGAttr("type")}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -48,7 +49,7 @@ This element implements the {{domxref("SVGFETurbulenceElement")}} interface.
       yChannelSelector="G" />
   </filter>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" />
 </svg>
 ```
 
@@ -64,7 +65,7 @@ This element implements the {{domxref("SVGFETurbulenceElement")}} interface.
 
 ## See also
 
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes), including {{SVGAttr('result')}}.
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes), including {{SVGAttr('result')}}.
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

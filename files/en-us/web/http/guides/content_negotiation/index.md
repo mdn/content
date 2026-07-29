@@ -2,9 +2,8 @@
 title: Content negotiation
 slug: Web/HTTP/Guides/Content_negotiation
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 
@@ -51,13 +50,13 @@ The `Accept` header is defined by the browser, or any other user agent, and can 
 > [!NOTE]
 > This is part of an **experimental** technology called _Client Hints_. Initial support comes in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
-The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the server can use to select an appropriate response. Valid values are:
+The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the server can use to select an appropriate response. Example valid values include:
 
-| Value            | Meaning                                                                                                                                                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`. |
-| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
-| `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
+| Value                   | Meaning                                                                                                                                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Sec-CH-Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`. |
+| `Sec-CH-Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
+| `Sec-CH-Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
 
 ### The `Accept-Encoding` header
 

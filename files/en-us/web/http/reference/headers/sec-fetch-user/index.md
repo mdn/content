@@ -4,11 +4,10 @@ short-title: Sec-Fetch-User
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
 page-type: http-header
 browser-compat: http.headers.Sec-Fetch-User
+sidebar: http
 ---
 
-{{HTTPSidebar}}
-
-The HTTP **`Sec-Fetch-User`** {{Glossary("fetch metadata request header")}} is sent for requests initiated by user activation, and its value is always `?1`.
+The HTTP **`Sec-Fetch-User`** [fetch metadata request header](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) is sent for requests initiated by user activation, and its value is always `?1`.
 
 A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.
 

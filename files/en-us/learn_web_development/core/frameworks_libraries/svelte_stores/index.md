@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Svelte articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 In the last article we completed the development of our app, finished organizing it into components, and discussed some advanced techniques for dealing with reactivity, working with DOM nodes, and exposing component functionality. In this article we will show another way to handle state management in Svelte: [Stores](https://learn.svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
 
 <table>
@@ -149,19 +152,19 @@ Let's now create our `Alert` component and see how we can read values from the s
      align-items: center;
      border-radius: 0.2rem;
      background-color: #565656;
-     color: #fff;
-     font-weight: 700;
+     color: white;
+     font-weight: bold;
      padding: 0.5rem 1.4rem;
      font-size: 1.5rem;
      z-index: 100;
      opacity: 95%;
    }
    div p {
-     color: #fff;
+     color: white;
    }
    div svg {
      height: 1.6rem;
-     fill: currentcolor;
+     fill: currentColor;
      width: 1.4rem;
      margin-right: 0.5rem;
    }
@@ -420,7 +423,8 @@ First we need some way for our `Todos` component to give back the updated to-dos
    <Todos bind:todos />
    ```
 
-   > **Note:** `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
+   > [!NOTE]
+   > `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
 
 3. Go back to your app, try adding some to-dos, then go to your developer tools web console. You'll see that every modification we make to our to-dos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
 
@@ -485,8 +489,8 @@ As you can see, our store is just an object containing `subscribe()`, `set()`, a
 Just for reference, here's a basic working store implemented from scratch:
 
 ```js
-export const writable = (initial_value = 0) => {
-  let value = initial_value; // content of the store
+export const writable = (initialValue = 0) => {
+  let value = initialValue; // content of the store
   let subs = []; // subscriber's handlers
 
   const subscribe = (handler) => {
@@ -495,13 +499,13 @@ export const writable = (initial_value = 0) => {
     return () => (subs = subs.filter((sub) => sub !== handler)); // return unsubscribe function
   };
 
-  const set = (new_value) => {
-    if (value === new_value) return; // same value, exit
-    value = new_value; // update value
+  const set = (newValue) => {
+    if (value === newValue) return; // same value, exit
+    value = newValue; // update value
     subs.forEach((sub) => sub(value)); // update subscribers
   };
 
-  const update = (update_fn) => set(update_fn(value)); // update function
+  const update = (updateFn) => set(updateFn(value)); // update function
 
   return { subscribe, set, update }; // store contract
 };

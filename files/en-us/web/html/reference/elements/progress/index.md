@@ -1,11 +1,11 @@
 ---
-title: "<progress>: The Progress Indicator element"
+title: "`<progress>` HTML progress indicator element"
+short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
 page-type: html-element
 browser-compat: html.elements.progress
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
 
@@ -153,7 +153,7 @@ If the `<progress>` element is describing the loading progress of a section of a
 
 ## See also
 
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{htmlelement("meter")}}
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}

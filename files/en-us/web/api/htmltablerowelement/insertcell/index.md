@@ -12,7 +12,8 @@ The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interfac
 cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
 reference to the cell.
 
-> **Note:** `insertCell()` inserts the cell directly into the
+> [!NOTE]
+> `insertCell()` inserts the cell directly into the
 > row. The cell does not need to be appended separately
 > with {{domxref("Node.appendChild()")}} as would be the case if
 > {{domxref("Document.createElement()")}} had been used to create the new

@@ -248,7 +248,6 @@ The following sections describe what you need to do.
 
 1. Create a skeleton project and web application for the site (as described in [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)). You might use 'diyblog' for the project name and 'blog' for the application name.
 2. Create models for the Blog posts, Comments, and any other objects needed. When thinking about your design, remember:
-
    - Each comment will have only one blog, but a blog may have many comments.
    - Blog posts and comments must be sorted by post date.
    - Not every user will necessarily be a blog author though any user may be a commenter.
@@ -269,12 +268,10 @@ Some general hints:
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
-
    - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
-
    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
@@ -283,7 +280,7 @@ Some general hints:
              """
              Add author and associated blog to form data before setting it as valid (so it is saved to model)
              """
-             #Add logged-in user as author of comment
+             # Add logged-in user as author of comment
              form.instance.author = self.request.user
              #Associate comment with blog based on passed id
              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])

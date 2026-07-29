@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.write
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Writes some response data to the output stream.
 
@@ -27,10 +26,6 @@ filter.write(
 ### Return value
 
 None.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,3 +57,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -3,9 +3,8 @@ title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets all active alarms for the extension.
 

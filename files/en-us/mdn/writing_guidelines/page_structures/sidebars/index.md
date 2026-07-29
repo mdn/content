@@ -11,8 +11,10 @@ Most of them are created using a system that defines data structures in YAML fil
 In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required.
 
 > [!NOTE]
-> If you're editing sidebars, you can use `yarn tool` commands for formatting and syncing with redirects.
-> See [Yari's CLI Tool](https://github.com/mdn/yari/blob/main/docs/cli-tool.md) documentation for information.
+> If you're editing sidebars, you can use `npm run content` commands:
+>
+> - Run `npm run content -- fmt-sidebars` to format sidebars.
+> - Run `npm run content -- sync-sidebars` to sync with redirects.
 
 ## How sidebars work
 
@@ -264,16 +266,17 @@ When the sidebar is rendered, the system replaces the `Input_types` text with it
 
 If an MDN locale is accessed that does not have a value defined for a particular placeholder, it defaults to the `en-US` version. If an `en-US` version is not defined, the literal placeholder text is displayed (which would be `Input_types`, in the above case).
 
-## Non-standard sidebars
+## Unique sidebars
 
-There are some sidebars on MDN that don't use the standard system described above. These are complex, fully automated macros that don't need changing very often:
+There are some sidebars on MDN that don't use the standard system described above. These are more complex macros that need special handling:
 
 - `\{{APIRef("<API>")}}`
   - : The API sidebar displayed on [API reference pages](/en-US/docs/Web/API#interfaces). For each interface, the macro auto-generates links to members defined on the interface — properties, methods, events, etc. The single parameter is the name of the relevant API group defined in the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file. To edit the related pages shown at the bottom of the sidebar, edit that API's GroupData entry.
 - `\{{DefaultAPISidebar("<API>")}}`
   - : The API sidebar displayed on [API landing pages](/en-US/docs/Web/API#specifications). The single parameter is the name of the relevant API group defined in the [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) file. To edit the guides, interfaces, etc. linked to in a particular API's sidebar, edit that API's GroupData entry.
-- `\{{JSRef("<JS_topic>")}}`
-  - : The sidebar on [JavaScript reference pages](/en-US/docs/Web/JavaScript/Reference). The single parameter is the directory you want to generate the links for.
+- `sidebar: jsref`
+  - : The sidebar on [JavaScript reference pages](/en-US/docs/Web/JavaScript/Reference) included via front matter.
+    The `jsref` contents are defined in rari in [`jsref.rs`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/sidebars/jsref.rs).
 
 If you think one of these should be updated, get in touch with us via the [usual channels](/en-US/docs/MDN/Community/Communication_channels).
 

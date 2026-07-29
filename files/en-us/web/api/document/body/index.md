@@ -26,10 +26,10 @@ One of the following:
 // Given this HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
-const aNewBodyElement = document.createElement("body");
+const newBodyElement = document.createElement("body");
 
-aNewBodyElement.id = "newBodyElement";
-document.body = aNewBodyElement;
+newBodyElement.id = "newBodyElement";
+document.body = newBodyElement;
 alert(document.body.id); // "newBodyElement"
 ```
 

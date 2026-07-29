@@ -139,7 +139,7 @@ This interface also supports the following properties:
 
 - {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
   - : Returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property.
-- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
   - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
 - {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.

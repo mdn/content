@@ -11,8 +11,6 @@ browser-compat: api.RTCPeerConnection.getIdentityAssertion
 The **`getIdentityAssertion()`** method of the {{domxref("RTCPeerConnection")}} interface initiates the gathering of an identity assertion.
 This has an effect only if the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not `"closed"`.
 
-The method returns a JavaScript {{jsxref("Promise")}} which resolves to an identity assertion encoded as a string.
-
 It is not expected for the application dealing with the `RTCPeerConnection`: this is automatically done; an explicit call only allows to anticipate the need.
 
 ## Syntax
@@ -21,7 +19,13 @@ It is not expected for the application dealing with the `RTCPeerConnection`: thi
 getIdentityAssertion()
 ```
 
-_There is neither parameter nor return value for this method._
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref("Promise")}} which resolves to an identity assertion encoded as a string.
 
 ## Example
 

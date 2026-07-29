@@ -21,7 +21,7 @@ A menu can be a permanently visible list of controls or a widget that can be mad
 
 When a user activates a choice in a menu that has been opened, the menu usually closes. If the menu choice action invokes a submenu, the menu will remain open and the submenu is displayed.
 
-When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
+When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://primer.style/accessibility/design-guidance/focus-management/) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
 
 Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) menu items are focusable but cannot be activated.
 
@@ -40,7 +40,6 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) role
-
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
 - [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute
@@ -117,7 +116,7 @@ Below are two example menu implementations.
 
 To progressively enhance this navigation widget that is by default accessible, the class to hide the `menu` and the inclusion of `tabindex="-1"` on the interactive menuitem content should be added with JavaScript on load.
 
-When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/TR/wai-aria-practices-1.2/examples/disclosure/disclosure-navigation.html) for an explanation and additional examples.
+When including a "menu" for site navigation, do not use the `menu` role. Rather, for the main site navigation use the native HTML {{HTMLElement('nav')}} element or simply a list of links. The `menu` role should be reserved for composite widgets requiring focus management. See [ARIA practices for disclosure navigation](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/) for an explanation and additional examples.
 
 ### Example 2: menubar submenu option picker
 

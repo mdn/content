@@ -39,7 +39,7 @@ A number representing the number of bytes written to the file.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the associated access handle is already closed, or if the modification of the file's binary data completely fails.
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the increased data capacity exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - {{jsxref("TypeError")}}
   - : Thrown if the underlying file system does not support writing the file from the specified file offset.

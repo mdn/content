@@ -13,6 +13,25 @@ For many people, technology makes things easier. For people with disabilities, t
 > When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability. \
 > – ([W3C - Accessibility](https://www.w3.org/standards/webdesign/accessibility))
 
+## Beginner's tutorials
+
+Our learn web development [Accessibility module](/en-US/docs/Learn_web_development/Core/Accessibility) contains modern, up-to-date tutorials covering accessibility fundamentals.
+
+- [What is accessibility?](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
+  - : This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
+- [Accessibility tooling and assistive technology](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling)
+  - : Next we turn our attention to accessibility tooling, providing information on the kinds of tools you can use to help solve accessibility issues, and the assistive technologies used by people with disabilities as they browse the web. You'll be using these tools throughout subsequent articles.
+- [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML)
+  - : A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose. This article looks in detail at how HTML can be used to ensure maximum accessibility.
+- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
+  - : CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
+- [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
+  - : Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.
+- [Accessible multimedia](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia)
+  - : Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives, so they can be understood by assistive technologies and their users. This article shows how.
+- [Mobile accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile)
+  - : With web access on mobile devices being so popular, and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
+
 ## Accessibility guides
 
 The [Accessibility guides](/en-US/docs/Web/Accessibility/Guides) cover authoring principles, WCAG compliance, accessible widgets and navigation, mobile accessibility, and other key topics that will help you understand why accessibility is crucial for the web and how to improve it in your projects.
@@ -45,23 +64,6 @@ The [Accessibility guides](/en-US/docs/Web/Accessibility/Guides) cover authoring
     This article helps you understand the types of content that can be problematic and find tools and strategies to help you avoid them.
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
   - : This is a collection of articles to learn how to use Accessible Rich Internet Applications (ARIA) to make your HTML documents more accessible.
-
-## Tutorials for beginners
-
-The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Accessibility) contains modern, up-to-date tutorials covering the following accessibility essentials:
-
-- [What is accessibility?](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-  - : This article starts off the module with a good look at what accessibility actually is — this includes what groups of people we need to consider and why, what tools different people use to interact with the Web, and how we can make accessibility part of our web development workflow.
-- [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML)
-  - : A great deal of web content can be made accessible just by making sure that the correct HTML elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
-  - : CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences. They can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
-- [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
-  - : Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.
-- [Accessible multimedia](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia)
-  - : Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
-- [Mobile accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile)
-  - : With web access on mobile devices being so popular and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
 
 ## References
 

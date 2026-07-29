@@ -36,18 +36,20 @@ between windows.
 [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage)
 is the recommended mechanism.
 
-> **Note:** `window.name` converts all stored values to their
+> [!NOTE]
+> `window.name` converts all stored values to their
 > string representations using the `toString` method.
 
 ## Examples
 
 ```html
-<script>
-  // Open a tab with a specific browsing context name
-  const otherTab = window.open("url1", "_blank");
-  if (otherTab) otherTab.name = "other-tab";
-</script>
 <a href="url2" target="other-tab">This link will be opened in the other tab.</a>
+```
+
+```js
+// Open a tab with a specific browsing context name
+const otherTab = window.open("url1", "_blank");
+if (otherTab) otherTab.name = "other-tab";
 ```
 
 ## Specifications

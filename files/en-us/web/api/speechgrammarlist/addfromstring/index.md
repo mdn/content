@@ -4,11 +4,11 @@ short-title: addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.SpeechGrammarList.addFromString
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`addFromString()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present in a specific
@@ -36,17 +36,6 @@ addFromString(string, weight)
 ### Return value
 
 None ({{jsxref("undefined")}}).
-
-## Examples
-
-```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
-```
 
 ## Specifications
 

@@ -109,7 +109,7 @@ This should log "baked beans" (the name of the first product listed in "products
 
 But wait! Remember the last article, where we said that by calling a callback inside another callback, we got successively more nested levels of code? And we said that this "callback hell" made our code hard to understand? Isn't this just the same, only with `then()` calls?
 
-It is, of course. But the elegant feature of promises is that _`then()` itself returns a promise, which will be completed with the result of the function passed to it_. This means that we can (and certainly should) rewrite the above code like this:
+It is, of course. But the elegant feature of promises is that `then()` itself returns a new promise that is fulfilled with the return value of the callback function (provided the function runs successfully). This means that we can (and certainly should) rewrite the above code like this:
 
 ```js
 const fetchPromise = fetch(
@@ -184,15 +184,16 @@ Promises come with some quite specific terminology that it's worth getting clear
 
 First, a promise can be in one of three states:
 
-- **pending**: the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to `fetch()`, and the request is still being made.
-- **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
-- **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
+- **pending**: The initial state. The operation has not yet completed (succeeded or failed).
+- **fulfilled**: The operation succeeded. This is when the promise's `.then()` handler is called.
+- **rejected**: The operation failed. This is when the promise's `.catch()` handler is called.
 
 Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Reference/Status/404).
 
-Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
+We also use a few other terms to describe a promise's state:
 
-A promise is **resolved** if it is settled, or if it has been "locked in" to follow the state of another promise.
+- **completed**: The promise is no longer pending; it has either been fulfilled or rejected.
+- **resolved**: The promise is completed, or it has been "locked in" to follow the state of another promise. This is a more advanced concept, relevant when one promise depends on another.
 
 The article [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) gives a great explanation of the details of this terminology.
 

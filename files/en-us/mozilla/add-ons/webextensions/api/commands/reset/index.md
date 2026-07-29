@@ -3,9 +3,8 @@ title: commands.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
 page-type: webextension-api-function
 browser-compat: webextensions.api.commands.reset
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Resets the given command's description and keyboard shortcut to the values given in the extension's [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -28,10 +27,6 @@ browser.commands.reset(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the shortcut has been reset.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Resets the command named "my-command" when the user clicks the "reset" button:
@@ -47,3 +42,7 @@ document.querySelector("#reset").addEventListener("click", resetShortcut);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -24,9 +24,7 @@ new PointerEvent(type, options)
   - : A string representing the name of the event
     (see [PointerEvent event types](/en-US/docs/Web/API/PointerEvent#pointer_event_types)).
 - `options` {{optional_inline}}
-
   - : An object that, _in addition of the properties defined in {{domxref("MouseEvent/MouseEvent", "MouseEvent()")}}_, can have the following properties:
-
     - `pointerId`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
     - `width`

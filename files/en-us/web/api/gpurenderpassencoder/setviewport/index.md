@@ -3,12 +3,10 @@ title: "GPURenderPassEncoder: setViewport() method"
 short-title: setViewport()
 slug: Web/API/GPURenderPassEncoder/setViewport
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPURenderPassEncoder.setViewport
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setViewport()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
@@ -39,7 +37,7 @@ setViewport(x, y, width, height, minDepth, maxDepth)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

@@ -3,9 +3,8 @@ title: Theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 page-type: webextension-api-type
 browser-compat: webextensions.api.theme.Theme
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A Theme object represents the specification of a theme.
 

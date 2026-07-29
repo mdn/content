@@ -2,9 +2,8 @@
 title: Using an external spell checker
 slug: Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Starting with Firefox 3 (as well as Thunderbird 3 and SeaMonkey 2), you can now install an external spell checker using an extension.
 

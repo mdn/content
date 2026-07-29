@@ -3,12 +3,10 @@ title: "GPUDevice: queue property"
 short-title: queue
 slug: Web/API/GPUDevice/queue
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.GPUDevice.queue
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`queue`** read-only property of the
 {{domxref("GPUDevice")}} interface returns the primary {{domxref("GPUQueue")}} for the device.

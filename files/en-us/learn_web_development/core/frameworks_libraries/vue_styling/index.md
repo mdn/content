@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Vue articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
 
 <table>
@@ -61,7 +64,7 @@ While this tutorial will not be using such tools, it's good to know that when in
 Add the following contents to the `reset.css` file:
 
 ```css
-/*reset.css*/
+/* reset.css */
 /* RESETS */
 *,
 *::before,
@@ -123,21 +126,21 @@ body {
   margin: 0 auto;
   font:
     1.6rem/1.25 "Helvetica Neue",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 ```
 
 Next, in your `src/main.js` file, import the `reset.css` file like so:
@@ -178,7 +181,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   text-transform: capitalize;
 }
 .btn__danger {
-  color: #fff;
+  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -189,8 +192,8 @@ Update your `App.vue` file's `<style>` element so it looks like so:
   outline-color: #c82333;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
 }
 .btn-group {
   display: flex;
@@ -215,7 +218,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -239,7 +242,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -249,7 +252,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
 }
 /* End global styles */
 #app {
-  background: #fff;
+  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   padding-top: 0;
@@ -258,7 +261,7 @@ Update your `App.vue` file's `<style>` element so it looks like so:
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   #app {
     padding: 4rem;
   }
@@ -292,7 +295,7 @@ We should apply the button CSS classes to the `<button>` in our `ToDoForm` compo
 
 Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
 
-```html
+```vue
 <button type="submit" class="btn btn__primary btn__lg">Add</button>
 ```
 
@@ -300,7 +303,7 @@ While we're here, there's one more semantic and styling change we can make. Sinc
 
 Update your `ToDoForm` template so that it looks like this:
 
-```html
+```vue
 <template>
   <form @submit.prevent="onSubmit">
     <h2 class="label-wrapper">
@@ -324,7 +327,7 @@ Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. 
 
 Update it as follows:
 
-```html
+```vue
 <ul aria-labelledby="list-summary" class="stack-large">
   …
 </ul>
@@ -346,10 +349,10 @@ Next, copy the following CSS into the newly created `<style>` element:
 
 ```css
 .custom-checkbox > .checkbox-label {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   color: #0b0c0c;
@@ -357,10 +360,10 @@ Next, copy the following CSS into the newly created `<style>` element:
   margin-bottom: 5px;
 }
 .custom-checkbox > .checkbox {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1rem;
   line-height: 1.25;
   box-sizing: border-box;
@@ -373,14 +376,14 @@ Next, copy the following CSS into the newly created `<style>` element:
   appearance: none;
 }
 .custom-checkbox > input:focus {
-  outline: 3px dashed #fd0;
+  outline: 3px dashed #ffdd00;
   outline-offset: 0;
   box-shadow: inset 0 0 0 2px;
 }
 .custom-checkbox {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 1.25;
   display: block;
@@ -420,7 +423,7 @@ Next, copy the following CSS into the newly created `<style>` element:
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .custom-checkbox > input[type="checkbox"]:focus + label::before {
@@ -445,7 +448,7 @@ Next, copy the following CSS into the newly created `<style>` element:
 .custom-checkbox > input[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (width >= 40rem) {
   label,
   input,
   .custom-checkbox {
@@ -459,11 +462,11 @@ Now we need to add some CSS classes to our template to connect the styles.
 
 To the root `<div>`, add a `custom-checkbox` class. To the `<input>`, add a `checkbox` class. Last of all, to the `<label>` add a `checkbox-label` class. The updated template is below:
 
-```html
+```vue
 <template>
   <div class="custom-checkbox">
     <input type="checkbox" :id="id" :checked="isDone" class="checkbox" />
-    <label :for="id" class="checkbox-label">\{{label}}</label>
+    <label :for="id" class="checkbox-label">\{{ label }}</label>
   </div>
 </template>
 ```

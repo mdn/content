@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XPathResult.iterateNext
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The **`iterateNext()`** method of the
 {{domxref("XPathResult")}} interface iterates over a node set result and returns the

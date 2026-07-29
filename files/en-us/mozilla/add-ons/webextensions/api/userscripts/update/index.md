@@ -3,9 +3,8 @@ title: userScripts.update()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/update
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.update
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Updates user scripts registered by the extension.
 
@@ -20,7 +19,6 @@ let updatingUserScript = browser.userScripts.update(
 ### Parameters
 
 - `scripts`
-
   - : `array` of {{WebExtAPIRef("userScripts.RegisteredUserScript")}}. Details of user scripts to update.
 
     Properties that are `null` or omitted are not changed. Passing an empty array to `matches`, `excludeMatches`, `globs`, and `excludeGlobs` clears these properties.

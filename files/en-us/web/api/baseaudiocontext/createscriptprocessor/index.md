@@ -25,7 +25,6 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ### Parameters
 
 - `bufferSize`
-
   - : The buffer size in units of sample-frames. If specified, the bufferSize must be one
     of the following values: 256, 512, 1024, 2048, 4096, 8192, 16384. If it's not passed
     in, or if the value is 0, then the implementation will choose the best buffer size for

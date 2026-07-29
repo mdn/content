@@ -27,10 +27,8 @@ permissionState(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object containing optional configuration parameters. It can have the following
     properties:
-
     - `userVisibleOnly`
       - : A boolean indicating that the returned push
         subscription will only be used for messages whose effect is made visible to the

@@ -2,9 +2,8 @@
 title: JavaScript engine
 slug: Glossary/Engine/JavaScript
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **JavaScript engines** are interpreters that parse and execute {{glossary("JavaScript")}} code. Modern JavaScript engines use just-in-time (JIT) compilation to convert JavaScript code into machine code that can be executed by a computer's processor. A JavaScript engine is typically developed and used in web {{glossary("browser", "browsers")}} to run client-side code but can also be used in server-side environments like {{glossary("Node.js")}}.
 

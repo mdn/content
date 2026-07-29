@@ -11,7 +11,8 @@ browser-compat: api.TextEvent
 
 The **`TextEvent`** interface is a legacy UI event interface for reporting changes to text UI elements.
 
-> **Note:** `TextEvent` events have been superseded by events such as `input`, `beforeinput`, `keypress`, `keyup`, and `keydown`.
+> [!NOTE]
+> `TextEvent` events have been superseded by events such as `input`, `beforeinput`, `keypress`, `keyup`, and `keydown`.
 
 {{InheritanceDiagram}}
 
@@ -40,13 +41,9 @@ The following is a list of all `TextEvent` events:
 You can register a listener for text input events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener(
-  "textInput",
-  (event) => {
-    // …
-  },
-  false,
-);
+element.addEventListener("textInput", (event) => {
+  // …
+});
 ```
 
 ### Simple logger showing input events

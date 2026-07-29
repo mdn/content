@@ -22,7 +22,6 @@ None.
 ### Optional Attributes
 
 - `disable-output-escaping`
-
   - : Specifies whether special characters are escaped when written to the output. The available values are `yes` or `no`. If `yes` is set, for example, the character `>` is output as `>`, not as `&gt;`.
 
     > [!NOTE]

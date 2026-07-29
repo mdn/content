@@ -2,9 +2,8 @@
 title: ECMA
 slug: Glossary/ECMA
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Ecma International** (formally _European Computer Manufacturers Association_) is a non-profit organization that develops standards in computer hardware, communications, and programming languages.
 

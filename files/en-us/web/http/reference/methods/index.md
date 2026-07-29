@@ -4,9 +4,8 @@ short-title: Request methods
 slug: Web/HTTP/Reference/Methods
 page-type: landing-page
 browser-compat: http.methods
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP defines a set of **request methods** to indicate the purpose of the request and what is expected if the request is successful.
 Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_.

@@ -2,9 +2,8 @@
 title: WebRTC data channels
 slug: Games/Techniques/WebRTC_data_channels
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 The [WebRTC](/en-US/docs/Web/API/WebRTC_API) (Web Real-Time Communications) API is primarily known for its support for audio and video communications; however, it also offers peer-to-peer data channels. This article explains more about this, and shows you how to use libraries to implement data channels in your game.
 

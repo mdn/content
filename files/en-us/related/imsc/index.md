@@ -1,7 +1,9 @@
 ---
 title: "IMSC: subtitles and captioning for the Web"
+short-title: IMSC
 slug: Related/IMSC
 page-type: guide
+sidebar: related
 ---
 
 IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.
@@ -114,7 +116,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 
 ## Reference
 
-- [TTML Profiles for Internet Media Subtitles and Captions](https://www.w3.org/TR/ttml-imsc/all/)
+- [TTML Profiles for Internet Media Subtitles and Captions](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
 
 ## Tools
 
@@ -149,25 +151,3 @@ Team:
 - Andreas Tai
 
 If you want to get involved with documenting IMSC, please contact [Andreas Tai](mailto:tai@irt.de).
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>

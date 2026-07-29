@@ -3,9 +3,8 @@ title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired immediately after a notification has been shown.
 
@@ -31,15 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `notificationId`
       - : `string`. ID of the notification that has been shown.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -57,6 +50,10 @@ browser.notifications.onShown.addListener(logShown);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

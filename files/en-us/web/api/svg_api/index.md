@@ -2,7 +2,7 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-spec-urls: https://svgwg.org/svg2-draft/
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/
 ---
 
 {{DefaultAPISidebar("SVG")}}

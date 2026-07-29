@@ -2,9 +2,8 @@
 title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 
@@ -33,6 +32,8 @@ Make sure your code only uses the permitted HTTP methods when accessing the serv
 
 > [!NOTE]
 > If the server includes any unrecognized or undefined method names in its `Access-Control-Allow-methods` header, a different error occurs: [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod).
+
+If the server is not under your control, see [Client-side considerations](/en-US/docs/Web/HTTP/Guides/CORS/Errors#client-side_considerations) for alternative approaches.
 
 ## See also
 

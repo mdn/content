@@ -27,9 +27,7 @@ createPeriodicWave(real, imag, constraints)
 The `real` and `imag` arrays must have the same length, otherwise an error is thrown.
 
 - `constraints` {{optional_inline}}
-
   - : A dictionary object that specifies whether normalization should be disabled. If not specified, normalization is enabled by default. It takes one property:
-
     - `disableNormalization`
       - : If set to `true`, normalization is disabled for the periodic wave. The default is `false`.
 

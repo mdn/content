@@ -8,11 +8,13 @@ browser-compat: api.HTMLOutputElement.htmlFor
 
 {{ APIRef("HTML DOM") }}
 
-The **`htmlFor`** property of the {{DOMxRef("HTMLOutputElement")}} interface is a string containing a space-separated list of other elements' `id`s, indicating that those elements contributed input values to (or otherwise affected) the calculation. It reflects the [`for`](/en-US/docs/Web/HTML/Reference/Elements/output#for) attribute of the {{HTMLElement("output")}} element.
+The read-only **`htmlFor`** property of the {{domxref("HTMLOutputElement")}} returns a live {{domxref("DOMTokenList")}} object containing a list of `id`s of those elements contributing input values to (or otherwise affected) the calculation. It reflects the {{HTMLElement("output")}} element's [`for`](/en-US/docs/Web/HTML/Reference/Elements/output#for) content attribute.
 
 ## Value
 
-A string.
+A live {{domxref("DOMTokenList")}} object.
+
+Although the `htmlFor` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `htmlFor` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 

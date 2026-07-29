@@ -2,9 +2,8 @@
 title: Immutable
 slug: Glossary/Immutable
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **immutable** value is one whose content cannot be changed without creating an entirely new value, in comparison with {{Glossary("mutable", "mutable values")}}.
 

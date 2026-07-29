@@ -4,9 +4,8 @@ short-title: Link
 slug: Web/HTTP/Reference/Headers/Link
 page-type: http-header
 browser-compat: http.headers.Link
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Link`** header provides a means for serializing one or more links in HTTP headers.
 This allows the server to point a client to another resource containing metadata about the requested resource.
@@ -50,7 +49,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ### Parameters
 
 The link header contains parameters, which are separated with `;` and are equivalent to attributes of the {{HTMLElement("link")}} element.
-Values can be both quoted or unquoted based on [field value component rules](https://www.rfc-editor.org/rfc/rfc7230.html#section-3.2.6), so `x=y` is equivalent to `x="y"`.
+Values can be both quoted or unquoted based on [field value component rules](https://www.rfc-editor.org/info/rfc7230/#section-3.2.6), so `x=y` is equivalent to `x="y"`.
 
 ## Examples
 

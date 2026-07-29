@@ -2,9 +2,8 @@
 title: Compression Dictionary Transport
 slug: Glossary/Compression_dictionary_transport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary, rather than the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}, to dramatically reduce the transport size of HTTP responses.
 
@@ -18,7 +17,8 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 - Related glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)- {{HTTPHeader("Accept-encoding")}}
+- [`<link rel="compression-dictionary">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
+- {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}

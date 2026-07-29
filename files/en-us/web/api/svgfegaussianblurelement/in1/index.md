@@ -41,7 +41,7 @@ In this example, two {{SVGElement("feGaussianBlur")}} elements are defined in a 
     y="20"
     width="100"
     height="100"
-    style="fill:rebeccapurple;"
+    fill="rebeccapurple"
     filter="url(#gaussian-blur-filter)" />
 
   <!-- Circle with BackgroundImage blur effect -->
@@ -49,7 +49,7 @@ In this example, two {{SVGElement("feGaussianBlur")}} elements are defined in a 
     cx="150"
     cy="100"
     r="50"
-    style="fill:hotpink;"
+    fill="hotpink"
     filter="url(#gaussian-blur-filter)" />
 </svg>
 ```

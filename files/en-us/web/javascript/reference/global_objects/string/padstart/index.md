@@ -1,20 +1,20 @@
 ---
 title: String.prototype.padStart()
+short-title: padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.padStart
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`padStart()`** method of {{jsxref("String")}} values pads this string with a given string (repeated and/or truncated, if needed) so that the resulting string has a given length. The padding is applied from the start of this string.
 
 {{InteractiveExample("JavaScript Demo: String.prototype.padStart()")}}
 
 ```js interactive-example
-const str1 = "5";
+const str = "5";
 
-console.log(str1.padStart(2, "0"));
+console.log(str.padStart(2, "0"));
 // Expected output: "05"
 
 const fullNumber = "2034399002125581";

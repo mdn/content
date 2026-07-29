@@ -2,9 +2,8 @@
 title: Bounding volume collision detection with THREE.js
 slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article shows how to implement **collision detection between bounding boxes and spheres using the Three.js** library. It is assumed that before reading this you have read our [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection) introductory article first, and have basic knowledge about Three.js.
 

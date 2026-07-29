@@ -22,19 +22,19 @@ _Also inherits properties from its parent, {{domxref("EventTarget")}}._
 - {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the background fetch's ID.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total number of bytes to be uploaded.
+  - : A {{jsxref("Number")}} containing the total number of bytes to be uploaded.
 - {{domxref("BackgroundFetchRegistration.uploaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes successfully sent, initially `0`.
+  - : A {{jsxref("Number")}} containing the size in bytes successfully sent, initially `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
+  - : A {{jsxref("Number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
+  - : A {{jsxref("Number")}} containing the size in bytes that has been downloaded, initially `0`.
 - {{domxref("BackgroundFetchRegistration.result")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string with a value that indicates a reason for a background fetch failure. Can be one of the following values: `""`, `"aborted"`, `"bad-status"`, `"fetch-error"`, `"quota-exceeded"`, `"download-total-exceeded"`.
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
+  - : A {{jsxref("Boolean")}} indicating whether the `recordsAvailable` flag is set.
 
 ## Instance methods
 
@@ -54,7 +54,6 @@ _Also inherits events from its parent, {{domxref("EventTarget")}}._
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("BackgroundFetchRegistration/progress_event", "progress")}} {{Experimental_Inline}}
-
   - : Fired when there is a change to any of the following properties:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},

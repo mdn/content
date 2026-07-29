@@ -22,8 +22,7 @@ new CSSMathMax(args)
 ### Parameters
 
 - `args`
-  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
-    integer or a {{domxref('CSSNumericValue')}}.
+  - : A list of numbers or {{domxref("CSSNumericValue")}} objects.
 
 ### Exceptions
 

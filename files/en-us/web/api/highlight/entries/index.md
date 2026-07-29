@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`entries()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains an array of `[range, range]` for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
+The **`entries()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains an array of `[range, range]` for each {{domxref("AbstractRange")}} object in the `Highlight` object, in insertion order.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.entries()")}}.
 
@@ -19,9 +19,13 @@ The **`entries()`** method of the {{domxref("Highlight")}} interface returns a n
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object that contains an array of `[range, range]` for each `Range` object in the given `Highlight`, in insertion order.
+A new iterator object that contains an array of `[range, range]` for each `AbstractRange` object in the given `Highlight`, in insertion order.
 
 ## Examples
 

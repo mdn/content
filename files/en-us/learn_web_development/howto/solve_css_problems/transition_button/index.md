@@ -50,7 +50,7 @@ button {
 ```css live-sample___transition-button
 .fade {
   background-color: #db1f48;
-  color: #fff;
+  color: white;
   transition: background-color 1s;
 }
 
@@ -72,4 +72,4 @@ button {
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)

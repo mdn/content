@@ -27,17 +27,14 @@ registerProtocolHandler(scheme, url)
 ### Parameters
 
 - `scheme`
-
   - : A string containing the scheme for the protocol that the site wishes to handle.
 
     This may be a custom scheme, in which case the scheme's name:
-
     - Begins with `web+`
     - Contains at least one letter after the `web+` prefix
     - Contains only lowercase {{Glossary("ASCII")}} letters.
 
     Otherwise, the scheme must be one of the following:
-
     - `bitcoin`
     - `ftp`
     - `ftps`
@@ -66,7 +63,6 @@ registerProtocolHandler(scheme, url)
     <!-- This must match: https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
 
 - `url`
-
   - : A string containing the URL of the handler.
     This URL must include `%s`, as a placeholder that will be replaced with the [escaped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) URL to be handled.
 
@@ -79,10 +75,8 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : The user agent blocked the registration.
     This might happen if:
-
     - The registered scheme (protocol) is invalid, such as a scheme the browser handles itself (`https:`, `about:`, etc.)
     - The handler URL's {{Glossary("origin")}} does not match the origin of the page calling this API.
     - The handler's URL's scheme is not `https`.

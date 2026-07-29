@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Ember_routing", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Ember articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
 
 <table>
@@ -44,7 +47,6 @@ Our final Ember article provides you with a list of resources that you can use t
 ## Further resources
 
 - [Ember.JS Guides](https://guides.emberjs.com/release/)
-
   - [Tutorial: Super Rentals](https://guides.emberjs.com/release/tutorial/part-1/)
 
 - [Ember.JS API Documentation](https://api.emberjs.com/ember/release/)

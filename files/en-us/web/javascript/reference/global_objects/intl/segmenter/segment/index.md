@@ -1,11 +1,11 @@
 ---
 title: Intl.Segmenter.prototype.segment()
+short-title: segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segmenter.segment
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`segment()`** method of {{jsxref("Intl.Segmenter")}} instances segments a string according to the locale and granularity of this `Intl.Segmenter` object.
 

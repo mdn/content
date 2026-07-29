@@ -3,12 +3,10 @@ title: "Navigator: taintEnabled() method"
 short-title: taintEnabled()
 slug: Web/API/Navigator/taintEnabled
 page-type: web-api-instance-method
-status:
-  - deprecated
 browser-compat: api.Navigator.taintEnabled
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.taintEnabled()`** method always returns
 `false`.

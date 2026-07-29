@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.scrollend_event
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollend`** event fires when the document view has completed scrolling.
 Scrolling is considered completed when the scroll position has no more pending updates and the user has completed their gesture.

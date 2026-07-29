@@ -22,9 +22,7 @@ bufferData(target, srcData, usage, srcOffset, length)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.ARRAY_BUFFER`
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
@@ -53,10 +51,8 @@ bufferData(target, srcData, usage, srcOffset, length)
     If `null`, a data store is still created, but the content is uninitialized and undefined.
     One of `size` and `srcData` must be provided.
 - `usage`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the intended usage pattern of the data store
     for optimization purposes. Possible values:
-
     - `gl.STATIC_DRAW`
       - : The contents are intended to be specified
         once by the application, and used many times as the source for WebGL

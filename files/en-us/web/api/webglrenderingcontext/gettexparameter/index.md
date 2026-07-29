@@ -21,20 +21,16 @@ getTexParameter(target, pname)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
     the following values are available additionally:
-
     - `gl.TEXTURE_3D`: A three-dimensional texture.
     - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
     <table class="standard-table">

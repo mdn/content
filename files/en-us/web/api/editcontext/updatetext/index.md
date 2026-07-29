@@ -31,9 +31,14 @@ updateText(rangeStart, rangeEnd, text)
 - `text`
   - : A string representing the new text content.
 
+### Return value
+
+None (`undefined`).
+
 ### Exceptions
 
-- If less than three arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
+- {{jsxref("TypeError")}}
+  - : Thrown if the method is called with less than three arguments.
 
 ## Examples
 

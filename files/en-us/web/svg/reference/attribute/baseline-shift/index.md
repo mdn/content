@@ -12,7 +12,7 @@ The **`baseline-shift`** attribute allows repositioning of the dominant-baseline
 > As a presentation attribute, `baseline-shift` also has a CSS property counterpart: {{cssxref("baseline-shift")}}. When both are specified, the CSS property takes priority.
 
 > [!NOTE]
-> This property is going to be deprecated and authors are advised to use [`vertical-align`](/en-US/docs/Web/CSS/vertical-align) instead.
+> This property is going to be deprecated and authors are advised to use {{cssxref("vertical-align")}} instead.
 
 You can use this attribute with the following SVG elements:
 
@@ -46,10 +46,9 @@ You can use this attribute with the following SVG elements:
 - `super`
   - : The dominant-baseline is shifted to the default position for superscripts.
 - `<length-percentage>`
-
   - : A length value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified length.
 
-    A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{SVGAttr("line-height")}}.
+    A percentage value raises (positive value) or lowers (negative value) the dominant-baseline of the parent text content element by the specified percentage of the {{cssxref("line-height")}}.
 
 ## Specifications
 

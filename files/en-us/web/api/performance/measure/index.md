@@ -33,31 +33,43 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
 ### Parameters
 
 - `measureName`
-
   - : A string representing the name of the measure.
 
 - `measureOptions` {{optional_inline}}
-
   - : An object that may contain measure options.
-
     - `detail` {{optional_inline}}
       - : Arbitrary metadata to be included in the measure. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    - `start` {{optional_inline}}
+        - `devtools`
+          - : Some browsers have use a structured `devtools` object within the `detail` object as part of an Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+            - `dataType` {{experimental_inline}}
+              - : String with a value of `track-entry` (for defining a new track) or `marker` (for defining an entry in a track).
+            - `color` {{optional_inline}} {{experimental_inline}}
+              - : Defaults to `"primary"`. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+            - `track` {{optional_inline}} {{experimental_inline}}
+              - : String of the name of the custom track (required for `track-entry`)
+            - `trackGroup` {{optional_inline}} {{experimental_inline}}
+              - : String of the name of the grouping withing a custom track (required for `track-entry`)
+            - `properties` {{optional_inline}} {{experimental_inline}}
+              - : Array of key-value pairs. Values can be any JSON-compatible type.
+            - `tooltipText` {{optional_inline}} {{experimental_inline}}
+              - : Short description for tooltip.
 
+    - `start` {{optional_inline}}
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time, or string that names a {{domxref("PerformanceMark")}} to use for the start time.
 
         If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `startMark`.
 
     - `duration` {{optional_inline}}
       - : Duration (in milliseconds) between the start and end mark times. If omitted, this defaults to {{domxref("performance.now()")}}; the time that has elapsed since the context was created. If provided, you must also specify either `start` or `end` but not both.
-    - `end` {{optional_inline}}
 
+    - `end` {{optional_inline}}
       - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or string that names a {{domxref("PerformanceMark")}} to use for the end time.
 
         If this is a string naming a {{domxref("PerformanceMark")}}, then it is defined in the same way as `endMark`.
 
 - `startMark` {{optional_inline}}
   - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
+
 - `endMark` {{optional_inline}}
   - : A string naming a {{domxref("PerformanceMark")}} in the performance timeline. The {{domxref("PerformanceEntry.startTime")}} property of this mark will be used for calculating the measure.
     If you want to pass this argument, you must also pass either `startMark` or an empty `measureOptions` object.
@@ -71,7 +83,6 @@ The returned _measure_ will have the following property values:
 - {{domxref("PerformanceEntry.entryType","entryType")}} - set to `"measure"`.
 - {{domxref("PerformanceEntry.name","name")}} - set to the `name` argument.
 - {{domxref("PerformanceEntry.startTime","startTime")}} - set to:
-
   - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `measureOptions.start`.
   - the {{domxref("DOMHighResTimeStamp","timestamp")}} of a start mark, if specified in `measureOptions.start` or `startMark`
   - a timestamp calculated from the `measureOptions.end` and `measureOptions.duration` (if `measureOptions.start` was not specified)
@@ -80,7 +91,6 @@ The returned _measure_ will have the following property values:
 - {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure calculated by subtracting the `startTime` from the end timestamp.
 
   The end timestamp is one of:
-
   - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `measureOptions.end`.
   - the {{domxref("DOMHighResTimeStamp","timestamp")}} of an end mark, if one is specified in `measureOptions.end` or `endMark`
   - a timestamp calculated from the `measureOptions.start` and `measureOptions.duration` (if `measureOptions.end` was not specified)
@@ -91,24 +101,19 @@ The returned _measure_ will have the following property values:
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
-
     - Both `endMark` and `measureOptions` are specified.
     - `measureOptions` is specified with `duration` but without specifying either `start` or `end`.
     - `measureOptions` is specified with all of `start`, `end`, and `duration`.
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : The named mark does not exist.
-
     - An end mark is specified using either `endMark` or `measureOptions.end`, but there is no {{domxref('PerformanceMark')}} in the performance buffer with the matching name.
     - An end mark is specified using either `endMark` or `measureOptions.end`, but it cannot be converted to match that of a read only attribute in the {{domxref("PerformanceTiming")}} interface.
     - A start mark is specified using either `startMark` or `measureOptions.start`, but there is no {{domxref('PerformanceMark')}} in the performance buffer with the matching name.
     - A start mark is specified using either `startMark` or `measureOptions.start`, but it cannot be converted to match that of a read only attribute in the {{domxref("PerformanceTiming")}} interface.
 
 - `DataCloneError` {{domxref("DOMException")}}
-
   - : The `measureOptions.detail` value is non-`null` and cannot be serialized using the HTML "StructuredSerialize" algorithm.
 
 - {{jsxref("RangeError")}}
@@ -149,6 +154,44 @@ performance.measure("login-click", {
   detail: { htmlElement: myElement.id },
   start: myClickEvent.timeStamp,
   end: myMarker.startTime,
+});
+```
+
+### DevTools Extensibility API
+
+For browsers that support the [Extensibility API](https://developer.chrome.com/docs/devtools/performance/extension) you can use the `detail` parameter to provide more details in a `devtools` object that will be used to display this in performance profiles:
+
+```js
+const imageProcessingTimeStart = performance.now();
+
+// ... later in your code
+
+performance.measure("Image Processing Complete", {
+  start: imageProcessingTimeStart,
+  end: performance.now(),
+  detail: {
+    // This data appears in the "Summary"
+    extraInfo: {
+      imageId: "xyz-123",
+      source: "cache",
+      checkUrl: "https://example.com/check/xyz-123",
+    },
+    // The devtools object controls the track visualization
+    devtools: {
+      dataType: "track-entry",
+      track: "Image Processing Tasks",
+      trackGroup: "My Tracks",
+      color: "tertiary-dark",
+      properties: [
+        ["Filter Type", "Gaussian Blur"],
+        // Values can be objects, arrays, or other types
+        ["Resize Dimensions", { w: 500, h: 300 }],
+        // String values that are URLs get linkified
+        ["Image URL", "https://example.com/img.png"],
+      ],
+      tooltipText: "Image processed successfully",
+    },
+  },
 });
 ```
 

@@ -1,11 +1,11 @@
 ---
-title: "<del>: The Deleted Text element"
+title: "`<del>` HTML deleted text element"
+short-title: <del>
 slug: Web/HTML/Reference/Elements/del
 page-type: html-element
 browser-compat: html.elements.del
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 
@@ -21,8 +21,8 @@ The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
 ```css interactive-example
 del {
   text-decoration: line-through;
-  background-color: #fbb;
-  color: #555;
+  background-color: #ffbbbb;
+  color: #555555;
 }
 
 ins {
@@ -75,7 +75,7 @@ del::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been deleted would adversely affect understanding.
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Examples

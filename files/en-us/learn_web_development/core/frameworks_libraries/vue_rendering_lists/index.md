@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_first_component","Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Vue articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 At this point we've got a fully working component; we're now ready to add multiple `ToDoItem` components to our app. In this article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
 <table>
@@ -124,7 +127,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 3. Now, add the `v-for` directive and `key` attribute to the `<li>` element in your `App.vue` template, like so:
 
-   ```html
+   ```vue
    <ul>
      <li v-for="item in ToDoItems" :key="item.id">
        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
@@ -136,7 +139,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 4. Update the `label="My ToDo Item"` attribute to `:label="item.label"`, and the `:done="true"` attribute to `:done="item.done"`, as seen in context below:
 
-   ```html
+   ```vue
    <ul>
      <li v-for="item in ToDoItems" :key="item.id">
        <to-do-item :label="item.label" :done="item.done"></to-do-item>
@@ -176,7 +179,7 @@ export default {
 
 Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem` component. Your `App.vue` template should now look like this:
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>My To-Do List</h1>

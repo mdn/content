@@ -3,9 +3,8 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Executes JavaScript in the window that the devtools are attached to.
 
@@ -19,6 +18,8 @@ The script is evaluated by default in the main frame of the page. The script mus
 
 You can't call `eval()` on privileged browser windows such as "about:addons".
 
+In Firefox 153 and later, calling `eval()` on a `file://` URL requires the extension to be granted file scheme access by the user. Without this permission, the promise rejects with an error. Use {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}} to check whether the user has granted the extension this permission.
+
 You can optionally provide an `options` parameter, which includes options to evaluate the script in a different frame or in the context of attached content scripts. Note that Firefox does not yet support the `options` parameter.
 
 The `eval()` function returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to the evaluated result of the script or to an error.
@@ -30,7 +31,7 @@ The script gets access to a number of objects that help the injected script inte
 - `$0`
   - : Contains a reference to the element that's currently selected in the devtools Inspector.
 - `inspect()`
-  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
+  - : Given an object, if it is a DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the console.
 
 [See some examples.](#examples)
 
@@ -48,9 +49,7 @@ let evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. The JavaScript expression to evaluate. The string must evaluate to an object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
 - `options` {{optional_inline}}
-
   - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
-
     - `frameURL` {{optional_inline}}
       - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
     - `useContentScriptContext` {{optional_inline}}
@@ -67,18 +66,12 @@ If no error occurred, element 0 will contain the result of evaluating the expres
 If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
 - errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-
   - a boolean property `isException`, set to `true`
   - a string property `value`, giving more details.
 
 - other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -162,6 +155,10 @@ inspectButton.addEventListener("click", () => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.

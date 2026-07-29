@@ -8,16 +8,13 @@ browser-compat: api.HTMLStyleElement.blocking
 
 {{APIRef("HTML DOM")}}
 
-The **`blocking`** property of the {{domxref("HTMLStyleElement")}} interface is a string indicating that certain operations should be blocked on the fetching of critical subresources.
-
-It reflects the `blocking` attribute of the {{HTMLElement("style")}} element.
+The read-only **`blocking`** property of the {{domxref("HTMLStyleElement")}} returns a live {{domxref("DOMTokenList")}} object containing the operations that should be blocked on the fetching of an external resource. It reflects the {{HTMLElement("style")}} element's [`blocking`](/en-US/docs/Web/HTML/Reference/Elements/style#blocking) content attribute.
 
 ## Value
 
-A string. Must be a space-separated list of blocking tokens listed below indicating the operations that are to be blocked:
+A live {{domxref("DOMTokenList")}} object.
 
-- `render`
-  - : The rendering of content on the screen is blocked.
+Although the `blocking` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `blocking` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 
@@ -31,7 +28,7 @@ A string. Must be a space-separated list of blocking tokens listed below indicat
 
 ```js
 const el = document.getElementById("el");
-console.log(el.blocking); // Output: "render"
+console.log(el.blocking); // Output: DOMTokenList ["render"]
 ```
 
 ## Specifications

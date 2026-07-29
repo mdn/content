@@ -32,6 +32,7 @@ Henkan
 Hijri
 Hinckley
 Hiroko
+Huangdi
 háček
 Jeonja
 Kayah
@@ -70,6 +71,7 @@ Rohingya
 Romaji
 Saurashtra
 Sharada
+shippo
 Sinhala
 Sora_Sompeng
 Sunuwar
@@ -79,9 +81,11 @@ Tangsa
 Thaana
 Tham
 Tirhuta
+Tishrei
 Tlayolotl
 Totnes
 Wancho
 Warang
 Zenkaku
 zhuyin
+Śaka

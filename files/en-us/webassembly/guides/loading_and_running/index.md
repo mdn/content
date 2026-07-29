@@ -89,7 +89,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 1. Create a new {{domxref("XMLHttpRequest()")}} instance, and use its {{domxref("XMLHttpRequest.open","open()")}} method to open a request, setting the request method to `GET`, and declaring the path to the file we want to fetch.
 2. The key part of this is to set the response type to `'arraybuffer'` using the {{domxref("XMLHttpRequest.responseType","responseType")}} property.
 3. Next, send the request using {{domxref("XMLHttpRequest.send()")}}.
-4. We then use the {{domxref("XMLHttpRequest.load_event", "load")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) method as we did with Fetch.
+4. We then use the {{domxref("XMLHttpRequestEventTarget/load_event", "load")}} event handler to invoke a function when the response has finished downloading — in this function we get the array buffer from the {{domxref("XMLHttpRequest.response", "response")}} property, and then feed that into our [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) method as we did with Fetch.
 
 The final code looks like this:
 

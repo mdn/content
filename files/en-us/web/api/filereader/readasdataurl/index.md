@@ -59,14 +59,10 @@ function previewFile() {
   const file = fileInput.files[0];
   const reader = new FileReader();
 
-  reader.addEventListener(
-    "load",
-    () => {
-      // convert image file to base64 string
-      preview.src = reader.result;
-    },
-    false,
-  );
+  reader.addEventListener("load", () => {
+    // convert image file to base64 string
+    preview.src = reader.result;
+  });
 
   if (file) {
     reader.readAsDataURL(file);
@@ -99,17 +95,13 @@ function previewFiles() {
     if (/\.(?:jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener(
-        "load",
-        () => {
-          const image = new Image();
-          image.height = 100;
-          image.title = file.name;
-          image.src = reader.result;
-          preview.appendChild(image);
-        },
-        false,
-      );
+      reader.addEventListener("load", () => {
+        const image = new Image();
+        image.height = 100;
+        image.title = file.name;
+        image.src = reader.result;
+        preview.appendChild(image);
+      });
 
       reader.readAsDataURL(file);
     }

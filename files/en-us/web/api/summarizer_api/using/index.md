@@ -83,11 +83,9 @@ console.log("Stream complete");
 summaryOutput.textContent = summary;
 ```
 
-After a `Summarizer` instance has been created, you can remove it again using the {{domxref("Summarizer.destroy()")}} instance method. It makes sense to destroy `Summarizer` objects if they are no longer going to be used, as they tie up significant resources in their handling.
+## Cancelling operations and destroying instances
 
-## Cancelling summarize operations
-
-You can cancel a pending `create()`, `summarize()`, or `summarizeStreaming()` operation using an {{domxref("AbortController")}}:
+You can cancel a pending `create()`, `summarize()`, or `summarizeStreaming()` operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `Summarizer.create()` operation would look like this:
 
 ```js
 const controller = new AbortController();
@@ -99,6 +97,14 @@ const summary = await summarizer.summarize(myTextString, {
 
 controller.abort();
 ```
+
+After a `Summarizer` instance has been created, you can release its assigned resources and stop any further activity by calling its {{domxref("Summarizer.destroy()")}} method. You are encouraged to do this after you've finished with the `Summarizer` object as it can consume a lot of resources.
+
+```js
+summarizer.destroy();
+```
+
+If a `create()` call has an associated {{domxref("AbortController")}}, and you call its {{domxref("AbortController.abort()")}} method after the `create()` call has succeeded, it will have the same effect as calling `destroy()` on the resulting `Summarizer` object.
 
 ## Monitoring download progress
 
@@ -204,7 +210,7 @@ The second half of our markup includes a {{htmlelement("p")}} element to display
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

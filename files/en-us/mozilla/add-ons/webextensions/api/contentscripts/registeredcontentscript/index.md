@@ -3,9 +3,8 @@ title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 page-type: webextension-api-type
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
 
@@ -18,10 +17,6 @@ It defines a single function {{WebExtAPIRef("contentScripts.RegisteredContentScr
 
 - {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}
   - : Unregisters the content scripts represented by this object.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -55,3 +50,7 @@ browser.browserAction.onClicked.addListener(toggle);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

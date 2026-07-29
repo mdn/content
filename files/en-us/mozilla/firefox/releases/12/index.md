@@ -1,14 +1,14 @@
 ---
-title: Firefox 12 for developers
+title: Firefox 12 release notes for developers
+short-title: Firefox 12
 slug: Mozilla/Firefox/Releases/12
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### HTML
 
@@ -36,7 +36,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 - {{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.
 - The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the `whatToShow` and `filter` parameters optional and removes the non-standard fourth parameter, `entityReferenceExpansion`.
 - The {{domxref("Blob")}} interface's `slice()` method was affected by a bug that prevented it from properly accepting `start` and `end` values outside the range of a signed 64-bit integer; this has been fixed.
-- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
+- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) when computing the element's bounding rectangle.
 - The `crossOrigin` property is now supported by {{domxref("HTMLMediaElement")}}.
 
 #### New WebAPIs
@@ -119,7 +119,3 @@ Mozilla has been working on integrating its own Web developer tools that complem
 ### Other changes
 
 - The editor component (known as Midas) now only accepts events from privileged code.
-
-## See also
-
-{{Firefox_for_developers}}

@@ -5,9 +5,10 @@ page-type: javascript-constructor
 status:
   - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
+sidebar: jsref
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`Temporal.PlainYearMonth()`** constructor creates {{jsxref("Temporal.PlainYearMonth")}} objects.
 
@@ -21,7 +22,8 @@ new Temporal.PlainYearMonth(year, month, calendar)
 new Temporal.PlainYearMonth(year, month, calendar, referenceDay)
 ```
 
-> **Note:** `Temporal.PlainYearMonth()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainYearMonth()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 > [!WARNING]
 > Avoid using the `calendar` and `referenceDay` parameters, because {{jsxref("Temporal/PlainYearMonth/equals", "equals()")}} and {{jsxref("Temporal/PlainYearMonth/compare", "compare()")}} will consider the reference day for comparison, causing two equivalent year-months to be considered different if they have different reference days. To create a `Temporal.PlainYearMonth` object with a non-ISO calendar, use the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} static method.

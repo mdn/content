@@ -28,5 +28,5 @@ For example, if a 600x400 pixel element is being displayed inside a 300x300 pixe
 
 ## See also
 
-- <https://www.w3.org/TR/cssom-view-1/>
+- [The CSSOM View Module](https://drafts.csswg.org/cssom-view/) specification
 - [MSDN: Measuring Element Dimension and Location](<https://learn.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)

@@ -2,14 +2,12 @@
 title: ScrollTimeline
 slug: Web/API/ScrollTimeline
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ScrollTimeline
 ---
 
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations")}}
 
-The **`ScrollTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a scroll progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details).
+The **`ScrollTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a scroll progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more details).
 
 Pass a `ScrollTimeline` instance to the {{domxref("Animation.Animation", "Animation()")}} constructor or the {{domxref("Element.animate()", "animate()")}} method to specify it as the timeline that will control the progress of the animation.
 
@@ -17,16 +15,16 @@ Pass a `ScrollTimeline` instance to the {{domxref("Animation.Animation", "Animat
 
 ## Constructor
 
-- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.ScrollTimeline", "ScrollTimeline()")}}
   - : Creates a new `ScrollTimeline` object instance.
 
 ## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("AnimationTimeline")}}._
 
-- {{domxref("ScrollTimeline.source", "source")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.source", "source")}} {{ReadOnlyInline}}
   - : Returns a reference to the scrollable element (_scroller_) whose scroll position is driving the progress of the timeline and therefore the animation.
-- {{domxref("ScrollTimeline.axis", "axis")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ScrollTimeline.axis", "axis")}} {{ReadOnlyInline}}
   - : Returns an enumerated value representing the scroll axis that is driving the progress of the timeline.
 
 ## Instance methods
@@ -69,7 +67,7 @@ The CSS for the example looks like this:
 }
 
 .output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   position: fixed;
   top: 5px;
   right: 5px;
@@ -119,5 +117,5 @@ Scroll to see the box being animated.
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}

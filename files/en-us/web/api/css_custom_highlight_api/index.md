@@ -213,7 +213,7 @@ Finally, the `::highlight()` pseudo-element is used in CSS to style the highligh
 
 ```css
 ::highlight(search-results) {
-  background-color: #f06;
+  background-color: #ff0066;
   color: white;
 }
 ```
@@ -234,6 +234,7 @@ The result is shown below. Type text within the search field to highlight matche
 
 ## See also
 
-- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
 - HTML [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
 - CSS {{cssxref("pseudo-elements")}}
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module
+- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/) via CSS-Tricks (2022)

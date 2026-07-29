@@ -2,9 +2,8 @@
 title: JavaScript Guide
 slug: Web/JavaScript/Guide
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
@@ -152,6 +151,14 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 - [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
 - [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
+
+## Resource management
+
+Overview: [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+
+- [The `using` and `await using` declarations](/en-US/docs/Web/JavaScript/Guide/Resource_management#the_using_and_await_using_declarations)
+- [The `DisposableStack` and `AsyncDisposableStack` objects](/en-US/docs/Web/JavaScript/Guide/Resource_management#the_disposablestack_and_asyncdisposablestack_objects)
+- [Error handling](/en-US/docs/Web/JavaScript/Guide/Resource_management#error_handling)
 
 ## Internationalization
 

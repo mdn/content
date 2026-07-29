@@ -3,9 +3,8 @@ title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.Cookie
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
 
@@ -16,7 +15,7 @@ Values of this type are objects that can contain these properties:
 - `domain`
   - : A `string` representing the domain the cookie belongs to (e.g., "www.google.com" or "example.com").
 - `expirationDate` {{optional_inline}}
-  - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
+  - : A `number` representing the expiration date of the cookie as the seconds after the UNIX epoch. Includes milliseconds in the fractional part. Not provided for session cookies.
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This is an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - `hostOnly`
@@ -26,9 +25,7 @@ Values of this type are objects that can contain these properties:
 - `name`
   - : A `string` representing the name of the cookie.
 - `partitionKey` {{optional_inline}}
-
   - : An `object` representing the description of the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
-
     - `topLevelSite`
       - : A `string` representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.
 

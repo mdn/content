@@ -84,9 +84,11 @@ Alternatively, you can also just display a warning at the top of the page for br
 
 #### Mathematical fonts
 
-As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Guides/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Guides/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
+As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Guides/Fonts) article, mathematical fonts are instrumental to render MathML content.
+It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Guides/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
 
-The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
+The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets.
+For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
 ```html
 <link
@@ -100,6 +102,15 @@ Several fonts are proposed and you can just select a different style, for exampl
 <link
   rel="stylesheet"
   href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
+```
+
+The [XITS font](https://fred-wang.github.io/MathFonts/XITS/mathfonts.css) is recommended for formulas that need to be rendered right-to-left.
+For more information see the [`dir`](/en-US/docs/Web/MathML/Reference/Global_attributes/dir) global property.
+
+```html
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/XITS/mathfonts.css" />
 ```
 
 > [!NOTE]

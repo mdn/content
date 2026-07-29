@@ -21,7 +21,7 @@ A string.
 When the following code is used inside a service worker to respond to a push messages
 by sending the data received via {{domxref("PushMessageData")}} to the main context via
 a [channel message](/en-US/docs/Web/API/Channel_Messaging_API), the event
-object of `onmessage` will be a `ExtendableMessageEvent`.
+object of `onmessage` will be an `ExtendableMessageEvent`.
 
 ```js
 let port;

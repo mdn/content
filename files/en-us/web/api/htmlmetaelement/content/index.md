@@ -20,7 +20,7 @@ A string.
 ### Reading meta element content
 
 The following example queries a `<meta>` element that contains a `name` attribute with the value of `keywords`.
-The `content` value is logged to the console to display the [keywords](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification) of the document:
+The `content` value is logged to the console to display the [keywords](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification) of the document:
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web">
@@ -31,7 +31,7 @@ console.log(meta.content);
 
 ### Creating a meta element with content
 
-The following example creates a new `<meta>` element with a `name` attribute set to [`description`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The following example creates a new `<meta>` element with a `name` attribute set to [`description`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#meta_names_defined_in_the_html_specification).
 The `content` attribute sets a description of the document and is appended to the document `<head>`:
 
 ```js

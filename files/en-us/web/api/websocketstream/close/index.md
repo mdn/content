@@ -5,15 +5,14 @@ slug: Web/API/WebSocketStream/close
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.WebSocketStream.close
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`close()`** method of the
 {{domxref("WebSocketStream")}} interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
-
-An alternative mechanism for closing a `WebSocketStream` is to specify an {{domxref("AbortSignal")}} in the [`signal`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#signal) option of the constructor upon creation. The associated {{domxref("AbortController")}} can then be used to close the WebSocket connection. This is generally the preferred mechanism. However, `close()` can be used if you wish to specify a custom code and/or reason.
 
 ## Syntax
 
@@ -51,7 +50,7 @@ const wss = new WebSocketStream(wsURL);
 
 setTimeout(() => {
   wss.close({
-    code: 1000,
+    closeCode: 1000,
     reason: "That's all folks",
   });
 }, 10000);

@@ -40,7 +40,6 @@ For {{SVGElement("linearGradient")}}, `gradientUnits` defines the coordinate sys
   - : This value indicates that the attributes represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.
     Percentages represent values relative to the current SVG viewport.
 - `objectBoundingBox`
-
   - : This value indicates that the user coordinate system for the attributes is established using the bounding box of the element to which the gradient is applied and then applying the transform specified by attribute `gradientTransform`.
 
     Percentages represent values relative to the bounding box for the object.

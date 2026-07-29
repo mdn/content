@@ -63,7 +63,7 @@ the `.` returns the `bar` node, which may be different from the current node.
 
 ## Specifications
 
-[XSLT 1.0 12.4](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-current)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt-10/#function-current)
 
 ## Gecko support
 

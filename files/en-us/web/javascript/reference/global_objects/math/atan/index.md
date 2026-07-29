@@ -1,11 +1,11 @@
 ---
 title: Math.atan()
+short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.atan
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.atan()`** static method returns the inverse tangent (in radians) of a number, that is
 
@@ -82,3 +82,4 @@ Note that you may want to avoid the `theta` function and use {{jsxref("Math.atan
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("atan()")}} function

@@ -3,9 +3,8 @@ title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAllCookieStores
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.
 

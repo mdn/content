@@ -2,9 +2,8 @@
 title: "SyntaxError: duplicate capture group name in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_duplicate_capture_group_name
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "duplicate capture group name in regular expression" occurs when a regular expression pattern contains two or more [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) with the same name, and these capture groups could be matched at the same time.
 

@@ -41,8 +41,8 @@ On the surface, the `aria-hidden="true"` and the `role="presentation"` and its s
 `aria-hidden="true"` should not be added when:
 
 - The HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute is present
-- The element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/display)
-- The element or the element's ancestor is hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility)
+- The element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/Reference/Properties/display)
+- The element or the element's ancestor is hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/Reference/Properties/visibility)
 
 In all three scenarios, the attribute is unnecessary to add because the element has already been removed from the accessibility tree. Visually hiding elements with `display` or `visibility` hides content from the screen and from assistive technologies.
 

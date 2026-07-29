@@ -3,9 +3,8 @@ title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 page-type: javascript-class
 browser-compat: javascript.builtins.TypeError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypeError`** object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.
 

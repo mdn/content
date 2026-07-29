@@ -1,13 +1,15 @@
 ---
 title: RegExp.prototype.compile()
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 page-type: javascript-instance-method
 status:
   - deprecated
 browser-compat: javascript.builtins.RegExp.compile
+sidebar: jsref
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > The `compile()` method is only specified for compatibility reasons. Using `compile()` causes the otherwise immutable regex source and flags to become mutable, which may break user expectations. You can use the [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) constructor to construct a new regular expression object instead.
@@ -30,6 +32,12 @@ compile(pattern, flags)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `this` value is not an instance of the current realm's `RegExp` constructor.
+    This includes a subclass of `RegExp` and the `RegExp` constructor from a different realm.
 
 ## Examples
 

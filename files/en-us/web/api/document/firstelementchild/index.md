@@ -18,7 +18,7 @@ See {{domxref("Element.firstElementChild")}} for the first child element of spec
 
 ## Value
 
-A {{domxref("Element")}} object, or `null`.
+An {{domxref("Element")}} object, or `null`.
 
 ## Examples
 

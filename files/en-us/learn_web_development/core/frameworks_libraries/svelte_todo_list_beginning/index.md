@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Svelte articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a to-do list. In this article we will first have a look at the desired functionality of our app, and then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our to-do list app features, which we'll go on to in subsequent articles.
 
 We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, and we'll look at some more advanced concepts along the way too.
@@ -454,18 +457,18 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font:
-    1.6rem/1.25 Arial,
+    1.6rem/1.25 "Arial",
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #4d4d4d;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
 }
-/*END RESETS*/
+/* END RESETS */
 
 /* GLOBAL STYLES */
 .form-group > input[type="text"] {
@@ -480,14 +483,14 @@ body {
 }
 .btn.toggle-btn {
   border-width: 1px;
-  border-color: #d3d3d3;
+  border-color: lightgray;
 }
 .btn.toggle-btn[aria-pressed="true"] {
   text-decoration: underline;
   border-color: #4d4d4d;
 }
 .btn__danger {
-  color: #fff;
+  color: white;
   background-color: #ca3c3c;
   border-color: #bd2130;
 }
@@ -495,8 +498,8 @@ body {
   border-color: lightgrey;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: white;
+  background-color: black;
 }
 .btn__primary:disabled {
   color: darkgrey;
@@ -535,7 +538,7 @@ body {
 .stack-large > * + * {
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
@@ -549,7 +552,7 @@ body {
 /* END GLOBAL STYLES */
 
 .todoapp {
-  background: #fff;
+  background: white;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
@@ -557,7 +560,7 @@ body {
     0 2px 4px 0 rgb(0 0 0 / 20%),
     0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
-@media screen and (min-width: 550px) {
+@media screen and (width >= 550px) {
   .todoapp {
     padding: 4rem;
   }
@@ -586,7 +589,7 @@ body {
 }
 .input__lg {
   padding: 2rem;
-  border: 2px solid #000;
+  border: 2px solid black;
 }
 .input__lg:focus {
   border-color: #4d4d4d;
@@ -600,7 +603,7 @@ body {
 [class*="__lg"]:not(:last-child) {
   margin-bottom: 1rem;
 }
-@media screen and (min-width: 620px) {
+@media screen and (width >= 620px) {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
@@ -630,9 +633,9 @@ body {
 /* CHECKBOX STYLES */
 .c-cb {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.6rem;
   line-height: 1.25;
   display: block;
@@ -670,7 +673,7 @@ body {
 .c-cb > label::before {
   content: "";
   position: absolute;
-  border: 2px solid currentcolor;
+  border: 2px solid currentColor;
   background: transparent;
 }
 .c-cb > input[type="checkbox"]:focus + label::before {

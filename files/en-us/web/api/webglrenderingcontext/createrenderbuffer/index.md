@@ -25,7 +25,7 @@ None.
 ### Return value
 
 A {{domxref("WebGLRenderbuffer")}} object that stores data such an image, or can be
-source or target of an rendering operation.
+source or target of a rendering operation.
 
 ## Examples
 

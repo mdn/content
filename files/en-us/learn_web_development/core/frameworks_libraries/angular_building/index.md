@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Angular articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
 
 <table>
@@ -54,7 +57,7 @@ Because these files are static, you can host them on any web server capable of s
 - Java
 - .NET
 
-You can use any backend such as [Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/hosting-a-static-website).
+You can use any backend such as [Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://docs.cloud.google.com/appengine/docs/standard/hosting-a-static-website).
 
 ### Host locally
 

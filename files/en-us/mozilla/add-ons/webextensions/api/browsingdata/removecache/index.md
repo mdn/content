@@ -3,9 +3,8 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCache
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the browser's cache.
 
@@ -46,11 +45,11 @@ function onError(error) {
 browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

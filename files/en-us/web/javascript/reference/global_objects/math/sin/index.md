@@ -1,11 +1,11 @@
 ---
 title: Math.sin()
+short-title: sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.sin
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.sin()`** static method returns the sine of a number in radians.
 
@@ -74,3 +74,4 @@ Math.sin(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("sin()")}} function

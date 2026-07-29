@@ -24,9 +24,7 @@ new NDEFRecord(options)
 ### Parameters
 
 - `options`
-
   - : An object with the following properties:
-
     - `data` {{optional_inline}}
       - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}
@@ -34,7 +32,7 @@ new NDEFRecord(options)
     - `id` {{optional_inline}}
       - : A developer-defined identifier for the record.
     - `lang` {{optional_inline}}
-      - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      - : A valid {{glossary("BCP 47 language tag")}}.
     - `mediaType` {{optional_inline}}
       - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
     - `recordType`

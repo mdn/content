@@ -11,7 +11,7 @@ browser-compat: api.Window.sessionStorage
 The read-only **`sessionStorage`** property accesses a session {{DOMxRef("Storage")}} object for the current {{glossary("origin")}}. `sessionStorage` is similar to {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while `localStorage` is partitioned by origin only, `sessionStorage` is partitioned by both origin and browser tabs (top-level browsing contexts). The data in `sessionStorage` is only kept for the duration of the page session.
 
 - Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is accessible only in that particular tab. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area.
-- If the page has a {{domxref("Window.opener", "opener")}}, the `sessionStorage` is initially a copy of the opener's `sessionStorage` object. However, they are still separate and changes to one do not affect the other. To prevent the `sessionStorage` from being copied, use one of the techniques that remove `opener` (see {{domxref("Window.opener")}}).
+- If the page has an {{domxref("Window.opener", "opener")}}, the `sessionStorage` is initially a copy of the opener's `sessionStorage` object. However, they are still separate and changes to one do not affect the other. To prevent the `sessionStorage` from being copied, use one of the techniques that remove `opener` (see {{domxref("Window.opener")}}).
 - A page session lasts as long as the tab or the browser is open, and survives over page reloads and restores.
 - Opening a page in a new tab or window creates a new session with the value of the top-level browsing context, which differs from how session cookies work.
 - Closing the tab/window ends the session and clears the data in `sessionStorage`.
@@ -24,10 +24,8 @@ session storage space.
 ### Exceptions
 
 - `SecurityError`
-
   - : Thrown in one of the following cases:
-
-    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
+    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Defenses/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
     - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
 
     Note that if the user blocks cookies, browsers will probably interpret this as an instruction to prevent the page from persisting data.

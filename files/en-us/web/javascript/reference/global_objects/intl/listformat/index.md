@@ -3,9 +3,8 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.ListFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 

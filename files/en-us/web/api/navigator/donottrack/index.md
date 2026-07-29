@@ -32,7 +32,7 @@ console.log(navigator.doNotTrack);
 
 ## Specifications
 
-Part of the discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dom-navigator-donottrack) specification.
+Part of the discontinued [Tracking Preference Expression (DNT)](https://w3c.github.io/dnt/drafts/tracking-dnt.html#dom-navigator-donottrack) specification.
 
 ## Browser compatibility
 

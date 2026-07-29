@@ -52,8 +52,8 @@ SVG element: {{SVGElement("animateTransform")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/animate.html#AnimateTransformElementTypeAttribute"
-          >SVG 1.1 (2nd Edition)</a
+          href="https://svgwg.org/specs/animations/#AnimateTransformElementTypeAttribute"
+          >Scalable Vector Graphics (SVG) 2</a
         >
       </td>
     </tr>
@@ -85,9 +85,9 @@ SVG element: {{SVGElement("feColorMatrix")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecolormatrix-type"
           rel="external"
-          >SVG 1.1 (2nd Edition)</a
+          >Filter Effects Module Level 1</a
         >
       </td>
     </tr>
@@ -119,9 +119,9 @@ SVG elements: {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-type"
           rel="external"
-          >SVG 1.1 (2nd Edition)</a
+          >Filter Effects Module Level 1</a
         >
       </td>
     </tr>
@@ -152,9 +152,9 @@ SVG element: {{SVGElement("feTurbulence")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute"
+          href="https://drafts.csswg.org/filter-effects-1/#element-attrdef-feturbulence-type"
           rel="external"
-          >SVG 1.1 (2nd Edition)</a
+          >Filter Effects Module Level 1</a
         >
       </td>
     </tr>
@@ -183,13 +183,13 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
       <th scope="row">Normative document</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/interact.html#ScriptElementTypeAttribute"
           rel="external"
-          >SVG 1.1 (2nd Edition) : script</a
+          >Scalable Vector Graphics (SVG) 2</a
         ><br /><a
-          href="https://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute"
+          href="https://w3c.github.io/svgwg/svg2-draft/styling.html#StyleElementTypeAttribute"
           rel="external"
-          >SVG 1.1 (2nd Edition) : style</a
+          >Scalable Vector Graphics (SVG) 2</a
         >
       </td>
     </tr>

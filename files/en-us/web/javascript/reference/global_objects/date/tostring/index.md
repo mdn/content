@@ -1,11 +1,11 @@
 ---
 title: Date.prototype.toString()
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Date")}} instances returns a string representing this date interpreted in the local timezone.
 

@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.RTT
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`RTT`** {{Glossary("request header")}} is a [network client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#network_client_hints) which provides the approximate round trip time on the application layer, in milliseconds.
 The RTT hint includes server processing time, unlike transport layer RTT.

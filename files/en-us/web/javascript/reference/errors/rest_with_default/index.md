@@ -2,9 +2,8 @@
 title: "SyntaxError: rest parameter may not have a default"
 slug: Web/JavaScript/Reference/Errors/Rest_with_default
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "rest parameter may not have a default" occurs when a [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) has a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters). Because the rest parameter always creates an array, the default value would never apply.
 

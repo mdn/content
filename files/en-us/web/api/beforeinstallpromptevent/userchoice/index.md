@@ -18,7 +18,6 @@ The **`userChoice`** property of the {{domxref("BeforeInstallPromptEvent")}} int
 A {{jsxref("Promise")}} which resolves to an object containing two properties:
 
 - `outcome` {{experimental_inline}} {{non-standard_inline}}
-
   - : A string indicating whether the user chose to install the app or not. It must be one of the following values:
     - `"accepted"`: The user installed the app.
     - `"dismissed"`: The user did not install the app.

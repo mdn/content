@@ -1,11 +1,11 @@
 ---
 title: TypedArray.prototype.set()
+short-title: set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.set
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`set()`** method of {{jsxref("TypedArray")}} instances stores multiple values in the typed
 array, reading input values from a specified array.

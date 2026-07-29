@@ -21,9 +21,7 @@ new AudioBuffer(options)
 ### Parameters
 
 - `options`
-
   - : Options are as follows:
-
     - `length`
       - : The size of the audio buffer in sample-frames. To determine
         the `length` to use for a specific number of seconds of audio, use

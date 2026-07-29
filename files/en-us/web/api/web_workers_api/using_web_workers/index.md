@@ -180,6 +180,21 @@ The port connection needs to be started either implicitly by use of the `onmessa
 > [!NOTE]
 > When using the `start()` method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.
 
+### Shared worker lifetime
+
+Shared workers are shut down when they are no longer referenced by any windows, iframes, or workers.
+
+Browsers _may_ keep workers alive between same-origin navigations to avoid the cost of restarting a shared worker used by a site when the user is navigating from page to page within that site.
+
+The [`extendedLifetime`](/en-US/docs/Web/API/SharedWorker/SharedWorker#extendedlifetime) constructor option may also be specified to keep a shared worker alive for a short period after all references to it have closed:
+
+```js
+const worker = new SharedWorker("worker.js", { extendedLifetime: true });
+```
+
+This allows work to be done after the user navigates away from the page, such as writing state information to storage, or sending analytics data back to servers.
+This is more ergonomic than using a service worker for the same purpose.
+
 ### Sending messages to and from a shared worker
 
 Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)):
@@ -243,51 +258,9 @@ The exception to this is if the worker script's origin is a globally unique iden
 
 ## Transferring data to and from workers: further details
 
-Data passed between the main page and workers is **copied**, not shared. Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker **do not share the same instance**, so the end result is that **a duplicate** is created on each end. Most browsers implement this feature as [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+Data passed between the main page and workers is _copied_, not shared (except for certain objects that can be explicitly [shared](#sharing_data)). Objects are serialized as they're handed to the worker, and subsequently, de-serialized on the other end. The page and worker **do not share the same instance**, so the end result is that **a duplicate** is created on each end. Most browsers implement this feature as [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-To illustrate this, let's create a function named `emulateMessage()`, which will simulate the behavior of a value that is _cloned and not shared_ during the passage from a `worker` to the main page or vice versa:
-
-```js
-function emulateMessage(vVal) {
-  return eval(`(${JSON.stringify(vVal)})`);
-}
-
-// Tests
-
-// test #1
-const example1 = new Number(3);
-console.log(typeof example1); // object
-console.log(typeof emulateMessage(example1)); // number
-
-// test #2
-const example2 = true;
-console.log(typeof example2); // boolean
-console.log(typeof emulateMessage(example2)); // boolean
-
-// test #3
-const example3 = new String("Hello World");
-console.log(typeof example3); // object
-console.log(typeof emulateMessage(example3)); // string
-
-// test #4
-const example4 = {
-  name: "Carina Anand",
-  age: 43,
-};
-console.log(typeof example4); // object
-console.log(typeof emulateMessage(example4)); // object
-
-// test #5
-function Animal(type, age) {
-  this.type = type;
-  this.age = age;
-}
-const example5 = new Animal("Cat", 3);
-alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object
-```
-
-A value that is cloned and not shared is called _message_. As you will probably know by now, _messages_ can be sent to and from the main thread by using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
+As you probably know by now, data is exchanged between the two threads via messages using `postMessage()`, and the `message` event's {{domxref("MessageEvent.data", "data")}} attribute contains data passed back from the worker.
 
 **example.html**: (the main page):
 
@@ -295,19 +268,17 @@ A value that is cloned and not shared is called _message_. As you will probably 
 const myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = (event) => {
-  console.log(`Worker said : ${event.data}`);
+  console.log(`Worker said : "${event.data}"`);
 };
 
-myWorker.postMessage("ali");
+myWorker.postMessage({ lastUpdate: new Date() });
 ```
 
 **my_task.js** (the worker):
 
 ```js
-postMessage("I'm working before postMessage('ali').");
-
-onmessage = (event) => {
-  postMessage(`Hi, ${event.data}`);
+self.onmessage = (event) => {
+  postMessage(`Last updated: ${event.data.lastUpdate.toDateString()}`);
 };
 ```
 
@@ -372,7 +343,7 @@ this.sendQuery = (queryMethod, ...queryMethodArguments) => {
 };
 ```
 
-We finish QueryableWorker with the `onmessage` method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in `listeners`.:
+We finish QueryableWorker with the `onmessage` method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in `listeners`:
 
 ```js
 worker.onmessage = (event) => {
@@ -382,11 +353,11 @@ worker.onmessage = (event) => {
     Object.hasOwn(event.data, "queryMethodArguments")
   ) {
     listeners[event.data.queryMethodListener].apply(
-      instance,
+      this,
       event.data.queryMethodArguments,
     );
   } else {
-    this.defaultListener.call(instance, event.data);
+    this.defaultListener(event.data);
   }
 };
 ```
@@ -441,120 +412,116 @@ onmessage = (event) => {
 };
 ```
 
-Here are the full implementation:
+Here is the full implementation:
 
 **example.html** (the main page):
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MDN Example - Queryable worker</title>
-    <script>
-      // QueryableWorker instances methods:
-      //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
-      //   * postMessage(string or JSON Data): see Worker.prototype.postMessage()
-      //   * terminate(): terminates the Worker
-      //   * addListener(name, function): adds a listener
-      //   * removeListener(name): removes a listener
-      // QueryableWorker instances properties:
-      //   * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
-      function QueryableWorker(url, defaultListener, onError) {
-        const instance = this;
-        const worker = new Worker(url);
-        const listeners = {};
+<ul>
+  <li>
+    <button id="first-action">What is the difference between 5 and 3?</button>
+  </li>
+  <li>
+    <button id="second-action">Wait 3 seconds</button>
+  </li>
+  <li>
+    <button id="terminate">terminate() the Worker</button>
+  </li>
+</ul>
+```
 
-        this.defaultListener = defaultListener ?? (() => {});
+It needs to execute the following script, either inline or as an external file:
 
-        if (onError) {
-          worker.onerror = onError;
-        }
+```js
+// QueryableWorker instances methods:
+//   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): calls a Worker's queryable function
+//   * postMessage(string or JSON Data): see Worker.prototype.postMessage()
+//   * terminate(): terminates the Worker
+//   * addListener(name, function): adds a listener
+//   * removeListener(name): removes a listener
+// QueryableWorker instances properties:
+//   * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
+function QueryableWorker(url, defaultListener, onError) {
+  const worker = new Worker(url);
+  const listeners = {};
 
-        this.postMessage = (message) => {
-          worker.postMessage(message);
-        };
+  this.defaultListener = defaultListener ?? (() => {});
 
-        this.terminate = () => {
-          worker.terminate();
-        };
+  if (onError) {
+    worker.onerror = onError;
+  }
 
-        this.addListener = (name, listener) => {
-          listeners[name] = listener;
-        };
+  this.postMessage = (message) => {
+    worker.postMessage(message);
+  };
 
-        this.removeListener = (name) => {
-          delete listeners[name];
-        };
+  this.terminate = () => {
+    worker.terminate();
+  };
 
-        // This functions takes at least one argument, the method name we want to query.
-        // Then we can pass in the arguments that the method needs.
-        this.sendQuery = (queryMethod, ...queryMethodArguments) => {
-          if (!queryMethod) {
-            throw new TypeError(
-              "QueryableWorker.sendQuery takes at least one argument",
-            );
-          }
-          worker.postMessage({
-            queryMethod,
-            queryMethodArguments,
-          });
-        };
+  this.addListener = (name, listener) => {
+    listeners[name] = listener;
+  };
 
-        worker.onmessage = (event) => {
-          if (
-            event.data instanceof Object &&
-            Object.hasOwn(event.data, "queryMethodListener") &&
-            Object.hasOwn(event.data, "queryMethodArguments")
-          ) {
-            listeners[event.data.queryMethodListener].apply(
-              instance,
-              event.data.queryMethodArguments,
-            );
-          } else {
-            this.defaultListener.call(instance, event.data);
-          }
-        };
-      }
+  this.removeListener = (name) => {
+    delete listeners[name];
+  };
 
-      // your custom "queryable" worker
-      const myTask = new QueryableWorker("my_task.js");
+  // This functions takes at least one argument, the method name we want to query.
+  // Then we can pass in the arguments that the method needs.
+  this.sendQuery = (queryMethod, ...queryMethodArguments) => {
+    if (!queryMethod) {
+      throw new TypeError(
+        "QueryableWorker.sendQuery takes at least one argument",
+      );
+    }
+    worker.postMessage({
+      queryMethod,
+      queryMethodArguments,
+    });
+  };
 
-      // your custom "listeners"
-      myTask.addListener("printStuff", (result) => {
-        document
-          .getElementById("firstLink")
-          .parentNode.appendChild(
-            document.createTextNode(`The difference is ${result}!`),
-          );
-      });
+  worker.onmessage = (event) => {
+    if (
+      event.data instanceof Object &&
+      Object.hasOwn(event.data, "queryMethodListener") &&
+      Object.hasOwn(event.data, "queryMethodArguments")
+    ) {
+      listeners[event.data.queryMethodListener].apply(
+        this,
+        event.data.queryMethodArguments,
+      );
+    } else {
+      this.defaultListener(event.data);
+    }
+  };
+}
 
-      myTask.addListener("doAlert", (time, unit) => {
-        alert(`Worker waited for ${time} ${unit} :-)`);
-      });
-    </script>
-  </head>
-  <body>
-    <ul>
-      <li>
-        <a
-          id="firstLink"
-          href="javascript:myTask.sendQuery('getDifference', 5, 3);"
-          >What is the difference between 5 and 3?</a
-        >
-      </li>
-      <li>
-        <a href="javascript:myTask.sendQuery('waitSomeTime');"
-          >Wait 3 seconds</a
-        >
-      </li>
-      <li>
-        <a href="javascript:myTask.terminate();">terminate() the Worker</a>
-      </li>
-    </ul>
-  </body>
-</html>
+// your custom "queryable" worker
+const myTask = new QueryableWorker("my_task.js");
+
+// your custom "listeners"
+myTask.addListener("printStuff", (result) => {
+  document
+    .getElementById("firstLink")
+    .parentNode.appendChild(
+      document.createTextNode(`The difference is ${result}!`),
+    );
+});
+
+myTask.addListener("doAlert", (time, unit) => {
+  alert(`Worker waited for ${time} ${unit} :-)`);
+});
+
+document.getElementById("first-action").addEventListener("click", () => {
+  myTask.sendQuery("getDifference", 5, 3);
+});
+document.getElementById("second-action").addEventListener("click", () => {
+  myTask.sendQuery("waitSomeTime");
+});
+document.getElementById("terminate").addEventListener("click", () => {
+  myTask.terminate();
+});
 ```
 
 **my_task.js** (the worker):
@@ -621,6 +588,10 @@ const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
+### Sharing data
+
+The {{jsxref("SharedArrayBuffer")}} object allows two threads, such as the worker and the main thread, to simultaneously operate on the same memory span and exchange data without going through the messaging mechanism. Using shared memory does come with significant determinism, security, and performance concerns, some of which are outlined in the [JavaScript execution model](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing) article.
+
 ## Embedded workers
 
 There is not an "official" way to embed the code of a worker within a web page, like {{HTMLElement("script")}} elements do for normal scripts. But a {{HTMLElement("script")}} element that does not have a `src` attribute and has a `type` attribute that does not identify an executable MIME type can be considered a data block element that JavaScript could use. "Data blocks" is a more general feature of HTML that can carry almost any textual data. So, a worker could be embedded in this way:
@@ -634,7 +605,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
     <title>MDN Example - Embedded worker</title>
     <script type="text/js-worker">
       // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
-      const myVar = 'Hello World!';
+      const myVar = "Hello World!";
       // Rest of your worker code goes here.
     </script>
     <script>
@@ -666,21 +637,20 @@ There is not an "official" way to embed the code of a worker within a web page, 
         { type: "text/javascript" },
       );
 
-      // Creating a new document.worker property containing all our "text/js-worker" scripts.
-      document.worker = new Worker(window.URL.createObjectURL(blob));
+      // Creating a new global "worker" variable from all our "text/js-worker" scripts.
+      const worker = new Worker(window.URL.createObjectURL(blob));
 
-      document.worker.onmessage = (event) => {
+      worker.onmessage = (event) => {
         pageLog(`Received: ${event.data}`);
-      };
-
-      // Start the worker.
-      window.onload = () => {
-        document.worker.postMessage("");
       };
     </script>
   </head>
   <body>
     <div id="logDisplay"></div>
+    <script>
+      // Start the worker.
+      worker.postMessage("");
+    </script>
   </body>
 </html>
 ```
@@ -731,64 +701,46 @@ The worker sets the property `onmessage` to a function which will receive messag
 #### The HTML code
 
 ```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Fibonacci number generator</title>
-    <style>
-      body {
-        width: 500px;
-      }
+<form>
+  <div>
+    <label for="number">
+      Enter a number that is a zero-based index position in the fibonacci
+      sequence to see what number is in that position. For example, enter 6 and
+      you'll get a result of 8 — the fibonacci number at index position 6 is 8.
+    </label>
+    <input type="number" id="number" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form>
 
-      div,
-      p {
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <form>
-      <div>
-        <label for="number"
-          >Enter a number that is a zero-based index position in the fibonacci
-          sequence to see what number is in that position. For example, enter 6
-          and you'll get a result of 8 — the fibonacci number at index position
-          6 is 8.</label
-        >
-        <input type="number" id="number" />
-      </div>
-      <div>
-        <input type="submit" />
-      </div>
-    </form>
+<p id="result"></p>
+```
 
-    <p id="result"></p>
+It needs to execute the following script, either inline or as an external file:
 
-    <script>
-      const form = document.querySelector("form");
-      const input = document.querySelector('input[type="number"]');
-      const result = document.querySelector("p#result");
-      const worker = new Worker("fibonacci.js");
+```js
+const form = document.querySelector("form");
+const input = document.querySelector('input[type="number"]');
+const result = document.querySelector("p#result");
+const worker = new Worker("fibonacci.js");
 
-      worker.onmessage = (event) => {
-        result.textContent = event.data;
-        console.log(`Got: ${event.data}`);
-      };
+worker.onmessage = (event) => {
+  result.textContent = event.data;
+  console.log(`Got: ${event.data}`);
+};
 
-      worker.onerror = (error) => {
-        console.log(`Worker error: ${error.message}`);
-        throw error;
-      };
+worker.onerror = (error) => {
+  console.log(`Worker error: ${error.message}`);
+  throw error;
+};
 
-      form.onsubmit = (e) => {
-        e.preventDefault();
-        worker.postMessage(input.value);
-        input.value = "";
-      };
-    </script>
-  </body>
-</html>
+form.onsubmit = (e) => {
+  e.preventDefault();
+  worker.postMessage(input.value);
+  input.value = "";
+};
 ```
 
 The web page creates a `<p>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<p>` element, and the `onerror` handler is set to log the error message to the devtools console.
@@ -823,7 +775,7 @@ To open devtools for web workers, you can use the following URLs:
 - Chrome: `chrome://inspect/`
 - Firefox: `about:debugging#/runtime/this-firefox`
 
-These pages show an overview over all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
+These pages show an overview of all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
 
 ## Functions and interfaces available in workers
 
@@ -837,7 +789,7 @@ You can use most standard JavaScript features inside a web worker, including:
 The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}, then doing the changes in event handler.
 
 > [!NOTE]
-> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter {{domxref("EventSource")}} into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> You can test whether a method or interface is available to workers using the [Worker Playground](https://mdn.github.io/dom-examples/web-workers/worker-playground/).
 
 > [!NOTE]
 > For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).

@@ -7,7 +7,7 @@ status:
 browser-compat: api.LanguageDetector
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`LanguageDetector`** interface of the {{domxref("Translator and Language Detector APIs", "Translator and Language Detector APIs", "", "nocode")}} contains all the language detection functionality, including checking AI model availability, creating a new `LanguageDetector` instance, using it to detect a language, and more.
 
@@ -30,7 +30,7 @@ The **`LanguageDetector`** interface of the {{domxref("Translator and Language D
 ## Instance methods
 
 - {{domxref("LanguageDetector.destroy", "destroy()")}} {{Experimental_Inline}}
-  - : Destroys the `LanguageDetector` instance it is called on.
+  - : Releases the resources assigned to the `LanguageDetector` instance it is called on and stops any further activity on it.
 - {{domxref("LanguageDetector.detect", "detect()")}} {{Experimental_Inline}}
   - : Detects the closest matching language or languages that a given text string is most likely to be written in.
 - {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}

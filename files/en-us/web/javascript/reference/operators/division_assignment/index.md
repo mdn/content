@@ -3,9 +3,8 @@ title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.division_assignment
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **division assignment (`/=`)** operator performs [division](/en-US/docs/Web/JavaScript/Reference/Operators/Division) on the two operands and assigns the result to the left operand.
 

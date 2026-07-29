@@ -98,7 +98,7 @@ ARIA provides attributes for declaring the current state of a UI widget. Example
 - `aria-grabbed`
   - : Indicates the 'grabbed' state of an object in a drag-and-drop operation.
 
-(For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria-1.1/#introstates).)
+(For a full list of ARIA states, consult the [ARIA list of states and properties](https://w3c.github.io/aria/#introstates).)
 
 Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).
 
@@ -174,5 +174,5 @@ So, for the Tabs widget example above, the user should be able to navigate into 
 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA Specification](https://w3c.github.io/aria/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

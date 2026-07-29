@@ -21,9 +21,7 @@ request(type)
 ### Parameters
 
 - `type` {{optional_inline}}
-
   - : A string specifying the screen wake lock type, from among the following enumerated types:
-
     - `screen`
       - : Prevents the screen from turning off.
         Only visible documents can acquire the screen wake lock.
@@ -37,9 +35,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-
   - : Thrown when wake lock is not available, which can happen because:
-
     - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The document is not fully active.
     - The document's visibility state is `hidden`.

@@ -23,8 +23,8 @@ svg {
 
 text {
   font:
-    20px Arial,
-    Helvetica,
+    20px "Helvetica",
+    "Arial",
     sans-serif;
   fill: blue;
   text-decoration: underline;
@@ -70,7 +70,6 @@ text {
 </table>
 
 - `_replace` {{deprecated_inline}}
-
   - : The current SVG image is replaced by the linked content in the same rectangular area in the same frame as the current SVG image.
 
     > [!NOTE]

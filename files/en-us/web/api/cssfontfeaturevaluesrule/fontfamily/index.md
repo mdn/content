@@ -8,7 +8,7 @@ browser-compat: api.CSSFontFeatureValuesRule.fontFamily
 
 {{ APIRef("CSSOM") }}
 
-The **`fontFamily`** property of the {{domxref("CSSConditionRule")}} interface represents the name of the font family it applies to.
+The **`fontFamily`** property of the {{domxref("CSSFontFeatureValuesRule")}} interface represents the name of the font family it applies to.
 
 ## Value
 
@@ -51,7 +51,7 @@ In this example, we declare two {{cssxref("@font-feature-values")}} one for the 
 
 ```js
 const log = document.getElementById("log");
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const fontOne = rules[0]; // A CSSFontFeatureValuesRule
 log.textContent = `The 1st '@font-feature-values' family: "${fontOne.fontFamily}".\n`;

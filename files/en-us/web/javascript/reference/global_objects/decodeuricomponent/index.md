@@ -3,9 +3,8 @@ title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 page-type: javascript-function
 browser-compat: javascript.builtins.decodeURIComponent
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`decodeURIComponent()`** function decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("encodeURIComponent()")}} or by a similar routine.
 

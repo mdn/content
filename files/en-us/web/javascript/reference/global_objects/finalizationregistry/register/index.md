@@ -1,13 +1,13 @@
 ---
 title: FinalizationRegistry.prototype.register()
+short-title: register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.register
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`register()`** method of {{jsxref("FinalizationRegistry")}} instances registers an value with this `FinalizationRegistry` so that if the value is garbage-collected, the registry's callback may get called.
+The **`register()`** method of {{jsxref("FinalizationRegistry")}} instances registers a value with this `FinalizationRegistry` so that if the value is garbage-collected, the registry's callback may get called.
 
 ## Syntax
 

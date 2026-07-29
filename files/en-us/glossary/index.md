@@ -3,9 +3,8 @@ title: Glossary of web terms
 short-title: Glossary
 slug: Glossary
 page-type: landing-page
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 Web technologies use many types of jargon, acronyms, and abbreviations in documentation, code, and other contexts.
 This glossary provides definitions of words and abbreviations you need to know to successfully understand and build for the web.

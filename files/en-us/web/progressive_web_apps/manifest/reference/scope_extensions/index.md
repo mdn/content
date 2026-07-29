@@ -2,9 +2,13 @@
 title: scope_extensions
 slug: Web/Progressive_web_apps/Manifest/Reference/scope_extensions
 page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: manifests.webapp.scope_extensions
 sidebar: pwasidebar
 ---
+
+{{SeeCompatTable}}
 
 The `scope_extensions` manifest member is used to extend the scope of a web app to include other origins. This allows multiple domains to be presented as a single web app.
 
@@ -22,9 +26,7 @@ The `scope_extensions` manifest member is used to extend the scope of a web app 
 ### Values
 
 - `scope_extensions`
-
   - : An array of objects each containing the following properties:
-
     - `type`
       - : A string defining the type of scope extension. This is currently always `origin`, but future extensions may add other types.
     - `origin`
@@ -41,12 +43,14 @@ The `scope_extensions` manifest member can extend the scope of a web app to incl
 The main web app (for example, `https://example.com`) needs to include the origins it wishes to include in its scope inside its `scope_extensions` manifest member:
 
 ```json
-"scope_extensions": [
-  { "type": "origin", "origin": "https://example.jp"},
-  { "type": "origin", "origin": "https://my-example.com"},
-  { "type": "origin", "origin": "https://my-partner-site.com"},
-  { "type": "origin", "origin": "https://example.slack.com"}
-]
+{
+  "scope_extensions": [
+    { "type": "origin", "origin": "https://example.jp" },
+    { "type": "origin", "origin": "https://my-example.com" },
+    { "type": "origin", "origin": "https://my-partner-site.com" },
+    { "type": "origin", "origin": "https://example.slack.com" }
+  ]
+}
 ```
 
 ### Opt-in via a .well-known file
@@ -110,9 +114,6 @@ To opt-in to the app's scope, `https://example.co.uk` and `https://help.example.
   }
 }
 ```
-
-> [!NOTE]
-> See [Scope Extensions API Demo](https://main-pwa-origin-2.glitch.me/) for a working example.
 
 ## Specifications
 

@@ -18,6 +18,10 @@ in this object. The values are {{domxref("Node")}} objects.
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
@@ -49,6 +53,10 @@ The result is:
 #text "hey"
 <span>
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

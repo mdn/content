@@ -27,7 +27,7 @@ based on the index, not the primary key.
 The current object store is logged to the console: it should be returned something like
 this:
 
-```json
+```plain
 IDBObjectStore { name: "contactsList", keyPath: "id", indexNames: DOMStringList[7], transaction: IDBTransaction, autoIncrement: false }
 ```
 

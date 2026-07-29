@@ -23,7 +23,7 @@ createProjectionLayer(options)
 - `options`
   - : An object to configure the {{domxref("XRProjectionLayer")}}.
     - `textureType` {{optional_inline}}
-      - : An string defining the type of texture the layer will have. Possible values:
+      - : A string defining the type of texture the layer will have. Possible values:
         - `texture`
           - : The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
         - `texture-array`

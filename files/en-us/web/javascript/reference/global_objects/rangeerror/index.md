@@ -3,9 +3,8 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 page-type: javascript-class
 browser-compat: javascript.builtins.RangeError
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RangeError`** object indicates an error when a value is not in the set or range of allowed values.
 

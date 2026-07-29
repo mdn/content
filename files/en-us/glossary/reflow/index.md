@@ -2,9 +2,8 @@
 title: Reflow
 slug: Glossary/Reflow
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Reflow** happens when a {{glossary("browser")}} recalculates the position and geometry of certain parts of a webpage, such as after an update on an interactive site. This tends to be followed by repainting, which is when the browser redraws the webpage to show the resulting visual updates.
 

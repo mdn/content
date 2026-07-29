@@ -2,9 +2,8 @@
 title: Throttle
 slug: Glossary/Throttle
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Throttling** originally meant slowing down the rate of fluid flow using an obstruction. In the context of programming, it refers to slowing down a process such that an operation can only be performed at a certain rate.
 

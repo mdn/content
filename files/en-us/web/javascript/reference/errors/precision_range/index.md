@@ -2,9 +2,8 @@
 title: "RangeError: precision is out of range"
 slug: Web/JavaScript/Reference/Errors/Precision_range
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "precision is out of range" occurs when a number that's
 outside of the allowed range was passed into `toExponential`, `toFixed`, or `toPrecision`.

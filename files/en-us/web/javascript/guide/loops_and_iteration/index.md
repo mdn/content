@@ -2,9 +2,9 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Loops offer a quick and easy way to do something repeatedly. This
@@ -74,7 +74,7 @@ element that allows multiple selections).
     >Choose some music types, then click the button below:</label
   >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>
@@ -110,7 +110,7 @@ btn.addEventListener("click", () => {
 
 ## do...while statement
 
-The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
+The {{jsxref("Statements/do...while", "do...while")}} statement repeats until a
 specified condition evaluates to false.
 
 A `do...while` statement looks as follows:

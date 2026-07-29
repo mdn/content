@@ -1,28 +1,28 @@
 ---
 title: "RegExp: lastIndex"
+short-title: lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.RegExp.lastIndex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`lastIndex`** data property of a {{jsxref("RegExp")}} instance specifies the index at which to start the next match.
 
 {{InteractiveExample("JavaScript Demo: RegExp: lastIndex")}}
 
 ```js interactive-example
-const regex1 = /foo/g;
-const str1 = "table football, foosball";
+const regex = /foo/g;
+const str = "table football, foosball";
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
+console.log(regex.lastIndex);
 // Expected output: 9
 
-regex1.test(str1);
+regex.test(str);
 
-console.log(regex1.lastIndex);
+console.log(regex.lastIndex);
 // Expected output: 19
 ```
 
