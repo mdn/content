@@ -65,9 +65,9 @@ value_type.extend8_s
 
 ## Description
 
-Sign extension is useful because Wasm integers are a fixed width (32- or 64-bit), but you often want to work with smaller values — like an i8 or i16 — stored inside them. If you zero-pad a negative small value to fill the rest of the bits, you get the wrong number: the bit pattern that means `-1` represented as an 8-bit value no longer represents `-1` once you've zero-padded it.
+Sign extension is useful because Wasm integers are a fixed width (32- or 64-bit), but you often want to work with smaller values — like an i8 or i16 — stored inside them. If you zero-pad a negative small value to fill the rest of the bits, you get the wrong number: the bit pattern that means `-1` represented as an 8-bit value, for example, no longer represents `-1` once you've zero-padded it.
 
-The `extend8_s` value fixes this by taking the low 8 bits of the value, treating them as a signed 8-bit integer, and copying that sign bit (bit 7) up through all the remaining bits of the `i32` or `i64`.
+The `extend8_s` instruction fixes this by taking the low 8 bits of the value, treating them as a signed 8-bit integer, and copying that sign bit (bit 7) up through all the remaining bits of the `i32` or `i64`.
 
 This is useful whenever you've loaded or produced an 8-bit value (say, from a byte in memory) and need to use it correctly in arithmetic at the full 32- or 64-bit width.
 
