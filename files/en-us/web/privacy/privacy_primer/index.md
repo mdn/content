@@ -9,10 +9,19 @@ This guide is an introduction to privacy for web developers. It provides an over
 
 It is largely based on the principles listed in the [W3C Privacy Principles](https://www.w3.org/TR/privacy-principles/) statement, but unlike that document, this guide covers only principles that apply to web developers, not those that apply to browser developers or standards designers.
 
-It's split into two main sections:
+It's split into three main sections:
 
+- [Why privacy matters](#why_privacy_matters)
 - [Working with a user's personal data](#working_with_personal_data)
 - [User recognition and tracking](#user_recognition_and_tracking)
+
+## Why privacy matters
+
+Respecting the privacy of your users is important in the first place because it is, ethically, the right thing to do.
+
+It also enables you to build trust with your users, who will value your services more. Conversely, the bad publicity arising from privacy violations can be very damaging.
+
+Finally, it's very likely that you will be _required_ to follow many of the principles in this article, due to legislation such as the European Union's [General Data Protection Regulation (GDPR)](https://gdpr.eu/) and the [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa).
 
 ## Working with personal data
 
