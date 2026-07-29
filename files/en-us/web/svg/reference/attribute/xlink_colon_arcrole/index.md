@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Attribute/xlink:arcrole
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.xlink_arcrole
+spec-urls: https://www.w3.org/TR/SVG11/linking.html#XLinkArcRoleAttribute
 sidebar: svgref
 ---
 
@@ -61,10 +61,6 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
