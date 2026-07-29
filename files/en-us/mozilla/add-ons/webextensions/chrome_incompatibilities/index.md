@@ -75,7 +75,7 @@ The rest of this page details these and other incompatibilities.
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
 
 > [!NOTE]
-> Firefox and Safari support the `browser` namespace. Starting with Chrome 148, Chrome also supports the `browser` namespace, except in extensions that include a DevTools page. See [Chrome bug 798169](https://crbug.com/798169) for background.
+> Firefox and Safari support the `browser` namespace. Starting with Chrome 148, Chrome also supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
 
 If you choose to write your extension to use `browser` and promises, Firefox provides a [polyfill](https://github.com/mozilla/webextension-polyfill) that enables it to run in earlier versions of Chrome and in other Chromium-based browsers that don't yet support the `browser` namespace. The polyfill is no-op in Chrome 148 and later.
 

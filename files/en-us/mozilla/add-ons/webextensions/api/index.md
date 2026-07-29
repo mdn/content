@@ -36,7 +36,7 @@ setCookie.then(logCookie, logError);
 
 ## Browser namespace differences
 
-Starting with Chrome 148, Chrome natively supports the `browser` namespace. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
+Starting with Chrome 148, Chrome also supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
 
 Before Chrome 148, Chrome uses the `chrome` namespace. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and Promises. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here. A [polyfill](https://github.com/mozilla/webextension-polyfill) that enables code that uses `browser` and promises to work unchanged in Chrome is also available. This polyfill is a no-op in Chrome 148 and later.
 

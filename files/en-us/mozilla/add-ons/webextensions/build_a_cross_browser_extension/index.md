@@ -51,7 +51,9 @@ Firefox also supports callbacks for the APIs that support the `chrome.*` namespa
 
 #### The WebExtension browser API Polyfill
 
-Starting with Chrome 148, Chrome natively supports the `browser.*` namespace. To take advantage of the `browser.*` namespace and promises in earlier versions, use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
+Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
+
+To take advantage of the `browser.*` namespace and promises in earlier versions, use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
 
 > [!NOTE]
 > In Chrome 148 or later, the polyfill is no-op.
