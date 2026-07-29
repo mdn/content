@@ -9,6 +9,9 @@ sidebar: webassemblysidebar
 
 The **`elem.drop`** [elem instruction](/en-US/docs/WebAssembly/Reference/Elem) discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) `elem` segment, freeing up its memory, after being used in a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init).
 
+> [!NOTE]
+> [Active](/en-US/docs/WebAssembly/Reference/Definitions/elem#active_form) `elem` segments are dropped automatically during module instantiation, and therefore are not available to drop via `elem.drop`.
+
 {{InteractiveExample("Wat Demo: elem.drop", "tabbed-taller")}}
 
 ```wat interactive-example

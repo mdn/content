@@ -79,7 +79,7 @@ If `dest_memory` or `source_memory` are omitted, they default to `0`.
   - : An integer representing the number of bytes to copy. This will be an `i32` or an `i64`, to match the `address_type` the `memory` was defined with. When copying between a 32-bit and 64-bit memory, an `i32` must be used for the `length`.
 
 > [!NOTE]
-> `memory.copy` copies memory regions in an overlap-aware way. In other words, the source data identified by `source_offset` and `length` is first copied into a temporary value before being copied starting at `dest_offset`, meaning that if your source and destination data overlap, they don't interfere with one another and the source is cleanly copied into the destination region as expected.
+> `memory.copy` copies memory regions in an overlap-aware way. In other words, the copy proceeds as if the source data identified by `source_offset` and `length` was first copied into a temporary value before being copied to `dest_offset`, meaning that if your source and destination data overlap, they don't interfere with one another and the source is cleanly copied into the destination region as expected.
 
 ### Traps
 
@@ -93,7 +93,7 @@ If any copied byte would be out of bounds in the source or destination, the inst
 
 ## Examples
 
-### Copy within default memory
+### Copy within the default (0-index) memory
 
 ```wat
 ;; Copy data in default memory from [100, 125] to [50, 75]
@@ -106,7 +106,7 @@ memory.copy  ;; Copy memory
 (memory.copy (i32.const 50) (i32.const 100) (i32.const 25))
 ```
 
-### Copy specified memory
+### Copy within a specified memory
 
 ```wat
 ;; Copy data within specific memory from [100, 125] to [50, 75]

@@ -10,8 +10,6 @@ This set of pages details the table instructions available in Wasm to create and
 > [!NOTE]
 > Equivalent functionality is available to JavaScript via the [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table) API.
 
-## Instructions
-
 - [`table.copy`](/en-US/docs/WebAssembly/Reference/Table/copy)
   - : Copies references from one [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) location to another.
 - [`table.fill`](/en-US/docs/WebAssembly/Reference/Table/fill)

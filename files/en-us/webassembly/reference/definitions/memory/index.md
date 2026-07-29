@@ -65,12 +65,24 @@ WebAssembly memories provide raw working memory for Wasm modules. The `memory` d
 ```wat
 (module
   (memory $my_mem 1 2)
+  (data $greeting (memory $my_mem) (i32.const 0) "Hello world")
+  ;; ...
+)
+```
+
+Each `memory` is defined as a number of "pages", each one 64KiB (65,536 bytes) in size. After the optional identifying memory name, the two number values define the minimum (and initial) number of pages, and the maximum number of pages the memory can contain. The `data` definition is also named, and specifies an identifier for the memory to store the data in. A Wasm module can contain multiple memories, each identifiable by name or index.
+
+If you only have one memory in your module, or you want to store the data in the first memory in the module, you can omit the memory name and identifier, like so:
+
+```wat
+(module
+  (memory 1 2)
   (data $greeting (i32.const 0) "Hello world")
   ;; ...
 )
 ```
 
-Each `memory` is defined as a number of "pages", each one 64KiB (65,536 bytes) in size. After the optional identifying name, the two number values define the minimum (and initial) number of pages, and the maximum number of pages the memory can contain. A Wasm module can contain multiple memories, each identifiable by name or index.
+By default, the data is written to memory 0.
 
 Once a `memory` has been created, there are several [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) available for manipulating it. You can find more details about using Wasm memories in [WebAssembly memory](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_memory).
 

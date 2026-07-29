@@ -91,6 +91,9 @@ If `dest_table` or `source_table` are omitted, they default to `0`.
 - `length`
   - : An integer representing the number of references to copy. This will be an `i32` or an `i64`, to match the `index_type` the `table` was defined with. When copying between a 32-bit index table and a 64-bit index table, an `i32` must be used for the `length`.
 
+> [!NOTE]
+> `table.copy` copies references in an overlap-aware way. In other words, the copy proceeds as if the source references identified by `source_offset` and `length` was first copied into a temporary value before being copied to `dest_offset`, meaning that if your source and destination data overlap, they don't interfere with one another and the source is cleanly copied into the destination region as expected.
+
 ### Traps
 
 If any copied element reference would be out of bounds in the source or destination, the instruction traps.

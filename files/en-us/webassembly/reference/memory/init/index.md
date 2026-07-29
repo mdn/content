@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.memory_init
 sidebar: webassemblysidebar
 ---
 
-The **`memory.init`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) manually copies the bytes from a passive [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition into a [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory).
+The **`memory.init`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) manually copies the bytes from a [passive](/en-US/docs/WebAssembly/Reference/Definitions/data#passive_form) [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) definition into a [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory).
 
 {{InteractiveExample("Wat Demo: memory.init", "tabbed-taller")}}
 
@@ -21,6 +21,7 @@ The **`memory.init`** [memory instruction](/en-US/docs/WebAssembly/Reference/Mem
     i32.const 0       ;; offset into the data segment
     i32.const 11      ;; number of bytes to copy
     memory.init $greeting
+    data.drop $greeting
   )
 )
 ```
@@ -34,7 +35,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 });
 ```
 
-In the above example, we specify a `data` definition with the identifier `$greeting`, containing the string "Hello World". In the `init()` function, the `data` definition is written to memory using the `memory.init` instruction.
+In the above example, we specify a `data` definition with the identifier `$greeting`, containing the string "Hello World". In the `init()` function, the `data` segment is written to memory using the `memory.init` instruction; we then drop the `data` segment using [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop), as it is no longer needed.
 
 In the JavaScript, we call the exported `init()` function to write the data definition into memory, then decode the exported memory buffer and log the result to the console.
 
@@ -81,8 +82,8 @@ memory.init memory_identifier data_identifier
 The `memory.init` instruction traps if:
 
 - The `dest_offset` plus the `length` exceeds the size of the `memory`.
+- The `source_offset` plus the `length` exceeds the size of the `data` segment.
 - The [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop) instruction was previously called on the [`data`](/en-US/docs/WebAssembly/Reference/Definitions/data) segment referenced in [`data_identifier`](#data_identifier).
-- The `dest_offset`, `source_offset`, or `length` values are negative or invalid types.
 
 ### Binary encoding
 

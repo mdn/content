@@ -27,7 +27,7 @@ The **`table`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) crea
     (i32.const 100)
   )
 
-  ;; initialize table slots actively
+  ;; Actively initialize table slots
   (elem (i32.const 0) $f1 $f2)
 
   (func (export "accessTable") (param $index i32) (result i32)
@@ -53,7 +53,7 @@ table name index_type initial_size max_size type
 - `table`
   - : The `table` definition type. Must always be included first.
 - `name` {{optional_inline}}
-  - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm script, `1` for the second, etc.
+  - : An optional identifying name for the table. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the table can be identified by its index, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
 - `index_type` {{optional_inline}}
   - : An integer value type that indicates what index type the table will have. Possible values are:

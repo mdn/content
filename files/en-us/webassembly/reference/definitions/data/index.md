@@ -52,7 +52,7 @@ data name data_string
 - `data`
   - : The `data` definition type. Must always be included first.
 - `name` {{optional_inline}}
-  - : An optional identifying name for the data. This must begin with a `$` symbol, for example `$my_data`. If this is omitted, the `data` can be identified (for example when calling `memory.init`) by its index, for example `0` for the first `data` in the wasm script, `1` for the second, etc.
+  - : An optional identifying name for the data. This must begin with a `$` symbol, for example `$my_data`. If this is omitted, the `data` can be identified (for example when calling `memory.init`) by its index, for example `0` for the first `data` in the wasm module, `1` for the second, etc.
 - `memory_identifier` {{optional_inline}}
   - : An identifier representing the `memory` instance to place the data into, which must be preceded by the `memory` keyword to be interpreted as a `memory_identifier`. The identifier can be one of:
     - `name`
@@ -71,6 +71,68 @@ data name data_string
 - `data_string`
   - : A string of literal bytes defining the data represented by this `data` instance.
 
+## Description
+
+A `data` definition defines a segment of bytes that can be copied into linear memory. There are two forms of `data` definition:
+
+- [Active form](#active_form)
+- [Passive form](#passive_form)
+
+### Active form
+
+An active data definition references the memory offset the data is to be copied to, and is copied into the specified memory as soon as the module is instantiated. This must include the offset the data is to be copied to, and can also include an identifier for the data and the memory:
+
+```wat
+(memory $my_mem (export "memory") 1)
+(data $greeting1 (memory $my_mem) (offset i32.const 0) "Hello ")
+```
+
+Note that a module can contain multiple memories, which can be identified by their identifying names or by index numbers. In the above example, the following would also work:
+
+```wat
+(data $greeting1 (memory 0) (offset i32.const 0) "Hello ")
+```
+
+In cases where there is only one memory in the module, or when you want to copy data into the first memory, you can omit the memory identifier, and the data will be copied into the first memory by default. The following version will also work, as long as the `offset` value is specified:
+
+```wat
+(memory (export "memory") 1)
+(data (offset i32.const 0) "Hello ")
+```
+
+> [!NOTE]
+> Active data segments are dropped automatically during module instantiation, and therefore are not available to drop via [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop).
+
+### Passive form
+
+A passive data segment doesn't reference the memory the data is to be copied into. For example:
+
+```wat
+(memory (export "memory") 1)
+(data $greeting "Hello World")
+```
+
+Passive data segments are copied into a memory using a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction:
+
+```wat
+i32.const 0       ;; destination offset in memory
+i32.const 0       ;; offset into the data segment
+i32.const 11      ;; number of bytes to copy
+memory.init $greeting
+```
+
+The `memory.init` instruction itself specifies an identifier for the data to copy into the memory. This could also be an index number:
+
+```wat
+memory.init 0
+```
+
+After `memory.init` has been called, the `data` segment is no longer needed, so [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop) can be called to free up the memory it was using:
+
+```wat
+data.drop $greeting
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -81,5 +143,6 @@ data name data_string
 
 ## See also
 
+- [`data.drop`](/en-US/docs/WebAssembly/Reference/Data/drop) instruction
 - [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory) definition
 - [WebAssembly memory instructions](/en-US/docs/WebAssembly/Reference/Memory)

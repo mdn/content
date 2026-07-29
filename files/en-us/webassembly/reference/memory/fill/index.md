@@ -81,7 +81,7 @@ If the indicated memory region is out of bounds, the instruction traps.
 
 ## Examples
 
-### Fill within default memory
+### Fill within the default (0-index) memory
 
 ```wat
 ;; Fill region at offset/range in default memory with 255
@@ -94,7 +94,7 @@ memory.fill ;; Fill default memory
 (memory.fill (i32.const 200) (i32.const 255) (i32.const 100))
 ```
 
-### Fill specified memory
+### Fill within a specified memory
 
 ```wat
 ;; Fill specific memory referenced by its index

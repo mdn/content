@@ -25,7 +25,7 @@ The **`elem`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) decla
   )
 
   ;; initialize table slots actively
-  (elem (table 0) (offset i32.const 0) func $f1 $f2)
+  (elem (table $return_values) (offset i32.const 0) func $f1 $f2)
 
   (func (export "accessTable") (param $index i32) (result i32)
     (local.get $index)
@@ -52,14 +52,14 @@ elem name table_identifier offset value_type element_list
 ;; Passive form, initialized later via table.init
 elem name value_type element_list
 
-;; Declaration form, declares already existing reference(s)
+;; Declarative form, declares already existing reference(s)
 elem name declare value_type element_list
 ```
 
 - `elem`
   - : The `elem` definition type. Must always be included first.
 - `name` {{optional_inline}}
-  - : An optional identifying name for the elem. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the `elem` can be identified (for example when calling `elem.drop`) by its index, for example `0` for the first `elem` in the wasm script, `1` for the second, etc.
+  - : An optional identifying name for the elem. This must begin with a `$` symbol, for example `$my_table`. If this is omitted, the `elem` can be identified (for example when calling `elem.drop`) by its index, for example `0` for the first `elem` in the wasm module, `1` for the second, etc.
 - `table_identifier` {{optional_inline}}
   - : An identifier representing the `table` instance to place the table elements into, which must be preceded by the `table` keyword to be interpreted as a `table_identifier`. This can be one of:
     - `name`
@@ -79,18 +79,24 @@ elem name declare value_type element_list
   - : A keyword that identifies the `elem` definition as being of the declarative form, meaning that it declares references that will be used at runtime (for example, by `ref.func`), without them being inserted into a table.
 - `value_type`
   - : A value type that defines which type of reference will be stored in this table. All references in the `element_list` must match this type. The value can be any reference type, such as:
-    - `func`: An abbreviation that more concisely declares a list of non-nullable function references. For example `func $my_func` is equivalent to `(ref func) (ref.func $my_func)`.
-    - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref): Function references, for example `(ref.func $my_func)`, `(ref null func)`, `(ref func)`.
-    - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref): External value references, for example `(ref.null extern)`, `(ref null extern)`.
-    - [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref): Exception references, for example `(ref.null extern)`.
-    - `eqref`, `structref`, `arrayref`, `anyref`: References to garbage collection (GC) values.
-    - `nullref`, `nullfuncref`, `nullexternref`: Null references.
+    - `func`
+      - : An abbreviation that more concisely declares a list of non-nullable function references. For example `func $my_func` is equivalent to `(ref func) (ref.func $my_func)`.
+    - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
+      - : Function references, for example `(ref.func $my_func)`, `(ref null func)`, `(ref func)`.
+    - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
+      - : External value references, for example `(ref.null extern)`, `(ref null extern)`.
+    - [`exnref`](/en-US/docs/WebAssembly/Reference/Value_types/exnref)
+      - : Exception references, for example `(ref.null extern)`.
+    - `eqref`, `structref`, `arrayref`, `anyref`
+      - : References to garbage collection (GC) values.
+    - `nullref`, `nullfuncref`, `nullexternref`
+      - : Null references.
 - `element_list`
   - : A space-separated list of references to be stored in the `table`.
 
 ## Description
 
-Wasm `elem` definitions define a series of references that can be copied into a previously-defined [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table). There are three forms of `elem` definition that you should know about:
+Wasm `elem` definitions define a series of references. There are three forms of `elem` definition:
 
 - [Active form](#active_form)
 - [Passive form](#passive_form)
@@ -98,7 +104,7 @@ Wasm `elem` definitions define a series of references that can be copied into a 
 
 ### Active form
 
-An active element segment will be written into its table on instantiation. In active form, as seen in the live example earlier on, a table first needs to be defined:
+An active element segment will be written into a previously-defined [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) on instantiation. In active form, as seen in the live example earlier on, a table first needs to be defined:
 
 ```wat
 (table $return_values 2 funcref)
@@ -121,6 +127,9 @@ This `elem` definition includes the `value_type` to be stored (`func`), and the 
 
 We've also included a `table_identifier` — `(table $return_values)` — to indicate the table to write the references to, although in this basic example there is only one table, so this is not necessary.
 
+> [!NOTE]
+> Active `elem` segments are dropped automatically during module instantiation, and therefore are not available to drop via [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop).
+
 ### Passive form
 
 In passive form, the `elem` definition declares the references that should be stored in the table in the same way as in active form. The main difference is that, in passive form, you don't specify the `table_identifier` or `offset` value. This means that the references are not stored in the `table` immediately. Instead, this part of the process is handled manually using a [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init) instruction.
@@ -142,7 +151,14 @@ We can then call `table.init`, referencing the `elem` `name`, to copy the refere
 )
 ```
 
-You can see a full working example at [Passive `elem` example](#passive_elem_example).
+After `table.init` has been called, the `elem` segment is no longer needed, so [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) can be called to free up the memory it was using:
+
+```wat
+elem.drop $funcs
+```
+
+> [!NOTE]
+> You can see a full working example at [Passive `elem` example](#passive_elem_example).
 
 ### Declarative form
 
@@ -172,7 +188,7 @@ This was added to the language because normally you can only reference functions
 
 ### Passive `elem` example
 
-This example shows how you can use the passive form of `elem` to not immediately copy the specified references to the table, instead copying them later on via the [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init) instruction.
+This example shows how you can use the passive form of `elem` to defer copying the specified references to the table on instantiation, later adding them using the [`table.init`](/en-US/docs/WebAssembly/Reference/Table/init) instruction.
 
 #### JavaScript
 
@@ -248,5 +264,6 @@ Note that we have to call `init()` before we call `accessTable()`, to initialize
 
 ## See also
 
+- [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) instruction
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) definition
 - [WebAssembly table instructions](/en-US/docs/WebAssembly/Reference/Table)

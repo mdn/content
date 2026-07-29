@@ -7,7 +7,10 @@ browser-compat: webassembly.instructions.data_drop
 sidebar: webassemblysidebar
 ---
 
-The **`data.drop`** [data instruction](/en-US/docs/WebAssembly/Reference/Data) discards the data contained by a passive `data` definition, freeing up its memory, after being used in a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
+The **`data.drop`** [data instruction](/en-US/docs/WebAssembly/Reference/Data) discards the data contained by a [passive](/en-US/docs/WebAssembly/Reference/Definitions/data#passive_form) `data` definition, freeing up its memory, after being used in a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init).
+
+> [!NOTE]
+> [Active](/en-US/docs/WebAssembly/Reference/Definitions/data#active_form) data segments are dropped automatically during module instantiation, and therefore are not available to drop via `data.drop`.
 
 {{InteractiveExample("Wat Demo: data.drop", "tabbed-taller")}}
 

@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.table_init
 sidebar: webassemblysidebar
 ---
 
-The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) manually copies the references from a passive [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table).
+The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) manually copies the references from a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table).
 
 {{InteractiveExample("Wat Demo: table.init", "tabbed-taller")}}
 
@@ -29,6 +29,7 @@ The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table
     i32.const 0    ;; offset into elem segment
     i32.const 2    ;; number of elements to copy
     table.init $funcs
+    elem.drop $funcs
   )
 
   (func (export "accessTable") (param $index i32) (result i32)
@@ -46,7 +47,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
 });
 ```
 
-In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`.
+In the above example, we define a `table`, two functions, and an `elem` segment called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`, and drop the `elem` segment using [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) when it is no longer needed.
 
 ## Syntax
 
@@ -67,7 +68,7 @@ table.init table_identifier elem_identifier
     If omitted, `table_identifier` defaults to `0`.
 
 - `elem_identifier`
-  - : The identifier for the `elem` you want to get the references from to insert. This can be one of the following:
+  - : The identifier for the `elem` you want to copy references from. This can be one of the following:
     - `name`
       - : An identifying name [set for the `elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem#name) when it was first defined. This must begin with a `$` symbol, for example `$my_elem`.
     - `index`
@@ -91,8 +92,8 @@ table.init table_identifier elem_identifier
 The `table.init` instruction traps if:
 
 - The `dest_offset` plus the `length` exceeds the size of the `table`.
+- The `source_offset` plus the `length` exceeds the size of the `elem` segment.
 - The [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) instruction was previously called on the [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) segment referenced in [`elem_identifier`](#elem_identifier).
-- The `dest_offset`, `source_offset`, or `length` values are negative or invalid types.
 
 ### Binary encoding
 
