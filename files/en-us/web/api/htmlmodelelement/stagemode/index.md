@@ -10,7 +10,7 @@ browser-compat: api.HTMLModelElement.stageMode
 
 The **`HTMLModelElement.stageMode`** property reflects the [`stagemode`](/en-US/docs/Web/HTML/Reference/Elements/model#stagemode) HTML attribute, which indicates the current stage mode for the model element.
 
-### Value
+## Value
 
 stageMode can be set to the following values:
 
