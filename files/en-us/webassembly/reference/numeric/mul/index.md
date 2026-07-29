@@ -1,12 +1,13 @@
 ---
-title: "mul: Wasm text instruction"
+title: "mul: Wasm numeric instruction"
 short-title: mul
 slug: WebAssembly/Reference/Numeric/mul
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.mul
 sidebar: webassemblysidebar
 ---
 
-The **`mul`** instruction, short for _multiplication_, is used for multiplying one number by another number, similar to the **`*`** operator in other languages.
+The **`mul`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _multiplication_, is used for multiplying one number by another number, similar to the **`*`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: mul", "tabbed-taller")}}
 
@@ -141,3 +142,11 @@ The output is as follows:
 {{embedlivesample("simd_mul", "100%", 100)}}
 
 The result is `108`, because the value stored in lane `3` of output value is the result of `12 * 9`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

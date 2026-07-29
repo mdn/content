@@ -7,7 +7,7 @@ browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) into your CSS.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) into your CSS. Alternatively `env()` can be used to make dynamic values in external SVG files which updated using the {{cssxref("link-parameters")}} CSS property.
 
 ## Syntax
 
@@ -23,9 +23,15 @@ env(titlebar-area-y, 40px);
 env(viewport-segment-width 0 0, 40%);
 ```
 
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
 ### Parameters
 
-The `env( <environment-variable>, <fallback> )` function accepts the following parameters:
+The `env( <environment-variable> | <dashed-ident>, <fallback> | <declaration-value> )` function accepts the following parameters:
 
 - [`<environment-variable>`](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables)
   - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted. If the name provided represents an array-like environment variable, the name is followed by {{cssxref("&lt;integer>")}} values identifying the specific instance the name is referencing. The case-sensitive environment variable name can be one of the following:
@@ -42,8 +48,14 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
+- [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
+  - A `<dashed-ident>`is a user defined variable that can be used as an identifier in the {{cssxref("param")}} CSS function to update the value.
+
 - `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. Everything after the first comma is deemed to be the fallback value. This can be a single value, another `env()` function, or a comma-separated list of values.
+
+- `<declaration_value>` {{optional_inline}}
+  - : A `<declaration_value>` is the default value of the SVG attribute being set dynamically. If the `<declaration-value>` is omitted, it represents an empty value.
 
 ## Description
 
