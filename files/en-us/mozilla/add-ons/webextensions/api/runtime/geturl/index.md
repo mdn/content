@@ -10,6 +10,20 @@ Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebEx
 
 This function does _not_ check that the resource actually exists at that URL.
 
+> [!NOTE]
+> The absence of the resource check impacts the use of `fetch()`. Because `moz-extension:` URLs are served through a custom (non-HTTP) channel, Firefox builds the `Response` object with `ok: true` and `status: 200` _before_ it has checked whether the resource exists. So, for a missing JSON file, `fetch(browser.runtime.getURL("missing.json")).then(r => r.ok)` resolves to `true`. There is no 404 to check for.
+>
+> If your extension attempts to read the body, e.g., with `response.json()` or `response.text()`, it is rejected with `DOMException: The operation was aborted.` To detect a missing resource, wrap the body read in a `try`/`catch` rather than relying on `response.ok`:
+>
+> ```js
+> try {
+>   const response = await fetch(browser.runtime.getURL("beasts/frog.json"));
+>   const data = await response.json(); // throws if frog.json doesn't exist
+> } catch (e) {
+>   console.error("Resource missing or unreadable:", e);
+> }
+> ```
+
 ## Syntax
 
 ```js-nolint
