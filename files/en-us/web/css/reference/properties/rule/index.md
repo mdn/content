@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between rows and columns in multi-row grid, flex, setting both the column and row rules to the same values.
+The **`rule`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between rows and columns in multi-row grid, flex, and multi-col layouts, setting both the column and row rules to the same values.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -26,20 +26,20 @@ rule: dotted medium blue;
 ```css interactive-example-choice
 rule:
   dotted medium blue,
-  repeat(3, dotted purple 1px, double orange 5px);
+  repeat(3, dotted red 2px, double orange 5px);
 ```
 
 ```css interactive-example-choice
 rule:
   dashed medium magenta,
-  repeat(auto, dotted blue 1px, dotted blue 5px),
+  repeat(auto, dotted blue 2px, dotted blue 5px),
   dashed medium magenta;
 ```
 
 ```css interactive-example-choice
 rule:
   dashed medium magenta,
-  repeat(auto, dotted blue 1px),
+  repeat(auto, dotted blue 2px),
   outset goldenrod 5px;
 ```
 
@@ -132,7 +132,7 @@ The `rule` property accepts a comma-separated list of values, including:
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.
     - `<'line-width'>`
-      - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium. See {{cssxref("rule-width")}}.
+      - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium`. See {{cssxref("rule-width")}}.
     - `<'line-style'>`
       - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("rule-style")}}.
     - `<'color'>`
@@ -184,7 +184,7 @@ rule:
   repeat(3, outset blue 10px, inset green 1px);
 ```
 
-This creates a list of seven rules. If the number of styles in the `rule` value's style list exceeds the number of gaps between rows and columns, the excess style values are ignored. If the container on which this is applied has three rows and columns, the rule in the first gutter will be `solid red 5px` and the second `outset blue 10px`.
+This creates a list of seven rules. If the number of styles in the `rule` value's style list exceeds the number of gaps between rows and columns, the excess style values are ignored. If the container on which this is applied has three rows and columns, the rule in the first gutter will be `solid red 5px` and the second `outset blue 10px`, in both directions.
 
 If there are more gutters than styles, the list of styles is repeated. If the container has 8, 15, 22, or 29 rows or columns, this sequence of styles will be repeated in that direction one, two, three, or four times, respectively, with the last rule being `inset green 1px`.
 
@@ -368,13 +368,13 @@ ul {
 
 {{EmbedLiveSample("func", "", "600")}}
 
-The grid has ten columns and eight rows, so nine column gutters and seven row gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values. As there are fewer row gutters than value, the last value is not used in the row direction. As there are more column gutters that rule style values, the list is repeated in the column direction.
+The grid has ten columns and eight rows, so nine column gutters and seven row gutters. The `repeat()` function repeats two style values three times, creating a list of eight style values. As there are fewer row gutters than values, the last value is not used in the row direction. As there are more column gutters than values, the list repeats in the column direction.
 
 ### Using `auto` within `repeat()`
 
 This example demonstrates using the `auto` argument instead of an integer in the `repeat()` function.
 
-Using `repeat(auto, <gap-rule>)`, we set all row and column rules to `1px dotted` and default to the current color, except the first and last rules, which we set to `3px solid red`.
+Using `repeat(auto, <gap-rule>)`, we set all row and column rules to `1px dotted` (with the color defaulting to the current color), except the first and last rules, which we set to `3px solid red`.
 
 ```css live-sample___auto
 ul {
