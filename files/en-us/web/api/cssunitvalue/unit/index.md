@@ -18,7 +18,7 @@ A string indicating the unit type, such as `"em"`, `"px"`, `"%"`, etc.
 
 ### Basic usage
 
-The following creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.unit`.
+The following code creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.unit`.
 
 ```js
 const pos = new CSSPositionValue(

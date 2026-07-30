@@ -18,7 +18,7 @@ An integer.
 
 ### Basic usage
 
-In this example we employ the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor, then query the length:
+In this example, we use the {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor, then query the length:
 
 ```js
 const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);

@@ -26,7 +26,7 @@ A string.
 
 The exact serialization depends on how the `CSSStyleValue` object was obtained:
 
-- If the object was created by parsing a string, such as with {{domxref("CSSStyleValue.parse_static", "CSSStyleValue.parse()")}}, the returned string is that original string.
+- If the object was created by parsing a string, such as with {{domxref("CSSStyleValue.parse_static", "CSSStyleValue.parse()")}}, the method returns the original string that was parsed.
 - If the object was constructed directly, such as with a [`CSS` factory function](/en-US/docs/Web/API/CSS/factory_functions_static) or a subclass constructor, the returned string is generated according to serialization rules specific to that subclass.
 - If the object was read from the CSSOM, such as with {{domxref("Element.computedStyleMap()")}} or {{domxref("HTMLElement.attributeStyleMap")}}, the returned string follows the CSSOM serialization rules.
 

@@ -29,7 +29,7 @@ new CSSTranslate(x, y, z)
   - : A value for the z-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length')}}.
 
-    If a value is passed for the `z-axis` this is a 3d transform.
+    If a value is passed for the `z-axis` this is a 3D transform.
     The value of `is2D` will be set to false.
 
 ### Exceptions

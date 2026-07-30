@@ -30,7 +30,7 @@ An array of {{domxref("CSSStyleValue")}} objects.
 ### Basic usage
 
 The following example uses `getAll()` with the {{cssxref('background-image')}} property.
-An {{jsxref('Array')}} is returned which contains an item for each background image declared.
+An {{jsxref('Array')}} is returned, which contains an item for each background image declared.
 
 ```js
 // get a button element

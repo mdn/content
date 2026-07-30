@@ -9,7 +9,7 @@ browser-compat: api.CSSRotate.z
 {{APIRef("CSS Typed Object Model API")}}
 
 The **`z`** property of the {{domxref("CSSRotate")}} interface representing the z-component of the translating vector.
-A positive value moves the element towards the viewer, and a negative value farther away.
+A positive value moves the element towards the viewer and a negative value farther away.
 
 ## Value
 

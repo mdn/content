@@ -8,7 +8,7 @@ browser-compat: api.CSSSkewX.CSSSkewX
 
 {{APIRef("CSS Typed Object Model API")}}{{AvailableInWorkers}}
 
-The **`CSSSkewX()`** constructor creates a new {{domxref("CSSSkewX")}} object which represents the {{cssxref("transform-function/skewX", "skewX()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
+The **`CSSSkewX()`** constructor creates a new {{domxref("CSSSkewX")}} object that represents the {{cssxref("transform-function/skewX", "skewX()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 

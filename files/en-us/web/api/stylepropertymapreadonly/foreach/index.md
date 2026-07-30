@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ### Basic usage
 
-The following is an example of using `forEach()` on a retrieved {{domxref('Element.computedStyleMap()')}}.
+The following code is an example of using `forEach()` on a retrieved {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element

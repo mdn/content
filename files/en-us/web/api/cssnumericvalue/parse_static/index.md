@@ -34,7 +34,7 @@ A {{domxref('CSSNumericValue')}}.
 
 ### Basic usage
 
-The following returns a {{domxref('CSSUnitValue')}} object with a `unit` property equal to `"px"` and a `value` property equal to `42`.
+The following code returns a {{domxref('CSSUnitValue')}} object with a `unit` property equal to `"px"` and a `value` property equal to `42`.
 
 ```js
 let numValue = CSSNumericValue.parse("42.0px");

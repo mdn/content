@@ -28,7 +28,7 @@ A new {{jsxref("Array")}}.
 
 ### Basic usage
 
-In this example we use the `keys()` method to be able to access the properties within our {{domxref('Element.computedStyleMap()')}}.
+In this example, we use the `keys()` method to access the properties within the {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element

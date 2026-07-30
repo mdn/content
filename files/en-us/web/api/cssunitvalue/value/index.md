@@ -18,7 +18,7 @@ A double.
 
 ### Basic usage
 
-The following creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.value`.
+The following code creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.value`.
 
 ```js
 const pos = new CSSPositionValue(

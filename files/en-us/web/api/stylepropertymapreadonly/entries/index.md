@@ -28,7 +28,7 @@ An array of the given `StylePropertyMapReadOnly` object's own enumerable propert
 
 ### Basic usage
 
-The following shows an example of using `StylePropertyMapReadOnly.entries()` method on an elements computed styles.
+The following code shows an example of using `StylePropertyMapReadOnly.entries()` method on an elements computed styles.
 
 ```js
 // grab a DOM element
