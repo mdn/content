@@ -581,7 +581,7 @@ This simplifies CSS property manipulation by exposing CSS values as typed JavaSc
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Y                   |
+| Nightly           | 154           | Yes                 |
 | Developer Edition | 149           | No                  |
 | Beta              | 149           | No                  |
 | Release           | 149           | No                  |
