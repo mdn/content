@@ -115,7 +115,8 @@ rule:
   repeat(3, dashed magenta 1px, outset green 5px);
 rule:
   inset 3px yellow,
-  repeat(auto, dashed magenta 1px, groove green 5px);
+  repeat(auto, dashed magenta 1px, groove green 5px),
+  inset 3px yellow;
 
 /* Global values */
 rule: inherit;
