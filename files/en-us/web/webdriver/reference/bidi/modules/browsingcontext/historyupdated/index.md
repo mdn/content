@@ -9,13 +9,6 @@ sidebar: webdriver
 
 The `browsingContext.historyUpdated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the active URL in a context is updated programmatically without a full navigation.
 
-## Description
-
-This event fires when {{domxref("History.pushState", "history.pushState()")}} or {{domxref("History.replaceState", "history.replaceState()")}} is called to update the URL, or when {{domxref("Document.open", "document.open()")}} is called to replace the document.
-These calls change the active URL in the context.
-
-`browsingContext.historyUpdated` fires specifically when the URL is changed programmatically, unlike [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated), which fires for same-document navigations to a URL fragment.
-
 ## Event data
 
 The `params` field in the event notification is an object with the following fields:
@@ -26,6 +19,13 @@ The `params` field in the event notification is an object with the following fie
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the updated URL.
+
+## Description
+
+This event fires when {{domxref("History.pushState", "history.pushState()")}} or {{domxref("History.replaceState", "history.replaceState()")}} is called to update the URL, or when {{domxref("Document.open", "document.open()")}} is called to replace the document.
+These calls change the active URL in the context.
+
+`browsingContext.historyUpdated` fires specifically when the URL is changed programmatically, unlike [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated), which fires for same-document navigations to a URL fragment.
 
 ## Examples
 

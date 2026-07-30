@@ -9,14 +9,6 @@ sidebar: webdriver
 
 The `browsingContext.load` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation has fully completed in a context.
 
-## Description
-
-In the lifecycle of a successful navigation, this event fires after [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) and is the final event in the sequence.
-
-At this point, the document and all its subresources have finished loading, equivalent to the {{domxref("Window/load_event", "load")}} event firing.
-
-If you set `wait` to `"complete"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.load` fires.
-
 ## Event data
 
 The `params` field in the event notification is an object with the following fields:
@@ -31,6 +23,14 @@ The `params` field in the event notification is an object with the following fie
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL of the document that has fully loaded.
+
+## Description
+
+In the lifecycle of a successful navigation, this event fires after [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) and is the final event in the sequence.
+
+At this point, the document and all its subresources have finished loading, equivalent to the {{domxref("Window/load_event", "load")}} event firing.
+
+If you set `wait` to `"complete"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.load` fires.
 
 ## Examples
 

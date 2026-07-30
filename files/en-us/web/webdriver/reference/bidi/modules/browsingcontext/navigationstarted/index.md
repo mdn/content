@@ -9,6 +9,21 @@ sidebar: webdriver
 
 The `browsingContext.navigationStarted` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation begins in a context.
 
+## Event data
+
+The `params` field in the event notification is an object with the following fields:
+
+- `context`
+  - : A string that contains the ID of the context in which the navigation is starting.
+- `navigation`
+  - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
+    If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
+    The same ID is shared by all events related to this navigation, including other navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module.
+- `timestamp`
+  - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+- `url`
+  - : A string that contains the URL being loaded.
+
 ## Description
 
 The navigation to a different page can be triggered by the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, by user interaction with elements on the page, or by JavaScript running in the page's context.
@@ -24,21 +39,6 @@ If the navigation fails, [`browsingContext.navigationFailed`](/en-US/docs/Web/We
 This event does not fire for same-document navigations.
 For navigations to a URL fragment, see [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated).
 For URL changes made through the History API without a full navigation, see [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated).
-
-## Event data
-
-The `params` field in the event notification is an object with the following fields:
-
-- `context`
-  - : A string that contains the ID of the context in which the navigation is starting.
-- `navigation`
-  - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
-    If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
-    The same ID is shared by all events related to this navigation, including other navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module.
-- `timestamp`
-  - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
-- `url`
-  - : A string that contains the URL being loaded.
 
 ## Examples
 

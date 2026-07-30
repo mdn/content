@@ -9,10 +9,6 @@ sidebar: webdriver
 
 The `browsingContext.navigationFailed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation is blocked.
 
-## Description
-
-In the lifecycle of a navigation, this event fires when the navigation is blocked, for example because of a security or CSP restriction or because the client cancels the unload prompt.
-
 ## Event data
 
 The `params` field in the event notification is an object with the following fields:
@@ -26,6 +22,10 @@ The `params` field in the event notification is an object with the following fie
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL being loaded.
+
+## Description
+
+In the lifecycle of a navigation, this event fires when the navigation is blocked, for example because of a security or CSP restriction or because the client cancels the unload prompt.
 
 ## Examples
 

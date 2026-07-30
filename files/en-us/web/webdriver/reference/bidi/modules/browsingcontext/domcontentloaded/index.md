@@ -9,14 +9,6 @@ sidebar: webdriver
 
 The `browsingContext.domContentLoaded` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the HTML document has been parsed during a cross-document navigation in a context.
 
-## Description
-
-In the lifecycle of a successful navigation, this event fires after [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) and before [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) events.
-
-At this point, the HTML has been parsed, but subresources such as stylesheets and images may still be loading. This event is equivalent to the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event firing in the context.
-
-If you set `wait` to `"interactive"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.domContentLoaded` fires.
-
 ## Event data
 
 The `params` field in the event notification is an object with the following fields:
@@ -31,6 +23,14 @@ The `params` field in the event notification is an object with the following fie
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL being loaded.
+
+## Description
+
+In the lifecycle of a successful navigation, this event fires after [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted) and before [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) events.
+
+At this point, the HTML has been parsed, but subresources such as stylesheets and images may still be loading. This event is equivalent to the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event firing in the context.
+
+If you set `wait` to `"interactive"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.domContentLoaded` fires.
 
 ## Examples
 

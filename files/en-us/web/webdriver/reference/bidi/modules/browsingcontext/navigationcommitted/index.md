@@ -9,18 +9,6 @@ sidebar: webdriver
 
 The `browsingContext.navigationCommitted` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the browser commits a cross-document navigation and begins loading the new page.
 
-## Description
-
-A navigation is committed when the browser has accepted the URL from the server response and begun loading the new page, but before any content has been parsed or rendered. Page content is not yet available at this point.
-
-In the lifecycle of a successful navigation, this event fires after [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) and before [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) and [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) events.
-
-If you set `wait` to `"none"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.navigationCommitted` fires.
-
-This event does not fire for same-document navigations.
-For navigations to a URL fragment, see [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated).
-For URL changes made through the History API without a full navigation, see [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated).
-
 ## Event data
 
 The `params` field in the event notification is an object with the following fields:
@@ -35,6 +23,18 @@ The `params` field in the event notification is an object with the following fie
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
   - : A string that contains the URL being loaded, including any basic auth credentials.
+
+## Description
+
+A navigation is committed when the browser has accepted the URL from the server response and begun loading the new page, but before any content has been parsed or rendered. Page content is not yet available at this point.
+
+In the lifecycle of a successful navigation, this event fires after [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) and before [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) and [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load) events.
+
+If you set `wait` to `"none"` for the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands, they return as soon as `browsingContext.navigationCommitted` fires.
+
+This event does not fire for same-document navigations.
+For navigations to a URL fragment, see [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated).
+For URL changes made through the History API without a full navigation, see [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated).
 
 ## Examples
 
