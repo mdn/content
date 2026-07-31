@@ -1,6 +1,6 @@
 ---
 title: CCPA
-slug: Web/Privacy/Guides/Legislation/CCPA
+slug: Web/Privacy/Legislation/CCPA
 page-type: guide
 sidebar: privacy
 ---
@@ -14,7 +14,7 @@ The CCPA applies to data controllers and processors that meet certain thresholds
 
 CCPA applies to for‑profit businesses that collect personal information of California residents and either have an annual revenue of over $25M, buy, sell, or share the personal data of over 100,000 data subjects, or derive most of their revenue from the selling or sharing of personal data. Non-profit organizations and businesses that fall below these thresholds are generally exempt.
 
-While your site may not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Guides/Legislation/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
+While your site may not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
 
 - A clear privacy policy that explains data practices.
 - Provide methods for submitting requests to know, delete, correct, or limit use of personal data.
@@ -56,7 +56,7 @@ CCPA also explicitly prevents discrimination. Data controllers cannot retaliate 
 
 ### Conformity requirements
 
-CCPA compliance is ultimately an engineering problem as much as a legal one. To comply with CCPA, you should [design for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy) and build privacy into your application's architecture, data flows, and UI features. Ensure you collect the minimum data needed, store it securely and transparently, make it retrievable and deletable, and provide your users with control over their privacy choices.
+CCPA compliance is ultimately an engineering problem as much as a legal one. To comply with CCPA, you should [design for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy) and build privacy into your application's architecture, data flows, and UI features. Ensure you collect the minimum data needed, store it securely and transparently, make it retrievable and deletable, and provide your users with control over their privacy choices.
 
 To comply with CCPA, if you collect any personal data, or incorporate third-party scripts that do, in addition to implementing all the [data subject rights](#data-subject-rights), there are several steps you need to complete and maintain to comply with the law:
 
@@ -174,8 +174,8 @@ Here is an example of an opt-out message for email tracking:
 
 ## See also
 
-- [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Guides/Legislation/GDPR)
-- [Designing for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy)
+- [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR)
+- [Designing for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy)
 - [Privacy](/en-US/docs/Web/Privacy)
 - [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa) via oag.ca.gov ([pdf](https://cppa.ca.gov/regulations/pdf/20230329_final_regs_text.pdf))
 - [Global Privacy Control specification](https://www.w3.org/TR/gpc) via w3.org

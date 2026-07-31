@@ -1,6 +1,6 @@
 ---
 title: Privacy regulations
-slug: Web/Privacy/Guides/Legislation
+slug: Web/Privacy/Legislation
 page-type: guide
 sidebar: privacy
 ---
@@ -9,13 +9,13 @@ Respecting a user's privacy is not just a good practice and a way to build trust
 
 ## GDPR: Europe's privacy law
 
-The [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Guides/Legislation/GDPR), is the European Union's comprehensive data protection law. GDPR gives individuals control over their own data and unifies data protection regulations across EU member states. GDPR governs how organizations handle the personal data of EU residents.
+The [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR), is the European Union's comprehensive data protection law. GDPR gives individuals control over their own data and unifies data protection regulations across EU member states. GDPR governs how organizations handle the personal data of EU residents.
 
 GDPR is a strict, opt‑in, rights‑heavy regulation that applies to anyone processing EU data. GDPR requires a lawful basis for processing. Consent must be freely given, specific, informed, and unambiguous. Users must actively opt in before data collection unless another lawful basis applies (contract, legal obligation, legitimate interest, etc.).
 
 ## CCPA: California's privacy law
 
-The [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Guides/Legislation/CCPA) is a California privacy law giving California residents rights over their personal information. CCPA creates requirements on businesses that collect, use, or share that data, including rights to know, delete, opt out, correct, and limit the use of sensitive data.
+The [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Legislation/CCPA) is a California privacy law giving California residents rights over their personal information. CCPA creates requirements on businesses that collect, use, or share that data, including rights to know, delete, opt out, correct, and limit the use of sensitive data.
 
 CCPA is business‑ and threshold‑based, opt‑out, category‑driven legislation that is focused on the sale and sharing of personal data. CCPA allows businesses to collect and use personal information by default but requires that data subjects have the right to opt out of the sale or sharing of personal information and provides data subjects the right to limit the use of their sensitive personal information, while requiring [Global Privacy Control (GPC)](/en-US/docs/Web/API/Navigator/globalPrivacyControl) signals be honored.
 
@@ -23,7 +23,7 @@ The CCPA law applies primarily to businesses meeting specific size‑related thr
 
 ## Complying with privacy regulations
 
-To better ensure user privacy, you should [design and develop for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy), and have comprehensive [privacy policies](/en-US/docs/Web/Privacy/Guides/GDPR#privacy_notice), security and breach workflows, a consumer request user flow or pipeline to meet [Data Subject Access Request (DSAR)](/en-US/docs/Web/Privacy/Guides/GDPR#process_for_access_requests) requirements, complete [data inventory with documentation](/en-US/docs/Web/Privacy/Guides/GDPR#data_inventory), and a consent / opt-out capabilities. To comply with both GDPR and CCPA, developers must ensure that systems minimize data collection, store it [transparently](/en-US/docs/Web/Privacy/Guides/GDPR#privacy_notice), make it retrievable and deletable, and provide user‑controlled privacy choices.
+To better ensure user privacy, you should [design and develop for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy), and have comprehensive [privacy policies](/en-US/docs/Web/Privacy/GDPR#privacy_notice), security and breach workflows, a consumer request user flow or pipeline to meet [Data Subject Access Request (DSAR)](/en-US/docs/Web/Privacy/GDPR#process_for_access_requests) requirements, complete [data inventory with documentation](/en-US/docs/Web/Privacy/GDPR#data_inventory), and a consent / opt-out capabilities. To comply with both GDPR and CCPA, developers must ensure that systems minimize data collection, store it [transparently](/en-US/docs/Web/Privacy/GDPR#privacy_notice), make it retrievable and deletable, and provide user‑controlled privacy choices.
 
 _Data minimization_ means collecting only what is reasonably necessary and proportionate for your disclosed purpose. For example, if you only need an email address to create user accounts, you cannot also require a phone number. Similarly, when collecting usage analytics, you must collect only the metrics required, not full logs. Data minimization means collecting less data compared to any unnecessary or unjustified data collection, not compared to a specific baseline.
 
@@ -50,5 +50,5 @@ The various privacy laws use slightly different vocabulary to name users, captur
 
 ## See also
 
-- [Designing for privacy](/en-US/docs/Web/Privacy/Guides/Designing_for_privacy)
-- [Privacy guides](/en-US/docs/Web/Privacy/Guides)
+- [Designing for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy)
+- [Privacy guides](/en-US/docs/Web/Privacy)
