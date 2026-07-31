@@ -79,7 +79,7 @@ Select different `gap` values to see the effect of each:
 }
 ```
 
-{{EmbedLiveSample("grid_gap", "", "600")}}
+{{EmbedLiveSample("grid_gap", "", "420")}}
 
 ### With flex
 
@@ -181,7 +181,7 @@ i:nth-of-type(7n) {
 </fieldset>
 ```
 
-{{EmbedLiveSample("flex_gap", "", "600")}}
+{{EmbedLiveSample("flex_gap", "", "900")}}
 
 In [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout), the property defines the gutter between columns and rows of columns. The first value defines the gap between adjacent column boxes, while the second value defines the size of the gutter between rows of column boxes, if multiple rows were established by the {{cssxref("column-height")}} property.
 
@@ -212,7 +212,7 @@ By default, there is a `1em` gap between rows and columns. Change this by select
 }
 ```
 
-{{EmbedLiveSample("col_gap", "", "600")}}
+{{EmbedLiveSample("col_gap", "", "820")}}
 
 The gutters may appear larger than the gap size defined because the letters don't fill up the allotted space. The rule is in the middle of the gap, either 0.25em or 1.5em from the block and inline starts of the column and row's content depending on the setting selected. The extra white-space is at block- and inline-end, making the gaps look larger than they are.
 
@@ -311,13 +311,13 @@ In this example, the size of the container is set. Select different gap sizes, s
 }
 ```
 
-{{EmbedLiveSample("percent_gap", "", "1000")}}
+{{EmbedLiveSample("percent_gap", "", "800")}}
 
 You'll note that when you set the `gap` property to a single value, when the `column-gap` and the `row-gap` have the same percent set, the row gap is twice the size of the column gap because the container is twice as tall as it is wide.
 
 ```css hidden live-sample___percent_gap live-sample___percent_gap2
 fieldset {
-  width: 45%;
+  width: 44%;
   float: left;
 }
 p {
@@ -367,7 +367,7 @@ Because if the container is auto‑sized, percent gaps could become circular - w
 }
 ```
 
-{{EmbedLiveSample("percent_gap2", "", "1000")}}
+{{EmbedLiveSample("percent_gap2", "", "500")}}
 
 In the example, the width of the container is constrained by the containing block, while the height is not.
 
