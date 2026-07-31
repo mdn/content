@@ -10,7 +10,7 @@ A typical 3D scene in a game — even the simplest one — contains standard ite
 Three is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, though we are not saying it is better than any other WebGL library, and you should feel free to try other libraries.
 
 > [!NOTE]
-> This guide was last updated in November 2024, and is compatible with Three.js version `r79`.
+> This guide was last updated in August 2026, and is compatible with Three.js version `r185`.
 
 ## Development setup
 
@@ -20,7 +20,9 @@ In your code, you can import Three.js [using a CDN or use Node.js](https://three
 If you're including it from a CDN, you can use the following URL in your HTML:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+<script type="module">
+  import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js';
+</script>
 ```
 
 A Node.js setup with Three.js installed as a dependency is convenient if you want to develop against specific Three.js versions and it can speed up collaboration and deployment:
@@ -31,8 +33,8 @@ npm install --save-dev vite # For development
 npx vite
 ```
 
-Alternatively, you can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
-Bear in mind that the archives include source files, which makes the download size approximately 350MB.
+Alternatively, you can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.webgpu.js` into your project.
+Bear in mind that the archives include source files, which makes the download size approximately 360MB.
 
 Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
 
@@ -59,7 +61,14 @@ If you're building your project locally in an IDE, here's the HTML structure to 
     </style>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js",
+        "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js"
+      }
+    }
+    </script>
     <script>
       const WIDTH = window.innerWidth;
       const HEIGHT = window.innerHeight;
@@ -75,16 +84,20 @@ Before reading further, copy this code to a new text file, and save it in your w
 
 ## Renderer
 
-A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser.
+A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are WebGPU, Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser. For instance, the WebGPU renderer uses a WebGPU backend by default and a WebGL 2 backend as a fallback.
 
-The code below creates a new WebGL renderer, sets its size to fit the whole available space on the screen, and appends the DOM structure to the page.
+The code below creates a new WebGPU renderer, sets its size to fit the whole available space on the screen, and appends the DOM structure to the page.
 You might have noticed the `antialias` parameter in the first line — this renders the edges of shapes more smoothly. The `setClearColor()` method sets our background to a light gray color, instead of the default black one.
 
 ```js
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+import * as THREE from 'three/webgpu';
+
+const renderer = new THREE.WebGPURenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
+
+await renderer.init();
 ```
 
 Add this code into our second {{htmlelement("script")}} element, just below the JavaScript comment.
@@ -188,17 +201,18 @@ Your code should look like the following live sample.
 You can click "Play" to view and edit the code in the MDN Playground:
 
 ```html hidden live-sample___three-js-intro
-<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
-```
+<script type="module">
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js';
 
-```js hidden live-sample___three-js-intro
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGPURenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
+
+await renderer.init();
 
 const scene = new THREE.Scene();
 
@@ -328,17 +342,18 @@ Here's the final code with animated shapes.
 You can click "Play" to edit the example in the MDN Playground:
 
 ```html hidden live-sample___three-js-animation
-<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
-```
+<script type="module">
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js';
 
-```js live-sample___three-js-animation
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGPURenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
+
+await renderer.init();
 
 const scene = new THREE.Scene();
 
@@ -398,5 +413,5 @@ canvas {
 
 Now you know the basics of Three.js; happy experimentation!
 You can continue reading the [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) documentation if you want to learn more.
-You could also try learning WebGL, to gain a better understanding of what's going on underneath.
-See our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) for more information.
+You could also try learning WebGL and WebGPU, to gain a better understanding of what's going on underneath.
+See our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) and [WebGPU documentation](/en-US/docs/Web/API/WebGPU_API)for more information.
