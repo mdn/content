@@ -5,9 +5,10 @@ page-type: web-api-interface
 browser-compat: api.CSSSkewY
 ---
 
-{{APIRef("CSS Typed OM")}}{{AvailableInWorkers}}
+{{APIRef("CSS Typed Object Model API")}}{{AvailableInWorkers}}
 
-The **`CSSSkewY`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/skewY", "skewY()")}} value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.
+The **`CSSSkewY`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/skewY", "skewY()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
+It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.
 
 {{InheritanceDiagram}}
 

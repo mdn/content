@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.sub
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`sub()`** method of the
-{{domxref("CSSNumericValue")}} interface subtracts a supplied number from the
-`CSSNumericValue`.
+The **`sub()`** method of the {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the `CSSNumericValue`.
 
 ## Syntax
 
@@ -33,6 +31,8 @@ A {{domxref('CSSMathSum')}}
   - : Thrown if an invalid type was passed to the method.
 
 ## Examples
+
+### Basic usage
 
 ```js
 let mathSum = CSS.px("23")

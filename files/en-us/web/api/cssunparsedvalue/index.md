@@ -5,9 +5,10 @@ page-type: web-api-interface
 browser-compat: api.CSSUnparsedValue
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSUnparsedValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents property values that reference [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables). It consists of a list of string fragments and variable references.
+The **`CSSUnparsedValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents property values that reference [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables).
+It consists of a list of string fragments and variable references.
 
 Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "var()")}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 

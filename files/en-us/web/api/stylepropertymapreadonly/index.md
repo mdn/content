@@ -7,7 +7,8 @@ browser-compat: api.StylePropertyMapReadOnly
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}.
+Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
 ## Instance properties
 
@@ -32,6 +33,8 @@ The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API]
   - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
 ## Examples
+
+### Basic usage
 
 We have to have an element to observe:
 
