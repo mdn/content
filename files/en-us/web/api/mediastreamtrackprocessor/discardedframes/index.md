@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrackProcessor.discardedFrames
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}
 
-The **`discardedFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating the number of frames dropped by the processor.
+The **`discardedFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating how many frames have been dropped by the processor.
 
 ## Value
 
