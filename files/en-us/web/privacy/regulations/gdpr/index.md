@@ -1,6 +1,6 @@
 ---
 title: GDPR
-slug: Web/Privacy/Legislation/GDPR
+slug: Web/Privacy/Regulations/GDPR
 page-type: guide
 sidebar: privacy
 ---
@@ -129,6 +129,6 @@ GDPR uses the following terms:
 
 ## See also
 
-- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Legislation/CCPA)
+- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Regulations/CCPA)
 - [Designing for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy)
 - [Privacy](/en-US/docs/Web/Privacy)

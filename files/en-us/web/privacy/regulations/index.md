@@ -1,6 +1,6 @@
 ---
 title: Privacy regulations
-slug: Web/Privacy/Legislation
+slug: Web/Privacy/Regulations
 page-type: guide
 sidebar: privacy
 ---
@@ -9,13 +9,13 @@ Respecting a user's privacy is not just a good practice and a way to build trust
 
 ## GDPR: Europe's privacy law
 
-The [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR), is the European Union's comprehensive data protection law. GDPR gives individuals control over their own data and unifies data protection regulations across EU member states. GDPR governs how organizations handle the personal data of EU residents.
+The [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Regulations/GDPR), is the European Union's comprehensive data protection law. GDPR gives individuals control over their own data and unifies data protection regulations across EU member states. GDPR governs how organizations handle the personal data of EU residents.
 
 GDPR is a strict, opt‑in, rights‑heavy regulation that applies to anyone processing EU data. GDPR requires a lawful basis for processing. Consent must be freely given, specific, informed, and unambiguous. Users must actively opt in before data collection unless another lawful basis applies (contract, legal obligation, legitimate interest, etc.).
 
 ## CCPA: California's privacy law
 
-The [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Legislation/CCPA) is a California privacy law giving California residents rights over their personal information. CCPA creates requirements on businesses that collect, use, or share that data, including rights to know, delete, opt out, correct, and limit the use of sensitive data.
+The [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Regulations/CCPA) is a California privacy law giving California residents rights over their personal information. CCPA creates requirements on businesses that collect, use, or share that data, including rights to know, delete, opt out, correct, and limit the use of sensitive data.
 
 CCPA is business‑ and threshold‑based, opt‑out, category‑driven legislation that is focused on the sale and sharing of personal data. CCPA allows businesses to collect and use personal information by default but requires that data subjects have the right to opt out of the sale or sharing of personal information and provides data subjects the right to limit the use of their sensitive personal information, while requiring [Global Privacy Control (GPC)](/en-US/docs/Web/API/Navigator/globalPrivacyControl) signals be honored.
 

@@ -1,6 +1,6 @@
 ---
 title: CCPA
-slug: Web/Privacy/Legislation/CCPA
+slug: Web/Privacy/Regulations/CCPA
 page-type: guide
 sidebar: privacy
 ---
@@ -14,7 +14,7 @@ The CCPA applies to data controllers and processors that meet certain thresholds
 
 CCPA applies to for‑profit businesses that collect personal information of California residents and either have an annual revenue of over $25M, buy, sell, or share the personal data of over 100,000 data subjects, or derive most of their revenue from the selling or sharing of personal data. Non-profit organizations and businesses that fall below these thresholds are generally exempt.
 
-While your site may not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
+While your site may not fall under CCPA, you may fall under Europe's [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Regulations/GDPR), which has similar requirements, but encompasses a much broader umbrella of sites. Both privacy policies require the following:
 
 - A clear privacy policy that explains data practices.
 - Provide methods for submitting requests to know, delete, correct, or limit use of personal data.
@@ -174,7 +174,7 @@ Here is an example of an opt-out message for email tracking:
 
 ## See also
 
-- [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Legislation/GDPR)
+- [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Regulations/GDPR)
 - [Designing for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy)
 - [Privacy](/en-US/docs/Web/Privacy)
 - [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa) via oag.ca.gov ([pdf](https://cppa.ca.gov/regulations/pdf/20230329_final_regs_text.pdf))
