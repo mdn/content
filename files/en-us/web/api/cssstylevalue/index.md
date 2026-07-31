@@ -31,7 +31,7 @@ Below is a list of interfaces based on the `CSSStyleValue` interface.
 ## Instance methods
 
 - {{domxref("CSSStyleValue.toString()")}}
-  - : A {{Glossary("stringifier")}} that returns a string containing the serialized CSS text of the value.
+  - : A {{Glossary("stringifier")}} that returns the value formatted as a string of standard CSS text.
 
 ## Specifications
 
