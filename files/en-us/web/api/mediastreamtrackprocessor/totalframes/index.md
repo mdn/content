@@ -34,7 +34,8 @@ async function init() {
       const { value: frame, done } = await reader.read();
       if (done) break;
 
-      // do something with frame...
+      // Do something with frame...
+      
       frame.close();
 
       console.log(
