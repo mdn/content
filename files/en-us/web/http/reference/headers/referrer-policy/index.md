@@ -62,6 +62,19 @@ Referrer-Policy: unsafe-url
     > [!WARNING]
     > This policy will leak potentially-private information from HTTPS resource URLs to insecure origins. Carefully consider the impact of this setting.
 
+## Effect on the `Origin` header
+
+The referrer policy also decides what the browser puts in the {{HTTPHeader("Origin")}} header, not just the {{HTTPHeader("Referer")}} header.
+This only applies to requests that don't use [CORS](/en-US/docs/Web/HTTP/Guides/CORS) and whose method is neither `GET` nor `HEAD`.
+For those requests the browser sends `Origin: null` in place of the serialized origin in these cases:
+
+- The policy is `no-referrer`.
+- The policy is `no-referrer-when-downgrade`, `strict-origin`, or `strict-origin-when-cross-origin`, and the request goes from an `https` origin to a URL that isn't `https`.
+- The policy is `same-origin` and the request is cross-origin.
+
+Any other policy value leaves the `Origin` header set to the request's origin.
+CORS requests, WebSocket requests, and WebTransport requests always send the serialized origin, whatever the referrer policy, because they already opt into sharing the origin with the server.
+
 ## Integration with HTML
 
 You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta/name) of `referrer`:
