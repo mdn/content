@@ -38,7 +38,7 @@ console.log(
 
 ### Warning when the context is nearly full
 
-The following example uses a function to verify that context is available before calling {{domxref("LanguageModel.prompt()")}}. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less or equal to than `remaining`, it returns `true` and the session continues.
+The following example uses a function to verify that context is available before calling {{domxref("LanguageModel.prompt()")}}. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less than or equal to `remaining`, it returns `true` and the session continues.
 
 ```js
 const promptText = "Let me ask you an interesting question...";

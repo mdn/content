@@ -175,7 +175,7 @@ const session = await LanguageModel.create({
 
 ### Providing few-shot prompts
 
-The following example shows how use a [few-shot prompt](/en-US/docs/Web/API/Prompt_API/Adding_context#few-shot_prompts) to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
+The following example shows how to use a [few-shot prompt](/en-US/docs/Web/API/Prompt_API/Adding_context#few-shot_prompts) to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
 
 ```js
 const session = await LanguageModel.create({
