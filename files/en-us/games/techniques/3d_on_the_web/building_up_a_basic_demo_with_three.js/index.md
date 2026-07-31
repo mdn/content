@@ -414,4 +414,4 @@ canvas {
 Now you know the basics of Three.js; happy experimentation!
 You can continue reading the [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) documentation if you want to learn more.
 You could also try learning WebGL and WebGPU, to gain a better understanding of what's going on underneath.
-See our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) and [WebGPU documentation](/en-US/docs/Web/API/WebGPU_API)for more information.
+See our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) and [WebGPU documentation](/en-US/docs/Web/API/WebGPU_API) for more information.
