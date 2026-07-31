@@ -8,9 +8,7 @@ browser-compat: api.StylePropertyMapReadOnly.get
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`get()`** method of the
-{{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}}
-object for the first value of the specified property.
+The **`get()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}} object for the first value of the specified property.
 
 ## Syntax
 
@@ -29,9 +27,9 @@ A {{domxref("CSSStyleValue")}} object.
 
 ## Examples
 
-Let's get just a few properties and values. Let's start by creating a link inside a
-paragraph in our HTML, and adding a definition list which we will populate with
-JavaScript:
+### Basic usage
+
+Let's get just a few properties and values. Let's start by creating a link inside a paragraph in our HTML, and adding a definition list which we will populate with JavaScript:
 
 ```html
 <p>
@@ -52,11 +50,7 @@ a {
 }
 ```
 
-We use the Element's
-[`computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap)
-to return a _StylePropertyMapReadOnly_ object. We create an array of properties
-of interest and use the StylePropertyMapReadOnly's `get()` method to get only
-those values.
+We use the element's [`computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap) to return a `StylePropertyMapReadOnly` object. We create an array of properties of interest and use the `get()` method of `StylePropertyMapReadOnly` to get only those values.
 
 ```js
 // get the element
