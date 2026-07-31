@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrackProcessor.totalFrames
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}
 
-The **`totalFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating the total number of frames recieved by the processor.
+The **`totalFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating how many frames have been received by the processor in total.
 
 ## Value
 
