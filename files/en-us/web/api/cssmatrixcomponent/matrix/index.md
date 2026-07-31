@@ -8,11 +8,9 @@ browser-compat: api.CSSMatrixComponent.matrix
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`matrix`** property of the
-{{domxref("CSSMatrixComponent")}} interface gets and sets a 2d or 3d matrix.
+The **`matrix`** property of the {{domxref("CSSMatrixComponent")}} interface gets and sets a 2D or 3D matrix.
 
-See the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} pages for
-examples.
+See the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} pages for examples.
 
 ## Value
 

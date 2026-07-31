@@ -21,7 +21,8 @@ For example, the value `42px` (a {{cssxref("&lt;dimension&gt;")}}) would be repr
 ## Instance properties
 
 - {{domxref('CSSUnitValue.value')}}
-  - : Returns a double indicating the number of units. For a `CSSNumericValue` representing `42px`, this would be `42`.
+  - : Returns a double indicating the number of units.
+    For a `CSSNumericValue` representing `42px`, this would be `42`.
 - {{domxref('CSSUnitValue.unit')}}
   - : Returns a string indicating the type of unit. For a `CSSNumericValue` representing `42px`, this would be `"px"`.
 
@@ -34,6 +35,8 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 _The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
 
 ## Examples
+
+### Basic usage
 
 The following shows a method of creating a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors.
 

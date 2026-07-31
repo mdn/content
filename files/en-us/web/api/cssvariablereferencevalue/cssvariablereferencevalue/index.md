@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
 Creates a new {{domxref('CSSVariableReferenceValue')}}.
 

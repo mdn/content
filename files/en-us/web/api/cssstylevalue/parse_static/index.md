@@ -8,9 +8,7 @@ browser-compat: api.CSSStyleValue.parse_static
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`parse()`** static method of the {{domxref("CSSStyleValue")}}
-interface sets a specific CSS property to the specified values and returns the first
-value as a {{domxref('CSSStyleValue')}} object.
+The **`parse()`** static method of the {{domxref("CSSStyleValue")}} interface sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.
 
 ## Syntax
 
@@ -32,9 +30,10 @@ A `CSSStyleValue` object containing the first supplied value.
 
 ## Examples
 
+### Basic usage
+
 The code below parses a set of declarations for the `transform` property.
-The second code block shows the structure of the returned object as it would be rendered
-in a developer tools console.
+The second code block shows the structure of the returned object as it would be rendered in a developer tools console.
 
 ```js
 const css = CSSStyleValue.parse(

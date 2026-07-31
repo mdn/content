@@ -8,11 +8,8 @@ browser-compat: api.CSSMathValue.operator
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathValue.operator`** read-only
-property of the {{domxref("CSSMathValue")}} interface indicates the operator that the
-current subtype represents. For example, if the current `CSSMathValue`
-subtype is `CSSMathSum`, this property will return the string
-`"sum"`.
+The **`CSSMathValue.operator`** read-only property of the {{domxref("CSSMathValue")}} interface indicates the operator that the current subtype represents.
+For example, if the current `CSSMathValue` subtype is `CSSMathSum`, this property will return the string `"sum"`.
 
 ## Value
 
@@ -30,10 +27,9 @@ A {{jsxref('String')}}.
 
 ## Examples
 
-We create an element with a {{cssxref("width")}}
-determined using a {{cssxref("calc()")}} function,
-then {{domxref("console/log_static", "console.log()")}} the
-`operator`.
+### Basic usage
+
+We create an element with a {{cssxref("width")}} determined using a {{cssxref("calc()")}} function, then {{domxref("console/log_static", "console.log()")}} the `operator`.
 
 ```html
 <div>My width has a <code>calc()</code> function</div>
@@ -58,10 +54,9 @@ console.log(styleMap.get("width").operator); // 'sum'
 console.log(styleMap.get("width").values[1].operator); // 'negate'
 ```
 
-{{EmbedLiveSample("Examples", 120, 300)}}
+{{EmbedLiveSample("Basic usage", 120, 300)}}
 
-The `CSSMathValue.operator` returns `sum` for the equation and
-`negate` for the operator on the second value.
+The `CSSMathValue.operator` returns `sum` for the equation and `negate` for the operator on the second value.
 
 ## Specifications
 
