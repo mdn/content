@@ -50,7 +50,7 @@ a {
 }
 ```
 
-We use the element's [`computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap) to return a `StylePropertyMapReadOnly` object. We create an array of properties of interest and use the  `get()` method of `StylePropertyMapReadOnly` to get only those values.
+We use the element's [`computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap) to return a `StylePropertyMapReadOnly` object. We create an array of properties of interest and use the `get()` method of `StylePropertyMapReadOnly` to get only those values.
 
 ```js
 // get the element
