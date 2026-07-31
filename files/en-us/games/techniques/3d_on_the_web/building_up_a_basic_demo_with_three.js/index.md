@@ -21,7 +21,7 @@ If you're including it from a CDN, you can use the following URL in your HTML:
 
 ```html
 <script type="module">
-  import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js';
+  import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js";
 </script>
 ```
 
@@ -62,12 +62,12 @@ If you're building your project locally in an IDE, here's the HTML structure to 
   </head>
   <body>
     <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js",
-        "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js"
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js",
+          "three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.webgpu.js"
+        }
       }
-    }
     </script>
     <script>
       const WIDTH = window.innerWidth;
@@ -90,7 +90,7 @@ The code below creates a new WebGPU renderer, sets its size to fit the whole ava
 You might have noticed the `antialias` parameter in the first line — this renders the edges of shapes more smoothly. The `setClearColor()` method sets our background to a light gray color, instead of the default black one.
 
 ```js
-import * as THREE from 'three/webgpu';
+import * as THREE from "three/webgpu";
 
 const renderer = new THREE.WebGPURenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
