@@ -16,6 +16,8 @@ A number.
 
 ## Examples
 
+### Basic usage
+
 ```js
 async function init() {
   try {
