@@ -26,7 +26,7 @@ The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for Med
 - {{domxref("MediaStreamTrackProcessor.readable")}}
   - : Returns a {{domxref("ReadableStream")}}.
 - {{domxref("MediaStreamTrackProcessor.totalframes")}}
-  - : A number indicating the total number of frames recieved by the processor
+  - : A number indicating how many frames have been received by the processor in total.
 
 ## Examples
 
