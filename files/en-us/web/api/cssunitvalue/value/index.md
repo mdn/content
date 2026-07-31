@@ -8,8 +8,7 @@ browser-compat: api.CSSUnitValue.value
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSUnitValue.value`** property of the
-{{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
+The **`CSSUnitValue.value`** property of the {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
 
 ## Value
 
@@ -17,9 +16,9 @@ A double.
 
 ## Examples
 
-The following creates a {{domxref('CSSPositionValue')}} from individual
-`CSSUnitValue` constructors, then queries the
-`CSSUnitValue.value`.
+### Basic usage
+
+The following code creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.value`.
 
 ```js
 const pos = new CSSPositionValue(

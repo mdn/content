@@ -164,7 +164,9 @@ browser.runtime.onMessage.addListener(
 
 ### Filter events
 
-Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
+When your extension only needs to act on a subset of events, such as when a web page is opened from a specific domain, use event filters where they are available.
+
+For example, you can add a filter to the {{WebExtAPIRef("webNavigation.onCompleted")}} event to start your background script when certain URLs load, like this:
 
 ```js
 browser.webNavigation.onCompleted.addListener(
@@ -174,6 +176,8 @@ browser.webNavigation.onCompleted.addListener(
   { url: [{ urlMatches: "https://www.mozilla.org/" }] },
 );
 ```
+
+When targeting Firefox desktop only, you can also add filters to {{WebExtAPIRef("tabs.onUpdated")}} to achieve a similar outcome.
 
 ### React to listeners
 

@@ -8,10 +8,7 @@ browser-compat: api.CSSStyleValue.parseAll_static
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`parseAll()`** static method of the {{domxref("CSSStyleValue")}}
-interface sets all occurrences of a specific CSS property to the specified value and
-returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the
-supplied values.
+The **`parseAll()`** static method of the {{domxref("CSSStyleValue")}} interface sets all occurrences of a specific CSS property to the specified value and returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
 
 ## Syntax
 
@@ -24,8 +21,7 @@ CSSStyleValue.parseAll(property, value)
 - `property`
   - : A CSS property to set.
 - `value`
-  - : A comma-separated string containing one or more values that apply to the provided
-    property.
+  - : A comma-separated string containing one or more values that apply to the provided property.
 
 ### Return value
 
