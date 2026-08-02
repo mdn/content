@@ -56,7 +56,7 @@ The `animation-trigger` property specifies which trigger will control an animate
 
 ### Defining a trigger
 
-The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property. If an element has an animation _and_ a `animation-trigger` set on it, but no scrolling element exists with the same `<dashed-ident>` set as its `timeline-trigger-name` value, the animation will not have a trigger and therefore will never play.
+The trigger is identified via a `<dashed-ident>` value, which is defined in the tracked element's {{cssxref("timeline-trigger-name")}} property.
 
 For example:
 
@@ -67,7 +67,7 @@ For example:
 }
 ```
 
-In this case, the animation will only play when an element with a `timeline-trigger-name` of `--my-trigger` enters the activation range defined on the trigger.
+In this case, the animation will play when an element with a `timeline-trigger-name` of `--my-trigger` enters the activation range defined on the trigger.
 
 Here we create a trigger by setting the `timeline-trigger-name` using the {{cssxref("timeline-trigger")}} shorthand property. The `.trigger` can be any element, including the `.animated` element.
 
@@ -76,6 +76,8 @@ Here we create a trigger by setting the `timeline-trigger-name` using the {{cssx
   timeline-trigger: --my-trigger view();
 }
 ```
+
+If an element has an animation _and_ an `animation-trigger` set on it, but no scrolling element exists with the same `<dashed-ident>` set as its `timeline-trigger-name` value, the animation will not have a trigger and therefore will never play.
 
 ### Defining the triggered animation actions
 
@@ -92,13 +94,17 @@ For example:
 
 When the trigger is activated, the animation will `play-forwards`. When the trigger is deactivated, the animation will `play-backwards`.
 
-There are eight `<animation-action>` values, each providing different animation behaviors. Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger scrolls into view, and then "animate out" the element again when the trigger scrolls out of view.
+There are eight `<animation-action>` values, each providing different animation behaviors.
 
-The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. The addition of `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting from where it was paused if re-activated. See the {{cssxref("animation-action")}} data type for examples and more about each keyword value.
+Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger scrolls into view, and then "animate out" the element again when the trigger scrolls out of view.
+
+The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. The addition of `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting from where it was paused if re-activated.
+
+See the {{cssxref("animation-action")}} data type for examples and more about each keyword value.
 
 ### Triggering the same animation via multiple different triggers
 
-If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the animation multiple times on the animated element, and then give each animation instance a different trigger.
+If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the animation multiple times on the animated element, giving each animation instance a different trigger.
 
 For example:
 
@@ -132,7 +138,7 @@ The `animation-trigger` property is a reset-only sub-property of the {{cssxref("
 The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties concerning setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
-- If two comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
+- If two or more comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
 
 Given the following CSS:
 
@@ -306,11 +312,12 @@ Using the `animation` shorthand, the `.animated` element has the `rotate` animat
 }
 ```
 
-The `.trigger` element creates the animated element's trigger with a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the `.animated` declaration block's `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines).
+The `.trigger` element creates the animated element's trigger with a `timeline-trigger-name` of `--t`. This value is the identifier referenced in the `.animated` declaration block's `animation-trigger` property value, associating the two together. We also include a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines). We could have declared both together as `timeline-trigger: view() --t`.
 
 ```css live-sample___basic-example
 .trigger {
-  timeline-trigger: --t view();
+  timeline-trigger-name: --t;
+  timeline-trigger-source: view();
 }
 ```
 
@@ -425,13 +432,15 @@ div {
 }
 ```
 
-We set an `animation-trigger` value on the `<div>` that references a `timeline-trigger-name` of `--t`. We also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation, and play in reverse on deactivation.
+We set an `animation-trigger` value on the `<div>` that references a `timeline-trigger-name` of `--t`. We include two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation and play in reverse on deactivation.
 
-We also specify a `timeline-trigger` value of `--t view() contain` on the `<div>`, so the `<div>` creates the trigger for its own animation. The `timeline-trigger` includes:
+We also specify a `timeline-trigger` value of `--t view() contain` on the `<div>`, so the `<div>` creates the trigger for its own animation. The `timeline-trigger` shorthand includes three longhand property values:
 
-- A `<dashed-ident>`: The `timeline-trigger-name` identifier referenced in the `animation-trigger` property.
-- A `<timeline-trigger-source>`: The [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) value sets the timeline trigger to a view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-range-name")}}: The {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) means the trigger will activate when the `<div>` is fully inside the scrollport, and deactivate when it starts to exit the scrollport. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
+- A {{cssxref("timeline-trigger-name")}} value: A `<dashed-ident>` identifier referenced in the `animation-trigger` property.
+- A {{cssxref("timeline-trigger-source")}} value: The [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) value sets the timeline trigger to a view progress timeline tracking the element inside its nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-activation-range")}} value: The {{cssxref("timeline-range-name")}} value [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) represents the range of a view progress timeline where the subject element is fully contained by, or fully contains, the view progress visibility range within the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). This means the trigger will activate when the `<div>` is fully inside the scrollport, and deactivate when it starts to exit the scrollport. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
+
+Because we didn't set a value for the {{cssxref("timeline-trigger-active-range")}} component, the active range is the same as the activation range.
 
 ```css live-sample___same-element
 div {
@@ -456,6 +465,8 @@ This example shows how to assign multiple triggers to control the same animation
 We include three `<div>` elements as triggers. The text content is hidden for brevity.
 
 ```html
+<div class="animated">I am animated</div>
+
 ...
 
 <div class="trigger1">I create a trigger</div>
@@ -627,10 +638,11 @@ Try scrolling the content up and down, and note how the animation is activated a
 
 ## See also
 
+- {{cssxref("animation-action")}} type
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand
 - {{cssxref("trigger-scope")}}
-- {{cssxref("animation-action")}} type
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/scroll-driven_animations) module
