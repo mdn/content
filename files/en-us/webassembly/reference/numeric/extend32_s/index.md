@@ -32,19 +32,23 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 In this example, `i64.const 0xffffffff` pushes the value `0xffffffff` (`4294967295`) onto the stack. This value represents `-1` when read as a signed 32-bit number; `i64.extend32_s` sign-extends it to `0xffffffffffffffff` — which is `-1` represented as a full 64-bit signed integer.
 
-## Syntax
+## WAT syntax
 
 ```plain
-i64.extend32_s
+i64.extend32_s <input> <output>
 ```
 
 - `i64.extend32_s`
   - : The `i64.extend32_s` instruction.
 
-### Type
+### Immediates
+
+None.
+
+### Operand stack
 
 ```plain
-[input] -> [output]
+[input: i64] -> [output: i64]
 ```
 
 - `input`

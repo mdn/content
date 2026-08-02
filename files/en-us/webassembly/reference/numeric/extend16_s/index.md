@@ -32,10 +32,10 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 In this example, `i32.const 0xffff` pushes the value `0xffff` (`65535`) onto the stack. This value represents `-1` when read as a signed 16-bit number; `i32.extend16_s` sign-extends it to `0xffffffff` — which is `-1` represented as a full 32-bit signed integer.
 
-## Syntax
+## WAT syntax
 
 ```plain
-value_type.extend16_s
+value_type.extend16_s <input> <output>
 ```
 
 - `value_type`
@@ -45,10 +45,15 @@ value_type.extend16_s
 - `extend16_s`
   - : The `extend16_s` instruction. Must always be included after the `value_type` and a period (`.`).
 
-### Type
+### Immediates
+
+None.
+
+### Operand stack
 
 ```plain
-[input] -> [output]
+[input: i32] -> [output: i32]
+[input: i64] -> [output: i64]
 ```
 
 - `input`
