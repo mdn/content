@@ -104,7 +104,7 @@ Wasm `elem` definitions define a series of references. There are three forms of 
 
 ### Active form
 
-An active element segment will be written into a previously-defined [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) on instantiation. In active form, as seen in the live example earlier on, a table first needs to be defined:
+An active element definition is used to define an element segment that is immediately written into a previously-defined [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table) on instantiation and then discarded. In active form, a table first needs to be defined:
 
 ```wat
 (table $return_values 2 funcref)
@@ -162,7 +162,7 @@ elem.drop $funcs
 
 ### Declarative form
 
-The declarative form of `elem` is needed when you want to use a reference in your code without putting it into a table. It allows you to create a reference that can be referenced via `ref.func`:
+The declarative form of `elem` is used when you want to use a reference in your code without putting it into a table. It allows you to create a reference that can be referenced via `ref.func`:
 
 ```wat
 (module

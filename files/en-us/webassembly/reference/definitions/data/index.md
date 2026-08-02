@@ -80,7 +80,7 @@ A `data` definition defines a segment of bytes that can be copied into linear me
 
 ### Active form
 
-An active data definition references the memory offset the data is to be copied to, and is copied into the specified memory as soon as the module is instantiated. This must include the offset the data is to be copied to, and can also include an identifier for the data and the memory:
+An active data definition is used to define a data segment that is immediately written into memory and then discarded. It references the memory offset the data is to be copied to, and is copied into the specified memory as soon as the module is instantiated. This must include the offset the data is to be copied to, and can also include an identifier for the data and the memory:
 
 ```wat
 (memory $my_mem (export "memory") 1)
@@ -105,14 +105,14 @@ In cases where there is only one memory in the module, or when you want to copy 
 
 ### Passive form
 
-A passive data segment doesn't reference the memory the data is to be copied into. For example:
+A passive data segment is used to define a data definition that is not written into memory until later in the code. It doesn't reference the memory the data is to be copied into. For example:
 
 ```wat
 (memory (export "memory") 1)
 (data $greeting "Hello World")
 ```
 
-Passive data segments are copied into a memory using a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction:
+Passive data segments are copied into a memory when desired using a [`memory.init`](/en-US/docs/WebAssembly/Reference/Memory/init) instruction:
 
 ```wat
 i32.const 0       ;; destination offset in memory
