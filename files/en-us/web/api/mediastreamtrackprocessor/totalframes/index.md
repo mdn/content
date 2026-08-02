@@ -35,7 +35,6 @@ async function init() {
       if (done) break;
 
       // Do something with frame...
-      
       frame.close();
 
       console.log(
