@@ -77,7 +77,7 @@ Here we create a trigger by setting the `timeline-trigger-name` using the {{cssx
 }
 ```
 
-If an element has an animation _and_ a `animation-trigger` set on it, but no scrolling element exists with the same `<dashed-ident>` set as its `timeline-trigger-name` value, the animation will not have a trigger and therefore will never play.
+If an element has an animation _and_ an `animation-trigger` set on it, but no scrolling element exists with the same `<dashed-ident>` set as its `timeline-trigger-name` value, the animation will not have a trigger and therefore will never play.
 
 ### Defining the triggered animation actions
 
