@@ -83,7 +83,6 @@ It is possible for the animated element and the element that creates the trigger
 }
 ```
 
-The `timeline-trigger-name` property can also be set via the {{cssxref("timeline-trigger")}} shorthand property.
 The `timeline-trigger-name` property, along with the {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}} properties, can also be set using the {{cssxref("timeline-trigger")}} shorthand property.
 
 ### Multiple trigger names
