@@ -131,7 +131,7 @@ See [Multiple triggers for the same animation](#multiple_triggers_for_the_same_a
 
 ### Resetting via the `animation` shorthand
 
-The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. This means that trigger names and animation actions can not be included in the `animation` shorthand, but setting the `animation` shorthand resets `animation-trigger` to its initial value of `none`. All animations declared using the `animation` shorthand are regular, `documentTimeline`-based animations. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list or declare the `animation-trigger` in a declaration block with selectors with stronger {{cssxref("specificity")}}.
+The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. This means that trigger names and animation actions can not be included in the `animation` shorthand, but setting the `animation` shorthand resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list or declare the `animation-trigger` in a declaration block with selectors with stronger {{cssxref("specificity")}}.
 
 ### Multiple `animation-trigger` values
 
