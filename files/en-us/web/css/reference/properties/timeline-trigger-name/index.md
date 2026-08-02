@@ -374,12 +374,14 @@ We then specify the following properties on the same `<div>`:
 
 - A `timeline-trigger-name` value of `--t`. This specifies that the `<div>` creates the trigger for its own animation.
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view). This sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain). This means that the trigger will activate when the tracked `<div>` is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport. This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the tracked `<div>` enters the scrollport and deactivate only when it has fully left the scrollport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain). This means that the trigger will activate when the tracked element is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport. This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the element enters the scrollport and deactivate only when it has fully left the scrollport, which would make the reverse animation occur when the element is out of view.
 
 ```css live-sample___same-element
 div {
   animation: invert-colors 0.6s ease-in both;
+
   animation-trigger: --t play-forwards play-backwards;
+
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
   timeline-trigger-activation-range: contain;
@@ -406,7 +408,7 @@ div {
 
 {{EmbedLiveSample("same-element", "100%", "240")}}
 
-Try scrolling the content up. The tracked `<div>`'s animation plays after it has fully entered the scrollport, pausing when any part of the tracked `<div>` leaves the scrollport.
+Try scrolling the content up. The tracked element's animation plays after it has fully entered the scrollport, pausing when any part starts to leave the scrollport.
 
 ## Specifications
 
