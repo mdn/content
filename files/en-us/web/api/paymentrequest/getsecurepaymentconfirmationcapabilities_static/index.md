@@ -31,6 +31,9 @@ Available features are as follows:
 - `browserBoundKeyHardware`
   - : The Secure Payment Confirmation API is capable of using browser bound keys that are stored in hardware secure elements on the device. A browser-bound key is a public-private key pair that signs over the transaction details in addition to the [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential and is tied to a single device by the user agent.
 
+> [!NOTE]
+> The browser may choose to omit some or all capabilities from the map regardless if it is supported or not, for example to protect user privacy if abuse of the API is suspected.
+
 ## Examples
 
 ```js
