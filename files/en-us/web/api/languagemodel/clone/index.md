@@ -72,7 +72,7 @@ console.log("Mysterious ending:", ending2);
 
 ### Cloning to retry after a context overflow
 
-This example uses a checkpoint and rollback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` ensures that the app has a way to restore to a safe state before attempting something risky.
+This example uses a checkpoint and rollback pattern to save the state of a session before attempting to append a large amount of data. Cloning the session before calling `append()` allows the app to restore the state if the context window is exceeded.
 
 ```js
 const veryLargeDocument = "This is my very long story...";
