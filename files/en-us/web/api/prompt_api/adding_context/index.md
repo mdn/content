@@ -141,7 +141,7 @@ As well as telling the model what kind of personality it should have, `initialPr
 
 A few-shot prompt is a set of `user` role and `assistant` role input pairs passed as an example to the API to train it how to respond to a particular type of input, before asking it to complete a similar task.
 
-The following example shows how to use a few-shot prompt to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
+The following example shows how to use a few-shot prompt to request a French translation in a specific format, providing sample inputs and outputs to demonstrate the expected structure.
 
 ```js
 const session = await LanguageModel.create({
