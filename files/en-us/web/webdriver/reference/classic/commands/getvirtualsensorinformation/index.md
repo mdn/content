@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.GetVirtualSensorInformation
 sidebar: webdriver
 ---
 
-The _Get Virtual Sensor Information_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns information about a virtual sensor previously created with the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. It reports the sampling frequency currently requested by the page, which lets a test confirm that the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) are consuming readings at the expected rate.
+The _Get Virtual Sensor Information_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns information about a virtual sensor previously created using the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. It reports the sampling frequency currently requested by the page, which lets a test confirm that the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) are consuming readings at the expected rate.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ The _Get Virtual Sensor Information_ [command](/en-US/docs/Web/WebDriver/Referen
 An object with the following field:
 
 - `requestedSamplingFrequency`
-  - : A number giving the sampling frequency, in hertz, currently requested for the virtual sensor. This value is bounded by the minimum and maximum sampling frequencies that were set when the sensor was created.
+  - : A number, in hertz, providing the sampling frequency currently requested for the virtual sensor. This value is bounded by the minimum and maximum sampling frequencies that were set when the sensor was created.
 
 ### Errors
 

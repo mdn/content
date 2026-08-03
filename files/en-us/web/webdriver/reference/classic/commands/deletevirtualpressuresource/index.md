@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.DeleteVirtualPressureSource
 sidebar: webdriver
 ---
 
-The _Delete Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API removes a virtual pressure source previously created with the [Create Virtual Pressure Source](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualPressureSource) command. After the virtual pressure source is deleted, the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) once again uses the real platform pressure source of that type, if one is available.
+The _Delete Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API removes a virtual pressure source previously created using the [Create Virtual Pressure Source](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualPressureSource) command. After the virtual pressure source is deleted, the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) once again uses the real platform pressure source of that type, if one is available.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ With a WebDriver server running on `localhost:4444`, assume a virtual `"cpu"` pr
 curl -i -X DELETE http://localhost:4444/session/ID/pressuresource/cpu
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK

@@ -29,9 +29,9 @@ The input is an object:
 - `connected` {{optional_inline}}
   - : A boolean indicating whether the sensor is able to provide readings. Defaults to `true`.
 - `maxSamplingFrequency` {{optional_inline}}
-  - : A number specifying the upper bound, in hertz, of the sampling frequency the virtual sensor supports.
+  - : A number, in hertz, specifying the upper bound of the sampling frequency that the virtual sensor supports.
 - `minSamplingFrequency` {{optional_inline}}
-  - : A number specifying the lower bound, in hertz, of the sampling frequency the virtual sensor supports.
+  - : A number, in hertz, specifying the lower bound of the sampling frequency that the virtual sensor supports.
 
 ### Return value
 
@@ -42,13 +42,13 @@ The input is an object:
 - [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : The `type` is not a string or is not a supported virtual sensor type, a virtual sensor of that type already exists, or the supplied frequency values are invalid (for example, not a number or `minSamplingFrequency` is greater than `maxSamplingFrequency`).
+  - : The `type` is not a string, is not a supported virtual sensor type, or a virtual sensor of that type already exists. The specified sampling frequency values are invalid if they are not a number or if `minSamplingFrequency` is greater than `maxSamplingFrequency`.
 
 ## Examples
 
 ### Creating a virtual sensor
 
-With a WebDriver server running on `localhost:4444`, assume an active session has been created. To create a virtual [`AmbientLightSensor`](/en-US/docs/Web/API/AmbientLightSensor), send its type as the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
+With a WebDriver server running on `localhost:4444`, assume an active session has been created. To create a virtual [`AmbientLightSensor`](/en-US/docs/Web/API/AmbientLightSensor), send its type in the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
 ```bash
 curl -i -H "Content-Type: application/json" \
@@ -56,7 +56,7 @@ curl -i -H "Content-Type: application/json" \
   http://localhost:4444/session/ID/sensor
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK

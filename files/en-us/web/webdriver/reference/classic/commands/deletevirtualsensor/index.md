@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.DeleteVirtualSensor
 sidebar: webdriver
 ---
 
-The _Delete Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API removes a virtual sensor previously created with the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. After the virtual sensor is deleted, the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) once again use the real platform sensor of that type, if one is available.
+The _Delete Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API removes a virtual sensor previously created using the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. After the virtual sensor is deleted, the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) once again use the real platform sensor of that type, if one is available.
 
 ## Syntax
 
@@ -43,7 +43,7 @@ With a WebDriver server running on `localhost:4444`, assume a virtual `"ambient-
 curl -i -X DELETE http://localhost:4444/session/ID/sensor/ambient-light
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK

@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.CreateVirtualPressureSource
 sidebar: webdriver
 ---
 
-The _Create Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API creates a virtual pressure source of a given type that overrides the platform pressure source of the same type. This lets tests exercise the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) with predetermined pressure states instead of relying on real hardware.
+The _Create Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API creates a virtual pressure source of a given type, which overrides the platform pressure source of the same type. This lets tests exercise the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) with predetermined pressure states instead of relying on real hardware.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ The _Create Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Referen
 The input is an object:
 
 - `type`
-  - : A string identifying the pressure source type to create. Currently the only widely supported value is `"cpu"`.
+  - : A string identifying the pressure source type to create. Currently, the only widely supported value is `"cpu"`.
 - `supported` {{optional_inline}}
   - : A boolean indicating whether the virtual pressure source is able to provide samples. Defaults to `true`.
 
@@ -44,7 +44,7 @@ The input is an object:
 
 ### Creating a virtual pressure source
 
-With a WebDriver server running on `localhost:4444`, assume an active session has been created. To create a virtual `"cpu"` pressure source, send its type as the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
+With a WebDriver server running on `localhost:4444`, assume an active session has been created. To create a virtual `"cpu"` pressure source, send its type in the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
 ```bash
 curl -i -H "Content-Type: application/json" \
@@ -52,7 +52,7 @@ curl -i -H "Content-Type: application/json" \
   http://localhost:4444/session/ID/pressuresource
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK

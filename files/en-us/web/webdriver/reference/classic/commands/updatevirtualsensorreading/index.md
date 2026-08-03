@@ -44,7 +44,7 @@ The input is an object:
 
 ### Updating a virtual sensor reading
 
-With a WebDriver server running on `localhost:4444`, assume a virtual `"ambient-light"` sensor has been created for the active session. To set a new reading, send the `reading` object as the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
+With a WebDriver server running on `localhost:4444`, assume a virtual `"ambient-light"` sensor has been created for the active session. To set a new reading, send the `reading` object in the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
 ```bash
 curl -i -H "Content-Type: application/json" \
@@ -52,7 +52,7 @@ curl -i -H "Content-Type: application/json" \
   http://localhost:4444/session/ID/sensor/ambient-light
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK

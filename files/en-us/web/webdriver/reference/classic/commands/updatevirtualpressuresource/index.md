@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.UpdateVirtualPressureSource
 sidebar: webdriver
 ---
 
-The _Update Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets a new sample for a virtual pressure source previously created with the [Create Virtual Pressure Source](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualPressureSource) command. The new sample is delivered to the page through the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API), letting tests drive pressure-dependent behavior with predetermined data.
+The _Update Virtual Pressure Source_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets a new sample for a virtual pressure source previously created using the [Create Virtual Pressure Source](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualPressureSource) command. The new sample is delivered to the page through the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API), letting tests drive pressure-dependent behavior with predetermined data.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ The input is an object:
 
 ### Updating a virtual pressure source
 
-With a WebDriver server running on `localhost:4444`, assume a virtual `"cpu"` pressure source has been created for the active session. To report a new pressure state, send the `sample` value as the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
+With a WebDriver server running on `localhost:4444`, assume a virtual `"cpu"` pressure source has been created for the active session. To report a new pressure state, send the `sample` value in the request payload, replacing `ID` with the `sessionId` from the [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) response:
 
 ```bash
 curl -i -H "Content-Type: application/json" \
@@ -56,7 +56,7 @@ curl -i -H "Content-Type: application/json" \
   http://localhost:4444/session/ID/pressuresource/cpu
 ```
 
-The server responds with a null value to indicate success:
+The server responds with a `null` value to indicate success:
 
 ```http
 HTTP/1.1 200 OK
