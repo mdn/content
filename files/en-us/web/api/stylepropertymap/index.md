@@ -11,6 +11,10 @@ The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/
 
 {{InheritanceDiagram}}
 
+> [!NOTE]
+> This interface is only available on the window thread; unlike other interfaces in this API it cannot be accessed in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+> Worklets receive a read-only snapshot of an element's style through {{domxref("StylePropertyMapReadOnly")}}.
+
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
