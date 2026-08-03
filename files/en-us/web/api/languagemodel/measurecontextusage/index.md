@@ -71,8 +71,24 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if:
+    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
+    - A message's `type` is `text` and its `value` is not a string.
+    - The input or output text is in a language the user agent doesn't support for prompting.
+    - A message's `type` is `"image"` or `"audio"` but the type was not listed in `expectedInputs`, or the `value` is not an [accepted data type](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if:
+    - No messages are included in the messages array.
+    - A message's `prefix` property is set to `true` and:
+      - The message's `role` is not `assistant`.
+      - The message is not the last item in the messages array.
 - `TypeError`
-  - : Thrown if `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
+  - : Thrown if:
+    - `omitResponseConstraintInput` is `true` but `responseConstraint` is not provided.
+    - A message's `role` is `system` but it was not the first message passed to the context.
 
 ## Examples
 

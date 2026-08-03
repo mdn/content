@@ -28,6 +28,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
+
 ## Examples
 
 ### Basic `destroy()` usage

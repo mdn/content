@@ -86,6 +86,13 @@ A {{jsxref("Promise")}} that resolves with one of the values listed below.
 - `"unavailable"`
   - : The model cannot support the given options, or the user agent cannot determine availability, for example, due to a [transient activation](/en-US/docs/Glossary/Transient_activation) error. In that case, the caller should retry or fall back to an alternative implementation.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the calling document is not fully active.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
+
 ## Examples
 
 ### Requesting input support

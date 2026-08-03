@@ -653,7 +653,7 @@ const response = await session.prompt([
 ]);
 ```
 
-## An append example
+### An append example
 
 Let's look at a real implementation of the excerpt example mentioned previously. In this case, you can enter a passage of text into one input and a question about that text into another input. When submitted, the API response will answer the question specifically in the context of the provided text passage.
 
@@ -799,7 +799,7 @@ async function getSession() {
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 In this example, the excerpt is entered into a `<textarea>`. Once the `<textarea>`'s `change` event fires (meaning the user has entered some text into it and then moved focus somewhere else), we run the `appendExcerpt()` function. This checks whether the `<textarea>` contains any text. If so, the text is passed into the session via `append()` so processing can start. At this point, we also enable the form's submit button (we previously disabled it so that a question cannot be submitted without an excerpt being entered).
 
@@ -846,7 +846,7 @@ async function handleSubmission(e) {
 }
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("excerpt-question", , "730px", , , , "language-model", "allow-forms")}}
 

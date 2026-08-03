@@ -37,6 +37,8 @@ A {{jsxref("Promise")}} that resolves with a cloned {{domxref("LanguageModel")}}
 
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if the operation was cancelled via the `signal` option.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if cloning fails for any other reason not listed in the other exception types.
 
