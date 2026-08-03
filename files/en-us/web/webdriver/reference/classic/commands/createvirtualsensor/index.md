@@ -7,7 +7,10 @@ browser-compat: webdriver.classic.CreateVirtualSensor
 sidebar: webdriver
 ---
 
-The _Create Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API creates a virtual sensor of a given type that overrides the platform sensor of the same type. This lets tests exercise the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) with predetermined readings instead of relying on real hardware. While the virtual sensor exists, it replaces any real sensor of the same type for the [top-level browsing context](/en-US/docs/Glossary/Browsing_context).
+The _Create Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API creates a virtual sensor of a given type, which overrides the platform sensor of the same type. This lets tests exercise the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) with predetermined readings instead of relying on real hardware. While the virtual sensor exists, new connections to a sensor of the same type in the top-level [browsing context](/en-US/docs/Glossary/Browsing_context) use the virtual sensor instead of the platform sensor.
+
+> [!NOTE]
+> Sensor instances of the same type can coexist and use different device sensors. A sensor already connected to a real, hardware sensor continues receiving readings from it and switches to the virtual sensor only if it connects again.
 
 ## Syntax
 

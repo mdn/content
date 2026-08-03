@@ -7,7 +7,7 @@ browser-compat: webdriver.classic.UpdateVirtualSensorReading
 sidebar: webdriver
 ---
 
-The _Update Virtual Sensor Reading_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets a new reading for a virtual sensor previously created with the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. The new value is delivered to the page through the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs), letting tests drive sensor-dependent behavior with predetermined data.
+The _Update Virtual Sensor Reading_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API provides a new reading for a virtual sensor previously created using the [Create Virtual Sensor](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CreateVirtualSensor) command. The new reading is made available to platform sensors through the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs), letting tests drive sensor-dependent behavior with predetermined data.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ The input is an object:
 - [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : The `reading` is not an object, or it is not a valid reading for the given sensor `type`.
+  - : The `type` is not a supported virtual sensor type, no virtual sensor of that type exists, the `reading` is not an object, or the reading is not valid for the given sensor `type`.
 
 ## Examples
 
