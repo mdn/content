@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSTransformValue.is2D
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The read-only **`is2D`** property of the {{domxref("CSSTransformValue")}} interface returns whether the transform is 2D or 3D.
 

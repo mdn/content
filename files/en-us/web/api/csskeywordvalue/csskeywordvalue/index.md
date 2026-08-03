@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSKeywordValue()`** constructor
 creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and

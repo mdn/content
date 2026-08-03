@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSTransformValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 

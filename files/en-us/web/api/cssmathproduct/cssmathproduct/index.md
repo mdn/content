@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`CSSMathProduct()`** constructor creates a {{domxref("CSSMathProduct")}} object that multiplies the arguments passed into it.
 

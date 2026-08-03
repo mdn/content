@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSKeywordValue.value
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`value`** property of the {{domxref("CSSKeywordValue")}} interface returns or sets the value of the `CSSKeywordValue`.
 

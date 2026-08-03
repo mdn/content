@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSUnparsedValue.length
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`length`** read-only property of the {{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.
 

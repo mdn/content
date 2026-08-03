@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.min
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`min()`** method of the {{domxref("CSSNumericValue")}} interface returns the lowest value from among those values passed.
 The passed values must be of the same type.

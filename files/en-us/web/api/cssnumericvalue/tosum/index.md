@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.toSum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`toSum()`** method of the {{domxref("CSSNumericValue")}} interface converts the object's value to a {{domxref("CSSMathSum")}} object to values of the specified unit.
 
