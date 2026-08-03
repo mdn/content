@@ -10,7 +10,7 @@ browser-compat: api.LanguageModel.availability_static
 
 The **`availability()`** static method of the {{domxref("LanguageModel")}} interface returns a status identifier indicating whether the browser's language model supports a given set of configuration options, without creating a session or triggering a download.
 
-Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session (and spending tokens) only to have it fail, and lets you provide a meaningful fallback to users when the configuration is not supported.
+Use `availability()` before calling {{domxref("LanguageModel.create_static", "LanguageModel.create()")}} to determine whether the desired configuration is supported. This avoids initiating a session only to have it fail, and lets you provide a meaningful fallback to users when the configuration is not supported.
 
 ## Syntax
 
@@ -170,3 +170,4 @@ if (availability === "unavailable") {
 
 - {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)

@@ -10,7 +10,7 @@ browser-compat: api.LanguageModel.contextWindow
 
 The **`contextWindow`** read-only property of the {{domxref("LanguageModel")}} interface returns the total number of context window tokens available for this session. It is set when the session is created and does not change during the session's lifetime.
 
-Compare `contextWindow` against {{domxref("LanguageModel.contextUsage", "contextUsage")}} to determine how much space remains. Use {{domxref("LanguageModel.measureContextUsage()", "measureContextUsage()")}} to estimate how many tokens a new prompt would consume before sending it.
+Compare `contextWindow` against {{domxref("LanguageModel.contextUsage", "contextUsage")}} to determine how many tokens remain. Use {{domxref("LanguageModel.measureContextUsage()", "measureContextUsage()")}} to estimate how many tokens a new prompt would consume before sending it.
 
 The value is implementation-specific and varies depending on the model, device capabilities, and the session's configuration. A value of `Infinity` indicates that the user agent does not impose a hard limit.
 
@@ -28,6 +28,9 @@ The following example uses a function to verify that context is available before
 const promptText = "Let me ask you an interesting question...";
 
 async function contextAvailable(promptText) {
+  if (session.contextWindow === Infinity) {
+    return true;
+  }
   const remaining = session.contextWindow - session.contextUsage;
   const needed = await session.measureContextUsage(promptText);
 
@@ -57,3 +60,4 @@ if (await contextAvailable(promptText)) {
 - {{domxref("LanguageModel.contextUsage")}}
 - {{domxref("LanguageModel.measureContextUsage()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)

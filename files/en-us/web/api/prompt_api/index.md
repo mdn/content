@@ -34,12 +34,14 @@ To get started, check out [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/
 
 ## Interfaces
 
-- {{domxref("LanguageModel")}}
+- {{domxref("CreateMonitor")}} {{Experimental_Inline}}
+  - : Provides information on the progress of an AI model download, for example a language pack or some fine-tuning data.
+- {{domxref("LanguageModel")}} {{Experimental_Inline}}
   - : Represents a session with a browser-provided language model. Provides static methods for creating sessions and checking availability, and instance methods for prompting the model, managing context, cloning sessions, etc.
 
 ## HTTP headers
 
-- {{httpheader("Permissions-Policy")}}; the {{httpheader("Permissions-Policy/language-model", "language-model")}} directive
+- {{httpheader("Permissions-Policy")}}; the {{httpheader("Permissions-Policy/language-model", "language-model")}} directive {{Experimental_Inline}}
   - : Controls access to the prompt functionality.
     Where a policy specifically disallows its use, the {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}} static method will return `unavailable`, and any attempts to call other `LanguageModel` methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 

@@ -35,7 +35,7 @@ measureContextUsage(input, options)
           - `"user"`
             - : A message from the user, which the API should respond to.
           - `"assistant"`
-            - : Inputs that come from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds.
+            - : An input that provides context for the AI assistant, such as its persona or the format of its responses. Such messages mainly serve to provide context/history, and further shape how the model responds.
       - `content`
         - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
           - `type`
@@ -130,3 +130,4 @@ if (await contextAvailable(promptText)) {
 - {{domxref("LanguageModel.contextWindow")}}
 - {{domxref("LanguageModel.append()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)

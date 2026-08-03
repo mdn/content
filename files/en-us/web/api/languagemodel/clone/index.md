@@ -121,3 +121,5 @@ try {
 
 - {{domxref("LanguageModel.append()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)
+- [Adding context with initial and ongoing prompt inputs](/en-US/docs/Web/API/Prompt_API/Adding_context)

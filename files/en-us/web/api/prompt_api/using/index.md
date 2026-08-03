@@ -90,7 +90,7 @@ The Prompt API will handle multiple languages by default, but it might not handl
 
 ## Prompting the model
 
-When you've created a `LanguageModel` instance, you can start prompting the AI model by calling the {{domxref("LanguageModel.prompt()")}} instance method on it, passing it one or more input prompts as an argument. For example:
+When you've created a `LanguageModel` instance, you can start prompting the AI model by calling the {{domxref("LanguageModel.prompt()")}} instance method on it, passing it an input message as an argument. For example:
 
 ```js
 const response = await session.prompt(textarea.value);
@@ -98,7 +98,9 @@ const response = await session.prompt(textarea.value);
 
 This method returns a {{jsxref("Promise")}} that fulfills with a string containing the AI response to your prompt.
 
-You can pass multiple inputs into the API with different roles — for example, standard `user` prompts and instructions from the `assistant` to further shape how it responds to the `user` prompts. To get the AI to respond to your input in the style of a villainous mastermind, you might use this `prompt()` call:
+### Passing multiple messages
+
+You can pass multiple input messages into the API as an array, and they can have different roles. For example, messages can include standard `user` prompts, and instructions from the `assistant` to further shape how it responds to the `user` prompts. To get the AI to respond to your input in the style of a villainous mastermind, you might use this `prompt()` call:
 
 ```js
 const response = await session.prompt([
@@ -115,8 +117,21 @@ const response = await session.prompt([
 
 You'll learn more about these roles in the next article, [Adding context with initial and ongoing prompt inputs](/en-US/docs/Web/API/Prompt_API/Adding_context).
 
-> [!NOTE]
-> If you want to return the AI response gradually as a {{domxref("ReadableStream")}} rather than a single large string, you can use the {{domxref("LanguageModel.promptStreaming()")}} method.
+### Streaming responses
+
+If you want to return the AI response gradually as a {{domxref("ReadableStream")}} rather than a single large string, you can use the {{domxref("LanguageModel.promptStreaming()")}} method. You can consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
+
+For example:
+
+```js
+const stream = session.promptStreaming("Write a short poem about the ocean.");
+
+for await (const chunk of stream) {
+  output.textContent += chunk;
+}
+```
+
+This is useful for displaying responses to users incrementally for outputs that take a long time to complete, or for any scenario where perceived latency should be minimized.
 
 ## The context window
 
@@ -221,14 +236,29 @@ In our markup, we define an input {{htmlelement("textarea")}} that allows the us
 </form>
 ```
 
+```html live-sample___prompt-streaming-example
+<h1>Prompt API streaming demo</h1>
+<p>First released in Chrome 148.</p>
+
+<h2>Input</h2>
+<form>
+  <div>
+    <label for="prompt-text">Enter prompt text:</label>
+    <textarea id="prompt-text" name="promptText" rows="6"></textarea>
+  </div>
+  <button type="submit" id="submit">Submit query</button
+  ><button type="button" id="abort">Abort query</button>
+</form>
+```
+
 Next, we include a {{htmlelement("p")}} element to display the model's response to the user's prompt, plus details of any errors that are thrown.
 
-```html live-sample___prompt-example
+```html live-sample___prompt-example live-sample___prompt-streaming-example
 <h2>Output</h2>
 <p class="prompt-output"></p>
 ```
 
-```css hidden live-sample___prompt-example
+```css hidden live-sample___prompt-example live-sample___prompt-streaming-example
 * {
   box-sizing: border-box;
 }
@@ -404,6 +434,122 @@ async function getSession() {
 {{EmbedLiveSample("prompt-example", , "600px", , , , "language-model", "allow-forms")}}
 
 Try typing a question or statement into the `<textarea>`, then press the submit button to prompt the AI model and generate a response.
+
+## Complete streaming example
+
+This example demonstrates using the `promptStreaming()` method to return responses from the model as a stream. It is exactly the same as the previous example, except that the `prompt()` call has been replaced with `promptStreaming()`, and a `for await...of` loop has been used to output the model responses incrementally:
+
+```js
+const stream = await session.promptStreaming(textarea.value, {
+  signal: controller.signal,
+});
+
+const chunks = [];
+
+promptOutput.textContent = "";
+for await (const chunk of stream) {
+  promptOutput.textContent += chunk;
+}
+```
+
+```js hidden live-sample___prompt-streaming-example
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+const submitBtn = document.querySelector("#submit");
+const abortBtn = document.querySelector("#abort");
+abortBtn.disabled = true;
+submitBtn.disabled = true;
+const promptOutput = document.querySelector(".prompt-output");
+
+let session;
+textarea.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
+  if (!session) {
+    init();
+  }
+});
+
+async function init() {
+  session = await getSession();
+  promptOutput.textContent = `Session created.`;
+  submitBtn.disabled = false;
+}
+
+form.addEventListener("submit", handleSubmission);
+
+async function handleSubmission(e) {
+  e.preventDefault();
+
+  if (textarea.value === "") {
+    promptOutput.innerHTML = `<span class="error">No text entered!</span>`;
+    return;
+  }
+
+  try {
+    promptOutput.textContent = "...generating response...";
+    submitBtn.disabled = true;
+    abortBtn.disabled = false;
+
+    const controller = new AbortController();
+    abortBtn.addEventListener("click", () => {
+      controller.abort("Query aborted by user.");
+      submitBtn.disabled = false;
+      abortBtn.disabled = true;
+    });
+
+    const stream = await session.promptStreaming(textarea.value, {
+      signal: controller.signal,
+    });
+
+    const chunks = [];
+
+    promptOutput.textContent = "";
+    for await (const chunk of stream) {
+      promptOutput.textContent += chunk;
+    }
+
+    submitBtn.disabled = false;
+    abortBtn.disabled = true;
+    console.log(`${session.contextUsage}/${session.contextWindow}`);
+  } catch (e) {
+    promptOutput.innerHTML = `<span class="error">${e}</span>`;
+  }
+}
+
+async function getSession() {
+  const availability = await LanguageModel.availability({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+  });
+  if (availability === "unavailable") {
+    promptOutput.textContent = "Language model not available.";
+    return undefined;
+  } else if (availability === "available") {
+    return await LanguageModel.create({
+      expectedInputs: [{ type: "text", languages: ["en"] }],
+      expectedOutputs: [{ type: "text", languages: ["en"] }],
+    });
+  } else {
+    return await LanguageModel.create({
+      expectedInputs: [{ type: "text", languages: ["en"] }],
+      expectedOutputs: [{ type: "text", languages: ["en"] }],
+      monitor(monitor) {
+        monitor.addEventListener("downloadprogress", (e) => {
+          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+        });
+      },
+    });
+  }
+}
+```
+
+Enter a simple query, and note how the response is written to the output incrementally, rather than all appearing at once.
+
+{{EmbedLiveSample("prompt-streaming-example", , "600px", , , , "language-model", "allow-forms")}}
 
 ## See also
 

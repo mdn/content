@@ -64,7 +64,7 @@ LanguageModel.create(options)
             - `"user"`
               - : A message from the user, which the API should respond to.
             - `"assistant"`
-              - : Inputs that come from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds.
+              - : An input that provides context for the AI assistant, such as its persona or the format of its responses. Such messages mainly serve to provide context/history, and further shape how the model responds.
         - `content`
           - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
             - `type`
@@ -140,6 +140,10 @@ Before calling `create()`, use {{domxref("LanguageModel.availability_static", "L
 
 Once a session is created, use its instance methods — {{domxref("LanguageModel.prompt()")}}, {{domxref("LanguageModel.promptStreaming()")}}, {{domxref("LanguageModel.append()")}}, and others — to interact with the model.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element for this feature to work.
+
 ## Examples
 
 ### Creating a basic session
@@ -152,6 +156,8 @@ const session = await LanguageModel.create();
 const answer = await session.prompt("What is 2 + 2?");
 console.log(answer);
 ```
+
+See also [Using the Prompt API > Creating a `LanguageModel` session](/en-US/docs/Web/API/Prompt_API/Using#creating_a_languagemodel_session).
 
 ### Creating a session with a system prompt
 
@@ -171,6 +177,8 @@ const response = await session.prompt("What is photosynthesis?");
 console.log(response);
 ```
 
+See also [Adding context with initial and ongoing prompt inputs > Providing initial prompts during session creation](/en-US/docs/Web/API/Prompt_API/Adding_context#providing_initial_prompts_during_session_creation).
+
 ### Monitoring download progress
 
 This code shows how you can monitor the download progress of a model.
@@ -185,6 +193,8 @@ const session = await LanguageModel.create({
   },
 });
 ```
+
+See also [Using the Prompt API > Monitoring download progress](/en-US/docs/Web/API/Prompt_API/Using#monitoring_download_progress).
 
 ### Providing few-shot prompts
 
@@ -220,6 +230,8 @@ const session = await LanguageModel.create({
 const result = await session.prompt("Window");
 console.log(result); // "Window: Fenêtre"
 ```
+
+See also [Adding context with initial and ongoing prompt inputs > Few-shot prompts](/en-US/docs/Web/API/Prompt_API/Adding_context#few-shot_prompts).
 
 ### Defining a tool with a callback
 
@@ -279,6 +291,8 @@ const session = await LanguageModel.create({
 });
 ```
 
+See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
+
 ## Specifications
 
 {{Specifications}}
@@ -291,3 +305,5 @@ const session = await LanguageModel.create({
 
 - {{domxref("LanguageModel.availability_static", "LanguageModel.availability()")}}
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)
+- [Adding context with initial and ongoing prompt inputs](/en-US/docs/Web/API/Prompt_API/Adding_context)

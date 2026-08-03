@@ -58,4 +58,5 @@ session.destroy();
 
 ## See also
 
+- [Prompt API](/en-US/docs/Web/API/Prompt_API)
 - [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)
