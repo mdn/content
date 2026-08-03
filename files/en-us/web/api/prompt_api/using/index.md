@@ -43,7 +43,7 @@ If the AI model is downloading additional data (`availability()` returns `downlo
 
 The `create()` method can accept a `monitor` property, the value of which is a callback function that takes a {{domxref("CreateMonitor")}} instance as an argument. `CreateMonitor` has a {{domxref("CreateMonitor.downloadprogress_event", "downloadprogress")}} event available, which fires when progress is made on downloading the data.
 
-You can use this event to expose loading progress data:
+You can use this event to get the loading progress:
 
 ```js
 const session = await LanguageModel.create({
