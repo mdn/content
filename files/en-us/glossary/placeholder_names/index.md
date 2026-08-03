@@ -11,10 +11,10 @@ The most commonly used names are:
 
 - _Alice_ and _Bob_, two parties who want to send messages to each other, occasionally joined by _Carol_, a third participant
 - _Eve_, a passive attacker who is eavesdropping on Alice and Bob's conversation
-- _Mallory_, an active attacker ("[manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)") who is able to modify their conversation and replay old messages
+- _Mallory_, an active attacker ("[manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)") who is able to modify their conversation and replay old messages
 
 ## See also
 
-- [Manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+- [Manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 - [Attacks](/en-US/docs/Web/Security/Attacks)
 - [Security](/en-US/docs/Web/Security)
