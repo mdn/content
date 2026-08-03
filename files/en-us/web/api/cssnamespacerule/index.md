@@ -7,7 +7,7 @@ browser-compat: api.CSSNamespaceRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The **`CSSNamespaceRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
