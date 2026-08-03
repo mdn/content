@@ -86,3 +86,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 154 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Truncating content with `line-clamp`**: `layout.css.line-clamp.enabled`
+
+  The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
