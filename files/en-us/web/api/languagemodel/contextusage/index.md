@@ -12,7 +12,7 @@ The **`contextUsage`** read-only property of the {{domxref("LanguageModel")}} in
 
 This value increases every time you call {{domxref("LanguageModel.prompt()", "prompt()")}}, {{domxref("LanguageModel.promptStreaming()", "promptStreaming()")}}, or {{domxref("LanguageModel.append()", "append()")}}.
 
-Compare `contextUsage` with {{domxref("LanguageModel.contextWindow")}} to determine how much space remains. When `contextUsage` would exceed `contextWindow`, subsequent method calls throw a `QuotaExceededError` and the {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event fires.
+Compare `contextUsage` with {{domxref("LanguageModel.contextWindow")}} to determine how many tokens remain. When `contextUsage` would exceed `contextWindow`, subsequent method calls throw a `QuotaExceededError` and the {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event fires.
 
 To estimate how many tokens a new prompt would use before sending it, call {{domxref("LanguageModel.measureContextUsage()")}}.
 
