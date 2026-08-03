@@ -7,7 +7,7 @@ browser-compat: api.CSSMediaRule
 
 {{ APIRef("CSSOM") }}
 
-The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.
+The **`CSSMediaRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single CSS {{cssxref("@media")}} rule.
 
 {{InheritanceDiagram}}
 
