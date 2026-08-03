@@ -25,7 +25,7 @@ The _Create Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classi
 The input is an object:
 
 - `type`
-  - : A string identifying the virtual sensor type to create, for example `"ambient-light"`, `"accelerometer"`, or `"gyroscope"`. Only one virtual sensor of a given type can exist at a time in the top-level browsing context.
+  - : A string identifying the virtual sensor type to create. Possible values include `"ambient-light"`, `"accelerometer"`, and `"gyroscope"`. Only one virtual sensor of a given type can exist at a time in the top-level browsing context.
 - `connected` {{optional_inline}}
   - : A boolean indicating whether the sensor is able to provide readings. Defaults to `true`.
 - `maxSamplingFrequency` {{optional_inline}}

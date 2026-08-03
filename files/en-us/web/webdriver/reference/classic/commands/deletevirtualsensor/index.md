@@ -20,7 +20,7 @@ The _Delete Virtual Sensor_ [command](/en-US/docs/Web/WebDriver/Reference/Classi
 - `session id`
   - : Identifier of the session.
 - `type`
-  - : The virtual sensor type to delete, for example `"ambient-light"`.
+  - : The virtual sensor type to delete. Possible values include `"ambient-light"`, `"accelerometer"`, and `"gyroscope"`.
 
 ### Return value
 

@@ -20,7 +20,7 @@ The _Get Virtual Sensor Information_ [command](/en-US/docs/Web/WebDriver/Referen
 - `session id`
   - : Identifier of the session.
 - `type`
-  - : The virtual sensor type to query, for example `"ambient-light"`.
+  - : The virtual sensor type to query. Possible values include `"ambient-light"`, `"accelerometer"`, and `"gyroscope"`.
 
 ### Return value
 

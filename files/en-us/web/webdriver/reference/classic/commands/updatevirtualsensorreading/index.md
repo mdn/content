@@ -20,7 +20,7 @@ The _Update Virtual Sensor Reading_ [command](/en-US/docs/Web/WebDriver/Referenc
 - `session id`
   - : Identifier of the session.
 - `type`
-  - : The virtual sensor type to update, for example `"ambient-light"`.
+  - : The virtual sensor type to update. Possible values include `"ambient-light"`, `"accelerometer"`, and `"gyroscope"`.
 
 ### Payload
 
