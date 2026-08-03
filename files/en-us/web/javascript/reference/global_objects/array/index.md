@@ -326,7 +326,7 @@ These properties are own properties of each `Array` instance.
 - {{jsxref("Array.prototype.indexOf()")}}
   - : Returns the first (least) index at which a given element can be found in the calling array.
 - {{jsxref("Array.prototype.join()")}}
-  - : Joins all elements of an array into a string.
+  - : Returns a new string that is the concatenation of all elements in this array, separated by commas or a specified separator string.
 - {{jsxref("Array.prototype.keys()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) that contains the keys for each index in the calling array.
 - {{jsxref("Array.prototype.lastIndexOf()")}}

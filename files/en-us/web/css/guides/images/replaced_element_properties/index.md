@@ -13,7 +13,7 @@ A **{{glossary("replaced elements", "replaced element")}}** is an element whose 
 
 CSS handles replaced elements specifically in some cases, like when calculating margins and some `auto` values. Only replaced elements can ever have {{glossary("intrinsic size", "intrinsic dimensions")}}. Some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties, such as {{cssxref("vertical-align")}}.
 
-While document styles can set the size and position of replaced elements, document styles dont affect the replaced elements' content, with some exceptions: The [CSS images module](/en-US/docs/Web/CSS/Guides/Images) includes properties which support controlling the positioning of the element's content within its box.
+While document styles can set the size and position of replaced elements, document styles don't affect the replaced elements' content, with some exceptions: The [CSS images module](/en-US/docs/Web/CSS/Guides/Images) includes properties which support controlling the positioning of the element's content within its box.
 
 ## Controlling object position within the content box
 

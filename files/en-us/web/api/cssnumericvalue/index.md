@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSNumericValue
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSNumericValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents operations that all numeric values can perform.
 

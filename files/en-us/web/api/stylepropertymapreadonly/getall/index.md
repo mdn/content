@@ -8,9 +8,7 @@ browser-compat: api.StylePropertyMapReadOnly.getAll
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`getAll()`** method of the
-{{domxref("StylePropertyMapReadOnly")}} interface returns an array of
-{{domxref("CSSStyleValue")}} objects containing the values for the provided property.
+The **`getAll()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface returns an array of {{domxref("CSSStyleValue")}} objects containing the values for the provided property.
 
 ## Syntax
 
@@ -29,9 +27,10 @@ An array of {{domxref("CSSStyleValue")}} objects.
 
 ## Examples
 
-The following example uses `getAll()` with the
-{{cssxref('background-image')}} property. An {{jsxref('Array')}} is returned which
-contains an item for each background image declared.
+### Basic usage
+
+The following example uses `getAll()` with the {{cssxref('background-image')}} property.
+An {{jsxref('Array')}} is returned, which contains an item for each background image declared.
 
 ```js
 // get a button element

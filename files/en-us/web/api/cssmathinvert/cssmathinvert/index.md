@@ -8,9 +8,7 @@ browser-compat: api.CSSMathInvert.CSSMathInvert
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathInvert()`** constructor creates a
-new {{domxref("CSSMathInvert")}} object which represents a CSS
-{{CSSXref('calc','calc()')}} used as `calc(1 / value)`
+The **`CSSMathInvert()`** constructor creates a new {{domxref("CSSMathInvert")}} object which represents a CSS {{CSSXref('calc','calc()')}} used as `calc(1 / value)`
 
 ## Syntax
 

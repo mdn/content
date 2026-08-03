@@ -906,6 +906,6 @@ In the next article, we'll give you some tests that you can use to check how wel
 - [WAI-ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles): Categories of ARIA roles and the roles covered on MDN
 - [ARIA in HTML](https://w3c.github.io/html-aria/) on W3C: A specification that defines, for each HTML feature, the accessibility (ARIA) semantics implicitly applied on it by the browser and the WAI-ARIA features you may set on it if extra semantics are required
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
-- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
+- [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control while making them accessible using WAI-ARIA features
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA", "Learn_web_development/Core/Accessibility")}}

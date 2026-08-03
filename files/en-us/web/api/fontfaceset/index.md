@@ -31,7 +31,7 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
 - {{domxref("FontFaceSet.loadingdone_event", "loadingdone")}}
   - : Fires when a font face set has finished loading.
 - {{domxref("FontFaceSet.loadingerror_event", "loadingerror")}}
-  - : Fires when an error occurred whilst loading a font-face set.
+  - : Fires when an error occurred while loading a font-face set.
 
 ## Instance methods
 
