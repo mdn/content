@@ -7,7 +7,7 @@ browser-compat: api.CSSSupportsRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The **`CSSSupportsRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single CSS {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
