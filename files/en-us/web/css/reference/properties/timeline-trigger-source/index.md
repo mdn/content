@@ -48,9 +48,9 @@ The `timeline-trigger-source` property may be specified as one or more single an
 ### Values
 
 - `none`
-  - : The element does not create a scroll-triggered animation trigger, as it has no timeline.
+  - : The element does not create a animation trigger, as it has no timeline. Associated animations will not animated.
 - `auto`
-  - : The element does not create a scroll-triggered animation trigger, as its timeline is set to the document's default time-based timeline.
+  - : The element does not create a trigger. Associated animations are set to the document's default time-based timeline.
 - {{cssxref("dashed-ident")}}
   - : The element creates a scroll-triggered animation trigger as a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 - [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
@@ -86,11 +86,19 @@ For example:
 
 The {{cssxref("animation-action")}} keywords specified in the `animation-trigger` — `play-forwards play-backwards` — specify that the animation should play forwards when its trigger activates and backwards when its trigger deactivates.
 
-> [!NOTE]
-> The `timeline-trigger-source` property can also be set via the {{cssxref("timeline-trigger")}} shorthand property.
+It is possible for the animated element and the element that creates the trigger to be the same element. In this case, the animated element creates its own trigger:
 
-> [!NOTE]
-> It is possible for the animated element and the element that creates the trigger to be the same element.
+```css
+.animatedAndTrigger {
+  animation: rotate 3s infinite linear both;
+  animation-trigger: --my-trigger play-once;
+
+  timeline-trigger-name: --my-trigger;
+  timeline-trigger-source: view();
+}
+```
+
+The `timeline-trigger-source` property, along with the {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}} properties, can also be set using the {{cssxref("timeline-trigger")}} shorthand property.
 
 ### Different source types
 
