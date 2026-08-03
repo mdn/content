@@ -10,7 +10,7 @@ browser-compat: api.LanguageModel.promptStreaming
 
 The **`promptStreaming()`** method of the {{domxref("LanguageModel")}} interface sends input to the language model and returns a {{domxref("ReadableStream")}} that delivers the model's response incrementally as it is generated.
 
-This is useful for displaying responses to users in real time, for long outputs, or for any scenario where perceived latency should be minimized. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
+This is useful for displaying responses to users incrementally for outputs that take a long time to complete, or for any scenario where perceived latency should be minimized. Consume the stream using `for await...of` or by attaching a reader via {{domxref("ReadableStream.getReader()")}}.
 
 ## Syntax
 
