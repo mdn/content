@@ -8,9 +8,7 @@ browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMatrixComponent()`** constructor
-creates a new {{domxref("CSSMatrixComponent")}} object representing the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} values of the
-individual {{CSSXRef('transform')}} property in CSS.
+The **`CSSMatrixComponent()`** constructor creates a new {{domxref("CSSMatrixComponent")}} object representing the {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} values of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 

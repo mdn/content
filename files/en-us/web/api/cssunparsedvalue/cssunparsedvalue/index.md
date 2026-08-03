@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSUnparsedValue()`** constructor
-creates a new {{domxref("CSSUnparsedValue")}} object which represents property values
-that reference custom properties.
+The **`CSSUnparsedValue()`** constructor creates a new {{domxref("CSSUnparsedValue")}} object which represents property values that reference custom properties.
 
 ## Syntax
 
@@ -21,10 +19,11 @@ new CSSUnparsedValue(members)
 ### Parameters
 
 - `members`
-  - : An array whose values must be either a string or a
-    {{domxref('CSSVariableReferenceValue')}}.
+  - : An array whose values must be either a string or a {{domxref('CSSVariableReferenceValue')}}.
 
 ## Examples
+
+### Basic usage
 
 ```js
 const value = new CSSUnparsedValue(["4deg"]);

@@ -8,9 +8,7 @@ browser-compat: api.CSSKeywordValue.value
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`value`** property of the
-{{domxref("CSSKeywordValue")}} interface returns or sets the value of the
-`CSSKeywordValue`.
+The **`value`** property of the {{domxref("CSSKeywordValue")}} interface returns or sets the value of the `CSSKeywordValue`.
 
 ## Value
 
@@ -22,6 +20,8 @@ A string.
   - : Thrown if the `value` property is an empty {{jsxref('String')}} when being set.
 
 ## Examples
+
+### Basic usage
 
 The following example resets the CSS {{cssxref('display')}} property to its defaults.
 

@@ -6,11 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.min
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`min()`** method of the
-{{domxref("CSSNumericValue")}} interface returns the lowest value from among those
-values passed. The passed values must be of the same type.
+The **`min()`** method of the {{domxref("CSSNumericValue")}} interface returns the lowest value from among those values passed.
+The passed values must be of the same type.
 
 ## Syntax
 
@@ -34,8 +33,10 @@ A {{domxref('CSSUnitValue')}}.
 
 ## Examples
 
-As stated earlier, all passed values must be of the same type and value. Some of the
-following examples illustrate what happens when they are not.
+### Basic usage
+
+As stated earlier, all passed values must be of the same type and value.
+Some of the following examples illustrate what happens when they are not.
 
 ```js
 // Prints "1cm"

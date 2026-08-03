@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.entries
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSUnparsedValue.entries()`** method
-returns an array of a given object's own enumerable property `[key, value]`
-pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+The **`CSSUnparsedValue.entries()`** method returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 
 ## Syntax
 
@@ -21,13 +19,11 @@ entries(obj)
 ### Parameters
 
 - `obj`
-  - : The {{domxref('CSSUnparsedValue')}} whose enumerable own property
-    `[key, value]` pairs are to be returned.
+  - : The {{domxref('CSSUnparsedValue')}} whose enumerable own property `[key, value]` pairs are to be returned.
 
 ### Return value
 
-An array of the given `CSSUnparsedValue` object's own enumerable property
-`[key, value]` pairs.
+An array of the given `CSSUnparsedValue` object's own enumerable property `[key, value]` pairs.
 
 ## Specifications
 
