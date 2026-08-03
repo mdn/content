@@ -410,7 +410,7 @@ Try entering a name into the `<input>`, then press the submit button to prompt t
 
 ## Adding response constraints
 
-The `prompt()` and {{domxref("LanguageModel.promptStreaming", "promptStreaming()")}} methods both accept a [`responseConstraint`](/en-US/docs/Web/API/LanguageModel/prompt#responseconstraint) option that takes as its value a [JSON Schema](https://json-schema.org/) object defining the precise format the assistant's responses should be delivered in. This delivers more precise results than just asking the API to respond in a particular way via a `system` prompt, for example.
+The `prompt()` and {{domxref("LanguageModel.promptStreaming", "promptStreaming()")}} methods both accept a [`responseConstraint`](/en-US/docs/Web/API/LanguageModel/prompt#responseconstraint) option that takes as its value a [JSON Schema](https://json-schema.org/) object that defines the exact format expected for the assistant's responses. This delivers more controlled results than just asking the API to respond in a particular way via a `system` prompt.
 
 A very simple schema might define a response that should contain a single boolean value:
 
