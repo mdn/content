@@ -96,7 +96,7 @@ When the trigger is activated, the animation will `play-forwards`. When the trig
 
 There are eight `<animation-action>` values, each providing different animation behaviors.
 
-Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger scrolls into view, and then "animate out" the element again when the trigger scrolls out of view.
+Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger becomes active, such as by scrolling into view, and then "animate out" the element again when the trigger becomes inactive, for example, by scrolling out of view.
 
 The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. The addition of `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting from where it was paused if re-activated.
 
