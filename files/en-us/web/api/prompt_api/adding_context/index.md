@@ -74,7 +74,7 @@ const response = await session.prompt([
 ]);
 ```
 
-You don't need this form unless you are providing the assistant with `image` and/or `audio` inputs (see [multimodal prompts](/en-US/docs/Web/API/Prompt_API/Multimodal)).
+You don't need this form unless you are providing the assistant with `image` and/or `audio` inputs (see [multimodal prompts](/en-US/docs/Web/API/Prompt_API/Multimodal)):
 
 ```js
 const response = await session.prompt([
