@@ -27,7 +27,7 @@ clone(options)
   - : An object representing the options that can be passed. If this argument is absent, the `options` from the original session, such as its abort signal, are used.
     Properties include:
     - `signal`
-      — : An {{domxref("AbortSignal")}} to cancel the clone operation.
+      - : An {{domxref("AbortSignal")}} to cancel the clone operation.
 
 ### Return value
 

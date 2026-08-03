@@ -16,7 +16,7 @@ This article shows you how to implement a basic query-and-respond example (much 
 
 ## The user interface
 
-The HTML for this example features a {{htmlelement("textarea")}} element to enter prompts into, and a {{htmlelement("p")}} to write the APIs responses into. It also features three {{htmlelement("button")}} elements — one to submit the prompt to the API, one to abort an ongoing prompt request, and one to clear the saved session history.
+The HTML for this example features a {{htmlelement("textarea")}} element to enter prompts into, and a {{htmlelement("p")}} to write the API's responses into. It also features three {{htmlelement("button")}} elements — one to submit the prompt to the API, one to abort an ongoing prompt request, and one to clear the saved session history.
 
 ```html
 <h1>Prompt API demo</h1>
@@ -48,7 +48,7 @@ For brevity, we won't show the CSS; there is nothing significant to discuss, sty
 
 When the page first loads, we need to check whether we have any prompt history saved, and if so, load it into the session.
 
-We start by defining a variable called `promptHistory` to store the saved hsitory:
+We start by defining a variable called `promptHistory` to store the saved history:
 
 ```js
 let promptHistory;

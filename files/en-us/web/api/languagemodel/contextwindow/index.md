@@ -16,13 +16,13 @@ The value is implementation-specific and varies depending on the model, device c
 
 ## Value
 
-An number representing the session's context window capacity in tokens. This value may be `Infinity` if the user agent does not impose a specific limit beyond available memory or JavaScript string constraints.
+A number representing the session's context window capacity in tokens. This value may be `Infinity` if the user agent does not impose a specific limit beyond available memory or JavaScript string constraints.
 
 ## Examples
 
 ### Warning when the context is nearly full
 
-The following example uses a function to verify that context is available before calling {{domxref("LanguageModel.prompt()")}}. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less or equal to than `remaining`, it returns `true` and the session continues.
+The following example uses a function to verify that context is available before calling {{domxref("LanguageModel.prompt()")}}. It first calculates the remaining context and passes that value to `measureContextUsage()`. If `needed` is less than or equal to `remaining`, it returns `true` and the session continues.
 
 ```js
 const promptText = "Let me ask you an interesting question...";

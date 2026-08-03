@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Prompt API")}}
 
-The [Prompt API](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to directly prompt a language model provided by the user agent, without needing to manage implementation-specific details of the AI model being used. Having an on-device model is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services.
+The [Prompt API](/en-US/docs/Web/API/Prompt_API) provides an asynchronous ({{jsxref("Promise")}}-based) mechanism for a website to directly prompt a language model provided by the user agent, without needing to manage implementation-specific details of the AI model being used. Having an on-device model is useful and efficient because sensitive data can stay on the user's device, the model is available offline, and developers can avoid the cost and latency of API calls to external services.
 
 This article explains how to use the core fundamentals of the Prompt API. All of the AI prompting functionality is managed via the {{domxref("LanguageModel")}} interface.
 
@@ -77,7 +77,7 @@ The browser will automatically download the corresponding model data to handle t
 
 A `LanguageModel` object instance and the activity that occurs as a result of using its methods and properties is called a **session**. The browser stores all the prompts and responses sent to and received from the Prompt API as part of a single session, allowing the API to tailor its responses based on previous interactions and hold a conversation.
 
-This includes any prompt messages sent to it via the {{domxref("LanguageModel.create_static", "create()")}} method's `initialPrompts` option, {{domxref("LanguageModel.prompt", "prompt()")}}, {{domxref("LanguageModel.promptStreaming", "promptSteaming()")}}, or {{domxref("LanguageModel.append", "append()")}}.
+This includes any prompt messages sent to it via the {{domxref("LanguageModel.create_static", "create()")}} method's `initialPrompts` option, {{domxref("LanguageModel.prompt", "prompt()")}}, {{domxref("LanguageModel.promptStreaming", "promptStreaming()")}}, or {{domxref("LanguageModel.append", "append()")}}.
 
 > [!NOTE]
 > The browser doesn't store session information across browser reloads by default. To restore session context after a reload or browser restart, you will have to implement a mechanism to save the conversation and restore it using a server-side solution or a client-side mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API). Such an example is covered in [Preserving sessions across reloads](/en-US/docs/Web/API/Prompt_API/Preserving_sessions).
@@ -98,7 +98,7 @@ const response = await session.prompt(textarea.value);
 
 This method returns a {{jsxref("Promise")}} that fulfills with a string containing the AI response to your prompt.
 
-You can pass multiple inputs into the API with different roles — for example, standard `user` prompts and instructions from the `assistant` to further shape how it responds to the `user` prompts. To get the AI to respond to your input in the style of a villanous mastermind, you might use this `prompt()` call:
+You can pass multiple inputs into the API with different roles — for example, standard `user` prompts and instructions from the `assistant` to further shape how it responds to the `user` prompts. To get the AI to respond to your input in the style of a villainous mastermind, you might use this `prompt()` call:
 
 ```js
 const response = await session.prompt([

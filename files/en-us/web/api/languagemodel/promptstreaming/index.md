@@ -106,7 +106,7 @@ Each call to `promptStreaming()` adds to the session's context. To branch from a
 
 ### Streaming a response to the page
 
-This exaxmple writes out chunks from a `promptStreaming()` call's {{domxref("ReadableStream")}} as they arrive.
+This example writes out chunks from a `promptStreaming()` call's {{domxref("ReadableStream")}} as they arrive.
 
 ```js
 const session = await LanguageModel.create();

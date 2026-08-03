@@ -45,7 +45,7 @@ You can provide multiple inputs in the array, for example:
 const response = await session.prompt([
   {
     role: "user",
-    content: "The following is my favourite color. Do you like it?",
+    content: "The following is my favorite color. Do you like it?",
   },
   {
     role: "user",
@@ -98,7 +98,7 @@ const response = await session.prompt([
     content: [
       {
         type: "text",
-        value: "The following is my favourite color. Do you like it?",
+        value: "The following is my favorite color. Do you like it?",
       },
       { type: "text", value: inputElem.value },
     ],
@@ -121,12 +121,12 @@ const session = await LanguageModel.create({
     },
     {
       role: "assistant",
-      content: "Avast ye, pirate! I am Redbeard!.",
+      content: "Avast ye, pirate! I am Redbeard!",
     },
     {
       role: "user",
       content:
-        "Yarrrr, matey! Well met. My name is Slias Blacktooth, the scourge of Blackpool!",
+        "Yarrrr, matey! Well met. My name is Silas Blacktooth, the scourge of Blackpool!",
     },
   ],
 });
@@ -141,7 +141,7 @@ As well as telling the model what kind of personality it should have, `initialPr
 
 A few-shot prompt is a set of `user` role and `assistant` role input pairs passed as an example to the API to train it how to respond to a particular type of input, before asking it to complete a similar task.
 
-The following example shows how use a few-shot prompt to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
+The following example shows how to use a few-shot prompt to ask the API for a specific task (French translation) to be delivered in a specific format, before providing some examples to help it learn the correct output format.
 
 ```js
 const session = await LanguageModel.create({
@@ -178,7 +178,7 @@ You could include just the `system` initial prompt and the example would still w
 
 ## Initial and multiple inputs example
 
-Let's look at an example that makes use of intial and multiple inputs for extra context. In this example, the user is prompted to enter their name, and the API provides a whimsical review of it.
+Let's look at an example that makes use of initial and multiple inputs for extra context. In this example, the user is prompted to enter their name, and the API provides a whimsical review of it.
 
 Technically, this is very similar to the [complete example](/en-US/docs/Web/API/Prompt_API/Using#complete_example) from the previous guide, the only real differences being that user input is provided via a single line text {{htmlelement("input")}} rather than a {{htmlelement("textarea")}}, and the `create()` and `prompt()` calls are different. As a result, we won't walk through the entire codebase again. To check out the codebase in more detail, see the previous article's descriptions, and press the "Play" button in the rendered live output to open the full code in MDN Playground.
 
@@ -491,9 +491,9 @@ You can try this demo out in the following live example:
 ```html hidden live-sample___constraint-example
 <h1>Prompt API constraint demo</h1>
 <p>
-  Type in a subject. The demo uses a JSON schema to constraint the API response
+  Type in a subject. The demo uses a JSON schema to constrain the API response
   to a JSON string containing a summary string and an array containing three
-  supporting strings. Released in Chrome 148, but trialled since version 137.
+  supporting strings. Released in Chrome 148, but trialed since version 137.
 </p>
 
 <h2>Input</h2>
