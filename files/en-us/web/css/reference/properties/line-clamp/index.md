@@ -74,7 +74,11 @@ In this example there are 3 _cards_ each with different settings:
 <section>
   <div class="card">
     <h2>number of lines</h2>
-    <p class="integer">This example the <em>number of lines</em> is specified and content longer that this will be hidden by the line-clamp property. By default this will show an ellipsis.</p>
+    <p class="integer">
+      This example the <em>number of lines</em> is specified and content longer
+      that this will be hidden by the line-clamp property. By default this will
+      show an ellipsis.
+    </p>
   </div>
   <div class="card">
     <h2>no ellipsis</h2>
