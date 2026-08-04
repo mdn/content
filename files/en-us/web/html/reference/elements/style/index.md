@@ -108,15 +108,14 @@ A `<style>` element can also be placed inside a {{HTMLElement("template")}} elem
     }
   </style>
 
-  <div class="card">
-    Template content
-  </div>
+  <div class="card">Template content</div>
 </template>
 ```
 
 ### Multiple style elements
 
 In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
+
 ```html
 <!doctype html>
 <html lang="en-US">
