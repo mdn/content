@@ -409,7 +409,7 @@ div {
 
 {{EmbedLiveSample("same-element", "100%", "240")}}
 
-Try scrolling the content up. The tracked element's animation plays after it has fully entered the scrollport, pausing when any part starts to leave the scrollport.
+Try scrolling the content up. The tracked element's animation plays after it has fully entered the scrollport, and pauses when it starts to leave the scrollport.
 
 ## Specifications
 
