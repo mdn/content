@@ -12,7 +12,7 @@ spec-urls:
 
 The **CSS Object Model** is a set of APIs and interfaces allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
 
-The values of CSS are represented untyped, that is using {{JSxRef("String")}} objects (except when using the [CSS Typed Object Model API](#css_typed_object_model_api)).
+The values of CSS are represented untyped, that is using {{JSxRef("String")}} objects (except when using the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)).
 
 ## Guides
 
