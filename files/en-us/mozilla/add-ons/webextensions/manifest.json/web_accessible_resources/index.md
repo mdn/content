@@ -158,7 +158,7 @@ The URL uses a browser-specific scheme:
 
 - Chrome and Chromium-based browsers use `chrome-extension://`.
 - Firefox uses `moz-extension://`.
-- Safari uses `safari-web-extension://`.
+- Safari uses `safari-web-extension://` (WebKit uses `webkit-extension://`).
 
 For example, a resource URL in Firefox might look like:
 
