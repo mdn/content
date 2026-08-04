@@ -71,6 +71,8 @@ font-variant-east-asian: unset;
 
 ### Values
 
+This property is specified either as `normal` or `ruby` or as a space-separated list of the following values:
+
 - `normal`
   - : This keyword leads to the deactivation of the use of such alternate glyphs.
 - `ruby`

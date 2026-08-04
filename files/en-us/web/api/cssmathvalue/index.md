@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSMathValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) a base class for classes representing complex numeric values.
 

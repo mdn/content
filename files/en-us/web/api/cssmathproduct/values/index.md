@@ -6,12 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSMathProduct.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathProduct.values`** read-only
-property of the {{domxref("CSSMathProduct")}} interface returns a
-{{domxref('CSSNumericArray')}} object which contains one or more
-{{domxref('CSSNumericValue')}} objects.
+The **`CSSMathProduct.values`** read-only property of the {{domxref("CSSMathProduct")}} interface returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Value
 

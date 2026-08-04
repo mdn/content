@@ -98,11 +98,8 @@ The `<linearGradient>` element also takes several other attributes, which specif
 >   x2="0"
 >   y1="0"
 >   y2="1"
->   xmlns:xlink="http://www.w3.org/1999/xlink"
 >   href="#Gradient1" />
 > ```
->
-> We've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG).
 
 ## Radial Gradient
 

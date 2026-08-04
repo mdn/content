@@ -3,34 +3,49 @@ title: "`repeat()` CSS function"
 short-title: repeat()
 slug: Web/CSS/Reference/Values/repeat
 page-type: css-function
-browser-compat: css.properties.grid-template-columns.repeat
+browser-compat:
+  - css.properties.grid-template-columns.repeat
+  - css.properties.row-rule.repeat
 sidebar: cssref
 ---
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list](/en-US/docs/Web/CSS/Guides/Gaps). It allows repeated patterns of columns, rows, and their gap decorations, to be written in a compact form.
 
 {{InteractiveExample("CSS Demo: repeat()")}}
 
 ```css interactive-example-choice
 grid-template-columns: repeat(2, 60px);
+rule-color: repeat(2, green, orange), yellow;
 ```
 
 ```css interactive-example-choice
 grid-template-columns: 1fr repeat(2, 60px);
+rule-color: repeat(2, green), repeat(2, yellow);
 ```
 
 ```css interactive-example-choice
 grid-template-columns: repeat(2, 20px 1fr);
+rule-color: repeat(auto, green), repeat(2, yellow);
 ```
 
 ```css interactive-example-choice
 grid-template-columns: repeat(auto-fill, 40px);
+rule-color: repeat(2, orange, yellow), repeat(auto, green);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -48,6 +63,7 @@ grid-template-columns: repeat(auto-fill, 40px);
   grid-auto-rows: 40px;
   grid-gap: 10px;
   width: 220px;
+  rule: solid 4px;
 }
 
 #example-element > div {
@@ -56,7 +72,27 @@ grid-template-columns: repeat(auto-fill, 40px);
 }
 ```
 
-This function can be used in the CSS grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
+This function can be used with the following features:
+
+CSS grid properties:
+
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+
+CSS gap properties:
+
+- {{cssxref("column-rule-color")}}
+- {{cssxref("row-rule-color")}}
+- {{cssxref("rule-color")}} shorthand
+- {{cssxref("column-rule-style")}}
+- {{cssxref("row-rule-style")}}
+- {{cssxref("rule-style")}} shorthand
+- {{cssxref("column-rule-width")}}
+- {{cssxref("row-rule-width")}}
+- {{cssxref("rule-width")}} shorthand
+- {{cssxref("column-rule")}} shorthand
+- {{cssxref("row-rule")}} shorthand
+- {{cssxref("rule")}} shorthand
 
 ## Syntax
 
@@ -89,26 +125,151 @@ repeat(4, [col-start] 60% [col-end])
 repeat(4, [col-start] minmax(100px, 1fr) [col-end])
 repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
+
+/* <name-repeat> values */
+repeat(5, [footer])
+repeat(auto-fill, [header])
+repeat(2, [header footer])
+
+/* <repeat-line> */
+repeat(4, dashed)
+repeat(2, solid, dotted, inset)
+repeat(3, medium)
+repeat(4, red)
+repeat(3, green medium outset)
+
+/* <auto-repeat-line> */
+repeat(auto, dotted)
+repeat(auto, 10px)
+repeat(auto, currentcolor)
+repeat(auto, red, blue, green)
+repeat(auto, var(--lineColor) var(--lineSize) solid)
 ```
 
-The `repeat()` function takes two arguments:
+### Values
 
-- **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
-- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
+The `repeat()` function takes two arguments: The first argument specifies [**repeat count**](#repeat-count-values), and the second specifies the [**repeated values list**](#repeated-values-list) (the list of values to be repeated).
 
-If you use [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count, you may only specify track sizes using the [`<fixed-size>`](#fixed-size) type, not the [`<track-size>`](#track-size) type. This give us three main syntax forms for `repeat()`:
+#### Repeat count values
 
-- `<track-repeat>`, which uses:
-  - an integer to set the repeat count
-  - [`<track-size>`](#track-size) values to set track sizes.
-- `<auto-repeat>`, which uses
-  - [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count
-  - [`<fixed-size>`](#fixed-size) to set track sizes.
-- `<fixed-repeat>`, which uses:
-  - an integer to set the repeat count
-  - [`<fixed-size>`](#fixed-size) values to set track sizes.
+- {{cssxref("integer")}}
+  - : A positive integer greater than or equal to `1` specifying the number of times the feature list in the second parameter will be repeated.
 
-Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
+- `auto-fill`
+  - : Specifies an auto repeater that repeats to fill a space. Resolves to the largest number of repetitions that does not cause overflow of a constrained (has a maximum size) content box. Otherwise, if the content box has a minimum size, the fewest number of repetitions that meets the minimum size. If there is neither a minimum or maximum size, resolves to `1`. When used with subgrid, the second parameter must be a list of line names.
+
+- `auto-fit`
+  - : Behaves as `auto-fill`, except that after placing grid items, any empty repeated tracks are collapsed.
+
+- `auto`
+  - : Specifies an auto repeater. Once the values from other components of the property value have been applied, the values from the second parameter are repeated as many times as needed, filling any missing values.
+
+#### Repeated values list
+
+A list from one of the following track list types. Whether the components of the list are comma- or space-separated, depends on which separator is expected for that property value list type.
+
+- `<line-names>`
+  - : To add line names to subgrids, each `<line-names>` is zero or more {{cssxref("&lt;custom-ident&gt;")}} values, space-separated and enclosed in square brackets, such as `[start header-start]`.
+
+- `<track-size>`
+  - : Each `<track-size>` is a positive {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("minmax()")}} function with the first parameter being the keyword `min-content`, `max-content`, or `auto`, or a positive `<length-percentage>`, or a {{cssxref("fit-content()")}} function.
+
+- `<fixed-size>`
+  - : Each `<fixed-size>` is either a positive `<length-percentage>`, or a `minmax()` function whose first parameter is a positive `<length-percentage>` and whose second parameter is a non-negative dimension with the unit `fr` specifying the track's flex factor or the keyword `min-content`, `max-content`, or `auto`, or a `minmax()` function whose first parameter is a positive `<length-percentage>` or the keyword `min-content`, `max-content`, or `auto`, and whose second parameter is a positive `<length-percentage>`.
+
+- `<value>`
+  - : For defining gap rules, each `<value>` is a value that would be accepted by the property in which the `repeat()` appears, such as a {{cssxref("line-style")}}, {{cssxref("line-width")}}, {{cssxref("&lt;color&gt;")}}, or all three as a `<gap-rule>`.
+
+## Description
+
+The `repeat()` function represents a repeated fragment within a comma- or space-separated values list, that allows a recurring pattern to be written in a more compact form that can be repeated a specified number of times or can be auto-repeated.
+
+The generic form of the `repeat()` syntax is, approximately,
+
+```css
+repeat( <repeat-count>, <values-list> )
+```
+
+The first argument, the **repeat count**, specifies the number of repetitions. It defines the number of times the list of values defined in the second parameter should be repeated. It is specified either as an integer value of `1` or more or as the keyword `auto-fill`, `auto-fit`, or `auto`.
+
+The second argument is a comma- or space-separated list of values that are valid for the property in which the `repeat()` appears. It specifies the **repeated value type**, which is generally the _tracks_ or _rule feature(s)_ to be repeated.
+
+- **tracks**:
+  - : Specifies the set of tracks that will be repeated. Fundamentally this consists of one or more space-separated values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
+- **rule feature**:
+  - : Specifies the rule feature that will be repeated. This is either a comma separated list of {{cssxref("&lt;color>")}}, {{cssxref("line-width")}}, or {{cssxref("line-style")}} values, or a comma-separated list of shorthand declarations setting the line's color, width, and style.
+
+### Syntax forms
+
+The syntax of the `repeat()` function has several forms:
+
+- `<track-repeat>` = `repeat( <integer>, [ <line-names>? <track-size> ]+ <line-names>? )`
+  - : The `<integer>` sets the repeat count.
+  - : The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {{cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
+  - : Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+  - : An ending `<line-names>` is optional.
+
+- `<auto-repeat>` = `repeat( auto-fill | auto-fit, [ <line-names>? <fixed-size> ]+ <line-names>? )`
+  - : The `auto-fill` or `auto-fit` keyword sets the repeat count
+  - : The `<fixed-size>` sets the track size. A `<fixed-size>` is either a `<length-percentage>` value, or a `minmax()` function with either the `min` or the `max` being a `<length-percentage>` and the other value also being a `<length-percentage>`, or set to the keyword `min-content`, `max-content`, or `auto`.
+  - : Each `<fixed-size>` is optionally preceded by `<line-names>`.
+  - : The ending `<line-names>` is optional.
+
+- `<fixed-repeat>` = `repeat( <integer>, [ <line-names>? <fixed-size> ]+ <line-names>? )`
+  - : Same as `<auto-repeat>`, except the `<integer>` sets the repeat count, so there is no auto-repeating.
+
+- `<name-repeat>` = `repeat( [ <integer> | auto-fill ], <line-names>+)`
+  - : The integer or `auto-fill` keyword sets the repeat count
+  - : The `<line-names>` are one or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+  - : These line names (rather than track sizes) are relevant for [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
+
+- `<repeat-value-type>` = `repeat( <integer> , <value># )`
+  - : The `<integer>` sets the repeat count.
+  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
+  - : Multiple `repeat()` functions of the `<repeat-value-type>` may be used within a single value declaration.
+
+- `<auto-repeat-value-type>` = `repeat( auto , <value># )`
+  - : The `auto` keyword specifies an auto repeater. An auto repeater will be used to fill in values for gaps that would not otherwise receive values from other parts of the list.
+  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
+  - : At most one `repeat()` in a given list of values may be an auto repeater.
+
+### Auto-fit versus auto-fill
+
+When the first parameter of the `repeat()` function is a keyword, either `auto-fill`, `auto-fit`, or `auto`, rather than an integer, it creates an auto-repeater. An auto-repeating `repeat()` function repeats the values provided as the second parameter as many times as necessary.
+
+With `auto-fill`, if the container has a definite or maximum size set in the relevant axis, the number of repetitions is the largest possible positive integer that does not cause the content to overflow its container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, if there is no definite or maximum size defined, the `repeat()` function is a minimum track sizing function. If any number of repetitions would overflow, the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
+
+The `auto-fit` value behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
+
+A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
+
+For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid dividing by zero.
+
+### Use exceptions and rules
+
+There are some rules and restrictions when using `repeat()`:
+
+A property value can contain multiple `repeat()` functions.
+
+```css example-good
+.wrapper {
+  grid-template-columns:
+    repeat(2, 10px)
+    repeat(2, minmax(min-content, max-content));
+}
+```
+
+A property value can contain, at most, one auto-repeat `repeat()` function.
+
+```css example-bad
+.wrapper {
+  row-rule:
+    repeat(auto, yellow 3px solid, red 1px dashed),
+    repeat(auto, green 5px dotted);
+}
+```
+
+If a property declaration uses `<auto-repeat>`, it is only allowed to use `<fixed-repeat>` for any additional `repeat()` calls. Automatic repetitions (`auto-fill` or `auto-fit`) cannot be combined with fully intrinsic or flexible sizes. For example, this is invalid, because it combines the `<auto-repeat>` form with the `<track-repeat>` form:
 
 ```css example-bad
 .wrapper {
@@ -118,53 +279,27 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 }
 ```
 
-There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid) keyword and only specifies line names, not track sizes.
+The `repeat()` notation cannot be nested within another `repeat()` function.
 
-### Values
-
-- `<fixed-size>`
-  - : One of the following forms:
-    - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax()")}} function with:
-      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
-      - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
-      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-      - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
-- {{cssxref("&lt;flex&gt;")}}
-  - : A non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
-- {{cssxref("&lt;length&gt;")}}
-  - : A positive integer length.
-- `<line-names>`
-  - : Zero or more {{cssxref("&lt;custom-ident&gt;")}} values, space-separated and enclosed in square brackets, like this: `[first header-start]`.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the `<percentage>` must be treated as `auto`. The user-agent may adjust the intrinsic size contributions of the track to the size of the grid container and increase the final size of the track by the minimum amount that would result in honoring the percentage.
-- `<track-size>`
-  - : One of the following forms:
-    - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
-      - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-      - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
-- `auto`
-  - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
-- `auto-fill`
-  - : If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
-- `auto-fit`
-  - : Behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
-
-    A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
-
-    For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid division by zero.
-
-- {{cssxref("max-content")}}
-  - : Represents the largest max-content contribution of the grid items occupying the grid track.
-- {{cssxref("min-content")}}
-  - : Represents the largest min-content contribution of the grid items occupying the grid track.
+```css example-bad
+.wrapper {
+  grid-template-columns: repeat(
+    2,
+    minmax(min-content, max-content),
+    repeat(3, 10px)
+  );
+  column-rule: repeat(
+    auto,
+    yellow 3px solid,
+    repeat(5, green 5px dotted),
+    red 1px dashed
+  );
+}
+```
 
 ## Formal syntax
 
-{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
+{{CSSSyntaxRaw(`<repeat-line> <track-repeat> <auto-repeat> <fixed-repeat> <name-repeat> <auto-repeat-line>`)}}
 
 ## Examples
 
@@ -225,3 +360,5 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - {{cssxref("grid-auto-flow")}}
 - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)
+- [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

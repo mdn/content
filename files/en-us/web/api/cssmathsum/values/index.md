@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSMathSum.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathSum.values`** read-only property
-of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}
-object which contains one or more {{domxref('CSSNumericValue')}} objects.
+The **`CSSMathSum.values`** read-only property of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}} object that contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Value
 

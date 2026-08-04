@@ -5,9 +5,10 @@ page-type: web-api-interface
 browser-compat: api.CSSMathMax
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathMax`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref('max','max()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathMax`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref('max','max()')}} function.
+It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 

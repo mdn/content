@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.div
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`div()`** method of the
-{{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the
-supplied value.
+The **`div()`** method of the {{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the supplied value.
 
 ## Syntax
 
@@ -33,6 +31,8 @@ A {{domxref('CSSMathProduct')}}.
   - : Thrown if an invalid type was passed to the method.
 
 ## Examples
+
+### Basic usage
 
 ```js
 let mathProduct = CSS.px("24").div(CSS.percent("4"));

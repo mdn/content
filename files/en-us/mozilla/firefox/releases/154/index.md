@@ -50,11 +50,16 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCIceTransport.getSelectedCandidatePair()")}} method and {{domxref("RTCIceTransport/selectedcandidatepairchange_event", "selectedcandidatepairchange")}} event are now supported for getting the current {{domxref("RTCIceCandidatePair")}} for the transport.
+  ([Firefox bug 2019332](https://bugzil.la/2019332)).
+- The {{domxref("RTCDtlsTransport/error_event", "error")}} event is now fired on {{domxref("RTCDtlsTransport")}} to report DTLS and fingerprinting errors.
+  ([Firefox bug 1805447](https://bugzil.la/1805447)).
 
 <!-- #### Removals -->
 
