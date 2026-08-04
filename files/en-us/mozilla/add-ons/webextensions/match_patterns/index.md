@@ -10,6 +10,28 @@ Match patterns are a way to specify groups of URLs: a match pattern matches a sp
 
 APIs that use match patterns usually accept a list of match patterns, and will perform the appropriate action if the URL matches any of the patterns. See, for example, the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in manifest.json.
 
+## Where match patterns are used
+
+Match patterns are used in several places across the manifest.json keys and JavaScript APIs:
+
+- Manifest keys:
+  - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions), to request access to hosts.
+  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions), which can include host permissions alongside named API permissions.
+  - The `matches` and `exclude_matches` fields of [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) entries.
+  - The `matches` field of [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources#manifest_v3_syntax) entries (Manifest V3 only).
+  - The `show_matches` and `hide_matches` fields of [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
+- JavaScript APIs:
+  - The `origins` property of the object passed to {{WebExtAPIRef("permissions.request()")}} and returned by other {{WebExtAPIRef("permissions")}} methods.
+  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("userScripts.register()")}}.
+  - The `documentUrlPatterns` and `targetUrlPatterns` properties passed to {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}}.
+  - The `urls` property of the {{WebExtAPIRef("webRequest.RequestFilter")}} object, used to filter `webRequest` events and also reused by {{WebExtAPIRef("proxy.onRequest")}}
+  - The `urls` property of the filter object passed to {{WebExtAPIRef("tabs.onUpdated")}}.
+  - The `url` property of the object passed to {{WebExtAPIRef("tabs.query()")}}.
+
+> [!NOTE]
+> The [`events.UrlFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events/UrlFilter) object, used for example to filter `webNavigation` events, looks similar. However, it uses a different mechanism. It matches against URL components using properties such as `hostContains` and `urlMatches` (a regular expression), rather than match pattern syntax.
+
 ## Match pattern structure
 
 > [!NOTE]
