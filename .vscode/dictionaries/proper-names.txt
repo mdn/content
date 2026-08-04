@@ -37,6 +37,7 @@ Arun
 Ashlyn
 Ashok
 Audiocogs
+Audre
 Austerstræti
 Autonavi
 Avenir
@@ -202,6 +203,7 @@ Erba
 ERCIM
 ericwbailey
 Esben
+Evaristo
 Eventbrite
 Exljbris
 Exocoetidae
@@ -331,6 +333,7 @@ Kerckhoffs
 Kersee
 Kesteren
 Khronos
+Kimberlé
 Kinlan
 Kinnon
 kirsty
@@ -371,6 +374,7 @@ Lindenberg
 Lindesay
 Liskov
 Lorc
+Lorde
 Loycom
 Luxon
 Léonie
@@ -657,6 +661,7 @@ Webhint
 Webopedia
 webref
 Weinstein
+Westover
 Weyl
 Widevine
 Wikibooks
@@ -704,6 +709,7 @@ Zheng
 Zilla
 Zinsser
 Zosia
+Zoya
 zxcvbn
 Émanuel
 Österreich

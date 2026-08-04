@@ -103,7 +103,7 @@ We use CSS to apply the `will-change` property to the `#element`, providing a hi
 
 ```css
 #element {
-  willchange: transform, opacity;
+  will-change: transform, opacity;
 }
 ```
 
