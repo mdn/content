@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue.values()`** returns a new _array iterator_ object that contains the values for each index in the `CSSTransformValue` object.
 

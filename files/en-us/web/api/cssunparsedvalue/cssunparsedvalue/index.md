@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSUnparsedValue()`** constructor creates a new {{domxref("CSSUnparsedValue")}} object which represents property values that reference custom properties.
 

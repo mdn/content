@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSMathClamp.CSSMathClamp
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSMathClamp()`** constructor creates a new {{domxref("CSSMathClamp")}} object representing a CSS {{CSSXref("clamp", "clamp()")}} function.
 

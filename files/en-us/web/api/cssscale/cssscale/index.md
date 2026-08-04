@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSScale.CSSScale
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSScale()`** constructor creates a new {{domxref("CSSScale")}} object representing the {{cssxref("transform-function/scale", "scale()")}} and {{cssxref("transform-function/scale3d", "scale3d()")}} values of the individual {{CSSXref('transform')}} property in CSS.
 
