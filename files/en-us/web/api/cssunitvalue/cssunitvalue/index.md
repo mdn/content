@@ -20,7 +20,7 @@ new CSSUnitValue(value, unit)
 ### Parameters
 
 - `value`
-  - : A double indicating the number of units.
+  - : A number indicating the number of units.
 - `unit`
   - : A string indicating the type of unit.
 

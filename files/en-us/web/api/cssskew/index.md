@@ -7,8 +7,7 @@ browser-compat: api.CSSSkew
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSSkew`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is part of the {{domxref('CSSTransformValue')}} interface.
-It represents the {{cssxref("transform-function/skew", "skew()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
+The **`CSSSkew`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/skew", "skew()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
 
 {{InheritanceDiagram}}
 
@@ -19,10 +18,16 @@ It represents the {{cssxref("transform-function/skew", "skew()")}} value of the 
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
+
 - {{domxref('CSSSkew.ax','ax')}}
   - : Returns or sets the x-axis value.
 - {{domxref('CSSSkew.ay','ay')}}
   - : Returns or sets the y-axis value.
+
+## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
 
 ## Examples
 
