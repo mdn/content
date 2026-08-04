@@ -100,6 +100,8 @@ You could use multiple `timeline-trigger-name` values to create a trigger for al
 
 If you specify the same `<dashed-ident>` multiple times in the same `timeline-trigger-name` list, only the last instance will define a trigger. The preceding ones will have no effect.
 
+If multiple elements define triggers with the same trigger name, the trigger defined by the last element in the source order is used, unless scoped. See {{cssxref("trigger-scope")}} for more details.
+
 ## Formal definition
 
 {{cssinfo}}
