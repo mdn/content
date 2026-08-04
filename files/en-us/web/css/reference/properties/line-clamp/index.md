@@ -82,7 +82,10 @@ In this example there are 3 _cards_ each with different settings:
   </div>
   <div class="card">
     <h2>no ellipsis</h2>
-    <p class="no-ellipsis">This example <em>no ellipsis</em> is specified and should not show. If you see this then your browser does not currently support this.</p>
+    <p class="no-ellipsis">
+      This example <em>no ellipsis</em> is specified and should not show. If you
+      see this then your browser does not currently support this.
+    </p>
   </div>
   <div class="card">
     <h2>custom string</h2>
