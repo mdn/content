@@ -3,10 +3,12 @@ title: "MediaStreamTrackProcessor: discardedFrames property"
 short-title: discardedFrames
 slug: Web/API/MediaStreamTrackProcessor/discardedFrames
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor.discardedFrames
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`discardedFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating how many frames have been dropped by the processor.
 

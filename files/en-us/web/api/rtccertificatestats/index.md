@@ -19,7 +19,7 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
   - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](/en-US/docs/Web/API/RTCCertificateStats/fingerprintAlgorithm).
 - {{domxref("RTCCertificateStats.fingerprintAlgorithm", "fingerprintAlgorithm")}}
   - : A string containing the hash function used to compute the certificate [`fingerprint`](/en-US/docs/Web/API/RTCCertificateStats/fingerprint), such as "sha-256".
-- {{domxref("RTCCertificateStats.issuerCertificateId", "issuerCertificateId")}}
+- {{domxref("RTCCertificateStats.issuerCertificateId", "issuerCertificateId")}} {{experimental_inline}}
   - : A string containing the `id` of the {{domxref("RTCCertificateStats")}} object in this report that contains the next certificate in the certificate chain.
     This will not be set if the current certificate is a self-signed certificate or the end of the certificate chain (a root certificate).
 
