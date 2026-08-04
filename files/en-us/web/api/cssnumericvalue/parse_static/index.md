@@ -10,6 +10,10 @@ browser-compat: api.CSSNumericValue.parse_static
 
 The **`parse()`** static method of the {{domxref("CSSNumericValue")}} interface converts a value string into an object whose members are value and the units.
 
+> [!NOTE]
+> This method cannot be called in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts — parsing CSS text is restricted to the main thread.
+> All other methods in the `CSSNumericValue` interface are available in workers and worklets.
+
 ## Syntax
 
 ```js-nolint

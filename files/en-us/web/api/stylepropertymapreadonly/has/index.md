@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`has()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
 

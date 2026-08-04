@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.StylePropertyMapReadOnly.size
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`size`** read-only property of the {{domxref("StylePropertyMapReadOnly")}} interface returns a positive integer containing the size of the `StylePropertyMapReadOnly` object.
 

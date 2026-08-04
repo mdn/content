@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSRotate.CSSRotate
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSRotate()`** constructor creates a new
 {{domxref("CSSRotate")}} object representing the {{cssxref("transform-function/rotate", "rotate()")}} value of the

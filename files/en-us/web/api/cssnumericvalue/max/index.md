@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.max
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`max()`** method of the {{domxref("CSSNumericValue")}} interface returns the highest value from among the values passed.
 The passed values must be of the same type.

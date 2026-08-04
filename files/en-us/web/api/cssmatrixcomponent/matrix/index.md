@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSMatrixComponent.matrix
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`matrix`** property of the {{domxref("CSSMatrixComponent")}} interface gets and sets a 2D or 3D matrix.
 

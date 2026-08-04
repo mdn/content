@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.equals
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`equals()`** method of the {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed values are strictly equal.
 To return a value of `true`, all passed values must be of the same type and value and must be in the same order.

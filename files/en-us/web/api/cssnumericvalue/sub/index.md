@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.sub
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`sub()`** method of the {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the `CSSNumericValue`.
 
