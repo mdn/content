@@ -28,11 +28,11 @@ For example, the value `42px` (a {{cssxref("&lt;dimension&gt;")}}) would be repr
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
 
 ## Examples
 

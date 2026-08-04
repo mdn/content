@@ -25,7 +25,7 @@ The interface instance name is a {{Glossary("stringifier")}}, so when used anywh
 
 ## Instance methods
 
-_Inherits methods from {{domxref('CSSStyleValue')}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSStyleValue")}}._
 
 ## Examples
 

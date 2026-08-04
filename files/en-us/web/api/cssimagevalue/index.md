@@ -18,7 +18,7 @@ None.
 
 ## Instance methods
 
-_Inherits methods from {{domxref("CSSStyleValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSStyleValue")}}._
 
 ## Description
 
