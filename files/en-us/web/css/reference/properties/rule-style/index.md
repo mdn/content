@@ -299,6 +299,20 @@ li {
 }
 ```
 
+```css hidden live-sample___basic
+@layer no-support {
+  @supports not (rule-style: solid) {
+    body::before {
+      content: "Your browser doesn't support the rule-style property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("Basic", "", "600")}}
