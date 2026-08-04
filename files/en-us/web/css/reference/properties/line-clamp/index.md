@@ -89,7 +89,10 @@ In this example there are 3 _cards_ each with different settings:
   </div>
   <div class="card">
     <h2>custom string</h2>
-    <p class="string">This example has a <em>String</em> at the end and this replaces the ellipsis</p>
+    <p class="string">
+      This example has a <em>String</em> at the end and this replaces the
+      ellipsis
+    </p>
   </div>
 </section>
 ```
