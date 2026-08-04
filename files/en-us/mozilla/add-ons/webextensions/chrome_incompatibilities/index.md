@@ -215,3 +215,7 @@ Extensions that rely on the `toJSON()` method of the JSON serialization algorith
 Prior to Chrome 148, Chrome only exposed APIs on the `chrome` namespace instead of `browser`. For example, `browser.browserAction.setIcon({ path: "path/to/icon.png" });` would instead be `chrome.browserAction.setIcon({ path: "path/to/icon.png" });`.
 
 For extensions that use the `devtools_page` manifest key, Chrome support for the `browser` namespace and promises was introduced in Chrome 152.
+
+Additionally, Chrome support for Promise-based return values from APIs was introduced starting in Manifest V3, with some APIs being supported later. Before, a call like `browser.cookies.set({ url: "https://developer.mozilla.org/" }).then(logCookie);` would instead use a callback like `browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);`.
+
+If you are targetting older browser versions, Firefox provides a polyfill that provides the `browser` namespace and promise support: <https://github.com/mozilla/webextension-polyfill>.
