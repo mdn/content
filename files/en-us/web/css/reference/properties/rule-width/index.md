@@ -180,7 +180,7 @@ In this example, we define a single width for the lines drawn between the column
 
 #### HTML
 
-We create a list of 100 items. Most of the HTML is hidden for brevity.
+We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 ```html
 <ul>
@@ -349,7 +349,7 @@ ul {
 
 {{EmbedLiveSample("func", "", "600")}}
 
-The `repeat()` function repeats two width values four times, creating a list of ten width values. As there are fewer column and row gutters than total widths, the last values in the list is discarded.
+The `repeat()` function repeats two width values four times, creating a list of ten width values. As there are fewer column and row gutters than total widths, the last values in the list are discarded.
 
 ### Using `auto` within `repeat()`
 
