@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.add
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("CSSNumericValue")}} interface adds a supplied number to the `CSSNumericValue`.
 

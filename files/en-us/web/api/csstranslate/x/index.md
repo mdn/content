@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSTranslate.x
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`x`** property of the {{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the translating vector.
 

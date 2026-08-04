@@ -10,6 +10,10 @@ browser-compat: api.CSSStyleValue.parse_static
 
 The **`parse()`** static method of the {{domxref("CSSStyleValue")}} interface sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.
 
+> [!NOTE]
+> This method cannot be called in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+> The rest of the `CSSStyleValue` interface remains available in workers and worklets.
+
 ## Syntax
 
 ```js-nolint

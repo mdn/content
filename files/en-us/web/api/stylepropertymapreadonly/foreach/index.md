@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`StylePropertyMapReadOnly.forEach()`** method executes a provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.
 

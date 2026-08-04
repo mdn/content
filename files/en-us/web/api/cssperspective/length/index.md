@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSPerspective.length
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`length`** property of the {{domxref("CSSPerspective")}} interface sets the distance from z=0.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.mul
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`mul()`** method of the {{domxref("CSSNumericValue")}} interface multiplies the `CSSNumericValue` by the supplied value.
 

@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSTransformValue.CSSTransformValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue()`** constructor creates a new {{domxref("CSSTransformValue")}} object which represents a list of individual transform objects.
 

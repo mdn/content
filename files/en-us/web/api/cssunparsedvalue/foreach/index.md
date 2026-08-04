@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.forEach
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSUnparsedValue.forEach()`** method executes a provided function once for each element of the {{domxref('CSSUnparsedValue')}}.
 

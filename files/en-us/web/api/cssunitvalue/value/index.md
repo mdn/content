@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSUnitValue.value
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSUnitValue.value`** property of the {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
 

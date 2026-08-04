@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.get
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface returns a {{domxref("CSSStyleValue")}} object for the first value of the specified property.
 
