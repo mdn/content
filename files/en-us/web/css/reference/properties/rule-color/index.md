@@ -291,6 +291,20 @@ li {
 }
 ```
 
+```css hidden live-sample___basic
+@layer no-support {
+  @supports not (rule-color: red) {
+    body::before {
+      content: "Your browser doesn't support the rule-color property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("Basic", "", "600")}}
