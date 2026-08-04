@@ -369,7 +369,7 @@ div {
 }
 ```
 
-We set an `animation-trigger` value that references a `timeline-trigger-name` of `--t`. We also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which sets the animation will to play forwards on activation and play in reverse on deactivation.
+We set an `animation-trigger` value that references a `timeline-trigger-name` of `--t`. We also specify two `<animation-action>` values — `play-forwards` and `play-backwards` — which set the animation to play forwards on activation and in reverse on deactivation.
 
 We then specify the following properties on the same `<div>`:
 
