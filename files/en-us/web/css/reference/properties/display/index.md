@@ -173,7 +173,7 @@ The keyword values can be grouped into six value categories.
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `grid-lanes` {{Experimental_Inline}}
-      - : The element behaves like a block-level element and lays out its content according to the [grid lanes model](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes_layout/Basic_concepts). Items are placed into pre-defined lanes on the {{glossary("grid axis")}} and stack tightly on the {{glossary("stacking axis")}}.
+      - : The element behaves like a block-level element and lays out its content according to the grid lanes model. Items are placed into pre-defined lanes on the {{glossary("grid axis")}} and stack tightly on the stacking axis.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 

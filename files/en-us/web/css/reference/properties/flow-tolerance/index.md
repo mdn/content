@@ -17,7 +17,6 @@ Each item is normally placed into whichever lane is least full so far — the la
 
 {{InteractiveExample("CSS Demo: flow-tolerance")}}
 
-
 ```css interactive-example-choice
 flow-tolerance: 0;
 ```
@@ -40,7 +39,6 @@ flow-tolerance: 1.1em;
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
   flow-tolerance: normal;
-  
   padding: 10px;
   border: 2px solid #f76707;
   border-radius: 5px;
@@ -216,5 +214,3 @@ The following declaration widens the tolerance so that items only move to a diff
 
 - {{cssxref("display")}}
 - {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}
-- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes_layout)
-- [Controlling flow tolerance](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes_layout/Controlling_flow_tolerance)
