@@ -338,7 +338,7 @@ This time, our markup contains a single {{htmlelement("div")}} element, plus bas
 
 #### CSS
 
-We first define a keyframe animation inverts colors:
+We first define a keyframe animation that inverts the foreground and background colors:
 
 ```css hidden live-sample___same-element
 body {
