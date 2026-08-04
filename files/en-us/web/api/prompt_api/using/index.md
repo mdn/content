@@ -264,7 +264,7 @@ Next, we include a {{htmlelement("p")}} element to display the model's response 
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {

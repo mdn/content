@@ -64,6 +64,7 @@ Bitwarden
 Bixa
 Blackman
 Blackmoon
+Blacktooth
 Blankers
 Bloggs
 Bobtown
@@ -192,6 +193,7 @@ Elchi
 Elfie
 Elliotte
 Elly
+Elrond
 Emscripten
 Endtest
 Ensatina
@@ -212,6 +214,7 @@ Fairchild
 FDCP
 Firefogg
 Firesheep
+Firestore
 Firmata
 Firtman
 Flagfox
@@ -521,12 +524,14 @@ Rapp
 Rauschmayer
 Realtek
 Recep
+Redbeard
 Reis
 Rekapi
 Remy
 Resian
 Resig
 Rigby
+Rivendell
 Robison
 Rocher
 Rohini

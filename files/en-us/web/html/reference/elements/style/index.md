@@ -102,7 +102,7 @@ A `<style>` element can also be placed inside a {{HTMLElement("template")}} elem
 <template id="card-template">
   <style>
     .card {
-      border: 1px solid #ccc;
+      border: 1px solid #cccccc;
       padding: 1rem;
       border-radius: 0.5rem;
     }
