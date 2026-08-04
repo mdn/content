@@ -41,7 +41,7 @@ The `timeline-trigger-name` property may be specified using the keyword `none`, 
 - `none`
   - : Specifies that the element does not define any scroll-triggered animation triggers.
 - {{cssxref("dashed-ident")}}
-  - : An identifier, naming the trigger.
+  - : An identifier to name the trigger.
 
 ## Description
 
