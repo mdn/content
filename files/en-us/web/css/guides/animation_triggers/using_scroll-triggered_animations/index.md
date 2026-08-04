@@ -782,7 +782,6 @@ Finally, we define the animation {{cssxref("@keyframes")}} referenced in the `<s
   body::before {
     content: "Your browser does not support scroll-triggered animations.";
     background-color: wheat;
-    padding: 1rem 0;
     text-align: center;
     padding: 1rem 0;
 

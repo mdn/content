@@ -394,7 +394,6 @@ div {
   body::before {
     content: "Your browser does not support the timeline-trigger-name property.";
     background-color: wheat;
-    padding: 1rem 0;
     text-align: center;
     padding: 1rem 0;
 

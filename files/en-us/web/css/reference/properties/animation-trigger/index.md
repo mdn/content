@@ -611,7 +611,6 @@ We define a timeline trigger with a different name on each trigger `<div>` eleme
   body::before {
     content: "Your browser does not support the animation-trigger property.";
     background-color: wheat;
-    padding: 1rem 0;
     text-align: center;
     padding: 1rem 0;
 

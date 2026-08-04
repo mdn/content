@@ -508,7 +508,6 @@ Next, we set a different {{cssxref("animation-trigger")}} property value on each
   body::before {
     content: "Your browser does not support scroll-triggered animations.";
     background-color: wheat;
-    padding: 1rem 0;
     text-align: center;
     padding: 1rem 0;
 
