@@ -241,7 +241,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we w
 }
 ```
 
-We apply the animation to the `.animated` element using the {{cssxref("animation")}} shorthand to set infinite iterations. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and set two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+We apply the animation to the `.animated` element using the {{cssxref("animation")}} shorthand, setting it to play for infinite iterations. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and set two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
