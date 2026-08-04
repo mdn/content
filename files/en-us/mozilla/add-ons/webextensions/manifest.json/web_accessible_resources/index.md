@@ -154,10 +154,16 @@ To enable a web page to use an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements
 "web_accessible_resources": ["images/my-image.png"]
 ```
 
-The file is then available using a URL like:
+The URL uses a browser-specific scheme:
+
+- Chrome and Chromium-based browsers use `chrome-extension://`.
+- Firefox uses `moz-extension://`.
+- Safari uses `safari-web-extension://`.
+
+For example, a resource URL in Firefox might look like:
 
 ```plain
-moz-extension://<extension-UUID>/images/my-image.png"
+moz-extension://<extension-UUID>/images/my-image.png
 ```
 
 `<extension-UUID>` is **not** your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.
@@ -172,8 +178,16 @@ browser.runtime.getURL("images/my-image.png");
 // something like:
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
 ```
-
 This approach gives you the correct URL regardless of the browser your extension is running on.
+
+In Chrome, a statically declared CSS file can use the predefined
+`@@extension_id` message to construct a URL for an extension resource:
+
+```css
+body {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/my-image.png");
+}
+```
 
 ### Wildcards
 
