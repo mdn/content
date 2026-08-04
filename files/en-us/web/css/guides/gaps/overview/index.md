@@ -1,5 +1,5 @@
 ---
-title: Overiew of CSS gap decoration properties
+title: Overview of CSS gap decoration properties
 short-title: Gap decorations
 slug: Web/CSS/Guides/Gaps/Overview
 page-type: guide
@@ -15,7 +15,7 @@ This guide provides an overview of the features introduced in the specification,
 
 Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line-style of column rules in multi-col containers, all the rules had to be the same, the only option spanned the full block-dimension, and it was limited: only columns, and only on multi-col layout. And the decorations that were supported between mutli-col columns were limited. The {{cssxref("column-rule")}} property, which enables drawing a line in the center each gutter, was originally limited to multi-column layout, and originally not a shorthand.
 
-Grid layout has always supported gaps between rows and columns, but originally did not support decorations in those gutters. Before rules were expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox required hacks, such as backgrounds images, adding borders on all items, and even absolutely positioned overlays. Fortunately CSS has evolved. CSS gap module properties support defining column and row gaps for all gap-aware layout containers, and defining visible separators, called _gap decorations_, ainted in the middle of gaps in both horizontal and vertical gutters, that don't impact the box model.
+Grid layout has always supported gaps between rows and columns, but originally did not support decorations in those gutters. Before rules were expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox required hacks, such as backgrounds images, adding borders on all items, and even absolutely positioned overlays. Fortunately CSS has evolved. CSS gap module properties support defining column and row gaps for all gap-aware layout containers, and defining visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters, that don't impact the box model.
 
 This example demonstrates the basic gap decoration features, with a gap between the grid rows and columns containing a dashed lime and solid darkviolet rule, respectively.
 
