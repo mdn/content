@@ -7,7 +7,7 @@ sidebar: privacy
 
 This guide is an introduction to privacy for web developers. It provides an overview of the principles that a website needs to follow in order to respect the privacy of its users.
 
-It is largely based on the principles listed in the [W3C Privacy Principles](https://www.w3.org/TR/privacy-principles/) statement, but unlike that document, this guide covers only principles that apply to web developers, not those that apply to browser developers or standards designers.
+It is largely based on the principles listed in the [W3C Privacy Principles](https://w3ctag.github.io/privacy-principles/) statement, but unlike that document, this guide covers only principles that apply to web developers, not those that apply to browser developers or standards designers.
 
 It's split into three main sections:
 
@@ -125,5 +125,5 @@ This means that, by following the principles listed above, sites can ensure that
 
 ## See also
 
-- [Privacy principles](https://www.w3.org/TR/privacy-principles/#dfn-context) (W3C)
+- [Privacy principles](https://w3ctag.github.io/privacy-principles/#dfn-context) (W3C)
 - [Learn Privacy](https://web.dev/learn/privacy) (web.dev)

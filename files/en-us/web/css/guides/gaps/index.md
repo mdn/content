@@ -275,7 +275,7 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
-  column-rule: 0.25em dashed currentcolor;
+  column-rule: 0.25em dashed currentColor;
 }
 .title {
   column-span: all;
@@ -289,7 +289,7 @@ p {
   line-height: 1.4;
 }
 .code {
-  font-style: monospace;
+  font-family: monospace;
 }
 .breakInside * {
   break-inside: avoid;

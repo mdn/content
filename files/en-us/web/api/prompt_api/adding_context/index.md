@@ -211,7 +211,7 @@ Technically, this is very similar to the [complete example](/en-US/docs/Web/API/
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {
