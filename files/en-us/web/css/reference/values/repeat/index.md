@@ -148,7 +148,7 @@ repeat(auto, var(--lineColor) var(--lineSize) solid)
 
 ### Values
 
-The `repeat()` function takes two arguments: The first argument specifies [**repeat count**](#repeat-count-values), and the second specifies the [**repeated values list**](#repeated-values-list) (the list of values to be repeated).
+The `repeat()` function takes two arguments: The first argument specifies [**repeat count**](#repeat_count_values), and the second specifies the [**repeated values list**](#repeated_values_list) (the list of values to be repeated).
 
 #### Repeat count values
 
@@ -205,33 +205,45 @@ The syntax of the `repeat()` function has several forms:
 
 - `<track-repeat>` = `repeat( <integer>, [ <line-names>? <track-size> ]+ <line-names>? )`
   - : The `<integer>` sets the repeat count.
-  - : The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {{cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
-  - : Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
-  - : An ending `<line-names>` is optional.
+
+    The `<track-size>` values set the track size. A `<track-size>` is either a {{cssxref("&lt;length-percentage&gt;")}}, a {{cssxref("&lt;flex&gt;")}} value (a positive `fr` unit value), or the keyword `min-content`, `max-content`, or `auto`, a {{cssxref("fit-content()")}} function with a `<length-percentage>` parameter, or a {{cssxref("minmax()")}} function. For `minmax()` track values, the `min` is either a `<length-percentage>`, or the `min-content`, `max-content`, or `auto` keyword while the `max` can be any of those, or a `<flex>` value.
+
+    Each `<track-size>` is optionally preceded by `<line-names>`, which are zero or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+
+    An ending `<line-names>` is optional.
 
 - `<auto-repeat>` = `repeat( auto-fill | auto-fit, [ <line-names>? <fixed-size> ]+ <line-names>? )`
   - : The `auto-fill` or `auto-fit` keyword sets the repeat count
-  - : The `<fixed-size>` sets the track size. A `<fixed-size>` is either a `<length-percentage>` value, or a `minmax()` function with either the `min` or the `max` being a `<length-percentage>` and the other value also being a `<length-percentage>`, or set to the keyword `min-content`, `max-content`, or `auto`.
-  - : Each `<fixed-size>` is optionally preceded by `<line-names>`.
-  - : The ending `<line-names>` is optional.
+
+    The `<fixed-size>` sets the track size. A `<fixed-size>` is either a `<length-percentage>` value, or a `minmax()` function with either the `min` or the `max` being a `<length-percentage>` and the other value also being a `<length-percentage>`, or set to the keyword `min-content`, `max-content`, or `auto`.
+
+    Each `<fixed-size>` is optionally preceded by `<line-names>`.
+
+    The ending `<line-names>` is optional.
 
 - `<fixed-repeat>` = `repeat( <integer>, [ <line-names>? <fixed-size> ]+ <line-names>? )`
   - : Same as `<auto-repeat>`, except the `<integer>` sets the repeat count, so there is no auto-repeating.
 
 - `<name-repeat>` = `repeat( [ <integer> | auto-fill ], <line-names>+)`
   - : The integer or `auto-fill` keyword sets the repeat count
-  - : The `<line-names>` are one or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
-  - : These line names (rather than track sizes) are relevant for [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
+
+    The `<line-names>` are one or more space-separated {{cssxref("&lt;custom-ident&gt;")}} values enclosed in square brackets.
+
+    These line names (rather than track sizes) are relevant for [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid).
 
 - `<repeat-value-type>` = `repeat( <integer> , <value># )`
   - : The `<integer>` sets the repeat count.
-  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
-  - : Multiple `repeat()` functions of the `<repeat-value-type>` may be used within a single value declaration.
+
+    The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
+
+    Multiple `repeat()` functions of the `<repeat-value-type>` may be used within a single value declaration.
 
 - `<auto-repeat-value-type>` = `repeat( auto , <value># )`
   - : The `auto` keyword specifies an auto repeater. An auto repeater will be used to fill in values for gaps that would not otherwise receive values from other parts of the list.
-  - : The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
-  - : At most one `repeat()` in a given list of values may be an auto repeater.
+
+    The `<value>` is one or more comma-separated valid values for the property on which the `repeat()` function is applied.
+
+    At most one `repeat()` in a given list of values may be an auto repeater.
 
 ### Auto-fit versus auto-fill
 

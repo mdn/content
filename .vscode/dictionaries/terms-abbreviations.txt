@@ -101,6 +101,7 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
@@ -793,6 +794,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels
