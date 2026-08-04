@@ -408,7 +408,8 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
       padding: 1rem 0;
 
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
     }
   }
