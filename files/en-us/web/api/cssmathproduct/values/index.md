@@ -8,7 +8,7 @@ browser-compat: api.CSSMathProduct.values
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathProduct.values`** read-only property of the {{domxref("CSSMathProduct")}} interface returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
+The **`values`** read-only property of the {{domxref("CSSMathProduct")}} interface returns a {{domxref("CSSNumericArray")}} containing the {{domxref("CSSNumericValue")}} objects being multiplied together.
 
 ## Value
 

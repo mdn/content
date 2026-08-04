@@ -8,7 +8,7 @@ browser-compat: api.CSSNumericArray.length
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The read-only **`length`** property of the {{domxref("CSSNumericArray")}} interface returns the number of {{domxref("CSSNumericValue")}} objects in the list.
+The **`length`** read-only property of the {{domxref("CSSNumericArray")}} interface returns the number of {{domxref("CSSNumericValue")}} objects in the list.
 
 ## Value
 
