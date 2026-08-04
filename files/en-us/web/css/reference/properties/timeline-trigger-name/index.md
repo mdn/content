@@ -56,11 +56,11 @@ For example:
 }
 ```
 
-An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`. The `timeline-trigger-source` declaration is needed to create a timeline to control triggering animations; in this case, the value of `view()` creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function). Any animations element with the {{cssxref("animation-trigger")}} property set to `--my-trigger` will have
+An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`. The `timeline-trigger-source` declaration is needed to create a timeline to control triggering animations; in this case, the value of `view()` creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function). 
 
 The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to specific positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the scrollport, and deactivation occurs when the tracked element completely exits the scrollport.
 
-An element's animation can be triggered by the previously-described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property:
+Any animated element with its {{cssxref("animation-trigger")}} property set to `--my-trigger` will have its animation controlled by the `--my-trigger` trigger:
 
 ```css
 .animated {
@@ -69,7 +69,7 @@ An element's animation can be triggered by the previously-described trigger by r
 }
 ```
 
-Each {{cssxref("animation-trigger")}} value includes two or three components: the `<dashed-ident>` identifying the trigger, and one or two {{cssxref("animation-action")}} keywords specifying what should happen when the trigger is activated and, optionally, when it's deactivated. In this case, the animation will play once when activated.
+Each `animation-trigger` value includes two or three components: the `<dashed-ident>` identifying the trigger, and one or two {{cssxref("animation-action")}} keywords specifying what should happen when the trigger is activated and, optionally, when it's deactivated. In this case, the animation will play once when activated.
 
 It is possible for the animated element and the element that creates the trigger to be the same element. In this case, the animated element creates its own trigger:
 
