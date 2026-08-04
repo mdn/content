@@ -297,9 +297,12 @@ li {
     body::before {
       content: "Your browser doesn't support the rule-color property";
       background-color: wheat;
-      display: block;
       text-align: center;
       padding: 1rem 0;
+
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
     }
   }
 }
@@ -321,9 +324,12 @@ Using the same HTML and CSS as in the previous example, we include three comma-s
     body::before {
       content: "Your browser doesn't support multiple values for the rule-color property";
       background-color: wheat;
-      display: block;
       text-align: center;
       padding: 1rem 0;
+
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
     }
   }
 }
@@ -397,9 +403,12 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
     body::before {
       content: "Your browser doesn't support `repeat()` functions within a rule-color property value";
       background-color: wheat;
-      display: block;
       text-align: center;
       padding: 1rem 0;
+
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
     }
   }
 }
