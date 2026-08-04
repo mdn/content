@@ -113,7 +113,7 @@ However, this isn't necessarily the case, because the definition of a context is
 
 To respect a user's privacy, **sites should avoid cross-context tracking unless the user intends for it to happen and can control whether it does**.
 
-A good example of a situation in which cross-context tracking is legitimate is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which a third-party {{glossary("identity provider")}} needs to recognise a user who is trying to sign into a different site. In this situation, the user intends for the third party to recognise them.
+A good example of a situation in which cross-context tracking is legitimate is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which a third-party {{glossary("identity provider")}} needs to recognize a user who is trying to sign into a different site. In this situation, the user intends for the third party to recognize them.
 
 Websites typically implement cross-context tracking using [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
