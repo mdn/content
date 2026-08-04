@@ -35,7 +35,7 @@ The three available `role` types are:
 - `assistant`
   - : Inputs that are written from the point of view of the AI assistant, which mainly serve to provide context/history, and further shape how the model responds. These are commonly used for [preserving sessions](/en-US/docs/Web/API/Prompt_API/Preserving_sessions) and [few-shot prompts](#few-shot_prompts).
 - `system`
-  - : Global inputs from the overall system that give the model instructions on how to respond. If a `system` input is included, it must come first in the provided inputs, otherwise an exception is thrown. As a result, `system` inputs are usually only included as [initial prompts](#providing_initial_prompts_during_session_creation).
+  - : Global inputs from the overall system that give the model instructions on how to respond. If a `system` input is included, it must come first in the provided inputs, otherwise the returned promise will reject with an exception. `system` inputs are usually only included as [initial prompts](#providing_initial_prompts_during_session_creation).
 
 ### Multiple inputs
 
@@ -438,6 +438,8 @@ const response = await session.prompt(
 
 In this case, we set the prompt content to "Is this a color:" followed by an `<input>` element `value`. As a result, the API will evaluate whether the user's input is a color or not, and return a value of `true` or `false`.
 
+### A more complex constraint example
+
 Let's look at a more complex example, to give you more of an idea of what is possible with response constraints. In this case, the schema specifies that the API response should be delivered as JSON containing:
 
 - A single string representing a summary description.
@@ -523,6 +525,11 @@ const promptOutput = document.querySelector(".prompt-output");
 
 let session;
 textarea.addEventListener("focus", () => {
+  if (!("LanguageModel" in window)) {
+    promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
+    return;
+  }
+
   if (!session) {
     init();
   }

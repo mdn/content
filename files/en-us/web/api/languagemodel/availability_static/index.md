@@ -29,35 +29,35 @@ LanguageModel.availability(options)
         Each object can include the following properties:
         - `type`
           - : An enumerated value indicating the content type. Must be one of:
-            - `"text"`
+            - `text`
               - : Plain text content.
-            - `"image"`
+            - `image`
               - : Image content.
-            - `"audio"`
+            - `audio`
               - : Audio content.
-            - `"tool-call"`
+            - `tool-call`
               - : A tool invocation issued by the model.
-            - `"tool-response"`
+            - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) representing languages that the session is expected to handle. The user agent uses this list to determine whether the model supports the specified languages.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) representing languages that the session is expected to handle. The user agent uses this list to determine whether the model supports the specified languages.
     - `expectedOutputs`
       - : An array of objects representing the required output modalities and languages.
         Each object can include the following properties:
         - `type`
           - : An enumerated value indicating the content type. Must be one of:
-            - `"text"`
+            - `text`
               - : Textual content.
-            - `"image"`
+            - `image`
               - : Image content.
-            - `"audio"`
+            - `audio`
               - : Audio content.
-            - `"tool-call"`
+            - `tool-call`
               - : A tool invocation issued by the model.
-            - `"tool-response"`
+            - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to output.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to output.
     - `tools`
       - : An array of objects representing tools available to the AI.
         Each object can include the following properties:
@@ -77,13 +77,13 @@ LanguageModel.availability(options)
 
 A {{jsxref("Promise")}} that resolves with one of the values listed below.
 
-- `"available"`
+- `available`
   - : The model is ready to use with the given options.
-- `"downloadable"`
+- `downloadable`
   - : The model can support the given options but needs to download additional data to do so. The download has not yet started.
-- `"downloading"`
+- `downloading`
   - : The model can support the given options with an additional data download. The download is currently in progress.
-- `"unavailable"`
+- `unavailable`
   - : The model cannot support the given options, or the user agent cannot determine availability, for example, due to a [transient activation](/en-US/docs/Glossary/Transient_activation) error. In that case, the caller should retry or fall back to an alternative implementation.
 
 ### Exceptions
@@ -94,6 +94,8 @@ A {{jsxref("Promise")}} that resolves with one of the values listed below.
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 
 ## Examples
+
+See also [Using the Prompt API > Checking configuration support](/en-US/docs/Web/API/Prompt_API/Using#checking_configuration_support) and the [Complete example](/en-US/docs/Web/API/Prompt_API/Using#complete_example) on the same page.
 
 ### Requesting input support
 

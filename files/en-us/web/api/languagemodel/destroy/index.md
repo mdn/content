@@ -48,6 +48,8 @@ const session = await LanguageModel.create({
 session.destroy();
 ```
 
+See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
+
 ## Specifications
 
 {{Specifications}}

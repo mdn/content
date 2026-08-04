@@ -26,44 +26,44 @@ LanguageModel.create(options)
         Each object can include the following properties:
         - `type`
           - : An enumerated value indicating the content type. Must be one of:
-            - `"text"`
+            - `text`
               - : Plain text content.
-            - `"image"`
+            - `image`
               - : Image content.
-            - `"audio"`
+            - `audio`
               - : Audio content.
-            - `"tool-call"`
+            - `tool-call`
               - : A tool invocation issued by the model.
-            - `"tool-response"`
+            - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
       - : An array of objects representing the required output modalities and languages.
         Each object can include the following properties:
         - `type`
           - : An enumerated value indicating the content type. Must be one of:
-            - `"text"`
+            - `text`
               - : Plain text content.
-            - `"image"`
+            - `image`
               - : Image content.
-            - `"audio"`
+            - `audio`
               - : Audio content.
-            - `"tool-call"`
+            - `tool-call`
               - : A tool invocation issued by the model.
-            - `"tool-response"`
+            - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `"en"`, `"fr"`, `"ja"`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `initialPrompts`
       - : An array of objects representing messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Each object can include the following properties:
         - `role`
           - : A string indicating the point of view the message is phrased from. Must be one of:
-            - `"system"`
+            - `system`
               - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
-            - `"user"`
+            - `user`
               - : A message from the user, which the API should respond to.
-            - `"assistant"`
+            - `assistant`
               - : An input that provides context for the AI assistant, such as its persona or the format of its responses. Such messages mainly serve to provide context/history, and further shape how the model responds.
         - `content`
           - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
@@ -75,9 +75,9 @@ LanguageModel.create(options)
                   - : Image content.
                 - `text`
                   - : Textual content.
-                - `"tool-call"`
+                - `tool-call`
                   - : A tool invocation issued by the model.
-                - `"tool-response"`
+                - `tool-response`
                   - : The result of a tool invocation.
             - `value`
               - : The content of the message. If the `type` is `text`, this is always a string. If the `type` is `audio` or `image`, the `value` can be one of several different object types; see [What data types are accepted?](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
@@ -113,10 +113,10 @@ A {{jsxref("Promise")}} that resolves with a new {{domxref("LanguageModel")}} in
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
+    - A message's `role` is `assistant` and its `type` is anything other than `text`.
     - A message's `type` is `text` and its `value` is not a string.
     - The input or output text is in a language the user agent doesn't support for prompting.
-    - A message's `type` is `"image"` or `"audio"` but the type was not listed in `expectedInputs`, or the `value` is not an [accepted data type](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+    - A message's `type` is `image` or `audio` but the type was not listed in `expectedInputs`, or the `value` is not an [accepted data type](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if creation fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
@@ -235,7 +235,7 @@ See also [Adding context with initial and ongoing prompt inputs > Few-shot promp
 
 ### Defining a tool with a callback
 
-This example creates a session with a hypothetical "get weather" tool. When the model decides to call the tool, the user agent invokes `execute` with the arguments the model provides.
+This example creates a session with a hypothetical "get weather" tool. When the model decides to call the tool, the user agent invokes `execute()` with the arguments the model provides.
 
 ```js
 async function getWeatherData(location) {

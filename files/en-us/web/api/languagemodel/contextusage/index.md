@@ -72,6 +72,6 @@ if (await contextAvailable(promptText)) {
 
 - {{domxref("LanguageModel.contextWindow")}}
 - {{domxref("LanguageModel.measureContextUsage()")}}
-- {{domxref("LanguageModel.oncontextoverflow")}}
+- {{domxref("LanguageModel.contextoverflow_event", "contextoverflow")}} event
 - [Prompt API](/en-US/docs/Web/API/Prompt_API)
 - [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)

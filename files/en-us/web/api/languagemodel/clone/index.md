@@ -44,6 +44,8 @@ A {{jsxref("Promise")}} that resolves with a cloned {{domxref("LanguageModel")}}
 
 ## Examples
 
+See also [Using the Prompt API > Cloning a session](/en-US/docs/Web/API/Prompt_API/Using#cloning_a_session).
+
 ### Exploring multiple response paths
 
 The following example shows how to explore different response paths. First, it creates a single session with the start of a story. Then it clones the original session twice before prompting for different endings. This approach preserves the original session in case more exploration is wanted.

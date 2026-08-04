@@ -70,11 +70,12 @@ The overall app structure is very similar to examples in previous guides. We won
 
 ### HTML
 
-The file to describe can be chosen using an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element. The API's image description is output to a {{htmlelement("p")}} element. We also include an {{htmlelement("img")}} element to display the chosen image.
+The file to describe is chosen using an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element. The API's image description is output to a {{htmlelement("p")}} element. We also include an {{htmlelement("img")}} element to display the chosen image.
 
 ```html live-sample___multimodal
 <h1>Prompt API demo</h1>
 <p>
+  <strong>Focus the demo window, then press a key to start the app</strong>.
   This demo loads an image from your local filesystem, and then uses the Prompt
   API to describe it. First released in Chrome 148.
 </p>
@@ -158,9 +159,7 @@ button {
 
 ### JavaScript
 
-We create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `focus` event handler on the `<input>` element. When the user focuses the `<input>`, we first check whether the API is supported; if not, we print a non-support message and `return` early. Next, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function, which generates a `LanguageModel` instance using the custom `getSession()` function.
-
-Provided generation is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, and enable the submit `<button>` (now the session is available, we can start prompting it).
+We create a `session` variable to hold our session. Because using the API requires [transient activation](/en-US/docs/Glossary/Transient_activation), we populate `session` inside a `keydown` event handler on the demo window. When the user focuses the demo and presses a key, we first check whether the API is supported; if not, we print a non-support message. If support is available, we check whether `session` already has a value assigned (we don't want to create a new session each time). If not, we run the `init()` function.
 
 ```js hidden live-sample___multimodal
 const form = document.querySelector("form");
@@ -169,27 +168,34 @@ const submitBtn = document.querySelector("#submit");
 const abortBtn = document.querySelector("#abort");
 abortBtn.disabled = true;
 submitBtn.disabled = true;
+inputElem.disabled = true;
 const promptOutput = document.querySelector(".prompt-output");
 const imgElem = document.querySelector("img");
 ```
 
 ```js live-sample___multimodal
 let session;
-inputElem.addEventListener("focus", () => {
+window.addEventListener("keydown", () => {
   if (!("LanguageModel" in window)) {
     promptOutput.innerHTML = `<span class="error">Your browser doesn't support the Prompt API!</span>`;
-    return;
-  }
-
-  if (!session) {
+  } else if (!session) {
     init();
   }
 });
+```
 
+The `init()` function generates a `LanguageModel` instance using the custom `getSession()` function.
+
+Provided generation is successful, we assign the resulting `LanguageModel` instance to the `session` variable, print a success message to the output `<p>`, enable the `<input>` so that images can be chosen, and assign event listeners to update the UI when a new image is chosen in the file picker, and handle submission of a prompt query.
+
+```js live-sample___multimodal
 async function init() {
   session = await getSession();
+  if (!session) return;
   promptOutput.textContent = `Session created.`;
-  submitBtn.disabled = false;
+  inputElem.disabled = false;
+  inputElem.addEventListener("change", getImage);
+  form.addEventListener("submit", handleSubmission);
 }
 ```
 
@@ -202,21 +208,15 @@ return await LanguageModel.create({
 });
 ```
 
-When the `<form>` is submitted (via the submit `<button>`), we run the `handleSubmission()` function to handle the prompt functionality:
+The `getImage()` function first checks whether a file is chosen in the `<input type="file">` picker. If not, we print a suitable error to the output `<p>` and then `return`. At the end of the function body, we set the `<img>` element's `src` attribute to an object URL created from the file selected in the file picker, so that the image will be displayed in the UI.
+
+Above that, we add two event listeners to the `<img>`:
+
+- If an `error` event fires on the `<img>`, we print a suitable error to the output `<p>` and then `return`.
+- If a `load` event fires on the `<img>`, we print a success message to the output `<p>` to tell the user the app is ready to query the image, and then enable the submit `<button>` so the query can be submitted.
 
 ```js live-sample___multimodal
-form.addEventListener("submit", handleSubmission);
-```
-
-The `handleSubmission()` function first checks whether a file is chosen in the `<input type="file">` picker. If not, we print a suitable error to the output `<p>` and then `return`. At the end of the function body, we set the `<img>` element's `src` attribute to an object URL created from the file selected in the file picker. Above that, we add two event listeners to the `<img>`:
-
-- If an `error` event fires on the `<img>`, we we print a suitable error to the output `<p>` and then `return`.
-- If a `load` event fires on the `<img>`, we start our usual flow to prompt the language model and retrieve its output ([see explanation](/en-US/docs/Web/API/Prompt_API/Using#complete_example:~:text=Next%2C%20inside%20a%20try%20block%2C%20we)). The main difference is that in the `prompt()` call inputs, we first ask the API to describe the image, and then pass it a reference to the `<img>` element itself.
-
-```js live-sample___multimodal
-function handleSubmission(e) {
-  e.preventDefault();
-
+function getImage() {
   const file = inputElem.files[0];
   if (!file) {
     promptOutput.innerHTML = `<span class="error">No file selected!</span>`;
@@ -228,45 +228,57 @@ function handleSubmission(e) {
     return;
   });
 
-  imgElem.addEventListener("load", async () => {
-    try {
-      promptOutput.textContent = "...generating response...";
-      submitBtn.disabled = true;
-      abortBtn.disabled = false;
-
-      const controller = new AbortController();
-      abortBtn.addEventListener("click", () => {
-        controller.abort("Query aborted by user.");
-        submitBtn.disabled = false;
-        abortBtn.disabled = true;
-      });
-
-      const response = await session.prompt(
-        [
-          {
-            role: "user",
-            content: [
-              { type: "text", value: "Please describe the following image:" },
-              { type: "image", value: imgElem },
-            ],
-          },
-        ],
-        {
-          signal: controller.signal,
-        },
-      );
-
-      promptOutput.textContent = response;
-
-      submitBtn.disabled = false;
-      abortBtn.disabled = true;
-      console.log(`${session.contextUsage}/${session.contextWindow}`);
-    } catch (e) {
-      promptOutput.innerHTML = `<span class="error">${e}</span>`;
-    }
+  imgElem.addEventListener("load", () => {
+    promptOutput.innerHTML = "Image query ready to submit!";
+    submitBtn.disabled = false;
   });
 
   imgElem.src = URL.createObjectURL(file);
+}
+```
+
+The `handleSubmission()` function uses the same flow as previous examples to prompt the language model and retrieve its output ([see explanation](/en-US/docs/Web/API/Prompt_API/Using#complete_example:~:text=Next%2C%20inside%20a%20try%20block%2C%20we)). The main difference is that in the `prompt()` call inputs, we first ask the API to describe the image, and then pass it a reference to the `<img>` element itself.
+
+```js live-sample___multimodal
+async function handleSubmission(e) {
+  e.preventDefault();
+  try {
+    promptOutput.textContent = "...generating response...";
+    submitBtn.disabled = true;
+    abortBtn.disabled = false;
+
+    const controller = new AbortController();
+    abortBtn.addEventListener("click", () => {
+      controller.abort("Query aborted by user.");
+      submitBtn.disabled = false;
+      abortBtn.disabled = true;
+    });
+
+    const response = await session.prompt(
+      [
+        {
+          role: "user",
+          content: [
+            { type: "text", value: "Please describe the following image:" },
+            { type: "image", value: imgElem },
+          ],
+        },
+      ],
+      {
+        signal: controller.signal,
+      },
+    );
+
+    promptOutput.textContent = response;
+
+    submitBtn.disabled = false;
+    abortBtn.disabled = true;
+    console.log(`${session.contextUsage}/${session.contextWindow}`);
+  } catch (e) {
+    promptOutput.innerHTML = `<span class="error">${e}</span>`;
+    submitBtn.disabled = true;
+    abortBtn.disabled = false;
+  }
 }
 ```
 
@@ -302,7 +314,7 @@ async function getSession() {
 
 {{EmbedLiveSample("multimodal", , "630px", , , , "language-model", "allow-forms")}}
 
-Try selecting an image using the file picker then pressing the Submit `<button>`. You should see the image loaded in the UI, and the API's description of the image appear in the output `<p>`.
+Focus the embedded demo window and press a key on your keyboard to start the app, then select an image using the file picker. When the image loads, press the "Submit query" button. After a short wait, the API's description of the image should appear in the output `<p>`.
 
 ## See also
 

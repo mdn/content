@@ -26,11 +26,11 @@ prompt(input, options)
       Objects may have the following properties:
       - `role`
         - : A string indicating the point of view the message is phrased from. Must be one of:
-          - `"system"`
+          - `system`
             - : A system-level instruction that guides the model's overall behavior. This must be the first instruction passed to the model.
-          - `"user"`
+          - `user`
             - : A message from the user, which the API should respond to.
-          - `"assistant"`
+          - `assistant`
             - : An input that provides context for the AI assistant, such as its persona or the format of its responses. Such messages mainly serve to provide context/history, and further shape how the model responds.
       - `content`
         - : A string representing a textual prompt, or an array of objects. Each object includes the following properties:
@@ -42,9 +42,9 @@ prompt(input, options)
                 - : Image content.
               - `text`
                 - : Textual content.
-              - `"tool-call"`
+              - `tool-call`
                 - : A tool invocation issued by the model.
-              - `"tool-response"`
+              - `tool-response`
                 - : The result of a tool invocation.
           - `value`
             - : The content of the message. If the `type` is `text`, this is always a string. If the `type` is `audio` or `image`, the `value` can be one of several different object types; see [What data types are accepted?](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
@@ -71,10 +71,10 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} containing the
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - A message's `role` is `"assistant"` and its `type` is anything other than `"text"`.
+    - A message's `role` is `assistant` and its `type` is anything other than `text`.
     - A message's `type` is `text` and its `value` is not a string.
     - The input or output text is in a language the user agent doesn't support for prompting.
-    - A message's `type` is `"image"` or `"audio"` but the type was not listed in `expectedInputs`, or the `value` is not an [accepted data type](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
+    - A message's `type` is `image` or `audio` but the type was not listed in `expectedInputs`, or the `value` is not an [accepted data type](/en-US/docs/Web/API/Prompt_API/Multimodal#what_data_types_are_accepted).
 - `OperationError` {{domxref("DOMException")}}
   - : Thrown if the prompt fails for any other reason not listed in the other exception types.
 - `QuotaExceededError` {{domxref("DOMException")}}
@@ -112,6 +112,8 @@ const response = await session.prompt(
 console.log(response);
 ```
 
+See also [Using the Prompt API > Prompting the model](/en-US/docs/Web/API/Prompt_API/Using#prompting_the_model).
+
 ### Multi-turn conversation
 
 ```js
@@ -147,6 +149,8 @@ const { planets } = JSON.parse(raw);
 console.log(planets); // ["Mercury", "Venus", "Earth"]
 ```
 
+See also [Adding context with initial and ongoing prompt inputs > Adding response constraints](/en-US/docs/Web/API/Prompt_API/Adding_context#adding_response_constraints).
+
 ### Cancelling a prompt
 
 The following example shows how to enable a user to cancel a prompt with a button. It does this by creating an {{domxref("AbortController")}}. Its `abort()` is callable from a button's `click` handler. For this to work, a reference to the controller's `signal` property must be passed to `prompt()`.
@@ -175,6 +179,8 @@ try {
   }
 }
 ```
+
+See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
 
 ## Specifications
 
