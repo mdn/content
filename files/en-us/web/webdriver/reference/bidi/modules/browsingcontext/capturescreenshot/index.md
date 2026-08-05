@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.captureScreenshot
 sidebar: webdriver
 ---
 
-The `browsingContext.captureScreenshot` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module captures an image of the specified context and returns it as a [Base64](/en-US/docs/Glossary/Base64)-encoded string.
+The `browsingContext.captureScreenshot` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module captures an image of the specified [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) and returns it as a [Base64](/en-US/docs/Glossary/Base64)-encoded string.
 
 ## Syntax
 

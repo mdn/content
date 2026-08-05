@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.print
 sidebar: webdriver
 ---
 
-The `browsingContext.print` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module creates a paginated representation of a document in a context as a PDF and returns it as a [Base64](/en-US/docs/Glossary/Base64)-encoded string.
+The `browsingContext.print` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module creates a paginated representation of a document in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) as a PDF and returns it as a [Base64](/en-US/docs/Glossary/Base64)-encoded string.
 
 ## Syntax
 
