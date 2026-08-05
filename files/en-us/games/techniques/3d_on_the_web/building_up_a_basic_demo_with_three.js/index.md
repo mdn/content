@@ -287,7 +287,7 @@ As mentioned above, the new objects currently just look black. To have both the 
 There are various types of light sources available in Three.js. The most basic is `PointLight`, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:
 
 ```js
-const light = new THREE.PointLight(0xffffff);
+const light = new THREE.PointLight(0xffffff, 5000);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -381,7 +381,7 @@ const dodecahedron = new THREE.Mesh(strangeGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 
-const light = new THREE.PointLight(0xffffff);
+const light = new THREE.PointLight(0xffffff, 5000);
 light.position.set(-10, 15, 50);
 scene.add(light);
 
