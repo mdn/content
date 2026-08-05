@@ -12,10 +12,11 @@ The **`insertRow()`** method of the {{domxref("HTMLTableElement")}} interface in
 ({{HtmlElement("tr")}}) in a given {{HtmlElement("table")}}, and returns a reference to
 the new row.
 
-The section into which the new row is inserted depends on the insertion position.
-When appending a row (using `insertRow()` or `insertRow(-1)`), it is inserted
-into the parent section of the table's last row.
-To insert the row into a specific section, use {{domxref("HTMLTableSectionElement.insertRow()")}}
+If a specific `index` is provided, the new row is inserted immediately before the row at that index, within the same table section (such as a `<tbody>`, `<thead>`, or `<tfoot>`).
+
+If the `index` is `-1` or omitted, the new row is appended to the table. When appending, the new row is added to the same section as the existing last row. Note that if the table's last row is in a `<tfoot>`, the new row will be appended to the `<tfoot>`. If the table is completely empty, a new `<tbody>` is automatically created and appended to the table to contain the new row.
+
+To explicitly insert a row into a specific section, use {{domxref("HTMLTableSectionElement.insertRow()")}}
 
 > [!NOTE]
 > `insertRow()` inserts the row directly into the
