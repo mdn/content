@@ -39,6 +39,10 @@ Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 
 - [`browsingContext.contextCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextCreated)
 - [`browsingContext.contextDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed)
+- [`browsingContext.downloadEnd`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd)
+- [`browsingContext.downloadWillBegin`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin)
+- [`browsingContext.userPromptClosed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed)
+- [`browsingContext.userPromptOpened`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened)
 
 ## Specifications
 
