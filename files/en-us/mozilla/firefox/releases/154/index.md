@@ -90,3 +90,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Truncating content with `line-clamp`**: `layout.css.line-clamp.enabled`
 
   The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, though at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
+
+- **Percentage values for `text-decoration-inset`**: `layout.css.text-decoration-inset-percentage.enabled`
+
+  The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
