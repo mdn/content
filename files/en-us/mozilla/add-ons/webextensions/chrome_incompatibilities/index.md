@@ -14,6 +14,8 @@ However, there are significant differences between Chrome (and Chromium-based br
 
 The rest of this page details these and other incompatibilities.
 
+Support for the `browser` namespace and promises are no longer a source of incompatibility. See [Historical differences](#historical_differences).
+
 ## JavaScript APIs
 
 ### Partially supported APIs
