@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.setViewport
 sidebar: webdriver
 ---
 
-The `browsingContext.setViewport` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module resizes the viewport and overrides the device pixel ratio of one or more [top-level contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context).
+The `browsingContext.setViewport` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module changes viewport characteristics, such as the viewport size and the device pixel ratio, for one or more [top-level contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context).
 
 ## Syntax
 
@@ -47,12 +47,12 @@ The `browsingContext.setViewport` [command](/en-US/docs/Web/WebDriver/Reference/
 The `params` field contains:
 
 - `context`
-  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) to resize.
+  - : A string that contains the ID of the [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) in which to apply the viewport settings.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
     This field cannot be used if `userContexts` is also specified.
 - `userContexts`
-  - : An array of one or more [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) ID strings, each identifying a user context to resize.
+  - : An array of one or more [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) ID strings, each identifying a user context in which to apply the viewport settings.
     User context IDs are returned by commands such as [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) or [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts).
 
     This field cannot be used if `context` is also specified.
