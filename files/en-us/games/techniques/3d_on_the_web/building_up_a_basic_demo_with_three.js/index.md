@@ -207,14 +207,10 @@ You can click "Play" to view and edit the code in the MDN Playground:
   const WIDTH = window.innerWidth;
   const HEIGHT = window.innerHeight;
 
-const renderer = new THREE.WebGPURenderer({ antialias: true });
-renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xdddddd, 1);
-document.body.appendChild(renderer.domElement);
-
-await renderer.init();
-
-const scene = new THREE.Scene();
+  const renderer = new THREE.WebGPURenderer({ antialias: true });
+  renderer.setSize(WIDTH, HEIGHT);
+  renderer.setClearColor(0xdddddd, 1);
+  document.body.appendChild(renderer.domElement);
 
 const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
