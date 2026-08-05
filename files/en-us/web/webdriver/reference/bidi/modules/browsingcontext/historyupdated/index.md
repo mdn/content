@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.historyUpdated_event
 sidebar: webdriver
 ---
 
-The `browsingContext.historyUpdated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the active URL in a context is updated programmatically without a full navigation.
+The `browsingContext.historyUpdated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when the active URL in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) is updated programmatically without a full navigation.
 
 ## Event data
 

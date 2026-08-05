@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.load_event
 sidebar: webdriver
 ---
 
-The `browsingContext.load` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation has fully completed in a context.
+The `browsingContext.load` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation has fully completed in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts).
 
 ## Event data
 

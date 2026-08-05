@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.fragmentNavigated_event
 sidebar: webdriver
 ---
 
-The `browsingContext.fragmentNavigated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a same-document navigation to a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment) occurs in a context.
+The `browsingContext.fragmentNavigated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a same-document navigation to a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment) occurs in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts).
 
 ## Event data
 

@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.navigationStarted_event
 sidebar: webdriver
 ---
 
-The `browsingContext.navigationStarted` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation begins in a context.
+The `browsingContext.navigationStarted` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a cross-document navigation begins in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts).
 
 ## Event data
 
