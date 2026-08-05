@@ -437,7 +437,7 @@ The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS fun
 
 ### Truncating content with `line-clamp`
 
-The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
+The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, though at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
