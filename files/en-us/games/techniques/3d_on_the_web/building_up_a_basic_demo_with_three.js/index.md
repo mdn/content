@@ -381,9 +381,8 @@ const dodecahedron = new THREE.Mesh(strangeGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 
-const light = new THREE.PointLight(0xffffff, 5000);
-light.position.set(-10, 15, 50);
-scene.add(light);
+  const WIDTH = window.innerWidth;
+  const HEIGHT = window.innerHeight;
 
 let t = 0;
 function render() {
