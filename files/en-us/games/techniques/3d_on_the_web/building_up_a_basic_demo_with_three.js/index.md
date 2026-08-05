@@ -212,6 +212,10 @@ You can click "Play" to view and edit the code in the MDN Playground:
   renderer.setClearColor(0xdddddd, 1);
   document.body.appendChild(renderer.domElement);
 
+  await renderer.init();
+
+  const scene = new THREE.Scene();
+
   const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
   camera.position.z = 50;
   scene.add(camera);
