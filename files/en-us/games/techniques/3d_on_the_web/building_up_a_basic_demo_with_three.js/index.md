@@ -356,7 +356,7 @@ document.body.appendChild(renderer.domElement);
 
 await renderer.init();
 
-const scene = new THREE.Scene();
+  const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 0.1, 10000);
 camera.position.z = 50;
