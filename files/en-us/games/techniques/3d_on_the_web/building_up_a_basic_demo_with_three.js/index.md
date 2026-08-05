@@ -202,7 +202,7 @@ You can click "Play" to view and edit the code in the MDN Playground:
 
 ```html hidden live-sample___three-js-intro
 <script type="module">
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js';
+  import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js";
 
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
