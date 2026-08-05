@@ -20,16 +20,18 @@ A CSSMathSum is the object type returned when the [`StylePropertyMapReadOnly.get
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{DOMxRef("CSSMathValue")}}._
+
 - {{domxref('CSSMathSum.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Examples
 

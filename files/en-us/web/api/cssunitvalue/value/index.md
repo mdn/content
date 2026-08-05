@@ -8,11 +8,11 @@ browser-compat: api.CSSUnitValue.value
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSUnitValue.value`** property of the {{domxref("CSSUnitValue")}} interface returns a double indicating the number of units.
+The **`value`** property of the {{domxref("CSSUnitValue")}} interface represents the number of units.
 
 ## Value
 
-A double.
+A number.
 
 ## Examples
 

@@ -23,15 +23,15 @@ This module takes you through the essentials of version control using Git and Gi
 
 ## Guides
 
-- [About GitHub and Git (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
+- [What is GitHub? (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/what-is-github)
   - : This covers what Git and GitHub are, how they work together, and how to get started.
-- [Hello, World (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+- [Hello, World (from GitHub)](https://docs.github.com/en/get-started/using-github/hello-world)
   - : This practical guide jumps right into using GitHub, teaching the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
 - [Using Git (from GitHub)](https://docs.github.com/en/get-started/using-git)
   - : The Git Handbook goes into a little more depth, explaining what a version control tool is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
 - [Contributing to a project (from GitHub)](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
   - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
-- [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/reference/pull-requests)
   - : A useful guide to managing pull requests. These requests are how you propose code changes to someone else's repository so they can review and potentially merge them into the main codebase.
 - [About issues (from GitHub)](https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues)
   - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This article tells you what you need to know about issues.
@@ -46,7 +46,7 @@ This module takes you through the essentials of version control using Git and Gi
 
 - Other useful topics covered in GitHub Docs include:
   - [Understanding the GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
-  - [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
+  - [Addressing merge conflicts](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests)
   - [Ignoring files with .gitignore](https://docs.github.com/en/get-started/git-basics/ignoring-files)
   - [Authentication to GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
   - [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).

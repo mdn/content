@@ -166,4 +166,4 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## See also
 
-{{WebExtAPIRef("permissions")}} JavaScript API
+- {{WebExtAPIRef("permissions")}} JavaScript API

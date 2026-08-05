@@ -11,9 +11,20 @@ The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs
 
 {{InheritanceDiagram}}
 
-## Interfaces based on CSSMathValue
+## Instance properties
 
-Below is a list of interfaces based on the CSSMathValue interface.
+- {{domxref('CSSMathValue.operator')}}
+  - : Indicates the operator that the current subtype represents.
+
+## Static methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
+
+## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
+
+## Interfaces based on CSSMathValue
 
 - {{DOMxRef('CSSMathClamp')}}
 - {{domxref('CSSMathInvert')}}
@@ -22,19 +33,6 @@ Below is a list of interfaces based on the CSSMathValue interface.
 - {{domxref('CSSMathNegate')}}
 - {{domxref('CSSMathProduct')}}
 - {{domxref('CSSMathSum')}}
-
-## Instance properties
-
-- {{domxref('CSSMathValue.operator')}}
-  - : Indicates the operator that the current subtype represents.
-
-## Static methods
-
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
-
-## Instance methods
-
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
 
 ## Examples
 

@@ -8,7 +8,6 @@ browser-compat: api.CSSSkewY
 {{APIRef("CSS Typed Object Model API")}}{{AvailableInWorkers}}
 
 The **`CSSSkewY`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the {{cssxref("transform-function/skewY", "skewY()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
-It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.
 
 {{InheritanceDiagram}}
 
@@ -19,14 +18,14 @@ It inherits properties and methods from its parent {{domxref("CSSTransformValue"
 
 ## Instance properties
 
-_Inherits properties from its ancestor_ {{domxref("CSSTransformValue")}}.
+_Also inherits properties from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
 
 - {{domxref('CSSSkewY.ay','ay')}}
   - : Returns or sets the y-axis value.
 
 ## Instance methods
 
-_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}.
+_Also inherits methods from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
 
 ## Examples
 

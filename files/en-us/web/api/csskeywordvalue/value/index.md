@@ -8,7 +8,7 @@ browser-compat: api.CSSKeywordValue.value
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`value`** property of the {{domxref("CSSKeywordValue")}} interface represents the value of the `CSSKeywordValue`.
+The **`value`** property of the {{domxref("CSSKeywordValue")}} interface represents the keyword as a string.
 
 ## Value
 
