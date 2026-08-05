@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.browsingContext.locateNodes
 sidebar: webdriver
 ---
 
-The `browsingContext.locateNodes` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module finds the nodes in a context that match a locator, which specifies the search criteria.
+The `browsingContext.locateNodes` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module finds the nodes in a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) that match a locator, which specifies the search criteria.
 
 ## Syntax
 
