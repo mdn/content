@@ -346,8 +346,8 @@ You can click "Play" to edit the example in the MDN Playground:
 <script type="module">
   import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.185.0/three.webgpu.js";
 
-const WIDTH = window.innerWidth;
-const HEIGHT = window.innerHeight;
+  const WIDTH = window.innerWidth;
+  const HEIGHT = window.innerHeight;
 
   const renderer = new THREE.WebGPURenderer({ antialias: true });
   renderer.setSize(WIDTH, HEIGHT);
