@@ -36,7 +36,7 @@ npx vite
 Alternatively, you can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.webgpu.js` into your project.
 Bear in mind that the archives include source files, which makes the download size approximately 360MB.
 
-Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
+Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere for reference while you're working.
 
 ### HTML starter for Three.js
 
@@ -84,7 +84,7 @@ Before reading further, copy this code to a new text file, and save it in your w
 
 ## Renderer
 
-A renderer is a tool that displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are WebGPU, Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will render differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser. For instance, the WebGPU renderer uses a WebGPU backend by default and a WebGL 2 backend as a fallback.
+A renderer is a tool that displays scenes right in your browser. There are a few renderers: WebGL is the default, and others include WebGPU, Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will render differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used if a desired technology is not supported by the browser. For instance, the WebGPU renderer uses a WebGPU backend by default and a WebGL 2 backend as a fallback.
 
 The code below creates a new WebGPU renderer, sets its size to fit the whole available space on the screen, and appends the DOM structure to the page.
 You might have noticed the `antialias` parameter in the first line — this renders the edges of shapes more smoothly. The `setClearColor()` method sets our background to a light gray color, instead of the default black one.
@@ -231,6 +231,7 @@ function render() {
   renderer.render(scene, camera);
 }
 render();
+</script>
 ```
 
 ```css hidden live-sample___three-js-intro
@@ -394,6 +395,7 @@ function render() {
   renderer.render(scene, camera);
 }
 render();
+</script>
 ```
 
 ```css hidden live-sample___three-js-animation
