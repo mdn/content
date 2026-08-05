@@ -268,7 +268,7 @@ ul {
     color-mix(in lch decreasing hue, var(--base) 58%, var(--mixin));
 }
 li {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 ```
 

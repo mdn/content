@@ -8,8 +8,7 @@ browser-compat: api.StylePropertyMap.clear
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`clear()`** method of the {{domxref("StylePropertyMap")}}
-interface removes all declarations in the `StylePropertyMap`.
+The **`clear()`** method of the {{domxref("StylePropertyMap")}} interface removes all declarations in the `StylePropertyMap`.
 
 ## Syntax
 
@@ -26,6 +25,8 @@ None.
 None ({{jsxref("undefined")}}).
 
 ## Examples
+
+### Basic usage
 
 The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
