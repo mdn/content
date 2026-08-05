@@ -69,7 +69,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
         }
       }
     </script>
-    <script>
+    <script type="module">
       const WIDTH = window.innerWidth;
       const HEIGHT = window.innerHeight;
       /* all our JavaScript code goes here */
