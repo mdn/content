@@ -354,7 +354,7 @@ renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 
-await renderer.init();
+  await renderer.init();
 
   const scene = new THREE.Scene();
 
