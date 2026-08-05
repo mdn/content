@@ -21,18 +21,18 @@ For example, the value `42px` (a {{cssxref("&lt;dimension&gt;")}}) would be repr
 ## Instance properties
 
 - {{domxref('CSSUnitValue.value')}}
-  - : Returns a double indicating the number of units.
+  - : A number representing the number of units.
     For a `CSSNumericValue` representing `42px`, this would be `42`.
 - {{domxref('CSSUnitValue.unit')}}
   - : Returns a string indicating the type of unit. For a `CSSNumericValue` representing `42px`, this would be `"px"`.
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
 
 ## Examples
 

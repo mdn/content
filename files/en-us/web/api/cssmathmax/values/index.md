@@ -8,7 +8,7 @@ browser-compat: api.CSSMathMax.values
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The CSSMathMax.values read-only property of the {{domxref("CSSMathMax")}} interface returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
+The **`values`** read-only property of the {{domxref("CSSMathMax")}} interface returns a {{domxref("CSSNumericArray")}} containing the {{domxref("CSSNumericValue")}} objects being compared to find the maximum.
 
 ## Value
 

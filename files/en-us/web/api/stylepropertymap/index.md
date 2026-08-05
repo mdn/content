@@ -17,11 +17,11 @@ The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/
 
 ## Instance properties
 
-_Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
+_Also inherits properties from its parent interface, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 ## Instance methods
 
-_Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 - {{DOMxRef("StylePropertyMap.append()")}}
   - : Adds a new CSS declaration to the `StylePropertyMap` with the given property and value.

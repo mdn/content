@@ -8,7 +8,7 @@ browser-compat: api.CSSMathNegate.value
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathNegate.value`** read-only property of the {{domxref("CSSMathNegate")}} interface returns a {{domxref('CSSNumericValue')}} object.
+The **`value`** read-only property of the {{domxref("CSSMathNegate")}} interface returns the {{domxref("CSSNumericValue")}} that is being negated.
 
 ## Value
 

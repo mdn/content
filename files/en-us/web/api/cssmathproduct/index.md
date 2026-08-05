@@ -7,7 +7,7 @@ browser-compat: api.CSSMathProduct
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathProduct`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathProduct`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the result obtained by calling {{domxref('CSSNumericValue.mul','mul()')}} or {{domxref('CSSNumericValue.div','div()')}} on a {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -18,16 +18,18 @@ The **`CSSMathProduct`** interface of the [CSS Typed Object Model API](/en-US/do
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{DOMxRef("CSSMathValue")}}._
+
 - {{domxref('CSSMathProduct.values')}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 ## Specifications
 

@@ -10,17 +10,6 @@ browser-compat: api.CSSStyleValue
 The **`CSSStyleValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is the base class of all CSS values accessible through the Typed OM API.
 An instance of this class may be used anywhere a string is expected.
 
-## Interfaces based on CSSStyleValue
-
-Below is a list of interfaces based on the `CSSStyleValue` interface.
-
-- {{domxref('CSSImageValue')}}
-- {{domxref('CSSKeywordValue')}}
-- {{domxref('CSSNumericValue')}}
-- {{domxref('CSSPositionValue')}}
-- {{domxref('CSSTransformValue')}}
-- {{domxref('CSSUnparsedValue')}}
-
 ## Static methods
 
 - [`CSSStyleValue.parse()`](/en-US/docs/Web/API/CSSStyleValue/parse_static)
@@ -32,6 +21,15 @@ Below is a list of interfaces based on the `CSSStyleValue` interface.
 
 - {{domxref("CSSStyleValue.toString()")}}
   - : A {{Glossary("stringifier")}} that returns the value formatted as a string of standard CSS text.
+
+## Interfaces based on CSSStyleValue
+
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}
 
 ## Specifications
 
