@@ -176,7 +176,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Executes a provided function once for each element produced by the iterator.
 - {{jsxref("Iterator.prototype.includes()")}} {{experimental_inline}}
   - : Returns `true` if an element produced by the iterator is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
-- {{jsxref("Iterator.prototype.join()")}}
+- {{jsxref("Iterator.prototype.join()")}} {{experimental_inline}}
   - : Returns a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
 - {{jsxref("Iterator.prototype.map()")}}
   - : Returns a new iterator helper object that yields elements of the iterator, each transformed by a mapping function.

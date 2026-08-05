@@ -172,7 +172,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           controlled by <a href="#properties"><code>"properties":</code></a>.
         </p>
         <p>
-          As additional background items display behind the <code>theme_frame</code>item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
+          As additional background items display behind the <code>theme_frame</code> item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
         </p>
       </td>
     </tr>
