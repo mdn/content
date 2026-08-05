@@ -349,10 +349,10 @@ You can click "Play" to edit the example in the MDN Playground:
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 
-const renderer = new THREE.WebGPURenderer({ antialias: true });
-renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xdddddd, 1);
-document.body.appendChild(renderer.domElement);
+  const renderer = new THREE.WebGPURenderer({ antialias: true });
+  renderer.setSize(WIDTH, HEIGHT);
+  renderer.setClearColor(0xdddddd, 1);
+  document.body.appendChild(renderer.domElement);
 
   await renderer.init();
 
