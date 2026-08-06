@@ -16,7 +16,7 @@ The **`timeline-trigger-source`** [CSS](/en-US/docs/Web/CSS) property specifies 
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 timeline-trigger-source: none;
 timeline-trigger-source: auto;
 
@@ -34,6 +34,7 @@ timeline-trigger-source: view(x 200px auto);
 
 /* Multiple source values */
 timeline-trigger-source: view(), none, --my-timeline;
+timeline-trigger-source: scroll(x), auto, scroll(y root);
 
 /* Global values */
 timeline-trigger-source: inherit;
@@ -43,9 +44,9 @@ timeline-trigger-source: revert-layer;
 timeline-trigger-source: unset;
 ```
 
-The `timeline-trigger-source` property may be specified as one or more single animation timelines, separated by commas. Each animation timeline is specified using a `none` or `auto` keyword, a {{cssxref("dashed-ident")}}, a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function, or a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function.
-
 ### Values
+
+This property is specified as a comma-separated list of values. Each value can be one of the following value types:
 
 - `none`
   - : The element does not create a animation trigger, as it has no timeline. Associated animations will not animated.
@@ -73,18 +74,16 @@ For example:
 
 The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the scrollport, and deactivation occurs when the tracked element completely exits the scrollport.
 
-An animated element can be triggered by the previously-described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property:
+An animated element can be triggered by the previously-described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property, which accepts a comma-separated list of values, each value being the name of the trigger and one or two {{cssxref("animation-action")}} keywords that specify what the animation should do when its trigger activates and deactivates:
 
 For example:
 
 ```css
 .animated {
   animation: rotate 3s infinite linear both;
-  animation-trigger: --my-trigger play-forwards play-backwards;
+  animation-trigger: --my-trigger play-once;
 }
 ```
-
-The {{cssxref("animation-action")}} keywords specified in the `animation-trigger` — `play-forwards play-backwards` — specify that the animation should play forwards when its trigger activates and backwards when its trigger deactivates.
 
 It is possible for the animated element and the element that creates the trigger to be the same element. In this case, the animated element creates its own trigger:
 
@@ -100,9 +99,9 @@ It is possible for the animated element and the element that creates the trigger
 
 The `timeline-trigger-source` property, along with the {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}} properties, can also be set using the {{cssxref("timeline-trigger")}} shorthand property.
 
-### Different source types
+### Trigger source types
 
-The `timeline-trigger-source` property can take one of three main value types:
+To create a triggered animation, set the `timeline-trigger-source` property to one of three main value types:
 
 - A [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function referencing an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) trigger. This is created on the nearest scrolling ancestor of the element that creates the trigger. As shown earlier, this allows you to create functionality whereby an element will start animating when it (or another element) reaches a certain scroll offset in the scrollport, and stop animating (or some other action) when it (or another element) reaches a different scroll offset. For example:
 
@@ -131,7 +130,16 @@ The `timeline-trigger-source` property can take one of three main value types:
 
 Scroll progress timelines are arguably not as useful for scroll-triggered animations as view progress timelines. You are more likely to want an animation to start at a scroll offset relative to the scrollport, not after an arbitrary amount of scrolling, where the animation may well be triggered offscreen on smaller screens.
 
+### Other values
+
+- `none`
+
+- `auto`
+  <!--if auto is used, is always a documentTimeline, or will it be a scroll-driven animation if that is also set? -->
+
 ### Multiple sources
+
+<!-- this section sounds inaccurate to me -->
 
 When you specify multiple comma-separated values on a single `timeline-trigger-source` property, they are applied to the timeline triggers in the order in which the {{cssxref("timeline-trigger-name")}}s appear. When the number of triggers and `timeline-trigger-source` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
@@ -158,11 +166,11 @@ In this case, the first name will use the `view()` source, and the second name w
 
 ### Basic view progress timeline source usage
 
-In this example, we show how to create a basic scroll-triggered animation that uses an anonymous view progress timeline trigger source.
+In this example, we create a basic scroll-triggered animation that uses an anonymous view progress timeline trigger source.
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, one to animate and one to create a trigger on, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
+The markup contains two {{htmlelement("div")}} elements, one to animate and one on which to create a trigger, plus some basic text content to cause the page to scroll. The text is hidden for brevity.
 
 ```html
 <div class="animated">I am animated</div>
@@ -238,7 +246,7 @@ Our markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
+The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to keep it visible, so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 body {
@@ -285,7 +293,9 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'l
 }
 ```
 
-We apply the animation to the `.animated` `<div>` for infinite iterations using the {{cssxref("animation")}} shorthand. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
+We use the {{cssxref("animation")}} shorthand to apply the animation, setting infinite iterations. Without an associated trigger, the element would start animating when the page loads.
+
+We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
 
 ```css live-sample___basic-view-progress-example
 div.animated {
@@ -356,6 +366,12 @@ div.trigger {
 
 The animation will start when the tracked element scrolls `600px` upwards.
 
+### Disabling animations
+
+In this example, we demonstrate the effects of the `none` and `auto` values.
+
+<!-- and an example here -->
+
 ## Specifications
 
 {{Specifications}}
@@ -366,11 +382,11 @@ The animation will start when the tracked element scrolls `600px` upwards.
 
 ## See also
 
-- {{cssxref("animation-trigger")}}
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
-- {{cssxref("trigger-scope")}}
+- {{cssxref("animation-trigger")}}
 - {{cssxref("animation-action")}} type
+- {{cssxref("trigger-scope")}}
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
