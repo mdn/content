@@ -77,9 +77,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- Adds support for the [`sandbox`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox) manifest key, enabling extensions to designate pages that load with an opaque origin, without direct access to extension APIs. A sandboxed page can use `eval()` and similar constructs that are otherwise blocked by the extension's [content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy). ([Firefox bug 1685123](https://bugzil.la/1685123))
 
 ## Experimental web features
 
