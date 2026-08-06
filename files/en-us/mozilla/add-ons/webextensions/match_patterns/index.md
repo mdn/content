@@ -59,8 +59,8 @@ The _scheme_ component may take one of two forms:
     <tr>
       <td><code>*</code></td>
       <td>
-        Only "http" and "https" and in some browsers also
-        <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
+        All browsers match "http" and "https". <BR>
+        Firefox also matches <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
       </td>
     </tr>
     <tr>
@@ -69,7 +69,13 @@ The _scheme_ component may take one of two forms:
         <code>wss</code>, <code>ftp</code>, <code>data</code>,
         <code>file</code>, or <code>(chrome-)extension</code>.
       </td>
-      <td>Only the given scheme.</td>
+      <td>Only the given scheme, where:
+        <ul>
+          <li>Firefox supports "http", "https", "ws", "wss", "file", "ftp", and "data".</li>
+          <li>Chrome supports "http", "https", "file", "ftp", "chrome-extension", "ws", "wss", "data", "filesystem" (old File API), "uuid-in-package" (used by Web Bundles), and "chrome" (browser internals).</li>
+          <li>Safari supports "http", "https", "file", "ftp", and "webkit-extension" (internal scheme for extensions).</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -120,7 +126,17 @@ Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_ide
 
 ### \<all_urls>
 
-The special value `<all_urls>` matches all URLs under any of the supported schemes: that is "http", "https", "ws", "wss", "ftp", "data", and "file".
+The special value `<all_urls>` matches all URLs under the browser-supported schemas, where:
+
+- **Firefox** supports "http", "https", "ws", "wss", "ftp", "data", and "file". However, while `data:` URLs are matched, they aren't used for content script or stylesheet injection.
+- **Chrome** supports "http", "https", "ftp", "file", and "data".
+- **Safari** only supports "http" and "https".
+
+> [!NOTE]
+> Access to `file://` URLs requires an user permission grant beyond declaring `<all_urls>` or a `file://` match pattern:
+>
+> - In Chrome, the user must enable "Allow access to file URLs" for the extension on the `chrome://extensions` page.
+> - In Firefox 153 and later, the user must enable "Access local files on your computer". (Previously, access to local files was covered by the "Access your data for all websites" host permission.). See [Changes for add-on developers](<>) in the Firefox 153 release notes for more information.
 
 ## Examples
 
