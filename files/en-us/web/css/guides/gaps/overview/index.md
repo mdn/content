@@ -187,7 +187,8 @@ This example is almost the same as the first example on this page, but we've mad
 
 {{EmbedLiveSample("overlap", "", "200")}}
 
-## Gap decoration endpoints
+- {{cssxref("rule-overlap")}}
+  - : The keyword `row-over-column` or `column-over-row`. Sets the paint order for overlapping gap decorations, when a column rule and row rule intersect.
 
 Every rule has a beginning and an end, or start and end _cap_. When you have gap decorations in both columns and rows, every rule will intersect another rule at a _junction_. We can control these end points and intersections, defining whether the lines are painted to the end of the container or inset, whether the row rules are painted on top of the column rules when they intersect, or if the column rules on top of the row rule, or even if one direction should have a continuous line, with the other dimension being offset from the junction.
 
