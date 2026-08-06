@@ -11,19 +11,19 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope within which an animated element can be associated with a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger to a particular subtree.
+The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope of a trigger name of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) to a document subtree.
 
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 trigger-scope: none;
 trigger-scope: all;
 
 /* <dashed-ident> */
 trigger-scope: --my-trigger;
 
-/* Multiple <dashed-ident> values */
+/* Multiple values */
 trigger-scope: --my-trigger, --another-trigger;
 
 /* Global values */
@@ -36,20 +36,24 @@ trigger-scope: unset;
 
 ### Values
 
-Specified as the keyword `none`, the keyword `all`, or one or more {{cssxref("dashed-ident")}} values.
+This property is specified as `none`, `all`, or a comma-separated list of {{cssxref("dashed-ident")}} values:
 
 - `none`
   - : Specifies that no trigger scoping is set. This is the default value.
 - `all`
   - : Sets the scope so that _any_ `timeline-trigger-name` values set in the subtree can only be associated with animated elements in the same subtree.
-- [`<dashed-ident>#`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
-  - : One or more comma-separated `<dashed-ident>`s representing trigger names. Sets the scope so that the specified `timeline-trigger-name` values, when set in the subtree, can only be associated with animated elements in the same subtree.
+- {{cssxref("dashed-ident")}}
+  - : A trigger name. Sets the scope so that the specified `timeline-trigger-name` values, when set in the subtree, can only be associated with animated elements in the same subtree.
 
 ## Description
 
-The `trigger-scope` property is used to limit [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger scope to particular element subtrees. When such a scope is set on an element, this means that when that element or its descendents are specified as triggers (using the {{cssxref("timeline-trigger-name")}} property), animated elements can only associate themselves with those triggers (using the {{cssxref("animation-trigger")}} property) if they are within the same subtree.
+The `trigger-scope` property is used to limit trigger scope to specific element subtrees in [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
 
-When an animated element has an `animation-trigger` set on it, the browser determines what its trigger element is as follows:
+Trigger names, defined with the {{cssxref("timeline-trigger-name")}} property, are global by default. By default, if an elements is associate with a trigger name via its {{cssxref("animation-trigger")}} property, if multiple elements define triggers with the same trigger name, only the last element with that trigger name in the document tree will be used as the trigger.
+
+The `trigger-scope` property can limit the scope of a trigger name to a subtree of the document, only visible to elements within the same subtree, and have no effect on elements outside the subtree. When `trigger-scope` is set on an element, when that element or its descendants are defined as triggers, animated elements are only associates with those triggers if they are within the same subtree.
+
+When an animated element has an `animation-trigger` set, the browser determines what its trigger element is as follows:
 
 1. It walks up the animated element's ancestor tree until it finds an ancestor with a `timeline-trigger-name` set that is the same as the name referenced in its `animation-trigger` property value. If the animated element is also the trigger, it will be found instantly.
 2. If it can't find a suitable ancestor trigger, it will use the _last_ element in the HTML source order with that `timeline-trigger-name` value.
@@ -75,13 +79,15 @@ Which trigger names are included in the scope depends on the `trigger-scope` val
 
 ## Examples
 
-### Demonstration of `trigger-scope` usage
+### Basic usage
 
-This example includes three separate components, each containing an animated element and trigger, and illustrates how same-named triggers can create conflicts. It also demonstrates how `trigger-scope` can be used to solve such problems.
+This example demonstrates using the `trigger-scope` property to limit the scope of an animation trigger name.
 
 #### HTML
 
-In the markup for this example, we have three {{htmlelement("section")}} elements, each one containing an animated {{htmlelement("div")}} and another `<div>` to act as its trigger. We also have a {{htmlelement("form")}} element containing a [checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), which can be used to apply `trigger-scope` to the `<section>` elements when checked. It is initially unchecked, meaning no scoping is applied.
+We include three separate components, each containing an animated element and trigger. Each of the three {{htmlelement("section")}} elements contains two {{htmlelement("div")}} elements: an `.animated` element and a `.trigger` element.
+
+Most of the HTML, included a [checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) toggle that will enable disabling the `trigger-scope` property, have been hidden for brevity.
 
 ```html
 <section id="one">
@@ -90,15 +96,18 @@ In the markup for this example, we have three {{htmlelement("section")}} element
   <div class="trigger">Trigger for first animation</div>
   ...
 </section>
-<section id="two">...</section>
-<section id="three">...</section>
-
-<form>
-  <label for="trigger-scope">
-    Set <code>trigger-scope</code> on containers
-  </label>
-  <input id="trigger-scope" type="checkbox" />
-</form>
+<section id="two">
+  <div class="animated"></div>
+  ...
+  <div class="trigger">Trigger for second animation</div>
+  ...
+</section>
+<section id="three">
+  <div class="animated"></div>
+  ...
+  <div class="trigger">Trigger for third animation</div>
+  ...
+</section>
 ```
 
 ```html hidden live-sample___trigger-scope
@@ -200,17 +209,15 @@ In the markup for this example, we have three {{htmlelement("section")}} element
     tristique tellus, sed tincidunt velit.
   </p>
 </section>
-<form>
-  <label for="trigger-scope"
-    >Set <code>trigger-scope</code> on containers</label
-  >
+<label for="trigger-scope"
+  >Set <code>trigger-scope</code> to <code>none</code>
   <input id="trigger-scope" type="checkbox" />
-</form>
+</label>
 ```
 
 #### CSS
 
-To start, we define the {{cssxref("@keyframes")}} for multiple animations that will be applied to our `.animated` `<div>` elements later on.
+We define three {{cssxref("@keyframes")}} animations. Each will be applied to a different `.animated` element.
 
 ```css live-sample___trigger-scope
 @keyframes fade-in {
@@ -226,20 +233,22 @@ To start, we define the {{cssxref("@keyframes")}} for multiple animations that w
 @keyframes color-cycle {
   from {
     background: red;
+    scale: 1;
   }
 
   to {
     background: blue;
+    scale: 2;
   }
 }
 
 @keyframes move-up-down {
   25% {
-    translate: 0 -10px;
+    translate: 0 -20px;
   }
 
   75% {
-    translate: 0 10px;
+    translate: 0 20px;
   }
 }
 ```
@@ -269,7 +278,7 @@ section {
   border: 5px solid black;
 }
 
-form {
+label {
   position: fixed;
   bottom: 2px;
   right: 2px;
@@ -279,7 +288,9 @@ form {
 }
 ```
 
-We give each `.animated` `<div>` a {{cssxref("position")}} of `fixed`, and position them near the top of the scrollport. We do this so it is easy to see their animated state at all times. We also give each animated element the same `animation-trigger` value — their animations will all be triggered by a trigger with `timeline-trigger-name: --t`, and the animation will play when it activates and then reset when it deactivates.
+The animated `<div>` elements's {{cssxref("position")}} are set to `fixed`, positioning them near the top of the scrollport to enable us to keep the animatable elements visible at all times.
+
+Each animated element has the same `animation-trigger` value — their animations are triggered by a trigger with a `timeline-trigger-name` of `--t`, and the animations will play when their trigger activates and then reset when their trigger deactivates.
 
 ```css live-sample___trigger-scope
 .animated {
@@ -289,7 +300,7 @@ We give each `.animated` `<div>` a {{cssxref("position")}} of `fixed`, and posit
 }
 ```
 
-Each `.animated` `<div>` is then given a different `animation`, and a different {{cssxref("left")}} value so that they are not positioned on top of one another.
+Each `.animated` element is set to a different named `animation`, and a different {{cssxref("left")}} value so that they are not positioned on top of one another.
 
 ```css live-sample___trigger-scope
 #one .animated {
@@ -308,11 +319,14 @@ Each `.animated` `<div>` is then given a different `animation`, and a different 
 }
 ```
 
-Next, we set our `.trigger` `<div>` elements as triggers for the `.animated` `<div>` elements by giving them a {{cssxref("timeline-trigger")}} value that references the same name value, `--t`. We also set some rudimentary styles to make them stand out from the rest of the text.
+The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same name value, `--t`, and a `timeline-trigger-source` of `view()`. We set the `timeline-trigger-activation-range` to `contain`, so the activation and deactivation occurs when the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
 
 ```css live-sample___trigger-scope
 .trigger {
-  timeline-trigger: --t view() contain;
+  timeline-trigger-name: --t;
+  timeline-trigger-source: view();
+  timeline-trigger-activation-range: contain;
+
   padding: 10px;
   border: 2px solid black;
   background: black;
@@ -320,26 +334,19 @@ Next, we set our `.trigger` `<div>` elements as triggers for the `.animated` `<d
 }
 ```
 
-Finally, we define a `.scoped` class style, which sets a `trigger-scope` value of `all`. This `class` will be set on the three `<section>` elements when the checkbox is checked, and removed again when the checkbox is unchecked.
+Finally, we set the `trigger-scope` on the {{htmlelement("section")}} element to `all`. This limits the effect of each trigger named `--t` to their ancestor `<section>` container.
 
 ```css live-sample___trigger-scope
-.scoped {
+section {
   trigger-scope: all;
 }
 ```
 
-```js hidden live-sample___trigger-scope
-const sections = document.querySelectorAll("section");
-const checkbox = document.querySelector("input");
-
-checkbox.addEventListener("change", () => {
-  sections.forEach((section) => {
-    section.classList.toggle("scoped");
-  });
-});
-```
-
 ```css hidden live-sample___trigger-scope
+:has(:checked) section {
+  trigger-scope: none;
+}
+
 @supports not (trigger-scope: all) {
   body::before {
     content: "Your browser does not support the trigger-scope property.";
@@ -356,11 +363,11 @@ checkbox.addEventListener("change", () => {
 
 #### Result
 
-{{embedlivesample("trigger-scope", "100%", 400)}}
+{{embedlivesample("Basic usage", "100%", 400)}}
 
-Scroll through the example content without checking the checkbox. None of the red squares (the `.animated` `<div>` elements) animate until the third `.trigger` `<div>` is visible in the scrollport, at which point all of the red squares will start to animate — they are all using the last trigger element in the DOM as their trigger.
+We only see one square animate at a time as each square animates only when the trigger element located inside the same `<section>` is visible in the scrollport. Even though the three triggers share the same trigger name, each `.animated` element's animation is triggered by a different trigger. Only one square animates at a time as each one animates only when their same-scoped trigger element, located inside the same `<section>`, is visible in the scrollport.
 
-Now scroll up to the top of the content, check the checkbox to apply `trigger-scope: all` to all of the `<section>` elements, and scroll through the content again. This time you will only see one red square animate at a time — each one animates only when the trigger element located inside the same `<section>` is visible in the scrollport.
+Now check the checkbox to remove `trigger-scope: all` from the `<section>` element. Scroll through the content again. None of the squares animate until the third `.trigger` is visible in the scrollport, at which point all of the squares start animating at the same time. This is because scoping has been removed, so each `.animated` element's animation is activated and deactivated by the last `.trigger`'s trigger; all three animatable elements are now using the last trigger element in the DOM as their trigger.
 
 ## Specifications
 
