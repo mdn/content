@@ -64,16 +64,20 @@ Referrer-Policy: unsafe-url
 
 ## Effect on the `Origin` header
 
-The referrer policy also decides what the browser puts in the {{HTTPHeader("Origin")}} header, not just the {{HTTPHeader("Referer")}} header.
-This only applies to requests that don't use [CORS](/en-US/docs/Web/HTTP/Guides/CORS) and whose method is neither `GET` nor `HEAD`.
-For those requests the browser sends `Origin: null` in place of the serialized origin in these cases:
+The referrer policy also affects whether the user agent sets the {{HTTPHeader("Origin")}} header with the request's origin or as `null` (not just the {{HTTPHeader("Referer")}} header).
 
-- The policy is `no-referrer`.
-- The policy is `no-referrer-when-downgrade`, `strict-origin`, or `strict-origin-when-cross-origin`, and the request goes from an `https` origin to a URL that isn't `https`.
-- The policy is `same-origin` and the request is cross-origin.
+Requests using `GET` or `HEAD`, or made in `cors`, `websocket`, or `webtransport` [mode](/en-US/docs/Web/API/Request/mode), are never affected: if the user agent sends an `Origin` header for them at all, it sends the request's origin, regardless of the referrer policy.
+
+For other requests — such as HTML form submissions or `fetch()` calls using `mode: "same-origin"` or `"no-cors"` — the user agent sets `Origin` to `null` when the referrer policy is:
+
+- `no-referrer`.
+- `no-referrer-when-downgrade`, `strict-origin`, or `strict-origin-when-cross-origin`, and the request goes from an `https` origin to a URL that isn't `https`.
+- `same-origin`, and the request is cross-origin.
 
 Any other policy value leaves the `Origin` header set to the request's origin.
-CORS requests, WebSocket requests, and WebTransport requests always send the serialized origin, whatever the referrer policy, because they already opt into sharing the origin with the server.
+
+> [!NOTE]
+> Because `fetch()` defaults to `mode: "cors"`, a same-origin `fetch()` `POST` always sends its real `Origin`, even under `Referrer-Policy: no-referrer`. This behavior mainly shows up for non-`fetch()` requests, like HTML form submissions.
 
 ## Integration with HTML
 
