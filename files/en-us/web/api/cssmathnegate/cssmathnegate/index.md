@@ -6,10 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.CSSMathNegate.CSSMathNegate
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathNegate()`** constructor creates a
-new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
+The **`CSSMathNegate()`** constructor creates a new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 
 ## Syntax
 

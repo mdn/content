@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.values
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSUnparsedValue.values()`** method
-returns a new _array iterator_ object that contains the
-values for each index in the CSSUnparsedValue object.
+The **`CSSUnparsedValue.values()`** method returns a new _array iterator_ object that contains the values for each index in the CSSUnparsedValue object.
 
 ## Syntax
 

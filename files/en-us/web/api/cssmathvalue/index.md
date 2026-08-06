@@ -5,23 +5,11 @@ page-type: web-api-interface
 browser-compat: api.CSSMathValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) a base class for classes representing complex numeric values.
 
 {{InheritanceDiagram}}
-
-## Interfaces based on CSSMathValue
-
-Below is a list of interfaces based on the CSSMathValue interface.
-
-- {{DOMxRef('CSSMathClamp')}}
-- {{domxref('CSSMathInvert')}}
-- {{domxref('CSSMathMax')}}
-- {{domxref('CSSMathMin')}}
-- {{domxref('CSSMathNegate')}}
-- {{domxref('CSSMathProduct')}}
-- {{domxref('CSSMathSum')}}
 
 ## Instance properties
 
@@ -30,11 +18,21 @@ Below is a list of interfaces based on the CSSMathValue interface.
 
 ## Static methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
 
 ## Instance methods
 
-_The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSNumericValue")}}._
+
+## Interfaces based on CSSMathValue
+
+- {{DOMxRef('CSSMathClamp')}}
+- {{domxref('CSSMathInvert')}}
+- {{domxref('CSSMathMax')}}
+- {{domxref('CSSMathMin')}}
+- {{domxref('CSSMathNegate')}}
+- {{domxref('CSSMathProduct')}}
+- {{domxref('CSSMathSum')}}
 
 ## Examples
 
