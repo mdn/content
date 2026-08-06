@@ -180,7 +180,7 @@ This example is almost the same as the first example on this page, but we've mad
 ```css hidden live-sample___overlap
 @supports not (rule-overlap: row-over-column) {
   body::before {
-    content: "Your browser doesn't support the row-overlap property ";
+    content: "Your browser doesn't support the rule-overlap property ";
   }
 }
 ```
