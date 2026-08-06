@@ -47,7 +47,7 @@ To get started, check out [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/
 
 ## Security considerations
 
-The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts) (HTTPS). In addition, creation of `LanguageModel` objects requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required).
+The Prompt API is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS). In addition, creation of `LanguageModel` objects requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required).
 
 Access to the API is also controlled via the {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}} directive.
 
