@@ -104,7 +104,7 @@ When using a sandboxed page, consider these best practices:
 
   A sandboxed page's `location.origin` reflects the extension's `moz-extension://` origin. Therefore, a sandboxed page can validate an incoming message by checking that `event.origin` matches `location.origin`.
 
-  Messages sent _from_ a sandboxed page report an opaque origin (`"null"`). Therefore, the extension page receiving the messages can't validate by origin; instead, compare `event.source` to the sandboxed frame's `contentWindow`.
+  Messages sent _from_ a sandboxed page report the serialization of opaque origin (`"null"`), which is indistinguishable from other opaque origins. Therefore, the extension page receiving the messages can't validate by origin; instead, compare `event.source` to the sandboxed frame's `contentWindow`.
 
   This means that when posting a message _to_ a sandboxed page, there's no specific origin to target, as its opaque origin can't be expressed as a target origin string. The usual `postMessage()` best practice of targeting a specific origin can't be followed here; use `"*"` instead. There's no alternative until [this spec issue](https://github.com/whatwg/html/issues/3585) is resolved.
 
