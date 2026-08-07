@@ -154,7 +154,7 @@ To enable a web page to use an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements
 "web_accessible_resources": ["images/my-image.png"]
 ```
 
-The URL uses a browser-specific scheme:
+The file is then available using a URL. This URL uses a browser-specific scheme:
 
 - Chrome and Chromium-based browsers use `chrome-extension://`.
 - Firefox uses `moz-extension://`.
