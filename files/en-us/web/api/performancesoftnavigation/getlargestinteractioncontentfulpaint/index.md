@@ -59,4 +59,4 @@ To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/Java
 
 ## See also
 
-- {{jsxref("InteractionContentfulPaint")}}
+- {{domxref("InteractionContentfulPaint")}}
