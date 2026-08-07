@@ -102,7 +102,7 @@ Filters are defined by the {{SVGElement('filter')}} element, which should be put
 
 ```html
 <feSpecularLighting
-  in="offsetBlur"
+  in="blur"
   surfaceScale="5"
   specularConstant=".75"
   specularExponent="20"
@@ -112,7 +112,7 @@ Filters are defined by the {{SVGElement('filter')}} element, which should be put
 </feSpecularLighting>
 ```
 
-{{SVGelement('feSpecularLighting')}} takes `in` "offsetBlur", generates a lighting effect, and stores the `result` in the buffer "specOut".
+{{SVGElement('feSpecularLighting')}} takes `in` "blur", generates a lighting effect, and stores the `result` in the buffer "specOut".
 
 ### Step 4
 
