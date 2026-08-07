@@ -16,11 +16,7 @@ A basic example is to add a blur effect to SVG content. While basic blurs can be
 Filters are defined by the {{SVGElement('filter')}} element, which should be put in the `<defs>` section of your SVG file. Between the filter tags goes a list of _primitives_: basic operations that build on top of the previous operations (like blurring, adding a lighting effect, etc.). To apply your created filter on a graphic element, you set the {{SVGAttr('filter')}} attribute.
 
 ```html
-<svg
-  width="250"
-  viewBox="0 0 200 85"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+<svg width="250" viewBox="0 0 200 85" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Filter declaration -->
     <filter
