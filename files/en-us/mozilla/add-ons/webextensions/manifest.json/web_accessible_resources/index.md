@@ -180,8 +180,7 @@ browser.runtime.getURL("images/my-image.png");
 ```
 This approach gives you the correct URL regardless of the browser your extension is running on.
 
-In Chrome, a statically declared CSS file can use the predefined
-`@@extension_id` message to construct a URL for an extension resource:
+In Chrome, a static CSS file can use the `@@extension_id` message to construct a URL for an extension resource:
 
 ```css
 body {
