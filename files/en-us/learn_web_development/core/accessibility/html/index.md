@@ -356,23 +356,23 @@ A basic data table can be written with very simple markup, for example:
 <table>
   <tr>
     <td>Name</td>
-    <td>Age</td>
-    <td>Pronouns</td>
+    <td>Age (years)</td>
+    <td>Species</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
-    <td>he/him</td>
+    <td>Athena</td>
+    <td>10</td>
+    <td>Housecat</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Phil</td>
     <td>8</td>
-    <td>she/her</td>
+    <td>Black Labrador</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
-    <td>she/her</td>
+    <td>Killer</td>
+    <td>0.5</td>
+    <td>Goldfish</td>
   </tr>
 </table>
 ```
