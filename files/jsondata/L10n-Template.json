@@ -39,7 +39,7 @@
     "en-US": "Deprecated",
     "es": "Obsoleto",
     "fr": "Obsolète",
-    "ja": "非推奨;",
+    "ja": "非推奨",
     "ko": "지원이 중단되었습니다",
     "ru": "Устарело",
     "zh-CN": "已弃用",
@@ -51,7 +51,7 @@
   },
 
   "baseline_removing_abbreviation": {
-    "en-US": "Deprecated to be removed"
+    "en-US": "Deprecated, pending removal"
   },
 
   "deprecated_badge_title": {
