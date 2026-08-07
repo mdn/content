@@ -160,7 +160,7 @@ The file is then available using a URL. This URL uses a browser-specific scheme:
 - Firefox uses `moz-extension://`.
 - Safari uses `safari-web-extension://` (WebKit uses `webkit-extension://`).
 
-For example, a resource URL in Firefox might look like:
+For example, the resource URL in Firefox takes this form:
 
 ```plain
 moz-extension://<extension-UUID>/images/my-image.png
