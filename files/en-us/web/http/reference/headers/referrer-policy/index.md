@@ -64,7 +64,7 @@ Referrer-Policy: unsafe-url
 
 ## Effect on the `Origin` header
 
-The referrer policy also affects whether the user agent sets the {{HTTPHeader("Origin")}} header with the request's origin or as `null` (not just the {{HTTPHeader("Referer")}} header).
+The referrer policy also affects whether the user agent sets the {{HTTPHeader("Origin")}} header with the request's origin or as `null` (as well as the {{HTTPHeader("Referer")}} header).
 
 Requests using `GET` or `HEAD`, or made in `cors`, `websocket`, or `webtransport` [mode](/en-US/docs/Web/API/Request/mode), are never affected: if the user agent sends an `Origin` header for them at all, it sends the request's origin, regardless of the referrer policy.
 
@@ -77,7 +77,7 @@ For other requests — such as HTML form submissions or `fetch()` calls using `m
 Any other policy value leaves the `Origin` header set to the request's origin.
 
 > [!NOTE]
-> Because `fetch()` defaults to `mode: "cors"`, a same-origin `fetch()` `POST` always sends its real `Origin`, even under `Referrer-Policy: no-referrer`. This behavior mainly shows up for non-`fetch()` requests, like HTML form submissions.
+> Because `fetch()` defaults to `mode: "cors"`, a same-origin `fetch()` `POST` always sends its real `Origin`, even under `Referrer-Policy: no-referrer`. The null-`Origin` behavior above therefore mainly applies to `navigate`-mode requests, like HTML form submissions, rather than to `fetch()` calls.
 
 ## Integration with HTML
 
