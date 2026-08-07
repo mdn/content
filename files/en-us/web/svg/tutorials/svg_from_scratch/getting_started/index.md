@@ -78,7 +78,7 @@ Content-Type: image/svg+xml
 Vary: Accept-Encoding
 ```
 
-For gzip-compressed SVG files, servers should send the HTTP headers:
+For gzip-compressed SVG files, servers should send the following HTTP headers:
 
 ```http
 Content-Type: image/svg+xml
