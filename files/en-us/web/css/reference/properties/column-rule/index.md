@@ -96,7 +96,7 @@ column-rule: unset;
 
 ### Values
 
-This property is specified as a comma-separated list of values, each value being one of the following value types:
+This property is specified as a comma-separated list of values. Each value can be one of the following value types:
 
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.

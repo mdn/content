@@ -46,7 +46,7 @@ fill: unset;
 
 ### Values
 
-This property is specified as a `<color>`, a `url()` optionally followed by a `<color>` or the keyword `none`, or one of the following keyword values:
+This property is specified as a single value from the following list or as two values when using `<url>`:
 
 - `none`
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.

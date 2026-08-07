@@ -102,7 +102,7 @@ contain: unset;
 
 ### Values
 
-This property is specified as the keyword `none`, `strict`, or `content`, or a space-separated list of keyword values:
+This property is specified as a single value (`none`, `strict`, or `content`) or as a space-separated list of one or more of `size` (or `inline-size`), `layout`, `style`, and `paint`, in any order:
 
 - `none`
   - : The element renders as normal, with no containment applied.

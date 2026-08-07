@@ -96,7 +96,7 @@ counter-set: unset;
 
 ### Values
 
-The `counter-set` property is specified as either a space-separated list of `<custom-ident>` values, each optionally followed by an `<integer>`, or the keyword `none`:
+This property is specified as either a space-separated list of `<custom-ident>` values, each optionally followed by an `<integer>`, or the keyword `none`:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : The name of the counter to set.

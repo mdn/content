@@ -35,7 +35,7 @@ container-type: unset;
 
 ### Values
 
-This property is specified as one of the following keyword values, optionally with the keywords `inline-size` or `size` if the keyword is `scroll-state`:
+This property is specified as one or two keyword values from the following list. In the two-value case, one must be `scroll-state` and the other must be `inline-size` or `size`:
 
 - `anchored`
   - : Establishes a query container for anchored container queries on the container. In this case, the size of the element is not computed in isolation; no [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) is applied.

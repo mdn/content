@@ -112,7 +112,7 @@ color: unset;
 
 ### Values
 
-This property is specified as one {{cssxref("&lt;color&gt;")}} value:
+This property is specified as a single value from the following list:
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.
