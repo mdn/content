@@ -67,7 +67,7 @@ The rendering process involves the following:
 
 SVG files come in two flavors. Normal SVG files are text files containing SVG markup. The recommended filename extension for these files is ".svg" (all lowercase).
 
-Due to the potentially massive size SVG files can reach when used for some applications (e.g., geographical applications), the SVG specification also allows for gzip-compressed SVG files. The recommended filename extension for these files is ".svgz" (all lowercase). A gzip-compressed SVG only loads correctly when the server sends the right `Content-Encoding` header (see below), so only use `.svgz` when you know your web server is configured to serve it correctly.
+Due to the potentially massive size SVG files can reach when used for some applications (e.g., geographical applications), the SVG specification also allows SVG files to be [gzip-compressed](/en-US/docs/Glossary/gzip_compression). The recommended filename extension for these files is ".svgz" (all lowercase). A gzip-compressed SVG loads correctly only when the server sends the correct `Content-Encoding` header (see the next section), so use `.svgz` only when you know your web server is configured to serve it correctly.
 
 ## A word on web servers for .svgz files
 
