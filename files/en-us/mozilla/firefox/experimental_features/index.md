@@ -575,13 +575,13 @@ The implementation includes:
 
 ### CSS Typed Object Model Level 1
 
-Implementation work has started on the [CSS Typed OM Level 1](https://drafts.css-houdini.org/css-typed-om/).
-For example, the {{domxref("CSSNumericValue/to","to()")}} method of the {{domxref("CSSNumericValue")}} interface is supported for converting a CSS numeric value from one unit to another.
+The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
+This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
 ([Firefox bug 1278697](https://bugzil.la/1278697)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 149           | No                  |
+| Nightly           | 154           | Yes                 |
 | Developer Edition | 149           | No                  |
 | Beta              | 149           | No                  |
 | Release           | 149           | No                  |
