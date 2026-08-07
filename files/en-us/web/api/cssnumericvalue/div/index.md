@@ -29,6 +29,8 @@ A {{domxref('CSSMathProduct')}}.
 
 - {{jsxref("TypeError")}}
   - : Thrown if an invalid type was passed to the method.
+- [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
+  - : Thrown if `number` is, or resolves to, 0 or -0.
 
 ## Examples
 
