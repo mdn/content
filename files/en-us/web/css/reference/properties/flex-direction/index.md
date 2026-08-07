@@ -74,23 +74,23 @@ flex-direction: unset;
 This property is specified as one of the following keyword values:
 
 - `row`
-  - : The flex container's main-axis is defined to be the same as the text direction. This is the default value.
+  - : Specifies the flex container's main-axis to be the same as the text direction. This is the default value.
 - `row-reverse`
-  - : Behaves the same as `row` but the content direction is inverted, with the first item placed at the inline-end edge.
+  - : Behaves the same as `row` but specifies the content direction to be inverted, with the first item placed at the inline-end edge.
 - `column`
-  - : The flex container's main-axis is the same as the block-axis.
+  - : Specifies the flex container's main-axis to be the same as the block-axis.
 - `column-reverse`
-  - : Behaves the same as `column`, but the content direction is inverted, with the first item placed at the block-end edge.
+  - : Behaves the same as `column` but specifies the content direction to be inverted, with the first item placed at the block-end edge.
 
 ## Description
 
-The `flex-direction` property sets how flex items are placed in the flex container defining the container's main axis and the direction of the flex-items. The property is only relevant on container elements with their {{cssxref("display")}} property set to `flex` or `inline-flex`. The `flex-direction` property, along with the {{CSSXRef("flex-wrap")}} property, should be set using the {{CSSXRef("flex-flow")}} shorthand.
+The `flex-direction` property enables you to define how flex items are placed in a flex container by setting the container's main axis and the direction of the flex items. This property is relevant only on container elements that have their {{cssxref("display")}} property set to `flex` or `inline-flex`. The `flex-direction` property, along with the {{CSSXRef("flex-wrap")}} property, should be set using the {{CSSXRef("flex-flow")}} shorthand.
 
 When set on a flex container, the `flex-direction` property defines whether the flex items are laid out in the same direction or perpendicular to the text direction, and whether the items are laid out normally or reversed.
 
-The default value is `row`. By default, or when `row` is explicitly set, the flex container's main-axis is defined to be the same as the text direction. The first flex in DOM order abuts the inline-start and block start edges. Additional items are placed at the previous item's inline-end edge. Additional rows, if the container is set to wrap with `flex-wrap: wrap`, are added on the block-end edge. The **main-start** and **main-end** points are the same as the content direction, with main-start being the inline-start edge and the main-end being the inline-end edge, and cross-start and cross-end being the block-start and block-end edges, respectively.
+The default value is `row`. By default, or when `row` is explicitly set, the flex container's main-axis is defined to be the same as the text direction. The first flex item in the DOM order is placed at the inline-start and block start edges. Additional items are placed at the previous item's inline-end edge. Additional rows, if the container is set to wrap with `flex-wrap: wrap`, are added on the block-end edge. The **main-start** and **main-end** points are the same as the content direction, with main-start being the inline-start edge and the main-end being the inline-end edge, and cross-start and cross-end being the block-start and block-end edges, respectively.
 
-The `row-reverse` value is used to change the inline-direction, behaving like `row`, but reversed. The first item is placed at the inline-end and block-start edges, with subsequen flex items being placed at the previous items inline-start edge, and additional rows added on the block-end edge. The main-start and main-end points are the same as the inline-end and inline-start ends of the writing-mode, respectively, and cross-start and cross-end are the block-start and block-end edges, respectively.
+The `row-reverse` value is used to change the inline-direction, behaving like `row`, but reversed. The first item is placed at the inline-end and block-start edges, with subsequent flex items being placed at the previous item's inline-start edge, and additional rows added on the block-end edge. The main-start and main-end points are the same as the inline-end and inline-start ends of the writing-mode, respectively, and cross-start and cross-end are the block-start and block-end edges, respectively.
 
 When `flex-direction` is set to `column`, the main axis is the block axis. As with `row`, the first item is placed at the inline-start and block-start edges, but additional items are placed at the previous item's block-end edge rather than the inline edge. If set to be able to wrap, additional columns are added on the inline-end edge. The **main-start** and **main-end** points are based on the block direction of the writing mode, with main-start being the block-start edge and the main-end being the block-end edge, and cross-start and cross-end being the inline-start and inline-end edges, respectively.
 
@@ -100,8 +100,9 @@ The values `row` and `row-reverse` are affected by the directionality of the fle
 
 ## Accessibility
 
-Using the `flex-direction` property with values of `row-reverse` or `column-reverse` will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (CSS) order is important, then screen reader users will not have access to the correct reading order.
+Using the `flex-direction` property with values of `row-reverse` or `column-reverse` will create a disconnect between the visual presentation of content and DOM order. This will adversely affect the experience of users with low vision navigating the page with the aid of assistive technology such as a screen reader. If the visual (CSS) order is important, then screen reader users will not have access to the correct reading order.
 
+- [Source Order Matters](https://adrianroselli.com/2015/09/source-order-matters.html) by Adrian Roselli (2015)
 - [Flexbox & the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) by Léonie Watson (2016)
 - [Understanding SC 1.3.2: Meaningful Sequence](https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence) via WCAG 2.2 (2023)
 
