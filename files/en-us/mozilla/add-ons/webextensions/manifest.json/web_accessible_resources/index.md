@@ -178,6 +178,7 @@ browser.runtime.getURL("images/my-image.png");
 // something like:
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
 ```
+
 This approach gives you the correct URL regardless of the browser your extension is running on.
 
 In Chrome, a static CSS file can use the `@@extension_id` message to construct a URL for an extension resource:
