@@ -50,7 +50,7 @@ Traditionally, {{jsxref("Object", "objects", "", 1)}} have been used to map stri
 
 These three tips can help you to decide whether to use a `Map` or an `Object`:
 
-- Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.
+- Use maps over objects when keys are unknown until run time. Maps support keys and values of any type and do not require them to all be the same type.
 - Use maps if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.
 - Use objects when there is logic that operates on individual elements.
 
