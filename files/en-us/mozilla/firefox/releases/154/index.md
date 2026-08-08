@@ -36,9 +36,10 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The {{jsxref("Iterator.prototype.includes()")}} method is now supported, allowing developers to check whether an iterator contains a given value.
+  ([Firefox bug 2034104](https://bugzil.la/2034104)).
 
 <!-- #### Removals -->
 
