@@ -80,6 +80,14 @@ WebAssembly numeric instructions.
   - : Removes the fractional part of an `f64` value and outputs it as a signed integer.
 - [`trunc_f64_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_u)
   - : Removes the fractional part of an `f64` value and outputs it as an unsigned integer.
+- [`trunc_sat_f32_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_sat_f32_s)
+  - : Performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of an `f32` value into a signed integer, clamping the output to the range allowed by the value type.
+- [`trunc_sat_f32_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_sat_f32_u)
+  - : Performs a saturating conversion of an `f32` value into an unsigned integer, clamping the output to the range allowed by the value type.
+- [`trunc_sat_f64_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_sat_f64_s)
+  - : Performs a saturating conversion of an `f64` value into a signed integer, clamping the output to the range allowed by the value type.
+- [`trunc_sat_f64_u`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_sat_f64_u)
+  - : Performs a saturating conversion of an `f64` value into an unsigned integer, clamping the output to the range allowed by the value type.
 - [`reinterpret`](/en-US/docs/WebAssembly/Reference/Numeric/reinterpret)
   - : Reinterpret the bytes of integers as floating points and vice versa.
 
