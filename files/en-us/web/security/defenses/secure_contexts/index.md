@@ -31,7 +31,7 @@ Resources that are not local, to be considered secure, must meet the following c
 
 ## Potentially trustworthy origins
 
-A **potentially trustworthy origin** is one that the browser can generally trust to deliver data security, even though strictly speaking it does not meet the criteria of a secure context.
+A **potentially trustworthy origin** is one that the browser can generally trust to deliver data securely and will therefore (under some circumstances) grant it access to features otherwise restricted to secure contexts.
 
 Locally-delivered resources such as those with `http://127.0.0.1`, `http://localhost`, and `http://*.localhost` URLs (for example, `http://dev.whatever.localhost/`) are not delivered using HTTPS, but they can be considered to have been delivered securely because they are on the same device as the browser. They are therefore potentially trustworthy. This is convenient for developers testing applications locally.
 
@@ -43,6 +43,18 @@ Vendor-specific URL schemes like `app://` or `chrome-extension://` are not consi
 
 > [!NOTE]
 > Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
+
+### Potentially trustworthy URLs
+
+A **potentially trustworthy URL** is one that is from a [potentially trustworthy origin](#potentially_trustworthy_origins), or:
+
+- whose URL is `about:blank` or `about:srcdoc`, both of which inherit trustworthiness from their creator's origin.
+- whose scheme is a `blob:` URL, which inherits trustworthiness from its creator's origin.
+- whose scheme is `data:`, in which case the content is inline rather than network-delivered.
+
+While potentially trustworthy origins are used to make trust decisions about access to features generally allowed only to secure contexts, potentially trustworthy URLs are used to determine whether a request is allowed to include potentially private data.
+For example, [Fetch Metadata request headers](/en-US/docs/Glossary/Fetch_metadata_request_header) are only sent in requests to potentially trustworthy URLs.
+This means servers on non-secure `http://` URLs may not receive these headers.
 
 ## Feature detection
 
