@@ -24,7 +24,7 @@ color-mix(in lab, plum 60%, #123456 50%)
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
-/* with more than two colors */
+/* With more than two colors (experimental) */
 color-mix(in oklab, teal, olive, blue)
 color-mix(in oklab, teal 20%, olive 30%, blue 50%)
 ```
