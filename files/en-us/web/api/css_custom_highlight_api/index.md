@@ -28,6 +28,16 @@ There are four steps to style text ranges on a webpage using the CSS Custom High
 3. Registering the highlights using the {{domxref("HighlightRegistry")}}.
 4. Styling the highlights using the {{cssxref("::highlight", "::highlight()")}} pseudo-element.
 
+### Accessibility
+
+The CSS Custom Highlight API allows authors to visually highlight ranges of text without modifying the DOM. However, this API does not inherently provide semantic meaning in the document structure.
+
+The specification defines a `type` attribute that user agents may use to expose highlight semantics (such as spelling or grammar errors) to assistive technologies. In practice, support for this behavior is currently limited and may vary between browsers and platform accessibility APIs.
+
+As a result, custom highlights are not reliably conveyed to users of assistive technologies such as screen readers, and highlighted content may not be distinguishable from surrounding text.
+
+Developers should not rely on custom highlights alone to communicate important information. Where highlighting conveys meaning, consider using semantic HTML elements such as {{HTMLElement("mark")}} or providing additional accessible cues.
+
 ### Create ranges
 
 The first step is to define the text ranges that you want to style by creating {{domxref("Range")}} objects in JavaScript. For example:
