@@ -79,4 +79,4 @@ See the article [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)
+- [Advanced controllers using the gamepad object](/en-US/docs/Web/API/WebXR_Device_API/Inputs#advanced_controllers_using_the_gamepad_object)
