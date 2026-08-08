@@ -1,5 +1,5 @@
 ---
-title: Grid lanes
+title: Grid lanes layout
 slug: Web/CSS/Guides/Grid_layout/Grid_lanes
 page-type: guide
 status:
@@ -14,13 +14,13 @@ sidebar: cssref
 
 Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **grid lanes layout**, which is accessed via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide explains how grid lanes layout works and how to use it.
 
-Grid lanes layout is a layout method where one axis uses a typical strict grid layout, most often columns, while the other uses the masonry packing algorithm. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
+Grid lanes layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other uses a stacking algorithm. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
 
 ## Creating a grid lanes layout
 
-To create the most common grid lanes layout, where the columns are laid out in a grid and the rows are packed using the masonry stacking algorithm, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
+To create the most common grid lanes layout, where the columns are laid out in a grid and the rows are packed using the grid lanes layout algorithm, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
 
-The child elements of this container will lay out item by item along the stacking axis according to the masonry algorithm: each row of items loads into the column with the most room, causing a tightly packed layout without strict row tracks.
+The child elements of this container will lay out item by item along the stacking axis according to the grid lanes layout algorithm: each row of items loads into the column with the most room, causing a tightly packed layout without strict row tracks.
 
 ```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
@@ -178,7 +178,7 @@ This example includes an item which has positioning for columns. Items with defi
 
 ## Fallbacks for grid lanes layout
 
-In browsers that do not support the `grid-lanes` display values, regular grid auto-placement will be used instead.
+In browsers that do not support the `grid-lanes` display value, the `display: grid-lanes` declaration is ignored.
 
 ## Specifications
 

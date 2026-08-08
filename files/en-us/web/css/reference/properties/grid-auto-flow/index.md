@@ -61,10 +61,6 @@ grid-auto-flow: row dense;
 }
 ```
 
-> [!NOTE]
-> The `masonry-auto-flow` property was dropped from CSS [Grid lanes](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) in favor of `grid-auto-flow`.
-> See [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) for details.
-
 ## Syntax
 
 ```css
