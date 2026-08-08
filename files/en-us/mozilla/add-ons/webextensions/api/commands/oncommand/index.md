@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 Fired when a command is executed using its associated keyboard shortcut.
 
-The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+The event passes the listener the command's name. This name matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntax
 
@@ -34,7 +34,7 @@ Events have three functions:
 - `listener`
   - : The function called when a user enters the command's shortcut. The function is passed these arguments:
     - `name`
-      - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+      - : `string`. Name of the command. This name matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the command shortcut was entered.
 
@@ -53,12 +53,29 @@ Given a manifest.json entry like this:
 }
 ```
 
-You could listen for this particular command like this:
+You could listen for this command like this:
 
 ```js
 browser.commands.onCommand.addListener((command) => {
   if (command === "toggle-feature") {
     console.log("toggling the feature!");
+  }
+});
+```
+
+You could listen for this command and send a message to any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) or extension pages or iframe in the active tab so that they can act on the command, like this:
+
+```js
+browser.commands.onCommand.addListener((command, tab) => {
+  if (command === "toggle-feature") {
+    console.log("toggling the feature!");
+    console.log("Command triggered on tab:", tab.id, tab.url);
+
+    browser.tabs.sendMessage(tab.id, {
+      type: "toggle-feature",
+      tabId: tab.id,
+      url: tab.url,
+    });
   }
 });
 ```
