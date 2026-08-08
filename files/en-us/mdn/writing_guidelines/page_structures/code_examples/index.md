@@ -108,10 +108,10 @@ The macro has three parameters:
 2. The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
 3. The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
 
-Let's look at an example. Say we wanted to embed the code at <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. We could use the following call:
+Let's look at an example. Say we wanted to embed the code at <https://mdn.github.io/learning-area/html/introduction-to-html/getting-started/>. We could use the following call:
 
-\\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+\\{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
 
 This looks like so when rendered:
 
-{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
+{{EmbedGHLiveSample("learning-area/html/introduction-to-html/getting-started/", '100%', 100)}}
