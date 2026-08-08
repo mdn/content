@@ -10,6 +10,13 @@ browser-compat: api.HTMLButtonElement.reportValidity
 
 The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
 
+> [!NOTE]
+> This method always returns `true` for buttons with `type="reset"` or `type="button"`,
+> because those button types are
+> [barred from constraint validation](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#barred-from-constraint-validation).
+> Only buttons with `type="submit"` (the default) participate in constraint validation and can
+> return `false` from this method.
+
 ## Syntax
 
 ```js-nolint
