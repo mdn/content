@@ -21,7 +21,7 @@ You can also override the context menus displayed in extension pages, such as cu
 
 ## Specifying context menu items
 
-You manage context menu items programmatically, using the {{WebExtAPIRef("contextMenus")}} API. However, you need to request the `contextMenus` permission in your manifest.json to be able to take advantage of the API.
+You manage context menu items programmatically, using the {{WebExtAPIRef("menus")}} API. However, you need to request the `contextMenus` permission in your manifest.json to be able to take advantage of the API.
 
 ```json
 "permissions": ["contextMenus"]
