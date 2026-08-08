@@ -40,7 +40,7 @@ scrollIntoView(options)
         - `start`: Aligns the element's top edge with the top of the scrollable container, making the element appear at the start of the visible area vertically.
         - `center`: Aligns the element vertically at the center of the scrollable container, positioning it in the middle of the visible area.
         - `end`: Aligns the element's bottom edge with the bottom of the scrollable container, placing the element at the end of the visible area vertically.
-        - `nearest`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom edge, it will align to the bottom. This minimizes the scrolling distance.
+        - `nearest`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom edge, it will align to the bottom. This minimizes the scrolling distance. If the element is already visible, no scrolling is done.
 
         The default is `start`.
 
@@ -56,7 +56,7 @@ scrollIntoView(options)
         - `start`: Aligns the element's left edge with the left of the scrollable container, making the element appear at the start of the visible area horizontally.
         - `center`: Aligns the element horizontally at the center of the scrollable container, positioning it in the middle of the visible area.
         - `end`: Aligns the element's right edge with the right of the scrollable container, placing the element at the end of the visible area horizontally.
-        - `nearest`: Scrolls the element to the nearest edge in the horizontal direction. If the element is closer to the left edge of the scrollable container, it will align to the left; if it's closer to the right edge, it will align to the right. This minimizes the scrolling distance.
+        - `nearest`: Scrolls the element to the nearest edge in the horizontal direction. If the element is closer to the left edge of the scrollable container, it will align to the left; if it's closer to the right edge, it will align to the right. This minimizes the scrolling distance. If the element is already visible, no scrolling is done.
 
         The default is `nearest`.
 
