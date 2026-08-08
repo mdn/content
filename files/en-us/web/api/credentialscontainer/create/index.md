@@ -31,6 +31,8 @@ create(options)
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
+    - `mediation` {{optional_inline}}
+      - : A string indicating how user mediation should be handled for the credential creation request. For public key credentials, a value of `"conditional"` requests [automatic passkey creation](#creating_a_passkey_conditionally) when the user agent and passkey provider support it, and the user has recently signed in with a saved password.
 
     Each of the following properties represents a _credential type_ being created. One and only one of them must be specified:
     - `federated` {{optional_inline}}
@@ -168,6 +170,41 @@ Some of this data will need to be stored on the server for future authentication
 
 > [!NOTE]
 > See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+
+### Creating a passkey conditionally
+
+_Automatic passkey creation_, also known as _conditional create_, lets a relying party (RP) request passkey creation without requiring the user to explicitly choose a "create a passkey" control.
+It is intended to help users upgrade from passwords to passkeys: for example, a site can call `create()` with `mediation: "conditional"` immediately after the user signs in successfully with a saved password.
+
+Before requesting conditional creation, check whether the WebAuthn client supports the feature using {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}}:
+
+```js
+let conditionalCreateAvailable = false;
+
+if (window.PublicKeyCredential?.getClientCapabilities) {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  conditionalCreateAvailable = capabilities.conditionalCreate === true;
+}
+```
+
+If the feature is supported, pass `mediation: "conditional"` in the `create()` call, alongside the usual `publicKey` creation options supplied by your server:
+
+```js
+if (conditionalCreateAvailable) {
+  const publicKeyCredential = await navigator.credentials.create({
+    publicKey,
+    mediation: "conditional",
+  });
+
+  // Send publicKeyCredential to the server to complete registration.
+}
+```
+
+A conditional creation request can fail when the user agent or selected passkey provider cannot satisfy the request — for example, if the user did not recently sign in using a saved password, or if a matching passkey already exists.
+Handle those failures silently and continue the signed-in session without interrupting the user.
+
+> [!NOTE]
+> If your sign-in page has an ongoing conditional {{domxref("CredentialsContainer.get()", "get()")}} request for passkey autofill, abort it before starting conditional creation. Only one WebAuthn operation can be active at a time.
 
 ## Specifications
 
