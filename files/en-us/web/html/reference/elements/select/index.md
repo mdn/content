@@ -70,7 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `name`
   - : This attribute is used to specify the name of the control.
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
-  - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
+  - : A Boolean attribute indicating that the user must select an option before the form can be submitted. The control is invalid if no option is selected, or if the only selected option is the placeholder label option. Options with an empty value can satisfy the requirement when selected.
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
   - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
