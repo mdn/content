@@ -31,9 +31,9 @@ font-language-override: revert-layer;
 font-language-override: unset;
 ```
 
-The `font-language-override` property is specified as the keyword `normal` or a `<string>`.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.

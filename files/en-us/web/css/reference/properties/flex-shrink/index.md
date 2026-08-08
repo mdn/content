@@ -67,6 +67,13 @@ flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
+## Values
+
+This property is specified as the following value:
+
+- `<number>`
+  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.
+
 ## Description
 
 The `flex-shrink` property specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
@@ -76,13 +83,6 @@ This property deals with situations where the browser calculates the flex-basis 
 The `flex-grow` property deals with distributing available positive free space proportional to each item's flex grow factor, with the value of the `flex-grow` property as the only consideration. The `flex-shrink` property manages removing negative free space to make boxes fit into their container without overflowing. Removing space is a bit more complicated than adding space. The flex shrink factor is multiplied by the flex base size; this distributes negative space in proportion to how much the item can shrink. This prevents smaller items from shrinking to `0px` before a larger item is noticeably reduced.
 
 Generally, `flex-shrink` is used alongside the {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} properties. Within the `flex` shorthand, the shrink factor is always the second `<number>`. If the shorthand only includes one number value, that value is assumed to be the `flex-grow` value.
-
-## Values
-
-The `flex-shrink` property is specified as a single `<number>`.
-
-- `<number>`
-  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.
 
 ## Formal definition
 

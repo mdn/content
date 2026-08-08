@@ -30,6 +30,8 @@ container-name: unset;
 
 ### Values
 
+This property is specified as a space-separated list of `<custom-ident>` values or the keyword `none`:
+
 - `none`
   - : The default value. The query container has no name.
 

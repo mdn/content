@@ -35,7 +35,7 @@ container-type: unset;
 
 ### Values
 
-The `container-type` property can take a single value from the list below, or two values. In the two-value case, one must be `scroll-state` and the other can be `inline-size` or `size`.
+This property is specified as one or two keyword values from the following list. In the two-value case, one must be `scroll-state` and the other must be `inline-size` or `size`:
 
 - `anchored`
   - : Establishes a query container for anchored container queries on the container. In this case, the size of the element is not computed in isolation; no [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) is applied.

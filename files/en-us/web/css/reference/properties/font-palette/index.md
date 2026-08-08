@@ -27,14 +27,16 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `normal`
   - : Specifies the default color palette or the default glyph colorization (set by the font maker) to be used for the font. With this setting, the palette in the font at index 0 is rendered.
 - `light`
   - : Specifies the first palette in the font that matches 'light' to be used for the font. Some fonts contain metadata that identify a palette as applicable for a light (close to white) background. If a font does not have this metadata, the `light` value behaves as `normal`.
 - `dark`
   - : Specifies the first palette in the font that matches 'dark' to be used for the font. Some fonts contain metadata that identify a palette as applicable for a dark (close to black) background. If a font does not have this metadata, the value behaves as `normal`.
-- `<palette-identifier>`
-  - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) format.
+- {{cssxref("&lt;dashed-ident&gt;")}}
+  - : Allows you to specify your own values for the font palette by using the `<palette-identifier>` of a [@font-palette-values](/en-US/docs/Web/CSS/Reference/At-rules/@font-palette-values) at-rule.
 - {{cssxref("font-palette/palette-mix", "palette-mix()")}}
   - : Creates a new `font-palette` value by blending together two `font-palette` values by specified percentages and color interpolation methods.
 
