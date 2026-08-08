@@ -21,6 +21,7 @@ sidebar:
     link: /Web/Privacy/Guides/Storage_Access_Policy
     details: closed
   - link: /Web/Privacy/Guides/Third-party_cookies
+  - link: /Web/Privacy/Threat_modeling
 l10n:
   fr:
     Privacy: Confidentialité
