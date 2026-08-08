@@ -49,6 +49,9 @@ outline: 5px dashed blue;
 outline-offset: 3px;
 outline-offset: 0.2em;
 
+/* Keyword value */
+outline-offset: inset;
+
 /* Global values */
 outline-offset: inherit;
 outline-offset: initial;
@@ -61,6 +64,9 @@ outline-offset: unset;
 
 - {{cssxref("&lt;length&gt;")}}
   - : The width of the space between the element and its outline. A negative value places the outline inside the element. A value of `0` places the outline so that there is no space between it and the element.
+
+- `inset` {{experimental_inline}}
+  - : Positions the outline inside the element. The outline offset is the negated used width of the outline.
 
 ## Description
 
