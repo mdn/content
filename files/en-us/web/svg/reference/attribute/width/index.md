@@ -2,6 +2,15 @@
 title: width
 slug: Web/SVG/Reference/Attribute/width
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.filter.width
+  - svg.elements.foreignObject.width
+  - svg.elements.image.width
+  - svg.elements.mask.width
+  - svg.elements.pattern.width
+  - svg.elements.rect.width
+  - svg.elements.svg.width
+  - svg.elements.use.width
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-width
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-width
@@ -909,6 +918,10 @@ This example includes three {{SVGElement("rect")}} elements with varied `width` 
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

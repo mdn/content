@@ -2,6 +2,9 @@
 title: ry
 slug: Web/SVG/Reference/Attribute/ry
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.ellipse.ry
+  - svg.elements.rect.ry
 spec-urls: https://w3c.github.io/svgwg/svg2-draft/geometry.html#RY
 sidebar: svgref
 ---
@@ -120,6 +123,10 @@ The way the value of the `ry` attribute is interpreted depend on both the {{SVGA
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
