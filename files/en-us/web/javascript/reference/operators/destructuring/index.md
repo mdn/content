@@ -188,6 +188,18 @@ const [first, ...others2] = [1, 2, 3];
 console.log(others2); // [2, 3]
 ```
 
+Object values collected by a rest property or rest element are not cloned. The rest binding contains references to the same objects as the source, so mutations to these objects are visible through both the source and the rest binding.
+
+```js
+const source = { a: 1, nested: { value: 2 } };
+const { a, ...rest } = source;
+
+console.log(rest.nested === source.nested); // true
+
+rest.nested.value = 3;
+console.log(source.nested.value); // 3
+```
+
 The rest property must be the last in the pattern, and must not have a trailing comma.
 
 ```js-nolint example-bad
