@@ -57,13 +57,13 @@ This interface directly defines the following properties:
 
 It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"largest-contentful-paint"`.
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Always returns an empty string.
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}}.
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns `0`, as `duration` is not applicable to this interface.
 
 ## Instance methods
