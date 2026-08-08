@@ -245,8 +245,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-The CSS animations module level 2 also introduces the `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, and `animation-trigger-type` properties. Currently, no browsers support these features.
-
 ### At-rules and descriptors
 
 - {{cssxref("@keyframes")}}
@@ -280,6 +278,30 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## Related concepts
 
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
+  - {{cssxref("animation-trigger")}}
+  - {{cssxref("timeline-trigger")}} shorthand
+  - {{cssxref("timeline-trigger-activation-range")}} shorthand
+    - {{cssxref("timeline-trigger-activation-range-end")}}
+    - {{cssxref("timeline-trigger-activation-range-start")}}
+  - {{cssxref("timeline-trigger-active-range")}} shorthand
+    - {{cssxref("timeline-trigger-active-range-end")}}
+    - {{cssxref("timeline-trigger-active-range-start")}}
+  - {{cssxref("timeline-trigger-name")}}
+  - {{cssxref("timeline-trigger-source")}}
+  - {{cssxref("trigger-scope")}}
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+  - {{cssxref("animation-range")}} shorthand
+    - {{cssxref("animation-range-end")}}
+    - {{cssxref("animation-range-start")}}
+  - {{cssxref("scroll-timeline")}} shorthand
+    - {{cssxref("scroll-timeline-axis")}}
+    - {{cssxref("scroll-timeline-name")}}
+  - {{cssxref("timeline-scope")}}
+  - {{cssxref("view-timeline")}} shorthand
+    - {{cssxref("view-timeline-axis")}}
+    - {{cssxref("view-timeline-inset")}}
+    - {{cssxref("view-timeline-name")}}
 - {{cssxref("will-change")}} CSS property
 - {{cssxref("easing-function")}} data type
 - [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) media query
@@ -291,8 +313,9 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## See also
 
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module.
-- Properties in the [transitions](/en-US/docs/Web/CSS/Guides/Transitions) CSS module to trigger animations based on user actions.
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
+- [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions) module
 - The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size).
 - The {{htmlelement("canvas")}} HTML element along with [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 - The {{domxref("SVGAnimationElement")}} interface for all the animation-related element interfaces, including {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, and {{domxref("SVGAnimateTransformElement")}}.
