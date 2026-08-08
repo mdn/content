@@ -60,6 +60,8 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2019332](https://bugzil.la/2019332)).
 - The {{domxref("RTCDtlsTransport/error_event", "error")}} event is now fired on {{domxref("RTCDtlsTransport")}} to report DTLS and fingerprinting errors.
   ([Firefox bug 1805447](https://bugzil.la/1805447)).
+- Firefox now reports all WebRTC `certificate` statistics defined in the {{domxref("RTCCertificateStats")}} dictionary, and the following additional WebRTC `transport` statistics defined in the {{domxref("RTCTransportStats")}} dictionary: {{domxref("RTCTransportStats/remoteCertificateId", "remoteCertificateId")}}, {{domxref("RTCTransportStats/localCertificateId", "localCertificateId")}}, {{domxref("RTCTransportStats/packetsSent", "packetsSent")}}, {{domxref("RTCTransportStats/packetsReceived", "packetsReceived")}}, {{domxref("RTCTransportStats/bytesSent", "bytesSent")}}, and {{domxref("RTCTransportStats/bytesReceived", "bytesReceived")}}.
+  ([Firefox bug 2019349](https://bugzil.la/2019349) and [Firefox bug 2019333](https://bugzil.la/2019333)).
 
 <!-- #### Removals -->
 
