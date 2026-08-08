@@ -34,6 +34,7 @@ Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 - [`browsingContext.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/close)
 - [`browsingContext.create`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/create)
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree)
+- [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes)
 
 ## Events
 
