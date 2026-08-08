@@ -14,6 +14,7 @@ Elements that will appear in the top layer include:
 - Fullscreen elements, i.e., elements that have been caused to display in fullscreen mode by a successful {{domxref("Element.requestFullscreen()")}} call.
 - {{htmlelement("dialog")}} elements displayed as a modal via a successful {{domxref("HTMLDialogElement.showModal()")}} call.
 - Popover elements shown via a successful {{domxref("HTMLElement.showPopover()")}} call.
+- The picker of a drop-down [customizable `<select>` element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
 Some browsers, such as Chrome, show elements placed in the top layer inside a special DOM tree entry. For example:
 
@@ -28,3 +29,4 @@ Note that the top layer is an internal browser concept and cannot be directly ma
 - {{htmlelement("dialog")}} element, {{domxref("HTMLDialogElement")}} interface
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - {{CSSXref(":fullscreen")}} pseudo-class
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
