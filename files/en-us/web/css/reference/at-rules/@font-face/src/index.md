@@ -29,17 +29,17 @@ src: url("path/to/fontCOLR-svg.otf") tech(color-SVG);
 
 /* <format(<font-format>)> values */
 src: url("path/to/font.woff") format("woff");
-src: url("path/to/font.otf") format("opentype");
+src: url("path/to/font.woff2") format("woff2");
 
 /* Multiple resources */
 src:
   url("path/to/font.woff") format("woff"),
-  url("path/to/font.otf") format("opentype");
+  url("path/to/font.woff2") format("woff2");
 
 /* Multiple resources with font format and technologies */
 src:
-  url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
-  url("trickster-outline.otf") format(opentype);
+  url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+  url("trickster-outline.woff2") format("woff2");
 ```
 
 ### Values
@@ -174,7 +174,7 @@ The example below shows how to define two font faces with the same font family. 
   src:
     local("Futura-Medium"),
     url("FuturaMedium.woff") format("woff"),
-    url("FuturaMedium.otf") format("opentype");
+    url("FuturaMedium.woff2") format("woff2");
 }
 
 /* Defining a different bold font face for the same family */
@@ -184,7 +184,7 @@ The example below shows how to define two font faces with the same font family. 
     local("Gill Sans Bold") /* full font name */,
     local("GillSans-Bold") /* postscript name */,
     url("GillSansBold.woff") format("woff"),
-    url("GillSansBold.otf") format("opentype"),
+    url("GillSansBold.woff2") format("woff2"),
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
   font-weight: bold;
 }
@@ -210,8 +210,8 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 @font-face {
   font-family: "Trickster";
   src:
-    url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
-    url("trickster-outline.otf") format(opentype);
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
+    url("trickster-outline.woff2") format("woff2");
 }
 
 /* Using the font face */
@@ -232,8 +232,8 @@ For example:
 @font-face {
   font-family: "MgOpenModernaBold";
   src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+    url("MgOpenModernaBoldIncr.woff2") format("woff2")
+    url("MgOpenModernaBold.woff2") format("woff2")
 }
 ```
 
@@ -246,11 +246,11 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBold.otf") format(opentype);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
+  src: url("MgOpenModernaBold.woff2") format("woff2");
+  src: url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental);
   src:
-    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
-    url("MgOpenModernaBold.otf") format(opentype);
+    url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental),
+    url("MgOpenModernaBold.woff2") format("woff2");
 }
 ```
 
@@ -263,7 +263,7 @@ The block of CSS inside `@supports` will be applied if the user agent supports `
 @supports font-tech(color-COLRv1) {
   @font-face {
     font-family: "Trickster";
-    src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1);
+    src: url("trickster-COLRv1.woff2") format(woff2) tech(color-COLRv1);
   }
 
   .colored_text {
