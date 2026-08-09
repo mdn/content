@@ -34,12 +34,11 @@ There are two API namespaces in use among the main browsers:
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-
 ### API asynchronous event handling
 
-With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. Firefox and Safari have full support for Promises on all asynchronous APIs. Starting from Chrome 121, all asynchronous extension APIs support promises unless documented otherwise. The `devtools` API is the only API namespace without Promise support ([Chromium bug 1510416](https://crbug.com/1510416)).
+With the introduction of Manifest V3, all the main browsers adopted the standard of returning _[promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises)_ from asynchronous methods. Firefox and Safari support promises on all asynchronous APIs. Starting from Chrome 121, all asynchronous extension APIs support promises unless documented otherwise. For extensions that use the `devtools_page` manifest key, Chrome provided promise support in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)).
 
-In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See the [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) section of the Chrome incompatibilities page for details.
+In Manifest V2, Firefox and Safari support promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See the [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) section of the Chrome incompatibilities page for details.
 
 Some handlers of extension API events are expected to respond asynchronously through a `Promise` or callback function. For example, a handler of the `runtime.onMessage` event can [send an asynchronous response using a `Promise`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise) or using [a callback](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse). A `Promise` as the return value from an event handler is supported in Firefox and Safari, but not yet in Chrome.
 
