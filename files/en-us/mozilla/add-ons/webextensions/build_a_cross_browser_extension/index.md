@@ -29,12 +29,11 @@ You need to address these areas when tackling a cross-platform extension:
 
 There are two API namespaces in use among the main browsers:
 
-- `browser.*`, the standard for the extensions API used by Firefox Safari, Chrome (from 148), Opera (from 121), and Edge (from 136).
+- `browser.*`, the standard for the extensions API. Originally used by Firefox and Safari, supported by Chrome [in mid 2026](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace) (i.e., Chrome 148, Opera 121, and Edge 136, and 4 versions later for extensions using [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)).
 - `chrome.*` used by Chrome, Opera, and Edge.
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-Only in the most trivial extensions is namespace likely to be the only cross-platform issue to be addressed. Therefore, it's rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
 
 ### API asynchronous event handling
 
@@ -53,10 +52,10 @@ Firefox also supports callbacks for the APIs that support the `chrome.*` namespa
 
 Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
 
-To take advantage of the `browser.*` namespace and promises in earlier versions, use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
+To take advantage of the `browser.*` namespace and promises in earlier versions, use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
 
 > [!NOTE]
-> In Chrome 148 or later, the polyfill is no-op.
+> In Chrome 152 or later, the polyfill is no-op.
 
 To use the polyfill, install it into your development environment using npm or download it directly from [GitHub releases](https://github.com/mozilla/webextension-polyfill/releases).
 
