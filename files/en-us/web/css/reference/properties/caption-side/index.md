@@ -92,9 +92,9 @@ caption-side: revert-layer;
 caption-side: unset;
 ```
 
-The `caption-side` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `top`
   - : The caption box should be positioned at the block start side of the table.

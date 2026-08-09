@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformComponent.toString
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms) function.
 
@@ -24,7 +24,9 @@ None.
 
 A string in the form of a CSS [transform function](/en-US/docs/Web/CSS/Reference/Values/transform-function).
 
-This will use the value of `is2D` to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and `is2D` is false then the string returned will be in the form of the CSS transformation {{cssxref("transform-function/rotate3d", "rotate3d()")}} function. If true the string returned will be in the form of the 2-dimensional {{cssxref("transform-function/rotate", "rotate()")}} function.
+This will use the value of `is2D` to return either a 2D or 3D transform.
+For example, if the component represents {{domxref("CSSRotate")}} and `is2D` is false, then the string returned will be in the form of the CSS transformation {{cssxref("transform-function/rotate3d", "rotate3d()")}} function.
+If true the string returned will be in the form of the 2-dimensional {{cssxref("transform-function/rotate", "rotate()")}} function.
 
 ## Examples
 

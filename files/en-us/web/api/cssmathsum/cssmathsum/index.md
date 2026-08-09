@@ -8,13 +8,9 @@ status:
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}{{SeeCompatTable}}
 
-The **`CSSMathSum()`** constructor creates a
-new {{domxref("CSSMathSum")}} object which creates a new {{domxref('CSSKeywordValue')}}
-object which represents the result obtained by calling
-{{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}},
-or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
+The **`CSSMathSum()`** constructor creates a new {{domxref("CSSMathSum")}} object that represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
 ## Syntax
 

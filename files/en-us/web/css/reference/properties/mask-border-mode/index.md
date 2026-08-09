@@ -26,6 +26,8 @@ mask-border-mode: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `luminance`
   - : The luminance values of the mask border image are used as the mask values.
 - `alpha`

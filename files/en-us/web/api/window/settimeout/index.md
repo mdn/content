@@ -35,7 +35,7 @@ setTimeout(func, delay, param1, param2, /* …, */ paramN)
 - `func`
   - : A {{jsxref("function")}} to be executed after the timer expires.
 - `code`
-  - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
+  - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed after `delay` milliseconds.
     This can be used instead of passing a function, but is _strongly discouraged_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
   - : A non-negative integer indicating how long the timer should wait before the specified function or code is executed, in milliseconds.

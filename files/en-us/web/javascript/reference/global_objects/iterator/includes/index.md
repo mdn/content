@@ -3,9 +3,13 @@ title: Iterator.prototype.includes()
 short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/includes
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.includes
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`includes()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.includes()")}}: it returns `true` if it finds an element that is equal to the given value. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 

@@ -37,9 +37,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-align` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box aligns contents at the start, leaving any extra space at the end.

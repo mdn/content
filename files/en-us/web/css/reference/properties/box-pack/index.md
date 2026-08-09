@@ -34,9 +34,9 @@ box-pack: initial;
 box-pack: unset;
 ```
 
-The `box-pack` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box packs contents at the start, leaving any extra space at the end.

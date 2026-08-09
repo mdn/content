@@ -5,9 +5,10 @@ page-type: web-api-interface
 browser-compat: api.CSSUnparsedValue
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSUnparsedValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents property values that reference [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables). It consists of a list of string fragments and variable references.
+The **`CSSUnparsedValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents property values that reference [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables).
+It consists of a list of string fragments and variable references.
 
 Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "var()")}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 
@@ -24,6 +25,8 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "va
   - : Returns the number of items in the `CSSUnparsedValue` object.
 
 ## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("CSSStyleValue")}}._
 
 - {{domxref('CSSUnparsedValue.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).

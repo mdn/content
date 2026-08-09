@@ -8,10 +8,9 @@ status:
 browser-compat: api.CSSMathMax.CSSMathMax
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathMax()`** constructor creates a
-new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max', 'max()')}} function.
+The **`CSSMathMax()`** constructor creates a new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max', 'max()')}} function.
 
 ## Syntax
 

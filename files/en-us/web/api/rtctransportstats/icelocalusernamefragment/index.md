@@ -3,12 +3,10 @@ title: "RTCTransportStats: iceLocalUsernameFragment property"
 short-title: iceLocalUsernameFragment
 slug: Web/API/RTCTransportStats/iceLocalUsernameFragment
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.RTCStatsReport.type_transport.iceLocalUsernameFragment
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The **`iceLocalUsernameFragment`** property of the {{domxref("RTCTransportStats")}} dictionary is a string that indicates the local username fragment ("ufrag" or "ice-ufrag") that uniquely identifies the ICE interaction session managed by this transport.
 
