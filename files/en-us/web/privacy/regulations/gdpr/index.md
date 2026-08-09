@@ -5,130 +5,106 @@ page-type: guide
 sidebar: privacy
 ---
 
-The **General Data Protection Regulation (GDPR)** is a comprehensive data protection law enacted by the European Union (EU) with the goal of enhancing individuals' control over their personal data and unifying data protection regulations across EU member states, including the European Economic Area (EEA) (Iceland, Liechtenstein, and Norway). GDPR governs how organizations handle personal data of EU residents, enhancing individuals' control over their personal information. Regardless of where you and your organization are based, GDPR applies to you if your website or application is available in EU.
+The **General Data Protection Regulation (GDPR)** is a comprehensive data protection law enacted by the [European Union (EU)](https://en.wikipedia.org/wiki/European_Union). It gives individuals control over how their personal data is used by organizations, and imposes restrictions on how an organization is allowed to handle this personal data.
 
-This article explains what GDPR is, which organizations it applies to, and provides a basic introduction to GDPR requirements from a developer perspective. This is also a [glossary of GDPR terms](#gdpr_glossary_of_terms). This guide should not be construed as legal advice.
+This article explains what the GDPR is, which organizations it applies to, and provides a basic introduction to the requirements imposed by GDPR on web developers. The GDPR is a complex regulation and we can't provide a complete guide to compliance here: we will just outline the most important responsibilities. The website [GDPR.EU](https://gdpr.eu/) provides comprehensive guidance.
 
-## Who falls under GDPR
+## Scope and penalties
 
-GDPR applies to any organization, no matter how small, that processes the [personal data](#personal_data) of even one person in the EU, regardless of whether the organization is based in the EU or elsewhere. [Data processing](#data_processing) is any action performed on data, whether automated or manual, including collecting, storing, using, and even erasing; so basically anything.
+The GDPR applies to any organization that is based in the EU as well as any organization outside the EU that offers goods or services to EU residents, or that tracks them (for example, by setting or reading cookies or recording IP addresses).
 
-There are no size‑based exemptions, though if a company has fewer than 250 employees, they may be exempt from keeping formal "records of processing activities" (ROPA) — but only if their data processing is occasional, low‑risk, **and** does not involve sensitive data. If a site collects any personal data, either directly or through a third party, and is accessible in the EU, it must comply with all of GDPR.
+It applies when any such organizations [process](#processing_data) the [personal data](#personal_data) of any EU resident, in the course of professional or commercial activities. That is, it does not apply to purely personal activities.
 
-While the law applies universally, requirements under the law are proportionate to scale and risk. While the law applies to everyone collecting personal data, a sole proprieter with a small client list will not be expected to maintain a Records of Processing Activities (ROPA). Documenting what data is held, why, and for how long may be enough to demonstrate accountability. The law requires that everyone considers and documents GDPR compliance, but your blog's mailing list doesn't require the same compliance efforts of a multinational corporation.
+The GDPR does not make an exception for small organizations, although organizations with fewer than 250 employees are in some circumstances [exempt from some record-keeping requirements](#record_of_processing_activities).
 
-### Enforcers
+Organizations who violate the GDPR may be fined. Fines vary depending on the severity of the violation and the size of the company, but they can be very severe: up to €10 million, or 2% of the organization's worldwide annual revenue from the previous financial year.
 
-Organizations located within an EU or EEA member state must register with their country's _Data Protection Authority (DPA)_, the national regulator responsible for enforcing GDPR, handling complaints, and imposing fines. DPAs are a great resource issuing guidance; they publish guides on how to interpret GDPR, oversee breach notifications, and provide advice to individuals and institutions.
+## GDPR terminology
 
-Registering with your country's DPA is a national administrative requirement, not a GDPR requirement. If your organization has no EU/EEA physical presence, then it does not "operate" in an EU member state in the legal sense that triggers DPA registration; but your organization must still comply with all the GDPR compliance requirements.
+- **Personal data**
+  - : Any information relating to an identified or identifiable natural person. This includes data that can be directly used to identify a person, such as a name, social security number, date of birth, or address. It may also include physical attributes, such as biometric data or ethnicity, and societal data such as religious or political affiliation.
 
-## Compliance requirements
+- **Processing data**
+  - : This term includes both collecting data in the first place and working with data that has been collected. Working with data includes activities such as recording, organizing, storing data, or using it in almost any other way.
 
-The GDPR sets out compliance requirements for organizations that process [personal data](#personal_data). The compliance requirements are designed to ensure transparency, accountability, and the protection of personal privacy.
+- **Data subject**
+  - : The people who own the personal data being processed: the users of your website.
 
-This table is a summary of the GDPR articles and the requirement category most relevant to you, the developer. Explanations and requirements for each category follow:
+- **Data controller**
+  - : The person or organization who determines what data is processed and how it is processed. If you maintain a website that collects and uses personal data, this is you.
 
-| Requirement category    | GDPR Article | Title                            | Core Purpose                                     |
-| ----------------------- | ------------ | -------------------------------- | ------------------------------------------------ |
-| Data inventory          | Art. 30      | Records of processing activities | Accountability through documented data flows     |
-| Privacy notice          | Art. 13 & 14 | Information to data subjects     | Transparency about data use                      |
-| Access request process  | Art. 15      | Right of access                  | Empower individuals to see and verify their data |
-| Breach log              | Art. 33 & 34 | Breach notification              | Ensure breaches are documented and addressed     |
-| Basic security controls | Art. 32      | Security of processing           | Protect data through appropriate safeguards      |
+- **Data processor**
+  - : Any person or organization who [processes data](#processing_data) on behalf of a [data controller](#data_controller).
 
-### Data inventory
+## Data processing restrictions
 
-[Article 30, Records of processing activities (ROPA)](https://gdpr.eu/article-30-records-of-processing-activities/), aims to ensure organizations maintain internal records of the [personal data](#personal_data) they process: why they collect it, where it goes, and who has access to it. The goal is accountability: regulators must be able to understand an organization's data flows without conducting invasive audits. It also helps organizations identify risks, unnecessary processing, and compliance gaps.
+The GDPR defines restrictions on what personal data may be processed and how it may be processed, including:
 
-#### Requirements
+- You may only process a subject's personal data if they explicitly consent to it, or in various other specific cases (including, for example, that you need to process personal data in order to comply with a legal obligation). See [Article 6](https://gdpr.eu/article-6-how-to-process-personal-data-legally/).
 
-Your organization must document:
+- Consent must be explicit and freely given. The subject must be able to withdraw their consent at any time, and withdrawing consent must be as easy as granting it. If a website makes access to a service dependent on consent, while the personal data being requested was not needed for the service, then this indicates coercion: that is, the consent may not have been freely given. See [Article 7](https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/).
 
-- Categories of [data subjects](#data_subject) and personal data
-- Purposes of processing
-- Recipients and international transfers
-- Retention periods
-- Security measures
+- You may only use personal data for the purposes indicated when you requested it.
 
-As noted earlier, organizations with less than 250 employees are exempt, but only if processing is _occasional_, _low‑risk_, and does _not_ involve sensitive data — a narrow exception few meet.
+- You must practice data minimization: that is, you may only request personal data which you need to process in order to meet the purposes indicated.
 
-### Privacy notice
+- You may only store personally identifying data for as long as you need in order to meet the purposes indicated.
 
-Transparency is the goal of [Article 13, Information to be provided where personal data are collected from the data subject](https://gdpr.eu/article-13-personal-data-collected/), and [Article 14, Information to be provided where personal data have not been obtained from the data subject](https://gdpr.eu/article-14-personal-data-not-obtained-from-data-subject/). Individuals must understand how their data is used, who has access to it, and their rights. When collecting any personal data, you must make your privacy policies clear, with no "hidden" or misleading data practices. Empower your users to make informed decisions.
+- You must maintain the accuracy of any stored personal data.
 
-#### Requirements
+See also [Article 5](https://gdpr.eu/article-5-how-to-process-personal-data/).
 
-Your privacy notice must include:
+## Data security
 
-- Identity and contact details of the [data controller](#data_controller), the person who decides why and how personal data will be processed.
-- Purposes and legal bases
-- Categories of data (see [data inventory](#data_inventory))
-- Recipients
-- Transfers outside the EU
-- Retention periods
-- Rights (access, deletion, objection, etc.)
-- Right to lodge a complaint with a DPA
-- Whether data is mandatory and consequences of not providing it
-- Automated decision‑making details, if applicable
+You must maintain the confidentiality and integrity of any stored personal data. This typically means that it should be encrypted, protected from unauthorized access, and that staff should be trained in the proper handling of sensitive data.
 
-### Process for access requests
+If you have a data breach, you must tell the supervisory authority within 72 hours and, depending on the severity of the breach, may also have to inform the affected data subjects.
 
-[Article 15, Right of access by the data subject](https://gdpr.eu/article-15-right-of-access/), gives individuals the right to know what data an organization holds about them and how it is used. The Data Subject Access Request (DSAR) regulations aim to prevent misuse, ensure fairness, and allow individuals to verify accuracy. It also supports other rights, including rectification, deletion, and objection.
+See also [Article 32](https://gdpr.eu/article-32-security-of-processing/), [Article 33](https://gdpr.eu/article-33-notification-of-a-personal-data-breach/), and [Article 34](https://gdpr.eu/article-34-communication-of-a-personal-data-breach/).
 
-#### Requirements
+## Rights of data subjects
 
-If an individual makes a _DSAR request_, a formal request to obtain a copy of their personal data you hold about them, you have one month to verify the requester's identity, locate relevant data, and provide it to them in a secure way. Verifying the identity of the subject is required to ensure the requestor is the data subject; that the request is for their own data and not someone else's. You must reply with a free (with some exceptions) copy of their personal data, describing the purposes, categories, recipients, retention, and rights.
+The GDPR recognizes a number of rights for data subjects, and mandates that data controllers and processors enable subjects to exercise these rights.
 
-### Breach logs
+Data subjects have the right to know what personal data is processed, how it will be processed, who has access to it, and how it is protected. They also have the right to retrieve, correct, delete, and transfer their data.
 
-[Article 33, Notification of a personal data breach to the supervisory authority](https://gdpr.eu/article-33-notification-of-a-personal-data-breach/), and [Article 34, Communication of a personal data breach to the data subject](https://gdpr.eu/article-34-communication-of-a-personal-data-breach/) require you to detect, document, and respond to data breaches quickly. Article 33(5) mandates documentation of _every_ breach; hence a "breach log". The goal is to reduce harm to individuals and ensure regulators can assess whether security practices are adequate.
+See also [Chapter 3](https://gdpr.eu/tag/chapter-3/).
 
-#### Requirements
+## Demonstrating compliance
 
-When a data breach occurs, you must:
+Data controllers must be able to show that they comply with the terms of the GDPR. The GDPR calls this _accountability_.
 
-- Maintain an internal breach register documenting _all_ breaches, even those that are not reportable
-- Assess risk to individuals
-- Notify the DPA within 72 hours if risk is likely
-- Notify affected individuals if risk is high
-- Document facts, effects, and remedial actions
+### Record of Processing Activities
 
-### Basic security controls
+A key component of accountability is a record of the data processing activities that the data controller engages in, also called a _Record of Processing Activities_ (ROPA). This documents the data that is collected and how it is used. Both data controllers and data processors must maintain ROPAs.
 
-[Article 32, Security of processing](https://gdpr.eu/article-32-security-of-processing/), aims to ensure the protection of personal data against unauthorized access, loss, or damage. It is intentionally flexible: [security](/en-US/docs/Web/Security/) must be appropriate to the risk, meaning small organizations can adopt simpler controls while still protecting data.
+Organizations with fewer than 250 employees may be exempt from maintaining a ROPA, depending on the type of processing that they carry out.
 
-#### Requirements
+See also [Article 30](https://gdpr.eu/article-30-records-of-processing-activities/).
 
-The level of security must match the sensitivity and volume of data processed. You have to meet basic security control standards, implementing security and privacy features such as:
+### Data Protection Impact Assessment
 
-- Encryption and pseudo-anonymization
-- Ensuring confidentiality, integrity, and availability
-- Ability to restore data after incidents
-- Regular testing of security measures
-- Access controls, [authentication](/en-US/docs/Web/Security/Authentication), and physical security
+A _Data Protection Impact Assessment_ (DPIA) is another practice that an organization can follow to show that they are in compliance with the GDPR. It is performed as part of the planning for a project that involves processing personal data, and includes:
 
-## GDPR glossary of terms
+- A description of the data that the controller expects to collect and the purposes for which it will be used.
+- An assessment of the necessity and proportionality of the processing, in relation to its goals.
+- An assessment of the risks posed to the subjects of the data.
+- A description of the measures that will be taken to address these risks.
 
-GDPR uses the following terms:
+Depending on the specific activity they are engaged in, organizations don't always have to produce a DPIA, but it always offers good evidence that a controller is in compliance with the GDPR.
 
-- Personal data
-  - : Captured data; any information that relates to an individual, generally a user, who can be directly or indirectly identified. This includes names, email addresses, location information, ethnicity, gender, biometric data, religious beliefs, web [cookies](/en-US/docs/Web/HTTP/Guides/Cookies), and even political opinions. Personal data also includes pseudo-anonymous data if it is relatively easy to identify someone from the nominally anonymized data.
+See also [Article 35](https://gdpr.eu/article-35-impact-assessment/) and [Data Protection Impact Assessment (DPIA)](https://gdpr.eu/data-protection-impact-assessment-template/).
 
-- Data processing
-  - : Data actions; any actions performed on data, whether automated or manually, including but not limited to collecting, recording, organizing, structuring, storing, using, and deleting data.
+### Data Protection Officer
 
-- Data subject
-  - : Your user; any person, generally the application user or site visitor, whose data is processed.
+A Data Protection Officer (DPO) is an individual nominated by a controller or processor (and often, although not necessarily, an employee of the controller or processor). They are responsible for informing the controller or processor of its obligations under the GDPR, monitoring its compliance, and interacting with external parties such as data subjects and regulatory authorities.
 
-- Data controller
-  - : You; the person in your organization who handles collectd data and decides why and how personal data is processed.
+Some organizations must appoint a DPO, while for others this is optional: however, it's considered to be a good way to help demonstrate that an organization is compliant.
 
-- Data processor
-  - : Third parties; any third party that processes personal data on your behalf, such as cloud servers, analytics, and email service providers.
+See [Everything you need to know about the GPDR Data Protection Officer (DPO)](https://gdpr.eu/data-protection-officer/).
 
 ## See also
 
-- [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Regulations/CCPA)
-- [Designing for privacy](/en-US/docs/Web/Privacy/Designing_for_privacy)
-- [Privacy](/en-US/docs/Web/Privacy)
+- [GDPR.EU](https://gdpr.eu/)
+- [What is GDPR, the EU’s new data protection law?](https://gdpr.eu/what-is-gdpr/)
+- [GDPR compliance checklist](https://gdpr.eu/checklist/)
