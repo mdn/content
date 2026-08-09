@@ -16,8 +16,7 @@ To insert a shape, you create an element in the document. Different elements cor
 The code to generate that image looks something like this:
 
 ```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="250" xmlns="http://www.w3.org/2000/svg">
 
   <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
   <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>

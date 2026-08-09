@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.mul
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`mul()`** method of the
-{{domxref("CSSNumericValue")}} interface multiplies the `CSSNumericValue` by
-the supplied value.
+The **`mul()`** method of the {{domxref("CSSNumericValue")}} interface multiplies the `CSSNumericValue` by the supplied value.
 
 ## Syntax
 
@@ -33,6 +31,8 @@ A {{domxref('CSSMathProduct')}}
   - : Thrown if an invalid type was passed to the method.
 
 ## Examples
+
+### Basic usage
 
 ```js
 let mathSum = CSS.px("23")

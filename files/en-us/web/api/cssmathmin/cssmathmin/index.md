@@ -8,11 +8,9 @@ status:
 browser-compat: api.CSSMathMin.CSSMathMin
 ---
 
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathMin()`** constructor creates a
-new {{domxref("CSSMathMin")}} object which represents the CSS
-{{CSSXref('min','min()')}} function.
+The **`CSSMathMin()`** constructor creates a new {{domxref("CSSMathMin")}} object that represents the CSS {{CSSXref('min','min()')}} function.
 
 ## Syntax
 

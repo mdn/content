@@ -55,7 +55,7 @@ Unless working with legacy systems (which is unlikely since most will expect the
 ## Description
 
 A `Digest` header was defined in previous specifications, but it proved problematic as the scope of what the digest applied to was not clear.
-Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of a HTTP message.
+Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of an HTTP message.
 As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`) to convey HTTP message content digests and resource representation digests, respectively.
 
 ## Examples
