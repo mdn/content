@@ -49,7 +49,7 @@ These identifiers are typically provided by payment service providers during onb
 - `https://apple.com/apple-pay`
   - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. This payment method is primarily supported in Safari on compatible Apple devices.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home/). Support for this payment method is generally limited to Chromium-based browsers because only Chromium-based browsers support payment handlers that aren't built into the browser.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home/). Support depends on browsers that implement the Payment Handler API (currently primarily Chromium-based browsers).
 
 ## Functions of a payment handler
 
