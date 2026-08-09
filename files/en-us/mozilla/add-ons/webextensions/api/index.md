@@ -34,11 +34,15 @@ let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
-## Browser API differences
+## Browser namespace differences
 
-Starting with browsers based on Chromium 148, the `browser` namespace is supported, except for extensions with a DevTools page (see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)). This change means that all the major browsers support the `browser` namespace.
+Firefox and Safari have always used the `browser` namespace (with promises). Originally, Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) used the `chrome` namespace (with callbacks).
 
-Before Chromium 148, Chrome used the `chrome` namespace, which relied on callbacks rather than promises for asynchronous functions. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` using callbacks (as well as `browser` and promises). This Firefox feature allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here. Mozilla has also written a polyfill that enables code that uses `browser` and promises to work unchanged in older versions of Chrome: <https://github.com/mozilla/webextension-polyfill>.
+Starting with Chrome 148, Chrome also supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions. Also, Chrome began providing promises for asynchronous methods with the introduction of Manifest V3, with complete coverage delivered in Chrome 152.
+
+This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
+
+Before Chrome 148, Chrome uses the `chrome` namespace. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and Promises. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here. A [polyfill](https://github.com/mozilla/webextension-polyfill) that enables code that uses `browser` and promises to work unchanged in Chrome is also available. This polyfill is a no-op in Chrome 148 and later.
 
 Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) and [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities).
 
