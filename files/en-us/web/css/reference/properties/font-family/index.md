@@ -124,6 +124,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
         For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
 
+        > [!NOTE]
+        > When `font-family` is set to the single keyword `monospace` and no `font-size` is set, browsers use the user's monospace font size preference, which is often smaller than the size used for proportional fonts. See [Monospace font size](#monospace_font_size) for details and how to control this.
+
     - `cursive`
       - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
@@ -217,6 +220,42 @@ div {
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
+
+### Monospace font size
+
+Browsers maintain separate default font size preferences for proportional fonts (such as `serif` and `sans-serif`) and for monospace fonts. Typical defaults are `16px` for proportional fonts and `13px` for monospace fonts.
+
+When `font-family` is set to the single keyword `monospace`, browsers apply the monospace size preference. If users have not changed their browser preferences and {{cssxref("font-size")}} is not explicitly set, monospace text may be rendered smaller than surrounding content. The same reduction applies to elements whose user agent stylesheet sets `font-family: monospace`, such as {{HTMLElement("code")}} and {{HTMLElement("pre")}}.
+
+If the `font-family` value includes more than one family, even if the value is `monospace, monospace`, browsers do not apply the monospace font size preference, and will render the text at the inherited `font-size`. Declaring `font-family: monospace, monospace` (or a named monospace font followed by `monospace`) therefore renders at the same size as surrounding proportional text. This behavior is not specified in CSS, but it is interoperable across the major browser engines.
+
+```html
+<p class="proportional">
+  This proportional text is at the default size; generally 16px.
+</p>
+<p class="mono-only">
+  This monospace text is at the preferred size for monospace fonts; generally
+  13px.
+</p>
+<p class="mono-list">
+  This is in "monospace, monospace" font, rendered at the same size as
+  proportional text; generally 16px.
+</p>
+```
+
+```css
+.mono-only {
+  font-family: monospace;
+}
+
+.mono-list {
+  font-family: monospace, monospace;
+}
+```
+
+{{EmbedLiveSample("Monospace_font_size", 600, 120)}}
+
+If you haven't changed your font size in your browser settings, the first and last paragraphs will be the same font-size, rendered at the browser preferred font size. The middle paragraph will be rendered at the preferred mono-space font size, which is generally set to be smaller than the preferred font-size for other text.
 
 ### Valid family names
 
