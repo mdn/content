@@ -1,14 +1,14 @@
 ---
-title: "InteractionContentfulPaint: largestInteractionContentfulPaint() property"
-short-title: largestInteractionContentfulPaint
-slug: Web/API/InteractionContentfulPaint/LargestInteractionContentfulPaint
+title: "InteractionContentfulPaint: largestContentfulPaint() property"
+short-title: largestContentfulPaint
+slug: Web/API/InteractionContentfulPaint/largestContentfulPaint
 page-type: web-api-instance-property
-browser-compat: api.InteractionContentfulPaint.LargestInteractionContentfulPaint
+browser-compat: api.InteractionContentfulPaint.largestContentfulPaint
 ---
 
 {{APIRef("Performance API")}}
 
-The **`largestInteractionContentfulPaint`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the current largest {{domxref("LargestContentfulPaint")}} relevant to this soft navigation.
+The **`largestContentfulPaint`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the current largest {{domxref("LargestContentfulPaint")}} relevant to this soft navigation.
 
 This can remain the same between two `InteractionContentfulPaint` entries for the same interaction if a new contentful paint is smaller than the current largest contentful paint for that interaction. When using this API to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for soft navigations you may only be interested in the largest paint.
 
@@ -20,7 +20,7 @@ A {{domxref("LargestContentfulPaint")}} object representing the largest contentf
 
 ### Logging the largest contentful paint of `InteractionContentfulPaint`
 
-In this example, calling `entry.largestInteractionContentfulPaint` returns a {{domxref("LargestContentfulPaint")}} object.
+In this example, calling `entry.largestContentfulPaint` returns a {{domxref("LargestContentfulPaint")}} object.
 
 ```js
 const observer = new PerformanceObserver((list) => {
@@ -28,7 +28,7 @@ const observer = new PerformanceObserver((list) => {
     console.log(
       "Interaction Contentful Paint:",
       entry.startTime,
-      entry.largestInteractionContentfulPaint,
+      entry.largestContentfulPaint,
     );
   }
 });

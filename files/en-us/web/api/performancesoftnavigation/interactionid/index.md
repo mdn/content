@@ -8,7 +8,7 @@ browser-compat: api.PerformanceSoftNavigation.interactionId
 
 {{APIRef("Performance API")}}
 
-The **`interactionId`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} of the {{domxref("PerformanceEventTiming")}} of the interaction that resulted in the soft navigation.
+The **`interactionId`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} of the {{domxref("PerformanceEventTiming")}} entry representing the interaction that resulted in the soft navigation.
 
 ## Value
 
