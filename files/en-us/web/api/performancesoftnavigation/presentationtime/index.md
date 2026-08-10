@@ -8,9 +8,9 @@ browser-compat: api.PerformanceSoftNavigation.presentationTime
 
 {{APIRef("Performance API")}}
 
-The **`presentationTime`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
+The **`presentationTime`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the painted pixels were actually drawn on the screen.
 
-The `presentationTime` is optional — some browsers may choose always to return `0` or not to expose the value at all. The value is also implementation-dependent — it may differ across browsers that choose to expose it.
+The `presentationTime` is optional — some browsers may always return `0` or not expose the value at all. The value is also implementation-dependent — it may differ across browsers that choose to expose it.
 
 ## Value
 
@@ -18,7 +18,7 @@ A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("operators/null", "null")}} if 
 
 ## Examples
 
-This example uses a {{domxref("PerformanceObserver")}} notifying of new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
+This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {

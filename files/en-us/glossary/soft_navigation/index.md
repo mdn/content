@@ -1,5 +1,5 @@
 ---
-title: Soft Navigation
+title: Soft navigation
 slug: Glossary/Soft_navigation
 page-type: glossary-definition
 sidebar: glossarysidebar
