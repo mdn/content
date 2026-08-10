@@ -64,22 +64,24 @@ You normally create a new `URL` object by specifying the URL as a string when ca
 
 ## Usage notes
 
-The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL:
+The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL.
+
+Note that in the case below "dogs" is the filename segment (because it has no trailing slash), and the relative URL "cats" is interpreted relative to the _directory_ part of the base URL, which is `http://www.example.com/animals/`. See [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references) for more information.
 
 ```js
-const url = new URL("../cats", "http://www.example.com/dogs");
+const url = new URL("cats", "http://www.example.com/animals/dogs");
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"
+console.log(url.pathname); // "/animals/cats"
 ```
 
 The constructor will raise an exception if the URL cannot be parsed to a valid URL.
 You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the {{domxref("URL.canParse_static", "canParse()")}} static method to first check the URL is valid:
 
 ```js
-if (URL.canParse("../cats", "http://www.example.com/dogs")) {
-  const url = new URL("../cats", "http://www.example.com/dogs");
+if (URL.canParse("cats", "http://www.example.com/animals/dogs")) {
+  const url = new URL("cats", "http://www.example.com/animals/dogs");
   console.log(url.hostname); // "www.example.com"
-  console.log(url.pathname); // "/cats"
+  console.log(url.pathname); // "/animals/cats"
 } else {
   console.log("Invalid URL");
 }
@@ -89,7 +91,7 @@ URL properties can be set to construct the URL:
 
 ```js
 url.hash = "tabby";
-console.log(url.href); // "http://www.example.com/cats#tabby"
+console.log(url.href); // "http://www.example.com/animals/cats#tabby"
 ```
 
 URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:

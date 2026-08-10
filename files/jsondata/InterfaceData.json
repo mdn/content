@@ -516,6 +516,10 @@
       "inh": "",
       "impl": []
     },
+    "CrossOriginStorageManager": {
+      "inh": "",
+      "impl": []
+    },
     "Crypto": {
       "inh": "",
       "impl": []
@@ -2317,11 +2321,7 @@
       "impl": []
     },
     "ModelContext": {
-      "inh": "",
-      "impl": []
-    },
-    "ModelContextClient": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "Module": {
@@ -2796,6 +2796,10 @@
       "inh": "Event",
       "impl": []
     },
+    "Proofreader": {
+      "inh": "",
+      "impl": []
+    },
     "ProximitySensor": {
       "inh": "Sensor",
       "impl": []
@@ -3016,6 +3020,14 @@
       "inh": "",
       "impl": []
     },
+    "RTCRtpSFrameDecryptor": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "RTCRtpSFrameEncryptor": {
+      "inh": "",
+      "impl": []
+    },
     "RTCRtpTransceiver": {
       "inh": "",
       "impl": []
@@ -3025,14 +3037,6 @@
       "impl": []
     },
     "RTCSessionDescription": {
-      "inh": "",
-      "impl": []
-    },
-    "RTCSFrameReceiverTransform": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "RTCSFrameSenderTransform": {
       "inh": "",
       "impl": []
     },
@@ -3128,12 +3132,12 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameDecrypterStream": {
+    "SFrameDecryptorStream": {
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameEncrypterStream": {
-      "inh": "EventTarget",
+    "SFrameEncryptorStream": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
@@ -4350,6 +4354,14 @@
     },
     "XRFrame": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUBinding": {
+      "inh": "",
+      "impl": []
+    },
+    "XRGPUSubImage": {
+      "inh": "XRSubImage",
       "impl": []
     },
     "XRHand": {

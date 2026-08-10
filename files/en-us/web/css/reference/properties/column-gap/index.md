@@ -7,11 +7,7 @@ browser-compat: css.properties.column-gap
 sidebar: cssref
 ---
 
-The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns.
-
-Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/Guides/Multicol_layout), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment), it may be used in multi-column, flexible box, and grid layouts.
-
-Early versions of the specification called this property `grid-column-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-column-gap` as an alias for `column-gap`.
+The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns in multi-column, flexible box, and grid layouts.
 
 {{InteractiveExample("CSS Demo: column-gap")}}
 
@@ -65,12 +61,11 @@ column-gap: 20px;
 /* Keyword value */
 column-gap: normal;
 
-/* <length> values */
+/* <length-percentage> values */
 column-gap: 3px;
 column-gap: 2.5em;
-
-/* <percentage> value */
 column-gap: 3%;
+column-gap: calc(3% - 6px);
 
 /* Global values */
 column-gap: inherit;
@@ -80,16 +75,26 @@ column-gap: revert-layer;
 column-gap: unset;
 ```
 
-The `column-gap` property is specified as one of the values listed below.
-
 ### Values
 
 - `normal`
-  - : The browser's default spacing is used between columns. For multi-column layout this is specified as `1em`. For all other layout types it is 0.
+  - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
 - {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap between columns, defined as a {{CSSxRef("&lt;length&gt;")}}. The {{CSSxRef("&lt;length&gt;")}} property's value must be non-negative.
+  - : The size of the gap between columns, as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap between columns, defined as a {{CSSxRef("&lt;percentage&gt;")}}. The {{CSSxRef("&lt;percentage&gt;")}} property's value must be non-negative.
+  - : The size of the gap between columns, defined as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value.
+
+## Description
+
+The `column-gap` property sets the size of the gap between an element's columns. The property specifies a fixed-length gutter between items in a container, separating boxes in the container's inline axis. Negative values are invalid. The default value `normal` resolves to `1em` on multi-column containers, and `0` everywhere else.
+
+Percentages are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
+
+The column gap may contain a visible separator as a gap decoration. If there is a rule between the columns, set with the {{cssxref("column-rule")}} property or {{cssxref("rule")}} shorthand, it will appear in the middle of the gap, but has no effect on the size of the gaps between the column.
+
+A legacy `grid-column-gap` is an alias for `column-gap`. It was initially defined in [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns.
+
+The `column-gap`, along with the {{cssxref("row-gap")}} property, can also be set using the {{cssxref("gap")}} shorthand.
 
 ## Formal definition
 
@@ -225,3 +230,4 @@ div:nth-of-type(3n) {
 - {{CSSxRef("gap")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
 - [Styling Columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

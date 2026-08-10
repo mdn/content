@@ -28,13 +28,6 @@ A {{domxref("HIDConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("HIDConnectionEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("HIDConnectionEvent.device", "device")}} {{ReadOnlyInline}}
-  - : The {{domxref("HIDDevice")}} the event is fired for.
-
 ## Examples
 
 In the following example an event listener is registered to listen for the connection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}.

@@ -19,7 +19,7 @@ The following example shows an HTML document and corresponding "XHTML" document,
     <title>HTML</title>
   </head>
   <body>
-    <p>I am a HTML document</p>
+    <p>I am an HTML document</p>
   </body>
 </html>
 ```

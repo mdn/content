@@ -185,4 +185,5 @@ See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-securit
 
 ## See also
 
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)

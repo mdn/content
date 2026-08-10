@@ -12,7 +12,7 @@ sidebar: http
 {{deprecated_header}}
 
 > [!NOTE]
-> The header was deprecated because it is not widely generated or surfaced to users (see [RFC9111](https://www.rfc-editor.org/rfc/rfc9111#field.warning)).
+> The header was deprecated because it is not widely generated or surfaced to users (see [RFC9111](https://www.rfc-editor.org/info/rfc9111/#field.warning)).
 > Some of the information can be inferred from other headers such as {{httpheader("Age")}}.
 
 The HTTP **`Warning`** {{glossary("request header", "request")}} and {{glossary("response header")}} contains information about possible problems with the status of the message.

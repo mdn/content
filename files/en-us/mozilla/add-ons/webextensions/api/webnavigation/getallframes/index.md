@@ -40,9 +40,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 - `documentId`
-  - : `string`. A UUID of the frame's document.
+  - : `string`. A UUID of the frame's document. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentDocumentId`
-  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `processId` {{optional_inline}} {{deprecated_inline}}

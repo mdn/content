@@ -3,12 +3,10 @@ title: "ReadableStream: from() static method"
 short-title: from()
 slug: Web/API/ReadableStream/from_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.ReadableStream.from_static
 ---
 
-{{APIRef("Streams")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStream.from()`** static method returns a {{domxref("ReadableStream")}} from a provided iterable or async iterable object.
 
