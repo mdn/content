@@ -18,7 +18,7 @@ An integer unique to this page load.
 
 ### Logging the `navigationId` of the soft navigation
 
-This example uses a {{domxref("PerformanceObserver")}} notifying of new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
+This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {

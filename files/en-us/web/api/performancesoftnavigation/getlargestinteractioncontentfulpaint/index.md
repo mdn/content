@@ -12,7 +12,7 @@ The **`getLargestInteractionContentfulPaint()`** method of the {{domxref("Perfor
 
 It is useful to understand `InteractionContentfulPaint`'s that happened before the soft navigation was finalized if the URL change happens later. This avoids having to monitor and buffer all `InteractionContentfulPaint`'s in case they result in a future soft navigation.
 
-The `getLargestInteractionContentfulPaint()` method returns the latest, largest `InteractionContentfulPaint` for the soft navigation so may return different results over time if increasing `InteractionContentfulPaint`s are painted after the soft navigation.
+The `getLargestInteractionContentfulPaint()` method returns the latest, largest `InteractionContentfulPaint` for the soft navigation; it may return different results over time if increasing `InteractionContentfulPaint` entries are recorded after the soft navigation.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A {{domxref("InteractionContentfulPaint")}} object for the largest {{domxref("InteractionContentfulPaint")}} for this soft navigation.
+A {{domxref("InteractionContentfulPaint")}} object representing the largest `InteractionContentfulPaint` for this soft navigation.
 
 ## Examples
 

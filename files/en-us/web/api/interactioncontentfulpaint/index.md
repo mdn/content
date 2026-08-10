@@ -39,13 +39,13 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 The `InteractionContentfulPaint` provides a stream of paint updates attributable to an interaction.
 
-At present this is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}} as used by {{glossary("SPA", "Single Page Applications (SPAs)")}}, but the API has been designed to allow for all paints relevant to an interaction to be emitted.
+At present this is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}}, but the API has been designed to allow for all paints relevant to an interaction to be emitted.
 
-`InteractionContentfulPaint` is needed instead of using the {{domxref("LargestContentfulPaint")}} API as that is only emitted per full page load and is finalized upon interaction (which is the start point for a soft navigation).
+`InteractionContentfulPaint` is needed instead of using the {{domxref("LargestContentfulPaint")}} API as that is only emitted per full page load and is finalized upon interaction (which is a necessary start to a soft navigation).
 
-### Relationship to Event Timing and INP
+### Relationship with Event Timing and INP
 
-The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details of the how long an event takes to make a paint, but does not provide further details of additional paints beyond that. It is intended to measure the responsiveness time during which a user has received no feedback, which should be kep to a minimum and forms the based for metrics like {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
+The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details on how long an event takes to make a paint, but does not provide further details on additional paints beyond that. It is intended to measure the responsiveness time during which a user receives no feedback, which should be kept to a minimum and forms the basis for metrics such as {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
 
 `InteractionContentfulPaint`, despite being similarly named to Interaction to Next Paint, serves a different purpose. `InteractionContentfulPaint` excludes non-contentful paints which do count for Event Timing and INP but also measure additional paints before the first. It allows measure a more complete understanding of the effects and content updates directly attributable to an interaction.
 

@@ -10,7 +10,7 @@ browser-compat: api.PerformanceSoftNavigation.navigationType
 
 The **`navigationType`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the type of the soft navigation — `push`, `reload`, `replace`, or `traverse`.
 
-This returns the same times as {{domxref("NavigateEvent.navigationType")}}.
+This returns the same types as {{domxref("NavigateEvent.navigationType")}}.
 
 ## Value
 
@@ -31,7 +31,7 @@ The possible values are:
 
 ### Logging the navigation type of the soft navigation
 
-This example uses a {{domxref("PerformanceObserver")}} notifying of new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
+This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigation` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {
