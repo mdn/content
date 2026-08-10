@@ -29,11 +29,11 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `"interaction-contentful-paint"`.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("InteractionContentfulPaint.presentationTime")}} - {{domxref("PerformanceEntry.startTime")}}.
+  - : Returns the result of {{domxref("InteractionContentfulPaint.presentationTime")}} - {{domxref("PerformanceEntry.startTime")}}.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the time of the interaction which resulted in the soft navigation.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of the interaction that resulted in the soft navigation.
 
 ## Description
 
@@ -66,12 +66,12 @@ observer.observe({ type: "interaction-contentful-paints", buffered: true });
 
 ### Observing interaction contentful paints specific to a soft navigation
 
-One of the key uses of the `InteractionContentfulPaint` interface is to measure all contentful paints related to a soft navigation to calculate the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for that {{domxref("PerformanceSoftNavigation", "soft navigations")}}.
+One of the key uses of the `InteractionContentfulPaint` interface is to measure all contentful paints related to a {{domxref("PerformanceSoftNavigation", "soft navigation")}} to calculate the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for that soft navigation.
 
-To do this it is recommend to use the {{domxref("PerformanceSoftNavigation.interactionId")}}, rather than the {{domxref("PerformanceSoftNavigation.navigationId")}} since some LCP candidates can happen before the soft navigation is defined (for paints before the URL us updated) and so will have the old `navigationId`
+To do this, it is recommended to use the {{domxref("PerformanceSoftNavigation.interactionId")}} rather than the {{domxref("PerformanceSoftNavigation.navigationId")}}, since some LCP candidates can happen before the soft navigation is defined (for paints, before the URL is updated) and will therefore have the old `navigationId`.
 
 ```js
-let currentNavigationInteractionId = 1045; /// hardcoded in this example
+let currentNavigationInteractionId = 1045; // hardcoded in this example
 
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
@@ -93,4 +93,4 @@ observer.observe({ type: "interaction-contentful-paints", buffered: true });
 
 ## See also
 
-- [Measuring soft navigations](https://developer.chrome.com/docs/web-platform/soft-navigations) on developer.chrome.com
+- [Measuring soft navigations](https://developer.chrome.com/docs/web-platform/soft-navigations) on developer.chrome.com (2026)
