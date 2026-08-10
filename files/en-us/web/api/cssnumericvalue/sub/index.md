@@ -13,13 +13,16 @@ The **`sub()`** method of the {{domxref("CSSNumericValue")}} interface subtracts
 ## Syntax
 
 ```js-nolint
-sub(number)
+sub()
+sub(number1)
+sub(number1, number2)
+sub(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
-  - : Either a number or a {{domxref('CSSMathSum')}}.
+- `number1`, …, `numberN` {{optional_inline}}
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

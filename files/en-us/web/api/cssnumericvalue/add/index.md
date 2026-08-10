@@ -13,12 +13,15 @@ The **`add()`** method of the {{domxref("CSSNumericValue")}} interface adds a su
 ## Syntax
 
 ```js-nolint
-add(number)
+add()
+add(number1)
+add(number1, number2)
+add(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

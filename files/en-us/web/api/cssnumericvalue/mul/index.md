@@ -13,12 +13,15 @@ The **`mul()`** method of the {{domxref("CSSNumericValue")}} interface multiplie
 ## Syntax
 
 ```js-nolint
-mul(number)
+mul()
+mul(number1)
+mul(number1, number2)
+mul(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

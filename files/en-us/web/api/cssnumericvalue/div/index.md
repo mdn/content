@@ -13,12 +13,15 @@ The **`div()`** method of the {{domxref("CSSNumericValue")}} interface divides t
 ## Syntax
 
 ```js-nolint
-div(number)
+div()
+div(number1)
+div(number1, number2)
+div(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
@@ -30,7 +33,7 @@ A {{domxref('CSSMathProduct')}}.
 - {{jsxref("TypeError")}}
   - : Thrown if an invalid type was passed to the method.
 - [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-  - : Thrown if `number` is, or resolves to, 0 or -0.
+  - : Thrown if any of `number1`, …, `numberN` is, or resolves to, 0 or -0.
 
 ## Examples
 
