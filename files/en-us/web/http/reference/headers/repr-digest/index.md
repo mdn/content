@@ -20,7 +20,7 @@ A {{HTTPHeader("Content-Digest")}} applies to the content of a specific message,
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Representation header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header")}}</th>
