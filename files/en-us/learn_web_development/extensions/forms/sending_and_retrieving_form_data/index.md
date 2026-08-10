@@ -93,7 +93,7 @@ The [`GET` method](/en-US/docs/Web/HTTP/Reference/Methods/GET) is the method use
 Consider the following form:
 
 ```html
-<form action="https://www.example.com/greet" method="GET">
+<form action="https://www.example.com" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
@@ -108,9 +108,9 @@ Consider the following form:
 </form>
 ```
 
-Since the `GET` method has been used, you'll see the URL `https://www.example.com/greet?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
+Since the `GET` method has been used, you'll see the URL `https://www.example.com/?say=Hi&to=Mom` appear in the browser address bar when you submit the form.
 
-![The changed url with query parameters after submitting the form with GET method with a "server not found" browser error page](url-parameters.png)
+![The changed url with query parameters after submitting the form with GET method](url-parameters.png)
 
 The data is appended to the URL as a series of name/value pairs. After the URL web address has ended, we include a question mark (`?`) followed by the name/value pairs, each one separated by an ampersand (`&`). In this case, we are passing two pieces of data to the server:
 
@@ -137,7 +137,7 @@ The [`POST` method](/en-US/docs/Web/HTTP/Reference/Methods/POST) is a little dif
 Let's look at an example — this is the same form we looked at in the `GET` section above, but with the [`method`](/en-US/docs/Web/HTML/Reference/Elements/form#method) attribute set to `POST`.
 
 ```html
-<form action="https://www.example.com/greet" method="POST">
+<form action="https://www.example.com" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
     <input name="say" id="say" value="Hi" />
