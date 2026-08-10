@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Iterator.windows
 sidebar: jsref
 ---
 
-The **`windows()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields overlapping element sequences as arrays. A sliding window sweeps across the input iterator; each time, a new element is added to the right while the leftmost element is removed.
+The **`windows()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields a sliding window of elements. Each time the helper is iterated, it yields an array removing the first element from the previous iteration and adding the next element from the original iterator.
 
-For yielding non-overlapping sequences (i.e., chunking), see {{jsxref("Iterator.prototype.chunks()")}}.
+To yield distinct chunks, see {{jsxref("Iterator.prototype.chunks()")}}.
 
 ## Syntax
 

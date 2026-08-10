@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Iterator.chunks
 sidebar: jsref
 ---
 
-The **`chunks()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields non-overlapping element sequences as arrays. Each time, the specified number of elements are retrieved from the underlying iterator and are yielded together as a chunk.
+The **`chunks()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that splits the elements from the original iterator into consecutive array chunks. Each time the helper is iterated, it gets the specified number of elements from the underlying iterator and yields them together.
 
-For yielding overlapping sequences (i.e., sliding window), see {{jsxref("Iterator.prototype.windows()")}}.
+To yield overlapping sequences (i.e., sliding window), see {{jsxref("Iterator.prototype.windows()")}}.
 
 ## Syntax
 
@@ -24,11 +24,11 @@ chunks(chunkSize)
 
 ### Return value
 
-A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). Each time the returned iterator helper's `next()` method is called, the current iterator is advanced by `chunkSize` elements, and those elements are yielded together as an array.
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). Each time the returned iterator helper's `next()` method is called, the original iterator is advanced by `chunkSize` elements, and those elements are yielded together as an array.
 
-If the current iterator has some but fewer than `chunkSize` elements remaining, those elements are still yielded as an array (so the length is less than `chunkSize`), and the iterator helper will be immediately completed the next time `next()` is called.
+If the original iterator has some but fewer than `chunkSize` elements remaining, those elements are still yielded as an array (so the length is less than `chunkSize`), and the iterator helper will be immediately completed the next time `next()` is called.
 
-If the current iterator has no elements remaining, the iterator helper is immediately completed without yielding an empty array.
+If the original iterator has no elements remaining, the iterator helper is immediately completed without yielding an empty array.
 
 ### Exceptions
 
