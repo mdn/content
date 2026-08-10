@@ -47,6 +47,19 @@ In order to determine the value of a clamped property, you need to read its comp
 
 ## Examples
 
+### Basic usage
+
+The following code creates a `CSSMathClamp` instance from three lengths, then reads back its `lower`, `value`, and `upper` properties.
+
+```js
+const clamp = new CSSMathClamp(CSS.px(10), CSS.percent(50), CSS.px(500));
+
+console.log(clamp.constructor.name); // "CSSMathClamp"
+console.log(clamp.lower); // CSSUnitValue {value: 10, unit: "px"}
+console.log(clamp.value); // CSSUnitValue {value: 50, unit: "percent"}
+console.log(clamp.upper); // CSSUnitValue {value: 500, unit: "px"}
+```
+
 ### `clamp()` representations
 
 This example shows how {{CSSXref("clamp","clamp()")}} is represented by a {{domxref("CSSUnitValue")}} or a `CSSMathClamp`, depending on whether all of its arguments are absolute values.
@@ -65,10 +78,8 @@ First we declare a {{htmlelement("div")}} element, `#demoBox`, on which we'll se
 
 #### CSS
 
-The CSS defines the `width` and `font-size` of the demo box:
-
-- `width` is set using a `clamp()` whose three arguments are all absolute lengths, so the browser can resolve it to a single fixed value immediately.
-- `font-size` is set using a `clamp()` whose preferred value uses the relative unit `vw`, so the browser can't resolve it until layout (this will be represented by a `CSSMathClamp`).
+The `width` of the box is set using a `clamp()` whose three arguments are all absolute lengths, so the browser can resolve it to a single fixed value immediately.
+`font-size` is set using a `clamp()` whose preferred value uses the relative unit `vw`, so the browser can't resolve it until layout (this will be represented by a `CSSMathClamp`).
 
 ```css
 #demoBox {

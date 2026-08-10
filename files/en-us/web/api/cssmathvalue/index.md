@@ -7,13 +7,13 @@ browser-compat: api.CSSMathValue
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) a base class for classes representing complex numeric values.
+The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is a base class for classes representing complex numeric values.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-- {{domxref('CSSMathValue.operator')}}
+- {{domxref('CSSMathValue.operator')}} {{ReadOnlyInline}}
   - : Indicates the operator that the current subtype represents.
 
 ## Static methods

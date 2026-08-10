@@ -15,13 +15,22 @@ The **`CSSMathProduct()`** constructor creates a {{domxref("CSSMathProduct")}} o
 ## Syntax
 
 ```js-nolint
-new CSSMathProduct(args)
+new CSSMathProduct(arg1)
+new CSSMathProduct(arg1, arg2)
+new CSSMathProduct(arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
-- `args`
-  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double integer or a {{domxref('CSSNumericValue')}}.
+- `arg1`, …, `argN`
+  - : A list of numbers or {{domxref("CSSNumericValue")}} objects.
+
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if no arguments are passed.
+- {{jsxref("TypeError")}}
+  - : Thrown if `arg1`, …, `argN` have incompatible types, so they cannot be multiplied.
 
 ## Specifications
 

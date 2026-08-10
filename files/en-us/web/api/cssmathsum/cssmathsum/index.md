@@ -15,13 +15,22 @@ The **`CSSMathSum()`** constructor creates a new {{domxref("CSSMathSum")}} objec
 ## Syntax
 
 ```js-nolint
-new CSSMathSum(values)
+new CSSMathSum(arg1)
+new CSSMathSum(arg1, arg2)
+new CSSMathSum(arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
-- `values`
+- `arg1`, …, `argN`
   - : One or more numbers (which are wrapped into {{domxref("CSSUnitValue")}}s of `unit: "number"`) or {{domxref("CSSNumericValue")}} objects.
+
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if no arguments are passed.
+- {{jsxref("TypeError")}}
+  - : Thrown if `arg1`, …, `argN` have incompatible types, so they cannot be summed.
 
 ## Specifications
 
