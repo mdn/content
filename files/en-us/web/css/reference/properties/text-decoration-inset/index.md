@@ -91,7 +91,7 @@ The `text-decoration-inset` property allows you to adjust the start and/or end p
 A single `<length-percentage>` value will set the inset (if positive) or outset (if negative) on the start and end positions of the text decoration. To set the start and end positions separately, you can use two `<length-percentage>` values — the first one applies to the start position of the text decoration and the second one applies to the end.
 
 > [!NOTE]
-> A percentage value specifies the size of the inset as a percentage of the used {{cssxref("font-size")}} and will scale with changes in the font.
+> A percentage value depends on the value of {{cssxref("box-decoration-break")}}, if it is set to `slice` (the initial value) it refers to the inline size of the decorating box or if it is set to `clone` it refers to each individual box fragment.
 
 The `text-decoration-inset` property can also take the `auto` keyword. This causes the browser to inset the text decoration start and end points to ensure that, if two decorated text boxes appear side-by-side, they do not appear to have a single text decoration. The `auto` value is particularly important when rendering Chinese text, where underlining is used to [punctuate proper nouns](https://www.w3.org/International/clreq/#id88), and adjacent proper nouns should have separate underlines. See [Effect of the `auto` value](#effect_of_the_auto_value) for an example.
 
