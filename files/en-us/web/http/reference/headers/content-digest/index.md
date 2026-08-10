@@ -17,6 +17,14 @@ In certain cases, a {{HTTPHeader("Repr-Digest")}} can be used to validate the in
 For example, in [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the content digest will be different for each part.
 For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message.
 
+> [!NOTE]
+> `Content-Digest` supports several hashing algorithms, some of which are deprecated for security reasons.
+> See [Section 5 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-5) for the relevant security considerations.
+
+> [!NOTE]
+> A `Digest` header was defined in earlier specifications, but it didn't distinguish between a message's content and a resource's representation.
+> It was obsoleted by `Content-Digest` and `Repr-Digest`.
+
 <table class="properties">
   <tbody>
     <tr>
@@ -49,12 +57,6 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
   - : The digest in bytes of the message content using the `<digest-algorithm>`.
     The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use {{Glossary("base64")}} encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
     In contrast to earlier drafts of the specification, the standard base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/info/rfc8941/#name-byte-sequences).
-
-## Description
-
-A `Digest` header was defined in previous specifications, but it proved problematic as the scope of what the digest applied to was not clear.
-Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of an HTTP message.
-As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`) to convey HTTP message content digests and resource representation digests, respectively.
 
 ## Examples
 
