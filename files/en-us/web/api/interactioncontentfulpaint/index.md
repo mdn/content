@@ -20,7 +20,7 @@ This interface directly defines the following properties:
 - {{domxref("InteractionContentfulPaint.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The id of the navigation this paint is attributable to.
 - {{domxref("InteractionContentfulPaint.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the first rendering phase ended and the paint phase started.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the first rendering phase ended and the paint phase started.
 - {{domxref("InteractionContentfulPaint.presentationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the first painted pixels were actually drawn on the screen.
 
