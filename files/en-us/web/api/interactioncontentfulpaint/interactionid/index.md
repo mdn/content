@@ -18,7 +18,7 @@ An integer matching the {{domxref("PerformanceEventTiming.interactionId", "inter
 
 ### Logging the `interactionId` of `InteractionContentfulPaint`
 
-This example uses a {{domxref("PerformanceObserver")}} notifying of new `interaction-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
+This example uses a {{domxref("PerformanceObserver")}} to log new `interaction-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
 const observer = new PerformanceObserver((list) => {

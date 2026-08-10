@@ -7,11 +7,11 @@ sidebar: glossarysidebar
 
 A soft navigation is a client-side routing navigation used by {{Glossary("SPA", "Single Page Applications (SPAs)")}} to load new content.
 
-Typically clicking a link on a webpage loads a completely new page (a "hard navigation") which can result in considerable unnecessary work, and loss of stat, when navigating between similar pages on a site.
+Typically, clicking a link on a webpage loads a completely new page (a "hard navigation"), which can result in considerable unnecessary work, and loss of state when navigating between similar pages on a site.
 
-Modern JavaScript frameworks use the concept of client-side routing to intercept the link click, update the content on the current page (perhaps after making [Fetch](/en-US/docs/Web/API/Fetch_API) calls), and then updating the URL in the address bar while pushing a history state.
+Modern JavaScript frameworks use client-side routing to intercept link clicks, update the content on the current page (perhaps after making [Fetch](/en-US/docs/Web/API/Fetch_API) calls), and then update the URL in the address bar while pushing a history state entry for the resulting navigation.
 
-The net effort is what appears to be a navigation to the user (but hopefully faster), but which the browser will see as the same page.
+The net effect appears to be a navigation to the user (but hopefully faster than a hard navigation), which the browser will see as the same page.
 
 The {{domxref("PerformanceSoftNavigation")}} and {{domxref("InteractionContentfulPaint")}} APIs allow measurement of soft navigations outside of a framework for performance metrics.
 
