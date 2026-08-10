@@ -14,12 +14,17 @@ What exactly counts as "content" are somewhat heuristic-based and differs betwee
 Whether a paint is "contentful" also diffs between metrics:
 
 - FCP [includes most elements that paint](https://w3c.github.io/paint-timing/#contentful) including `<canvas>` and `<svg>` elements. Skeleton screens using just `<div>` elements would not count as contentful. This is because FCP is intended to measure when the page starts to load.
-- LCP has stricter criteria and only includes [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements and so does not include `<canvas>` nor `<svg>` elements. It also excludes low-entropy images. This is because LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering.
-
-Other metrics like {{domxref("InteractionContentfulPaint", "Interaction Contentful Paint")}}, {{domxref("PerformanceSoftNavigation", "soft navigations")}}, {{domxref("PerformanceElementTiming", "Element Timing")}}, and the upcoming [Container Timing](https://github.com/WICG/container-timing) follow the LCP model.
+- LCP has stricter criteria and only includes [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements and so does not include `<canvas>` nor `<svg>` elements, since those are more difficult to measure if representative of when the largest content of the page if drawn. It also excludes low-entropy images. This is because LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering.
+- Other metrics like {{domxref("InteractionContentfulPaint", "Interaction Contentful Paint")}}, {{domxref("PerformanceSoftNavigation", "soft navigations")}}, {{domxref("PerformanceElementTiming", "Element Timing")}}, and the upcoming [Container Timing](https://github.com/WICG/container-timing) are closer to the LCP model with some small differences like low-entropy images not being excluded.
 
 ## See also
 
 - Related glossary terms:
   - {{Glossary("First_contentful_paint")}}
   - {{Glossary("Largest_contentful_paint")}}
+- Performance APIs
+  - {{domxref("InteractionContentfulPaint")}}
+  - {{domxref("LargestContentfulPaint")}}
+  - {{domxref("PerformanceElementTiming")}}
+  - {{domxref("PerformancePaintTiming")}}
+  - {{domxref("PerformanceSoftNavigation")}}
