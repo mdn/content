@@ -87,7 +87,7 @@ The `font-weight` property is specified using either a `<font-weight-absolute>` 
 
 ### Values
 
-This property is specified as one of the following keyword values or a `<number>`:
+his property is specified as a single value from the following list:
 
 - `normal`
   - : Normal font weight. Same as `400`.

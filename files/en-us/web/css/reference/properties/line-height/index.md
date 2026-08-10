@@ -73,7 +73,7 @@ line-height: unset;
 
 ### Values
 
-This property is specified as a `<number>`,`<length>`, `<percentage>`, or the keyword `normal`:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly **`1.2`**, depending on the element's `font-family`.

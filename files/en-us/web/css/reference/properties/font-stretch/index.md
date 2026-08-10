@@ -93,7 +93,7 @@ font-stretch: unset;
 
 ### Values
 
-This property is specified as a {{cssxref("&lt;percentage&gt;")}} value or one of the following keyword values:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Specifies a normally condensed font face.

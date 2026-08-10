@@ -74,7 +74,7 @@ The `font-style` property is specified as a single keyword chosen from the list 
 
 ### Values
 
-This property is specified as one of the following keyword values, with `oblique` optionally followed by an `<angle>`:
+This property is specified as one of the following keyword values. The `oblique` keyword can optionally be followed by an `<angle>`:
 
 - `normal`
   - : Selects a font that is classified as `normal` within a {{Cssxref("font-family")}}.

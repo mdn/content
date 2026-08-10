@@ -29,7 +29,7 @@ line-height-step: unset;
 
 ### Values
 
-This property is specified as a `<length>`:
+This property is specified as the following value:
 
 - `<length>`
   - : The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height step.

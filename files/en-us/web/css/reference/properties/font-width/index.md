@@ -97,7 +97,7 @@ font-width: unset;
 
 ### Values
 
-This property is specified as one of the following keyword values or a `<percentage>` value:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Specifies a normally condensed font face.

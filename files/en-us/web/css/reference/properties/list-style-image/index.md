@@ -97,7 +97,7 @@ list-style-image: unset;
 
 ### Values
 
-This property is specified as an `<image>` or the keyword `none`:
+This property is specified as a single value from the following list:
 
 - {{cssxref("image")}}
   - : A valid image to use as the marker.

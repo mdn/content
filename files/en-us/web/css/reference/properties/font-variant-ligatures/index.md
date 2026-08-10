@@ -80,7 +80,7 @@ font-variant-ligatures: unset;
 
 ### Values
 
-This property is specified as `normal`, `none`, or a space-separated list of the following values:
+This property is specified as a single keyword or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword activates the usual ligatures and contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language, and kind of script. This is the default value.

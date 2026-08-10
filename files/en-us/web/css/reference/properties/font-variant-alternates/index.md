@@ -39,7 +39,7 @@ font-variant-alternates: unset;
 
 ### Values
 
-This property is specified either as `normal` or as a space-separated list of the following values and functions:
+This property is specified as `normal` or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword deactivates alternate glyphs.
