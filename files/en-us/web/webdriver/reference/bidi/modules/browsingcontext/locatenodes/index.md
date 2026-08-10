@@ -99,12 +99,13 @@ The `params` field contains:
         - `"partial"`: The search text must match only part of the node's text.
 
     - `maxDepth` {{optional_inline}}
-      - : A non-negative integer that limits the number of levels of descendant nodes that are searched for matching text before matching on their own text content.
+      - : A non-negative integer that specifies the maximum number of levels of descendants to search.
+        At the deepest allowed level, a node is matched on its own rendered text instead of being searched further.
         This field is available only for `type: "innerText"`.
         If not specified, there is no limit on the number of levels searched.
 
 - `maxNodeCount` {{optional_inline}}
-  - : A positive integer that limits the number of nodes returned.
+  - : A positive integer that specifies the maximum number of nodes returned.
     If not specified, all matching nodes are returned.
 
 - `serializationOptions` {{optional_inline}}
@@ -170,8 +171,8 @@ The `result` object in the response contains the following fields:
           - : A string that specifies the [mode of the shadow root](/en-US/docs/Web/API/ShadowRoot/mode) attached to the node.
             This field is present only for shadow root nodes.
             It can take one of the following values:
-            - `"closed"`: Nodes inside the shadow root cannot be accessed from JavaScript outside the root.
-            - `"open"`: Elements of the shadow root are accessible from JavaScript outside the root.
+            - `"closed"`: Indicates that nodes inside the shadow root cannot be accessed from JavaScript outside the root.
+            - `"open"`: Indicates that nodes inside the shadow root are accessible from JavaScript outside the root.
         - `namespaceURI` {{optional_inline}}
           - : A string that contains the [namespace URI](/en-US/docs/Web/API/Element/namespaceURI) of the node.
             This field is present only for element nodes.
