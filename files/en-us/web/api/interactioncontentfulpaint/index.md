@@ -16,7 +16,7 @@ This interface directly defines the following properties:
 - {{domxref("InteractionContentfulPaint.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The id of the interaction that resulted in the paint.
 - {{domxref("InteractionContentfulPaint.largestInteractionContentfulPaint")}} {{Experimental_Inline}}
-  - : Returns returns details of the largest {{domxref("LargestContentfulPaint")}} for the interaction. This can remain the same between two `InteractionContentfulPaint` entries for the same interaction if a new contentful paint is smaller than the current largest contentful paint for that interaction.
+  - : Returns details of the largest {{domxref("LargestContentfulPaint")}} for the interaction. This can remain the same between two `InteractionContentfulPaint` entries for the same interaction if a new contentful paint is smaller than the current largest contentful paint for that interaction.
 - {{domxref("InteractionContentfulPaint.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The id of the navigation this paint is attributable to.
 - {{domxref("InteractionContentfulPaint.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
