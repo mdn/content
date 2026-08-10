@@ -238,13 +238,9 @@ CSS property reference pages include a "Syntax" section, which used to be found 
 
 Inside the syntax section you'll find the following contents.
 
-#### Optional explanation text
-
-Some CSS properties are self-explanatory and don't really need extra explanation (for example {{CSSxRef("color")}}). Some on the other hand are more complex and need explanation on syntax order, including multiple values, etc. (see {{CSSxRef("animation")}}). In such cases you can include extra explanation before any of the subsections.
-
 #### Values section
 
-Next, you should include a "Values" section — this contains a description list explaining the CSS value types that make up the value of the property. Each value type should be wrapped in angle brackets and linked to the MDN reference page covering that value type if a page exists for it. For example, see the {{CSSxRef("border")}} property reference — this reference three value types, only one of which is linked ({{CSSxRef("&lt;color&gt;")}}).
+Next, you should include a "Values" section — this contains an introductory sentence explaining the syntax order, multiple values, etc., followed by a definition list of the CSS value types that make up the value of the property. Each value type should be wrapped in angle brackets and linked to the MDN reference page covering that value type if a page exists for it. For example, see the {{CSSxRef("border")}} property reference — this reference three value types, which are linked to their respective data-type reference pages.
 
 #### Formal syntax
 
