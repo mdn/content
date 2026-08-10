@@ -327,7 +327,9 @@ The rule's `condition` matches `main_frame` requests to `useragentstring.com`. T
 
 Host permissions for `useragentstring.com` are required to modify headers on requests to that domain.
 
-To test it out, [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), open [useragentstring.com](https://useragentstring.com/) and check that it identifies the browser as Firefox. Then reload [useragentstring.com](https://useragentstring.com/), and see that the site now identifies the browser as Opera.
+To test it out, open [useragentstring.com](https://useragentstring.com/) and check that it identifies the browser as Firefox. Then [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), refresh [useragentstring.com](https://useragentstring.com/), and see that the site now identifies the browser as Opera.
+
+To see the importance of host permissions, open `about:addons`, locate your extension, and in its hamburger menu, select **Manage**. Open the Permissions and data tab and turn off "Access your data for https://useragentstring.com". Reload [useragentstring.com](https://useragentstring.com/), and see that, without permission to access data for the site, it now identifies the browser as Firefox.
 
 ![useragentstring.com showing details of the modified user agent string](modified_request_header.png)
 
