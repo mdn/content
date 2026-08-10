@@ -58,86 +58,138 @@ As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`
 
 ## Examples
 
-### User-agent request for a SHA-256 Content-Digest
+### A SHA-256 Content-Digest in a response
 
-In the following example, a user-agent requests a digest of the message content with a preference for SHA-256, followed by SHA-1 at a lower preference:
+A user-agent requests a resource:
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
-Want-Content-Digest: sha-256=10, sha=3
 ```
 
-The server responds with a `Content-Digest` of the message content using the SHA-256 algorithm:
+The server responds with a `Content-Digest` of the message content using the SHA-256 algorithm.
+The digest is calculated over the exact bytes of the message body, `{"hello": "mdn"}` (16 bytes, with no trailing line break):
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"hello": "world"}
+{"hello": "mdn"}
 ```
 
 ### Identical Content-Digest and Repr-Digest values
 
-A user-agent requests a resource without a `Want-Content-Digest` field:
+A user-agent requests a resource:
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
 ```
 
-The server is configured to send unsolicited digest headers in responses.
-The `Repr-Digest` and `Content-Digest` fields have matching values because they are using the same algorithm, and in this case the whole resource is sent in one message:
+The server responds with a `Content-Digest` and `Repr-Digest` of the message content using the SHA-256 algorithm.
+The `Repr-Digest` and `Content-Digest` fields have matching values because they are calculated using the same algorithm over the same bytes, `{"hello": "mdn"}` (16 bytes), and in this case the entire representation is sent in one message:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 19
-Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Content-Length: 16
+Content-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 
-{"hello": "world"}
+{"hello": "mdn"}
 ```
 
 ### Diverging Content-Digest and Repr-Digest values
 
-If the same request is repeated as the previous example, but uses a {{HTTPMethod("HEAD")}} method instead of a {{HTTPMethod("GET")}}, the `Repr-Digest` and `Content-Digest` fields will be different:
+A user-agent requests only part of a resource using a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests):
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
+Range: bytes=0-7
 ```
 
-The `Repr-Digest` value will be the same as before, but there is no message body, so a different `Content-Digest` would be sent by the server:
+The server returns a {{HTTPStatus("206", "206 Partial Content")}} response containing only the requested bytes, `{"hello"` (8 bytes), as the message content.
+`Content-Digest` covers only those bytes, while `Repr-Digest` still covers the entire representation, `{"hello": "mdn"}` (16 bytes), so the two values differ:
+
+```http
+HTTP/1.1 206 Partial Content
+Content-Type: application/json
+Content-Range: bytes 0-7/16
+Content-Digest: sha-256=:pKQv0IAKChzGfyfxu5TNqcnvxIzaG4XICf6NQnB1YhY=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+### Digest of a GZIP-encoded representation
+
+If the client indicates it accepts GZIP compression, the server may select a GZIP-encoded representation of the same resource:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Accept-Encoding: gzip
+```
+
+`Content-Encoding` identifies a different representation of the resource, so the digest is calculated over the encoded bytes, not the original unencoded text.
+Here, the 16-byte JSON body `{"hello": "mdn"}` is GZIP-compressed to a 36-byte representation, and `Content-Digest` and `Repr-Digest` are calculated over those 36 bytes (shown here as hex for readability):
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Encoding: gzip
+Content-Length: 36
+Content-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+Repr-Digest: sha-256=:6Gx6u1ZhhahDLs06Zc6ZEqXxUy8RNjy18CaMucjKOFk=:
+
+1F 8B 08 00 00 00 00 00 02 FF AB 56 CA 48 CD C9 C9 57 B2 52 50 CA 4D C9 53 AA 05 00 35 D8 1D 91 10 00 00 00
+```
+
+### Content-Digest handling of no content
+
+If the same resource is requested with a {{HTTPMethod("HEAD")}} method instead of a {{HTTPMethod("GET")}}, the response has no content:
+
+```http
+HEAD /items/123 HTTP/1.1
+Host: example.com
+```
+
+The `Repr-Digest` value is the same as before, since it always applies to the full representation, `{"hello": "mdn"}`.
+However, the server will not send any content in the response and can omit the `Content-Digest` header:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
+```
+
+Instead of omitting `Content-Digest` when there is no content, a server can explicitly compute it over an empty string.
+Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
-Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
-### User-agent sending a Content-Digest in requests
+### User-agent sending digests in requests
 
 In the following example, a user-agent sends a digest of the message content using SHA-512.
-It sends both a `Content-Digest` and a `Repr-Digest`, which differ from each other because of the `Content-Encoding`:
+The digest is calculated over the exact bytes of the message body, `{"recipient":"Alex","amount":900000000}` (39 bytes, with no trailing line break).
+Since the entire representation is sent in this single request, `Content-Digest` and `Repr-Digest` have the same value:
 
 ```http
 POST /bank_transfer HTTP/1.1
 Host: example.com
-Content-Encoding: zstd
-Content-Digest: sha-512=:ABC…=:
-Repr-Digest: sha-512=:DEF…=:
+Content-Type: application/json
+Content-Length: 39
+Content-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
+Repr-Digest: sha-512=:PlrIZYU3M76B30wGsL0h6O79BoxHTdAG+RnMPjOyECTSJCN/KnYdOrSCCWjxV3ckkyvdRmZ52//M3WbehCXcPw==:
 
-{
- "recipient": "Alex",
- "amount": 900000000
-}
+{"recipient":"Alex","amount":900000000}
 ```
-
-The server may calculate a digest of the content it has received and compare the result with the `Content-Digest` or `Repr-Digest` headers to validate the message integrity.
-In requests like the example above, the `Repr-Digest` is more useful to the server as this is calculated over the decoded representation and would be more consistent in different scenarios.
 
 ## Specifications
 
