@@ -188,18 +188,6 @@ const [first, ...others2] = [1, 2, 3];
 console.log(others2); // [2, 3]
 ```
 
-Object values collected by a rest property or rest element are not cloned. The rest binding contains references to the same objects as the source, so mutations to these objects are visible through both the source and the rest binding.
-
-```js
-const source = { a: 1, nested: { value: 2 } };
-const { a, ...rest } = source;
-
-console.log(rest.nested === source.nested); // true
-
-rest.nested.value = 3;
-console.log(source.nested.value); // 3
-```
-
 The rest property must be the last in the pattern, and must not have a trailing comma.
 
 ```js-nolint example-bad
@@ -208,6 +196,8 @@ const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
 ```
+
+Like any other JavaScript language feature, there is no implicit deep-copying. The rest property creates a new object (or array), but all its member values, if they are object references, remain the same.
 
 ## Examples
 
