@@ -79,7 +79,7 @@ sidebar: mdnsidebar
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
-This should ideally be one or two short sentences.
+This should ideally be one or two short sentences. All other explanations, if any, should be in the Description section. 
 
 ## Try it
 
@@ -104,6 +104,8 @@ Include the common use cases as a code block and describe the component subvalue
 
 Include one term and definition for each subvalue.
 
+This property is specified as \[the following value] || \[one of the following keyword values]:
+
 - `subvalue1`
   - : Include a description of the subvalue, its data type, and what it represents.
 - `subvalue2`
@@ -114,7 +116,7 @@ Include one term and definition for each subvalue.
 
 ## Description
 
-This is an optional section to include a description of the property and explain how it works. Use this section to explain related terms and add use cases for the property.
+Include a description of the property and explain how it works. Use this section to explain related terms and add use cases for the property.
 
 ## Formal definition
 
@@ -138,7 +140,7 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 
 ### Add a descriptive heading
 
-Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore is not a good heading. That said, "Basic usage" is okay as the first heading, when complex examples follow, when only demonstrating value assignment. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
@@ -189,4 +191,5 @@ Include links to reference pages and guides related to the current property. For
 
 - link1
 - link2
+- ModuleLink 
 - external_link (year)
