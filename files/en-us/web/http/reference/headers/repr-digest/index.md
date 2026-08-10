@@ -38,7 +38,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>
 Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-valueN>
 ```
 
-`Repr-Digest` is a [structured field](https://www.rfc-editor.org/info/rfc9651/) Dictionary, whose keys are `<digest-algorithm>` and values are `<digest-value>`.
+`Repr-Digest` is a _structured field dictionary_ ({{rfc("9651","Structured Field Values for HTTP")}}), whose keys are `<digest-algorithm>` and values are `<digest-value>`.
 
 ## Directives
 
