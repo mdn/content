@@ -19,7 +19,7 @@ At present this is scoped to increasing paint sizes, so it can be used to measur
 
 ### Relationship to Event Timing and INP
 
-The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details of the how long an event takes to make a paint, but does not provide further details of additional paints beyond that. It is intended to measure the responsiveness time during which a user has received no feedback, which should be kep to a minimum and forms the based for metrics like {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
+The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details on how long an event takes to make a paint, but does not provide further details on additional paints beyond that. It is intended to measure the responsiveness time during which a user receives no feedback, which should be kept to a minimum and forms the basis for metrics such as {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
 
 `InteractionContentfulPaint`, despite being similarly named to Interaction to Next Paint, serves a different purpose. `InteractionContentfulPaint` excludes non-contentful paints which do count for Event Timing and INP but also measure additional paints before the first. It allows measure a more complete understanding of the effects and content updates directly attributable to an interaction.
 
