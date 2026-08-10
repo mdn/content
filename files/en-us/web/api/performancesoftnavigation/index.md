@@ -9,23 +9,6 @@ browser-compat: api.PerformanceSoftNavigation
 
 The `PerformanceSoftNavigation` interface provides timing information about a "soft navigation" for client-side routing as using by {{Glossary("SPA", "single-page application (SPA)")}} sites.
 
-## Description
-
-The `PerformanceSoftNavigation` interface is driven by the browser observing the following:
-
-- A user interaction
-- A visible paint updating the screen
-- A URL update to the user's address bar
-
-Having the browser drive this rather than by the routing framework calling an API to emit this entry allows the performance timing to be measured consistently regardless of how different applications may handle the navigation (for example, updating the URL first or at the end of the navigation processing).
-
-The `PerformanceSoftNavigation` interface allows measuring of other performance metrics such as:
-
-- {{Glossary("First Contentful Paint", "First Contentful Paint (FCP)")}} which can be measured as the first paint from the soft navigation time.
-- {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} which can be measured through the {{domxref("InteractionContentfulPaint")}} for the soft navigation.
-- {{Glossary("CLS", "Cumulative Layout Shift (CLS)")}} which can be calculated between navigations.
-- {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}} which can be calculated between navigations.
-
 ## Instance properties
 
 This interface directly defines the following properties:
@@ -58,6 +41,23 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 - {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} {{Experimental_Inline}}
   - : Returns returns the current largest {{domxref("InteractionContentfulPaint")}} for this soft navigation.
+
+## Description
+
+The `PerformanceSoftNavigation` interface is driven by the browser observing the following:
+
+- A user interaction
+- A visible paint updating the screen
+- A URL update to the user's address bar
+
+Having the browser drive this rather than by the routing framework calling an API to emit this entry allows the performance timing to be measured consistently regardless of how different applications may handle the navigation (for example, updating the URL first or at the end of the navigation processing).
+
+The `PerformanceSoftNavigation` interface allows measuring of other performance metrics such as:
+
+- {{Glossary("First Contentful Paint", "First Contentful Paint (FCP)")}} which can be measured as the first paint from the soft navigation time.
+- {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} which can be measured through the {{domxref("InteractionContentfulPaint")}} for the soft navigation.
+- {{Glossary("CLS", "Cumulative Layout Shift (CLS)")}} which can be calculated between navigations.
+- {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}} which can be calculated between navigations.
 
 ## Examples
 

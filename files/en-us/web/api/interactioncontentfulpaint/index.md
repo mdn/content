@@ -9,20 +9,6 @@ browser-compat: api.InteractionContentfulPaint
 
 The `InteractionContentfulPaint` interface provides timing information about contentful paints attributable to an interaction.
 
-## Description
-
-The `InteractionContentfulPaint` provides a stream of paint updates attributable to an interaction.
-
-At present this is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}}, but the API has been designed to allow for all paints relevant to an interaction to be emitted.
-
-`InteractionContentfulPaint` is needed instead of using the {{domxref("LargestContentfulPaint")}} API as that is only emitted per full page load and is finalized upon interaction (which is a necessary start to a soft navigation).
-
-### Relationship to Event Timing and INP
-
-The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details of the how long an event takes to make a paint, but does not provide further details of additional paints beyond that. It is intended to measure the responsiveness time during which a user has received no feedback, which should be kep to a minimum and forms the based for metrics like {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
-
-`InteractionContentfulPaint`, despite being similarly named to Interaction to Next Paint, serves a different purpose. `InteractionContentfulPaint` excludes non-contentful paints which do count for Event Timing and INP but also measure additional paints before the first. It allows measure a more complete understanding of the effects and content updates directly attributable to an interaction.
-
 ## Instance properties
 
 This interface directly defines the following properties:
@@ -48,6 +34,20 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the time of the interaction which resulted in the soft navigation.
+
+## Description
+
+The `InteractionContentfulPaint` provides a stream of paint updates attributable to an interaction.
+
+At present this is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}} as used by {{glossary("SPA", "Single Page Applications (SPAs)")}}, but the API has been designed to allow for all paints relevant to an interaction to be emitted.
+
+`InteractionContentfulPaint` is needed instead of using the {{domxref("LargestContentfulPaint")}} API as that is only emitted per full page load and is finalized upon interaction (which is the start point for a soft navigation).
+
+### Relationship to Event Timing and INP
+
+The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details of the how long an event takes to make a paint, but does not provide further details of additional paints beyond that. It is intended to measure the responsiveness time during which a user has received no feedback, which should be kep to a minimum and forms the based for metrics like {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
+
+`InteractionContentfulPaint`, despite being similarly named to Interaction to Next Paint, serves a different purpose. `InteractionContentfulPaint` excludes non-contentful paints which do count for Event Timing and INP but also measure additional paints before the first. It allows measure a more complete understanding of the effects and content updates directly attributable to an interaction.
 
 ## Examples
 
