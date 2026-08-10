@@ -83,11 +83,9 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-The `font-weight` property is specified using either a `<font-weight-absolute>` value or a relative weight value, as listed below.
-
 ### Values
 
-his property is specified as a single value from the following list:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Normal font weight. Same as `400`.
