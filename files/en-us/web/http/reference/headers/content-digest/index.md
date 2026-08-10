@@ -39,6 +39,8 @@ Content-Digest: <digest-algorithm>=<digest-value>
 Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>, …
 ```
 
+`Content-Digest` is a [structured field](https://www.rfc-editor.org/info/rfc9651/) Dictionary, whose keys are `<digest-algorithm>` and values are `<digest-value>`.
+
 ## Directives
 
 - `<digest-algorithm>`
