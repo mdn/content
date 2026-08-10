@@ -11,7 +11,7 @@ This is used to differentiate less important paints that contain no useful conte
 
 What exactly counts as "content" is somewhat difficult to define precisely and so is to some extend heuristic-based and may not perfectly align to user perception or developer intent. These means some paints drawn to screen in different ways (for example, using different HTML elements), may count as "contentful" or not even if they appear to be the same to the user.
 
-Whether a paint count or not also differs slightly between contentful metrics:
+The types of contentful paints considered, also differs slightly between the metrics:
 
 - FCP is intended to measure when the page starts to load. It therefore [includes most elements that paint](https://w3c.github.io/paint-timing/#contentful) including `<canvas>` and `<svg>` elements. Skeleton screens using just `<div>` elements would not count as contentful.
 - LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering. It has stricter criteria and only includes [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements and so does not include `<canvas>` nor `<svg>` elements, since those are more difficult to measure if representative of when the largest content of the page if drawn. Furthermore, LCP also excludes low-entropy images.
