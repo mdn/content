@@ -39,7 +39,7 @@ hyphenate-limit-chars: unset;
 
 ### Values
 
-This property is specified as one to three values from the following list:
+This property is specified as one to three numeric or `auto` values:
 
 - `<number> <number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.
