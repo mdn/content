@@ -62,6 +62,14 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/input
