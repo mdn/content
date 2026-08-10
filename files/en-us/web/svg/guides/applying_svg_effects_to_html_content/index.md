@@ -193,7 +193,6 @@ And some more filters:
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix
-      filterRes="100 100"
       color-interpolation-filters="sRGB"
       order="3"
       kernelMatrix="0 -1 0

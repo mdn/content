@@ -3,9 +3,13 @@ title: "`rule-style` CSS property"
 short-title: rule-style
 slug: Web/CSS/Reference/Properties/rule-style
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.rule-style
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
 
