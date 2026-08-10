@@ -44,7 +44,7 @@ Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/C
 
 Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com`, passing the context ID you obtain from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
-The browser first fires a [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event (that notification is not received since the subscription in this example is only to `browsingContext.navigationCommitted`).
+The browser first fires a [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted) event (you don't receive that notification because the subscription in this example is only to `browsingContext.navigationCommitted`).
 
 Once the browser accepts the server response and commits to loading the page, it sends the following notification, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
 

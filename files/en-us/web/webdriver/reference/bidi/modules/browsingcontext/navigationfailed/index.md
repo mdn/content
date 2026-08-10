@@ -17,7 +17,8 @@ The `params` field in the event notification is an object with the following fie
   - : A string that contains the ID of the context in which the navigation failed.
 - `navigation`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this navigation.
-    This ID matches the `navigation` value in the response of the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) and [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) commands.
+    If the navigation was started using the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) or [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload) command, this ID matches the `navigation` value in the command's response.
+    The same ID is shared by all events related to this navigation, including other navigation events in the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#events) module and events in the [`network`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/network) module.
 - `timestamp`
   - : A non-negative integer that represents the time when the event was fired, as milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 - `url`
@@ -31,7 +32,7 @@ In the lifecycle of a navigation, this event fires when the navigation is blocke
 
 ### Receiving an event when a cross-document navigation is blocked
 
-Consider the following scenario: you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.navigationFailed`.
+Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) and an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.navigationFailed`.
 The session's `unhandledPromptBehavior` capability is configured to dismiss [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) prompts.
 The current page also has a `beforeunload` handler that calls [`event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) to warn before leaving.
 

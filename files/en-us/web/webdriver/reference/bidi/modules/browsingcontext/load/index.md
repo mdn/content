@@ -40,7 +40,7 @@ Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/C
 
 Suppose you use [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) to load `https://example.com`, passing the context ID you obtain from [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
 
-The browser first fires [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted), [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted), and [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) events (those notifications are not received since the subscription in this example is only to `browsingContext.load`).
+The browser first fires [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted), [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted), and [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded) events (you don't receive those notifications because the subscription in this example is only to `browsingContext.load`).
 
 Once the document and all its subresources have finished loading, the browser sends the following notification, where the `context` value matches the context ID you passed to `browsingContext.navigate`:
 
