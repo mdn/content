@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-A soft navigation is a client-side routing navigation as used by {{Glossary("SPA", "Single Page Applications (SPAs)")}}.
+A soft navigation is a client-side routing navigation used by {{Glossary("SPA", "Single Page Applications (SPAs)")}} to load new content.
 
 Typically clicking a link on a webpage loads a completely new page (a "hard navigation") which can result in considerable unnecessary work, and loss of stat, when navigating between similar pages on a site.
 

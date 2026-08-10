@@ -22,7 +22,7 @@ This interface directly defines the following properties:
 - {{domxref("InteractionContentfulPaint.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the first rendering phase ended and the paint phase started.
 - {{domxref("InteractionContentfulPaint.presentationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the first painted pixels were actually drawn on the screen.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the first painted pixels were actually drawn on the screen.
 
 It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
