@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Attribute/requiredFeatures
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.requiredFeatures
+spec-urls: https://www.w3.org/TR/SVG11/struct.html#RequiredFeaturesAttribute
 sidebar: svgref
 ---
 
@@ -791,7 +791,3 @@ text {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

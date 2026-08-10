@@ -3,7 +3,7 @@ title: "load8x8_s: Wasm SIMD load/store instruction"
 short-title: load8x8_s
 slug: WebAssembly/Reference/SIMD/load_store/load8x8_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load8x8_s
+browser-compat: webassembly.instructions.load8x8_s
 sidebar: webassemblysidebar
 ---
 
@@ -76,7 +76,3 @@ v128.load8x8_s mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

@@ -58,7 +58,7 @@ With no name specified, a container query will apply styles to elements based on
 
 When a containment context is given a name, it can be specifically targeted by setting that name on a {{Cssxref("@container")}} at-rule.
 
-It is possible to create a query container by assigning a {{cssxref("container-name")}} to an element, and then query only the existence of that name in the associated `@container` at-rule, with no query expression specified. These so-called [**name-only container queries**](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries) enable selectively applying styles to elements based only on whether they have an ancestor with a specific `container-name` set.
+It is possible to create a query container by assigning a `container-name` to an element, and then query only the existence of that name in the associated `@container` at-rule, with no query expression specified. These so-called [**name-only container queries**](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries) enable selectively applying styles to elements based only on whether they have an ancestor with a specific `container-name` set.
 
 ## Examples
 

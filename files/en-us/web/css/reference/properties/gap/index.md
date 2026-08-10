@@ -101,11 +101,11 @@ gap: unset;
 ### Values
 
 - `normal`
-  - A value of `1em` on multi-column containers and `0` in all other contexts.
+  - : A value of `1em` on multi-column containers and `0` in all other contexts.
 - {{CSSxRef("&lt;length&gt;")}}
   - : The size of the gap as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
+  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
 
 ## Description
 

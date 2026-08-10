@@ -3,7 +3,7 @@ title: "bitselect: Wasm SIMD bitwise instruction"
 short-title: bitselect
 slug: WebAssembly/Reference/SIMD/bitwise/bitselect
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.bitselect
+browser-compat: webassembly.instructions.bitselect
 sidebar: webassemblysidebar
 ---
 
@@ -94,7 +94,3 @@ v128.bitselect
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

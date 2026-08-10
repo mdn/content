@@ -1,12 +1,13 @@
 ---
-title: "abs: Wasm text instruction"
+title: "abs: Wasm numeric instruction"
 short-title: abs
 slug: WebAssembly/Reference/Numeric/abs
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.abs
 sidebar: webassemblysidebar
 ---
 
-The **`abs`** instruction, short for _absolute_, is used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
+The **`abs`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _absolute_, is used to get the absolute value of a number. That is, it returns x if x is positive, and the negation of x if x is negative.
 
 {{InteractiveExample("Wat Demo: abs", "tabbed-standard")}}
 
@@ -135,3 +136,11 @@ The output is as follows:
 {{embedlivesample("simd_abs", "100%", 100)}}
 
 The result is `12`, because the value stored in lane `3` of the input value is `-12`, as we are outputting the absolute equivalent.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
