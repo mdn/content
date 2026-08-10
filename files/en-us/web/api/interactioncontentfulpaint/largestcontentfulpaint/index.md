@@ -1,5 +1,5 @@
 ---
-title: "InteractionContentfulPaint: largestContentfulPaint() property"
+title: "InteractionContentfulPaint: largestContentfulPaint property"
 short-title: largestContentfulPaint
 slug: Web/API/InteractionContentfulPaint/largestContentfulPaint
 page-type: web-api-instance-property
