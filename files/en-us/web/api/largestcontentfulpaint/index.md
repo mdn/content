@@ -50,7 +50,7 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 ## Description
 
-The key moment this API provides is the {{Glossary("Largest Contentful Paint")}} (LCP) metric. It provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The following elements are considered when determining the LCP:
+The key moment this API provides is the {{Glossary("Largest Contentful Paint")}} (LCP) metric. It provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The following elements are considered {{Glossary("Contentful paint", "contentful")}} when determining the LCP:
 
 - {{HTMLElement("img")}} elements.
 - [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.

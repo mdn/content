@@ -7,7 +7,7 @@ browser-compat: api.InteractionContentfulPaint
 
 {{APIRef("Performance API")}}
 
-The `InteractionContentfulPaint` interface provides timing information about contentful paints attributable to an interaction.
+The `InteractionContentfulPaint` interface provides timing information about {{Glossary("Contentful paint", "contentful paints")}} attributable to an interaction.
 
 ## Instance properties
 

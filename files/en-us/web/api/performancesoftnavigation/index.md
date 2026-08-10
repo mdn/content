@@ -47,7 +47,7 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 The `PerformanceSoftNavigation` interface is driven by the browser observing the following:
 
 - A user interaction
-- A visible paint updating the screen
+- A visible, {{Glossary("Contentful Paint", "contentful paint")}} updating the screen
 - A URL update in the user's address bar
 
 Having the browser provide this rather than a routing framework calling an API to emit this entry allows SPA performance timing to be measured consistently regardless of how different applications handle navigations (for example, updating the URL at the start or the end of navigation processing).
