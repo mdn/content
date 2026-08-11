@@ -176,10 +176,6 @@ This example includes an item which has positioning for columns. Items with defi
 
 {{EmbedLiveSample("positioned", "", "290px")}}
 
-## Fallbacks for grid lanes layout
-
-In browsers that do not support the `grid-lanes` display value, the `display: grid-lanes` declaration is ignored.
-
 ## Specifications
 
 {{Specifications}}
